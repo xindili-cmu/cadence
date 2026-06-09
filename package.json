@@ -1,0 +1,13 @@
+{
+  "name": "kinetics-pt-news",
+  "version": "1.0.0",
+  "description": "Daily auto-refresh for Kinetics — physical therapy news feed (working name, pending rebrand)",
+  "private": true,
+  "scripts": {
+    "refresh": "node scripts/news-refresh.js",
+    "test-refresh": "DRY_RUN=true node scripts/news-refresh.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

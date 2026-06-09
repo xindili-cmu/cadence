@@ -1,0 +1,45 @@
+<!-- GreenStack — public ESG news feed.
+     Shell is the designer-shipped UI kit; data wiring fetches news.json on load. -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GreenStack — ESG · Climate · Hard tech</title>
+
+<!-- Brand / fonts / design tokens -->
+<link rel="icon" href="design-system/assets/logo-mark.svg">
+<link rel="stylesheet" href="design-system/styles.css">
+
+<!-- React + Babel-standalone (same architecture as the prior index, no build step) -->
+<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<style>
+  html, body { margin: 0; background: var(--surface-page); }
+  * { box-sizing: border-box; }
+  ::selection { background: var(--green-200); }
+</style>
+</head>
+<body>
+<div id="root">
+  <!-- Pre-hydration skeleton in design-system tokens so first paint matches the brand -->
+  <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#FAFAF6;color:#6A766D;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:13px;letter-spacing:0.02em">
+    Loading GreenStack…
+  </div>
+</div>
+
+<!-- Order matters:
+     1. components.bundle.jsx  → defines window.NewsCard, window.CategoryTabs, etc.
+     2. app.data.jsx           → fetches news.json, sets window.GS_STORIES / GS_NAV / GS_SOURCES,
+                                 exposes window.GS_DATA_READY promise
+     3. app.shell.jsx          → defines window.AppHeader, NavRail, DigestRail
+     4. app.main.jsx           → FeedApp + ReactDOM render (awaits GS_DATA_READY) -->
+<script type="text/babel" src="design-system/app/components.bundle.jsx"></script>
+<script type="text/babel" src="design-system/app/app.data.jsx"></script>
+<script type="text/babel" src="design-system/app/app.shell.jsx"></script>
+<script type="text/babel" src="design-system/app/app.main.jsx"></script>
+</body>
+</html>

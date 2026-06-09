@@ -1,0 +1,139 @@
+/* ============================================================
+   GreenStack — Color tokens
+   Two palette directions ship in this system:
+   · GREEN (default, on :root)  — leans the ESG/climate intuition
+   · EMBER (alt, [data-theme="ember"]) — keeps a confident editorial
+     red for differentiation from the green-washed sustainability crowd
+   ============================================================ */
+
+:root {
+  /* ---- Brand green scale ---- */
+  --green-50:  #F1FAF6;
+  --green-100: #E1F3EA;
+  --green-200: #C2E7D5;
+  --green-300: #92D3B4;
+  --green-400: #57B98D;
+  --green-500: #1E9E6E;
+  --green-600: #14855A;
+  --green-700: #0F6A48;  /* PRIMARY brand green */
+  --green-800: #0D5239;
+  --green-900: #0A3B2A;
+  --green-950: #06271C;
+
+  /* ---- Ink / neutral scale (very slightly green-cooled charcoal) ---- */
+  --ink-900: #13201B;
+  --ink-800: #1E2C26;
+  --ink-700: #324039;
+  --ink-600: #4B584F;
+  --ink-500: #6A766D;
+  --ink-400: #94A099;
+  --ink-300: #C0C9C3;
+  --ink-200: #DFE5E0;
+  --ink-100: #EDF0EC;
+  --ink-50:  #F5F7F4;
+  --paper:   #FAFAF6;   /* warm editorial page background */
+  --white:   #FFFFFF;
+
+  /* ---- Ember (alternate brand red) scale ---- */
+  --ember-50:  #FCF2EF;
+  --ember-100: #FAE2DB;
+  --ember-200: #F3C2B5;
+  --ember-300: #E89683;
+  --ember-400: #DC6650;
+  --ember-500: #CB4630;
+  --ember-600: #B23423;  /* PRIMARY ember red */
+  --ember-700: #8F2A1D;
+  --ember-800: #6E2117;
+  --ember-900: #4D1810;
+
+  /* ---- Signal / status ---- */
+  --signal-up:   #14855A;  /* positive / gain */
+  --signal-down: #C0392B;  /* negative / loss */
+  --signal-warn: #C8861E;
+  --signal-info: #2D6FE0;
+
+  /* ============================================================
+     Category accents — one hue per ESG feed category.
+     Each has a solid (-600 strength), a soft tint background,
+     and an ink color for text sitting on the soft tint.
+     ============================================================ */
+  --cat-power:       #C8861E;  /* 1 · Clean Power            (solar amber) */
+  --cat-power-soft:  #FBF1DD;
+  --cat-power-ink:   #8A5A0E;
+
+  --cat-electric:      #2D6FE0;  /* 2 · Electrification & Efficiency (electric blue) */
+  --cat-electric-soft: #E6EEFC;
+  --cat-electric-ink:  #1B4FA8;
+
+  --cat-industrial:      #0E8C84;  /* 3 · Industrial Decarbonization (teal) */
+  --cat-industrial-soft: #DCF1EF;
+  --cat-industrial-ink:  #0A6660;
+
+  --cat-grid:      #6E59C7;  /* 4 · Grid Tech (violet) */
+  --cat-grid-soft: #ECE8FA;
+  --cat-grid-ink:  #50409A;
+
+  --cat-robotics:      #BB3E8E;  /* 5 · Robotics & Physical AI (magenta) */
+  --cat-robotics-soft: #FAE7F2;
+  --cat-robotics-ink:  #8E2C6B;
+
+  --cat-agri:      #6E9B2E;  /* 6 · Agriculture & Food (olive) */
+  --cat-agri-soft: #EEF4E0;
+  --cat-agri-ink:  #4F7019;
+
+  --cat-social:      #E0653C;  /* 7 · Social (coral) */
+  --cat-social-soft: #FCEBE2;
+  --cat-social-ink:  #B0461F;
+
+  --cat-governance:      #34508C;  /* 8 · Governance (navy) */
+  --cat-governance-soft: #E6EBF4;
+  --cat-governance-ink:  #243C6E;
+
+  /* ============================================================
+     Semantic aliases — reference these in components, not raw scales
+     ============================================================ */
+  --color-primary:        var(--green-700);
+  --color-primary-hover:  var(--green-800);
+  --color-primary-press:  var(--green-900);
+  --color-primary-soft:   var(--green-100);
+  --color-primary-softer: var(--green-50);
+  --on-primary:           var(--white);
+
+  --surface-page:    var(--paper);
+  --surface-card:    var(--white);
+  --surface-raised:  var(--white);
+  --surface-sunken:  var(--ink-50);
+  --surface-hover:   var(--ink-50);
+  --surface-active:  var(--green-50);
+  --surface-inverse: var(--ink-900);
+
+  --border-subtle:  var(--ink-200);
+  --border-default: var(--ink-300);
+  --border-strong:  var(--ink-400);
+  --border-focus:   var(--green-500);
+
+  --text-primary:   var(--ink-900);
+  --text-secondary: var(--ink-600);
+  --text-tertiary:  var(--ink-500);
+  --text-disabled:  var(--ink-400);
+  --text-link:      var(--green-700);
+  --text-on-inverse: var(--paper);
+
+  --focus-ring: 0 0 0 3px var(--green-200);
+}
+
+/* ============================================================
+   EMBER theme — opt in with <html data-theme="ember">
+   Remaps the primary aliases only; neutrals + categories persist.
+   ============================================================ */
+[data-theme="ember"] {
+  --color-primary:        var(--ember-600);
+  --color-primary-hover:  var(--ember-700);
+  --color-primary-press:  var(--ember-800);
+  --color-primary-soft:   var(--ember-100);
+  --color-primary-softer: var(--ember-50);
+  --surface-active:       var(--ember-50);
+  --border-focus:         var(--ember-500);
+  --text-link:            var(--ember-600);
+  --focus-ring: 0 0 0 3px var(--ember-200);
+}

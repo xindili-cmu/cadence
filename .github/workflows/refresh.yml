@@ -1,0 +1,60 @@
+name: PT News Refresh
+
+on:
+  schedule:
+    # Daily PT news refresh at 07:00 UTC (= 3pm Beijing, morning Pacific)
+    - cron: '0 7 * * *'
+  workflow_dispatch:  # allow manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+# Prevent two cron runs from racing on the same main branch
+concurrency:
+  group: news-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run PT news refresh
+        env:
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/news-refresh.js
+
+      - name: Commit news.json (with rebase retry)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          if git diff --staged --quiet; then
+            echo "No news.json changes to commit"
+            exit 0
+          fi
+          git commit -m "📰 PT news $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt..."
+            if git push; then
+              echo "✓ Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed, fetching + rebasing onto latest main..."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              echo "Rebase conflict — aborting and falling back to merge"
+              git rebase --abort
+              git pull --no-rebase origin main --no-edit || true
+            fi
+          done
+          echo "✗ Push failed after 3 attempts. Manual intervention required."
+          exit 1

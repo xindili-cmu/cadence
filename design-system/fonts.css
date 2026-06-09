@@ -1,0 +1,7 @@
+/* GreenStack webfonts — loaded from Google Fonts.
+   Spectral (editorial serif display) · IBM Plex Sans (UI/body) · IBM Plex Mono (data/labels)
+   NOTE: served from Google's CDN (fonts.gstatic.com). If self-hosted binaries are
+   required for offline/production use, swap these @import lines for local @font-face
+   rules pointing at copied .woff2 files. */
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
