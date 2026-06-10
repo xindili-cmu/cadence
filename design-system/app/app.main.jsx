@@ -152,6 +152,95 @@ function SourceCard({ source }) {
   );
 }
 
+// ── Suggest-a-source form ───────────────────────────────────────────────────
+// Reader-submitted source suggestions, delivered to Cindy's inbox via
+// Formspree (static site — no backend of our own). Vetted manually before
+// being added to CD_SOURCES; the form promises review, not auto-listing.
+// TODO: replace with the real form ID from https://formspree.io/forms
+const CD_SUGGEST_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+function SuggestSourceForm() {
+  const [open, setOpen] = React.useState(false);
+  const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
+  const [form, setForm] = React.useState({ name: '', url: '', note: '', email: '' });
+  const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const valid = form.name.trim() && /^https?:\/\/.+\..+/.test(form.url.trim());
+
+  async function submit(e) {
+    e.preventDefault();
+    if (!valid || status === 'sending') return;
+    setStatus('sending');
+    try {
+      const res = await fetch(CD_SUGGEST_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ _subject: `Cadence source suggestion: ${form.name.trim()}`, ...form }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus('sent');
+    } catch (err) {
+      console.error('[Cadence] suggestion submit failed:', err);
+      setStatus('error');
+    }
+  }
+
+  const label = { fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-tertiary)' };
+
+  if (!open) {
+    return (
+      <button type="button" onClick={() => setOpen(true)}
+        style={{ border: '1px dashed var(--border-default)', background: 'transparent', borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600, color: 'var(--text-secondary)' }}>
+        + Suggest a source · 推荐信源
+      </button>
+    );
+  }
+
+  if (status === 'sent') {
+    return (
+      <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 20, fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--text-secondary)', textAlign: 'center' }}>
+        Thanks — your suggestion was sent. We review every submission before adding it to the wall. 已收到，确认后会加入信源墙。
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={submit}
+      style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1 }}>Suggest a source</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>reviewed before listing · 审核后添加</span>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <span style={label}>Source name *</span>
+          <Input size="sm" value={form.name} onChange={set('name')} placeholder="e.g. JOSPT, 丁香园" />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <span style={label}>Official URL *</span>
+          <Input size="sm" type="url" value={form.url} onChange={set('url')} placeholder="https://…" />
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <span style={label}>Your email (optional)</span>
+          <Input size="sm" type="email" value={form.email} onChange={set('email')} placeholder="for follow-up" />
+        </div>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <span style={label}>Why it belongs here (optional)</span>
+        <Input size="sm" value={form.note} onChange={set('note')} placeholder="What does it cover? Why is it credible?" />
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <Button type="submit" size="sm" disabled={!valid || status === 'sending'}>
+          {status === 'sending' ? 'Sending…' : 'Submit suggestion'}
+        </Button>
+        <Button size="sm" variant="ghost" onClick={() => { setOpen(false); setStatus('idle'); }}>Cancel</Button>
+        {status === 'error' && (
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>Could not send — please try again.</span>
+        )}
+      </div>
+    </form>
+  );
+}
+
 function SourcesGrid({ stories }) {
   // Live stats keyed by extractDomain name
   const live = {};
@@ -199,6 +288,7 @@ function SourcesGrid({ stories }) {
           </div>
         </section>
       ))}
+      <SuggestSourceForm />
     </div>
   );
 }
