@@ -193,7 +193,9 @@ async function curateWithClaude(rawItems) {
     title: item.title,
     text: item.text?.substring(0, 400),
     category: item.category,
-    source: item.source
+    source: item.source,
+    url: item.url?.substring(0, 120),
+    publishedDate: item.publishedDate?.substring(0, 10)
   }));
 
   const systemPrompt = `你是 Cadence 的物理治疗 / 康复医学新闻策展 AI。
@@ -220,6 +222,7 @@ tags 规则：
 - 70-79 = 扎实但非实践改变级的研究 / 新闻
 - 60-69 = 一般动态
 - <60 = 噪音（会议预告、产品软文、患者向科普、内容农场转载）
+- **陈旧内容检查**：核对 url 路径和正文里的年份/试验线索。博客或聚合站转载多年前的旧研究（即使 publishedDate 显示很新）一律 <60；研究本身年代久但新闻点是"新指南/新政策引用了它"则按新闻点正常评分。blogspot / 内容农场域名默认重扣。
 
 编辑标准：
 - summary：1-2 句中性英文，front-load "what changed"。研究类必带样本量 + 关键效应量（或 p 值 / CI），原文没给就不编造。
@@ -414,6 +417,22 @@ function clusterItems(items, keepBest) {
 const byExaScore = (a, b) => (b.score || 0) - (a.score || 0);
 const byCuratedScore = (a, b) => (b.curatedScore || 0) - (a.curatedScore || 0);
 
+// ── Stale-content pre-filter ────────────────────────────────────────────────
+// Blogs/content farms re-surface old studies and Exa's crawl date masks the
+// original publication year. If the URL path embeds a year two or more years
+// old (e.g. /2015/01/), drop it before curation.
+function dropStaleByUrl(items) {
+  const thisYear = new Date().getFullYear();
+  return items.filter(it => {
+    const m = (it.url || '').match(/\/((?:19|20)\d{2})(?:[\/\-]|$)/);
+    if (m && parseInt(m[1], 10) <= thisYear - 2) {
+      console.log(`   ⏳ stale URL dropped: ${(it.url || '').slice(0, 80)}`);
+      return false;
+    }
+    return true;
+  });
+}
+
 // ── Hot topics (当前热点) ────────────────────────────────────────────────────
 // Heat = distinct-source count with exponential time decay (half-life 2 days).
 // Only stories covered by ≥2 independent sources qualify; empty array on
@@ -459,7 +478,8 @@ async function main() {
   }
 
   console.log(`\n📊 Raw: ${raw.length}`);
-  const unique = clusterItems(raw, byExaScore);
+  const fresh = dropStaleByUrl(raw);
+  const unique = clusterItems(fresh, byExaScore);
   unique.sort(byExaScore);
   console.log(`   Unique: ${unique.length} (${unique.filter(u => u.related?.length).length} multi-source)`);
 
