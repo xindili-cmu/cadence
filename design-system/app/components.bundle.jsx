@@ -73,26 +73,26 @@ function Icon({ name, size = 18, strokeWidth = 1.75, style, className, ...rest }
 
 
 /* ===== components/brand/Logo.jsx ===== */
-// Cadence mark — five staggered beat-bars + the stride slash, ALL parallel
-// at the same 18° lean (the bars are short strokes of the same gesture;
-// the slash is simply the long one). Favicon = simplified 3-bar cut.
-const BARS = [
-  { x: 1,    y: 21.5, h: 5.5 },
-  { x: 6,    y: 16.9, h: 9.5 },
-  { x: 11,   y: 12.3, h: 13.5 },
-  { x: 21,   y: 12.6, h: 12 },
-  { x: 26,   y: 19,   h: 5 },
+// Cadence mark — measured 1:1 from Cindy's chosen generation
+// (b9354305*.png): six parallel strokes at 22.49°, flat horizontal cuts,
+// bar bottoms on one flat baseline, per-stroke measured widths.
+// Geometry verified programmatically against the source image (≤7px @1536px).
+const RECTS = [
+  [664.6, 410, 40.5, 92],
+  [745.6, 343, 42.5, 159],
+  [832.5, 277, 42.6, 225],
+  [930.0, 121, 46.7, 474],
+  [1035.4, 344, 46.9, 158],
+  [1128.9, 415, 39.9, 87],
 ];
 
-function Mark({ size, color }) {
+function Mark({ height, color }) {
+  const w = Math.round(height * 580 / 508);
   return (
-    <svg width={size} height={size} viewBox="0 0 36 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
-      <g transform="translate(8.5 0) skewX(-18.13)">
-        {BARS.map((b, i) => (
-          <rect key={i} x={b.x} y={b.y} width="2.6" height={b.h} fill={color} />
-        ))}
+    <svg width={w} height={height} viewBox="446 107 580 508" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
+      <g transform="skewX(-22.490)" fill={color}>
+        {RECTS.map(([x, y, rw, rh], i) => <rect key={i} x={x} y={y} width={rw} height={rh} />)}
       </g>
-      <line x1="15.8" y1="30.5" x2="25.3" y2="1.5" stroke={color} strokeWidth="3" strokeLinecap="butt" />
     </svg>
   );
 }
@@ -106,7 +106,7 @@ function Mark({ size, color }) {
 function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...rest }) {
   const inverse = tone === 'inverse';
   const markColor = inverse ? '#FFFFFF' : 'var(--blue-600)';
-  const markSize = Math.round(height * 1.3);
+  const markSize = Math.round(height * 1.25);
 
   const Wordmark = (
     <span style={{
@@ -119,14 +119,14 @@ function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...res
   );
 
   if (variant === 'mark') {
-    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}><Mark size={markSize} color={markColor} /></span>;
+    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}><Mark height={markSize} color={markColor} /></span>;
   }
   if (variant === 'wordmark') {
     return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Wordmark}</span>;
   }
   return (
     <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.36), ...style }} {...rest}>
-      <Mark size={markSize} color={markColor} />{Wordmark}
+      <Mark height={markSize} color={markColor} />{Wordmark}
     </span>
   );
 }
