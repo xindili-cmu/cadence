@@ -10,9 +10,10 @@ function AppHeader({ query, onQuery }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      {/* Masthead motto — quiet sans italic. (Cindy 2026-06-10: mono/uppercase/pill
-          read as AI; Spectral italic at 13px too spindly. Plex Sans italic it is.) */}
-      <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontSize: 12.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 1 }}>Keeping pace with the evidence</span>
+      {/* Masthead motto — Spectral uppercase, wide tracking (Cindy picked option 4,
+          2026-06-10): academic-journal masthead feel; serif caps don't read as an
+          AI label the way mono caps did. */}
+      <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
       {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
           Search is the only header action. */}
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
