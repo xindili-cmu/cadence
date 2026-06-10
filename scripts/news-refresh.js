@@ -42,6 +42,14 @@ const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const DRY_RUN = process.env.DRY_RUN === 'true';
 
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
+
+// ── Source roster (AIHOT-style: the wall IS the universe) ───────────────────
+// sources.json is the single source of truth, shared with the frontend
+// (app.data.jsx fetches it for the Sources view). Exa searches are constrained
+// to these domains via includeDomains, and anything that still slips through
+// is dropped. Adding a source = editing sources.json, nothing else.
+const SOURCES = require(path.join(__dirname, '..', 'sources.json'));
+const SOURCE_HOSTNAMES = [...new Set(SOURCES.map(s => s.domain.split('/')[0]))];
 const MAX_ITEMS = 30;
 const LOOKBACK_DAYS = 7; // PT news cadence is slower than climate-tech; revisit after 2 weeks
 const CURATE_TOP_N = 25;
@@ -139,6 +147,7 @@ async function searchExa(query, numResults = 5) {
       query,
       type: 'auto',
       numResults,
+      includeDomains: SOURCE_HOSTNAMES,
       startPublishedDate: startDate.toISOString().split('T')[0],
       useAutoprompt: true,
       contents: {
@@ -161,28 +170,26 @@ async function searchExa(query, numResults = 5) {
     highlights: (r.highlights || []).join(' '),
     publishedDate: r.publishedDate || new Date().toISOString(),
     score: r.score || 0,
-    source: extractDomain(r.url)
-  }));
+    source: matchSource(r.url)
+  })).filter(r => r.source); // off-roster results are dropped, not relabeled
 }
 
-function extractDomain(url) {
+// Map a URL onto the source roster: hostname equals or is a subdomain of a
+// roster domain (bjsm.bmj.com → BMJ). Roster domains with a path part
+// ('academic.oup.com/ptj') also require the path prefix, so other OUP
+// journals don't masquerade as PTJ. Returns the roster name, or null.
+function matchSource(url) {
   try {
-    const hostname = new URL(url).hostname.replace('www.', '');
-    const map = {
-      'jospt.org': 'JOSPT', 'apta.org': 'APTA',
-      'academic.oup.com': 'PTJ', 'physio-pedia.com': 'Physiopedia',
-      'pubmed.ncbi.nlm.nih.gov': 'PubMed', 'medrxiv.org': 'medRxiv',
-      'thelancet.com': 'The Lancet', 'bmj.com': 'BMJ', 'jamanetwork.com': 'JAMA',
-      'nature.com': 'Nature', 'sciencedirect.com': 'ScienceDirect',
-      'statnews.com': 'STAT', 'modernhealthcare.com': 'Modern Healthcare',
-      'reuters.com': 'Reuters', 'healthline.com': 'Healthline',
-      'physiotherapy.asn.au': 'APA (AU)', 'ahpra.gov.au': 'AHPRA',
-      'choosept.com': 'ChoosePT', 'webpt.com': 'WebPT',
-      'cms.gov': 'CMS', 'nhc.gov.cn': '国家卫健委',
-      'dxy.cn': '丁香园', 'cn-healthcare.com': '健康界'
-    };
-    return map[hostname] || hostname;
-  } catch { return 'Unknown'; }
+    const u = new URL(url);
+    const hostname = u.hostname.replace(/^www\./, '');
+    for (const s of SOURCES) {
+      const [dom, ...pathParts] = s.domain.split('/');
+      const hostOk = hostname === dom || hostname.endsWith('.' + dom);
+      const pathOk = !pathParts.length || u.pathname.startsWith('/' + pathParts.join('/'));
+      if (hostOk && pathOk) return s.name;
+    }
+    return null;
+  } catch { return null; }
 }
 
 // ── Claude Curation ─────────────────────────────────────────────────────────
@@ -510,7 +517,12 @@ async function main() {
   try {
     const old = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
     const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 7);
-    existing = (old.items || []).filter(i => new Date(i.publishedAt) > cutoff);
+    existing = (old.items || [])
+      .filter(i => new Date(i.publishedAt) > cutoff)
+      // Re-validate against the roster so items from since-removed sources
+      // age out immediately, and relabel in case a source was renamed.
+      .map(i => ({ ...i, source: matchSource(i.sourceUrl) }))
+      .filter(i => i.source);
   } catch {}
 
   // Cluster-aware merge: a re-found story unions its related-source list
