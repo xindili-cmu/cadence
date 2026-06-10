@@ -80,7 +80,7 @@ function SourceCard({ source, onPick }) {
   );
 }
 
-function SourcesGrid({ stories, category, onPickSource }) {
+function SourcesGrid({ stories, onPickSource }) {
   // Live stats keyed by extractDomain name
   const live = {};
   stories.forEach((s) => {
@@ -92,7 +92,8 @@ function SourcesGrid({ stories, category, onPickSource }) {
   });
   const liveCats = (b) => Object.entries(b.catSet).sort((a, b2) => b2[1] - a[1]).map(([k]) => k);
 
-  // The wall: curated directory first, live stats merged on
+  // The wall: curated directory only, live stats merged on. One-off domains
+  // Exa surfaces still appear on their NewsCards, just not in this directory.
   const wall = (window.CD_SOURCES || []).map((src) => {
     const b = live[src.name];
     return {
@@ -102,18 +103,39 @@ function SourcesGrid({ stories, category, onPickSource }) {
       latest: b ? b.latest : null,
     };
   });
-  // Wall only — one-off domains Exa surfaces still appear on their NewsCards,
-  // but the Sources directory shows exactly the curated first-party outlets.
-  let all = [...wall];
-  if (category !== 'all') all = all.filter((s) => s.cats.includes(category));
-  all.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
+  // Group by outlet kind — the natural axis for a source wall
+  const sections = KIND_SECTIONS
+    .map((sec) => ({
+      ...sec,
+      items: wall.filter((s) => sec.kinds.includes(s.kind))
+        .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
+    }))
+    .filter((sec) => sec.items.length);
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
-      {all.map((s) => <SourceCard key={s.name} source={s} onPick={() => onPickSource && onPickSource(s.name)} />)}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {sections.map((sec) => (
+        <section key={sec.label}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 10px' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{sec.label}</span>
+            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{sec.items.length}</span>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
+            {sec.items.map((s) => <SourceCard key={s.name} source={s} onPick={() => onPickSource && onPickSource(s.name)} />)}
+          </div>
+        </section>
+      ))}
     </div>
   );
 }
+
+const KIND_SECTIONS = [
+  { label: 'Journals & Research', kinds: ['journal', 'database', 'preprint'] },
+  { label: 'Associations & Regulators', kinds: ['association', 'regulator'] },
+  { label: 'Industry News & Platforms', kinds: ['news', 'platform'] },
+];
 
 const KIND_LABEL = {
   journal: 'Journal', database: 'Database', preprint: 'Preprint',
@@ -194,15 +216,11 @@ function FeedApp() {
         <main style={{ flex: 1, minWidth: 0, maxWidth: 'var(--feed-column)', padding: '24px 0 64px' }}>
           <FeedToolbar view={view} count={isSources ? null : stories.length} />
 
-          {/* Sources directory branch — short-circuits feed rendering */}
+          {/* Sources directory branch — short-circuits feed rendering.
+              No specialty tabs here: the wall groups by outlet kind instead. */}
           {isSources && (
             <>
-              <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 12px',
-                background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
-                <CategoryTabs value={category} onChange={setCategory} />
-              </div>
-              <SourcesGrid stories={window.CD_STORIES || []} category={category} onPickSource={(name) => { setView('all'); setQuery(name); }} />
-            </>
+              <SourcesGrid stories={window.CD_STORIES || []} onPickSource={(name) => { setView('all'); setQuery(name); }} />
           )}
 
           {/* Daily brief editorial lead — fixed copy until Critic generates one per cron */}
