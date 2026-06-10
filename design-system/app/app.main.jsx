@@ -156,8 +156,7 @@ function SourceCard({ source }) {
 // Reader-submitted source suggestions, delivered to Cindy's inbox via
 // Formspree (static site — no backend of our own). Vetted manually before
 // being added to CD_SOURCES; the form promises review, not auto-listing.
-// TODO: replace with the real form ID from https://formspree.io/forms
-const CD_SUGGEST_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const CD_SUGGEST_ENDPOINT = 'https://formspree.io/f/mlgkwdja';
 
 function SuggestSourceForm() {
   const [open, setOpen] = React.useState(false);
