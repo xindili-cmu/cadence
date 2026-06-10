@@ -287,33 +287,49 @@ async function callAnthropic(systemPrompt, userPrompt) {
 }
 
 async function callGemini(systemPrompt, userPrompt) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-goog-api-key': GEMINI_API_KEY
-    },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: systemPrompt }] },
-      contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
-      generationConfig: {
-        maxOutputTokens: 16384,
-        responseMimeType: 'application/json',
-        // Thinking tokens count toward maxOutputTokens — disable so the
-        // budget goes entirely to the JSON payload.
-        thinkingConfig: { thinkingBudget: 0 }
+  // Free tier hits 503 UNAVAILABLE during demand spikes — retry with backoff,
+  // then fall back to flash-lite (separate capacity pool).
+  const models = [GEMINI_MODEL, 'gemini-2.5-flash-lite'];
+  const delays = [0, 15000, 45000];
+
+  for (const model of models) {
+    for (const delay of delays) {
+      if (delay) {
+        console.log(`  Gemini retry in ${delay / 1000}s...`);
+        await new Promise(r => setTimeout(r, delay));
       }
-    })
-  });
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-goog-api-key': GEMINI_API_KEY
+        },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: systemPrompt }] },
+          contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+          generationConfig: {
+            maxOutputTokens: 16384,
+            responseMimeType: 'application/json',
+            // Thinking tokens count toward maxOutputTokens — disable so the
+            // budget goes entirely to the JSON payload.
+            thinkingConfig: { thinkingBudget: 0 }
+          }
+        })
+      });
 
-  if (!res.ok) {
-    console.error(`  Gemini error: ${res.status} ${(await res.text()).slice(0, 200)}`);
-    return '';
+      if (res.ok) {
+        const data = await res.json();
+        if (model !== GEMINI_MODEL) console.log(`  (served by fallback model ${model})`);
+        return data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('') || '';
+      }
+
+      const errText = (await res.text()).slice(0, 200);
+      console.error(`  Gemini ${model} error: ${res.status} ${errText}`);
+      // Retry only transient errors; anything else (400/401/404) won't heal.
+      if (![429, 500, 502, 503, 504].includes(res.status)) break;
+    }
   }
-
-  const data = await res.json();
-  return data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('') || '';
+  return '';
 }
 
 // ── Dedup ───────────────────────────────────────────────────────────────────
