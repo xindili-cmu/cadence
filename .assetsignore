@@ -1,0 +1,18 @@
+# Not part of the static site — keep out of Workers asset upload
+node_modules/
+.git/
+.github/
+.wrangler/
+scripts/
+design-input/
+*.zip
+.env
+.env.local
+.gitignore
+.assetsignore
+wrangler.jsonc
+package.json
+package-lock.json
+bun.lockb
+README.md
+.DS_Store

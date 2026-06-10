@@ -1,0 +1,11 @@
+{
+  // Cadence — static site served via Cloudflare Workers assets.
+  // Exclusions live in .assetsignore (node_modules etc. must not upload).
+  "name": "cadence",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
