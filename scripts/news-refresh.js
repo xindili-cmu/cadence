@@ -208,7 +208,9 @@ Cadence 是独立物理治疗专业新闻品牌，覆盖临床研究、技术进
 7. Manual Therapy & Modalities (manual-modality) — 手法与理疗。sub-tags: dry-needling, iastm, electro, laser, taping, manipulation
 8. Practice & Profession (practice) — 行业与执业。sub-tags: reimbursement, regulation, telehealth, education, ethics, workforce
 
-tags 规则：有 sub-tag axis 的分类（orthopedic / neurological / manual-modality / practice），tags 数组里优先放上面列出的 sub-tag slug（可多选）；其他分类 tags 自由但保持 kebab-case 英文。
+tags 规则：
+- tags[0] 必须是内容类型，四选一：research（期刊论文 / 系统综述 / RCT）/ news（行业新闻 / 产品 / 公司动态）/ guideline（临床实践指南发布或更新）/ policy（监管 / 报销 / 执业规则）。判断不清时按主要信息价值归类。
+- 之后：有 sub-tag axis 的分类（orthopedic / neurological / manual-modality / practice）优先放上面列出的 sub-tag slug（可多选）；其他分类 tags 自由但保持 kebab-case 英文。
 
 评分标准（信号质量为核心）：
 - 90+ = 临床实践改变级别：高水平证据更新（大样本 RCT / 系统综述推翻或确立干预）、重大监管 / 报销变化
@@ -225,7 +227,7 @@ tags 规则：有 sub-tag axis 的分类（orthopedic / neurological / manual-mo
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
 
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","tags":["tag1","tag2"],"summary":"One-line English neutral summary"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","tags":["research","spine"],"summary":"One-line English neutral summary"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
