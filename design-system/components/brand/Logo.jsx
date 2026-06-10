@@ -1,33 +1,40 @@
 import React from 'react';
 
-// Cadence mark — four bars in a walking-cadence rhythm (rise · peak · settle),
-// echoing steps-per-minute, the gait metric PTs measure. Final mark, designer round 2.
-const STACK = [
-  { x: 4,  h: 9,  o: 0.55 },
-  { x: 11, h: 15, o: 0.78 },
-  { x: 18, h: 19, o: 1 },
-  { x: 25, h: 13, o: 0.7 },
+// Cadence mark — five staggered beat-bars with a long stride-slash sweeping
+// through (concept locked from Cindy's chosen generation, 2026-06-10).
+// Bars lean ~10° with rising baselines; the slash is the stride crossing
+// the metronome beats. Favicon uses a simplified 3-bar cut for 16px clarity.
+const BARS = [
+  { x: 3,    y: 21.5, h: 5.5 },
+  { x: 8,    y: 17,   h: 9.5 },
+  { x: 13,   y: 12.5, h: 13.5 },
+  { x: 25.5, y: 13,   h: 12 },
+  { x: 30.5, y: 19,   h: 5 },
 ];
+
+function Mark({ size, color }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 36 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
+      <g transform="translate(3.5 0) skewX(-10)">
+        {BARS.map((b, i) => (
+          <rect key={i} x={b.x} y={b.y} width="2.6" height={b.h} rx="1.1" fill={color} />
+        ))}
+      </g>
+      <line x1="18" y1="30.5" x2="27.5" y2="1.5" stroke={color} strokeWidth="3" strokeLinecap="round" />
+    </svg>
+  );
+}
 
 /**
  * Logo — the Cadence mark and lockup.
  * `variant`: 'lockup' (mark + wordmark, default) · 'wordmark' · 'mark'.
- * `tone`: 'default' (blue tile / ink wordmark) · 'inverse' (for dark backgrounds).
+ * `tone`: 'default' (blue mark / ink wordmark) · 'inverse' (for dark backgrounds).
  * Sizes scale from `height` (mark + wordmark cap height in px).
  */
 export function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...rest }) {
   const inverse = tone === 'inverse';
-  const tile = inverse ? 'var(--blue-500)' : 'var(--blue-600)';
-  const tileSize = Math.round(height * 1.34);
-
-  const Mark = (
-    <svg width={tileSize} height={tileSize} viewBox="0 0 32 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
-      <rect width="32" height="32" rx="8" fill={tile} />
-      {STACK.map((b, i) => (
-        <rect key={i} x={b.x} y={26 - b.h} width="4" height={b.h} rx="2" fill="#FFFFFF" fillOpacity={b.o} />
-      ))}
-    </svg>
-  );
+  const markColor = inverse ? '#FFFFFF' : 'var(--blue-600)';
+  const markSize = Math.round(height * 1.3);
 
   const Wordmark = (
     <span style={{
@@ -40,14 +47,14 @@ export function Logo({ variant = 'lockup', tone = 'default', height = 28, style,
   );
 
   if (variant === 'mark') {
-    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Mark}</span>;
+    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}><Mark size={markSize} color={markColor} /></span>;
   }
   if (variant === 'wordmark') {
     return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Wordmark}</span>;
   }
   return (
-    <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.42), ...style }} {...rest}>
-      {Mark}{Wordmark}
+    <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.36), ...style }} {...rest}>
+      <Mark size={markSize} color={markColor} />{Wordmark}
     </span>
   );
 }
