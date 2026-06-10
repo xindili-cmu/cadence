@@ -5,9 +5,9 @@ import React from 'react';
 // the slash is simply the long one). Favicon = simplified 3-bar cut.
 const BARS = [
   { x: 1,    y: 21.5, h: 5.5 },
-  { x: 6,    y: 17,   h: 9.5 },
-  { x: 11,   y: 12.5, h: 13.5 },
-  { x: 21,   y: 13,   h: 12 },
+  { x: 6,    y: 16.9, h: 9.5 },
+  { x: 11,   y: 12.3, h: 13.5 },
+  { x: 21,   y: 12.6, h: 12 },
   { x: 26,   y: 19,   h: 5 },
 ];
 
