@@ -232,7 +232,7 @@ function FeedApp() {
                   <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
                     <NewsCard
                       variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
-                      category={s.category} score={s.score} source={s.source} time={s.time} date={s.date}
+                      category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                       title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                       selected={selected === s.id}
                       onClick={() => setSelected(s.id)} />
