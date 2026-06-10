@@ -41,6 +41,7 @@ function cdTransformItem(item) {
     summary:     item.summary,
     why:         item.curatedReason,
     tags:        item.tags || [],
+    related:     item.related || [],  // other outlets covering the same story (关联讨论)
   };
 }
 
@@ -65,10 +66,12 @@ window.CD_DATA_READY = (async () => {
     const data = await res.json();
     window.CD_STORIES = (data.items || []).map(cdTransformItem);
     window.CD_META = data.meta || {};
+    window.CD_HOT = data.hotTopics || [];  // multi-source hot topics; empty = strip hidden
   } catch (err) {
     console.error('[Cadence] news.json load failed:', err);
     window.CD_STORIES = [];
     window.CD_META = { error: err.message };
+    window.CD_HOT = [];
   }
 })();
 

@@ -35,6 +35,61 @@ function FeedToolbar({ view, count }) {
   );
 }
 
+// ── Hot topics strip (当前热点) ──────────────────────────────────────────────
+// Top of Curated only. Ranked by multi-source heat (computed in the cron:
+// distinct-source count × time decay). Renders nothing on quiet days, so the
+// page falls back to the pure timeline. Hover the source count to see who's
+// covering the story; click scrolls to the card in the feed.
+
+function HotTopicsStrip({ topics, onPick }) {
+  if (!topics || !topics.length) return null;
+  return (
+    <section style={{ marginBottom: 20, padding: '14px 18px 10px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 8 }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)' }}>Hot now</span>
+        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>Multi-source coverage · heat decays over time</span>
+      </div>
+      <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+        {topics.map((t, i) => {
+          const cat = window.getCategory ? window.getCategory(t.category) : null;
+          return (
+            <li key={t.id} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
+              <button type="button" onClick={() => onPick && onPick(t.id)}
+                style={{ display: 'flex', alignItems: 'baseline', gap: 10, width: '100%', padding: '8px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
+                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{t.title}</span>
+                {cat && <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>}
+                <span title={(t.sources || []).join(' · ')}
+                  style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
+                  {t.sourceCount} sources
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
+
+// ── Related coverage row (关联讨论) ──────────────────────────────────────────
+// Other outlets reporting the same story — folded under the main card instead
+// of appearing as duplicate cards. Hover a name to see that outlet's headline.
+
+function RelatedRow({ related }) {
+  if (!related || !related.length) return null;
+  return (
+    <div style={{ margin: '6px 6px 0', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'baseline', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>
+      <span style={{ letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 10 }}>Also covered by</span>
+      {related.map((r) => (
+        <a key={r.source + r.sourceUrl} href={r.sourceUrl} target="_blank" rel="noopener noreferrer" title={r.title}
+          onClick={(e) => e.stopPropagation()}
+          style={{ color: 'var(--text-secondary)', textDecoration: 'none', borderBottom: '1px dotted var(--border-subtle)' }}>{r.source}</a>
+      ))}
+    </div>
+  );
+}
+
 // ── Sources directory view ──────────────────────────────────────────────────
 // Standing source wall: window.CD_SOURCES (app.data.jsx) is the canonical
 // directory of monitored outlets; live counts / categories / latest story
@@ -222,6 +277,11 @@ function FeedApp() {
             <SourcesGrid stories={window.CD_STORIES || []} onPickSource={(name) => { setView('all'); setQuery(name); }} />
           )}
 
+          {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
+          {!isSources && view === 'curated' && !q && category === 'all' && (
+            <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} />
+          )}
+
           {/* Daily brief editorial lead — fixed copy until Critic generates one per cron */}
           {!isSources && isDaily && grouped.length > 0 && (
             <div style={{ marginBottom: 24, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
@@ -269,6 +329,7 @@ function FeedApp() {
                       title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                       selected={selected === s.id}
                       onClick={() => setSelected(s.id)} />
+                    {!compact && <RelatedRow related={s.related} />}
                   </div>
                 ))}
               </div>
