@@ -50,11 +50,20 @@ jobs:
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/news-refresh.js
 
+      - name: Generate WeChat daily brief (full runs only)
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
+        run: node scripts/wechat-brief.js
+
       - name: Commit news.json (with race-safe retry)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add news.json
+          [ -d briefs ] && git add briefs || true
           [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
           if git diff --staged --quiet; then
             echo "No news.json changes to commit"
@@ -76,11 +85,14 @@ jobs:
             git merge --abort 2>/dev/null || true
             cp news.json /tmp/news.json
             cp scrape-ledger.json /tmp/scrape-ledger.json 2>/dev/null || true
+            cp -r briefs /tmp/briefs 2>/dev/null || true
             git fetch origin main
             git reset --hard origin/main
             cp /tmp/news.json news.json
             cp /tmp/scrape-ledger.json scrape-ledger.json 2>/dev/null || true
+            cp -r /tmp/briefs briefs 2>/dev/null || true
             git add news.json
+            [ -d briefs ] && git add briefs || true
             [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
             if git diff --staged --quiet; then
               echo "Remote already has identical news.json"

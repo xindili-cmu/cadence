@@ -766,9 +766,13 @@ async function main() {
     headlines: merged.slice(0, 5).map(i => `[${i.curatedScore}] ${i.title}`) };
 }
 
-main().then(s => {
-  if (s) { console.log('\n📰 Top:'); s.headlines.forEach(h => console.log(`   ${h}`)); }
-  console.log('Done.\n');
-}).catch(e => { console.error('❌', e); process.exit(1); });
+// Run only when invoked directly — scripts/wechat-brief.js requires this
+// module for the shared LLM callers without triggering a refresh.
+if (require.main === module) {
+  main().then(s => {
+    if (s) { console.log('\n📰 Top:'); s.headlines.forEach(h => console.log(`   ${h}`)); }
+    console.log('Done.\n');
+  }).catch(e => { console.error('❌', e); process.exit(1); });
+}
 
-module.exports = { main };
+module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER };
