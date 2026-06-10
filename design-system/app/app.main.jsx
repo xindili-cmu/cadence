@@ -102,13 +102,9 @@ function SourcesGrid({ stories, category, onPickSource }) {
       latest: b ? b.latest : null,
     };
   });
-  // Outlets seen in the feed but not in the wall (one-off domains Exa surfaced)
-  const listed = new Set(wall.map((s) => s.name));
-  const extras = Object.entries(live)
-    .filter(([name]) => !listed.has(name))
-    .map(([name, b]) => ({ name, kind: 'spotted', regions: [], count: b.count, cats: liveCats(b), latest: b.latest }));
-
-  let all = [...wall, ...extras];
+  // Wall only — one-off domains Exa surfaces still appear on their NewsCards,
+  // but the Sources directory shows exactly the curated first-party outlets.
+  let all = [...wall];
   if (category !== 'all') all = all.filter((s) => s.cats.includes(category));
   all.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
@@ -122,7 +118,7 @@ function SourcesGrid({ stories, category, onPickSource }) {
 const KIND_LABEL = {
   journal: 'Journal', database: 'Database', preprint: 'Preprint',
   association: 'Association', regulator: 'Regulator', news: 'News',
-  platform: 'Platform', spotted: 'Spotted in feed',
+  platform: 'Platform',
 };
 
 function FeedApp() {
