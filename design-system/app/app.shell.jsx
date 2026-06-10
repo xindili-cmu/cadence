@@ -10,7 +10,6 @@ function AppHeader({ query, onQuery }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-tertiary)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-pill)', padding: '2px 8px', whiteSpace: 'nowrap' }}>PT · Rehab · Evidence</span>
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
       </div>

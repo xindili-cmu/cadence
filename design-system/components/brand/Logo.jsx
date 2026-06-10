@@ -1,21 +1,20 @@
 import React from 'react';
 
-// Cadence mark — five staggered beat-bars with a long stride-slash sweeping
-// through (concept locked from Cindy's chosen generation, 2026-06-10).
-// Bars lean ~10° with rising baselines; the slash is the stride crossing
-// the metronome beats. Favicon uses a simplified 3-bar cut for 16px clarity.
+// Cadence mark — five staggered beat-bars + the stride slash, ALL parallel
+// at the same 18° lean (the bars are short strokes of the same gesture;
+// the slash is simply the long one). Favicon = simplified 3-bar cut.
 const BARS = [
-  { x: 3,    y: 21.5, h: 5.5 },
-  { x: 8,    y: 17,   h: 9.5 },
-  { x: 13,   y: 12.5, h: 13.5 },
-  { x: 25.5, y: 13,   h: 12 },
-  { x: 30.5, y: 19,   h: 5 },
+  { x: 1,    y: 21.5, h: 5.5 },
+  { x: 6,    y: 17,   h: 9.5 },
+  { x: 11,   y: 12.5, h: 13.5 },
+  { x: 23.5, y: 13,   h: 12 },
+  { x: 28.5, y: 19,   h: 5 },
 ];
 
 function Mark({ size, color }) {
   return (
     <svg width={size} height={size} viewBox="0 0 36 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
-      <g transform="translate(3.5 0) skewX(-10)">
+      <g transform="translate(8.5 0) skewX(-18.13)">
         {BARS.map((b, i) => (
           <rect key={i} x={b.x} y={b.y} width="2.6" height={b.h} rx="1.1" fill={color} />
         ))}
