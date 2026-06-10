@@ -37,7 +37,7 @@ const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'anthropic').toLowerCase();
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-flash-latest';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const DRY_RUN = process.env.DRY_RUN === 'true';
 
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
@@ -235,11 +235,28 @@ tags 规则：有 sub-tag axis 的分类（orthopedic / neurological / manual-mo
     ? await callGemini(systemPrompt, userPrompt)
     : await callAnthropic(systemPrompt, userPrompt);
   if (!text) return [];
+  return parseCuratedArray(text);
+}
 
+// Parse the LLM's JSON array; if the response was truncated mid-item,
+// salvage every complete object instead of dropping the whole batch.
+function parseCuratedArray(raw) {
+  let text = raw.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
+  const start = text.indexOf('[');
+  if (start === -1) { console.error('  Parse error: no JSON array in response'); return []; }
+  text = text.slice(start);
   try {
-    return JSON.parse(text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim());
+    return JSON.parse(text);
   } catch (e) {
-    console.error('  Parse error:', e.message);
+    console.error(`  Parse error: ${e.message} — attempting truncation salvage`);
+    for (let cut = text.lastIndexOf('}'); cut > 0; cut = text.lastIndexOf('}', cut - 1)) {
+      try {
+        const salvaged = JSON.parse(text.slice(0, cut + 1) + ']');
+        console.error(`  Salvaged ${salvaged.length} complete items from truncated response`);
+        return salvaged;
+      } catch { /* keep cutting */ }
+    }
+    console.error('  Salvage failed — 0 items');
     return [];
   }
 }
@@ -281,8 +298,11 @@ async function callGemini(systemPrompt, userPrompt) {
       systemInstruction: { parts: [{ text: systemPrompt }] },
       contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
       generationConfig: {
-        maxOutputTokens: 4000,
-        responseMimeType: 'application/json'
+        maxOutputTokens: 16384,
+        responseMimeType: 'application/json',
+        // Thinking tokens count toward maxOutputTokens — disable so the
+        // budget goes entirely to the JSON payload.
+        thinkingConfig: { thinkingBudget: 0 }
       }
     })
   });
