@@ -13,20 +13,14 @@ function AppHeader({ query, onQuery }) {
       {/* Masthead motto — quiet sans italic. (Cindy 2026-06-10: mono/uppercase/pill
           read as AI; Spectral italic at 13px too spindly. Plex Sans italic it is.) */}
       <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontSize: 12.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 1 }}>Keeping pace with the evidence</span>
+      {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
+          Search is the only header action. */}
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
       </div>
-      <button type="button" title="Notifications" style={iconBtn}><Icon name="bell" size={18} style={{ color: 'var(--text-secondary)' }} /></button>
-      <Button variant="primary" size="sm" iconStart="sun">8AM Brief</Button>
-      <span style={{ width: 30, height: 30, borderRadius: '999px', background: 'var(--green-700)', color: '#fff', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600 }}>JD</span>
     </header>
   );
 }
-
-const iconBtn = {
-  width: 34, height: 34, display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-  background: 'transparent', border: '1px solid transparent', borderRadius: 'var(--radius-md)', cursor: 'pointer',
-};
 
 // NavRail v2 — pure navigation. The "Following" hardcoded outlet list was
 // removed 2026-06-09 once Sources view shipped: it auto-builds the real list
