@@ -18,18 +18,26 @@
  * Pipeline: Exa search → deduplicate → Claude curation → news.json
  *
  * Env vars:
- *   EXA_API_KEY, ANTHROPIC_API_KEY
+ *   EXA_API_KEY — required
+ *   LLM_PROVIDER — 'anthropic' (default) or 'gemini'
+ *   ANTHROPIC_API_KEY — required when LLM_PROVIDER=anthropic
+ *   GEMINI_API_KEY — required when LLM_PROVIDER=gemini (free tier OK: 1 call/day)
+ *   GEMINI_MODEL — optional, defaults to gemini-flash-latest
  *
  * Usage:
  *   node scripts/news-refresh.js
  *   DRY_RUN=true node scripts/news-refresh.js
+ *   LLM_PROVIDER=gemini GEMINI_API_KEY=... node scripts/news-refresh.js
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
+const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'anthropic').toLowerCase();
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-flash-latest';
 const DRY_RUN = process.env.DRY_RUN === 'true';
 
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
@@ -221,6 +229,22 @@ tags 规则：有 sub-tag axis 的分类（orthopedic / neurological / manual-mo
 
 只保留 curatedScore >= 65 的条目。`;
 
+  const userPrompt = `请策展以下 ${items.length} 条新闻：\n\n${JSON.stringify(items, null, 2)}`;
+
+  const text = LLM_PROVIDER === 'gemini'
+    ? await callGemini(systemPrompt, userPrompt)
+    : await callAnthropic(systemPrompt, userPrompt);
+  if (!text) return [];
+
+  try {
+    return JSON.parse(text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim());
+  } catch (e) {
+    console.error('  Parse error:', e.message);
+    return [];
+  }
+}
+
+async function callAnthropic(systemPrompt, userPrompt) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -232,23 +256,44 @@ tags 规则：有 sub-tag axis 的分类（orthopedic / neurological / manual-mo
       model: 'claude-haiku-4-5-20251001',
       max_tokens: 4000,
       system: systemPrompt,
-      messages: [{ role: 'user', content: `请策展以下 ${items.length} 条新闻：\n\n${JSON.stringify(items, null, 2)}` }]
+      messages: [{ role: 'user', content: userPrompt }]
     })
   });
 
   if (!res.ok) {
-    console.error(`  Claude error: ${res.status}`);
-    return [];
+    console.error(`  Claude error: ${res.status} ${(await res.text()).slice(0, 200)}`);
+    return '';
   }
 
   const data = await res.json();
-  const text = data.content?.map(c => c.text || '').join('') || '';
-  try {
-    return JSON.parse(text.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim());
-  } catch (e) {
-    console.error('  Parse error:', e.message);
-    return [];
+  return data.content?.map(c => c.text || '').join('') || '';
+}
+
+async function callGemini(systemPrompt, userPrompt) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': GEMINI_API_KEY
+    },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+      contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
+      generationConfig: {
+        maxOutputTokens: 4000,
+        responseMimeType: 'application/json'
+      }
+    })
+  });
+
+  if (!res.ok) {
+    console.error(`  Gemini error: ${res.status} ${(await res.text()).slice(0, 200)}`);
+    return '';
   }
+
+  const data = await res.json();
+  return data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('') || '';
 }
 
 // ── Dedup ───────────────────────────────────────────────────────────────────
@@ -268,7 +313,9 @@ function dedup(items) {
 async function main() {
   console.log(`\n⚡ Cadence PT News Refresh — ${new Date().toISOString()}`);
   if (DRY_RUN) { console.log('  DRY_RUN mode\n'); return; }
-  if (!EXA_API_KEY || !ANTHROPIC_API_KEY) { console.error('❌ Missing API keys'); process.exit(1); }
+  const llmKey = LLM_PROVIDER === 'gemini' ? GEMINI_API_KEY : ANTHROPIC_API_KEY;
+  if (!EXA_API_KEY || !llmKey) { console.error(`❌ Missing API keys (EXA_API_KEY + ${LLM_PROVIDER === 'gemini' ? 'GEMINI_API_KEY' : 'ANTHROPIC_API_KEY'})`); process.exit(1); }
+  console.log(`  LLM provider: ${LLM_PROVIDER}`);
 
   let raw = [];
   for (const cat of CATEGORY_QUERIES) {

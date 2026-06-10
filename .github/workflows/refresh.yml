@@ -29,7 +29,12 @@ jobs:
       - name: Run PT news refresh
         env:
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          # LLM provider switch: set repo Variable LLM_PROVIDER=gemini (Settings →
+          # Secrets and variables → Actions → Variables) + Secret GEMINI_API_KEY
+          # to run on Gemini's free tier; defaults to anthropic.
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/news-refresh.js
 
       - name: Commit news.json (with rebase retry)
