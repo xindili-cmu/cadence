@@ -15,7 +15,8 @@
  * Audience: clinicians (practicing + academic). NOT patient-facing.
  * Geo: US + China + Australia.
  *
- * Pipeline: Exa search → deduplicate → Claude curation → news.json
+ * Pipeline: Exa search → cluster (dedup + related sources) → Claude curation
+ *           → merge → hot topics (multi-source heat, time decay) → news.json
  *
  * Env vars:
  *   EXA_API_KEY — required
@@ -216,13 +217,19 @@ tags 规则：
 评分标准（信号质量为核心）：
 - 90+ = 临床实践改变级别：高水平证据更新（大样本 RCT / 系统综述推翻或确立干预）、重大监管 / 报销变化
 - 80-89 = 重要进展，值得临床医师 deep dive
-- 70-79 = 有参考价值的研究 / 新闻
+- 70-79 = 扎实但非实践改变级的研究 / 新闻
 - 60-69 = 一般动态
 - <60 = 噪音（会议预告、产品软文、患者向科普、内容农场转载）
 
 编辑标准：
 - summary：1-2 句中性英文，front-load "what changed"。研究类必带样本量 + 关键效应量（或 p 值 / CI），原文没给就不编造。
-- curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——这条研究/新闻怎么改变他的临床判断 / 患者管理 / 技术选择 / 执业决策。
+- curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么、该做什么、别做什么。
+  - 禁止条件句开头（"如果你在使用…"、"如果你关注…"、"如果你治疗…"）——默认读者就是干这行的，直接说事。
+  - 禁止空效用措辞："有参考价值"、"帮助你决策"、"值得关注"、"提供了依据/证据/支持"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
+  - 口吻是资深同行，不是客服。可以泼冷水（"证据只有短期小样本，别急着写进常规方案"），可以站队（"这基本坐实了运动疗法该是一线"）。
+  - 反例（禁止这种写法）："如果你在使用或考虑为患者推荐腰骶矫形器，这篇综述能为你提供基于证据的考量，帮助你决策。"
+  - 正例："腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。"
+  - 正例："5 年随访坐实了运动疗法对退行性半月板撕裂的非劣效。下次跟骨科讨论转诊，这是你手里最硬的一张牌。"
 - 数字优先于形容词（样本量、效应量、报销金额、生效日期）。不用 emoji。
 - 不夸大研究结论：单个小样本研究不写成实践改变；研究限制（样本量小、无对照、随访短、行业资助）在 curatedReason 里点出。
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
@@ -335,16 +342,100 @@ async function callGemini(systemPrompt, userPrompt) {
   return '';
 }
 
-// ── Dedup ───────────────────────────────────────────────────────────────────
+// ── Dedup / clustering ──────────────────────────────────────────────────────
+// AIHOT-style: same story reported by several outlets collapses into ONE main
+// card; the other outlets are kept as `related` (关联讨论) instead of dropped.
+// Cluster key = exact normalized title; fuzzy match = token-set Jaccard
+// (word tokens for latin, char-bigrams for CJK so Chinese titles cluster too).
 
-function dedup(items) {
-  const seen = new Map();
-  return items.filter(item => {
-    const key = item.title.toLowerCase().replace(/[^a-z0-9一-鿿]/g, '').substring(0, 60);
-    if (seen.has(key)) return false;
-    seen.set(key, true);
-    return true;
+function titleKey(title) {
+  return (title || '').toLowerCase().replace(/[^a-z0-9一-鿿]/g, '').substring(0, 60);
+}
+
+function canonicalUrl(url) {
+  try {
+    const u = new URL(url);
+    return (u.hostname.replace('www.', '') + u.pathname).replace(/\/$/, '').toLowerCase();
+  } catch { return url || ''; }
+}
+
+function titleTokens(title) {
+  const t = (title || '').toLowerCase();
+  if (/[一-鿿]/.test(t)) {
+    const s = t.replace(/[^a-z0-9一-鿿]/g, '');
+    const grams = new Set();
+    for (let i = 0; i < s.length - 1; i++) grams.add(s.slice(i, i + 2));
+    return grams;
+  }
+  return new Set(t.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(w => w.length >= 3));
+}
+
+function jaccard(a, b) {
+  if (!a.size || !b.size) return 0;
+  let inter = 0;
+  for (const x of a) if (b.has(x)) inter++;
+  return inter / (a.size + b.size - inter);
+}
+
+function sameStory(a, b) {
+  if (canonicalUrl(a.sourceUrl || a.url) === canonicalUrl(b.sourceUrl || b.url)) return true;
+  if (titleKey(a.title) === titleKey(b.title)) return true;
+  return jaccard(titleTokens(a.title), titleTokens(b.title)) >= 0.55;
+}
+
+// Collapse a list into clusters. keepBest picks the main card; the rest become
+// related entries (one per distinct source domain). Works both on raw Exa
+// results (pre-curation) and on final items (merge with yesterday's feed).
+function clusterItems(items, keepBest) {
+  const clusters = [];
+  for (const item of items) {
+    const hit = clusters.find(c => sameStory(c.main, item));
+    if (hit) hit.members.push(item);
+    else clusters.push({ main: item, members: [item] });
+  }
+  return clusters.map(c => {
+    const sorted = [...c.members].sort(keepBest);
+    const main = { ...sorted[0] };
+    const seenSrc = new Set([main.source]);
+    const related = [...(main.related || [])];
+    related.forEach(r => seenSrc.add(r.source));
+    for (const m of sorted.slice(1)) {
+      for (const r of [{ source: m.source, sourceUrl: m.sourceUrl || m.url, title: m.title }, ...(m.related || [])]) {
+        if (!r.source || seenSrc.has(r.source)) continue;
+        seenSrc.add(r.source);
+        related.push({ source: r.source, sourceUrl: r.sourceUrl, title: r.title });
+      }
+    }
+    if (related.length) main.related = related;
+    return main;
   });
+}
+
+const byExaScore = (a, b) => (b.score || 0) - (a.score || 0);
+const byCuratedScore = (a, b) => (b.curatedScore || 0) - (a.curatedScore || 0);
+
+// ── Hot topics (当前热点) ────────────────────────────────────────────────────
+// Heat = distinct-source count with exponential time decay (half-life 2 days).
+// Only stories covered by ≥2 independent sources qualify; empty array on
+// quiet days → the frontend hides the strip entirely.
+
+function computeHotTopics(items) {
+  const now = Date.now();
+  return items
+    .map(i => {
+      const sourceCount = 1 + (i.related?.length || 0);
+      const ageDays = Math.max(0, (now - new Date(i.publishedAt).getTime()) / 86400000);
+      const heat = sourceCount * Math.pow(0.5, ageDays / 2);
+      return {
+        id: i.id, title: i.title, sourceUrl: i.sourceUrl, category: i.category,
+        publishedAt: i.publishedAt, sourceCount,
+        sources: [i.source, ...(i.related || []).map(r => r.source)],
+        heat: Math.round(heat * 100) / 100
+      };
+    })
+    .filter(t => t.sourceCount >= 2 && t.heat >= 1.2)
+    .sort((a, b) => b.heat - a.heat)
+    .slice(0, 5);
 }
 
 // ── Main ────────────────────────────────────────────────────────────────────
@@ -368,9 +459,9 @@ async function main() {
   }
 
   console.log(`\n📊 Raw: ${raw.length}`);
-  const unique = dedup(raw);
-  unique.sort((a, b) => (b.score || 0) - (a.score || 0));
-  console.log(`   Unique: ${unique.length}`);
+  const unique = clusterItems(raw, byExaScore);
+  unique.sort(byExaScore);
+  console.log(`   Unique: ${unique.length} (${unique.filter(u => u.related?.length).length} multi-source)`);
 
   console.log(`\n🤖 Curating with Claude...`);
   const curated = await curateWithClaude(unique);
@@ -389,7 +480,8 @@ async function main() {
       publishedAt: o.publishedDate,
       curatedScore: c.curatedScore,
       curatedReason: c.curatedReason,
-      tags: c.tags || []
+      tags: c.tags || [],
+      ...(o.related?.length ? { related: o.related } : {})
     };
   }).filter(Boolean).sort((a, b) => b.curatedScore - a.curatedScore);
 
@@ -401,7 +493,11 @@ async function main() {
     existing = (old.items || []).filter(i => new Date(i.publishedAt) > cutoff);
   } catch {}
 
-  const merged = dedup([...final, ...existing]).slice(0, MAX_ITEMS);
+  // Cluster-aware merge: a re-found story unions its related-source list
+  // instead of being silently dropped, so heat can build across days.
+  const merged = clusterItems([...final, ...existing], byCuratedScore).slice(0, MAX_ITEMS);
+  const hotTopics = computeHotTopics(merged);
+  console.log(`   Hot topics: ${hotTopics.length}`);
 
   fs.writeFileSync(NEWS_PATH, JSON.stringify({
     meta: {
@@ -409,6 +505,7 @@ async function main() {
       totalItems: merged.length,
       categories: ['orthopedic', 'neurological', 'sports', 'pediatric', 'geriatric', 'cardiopulmonary', 'manual-modality', 'practice']
     },
+    hotTopics,
     items: merged
   }, null, 2));
 
