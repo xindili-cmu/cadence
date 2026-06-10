@@ -7,8 +7,8 @@ const BARS = [
   { x: 1,    y: 21.5, h: 5.5 },
   { x: 6,    y: 17,   h: 9.5 },
   { x: 11,   y: 12.5, h: 13.5 },
-  { x: 23.5, y: 13,   h: 12 },
-  { x: 28.5, y: 19,   h: 5 },
+  { x: 21,   y: 13,   h: 12 },
+  { x: 26,   y: 19,   h: 5 },
 ];
 
 function Mark({ size, color }) {
@@ -16,10 +16,10 @@ function Mark({ size, color }) {
     <svg width={size} height={size} viewBox="0 0 36 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
       <g transform="translate(8.5 0) skewX(-18.13)">
         {BARS.map((b, i) => (
-          <rect key={i} x={b.x} y={b.y} width="2.6" height={b.h} rx="1.1" fill={color} />
+          <rect key={i} x={b.x} y={b.y} width="2.6" height={b.h} fill={color} />
         ))}
       </g>
-      <line x1="18" y1="30.5" x2="27.5" y2="1.5" stroke={color} strokeWidth="3" strokeLinecap="round" />
+      <line x1="15.8" y1="30.5" x2="25.3" y2="1.5" stroke={color} strokeWidth="3" strokeLinecap="butt" />
     </svg>
   );
 }
