@@ -325,7 +325,11 @@ async function fetchScrapes() {
   let ledgerDirty = false;
 
   for (const s of SOURCES) {
-    for (const listUrl of s.scrape || []) {
+    for (const entry of s.scrape || []) {
+      // Entries are either a bare URL string or {url, category} for listing
+      // pages that map 1:1 onto a PT vertical (e.g. dxy.cn/sub/5 = 骨科).
+      const listUrl = typeof entry === 'string' ? entry : entry.url;
+      const presetCat = typeof entry === 'object' && entry.category ? entry.category : null;
       try {
         const res = await fetch(listUrl, { headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; CadenceBot/1.0; PT news aggregator)',
@@ -358,7 +362,7 @@ async function fetchScrapes() {
           out.push({
             title: l.title, url: l.url, text: '', highlights: '',
             publishedDate: new Date().toISOString(), // discovery time
-            score: 0.5, source: s.name, category: null
+            score: 0.5, source: s.name, category: presetCat
           });
         }
         console.log(`   scrape:${s.name} → ${links.size} links, ${bootstrap ? 'bootstrap snapshot' : fresh + ' new'}`);
