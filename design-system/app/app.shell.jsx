@@ -12,7 +12,7 @@ function AppHeader({ query, onQuery }) {
       <Logo variant="lockup" height={22} />
       {/* Masthead motto — italic display serif, no box. (Cindy 2026-06-10: the
           mono/uppercase/pill treatment read as AI-generated; newspaper-motto style.) */}
-      <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 13, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Evidence in motion</span>
+      <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 13, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
       </div>
