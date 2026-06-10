@@ -104,11 +104,11 @@ function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...res
 
   const Wordmark = (
     <span style={{
-      fontFamily: 'var(--font-sans)', fontWeight: 700, fontSize: height,
+      fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: height,
       letterSpacing: '-0.018em', lineHeight: 1, whiteSpace: 'nowrap',
       color: inverse ? '#FFFFFF' : 'var(--ink-900)',
     }}>
-      Ca<span style={{ fontWeight: 600, color: inverse ? 'var(--blue-300)' : 'var(--blue-600)' }}>dence</span>
+      Ca<span style={{ color: inverse ? 'var(--blue-300)' : 'var(--blue-600)' }}>dence</span>
     </span>
   );
 
