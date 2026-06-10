@@ -219,8 +219,7 @@ function FeedApp() {
           {/* Sources directory branch — short-circuits feed rendering.
               No specialty tabs here: the wall groups by outlet kind instead. */}
           {isSources && (
-            <>
-              <SourcesGrid stories={window.CD_STORIES || []} onPickSource={(name) => { setView('all'); setQuery(name); }} />
+            <SourcesGrid stories={window.CD_STORIES || []} onPickSource={(name) => { setView('all'); setQuery(name); }} />
           )}
 
           {/* Daily brief editorial lead — fixed copy until Critic generates one per cron */}
