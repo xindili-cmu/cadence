@@ -69,7 +69,14 @@ window.CD_DATA_READY = (async () => {
     const data = await newsRes.json();
     window.CD_STORIES = (data.items || []).map(cdTransformItem);
     window.CD_META = data.meta || {};
-    window.CD_HOT = data.hotTopics || [];  // multi-source hot topics; empty = strip hidden
+    // Multi-source hot topics; empty = strip hidden. Heat is recomputed
+    // client-side (same formula as the cron: sources × 0.5^(days/2)) because
+    // quiet-hour runs skip the news.json write — without this, decay freezes
+    // and a stale topic could stay pinned for days.
+    window.CD_HOT = (data.hotTopics || [])
+      .map((t) => ({ ...t, heat: t.sourceCount * Math.pow(0.5, Math.max(0, (Date.now() - new Date(t.publishedAt)) / 86400000) / 2) }))
+      .filter((t) => t.heat >= 1.2)
+      .sort((a, b) => b.heat - a.heat);
     window.CD_SOURCES = srcRes.ok ? await srcRes.json() : [];
   } catch (err) {
     console.error('[Cadence] data load failed:', err);

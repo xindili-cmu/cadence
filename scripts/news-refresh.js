@@ -40,6 +40,10 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
 const DRY_RUN = process.env.DRY_RUN === 'true';
+// 'full' = Exa + PubMed + RSS (daily sweep). 'direct' = PubMed + RSS only —
+// free to run, so it polls every 2h AIHOT-style; exits before the LLM call
+// when nothing new arrived, so quiet runs cost zero.
+const REFRESH_MODE = (process.env.REFRESH_MODE || 'full').toLowerCase();
 
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 
@@ -583,17 +587,20 @@ async function main() {
   console.log(`\n⚡ Cadence PT News Refresh — ${new Date().toISOString()}`);
   if (DRY_RUN) { console.log('  DRY_RUN mode\n'); return; }
   const llmKey = LLM_PROVIDER === 'gemini' ? GEMINI_API_KEY : ANTHROPIC_API_KEY;
-  if (!EXA_API_KEY || !llmKey) { console.error(`❌ Missing API keys (EXA_API_KEY + ${LLM_PROVIDER === 'gemini' ? 'GEMINI_API_KEY' : 'ANTHROPIC_API_KEY'})`); process.exit(1); }
-  console.log(`  LLM provider: ${LLM_PROVIDER}`);
+  const needExa = REFRESH_MODE !== 'direct';
+  if ((needExa && !EXA_API_KEY) || !llmKey) { console.error(`❌ Missing API keys (${needExa ? 'EXA_API_KEY + ' : ''}${LLM_PROVIDER === 'gemini' ? 'GEMINI_API_KEY' : 'ANTHROPIC_API_KEY'})`); process.exit(1); }
+  console.log(`  LLM provider: ${LLM_PROVIDER} · mode: ${REFRESH_MODE}`);
 
   let raw = [];
-  for (const cat of CATEGORY_QUERIES) {
-    console.log(`📡 ${cat.category}`);
-    for (const q of cat.queries) {
-      const r = await searchExa(q, 4);
-      raw.push(...r.map(x => ({ ...x, category: cat.category })));
-      console.log(`   "${q}" → ${r.length}`);
-      await new Promise(r => setTimeout(r, 200));
+  if (needExa) {
+    for (const cat of CATEGORY_QUERIES) {
+      console.log(`📡 ${cat.category}`);
+      for (const q of cat.queries) {
+        const r = await searchExa(q, 4);
+        raw.push(...r.map(x => ({ ...x, category: cat.category })));
+        console.log(`   "${q}" → ${r.length}`);
+        await new Promise(r => setTimeout(r, 200));
+      }
     }
   }
 
@@ -605,7 +612,22 @@ async function main() {
 
   console.log(`\n📊 Raw: ${raw.length}`);
   const fresh = dropStaleByUrl(raw);
-  const unique = clusterItems(fresh, byExaScore);
+
+  // Incremental gate: drop URLs the feed already carries (as main cards or
+  // related coverage). High-frequency direct runs exit here on quiet hours —
+  // no LLM call, no news.json write, no deploy churn.
+  const seen = new Set();
+  try {
+    for (const i of JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8')).items || []) {
+      seen.add(canonicalUrl(i.sourceUrl));
+      for (const r of i.related || []) seen.add(canonicalUrl(r.sourceUrl));
+    }
+  } catch {}
+  const novel = fresh.filter(i => !seen.has(canonicalUrl(i.url)));
+  console.log(`   New since last run: ${novel.length} (${fresh.length - novel.length} already in feed)`);
+  if (!novel.length) { console.log('\n💤 Nothing new — skipping curation and write.'); return; }
+
+  const unique = clusterItems(novel, byExaScore);
   unique.sort(byExaScore);
   console.log(`   Unique: ${unique.length} (${unique.filter(u => u.related?.length).length} multi-source)`);
 

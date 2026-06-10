@@ -2,9 +2,19 @@ name: PT News Refresh
 
 on:
   schedule:
-    # Daily PT news refresh at 07:00 UTC (= 3pm Beijing, morning Pacific)
+    # Daily FULL sweep (Exa + PubMed + RSS) at 07:00 UTC (= 3pm Beijing)
     - cron: '0 7 * * *'
+    # AIHOT-style high-frequency polling: PubMed + RSS only (the free legs),
+    # every 2h at :25. The script exits before the LLM call when nothing new
+    # arrived, so quiet runs cost nothing and write nothing.
+    - cron: '25 */2 * * *'
   workflow_dispatch:  # allow manual trigger from Actions tab
+    inputs:
+      mode:
+        description: 'full = Exa+PubMed+RSS · direct = PubMed+RSS only'
+        type: choice
+        options: [full, direct]
+        default: full
 
 permissions:
   contents: write
@@ -35,6 +45,9 @@ jobs:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # 2-hourly cron → free direct legs; daily 07:00 cron and manual
+          # dispatch (unless overridden) → full sweep.
+          REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/news-refresh.js
 
       - name: Commit news.json (with race-safe retry)
