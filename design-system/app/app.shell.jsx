@@ -10,9 +10,9 @@ function AppHeader({ query, onQuery }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      {/* Masthead motto — italic display serif, no box. (Cindy 2026-06-10: the
-          mono/uppercase/pill treatment read as AI-generated; newspaper-motto style.) */}
-      <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 13, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+      {/* Masthead motto — quiet sans italic. (Cindy 2026-06-10: mono/uppercase/pill
+          read as AI; Spectral italic at 13px too spindly. Plex Sans italic it is.) */}
+      <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontSize: 12.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 1 }}>Keeping pace with the evidence</span>
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
       </div>
