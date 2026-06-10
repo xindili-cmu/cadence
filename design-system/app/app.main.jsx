@@ -1,4 +1,4 @@
-// GreenStack UI kit — main feed screen + composition root.
+// Cadence UI kit — main feed screen + composition root.
 const { NewsCard, CategoryTabs, Button, Icon } = window;
 
 // Day labels computed from real Date so they update with the calendar.
@@ -17,10 +17,10 @@ const DAY_LABELS = {
 
 function FeedToolbar({ view, count }) {
   const meta = {
-    curated: { title: 'Curated', sub: 'AI-selected ESG signal · updated 08:10' },
+    curated: { title: 'Curated', sub: 'AI-selected PT signal · updated daily' },
     all: { title: 'All stories', sub: 'Full firehose across every source' },
     daily: { title: 'Daily brief', sub: 'Yesterday, packaged into eight sections' },
-    sources: { title: 'Sources', sub: 'Outlets GreenStack monitors' },
+    sources: { title: 'Sources', sub: 'Outlets Cadence monitors' },
     saved: { title: 'Saved', sub: 'Stories you bookmarked' },
   }[view] || { title: 'Curated', sub: '' };
   return (
@@ -36,7 +36,7 @@ function FeedToolbar({ view, count }) {
 }
 
 // ── Sources directory view ──────────────────────────────────────────────────
-// Auto-generated from window.GS_STORIES — no auth, no static config drift.
+// Auto-generated from window.CD_STORIES — no auth, no static config drift.
 // Layout: 2-column grid of source cards, sorted by story count desc.
 // Each card shows name, count, top categories covered (max 3), latest story
 // title + relative time ago.
@@ -128,7 +128,7 @@ function FeedApp() {
   }, []);
 
   // Source-of-truth filter — search + category narrowing applies to every view.
-  let stories = window.GS_STORIES.filter((s) => {
+  let stories = window.CD_STORIES.filter((s) => {
     if (category !== 'all' && s.category !== category) return false;
     if (q && !(s.title.toLowerCase().includes(q) || s.source.toLowerCase().includes(q) || s.summary.toLowerCase().includes(q))) return false;
     return true;
@@ -142,7 +142,7 @@ function FeedApp() {
   }
 
   // Curated / All grouping = by day (today / yesterday / older).
-  // Daily brief grouping  = by category (one section per ESG cat in CATEGORIES order),
+  // Daily brief grouping  = by category (one section per PT cat in CATEGORIES order),
   //                         within each section sorted by score desc, capped to 5.
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
@@ -185,7 +185,7 @@ function FeedApp() {
                 background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
                 <CategoryTabs value={category} onChange={setCategory} />
               </div>
-              <SourcesGrid stories={window.GS_STORIES || []} category={category} onPickSource={(name) => { setView('all'); setQuery(name); }} />
+              <SourcesGrid stories={window.CD_STORIES || []} category={category} onPickSource={(name) => { setView('all'); setQuery(name); }} />
             </>
           )}
 
@@ -194,7 +194,7 @@ function FeedApp() {
             <div style={{ marginBottom: 24, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>Yesterday's signal</div>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, lineHeight: 1.5, color: 'var(--text-primary)' }}>
-                {stories.length} ESG stories across {grouped.length} sectors yesterday. Top signal: <em>{stories.length && [...stories].sort((a, b) => b.score - a.score)[0].title}</em>.
+                {stories.length} PT stories across {grouped.length} specialties yesterday. Top signal: <em>{stories.length && [...stories].sort((a, b) => b.score - a.score)[0].title}</em>.
               </p>
             </div>
           )}
@@ -245,7 +245,7 @@ function FeedApp() {
 
         {!isSources && (
           <DigestRail
-            stories={window.GS_STORIES.filter((s) => s.day === (isDaily ? 'yesterday' : 'today'))}
+            stories={window.CD_STORIES.filter((s) => s.day === (isDaily ? 'yesterday' : 'today'))}
             onPick={scrollToStory} />
         )}
       </div>
@@ -253,12 +253,12 @@ function FeedApp() {
   );
 }
 
-// Wait for news.json to load (via app.data.jsx's GS_DATA_READY promise) before
+// Wait for news.json to load (via app.data.jsx's CD_DATA_READY promise) before
 // first render so the feed doesn't flash empty. If app.data.jsx didn't expose a
 // promise (older revisions), render immediately as a graceful fallback.
 const _gsRender = () => ReactDOM.createRoot(document.getElementById('root')).render(<FeedApp />);
-if (window.GS_DATA_READY && typeof window.GS_DATA_READY.then === 'function') {
-  window.GS_DATA_READY.then(_gsRender);
+if (window.CD_DATA_READY && typeof window.CD_DATA_READY.then === 'function') {
+  window.CD_DATA_READY.then(_gsRender);
 } else {
   _gsRender();
 }

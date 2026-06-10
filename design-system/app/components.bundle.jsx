@@ -1,26 +1,27 @@
 // AUTO-GENERATED from components/** — do not edit by hand.
-// Regenerate by re-running the concat script. Exposes all components as globals.
+// Regenerate: node scripts/build-bundle.js. Exposes all components as globals.
 const { useState, useRef, useEffect } = React;
 
 
 /* ===== components/feed/categories.js ===== */
-// GreenStack feed categories — shared config consumed by CategoryTag,
+// Cadence feed categories — shared config consumed by CategoryTag,
 // CategoryTabs and NewsCard. Colors resolve to --cat-<accent>* tokens.
+// Slug authority for the whole system; scripts/news-refresh.js must match.
 const CATEGORIES = [
-  { id: 'clean-power',     label: 'Clean Power',                 short: 'Clean Power',     icon: 'sun',              accent: 'power' },
-  { id: 'electrification', label: 'Electrification & Efficiency', short: 'Electrification', icon: 'battery-charging', accent: 'electric' },
-  { id: 'industrial',      label: 'Industrial Decarbonization',  short: 'Industrial',      icon: 'factory',          accent: 'industrial' },
-  { id: 'grid',            label: 'Grid Tech',                   short: 'Grid Tech',       icon: 'waypoints',        accent: 'grid' },
-  { id: 'robotics',        label: 'Robotics & Physical AI',      short: 'Robotics',        icon: 'bot',              accent: 'robotics' },
-  { id: 'agriculture',     label: 'Agriculture & Food',          short: 'Agriculture',     icon: 'sprout',           accent: 'agri' },
-  { id: 'social',          label: 'Social',                      short: 'Social',          icon: 'users',            accent: 'social' },
-  { id: 'governance',      label: 'Governance',                  short: 'Governance',      icon: 'scale',            accent: 'governance' },
+  { id: 'orthopedic',      label: 'Orthopedic',                  short: 'Ortho',      icon: 'bone',            accent: 'ortho' },
+  { id: 'neurological',    label: 'Neurological',                short: 'Neuro',      icon: 'brain',           accent: 'neuro' },
+  { id: 'sports',          label: 'Sports & Athletic',           short: 'Sports',     icon: 'activity',        accent: 'sports' },
+  { id: 'pediatric',       label: 'Pediatric',                   short: 'Pediatric',  icon: 'baby',            accent: 'pediatric' },
+  { id: 'geriatric',       label: 'Geriatric',                   short: 'Geriatric',  icon: 'person-standing', accent: 'geriatric' },
+  { id: 'cardiopulmonary', label: 'Cardiopulmonary',             short: 'Cardiopulm', icon: 'heart-pulse',     accent: 'cardiopulm' },
+  { id: 'manual-modality', label: 'Manual Therapy & Modalities', short: 'Manual',     icon: 'hand',            accent: 'manual' },
+  { id: 'practice',        label: 'Practice & Profession',       short: 'Practice',   icon: 'briefcase',       accent: 'practice' },
 ];
 
 const CATEGORY_MAP = CATEGORIES.reduce((m, c) => { m[c.id] = c; return m; }, {});
 
 function getCategory(id) {
-  return CATEGORY_MAP[id] || { id, label: id, short: id, icon: 'circle', accent: 'electric' };
+  return CATEGORY_MAP[id] || { id, label: id, short: id, icon: 'circle', accent: 'practice' };
 }
 
 // CSS custom-property names for a category's accent trio.
@@ -34,7 +35,6 @@ function catVars(accent) {
 
 
 /* ===== components/core/Icon.jsx ===== */
-
 /**
  * Icon — thin wrapper over Lucide (loaded globally as `window.lucide`).
  * Renders an <i data-lucide> placeholder and asks Lucide to swap it for an
@@ -42,9 +42,9 @@ function catVars(accent) {
  * `size` prop (px). Keep Lucide's CDN script on the host page.
  */
 function Icon({ name, size = 18, strokeWidth = 1.75, style, className, ...rest }) {
-  const ref = React.useRef(null);
+  const ref = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const host = ref.current;
     if (!host || !window.lucide) return;
     host.innerHTML = '';
@@ -73,29 +73,30 @@ function Icon({ name, size = 18, strokeWidth = 1.75, style, className, ...rest }
 
 
 /* ===== components/brand/Logo.jsx ===== */
-
+// PLACEHOLDER pulse-bar mark — three bars in a walking-cadence rhythm.
+// Designer round 2 ships the final Cadence mark; replace STACK + Mark then.
 const STACK = [
-  { x: 6,  y: 20.5, o: 0.62 },
-  { x: 9,  y: 14.2, o: 0.82 },
-  { x: 12, y: 7.9,  o: 1 },
+  { x: 7,  h: 9,  o: 0.6 },
+  { x: 14, h: 16, o: 0.85 },
+  { x: 21, h: 12, o: 1 },
 ];
 
 /**
- * Logo — the GreenStack mark and lockup.
+ * Logo — the Cadence mark and lockup. (Placeholder until designer round 2.)
  * `variant`: 'lockup' (mark + wordmark, default) · 'wordmark' · 'mark'.
- * `tone`: 'default' (green tile / ink wordmark) · 'inverse' (for dark backgrounds).
+ * `tone`: 'default' (blue tile / ink wordmark) · 'inverse' (for dark backgrounds).
  * Sizes scale from `height` (mark + wordmark cap height in px).
  */
 function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...rest }) {
   const inverse = tone === 'inverse';
-  const tile = inverse ? 'var(--green-600)' : 'var(--green-700)';
+  const tile = inverse ? 'var(--blue-500)' : 'var(--blue-600)';
   const tileSize = Math.round(height * 1.34);
 
   const Mark = (
     <svg width={tileSize} height={tileSize} viewBox="0 0 32 32" style={{ display: 'block', flex: 'none' }} aria-hidden="true">
       <rect width="32" height="32" rx="8" fill={tile} />
       {STACK.map((b, i) => (
-        <rect key={i} x={b.x} y={b.y} width="15" height="3.6" rx="1.8" fill="#FFFFFF" fillOpacity={b.o} />
+        <rect key={i} x={b.x} y={26 - b.h} width="4" height={b.h} rx="2" fill="#FFFFFF" fillOpacity={b.o} />
       ))}
     </svg>
   );
@@ -106,18 +107,18 @@ function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...res
       letterSpacing: '-0.018em', lineHeight: 1, whiteSpace: 'nowrap',
       color: inverse ? '#FFFFFF' : 'var(--ink-900)',
     }}>
-      Green<span style={{ fontWeight: 600, color: inverse ? 'var(--green-300)' : 'var(--green-700)' }}>Stack</span>
+      Ca<span style={{ fontWeight: 600, color: inverse ? 'var(--blue-300)' : 'var(--blue-600)' }}>dence</span>
     </span>
   );
 
   if (variant === 'mark') {
-    return <span role="img" aria-label="GreenStack" style={{ display: 'inline-flex', ...style }} {...rest}>{Mark}</span>;
+    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Mark}</span>;
   }
   if (variant === 'wordmark') {
-    return <span role="img" aria-label="GreenStack" style={{ display: 'inline-flex', ...style }} {...rest}>{Wordmark}</span>;
+    return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Wordmark}</span>;
   }
   return (
-    <span role="img" aria-label="GreenStack" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.42), ...style }} {...rest}>
+    <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.42), ...style }} {...rest}>
       {Mark}{Wordmark}
     </span>
   );
@@ -125,7 +126,6 @@ function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...res
 
 
 /* ===== components/core/Button.jsx ===== */
-
 const SIZES = {
   sm: { height: 30, padding: '0 12px', font: 13, gap: 6, icon: 15 },
   md: { height: 38, padding: '0 16px', font: 14, gap: 7, icon: 17 },
@@ -166,7 +166,7 @@ function Button({
   children, variant = 'primary', size = 'md', iconStart, iconEnd,
   disabled = false, fullWidth = false, onClick, type = 'button', style, ...rest
 }) {
-  const [hover, setHover] = React.useState(false);
+  const [hover, setHover] = useState(false);
   const s = SIZES[size] || SIZES.md;
   const vs = variantStyle(variant, disabled);
 
@@ -203,7 +203,6 @@ function Button({
 
 
 /* ===== components/core/Input.jsx ===== */
-
 /**
  * Input — single-line text / search field with optional leading icon.
  * Use `icon="search"` for the feed search box.
@@ -212,7 +211,7 @@ function Input({
   value, defaultValue, onChange, placeholder, icon, type = 'text',
   size = 'md', disabled = false, fullWidth = true, onKeyDown, style, ...rest
 }) {
-  const [focus, setFocus] = React.useState(false);
+  const [focus, setFocus] = useState(false);
   const dims = size === 'sm'
     ? { height: 34, font: 13, pad: 10, icon: 15 }
     : { height: 40, font: 14, pad: 12, icon: 17 };
@@ -252,7 +251,6 @@ function Input({
 
 
 /* ===== components/feed/SignalScore.jsx ===== */
-
 /**
  * SignalScore — GreenStack's selection score (0–100). The higher the score,
  * the stronger the editorial signal that a story matters to practitioners.
@@ -292,7 +290,6 @@ function SignalScore({ score = 0, variant = 'chip', size = 'md', style, ...rest 
 
 
 /* ===== components/feed/CategoryTag.jsx ===== */
-
 /**
  * CategoryTag — the colored label that classifies a story by ESG category.
  * `variant`: 'soft' (tinted pill, default) · 'solid' · 'outline' · 'dot' (text + color dot).
@@ -342,9 +339,8 @@ function CategoryTag({
 
 
 /* ===== components/feed/CategoryTabs.jsx ===== */
-
 function Tab({ id, label, icon, accent, active, onClick }) {
-  const [hover, setHover] = React.useState(false);
+  const [hover, setHover] = useState(false);
   const solid = accent ? `var(--cat-${accent})` : 'var(--green-700)';
   return (
     <button
@@ -394,7 +390,6 @@ function CategoryTabs({ value = 'all', onChange = () => {}, includeAll = true, s
 
 
 /* ===== components/feed/NewsCard.jsx ===== */
-
 function SourceMonogram({ source, accent }) {
   const letter = (source || '?').trim().charAt(0).toUpperCase();
   return (
@@ -418,7 +413,7 @@ function NewsCard({
   score, whyItMatters, variant = 'default', selected = false,
   onClick, onOpen, style, ...rest
 }) {
-  const [hover, setHover] = React.useState(false);
+  const [hover, setHover] = useState(false);
   const cat = getCategory(category);
   const isLead = variant === 'lead';
   const isCompact = variant === 'compact';

@@ -1,6 +1,6 @@
 /**
- * Kinetics News Refresh — Curated Physical Therapy / Rehab News Feed
- * (Kinetics = working name, pending designer; rename strings at rebrand pass)
+ * Cadence News Refresh — Curated Physical Therapy / Rehab News Feed
+ * (Brand locked 2026-06-09: Cadence, scrubs-blue palette)
  *
  * 8 PT Verticals (slug authority: design-system/components/feed/categories.js):
  *   1. Orthopedic        — spine, knee, shoulder, hand-wrist, foot-ankle, hip, pelvic-floor
@@ -186,9 +186,9 @@ async function curateWithClaude(rawItems) {
     source: item.source
   }));
 
-  const systemPrompt = `你是 Kinetics 的物理治疗 / 康复医学新闻策展 AI。
+  const systemPrompt = `你是 Cadence 的物理治疗 / 康复医学新闻策展 AI。
 
-Kinetics 是独立物理治疗专业新闻品牌，覆盖临床研究、技术进展、监管动态、行业实践。读者是临床医师，分两类并重：practicing（诊所 + 医院 PT/PTA/owner）和 academic（faculty / student / resident）。不面向患者。语气：clinically authoritative, evidence-graded, accessible without dumbed-down jargon。地理范围：美国 + 中国 + 澳大利亚三市场。
+Cadence 是独立物理治疗专业新闻品牌，覆盖临床研究、技术进展、监管动态、行业实践。读者是临床医师，分两类并重：practicing（诊所 + 医院 PT/PTA/owner）和 academic（faculty / student / resident）。不面向患者。语气：clinically authoritative, evidence-graded, accessible without dumbed-down jargon。地理范围：美国 + 中国 + 澳大利亚三市场。
 
 8 个垂直分类（slug 必须精确匹配；不要发明新 slug）：
 1. Orthopedic (orthopedic) — 骨科 / 肌肉骨骼康复。sub-tags: spine, knee, shoulder, hand-wrist, foot-ankle, hip, pelvic-floor
@@ -266,7 +266,7 @@ function dedup(items) {
 // ── Main ────────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log(`\n⚡ Kinetics PT News Refresh — ${new Date().toISOString()}`);
+  console.log(`\n⚡ Cadence PT News Refresh — ${new Date().toISOString()}`);
   if (DRY_RUN) { console.log('  DRY_RUN mode\n'); return; }
   if (!EXA_API_KEY || !ANTHROPIC_API_KEY) { console.error('❌ Missing API keys'); process.exit(1); }
 

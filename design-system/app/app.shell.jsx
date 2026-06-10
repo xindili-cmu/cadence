@@ -1,4 +1,4 @@
-// GreenStack UI kit — app shell: header, left nav rail, right digest rail.
+// Cadence UI kit — app shell: header, left nav rail, right digest rail.
 const { Logo, Button, Input, Icon, CategoryTag, SignalScore, CATEGORIES } = window;
 
 function AppHeader({ query, onQuery }) {
@@ -10,7 +10,7 @@ function AppHeader({ query, onQuery }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-tertiary)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-pill)', padding: '2px 8px', whiteSpace: 'nowrap' }}>ESG · Climate · Hard tech</span>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-tertiary)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-pill)', padding: '2px 8px', whiteSpace: 'nowrap' }}>PT · Rehab · Evidence</span>
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
       </div>
@@ -28,13 +28,13 @@ const iconBtn = {
 
 // NavRail v2 — pure navigation. The "Following" hardcoded outlet list was
 // removed 2026-06-09 once Sources view shipped: it auto-builds the real list
-// from window.GS_STORIES so a static left-rail copy was both redundant and
+// from window.CD_STORIES so a static left-rail copy was both redundant and
 // semantically wrong ("Following" implies user-curated subscriptions).
 function NavRail({ view, onView }) {
   return (
     <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start' }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {window.GS_NAV.map((item) => {
+        {window.CD_NAV.map((item) => {
           const active = view === item.id;
           return (
             <button key={item.id} type="button" onClick={() => onView(item.id)} style={{

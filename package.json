@@ -1,7 +1,7 @@
 {
-  "name": "kinetics-pt-news",
+  "name": "cadence-pt-news",
   "version": "1.0.0",
-  "description": "Daily auto-refresh for Kinetics — physical therapy news feed (working name, pending rebrand)",
+  "description": "Daily auto-refresh for Cadence — physical therapy news feed",
   "private": true,
   "scripts": {
     "refresh": "node scripts/news-refresh.js",

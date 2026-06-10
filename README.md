@@ -1,6 +1,6 @@
-# Kinetics — PT News Feed
+# Cadence — PT News Feed
 
-> Working name pending final brand. Curated physical therapy / rehab news for clinicians (practicing + academic). US + China + Australia. Not patient-facing.
+> Curated physical therapy / rehab news for clinicians (practicing + academic). US + China + Australia. Not patient-facing.
 
 Forked from the GreenStack cloud-deploy AIHOT pattern. Methodology: `climate agent/internal-design/methodology-kit/`.
 

@@ -6,8 +6,8 @@
    ============================================================ */
 
 :root {
-  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
-  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Spectral', 'Noto Serif SC', 'Songti SC', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', 'Noto Sans SC', 'PingFang SC', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Type scale (px) — feed-friendly, runs slightly tighter than a marketing site */
