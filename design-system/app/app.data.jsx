@@ -71,3 +71,35 @@ window.CD_DATA_READY = (async () => {
     window.CD_META = { error: err.message };
   }
 })();
+
+// ── Source wall ──────────────────────────────────────────────────────────────
+// The canonical directory of outlets Cadence monitors — rendered by the
+// Sources view as a standing wall, enriched with live counts from CD_STORIES.
+// `name` must match scripts/news-refresh.js extractDomain output exactly,
+// otherwise live stats won't merge onto the card.
+
+window.CD_SOURCES = [
+  // Journals & research
+  { name: 'JOSPT',             domain: 'jospt.org',            url: 'https://www.jospt.org',                kind: 'journal',     regions: ['US'],  cats: ['orthopedic', 'sports'] },
+  { name: 'PTJ',               domain: 'academic.oup.com/ptj', url: 'https://academic.oup.com/ptj',         kind: 'journal',     regions: ['US'],  cats: ['practice'] },
+  { name: 'The Lancet',        domain: 'thelancet.com',        url: 'https://www.thelancet.com',            kind: 'journal',     regions: ['Global'], cats: ['neurological'] },
+  { name: 'BMJ',               domain: 'bmj.com',              url: 'https://www.bmj.com',                  kind: 'journal',     regions: ['Global'], cats: ['orthopedic'] },
+  { name: 'JAMA',              domain: 'jamanetwork.com',      url: 'https://jamanetwork.com',              kind: 'journal',     regions: ['US'],  cats: ['geriatric'] },
+  { name: 'PubMed',            domain: 'pubmed.ncbi.nlm.nih.gov', url: 'https://pubmed.ncbi.nlm.nih.gov',   kind: 'database',    regions: ['Global'], cats: ['orthopedic', 'neurological'] },
+  { name: 'medRxiv',           domain: 'medrxiv.org',          url: 'https://www.medrxiv.org',              kind: 'preprint',    regions: ['Global'], cats: ['cardiopulmonary'] },
+  // Associations & regulators
+  { name: 'APTA',              domain: 'apta.org',             url: 'https://www.apta.org',                 kind: 'association', regions: ['US'],  cats: ['practice'] },
+  { name: 'APA (AU)',          domain: 'physiotherapy.asn.au', url: 'https://australian.physio',            kind: 'association', regions: ['AU'],  cats: ['practice'] },
+  { name: 'AHPRA',             domain: 'ahpra.gov.au',         url: 'https://www.ahpra.gov.au',             kind: 'regulator',   regions: ['AU'],  cats: ['practice'] },
+  { name: 'CMS',               domain: 'cms.gov',              url: 'https://www.cms.gov',                  kind: 'regulator',   regions: ['US'],  cats: ['practice'] },
+  { name: '国家卫健委',         domain: 'nhc.gov.cn',           url: 'http://www.nhc.gov.cn',                kind: 'regulator',   regions: ['CN'],  cats: ['practice'] },
+  // Industry news & platforms
+  { name: 'STAT',              domain: 'statnews.com',         url: 'https://www.statnews.com',             kind: 'news',        regions: ['US'],  cats: ['practice'] },
+  { name: 'Modern Healthcare', domain: 'modernhealthcare.com', url: 'https://www.modernhealthcare.com',     kind: 'news',        regions: ['US'],  cats: ['practice'] },
+  { name: 'Reuters',           domain: 'reuters.com',          url: 'https://www.reuters.com',              kind: 'news',        regions: ['Global'], cats: ['practice'] },
+  { name: 'Physiopedia',       domain: 'physio-pedia.com',     url: 'https://www.physio-pedia.com',         kind: 'platform',    regions: ['Global'], cats: ['manual-modality'] },
+  { name: 'WebPT',             domain: 'webpt.com',            url: 'https://www.webpt.com',                kind: 'news',        regions: ['US'],  cats: ['practice'] },
+  // Chinese clinical media
+  { name: '丁香园',             domain: 'dxy.cn',               url: 'https://www.dxy.cn',                   kind: 'platform',    regions: ['CN'],  cats: ['neurological'] },
+  { name: '健康界',             domain: 'cnhealthcare.com',     url: 'https://www.cnhealthcare.com',         kind: 'news',        regions: ['CN'],  cats: ['practice'] },
+];

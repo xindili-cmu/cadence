@@ -36,10 +36,10 @@ function FeedToolbar({ view, count }) {
 }
 
 // ── Sources directory view ──────────────────────────────────────────────────
-// Auto-generated from window.CD_STORIES — no auth, no static config drift.
-// Layout: 2-column grid of source cards, sorted by story count desc.
-// Each card shows name, count, top categories covered (max 3), latest story
-// title + relative time ago.
+// Standing source wall: window.CD_SOURCES (app.data.jsx) is the canonical
+// directory of monitored outlets; live counts / categories / latest story
+// from CD_STORIES are merged on top by name. Outlets seen in the feed but
+// not yet listed in the wall are appended so nothing is hidden.
 
 function relativeAgo(iso) {
   if (!iso) return '';
@@ -56,9 +56,14 @@ function SourceCard({ source, onPick }) {
     <button type="button" onClick={onPick}
       style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 16, textAlign: 'left', cursor: 'pointer', boxShadow: 'var(--shadow-xs)', fontFamily: 'var(--font-sans)', display: 'flex', flexDirection: 'column', gap: 10 }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: `var(--cat-${cats[0]?.accent || 'electric'}-soft)`, color: `var(--cat-${cats[0]?.accent || 'electric'}-ink)`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, flex: 'none' }}>{source.name[0]}</span>
+        <span style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: `var(--cat-${cats[0]?.accent || 'practice'}-soft)`, color: `var(--cat-${cats[0]?.accent || 'practice'}-ink)`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, flex: 'none' }}>{source.name[0]}</span>
         <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{source.name}</span>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count}</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count || '—'}</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
+        <span style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}>{KIND_LABEL[source.kind] || 'Source'}</span>
+        {source.regions && source.regions.length > 0 && <span>· {source.regions.join(' / ')}</span>}
+        {source.domain && <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', textAlign: 'right' }}>{source.domain}</span>}
       </div>
       <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
         {cats.slice(0, 3).map((c) => (
@@ -76,34 +81,49 @@ function SourceCard({ source, onPick }) {
 }
 
 function SourcesGrid({ stories, category, onPickSource }) {
-  const bySource = {};
+  // Live stats keyed by extractDomain name
+  const live = {};
   stories.forEach((s) => {
-    if (!bySource[s.source]) bySource[s.source] = { name: s.source, count: 0, catSet: {}, latest: null };
-    const b = bySource[s.source];
+    if (!live[s.source]) live[s.source] = { count: 0, catSet: {}, latest: null };
+    const b = live[s.source];
     b.count++;
     b.catSet[s.category] = (b.catSet[s.category] || 0) + 1;
     if (!b.latest || (s.publishedAt && (!b.latest.publishedAt || s.publishedAt > b.latest.publishedAt))) b.latest = s;
   });
-  const all = Object.values(bySource).map((b) => ({
-    ...b,
-    cats: Object.entries(b.catSet).sort((a, b2) => b2[1] - a[1]).map(([k]) => k),
-  }));
-  const filtered = category !== 'all' ? all.filter((s) => s.cats.includes(category)) : all;
-  filtered.sort((a, b) => b.count - a.count);
-  if (filtered.length === 0) {
-    return (
-      <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
-        <Icon name="rss" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
-        <div>No sources yet — wait for the next 7am cron.</div>
-      </div>
-    );
-  }
+  const liveCats = (b) => Object.entries(b.catSet).sort((a, b2) => b2[1] - a[1]).map(([k]) => k);
+
+  // The wall: curated directory first, live stats merged on
+  const wall = (window.CD_SOURCES || []).map((src) => {
+    const b = live[src.name];
+    return {
+      ...src,
+      count: b ? b.count : 0,
+      cats: b ? liveCats(b) : (src.cats || []),
+      latest: b ? b.latest : null,
+    };
+  });
+  // Outlets seen in the feed but not in the wall (one-off domains Exa surfaced)
+  const listed = new Set(wall.map((s) => s.name));
+  const extras = Object.entries(live)
+    .filter(([name]) => !listed.has(name))
+    .map(([name, b]) => ({ name, kind: 'spotted', regions: [], count: b.count, cats: liveCats(b), latest: b.latest }));
+
+  let all = [...wall, ...extras];
+  if (category !== 'all') all = all.filter((s) => s.cats.includes(category));
+  all.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
   return (
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
-      {filtered.map((s) => <SourceCard key={s.name} source={s} onPick={() => onPickSource && onPickSource(s.name)} />)}
+      {all.map((s) => <SourceCard key={s.name} source={s} onPick={() => onPickSource && onPickSource(s.name)} />)}
     </div>
   );
 }
+
+const KIND_LABEL = {
+  journal: 'Journal', database: 'Database', preprint: 'Preprint',
+  association: 'Association', regulator: 'Regulator', news: 'News',
+  platform: 'Platform', spotted: 'Spotted in feed',
+};
 
 function FeedApp() {
   const [view, setView] = React.useState('curated');
