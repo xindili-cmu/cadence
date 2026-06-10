@@ -37,7 +37,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node scripts/news-refresh.js
 
-      - name: Commit news.json (with rebase retry)
+      - name: Commit news.json (with race-safe retry)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -53,13 +53,23 @@ jobs:
               echo "✓ Push succeeded on attempt $attempt"
               exit 0
             fi
-            echo "Push failed, fetching + rebasing onto latest main..."
+            # Race: someone pushed mid-run. news.json is regenerated daily, so
+            # the freshly generated file always wins — re-commit it on top of
+            # the latest remote main instead of rebasing/merging (which can
+            # conflict on news.json and wedge the job).
+            echo "Push rejected — re-applying news.json onto latest origin/main..."
+            git rebase --abort 2>/dev/null || true
+            git merge --abort 2>/dev/null || true
+            cp news.json /tmp/news.json
             git fetch origin main
-            if ! git rebase origin/main; then
-              echo "Rebase conflict — aborting and falling back to merge"
-              git rebase --abort
-              git pull --no-rebase origin main --no-edit || true
+            git reset --hard origin/main
+            cp /tmp/news.json news.json
+            git add news.json
+            if git diff --staged --quiet; then
+              echo "Remote already has identical news.json"
+              exit 0
             fi
+            git commit -m "📰 PT news $(date -u +%Y-%m-%d)"
           done
           echo "✗ Push failed after 3 attempts. Manual intervention required."
           exit 1
