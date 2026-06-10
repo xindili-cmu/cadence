@@ -10,6 +10,9 @@
     "cats": [
       "orthopedic",
       "sports"
+    ],
+    "rss": [
+      "https://www.jospt.org/action/showFeed?type=etoc&feed=rss&jc=jospt"
     ]
   },
   {
@@ -34,6 +37,9 @@
     ],
     "cats": [
       "neurological"
+    ],
+    "rss": [
+      "https://www.thelancet.com/rssfeed/lancet_current.xml"
     ]
   },
   {
@@ -46,6 +52,9 @@
     ],
     "cats": [
       "orthopedic"
+    ],
+    "rss": [
+      "https://bjsm.bmj.com/rss/current.xml"
     ]
   },
   {
@@ -71,7 +80,8 @@
     "cats": [
       "orthopedic",
       "neurological"
-    ]
+    ],
+    "eutils": true
   },
   {
     "name": "medRxiv",
@@ -83,6 +93,9 @@
     ],
     "cats": [
       "cardiopulmonary"
+    ],
+    "rss": [
+      "https://connect.medrxiv.org/medrxiv_xml.php?subject=rehabilitation_medicine_and_physical_therapy"
     ]
   },
   {

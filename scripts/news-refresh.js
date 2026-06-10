@@ -52,7 +52,7 @@ const SOURCES = require(path.join(__dirname, '..', 'sources.json'));
 const SOURCE_HOSTNAMES = [...new Set(SOURCES.map(s => s.domain.split('/')[0]))];
 const MAX_ITEMS = 30;
 const LOOKBACK_DAYS = 7; // PT news cadence is slower than climate-tech; revisit after 2 weeks
-const CURATE_TOP_N = 25;
+const CURATE_TOP_N = 40; // Exa + PubMed + RSS all feed one batch now
 
 // ── PT Category Queries ─────────────────────────────────────────────────────
 // Slugs are the canonical short form used by the UI components in
@@ -192,6 +192,117 @@ function matchSource(url) {
   } catch { return null; }
 }
 
+// ── Direct ingestion: PubMed E-utilities ────────────────────────────────────
+// AIHOT-style source-first crawl, leg 1. Per-category PubMed queries over the
+// last LOOKBACK_DAYS; esearch → efetch(abstract XML), parsed with zero deps.
+// NCBI limit is 3 req/s without an API key — the 350ms sleeps keep us under.
+
+const PUBMED_QUERIES = [
+  { category: 'orthopedic',      term: '(physical therapy[tiab] OR physiotherapy[tiab] OR exercise therapy[tiab]) AND (low back pain[tiab] OR knee[tiab] OR shoulder[tiab] OR musculoskeletal[tiab] OR pelvic floor[tiab])' },
+  { category: 'neurological',    term: '(rehabilitation[tiab] OR physical therapy[tiab] OR physiotherapy[tiab]) AND (stroke[tiab] OR parkinson[tiab] OR multiple sclerosis[tiab] OR spinal cord injury[tiab] OR vestibular[tiab])' },
+  { category: 'sports',          term: '(sports physical therapy[tiab] OR return to sport[tiab] OR athletic rehabilitation[tiab] OR ACL rehabilitation[tiab] OR injury prevention[tiab]) AND (physiotherapy[tiab] OR rehabilitation[tiab])' },
+  { category: 'pediatric',       term: '(pediatric[tiab] OR cerebral palsy[tiab] OR developmental coordination[tiab]) AND (physical therapy[tiab] OR physiotherapy[tiab] OR early intervention[tiab])' },
+  { category: 'geriatric',       term: '(older adults[tiab] OR geriatric[tiab] OR frailty[tiab] OR sarcopenia[tiab]) AND (fall prevention[tiab] OR balance training[tiab] OR physical therapy[tiab] OR exercise[tiab])' },
+  { category: 'cardiopulmonary', term: '(cardiac rehabilitation[tiab] OR pulmonary rehabilitation[tiab] OR COPD[tiab]) AND (exercise[tiab] OR physiotherapy[tiab] OR physical therapy[tiab])' },
+  { category: 'manual-modality', term: '(dry needling[tiab] OR spinal manipulation[tiab] OR joint mobilization[tiab] OR taping[tiab] OR laser therapy[tiab] OR electrotherapy[tiab]) AND (trial[tiab] OR review[tiab])' },
+  { category: 'practice',        term: '(physical therapy[tiab] OR physiotherapy[tiab]) AND (reimbursement[tiab] OR telehealth[tiab] OR scope of practice[tiab] OR workforce[tiab])' },
+];
+
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const xmlTag = (s, tag) => (s.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`)) || [])[1] || '';
+const stripTags = (s) => (s || '')
+  .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
+  .replace(/&#39;|&apos;/g, "'").replace(/&amp;/g, '&').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(n))
+  .replace(/\s+/g, ' ').trim();
+
+async function fetchPubMed() {
+  const out = [];
+  const base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils';
+  for (const q of PUBMED_QUERIES) {
+    try {
+      const es = await fetch(`${base}/esearch.fcgi?db=pubmed&retmode=json&retmax=8&reldate=${LOOKBACK_DAYS}&datetype=edat&sort=date&term=${encodeURIComponent(q.term)}`);
+      if (!es.ok) { console.error(`  PubMed esearch ${q.category}: ${es.status}`); continue; }
+      const ids = (await es.json()).esearchresult?.idlist || [];
+      console.log(`   pubmed:${q.category} → ${ids.length}`);
+      await sleep(350);
+      if (!ids.length) continue;
+      const ef = await fetch(`${base}/efetch.fcgi?db=pubmed&retmode=xml&rettype=abstract&id=${ids.join(',')}`);
+      if (!ef.ok) { console.error(`  PubMed efetch ${q.category}: ${ef.status}`); continue; }
+      const xml = await ef.text();
+      for (const art of xml.split(/<PubmedArticle\b[^>]*>/).slice(1)) {
+        const pmid = stripTags(xmlTag(art, 'PMID'));
+        const title = stripTags(xmlTag(art, 'ArticleTitle'));
+        if (!pmid || !title) continue;
+        const abstract = stripTags((art.match(/<AbstractText[^>]*>[\s\S]*?<\/AbstractText>/g) || []).join(' '));
+        const journal = stripTags(xmlTag(art, 'Title'));
+        // entrez date ≈ when PubMed first saw it — the freshness signal we filter on
+        const pdates = art.match(/<PubMedPubDate PubStatus="pubmed">[\s\S]*?<\/PubMedPubDate>/);
+        let publishedDate = new Date().toISOString();
+        if (pdates) {
+          const y = xmlTag(pdates[0], 'Year'), m = xmlTag(pdates[0], 'Month'), d = xmlTag(pdates[0], 'Day');
+          if (y) publishedDate = new Date(Date.UTC(+y, (+m || 1) - 1, +d || 1)).toISOString();
+        }
+        out.push({
+          title, url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
+          text: `${journal ? journal + '. ' : ''}${abstract}`.slice(0, 800),
+          highlights: '', publishedDate, score: 0.5,
+          source: 'PubMed', category: q.category
+        });
+      }
+      await sleep(350);
+    } catch (e) { console.error(`  PubMed ${q.category}: ${e.message}`); }
+  }
+  return out;
+}
+
+// ── Direct ingestion: RSS / Atom feeds ──────────────────────────────────────
+// Leg 2: every roster source with an `rss` array in sources.json gets polled.
+// Zero-dep parser (handles <item> and <entry>, CDATA, Atom href links).
+// Items carry category:null — the critic assigns one of the 8 slugs.
+
+function parseFeed(xml, sourceName) {
+  const blocks = xml.match(/<item[\s>][\s\S]*?<\/item>/g) || xml.match(/<entry[\s>][\s\S]*?<\/entry>/g) || [];
+  const items = [];
+  for (const b of blocks) {
+    const title = stripTags(xmlTag(b, 'title'));
+    let link = stripTags(xmlTag(b, 'link'));
+    if (!link) link = (b.match(/<link[^>]*href="([^"]+)"/) || [])[1] || '';
+    if (!title || !link) continue;
+    const dateRaw = stripTags(xmlTag(b, 'pubDate') || xmlTag(b, 'dc:date') || xmlTag(b, 'updated') || xmlTag(b, 'published'));
+    const d = new Date(dateRaw);
+    items.push({
+      title, url: link.trim(),
+      text: stripTags(xmlTag(b, 'description') || xmlTag(b, 'summary') || xmlTag(b, 'content')).slice(0, 800),
+      highlights: '', publishedDate: isNaN(d) ? new Date().toISOString() : d.toISOString(),
+      score: 0.5, source: sourceName, category: null
+    });
+  }
+  return items;
+}
+
+async function fetchRssFeeds() {
+  const out = [];
+  for (const s of SOURCES) {
+    for (const feed of s.rss || []) {
+      try {
+        const res = await fetch(feed, { headers: {
+          'User-Agent': 'CadenceBot/1.0 (PT news aggregator)',
+          'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*'
+        } });
+        if (!res.ok) { console.error(`  RSS ${s.name}: ${res.status}`); continue; }
+        const got = parseFeed(await res.text(), s.name);
+        console.log(`   rss:${s.name} → ${got.length}`);
+        out.push(...got);
+      } catch (e) { console.error(`  RSS ${s.name}: ${e.message}`); }
+      await sleep(200);
+    }
+  }
+  const cutoff = Date.now() - LOOKBACK_DAYS * 86400000;
+  return out.filter(i => new Date(i.publishedDate).getTime() >= cutoff);
+}
+
 // ── Claude Curation ─────────────────────────────────────────────────────────
 
 async function curateWithClaude(rawItems) {
@@ -244,8 +355,10 @@ tags 规则：
 - 不夸大研究结论：单个小样本研究不写成实践改变；研究限制（样本量小、无对照、随访短、行业资助）在 curatedReason 里点出。
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
 
+category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
+
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","tags":["research","spine"],"summary":"One-line English neutral summary"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","tags":["research","spine"],"summary":"One-line English neutral summary","category":"orthopedic（仅输入为 null 时必填）"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
@@ -291,7 +404,7 @@ async function callAnthropic(systemPrompt, userPrompt) {
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 4000,
+      max_tokens: 8000, // 40-item batches overflow 4000 (truncation salvage loses tail items)
       system: systemPrompt,
       messages: [{ role: 'user', content: userPrompt }]
     })
@@ -484,6 +597,12 @@ async function main() {
     }
   }
 
+  console.log(`\n📚 PubMed E-utilities`);
+  raw.push(...await fetchPubMed());
+
+  console.log(`\n📰 RSS feeds`);
+  raw.push(...await fetchRssFeeds());
+
   console.log(`\n📊 Raw: ${raw.length}`);
   const fresh = dropStaleByUrl(raw);
   const unique = clusterItems(fresh, byExaScore);
@@ -494,14 +613,18 @@ async function main() {
   const curated = await curateWithClaude(unique);
   console.log(`   Curated: ${curated.length} items`);
 
+  const VALID_CATS = new Set(['orthopedic', 'neurological', 'sports', 'pediatric', 'geriatric', 'cardiopulmonary', 'manual-modality', 'practice']);
   const final = curated.map(c => {
     const o = unique[c.index];
     if (!o) return null;
+    // RSS whole-journal items arrive with category:null — critic assigns one.
+    const category = o.category || (VALID_CATS.has(c.category) ? c.category : null);
+    if (!category) return null;
     return {
       id: `news-${Date.now()}-${c.index}`,
       title: o.title,
       summary: c.summary || o.highlights || o.text?.substring(0, 200),
-      category: o.category,
+      category,
       source: o.source,
       sourceUrl: o.url,
       publishedAt: o.publishedDate,
