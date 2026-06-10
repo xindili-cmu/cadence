@@ -307,6 +307,74 @@ async function fetchRssFeeds() {
   return out.filter(i => new Date(i.publishedDate).getTime() >= cutoff);
 }
 
+// ── Direct ingestion: listing-page scrape (AIHOT "网页" source type) ─────────
+// Leg 3, for roster sources with no feed (associations, regulators, zh sites).
+// Poll each `scrape` URL in sources.json, extract <a> links that resolve back
+// to the same roster source, and diff against scrape-ledger.json: only links
+// never seen before are ingested, stamped with DISCOVERY time (AIHOT does the
+// same — 发现时间). First run per source is a silent snapshot, so a freshly
+// added listing page never floods the feed with its backlog.
+
+const LEDGER_PATH = path.join(__dirname, '..', 'scrape-ledger.json');
+const LEDGER_TTL_DAYS = 60;
+
+async function fetchScrapes() {
+  let ledger = {};
+  try { ledger = JSON.parse(fs.readFileSync(LEDGER_PATH, 'utf8')); } catch {}
+  const out = [];
+  let ledgerDirty = false;
+
+  for (const s of SOURCES) {
+    for (const listUrl of s.scrape || []) {
+      try {
+        const res = await fetch(listUrl, { headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; CadenceBot/1.0; PT news aggregator)',
+          'Accept': 'text/html,application/xhtml+xml'
+        } });
+        if (!res.ok) { console.error(`  scrape ${s.name}: ${res.status}`); continue; }
+        const html = await res.text();
+        const links = new Map(); // canonical url -> {url, title}
+        for (const m of html.matchAll(/<a\b[^>]*href="([^"#]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+          let abs; try { abs = new URL(m[1], listUrl).href; } catch { continue; }
+          const title = stripTags(m[2]);
+          // Heuristics: link must resolve to this same roster source, carry a
+          // headline-length text, and not be the listing page itself.
+          if (matchSource(abs) !== s.name) continue;
+          // Headline-length gate; CJK headlines pack the same info into far
+          // fewer chars (国家卫健委 titles run 15-20 chars), so lower bar there.
+          const minLen = /[一-鿿]/.test(title) ? 10 : 25;
+          if (title.length < minLen || abs === listUrl) continue;
+          links.set(canonicalUrl(abs), { url: abs, title });
+        }
+        const bootstrap = !Object.keys(ledger).some(k => k.startsWith(`${s.name}|`));
+        let fresh = 0;
+        for (const [canon, l] of links) {
+          const key = `${s.name}|${canon}`;
+          if (ledger[key]) continue;
+          ledger[key] = new Date().toISOString();
+          ledgerDirty = true;
+          if (bootstrap) continue; // snapshot only — backlog stays out of the feed
+          fresh++;
+          out.push({
+            title: l.title, url: l.url, text: '', highlights: '',
+            publishedDate: new Date().toISOString(), // discovery time
+            score: 0.5, source: s.name, category: null
+          });
+        }
+        console.log(`   scrape:${s.name} → ${links.size} links, ${bootstrap ? 'bootstrap snapshot' : fresh + ' new'}`);
+      } catch (e) { console.error(`  scrape ${s.name}: ${e.message}`); }
+      await sleep(300);
+    }
+  }
+
+  if (ledgerDirty) {
+    const cutoff = Date.now() - LEDGER_TTL_DAYS * 86400000;
+    for (const [k, v] of Object.entries(ledger)) if (new Date(v).getTime() < cutoff) delete ledger[k];
+    fs.writeFileSync(LEDGER_PATH, JSON.stringify(ledger, null, 2));
+  }
+  return out;
+}
+
 // ── Claude Curation ─────────────────────────────────────────────────────────
 
 async function curateWithClaude(rawItems) {
@@ -609,6 +677,9 @@ async function main() {
 
   console.log(`\n📰 RSS feeds`);
   raw.push(...await fetchRssFeeds());
+
+  console.log(`\n🕸️ Listing-page scrapes`);
+  raw.push(...await fetchScrapes());
 
   console.log(`\n📊 Raw: ${raw.length}`);
   const fresh = dropStaleByUrl(raw);
