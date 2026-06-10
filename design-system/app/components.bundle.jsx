@@ -73,16 +73,17 @@ function Icon({ name, size = 18, strokeWidth = 1.75, style, className, ...rest }
 
 
 /* ===== components/brand/Logo.jsx ===== */
-// PLACEHOLDER pulse-bar mark — three bars in a walking-cadence rhythm.
-// Designer round 2 ships the final Cadence mark; replace STACK + Mark then.
+// Cadence mark — four bars in a walking-cadence rhythm (rise · peak · settle),
+// echoing steps-per-minute, the gait metric PTs measure. Final mark, designer round 2.
 const STACK = [
-  { x: 7,  h: 9,  o: 0.6 },
-  { x: 14, h: 16, o: 0.85 },
-  { x: 21, h: 12, o: 1 },
+  { x: 4,  h: 9,  o: 0.55 },
+  { x: 11, h: 15, o: 0.78 },
+  { x: 18, h: 19, o: 1 },
+  { x: 25, h: 13, o: 0.7 },
 ];
 
 /**
- * Logo — the Cadence mark and lockup. (Placeholder until designer round 2.)
+ * Logo — the Cadence mark and lockup.
  * `variant`: 'lockup' (mark + wordmark, default) · 'wordmark' · 'mark'.
  * `tone`: 'default' (blue tile / ink wordmark) · 'inverse' (for dark backgrounds).
  * Sizes scale from `height` (mark + wordmark cap height in px).
