@@ -105,13 +105,30 @@ function relativeAgo(iso) {
   return `${Math.floor(h / 24)}d`;
 }
 
-function SourceCard({ source, onPick }) {
+// Real outlet favicon (Google s2 service) with letter-avatar fallback when the
+// icon fails to load (offline, blocked, or no favicon published).
+function SourceFavicon({ source, accent }) {
+  const [failed, setFailed] = React.useState(false);
+  const host = (source.domain || '').split('/')[0];
+  if (failed || !host) {
+    return (
+      <span style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: `var(--cat-${accent}-soft)`, color: `var(--cat-${accent}-ink)`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, flex: 'none' }}>{source.name[0]}</span>
+    );
+  }
+  return (
+    <img src={`https://www.google.com/s2/favicons?domain=${host}&sz=64`} alt="" width={22} height={22}
+      onError={() => setFailed(true)}
+      style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: 'var(--surface-page)', border: '1px solid var(--border-subtle)', objectFit: 'contain', flex: 'none', alignSelf: 'center' }} />
+  );
+}
+
+function SourceCard({ source }) {
   const cats = source.cats.map((c) => window.getCategory ? window.getCategory(c) : { id: c, label: c, accent: 'electric' });
   return (
-    <button type="button" onClick={onPick}
-      style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 16, textAlign: 'left', cursor: 'pointer', boxShadow: 'var(--shadow-xs)', fontFamily: 'var(--font-sans)', display: 'flex', flexDirection: 'column', gap: 10 }}>
+    <a href={source.url} target="_blank" rel="noopener noreferrer"
+      style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 16, textAlign: 'left', cursor: 'pointer', boxShadow: 'var(--shadow-xs)', fontFamily: 'var(--font-sans)', display: 'flex', flexDirection: 'column', gap: 10, textDecoration: 'none' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: `var(--cat-${cats[0]?.accent || 'practice'}-soft)`, color: `var(--cat-${cats[0]?.accent || 'practice'}-ink)`, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, flex: 'none' }}>{source.name[0]}</span>
+        <SourceFavicon source={source} accent={cats[0]?.accent || 'practice'} />
         <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{source.name}</span>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count || '—'}</span>
       </div>
@@ -131,11 +148,11 @@ function SourceCard({ source, onPick }) {
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.4, color: 'var(--text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{source.latest.title}</span>
         </div>
       )}
-    </button>
+    </a>
   );
 }
 
-function SourcesGrid({ stories, onPickSource }) {
+function SourcesGrid({ stories }) {
   // Live stats keyed by extractDomain name
   const live = {};
   stories.forEach((s) => {
@@ -178,7 +195,7 @@ function SourcesGrid({ stories, onPickSource }) {
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{sec.items.length}</span>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
-            {sec.items.map((s) => <SourceCard key={s.name} source={s} onPick={() => onPickSource && onPickSource(s.name)} />)}
+            {sec.items.map((s) => <SourceCard key={s.name} source={s} />)}
           </div>
         </section>
       ))}
@@ -274,7 +291,7 @@ function FeedApp() {
           {/* Sources directory branch — short-circuits feed rendering.
               No specialty tabs here: the wall groups by outlet kind instead. */}
           {isSources && (
-            <SourcesGrid stories={window.CD_STORIES || []} onPickSource={(name) => { setView('all'); setQuery(name); }} />
+            <SourcesGrid stories={window.CD_STORIES || []} />
           )}
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
