@@ -1,4 +1,4 @@
-# Cadence — PT News Feed
+# Cadence 步频 — PT News Feed
 
 > Curated physical therapy / rehab news for clinicians (practicing + academic). US + China + Australia. Not patient-facing.
 
