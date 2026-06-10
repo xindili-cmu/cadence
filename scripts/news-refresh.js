@@ -179,7 +179,7 @@ function extractDomain(url) {
       'physiotherapy.asn.au': 'APA (AU)', 'ahpra.gov.au': 'AHPRA',
       'choosept.com': 'ChoosePT', 'webpt.com': 'WebPT',
       'cms.gov': 'CMS', 'nhc.gov.cn': '国家卫健委',
-      'dxy.cn': '丁香园', 'cnhealthcare.com': '健康界'
+      'dxy.cn': '丁香园', 'cn-healthcare.com': '健康界'
     };
     return map[hostname] || hostname;
   } catch { return 'Unknown'; }

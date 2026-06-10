@@ -104,5 +104,5 @@ window.CD_SOURCES = [
   { name: 'WebPT',             domain: 'webpt.com',            url: 'https://www.webpt.com',                kind: 'news',        regions: ['US'],  cats: ['practice'] },
   // Chinese clinical media
   { name: '丁香园',             domain: 'dxy.cn',               url: 'https://www.dxy.cn',                   kind: 'platform',    regions: ['CN'],  cats: ['neurological'] },
-  { name: '健康界',             domain: 'cnhealthcare.com',     url: 'https://www.cnhealthcare.com',         kind: 'news',        regions: ['CN'],  cats: ['practice'] },
+  { name: '健康界',             domain: 'cn-healthcare.com',    url: 'https://www.cn-healthcare.com',        kind: 'news',        regions: ['CN'],  cats: ['practice'] },
 ];
