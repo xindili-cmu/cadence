@@ -52,7 +52,7 @@ function HotTopicsStrip({ topics, onPick }) {
               <button type="button" onClick={() => onPick && onPick(t.id)}
                 style={{ display: 'flex', alignItems: 'baseline', gap: 10, width: '100%', padding: '8px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
-                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{t.title}</span>
+                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
                 {cat && <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>}
                 <span title={(t.sources || []).join(' · ')}
                   style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
@@ -332,13 +332,12 @@ function FeedApp() {
   const zh = lang === 'zh';
   const t = window.CD_T;
 
-  // Localized display copy of a story. Editorial decision (Cindy 2026-06-11):
-  // titles + summaries stay in the source language (English) in BOTH modes —
-  // the mixed "EN headline + 中文 why-it-matters" layout is the brand look.
-  // The toggle only switches UI chrome and the why-it-matters language.
-  // (titleZh/summaryZh are still generated + searchable, just not displayed.)
+  // Localized display copy of a story — full separation (Cindy 2026-06-11,
+  // final call after trying mixed): zh mode is all-Chinese (titleZh/summaryZh/
+  // 中文 reason), en mode is all-English (title/summary/curatedReasonEn).
+  // Missing bilingual fields fall back to the original language.
   const L = React.useCallback((s) => (zh
-    ? s
+    ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
     : { ...s, why: s.whyEn || s.why }), [zh]);
 
   const DAY_LABELS = cdDayLabels();

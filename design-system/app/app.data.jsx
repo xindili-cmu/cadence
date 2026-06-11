@@ -157,8 +157,14 @@ window.CD_DATA_READY = (async () => {
     // client-side (same formula as the cron: sources × 0.5^(days/2)) because
     // quiet-hour runs skip the news.json write — without this, decay freezes
     // and a stale topic could stay pinned for days.
+    const cdById = {};
+    window.CD_STORIES.forEach((s) => { cdById[s.id] = s; });
     window.CD_HOT = (data.hotTopics || [])
-      .map((t) => ({ ...t, heat: t.sourceCount * Math.pow(0.5, Math.max(0, (Date.now() - new Date(t.publishedAt)) / 86400000) / 2) }))
+      .map((t) => ({
+        ...t,
+        titleZh: t.titleZh || (cdById[t.id] && cdById[t.id].titleZh), // zh title via the representative story
+        heat: t.sourceCount * Math.pow(0.5, Math.max(0, (Date.now() - new Date(t.publishedAt)) / 86400000) / 2),
+      }))
       .filter((t) => t.heat >= 1.2)
       .sort((a, b) => b.heat - a.heat);
     window.CD_SOURCES = srcRes.ok ? await srcRes.json() : [];
