@@ -813,22 +813,72 @@ async function main() {
   const hotTopics = computeHotTopics(merged);
   console.log(`   Hot topics: ${hotTopics.length}`);
 
-  // Archive — every curated item is appended once to archive/YYYY-MM.json so
-  // stories rotating out of news.json (7-day cutoff / MAX_ITEMS cap) aren't
-  // lost. Dedup by canonical URL (re-found stories get fresh ids). Raw material
-  // for a future archive page / RSS output.
-  if (final.length) {
+  // Archive — every item that makes it into news.json is mirrored once into
+  // archive/YYYY-MM.json so stories rotating out (7-day cutoff / MAX_ITEMS cap)
+  // aren't lost. Dedup by canonical URL (re-found stories get fresh ids).
+  // NB: we archive from `merged` (the full feed about to be written), not just
+  // this run's freshly-curated `final`. Archiving only `final` silently drops
+  // carried-over `existing` items — any story first curated before this archive
+  // step existed, or surviving multiple runs without re-curation, never reached
+  // the archive and vanished permanently when it rotated out. Sourcing from
+  // `merged` makes the archive a strict superset of everything the feed ever held.
+  {
     const ARCHIVE_DIR = path.join(__dirname, '..', 'archive');
     fs.mkdirSync(ARCHIVE_DIR, { recursive: true });
     const archPath = path.join(ARCHIVE_DIR, `${new Date().toISOString().slice(0, 7)}.json`);
     let arch = [];
     try { arch = JSON.parse(fs.readFileSync(archPath, 'utf8')).items || []; } catch {}
     const known = new Set(arch.map(i => canonicalUrl(i.sourceUrl)));
-    const additions = final.filter(i => !known.has(canonicalUrl(i.sourceUrl)));
+    const additions = merged.filter(i => !known.has(canonicalUrl(i.sourceUrl)));
     if (additions.length) {
       arch.push(...additions);
       fs.writeFileSync(archPath, JSON.stringify({ items: arch }, null, 2));
       console.log(`   Archive: +${additions.length} → archive/${path.basename(archPath)} (${arch.length} total)`);
+    }
+
+    // Integrity check: the archive is meant to be a strict superset of the feed.
+    // If anything in news.json isn't in this month's archive, a story will be
+    // lost the moment it rotates out — exactly the bug that dropped the 5 early
+    // articles. Surface it loudly rather than letting it pass silently.
+    const archUrls = new Set(arch.map(i => canonicalUrl(i.sourceUrl)));
+    const orphans = merged.filter(i => !archUrls.has(canonicalUrl(i.sourceUrl)));
+    if (orphans.length) {
+      console.error(`   ⚠️  ARCHIVE GAP: ${orphans.length} feed item(s) not archived — will be lost on rotation:`);
+      for (const o of orphans) console.error(`        [${o.curatedScore}] ${(o.title || '').slice(0, 70)}`);
+    } else {
+      console.log(`   ✓ Archive integrity: all ${merged.length} feed items present in archive`);
+    }
+
+    // Manifest — archive/index.json lists every monthly file with item count,
+    // score range and date span, so the (future) archive page and the WeChat
+    // monthly-leaderboard can discover months without guessing filenames or
+    // loading every file. Rebuilt from disk each run; cheap and self-healing.
+    try {
+      const months = fs.readdirSync(ARCHIVE_DIR)
+        .filter(f => /^\d{4}-\d{2}\.json$/.test(f))
+        .sort().reverse();
+      const manifest = months.map(f => {
+        const items = (JSON.parse(fs.readFileSync(path.join(ARCHIVE_DIR, f), 'utf8')).items) || [];
+        const scores = items.map(i => i.curatedScore || 0);
+        const dates = items.map(i => i.publishedAt).filter(Boolean).sort();
+        return {
+          month: f.replace('.json', ''),
+          file: f,
+          count: items.length,
+          maxScore: scores.length ? Math.max(...scores) : 0,
+          minScore: scores.length ? Math.min(...scores) : 0,
+          firstPublished: dates[0] || null,
+          lastPublished: dates[dates.length - 1] || null
+        };
+      });
+      fs.writeFileSync(path.join(ARCHIVE_DIR, 'index.json'), JSON.stringify({
+        generatedAt: new Date().toISOString(),
+        totalItems: manifest.reduce((s, m) => s + m.count, 0),
+        months: manifest
+      }, null, 2));
+      console.log(`   Manifest: archive/index.json (${manifest.length} month(s), ${manifest.reduce((s, m) => s + m.count, 0)} items)`);
+    } catch (e) {
+      console.error('   ⚠️  manifest write failed:', e.message);
     }
   }
 
