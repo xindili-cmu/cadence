@@ -1,0 +1,37 @@
+{
+  "_README": "FILLED from Web of Science / JCR 2024 via CMU access (2026-06-11). All 22 journals retrieved — none dropped. impactFactor = 2024 Journal Impact Factor; quartile = best (highest) JIF quartile across the journal's categories, matching the convention already used in journals.json (e.g. BJSM=Q1). Multi-category journals are noted in _quartileNote.",
+  "_jcrYearTarget": 2024,
+  "_quartileNote": {
+    "Gait & Posture": "categories give Q3/Q2/Q2 -> best Q2",
+    "Clinical Biomechanics": "Q4/Q3/Q3 -> best Q3",
+    "Spine": "CLINICAL NEUROLOGY Q2, ORTHOPEDICS Q1 -> best Q1",
+    "Journal of Electromyography and Kinesiology": "NEUROSCIENCES Q3, PHYSIOLOGY Q2, REHABILITATION Q1, SPORT SCIENCES Q2 -> best Q1",
+    "American Journal of Physical Medicine & Rehabilitation": "REHABILITATION Q1, SPORT SCIENCES Q2 -> best Q1",
+    "Journal of Rehabilitation Medicine": "Q1/Q2 -> best Q1",
+    "Physical Therapy in Sport": "Q1/Q2 -> best Q1"
+  },
+  "candidates": [
+    { "name": "Clinical Rehabilitation", "aliases": ["clinical rehabilitation", "clin rehabil"], "impactFactor": 2.9, "quartile": "Q1" },
+    { "name": "Disability and Rehabilitation", "aliases": ["disability and rehabilitation", "disabil rehabil"], "impactFactor": 2.0, "quartile": "Q2" },
+    { "name": "Gait & Posture", "aliases": ["gait & posture", "gait and posture", "gait posture"], "impactFactor": 2.4, "quartile": "Q2" },
+    { "name": "Physiotherapy", "aliases": ["physiotherapy"], "impactFactor": 3.0, "quartile": "Q1" },
+    { "name": "Physiotherapy Theory and Practice", "aliases": ["physiotherapy theory and practice", "physiother theory pract"], "impactFactor": 1.5, "quartile": "Q2" },
+    { "name": "Brazilian Journal of Physical Therapy", "aliases": ["brazilian journal of physical therapy", "braz j phys ther"], "impactFactor": 3.2, "quartile": "Q1" },
+    { "name": "Musculoskeletal Science and Practice", "aliases": ["musculoskeletal science and practice", "musculoskelet sci pract"], "impactFactor": 2.2, "quartile": "Q2" },
+    { "name": "Journal of Manual & Manipulative Therapy", "aliases": ["journal of manual & manipulative therapy", "journal of manual and manipulative therapy", "j man manip ther"], "impactFactor": 1.9, "quartile": "Q2" },
+    { "name": "Physical Therapy in Sport", "aliases": ["physical therapy in sport", "phys ther sport"], "impactFactor": 2.4, "quartile": "Q1" },
+    { "name": "American Journal of Sports Medicine", "aliases": ["the american journal of sports medicine", "american journal of sports medicine", "am j sports med"], "impactFactor": 4.5, "quartile": "Q1" },
+    { "name": "Sports Medicine", "aliases": ["sports medicine", "sports med", "sports medicine (auckland, n.z.)"], "impactFactor": 9.4, "quartile": "Q1" },
+    { "name": "Clinical Biomechanics", "aliases": ["clinical biomechanics", "clinical biomechanics (bristol, avon)", "clin biomech"], "impactFactor": 1.4, "quartile": "Q3" },
+    { "name": "Journal of Electromyography and Kinesiology", "aliases": ["journal of electromyography and kinesiology", "j electromyogr kinesiol"], "impactFactor": 2.3, "quartile": "Q1" },
+    { "name": "PM&R", "aliases": ["pm&r", "pm and r", "pm r"], "impactFactor": 2.8, "quartile": "Q1" },
+    { "name": "American Journal of Physical Medicine & Rehabilitation", "aliases": ["american journal of physical medicine & rehabilitation", "american journal of physical medicine and rehabilitation", "am j phys med rehabil"], "impactFactor": 2.4, "quartile": "Q1" },
+    { "name": "Journal of Rehabilitation Medicine", "aliases": ["journal of rehabilitation medicine", "j rehabil med"], "impactFactor": 2.3, "quartile": "Q1" },
+    { "name": "Neurorehabilitation and Neural Repair", "aliases": ["neurorehabilitation and neural repair", "neurorehabil neural repair"], "impactFactor": 3.7, "quartile": "Q1" },
+    { "name": "European Spine Journal", "aliases": ["european spine journal", "eur spine j"], "impactFactor": 2.7, "quartile": "Q2" },
+    { "name": "Spine", "aliases": ["spine", "spine (phila pa 1976)"], "impactFactor": 3.5, "quartile": "Q1" },
+    { "name": "BMC Musculoskeletal Disorders", "aliases": ["bmc musculoskeletal disorders", "bmc musculoskelet disord"], "impactFactor": 2.4, "quartile": "Q2" },
+    { "name": "Pain", "aliases": ["pain"], "impactFactor": 5.5, "quartile": "Q1" },
+    { "name": "Archives of Physiotherapy", "aliases": ["archives of physiotherapy", "arch physiother"], "impactFactor": 2.9, "quartile": "Q1" }
+  ]
+}
