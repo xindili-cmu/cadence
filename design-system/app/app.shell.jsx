@@ -65,7 +65,10 @@ function NavRail({ view, onView }) {
   );
 }
 
-function DigestRail({ stories, onPick }) {
+function DigestRail({ stories, dayKey = 'today', onPick }) {
+  // Nothing published in the window yet (e.g. China-morning before the 15:00
+  // Beijing crawl) → render nothing instead of an empty box + zeroed pulse.
+  if (!stories.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
   const top = [...stories].sort((a, b) => b.score - a.score).slice(0, 3);
   const counts = CATEGORIES.map((c) => ({ ...c, n: stories.filter((s) => s.category === c.id).length }));
   const maxN = Math.max(1, ...counts.map((c) => c.n));
@@ -74,7 +77,7 @@ function DigestRail({ stories, onPick }) {
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
           <Icon name="sun" size={16} style={{ color: 'var(--green-700)' }} />
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--text-primary)' }}>{window.CD_T('todaysSignal')}</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--text-primary)' }}>{window.CD_T(dayKey === 'today' ? 'todaysSignal' : 'yesterdaySignal')}</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {top.map((s, i) => (
@@ -93,7 +96,7 @@ function DigestRail({ stories, onPick }) {
       </div>
 
       <div style={{ marginTop: 16, padding: '0 18px' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 12 }}>{window.CD_T('categoryPulse')}</div>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 12 }}>{window.CD_T('categoryPulse')} · {window.CD_T(dayKey)}</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {counts.map((c) => (
             <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>

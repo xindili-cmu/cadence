@@ -504,11 +504,15 @@ function FeedApp() {
           ))}
         </main>
 
-        {!isSources && (
-          <DigestRail
-            stories={window.CD_STORIES.filter((s) => s.day === (isDaily ? 'yesterday' : 'today')).map(L)}
-            onPick={scrollToStory} />
-        )}
+        {!isSources && (() => {
+          // Rail day: Daily-brief view pins yesterday; other views prefer today
+          // but fall back to yesterday when today is still empty (e.g. before
+          // the 15:00 Beijing crawl) so the rail never renders a hollow box.
+          const todayRail = window.CD_STORIES.filter((s) => s.day === 'today');
+          const railDay = (isDaily || !todayRail.length) ? 'yesterday' : 'today';
+          const railStories = (railDay === 'today' ? todayRail : window.CD_STORIES.filter((s) => s.day === 'yesterday')).map(L);
+          return <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />;
+        })()}
       </div>
     </div>
   );
