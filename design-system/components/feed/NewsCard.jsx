@@ -29,6 +29,9 @@ export function NewsCard({
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  // i18n — CD_T is defined by app.data.jsx; fall back to the English literal
+  // so the component still works standalone (e.g. in the design-system preview).
+  const t = (typeof window !== 'undefined' && window.CD_T) || ((k, fb) => fb);
   const cat = getCategory(category);
   const isLead = variant === 'lead';
   const isCompact = variant === 'compact';
@@ -71,8 +74,8 @@ export function NewsCard({
         {onToggleSave && (
           <button
             onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
-            aria-label={saved ? 'Remove bookmark' : 'Save story'}
-            title={saved ? 'Remove bookmark' : 'Save story (stored in this browser)'}
+            aria-label={saved ? t('unsave', 'Remove bookmark') : t('save', 'Save story')}
+            title={saved ? t('unsave', 'Remove bookmark') : t('saveHint', 'Save story (stored in this browser)')}
             style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               width: 26, height: 26, padding: 0, flex: 'none',
@@ -116,7 +119,7 @@ export function NewsCard({
         }}>
           <span style={{ color: 'var(--green-600)', marginTop: 1 }}><Icon name="sparkles" size={15} strokeWidth={2} /></span>
           <div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>Why it matters</div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>{t('whyMatters', 'Why it matters')}</div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--ink-700)' }}>{whyItMatters}</div>
           </div>
         </div>
@@ -138,7 +141,7 @@ export function NewsCard({
             color: hover ? 'var(--green-700)' : 'var(--text-tertiary)', transition: 'var(--transition-colors)',
           }}
         >
-          Read original <Icon name="arrow-up-right" size={15} strokeWidth={2} />
+          {t('readOriginal', 'Read original')} <Icon name="arrow-up-right" size={15} strokeWidth={2} />
         </button>
       </div>
     </article>

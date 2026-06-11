@@ -1,36 +1,30 @@
 // Cadence UI kit — main feed screen + composition root.
 const { NewsCard, CategoryTabs, Button, Icon } = window;
 
-// Day labels computed from real Date so they update with the calendar.
-const _fmtDayLabel = (offset, prefix) => {
-  const d = new Date();
-  d.setDate(d.getDate() - offset);
-  const dow = d.toLocaleDateString('en-US', { weekday: 'long' });
-  const mon = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-  return `${prefix} — ${dow}, ${mon}`;
-};
-const DAY_LABELS = {
-  today:     _fmtDayLabel(0, 'Today'),
-  yesterday: _fmtDayLabel(1, 'Yesterday'),
-  older:     'Earlier this week',
+// Day labels computed per render — they follow both the calendar and the
+// active language (locale-formatted dates).
+const cdDayLabels = () => {
+  const t = window.CD_T;
+  const locale = window.CD_LANG === 'zh' ? 'zh-CN' : 'en-US';
+  const fmt = (offset, key) => {
+    const d = new Date();
+    d.setDate(d.getDate() - offset);
+    return `${t(key)} — ${d.toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' })}`;
+  };
+  return { today: fmt(0, 'today'), yesterday: fmt(1, 'yesterday'), older: t('older') };
 };
 
 function FeedToolbar({ view, count }) {
-  const meta = {
-    curated: { title: 'Curated', sub: 'AI-selected PT signal · updated daily' },
-    all: { title: 'All stories', sub: 'Full firehose across every source' },
-    daily: { title: 'Daily brief', sub: 'Yesterday, packaged into eight sections' },
-    sources: { title: 'Sources', sub: 'Outlets Cadence monitors' },
-    saved: { title: 'Saved', sub: 'Bookmarked stories · stored in this browser only' },
-  }[view] || { title: 'Curated', sub: '' };
+  const t = window.CD_T;
+  const id = ['curated', 'all', 'daily', 'saved', 'sources'].includes(view) ? view : 'curated';
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
-        <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-3xl)', letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>{meta.title}</h1>
-        <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, color: 'var(--text-tertiary)' }}>{meta.sub}</p>
+        <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-3xl)', letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>{t('nav.' + id)}</h1>
+        <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, color: 'var(--text-tertiary)' }}>{t('sub.' + id)}</p>
       </div>
       <span style={{ flex: 1 }} />
-      <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">Signal score</Button>
+      <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
     </div>
   );
 }
@@ -42,12 +36,13 @@ function FeedToolbar({ view, count }) {
 // covering the story; click scrolls to the card in the feed.
 
 function HotTopicsStrip({ topics, onPick }) {
+  const tr = window.CD_T; // `t` is taken by the topic loop variable below
   if (!topics || !topics.length) return null;
   return (
     <section style={{ marginBottom: 20, padding: '14px 18px 10px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 8 }}>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)' }}>Hot now</span>
-        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>Multi-source coverage · heat decays over time</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)' }}>{tr('hotNow')}</span>
+        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{tr('hotSub')}</span>
       </div>
       <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
         {topics.map((t, i) => {
@@ -57,11 +52,11 @@ function HotTopicsStrip({ topics, onPick }) {
               <button type="button" onClick={() => onPick && onPick(t.id)}
                 style={{ display: 'flex', alignItems: 'baseline', gap: 10, width: '100%', padding: '8px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
-                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{t.title}</span>
+                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
                 {cat && <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>}
                 <span title={(t.sources || []).join(' · ')}
                   style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
-                  {t.sourceCount} sources
+                  {t.sourceCount} {tr('nSources')}
                 </span>
               </button>
             </li>
@@ -80,7 +75,7 @@ function RelatedRow({ related }) {
   if (!related || !related.length) return null;
   return (
     <div style={{ margin: '6px 6px 0', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'baseline', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>
-      <span style={{ letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 10 }}>Also covered by</span>
+      <span style={{ letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 10 }}>{window.CD_T('alsoCovered')}</span>
       {related.map((r) => (
         <a key={r.source + r.sourceUrl} href={r.sourceUrl} target="_blank" rel="noopener noreferrer" title={r.title}
           onClick={(e) => e.stopPropagation()}
@@ -133,7 +128,7 @@ function SourceCard({ source }) {
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count || '—'}</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
-        <span style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}>{KIND_LABEL[source.kind] || 'Source'}</span>
+        <span style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}>{window.CD_T('kindL.' + source.kind, KIND_LABEL[source.kind] || 'Source')}</span>
         {source.regions && source.regions.length > 0 && <span>· {source.regions.join(' / ')}</span>}
         {source.domain && <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', textAlign: 'right' }}>{source.domain}</span>}
       </div>
@@ -144,7 +139,7 @@ function SourceCard({ source }) {
       </div>
       {source.latest && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4, paddingTop: 8, borderTop: '1px solid var(--border-subtle)' }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>Latest · {relativeAgo(source.latest.publishedAt)}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{window.CD_T('latest')} · {relativeAgo(source.latest.publishedAt)}</span>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.4, color: 'var(--text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{source.latest.title}</span>
         </div>
       )}
@@ -278,7 +273,7 @@ function SourcesGrid({ stories }) {
       {sections.map((sec) => (
         <section key={sec.label}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 10px' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{sec.label}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{window.CD_T('kind.' + sec.key, sec.label)}</span>
             <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{sec.items.length}</span>
           </div>
@@ -293,9 +288,9 @@ function SourcesGrid({ stories }) {
 }
 
 const KIND_SECTIONS = [
-  { label: 'Journals & Research', kinds: ['journal', 'database', 'preprint'] },
-  { label: 'Associations & Regulators', kinds: ['association', 'regulator'] },
-  { label: 'Industry News & Platforms', kinds: ['news', 'platform'] },
+  { key: 'journals', label: 'Journals & Research', kinds: ['journal', 'database', 'preprint'] },
+  { key: 'assoc', label: 'Associations & Regulators', kinds: ['association', 'regulator'] },
+  { key: 'industry', label: 'Industry News & Platforms', kinds: ['news', 'platform'] },
 ];
 
 const KIND_LABEL = {
@@ -326,6 +321,26 @@ function FeedApp() {
     });
   }, []);
 
+  // 中英切换 — setLang re-renders the tree; every component reads
+  // CD_LANG / CD_T at render time, so the flip is instant and complete.
+  const [lang, setLang] = React.useState(window.CD_LANG);
+  const toggleLang = React.useCallback(() => {
+    const next = window.CD_LANG === 'zh' ? 'en' : 'zh';
+    window.CD_SET_LANG(next);
+    setLang(next);
+  }, []);
+  const zh = lang === 'zh';
+  const t = window.CD_T;
+
+  // Localized display copy of a story. Content fields fall back to the
+  // original language when a bilingual field is missing (pre-i18n items):
+  // zh mode prefers titleZh/summaryZh; en mode prefers the English reason.
+  const L = React.useCallback((s) => (zh
+    ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
+    : { ...s, why: s.whyEn || s.why }), [zh]);
+
+  const DAY_LABELS = cdDayLabels();
+
   const compact = view === 'all';
   const isDaily = view === 'daily';
   const isSources = view === 'sources';
@@ -345,7 +360,8 @@ function FeedApp() {
   // Source-of-truth filter — search + category narrowing applies to every view.
   const matchesFilter = (s) => {
     if (category !== 'all' && s.category !== category) return false;
-    if (q && !(s.title.toLowerCase().includes(q) || s.source.toLowerCase().includes(q) || s.summary.toLowerCase().includes(q))) return false;
+    // Search across both languages regardless of display language.
+    if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
   };
   let stories = window.CD_STORIES.filter(matchesFilter);
@@ -399,7 +415,7 @@ function FeedApp() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--surface-page)' }}>
-      <AppHeader query={query} onQuery={setQuery} />
+      <AppHeader query={query} onQuery={setQuery} lang={lang} onLang={toggleLang} />
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: 24, padding: '0 24px' }}>
         <NavRail view={view} onView={setView} />
 
@@ -418,7 +434,7 @@ function FeedApp() {
           {!isSources && view === 'saved' && (
             <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', marginBottom: 16, padding: '10px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.5, color: 'var(--text-secondary)' }}>
               <Icon name="monitor-smartphone" size={15} style={{ color: 'var(--ink-300)', marginTop: 1, flex: 'none' }} />
-              <span>Bookmarks are stored locally in this browser — no account needed. They won't follow you to another device or browser, and clearing site data removes them.</span>
+              <span>{t('savedNote')}</span>
             </div>
           )}
 
@@ -430,9 +446,9 @@ function FeedApp() {
           {/* Daily brief editorial lead — fixed copy until Critic generates one per cron */}
           {!isSources && isDaily && grouped.length > 0 && (
             <div style={{ marginBottom: 24, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>Yesterday's signal</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>{t('yesterdaySignal')}</div>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, lineHeight: 1.5, color: 'var(--text-primary)' }}>
-                {stories.length} PT stories across {grouped.length} specialties yesterday. Top signal: <em>{stories.length && [...stories].sort((a, b) => b.score - a.score)[0].title}</em>.
+                {stories.length} {t('dailyLeadA')} {grouped.length} {t('dailyLeadB')} <em>{stories.length ? L([...stories].sort((a, b) => b.score - a.score)[0]).title : ''}</em>.
               </p>
             </div>
           )}
@@ -447,7 +463,7 @@ function FeedApp() {
           {!isSources && grouped.length === 0 && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
-              <div>{q ? `No stories match “${query}”.` : (view === 'saved' ? 'Nothing saved yet — tap the bookmark icon on any story.' : isDaily ? 'No stories from yesterday yet — check back after the 7am cron.' : 'No stories yet.')}</div>
+              <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
             </div>
           )}
 
@@ -463,21 +479,26 @@ function FeedApp() {
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
                 )}
                 <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{g.items.length} {g.items.length === 1 ? 'story' : 'stories'}</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{g.items.length} {t(g.items.length === 1 ? 'storyOne' : 'storyMany')}</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {g.items.map((s) => (
-                  <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
-                    <NewsCard
-                      variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
-                      category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                      title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
-                      selected={selected === s.id}
-                      saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(s)}
-                      onClick={() => setSelected(s.id)} />
-                    {!compact && <RelatedRow related={s.related} />}
-                  </div>
-                ))}
+                {g.items.map((raw) => {
+                  // Render localized copy; bookmark the RAW story so the
+                  // snapshot keeps both languages for later toggles.
+                  const s = L(raw);
+                  return (
+                    <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
+                      <NewsCard
+                        variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
+                        category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
+                        title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
+                        selected={selected === s.id}
+                        saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}
+                        onClick={() => setSelected(s.id)} />
+                      {!compact && <RelatedRow related={s.related} />}
+                    </div>
+                  );
+                })}
               </div>
             </section>
           ))}
@@ -485,7 +506,7 @@ function FeedApp() {
 
         {!isSources && (
           <DigestRail
-            stories={window.CD_STORIES.filter((s) => s.day === (isDaily ? 'yesterday' : 'today'))}
+            stories={window.CD_STORIES.filter((s) => s.day === (isDaily ? 'yesterday' : 'today')).map(L)}
             onPick={scrollToStory} />
         )}
       </div>
@@ -498,20 +519,21 @@ function FeedApp() {
 // plain reload: the site is static, so re-running the page IS the refetch
 // (fetches already use cache:'no-store').
 function LoadErrorScreen({ message }) {
+  const t = window.CD_T;
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-page)', padding: 24 }}>
       <div style={{ maxWidth: 380, textAlign: 'center' }}>
         <Icon name="cloud-off" size={32} style={{ color: 'var(--ink-300)', margin: '0 auto 14px' }} />
         <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 8 }}>
-          Couldn't load the feed
+          {t('errTitle')}
         </div>
         <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>
-          The news data didn't come through — this is usually a flaky connection rather than anything on our end.
+          {t('errBody')}
         </p>
         {message && (
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginBottom: 18 }}>{message}</div>
         )}
-        <Button iconStart="rotate-cw" onClick={() => window.location.reload()}>Try again</Button>
+        <Button iconStart="rotate-cw" onClick={() => window.location.reload()}>{t('tryAgain')}</Button>
       </div>
     </div>
   );

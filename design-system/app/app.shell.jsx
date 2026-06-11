@@ -1,7 +1,8 @@
 // Cadence UI kit — app shell: header, left nav rail, right digest rail.
-const { Logo, Button, Input, Icon, CategoryTag, SignalScore, CATEGORIES } = window;
+const { Logo, Button, Input, Icon, CategoryTag, SignalScore, CATEGORIES, catShort } = window;
 
-function AppHeader({ query, onQuery }) {
+function AppHeader({ query, onQuery, lang, onLang }) {
+  const t = window.CD_T;
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 20, height: 'var(--header-height)',
@@ -12,13 +13,25 @@ function AppHeader({ query, onQuery }) {
       <Logo variant="lockup" height={22} />
       {/* Masthead motto — Spectral uppercase, wide tracking (Cindy picked option 4,
           2026-06-10): academic-journal masthead feel; serif caps don't read as an
-          AI label the way mono caps did. */}
+          AI label the way mono caps did. Brand line — stays English in both langs. */}
       <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
       {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
-          Search is the only header action. */}
+          Header actions: search + language toggle only. */}
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
-        <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder="Search stories, sources, companies…" />
+        <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t('searchPlaceholder')} />
       </div>
+      {/* 中英切换 — shows the language you'd switch TO. Device-local pref. */}
+      <button type="button" onClick={onLang}
+        aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
+        style={{
+          display: 'inline-flex', alignItems: 'center', gap: 6, padding: '5px 11px', flex: 'none',
+          background: 'transparent', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-pill)',
+          fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, color: 'var(--text-secondary)',
+          cursor: 'pointer', transition: 'var(--transition-colors)',
+        }}>
+        <Icon name="languages" size={14} style={{ color: 'var(--text-tertiary)' }} />
+        {lang === 'zh' ? 'EN' : '中文'}
+      </button>
     </header>
   );
 }
@@ -43,7 +56,7 @@ function NavRail({ view, onView }) {
               transition: 'var(--transition-colors)',
             }}>
               <Icon name={item.icon} size={17} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
-              {item.label}
+              {window.CD_T('nav.' + item.id, item.label)}
             </button>
           );
         })}
@@ -61,7 +74,7 @@ function DigestRail({ stories, onPick }) {
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
           <Icon name="sun" size={16} style={{ color: 'var(--green-700)' }} />
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--text-primary)' }}>Today's Signal</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--text-primary)' }}>{window.CD_T('todaysSignal')}</span>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {top.map((s, i) => (
@@ -80,12 +93,12 @@ function DigestRail({ stories, onPick }) {
       </div>
 
       <div style={{ marginTop: 16, padding: '0 18px' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 12 }}>Category pulse · today</div>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 12 }}>{window.CD_T('categoryPulse')}</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {counts.map((c) => (
             <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${c.accent})`, flex: 'none' }} />
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{c.short}</span>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{catShort(c)}</span>
               <span style={{ width: 54, height: 4, borderRadius: '999px', background: 'var(--ink-100)', overflow: 'hidden', flex: 'none' }}>
                 <span style={{ display: 'block', width: `${(c.n / maxN) * 100}%`, height: '100%', background: `var(--cat-${c.accent})`, opacity: 0.65, borderRadius: '999px' }} />
               </span>

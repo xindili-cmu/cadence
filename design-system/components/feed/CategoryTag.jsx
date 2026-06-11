@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
-import { getCategory } from './categories.js';
+import { getCategory, catLabel, catShort } from './categories.js';
 
 /**
  * CategoryTag — the colored label that classifies a story by ESG category.
@@ -13,7 +13,7 @@ export function CategoryTag({
   const solid = `var(--cat-${cat.accent})`;
   const soft = `var(--cat-${cat.accent}-soft)`;
   const ink = `var(--cat-${cat.accent}-ink)`;
-  const label = useShort ? cat.short : cat.label;
+  const label = useShort ? catShort(cat) : catLabel(cat);
 
   const dims = size === 'sm'
     ? { font: 11, pad: '2px 7px', gap: 4, icon: 12, radius: 'var(--radius-sm)' }

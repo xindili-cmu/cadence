@@ -17,7 +17,7 @@ const FILES = [
   'components/feed/CategoryTabs.jsx',
   'components/feed/NewsCard.jsx',
 ];
-const GLOBALS = ['Logo', 'Button', 'Input', 'Icon', 'CategoryTag', 'CategoryTabs', 'SignalScore', 'NewsCard', 'CATEGORIES', 'CATEGORY_MAP', 'getCategory', 'catVars'];
+const GLOBALS = ['Logo', 'Button', 'Input', 'Icon', 'CategoryTag', 'CategoryTabs', 'SignalScore', 'NewsCard', 'CATEGORIES', 'CATEGORY_MAP', 'getCategory', 'catVars', 'catLabel', 'catShort'];
 
 let out = `// AUTO-GENERATED from components/** — do not edit by hand.
 // Regenerate: node scripts/build-bundle.js. Exposes all components as globals.

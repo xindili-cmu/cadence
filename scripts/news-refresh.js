@@ -420,6 +420,10 @@ tags 规则：
 
 编辑标准：
 - summary：1-2 句中性英文，front-load "what changed"。研究类必带样本量 + 关键效应量（或 p 值 / CI），原文没给就不编造。
+- **双语字段（站点有中英切换，三个字段全部必填）**：
+  - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（如 ACL、COPD、RCT）保留英文。
+  - summaryZh：summary 的中文版，同样 1-2 句、front-load 变化点、保留数字。不是 summary 的直译腔，要像中文期刊导读。
+  - curatedReasonEn：curatedReason 的英文版，**同一个 take、同样的口吻规则**（second-person、直接下判断、禁条件句开头、禁空效用措辞）。不是翻译练习——写给英文读者的同一条专业意见。
 - curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么、该做什么、别做什么。
   - 禁止条件句开头（"如果你在使用…"、"如果你关注…"、"如果你治疗…"）——默认读者就是干这行的，直接说事。
   - 禁止空效用措辞："有参考价值"、"帮助你决策"、"值得关注"、"提供了依据/证据/支持"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
@@ -434,7 +438,7 @@ tags 规则：
 category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
 
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","tags":["research","spine"],"summary":"One-line English neutral summary","category":"orthopedic（仅输入为 null 时必填）"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","tags":["research","spine"],"summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
@@ -771,6 +775,10 @@ async function main() {
       publishedAt: o.publishedDate,
       curatedScore: c.curatedScore,
       curatedReason: c.curatedReason,
+      // Bilingual fields (中英切换) — optional in old data, required in new runs.
+      ...(c.titleZh ? { titleZh: c.titleZh } : {}),
+      ...(c.summaryZh ? { summaryZh: c.summaryZh } : {}),
+      ...(c.curatedReasonEn ? { curatedReasonEn: c.curatedReasonEn } : {}),
       tags: c.tags || [],
       ...(o.related?.length ? { related: o.related } : {})
     };

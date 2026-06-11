@@ -8,15 +8,24 @@ const { useState, useRef, useEffect } = React;
 // CategoryTabs and NewsCard. Colors resolve to --cat-<accent>* tokens.
 // Slug authority for the whole system; scripts/news-refresh.js must match.
 const CATEGORIES = [
-  { id: 'orthopedic',      label: 'Orthopedic',                  short: 'Ortho',      icon: 'bone',            accent: 'ortho' },
-  { id: 'neurological',    label: 'Neurological',                short: 'Neuro',      icon: 'brain',           accent: 'neuro' },
-  { id: 'sports',          label: 'Sports & Athletic',           short: 'Sports',     icon: 'activity',        accent: 'sports' },
-  { id: 'pediatric',       label: 'Pediatric',                   short: 'Pediatric',  icon: 'baby',            accent: 'pediatric' },
-  { id: 'geriatric',       label: 'Geriatric',                   short: 'Geriatric',  icon: 'person-standing', accent: 'geriatric' },
-  { id: 'cardiopulmonary', label: 'Cardiopulmonary',             short: 'Cardiopulm', icon: 'heart-pulse',     accent: 'cardiopulm' },
-  { id: 'manual-modality', label: 'Manual Therapy & Modalities', short: 'Manual',     icon: 'hand',            accent: 'manual' },
-  { id: 'practice',        label: 'Practice & Profession',       short: 'Practice',   icon: 'briefcase',       accent: 'practice' },
+  { id: 'orthopedic',      label: 'Orthopedic',                  labelZh: '骨科康复',   short: 'Ortho',      shortZh: '骨科', icon: 'bone',            accent: 'ortho' },
+  { id: 'neurological',    label: 'Neurological',                labelZh: '神经康复',   short: 'Neuro',      shortZh: '神经', icon: 'brain',           accent: 'neuro' },
+  { id: 'sports',          label: 'Sports & Athletic',           labelZh: '运动康复',   short: 'Sports',     shortZh: '运动', icon: 'activity',        accent: 'sports' },
+  { id: 'pediatric',       label: 'Pediatric',                   labelZh: '儿童康复',   short: 'Pediatric',  shortZh: '儿科', icon: 'baby',            accent: 'pediatric' },
+  { id: 'geriatric',       label: 'Geriatric',                   labelZh: '老年康复',   short: 'Geriatric',  shortZh: '老年', icon: 'person-standing', accent: 'geriatric' },
+  { id: 'cardiopulmonary', label: 'Cardiopulmonary',             labelZh: '心肺康复',   short: 'Cardiopulm', shortZh: '心肺', icon: 'heart-pulse',     accent: 'cardiopulm' },
+  { id: 'manual-modality', label: 'Manual Therapy & Modalities', labelZh: '手法与理疗', short: 'Manual',     shortZh: '手法', icon: 'hand',            accent: 'manual' },
+  { id: 'practice',        label: 'Practice & Profession',       labelZh: '行业与执业', short: 'Practice',   shortZh: '执业', icon: 'briefcase',       accent: 'practice' },
 ];
+
+// Language-aware label pickers — read window.CD_LANG (set by app.data.jsx) at
+// render time, so a language toggle re-render flips every tag/tab in place.
+function catLabel(cat) {
+  return (typeof window !== 'undefined' && window.CD_LANG === 'zh' && cat.labelZh) || cat.label;
+}
+function catShort(cat) {
+  return (typeof window !== 'undefined' && window.CD_LANG === 'zh' && cat.shortZh) || cat.short;
+}
 
 const CATEGORY_MAP = CATEGORIES.reduce((m, c) => { m[c.id] = c; return m; }, {});
 
@@ -308,7 +317,7 @@ function CategoryTag({
   const solid = `var(--cat-${cat.accent})`;
   const soft = `var(--cat-${cat.accent}-soft)`;
   const ink = `var(--cat-${cat.accent}-ink)`;
-  const label = useShort ? cat.short : cat.label;
+  const label = useShort ? catShort(cat) : catLabel(cat);
 
   const dims = size === 'sm'
     ? { font: 11, pad: '2px 7px', gap: 4, icon: 12, radius: 'var(--radius-sm)' }
@@ -386,10 +395,10 @@ function CategoryTabs({ value = 'all', onChange = () => {}, includeAll = true, s
       {...rest}
     >
       {includeAll && (
-        <Tab id="all" label="All" icon={null} accent={null} active={value === 'all'} onClick={onChange} />
+        <Tab id="all" label={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '全部' : 'All'} icon={null} accent={null} active={value === 'all'} onClick={onChange} />
       )}
       {CATEGORIES.map((c) => (
-        <Tab key={c.id} id={c.id} label={c.short} icon={c.icon} accent={c.accent} active={value === c.id} onClick={onChange} />
+        <Tab key={c.id} id={c.id} label={catShort(c)} icon={c.icon} accent={c.accent} active={value === c.id} onClick={onChange} />
       ))}
     </div>
   );
@@ -422,6 +431,9 @@ function NewsCard({
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = useState(false);
+  // i18n — CD_T is defined by app.data.jsx; fall back to the English literal
+  // so the component still works standalone (e.g. in the design-system preview).
+  const t = (typeof window !== 'undefined' && window.CD_T) || ((k, fb) => fb);
   const cat = getCategory(category);
   const isLead = variant === 'lead';
   const isCompact = variant === 'compact';
@@ -464,8 +476,8 @@ function NewsCard({
         {onToggleSave && (
           <button
             onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
-            aria-label={saved ? 'Remove bookmark' : 'Save story'}
-            title={saved ? 'Remove bookmark' : 'Save story (stored in this browser)'}
+            aria-label={saved ? t('unsave', 'Remove bookmark') : t('save', 'Save story')}
+            title={saved ? t('unsave', 'Remove bookmark') : t('saveHint', 'Save story (stored in this browser)')}
             style={{
               display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
               width: 26, height: 26, padding: 0, flex: 'none',
@@ -509,7 +521,7 @@ function NewsCard({
         }}>
           <span style={{ color: 'var(--green-600)', marginTop: 1 }}><Icon name="sparkles" size={15} strokeWidth={2} /></span>
           <div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>Why it matters</div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>{t('whyMatters', 'Why it matters')}</div>
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--ink-700)' }}>{whyItMatters}</div>
           </div>
         </div>
@@ -531,7 +543,7 @@ function NewsCard({
             color: hover ? 'var(--green-700)' : 'var(--text-tertiary)', transition: 'var(--transition-colors)',
           }}
         >
-          Read original <Icon name="arrow-up-right" size={15} strokeWidth={2} />
+          {t('readOriginal', 'Read original')} <Icon name="arrow-up-right" size={15} strokeWidth={2} />
         </button>
       </div>
     </article>
@@ -539,4 +551,4 @@ function NewsCard({
 }
 
 
-Object.assign(window, { Logo, Button, Input, Icon, CategoryTag, CategoryTabs, SignalScore, NewsCard, CATEGORIES, CATEGORY_MAP, getCategory, catVars });
+Object.assign(window, { Logo, Button, Input, Icon, CategoryTag, CategoryTabs, SignalScore, NewsCard, CATEGORIES, CATEGORY_MAP, getCategory, catVars, catLabel, catShort });
