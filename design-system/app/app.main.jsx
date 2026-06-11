@@ -310,22 +310,6 @@ function FeedApp() {
   const [query, setQuery] = React.useState('');
   const [selected, setSelected] = React.useState(null);
 
-  // Saved stories — full snapshots keyed by id, persisted to localStorage so
-  // bookmarks survive reloads AND survive the story rotating out of news.json.
-  // localStorage can throw (private browsing / disabled), so every touch is wrapped.
-  const [savedMap, setSavedMap] = React.useState(() => {
-    try { return JSON.parse(localStorage.getItem('cd-saved-v1') || '{}'); }
-    catch (e) { return {}; }
-  });
-  const toggleSave = React.useCallback((story) => {
-    setSavedMap((prev) => {
-      const next = { ...prev };
-      if (next[story.id]) delete next[story.id]; else next[story.id] = story;
-      try { localStorage.setItem('cd-saved-v1', JSON.stringify(next)); } catch (e) { /* noop */ }
-      return next;
-    });
-  }, []);
-
   const compact = view === 'all';
   const isDaily = view === 'daily';
   const isSources = view === 'sources';
@@ -343,24 +327,11 @@ function FeedApp() {
   }, []);
 
   // Source-of-truth filter — search + category narrowing applies to every view.
-  const matchesFilter = (s) => {
+  let stories = window.CD_STORIES.filter((s) => {
     if (category !== 'all' && s.category !== category) return false;
     if (q && !(s.title.toLowerCase().includes(q) || s.source.toLowerCase().includes(q) || s.summary.toLowerCase().includes(q))) return false;
     return true;
-  };
-  let stories = window.CD_STORIES.filter(matchesFilter);
-
-  // Saved view = bookmarked stories. Entries still in the live feed render
-  // fresh; bookmarks that have rotated out of news.json render from their
-  // localStorage snapshot, bucketed under 'older'.
-  if (view === 'saved') {
-    const live = stories.filter((s) => savedMap[s.id]);
-    const liveIds = new Set(window.CD_STORIES.map((s) => s.id));
-    const ghosts = Object.values(savedMap)
-      .filter((s) => !liveIds.has(s.id) && matchesFilter(s))
-      .map((s) => ({ ...s, day: 'older' }));
-    stories = [...live, ...ghosts];
-  }
+  });
 
   // Daily brief = yesterday's edition. Excludes today (today still flows on
   // Curated). Falls back to "older" if no yesterday items present.
@@ -394,7 +365,7 @@ function FeedApp() {
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
   // Daily brief intentionally has no lead — every section gets equal weight.
-  const leadId = (!compact && !isDaily && view !== 'saved' && grouped.length && grouped[0].items.length)
+  const leadId = (!compact && !isDaily && grouped.length && grouped[0].items.length)
     ? [...grouped[0].items].sort((a, b) => b.score - a.score)[0].id : null;
 
   return (
@@ -437,7 +408,7 @@ function FeedApp() {
           {!isSources && grouped.length === 0 && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
-              <div>{q ? `No stories match “${query}”.` : (view === 'saved' ? 'Nothing saved yet — tap the bookmark icon on any story.' : isDaily ? 'No stories from yesterday yet — check back after the 7am cron.' : 'No stories yet.')}</div>
+              <div>{q ? `No stories match “${query}”.` : (isDaily ? 'No stories from yesterday yet — check back after the 7am cron.' : 'No stories yet.')}</div>
             </div>
           )}
 
@@ -463,7 +434,6 @@ function FeedApp() {
                       category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                       title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                       selected={selected === s.id}
-                      saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(s)}
                       onClick={() => setSelected(s.id)} />
                     {!compact && <RelatedRow related={s.related} />}
                   </div>
