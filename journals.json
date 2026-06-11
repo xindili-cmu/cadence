@@ -1,0 +1,49 @@
+{
+  "_comment": "期刊影响因子 / JCR 分区元数据表。每年 6 月底 Clarivate 发布新版 JCR 后手动更新一次：改 impactFactor / quartile，并把 jcrYear 和 updated 改成新值。文章卡片渲染时按 journal 字段实时查这张表，所以改这里全站生效。alias 匹配规则：小写、去括号注释、去开头 the、& 视为 and。",
+  "jcrYear": 2024,
+  "updated": "2026-06-11",
+  "journals": [
+    {
+      "name": "Journal of Orthopaedic & Sports Physical Therapy",
+      "aliases": ["jospt", "journal of orthopaedic and sports physical therapy", "j orthop sports phys ther"],
+      "impactFactor": 5.8,
+      "quartile": "Q1"
+    },
+    {
+      "name": "Physical Therapy",
+      "aliases": ["physical therapy", "ptj", "phys ther", "physical therapy and rehabilitation journal"],
+      "impactFactor": 3.3,
+      "quartile": "Q1"
+    },
+    {
+      "name": "The Lancet",
+      "aliases": ["lancet", "lancet (london, england)"],
+      "impactFactor": 88.5,
+      "quartile": "Q1"
+    },
+    {
+      "name": "British Journal of Sports Medicine",
+      "aliases": ["british journal of sports medicine", "bjsm", "br j sports med"],
+      "impactFactor": 16.2,
+      "quartile": "Q1"
+    },
+    {
+      "name": "JAMA",
+      "aliases": ["jama", "jama-journal of the american medical association", "journal of the american medical association"],
+      "impactFactor": 55.0,
+      "quartile": "Q1"
+    },
+    {
+      "name": "Archives of Physical Medicine and Rehabilitation",
+      "aliases": ["archives of physical medicine and rehabilitation", "arch phys med rehabil", "archives of pm&r", "archives of pm and r"],
+      "impactFactor": 3.7,
+      "quartile": "Q1"
+    },
+    {
+      "name": "Journal of Physiotherapy",
+      "aliases": ["journal of physiotherapy", "j physiother"],
+      "impactFactor": 9.4,
+      "quartile": "Q1"
+    }
+  ]
+}

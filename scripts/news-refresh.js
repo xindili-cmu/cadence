@@ -252,7 +252,10 @@ async function fetchPubMed() {
           title, url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
           text: `${journal ? journal + '. ' : ''}${abstract}`.slice(0, 800),
           highlights: '', publishedDate, score: 0.5,
-          source: 'PubMed', category: q.category
+          source: 'PubMed', category: q.category,
+          // Actual journal name — the frontend matches it against journals.json
+          // (IF / JCR quartile badge). Source stays 'PubMed' for the roster.
+          ...(journal ? { journal } : {})
         });
       }
       await sleep(350);
@@ -297,6 +300,11 @@ async function fetchRssFeeds() {
         } });
         if (!res.ok) { console.error(`  RSS ${s.name}: ${res.status}`); continue; }
         const got = parseFeed(await res.text(), s.name);
+        // Journal feeds: stamp the canonical journal name (sources.json
+        // journalName) so the IF / JCR badge can match against journals.json.
+        if (s.kind === 'journal' && (s.journalName || s.name)) {
+          got.forEach(i => { i.journal = s.journalName || s.name; });
+        }
         console.log(`   rss:${s.name} → ${got.length}`);
         out.push(...got);
       } catch (e) { console.error(`  RSS ${s.name}: ${e.message}`); }
@@ -780,6 +788,8 @@ async function main() {
       ...(c.summaryZh ? { summaryZh: c.summaryZh } : {}),
       ...(c.curatedReasonEn ? { curatedReasonEn: c.curatedReasonEn } : {}),
       tags: c.tags || [],
+      // Journal identity for the IF / JCR-quartile badge (journals.json lookup)
+      ...(o.journal ? { journal: o.journal } : {}),
       ...(o.related?.length ? { related: o.related } : {})
     };
   }).filter(Boolean).sort((a, b) => b.curatedScore - a.curatedScore);

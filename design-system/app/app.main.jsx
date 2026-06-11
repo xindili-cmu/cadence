@@ -514,6 +514,7 @@ function FeedApp() {
                       <NewsCard
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
                         category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
+                        journalMeta={s.journalMeta}
                         title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                         selected={selected === s.id}
                         saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}

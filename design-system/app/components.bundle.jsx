@@ -447,6 +447,7 @@ function NewsCard({
   title, summary, source, sourceUrl = '#', time, date, category,
   score, whyItMatters, variant = 'default', selected = false,
   saved = false, onToggleSave, // bookmark state — persisted to localStorage by FeedApp
+  journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = useState(false);
@@ -559,6 +560,17 @@ function NewsCard({
       <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: isCompact ? 8 : 14 }}>
         <SourceMonogram source={source} accent={cat.accent} />
         <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, color: 'var(--text-secondary)' }}>{source}</span>
+        {journalMeta && (
+          <span
+            title={`${journalMeta.name} — ${t('ifTip', 'Journal impact factor')} · ${journalMeta.year} JCR`}
+            style={{
+              fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, whiteSpace: 'nowrap',
+              padding: '1px 6px', borderRadius: 'var(--radius-xs)', cursor: 'default',
+              background: 'var(--green-50)', border: '1px solid var(--green-100)', color: 'var(--green-700)',
+            }}>
+            IF {journalMeta.if} · {journalMeta.quartile}
+          </span>
+        )}
         <span style={{ color: 'var(--ink-300)' }}>·</span>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{date}</span>
         <span style={{ flex: 1 }} />

@@ -21,6 +21,7 @@ window.CD_DICT = {
     'sub.sources': 'Outlets Cadence monitors',
     searchPlaceholder: 'Search stories, sources, companies…',
     signalScore: 'Signal score',
+    ifTip: 'Journal impact factor',
     hotNow: 'Hot now', hotSub: 'Multi-source coverage · heat decays over time', nSources: 'sources',
     alsoCovered: 'Also covered by',
     whyMatters: 'Why it matters', readOriginal: 'Read original',
@@ -48,6 +49,7 @@ window.CD_DICT = {
     'sub.sources': 'Cadence 监测的信源',
     searchPlaceholder: '搜索文章、信源、机构…',
     signalScore: '信号分',
+    ifTip: '期刊影响因子',
     hotNow: '当前热点', hotSub: '多源报道 · 热度随时间衰减', nSources: '个来源',
     alsoCovered: '同题报道',
     whyMatters: '为什么重要', readOriginal: '阅读原文',
@@ -107,6 +109,26 @@ function cdFmtDate(publishedAt) {
   return new Date(publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
+// ── Journal IF / JCR-quartile lookup ─────────────────────────────────────────
+// journals.json is a small hand-maintained table (updated once a year when the
+// new JCR drops). Items carry a `journal` field (canonical name from sources.json
+// or the PubMed record); we match it against name+aliases, normalized.
+function cdNormJournal(s) {
+  return (s || '').toLowerCase()
+    .replace(/\(.*?\)/g, ' ')   // "Lancet (London, England)" → "Lancet"
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ').trim()
+    .replace(/^the /, '');
+}
+
+window.CD_JOURNALS = {}; // normalized alias → { name, if, quartile, year }
+
+function cdJournalMeta(journal) {
+  if (!journal) return null;
+  return window.CD_JOURNALS[cdNormJournal(journal)] || null;
+}
+
 function cdTransformItem(item) {
   return {
     id:          item.id,
@@ -115,6 +137,7 @@ function cdTransformItem(item) {
     score:       item.curatedScore,
     source:      item.source,
     sourceUrl:   item.sourceUrl,
+    journalMeta: cdJournalMeta(item.journal),
     publishedAt: item.publishedAt,  // raw ISO retained for SourcesGrid "latest" sort
     time:        cdFmtTime(item.publishedAt),
     date:        cdFmtDate(item.publishedAt),
@@ -148,11 +171,22 @@ window.CD_NAV = [
 
 window.CD_DATA_READY = (async () => {
   try {
-    const [newsRes, srcRes] = await Promise.all([
+    const [newsRes, srcRes, jrnRes] = await Promise.all([
       fetch('news.json', { cache: 'no-store' }),
       fetch('sources.json', { cache: 'no-store' }),
+      fetch('journals.json', { cache: 'no-store' }),
     ]);
     if (!newsRes.ok) throw new Error(`news.json HTTP ${newsRes.status}`);
+    // Journal IF table must be indexed BEFORE cdTransformItem runs (badge lookup).
+    if (jrnRes.ok) {
+      try {
+        const jrn = await jrnRes.json();
+        (jrn.journals || []).forEach((j) => {
+          const meta = { name: j.name, if: j.impactFactor, quartile: j.quartile, year: jrn.jcrYear };
+          [j.name, ...(j.aliases || [])].forEach((a) => { window.CD_JOURNALS[cdNormJournal(a)] = meta; });
+        });
+      } catch (e) { console.error('[Cadence] journals.json parse failed:', e); }
+    }
     const data = await newsRes.json();
     window.CD_STORIES = (data.items || []).map(cdTransformItem);
     window.CD_META = data.meta || {};
