@@ -25,6 +25,7 @@ function SourceMonogram({ source, accent }) {
 export function NewsCard({
   title, summary, source, sourceUrl = '#', time, date, category,
   score, whyItMatters, variant = 'default', selected = false,
+  saved = false, onToggleSave, // bookmark state — persisted to localStorage by FeedApp
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
@@ -67,6 +68,25 @@ export function NewsCard({
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>
           {time}
         </span>
+        {onToggleSave && (
+          <button
+            onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
+            aria-label={saved ? 'Remove bookmark' : 'Save story'}
+            title={saved ? 'Remove bookmark' : 'Save story (stored in this browser)'}
+            style={{
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              width: 26, height: 26, padding: 0, flex: 'none',
+              background: 'transparent', border: 'none', borderRadius: 'var(--radius-xs)',
+              cursor: 'pointer',
+            }}
+          >
+            <Icon
+              name={saved ? 'bookmark-check' : 'bookmark'}
+              size={15}
+              style={{ color: saved ? 'var(--green-600)' : 'var(--ink-300)' }}
+            />
+          </button>
+        )}
       </div>
 
       {/* title */}
