@@ -11,10 +11,16 @@ function AppHeader({ query, onQuery, lang, onLang }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      {/* Masthead motto — Spectral uppercase, wide tracking (Cindy picked option 4,
-          2026-06-10): academic-journal masthead feel; serif caps don't read as an
-          AI label the way mono caps did. Brand line — stays English in both langs. */}
-      <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+      {/* Masthead motto — follows the UI language (Cindy 2026-06-11) so the
+          header never mixes three typefaces in one row:
+          · en: Spectral uppercase, wide tracking (her option-4 pick, 2026-06-10)
+          · zh: 「跟上证据的步伐」 in LXGW WenKai, echoing the 步频 lockup —
+            translates the motto and puns on 步/pace. */}
+      {lang === 'zh' ? (
+        <span style={{ fontFamily: "'LXGW WenKai Light', var(--font-sans)", fontSize: 14.5, letterSpacing: '0.1em', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>跟上证据的步伐</span>
+      ) : (
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+      )}
       {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
           Header actions: search + language toggle only. */}
       <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
