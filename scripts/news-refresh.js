@@ -631,25 +631,69 @@ function dropStaleByUrl(items) {
 
 // ── Hot topics (当前热点) ────────────────────────────────────────────────────
 // Heat = distinct-source count with exponential time decay (half-life 2 days).
-// Only stories covered by ≥2 independent sources qualify; empty array on
-// quiet days → the frontend hides the strip entirely.
+// Two legs:
+//   1. story-level — the same story covered by ≥2 independent outlets
+//      (original behaviour; rare in a vertical as narrow as PT, which is why
+//      the strip stayed empty for the first week of operation)
+//   2. theme-level — ≥2 distinct outlets publishing *different* stories that
+//      share a specific sub-tag (e.g. two vestibular papers from PubMed +
+//      JOSPT within days of each other). tags[0] is the content-type tag
+//      (research/news/guideline/policy), never a theme — skipped, along with
+//      a denylist of tags too generic to be a topic.
+// Story-level wins on id collision. Empty array on quiet days → strip hidden.
+
+const GENERIC_TAGS = new Set(['research', 'news', 'guideline', 'policy', 'rehabilitation', 'physical-therapy', 'pt', 'rehab', 'therapy', 'clinical']);
 
 function computeHotTopics(items) {
   const now = Date.now();
-  return items
+  const decay = (publishedAt) => Math.pow(0.5, Math.max(0, (now - new Date(publishedAt).getTime()) / 86400000) / 2);
+
+  // Leg 1 — story-level multi-source coverage.
+  const storyTopics = items
     .map(i => {
       const sourceCount = 1 + (i.related?.length || 0);
-      const ageDays = Math.max(0, (now - new Date(i.publishedAt).getTime()) / 86400000);
-      const heat = sourceCount * Math.pow(0.5, ageDays / 2);
       return {
         id: i.id, title: i.title, sourceUrl: i.sourceUrl, category: i.category,
         publishedAt: i.publishedAt, sourceCount,
         sources: [i.source, ...(i.related || []).map(r => r.source)],
-        heat: Math.round(heat * 100) / 100
+        heat: Math.round(sourceCount * decay(i.publishedAt) * 100) / 100
       };
     })
-    .filter(t => t.sourceCount >= 2 && t.heat >= 1.2)
+    .filter(t => t.sourceCount >= 2);
+
+  // Leg 2 — theme-level: shared sub-tag, distinct sources, 4-day window.
+  const byTag = new Map();
+  for (const i of items) {
+    const ageDays = (now - new Date(i.publishedAt).getTime()) / 86400000;
+    if (!(ageDays <= 4)) continue;
+    for (const t of (i.tags || []).slice(1)) {
+      if (GENERIC_TAGS.has(t)) continue;
+      if (!byTag.has(t)) byTag.set(t, []);
+      byTag.get(t).push(i);
+    }
+  }
+  const themeTopics = [];
+  for (const [tag, members] of byTag) {
+    const srcs = new Set(members.map(m => m.source));
+    if (members.length < 2 || srcs.size < 2) continue;
+    // Representative card = highest curated score; freshness = newest member
+    // (so the client-side decay recompute keeps the theme alive while any
+    // member is recent).
+    const top = [...members].sort(byCuratedScore)[0];
+    const newest = members.reduce((a, b) => (new Date(a.publishedAt) > new Date(b.publishedAt) ? a : b));
+    themeTopics.push({
+      id: top.id, title: top.title, sourceUrl: top.sourceUrl, category: top.category,
+      publishedAt: newest.publishedAt, sourceCount: srcs.size, sources: [...srcs],
+      tag,
+      heat: Math.round(srcs.size * decay(newest.publishedAt) * 100) / 100
+    });
+  }
+
+  const seen = new Set();
+  return [...storyTopics, ...themeTopics]
+    .filter(t => t.heat >= 1.2)
     .sort((a, b) => b.heat - a.heat)
+    .filter(t => (seen.has(t.id) ? false : seen.add(t.id)))
     .slice(0, 5);
 }
 
@@ -751,6 +795,25 @@ async function main() {
   const hotTopics = computeHotTopics(merged);
   console.log(`   Hot topics: ${hotTopics.length}`);
 
+  // Archive — every curated item is appended once to archive/YYYY-MM.json so
+  // stories rotating out of news.json (7-day cutoff / MAX_ITEMS cap) aren't
+  // lost. Dedup by canonical URL (re-found stories get fresh ids). Raw material
+  // for a future archive page / RSS output.
+  if (final.length) {
+    const ARCHIVE_DIR = path.join(__dirname, '..', 'archive');
+    fs.mkdirSync(ARCHIVE_DIR, { recursive: true });
+    const archPath = path.join(ARCHIVE_DIR, `${new Date().toISOString().slice(0, 7)}.json`);
+    let arch = [];
+    try { arch = JSON.parse(fs.readFileSync(archPath, 'utf8')).items || []; } catch {}
+    const known = new Set(arch.map(i => canonicalUrl(i.sourceUrl)));
+    const additions = final.filter(i => !known.has(canonicalUrl(i.sourceUrl)));
+    if (additions.length) {
+      arch.push(...additions);
+      fs.writeFileSync(archPath, JSON.stringify({ items: arch }, null, 2));
+      console.log(`   Archive: +${additions.length} → archive/${path.basename(archPath)} (${arch.length} total)`);
+    }
+  }
+
   fs.writeFileSync(NEWS_PATH, JSON.stringify({
     meta: {
       lastUpdated: new Date().toISOString(),
@@ -775,4 +838,4 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER };
+module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics };

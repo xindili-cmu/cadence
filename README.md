@@ -8,6 +8,7 @@ Forked from the GreenStack cloud-deploy AIHOT pattern. Methodology: `climate age
 
 - `index.html` — static site (Cloudflare Pages, no site build step; loads precompiled `app.min.js`)
 - `news.json` — the feed data, committed daily by cron
+- `archive/YYYY-MM.json` — every curated item, appended monthly by cron (survives feed rotation)
 - `design-system/` — visual layer (rebrand pass pending designer round 1)
   - `app/*.jsx` — app sources (edit these); compiled to `app/app.min.js`
 - `scripts/news-refresh.js` — Exa search → dedup → Claude curation → news.json

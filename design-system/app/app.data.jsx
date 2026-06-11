@@ -52,6 +52,7 @@ window.CD_NAV = [
   { id: 'curated', label: 'Curated',     icon: 'sparkles' },
   { id: 'all',     label: 'All stories', icon: 'list' },
   { id: 'daily',   label: 'Daily brief', icon: 'newspaper' },
+  { id: 'saved',   label: 'Saved',       icon: 'bookmark' },
   { id: 'sources', label: 'Sources',     icon: 'rss' },
 ];
 
