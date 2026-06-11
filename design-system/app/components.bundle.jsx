@@ -513,14 +513,21 @@ function NewsCard({
         )}
       </div>
 
-      {/* title */}
+      {/* title — a real link to the original article (the hover underline
+          promises "link"; honor it). Card-body clicks select/expand instead. */}
       <h3 style={{
         margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600,
         fontSize: titleSize, lineHeight: isLead ? 1.22 : 1.3,
-        letterSpacing: '-0.01em', color: 'var(--text-primary)',
-        textDecoration: hover ? 'underline' : 'none', textDecorationColor: 'var(--green-300)',
-        textUnderlineOffset: '3px',
-      }}>{title}</h3>
+        letterSpacing: '-0.01em',
+      }}>
+        <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            color: 'var(--text-primary)',
+            textDecoration: hover ? 'underline' : 'none', textDecorationColor: 'var(--green-300)',
+            textUnderlineOffset: '3px',
+          }}>{title}</a>
+      </h3>
 
       {/* summary — clamped by default (2 lines, lead 4); the selected card
           shows it in full. Clicking a card selects it, clicking again
