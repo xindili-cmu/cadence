@@ -56,13 +56,22 @@ export function Logo({ variant = 'lockup', tone = 'default', height = 28, withZh
     <span role="img" aria-label="Cadence 步频" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.36), ...style }} {...rest}>
       <Mark height={markSize} color={markColor} />{Wordmark}
       {withZh && (
-        // 中文名 — sized slightly under the wordmark cap height (CJK glyphs
-        // read larger than Latin at equal font-size), same ink color.
-        <span style={{
-          fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: Math.round(height * 0.9),
-          lineHeight: 1, whiteSpace: 'nowrap', marginTop: 1,
-          color: inverse ? '#FFFFFF' : 'var(--ink-900)',
-        }}>步频</span>
+        // 中文名「步频」— set in 霞鹜文楷 Light (LXGW WenKai Light, brush-kaiti),
+        // demoted to a quiet companion: a hairline rule separates it, deep-ink
+        // (ink-800) so the light strokes still hold, sized ~0.82× the cap height.
+        // The earlier inline Noto-Sans-SC version read heavier than the wordmark.
+        // (Designer handoff, Fulcrum round 1.)
+        <>
+          <span aria-hidden="true" style={{
+            width: 1, height: Math.round(height * 0.82), flex: 'none',
+            background: inverse ? 'rgba(255,255,255,0.4)' : 'var(--ink-300)',
+          }} />
+          <span style={{
+            fontFamily: "'LXGW WenKai Light', var(--font-sans)",
+            fontSize: Math.round(height * 0.82), lineHeight: 1, whiteSpace: 'nowrap',
+            color: inverse ? '#FFFFFF' : 'var(--ink-800)',
+          }}>步频</span>
+        </>
       )}
     </span>
   );

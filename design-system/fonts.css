@@ -1,8 +1,12 @@
-/* Cadence webfonts — loaded from Google Fonts.
+/* Cadence webfonts — loaded from Google Fonts + jsDelivr.
    Spectral (editorial serif display) · IBM Plex Sans (UI/body) · IBM Plex Mono (data/labels)
    Noto Serif SC / Noto Sans SC — Chinese editorial + UI fallbacks (bilingual brand).
-   NOTE: served from Google's CDN (fonts.gstatic.com). If self-hosted binaries are
-   required for offline/production use, swap these @import lines for local @font-face
+   LXGW WenKai Light (霞鹜文楷) — brush-kaiti, used ONLY for the logo's 步频 companion.
+     Subsetted by 中文网字计划 (cn-font-split); only the glyph subset actually rendered
+     downloads. Pin a version in place of @latest for production reproducibility.
+   NOTE: served from Google's CDN (fonts.gstatic.com) + jsDelivr. If self-hosted binaries
+   are required for offline/production use, swap these @import lines for local @font-face
    rules pointing at copied .woff2 files. */
 
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Sans+SC:wght@400;500&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@callmebill/lxgw-wenkai-web@latest/style.css');
