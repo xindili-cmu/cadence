@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Cadence — Keeping pace with the evidence</title>
 
@@ -35,6 +35,9 @@
   html, body { margin: 0; background: var(--surface-page); }
   * { box-sizing: border-box; }
   ::selection { background: var(--green-200); }
+  /* Mobile horizontal-scroll strips (category tabs): scrollable, scrollbar hidden */
+  .cd-hscroll { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .cd-hscroll::-webkit-scrollbar { display: none; }
 </style>
 </head>
 <body>

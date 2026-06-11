@@ -300,6 +300,9 @@ const KIND_LABEL = {
 };
 
 function FeedApp() {
+  // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
+  // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
+  const isMobile = window.useCdMobile();
   const [view, setView] = React.useState('curated');
   const [category, setCategory] = React.useState('all');
   const [query, setQuery] = React.useState('');
@@ -414,14 +417,29 @@ function FeedApp() {
   const leadId = (!compact && !isDaily && view !== 'saved' && grouped.length && grouped[0].items.length)
     ? [...grouped[0].items].sort((a, b) => b.score - a.score)[0].id : null;
 
+  // Rail day: Daily-brief view pins yesterday; other views prefer today but
+  // fall back to yesterday when today is still empty (e.g. before the 15:00
+  // Beijing crawl) so the rail never renders a hollow box. Computed here so
+  // desktop DigestRail and MobileSignalCard share one source of truth.
+  const todayRail = window.CD_STORIES.filter((s) => s.day === 'today');
+  const railDay = (isDaily || !todayRail.length) ? 'yesterday' : 'today';
+  const railStories = (railDay === 'today' ? todayRail : window.CD_STORIES.filter((s) => s.day === 'yesterday')).map(L);
+
   return (
     <div style={{ minHeight: '100vh', background: 'var(--surface-page)' }}>
-      <AppHeader query={query} onQuery={setQuery} lang={lang} onLang={toggleLang} />
-      <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: 24, padding: '0 24px' }}>
-        <NavRail view={view} onView={setView} />
+      <AppHeader query={query} onQuery={setQuery} lang={lang} onLang={toggleLang} mobile={isMobile} />
+      <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
+        {!isMobile && <NavRail view={view} onView={setView} />}
 
-        <main style={{ flex: 1, minWidth: 0, maxWidth: 'var(--feed-column)', padding: '24px 0 64px' }}>
+        <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           <FeedToolbar view={view} count={isSources ? null : stories.length} />
+
+          {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
+              only, and only when unfiltered, mirroring the desktop rail's role
+              as ambient context rather than a search result. */}
+          {isMobile && !isSources && (view === 'curated' || isDaily) && !q && category === 'all' && (
+            <MobileSignalCard stories={railStories} dayKey={railDay} onPick={scrollToStory} />
+          )}
 
           {/* Sources directory branch — short-circuits feed rendering.
               No specialty tabs here: the wall groups by outlet kind instead. */}
@@ -457,7 +475,11 @@ function FeedApp() {
           {!isSources && (
             <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
               background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
-              <CategoryTabs value={category} onChange={setCategory} />
+              {/* Mobile: 9 pills don't fit — single-row horizontal scroll
+                  (.cd-hscroll hides the scrollbar, defined in index.html). */}
+              <CategoryTabs value={category} onChange={setCategory}
+                className={isMobile ? 'cd-hscroll' : undefined}
+                style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2 } : undefined} />
             </div>
           )}
 
@@ -505,16 +527,12 @@ function FeedApp() {
           ))}
         </main>
 
-        {!isSources && (() => {
-          // Rail day: Daily-brief view pins yesterday; other views prefer today
-          // but fall back to yesterday when today is still empty (e.g. before
-          // the 15:00 Beijing crawl) so the rail never renders a hollow box.
-          const todayRail = window.CD_STORIES.filter((s) => s.day === 'today');
-          const railDay = (isDaily || !todayRail.length) ? 'yesterday' : 'today';
-          const railStories = (railDay === 'today' ? todayRail : window.CD_STORIES.filter((s) => s.day === 'yesterday')).map(L);
-          return <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />;
-        })()}
+        {!isSources && !isMobile && (
+          <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
+        )}
       </div>
+
+      {isMobile && <MobileTabBar view={view} onView={setView} />}
     </div>
   );
 }

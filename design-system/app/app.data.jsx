@@ -14,6 +14,8 @@
 window.CD_DICT = {
   en: {
     'nav.curated': 'Curated', 'nav.all': 'All stories', 'nav.daily': 'Daily brief', 'nav.saved': 'Saved', 'nav.sources': 'Sources',
+    // Short labels for the mobile bottom tab bar (≤8 chars so 5 tabs fit at 320px)
+    'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.saved': 'Saved', 'navS.sources': 'Sources',
     'sub.curated': 'AI-selected PT signal · updated daily', 'sub.all': 'Full firehose across every source',
     'sub.daily': 'Yesterday, packaged into eight sections', 'sub.saved': 'Bookmarked stories · stored in this browser only',
     'sub.sources': 'Outlets Cadence monitors',
@@ -40,6 +42,7 @@ window.CD_DICT = {
   },
   zh: {
     'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.saved': '收藏', 'nav.sources': '信源',
+    'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.saved': '收藏', 'navS.sources': '信源',
     'sub.curated': 'AI 精选 PT 信号 · 每日更新', 'sub.all': '全部信源的完整信息流',
     'sub.daily': '昨日要闻，按八个专科打包', 'sub.saved': '已收藏 · 仅存于当前浏览器',
     'sub.sources': 'Cadence 监测的信源',
