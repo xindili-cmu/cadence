@@ -11,19 +11,17 @@ function AppHeader({ query, onQuery, lang, onLang }) {
       borderBottom: '1px solid var(--border-subtle)',
     }}>
       <Logo variant="lockup" height={22} />
-      {/* Masthead motto — follows the UI language (Cindy 2026-06-11) so the
-          header never mixes three typefaces in one row:
-          · en: Spectral uppercase, wide tracking (her option-4 pick, 2026-06-10)
-          · zh: 「跟上证据的步伐」 in LXGW WenKai, echoing the 步频 lockup —
-            translates the motto and puns on 步/pace. */}
-      {lang === 'zh' ? (
-        <span style={{ fontFamily: "'LXGW WenKai Light', var(--font-sans)", fontSize: 14.5, letterSpacing: '0.1em', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>跟上证据的步伐</span>
-      ) : (
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
-      )}
+      {/* Masthead motto — English in both languages (Cindy 2026-06-11; the
+          brief zh-motto experiment is reverted). Spectral uppercase, wide
+          tracking (her option-4 pick, 2026-06-10). Centered between lockup
+          and search: the empty space separates it from the 文楷 步频 so the
+          two faces stop fighting in one cluster. */}
+      <span style={{ flex: 1 }} />
+      <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+      <span style={{ flex: 1 }} />
       {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
           Header actions: search + language toggle only. */}
-      <div style={{ flex: 1, maxWidth: 420, marginLeft: 'auto' }}>
+      <div style={{ flex: 'none', width: 'min(340px, 30vw)' }}>
         <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t('searchPlaceholder')} />
       </div>
       {/* 中英切换 — shows the language you'd switch TO. Device-local pref. */}
