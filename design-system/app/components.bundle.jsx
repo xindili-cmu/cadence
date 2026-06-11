@@ -110,9 +110,10 @@ function Mark({ height, color }) {
  * Logo — the Cadence mark and lockup.
  * `variant`: 'lockup' (mark + wordmark, default) · 'wordmark' · 'mark'.
  * `tone`: 'default' (blue mark / ink wordmark) · 'inverse' (for dark backgrounds).
+ * `withZh`: lockup shows the Chinese name 步频 after the wordmark (default true).
  * Sizes scale from `height` (mark + wordmark cap height in px).
  */
-function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...rest }) {
+function Logo({ variant = 'lockup', tone = 'default', height = 28, withZh = true, style, ...rest }) {
   const inverse = tone === 'inverse';
   const markColor = inverse ? '#FFFFFF' : 'var(--blue-600)';
   const markSize = Math.round(height * 1.25);
@@ -134,8 +135,17 @@ function Logo({ variant = 'lockup', tone = 'default', height = 28, style, ...res
     return <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', ...style }} {...rest}>{Wordmark}</span>;
   }
   return (
-    <span role="img" aria-label="Cadence" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.36), ...style }} {...rest}>
+    <span role="img" aria-label="Cadence 步频" style={{ display: 'inline-flex', alignItems: 'center', gap: Math.round(height * 0.36), ...style }} {...rest}>
       <Mark height={markSize} color={markColor} />{Wordmark}
+      {withZh && (
+        // 中文名 — sized slightly under the wordmark cap height (CJK glyphs
+        // read larger than Latin at equal font-size), same ink color.
+        <span style={{
+          fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: Math.round(height * 0.9),
+          lineHeight: 1, whiteSpace: 'nowrap', marginTop: 1,
+          color: inverse ? '#FFFFFF' : 'var(--ink-900)',
+        }}>步频</span>
+      )}
     </span>
   );
 }
