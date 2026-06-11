@@ -522,12 +522,14 @@ function NewsCard({
         textUnderlineOffset: '3px',
       }}>{title}</h3>
 
-      {/* summary */}
+      {/* summary — clamped by default (2 lines, lead 4); the selected card
+          shows it in full. Clicking a card selects it, clicking again
+          deselects, so the clamp doubles as an expand/collapse. */}
       {summary && !isCompact && (
         <p style={{
           margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)',
           lineHeight: 1.5, color: 'var(--text-secondary)',
-          display: '-webkit-box', WebkitLineClamp: isLead ? 4 : 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+          ...(selected ? {} : { display: '-webkit-box', WebkitLineClamp: isLead ? 4 : 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }),
         }}>{summary}</p>
       )}
 

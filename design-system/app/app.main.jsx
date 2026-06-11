@@ -495,7 +495,7 @@ function FeedApp() {
                         title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                         selected={selected === s.id}
                         saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}
-                        onClick={() => setSelected(s.id)} />
+                        onClick={() => setSelected(selected === s.id ? null : s.id)} />
                       {!compact && <RelatedRow related={s.related} />}
                     </div>
                   );
