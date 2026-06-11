@@ -1,0 +1,54 @@
+name: Build app bundle
+
+# Regenerates design-system/app/app.min.js (precompiled, minified JSX) whenever
+# the JSX sources or component library change, and commits the result.
+# index.html loads app.min.js with production React — no Babel in the browser.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'design-system/app/*.jsx'
+      - 'design-system/components/**'
+      - 'scripts/build-app.js'
+      - 'scripts/build-bundle.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-app
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install esbuild
+        run: npm install --no-save --no-package-lock esbuild
+
+      - name: Rebuild components bundle
+        run: node scripts/build-bundle.js
+
+      - name: Build app.min.js
+        run: node scripts/build-app.js
+
+      - name: Commit bundle
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add design-system/app/app.min.js design-system/app/components.bundle.jsx
+          if ! git diff --cached --quiet; then
+            git commit -m "🔧 rebuild app.min.js"
+            # The news cron may have pushed meanwhile — rebase before pushing.
+            git pull --rebase origin main
+            git push
+          fi

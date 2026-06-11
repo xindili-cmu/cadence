@@ -12,11 +12,13 @@
 <link rel="icon" href="design-system/assets/logo-mark.svg">
 <link rel="stylesheet" href="design-system/styles.css">
 
-<!-- React + Babel-standalone (same architecture as the prior index, no build step) -->
+<!-- Production React + precompiled app bundle (fast path — no Babel, no runtime
+     JSX compile). app.min.js is generated from design-system/app/*.jsx by
+     scripts/build-app.js (run by .github/workflows/build-app.yml on push, or
+     locally via `npm run build-app`). -->
 <script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 
 <style>
   html, body { margin: 0; background: var(--surface-page); }
@@ -32,15 +34,32 @@
   </div>
 </div>
 
-<!-- Order matters:
-     1. components.bundle.jsx  → defines window.NewsCard, window.CategoryTabs, etc.
-     2. app.data.jsx           → fetches news.json, sets window.CD_STORIES / CD_NAV / CD_SOURCES,
-                                 exposes window.CD_DATA_READY promise
-     3. app.shell.jsx          → defines window.AppHeader, NavRail, DigestRail
-     4. app.main.jsx           → FeedApp + ReactDOM render (awaits CD_DATA_READY) -->
-<script type="text/babel" src="design-system/app/components.bundle.jsx"></script>
-<script type="text/babel" src="design-system/app/app.data.jsx"></script>
-<script type="text/babel" src="design-system/app/app.shell.jsx"></script>
-<script type="text/babel" src="design-system/app/app.main.jsx"></script>
+<script>
+  // Fallback boot — only runs if app.min.js fails to load (e.g. CI hasn't
+  // generated it yet on a fresh branch). Loads Babel-standalone and compiles
+  // the four JSX sources in-browser, in the same order and with the same
+  // per-file scoping (indirect eval) as the old <script type="text/babel"> setup.
+  window.__cdLegacyBoot = function () {
+    console.warn('[Cadence] app.min.js unavailable — falling back to in-browser Babel compile');
+    var b = document.createElement('script');
+    b.src = 'https://unpkg.com/@babel/standalone@7.29.0/babel.min.js';
+    b.crossOrigin = 'anonymous';
+    b.onload = async function () {
+      var files = [
+        'design-system/app/components.bundle.jsx', // window.NewsCard, CategoryTabs, …
+        'design-system/app/app.data.jsx',          // fetch news.json → window.CD_* + CD_DATA_READY
+        'design-system/app/app.shell.jsx',         // window.AppHeader, NavRail, DigestRail
+        'design-system/app/app.main.jsx',          // FeedApp + ReactDOM render
+      ];
+      for (var i = 0; i < files.length; i++) {
+        var src = await (await fetch(files[i], { cache: 'no-store' })).text();
+        var code = Babel.transform(src, { presets: ['react'], filename: files[i] }).code;
+        (0, eval)(code + '\n//# sourceURL=' + files[i]);
+      }
+    };
+    document.head.appendChild(b);
+  };
+</script>
+<script src="design-system/app/app.min.js" onerror="__cdLegacyBoot()"></script>
 </body>
 </html>

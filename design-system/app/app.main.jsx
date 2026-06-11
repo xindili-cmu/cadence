@@ -453,10 +453,40 @@ function FeedApp() {
   );
 }
 
+// Data-load failure screen — rendered instead of FeedApp when app.data.jsx
+// couldn't fetch news.json (CD_META.error set in its catch block). Retry is a
+// plain reload: the site is static, so re-running the page IS the refetch
+// (fetches already use cache:'no-store').
+function LoadErrorScreen({ message }) {
+  return (
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--surface-page)', padding: 24 }}>
+      <div style={{ maxWidth: 380, textAlign: 'center' }}>
+        <Icon name="cloud-off" size={32} style={{ color: 'var(--ink-300)', margin: '0 auto 14px' }} />
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 8 }}>
+          Couldn't load the feed
+        </div>
+        <p style={{ margin: '0 0 6px', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>
+          The news data didn't come through — this is usually a flaky connection rather than anything on our end.
+        </p>
+        {message && (
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginBottom: 18 }}>{message}</div>
+        )}
+        <Button iconStart="rotate-cw" onClick={() => window.location.reload()}>Try again</Button>
+      </div>
+    </div>
+  );
+}
+
 // Wait for news.json to load (via app.data.jsx's CD_DATA_READY promise) before
 // first render so the feed doesn't flash empty. If app.data.jsx didn't expose a
 // promise (older revisions), render immediately as a graceful fallback.
-const _gsRender = () => ReactDOM.createRoot(document.getElementById('root')).render(<FeedApp />);
+// Failure branch (CD_META.error) renders LoadErrorScreen instead of a feed that
+// silently sits on the "Loading Cadence…" skeleton.
+const _gsRender = () => ReactDOM.createRoot(document.getElementById('root')).render(
+  window.CD_META && window.CD_META.error
+    ? <LoadErrorScreen message={window.CD_META.error} />
+    : <FeedApp />
+);
 if (window.CD_DATA_READY && typeof window.CD_DATA_READY.then === 'function') {
   window.CD_DATA_READY.then(_gsRender);
 } else {

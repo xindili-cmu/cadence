@@ -5,7 +5,11 @@
   "private": true,
   "scripts": {
     "refresh": "node scripts/news-refresh.js",
-    "test-refresh": "DRY_RUN=true node scripts/news-refresh.js"
+    "test-refresh": "DRY_RUN=true node scripts/news-refresh.js",
+    "build-app": "node scripts/build-bundle.js && node scripts/build-app.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
   },
   "engines": {
     "node": ">=20"
