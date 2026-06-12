@@ -262,6 +262,45 @@ function isTech(item) {
     || TECH_ZH.some((k) => zh.includes(k) || en.includes(k));
 }
 
+// ── PT-relevance gate (off-topic medical leakage) ───────────────────────────
+// Whole-journal feeds (esp. The Lancet) push pharmacotherapy and organ-disease
+// content that the LLM curator sometimes lets through on a cardio-adjacent tag
+// (e.g. a finerenone/CKD trial tagged `cardiopulmonary`). The curation prompt
+// already says "无关即丢" but is too permissive at the margin, so this is a
+// deterministic safety net: drop an item only when it clearly reads as non-PT
+// clinical medicine AND carries no rehabilitation signal. Same design as isTech
+// — auditable keyword rules, backfillable over the archive (backfill-relevance.js).
+//
+// Precision over recall by intent: the OFFTOPIC list names drug/organ topics
+// with no rehab dimension; any rehab/exercise/function signal vetoes the drop,
+// so genuine cardiac-rehab or pulmonary-rehab studies are never removed. This
+// is a denylist, so it needs occasional curation as new off-topic terms appear.
+const OFFTOPIC_MEDICAL = [
+  // Pharmacotherapy / drug trials (not rehab interventions)
+  /\bfinerenone\b/i, /\bretatrutide\b/i, /\bsemaglutide\b/i, /\btirzepatide\b/i,
+  /\bGLP-?1\b/i, /\bstatins?\b/i, /\bSGLT2\b/i, /\bempagliflozin\b/i, /\bdapagliflozin\b/i,
+  /\bmonoclonal antibod/i, /\bchemotherap/i, /\bimmunotherap/i,
+  // Organ disease / internal medicine unrelated to rehab
+  /\bchronic kidney disease\b/i, /\bCKD\b/, /\bnephropathy\b/i, /\bdialysis\b/i,
+  /\bnephro/i, /\bhepatic\b/i, /\bcirrhosis\b/i, /\bsepsis\b/i,
+  /\btype 2 diabetes\b/i, /\bglycaemic\b/i, /\bglycemic\b/i, /\boncolog/i, /\btumou?r\b/i,
+];
+const REHAB_SIGNAL = [
+  /\brehab/i, /\bphysical therap/i, /\bphysiotherap/i, /\bexercise\b/i, /\btraining\b/i,
+  /\bgait\b/i, /\bbalance\b/i, /\bmobilit/i, /\bstrength/i, /\bmotor\b/i, /\bambulat/i,
+  /\bfunctional\b/i, /\bfunction\b/i, /\brange of motion\b/i, /\breturn to sport\b/i,
+  /\bmusculoskeletal\b/i, /\btendon\b/i, /\bligament\b/i, /\blocomot/i, /\bphysical activit/i,
+  /\bpulmonary rehab/i, /\bcardiac rehab/i, /\bsit-to-stand\b/i,
+  '康复', '物理治疗', '运动', '步态', '平衡', '肌力', '功能',
+];
+function isRehabRelevant(item) {
+  const text = `${item.title || ''} ${item.summary || ''} ${item.titleZh || ''} ${item.summaryZh || ''}`;
+  const off = OFFTOPIC_MEDICAL.some((re) => re.test(text));
+  if (!off) return true; // nothing off-topic matched → keep
+  const rehab = REHAB_SIGNAL.some((p) => (p instanceof RegExp ? p.test(text) : text.includes(p)));
+  return rehab; // off-topic term present → keep only if a rehab signal vetoes
+}
+
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const xmlTag = (s, tag) => (s.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`)) || [])[1] || '';
 const stripTags = (s) => (s || '')
@@ -507,6 +546,7 @@ tags 规则：
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
 
 category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
+- **cardiopulmonary 不是"任何心脏/肾脏/代谢疾病"**：它只收心肺**康复**（COPD 肺康复、心脏术后康复、运动耐量训练、呼吸肌训练）。药物试验（finerenone、retatrutide、GLP-1、他汀、SGLT2）、脏器疾病本身（慢性肾病、糖尿病、肿瘤）即使带"cardio"字样也与 PT 无关，一律丢弃，不要因为沾边就硬塞进 cardiopulmonary。整刊 feed 的 [Editorial]/[Correspondence]/[Comment] 段落除非直接讲康复干预，否则默认丢。
 
 请只返回 JSON 数组（不要 markdown 代码块），格式：
 [{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","tags":["research","spine"],"summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
@@ -710,12 +750,17 @@ function dropStaleByUrl(items) {
 //   1. story-level — the same story covered by ≥2 independent outlets
 //      (original behaviour; rare in a vertical as narrow as PT, which is why
 //      the strip stayed empty for the first week of operation)
-//   2. theme-level — ≥2 distinct outlets publishing *different* stories that
-//      share a specific sub-tag (e.g. two vestibular papers from PubMed +
-//      JOSPT within days of each other). tags[0] is the content-type tag
+//   2. theme-level — ≥2 distinct outlets publishing *different research papers*
+//      that share a specific sub-tag (e.g. two vestibular papers from PubMed +
+//      JOSPT within days of each other). Only research items (tags[0] ===
+//      'research') aggregate — editorials/correspondence/news don't count as an
+//      active research theme. tags[0] is the content-type tag
 //      (research/news/guideline/policy), never a theme — skipped, along with
 //      a denylist of tags too generic to be a topic.
 // Story-level wins on id collision. Empty array on quiet days → strip hidden.
+// Each topic carries kind: 'story' | 'theme' so the UI can label genuine
+// multi-source corroboration differently from theme co-occurrence; theme
+// topics also carry members[] (the distinct papers that fired the topic).
 
 const GENERIC_TAGS = new Set(['research', 'news', 'guideline', 'policy', 'rehabilitation', 'physical-therapy', 'pt', 'rehab', 'therapy', 'clinical']);
 
@@ -729,7 +774,7 @@ function computeHotTopics(items) {
       const sourceCount = 1 + (i.related?.length || 0);
       return {
         id: i.id, title: i.title, sourceUrl: i.sourceUrl, category: i.category,
-        publishedAt: i.publishedAt, sourceCount,
+        publishedAt: i.publishedAt, sourceCount, kind: 'story',
         sources: [i.source, ...(i.related || []).map(r => r.source)],
         heat: Math.round(sourceCount * decay(i.publishedAt) * 100) / 100
       };
@@ -737,8 +782,14 @@ function computeHotTopics(items) {
     .filter(t => t.sourceCount >= 2);
 
   // Leg 2 — theme-level: shared sub-tag, distinct sources, 4-day window.
+  // Only research items aggregate into a theme. "Theme heat" is meant to signal
+  // an active *research* area; editorials, correspondence, news and policy
+  // (tags[0] !== 'research') were inflating themes and surfacing off-topic
+  // journal-feed leakage (e.g. a Lancet CKD editorial counted as a
+  // cardiopulmonary outlet). tags[0] is the content-type tag.
   const byTag = new Map();
   for (const i of items) {
+    if ((i.tags || [])[0] !== 'research') continue;
     const ageDays = (now - new Date(i.publishedAt).getTime()) / 86400000;
     if (!(ageDays <= 4)) continue;
     for (const t of (i.tags || []).slice(1)) {
@@ -759,7 +810,10 @@ function computeHotTopics(items) {
     themeTopics.push({
       id: top.id, title: top.title, sourceUrl: top.sourceUrl, category: top.category,
       publishedAt: newest.publishedAt, sourceCount: srcs.size, sources: [...srcs],
-      tag,
+      tag, kind: 'theme',
+      // Distinct papers under this theme — lets the UI show what actually
+      // fired the topic instead of implying N outlets covered one story.
+      members: members.map(m => ({ source: m.source, title: m.title, titleZh: m.titleZh })),
       heat: Math.round(srcs.size * decay(newest.publishedAt) * 100) / 100
     });
   }
@@ -859,7 +913,13 @@ async function main() {
     // additionally carry tech:true (filter pill / card chip / pulse row).
     if (isTech(item)) item.tech = true;
     return item;
-  }).filter(Boolean).sort((a, b) => b.curatedScore - a.curatedScore);
+  }).filter(Boolean)
+    .filter(i => {
+      if (isRehabRelevant(i)) return true;
+      console.log(`   ⏭️  off-topic dropped: ${(i.title || '').slice(0, 70)}`);
+      return false;
+    })
+    .sort((a, b) => b.curatedScore - a.curatedScore);
 
   // Merge with existing (keep 7 days)
   let existing = [];
@@ -871,7 +931,10 @@ async function main() {
       // Re-validate against the roster so items from since-removed sources
       // age out immediately, and relabel in case a source was renamed.
       .map(i => ({ ...i, source: matchSource(i.sourceUrl) }))
-      .filter(i => i.source);
+      .filter(i => i.source)
+      // Apply the relevance gate to carried-over items too, so off-topic
+      // content curated before this gate existed ages out on the next run.
+      .filter(isRehabRelevant);
   } catch {}
 
   // Cluster-aware merge: a re-found story unions its related-source list
@@ -973,4 +1036,4 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics, isTech };
+module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant };

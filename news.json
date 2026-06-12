@@ -15,21 +15,6 @@
   },
   "hotTopics": [
     {
-      "id": "news-1781261176113-38",
-      "title": "Long-term resistance training with all-cause and cause-specific mortality: assessing dose-response and joint associations with aerobic physical activity",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/874?rss=1",
-      "category": "geriatric",
-      "publishedAt": "2026-06-13T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "BMJ",
-        "PubMed",
-        "The Lancet"
-      ],
-      "tag": "cardiopulmonary",
-      "heat": 3
-    },
-    {
       "id": "news-1781261176113-35",
       "title": "Randomised three-armed trial investigation of the Copenhagen Achilles tendon Rupture Treatment Algorithm (CARTA) for individualised treatment of acute Achilles tendon rupture",
       "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/848?rss=1",
@@ -41,7 +26,47 @@
         "PubMed"
       ],
       "tag": "sports",
-      "heat": 1.95
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMJ",
+          "title": "Randomised three-armed trial investigation of the Copenhagen Achilles tendon Rupture Treatment Algorithm (CARTA) for individualised treatment of acute Achilles tendon rupture",
+          "titleZh": "随机三臂试验调查Copenhagen跟腱断裂治疗算法（CARTA）在急性跟腱断裂个体化治疗中的应用"
+        },
+        {
+          "source": "PubMed",
+          "title": "Accelerometry-derived physical activity following Achilles tendon rupture: A prospective cohort study.",
+          "titleZh": "跟腱断裂后加速度计测量的体力活动：一项前瞻性队列研究"
+        }
+      ],
+      "heat": 1.85
+    },
+    {
+      "id": "news-1781261176113-38",
+      "title": "Long-term resistance training with all-cause and cause-specific mortality: assessing dose-response and joint associations with aerobic physical activity",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/874?rss=1",
+      "category": "geriatric",
+      "publishedAt": "2026-06-12T08:51:04.000Z",
+      "sourceCount": 2,
+      "sources": [
+        "BMJ",
+        "PubMed"
+      ],
+      "tag": "cardiopulmonary",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMJ",
+          "title": "Long-term resistance training with all-cause and cause-specific mortality: assessing dose-response and joint associations with aerobic physical activity",
+          "titleZh": "长期抗阻训练与全因及特定原因死亡率：评估剂量反应关系及与有氧活动的联合效应"
+        },
+        {
+          "source": "PubMed",
+          "title": "Lung Boost Trainer Versus Incentive Spirometer on Pulmonary Function Post COVID Hemiplegic Cerebral Palsy Children; Randomized Controlled Trial.",
+          "titleZh": "肺部助推训练器与激励性肺量计对COVID后患有偏瘫脑瘫儿童肺功能的影响；一项随机对照试验"
+        }
+      ],
+      "heat": 1.85
     },
     {
       "id": "news-1781261176113-5",
@@ -55,7 +80,30 @@
         "BMJ"
       ],
       "tag": "neurological",
-      "heat": 1.95
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "title": "Smartphone-Based Semi-Immersive Virtual Reality Enhances Upper Extremity Function in Subacute Stroke: A Randomized Controlled Trial.",
+          "titleZh": "基于智能手机的半沉浸式虚拟现实增强亚急性期中风患者上肢功能：一项随机对照试验"
+        },
+        {
+          "source": "BMJ",
+          "title": "Multimodal symptom-targeted treatment for young people with persisting post-concussion symptoms: a randomised clinical trial",
+          "titleZh": "针对持续性脑震荡后症状的 the Concussion Essentials（CE）多模式症状靶向治疗：一项随机临床试验"
+        },
+        {
+          "source": "PubMed",
+          "title": "Association Between Postoperative Mini-Balance Evaluation Systems Test Scores and Length of Hospital Stay in Patients with Chronic Subdural Hematoma: A Prospective Cohort Study.",
+          "titleZh": "慢性硬膜下血肿术后Mini-平衡评估系统测试评分与住院时间的关系：一项前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "title": "Prevalence of knee pain and factors influencing its risk in ambulatory chronic stroke survivors.",
+          "titleZh": "偏瘫慢性中风幸存者膝关节疼痛患病率及影响因素探究"
+        }
+      ],
+      "heat": 1.85
     }
   ],
   "items": [

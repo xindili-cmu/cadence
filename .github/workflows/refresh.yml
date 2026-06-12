@@ -63,6 +63,17 @@ jobs:
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/wechat-brief.js
 
+      # Web daily edition (AIHOT-style /daily page): briefs/daily/YYYY-MM-DD.json
+      # + index.json manifest. Skips itself on direct runs, same as the WeChat
+      # brief. Committed by the briefs/ git-add below.
+      - name: Generate web daily edition (full runs only)
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
+        run: node scripts/daily-brief.js
+
       - name: Commit news.json (with race-safe retry)
         run: |
           git config user.name "github-actions[bot]"
