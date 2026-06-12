@@ -6,10 +6,15 @@
   "scripts": {
     "refresh": "node scripts/news-refresh.js",
     "test-refresh": "DRY_RUN=true node scripts/news-refresh.js",
-    "build-app": "node scripts/build-bundle.js && node scripts/build-app.js"
+    "build-app": "node scripts/build-bundle.js && node scripts/build-app.js",
+    "xhs": "node scripts/xhs-digest.js"
   },
   "devDependencies": {
-    "esbuild": "^0.25.0"
+    "@expo-google-fonts/noto-sans-sc": "^0.4.3",
+    "@expo-google-fonts/noto-serif-sc": "^0.4.3",
+    "@resvg/resvg-js": "^2.6.2",
+    "esbuild": "^0.25.0",
+    "satori": "^0.26.0"
   },
   "engines": {
     "node": ">=20"
