@@ -1,0 +1,50 @@
+# Deploy to Cloudflare Workers after every content change.
+#
+# Why workflow_run triggers: the refresh / digest / build crons commit with
+# the default GITHUB_TOKEN, and GitHub deliberately does NOT fire `push`
+# workflows for those commits (recursion guard). So we listen for the
+# workflows themselves finishing, plus normal human pushes to main.
+#
+# Required repo secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN  — token with "Workers Scripts: Edit" permission
+#   CLOUDFLARE_ACCOUNT_ID — from the Cloudflare dashboard URL / Workers page
+
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows: ["PT News Refresh", "XHS Daily Digest", "Build app bundle"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Collapse rapid successive deploys into the latest one
+concurrency:
+  group: deploy-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # For workflow_run events, only deploy if the upstream run succeeded
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v5
+        with:
+          ref: main  # workflow_run checks out the triggering SHA by default; we always want tip of main
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Deploy with Wrangler
+        run: npx wrangler@latest deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
