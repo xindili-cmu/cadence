@@ -249,8 +249,18 @@ async function fetchPubMed() {
     try {
       // retmax 15 (was 8): roster filtering cut the volume way down, so
       // everything that passes the gate is worth sending to curation.
+      // POST, not GET: the [ta] clause grows with journals.json and the full
+      // term overruns NCBI's URL-length cap (414) past ~30 journals. E-utilities
+      // accept the same params as a POST body, with no length limit.
       const term = `(${q.term}) AND ${JOURNAL_TA_CLAUSE}`;
-      const es = await fetch(`${base}/esearch.fcgi?db=pubmed&retmode=json&retmax=15&reldate=${PUBMED_LOOKBACK_DAYS}&datetype=edat&sort=date&term=${encodeURIComponent(term)}`);
+      const es = await fetch(`${base}/esearch.fcgi`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          db: 'pubmed', retmode: 'json', retmax: '15',
+          reldate: String(PUBMED_LOOKBACK_DAYS), datetype: 'edat', sort: 'date', term
+        })
+      });
       if (!es.ok) { console.error(`  PubMed esearch ${q.category}: ${es.status}`); continue; }
       const ids = (await es.json()).esearchresult?.idlist || [];
       console.log(`   pubmed:${q.category} → ${ids.length}`);
