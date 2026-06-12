@@ -464,9 +464,9 @@ function DailyMasthead({ edition, zh }) {
   // No VOL./mono masthead line — Cindy 2026-06-12: reads as AI-generated.
   // The story count lives quietly on the date line instead.
   return (
-    <header style={{ textAlign: 'center', padding: '10px 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 20 }}>
+    <header style={{ textAlign: 'center', padding: '0 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 20 }}>
       <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 34, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
-        {zh ? '步频日报' : 'Cadence Daily'}
+        {zh ? 'PTcadence日报' : 'PTcadence Daily'}
       </h2>
       <div style={{ marginTop: 8, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
         {d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'UTC' })}
@@ -988,7 +988,8 @@ function FeedApp() {
         {!isMobile && <NavRail view={view} onView={setView} />}
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
-          <FeedToolbar view={view} count={isSources || isFeedback || isDaily ? null : stories.length} />
+          {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
+          {!isDaily && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />}
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
