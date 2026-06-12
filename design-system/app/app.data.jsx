@@ -94,16 +94,25 @@ window.CD_SET_LANG = (lang) => {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 };
 
-// Calendar-day bucketing (viewer-local). Was rolling 24h windows, which made
-// a UTC-midnight-stamped story flip from 今日信号 to 昨日信号 at 08:00 Beijing
-// mid-morning. Calendar comparison keeps the label stable all day: a story
-// dated 06-12 is "today" for the whole local 06-12, "yesterday" all of 06-13.
+// Calendar-day bucketing. Was rolling 24h windows, which made a UTC-midnight
+// story flip from 今日 to 昨日 at 08:00 Beijing mid-morning.
+//
+// Timestamp semantics (same convention as cdFmtTime below): PubMed and other
+// date-only sources are stored as exactly 00:00:00 UTC — that's a calendar
+// DATE, not an instant, so its day is read in UTC. Converting it to the
+// viewer's zone shifted everything a day back in the Americas (06-11T00:00Z
+// = 06-10 20:00 ET), which emptied today+yesterday and hid the signal rail.
+// Stamps with a real clock time are genuine instants → viewer-local date.
 function cdDayBucket(publishedAt) {
   if (!publishedAt) return 'older';
   const pub = new Date(publishedAt);
   const now = new Date();
-  const startOfDay = (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
-  const diffDays = Math.round((startOfDay(now) - startOfDay(pub)) / 86400000);
+  const isDateOnly = pub.getUTCHours() === 0 && pub.getUTCMinutes() === 0 && pub.getUTCSeconds() === 0;
+  const pubKey = isDateOnly
+    ? Date.UTC(pub.getUTCFullYear(), pub.getUTCMonth(), pub.getUTCDate())
+    : Date.UTC(pub.getFullYear(), pub.getMonth(), pub.getDate());
+  const nowKey = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const diffDays = Math.round((nowKey - pubKey) / 86400000);
   if (diffDays <= 0) return 'today';
   if (diffDays === 1) return 'yesterday';
   return 'older';
