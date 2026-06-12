@@ -90,12 +90,16 @@ window.CD_SET_LANG = (lang) => {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 };
 
+// Calendar-day bucketing (viewer-local). Was rolling 24h windows, which made
+// a UTC-midnight-stamped story flip from 今日信号 to 昨日信号 at 08:00 Beijing
+// mid-morning. Calendar comparison keeps the label stable all day: a story
+// dated 06-12 is "today" for the whole local 06-12, "yesterday" all of 06-13.
 function cdDayBucket(publishedAt) {
   if (!publishedAt) return 'older';
-  const now = new Date();
   const pub = new Date(publishedAt);
-  const diffMs = now - pub;
-  const diffDays = Math.floor(diffMs / 86400000);
+  const now = new Date();
+  const startOfDay = (x) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
+  const diffDays = Math.round((startOfDay(now) - startOfDay(pub)) / 86400000);
   if (diffDays <= 0) return 'today';
   if (diffDays === 1) return 'yesterday';
   return 'older';
