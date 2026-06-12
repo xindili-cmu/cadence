@@ -2,8 +2,13 @@ name: PT News Refresh
 
 on:
   schedule:
-    # Daily FULL sweep (Exa + PubMed + RSS) at 07:00 UTC (= 3pm Beijing)
-    - cron: '0 7 * * *'
+    # Daily FULL sweep (Exa + PubMed + RSS) at 21:30 UTC (= 05:30 Beijing).
+    # Mainland-first rhythm: the site's 今日信号 and the WeChat brief are fresh
+    # before the Chinese morning peak, and the XHS digest cron (22:40 UTC =
+    # 06:40 Beijing, xhs-digest.yml) runs right after this sweep. The US/UK
+    # publishing day is long over by 21:30 UTC, so nothing is missed vs the
+    # old 07:00 UTC slot.
+    - cron: '30 21 * * *'
     # AIHOT-style high-frequency polling: PubMed + RSS only (the free legs),
     # every 2h at :25. The script exits before the LLM call when nothing new
     # arrived, so quiet runs cost nothing and write nothing.
@@ -45,7 +50,7 @@ jobs:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # 2-hourly cron → free direct legs; daily 07:00 cron and manual
+          # 2-hourly cron → free direct legs; daily 21:30 UTC cron and manual
           # dispatch (unless overridden) → full sweep.
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/news-refresh.js

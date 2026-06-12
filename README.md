@@ -13,7 +13,7 @@ Forked from the GreenStack cloud-deploy AIHOT pattern. Methodology: `climate age
   - `app/*.jsx` — app sources (edit these); compiled to `app/app.min.js`
 - `scripts/news-refresh.js` — Exa search → dedup → Claude curation → news.json
 - `scripts/build-app.js` — JSX → minified `app.min.js` (production React, no in-browser Babel)
-- `.github/workflows/refresh.yml` — daily 07:00 UTC cron + workflow_dispatch
+- `.github/workflows/refresh.yml` — daily 21:30 UTC cron (05:30 Beijing) + workflow_dispatch
 - `.github/workflows/build-app.yml` — rebuilds + commits `app.min.js` on any `*.jsx` push
 
 After editing any `design-system/app/*.jsx` or `components/**`: run `npm run build-app`
