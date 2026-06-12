@@ -128,7 +128,22 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
       </div>
 
       <div style={{ marginTop: 16, padding: '0 18px' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 12 }}>{window.CD_T('categoryPulse')} · {window.CD_T(dayKey)}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{window.CD_T('categoryPulse')} · {window.CD_T(dayKey)}</span>
+          <span style={{ flex: 1 }} />
+          {/* 分类是怎么定的 — taxonomy rationale toggle, sits beside the pulse
+              header (Cindy 2026-06-12); explanation expands above the bars. */}
+          <button type="button" onClick={() => setWhyOpen((v) => !v)}
+            title={window.CD_T('whyCats')} aria-expanded={whyOpen}
+            style={{ display: 'inline-flex', alignItems: 'center', padding: 0, background: 'none', border: 'none', cursor: 'pointer' }}>
+            <Icon name={whyOpen ? 'chevron-up' : 'circle-help'} size={14} style={{ color: whyOpen ? 'var(--text-secondary)' : 'var(--ink-300)' }} />
+          </button>
+        </div>
+        {whyOpen && (
+          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 12, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+            {window.CD_T('whyCatsBody')}
+          </p>
+        )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {counts.map((c) => (
             <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -157,18 +172,6 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
           })}
         </div>
 
-        {/* Taxonomy rationale — quiet disclosure so curious readers learn the
-            system without the rail shouting at everyone else. */}
-        <button type="button" onClick={() => setWhyOpen((v) => !v)}
-          style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 14, padding: 0, background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-tertiary)' }}>
-          <Icon name={whyOpen ? 'chevron-down' : 'circle-help'} size={13} style={{ color: 'var(--ink-300)' }} />
-          <span style={{ borderBottom: '1px dotted var(--border-subtle)' }}>{window.CD_T('whyCats')}</span>
-        </button>
-        {whyOpen && (
-          <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
-            {window.CD_T('whyCatsBody')}
-          </p>
-        )}
       </div>
     </aside>
   );

@@ -243,17 +243,28 @@ function SuggestSourceForm() {
 }
 
 // ── Feedback view ────────────────────────────────────────────────────────────
-// Free-form reader feedback (bugs / feature ideas / gripes). Same Formspree
-// delivery as the source form (CD_FEEDBACK_ENDPOINT). Mirrors the aihot pattern:
-// one message body (≤2000 chars, live counter) + an optional contact field.
+// Reader feedback, delivered via Formspree (CD_FEEDBACK_ENDPOINT). Cadence-native
+// design — deliberately unlike the plain aihot box: a typed-note selector (pill
+// chips in the NavRail active-state language) sets the _subject, then the detail
+// box and an inline optional reply address. The char count is a quiet hint that
+// only appears near the cap, not an always-on counter.
 const CD_FEEDBACK_MAX = 2000;
+const FB_KINDS = [
+  { id: 'bug',     icon: 'bug' },
+  { id: 'feature', icon: 'lightbulb' },
+  { id: 'content', icon: 'book-open' },
+  { id: 'other',   icon: 'smile' },
+];
 
 function FeedbackView() {
   const t = window.CD_T;
+  const zh = window.CD_LANG === 'zh';
+  const [kind, setKind] = React.useState(null);
   const [content, setContent] = React.useState('');
   const [contact, setContact] = React.useState('');
   const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
   const valid = content.trim().length > 0;
+  const remaining = CD_FEEDBACK_MAX - content.length;
 
   async function submit(e) {
     e.preventDefault();
@@ -264,7 +275,8 @@ function FeedbackView() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          _subject: 'Cadence feedback',
+          _subject: kind ? `Cadence feedback · ${kind}` : 'Cadence feedback',
+          kind: kind || null,
           content: content.trim(),
           contact: contact.trim() || null,
           pageUrl: window.location.href,
@@ -280,30 +292,53 @@ function FeedbackView() {
 
   const label = { fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-tertiary)' };
 
+  // Success — a "signal received" acknowledgement that leans on Cadence's own
+  // signal vocabulary, with a left accent rule rather than a centered checkmark.
   if (status === 'sent') {
     return (
-      <div style={{ maxWidth: 620, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 24, boxShadow: 'var(--shadow-xs)', textAlign: 'center' }}>
-        <Icon name="circle-check" size={26} style={{ color: 'var(--green-600)', margin: '0 auto 12px' }} />
-        <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>{t('fb.sent')}</p>
-        <Button size="sm" variant="ghost" iconStart="rotate-cw"
-          onClick={() => { setContent(''); setContact(''); setStatus('idle'); }}>{t('fb.again')}</Button>
+      <div style={{ maxWidth: 640, display: 'flex', gap: 16, alignItems: 'flex-start', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', padding: '22px 24px', boxShadow: 'var(--shadow-xs)' }}>
+        <Icon name="radio" size={22} style={{ color: 'var(--green-600)', flex: 'none', marginTop: 2 }} />
+        <div style={{ flex: 1 }}>
+          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, lineHeight: 1.5, color: 'var(--text-primary)' }}>{t('fb.sent')}</p>
+          <div style={{ marginTop: 14 }}>
+            <Button size="sm" variant="ghost" iconStart="rotate-cw"
+              onClick={() => { setContent(''); setContact(''); setKind(null); setStatus('idle'); }}>{t('fb.again')}</Button>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <form onSubmit={submit}
-      style={{ maxWidth: 620, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 22, boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <div>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 600, color: 'var(--text-primary)' }}>{t('fb.heading')}</div>
-        <p style={{ margin: '5px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('fb.lead')}</p>
+    <form onSubmit={submit} style={{ maxWidth: 640, display: 'flex', flexDirection: 'column', gap: 22 }}>
+      {/* Typed-note selector — pill chips reuse the NavRail active-state look. */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <span style={label}>{t('fb.kindLabel')}</span>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+          {FB_KINDS.map((k) => {
+            const on = kind === k.id;
+            return (
+              <button key={k.id} type="button" onClick={() => setKind(on ? null : k.id)} aria-pressed={on}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 7, padding: '8px 14px',
+                  borderRadius: 'var(--radius-pill)', cursor: 'pointer',
+                  fontFamily: 'var(--font-sans)', fontSize: 13.5, fontWeight: on ? 600 : 500,
+                  background: on ? 'var(--surface-active)' : 'var(--surface-card)',
+                  border: `1px solid ${on ? 'var(--green-400)' : 'var(--border-default)'}`,
+                  color: on ? 'var(--green-800)' : 'var(--text-secondary)',
+                  transition: 'var(--transition-colors)',
+                }}>
+                <Icon name={k.icon} size={15} style={{ color: on ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
+                {t('fb.kind.' + k.id)}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-          <span style={{ ...label, flex: 1 }}>{t('fb.contentLabel')}</span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: content.length > CD_FEEDBACK_MAX ? 'var(--signal-down)' : 'var(--text-tertiary)' }}>{content.length} / {CD_FEEDBACK_MAX}</span>
-        </div>
+      {/* Details — a larger card-surfaced box; quiet char hint only near the cap. */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <span style={label}>{t('fb.contentLabel')}</span>
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
@@ -311,26 +346,31 @@ function FeedbackView() {
           rows={6}
           placeholder={t('fb.contentPlaceholder')}
           style={{
-            width: '100%', resize: 'vertical', minHeight: 132, padding: '11px 13px',
-            fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-primary)',
-            background: 'var(--surface-page)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)',
-            outline: 'none', boxSizing: 'border-box',
+            width: '100%', resize: 'vertical', minHeight: 150, padding: '14px 15px',
+            fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-primary)',
+            background: 'var(--surface-card)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-lg)',
+            outline: 'none', boxSizing: 'border-box', boxShadow: 'var(--shadow-xs)',
           }} />
-      </div>
-
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span style={label}>{t('fb.contactLabel')}</span>
-        <Input size="sm" value={contact} onChange={(e) => setContact(e.target.value)} placeholder={t('fb.contactPlaceholder')} maxLength={200} />
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-        <Button type="submit" size="sm" iconStart="send" disabled={!valid || status === 'sending'}>
-          {status === 'sending' ? t('fb.sending') : t('fb.send')}
-        </Button>
-        {status === 'error' && (
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>{t('fb.error')}</span>
+        {remaining <= 200 && (
+          <span style={{ alignSelf: 'flex-end', fontFamily: 'var(--font-mono)', fontSize: 11, color: remaining < 0 ? 'var(--signal-down)' : 'var(--text-tertiary)' }}>
+            {zh ? `还可输入 ${remaining} 字` : `${remaining} characters left`}
+          </span>
         )}
       </div>
+
+      {/* Optional reply address + submit on one baseline-aligned row. */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', gap: 14 }}>
+        <div style={{ flex: 1, minWidth: 220, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          <span style={label}>{t('fb.contactLabel')} <span style={{ textTransform: 'none', letterSpacing: 0, color: 'var(--ink-300)' }}>· {t('fb.optional')}</span></span>
+          <Input size="sm" value={contact} onChange={(e) => setContact(e.target.value)} placeholder={t('fb.contactPlaceholder')} maxLength={200} />
+        </div>
+        <Button type="submit" iconStart="send" disabled={!valid || status === 'sending'}>
+          {status === 'sending' ? t('fb.sending') : t('fb.send')}
+        </Button>
+      </div>
+      {status === 'error' && (
+        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>{t('fb.error')}</span>
+      )}
     </form>
   );
 }
