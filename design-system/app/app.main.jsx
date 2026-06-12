@@ -100,9 +100,10 @@ function RelatedRow({ related }) {
 
 // ── Sources directory view ──────────────────────────────────────────────────
 // Standing source wall: window.CD_SOURCES (app.data.jsx) is the canonical
-// directory of monitored outlets; live counts / categories / latest story
-// from CD_STORIES are merged on top by name. Outlets seen in the feed but
-// not yet listed in the wall are appended so nothing is hidden.
+// directory of monitored outlets; live counts / latest story from CD_STORIES
+// are merged on top via wallSource (journal-attributed name). The wall shows
+// the curated roster ONLY — one-off domains Exa surfaces still appear on
+// their NewsCards, just not in this directory.
 
 function relativeAgo(iso) {
   if (!iso) return '';
@@ -113,8 +114,11 @@ function relativeAgo(iso) {
   return `${Math.floor(h / 24)}d`;
 }
 
-// Real outlet favicon (Google s2 service) with letter-avatar fallback when the
-// icon fails to load (offline, blocked, or no favicon published).
+// Real outlet favicon, SELF-HOSTED under design-system/assets/favicons/<host>.png
+// (fetched once by scripts/fetch-favicons.js — re-run it after adding sources).
+// No runtime third-party request: google.com/s2 is unreachable for readers in
+// China, who are a primary audience. Letter-avatar fallback when the local
+// icon is missing or fails to load.
 function SourceFavicon({ source, accent }) {
   const [failed, setFailed] = React.useState(false);
   const host = (source.domain || '').split('/')[0];
@@ -124,24 +128,43 @@ function SourceFavicon({ source, accent }) {
     );
   }
   return (
-    <img src={`https://www.google.com/s2/favicons?domain=${host}&sz=64`} alt="" width={22} height={22}
+    <img src={`design-system/assets/favicons/${host}.png`} alt="" width={22} height={22}
       onError={() => setFailed(true)}
       style={{ width: 22, height: 22, borderRadius: 'var(--radius-sm)', background: 'var(--surface-page)', border: '1px solid var(--border-subtle)', objectFit: 'contain', flex: 'none', alignSelf: 'center' }} />
   );
 }
 
+// How each outlet is actually wired into the crawl (scripts/news-refresh.js):
+// rss array → RSS poll · scrape array → page scrape · kind journal → PubMed
+// leg (roster-filtered via journals.json) · kind database → the PubMed
+// E-utilities API itself · everything else → daily domain-constrained Exa sweep.
+function sourceChannel(src) {
+  if (src.rss && src.rss.length) return 'rss';
+  if (src.scrape && src.scrape.length) return 'scrape';
+  if (src.kind === 'database') return 'api';
+  if (src.kind === 'journal') return 'pubmed';
+  return 'exa';
+}
+
 function SourceCard({ source }) {
+  const t = window.CD_T;
   const cats = source.cats.map((c) => window.getCategory ? window.getCategory(c) : { id: c, label: c, accent: 'electric' });
+  const ch = sourceChannel(source);
   return (
     <a href={source.url} target="_blank" rel="noopener noreferrer"
       style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 16, textAlign: 'left', cursor: 'pointer', boxShadow: 'var(--shadow-xs)', fontFamily: 'var(--font-sans)', display: 'flex', flexDirection: 'column', gap: 10, textDecoration: 'none' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
         <SourceFavicon source={source} accent={cats[0]?.accent || 'practice'} />
         <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{source.name}</span>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count || '—'}</span>
+        {/* '—' = nothing in the current feed window (title explains); count is live, not all-time */}
+        <span title={source.count > 0 ? undefined : t('src.noneYet')}
+          style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count > 0 ? source.count : '—'}</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
         <span style={{ letterSpacing: '0.06em', textTransform: 'uppercase' }}>{window.CD_T('kindL.' + source.kind, KIND_LABEL[source.kind] || 'Source')}</span>
+        {/* Ingestion-channel badge — how this outlet is wired (tooltip has the detail) */}
+        <span title={t('src.chTip.' + ch)}
+          style={{ padding: '1px 5px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)', background: 'var(--surface-page)', letterSpacing: '0.04em', flex: 'none' }}>{t('src.ch.' + ch)}</span>
         {source.regions && source.regions.length > 0 && <span>· {source.regions.join(' / ')}</span>}
         {source.domain && <span style={{ flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', textAlign: 'right' }}>{source.domain}</span>}
       </div>
@@ -172,6 +195,7 @@ const CD_SUGGEST_ENDPOINT = 'https://formspree.io/f/mlgkwdja';
 const CD_FEEDBACK_ENDPOINT = 'https://formspree.io/f/mlgkwdja';
 
 function SuggestSourceForm() {
+  const t = window.CD_T;
   const [open, setOpen] = React.useState(false);
   const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
   const [form, setForm] = React.useState({ name: '', url: '', note: '', email: '' });
@@ -202,7 +226,7 @@ function SuggestSourceForm() {
     return (
       <button type="button" onClick={() => setOpen(true)}
         style={{ border: '1px dashed var(--border-default)', background: 'transparent', borderRadius: 'var(--radius-lg)', padding: '14px 16px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: 600, color: 'var(--text-secondary)' }}>
-        + Suggest a source · 推荐信源
+        {t('src.suggest.btn')}
       </button>
     );
   }
@@ -210,7 +234,7 @@ function SuggestSourceForm() {
   if (status === 'sent') {
     return (
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 20, fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--text-secondary)', textAlign: 'center' }}>
-        Thanks — your suggestion was sent. We review every submission before adding it to the wall. 已收到，确认后会加入信源墙。
+        {t('src.suggest.sent')}
       </div>
     );
   }
@@ -219,34 +243,34 @@ function SuggestSourceForm() {
     <form onSubmit={submit}
       style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 12 }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1 }}>Suggest a source</span>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>reviewed before listing · 审核后添加</span>
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1 }}>{t('src.suggest.title')}</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{t('src.suggest.review')}</span>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <span style={label}>Source name *</span>
+          <span style={label}>{t('src.suggest.name')} *</span>
           <Input size="sm" value={form.name} onChange={set('name')} placeholder="e.g. JOSPT, 丁香园" />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <span style={label}>Official URL *</span>
+          <span style={label}>{t('src.suggest.url')} *</span>
           <Input size="sm" type="url" value={form.url} onChange={set('url')} placeholder="https://…" />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-          <span style={label}>Your email (optional)</span>
-          <Input size="sm" type="email" value={form.email} onChange={set('email')} placeholder="for follow-up" />
+          <span style={label}>{t('src.suggest.email')}</span>
+          <Input size="sm" type="email" value={form.email} onChange={set('email')} placeholder={t('src.suggest.emailPh')} />
         </div>
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-        <span style={label}>Why it belongs here (optional)</span>
-        <Input size="sm" value={form.note} onChange={set('note')} placeholder="What does it cover? Why is it credible?" />
+        <span style={label}>{t('src.suggest.why')}</span>
+        <Input size="sm" value={form.note} onChange={set('note')} placeholder={t('src.suggest.whyPh')} />
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
         <Button type="submit" size="sm" disabled={!valid || status === 'sending'}>
-          {status === 'sending' ? 'Sending…' : 'Submit suggestion'}
+          {status === 'sending' ? t('src.suggest.sending') : t('src.suggest.send')}
         </Button>
-        <Button size="sm" variant="ghost" onClick={() => { setOpen(false); setStatus('idle'); }}>Cancel</Button>
+        <Button size="sm" variant="ghost" onClick={() => { setOpen(false); setStatus('idle'); }}>{t('src.suggest.cancel')}</Button>
         {status === 'error' && (
-          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>Could not send — please try again.</span>
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>{t('fb.error')}</span>
         )}
       </div>
     </form>
@@ -408,7 +432,10 @@ function SourcesGrid({ stories }) {
     return {
       ...src,
       count: b ? b.count : 0,
-      cats: b ? liveCats(b) : (src.cats || []),
+      // Curated cats are the editorial truth — live cats only fill in when the
+      // roster entry has none (a handful of live stories shouldn't redefine an
+      // outlet's specialty positioning).
+      cats: (src.cats && src.cats.length) ? src.cats : (b ? liveCats(b) : []),
       latest: b ? b.latest : null,
     };
   });
