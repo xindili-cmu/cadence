@@ -181,6 +181,8 @@ function storyCard(s, rank, total, dateStr) {
         txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 76, color: C.blue700, marginRight: 8 }, String(rank).padStart(2, '0')),
         h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: cat.soft },
           txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: cat.ink }, cat.zh)),
+        s.tech ? h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: '#DFEDEE' },
+          txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: '#1E5258' }, '康复科技')) : null,
         h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: C.blue100 },
           txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700 }, `信号分 ${s.curatedScore}`)),
       ),

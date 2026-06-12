@@ -92,6 +92,12 @@
   --cat-practice-soft: #E8EAEC;
   --cat-practice-ink:  #31363D;
 
+  --cat-tech:      #2A6F77;  /* 9 · Rehab Tech (teal) — cross-cutting overlay,
+                                not a 9th specialty: items keep their clinical
+                                category and additionally carry tech:true */
+  --cat-tech-soft: #DFEDEE;
+  --cat-tech-ink:  #1E5258;
+
   /* ============================================================
      Semantic aliases — reference these in components, not raw scales
      ============================================================ */

@@ -140,6 +140,21 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', width: 12, textAlign: 'right' }}>{c.n}</span>
             </div>
           ))}
+          {/* Cross-cutting overlay rows (e.g. 康复科技) — separated by a
+              hairline because they count across the specialties above. */}
+          {(window.XCUTS || []).map((x) => {
+            const n = stories.filter((s) => s[x.flag]).length;
+            return (
+              <div key={x.id} style={{ display: 'flex', alignItems: 'center', gap: 10, borderTop: '1px solid var(--border-subtle)', paddingTop: 9 }}>
+                <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${x.accent})`, flex: 'none' }} />
+                <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{catShort(x)}</span>
+                <span style={{ width: 54, height: 4, borderRadius: '999px', background: 'var(--ink-100)', overflow: 'hidden', flex: 'none' }}>
+                  <span style={{ display: 'block', width: `${Math.min(100, (n / Math.max(1, stories.length)) * 100)}%`, height: '100%', background: `var(--cat-${x.accent})`, opacity: 0.65, borderRadius: '999px' }} />
+                </span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', width: 12, textAlign: 'right' }}>{n}</span>
+              </div>
+            );
+          })}
         </div>
 
         {/* Taxonomy rationale — quiet disclosure so curious readers learn the

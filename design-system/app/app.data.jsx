@@ -13,12 +13,17 @@
 // browser-language default.
 window.CD_DICT = {
   en: {
-    'nav.curated': 'Curated', 'nav.all': 'All stories', 'nav.daily': 'Daily brief', 'nav.saved': 'Saved', 'nav.sources': 'Sources',
-    // Short labels for the mobile bottom tab bar (≤8 chars so 5 tabs fit at 320px)
-    'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.saved': 'Saved', 'navS.sources': 'Sources',
+    'nav.curated': 'Curated', 'nav.all': 'All stories', 'nav.daily': 'Daily brief', 'nav.saved': 'Saved', 'nav.sources': 'Sources', 'nav.feedback': 'Feedback',
+    // Short labels for the mobile bottom tab bar (≤8 chars so the tabs fit at 320px)
+    'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.saved': 'Saved', 'navS.sources': 'Sources', 'navS.feedback': 'Feedback',
     'sub.curated': 'AI-selected PT signal · updated daily', 'sub.all': 'Every story Cadence has curated — live feed plus full archive',
     'sub.daily': 'Yesterday, packaged into eight sections', 'sub.saved': 'Bookmarked stories · stored in this browser only',
-    'sub.sources': 'Outlets Cadence monitors',
+    'sub.sources': 'Outlets Cadence monitors', 'sub.feedback': 'Found a bug, want a feature, or something feels off? Tell me.',
+    'fb.heading': 'Share your thoughts', 'fb.lead': 'Bugs, feature ideas, anything that bugs you — I read every one.',
+    'fb.contentLabel': 'Your feedback', 'fb.contentPlaceholder': 'e.g. The daily brief could group by journal…',
+    'fb.contactLabel': 'Contact (optional)', 'fb.contactPlaceholder': 'Email / WeChat — any way to reach you',
+    'fb.send': 'Send feedback', 'fb.sending': 'Sending…', 'fb.sent': 'Thanks — got it. I read every piece of feedback.',
+    'fb.error': 'Could not send — please try again.', 'fb.again': 'Send another',
     searchPlaceholder: 'Search stories, sources, companies…',
     signalScore: 'Signal score',
     ifTip: 'Journal impact factor',
@@ -45,11 +50,16 @@ window.CD_DICT = {
     tryAgain: 'Try again',
   },
   zh: {
-    'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.saved': '收藏', 'nav.sources': '信源',
-    'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.saved': '收藏', 'navS.sources': '信源',
+    'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.saved': '收藏', 'nav.sources': '信源', 'nav.feedback': '反馈',
+    'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.saved': '收藏', 'navS.sources': '信源', 'navS.feedback': '反馈',
     'sub.curated': 'AI 精选 PT 信号 · 每日更新', 'sub.all': '全站入库的全部文章 · 实时 + 历史归档',
     'sub.daily': '昨日要闻，按八个专科打包', 'sub.saved': '已收藏 · 仅存于当前浏览器',
-    'sub.sources': 'Cadence 监测的信源',
+    'sub.sources': 'Cadence 监测的信源', 'sub.feedback': '发现 bug、想要的功能、看不顺眼的地方——都可以告诉我。',
+    'fb.heading': '说说你的想法', 'fb.lead': 'Bug、功能建议、任何不顺眼的地方——我都会看到。',
+    'fb.contentLabel': '你的反馈', 'fb.contentPlaceholder': '比如：每日简报可以按期刊分组…',
+    'fb.contactLabel': '联系方式（选填）', 'fb.contactPlaceholder': '邮箱 / 微信 — 任意能联系到你的方式',
+    'fb.send': '发送反馈', 'fb.sending': '发送中…', 'fb.sent': '已收到，谢谢——每条反馈我都会看。',
+    'fb.error': '发送失败——请再试一次。', 'fb.again': '再发一条',
     searchPlaceholder: '搜索文章、信源、机构…',
     signalScore: '信号分',
     ifTip: '期刊影响因子',
@@ -177,6 +187,7 @@ function cdTransformItem(item) {
     summaryZh:   item.summaryZh,
     whyEn:       item.curatedReasonEn,
     tags:        item.tags || [],
+    tech:        !!item.tech, // 康复科技 overlay flag (cross-cutting, see XCUTS)
     related:     item.related || [],  // other outlets covering the same story (关联讨论)
   };
 }
@@ -185,11 +196,12 @@ function cdTransformItem(item) {
 // Left-nav is not in news.json; it's product chrome.
 
 window.CD_NAV = [
-  { id: 'curated', label: 'Curated',     icon: 'sparkles' },
-  { id: 'all',     label: 'All stories', icon: 'list' },
-  { id: 'daily',   label: 'Daily brief', icon: 'newspaper' },
-  { id: 'saved',   label: 'Saved',       icon: 'bookmark' },
-  { id: 'sources', label: 'Sources',     icon: 'rss' },
+  { id: 'curated',  label: 'Curated',     icon: 'sparkles' },
+  { id: 'all',      label: 'All stories', icon: 'list' },
+  { id: 'daily',    label: 'Daily brief', icon: 'newspaper' },
+  { id: 'saved',    label: 'Saved',       icon: 'bookmark' },
+  { id: 'sources',  label: 'Sources',     icon: 'rss' },
+  { id: 'feedback', label: 'Feedback',    icon: 'message-circle' },
 ];
 
 // ── Async load → render ─────────────────────────────────────────────────────

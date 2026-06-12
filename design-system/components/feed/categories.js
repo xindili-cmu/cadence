@@ -35,3 +35,12 @@ export function catVars(accent) {
     ink:   `var(--cat-${accent}-ink)`,
   };
 }
+
+// ── Cross-cutting overlays (横切维度) ────────────────────────────────────────
+// Not specialties: an item keeps its single clinical `category` AND may carry
+// a boolean overlay flag (e.g. tech:true, set by scripts/news-refresh.js
+// keyword rules). Overlays get a filter pill, a card chip and a pulse row,
+// but never appear in specialty groupings (daily brief sections etc.).
+export const XCUTS = [
+  { id: 'rehab-tech', flag: 'tech', label: 'Rehab Tech', labelZh: '康复科技', short: 'Tech', shortZh: '科技', icon: 'cpu', accent: 'tech' },
+];

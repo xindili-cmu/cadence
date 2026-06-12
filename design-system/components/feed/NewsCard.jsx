@@ -27,6 +27,7 @@ export function NewsCard({
   score, whyItMatters, variant = 'default', selected = false,
   saved = false, onToggleSave, // bookmark state — persisted to localStorage by FeedApp
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
+  tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
@@ -68,6 +69,17 @@ export function NewsCard({
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
         {typeof score === 'number' && <SignalScore score={score} size={isCompact ? 'sm' : 'md'} />}
         <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort={isLead ? false : true} />
+        {tech && (
+          <span style={{
+            display: 'inline-flex', alignItems: 'center', gap: 4,
+            padding: isCompact ? '2px 7px' : '3px 9px', borderRadius: 'var(--radius-pill)',
+            fontFamily: 'var(--font-sans)', fontSize: isCompact ? 11 : 12, fontWeight: 500,
+            background: 'var(--cat-tech-soft)', color: 'var(--cat-tech-ink)', whiteSpace: 'nowrap',
+          }}>
+            <Icon name="cpu" size={isCompact ? 10 : 11} strokeWidth={2} />
+            {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '科技' : 'Tech'}
+          </span>
+        )}
         <span style={{ flex: 1 }} />
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>
           {time}

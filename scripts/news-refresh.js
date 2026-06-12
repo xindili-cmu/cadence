@@ -233,6 +233,35 @@ const PUBMED_QUERIES = [
   { category: 'practice',        term: '(physical therapy[tiab] OR physiotherapy[tiab]) AND (reimbursement[tiab] OR telehealth[tiab] OR scope of practice[tiab] OR workforce[tiab])' },
 ];
 
+// ── 康复科技 (Rehab Tech) cross-cutting overlay ──────────────────────────────
+// Not a 9th category: items keep their clinical specialty and additionally get
+// tech:true when title/summary (en or zh) mentions technology-driven rehab —
+// AI/ML, VR/AR, robotics, wearables, telerehab, digital health. Deterministic
+// keyword rules so the flag is auditable, free, and can be backfilled over the
+// archive (scripts/backfill-tech.js). Tune the lists, rerun the backfill.
+const TECH_PATTERNS = [
+  /\bmachine[ -]learning\b/i, /\bdeep[ -]learning\b/i, /\bartificial intelligence\b/i,
+  /\bneural network/i, /\bAI\b/, /\bML\b/,
+  /\bvirtual reality\b/i, /\bVR\b/, /\baugmented reality\b/i, /\bmixed reality\b/i,
+  /\bexoskeleton/i, /\brobot/i, /\bwearable/i, /\bsensor(s|-based)?\b/i,
+  /\btele-?rehab/i, /\btelehealth\b/i, /\btelemedicine\b/i, /\bm-?health\b/i,
+  /\bsmartphone/i, /\bmobile app/i, /\bapp-based\b/i, /\bdigital health\b/i,
+  /\bdigital therapeutic/i, /\bgamif/i, /\bvideo ?gam/i, /\bbrain[- ]computer interface/i,
+];
+const TECH_ZH = [
+  '机器学习', '人工智能', '深度学习', '神经网络', '虚拟现实', '增强现实', '混合现实',
+  '外骨骼', '机器人', '可穿戴', '传感器', '远程康复', '远程医疗', '智能手机',
+  '手机应用', '移动应用', '应用程序', '数字健康', '数字疗法', '游戏化', '脑机接口',
+];
+function isTech(item) {
+  const en = `${item.title || ''} ${item.summary || ''} ${(item.tags || []).join(' ')}`;
+  const zh = `${item.titleZh || ''} ${item.summaryZh || ''}`;
+  // zh summaries often keep English acronyms (VR/AI/ML), so run both rule sets
+  // over both languages.
+  return TECH_PATTERNS.some((re) => re.test(en) || re.test(zh))
+    || TECH_ZH.some((k) => zh.includes(k) || en.includes(k));
+}
+
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const xmlTag = (s, tag) => (s.match(new RegExp(`<${tag}[^>]*>([\\s\\S]*?)</${tag}>`)) || [])[1] || '';
 const stripTags = (s) => (s || '')
@@ -807,7 +836,7 @@ async function main() {
     // RSS whole-journal items arrive with category:null — critic assigns one.
     const category = o.category || (VALID_CATS.has(c.category) ? c.category : null);
     if (!category) return null;
-    return {
+    const item = {
       id: `news-${Date.now()}-${c.index}`,
       title: o.title,
       summary: c.summary || o.highlights || o.text?.substring(0, 200),
@@ -826,6 +855,10 @@ async function main() {
       ...(o.journal ? { journal: o.journal } : {}),
       ...(o.related?.length ? { related: o.related } : {})
     };
+    // 康复科技 cross-cutting overlay — items keep their clinical category and
+    // additionally carry tech:true (filter pill / card chip / pulse row).
+    if (isTech(item)) item.tech = true;
+    return item;
   }).filter(Boolean).sort((a, b) => b.curatedScore - a.curatedScore);
 
   // Merge with existing (keep 7 days)
@@ -940,4 +973,4 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics };
+module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics, isTech };

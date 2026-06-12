@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
-import { CATEGORIES, getCategory, catShort } from './categories.js';
+import { CATEGORIES, XCUTS, getCategory, catShort } from './categories.js';
 
 function Tab({ id, label, icon, accent, active, onClick }) {
   const [hover, setHover] = React.useState(false);
@@ -45,6 +45,11 @@ export function CategoryTabs({ value = 'all', onChange = () => {}, includeAll = 
         <Tab id="all" label={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '全部' : 'All'} icon={null} accent={null} active={value === 'all'} onClick={onChange} />
       )}
       {CATEGORIES.map((c) => (
+        <Tab key={c.id} id={c.id} label={catShort(c)} icon={c.icon} accent={c.accent} active={value === c.id} onClick={onChange} />
+      ))}
+      {/* Cross-cutting overlays (e.g. 康复科技) — same pill UI, but selecting
+          one filters on the overlay flag, not the category field. */}
+      {XCUTS.map((c) => (
         <Tab key={c.id} id={c.id} label={catShort(c)} icon={c.icon} accent={c.accent} active={value === c.id} onClick={onChange} />
       ))}
     </div>

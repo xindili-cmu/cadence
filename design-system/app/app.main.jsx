@@ -16,7 +16,7 @@ const cdDayLabels = () => {
 
 function FeedToolbar({ view, count }) {
   const t = window.CD_T;
-  const id = ['curated', 'all', 'daily', 'saved', 'sources'].includes(view) ? view : 'curated';
+  const id = ['curated', 'all', 'daily', 'saved', 'sources', 'feedback'].includes(view) ? view : 'curated';
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
@@ -24,7 +24,9 @@ function FeedToolbar({ view, count }) {
         <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, color: 'var(--text-tertiary)' }}>{t('sub.' + id)}</p>
       </div>
       <span style={{ flex: 1 }} />
-      <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
+      {id !== 'feedback' && (
+        <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
+      )}
     </div>
   );
 }
@@ -152,6 +154,11 @@ function SourceCard({ source }) {
 // Formspree (static site — no backend of our own). Vetted manually before
 // being added to CD_SOURCES; the form promises review, not auto-listing.
 const CD_SUGGEST_ENDPOINT = 'https://formspree.io/f/mlgkwdja';
+// Feedback form shares the same Formspree project as source suggestions —
+// zero extra setup. Submissions are told apart by their _subject line in the
+// inbox. To split them into a dedicated inbox later, create a second Formspree
+// form and point CD_FEEDBACK_ENDPOINT at its /f/<id> URL.
+const CD_FEEDBACK_ENDPOINT = 'https://formspree.io/f/mlgkwdja';
 
 function SuggestSourceForm() {
   const [open, setOpen] = React.useState(false);
@@ -229,6 +236,99 @@ function SuggestSourceForm() {
         <Button size="sm" variant="ghost" onClick={() => { setOpen(false); setStatus('idle'); }}>Cancel</Button>
         {status === 'error' && (
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>Could not send — please try again.</span>
+        )}
+      </div>
+    </form>
+  );
+}
+
+// ── Feedback view ────────────────────────────────────────────────────────────
+// Free-form reader feedback (bugs / feature ideas / gripes). Same Formspree
+// delivery as the source form (CD_FEEDBACK_ENDPOINT). Mirrors the aihot pattern:
+// one message body (≤2000 chars, live counter) + an optional contact field.
+const CD_FEEDBACK_MAX = 2000;
+
+function FeedbackView() {
+  const t = window.CD_T;
+  const [content, setContent] = React.useState('');
+  const [contact, setContact] = React.useState('');
+  const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
+  const valid = content.trim().length > 0;
+
+  async function submit(e) {
+    e.preventDefault();
+    if (!valid || status === 'sending') return;
+    setStatus('sending');
+    try {
+      const res = await fetch(CD_FEEDBACK_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Cadence feedback',
+          content: content.trim(),
+          contact: contact.trim() || null,
+          pageUrl: window.location.href,
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus('sent');
+    } catch (err) {
+      console.error('[Cadence] feedback submit failed:', err);
+      setStatus('error');
+    }
+  }
+
+  const label = { fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.07em', textTransform: 'uppercase', color: 'var(--text-tertiary)' };
+
+  if (status === 'sent') {
+    return (
+      <div style={{ maxWidth: 620, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 24, boxShadow: 'var(--shadow-xs)', textAlign: 'center' }}>
+        <Icon name="circle-check" size={26} style={{ color: 'var(--green-600)', margin: '0 auto 12px' }} />
+        <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>{t('fb.sent')}</p>
+        <Button size="sm" variant="ghost" iconStart="rotate-cw"
+          onClick={() => { setContent(''); setContact(''); setStatus('idle'); }}>{t('fb.again')}</Button>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={submit}
+      style={{ maxWidth: 620, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 22, boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 17, fontWeight: 600, color: 'var(--text-primary)' }}>{t('fb.heading')}</div>
+        <p style={{ margin: '5px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('fb.lead')}</p>
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+          <span style={{ ...label, flex: 1 }}>{t('fb.contentLabel')}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: content.length > CD_FEEDBACK_MAX ? 'var(--signal-down)' : 'var(--text-tertiary)' }}>{content.length} / {CD_FEEDBACK_MAX}</span>
+        </div>
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          maxLength={CD_FEEDBACK_MAX}
+          rows={6}
+          placeholder={t('fb.contentPlaceholder')}
+          style={{
+            width: '100%', resize: 'vertical', minHeight: 132, padding: '11px 13px',
+            fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-primary)',
+            background: 'var(--surface-page)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)',
+            outline: 'none', boxSizing: 'border-box',
+          }} />
+      </div>
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+        <span style={label}>{t('fb.contactLabel')}</span>
+        <Input size="sm" value={contact} onChange={(e) => setContact(e.target.value)} placeholder={t('fb.contactPlaceholder')} maxLength={200} />
+      </div>
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <Button type="submit" size="sm" iconStart="send" disabled={!valid || status === 'sending'}>
+          {status === 'sending' ? t('fb.sending') : t('fb.send')}
+        </Button>
+        {status === 'error' && (
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>{t('fb.error')}</span>
         )}
       </div>
     </form>
@@ -361,6 +461,7 @@ function FeedApp() {
   const compact = view === 'all';
   const isDaily = view === 'daily';
   const isSources = view === 'sources';
+  const isFeedback = view === 'feedback';
   const q = query.trim().toLowerCase();
 
   // DigestRail "Today's Signal" handler — set selected state + smooth-scroll
@@ -375,8 +476,12 @@ function FeedApp() {
   }, []);
 
   // Source-of-truth filter — search + category narrowing applies to every view.
+  // Cross-cutting pills (XCUTS, e.g. 康复科技) filter on their overlay flag
+  // instead of the category field, so a neuro VR trial matches both 神经 and 科技.
+  const xcut = (window.XCUTS || []).find((x) => x.id === category);
   const matchesFilter = (s) => {
-    if (category !== 'all' && s.category !== category) return false;
+    if (xcut) { if (!s[xcut.flag]) return false; }
+    else if (category !== 'all' && s.category !== category) return false;
     // Search across both languages regardless of display language.
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
@@ -474,7 +579,7 @@ function FeedApp() {
         {!isMobile && <NavRail view={view} onView={setView} />}
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
-          <FeedToolbar view={view} count={isSources ? null : stories.length} />
+          <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
@@ -487,6 +592,12 @@ function FeedApp() {
               No specialty tabs here: the wall groups by outlet kind instead. */}
           {isSources && (
             <SourcesGrid stories={window.CD_STORIES || []} />
+          )}
+
+          {/* Feedback branch — also short-circuits the feed: a single form,
+              no category tabs / signal rail / story list. */}
+          {isFeedback && (
+            <FeedbackView />
           )}
 
           {/* Device-local storage disclosure — bookmarks live in this browser's
@@ -514,7 +625,7 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && (
+          {!isSources && !isFeedback && (
             <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
               background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
               {/* Mobile: 9 pills don't fit — single-row horizontal scroll
@@ -534,14 +645,14 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && grouped.length === 0 && !archiveLoading && (
+          {!isSources && !isFeedback && grouped.length === 0 && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
               <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
             </div>
           )}
 
-          {!isSources && grouped.map((g) => (
+          {!isSources && !isFeedback && grouped.map((g) => (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
                 {isDaily && g.accent && (
@@ -565,7 +676,7 @@ function FeedApp() {
                       <NewsCard
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
                         category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                        journalMeta={s.journalMeta}
+                        journalMeta={s.journalMeta} tech={s.tech}
                         title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                         selected={selected === s.id}
                         saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}
@@ -579,7 +690,7 @@ function FeedApp() {
           ))}
         </main>
 
-        {!isSources && !isMobile && (
+        {!isSources && !isFeedback && !isMobile && (
           <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
         )}
       </div>
