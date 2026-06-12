@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-12T15:44:51.042Z",
+    "lastUpdated": "2026-06-12T18:22:04.294Z",
     "totalItems": 30,
     "categories": [
       "orthopedic",
@@ -13,27 +13,456 @@
       "practice"
     ]
   },
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "id": "news-1781288524277-37",
+      "title": "Effectiveness of maintenance interventions promoting physical activity following exercise therapy for chronic conditions: an umbrella review",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/884?rss=1",
+      "category": "cardiopulmonary",
+      "publishedAt": "2026-06-12T08:51:04.000Z",
+      "sourceCount": 2,
+      "sources": [
+        "BMJ",
+        "PubMed"
+      ],
+      "tag": "physical-activity",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMJ",
+          "title": "Effectiveness of maintenance interventions promoting physical activity following exercise therapy for chronic conditions: an umbrella review",
+          "titleZh": "运动疗法后促进身体活动的维持干预措施对慢性病患者的有效性：一项伞形综述"
+        },
+        {
+          "source": "PubMed",
+          "title": "Accelerometry-derived physical activity following Achilles tendon rupture: A prospective cohort study.",
+          "titleZh": "跟腱断裂后加速度计测量的身体活动：一项前瞻性队列研究"
+        }
+      ],
+      "heat": 1.74
+    }
+  ],
   "items": [
     {
-      "id": "news-1781279091025-8",
-      "title": "Many Paths to Recovery: The Case for Treatment Pluralism.",
-      "summary": "An editorial argues for treatment pluralism in musculoskeletal pain, stating that decades of research show no consistently superior treatment, with various interventions demonstrating modest and broadly equivalent effects.",
+      "id": "news-1781288524276-1",
+      "title": "The Effect of Duration of Supervised Rehabilitation on Outcomes Following Anterior Cruciate Ligament Reconstruction: A Systematic Review.",
+      "summary": "A systematic review investigating the effect of supervised rehabilitation duration on outcomes following anterior cruciate ligament reconstruction (ACLR) to improve outcomes and reduce re-injury risk.",
       "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42224024/",
-      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42245761/",
+      "publishedAt": "2026-06-05T00:00:00.000Z",
       "curatedScore": 85,
-      "curatedReason": "这篇社论强调了肌肉骨骼疼痛治疗的“多元主义”，即没有单一的“最佳”疗法，各种干预措施（如运动疗法和手法技术）的平均疗效大致相当。这提示你，临床实践中应回归以患者为中心，根据患者偏好、背景和特定症状，灵活运用多种循证干预手段。",
-      "titleZh": "多种康复途径：支持治疗多元主义的案例",
-      "summaryZh": "一篇社论主张肌肉骨骼疼痛治疗的多元主义，指出数十年研究未能找到持续优越的单一疗法，各种干预措施均显示出适度且大致相当的效果。",
-      "curatedReasonEn": "This editorial emphasizes \"treatment pluralism\" in musculoskeletal pain, noting that no single \"best\" therapy exists and various interventions (e.g., exercise and manual techniques) have broadly equivalent average effects. This suggests that your clinical practice should return to being patient-centered, flexibly employing multiple evidence-based interventions based on patient preferences, context, and specific symptoms.",
+      "curatedReason": "这份系统综述直接评估了 ACLR 术后康复时长与预后的关系。这是你制定个性化康复计划、平衡功能恢复与再损伤风险的重要循证依据，特别是在向患者解释康复预期时。",
+      "titleZh": "监督康复时长对前交叉韧带重建术后预后的影响：一项系统综述",
+      "summaryZh": "一项系统综述旨在阐明前交叉韧带重建术后监督康复的持续时间与功能预后及再损伤风险之间的关联，以期改善康复效果。",
+      "curatedReasonEn": "This systematic review directly assesses the association between rehabilitation duration and outcomes after ACLR. This provides crucial evidence for you to develop individualized rehabilitation plans, balancing functional recovery with re-injury risk, especially when discussing rehabilitation expectations with patients.",
       "tags": [
-        "policy",
-        "practice",
-        "ethics"
+        "research",
+        "knee"
+      ],
+      "journal": "International journal of sports physical therapy"
+    },
+    {
+      "id": "news-1781288524277-36",
+      "title": "Long-term risk of knee replacement after ACL reconstruction using the contralateral knee as an internal control: a National Hospital Episode Statistics database study of 135 881 patients",
+      "summary": "A national hospital database study of 135,881 patients found a significantly increased long-term risk of knee replacement after ACL reconstruction, using the contralateral knee as an internal control.",
+      "category": "sports",
+      "source": "BMJ",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/865?rss=1",
+      "publishedAt": "2026-06-12T08:51:04.000Z",
+      "curatedScore": 85,
+      "curatedReason": "这项基于国家数据的研究发现，ACLr 后膝关节置换的长期风险显著增加。这坐实了 ACLr 后关节炎进展的常见性。你应在术后康复中更早地介入关节保护策略和更全面的功能训练，并与患者讨论远期关节健康的潜在风险。",
+      "titleZh": "ACL 重建术后膝关节置换的长期风险，以对侧膝关节作为内部对照：一项针对 135,881 名患者的国家医院病案统计数据库研究",
+      "summaryZh": "一项针对 135,881 名患者的国家医院病案统计数据库研究发现，以前交叉韧带重建术后对侧膝关节作为内部对照，术后膝关节置换的长期风险显著增加。",
+      "curatedReasonEn": "This national database study found a significantly increased long-term risk of knee replacement after ACLr. This confirms the common progression to arthritis after ACLr. You should implement joint protection strategies and more comprehensive functional training earlier in post-operative rehabilitation, and discuss the potential long-term joint health risks with patients.",
+      "tags": [
+        "research",
+        "knee",
+        "anterior-cruciate-ligament",
+        "osteoarthritis"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1781288524277-37",
+      "title": "Effectiveness of maintenance interventions promoting physical activity following exercise therapy for chronic conditions: an umbrella review",
+      "summary": "An umbrella review investigated the effectiveness of maintenance interventions following exercise therapy on physical activity, physical function, and health-related quality of life in people with chronic conditions.",
+      "category": "cardiopulmonary",
+      "source": "BMJ",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/884?rss=1",
+      "publishedAt": "2026-06-12T08:51:04.000Z",
+      "curatedScore": 80,
+      "curatedReason": "这项伞形综述评估了慢性病患者运动疗法后维持身体活动的干预措施效果。你需要认识到，单纯的运动干预不够，必须有后续的维持策略才能确保患者长期保持身体活动水平，这对你的长期康复计划设计有直接指导意义。",
+      "titleZh": "运动疗法后促进身体活动的维持干预措施对慢性病患者的有效性：一项伞形综述",
+      "summaryZh": "一项伞形综述旨在调查运动疗法后维持干预措施对慢性病患者身体活动、身体功能、体适能和健康相关生活质量的有效性。",
+      "curatedReasonEn": "This umbrella review assessed the effectiveness of maintenance interventions promoting physical activity after exercise therapy for chronic conditions. You need to recognize that exercise intervention alone is insufficient; subsequent maintenance strategies are crucial for patients to sustain physical activity levels long-term. This directly guides your long-term rehabilitation program design.",
+      "tags": [
+        "research",
+        "physical-activity",
+        "chronic-conditions"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1781288524275-0",
+      "title": "Phenomenological exploration of perceptions, experiences, facilitators, and inhibitors in patients with knee osteoarthritis during physiotherapy rehabilitation in a low- and middle-income country.",
+      "summary": "This qualitative study explores perceptions, experiences, facilitators, and inhibitors of physiotherapy rehabilitation in knee osteoarthritis patients in a low- and middle-income country, highlighting the influence of lifestyle and contextual factors.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42249312/",
+      "publishedAt": "2026-06-06T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "本研究定性探讨了低收入国家膝骨关节炎患者对物理治疗康复的感知和体验。这类研究能帮助你了解文化和经济背景如何影响患者依从性和康复效果，从而优化你的康复方案沟通策略。",
+      "titleZh": "低收入国家膝骨关节炎患者物理治疗康复期间的感知、体验、促成因素和抑制因素：一项现象学探索",
+      "summaryZh": "这项定性研究探讨了低收入和中等收入国家膝骨关节炎患者在物理治疗康复过程中对疾病和治疗的感知、体验以及促成和抑制因素，强调了生活方式和情境因素的影响。",
+      "curatedReasonEn": "This qualitative study explores perceptions and experiences of physiotherapy rehabilitation in knee OA patients in a low-income country. Understanding how cultural and economic contexts influence patient adherence can help you optimize your rehabilitation program communication strategies.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1781288524277-4",
+      "title": "Goal attainment scaling for patients with chronic low back pain receiving physical therapist care: a feasibility and reliability study.",
+      "summary": "This study examines the feasibility and reliability of a Goal Attainment Scaling (GAS-Back) application for chronic low back pain patients, and the nature of identified goals.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42216206/",
+      "publishedAt": "2026-05-30T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究验证了针对慢性腰痛患者的目标达成量表（GAS-Back）的可用性和可靠性。在你的临床实践中，GAS 可以更好地捕捉患者个体化的功能目标和康复进展，提高以患者为中心的评估质量。",
+      "titleZh": "慢性腰痛患者接受物理治疗护理的目标达成量表：一项可行性和可靠性研究",
+      "summaryZh": "本研究旨在检验慢性腰痛患者目标达成量表（GAS-Back）的可用性和可靠性，并分析患者所设定目标的性质。",
+      "curatedReasonEn": "This study validates the feasibility and reliability of the Goal Attainment Scaling (GAS-Back) for chronic low back pain patients. In your clinical practice, GAS can better capture individualized functional goals and rehabilitation progress, enhancing patient-centered assessment quality.",
+      "tags": [
+        "research",
+        "spine",
+        "outcome-measure"
+      ],
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1781288524277-6",
+      "title": "How do people with multiple sclerosis who have walking difficulties perceive participation? A qualitative analysis.",
+      "summary": "A qualitative analysis exploring how people with multiple sclerosis and walking difficulties perceive participation, highlighting the subjective aspects of this rehabilitation concept.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42283196/",
+      "publishedAt": "2026-06-12T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项定性研究深入探讨了多发性硬化症（MS）步态障碍患者对“参与”的看法。这有助于你超越 ICF 框架的局限，更真实地理解 MS 患者的核心康复需求，从而设计更贴近患者主观体验的干预措施。",
+      "titleZh": "步态困难的多发性硬化症患者如何看待参与？一项定性分析",
+      "summaryZh": "一项定性分析探讨了有步态困难的多发性硬化症患者如何看待“参与”这一康复概念，突出了其主观感知。",
+      "curatedReasonEn": "This qualitative study delves into the perceptions of 'participation' among people with multiple sclerosis (MS) who have walking difficulties. It helps you understand MS patients' core rehabilitation needs beyond the ICF framework, enabling you to design interventions closer to patients' subjective experiences.",
+      "tags": [
+        "research",
+        "ms"
+      ],
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1781288524277-7",
+      "title": "Association Between Postoperative Mini-Balance Evaluation Systems Test Scores and Length of Hospital Stay in Patients with Chronic Subdural Hematoma: A Prospective Cohort Study.",
+      "summary": "A prospective cohort study examined the association between postoperative Mini-Balance Evaluation Systems Test (Mini-BESTest) scores and length of hospital stay in patients with chronic subdural hematoma.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42272418/",
+      "publishedAt": "2026-06-11T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项前瞻性队列研究发现，Mini-BESTest 评分与慢性硬膜下血肿术后住院时长存在关联。Mini-BESTest 可能作为预测工具，帮助你识别术后跌倒风险较高的患者，从而更早介入平衡训练，缩短住院时间。",
+      "titleZh": "慢性硬膜下血肿患者术后 Mini-Balance Evaluation Systems Test 评分与住院时间的关系：一项前瞻性队列研究",
+      "summaryZh": "一项前瞻性队列研究探讨了慢性硬膜下血肿患者术后 Mini-Balance Evaluation Systems Test (Mini-BESTest) 评分与住院时间之间的关联。",
+      "curatedReasonEn": "This prospective cohort study found an association between Mini-BESTest scores and length of hospital stay after chronic subdural hematoma surgery. Mini-BESTest could serve as a predictive tool for you to identify patients at higher fall risk post-surgery, allowing earlier intervention with balance training to shorten hospital stays.",
+      "tags": [
+        "research",
+        "brain-injury",
+        "outcome-measure"
+      ],
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1781288524277-8",
+      "title": "Prevalence of knee pain and factors influencing its risk in ambulatory chronic stroke survivors.",
+      "summary": "A cross-sectional study of 212 ambulatory chronic stroke survivors in Vietnam estimated the prevalence of knee pain (39.2%) and identified factors influencing its risk, such as stroke severity and gait speed.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42272360/",
+      "publishedAt": "2026-06-11T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项针对越南卒中患者的横断面研究揭示了步态异常与膝痛的高患病率及其相关因素。在评估卒中患者时，你需要高度关注膝痛问题，因为它可能显著限制康复进程和生活质量。",
+      "titleZh": "慢性卒中幸存者膝痛的患病率及其风险影响因素",
+      "summaryZh": "一项针对越南 212 名慢性卒中幸存者的横断面研究估计了膝痛患病率为 39.2%，并确定了包括卒中严重程度和步速在内的相关风险因素。",
+      "curatedReasonEn": "This cross-sectional study in Vietnamese stroke survivors reveals a high prevalence of knee pain associated with gait alterations. When assessing stroke patients, you need to pay close attention to knee pain, as it can significantly limit rehabilitation progress and quality of life.",
+      "tags": [
+        "research",
+        "stroke",
+        "gait"
+      ],
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1781288524277-13",
+      "title": "Accelerometry-derived physical activity following Achilles tendon rupture: A prospective cohort study.",
+      "summary": "A prospective cohort study investigated accelerometry-derived physical activity during the first year after Achilles tendon rupture and its relationship with patient-reported outcomes.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263423/",
+      "publishedAt": "2026-06-10T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项前瞻性队列研究使用加速度计评估了跟腱断裂后一年的身体活动水平。你需要认识到，尽管患者报告的结果可能改善，但客观的身体活动水平恢复可能较慢，提醒你在康复后期继续强调和监测活动水平。",
+      "titleZh": "跟腱断裂后加速度计测量的身体活动：一项前瞻性队列研究",
+      "summaryZh": "一项前瞻性队列研究调查了跟腱断裂后一年内通过加速度计测量的身体活动情况，并探讨了其与患者报告结果的关系。",
+      "curatedReasonEn": "This prospective cohort study used accelerometry to assess physical activity levels for one year after Achilles tendon rupture. You need to recognize that while patient-reported outcomes may improve, objective physical activity levels may recover slowly, prompting you to continue emphasizing and monitoring activity levels in later-stage rehabilitation.",
+      "tags": [
+        "research",
+        "foot-ankle",
+        "physical-activity"
+      ],
+      "journal": "Clinical biomechanics (Bristol, Avon)"
+    },
+    {
+      "id": "news-1781288524277-14",
+      "title": "Rehabilitation Protocols Following Patellar Instability Surgery: A Structured Review of Published Recommendations and AI Generated Guidance.",
+      "summary": "A structured review compared published postoperative rehabilitation protocols for patellar instability surgery (MPFLR, TTO, trochleoplasty) with guidance generated by selected artificial intelligence platforms.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42258047/",
+      "publishedAt": "2026-06-08T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项结构化综述比较了髌骨不稳手术后的康复方案与 AI 生成的指导。这为你提供了基于证据的髌骨不稳术后康复最新推荐，同时让你了解 AI 在辅助临床决策中的潜力与局限。",
+      "titleZh": "髌骨不稳手术后康复方案：已发表推荐与 AI 生成指导的结构化综述",
+      "summaryZh": "一项结构化综述比较了髌骨不稳手术（如 MPFLR、TTO、滑车成形术）后的已发表康复方案与选定人工智能平台生成的指导。",
+      "curatedReasonEn": "This structured review compares rehabilitation protocols following patellar instability surgery with AI-generated guidance. It provides you with the latest evidence-based recommendations for post-operative patellar instability rehabilitation, while also shedding light on the potential and limitations of AI in clinical decision support.",
+      "tags": [
+        "research",
+        "knee",
+        "ai"
+      ],
+      "journal": "Current reviews in musculoskeletal medicine",
+      "tech": true
+    },
+    {
+      "id": "news-1781288524277-16",
+      "title": "Community-Based Resistance Intensive Personal Training (RIPT) Program for Youth with Cerebral Palsy: A&#xa0;Prospective Cohort Pilot Study.",
+      "summary": "A pre-post prospective cohort pilot study evaluated a 12-week community-based power-training program for youth with cerebral palsy on goal performance, satisfaction, attainment, gross motor function, and anaerobic capacity.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42261757/",
+      "publishedAt": "2026-06-09T00:00:00.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项前瞻性队列研究评估了社区强化抗阻训练（RIPT）项目对脑瘫（CP）青少年目标表现和运动功能的影响。RIPT 对提升 CP 青少年的粗大运动功能和厌氧能力显示出积极效果，这表明你可以将此类项目纳入社区康复推荐，以实现更优的长期康复效果。",
+      "titleZh": "社区强化抗阻个人训练（RIPT）项目对脑瘫青少年的影响：一项前瞻性队列试点研究",
+      "summaryZh": "一项前瞻性队列试点研究评估了为期 12 周的社区强化抗阻个人训练项目对脑瘫青少年目标表现、满意度、达成度、粗大运动功能和无氧能力的影响。",
+      "curatedReasonEn": "This prospective cohort pilot study evaluated the effects of a community-based Resistance Intensive Personal Training (RIPT) program on goal performance and motor function in youth with cerebral palsy (CP). RIPT showed positive effects on improving gross motor function and anaerobic capacity in youth with CP, suggesting you can integrate such programs into community rehabilitation recommendations for better long-term outcomes.",
+      "tags": [
+        "research",
+        "cerebral-palsy",
+        "community-rehabilitation"
+      ],
+      "journal": "Physical & occupational therapy in pediatrics"
+    },
+    {
+      "id": "news-1781288524277-38",
+      "title": "Sport-related trauma and motor neurone disease: a scoping review of epidemiology, mechanisms and future directions",
+      "summary": "A scoping review mapped existing epidemiological evidence on the relationship between sport-related trauma and Motor Neurone Disease/Amyotrophic Lateral Sclerosis (MND/ALS), identifying potential mechanistic pathways and research gaps.",
+      "category": "neurological",
+      "source": "BMJ",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/900?rss=1",
+      "publishedAt": "2026-06-12T08:51:04.000Z",
+      "curatedScore": 75,
+      "curatedReason": "这项范围综述探讨了运动相关创伤与运动神经元疾病（MND/ALS）之间的关系。虽然机制尚不明确，但它提醒你在高强度、高碰撞运动中，需对头部和脊柱创伤进行更严格的风险管理和随访，尤其对有家族史的个体。",
+      "titleZh": "运动相关创伤与运动神经元疾病：流行病学、机制及未来方向的范围综述",
+      "summaryZh": "一项范围综述梳理了运动相关创伤与运动神经元疾病/肌萎缩侧索硬化症（MND/ALS）之间关系的现有流行病学证据，识别了潜在的机制途径和研究空白。",
+      "curatedReasonEn": "This scoping review explores the relationship between sport-related trauma and motor neuron disease (MND/ALS). While the mechanisms are unclear, it reminds you to implement stricter risk management and follow-up for head and spine trauma in high-intensity, contact sports, especially for individuals with a family history.",
+      "tags": [
+        "research",
+        "neurological",
+        "sports-injury"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1781288524277-2",
+      "title": "Rehabilitation Utilizing Blood Flow Restriction Following Surgical Repair of a Bankart Lesion with a Buford Complex in an Elite High School Football Player: A Case Report.",
+      "summary": "A case report details the rehabilitation of an elite high school football player with a Bankart lesion and Buford complex using blood flow restriction following surgical repair.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42245759/",
+      "publishedAt": "2026-06-05T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "本病例报告展示了精英橄榄球运动员肩关节 Bankart 损伤合并 Buford 复合体并使用血流限制训练的康复案例。虽然是单例，但对处理这类复杂肩关节不稳定患者，特别是高水平运动员，提供了有益的临床思路。",
+      "titleZh": "精英高中橄榄球运动员 Bankart 损伤合并 Buford 复合体手术修复后采用血流限制训练的康复：一例病例报告",
+      "summaryZh": "本病例报告详述了一名精英高中橄榄球运动员在 Bankart 损伤合并 Buford 复合体手术修复后，采用血流限制训练进行康复的过程。",
+      "curatedReasonEn": "This case report presents the rehabilitation of an elite high school football player with a Bankart lesion and Buford complex, utilizing blood flow restriction. While a single case, it offers valuable clinical insights for managing complex shoulder instability in high-level athletes.",
+      "tags": [
+        "news",
+        "shoulder",
+        "blood-flow-restriction"
+      ],
+      "journal": "International journal of sports physical therapy"
+    },
+    {
+      "id": "news-1781288524277-3",
+      "title": "Moving Forward Together. Part 5: Championing Physical Therapy Allyship and Advocacy for Indigenous Peoples With Musculoskeletal Pain.",
+      "summary": "The fifth article in the \"Moving Forward Together\" series explores the role of physical therapy allyship and advocacy in improving the musculoskeletal health of Indigenous Peoples, emphasizing truth-telling and healing.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42224021/",
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇文章探讨了物理治疗师在改善原住民肌肉骨骼健康方面的支持和倡导作用。这是行业实践领域的重要讨论，提醒你关注服务公平性与文化敏感性，而非直接的临床技术。",
+      "titleZh": "携手前行。第五部分：为原住民的肌肉骨骼疼痛疾病争取物理治疗支持和倡导",
+      "summaryZh": "“携手前行”系列第五篇文章探讨了物理治疗师在改善原住民肌肉骨骼健康方面的支持和倡导作用，强调了真相叙述和疗愈的重要性。",
+      "curatedReasonEn": "This article discusses the role of physical therapists in allyship and advocacy for improving musculoskeletal health among Indigenous Peoples. It's an important discussion in practice and profession, reminding you to consider equity and cultural sensitivity in your service delivery, rather than clinical techniques.",
+      "tags": [
+        "news",
+        "ethics",
+        "advocacy"
       ],
       "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+      "id": "news-1781288524277-9",
+      "title": "Healthcare professionals' perception of prevalence and assessment of mental ill-health in stroke patients with and without aphasia - a national survey.",
+      "summary": "A national survey investigated healthcare professionals' perceptions of mental ill-health prevalence and assessment practices in stroke patients, with and without aphasia, in Swedish stroke care.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263205/",
+      "publishedAt": "2026-06-09T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项全国性调查揭示了瑞典医疗专业人员对卒中患者（无论是否失语）心理健康问题的感知和评估现状。你需要意识到，即使是沟通障碍患者，心理健康评估也至关重要，但往往资源不足，这提示你加强多学科协作和评估工具的适应性。",
+      "titleZh": "医疗专业人员对伴或不伴失语症的卒中患者心理健康患病率和评估的看法：一项全国调查",
+      "summaryZh": "一项全国性调查研究了瑞典医疗专业人员对卒中患者（包括伴有和不伴有失语症的患者）心理健康患病率的感知和评估实践。",
+      "curatedReasonEn": "This national survey reveals Swedish healthcare professionals' perceptions and assessment practices regarding mental ill-health in stroke patients, with or without aphasia. You need to recognize that mental health assessment is crucial even for patients with communication impairments, but often lacks sufficient resources. This prompts you to strengthen multidisciplinary collaboration and adaptability of assessment tools.",
+      "tags": [
+        "research",
+        "stroke",
+        "aphasia",
+        "mental-health"
+      ],
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1781288524277-10",
+      "title": "Exploring psychological flexibility processes in adults with spinal cord injury: a qualitative study.",
+      "summary": "A qualitative study explored the lived experiences of psychological flexibility and its processes in adults with spinal cord injury (SCI), noting its link to better mental health.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42250241/",
+      "publishedAt": "2026-06-06T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项定性研究探讨了脊髓损伤（SCI）成人心理灵活性的过程。理解这些个体经验能帮助你在康复中更好地融入以价值观为导向的干预策略，提升患者的心理适应能力和生活质量。",
+      "titleZh": "探讨脊髓损伤成人心理灵活性的过程：一项定性研究",
+      "summaryZh": "一项定性研究探讨了脊髓损伤（SCI）成人心理灵活性及其过程的亲身经历，指出其与更好的心理健康相关。",
+      "curatedReasonEn": "This qualitative study explores the processes of psychological flexibility in adults with spinal cord injury (SCI). Understanding these individual experiences can help you better integrate value-driven intervention strategies into rehabilitation, enhancing patients' psychological resilience and quality of life.",
+      "tags": [
+        "research",
+        "spinal-cord",
+        "mental-health"
+      ],
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1781288524277-11",
+      "title": "Early Neuromuscular and Co-activation Patterns After Anterior Cruciate Ligament Reconstruction In Males: A Case-control Exploratory Feasibility Study.",
+      "summary": "An exploratory feasibility study investigated early (within ~2 weeks) neuromuscular and co-activation patterns in males after ACLR, highlighting quadriceps inhibition and excessive hamstring co-activation as barriers to recovery.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42245756/",
+      "publishedAt": "2026-06-05T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项探索性可行性研究关注 ACLR 术后早期的神经肌肉和协同激活模式。尽管样本量小，但它强调了早期股四头肌抑制和蠖绳肌过度协同激活的挑战，提醒你在术后早期康复中，需要更精细地评估和干预这些模式。",
+      "titleZh": "男性前交叉韧带重建术后早期神经肌肉和协同激活模式：一项病例对照探索性可行性研究",
+      "summaryZh": "一项探索性可行性研究调查了男性前交叉韧带重建术后早期（约2周内）的神经肌肉和协同激活模式，指出股四头肌抑制和腘绳肌过度协同激活是恢复的障碍。",
+      "curatedReasonEn": "This exploratory feasibility study focuses on early neuromuscular and co-activation patterns after ACLR. Although small in sample size, it highlights the challenges of early quadriceps inhibition and excessive hamstring co-activation, reminding you to meticulously assess and intervene these patterns in early postoperative rehabilitation.",
+      "tags": [
+        "research",
+        "knee",
+        "neuromuscular"
+      ],
+      "journal": "International journal of sports physical therapy"
+    },
+    {
+      "id": "news-1781288524277-12",
+      "title": "National survey of stroke rehabilitation services in Indonesia.",
+      "summary": "A cross-sectional online survey (June-August 2023) described stroke rehabilitation services in Indonesia, assessing service characteristics including staffing, session frequency, duration, and insurance coverage.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42241272/",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项关于印度尼西亚卒中康复服务的全国调查提供了当地服务特征的快照。如果你关注国际康复服务发展或考虑在印尼执业，这份报告为你了解当地的资源、频率和覆盖情况提供了基础信息。",
+      "titleZh": "印度尼西亚卒中康复服务全国调查",
+      "summaryZh": "一项于 2023 年 6 月至 8 月进行的在线横断面调查，描述了印度尼西亚的卒中康复服务，评估了人员配置、治疗频率、时长和保险覆盖等服务特征。",
+      "curatedReasonEn": "This national survey of stroke rehabilitation services in Indonesia provides a snapshot of local service characteristics. If you're interested in international rehabilitation service development or considering practice in Indonesia, this report offers foundational information on local resources, frequency, and coverage.",
+      "tags": [
+        "news",
+        "stroke",
+        "telehealth",
+        "international-practice"
+      ],
+      "journal": "Disability and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1781288524277-15",
+      "title": "Lung Boost Trainer Versus Incentive Spirometer on Pulmonary Function Post COVID Hemiplegic Cerebral Palsy Children; Randomized Controlled Trial.",
+      "summary": "A randomized controlled trial compared the efficacy of a Lung Boost Trainer versus an incentive spirometer on pulmonary function in post-COVID hemiplegic cerebral palsy children.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42261915/",
+      "publishedAt": "2026-06-09T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项 RCT 比较了 Lung Boost Trainer 和吸气式肺活量计对新冠后偏瘫脑瘫儿童肺功能的影响。虽然特定于脑瘫儿童，但其研究方法和对呼吸肌训练的关注，对你理解不同呼吸训练设备的疗效差异有参考价值。",
+      "titleZh": "肺部增强训练器与吸气式肺活量计对新冠后偏瘫脑瘫儿童肺功能的影响：一项随机对照试验",
+      "summaryZh": "一项随机对照试验比较了肺部增强训练器与吸气式肺活量计对新冠后偏瘫脑瘫儿童肺功能的影响。",
+      "curatedReasonEn": "This RCT compared the effects of the Lung Boost Trainer versus incentive spirometry on pulmonary function in post-COVID hemiplegic cerebral palsy children. Although specific to children with CP, its methodology and focus on respiratory muscle training are valuable for you to understand the efficacy differences among various respiratory training devices.",
+      "tags": [
+        "research",
+        "cerebral-palsy",
+        "respiratory"
+      ],
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1781288524277-17",
+      "title": "Evolving Demographics and Injury Characteristics of US Traumatic Spinal Cord Injury, 1972-2024.",
+      "summary": "A cross-sectional analysis of the Spinal Cord Injury Model Systems database (1972-2024) examined the demographic and injury characteristics of 37,866 new traumatic spinal cord injury cases in the United States.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42225230/",
+      "publishedAt": "2026-06-02T00:00:00.000Z",
+      "curatedScore": 70,
+      "curatedReason": "这项分析回顾了美国创伤性脊髓损伤（tSCI）的演变趋势。虽然不能直接改变你的临床手法，但了解 tSCI 人群的年龄、损伤原因等人口学变化，能帮助你预判未来康复服务的需求和资源分配，影响你的执业规划。",
+      "titleZh": "1972-2024 年美国创伤性脊髓损伤患者人口统计学和损伤特征的演变",
+      "summaryZh": "一项对 1972-2024 年脊髓损伤模型系统数据库的横断面分析，考察了美国 37,866 例新增创伤性脊髓损伤患者的人口统计学和损伤特征。",
+      "curatedReasonEn": "This analysis reviews the evolving trends of traumatic spinal cord injury (tSCI) in the US. While it doesn't directly change your clinical techniques, understanding demographic shifts in tSCI populations, such as age and injury causes, can help you anticipate future rehabilitation service needs and resource allocation, impacting your practice planning.",
+      "tags": [
+        "news",
+        "spinal-cord",
+        "demographics"
+      ],
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1781288524277-5",
+      "title": "Retraction Note: The effectiveness of routine physiotherapy with and without neuromobilization on pain and functional disability in patients with shoulder impingement syndrome; a randomized control clinical trial.",
+      "summary": "Retraction notice for a randomized controlled clinical trial on the effectiveness of routine physiotherapy with and without neuromobilization on pain and functional disability in patients with shoulder impingement syndrome.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42215919/",
+      "publishedAt": "2026-05-30T00:00:00.000Z",
+      "curatedScore": 65,
+      "curatedReason": "这是一篇撤稿声明，原论文关于肩峰撞击综合征物理治疗与神经松动术效果的随机对照试验已被撤回。这意味着你不能再引用该研究的结论，提醒你在查阅文献时留意撤稿信息。",
+      "titleZh": "撤稿声明：常规物理治疗结合或不结合神经松动术对肩峰撞击综合征患者疼痛和功能障碍的疗效；一项随机对照临床试验",
+      "summaryZh": "一篇关于常规物理治疗结合或不结合神经松动术对肩峰撞击综合征患者疼痛和功能障碍疗效的随机对照临床试验已撤稿。",
+      "curatedReasonEn": "This is a retraction notice for a randomized controlled trial on the effectiveness of routine physiotherapy with and without neuromobilization for shoulder impingement syndrome. This means you cannot cite its conclusions and should be aware of retraction information when reviewing literature.",
+      "tags": [
+        "policy",
+        "research-ethics"
+      ],
+      "journal": "BMC musculoskeletal disorders"
     },
     {
       "id": "news-1781279091025-3",
@@ -180,26 +609,6 @@
       "journal": "Disability and rehabilitation"
     },
     {
-      "id": "news-1781279091025-10",
-      "title": "Effect of Femoral Nerve Neurodynamic Techniques on Pain in Patellofemoral Pain Syndrome: A Randomised Controlled Trial.",
-      "summary": "A randomized controlled trial (N=71) found that adding femoral nerve neurodynamic techniques to routine physiotherapy significantly reduced pain and improved function in patients with patellofemoral pain syndrome.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42223246/",
-      "publishedAt": "2026-06-01T00:00:00.000Z",
-      "curatedScore": 75,
-      "curatedReason": "这项随机对照试验发现股神经神经动力学技术能额外改善髌股疼痛综合征患者的疼痛和功能。这表明在常规治疗方案中加入神经动力学干预，特别是针对髌股疼痛，可能带来增益。你可以考虑将其整合到你的治疗工具箱中。",
-      "titleZh": "股神经神经动力学技术对髌股疼痛综合征疼痛的影响：一项随机对照试验",
-      "summaryZh": "一项针对71名患者的随机对照试验发现，在常规物理治疗中加入股神经神经动力学技术，能显著减轻髌股疼痛综合征患者的疼痛并改善功能。",
-      "curatedReasonEn": "This randomized controlled trial found that femoral nerve neurodynamic techniques provided additional improvements in pain and function for patients with patellofemoral pain syndrome. This suggests that incorporating neurodynamic interventions into routine treatment, especially for patellofemoral pain, may offer added benefits. You can consider integrating this into your treatment toolkit.",
-      "tags": [
-        "research",
-        "knee",
-        "neuromuscular"
-      ],
-      "journal": "Clinical rehabilitation"
-    },
-    {
       "id": "news-1781279091025-13",
       "title": "Barriers and facilitators to leisure-time physical activity among individuals with spinal cord injury in China: A qualitative study.",
       "summary": "A qualitative study explored barriers and facilitators to leisure-time physical activity among community-dwelling adults with spinal cord injury in China, using the COM-B model.",
@@ -239,386 +648,6 @@
       ],
       "journal": "Neurorehabilitation and neural repair",
       "tech": true
-    },
-    {
-      "id": "news-1781279091025-23",
-      "title": "Effect of home-based rehabilitation in frail older adults after cardiac surgery: a prospective feasibility study.",
-      "summary": "A prospective feasibility study evaluated the Vivifrail structured, multicomponent exercise program as a home-based rehabilitation intervention for frail older adults after cardiac surgery.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42240546/",
-      "publishedAt": "2026-06-04T00:00:00.000Z",
-      "curatedScore": 75,
-      "curatedReason": "这项可行性研究表明，Vivifrail居家多组分运动方案在心脏手术后虚弱老年人中是可行的。这为你提供了一个在临床中推广居家康复的循证工具，特别对于高风险的虚弱老年患者，可以考虑将此结构化方案纳入术后康复计划。",
-      "titleZh": "心脏手术后虚弱老年人居家康复的效果：一项前瞻性可行性研究",
-      "summaryZh": "一项前瞻性可行性研究评估了Vivifrail结构化多组分运动方案作为心脏手术后虚弱老年人居家康复干预的可行性。",
-      "curatedReasonEn": "This feasibility study indicates that the Vivifrail home-based multicomponent exercise program is feasible for frail older adults after cardiac surgery. This provides you with an evidence-based tool for promoting home rehabilitation in clinical practice, especially for high-risk frail elderly patients; consider incorporating this structured program into their postoperative rehabilitation plan.",
-      "tags": [
-        "research",
-        "cardiac-rehab",
-        "home-based"
-      ],
-      "journal": "Journal of rehabilitation medicine"
-    },
-    {
-      "id": "news-1781279091025-27",
-      "title": "Effect of a multimodal exercise training program on sleep in older adults: a randomized controlled trial.",
-      "summary": "A randomized controlled trial (N=60) investigated the effect of a multimodal exercise training program on sleep quality in older adults.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42217510/",
-      "publishedAt": "2026-05-31T00:00:00.000Z",
-      "curatedScore": 75,
-      "curatedReason": "这项随机对照试验表明，多模式运动训练计划能有效改善老年人的睡眠质量。鉴于睡眠问题在老年人群中普遍存在并影响康复效果，你可以在老年康复中积极推荐并指导多模式运动，将其作为改善整体健康和睡眠的有效干预手段。",
-      "titleZh": "多模式运动训练计划对老年人睡眠的影响：一项随机对照试验",
-      "summaryZh": "一项随机对照试验（N=60）研究了多模式运动训练计划对老年人睡眠质量的影响。",
-      "curatedReasonEn": "This randomized controlled trial demonstrates that a multimodal exercise training program can effectively improve sleep quality in older adults. Given the prevalence of sleep issues in the elderly population and their impact on rehabilitation outcomes, you can actively recommend and guide multimodal exercise in geriatric rehabilitation as an effective intervention to improve overall health and sleep.",
-      "tags": [
-        "research",
-        "sleep",
-        "exercise"
-      ],
-      "journal": "Brazilian journal of physical therapy"
-    },
-    {
-      "id": "news-1781279091024-1",
-      "title": "The impact of a brief online education intervention on the knowledge, attitudes and beliefs of qualified physiotherapists about chronic low back pain: Pre- and post-intervention survey.",
-      "summary": "A pre- and post-intervention survey found that a brief online education intervention improved qualified physiotherapists' knowledge, attitudes, and beliefs about chronic low back pain.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42266205/",
-      "publishedAt": "2026-06-10T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "在线教育干预能改善PT对慢性腰痛的知识、态度和信念。这表明通过专业教育提升生物心理社会模型在慢性腰痛管理中的应用是可行的，但需要更多研究来评估其对患者实际临床结果的影响。",
-      "titleZh": "简短在线教育干预对理疗师慢性腰痛知识、态度和信念的影响：干预前后调查",
-      "summaryZh": "一项干预前后调查显示，简短在线教育干预改善了合格理疗师对慢性腰痛的知识、态度和信念。",
-      "curatedReasonEn": "Online education interventions can improve PTs' knowledge, attitudes, and beliefs regarding chronic low back pain. This suggests that professional education can effectively enhance the application of the biopsychosocial model in chronic LBP management, though further research is needed to assess its impact on actual patient clinical outcomes.",
-      "tags": [
-        "research",
-        "spine",
-        "education"
-      ],
-      "journal": "The South African journal of physiotherapy"
-    },
-    {
-      "id": "news-1781279091025-6",
-      "title": "Is Knee Osteoarthritis an Inevitable Consequence for Athletes after Anterior Cruciate Ligament Injury?",
-      "summary": "A review discusses anterior cruciate ligament (ACL) injury not solely as an acute event but as a long-term risk factor for post-traumatic knee osteoarthritis in athletes.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42245758/",
-      "publishedAt": "2026-06-05T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述提醒你ACL损伤不仅仅是一个急性事件，更是导致创伤后膝关节骨关节炎的长期风险。在康复计划中，除了恢复运动表现，更应注重长期的膝关节健康管理和预防骨关节炎的策略。",
-      "titleZh": "前交叉韧带损伤后膝骨关节炎是运动员不可避免的后果吗？",
-      "summaryZh": "一篇综述探讨了前交叉韧带（ACL）损伤对于运动员而言，不仅仅是急性创伤，更是导致创伤后膝骨关节炎的长期风险因素。",
-      "curatedReasonEn": "This review reminds you that ACL injury is not just an acute event but a long-term risk factor for post-traumatic knee osteoarthritis. In rehabilitation plans, beyond restoring athletic performance, you should emphasize long-term knee joint health management and strategies to prevent osteoarthritis.",
-      "tags": [
-        "research",
-        "knee",
-        "acl"
-      ],
-      "journal": "International journal of sports physical therapy"
-    },
-    {
-      "id": "news-1781279091025-7",
-      "title": "Developing consensus on competency-based educational standards in orthopaedic manual physical therapy fellowship training: part 2: knowledge for specialty practice and professionalism.",
-      "summary": "This is part 2 of developing consensus on competency-based educational standards for orthopaedic manual physical therapy fellowship training, focusing on knowledge for specialty practice and professionalism.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42231779/",
-      "publishedAt": "2026-06-03T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这份关于OMPT专科培训能力标准的共识制定，对于提升手法物理治疗师的专业水平和执业一致性至关重要。作为OMPT从业者或学员，你应该关注并理解这些标准，以指导你的知识学习和专业发展。",
-      "titleZh": "骨科手法物理治疗专科培训能力教育标准共识制定：第2部分：专科实践知识与专业精神",
-      "summaryZh": "这是骨科手法物理治疗专科培训能力教育标准共识制定的第二部分，重点关注专科实践知识和专业精神。",
-      "tags": [
-        "guideline",
-        "manual-modality",
-        "education"
-      ],
-      "journal": "The Journal of manual & manipulative therapy"
-    },
-    {
-      "id": "news-1781279091025-14",
-      "title": "Effectiveness of passive vs. assistive robotic gait training on functional recovery and neuroplasticity post-stroke: A randomized controlled trial.",
-      "summary": "A single-blind randomized controlled trial (N=48) compared the impacts of passive versus assistive robotic gait training on lower limb motor function recovery and neural mechanisms in subacute stroke patients.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263540/",
-      "publishedAt": "2026-06-10T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项随机对照试验比较了被动与辅助机器人步态训练对亚急性卒中患者功能恢复和神经可塑性的影响。虽然机器人辅助训练效果显著，但你需要关注具体模式（被动 vs 辅助）的差异，并结合患者具体情况选择最合适的机器人康复方案。",
-      "titleZh": "卒中后被动与辅助机器人步态训练对功能恢复和神经可塑性的效果：一项随机对照试验",
-      "summaryZh": "一项单盲随机对照试验（N=48）比较了被动与辅助机器人步态训练对亚急性卒中患者下肢运动功能恢复和神经机制的影响。",
-      "curatedReasonEn": "This randomized controlled trial compared the effects of passive versus assistive robotic gait training on functional recovery and neuroplasticity in subacute stroke patients. While robotic-assisted training shows significant effects, you need to pay attention to the differences between specific modes (passive vs. assistive) and choose the most suitable robotic rehabilitation program based on the patient's specific condition.",
-      "tags": [
-        "research",
-        "stroke",
-        "technology"
-      ],
-      "journal": "Gait & posture",
-      "tech": true
-    },
-    {
-      "id": "news-1781279091025-19",
-      "title": "Core Stability Training for Post-Stroke Recovery: A Multifaceted Approach to Enhance Postural Control and Motor Function.",
-      "summary": "This review explores the multifaceted mechanisms by which Core Stability Training (CST) enhances postural control and motor function in stroke survivors.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42237725/",
-      "publishedAt": "2026-06-04T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述阐述了核心稳定性训练在卒中后姿势控制和运动功能恢复中的多方面作用。虽然是综述而非原创研究，但它提供了一个框架，强化了你将核心稳定性训练整合到卒中康复方案中的理论基础。",
-      "titleZh": "卒中后核心稳定性训练：增强姿势控制和运动功能的多方面方法",
-      "summaryZh": "本综述探讨了核心稳定性训练（CST）通过多方面机制，增强卒中幸存者姿势控制和运动功能。",
-      "curatedReasonEn": "This review elaborates on the multifaceted role of core stability training in post-stroke postural control and motor function recovery. While a review rather than original research, it provides a framework that strengthens your theoretical basis for integrating core stability training into stroke rehabilitation programs.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1781279091025-20",
-      "title": "Visuospatial Working Memory Predicts Strategic Motor Learning With Visual Feedback During Gait After Stroke.",
-      "summary": "A study examined whether visuospatial working memory (VSWM) is related to strategic learning guided by visual feedback (VF) during gait rehabilitation after stroke.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42233381/",
-      "publishedAt": "2026-06-03T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究发现视空间工作记忆能预测卒中后步态视觉反馈引导的策略性运动学习。这意味着在设计卒中步态康复时，你需要评估患者的认知能力，特别是视空间工作记忆，从而优化视觉反馈的呈现方式，提高学习效果。",
-      "titleZh": "视空间工作记忆预测卒中后步态视觉反馈引导的策略性运动学习",
-      "summaryZh": "一项研究探讨了视空间工作记忆（VSWM）是否与卒中后步态康复中视觉反馈（VF）引导的策略性学习相关。",
-      "curatedReasonEn": "This study found that visuospatial working memory predicts strategic motor learning with visual feedback during gait after stroke. This means that when designing stroke gait rehabilitation, you need to assess patients' cognitive abilities, especially visuospatial working memory, to optimize the presentation of visual feedback and enhance learning outcomes.",
-      "tags": [
-        "research",
-        "stroke",
-        "cognition"
-      ],
-      "journal": "Neurorehabilitation and neural repair"
-    },
-    {
-      "id": "news-1781279091025-21",
-      "title": "Association between Patellofemoral Conditions and the Incidence of ACL Injury: Could Patellofemoral Conditions be a Risk Factor for ACL Injury? A 10-year Population-Based Study.",
-      "summary": "A 10-year population-based study investigated whether patellofemoral conditions are associated with an increased incidence of ACL injury.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42245755/",
-      "publishedAt": "2026-06-05T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项基于人群的研究提示，髌股关节疾病可能是ACL损伤的风险因素。你在评估膝关节不适或预防ACL损伤时，除了关注常见的运动模式和肌力失衡，还应考虑是否存在髌股关节问题，并将其纳入风险评估和干预策略。",
-      "titleZh": "髌股关节疾病与ACL损伤发生率的关联：髌股关节疾病是否是ACL损伤的风险因素？一项10年基于人群的研究",
-      "summaryZh": "一项10年基于人群的研究探讨了髌股关节疾病是否与前交叉韧带（ACL）损伤发生率增加有关。",
-      "curatedReasonEn": "This population-based study suggests that patellofemoral conditions might be a risk factor for ACL injury. When evaluating knee discomfort or preventing ACL injury, you should consider patellofemoral issues in addition to common movement patterns and muscle imbalances, integrating them into your risk assessment and intervention strategies.",
-      "tags": [
-        "research",
-        "sports",
-        "knee",
-        "acl"
-      ],
-      "journal": "International journal of sports physical therapy"
-    },
-    {
-      "id": "news-1781279091025-22",
-      "title": "Ischemic preconditioning alters gait mechanics in older adults with knee osteoarthritis.",
-      "summary": "A study evaluated changes in gait mechanics after a single session of ischemic preconditioning in 30 older adults with knee osteoarthritis.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42263422/",
-      "publishedAt": "2026-06-10T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究显示缺血预处理可以改变老年膝骨关节炎患者的步态力学。尽管是单次干预的小样本研究，但它提示了一种非运动干预对步态改善的潜力。在临床实践中，你可以关注这类辅助治疗方法，但需等待更多高证据级别的研究来验证其长期效果和适用性。",
-      "titleZh": "缺血预处理改变老年膝骨关节炎患者的步态力学",
-      "summaryZh": "一项研究评估了30名老年膝骨关节炎患者在单次缺血预处理后步态力学的变化。",
-      "curatedReasonEn": "This study shows that ischemic preconditioning can alter gait mechanics in older adults with knee osteoarthritis. Although a small-sample study with a single intervention, it suggests the potential of a non-exercise intervention to improve gait. In clinical practice, you can pay attention to such adjunctive therapies, but further high-evidence-level studies are needed to confirm their long-term efficacy and applicability.",
-      "tags": [
-        "research",
-        "knee",
-        "gait"
-      ],
-      "journal": "Clinical biomechanics (Bristol, Avon)"
-    },
-    {
-      "id": "news-1781279091025-24",
-      "title": "Influence of environmental barriers and facilitators on functioning: Analytical observational study in community-dwelling older adults.",
-      "summary": "An analytical observational study analyzed the influence of environmental barriers and facilitators on the functioning of community-dwelling older adults using standardized instruments.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42233439/",
-      "publishedAt": "2026-06-03T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项观察性研究量化了环境障碍和促成因素对社区老年人功能的影响。你需要认识到物理和社会环境对老年患者独立性和社会参与的重要性，在评估和制定康复计划时，除了患者自身因素，还应考虑其居住环境的调整和优化。",
-      "titleZh": "环境障碍和促成因素对功能的影响：社区老年人分析性观察研究",
-      "summaryZh": "一项分析性观察研究使用标准化工具，分析了环境障碍和促成因素对社区老年人功能的影响。",
-      "curatedReasonEn": "This observational study quantifies the influence of environmental barriers and facilitators on the functioning of community-dwelling older adults. You need to recognize the importance of the physical and social environment for older patients' independence and social participation. When assessing and formulating rehabilitation plans, consider adjusting and optimizing their living environment in addition to patient-specific factors.",
-      "tags": [
-        "research",
-        "environmental-factors"
-      ],
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1781279091025-25",
-      "title": "From robustness to frailty: how post-COVID-19 frailty shapes dyspnea, fatigue, and physical and functional status in post-COVID-19 syndrome.",
-      "summary": "A cross-sectional study (N=45) examined the relationship between post-COVID-19 frailty and dyspnea, fatigue, and physical/functional status in subjects with post-COVID-19 syndrome.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42228985/",
-      "publishedAt": "2026-06-02T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项横断面研究探讨了COVID-19后衰弱与呼吸困难、疲劳及身心状态的关系。这提示你，在评估和治疗后COVID-19综合征患者时，应识别并关注其衰弱水平，因为衰弱可能是这些症状的重要影响因素，并指导你制定更全面的康复策略。",
-      "titleZh": "从强健到衰弱：COVID-19后衰弱如何影响后COVID-19综合征患者的呼吸困难、疲劳以及身心状态",
-      "summaryZh": "一项横断面研究（N=45）探讨了COVID-19后衰弱与后COVID-19综合征患者呼吸困难、疲劳以及身心状态之间的关系。",
-      "curatedReasonEn": "This cross-sectional study explores the relationship between post-COVID-19 frailty and dyspnea, fatigue, and physical/functional status. This suggests that when assessing and treating patients with post-COVID-19 syndrome, you should identify and focus on their frailty level, as frailty can be a significant influencing factor for these symptoms, guiding you to develop more comprehensive rehabilitation strategies.",
-      "tags": [
-        "research",
-        "covid-19",
-        "frailty"
-      ],
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1781279091025-28",
-      "title": "Preventative strategies for non-contact lower limb injuries among male football players: A scoping review.",
-      "summary": "A scoping review mapped the range of preventative strategies used to reduce non-contact lower limb injuries among male footballers.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42266208/",
-      "publishedAt": "2026-06-10T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项范围综述梳理了男性足球运动员非接触性下肢损伤的预防策略。在指导运动员时，你可以参照综述中提到的预防方法，构建更全面的损伤预防方案，并根据运动员具体情况进行个性化调整。",
-      "titleZh": "男性足球运动员非接触性下肢损伤的预防策略：一项范围综述",
-      "summaryZh": "一项范围综述绘制了旨在减少男性足球运动员非接触性下肢损伤的预防策略。",
-      "curatedReasonEn": "This scoping review synthesizes preventive strategies for non-contact lower limb injuries among male football players. When guiding athletes, you can refer to the preventive methods mentioned in the review to construct a more comprehensive injury prevention program and customize it according to individual athlete circumstances.",
-      "tags": [
-        "research",
-        "sports-injury",
-        "prevention"
-      ],
-      "journal": "The South African journal of physiotherapy"
-    },
-    {
-      "id": "news-1781279091025-30",
-      "title": "Targeting neuromuscular deficits following anterior cruciate ligament reconstruction with spinal manipulation: A randomized controlled trial.",
-      "summary": "A single-blind, randomized controlled trial (N=20) investigated the effects of spinal manipulation on neuromuscular activation patterns during single-leg vertical drop landing in individuals with anterior cruciate ligament reconstruction.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42208111/",
-      "publishedAt": "2026-05-29T00:00:00.000Z",
-      "curatedScore": 70,
-      "curatedReason": "这项随机对照试验发现脊柱手法可以改善ACL重建后单腿垂直跳落的神经肌肉激活模式。虽然样本量较小，但它提示脊柱手法可能作为ACL康复的辅助手段，帮助恢复神经肌肉控制。在临床实践中，可以将其作为一种补充干预考虑，但需更多大型研究验证其长期疗效。",
-      "titleZh": "脊柱手法治疗对前交叉韧带重建后神经肌肉缺陷的影响：一项随机对照试验",
-      "summaryZh": "一项单盲随机对照试验（N=20）研究了脊柱手法治疗对前交叉韧带重建患者单腿垂直跳落时神经肌肉激活模式的影响。",
-      "curatedReasonEn": "This randomized controlled trial found that spinal manipulation can improve neuromuscular activation patterns during single-leg vertical drop landing after ACL reconstruction. Although the sample size is small, it suggests that spinal manipulation might serve as an adjunct in ACL rehabilitation to help restore neuromuscular control. In clinical practice, you can consider it as a complementary intervention, but more large-scale studies are needed to validate its long-term efficacy.",
-      "tags": [
-        "research",
-        "manipulation",
-        "acl",
-        "neuromuscular"
-      ],
-      "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
-    },
-    {
-      "id": "news-1781261176113-35",
-      "title": "Randomised three-armed trial investigation of the Copenhagen Achilles tendon Rupture Treatment Algorithm (CARTA) for individualised treatment of acute Achilles tendon rupture",
-      "summary": "A randomized controlled trial is investigating whether an individualized treatment algorithm (CARTA) for acute Achilles tendon rupture is superior to default operative or non-operative strategies.",
-      "category": "sports",
-      "source": "BMJ",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/848?rss=1",
-      "publishedAt": "2026-06-12T08:51:04.000Z",
-      "curatedScore": 85,
-      "curatedReason": "CARTA 算法如果优于标准术式/非手术治疗，标志着跟腱断裂从一刀切向个体化决策转变——但现在还在验证阶段，结果出来前别改临床路径。",
-      "titleZh": "随机三臂试验调查Copenhagen跟腱断裂治疗算法（CARTA）在急性跟腱断裂个体化治疗中的应用",
-      "summaryZh": "一项随机对照试验正在评估，针对急性跟腱断裂的个体化治疗算法（CARTA）是否优于默认的手术或非手术策略，旨在优化该损伤的治疗效果。",
-      "curatedReasonEn": "This RCT compares an individualized treatment algorithm (CARTA) for Achilles tendon rupture against standard operative/non-operative care. If CARTA proves superior, it signifies a shift towards personalized rehabilitation strategies, optimizing outcomes for this common injury.",
-      "tags": [
-        "research",
-        "sports"
-      ],
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1781261176113-38",
-      "title": "Long-term resistance training with all-cause and cause-specific mortality: assessing dose-response and joint associations with aerobic physical activity",
-      "summary": "A study assessing resistance training's association with all-cause and cause-specific mortality found dose-response relationships and joint effects with aerobic activity, supporting its role in longevity.",
-      "category": "geriatric",
-      "source": "BMJ",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/874?rss=1",
-      "publishedAt": "2026-06-12T08:51:04.000Z",
-      "curatedScore": 85,
-      "curatedReason": "阻力训练与全因死亡率呈剂量反应关系，与有氧运动有协同效应，这是足够强的证据来强化患者进行阻力训练——别再把它当成次要选项。",
-      "titleZh": "长期抗阻训练与全因及特定原因死亡率：评估剂量反应关系及与有氧活动的联合效应",
-      "summaryZh": "这项研究评估了长期抗阻训练与全因及特定原因死亡率的关系，发现了剂量反应关系以及与有氧活动的联合效应，有力支持将抗阻训练纳入健康指南以促进长寿。",
-      "curatedReasonEn": "This study examines long-term mortality risk associated with resistance training, including dose-response and joint effects with aerobic activity. It strongly supports integrating resistance training into public health recommendations for longevity and warrants emphasizing its role alongside aerobic exercise.",
-      "tags": [
-        "research",
-        "geriatric",
-        "cardiopulmonary"
-      ],
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1781261176113-5",
-      "title": "Smartphone-Based Semi-Immersive Virtual Reality Enhances Upper Extremity Function in Subacute Stroke: A Randomized Controlled Trial.",
-      "summary": "A randomized controlled trial demonstrated that augmenting conventional physical therapy with smartphone-based semi-immersive virtual reality significantly enhanced upper extremity function in patients with subacute stroke.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42272407/",
-      "publishedAt": "2026-06-11T00:00:00.000Z",
-      "curatedScore": 80,
-      "curatedReason": "手机VR叠加常规治疗能显著改善急性期卒中上肢功能——成本低、患者易获得，你应该把它纳入卒中康复流程，不必等更多证据。",
-      "titleZh": "基于智能手机的半沉浸式虚拟现实增强亚急性期中风患者上肢功能：一项随机对照试验",
-      "summaryZh": "一项随机对照试验表明，在常规物理治疗基础上结合基于智能手机的半沉浸式虚拟现实（VR）可显著改善亚急性期中风患者的上肢功能，提示该技术在神经康复中的应用潜力。",
-      "curatedReasonEn": "This RCT shows that adding smartphone-based VR to conventional therapy improves upper extremity function in subacute stroke. Given the low-cost, accessible nature of this tech, you should consider integrating it into your stroke rehab protocols to potentially accelerate recovery.",
-      "tags": [
-        "research",
-        "stroke",
-        "neurological"
-      ],
-      "journal": "NeuroRehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1781261176113-12",
-      "title": "Are There Sex Disparities in Return to Sport After Anterior Cruciate Ligament Reconstruction? A Systematic Review and Exploratory Meta-analysis.",
-      "summary": "A systematic review and exploratory meta-analysis investigated sex disparities in return-to-sport outcomes following anterior cruciate ligament reconstruction (ACLR), finding potentially smaller differences than expected.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42252835/",
-      "publishedAt": "2026-06-08T00:00:00.000Z",
-      "curatedScore": 80,
-      "curatedReason": "女性ACL术后的返回运动时间差异没想象那么大，别再拿性别差异当借口降低康复标准；真正的变量藏在你看不到的训练强度和心理因素里。",
-      "titleZh": "前交叉韧带重建术后重返运动是否存在性别差异？系统综述与探索性荟萃分析",
-      "summaryZh": "这项系统综述与探索性荟萃分析探讨了前交叉韧带重建术后（ACLR）重返运动（RTS）结果中的性别差异，发现其差异可能比预期要小，为评估和指导患者的重返运动提供更细致的视角。",
-      "curatedReasonEn": "This systematic review and meta-analysis addresses sex disparities in return-to-sport (RTS) after ACLR. It suggests that while female athletes may have higher injury rates, differences in RTS outcomes might be less pronounced than previously thought, or influenced by factors not fully captured. This nuance is critical for setting realistic expectations and tailoring rehab.",
-      "tags": [
-        "research",
-        "knee",
-        "sports"
-      ],
-      "journal": "The American journal of sports medicine"
-    },
-    {
-      "id": "news-1781261176113-34",
-      "title": "Sit-to-stand test emerges as a powerful prognostic factor of future health outcomes: different versions, measurement properties and future perspectives",
-      "summary": "A review concludes that the Sit-to-Stand test is a strong prognostic indicator of future health outcomes across different age groups, highlighting its utility in assessing muscular strength.",
-      "category": "geriatric",
-      "source": "BMJ",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/12/844?rss=1",
-      "publishedAt": "2026-06-12T08:51:04.000Z",
-      "curatedScore": 80,
-      "curatedReason": "坐站测试跨年龄组都能有效预测健康风险，其简便性和测量学特性使它成为功能强度评估和预测不良结局的一线工具。",
-      "titleZh": "坐站测试成为未来健康结局的有力预测因子：不同版本、测量特性与未来展望",
-      "summaryZh": "这篇综述指出，坐站测试（Sit-to-Stand test）是评估未来健康结局（包括全因死亡率）的有力预测因子，其简便性使其成为临床评估功能性力量和预测健康风险的宝贵工具。",
-      "curatedReasonEn": "This review highlights the Sit-to-Stand test as a powerful prognostic factor for health outcomes across age groups. Its simplicity and established measurement properties make it a valuable clinical tool for assessing functional strength and predicting future health risks.",
-      "tags": [
-        "research",
-        "geriatric",
-        "orthopedic"
-      ],
-      "journal": "British Journal of Sports Medicine"
     }
   ]
 }
