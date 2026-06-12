@@ -101,7 +101,15 @@ function cdDayBucket(publishedAt) {
 
 function cdFmtTime(publishedAt) {
   if (!publishedAt) return '';
-  return new Date(publishedAt).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+  const d = new Date(publishedAt);
+  // PubMed (and other date-only sources) carry no clock time, so the pipeline
+  // stores them at exactly 00:00:00 UTC. That midnight is a placeholder, not a
+  // real publish moment — rendering it in the viewer's local zone shows a
+  // misleading time (e.g. 20:00 in US Eastern). Suppress it; the exact date is
+  // already in the card footer and the feed is grouped by day. Only show a clock
+  // time when the source actually provided one.
+  if (d.getUTCHours() === 0 && d.getUTCMinutes() === 0 && d.getUTCSeconds() === 0) return '';
+  return d.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
 }
 
 function cdFmtDate(publishedAt) {

@@ -56,6 +56,12 @@ const SOURCES = require(path.join(__dirname, '..', 'sources.json'));
 const SOURCE_HOSTNAMES = [...new Set(SOURCES.map(s => s.domain.split('/')[0]))];
 const MAX_ITEMS = 30;
 const LOOKBACK_DAYS = 7; // PT news cadence is slower than climate-tech; revisit after 2 weeks
+// PubMed is roster-filtered (only journals.json journals get in), which cuts
+// volume hard — low-output flagships (JOSPT, Spine, Pain) may publish nothing
+// in a 7-day window. Give that leg a wider window so the wall stays populated;
+// the incremental gate dedupes anything already in the feed, so the overlap
+// with prior runs costs nothing.
+const PUBMED_LOOKBACK_DAYS = 14;
 const CURATE_TOP_N = 40; // Exa + PubMed + RSS all feed one batch now
 
 // ── PT Category Queries ─────────────────────────────────────────────────────
@@ -198,8 +204,23 @@ function matchSource(url) {
 
 // ── Direct ingestion: PubMed E-utilities ────────────────────────────────────
 // AIHOT-style source-first crawl, leg 1. Per-category PubMed queries over the
-// last LOOKBACK_DAYS; esearch → efetch(abstract XML), parsed with zero deps.
+// last PUBMED_LOOKBACK_DAYS; esearch → efetch(abstract XML), parsed zero-dep.
 // NCBI limit is 3 req/s without an API key — the 350ms sleeps keep us under.
+//
+// The wall applies here too: every query is AND-ed with a [ta] clause built
+// from journals.json, so only roster journals get in. Without it, by-date
+// retmax windows are dominated by high-volume mega-journals (Frontiers, PLoS
+// One, Scientific Reports) and the low-output flagship journals (JOSPT, Spine,
+// Pain) almost never surface. Quoted names PubMed can't translate (acronym
+// aliases like "jospt", names with "&") are silently ignored — the medline
+// abbreviation aliases are what actually match. Adding a journal to
+// journals.json automatically widens this gate.
+
+const JOURNALS = require(path.join(__dirname, '..', 'journals.json')).journals;
+const JOURNAL_TA_CLAUSE = '(' + [...new Map(
+  JOURNALS.flatMap(j => [j.name, ...(j.aliases || [])])
+    .map(n => [n.toLowerCase().trim(), n])
+).values()].map(n => `"${n}"[ta]`).join(' OR ') + ')';
 
 const PUBMED_QUERIES = [
   { category: 'orthopedic',      term: '(physical therapy[tiab] OR physiotherapy[tiab] OR exercise therapy[tiab]) AND (low back pain[tiab] OR knee[tiab] OR shoulder[tiab] OR musculoskeletal[tiab] OR pelvic floor[tiab])' },
@@ -226,7 +247,10 @@ async function fetchPubMed() {
   const base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils';
   for (const q of PUBMED_QUERIES) {
     try {
-      const es = await fetch(`${base}/esearch.fcgi?db=pubmed&retmode=json&retmax=8&reldate=${LOOKBACK_DAYS}&datetype=edat&sort=date&term=${encodeURIComponent(q.term)}`);
+      // retmax 15 (was 8): roster filtering cut the volume way down, so
+      // everything that passes the gate is worth sending to curation.
+      const term = `(${q.term}) AND ${JOURNAL_TA_CLAUSE}`;
+      const es = await fetch(`${base}/esearch.fcgi?db=pubmed&retmode=json&retmax=15&reldate=${PUBMED_LOOKBACK_DAYS}&datetype=edat&sort=date&term=${encodeURIComponent(term)}`);
       if (!es.ok) { console.error(`  PubMed esearch ${q.category}: ${es.status}`); continue; }
       const ids = (await es.json()).esearchresult?.idlist || [];
       console.log(`   pubmed:${q.category} → ${ids.length}`);
