@@ -459,38 +459,40 @@ function DailyMasthead({ edition, zh }) {
   const t = window.CD_T;
   const locale = zh ? 'zh-CN' : 'en-US';
   const d = new Date(edition.date + 'T12:00:00Z');
+  // No VOL./mono masthead line — Cindy 2026-06-12: reads as AI-generated.
+  // The story count lives quietly on the date line instead.
   return (
-    <header style={{ textAlign: 'center', padding: '10px 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 24 }}>
-      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 10 }}>
-        VOL.{edition.date.replace(/-/g, '.')} · {edition.stats.events} {t('daily.stories')} · CADENCE {t('daily.edition')}
-      </div>
+    <header style={{ textAlign: 'center', padding: '10px 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 20 }}>
       <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 34, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
         {zh ? '步频日报' : 'Cadence Daily'}
       </h2>
       <div style={{ marginTop: 8, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
         {d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'UTC' })}
-        <span style={{ color: 'var(--text-tertiary)' }}> · {zh ? '每早六时' : 'every morning'}</span>
+        <span> · {zh ? `今日 ${edition.stats.events} 篇` : `${edition.stats.events} stories today`}</span>
       </div>
     </header>
   );
 }
 
-function DailyStats({ stats }) {
-  const t = window.CD_T;
-  const cells = [
-    [stats.events, t('daily.stat.events')],
-    [stats.specialties, t('daily.stat.specialties')],
-    [stats.multiSource, t('daily.stat.multi')],
-    [stats.sources, t('daily.stat.sources')],
-  ];
+// Specialty pulse — one quiet centered line of counts under the masthead
+// (absorbed from the "signal terminal" direction; replaces the 4-cell stats grid).
+function DailyPulse({ items }) {
+  const counts = {};
+  items.forEach((s) => { counts[s.category] = (counts[s.category] || 0) + 1; });
+  const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  if (!entries.length) return null;
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, margin: '28px 0 18px', background: 'var(--border-subtle)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-      {cells.map(([n, label]) => (
-        <div key={label} style={{ background: 'var(--surface-card)', padding: '14px 8px', textAlign: 'center' }}>
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: 'var(--text-primary)' }}>{n}</div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginTop: 2 }}>{label}</div>
-        </div>
-      ))}
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 14px', justifyContent: 'center', marginBottom: 24, fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-secondary)' }}>
+      {entries.map(([c, n], i) => {
+        const cat = window.getCategory ? window.getCategory(c) : null;
+        const label = cat ? (window.CD_LANG === 'zh' ? (cat.short || cat.label) : (cat.shortEn || cat.short || cat.label)) : c;
+        return (
+          <React.Fragment key={c}>
+            {i > 0 && <span style={{ color: 'var(--border-default)' }}>·</span>}
+            <span>{cat && window.catLabel ? window.catLabel(cat) : label} <b style={{ color: 'var(--text-primary)' }}>{n}</b></span>
+          </React.Fragment>
+        );
+      })}
     </div>
   );
 }
@@ -534,7 +536,8 @@ function DailyBriefView({ L, savedMap, toggleSave }) {
   const [edition, setEdition] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
   const [showArchive, setShowArchive] = React.useState(false);
-  const [selected, setSelected] = React.useState(null);
+  const [selected, setSelected] = React.useState(null); // expanded tier-3 row
+  const [copied, setCopied] = React.useState(false);
 
   React.useEffect(() => {
     let alive = true;
@@ -581,57 +584,120 @@ function DailyBriefView({ L, savedMap, toggleSave }) {
   const pos = editions ? editions.findIndex((e) => e.date === date) : -1;
   const prevEd = pos >= 0 && pos < editions.length - 1 ? editions[pos + 1] : null;
   const nextEd = pos > 0 ? editions[pos - 1] : null;
-  const leadTitle = zh ? (edition.lead.titleZh || edition.lead.titleEn) : (edition.lead.titleEn || edition.lead.titleZh);
   const leadPara = zh ? (edition.lead.paragraphZh || edition.lead.paragraphEn) : (edition.lead.paragraphEn || edition.lead.paragraphZh);
-  let counter = 0; // global numbering across sections, AIHOT-style
+
+  // 晨间查房 tiering (Cindy 2026-06-12): organized by evidence/actionability,
+  // not specialty — the axis AIHOT doesn't have. Tier 1 = top signal with its
+  // clinical take; tier 2 = practice-changing (score ≥ 80); tier 3 = compact
+  // expandable rows. Driven entirely by curatedScore — no extra LLM call.
+  const allItems = edition.sections.flatMap((sec) => sec.items).map(window.cdTransformItem);
+  const ranked = [...allItems].sort((a, b) => b.score - a.score);
+  const leadStory = ranked.length ? L(ranked[0]) : null;
+  const tier2 = ranked.slice(1).filter((s) => s.score >= 80).map(L);
+  const tier3 = ranked.slice(1).filter((s) => s.score < 80).map(L);
+  const top3 = ranked.slice(0, 3).map(L);
+  const [mm, dd] = edition.date.slice(5).split('-');
+  const dShort = `${+mm}.${+dd}`;
+
+  const copyShare = () => {
+    const txt = `【Cadence步频 · ${dShort} 早班】${top3.length} 条 / 90 秒\n`
+      + top3.map((s, n) => `${n + 1}. ${s.title}`).join('\n')
+      + '\n全文与参考 → 公众号「Cadence步频」（小红书同名）';
+    try {
+      navigator.clipboard.writeText(txt).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1500); });
+    } catch (e) { /* clipboard unavailable — noop */ }
+  };
+
+  const kicker = { fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase' };
+  const srcLine = (s) => (
+    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginTop: 8 }}>
+      {s.source} · {t('signalScore')} {s.score} · <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
+    </div>
+  );
 
   return (
     <div>
       <DailyMasthead edition={edition} zh={zh} />
+      <DailyPulse items={allItems} />
 
-      {/* Editor's lead */}
-      <div style={{ marginBottom: 26, padding: '20px 24px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>{t('daily.lead')}</div>
-        <h3 style={{ margin: '0 0 8px', fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, lineHeight: 1.4, color: 'var(--text-primary)' }}>{leadTitle}</h3>
-        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.7, color: 'var(--text-secondary)' }}>{leadPara}</p>
-      </div>
+      {/* LLM editor's note — one quiet italic line, only when a real (non-
+          fallback) lead paragraph exists. */}
+      {leadPara && !edition.lead.fallback && (
+        <p style={{ margin: '0 auto 24px', maxWidth: 560, textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 14.5, lineHeight: 1.7, color: 'var(--text-secondary)' }}>{leadPara}</p>
+      )}
 
-      {/* Sections — fixed category order, numbered AIHOT-style */}
-      {edition.sections.map((sec, si) => {
-        const cat = window.getCategory ? window.getCategory(sec.category) : null;
-        const label = cat && window.catLabel ? window.catLabel(cat) : sec.label;
-        return (
-          <section key={sec.category} style={{ marginBottom: 28 }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, margin: '0 0 14px' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: 'var(--text-tertiary)' }}>{String(si + 1).padStart(2, '0')}</span>
-              {cat && <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${cat.accent})`, flex: 'none', alignSelf: 'center' }} />}
-              <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)' }}>{label}</span>
-              <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)', alignSelf: 'center' }} />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{sec.items.length} {t(sec.items.length === 1 ? 'storyOne' : 'storyMany')}</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {sec.items.map((raw) => {
-                counter += 1;
-                const story = window.cdTransformItem(raw);
-                const s = L(story);
-                return (
-                  <div key={s.id || s.sourceUrl}>
-                    <NewsCard
-                      variant="default"
-                      category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                      journalMeta={s.journalMeta} tech={s.tech}
-                      title={`${counter}. ${s.title}`} summary={s.summary} whyItMatters={s.why}
-                      selected={selected === s.id}
-                      saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(story)}
-                      onClick={() => setSelected(selected === s.id ? null : s.id)} />
-                    <RelatedRow related={s.related} />
+      {/* Tier 1 — the one story worth 5 minutes, with its clinical take */}
+      {leadStory && (
+        <section style={{ marginBottom: 26 }}>
+          <div style={{ ...kicker, color: 'var(--green-700)', marginBottom: 8 }}>{t('daily.read5')}</div>
+          <div style={{ padding: '20px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+            <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, lineHeight: 1.45, color: 'var(--text-primary)' }}>{leadStory.title}</h3>
+            {leadStory.summary && <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.75, color: 'var(--text-secondary)' }}>{leadStory.summary}</p>}
+            {leadStory.why && (
+              <div style={{ marginTop: 12, padding: '10px 14px', background: 'var(--green-100, var(--surface-active))', borderRadius: 'var(--radius-md)' }}>
+                <div style={{ ...kicker, fontSize: 10, color: 'var(--green-700)', marginBottom: 4 }}>{t('daily.take')}</div>
+                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.6, color: 'var(--green-900, var(--text-primary))' }}>{leadStory.why}</div>
+              </div>
+            )}
+            {srcLine(leadStory)}
+            <RelatedRow related={leadStory.related} />
+          </div>
+        </section>
+      )}
+
+      {/* Tier 2 — practice-changing: title + take */}
+      {tier2.length > 0 && (
+        <section style={{ marginBottom: 26 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 10 }}>
+            <span style={{ ...kicker, color: 'var(--text-secondary)' }}>{t('daily.tier2')}</span>
+            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{tier2.length} {t('storyMany')}</span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {tier2.map((s) => (
+              <div key={s.id || s.sourceUrl} style={{ padding: '14px 18px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-400)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 15, fontWeight: 600, lineHeight: 1.5, color: 'var(--text-primary)' }}>{s.title}</div>
+                {(s.why || s.summary) && <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.65, color: 'var(--text-secondary)' }}>{s.why || s.summary}</p>}
+                {srcLine(s)}
+                <RelatedRow related={s.related} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Tier 3 — worth knowing: compact rows, click to expand the summary */}
+      {tier3.length > 0 && (
+        <section style={{ marginBottom: 28 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 10 }}>
+            <span style={{ ...kicker, color: 'var(--text-secondary)' }}>{t('daily.tier3')}</span>
+            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{tier3.length} {t('storyMany')}</span>
+          </div>
+          <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+            {tier3.map((s, i) => {
+              const key = s.id || s.sourceUrl;
+              const open = selected === key;
+              const cat = window.getCategory ? window.getCategory(s.category) : null;
+              return (
+                <div key={key} onClick={() => setSelected(open ? null : key)}
+                  style={{ padding: '11px 16px', cursor: 'pointer', borderTop: i ? '1px solid var(--border-subtle)' : 'none', background: open ? 'var(--surface-active)' : 'none' }}>
+                  <div style={{ display: 'flex', gap: 10, alignItems: 'baseline' }}>
+                    <span style={{ flex: 1, fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--text-primary)' }}>{s.title}</span>
+                    <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{cat && window.catLabel ? window.catLabel(cat) : ''} · {s.score}</span>
                   </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
+                  {open && (
+                    <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+                      {s.summary} <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div style={{ marginTop: 6, textAlign: 'right', fontFamily: 'var(--font-sans)', fontSize: 11, color: 'var(--text-tertiary)' }}>{t('daily.expand')}</div>
+        </section>
+      )}
 
       {/* Flashes — overflow + uncategorized, one line each */}
       {edition.flashes && edition.flashes.length > 0 && (
@@ -654,7 +720,28 @@ function DailyBriefView({ L, savedMap, toggleSave }) {
         </section>
       )}
 
-      <DailyStats stats={edition.stats} />
+      {/* Handoff share card (交接班卡) — built to be screenshotted or copied
+          into a WeChat group; brand name is the full 「Cadence步频」. */}
+      {top3.length > 0 && (
+        <section style={{ marginBottom: 30 }}>
+          <div style={{ ...kicker, color: 'var(--text-tertiary)', marginBottom: 10 }}>{t('daily.share')}</div>
+          <div style={{ maxWidth: 340, margin: '0 auto', padding: '16px 18px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginBottom: 10 }}>
+              <span>Cadence步频 · {dShort} {t('daily.shift')}</span><span>{top3.length} {t('storyMany')} / 90s</span>
+            </div>
+            {top3.map((s, n) => (
+              <div key={s.id || n} style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.55, marginBottom: 8 }}>
+                <b style={{ color: 'var(--green-700)' }}>{n + 1}</b> {s.title}
+              </div>
+            ))}
+            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: 8, fontFamily: 'var(--font-sans)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>{t('daily.shareFoot')}</div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: 10 }}>
+            <Button size="sm" variant="ghost" iconStart="copy" onClick={copyShare}>{t('daily.copy')}</Button>
+            {copied && <span style={{ marginLeft: 8, fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--green-700)' }}>{t('daily.copied')}</span>}
+          </div>
+        </section>
+      )}
 
       {/* Prev / next / archive navigation */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
