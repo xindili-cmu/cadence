@@ -1,0 +1,134 @@
+<!doctype html>
+<!-- 原型：方向 A「晨间查房」+ D「分享卡」— 真实 2026-06-12 数据。
+     仅用于设计评审，不接路由；看完决定要不要替换 DailyBriefView 的版式。
+     数据来自 briefs/daily/2026-06-12.json，已内联。
+       node -e "见 session 记录" 或手动替换。 -->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>步频日报 · 晨间查房原型</title>
+<link rel="stylesheet" href="design-system/styles.css">
+<style>
+  :root { --p-green:#0F6E56; --p-green-soft:#E1F5EE; }
+  html,body { margin:0; background:var(--surface-page,#FAFAF6); color:var(--text-primary,#1d1d1b);
+    font-family:var(--font-sans,-apple-system,'PingFang SC','Noto Sans SC',sans-serif); }
+  .wrap { max-width:680px; margin:0 auto; padding:28px 20px 80px; }
+  .mono { font-family:var(--font-mono,ui-monospace,monospace); }
+  .card { background:var(--surface-card,#fff); border:1px solid var(--border-subtle,#e6e4dc); border-radius:14px; }
+  .kicker { font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-tertiary,#8a8f98); }
+  a { color:inherit; }
+  .t3:hover { background:var(--surface-active,#f3f1ea); cursor:pointer; }
+  .copybtn { font-size:12px; padding:6px 14px; border:1px solid var(--border-default,#d9d6cc); border-radius:999px;
+    background:transparent; cursor:pointer; color:var(--text-secondary,#55564f); }
+  .copybtn:hover { background:var(--surface-active,#f3f1ea); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header style="text-align:center; padding-bottom:20px; border-bottom:3px double var(--border-default,#d9d6cc); margin-bottom:20px;">
+    <div style="font-family:var(--font-display,Georgia,serif); font-size:32px; font-weight:700; letter-spacing:-0.01em;">步频日报</div>
+    <div style="margin-top:6px; font-size:13px; color:var(--text-secondary,#55564f);">2026年6月12日 星期五 · 今日 <span id="n-total"></span> 篇</div>
+  </header>
+
+  <div id="pulse" style="display:flex; flex-wrap:wrap; gap:6px 14px; justify-content:center; margin-bottom:26px;"></div>
+
+  <section style="margin-bottom:26px;">
+    <div class="kicker mono" style="color:var(--p-green); margin-bottom:8px;">今天只有 5 分钟？读这条</div>
+    <div id="tier1" class="card" style="border-left:3px solid var(--p-green); padding:20px 22px;"></div>
+  </section>
+
+  <section style="margin-bottom:26px;">
+    <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:10px;">
+      <span class="kicker mono">可改变实践</span>
+      <span style="flex:1; height:1px; background:var(--border-subtle,#e6e4dc);"></span>
+      <span class="mono" style="font-size:11px; color:var(--text-tertiary,#8a8f98);" id="n-t2"></span>
+    </div>
+    <div id="tier2" style="display:flex; flex-direction:column; gap:10px;"></div>
+  </section>
+
+  <section style="margin-bottom:30px;">
+    <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:10px;">
+      <span class="kicker mono">了解即可</span>
+      <span style="flex:1; height:1px; background:var(--border-subtle,#e6e4dc);"></span>
+      <span class="mono" style="font-size:11px; color:var(--text-tertiary,#8a8f98);" id="n-t3"></span>
+    </div>
+    <div id="tier3" class="card" style="overflow:hidden;"></div>
+    <div style="margin-top:6px; font-size:11px; color:var(--text-tertiary,#8a8f98); text-align:right;">点击条目展开摘要</div>
+  </section>
+
+  <section style="margin-bottom:30px;">
+    <div class="kicker mono" style="margin-bottom:10px;">交接班卡 · 截图即转发</div>
+    <div id="sharecard" class="card" style="max-width:340px; margin:0 auto; padding:16px 18px;"></div>
+    <div style="text-align:center; margin-top:10px;">
+      <button class="copybtn" onclick="copyCard()">复制为微信文字</button>
+      <span id="copied" style="font-size:12px; color:var(--p-green); display:none; margin-left:8px;">已复制</span>
+    </div>
+  </section>
+
+  <footer style="display:flex; align-items:center; gap:10px; padding-top:14px; border-top:1px solid var(--border-subtle,#e6e4dc);">
+    <button class="copybtn">← 前一日</button>
+    <button class="copybtn">查看历史</button>
+    <span style="flex:1"></span>
+    <span class="mono" style="font-size:10.5px; color:var(--text-tertiary,#8a8f98);">原型 · 数据来自 briefs/daily/2026-06-12.json</span>
+  </footer>
+
+</div>
+<script>
+const ITEMS = [{"t":"Long-term risk of knee replacement after ACL reconstruction using the contralateral knee as an internal control: a National Hospital Episode Statistics database study of 135 881 patients","tz":"以前交叉韧带重建术后对侧膝关节为内部对照的远期全膝关节置换风险：一项135,881名患者的英国国家医院病历统计数据库研究","sz":"一项利用对侧膝关节作为内部对照的大型数据库研究，评估了135,881名患者在前交叉韧带重建术（ACLr）后远期发生全膝关节置换的风险，为理解ACLr的长期效果和关节健康提供了重要证据。","take":"13.5 万例患者的数据库研究用健侧膝作对照，揭示 ACL 重建远期膝关节置换风险——这直接影响你对患者的长期预后交代和手术决策，不只是当下恢复。","score":80,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/865?rss=1","cat":"orthopedic"},{"t":"Multimodal symptom-targeted treatment for young people with persisting post-concussion symptoms: a randomised clinical trial","tz":"针对持续性脑震荡后症状的 the Concussion Essentials（CE）多模式症状靶向治疗：一项随机临床试验","sz":"一项随机临床试验评估了‘Concussion Essentials’（CE）——一种针对青少年持续性脑震荡后症状（PPCS）的多模式、症状靶向治疗——的有效性，为复杂脑震荡后遗症的治疗提供了新思路。","take":"症状靶向的多学科协作干预（Concussion Essentials）在青少年持续性脑震荡后症状中有效，说明整合治疗模式比单纯保守管理更强——但这个结论还需在更广泛人群验证。","score":80,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/856?rss=1","cat":"neurological"},{"t":"Randomised three-armed trial investigation of the Copenhagen Achilles tendon Rupture Treatment Algorithm (CARTA) for individualised treatment of acute Achilles tendon rupture","tz":"随机三臂试验调查Copenhagen跟腱断裂治疗算法（CARTA）在急性跟腱断裂个体化治疗中的应用","sz":"一项随机对照试验正在评估，针对急性跟腱断裂的个体化治疗算法（CARTA）是否优于默认的手术或非手术策略，旨在优化该损伤的治疗效果。","take":"CARTA 算法如果优于标准术式/非手术治疗，标志着跟腱断裂从一刀切向个体化决策转变——但现在还在验证阶段，结果出来前别改临床路径。","score":85,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/848?rss=1","cat":"sports"},{"t":"Mandatory genetic testing in sport: World Athletics and World Boxing repeat the discredited mistakes of the past","tz":"运动中的强制性基因检测：世界田联和世界拳击再次犯下过去的错误","sz":"本文批评了世界田联和世界拳击强制女性运动员进行SRY基因检测的政策，认为这是重蹈覆辙，并引发了关于运动中性别验证的伦理和科学争议。","take":"强制SRY基因检测在科学和伦理上都站不住脚，重复了已被否定的历史错误——别被这类政策迷惑，它对临床决策没有正当性。","score":75,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/837?rss=1","cat":"sports"},{"t":"SRY gene screening in elite Athletics: rationale, science and implementation of the World Athletics Regulations","tz":"精英田径中的SRY基因筛查：世界田联规定的基本原理、科学依据与实施","sz":"本文阐述了世界田联关于要求女性运动员进行SRY基因筛查以证明其有资格参加女子组比赛的规定的基本原理、科学依据及其实施细节，提供了该争议政策的官方解释。","take":"这是官方支持SRY检测的论述，用来理解第31条的对立观点，但其科学依据本身存在争议，不应作为你性别验证决策的主要根据。","score":75,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/839?rss=1","cat":"sports"},{"t":"Cardiac care of athletes with disabilities: are we prepared to adapt?","tz":"残疾运动员的心脏护理：我们准备好适应了吗？","sz":"本文探讨了残疾运动员日益增多的参与度，并质疑了现有心脏护理系统是否能有效适应他们的特殊需求，呼吁关注这一群体。","take":"残障运动员参赛人数在增加，但你们的心内科防线还没准备好——趁现在补课，别等出事。","score":70,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/835?rss=1","cat":"sports"},{"t":"Make or break: psychotropic medications have off-label effects on neuromuscular performance","tz":"“决定成败”：精神活性药物对神经肌肉表现的非标签效应","sz":"本文探讨了精神活性药物对运动员神经肌肉表现的非标签效应，强调了在管理运动员时考虑这些药物对心理健康和身体能力的影响的重要性。","take":"精神类用药会改变运动员的神经肌肉表现，不能只看心理效果而忽视训练侧效应——用药前得问清这个代价。","score":70,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/841?rss=1","cat":"sports"},{"t":"Australasian College of Sport and Exercise Physicians edition: uncertainty in sport and exercise medicine","tz":"澳洲运动与体育医师学院特刊：运动与体育医学中的不确定性","sz":"这篇来自澳洲运动与体育医师学院（ACSEP）的社论，围绕其即将举行的年会主题——运动与体育医学中的不确定性——展开讨论，反映了该领域在不断变化的医疗和体育环境中的挑战。","take":"澳新运动医学要承认不确定性是常态，而不是失败——这个心态对你的临床决策框架有实际约束力，尤其边界病例。","score":65,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/833?rss=1","cat":"sports"},{"t":"Long-term resistance training with all-cause and cause-specific mortality: assessing dose-response and joint associations with aerobic physical activity","tz":"长期抗阻训练与全因及特定原因死亡率：评估剂量反应关系及与有氧活动的联合效应","sz":"这项研究评估了长期抗阻训练与全因及特定原因死亡率的关系，发现了剂量反应关系以及与有氧活动的联合效应，有力支持将抗阻训练纳入健康指南以促进长寿。","take":"阻力训练与全因死亡率呈剂量反应关系，与有氧运动有协同效应，这是足够强的证据来强化患者进行阻力训练——别再把它当成次要选项。","score":85,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/874?rss=1","cat":"geriatric"},{"t":"Sit-to-stand test emerges as a powerful prognostic factor of future health outcomes: different versions, measurement properties and future perspectives","tz":"坐站测试成为未来健康结局的有力预测因子：不同版本、测量特性与未来展望","sz":"这篇综述指出，坐站测试（Sit-to-Stand test）是评估未来健康结局（包括全因死亡率）的有力预测因子，其简便性使其成为临床评估功能性力量和预测健康风险的宝贵工具。","take":"坐站测试跨年龄组都能有效预测健康风险，其简便性和测量学特性使它成为功能强度评估和预测不良结局的一线工具。","score":80,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/844?rss=1","cat":"geriatric"},{"t":"[Correspondence] Challenges in assessing statin-associated adverse events","tz":"[通信] 他汀类药物相关不良事件评估的挑战","sz":"这封通信在回应一项胆固醇治疗试验合作组（CTT）的荟萃分析时，讨论了他汀类药物相关不良事件评估所面临的挑战。","take":"This correspondence addresses challenges in assessing statin-associated adverse events, referencing a meta-analysis. While relevant to pharmacology, understanding potential side effects of common medications like statins can indirectly inform your patient management and communication.","score":65,"src":"The Lancet","url":"https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00850-0/fulltext?rss=yes","cat":"cardiopulmonary"},{"t":"[Editorial] The next steps for chronic kidney disease","tz":"[社论] 慢性肾脏病的下一步","sz":"这篇社论评论了在WHO通过一项决议后，慢性肾脏病（CKD）日益受到全球关注的现状，并指出了实施相关全球性协议所面临的挑战。","take":"This editorial discusses the growing recognition of chronic kidney disease (CKD) and the challenges in implementing global agreements. While important for public health context, it does not offer specific clinical guidance for physical therapists.","score":60,"src":"The Lancet","url":"https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01183-9/fulltext?rss=yes","cat":"cardiopulmonary"},{"t":"Effectiveness of maintenance interventions promoting physical activity following exercise therapy for chronic conditions: an umbrella review","tz":"运动疗法后促进体力活动的维持性干预效果：一项伞形综述","sz":"这项伞形综述旨在评估运动疗法后维持性干预措施，在改善慢性病患者体力活动、身体功能、健康相关生活质量等方面的效果，为制定长期运动管理策略提供依据。","take":"运动治疗后怎么维持效果是真问题，这份伞状综述告诉你维持性干预的证据如何；别设计了好的运动方案却不管患者长期依从，效果白瞎。","score":80,"src":"BMJ","url":"http://bjsm.bmj.com/cgi/content/short/60/12/884?rss=1","cat":"practice"}];
+const CAT_ZH = { orthopedic:'骨科', neurological:'神经', sports:'运动', pediatric:'儿童', geriatric:'老年', cardiopulmonary:'心肺', 'manual-modality':'手法', practice:'执业' };
+const sorted = [...ITEMS].sort((a,b)=>b.score-a.score);
+const lead = sorted[0];
+const tier2 = sorted.slice(1).filter(i=>i.score>=80);
+const tier3 = sorted.slice(1).filter(i=>i.score<80);
+document.getElementById('n-total').textContent = ITEMS.length;
+document.getElementById('n-t2').textContent = tier2.length + ' 条';
+document.getElementById('n-t3').textContent = tier3.length + ' 条';
+
+const counts = {};
+ITEMS.forEach(i=>{ counts[i.cat]=(counts[i.cat]||0)+1; });
+document.getElementById('pulse').innerHTML = Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c,n])=>
+  `<span class="mono" style="font-size:11.5px; color:var(--text-secondary,#55564f);">${CAT_ZH[c]||c} <b style="color:var(--text-primary,#1d1d1b)">${n}</b></span>`).join('<span style="color:var(--border-default,#d9d6cc)">·</span>');
+
+const srcLine = i => `<div class="mono" style="font-size:11px; color:var(--text-tertiary,#8a8f98); margin-top:8px;">${i.src} · 信号分 ${i.score} · <a href="${i.url}" target="_blank" style="color:var(--text-secondary,#55564f)">原文 ↗</a></div>`;
+
+document.getElementById('tier1').innerHTML = `
+  <div style="font-family:var(--font-display,Georgia,serif); font-size:20px; font-weight:700; line-height:1.45;">${lead.tz||lead.t}</div>
+  <p style="margin:10px 0 0; font-size:14px; line-height:1.75; color:var(--text-secondary,#55564f);">${lead.sz||''}</p>
+  <div style="margin-top:12px; padding:10px 14px; background:var(--p-green-soft); border-radius:10px;">
+    <div class="kicker" style="color:var(--p-green); margin-bottom:4px;">临床底线 · Take</div>
+    <div style="font-size:13px; line-height:1.6; color:#04342C;">${lead.take||''}</div>
+  </div>${srcLine(lead)}`;
+
+document.getElementById('tier2').innerHTML = tier2.map(i=>`
+  <div class="card" style="border-left:3px solid #1D9E75; padding:14px 18px;">
+    <div style="font-size:15px; font-weight:600; line-height:1.5;">${i.tz||i.t}</div>
+    <p style="margin:6px 0 0; font-size:13px; line-height:1.65; color:var(--text-secondary,#55564f);">${i.take||i.sz||''}</p>${srcLine(i)}
+  </div>`).join('');
+
+document.getElementById('tier3').innerHTML = tier3.map((i,n)=>`
+  <div class="t3" onclick="this.querySelector('p').style.display=this.querySelector('p').style.display==='none'?'block':'none'"
+    style="padding:11px 16px; ${n?'border-top:1px solid var(--border-subtle,#e6e4dc);':''}">
+    <div style="display:flex; gap:10px; align-items:baseline;">
+      <span style="flex:1; font-size:13.5px; line-height:1.5;">${i.tz||i.t}</span>
+      <span class="mono" style="flex:none; font-size:11px; color:var(--text-tertiary,#8a8f98);">${CAT_ZH[i.cat]||''} · ${i.score}</span>
+    </div>
+    <p style="display:none; margin:6px 0 0; font-size:12.5px; line-height:1.6; color:var(--text-secondary,#55564f);">${i.sz||''} <a href="${i.url}" target="_blank">原文 ↗</a></p>
+  </div>`).join('');
+
+const top3 = sorted.slice(0,3);
+document.getElementById('sharecard').innerHTML = `
+  <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-tertiary,#8a8f98); margin-bottom:10px;" class="mono">
+    <span>Cadence步频 · 6.12 早班</span><span>${top3.length} 条 / 90 秒</span>
+  </div>
+  ${top3.map((i,n)=>`<div style="font-size:13px; line-height:1.55; margin-bottom:8px;"><b style="color:#993556;">${n+1}</b> ${i.tz||i.t}</div>`).join('')}
+  <div style="border-top:1px solid var(--border-subtle,#e6e4dc); padding-top:8px; font-size:10.5px; color:var(--text-tertiary,#8a8f98);">全文与参考链接 → 公众号「Cadence步频」 · 小红书同名</div>`;
+
+function copyCard(){
+  const txt = `【Cadence步频 · 6.12 早班】${top3.length} 条 / 90 秒\n` + top3.map((i,n)=>`${n+1}. ${i.tz||i.t}`).join('\n') + `\n全文与参考 → 公众号「Cadence步频」（小红书同名）`;
+  navigator.clipboard.writeText(txt).then(()=>{ const el=document.getElementById('copied'); el.style.display='inline'; setTimeout(()=>el.style.display='none',1500); });
+}
+</script>
+</body>
+</html>
