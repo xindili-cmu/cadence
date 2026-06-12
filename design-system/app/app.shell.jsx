@@ -95,7 +95,10 @@ function NavRail({ view, onView }) {
 }
 
 function DigestRail({ stories, dayKey = 'today', onPick }) {
-  // Nothing published in the window yet (e.g. China-morning before the 15:00
+  // 为什么是这八类 — taxonomy rationale, collapsed under the pulse so the rail
+  // stays scannable; copy lives in CD_DICT (whyCats / whyCatsBody).
+  const [whyOpen, setWhyOpen] = React.useState(false);
+  // Nothing published in the window yet (e.g. China-morning before the 05:30
   // Beijing crawl) → render nothing instead of an empty box + zeroed pulse.
   if (!stories.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
   const top = [...stories].sort((a, b) => b.score - a.score).slice(0, 3);
@@ -138,6 +141,19 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
             </div>
           ))}
         </div>
+
+        {/* Taxonomy rationale — quiet disclosure so curious readers learn the
+            system without the rail shouting at everyone else. */}
+        <button type="button" onClick={() => setWhyOpen((v) => !v)}
+          style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 14, padding: 0, background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-tertiary)' }}>
+          <Icon name={whyOpen ? 'chevron-down' : 'circle-help'} size={13} style={{ color: 'var(--ink-300)' }} />
+          <span style={{ borderBottom: '1px dotted var(--border-subtle)' }}>{window.CD_T('whyCats')}</span>
+        </button>
+        {whyOpen && (
+          <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+            {window.CD_T('whyCatsBody')}
+          </p>
+        )}
       </div>
     </aside>
   );
