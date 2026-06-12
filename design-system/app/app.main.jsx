@@ -24,7 +24,7 @@ function FeedToolbar({ view, count }) {
         <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, color: 'var(--text-tertiary)' }}>{t('sub.' + id)}</p>
       </div>
       <span style={{ flex: 1 }} />
-      {id !== 'feedback' && (
+      {id !== 'feedback' && id !== 'daily' && (
         <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
       )}
     </div>
@@ -528,23 +528,87 @@ function DailyArchiveList({ editions, current, onPick }) {
   );
 }
 
-function DailyBriefView({ L, savedMap, toggleSave }) {
+// Right-rail edition archive (replaces 昨日信号/分类脉搏 on the daily view —
+// Cindy 2026-06-12, AIHOT-archive style): a "latest edition" box on top, then
+// past editions grouped by month, date + lead title per row.
+function DailyArchiveRail({ current, onPick }) {
+  const t = window.CD_T;
+  const zh = window.CD_LANG === 'zh';
+  const [editions, setEditions] = React.useState(null);
+  React.useEffect(() => {
+    let alive = true;
+    window.CD_LOAD_DAILY_INDEX().then((eds) => { if (alive) setEditions(eds); });
+    return () => { alive = false; };
+  }, []);
+  if (!editions || !editions.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
+
+  const latest = editions[0];
+  const months = [];
+  editions.forEach((e) => {
+    const key = e.date.slice(0, 7);
+    let m = months[months.length - 1];
+    if (!m || m.key !== key) { m = { key, items: [] }; months.push(m); }
+    m.items.push(e);
+  });
+  const monthLabel = (key) => zh
+    ? `${key.slice(0, 4)} 年 ${+key.slice(5)} 月`
+    : new Date(key + '-15T12:00:00Z').toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const leadOf = (e) => (zh ? (e.leadTitleZh || e.leadTitle) : (e.leadTitle || e.leadTitleZh)) || '';
+
+  return (
+    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', maxHeight: 'calc(100vh - var(--header-height))', overflowY: 'auto' }}>
+      <button type="button" onClick={() => onPick(latest.date)}
+        style={{ display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer', padding: '14px 16px', marginBottom: 16, background: current === latest.date ? 'var(--surface-active)' : 'var(--surface-card)', border: '1.5px solid var(--green-600)', borderRadius: 'var(--radius-lg)', fontFamily: 'var(--font-sans)' }}>
+        <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--green-800, var(--text-primary))' }}>{t('daily.latestIssue')}</div>
+        <div style={{ marginTop: 4, fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-secondary)' }}>{latest.date}</div>
+      </button>
+
+      {months.map((m) => (
+        <div key={m.key} style={{ marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, padding: '0 2px', marginBottom: 6 }}>
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, color: 'var(--text-primary)' }}>{monthLabel(m.key)}</span>
+            <span style={{ flex: 1 }} />
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{m.items.length}</span>
+          </div>
+          <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+            {m.items.map((e, i) => {
+              const on = e.date === current;
+              return (
+                <button key={e.date} type="button" onClick={() => onPick(e.date)}
+                  style={{ display: 'flex', gap: 10, width: '100%', textAlign: 'left', cursor: on ? 'default' : 'pointer', padding: '9px 12px', background: on ? 'var(--surface-active)' : 'none', border: 'none', borderTop: i ? '1px solid var(--border-subtle)' : 'none', fontFamily: 'var(--font-sans)' }}>
+                  <span style={{ flex: 'none', width: 38, fontFamily: 'var(--font-mono)', fontSize: 11.5, color: on ? 'var(--green-700)' : 'var(--text-tertiary)', paddingTop: 1 }}>
+                    {zh ? `${+e.date.slice(8)} 日` : e.date.slice(8)}
+                  </span>
+                  <span style={{ flex: 1, minWidth: 0, fontSize: 12.5, lineHeight: 1.45, fontWeight: on ? 600 : 400, color: 'var(--text-primary)', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{leadOf(e)}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </aside>
+  );
+}
+
+function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
   const t = window.CD_T;
   const zh = window.CD_LANG === 'zh';
   const [editions, setEditions] = React.useState(null); // null = manifest loading
-  const [date, setDate] = React.useState(null);
   const [edition, setEdition] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
   const [showArchive, setShowArchive] = React.useState(false);
   const [selected, setSelected] = React.useState(null); // expanded tier-3 row
   const [copied, setCopied] = React.useState(false);
 
+  // Date state lives in FeedApp so the right-rail archive (DailyArchiveRail)
+  // and this view stay in sync; default to the latest edition once the
+  // manifest arrives.
   React.useEffect(() => {
     let alive = true;
     window.CD_LOAD_DAILY_INDEX().then((eds) => {
       if (!alive) return;
       setEditions(eds);
-      if (eds.length) setDate((d) => d || eds[0].date); else setLoading(false);
+      if (eds.length) { if (!date) onDate(eds[0].date); } else setLoading(false);
     });
     return () => { alive = false; };
   }, []);
@@ -743,17 +807,18 @@ function DailyBriefView({ L, savedMap, toggleSave }) {
         </section>
       )}
 
-      {/* Prev / next / archive navigation */}
+      {/* Prev / next navigation. The in-page archive toggle only renders on
+          mobile — desktop has the right-rail edition archive instead. */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
-        {prevEd && <Button size="sm" variant="ghost" onClick={() => setDate(prevEd.date)}>{t('daily.prev')}</Button>}
-        <Button size="sm" variant="ghost" iconStart="archive" onClick={() => setShowArchive((v) => !v)}>{t('daily.archive')}</Button>
-        {nextEd && <Button size="sm" variant="ghost" onClick={() => setDate(nextEd.date)}>{t('daily.next')}</Button>}
-        {pos > 0 && <Button size="sm" variant="ghost" onClick={() => setDate(editions[0].date)}>{t('daily.latest')}</Button>}
+        {prevEd && <Button size="sm" variant="ghost" onClick={() => onDate(prevEd.date)}>{t('daily.prev')}</Button>}
+        {mobile && <Button size="sm" variant="ghost" iconStart="archive" onClick={() => setShowArchive((v) => !v)}>{t('daily.archive')}</Button>}
+        {nextEd && <Button size="sm" variant="ghost" onClick={() => onDate(nextEd.date)}>{t('daily.next')}</Button>}
+        {pos > 0 && <Button size="sm" variant="ghost" onClick={() => onDate(editions[0].date)}>{t('daily.latest')}</Button>}
         <span style={{ flex: 1 }} />
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>{t('daily.autoNote')}</span>
       </div>
-      {showArchive && editions && (
-        <DailyArchiveList editions={editions} current={date} onPick={(d) => { setShowArchive(false); setDate(d); }} />
+      {mobile && showArchive && editions && (
+        <DailyArchiveList editions={editions} current={date} onPick={(d) => { setShowArchive(false); onDate(d); }} />
       )}
     </div>
   );
@@ -767,6 +832,9 @@ function FeedApp() {
   const [category, setCategory] = React.useState('all');
   const [query, setQuery] = React.useState('');
   const [selected, setSelected] = React.useState(null);
+  // Daily-edition date — lifted here so DailyBriefView and the right-rail
+  // archive (DailyArchiveRail) share one source of truth. null = latest.
+  const [dailyDate, setDailyDate] = React.useState(null);
 
   // Saved stories — full snapshots keyed by id, persisted to localStorage so
   // bookmarks survive reloads AND survive the story rotating out of news.json.
@@ -942,7 +1010,8 @@ function FeedApp() {
           {/* Daily edition branch — AIHOT-style fixed daily slices with their
               own lead / sections / archive navigation; short-circuits the feed. */}
           {isDaily && (
-            <DailyBriefView L={L} savedMap={savedMap} toggleSave={toggleSave} />
+            <DailyBriefView L={L} savedMap={savedMap} toggleSave={toggleSave}
+              date={dailyDate} onDate={setDailyDate} mobile={isMobile} />
           )}
 
           {/* Device-local storage disclosure — bookmarks live in this browser's
@@ -1018,8 +1087,9 @@ function FeedApp() {
           ))}
         </main>
 
-        {!isSources && !isFeedback && !isMobile && (
-          <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
+        {!isSources && !isFeedback && !isMobile && (isDaily
+          ? <DailyArchiveRail current={dailyDate} onPick={setDailyDate} />
+          : <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
         )}
       </div>
 
