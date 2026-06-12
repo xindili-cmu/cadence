@@ -707,7 +707,7 @@ function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
   const kicker = { fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase' };
   const srcLine = (s) => (
     <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginTop: 8 }}>
-      {s.source} · {t('signalScore')} {s.score} · <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
+      {s.wallSource || s.source} · {t('signalScore')} {s.score} · <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
     </div>
   );
 
@@ -946,7 +946,7 @@ function FeedApp() {
     if (xcut) { if (!s[xcut.flag]) return false; }
     else if (category !== 'all' && s.category !== category) return false;
     // Search across both languages regardless of display language.
-    if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
+    if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
   };
   // All view draws from the merged pool (live feed + archive-only stories);
@@ -1106,9 +1106,11 @@ function FeedApp() {
                   const s = L(raw);
                   return (
                     <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
+                      {/* source = wallSource: journal-attributed name (PubMed-pipeline items
+                          show their journal, e.g. IJSPT, not the pipeline); raw source as fallback */}
                       <NewsCard
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
-                        category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
+                        category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} tech={s.tech}
                         title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
                         selected={selected === s.id}
