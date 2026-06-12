@@ -156,8 +156,8 @@ function SourceCard({ source }) {
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
         <SourceFavicon source={source} accent={cats[0]?.accent || 'practice'} />
         <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)', flex: 1, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{source.name}</span>
-        {/* '—' = nothing in the current feed window (title explains); count is live, not all-time */}
-        <span title={source.count > 0 ? undefined : t('src.noneYet')}
+        {/* Count = all-time archived stories (live + archive); '—' = none yet, title explains */}
+        <span title={source.count > 0 ? `${source.count} · ${t('src.countTip')}` : t('src.noneYet')}
           style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)', flex: 'none' }}>{source.count > 0 ? source.count : '—'}</span>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
@@ -891,7 +891,10 @@ function FeedApp() {
   const [archiveStories, setArchiveStories] = React.useState(null);
   const archiveLoading = view === 'all' && archiveStories === null;
   React.useEffect(() => {
-    if (view !== 'all' || archiveStories !== null) return;
+    // Sources view also wants the archive: wall counts are all-time (live feed
+    // caps at 30 items — against a 50-outlet roster, live-only counts left most
+    // cards permanently at zero). Same cached promise, so no extra cost.
+    if ((view !== 'all' && view !== 'sources') || archiveStories !== null) return;
     let alive = true;
     window.CD_LOAD_ARCHIVE().then((items) => { if (alive) setArchiveStories(items); });
     return () => { alive = false; };
@@ -1031,7 +1034,7 @@ function FeedApp() {
           {/* Sources directory branch — short-circuits feed rendering.
               No specialty tabs here: the wall groups by outlet kind instead. */}
           {isSources && (
-            <SourcesGrid stories={window.CD_STORIES || []} />
+            <SourcesGrid stories={(window.CD_STORIES || []).concat(archiveStories || [])} />
           )}
 
           {/* Feedback branch — also short-circuits the feed: a single form,
