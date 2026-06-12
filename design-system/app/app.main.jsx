@@ -324,6 +324,19 @@ function FeedApp() {
     });
   }, []);
 
+  // All-stories archive — lazy-loaded the first time the user opens the All
+  // view (aihot-style: Curated = top-30 live feed, All = permanent superset
+  // from archive/*.json). null = not requested yet; [] = loaded-but-empty or
+  // load failed (feed still renders); array = archive-only stories.
+  const [archiveStories, setArchiveStories] = React.useState(null);
+  const archiveLoading = view === 'all' && archiveStories === null;
+  React.useEffect(() => {
+    if (view !== 'all' || archiveStories !== null) return;
+    let alive = true;
+    window.CD_LOAD_ARCHIVE().then((items) => { if (alive) setArchiveStories(items); });
+    return () => { alive = false; };
+  }, [view, archiveStories]);
+
   // 中英切换 — setLang re-renders the tree; every component reads
   // CD_LANG / CD_T at render time, so the flip is instant and complete.
   const [lang, setLang] = React.useState(window.CD_LANG);
@@ -368,7 +381,12 @@ function FeedApp() {
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
   };
-  let stories = window.CD_STORIES.filter(matchesFilter);
+  // All view draws from the merged pool (live feed + archive-only stories);
+  // every other view sees exactly the live feed, unchanged.
+  const pool = view === 'all'
+    ? window.CD_STORIES.concat(archiveStories || [])
+    : window.CD_STORIES;
+  let stories = pool.filter(matchesFilter);
 
   // Saved view = bookmarked stories. Entries still in the live feed render
   // fresh; bookmarks that have rotated out of news.json render from their
@@ -410,7 +428,29 @@ function FeedApp() {
     }))
     .filter((g) => g.items.length);
 
-  const grouped = isDaily ? groupedByCat : groupedByDay;
+  // All view spans weeks of archive — today/yesterday/older would dump nearly
+  // everything into one "older" heap. Group by calendar date instead (aihot
+  // pattern), newest day first, within a day sorted by score desc.
+  const groupedByDate = (() => {
+    if (view !== 'all') return [];
+    const locale = window.CD_LANG === 'zh' ? 'zh-CN' : 'en-US';
+    const map = new Map();
+    stories.forEach((s) => {
+      const k = (s.publishedAt || '').slice(0, 10) || '0000-00-00';
+      if (!map.has(k)) map.set(k, []);
+      map.get(k).push(s);
+    });
+    return [...map.entries()]
+      .sort((a, b) => b[0].localeCompare(a[0]))
+      .map(([k, items]) => ({
+        key: k,
+        label: k === '0000-00-00' ? t('older') : new Date(k + 'T12:00:00Z')
+          .toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
+        items: items.sort((a, b) => b.score - a.score),
+      }));
+  })();
+
+  const grouped = isDaily ? groupedByCat : (view === 'all' ? groupedByDate : groupedByDay);
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
   // Daily brief intentionally has no lead — every section gets equal weight.
@@ -483,7 +523,16 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && grouped.length === 0 && (
+          {/* Archive still in flight — feed items already render above; this
+              strip just signals that older stories are on their way. */}
+          {!isSources && archiveLoading && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, margin: '0 0 14px', padding: '8px 12px', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>
+              <Icon name="loader-circle" size={13} style={{ color: 'var(--ink-300)' }} />
+              <span>{t('loadingArchive')}</span>
+            </div>
+          )}
+
+          {!isSources && grouped.length === 0 && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
               <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>

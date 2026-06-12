@@ -16,7 +16,7 @@ window.CD_DICT = {
     'nav.curated': 'Curated', 'nav.all': 'All stories', 'nav.daily': 'Daily brief', 'nav.saved': 'Saved', 'nav.sources': 'Sources',
     // Short labels for the mobile bottom tab bar (≤8 chars so 5 tabs fit at 320px)
     'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.saved': 'Saved', 'navS.sources': 'Sources',
-    'sub.curated': 'AI-selected PT signal · updated daily', 'sub.all': 'Full firehose across every source',
+    'sub.curated': 'AI-selected PT signal · updated daily', 'sub.all': 'Every story Cadence has curated — live feed plus full archive',
     'sub.daily': 'Yesterday, packaged into eight sections', 'sub.saved': 'Bookmarked stories · stored in this browser only',
     'sub.sources': 'Outlets Cadence monitors',
     searchPlaceholder: 'Search stories, sources, companies…',
@@ -29,6 +29,7 @@ window.CD_DICT = {
     savedNote: "Bookmarks are stored locally in this browser — no account needed. They won't follow you to another device or browser, and clearing site data removes them.",
     today: 'Today', yesterday: 'Yesterday', older: 'Earlier this week',
     storyOne: 'story', storyMany: 'stories',
+    loadingArchive: 'Loading the full archive…',
     emptySearch: 'No stories match', emptySaved: 'Nothing saved yet — tap the bookmark icon on any story.',
     emptyDaily: 'No stories from yesterday yet — check back after the 7am cron.', emptyNone: 'No stories yet.',
     yesterdaySignal: "Yesterday's signal", todaysSignal: "Today's Signal", categoryPulse: 'Category pulse',
@@ -44,7 +45,7 @@ window.CD_DICT = {
   zh: {
     'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.saved': '收藏', 'nav.sources': '信源',
     'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.saved': '收藏', 'navS.sources': '信源',
-    'sub.curated': 'AI 精选 PT 信号 · 每日更新', 'sub.all': '全部信源的完整信息流',
+    'sub.curated': 'AI 精选 PT 信号 · 每日更新', 'sub.all': '全站入库的全部文章 · 实时 + 历史归档',
     'sub.daily': '昨日要闻，按八个专科打包', 'sub.saved': '已收藏 · 仅存于当前浏览器',
     'sub.sources': 'Cadence 监测的信源',
     searchPlaceholder: '搜索文章、信源、机构…',
@@ -57,6 +58,7 @@ window.CD_DICT = {
     savedNote: '收藏保存在当前浏览器本地，无需账号——但不会同步到其他设备或浏览器，清除站点数据后会丢失。',
     today: '今天', yesterday: '昨天', older: '本周早些时候',
     storyOne: '条', storyMany: '条',
+    loadingArchive: '正在加载历史归档…',
     emptySearch: '没有匹配的文章：', emptySaved: '还没有收藏——点击任意卡片上的书签图标。',
     emptyDaily: '昨天还没有文章——每日抓取（北京时间 15 点）后再来看看。', emptyNone: '暂无文章。',
     yesterdaySignal: '昨日信号', todaysSignal: '今日信号', categoryPulse: '分类脉搏',
@@ -221,6 +223,56 @@ window.CD_DATA_READY = (async () => {
     window.CD_SOURCES = window.CD_SOURCES || [];
   }
 })();
+
+// ── Archive (历史归档) ────────────────────────────────────────────────────────
+// The "All stories" view is the permanent superset: live feed + every story
+// ever archived by scripts/news-refresh.js (archive/YYYY-MM.json, manifest in
+// archive/index.json). Loaded lazily — only when the user first opens that
+// view — so Curated stays as fast as before. Returns archive-only items
+// (already-in-feed stories are deduped out by sourceUrl/id) in CD_STORIES
+// shape, newest first. Cached promise: at most one network round per session.
+window.CD_ARCHIVE_READY = null;
+window.CD_LOAD_ARCHIVE = () => {
+  if (window.CD_ARCHIVE_READY) return window.CD_ARCHIVE_READY;
+  window.CD_ARCHIVE_READY = (async () => {
+    try {
+      const idxRes = await fetch('archive/index.json', { cache: 'no-store' });
+      if (!idxRes.ok) throw new Error(`archive/index.json HTTP ${idxRes.status}`);
+      const manifest = await idxRes.json();
+      const files = (manifest.months || []).map((m) => m.file).filter(Boolean);
+      // Dedupe against the live feed AND across month files (a story can sit
+      // in two month files if it straddles a month boundary). Feed ids are
+      // regenerated per run, so sourceUrl is the stable identity; id is kept
+      // as a secondary guard.
+      const seen = new Set();
+      (window.CD_STORIES || []).forEach((s) => {
+        if (s.sourceUrl) seen.add(s.sourceUrl);
+        if (s.id) seen.add(s.id);
+      });
+      const months = await Promise.all(files.map((f) =>
+        fetch(`archive/${f}`, { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : { items: [] }))
+          .catch(() => ({ items: [] }))
+      ));
+      const out = [];
+      for (const data of months) {
+        for (const item of (data.items || [])) {
+          const key = item.sourceUrl || item.title;
+          if ((key && seen.has(key)) || (item.id && seen.has(item.id))) continue;
+          if (key) seen.add(key);
+          if (item.id) seen.add(item.id);
+          out.push(cdTransformItem(item));
+        }
+      }
+      out.sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));
+      return out;
+    } catch (err) {
+      console.error('[Cadence] archive load failed:', err);
+      return [];
+    }
+  })();
+  return window.CD_ARCHIVE_READY;
+};
 
 // ── Source wall ──────────────────────────────────────────────────────────────
 // Canonical roster lives in sources.json (single source of truth, shared with
