@@ -419,7 +419,9 @@ function FeedApp() {
   const groupedByCat = CATS
     .map((c) => ({
       key: c.id,
-      label: c.label,
+      // Localized at render time (catLabel reads CD_LANG) so the daily brief's
+      // section headers follow the language toggle like every other label.
+      label: window.catLabel ? window.catLabel(c) : c.label,
       icon: c.icon,
       accent: c.accent,
       items: [...stories.filter((s) => s.category === c.id)]
@@ -507,7 +509,7 @@ function FeedApp() {
             <div style={{ marginBottom: 24, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>{t('yesterdaySignal')}</div>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, lineHeight: 1.5, color: 'var(--text-primary)' }}>
-                {stories.length} {t('dailyLeadA')} {grouped.length} {t('dailyLeadB')} <em>{stories.length ? L([...stories].sort((a, b) => b.score - a.score)[0]).title : ''}</em>.
+                {stories.length} {t('dailyLeadA')} {grouped.length} {t('dailyLeadB')} <em>{stories.length ? L([...stories].sort((a, b) => b.score - a.score)[0]).title : ''}</em>{window.CD_LANG === 'zh' ? '' : '.'}
               </p>
             </div>
           )}
