@@ -387,11 +387,14 @@ function FeedbackView() {
 }
 
 function SourcesGrid({ stories }) {
-  // Live stats keyed by extractDomain name
+  // Live stats keyed by wallSource — journal-attributed name from app.data.jsx
+  // (PubMed-pipeline stories credit their journal's card, not "PubMed";
+  // unmatched stories fall back to s.source).
   const live = {};
   stories.forEach((s) => {
-    if (!live[s.source]) live[s.source] = { count: 0, catSet: {}, latest: null };
-    const b = live[s.source];
+    const key = s.wallSource || s.source;
+    if (!live[key]) live[key] = { count: 0, catSet: {}, latest: null };
+    const b = live[key];
     b.count++;
     b.catSet[s.category] = (b.catSet[s.category] || 0) + 1;
     if (!b.latest || (s.publishedAt && (!b.latest.publishedAt || s.publishedAt > b.latest.publishedAt))) b.latest = s;

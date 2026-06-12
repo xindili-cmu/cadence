@@ -196,6 +196,27 @@ function cdJournalMeta(journal) {
   return window.CD_JOURNALS[cdNormJournal(journal)] || null;
 }
 
+// ── Source-wall attribution ─────────────────────────────────────────────────
+// Most journal articles arrive via the PubMed pipeline, so item.source says
+// "PubMed" while the journal lives in item.journal — keying the Sources wall
+// on item.source alone starves every journal card (and inflates PubMed).
+// cdWallSource re-attributes a story to its curated journal source when the
+// journal matches a sources.json journalName (via the journals.json alias
+// table first, then raw normalization). No match → falls back to item.source,
+// so PubMed's own card counts only what stays unattributed.
+window.CD_WALL_BY_JOURNAL = {}; // normalized journalName → sources.json name (built in CD_DATA_READY)
+
+function cdWallSource(item) {
+  const map = window.CD_WALL_BY_JOURNAL;
+  if (item.journal) {
+    const n = cdNormJournal(item.journal);
+    const meta = window.CD_JOURNALS[n]; // canonical name via alias table
+    const hit = (meta && map[cdNormJournal(meta.name)]) || map[n];
+    if (hit) return hit;
+  }
+  return item.source;
+}
+
 function cdTransformItem(item) {
   return {
     id:          item.id,
@@ -203,6 +224,7 @@ function cdTransformItem(item) {
     category:    item.category,
     score:       item.curatedScore,
     source:      item.source,
+    wallSource:  cdWallSource(item), // curated journal if matched, else item.source (Sources wall stats)
     sourceUrl:   item.sourceUrl,
     journalMeta: cdJournalMeta(item.journal),
     publishedAt: item.publishedAt,  // raw ISO retained for SourcesGrid "latest" sort
@@ -260,6 +282,12 @@ window.CD_DATA_READY = (async () => {
         });
       } catch (e) { console.error('[Cadence] journals.json parse failed:', e); }
     }
+    // Sources must be indexed BEFORE cdTransformItem runs — wallSource
+    // attribution (journal → curated source) depends on CD_WALL_BY_JOURNAL.
+    window.CD_SOURCES = srcRes.ok ? await srcRes.json() : [];
+    window.CD_SOURCES.forEach((s) => {
+      if (s.journalName) window.CD_WALL_BY_JOURNAL[cdNormJournal(s.journalName)] = s.name;
+    });
     const data = await newsRes.json();
     window.CD_STORIES = (data.items || []).map(cdTransformItem);
     window.CD_META = data.meta || {};
@@ -277,7 +305,6 @@ window.CD_DATA_READY = (async () => {
       }))
       .filter((t) => t.heat >= 1.2)
       .sort((a, b) => b.heat - a.heat);
-    window.CD_SOURCES = srcRes.ok ? await srcRes.json() : [];
   } catch (err) {
     console.error('[Cadence] data load failed:', err);
     window.CD_STORIES = [];
