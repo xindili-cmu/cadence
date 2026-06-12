@@ -271,16 +271,22 @@ function isTech(item) {
 // clinical medicine AND carries no rehabilitation signal. Same design as isTech
 // — auditable keyword rules, backfillable over the archive (backfill-relevance.js).
 //
-// Precision over recall by intent: the OFFTOPIC list names drug/organ topics
-// with no rehab dimension; any rehab/exercise/function signal vetoes the drop,
-// so genuine cardiac-rehab or pulmonary-rehab studies are never removed. This
-// is a denylist, so it needs occasional curation as new off-topic terms appear.
-const OFFTOPIC_MEDICAL = [
-  // Pharmacotherapy / drug trials (not rehab interventions)
+// Precision over recall by intent. Two tiers, because a drug trial can mention
+// "diet and exercise" as trial background and a real rehab RCT can enrol
+// diabetes/CKD patients — the same word means different things:
+//   HARD — named drug molecules / classes. When the *subject* is finerenone or
+//          a GLP-1 agonist it's a pharmacology trial; an incidental "exercise"
+//          mention must NOT rescue it, so HARD drops regardless of any signal.
+//   SOFT — disease states (CKD, diabetes, oncology). These can legitimately be
+//          the population of an exercise/rehab study, so SOFT drops only when no
+//          rehab signal is present.
+// Denylist by design — needs occasional curation as new off-topic terms appear.
+const OFFTOPIC_HARD = [
   /\bfinerenone\b/i, /\bretatrutide\b/i, /\bsemaglutide\b/i, /\btirzepatide\b/i,
-  /\bGLP-?1\b/i, /\bstatins?\b/i, /\bSGLT2\b/i, /\bempagliflozin\b/i, /\bdapagliflozin\b/i,
-  /\bmonoclonal antibod/i, /\bchemotherap/i, /\bimmunotherap/i,
-  // Organ disease / internal medicine unrelated to rehab
+  /\bempagliflozin\b/i, /\bdapagliflozin\b/i, /\bGLP-?1\b/i, /\bSGLT2\b/i,
+];
+const OFFTOPIC_SOFT = [
+  /\bstatins?\b/i, /\bmonoclonal antibod/i, /\bchemotherap/i, /\bimmunotherap/i,
   /\bchronic kidney disease\b/i, /\bCKD\b/, /\bnephropathy\b/i, /\bdialysis\b/i,
   /\bnephro/i, /\bhepatic\b/i, /\bcirrhosis\b/i, /\bsepsis\b/i,
   /\btype 2 diabetes\b/i, /\bglycaemic\b/i, /\bglycemic\b/i, /\boncolog/i, /\btumou?r\b/i,
@@ -295,10 +301,10 @@ const REHAB_SIGNAL = [
 ];
 function isRehabRelevant(item) {
   const text = `${item.title || ''} ${item.summary || ''} ${item.titleZh || ''} ${item.summaryZh || ''}`;
-  const off = OFFTOPIC_MEDICAL.some((re) => re.test(text));
-  if (!off) return true; // nothing off-topic matched → keep
+  if (OFFTOPIC_HARD.some((re) => re.test(text))) return false; // pharma trial → drop, no veto
+  if (!OFFTOPIC_SOFT.some((re) => re.test(text))) return true; // nothing off-topic → keep
   const rehab = REHAB_SIGNAL.some((p) => (p instanceof RegExp ? p.test(text) : text.includes(p)));
-  return rehab; // off-topic term present → keep only if a rehab signal vetoes
+  return rehab; // disease-state term present → keep only if a rehab signal vetoes
 }
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));

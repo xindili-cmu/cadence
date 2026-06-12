@@ -17,7 +17,7 @@ window.CD_DICT = {
     // Short labels for the mobile bottom tab bar (≤8 chars so the tabs fit at 320px)
     'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.saved': 'Saved', 'navS.sources': 'Sources', 'navS.feedback': 'Feedback',
     'sub.curated': 'AI-selected PT signal · updated daily', 'sub.all': 'Every story Cadence has curated — live feed plus full archive',
-    'sub.daily': 'Yesterday, packaged into eight sections', 'sub.saved': 'Bookmarked stories · stored in this browser only',
+    'sub.daily': 'One edition every morning — lead, sections, archive', 'sub.saved': 'Bookmarked stories · stored in this browser only',
     'sub.sources': 'Outlets Cadence monitors', 'sub.feedback': 'Help shape where Cadence goes next',
     'fb.kindLabel': 'What kind of note is this?',
     'fb.kind.bug': "Something's broken", 'fb.kind.feature': 'Idea or request', 'fb.kind.content': 'Content quality', 'fb.kind.other': 'Just saying hi',
@@ -28,7 +28,8 @@ window.CD_DICT = {
     searchPlaceholder: 'Search stories, sources, companies…',
     signalScore: 'Signal score',
     ifTip: 'Journal impact factor',
-    hotNow: 'Hot now', hotSub: 'Multi-source coverage · heat decays over time', nSources: 'sources',
+    hotNow: 'Hot now', hotSub: 'Multi-source stories & active themes · heat decays over time', nSources: 'sources',
+    themeHeat: 'Theme', nOutlets: 'outlets',
     alsoCovered: 'Also covered by',
     whyMatters: 'Why it matters', readOriginal: 'Read original',
     save: 'Save story', unsave: 'Remove bookmark', saveHint: 'Save story (stored in this browser)',
@@ -38,6 +39,14 @@ window.CD_DICT = {
     loadingArchive: 'Loading the full archive…',
     emptySearch: 'No stories match', emptySaved: 'Nothing saved yet — tap the bookmark icon on any story.',
     emptyDaily: 'No stories from yesterday yet — check back after the early-morning crawl (05:30 Beijing).', emptyNone: 'No stories yet.',
+    'daily.stories': 'STORIES', 'daily.edition': 'DAILY EDITION',
+    'daily.lead': "Editor's lead", 'daily.flashes': 'In brief',
+    'daily.prev': '← Previous day', 'daily.next': 'Next day →', 'daily.archive': 'All editions', 'daily.latest': 'Back to latest',
+    'daily.archiveTitle': 'Past editions', 'daily.eventsN': 'stories',
+    'daily.loading': 'Loading edition…',
+    'daily.empty': 'No editions yet — the first one is generated after the next morning crawl (05:30 Beijing).',
+    'daily.autoNote': 'Generated daily by the Cadence editorial pipeline · AI-curated, human-edited',
+    'daily.stat.events': 'stories today', 'daily.stat.specialties': 'specialties', 'daily.stat.multi': 'multi-source', 'daily.stat.sources': 'sources',
     yesterdaySignal: "Yesterday's signal", todaysSignal: "Today's Signal", categoryPulse: 'Category pulse',
     whyCats: 'How stories are categorized',
     whyCatsBody: 'The first six mirror PT’s core clinical specialties as recognized by board certification (e.g. ABPTS): orthopedic, neurological, sports, pediatric, geriatric, cardiopulmonary. Manual & Modalities and Practice & Profession cut across them — treatment techniques, and policy/payment/workforce news. Tech is an overlay rather than a category: stories keep their specialty and are additionally flagged when they involve AI, VR, robotics, telerehab or other technology-driven rehab.',
@@ -54,7 +63,7 @@ window.CD_DICT = {
     'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.saved': '收藏', 'nav.sources': '信源', 'nav.feedback': '反馈',
     'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.saved': '收藏', 'navS.sources': '信源', 'navS.feedback': '反馈',
     'sub.curated': 'AI 精选 PT 信号 · 每日更新', 'sub.all': '全站入库的全部文章 · 实时 + 历史归档',
-    'sub.daily': '昨日要闻，按八个专科打包', 'sub.saved': '已收藏 · 仅存于当前浏览器',
+    'sub.daily': '每日一期 · 导语 + 分版块 + 历史归档', 'sub.saved': '已收藏 · 仅存于当前浏览器',
     'sub.sources': 'Cadence 监测的信源', 'sub.feedback': '一起决定 Cadence 接下来怎么走',
     'fb.kindLabel': '这条属于哪一类？',
     'fb.kind.bug': '出问题了', 'fb.kind.feature': '想法或需求', 'fb.kind.content': '内容质量', 'fb.kind.other': '随便聊聊',
@@ -65,7 +74,8 @@ window.CD_DICT = {
     searchPlaceholder: '搜索文章、信源、机构…',
     signalScore: '信号分',
     ifTip: '期刊影响因子',
-    hotNow: '当前热点', hotSub: '多源报道 · 热度随时间衰减', nSources: '个来源',
+    hotNow: '当前热点', hotSub: '多源报道与活跃主题 · 热度随时间衰减', nSources: '个来源报道',
+    themeHeat: '主题热度', nOutlets: '刊',
     alsoCovered: '同题报道',
     whyMatters: '为什么重要', readOriginal: '阅读原文',
     save: '收藏', unsave: '取消收藏', saveHint: '收藏（仅存于当前浏览器）',
@@ -75,6 +85,14 @@ window.CD_DICT = {
     loadingArchive: '正在加载历史归档…',
     emptySearch: '没有匹配的文章：', emptySaved: '还没有收藏——点击任意卡片上的书签图标。',
     emptyDaily: '昨天还没有文章——每日抓取（北京时间早上 5:30）后再来看看。', emptyNone: '暂无文章。',
+    'daily.stories': '篇', 'daily.edition': '步频日报',
+    'daily.lead': '主编导语', 'daily.flashes': '快讯',
+    'daily.prev': '← 前一日', 'daily.next': '后一日 →', 'daily.archive': '查看历史', 'daily.latest': '回到最新',
+    'daily.archiveTitle': '历史日报', 'daily.eventsN': '事件',
+    'daily.loading': '正在加载日报…',
+    'daily.empty': '还没有日报——下一次早间抓取（北京时间 5:30）后生成第一期。',
+    'daily.autoNote': 'Cadence 编辑系统每日自动生成 · AI 筛选 · 人工把关',
+    'daily.stat.events': '今日事件', 'daily.stat.specialties': '专科', 'daily.stat.multi': '多源报道', 'daily.stat.sources': '信源',
     yesterdaySignal: '昨日信号', todaysSignal: '今日信号', categoryPulse: '分类脉搏',
     whyCats: '分类是怎么定的？',
     whyCatsBody: '前六类对应物理治疗的核心临床专科（参照 ABPTS 等国际专科认证体系）：骨科、神经、运动、儿童、老年、心肺；「手法与理疗」与「行业与执业」是横切维度，分别跟踪治疗技术和政策、医保、职业发展。「科技」是叠加标记而非第九个分类——文章保留所属专科，凡涉及 AI、VR、机器人、远程康复等科技驱动的内容会额外带上它。',
@@ -193,6 +211,10 @@ function cdTransformItem(item) {
     related:     item.related || [],  // other outlets covering the same story (关联讨论)
   };
 }
+// Exposed for the Daily brief view — edition files store raw news.json
+// snapshots, transformed to card shape at render time (files are IIFE-wrapped
+// by build-app.js, so cross-file access must go through window.*).
+window.cdTransformItem = cdTransformItem;
 
 // ── Static side-rail content ────────────────────────────────────────────────
 // Left-nav is not in news.json; it's product chrome.
@@ -303,6 +325,28 @@ window.CD_LOAD_ARCHIVE = () => {
     }
   })();
   return window.CD_ARCHIVE_READY;
+};
+
+// ── Daily editions (网页日报) ─────────────────────────────────────────────────
+// AIHOT-style fixed daily slices written by scripts/daily-brief.js. The view
+// loads the manifest lazily on first open, then individual editions on demand.
+// Both caches are per-session promises — at most one network round per file.
+window.CD_DAILY_INDEX_READY = null;
+window.CD_LOAD_DAILY_INDEX = () => {
+  if (window.CD_DAILY_INDEX_READY) return window.CD_DAILY_INDEX_READY;
+  window.CD_DAILY_INDEX_READY = fetch('briefs/daily/index.json', { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : { editions: [] }))
+    .then((j) => j.editions || [])
+    .catch((err) => { console.error('[Cadence] daily index load failed:', err); return []; });
+  return window.CD_DAILY_INDEX_READY;
+};
+window.CD_DAILY_CACHE = {};
+window.CD_LOAD_DAILY = (date) => {
+  if (window.CD_DAILY_CACHE[date]) return window.CD_DAILY_CACHE[date];
+  window.CD_DAILY_CACHE[date] = fetch(`briefs/daily/${date}.json`, { cache: 'no-store' })
+    .then((r) => (r.ok ? r.json() : null))
+    .catch((err) => { console.error('[Cadence] daily edition load failed:', err); return null; });
+  return window.CD_DAILY_CACHE[date];
 };
 
 // ── Source wall ──────────────────────────────────────────────────────────────

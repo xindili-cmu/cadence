@@ -49,6 +49,13 @@ function HotTopicsStrip({ topics, onPick }) {
       <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
         {topics.map((t, i) => {
           const cat = window.getCategory ? window.getCategory(t.category) : null;
+          // 'theme' = different papers sharing a sub-tag; 'story' = the same
+          // story corroborated by ≥2 outlets. Old payloads lack `kind`, so
+          // fall back to the presence of `tag` (theme topics always have one).
+          const isTheme = (t.kind || (t.tag ? 'theme' : 'story')) === 'theme';
+          const tip = isTheme && (t.members || []).length
+            ? t.members.map((m) => `${m.source} — ${window.CD_LANG === 'zh' ? (m.titleZh || m.title) : m.title}`).join('\n')
+            : (t.sources || []).join(' · ');
           return (
             <li key={t.id} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
               <button type="button" onClick={() => onPick && onPick(t.id)}
@@ -56,9 +63,11 @@ function HotTopicsStrip({ topics, onPick }) {
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
                 <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
                 {cat && <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>}
-                <span title={(t.sources || []).join(' · ')}
+                <span title={tip}
                   style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
-                  {t.sourceCount} {tr('nSources')}
+                  {isTheme
+                    ? `${tr('themeHeat')}${t.tag ? ` · ${t.tag}` : ''} · ${t.sourceCount} ${tr('nOutlets')}`
+                    : `${t.sourceCount} ${tr('nSources')}`}
                 </span>
               </button>
             </li>
@@ -439,6 +448,230 @@ const KIND_LABEL = {
   platform: 'Platform',
 };
 
+// ── Daily edition view (网页日报) ────────────────────────────────────────────
+// AIHOT-style fixed daily slices: one immutable edition per day written by
+// scripts/daily-brief.js (briefs/daily/*.json), with an LLM editor's lead,
+// category sections, flashes, footer stats, prev/next + archive navigation.
+// Items are raw news.json snapshots → cdTransformItem → NewsCard, so editions
+// keep rendering after the live feed rotates.
+
+function DailyMasthead({ edition, zh }) {
+  const t = window.CD_T;
+  const locale = zh ? 'zh-CN' : 'en-US';
+  const d = new Date(edition.date + 'T12:00:00Z');
+  return (
+    <header style={{ textAlign: 'center', padding: '10px 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 24 }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 10 }}>
+        VOL.{edition.date.replace(/-/g, '.')} · {edition.stats.events} {t('daily.stories')} · CADENCE {t('daily.edition')}
+      </div>
+      <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 34, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
+        {zh ? '步频日报' : 'Cadence Daily'}
+      </h2>
+      <div style={{ marginTop: 8, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
+        {d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'UTC' })}
+        <span style={{ color: 'var(--text-tertiary)' }}> · {zh ? '每早六时' : 'every morning'}</span>
+      </div>
+    </header>
+  );
+}
+
+function DailyStats({ stats }) {
+  const t = window.CD_T;
+  const cells = [
+    [stats.events, t('daily.stat.events')],
+    [stats.specialties, t('daily.stat.specialties')],
+    [stats.multiSource, t('daily.stat.multi')],
+    [stats.sources, t('daily.stat.sources')],
+  ];
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1, margin: '28px 0 18px', background: 'var(--border-subtle)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+      {cells.map(([n, label]) => (
+        <div key={label} style={{ background: 'var(--surface-card)', padding: '14px 8px', textAlign: 'center' }}>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 700, color: 'var(--text-primary)' }}>{n}</div>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginTop: 2 }}>{label}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function DailyArchiveList({ editions, current, onPick }) {
+  const t = window.CD_T;
+  const zh = window.CD_LANG === 'zh';
+  const locale = zh ? 'zh-CN' : 'en-US';
+  return (
+    <div style={{ marginTop: 14, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)', overflow: 'hidden' }}>
+      <div style={{ padding: '10px 16px', borderBottom: '1px solid var(--border-subtle)', fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{t('daily.archiveTitle')}</div>
+      <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+        {editions.map((e, i) => {
+          const on = e.date === current;
+          const d = new Date(e.date + 'T12:00:00Z');
+          return (
+            <li key={e.date} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
+              <button type="button" onClick={() => onPick(e.date)} disabled={on}
+                style={{ display: 'flex', alignItems: 'baseline', gap: 12, width: '100%', padding: '10px 16px', background: on ? 'var(--surface-active)' : 'none', border: 'none', cursor: on ? 'default' : 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
+                <span style={{ flex: 'none', width: 86, fontFamily: 'var(--font-mono)', fontSize: 12, color: on ? 'var(--green-800)' : 'var(--text-secondary)' }}>
+                  {d.toLocaleDateString(locale, { month: 'numeric', day: 'numeric', weekday: 'short', timeZone: 'UTC' })}
+                </span>
+                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: on ? 600 : 500, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                  {zh ? (e.leadTitleZh || e.leadTitle) : (e.leadTitle || e.leadTitleZh)}
+                </span>
+                <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{e.events} {t('daily.eventsN')}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+}
+
+function DailyBriefView({ L, savedMap, toggleSave }) {
+  const t = window.CD_T;
+  const zh = window.CD_LANG === 'zh';
+  const [editions, setEditions] = React.useState(null); // null = manifest loading
+  const [date, setDate] = React.useState(null);
+  const [edition, setEdition] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+  const [showArchive, setShowArchive] = React.useState(false);
+  const [selected, setSelected] = React.useState(null);
+
+  React.useEffect(() => {
+    let alive = true;
+    window.CD_LOAD_DAILY_INDEX().then((eds) => {
+      if (!alive) return;
+      setEditions(eds);
+      if (eds.length) setDate((d) => d || eds[0].date); else setLoading(false);
+    });
+    return () => { alive = false; };
+  }, []);
+
+  React.useEffect(() => {
+    if (!date) return;
+    let alive = true;
+    setLoading(true);
+    window.CD_LOAD_DAILY(date).then((ed) => {
+      if (!alive) return;
+      setEdition(ed);
+      setLoading(false);
+      window.scrollTo({ top: 0 });
+    });
+    return () => { alive = false; };
+  }, [date]);
+
+  // Manifest empty → no editions generated yet (pre-first-cron state).
+  if (editions !== null && !editions.length) {
+    return (
+      <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
+        <Icon name="newspaper" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
+        <div>{t('daily.empty')}</div>
+      </div>
+    );
+  }
+
+  if (loading || !edition) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '8px 12px', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>
+        <Icon name="loader-circle" size={13} style={{ color: 'var(--ink-300)' }} />
+        <span>{t('daily.loading')}</span>
+      </div>
+    );
+  }
+
+  const pos = editions ? editions.findIndex((e) => e.date === date) : -1;
+  const prevEd = pos >= 0 && pos < editions.length - 1 ? editions[pos + 1] : null;
+  const nextEd = pos > 0 ? editions[pos - 1] : null;
+  const leadTitle = zh ? (edition.lead.titleZh || edition.lead.titleEn) : (edition.lead.titleEn || edition.lead.titleZh);
+  const leadPara = zh ? (edition.lead.paragraphZh || edition.lead.paragraphEn) : (edition.lead.paragraphEn || edition.lead.paragraphZh);
+  let counter = 0; // global numbering across sections, AIHOT-style
+
+  return (
+    <div>
+      <DailyMasthead edition={edition} zh={zh} />
+
+      {/* Editor's lead */}
+      <div style={{ marginBottom: 26, padding: '20px 24px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>{t('daily.lead')}</div>
+        <h3 style={{ margin: '0 0 8px', fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, lineHeight: 1.4, color: 'var(--text-primary)' }}>{leadTitle}</h3>
+        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.7, color: 'var(--text-secondary)' }}>{leadPara}</p>
+      </div>
+
+      {/* Sections — fixed category order, numbered AIHOT-style */}
+      {edition.sections.map((sec, si) => {
+        const cat = window.getCategory ? window.getCategory(sec.category) : null;
+        const label = cat && window.catLabel ? window.catLabel(cat) : sec.label;
+        return (
+          <section key={sec.category} style={{ marginBottom: 28 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, margin: '0 0 14px' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: 'var(--text-tertiary)' }}>{String(si + 1).padStart(2, '0')}</span>
+              {cat && <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${cat.accent})`, flex: 'none', alignSelf: 'center' }} />}
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)' }}>{label}</span>
+              <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)', alignSelf: 'center' }} />
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{sec.items.length} {t(sec.items.length === 1 ? 'storyOne' : 'storyMany')}</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {sec.items.map((raw) => {
+                counter += 1;
+                const story = window.cdTransformItem(raw);
+                const s = L(story);
+                return (
+                  <div key={s.id || s.sourceUrl}>
+                    <NewsCard
+                      variant="default"
+                      category={s.category} score={s.score} source={s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
+                      journalMeta={s.journalMeta} tech={s.tech}
+                      title={`${counter}. ${s.title}`} summary={s.summary} whyItMatters={s.why}
+                      selected={selected === s.id}
+                      saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(story)}
+                      onClick={() => setSelected(selected === s.id ? null : s.id)} />
+                    <RelatedRow related={s.related} />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Flashes — overflow + uncategorized, one line each */}
+      {edition.flashes && edition.flashes.length > 0 && (
+        <section style={{ marginBottom: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 10px' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{t('daily.flashes')}</span>
+            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+          </div>
+          <ul style={{ margin: 0, padding: 0, listStyle: 'none', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+            {edition.flashes.map((f, i) => (
+              <li key={f.sourceUrl || i} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
+                <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer"
+                  style={{ display: 'flex', alignItems: 'baseline', gap: 10, padding: '9px 14px', textDecoration: 'none', fontFamily: 'var(--font-sans)' }}>
+                  <span style={{ flex: 1, minWidth: 0, fontSize: 13, lineHeight: 1.5, color: 'var(--text-primary)' }}>{zh ? (f.titleZh || f.title) : f.title}</span>
+                  <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{f.source}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      <DailyStats stats={edition.stats} />
+
+      {/* Prev / next / archive navigation */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+        {prevEd && <Button size="sm" variant="ghost" onClick={() => setDate(prevEd.date)}>{t('daily.prev')}</Button>}
+        <Button size="sm" variant="ghost" iconStart="archive" onClick={() => setShowArchive((v) => !v)}>{t('daily.archive')}</Button>
+        {nextEd && <Button size="sm" variant="ghost" onClick={() => setDate(nextEd.date)}>{t('daily.next')}</Button>}
+        {pos > 0 && <Button size="sm" variant="ghost" onClick={() => setDate(editions[0].date)}>{t('daily.latest')}</Button>}
+        <span style={{ flex: 1 }} />
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>{t('daily.autoNote')}</span>
+      </div>
+      {showArchive && editions && (
+        <DailyArchiveList editions={editions} current={date} onPick={(d) => { setShowArchive(false); setDate(d); }} />
+      )}
+    </div>
+  );
+}
+
 function FeedApp() {
   // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
   // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
@@ -545,34 +778,14 @@ function FeedApp() {
     stories = [...live, ...ghosts];
   }
 
-  // Daily brief = yesterday's edition. Excludes today (today still flows on
-  // Curated). Falls back to "older" if no yesterday items present.
-  if (isDaily) {
-    const ydayItems = stories.filter((s) => s.day === 'yesterday');
-    stories = ydayItems.length ? ydayItems : stories.filter((s) => s.day === 'older' || s.day === 'yesterday');
-  }
+  // Daily brief view renders pre-built editions (briefs/daily/*.json) via
+  // DailyBriefView below — it short-circuits the feed like Sources/Feedback,
+  // so no daily-specific story filtering happens here anymore.
 
   // Curated / All grouping = by day (today / yesterday / older).
-  // Daily brief grouping  = by category (one section per PT cat in CATEGORIES order),
-  //                         within each section sorted by score desc, capped to 5.
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
     .map((d) => ({ key: d, label: DAY_LABELS[d], items: stories.filter((s) => s.day === d) }))
-    .filter((g) => g.items.length);
-
-  const CATS = window.CATEGORIES || [];
-  const groupedByCat = CATS
-    .map((c) => ({
-      key: c.id,
-      // Localized at render time (catLabel reads CD_LANG) so the daily brief's
-      // section headers follow the language toggle like every other label.
-      label: window.catLabel ? window.catLabel(c) : c.label,
-      icon: c.icon,
-      accent: c.accent,
-      items: [...stories.filter((s) => s.category === c.id)]
-        .sort((a, b) => b.score - a.score)
-        .slice(0, 5),
-    }))
     .filter((g) => g.items.length);
 
   // All view spans weeks of archive — today/yesterday/older would dump nearly
@@ -597,10 +810,9 @@ function FeedApp() {
       }));
   })();
 
-  const grouped = isDaily ? groupedByCat : (view === 'all' ? groupedByDate : groupedByDay);
+  const grouped = view === 'all' ? groupedByDate : groupedByDay;
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
-  // Daily brief intentionally has no lead — every section gets equal weight.
   const leadId = (!compact && !isDaily && view !== 'saved' && grouped.length && grouped[0].items.length)
     ? [...grouped[0].items].sort((a, b) => b.score - a.score)[0].id : null;
 
@@ -619,12 +831,12 @@ function FeedApp() {
         {!isMobile && <NavRail view={view} onView={setView} />}
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
-          <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />
+          <FeedToolbar view={view} count={isSources || isFeedback || isDaily ? null : stories.length} />
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
               as ambient context rather than a search result. */}
-          {isMobile && !isSources && (view === 'curated' || isDaily) && !q && category === 'all' && (
+          {isMobile && !isSources && view === 'curated' && !q && category === 'all' && (
             <MobileSignalCard stories={railStories} dayKey={railDay} onPick={scrollToStory} />
           )}
 
@@ -638,6 +850,12 @@ function FeedApp() {
               no category tabs / signal rail / story list. */}
           {isFeedback && (
             <FeedbackView />
+          )}
+
+          {/* Daily edition branch — AIHOT-style fixed daily slices with their
+              own lead / sections / archive navigation; short-circuits the feed. */}
+          {isDaily && (
+            <DailyBriefView L={L} savedMap={savedMap} toggleSave={toggleSave} />
           )}
 
           {/* Device-local storage disclosure — bookmarks live in this browser's
@@ -655,17 +873,7 @@ function FeedApp() {
             <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} />
           )}
 
-          {/* Daily brief editorial lead — fixed copy until Critic generates one per cron */}
-          {!isSources && isDaily && grouped.length > 0 && (
-            <div style={{ marginBottom: 24, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 8 }}>{t('yesterdaySignal')}</div>
-              <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, lineHeight: 1.5, color: 'var(--text-primary)' }}>
-                {stories.length} {t('dailyLeadA')} {grouped.length} {t('dailyLeadB')} <em>{stories.length ? L([...stories].sort((a, b) => b.score - a.score)[0]).title : ''}</em>{window.CD_LANG === 'zh' ? '' : '.'}
-              </p>
-            </div>
-          )}
-
-          {!isSources && !isFeedback && (
+          {!isSources && !isFeedback && !isDaily && (
             <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
               background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
               {/* Mobile: 9 pills don't fit — single-row horizontal scroll
@@ -685,24 +893,17 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && !isFeedback && grouped.length === 0 && !archiveLoading && (
+          {!isSources && !isFeedback && !isDaily && grouped.length === 0 && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
               <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
             </div>
           )}
 
-          {!isSources && !isFeedback && grouped.map((g) => (
+          {!isSources && !isFeedback && !isDaily && grouped.map((g) => (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
-                {isDaily && g.accent && (
-                  <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${g.accent})`, flex: 'none' }} />
-                )}
-                {isDaily ? (
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)' }}>{g.label}</span>
-                ) : (
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
-                )}
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
                 <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{g.items.length} {t(g.items.length === 1 ? 'storyOne' : 'storyMany')}</span>
               </div>
