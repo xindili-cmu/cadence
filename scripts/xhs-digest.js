@@ -193,6 +193,8 @@ function storyCard(s, rank, total, dateStr) {
           txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: cat.ink }, cat.zh)),
         s.tech ? h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: '#DFEDEE' },
           txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: '#1E5258' }, '康复科技')) : null,
+        s.studyDesign ? h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: C.ink50, border: `1px solid ${C.ink200}` },
+          txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: C.ink600 }, s.studyDesign)) : null,
         h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: C.blue100 },
           txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700 }, tierOf(s.curatedScore))),
       ),

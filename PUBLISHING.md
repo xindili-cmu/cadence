@@ -7,14 +7,14 @@
 
 ## 小红书（XHS）— 半自动
 
-每天产物在 `xhs/YYYY-MM-DD/`：`cover.png` + `01.png … 08.png` + `caption.txt`（首行=标题，其余=正文）。
+每天产物在 `xhs/YYYY-MM-DD/`：`cover.png` + `01.png … 0N.png`（每篇一张）+ 尾页 `0(N+1).png`（标签档位说明+关注引导）+ `caption.txt`（首行=标题，其余=正文）。
 
 平台：creator.xiaohongshu.com（桌面端支持图文发布）。首次需 Cindy 短信登录一次，cookie 保留后免登。
 
 **代填流程（Claude 用 Chrome 扩展驱动）：**
 
 1. 打开 `creator.xiaohongshu.com/publish/publish` → 切到「上传图文」tab
-2. 找到 file input，一次性上传 9 张图：`cover.png` 在前，`01–08.png` 依序
+2. 找到 file input，一次性上传全部图（8 篇时共 10 张）：`cover.png` 在前，编号图依序，最后一张编号图是尾页
 3. 标题 = `caption.txt` 首行，填入标题框
 4. **正文 = 整段注入，不要逐字 type**：
    - 已知问题：逐字 `type` 中文会偶发字符损坏（实测「荟萃」被打成「荇萃」）。
