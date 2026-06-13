@@ -21,7 +21,7 @@ window.CD_DICT = {
     'sub.sources': 'Outlets Cadence monitors', 'sub.about': 'Who Cadence is for, how it works, and why it exists', 'sub.feedback': 'Help shape where Cadence goes next',
     // About page — brand statement, how-it-works, founder story, transparency, disclaimer, contact
     'about.brand': 'Cadence is a daily evidence signal for the rehabilitation field, built for clinicians, students, educators, and coaches across physical therapy, rehab, and sports science. We surface the research and industry news most worth your time, curated from JOSPT, PTJ, PubMed, and 20+ specialty sources, refreshed every morning.',
-    'about.how.title': 'How it works',
+    'about.how.title': 'How Cadence works',
     'about.how.1': 'Every day, an automated crawl sweeps 20+ sources for the latest research and industry news.',
     'about.how.2': 'An AI scoring model ranks each item by clinical relevance, evidence level, and cross-source coverage.',
     'about.how.3': 'An editorial layer filters out off-topic noise, keeping the signal that matters to rehab.',
@@ -102,7 +102,7 @@ window.CD_DICT = {
     'sub.sources': 'Cadence 监测的信源', 'sub.about': '步频写给谁、怎么运作、为什么存在', 'sub.feedback': '一起决定 Cadence 接下来怎么走',
     // 关于页 — 品牌声明、工作原理、创始人故事、信源透明、免责声明、联系
     'about.brand': '步频是一个面向康复领域的每日循证信号聚合器，服务于物理治疗、康复与运动科学的从业者、师生和教练。我们从 JOSPT、PTJ、PubMed 及 20+ 个专业信源中筛选最值得花时间的研究与行业动态，每天早上准时更新。',
-    'about.how.title': '它是怎么运作的',
+    'about.how.title': 'Cadence 是怎么运作的',
     'about.how.1': '每天自动抓取 20+ 个信源的最新研究与行业动态。',
     'about.how.2': 'AI 评分模型按临床相关性、证据等级、多源交叉报道，对每条内容排序。',
     'about.how.3': '编辑层过滤掉无关噪音，只留下对康复真正重要的信号。',
