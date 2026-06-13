@@ -33,6 +33,57 @@ function FeedToolbar({ view, count }) {
   );
 }
 
+// ── Content-type filter bar (内容类型) ───────────────────────────────────────
+// The front filter axis: research / news / guideline / policy (tags[0]). Only 5
+// values, so it never wraps. Specialty moved to the left rail (desktop) / the
+// SpecialtySelect dropdown (mobile).
+function TypeTabs({ value = 'all', onChange = () => {}, className, style }) {
+  const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
+  const types = [
+    ['all', zh ? '全部' : 'All'],
+    ['research', zh ? '研究论文' : 'Research'],
+    ['news', zh ? '新闻' : 'News'],
+    ['guideline', zh ? '指南' : 'Guidelines'],
+    ['policy', zh ? '政策' : 'Policy'],
+  ];
+  return (
+    <div role="tablist" className={className} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', ...style }}>
+      {types.map(([id, label]) => {
+        const on = value === id;
+        return (
+          <button key={id} type="button" role="tab" aria-selected={on} onClick={() => onChange(id)} style={{
+            padding: '7px 13px', borderRadius: 'var(--radius-pill)', whiteSpace: 'nowrap', cursor: 'pointer',
+            fontFamily: 'var(--font-sans)', fontSize: 13.5, fontWeight: on ? 600 : 500,
+            border: `1px solid ${on ? 'transparent' : 'var(--border-subtle)'}`,
+            background: on ? 'var(--ink-900)' : 'var(--surface-card)',
+            color: on ? 'var(--paper)' : 'var(--text-secondary)',
+            transition: 'var(--transition-colors)',
+          }}>{label}</button>
+        );
+      })}
+    </div>
+  );
+}
+
+// Mobile specialty picker — the left-rail specialty list has no home on small
+// screens, so it folds into a native <select> (8 specialties + tech overlay).
+function SpecialtySelect({ value = 'all', onChange = () => {} }) {
+  const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
+  const cats = window.CATEGORIES || [];
+  const xcuts = window.XCUTS || [];
+  return (
+    <select value={value} onChange={(e) => onChange(e.target.value)} aria-label={zh ? '专科' : 'Specialty'} style={{
+      flex: 'none', maxWidth: '48%', fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)',
+      padding: '7px 10px', borderRadius: 'var(--radius-pill)', border: '1px solid var(--border-subtle)',
+      background: 'var(--surface-card)', cursor: 'pointer',
+    }}>
+      <option value="all">{zh ? '全部专科' : 'All specialties'}</option>
+      {cats.map((c, i) => <option key={c.id} value={c.id}>{String(i + 1).padStart(2, '0')} {window.catShort(c)}</option>)}
+      {xcuts.map((x) => <option key={x.id} value={x.id}>✦ {window.catShort(x)}</option>)}
+    </select>
+  );
+}
+
 // ── Hot topics strip (当前热点) ──────────────────────────────────────────────
 // Top of Curated only. Ranked by multi-source heat (computed in the cron:
 // distinct-source count × time decay). Renders nothing on quiet days, so the
@@ -1020,23 +1071,31 @@ function DailyBriefView({ L, date, onDate, mobile }) {
 const CD_VIEWS = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'];
 const CD_CATS  = ['all', 'orthopedic', 'neurological', 'sports', 'pediatric',
                   'geriatric', 'cardiopulmonary', 'manual-modality', 'practice', 'rehab-tech'];
+// Content type (tags[0] in news.json) — second filter axis, surfaced as the top
+// bar. 'all' = no filter. Carried in the hash as ?type= so it deep-links.
+const CD_CTYPES = ['all', 'research', 'news', 'guideline', 'policy'];
 
 function cdParseHash() {
   const raw = (location.hash || '').replace(/^#/, '') || 'curated';
   const [pathPart, qs] = raw.split('?');
   const segs = pathPart.split('/');
+  const params = new URLSearchParams(qs || '');
   const view = CD_VIEWS.includes(segs[0]) ? segs[0] : 'curated';
   const cat  = (view !== 'daily' && CD_CATS.includes(segs[1])) ? segs[1] : 'all';
   const date = (view === 'daily' && /^\d{4}-\d{2}-\d{2}$/.test(segs[1])) ? segs[1] : null;
-  const q    = new URLSearchParams(qs || '').get('q') || '';
-  return { view, category: cat, query: q, dailyDate: date };
+  const q    = params.get('q') || '';
+  const type = CD_CTYPES.includes(params.get('type')) ? params.get('type') : 'all';
+  return { view, category: cat, query: q, dailyDate: date, ctype: type };
 }
 
-function cdWriteHash(view, category, query, dailyDate) {
+function cdWriteHash(view, category, query, dailyDate, ctype) {
   let h = view;
   if (view === 'daily' && dailyDate) h += '/' + dailyDate;
   else if (category && category !== 'all') h += '/' + category;
-  if (query) h += '?q=' + encodeURIComponent(query);
+  const params = [];
+  if (query) params.push('q=' + encodeURIComponent(query));
+  if (ctype && ctype !== 'all') params.push('type=' + ctype);
+  if (params.length) h += '?' + params.join('&');
   if (h !== (location.hash || '').replace(/^#/, ''))
     history.replaceState(null, '', '#' + h);
 }
@@ -1050,6 +1109,7 @@ function FeedApp() {
   const _h0 = cdParseHash();
   const [view, setView] = React.useState(_h0.view);
   const [category, setCategory] = React.useState(_h0.category);
+  const [ctype, setCtype] = React.useState(_h0.ctype);
   const [query, setQuery] = React.useState(_h0.query);
   const [selected, setSelected] = React.useState(null);
   // Daily-edition date — lifted here so DailyBriefView and the right-rail
@@ -1060,13 +1120,13 @@ function FeedApp() {
   const _hashBusy = React.useRef(false);
   React.useEffect(() => {
     if (_hashBusy.current) return;
-    cdWriteHash(view, category, query, dailyDate);
-  }, [view, category, query, dailyDate]);
+    cdWriteHash(view, category, query, dailyDate, ctype);
+  }, [view, category, query, dailyDate, ctype]);
   React.useEffect(() => {
     const onHash = () => {
       _hashBusy.current = true;
       const h = cdParseHash();
-      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate);
+      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate); setCtype(h.ctype);
       requestAnimationFrame(() => { _hashBusy.current = false; });
     };
     window.addEventListener('hashchange', onHash);
@@ -1100,7 +1160,7 @@ function FeedApp() {
   // hundreds of cards into the DOM at once. Reset when the filter changes.
   const ALL_PAGE_SIZE = 7;
   const [visibleDays, setVisibleDays] = React.useState(ALL_PAGE_SIZE);
-  React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query]);
+  React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query, ctype]);
 
   // 中英切换 — setLang re-renders the tree; every component reads
   // CD_LANG / CD_T at render time, so the flip is instant and complete.
@@ -1148,6 +1208,8 @@ function FeedApp() {
   const matchesFilter = (s) => {
     if (xcut) { if (!s[xcut.flag]) return false; }
     else if (category !== 'all' && s.category !== category) return false;
+    // Content-type axis (research / news / guideline / policy) = tags[0].
+    if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
     // Search across both languages regardless of display language.
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
@@ -1219,7 +1281,8 @@ function FeedApp() {
     <div style={{ minHeight: '100vh', background: 'var(--surface-page)' }}>
       <AppHeader query={query} onQuery={setQuery} lang={lang} onLang={toggleLang} mobile={isMobile} />
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
-        {!isMobile && <NavRail view={view} onView={setView} />}
+        {!isMobile && <NavRail view={view} onView={setView} category={category}
+          onCategory={(c) => { setCategory(c); if (view !== 'curated' && view !== 'all') setView('curated'); }} />}
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
@@ -1228,7 +1291,7 @@ function FeedApp() {
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
               as ambient context rather than a search result. */}
-          {isMobile && !isSources && view === 'curated' && !q && category === 'all' && (
+          {isMobile && !isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
             <MobileSignalCard stories={railStories} dayKey={railDay} onPick={scrollToStory} />
           )}
 
@@ -1258,18 +1321,22 @@ function FeedApp() {
           )}
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
-          {!isSources && view === 'curated' && !q && category === 'all' && (
+          {!isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
             <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} />
           )}
 
           {!isSources && !isFeedback && !isDaily && !isAbout && (
             <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
               background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
-              {/* Mobile: 9 pills don't fit — single-row horizontal scroll
-                  (.cd-hscroll hides the scrollbar, defined in index.html). */}
-              <CategoryTabs value={category} onChange={setCategory}
-                className={isMobile ? 'cd-hscroll' : undefined}
-                style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2 } : undefined} />
+              {/* Top axis = content type. Specialty lives in the left rail on
+                  desktop; on mobile it folds into the dropdown beside this bar.
+                  .cd-hscroll hides the scrollbar (defined in index.html). */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                {isMobile && <SpecialtySelect value={category} onChange={setCategory} />}
+                <TypeTabs value={ctype} onChange={setCtype}
+                  className={isMobile ? 'cd-hscroll' : undefined}
+                  style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2, flex: 1, minWidth: 0 } : undefined} />
+              </div>
             </div>
           )}
 

@@ -69,9 +69,31 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
 // removed 2026-06-09 once Sources view shipped: it auto-builds the real list
 // from window.CD_STORIES so a static left-rail copy was both redundant and
 // semantically wrong ("Following" implies user-curated subscriptions).
-function NavRail({ view, onView }) {
+// SpecBtn — one specialty row in the left rail's 专科 section. Index (01–08 or
+// ✦ for the tech overlay) + accent dot + label; active state mirrors the nav.
+function SpecBtn({ id, label, dot, idx, active, onClick }) {
+  return (
+    <button type="button" onClick={() => onClick(id)} style={{
+      display: 'flex', alignItems: 'center', gap: 8, padding: '6px 12px', borderRadius: 'var(--radius-md)',
+      border: 'none', cursor: 'pointer', textAlign: 'left', width: '100%',
+      fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: active ? 600 : 500,
+      background: active ? 'var(--surface-active)' : 'transparent',
+      color: active ? 'var(--green-800)' : 'var(--text-secondary)',
+      transition: 'var(--transition-colors)',
+    }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, width: 14, flex: 'none', textAlign: idx === '✦' ? 'center' : 'left', color: active ? 'var(--green-600)' : 'var(--ink-400)' }}>{idx || ''}</span>
+      <span style={{ width: 7, height: 7, borderRadius: '999px', flex: 'none', background: dot || 'transparent' }} />
+      <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label}</span>
+    </button>
+  );
+}
+
+function NavRail({ view, onView, category, onCategory }) {
+  const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
+  const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 7px' };
   return (
     <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start' }}>
+      <div style={eyebrow}>{zh ? '浏览' : 'Browse'}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {window.CD_NAV.map((item) => {
           const active = view === item.id;
@@ -90,6 +112,24 @@ function NavRail({ view, onView }) {
           );
         })}
       </div>
+
+      {/* Specialty filter — moved here from the old top tab bar. Selecting one
+          jumps to a feed view (handled by onCategory in app.main). */}
+      {typeof onCategory === 'function' && (
+        <>
+          <div style={{ height: 1, background: 'var(--border-subtle)', margin: '16px 8px 14px' }} />
+          <div style={eyebrow}>{zh ? '专科' : 'Specialty'}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            <SpecBtn id="all" label={zh ? '全部' : 'All'} dot={null} idx={null} active={category === 'all'} onClick={onCategory} />
+            {CATEGORIES.map((c, i) => (
+              <SpecBtn key={c.id} id={c.id} label={catShort(c)} dot={`var(--cat-${c.accent})`} idx={String(i + 1).padStart(2, '0')} active={category === c.id} onClick={onCategory} />
+            ))}
+            {(window.XCUTS || []).map((x) => (
+              <SpecBtn key={x.id} id={x.id} label={catShort(x)} dot={`var(--cat-${x.accent})`} idx={'✦'} active={category === x.id} onClick={onCategory} />
+            ))}
+          </div>
+        </>
+      )}
     </nav>
   );
 }
