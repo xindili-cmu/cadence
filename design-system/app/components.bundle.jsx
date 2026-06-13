@@ -460,7 +460,6 @@ function SourceMonogram({ source, accent }) {
 function NewsCard({
   title, summary, source, sourceUrl = '#', time, date, category,
   score, whyItMatters, variant = 'default', selected = false,
-  saved = false, onToggleSave, // bookmark state — persisted to localStorage by FeedApp
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   onClick, onOpen, style, ...rest
@@ -519,25 +518,6 @@ function NewsCard({
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>
           {time}
         </span>
-        {onToggleSave && (
-          <button
-            onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
-            aria-label={saved ? t('unsave', 'Remove bookmark') : t('save', 'Save story')}
-            title={saved ? t('unsave', 'Remove bookmark') : t('saveHint', 'Save story (stored in this browser)')}
-            style={{
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              width: 26, height: 26, padding: 0, flex: 'none',
-              background: 'transparent', border: 'none', borderRadius: 'var(--radius-xs)',
-              cursor: 'pointer',
-            }}
-          >
-            <Icon
-              name={saved ? 'bookmark-check' : 'bookmark'}
-              size={15}
-              style={{ color: saved ? 'var(--green-600)' : 'var(--ink-300)' }}
-            />
-          </button>
-        )}
       </div>
 
       {/* title — a real link to the original article (the hover underline

@@ -16,7 +16,7 @@ const cdDayLabels = () => {
 
 function FeedToolbar({ view, count }) {
   const t = window.CD_T;
-  const id = ['curated', 'all', 'daily', 'saved', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
+  const id = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
@@ -759,7 +759,7 @@ function DailyArchiveRail({ current, onPick }) {
   );
 }
 
-function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
+function DailyBriefView({ L, date, onDate, mobile }) {
   const t = window.CD_T;
   const zh = window.CD_LANG === 'zh';
   const [editions, setEditions] = React.useState(null); // null = manifest loading
@@ -996,7 +996,7 @@ function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
 // ── Hash-based deep linking ──────────────────────────────────────────────────
 // Format: #view/category?q=query  (daily uses #daily/YYYY-MM-DD)
 // Examples: #curated  #all/neurological  #curated?q=balance  #daily/2026-06-12
-const CD_VIEWS = ['curated', 'all', 'daily', 'saved', 'sources', 'about', 'feedback'];
+const CD_VIEWS = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'];
 const CD_CATS  = ['all', 'orthopedic', 'neurological', 'sports', 'pediatric',
                   'geriatric', 'cardiopulmonary', 'manual-modality', 'practice', 'rehab-tech'];
 
@@ -1050,22 +1050,6 @@ function FeedApp() {
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
-  }, []);
-
-  // Saved stories — full snapshots keyed by id, persisted to localStorage so
-  // bookmarks survive reloads AND survive the story rotating out of news.json.
-  // localStorage can throw (private browsing / disabled), so every touch is wrapped.
-  const [savedMap, setSavedMap] = React.useState(() => {
-    try { return JSON.parse(localStorage.getItem('cd-saved-v1') || '{}'); }
-    catch (e) { return {}; }
-  });
-  const toggleSave = React.useCallback((story) => {
-    setSavedMap((prev) => {
-      const next = { ...prev };
-      if (next[story.id]) delete next[story.id]; else next[story.id] = story;
-      try { localStorage.setItem('cd-saved-v1', JSON.stringify(next)); } catch (e) { /* noop */ }
-      return next;
-    });
   }, []);
 
   // All-stories archive — lazy-loaded the first time the user opens the All
@@ -1154,18 +1138,6 @@ function FeedApp() {
     : window.CD_STORIES;
   let stories = pool.filter(matchesFilter);
 
-  // Saved view = bookmarked stories. Entries still in the live feed render
-  // fresh; bookmarks that have rotated out of news.json render from their
-  // localStorage snapshot, bucketed under 'older'.
-  if (view === 'saved') {
-    const live = stories.filter((s) => savedMap[s.id]);
-    const liveIds = new Set(window.CD_STORIES.map((s) => s.id));
-    const ghosts = Object.values(savedMap)
-      .filter((s) => !liveIds.has(s.id) && matchesFilter(s))
-      .map((s) => ({ ...s, day: 'older' }));
-    stories = [...live, ...ghosts];
-  }
-
   // Daily brief view renders pre-built editions (briefs/daily/*.json) via
   // DailyBriefView below — it short-circuits the feed like Sources/Feedback,
   // so no daily-specific story filtering happens here anymore.
@@ -1211,7 +1183,7 @@ function FeedApp() {
   const hasMoreDays = view === 'all' && grouped.length > visibleDays;
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
-  const leadId = (!compact && !isDaily && view !== 'saved' && grouped.length && grouped[0].items.length)
+  const leadId = (!compact && !isDaily && grouped.length && grouped[0].items.length)
     ? [...grouped[0].items].sort((a, b) => b.score - a.score)[0].id : null;
 
   // Rail day: Daily-brief view pins yesterday; other views prefer today but
@@ -1260,37 +1232,8 @@ function FeedApp() {
           {/* Daily edition branch — AIHOT-style fixed daily slices with their
               own lead / sections / archive navigation; short-circuits the feed. */}
           {isDaily && (
-            <DailyBriefView L={L} savedMap={savedMap} toggleSave={toggleSave}
+            <DailyBriefView L={L}
               date={dailyDate} onDate={setDailyDate} mobile={isMobile} />
-          )}
-
-          {/* Device-local storage disclosure — bookmarks live in this browser's
-              localStorage: no account, no server, no sync. Shown on every visit
-              to Saved so the boundary is never a surprise. Export button lets
-              users save a JSON snapshot of their bookmarks to disk. */}
-          {!isSources && view === 'saved' && (
-            <div style={{ display: 'flex', gap: 9, alignItems: 'center', marginBottom: 16, padding: '10px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.5, color: 'var(--text-secondary)' }}>
-              <Icon name="monitor-smartphone" size={15} style={{ color: 'var(--ink-300)', flex: 'none' }} />
-              <span style={{ flex: 1 }}>{t('savedNote')}</span>
-              {Object.keys(savedMap).length > 0 && (
-                <button
-                  onClick={() => {
-                    const items = Object.values(savedMap);
-                    const date = new Intl.DateTimeFormat('en-CA').format(new Date());
-                    const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), count: items.length, items }, null, 2)], { type: 'application/json' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url; a.download = `cadence-saved-${date}.json`;
-                    document.body.appendChild(a); a.click();
-                    document.body.removeChild(a); URL.revokeObjectURL(url);
-                  }}
-                  style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '4px 10px', borderRadius: 6, border: '1px solid var(--border-subtle)', background: 'transparent', color: 'var(--text-secondary)', fontSize: 12, cursor: 'pointer', fontFamily: 'var(--font-mono)', letterSpacing: '0.03em', flex: 'none', whiteSpace: 'nowrap' }}
-                >
-                  <Icon name="download" size={12} />
-                  {t('savedExport') || 'Export'}
-                </button>
-              )}
-            </div>
           )}
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
@@ -1332,7 +1275,7 @@ function FeedApp() {
           {!isSources && !isFeedback && !isDaily && !isAbout && grouped.length === 0 && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
-              <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
+              <div>{q ? `${t('emptySearch')} “${query}”` : (isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
             </div>
           )}
 
@@ -1345,8 +1288,7 @@ function FeedApp() {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {g.items.map((raw) => {
-                  // Render localized copy; bookmark the RAW story so the
-                  // snapshot keeps both languages for later toggles.
+                  // Render localized copy (title/summary/why per active language).
                   const s = L(raw);
                   return (
                     <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
@@ -1358,7 +1300,6 @@ function FeedApp() {
                         journalMeta={s.journalMeta} tech={s.tech}
                         title={s.title} summary={s.summary} whyItMatters={s.why}
                         selected={selected === s.id}
-                        saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}
                         onClick={() => setSelected(selected === s.id ? null : s.id)} />
                       {!compact && <RelatedRow related={s.related} />}
                     </div>
