@@ -477,7 +477,7 @@ function SourcesGrid({ stories }) {
         {/* Search input */}
         <div style={{ position: 'relative', flex: '1 1 180px', minWidth: 140, maxWidth: 280 }}>
           <span style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-tertiary)', pointerEvents: 'none', lineHeight: 1 }}>
-            {React.createElement(lucide.Search, { size: 13 })}
+            <Icon name="search" size={13} />
           </span>
           <input
             type="search"
@@ -1210,7 +1210,7 @@ function FeedApp() {
                   }}
                   style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '4px 10px', borderRadius: 6, border: '1px solid var(--border-subtle)', background: 'transparent', color: 'var(--text-secondary)', fontSize: 12, cursor: 'pointer', fontFamily: 'var(--font-mono)', letterSpacing: '0.03em', flex: 'none', whiteSpace: 'nowrap' }}
                 >
-                  {React.createElement(lucide.Download, { size: 12 })}
+                  <Icon name="download" size={12} />
                   {t('savedExport') || 'Export'}
                 </button>
               )}
