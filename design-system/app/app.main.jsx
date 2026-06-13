@@ -419,7 +419,7 @@ function AboutView({ onView, mobile }) {
   const zh = window.CD_LANG === 'zh';
   const srcCount = (window.CD_SOURCES || []).length || 20;
 
-  const h2 = { margin: '0 0 22px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
+  const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const para = { margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.85, color: 'var(--text-secondary)' };
 
   const stats = [
@@ -436,14 +436,14 @@ function AboutView({ onView, mobile }) {
 
   return (
     <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: mobile ? 36 : 44 }}>
-      {/* Header unit — hero masthead + stat row kept tight together */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-        {/* Hero — full-bleed scrubs-blue masthead, white serif statement */}
-        <section style={{ background: 'var(--blue-700)', borderRadius: 'var(--radius-lg)', padding: mobile ? '28px 22px' : '42px 44px' }}>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--blue-300)', marginBottom: 16 }}>{zh ? '关于 · About' : 'About · 关于'}</div>
-          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.5, fontWeight: 500, letterSpacing: '-0.01em', color: '#ffffff' }}>
-            {t('about.brand')}
-          </p>
+      {/* Header unit — magazine-feature hero + stat row kept together */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+        {/* Hero — wordmark title, hairline rule, serif lead, supporting line */}
+        <section>
+          <div style={{ fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: 16 }}>{zh ? '步频 · Cadence' : 'Cadence · 步频'}</div>
+          <div style={{ height: 1, background: 'var(--border-subtle)', marginBottom: 18 }} />
+          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.6, fontWeight: 500, color: 'var(--blue-700)' }}>{t('about.hero.lead')}</p>
+          <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.7, color: 'var(--text-tertiary)' }}>{t('about.hero.sub')}</p>
         </section>
 
         {/* Stats — hairline-bounded row, no cards */}
@@ -459,7 +459,7 @@ function AboutView({ onView, mobile }) {
 
       {/* How it works — editorial numbered list */}
       <section>
-        <h2 style={h2}>{t('about.how.title')}</h2>
+        <h2 style={h2}><Icon name="workflow" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.how.title')}</h2>
         <div>
           {steps.map((k, i) => (
             <div key={k} style={{ display: 'flex', gap: 18, alignItems: 'baseline', paddingBottom: 18, marginBottom: 18, borderBottom: i < steps.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}>
@@ -472,7 +472,7 @@ function AboutView({ onView, mobile }) {
 
       {/* Founder story — plain prose, signed off */}
       <section>
-        <h2 style={h2}>{t('about.why.title')}</h2>
+        <h2 style={h2}><Icon name="heart" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.why.title')}</h2>
         {['p1', 'p2', 'p3'].map((k) => (
           <p key={k} style={para}>{t('about.why.' + k)}</p>
         ))}
