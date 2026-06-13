@@ -26,7 +26,7 @@ function FeedToolbar({ view, count }) {
         )}
       </div>
       <span style={{ flex: 1 }} />
-      {id !== 'feedback' && id !== 'daily' && (
+      {(id === 'curated' || id === 'all') && (
         <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
       )}
     </div>
@@ -414,67 +414,104 @@ function FeedbackView() {
 // CD_DICT (about.*), so en/zh stay fully separated per the language-toggle
 // rule. CTAs call onView() to hop to Sources / Feedback (which also rewrites
 // the hash, keeping deep links intact).
-function AboutView({ onView }) {
+function AboutView({ onView, mobile }) {
   const t = window.CD_T;
-  const sectionTitle = {
-    margin: '0 0 14px', display: 'flex', alignItems: 'center', gap: 9,
-    fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)',
-  };
-  const para = {
-    margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 14.5,
-    lineHeight: 1.75, color: 'var(--text-secondary)',
-  };
-  const card = {
-    background: 'var(--surface-card)', border: '1px solid var(--border-subtle)',
-    borderRadius: 'var(--radius-lg)', padding: '20px 22px', boxShadow: 'var(--shadow-xs)',
-  };
-  return (
-    <div style={{ maxWidth: 680, display: 'flex', flexDirection: 'column', gap: 36 }}>
-      {/* Brand statement — hero */}
-      <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 19, lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>
-        {t('about.brand')}
-      </p>
+  const zh = window.CD_LANG === 'zh';
+  const srcCount = (window.CD_SOURCES || []).length || 20;
 
-      {/* How it works — three numbered steps */}
+  const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)' };
+  const sectionTitle = {
+    margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: 9,
+    fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)',
+  };
+  const para = { margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.8, color: 'var(--text-secondary)' };
+  const panel = (extra) => ({ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-lg)', ...extra });
+
+  const stats = [
+    { v: String(srcCount), l: zh ? '专业信源' : 'sources' },
+    { v: '8', l: zh ? '临床专科' : 'specialties' },
+    { v: '05:30', l: zh ? '每日更新' : 'daily refresh' },
+    { v: '中·EN', l: zh ? '双语' : 'bilingual' },
+  ];
+  const steps = [
+    { icon: 'radar', k: '1' },
+    { icon: 'sliders-horizontal', k: '2' },
+    { icon: 'filter', k: '3' },
+  ];
+
+  return (
+    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: 40 }}>
+      {/* Hero panel — brand statement on a tinted surface with an accent bar */}
+      <section style={panel({ background: 'var(--blue-50)', border: '1px solid var(--blue-100)', padding: mobile ? '24px 20px 24px 24px' : '32px 36px 32px 38px' })}>
+        <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--blue-600)' }} />
+        <div style={{ ...eyebrow, marginBottom: 14 }}>{zh ? '关于 · Cadence 步频' : 'About · Cadence 步频'}</div>
+        <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.55, fontWeight: 500, color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
+          {t('about.brand')}
+        </p>
+      </section>
+
+      {/* Stat strip */}
+      <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr 1fr' : 'repeat(4, 1fr)', gap: 12 }}>
+        {stats.map((s, i) => (
+          <div key={i} style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', padding: '16px 12px', textAlign: 'center' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1.1 }}>{s.v}</div>
+            <div style={{ marginTop: 6, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>{s.l}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* How it works — icon step cards */}
       <section>
-        <h2 style={sectionTitle}><Icon name="workflow" size={18} style={{ color: 'var(--green-700)' }} />{t('about.how.title')}</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
-          {[1, 2, 3].map((n) => (
-            <div key={n} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: 'var(--green-600)', flex: 'none', width: 18, marginTop: 2 }}>{n}</span>
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('about.how.' + n)}</span>
+        <h2 style={sectionTitle}><Icon name="workflow" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.how.title')}</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : 'repeat(3, 1fr)', gap: 12 }}>
+          {steps.map((st) => (
+            <div key={st.k} style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '18px 18px 20px', boxShadow: 'var(--shadow-xs)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 38, height: 38, borderRadius: '50%', background: 'var(--blue-50)', marginBottom: 14 }}>
+                <Icon name={st.icon} size={19} style={{ color: 'var(--blue-600)' }} />
+              </div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 7 }}>{zh ? '第 ' + st.k + ' 步' : 'Step ' + st.k}</div>
+              <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('about.how.' + st.k)}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Why I built this — founder story */}
-      <section>
-        <h2 style={sectionTitle}><Icon name="heart" size={18} style={{ color: 'var(--green-700)' }} />{t('about.why.title')}</h2>
+      {/* Founder story — white panel, blue accent bar, signed off */}
+      <section style={panel({ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-xs)', padding: mobile ? '24px 20px 22px 24px' : '30px 32px 26px 34px' })}>
+        <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--blue-600)' }} />
+        <h2 style={sectionTitle}><Icon name="heart" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.why.title')}</h2>
         {['p1', 'p2', 'p3'].map((k) => (
           <p key={k} style={para}>{t('about.why.' + k)}</p>
         ))}
+        <div style={{ marginTop: 6, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
       </section>
 
-      {/* Source transparency — links to the Sources wall */}
-      <section style={card}>
-        <h2 style={sectionTitle}><Icon name="rss" size={17} style={{ color: 'var(--green-700)' }} />{t('about.sources.title')}</h2>
-        <p style={{ ...para, marginBottom: 16 }}>{t('about.sources.body')}</p>
-        <Button variant="secondary" size="sm" iconStart="rss" onClick={() => onView('sources')}>{t('about.sources.cta')}</Button>
-      </section>
+      {/* Next steps — sources + contact as clickable link cards */}
+      <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : '1fr 1fr', gap: 12 }}>
+        {[
+          { icon: 'rss', title: t('about.sources.title'), body: t('about.sources.body'), cta: t('about.sources.cta'), view: 'sources' },
+          { icon: 'message-circle', title: t('about.contact.title'), body: t('about.contact.body'), cta: t('about.contact.cta'), view: 'feedback' },
+        ].map((c) => (
+          <button key={c.view} type="button" onClick={() => onView(c.view)}
+            style={{ textAlign: 'left', cursor: 'pointer', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '20px 22px', boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+              <Icon name={c.icon} size={18} style={{ color: 'var(--blue-600)' }} />
+              <span style={{ flex: 1, fontFamily: 'var(--font-display)', fontSize: 'var(--text-lg)', fontWeight: 600, color: 'var(--text-primary)' }}>{c.title}</span>
+              <Icon name="arrow-right" size={16} style={{ color: 'var(--text-tertiary)' }} />
+            </div>
+            <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{c.body}</p>
+            <span style={{ marginTop: 4, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', fontWeight: 500, color: 'var(--blue-600)' }}>{c.cta} →</span>
+          </button>
+        ))}
+      </div>
 
-      {/* Disclaimer */}
-      <section>
-        <h2 style={sectionTitle}><Icon name="info" size={17} style={{ color: 'var(--green-700)' }} />{t('about.disclaimer.title')}</h2>
-        <p style={{ ...para, margin: 0, fontSize: 13, color: 'var(--text-tertiary)' }}>{t('about.disclaimer.body')}</p>
-      </section>
-
-      {/* Contact — links to the Feedback form */}
-      <section>
-        <h2 style={sectionTitle}><Icon name="message-circle" size={17} style={{ color: 'var(--green-700)' }} />{t('about.contact.title')}</h2>
-        <p style={{ ...para, marginBottom: 16 }}>{t('about.contact.body')}</p>
-        <Button size="sm" iconStart="message-circle" onClick={() => onView('feedback')}>{t('about.contact.cta')}</Button>
-      </section>
+      {/* Disclaimer — quiet footer note */}
+      <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', paddingTop: 4 }}>
+        <Icon name="info" size={15} style={{ color: 'var(--ink-300)', flex: 'none', marginTop: 2 }} />
+        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+          <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
+        </p>
+      </div>
     </div>
   );
 }
@@ -1226,7 +1263,7 @@ function FeedApp() {
           {/* About branch — static brand / mission / founder page;
               short-circuits the feed like Feedback. CTAs hop to other views. */}
           {isAbout && (
-            <AboutView onView={setView} />
+            <AboutView onView={setView} mobile={isMobile} />
           )}
 
           {/* Daily edition branch — AIHOT-style fixed daily slices with their
