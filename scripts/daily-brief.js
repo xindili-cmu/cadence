@@ -27,7 +27,18 @@ const { callAnthropic, callGemini, LLM_PROVIDER } = require('./news-refresh.js')
 const DRY_RUN = process.env.DRY_RUN === 'true';
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 const DAILY_DIR = path.join(__dirname, '..', 'briefs', 'daily');
-const WINDOW_HOURS = 26;       // daily full-run cadence + slack (same as wechat-brief)
+const WINDOW_HOURS_WEEKDAY = 26;  // daily full-run cadence + slack
+const WINDOW_HOURS_WEEKEND = 50;  // Sat/Sun: merge two days of articles (journals go quiet on weekends)
+
+// Beijing calendar weekday at run time (0=Sun, 6=Sat).
+function beijingWeekday() {
+  const now = new Date();
+  return new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Shanghai' })).getDay();
+}
+function windowHours() {
+  const day = beijingWeekday();
+  return (day === 0 || day === 6) ? WINDOW_HOURS_WEEKEND : WINDOW_HOURS_WEEKDAY;
+}
 const SECTION_CAP = 6;         // per-section item ceiling — keeps one edition scannable
 
 // Section order mirrors the site's CATEGORIES order (components/feed/categories.js).
@@ -110,12 +121,14 @@ async function main() {
   if (process.env.REFRESH_MODE === 'direct') { console.log('  direct mode — daily edition is a full-run product, skipping.'); return; }
 
   const data = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
+  const WINDOW_HOURS = windowHours();
+  const isWeekend = WINDOW_HOURS === WINDOW_HOURS_WEEKEND;
   const cutoff = Date.now() - WINDOW_HOURS * 3600 * 1000;
   const windowItems = (data.items || [])
     .filter(i => new Date(i.publishedAt).getTime() >= cutoff)
     .sort((a, b) => b.curatedScore - a.curatedScore);
 
-  if (!windowItems.length) { console.log('  近 26h 无新条目，今日不出刊。'); return; }
+  if (!windowItems.length) { console.log(`  近 ${WINDOW_HOURS}h 无新条目，今日不出刊。`); return; }
 
   const dateStr = beijingDate();
 
@@ -150,7 +163,7 @@ async function main() {
     topScore: sectionItems.length ? sectionItems[0].curatedScore : null,
   };
 
-  console.log(`  ${stats.events} 条进刊 · ${stats.specialties} 个版块 · ${flashes.length} 条快讯 · LLM: ${LLM_PROVIDER}`);
+  console.log(`  ${stats.events} 条进刊 · ${stats.specialties} 个版块 · ${flashes.length} 条快讯 · 窗口 ${WINDOW_HOURS}h${isWeekend ? '（周末合并）' : ''} · LLM: ${LLM_PROVIDER}`);
 
   if (DRY_RUN) {
     console.log('  DRY_RUN — sections:', sections.map(s => `${s.category}×${s.items.length}`).join(' '));
