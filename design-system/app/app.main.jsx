@@ -435,23 +435,26 @@ function AboutView({ onView, mobile }) {
   ];
 
   return (
-    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: mobile ? 38 : 46 }}>
-      {/* Hero — full-bleed scrubs-blue masthead, white serif statement */}
-      <section style={{ background: 'var(--blue-700)', borderRadius: 'var(--radius-lg)', padding: mobile ? '28px 22px' : '42px 44px' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--blue-300)', marginBottom: 16 }}>{zh ? '关于 · About' : 'About · 关于'}</div>
-        <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.5, fontWeight: 500, letterSpacing: '-0.01em', color: '#ffffff' }}>
-          {t('about.brand')}
-        </p>
-      </section>
+    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: mobile ? 36 : 44 }}>
+      {/* Header unit — hero masthead + stat row kept tight together */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {/* Hero — full-bleed scrubs-blue masthead, white serif statement */}
+        <section style={{ background: 'var(--blue-700)', borderRadius: 'var(--radius-lg)', padding: mobile ? '28px 22px' : '42px 44px' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--blue-300)', marginBottom: 16 }}>{zh ? '关于 · About' : 'About · 关于'}</div>
+          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.5, fontWeight: 500, letterSpacing: '-0.01em', color: '#ffffff' }}>
+            {t('about.brand')}
+          </p>
+        </section>
 
-      {/* Stats — hairline-bounded row, no cards */}
-      <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
-        {stats.map((s, i) => (
-          <div key={i} style={{ flex: 1, textAlign: 'center', padding: '18px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1 }}>{s.v}</div>
-            <div style={{ marginTop: 6, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>{s.l}</div>
-          </div>
-        ))}
+        {/* Stats — hairline-bounded row, no cards */}
+        <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
+          {stats.map((s, i) => (
+            <div key={i} style={{ flex: 1, textAlign: 'center', padding: '18px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1 }}>{s.v}</div>
+              <div style={{ marginTop: 6, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>{s.l}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* How it works — editorial numbered list */}
@@ -1221,7 +1224,7 @@ function FeedApp() {
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
-          {!isDaily && <FeedToolbar view={view} count={isSources || isFeedback || isAbout ? null : stories.length} />}
+          {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />}
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
