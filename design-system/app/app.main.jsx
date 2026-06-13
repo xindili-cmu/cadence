@@ -441,9 +441,8 @@ function AboutView({ onView, mobile }) {
         {/* Hero — wordmark title, hairline rule, serif lead, supporting line */}
         <section>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: 16 }}>{zh ? '步频 · Cadence' : 'Cadence · 步频'}</div>
-          <div style={{ height: 1, background: 'var(--border-subtle)', marginBottom: 18 }} />
-          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.6, fontWeight: 500, color: 'var(--blue-700)' }}>{t('about.hero.lead')}</p>
-          <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.7, color: 'var(--text-tertiary)' }}>{t('about.hero.sub')}</p>
+          <div style={{ height: 1, background: 'var(--border-subtle)', marginBottom: 20 }} />
+          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>{t('about.brand')}</p>
         </section>
 
         {/* Stats — hairline-bounded row, no cards */}
