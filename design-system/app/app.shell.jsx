@@ -102,8 +102,14 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   // Beijing crawl) → render nothing instead of an empty box + zeroed pulse.
   if (!stories.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
   const top = [...stories].sort((a, b) => b.score - a.score).slice(0, 3);
-  const counts = CATEGORIES.map((c) => ({ ...c, n: stories.filter((s) => s.category === c.id).length }));
+  // Ranked distribution: keep each specialty's taxonomy index (01–08) but sort
+  // rows by today's volume so the most-covered area reads first.
+  const counts = CATEGORIES
+    .map((c, i) => ({ ...c, idx: i + 1, n: stories.filter((s) => s.category === c.id).length }))
+    .sort((a, b) => b.n - a.n);
   const maxN = Math.max(1, ...counts.map((c) => c.n));
+  const activeCats = counts.filter((c) => c.n > 0).length;
+  const pulseZh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   return (
     <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start' }}>
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
@@ -139,6 +145,13 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
             <Icon name={whyOpen ? 'chevron-up' : 'circle-help'} size={14} style={{ color: whyOpen ? 'var(--text-secondary)' : 'var(--ink-300)' }} />
           </button>
         </div>
+        {/* header stat — total volume + how many specialties it spans today */}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 13 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 21, fontWeight: 600, color: 'var(--blue-600)' }}>{stories.length}</span>
+          <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--text-tertiary)' }}>
+            {pulseZh ? `篇 · 横跨 ${activeCats} 个专科` : `stories · ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}`}
+          </span>
+        </div>
         {whyOpen && (
           <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 12, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
             {window.CD_T('whyCatsBody')}
@@ -146,7 +159,8 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
           {counts.map((c) => (
-            <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 8, opacity: c.n === 0 ? 0.5 : 1 }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, color: 'var(--ink-400)', width: 16, flex: 'none' }}>{String(c.idx).padStart(2, '0')}</span>
               <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${c.accent})`, flex: 'none' }} />
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{catLabel(c)}</span>
               <span style={{ width: 54, height: 4, borderRadius: '999px', background: 'var(--ink-100)', overflow: 'hidden', flex: 'none' }}>
@@ -160,7 +174,8 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
           {(window.XCUTS || []).map((x) => {
             const n = stories.filter((s) => s[x.flag]).length;
             return (
-              <div key={x.id} style={{ display: 'flex', alignItems: 'center', gap: 10, borderTop: '1px solid var(--border-subtle)', paddingTop: 9 }}>
+              <div key={x.id} style={{ display: 'flex', alignItems: 'center', gap: 8, borderTop: '1px solid var(--border-subtle)', paddingTop: 9 }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--ink-400)', width: 16, flex: 'none', textAlign: 'center' }}>✦</span>
                 <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${x.accent})`, flex: 'none' }} />
                 <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{catLabel(x)}</span>
                 <span style={{ width: 54, height: 4, borderRadius: '999px', background: 'var(--ink-100)', overflow: 'hidden', flex: 'none' }}>
