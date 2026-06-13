@@ -30,9 +30,11 @@
      JSX compile). app.min.js is generated from design-system/app/*.jsx by
      scripts/build-app.js (run by .github/workflows/build-app.yml on push, or
      locally via `npm run build-app`). -->
-<script src="https://unpkg.com/lucide@0.544.0/dist/umd/lucide.min.js"></script>
-<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<!-- Self-hosted (same-origin) so the site works where unpkg/Google CDNs are blocked
+     or slow — notably mainland China, the core PT audience. Files vendored under /vendor. -->
+<script src="vendor/lucide-0.544.0.min.js"></script>
+<script src="vendor/react-18.3.1.min.js"></script>
+<script src="vendor/react-dom-18.3.1.min.js"></script>
 
 <style>
   html, body { margin: 0; background: var(--surface-page); }
