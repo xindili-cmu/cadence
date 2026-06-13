@@ -11,13 +11,20 @@
 <!-- SEO / share cards. og:url + og:image need the production domain —
      fill in once the Cloudflare hostname is locked. -->
 <meta name="description" content="Cadence (步频) — daily curated physical therapy & rehab research for clinicians. AI-scored signal from JOSPT, PTJ, PubMed and 20+ journals across orthopedic, neuro, sports, pediatric and geriatric PT.">
-<meta name="theme-color" content="#FAFAF6">
+<meta name="theme-color" content="#F7F9FB">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cadence 步频">
 <meta property="og:title" content="Cadence — Keeping pace with the evidence">
 <meta property="og:description" content="Daily curated physical therapy & rehab research for clinicians. AI-scored signal from JOSPT, PTJ, PubMed and 20+ journals.">
-<!-- TODO once domain is live: <meta property="og:url" content="https://…"> and <meta property="og:image" content="https://…/og-card.png"> -->
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="https://incadencept.com/">
+<meta property="og:image" content="https://incadencept.com/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cadence 步频 — keeping pace with the evidence">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cadence — Keeping pace with the evidence">
+<meta name="twitter:description" content="Daily curated physical therapy & rehab research for clinicians.">
+<meta name="twitter:image" content="https://incadencept.com/og-card.png">
 
 <!-- RSS feed — updated on each news-refresh run. SITE_URL is set via env var. -->
 <link rel="alternate" type="application/rss+xml" title="Cadence 步频 — PT Research Signal" href="/rss.xml">
@@ -49,7 +56,7 @@
 <div id="root">
   <!-- Pre-hydration skeleton in design-system tokens so first paint matches the brand.
        Animated equalizer bars echo the Cadence logo mark (and the "步频 / cadence" idea). -->
-  <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#FAFAF6">
+  <div style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;background:#F7F9FB">
     <svg width="84" height="74" viewBox="0 0 84 74" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loading Cadence" style="overflow:visible">
       <g transform="translate(8 4) skewX(-22.49)" fill="#3D74B8">
         <rect x="2"  y="44" width="6" height="22" rx="2"><animate attributeName="height" values="22;58;22" dur="1.1s" begin="0s"    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" keyTimes="0;0.5;1"/><animate attributeName="y" values="44;26;44" dur="1.1s" begin="0s"    repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1" keyTimes="0;0.5;1"/></rect>
