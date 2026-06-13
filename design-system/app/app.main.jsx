@@ -419,13 +419,8 @@ function AboutView({ onView, mobile }) {
   const zh = window.CD_LANG === 'zh';
   const srcCount = (window.CD_SOURCES || []).length || 20;
 
-  const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)' };
-  const sectionTitle = {
-    margin: '0 0 16px', display: 'flex', alignItems: 'center', gap: 9,
-    fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)',
-  };
-  const para = { margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.8, color: 'var(--text-secondary)' };
-  const panel = (extra) => ({ position: 'relative', overflow: 'hidden', borderRadius: 'var(--radius-lg)', ...extra });
+  const h2 = { margin: '0 0 22px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
+  const para = { margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.85, color: 'var(--text-secondary)' };
 
   const stats = [
     { v: String(srcCount), l: zh ? '专业信源' : 'sources' },
@@ -433,85 +428,72 @@ function AboutView({ onView, mobile }) {
     { v: '05:30', l: zh ? '每日更新' : 'daily refresh' },
     { v: '中·EN', l: zh ? '双语' : 'bilingual' },
   ];
-  const steps = [
-    { icon: 'radar', k: '1' },
-    { icon: 'sliders-horizontal', k: '2' },
-    { icon: 'filter', k: '3' },
+  const steps = ['1', '2', '3'];
+  const actions = [
+    { title: t('about.sources.title'), body: t('about.sources.body'), cta: t('about.sources.cta'), view: 'sources' },
+    { title: t('about.contact.title'), body: t('about.contact.body'), cta: t('about.contact.cta'), view: 'feedback' },
   ];
 
   return (
-    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: 40 }}>
-      {/* Hero panel — brand statement on a tinted surface with an accent bar */}
-      <section style={panel({ background: 'var(--blue-50)', border: '1px solid var(--blue-100)', padding: mobile ? '24px 20px 24px 24px' : '32px 36px 32px 38px' })}>
-        <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--blue-600)' }} />
-        <div style={{ ...eyebrow, marginBottom: 14 }}>{zh ? '关于 · Cadence 步频' : 'About · Cadence 步频'}</div>
-        <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.55, fontWeight: 500, color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
+    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: mobile ? 38 : 46 }}>
+      {/* Hero — full-bleed scrubs-blue masthead, white serif statement */}
+      <section style={{ background: 'var(--blue-700)', borderRadius: 'var(--radius-lg)', padding: mobile ? '28px 22px' : '42px 44px' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--blue-300)', marginBottom: 16 }}>{zh ? '关于 · About' : 'About · 关于'}</div>
+        <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-2xl)', lineHeight: 1.5, fontWeight: 500, letterSpacing: '-0.01em', color: '#ffffff' }}>
           {t('about.brand')}
         </p>
       </section>
 
-      {/* Stat strip */}
-      <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr 1fr' : 'repeat(4, 1fr)', gap: 12 }}>
+      {/* Stats — hairline-bounded row, no cards */}
+      <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         {stats.map((s, i) => (
-          <div key={i} style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', padding: '16px 12px', textAlign: 'center' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1.1 }}>{s.v}</div>
+          <div key={i} style={{ flex: 1, textAlign: 'center', padding: '18px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1 }}>{s.v}</div>
             <div style={{ marginTop: 6, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>{s.l}</div>
           </div>
         ))}
       </div>
 
-      {/* How it works — icon step cards */}
+      {/* How it works — editorial numbered list */}
       <section>
-        <h2 style={sectionTitle}><Icon name="workflow" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.how.title')}</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : 'repeat(3, 1fr)', gap: 12 }}>
-          {steps.map((st) => (
-            <div key={st.k} style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '18px 18px 20px', boxShadow: 'var(--shadow-xs)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 38, height: 38, borderRadius: '50%', background: 'var(--blue-50)', marginBottom: 14 }}>
-                <Icon name={st.icon} size={19} style={{ color: 'var(--blue-600)' }} />
-              </div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 7 }}>{zh ? '第 ' + st.k + ' 步' : 'Step ' + st.k}</div>
-              <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('about.how.' + st.k)}</div>
+        <h2 style={h2}>{t('about.how.title')}</h2>
+        <div>
+          {steps.map((k, i) => (
+            <div key={k} style={{ display: 'flex', gap: 18, alignItems: 'baseline', paddingBottom: 18, marginBottom: 18, borderBottom: i < steps.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--blue-600)', flex: 'none', width: 28 }}>{'0' + k}</span>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.7, color: 'var(--text-secondary)' }}>{t('about.how.' + k)}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Founder story — white panel, blue accent bar, signed off */}
-      <section style={panel({ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', boxShadow: 'var(--shadow-xs)', padding: mobile ? '24px 20px 22px 24px' : '30px 32px 26px 34px' })}>
-        <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: 'var(--blue-600)' }} />
-        <h2 style={sectionTitle}><Icon name="heart" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.why.title')}</h2>
+      {/* Founder story — plain prose, signed off */}
+      <section>
+        <h2 style={h2}>{t('about.why.title')}</h2>
         {['p1', 'p2', 'p3'].map((k) => (
           <p key={k} style={para}>{t('about.why.' + k)}</p>
         ))}
         <div style={{ marginTop: 6, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
       </section>
 
-      {/* Next steps — sources + contact as clickable link cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : '1fr 1fr', gap: 12 }}>
-        {[
-          { icon: 'rss', title: t('about.sources.title'), body: t('about.sources.body'), cta: t('about.sources.cta'), view: 'sources' },
-          { icon: 'message-circle', title: t('about.contact.title'), body: t('about.contact.body'), cta: t('about.contact.cta'), view: 'feedback' },
-        ].map((c) => (
-          <button key={c.view} type="button" onClick={() => onView(c.view)}
-            style={{ textAlign: 'left', cursor: 'pointer', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '20px 22px', boxShadow: 'var(--shadow-xs)', display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-              <Icon name={c.icon} size={18} style={{ color: 'var(--blue-600)' }} />
-              <span style={{ flex: 1, fontFamily: 'var(--font-display)', fontSize: 'var(--text-lg)', fontWeight: 600, color: 'var(--text-primary)' }}>{c.title}</span>
-              <Icon name="arrow-right" size={16} style={{ color: 'var(--text-tertiary)' }} />
-            </div>
-            <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{c.body}</p>
-            <span style={{ marginTop: 4, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', fontWeight: 500, color: 'var(--blue-600)' }}>{c.cta} →</span>
+      {/* Next steps — text link rows, no cards */}
+      <div style={{ borderTop: '1px solid var(--border-subtle)' }}>
+        {actions.map((a) => (
+          <button key={a.view} type="button" onClick={() => onView(a.view)}
+            style={{ width: '100%', textAlign: 'left', cursor: 'pointer', background: 'none', border: 'none', borderBottom: '1px solid var(--border-subtle)', padding: '18px 2px', display: 'flex', alignItems: 'center', gap: 16 }}>
+            <span style={{ flex: 1 }}>
+              <span style={{ display: 'block', fontFamily: 'var(--font-display)', fontSize: 'var(--text-lg)', fontWeight: 600, color: 'var(--text-primary)', marginBottom: 4 }}>{a.title}</span>
+              <span style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{a.body}</span>
+            </span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 6, flex: 'none', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', fontWeight: 500, color: 'var(--blue-600)' }}>{!mobile && a.cta}<Icon name="arrow-right" size={16} /></span>
           </button>
         ))}
       </div>
 
-      {/* Disclaimer — quiet footer note */}
-      <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', paddingTop: 4 }}>
-        <Icon name="info" size={15} style={{ color: 'var(--ink-300)', flex: 'none', marginTop: 2 }} />
-        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
-          <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
-        </p>
-      </div>
+      {/* Disclaimer — quiet footnote */}
+      <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+        <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
+      </p>
     </div>
   );
 }
