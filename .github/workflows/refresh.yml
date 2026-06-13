@@ -43,6 +43,10 @@ jobs:
 
       - name: Run PT news refresh
         env:
+          # Production site URL — fills the RSS channel <link> and atom:self link.
+          # news-refresh.js falls back to this same domain if unset, but we set it
+          # explicitly so it stays the source of truth.
+          SITE_URL: https://incadencept.com
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
           # LLM provider switch: set repo Variable LLM_PROVIDER=gemini (Settings →
           # Secrets and variables → Actions → Variables) + Secret GEMINI_API_KEY
@@ -79,6 +83,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add news.json
+          [ -f rss.xml ] && git add rss.xml || true
           [ -d briefs ] && git add briefs || true
           [ -d archive ] && git add archive || true
           [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
@@ -101,14 +106,17 @@ jobs:
             git rebase --abort 2>/dev/null || true
             git merge --abort 2>/dev/null || true
             cp news.json /tmp/news.json
+            cp rss.xml /tmp/rss.xml 2>/dev/null || true
             cp scrape-ledger.json /tmp/scrape-ledger.json 2>/dev/null || true
             cp -r briefs /tmp/briefs 2>/dev/null || true
             git fetch origin main
             git reset --hard origin/main
             cp /tmp/news.json news.json
+            cp /tmp/rss.xml rss.xml 2>/dev/null || true
             cp /tmp/scrape-ledger.json scrape-ledger.json 2>/dev/null || true
             cp -r /tmp/briefs briefs 2>/dev/null || true
             git add news.json
+            [ -f rss.xml ] && git add rss.xml || true
             [ -d briefs ] && git add briefs || true
             [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
             if git diff --staged --quiet; then

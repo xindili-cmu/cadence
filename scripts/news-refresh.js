@@ -54,7 +54,7 @@ const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 // is dropped. Adding a source = editing sources.json, nothing else.
 const SOURCES = require(path.join(__dirname, '..', 'sources.json'));
 const SOURCE_HOSTNAMES = [...new Set(SOURCES.map(s => s.domain.split('/')[0]))];
-const MAX_ITEMS = 30;
+const MAX_ITEMS = 75;
 const LOOKBACK_DAYS = 7; // PT news cadence is slower than climate-tech; revisit after 2 weeks
 // PubMed is roster-filtered (only journals.json journals get in), which cuts
 // volume hard — low-output flagships (JOSPT, Spine, Pain) may publish nothing
@@ -1084,6 +1084,47 @@ async function main() {
   }, null, 2));
 
   console.log(`\n✅ ${merged.length} items → news.json`);
+
+  // ── RSS 2.0 feed ────────────────────────────────────────────────────────────
+  // SITE_URL is the source of truth (set per-env in the workflow), with the
+  // production domain as a fallback so CI / local / manual runs all emit a valid
+  // self+channel link instead of an empty one. Preview/branch deploys should set
+  // SITE_URL explicitly so they don't write the production URL into their feed.
+  const SITE_URL = (process.env.SITE_URL || 'https://incadencept.com').replace(/\/$/, '');
+  try {
+    const xmlEsc = (s) => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const rssDate = (iso) => iso ? new Date(iso).toUTCString() : new Date().toUTCString();
+    const top = [...merged].sort((a, b) => b.curatedScore - a.curatedScore).slice(0, 20);
+    const items = top.map(i => `  <item>
+    <title>${xmlEsc(i.title)}</title>
+    <link>${xmlEsc(i.sourceUrl)}</link>
+    <guid isPermaLink="true">${xmlEsc(i.sourceUrl)}</guid>
+    <pubDate>${rssDate(i.publishedAt)}</pubDate>
+    <description><![CDATA[${(i.summary || i.curatedReason || '').replace(/]]>/g, ']]]]><![CDATA[>')}]]></description>
+    <category>${xmlEsc(i.category)}</category>
+    <author>${xmlEsc(i.source)}</author>
+  </item>`).join('\n');
+    const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <title>Cadence 步频 — PT Research Signal</title>
+  <link>${SITE_URL}/</link>
+  <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 50+ journals.</description>
+  <language>en</language>
+  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+  <ttl>360</ttl>${SITE_URL ? `\n  <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>` : ''}
+${items}
+</channel>
+</rss>`;
+    fs.writeFileSync(path.join(__dirname, '..', 'rss.xml'), rss);
+    console.log('   rss.xml 已更新');
+  } catch (e) { console.error('   ⚠️  rss.xml 生成失败:', e.message); }
+
+  // NOTE: the homepage <head> keeps brand-level static og:title/description on
+  // purpose — the index.html canonical title should be stable ("Cadence — daily
+  // PT evidence"), not rewritten to the top article each run. Per-article rich
+  // previews would need per-article URLs (which the hash SPA doesn't have).
+
   return { newItems: final.length, totalItems: merged.length,
     headlines: merged.slice(0, 5).map(i => `[${i.curatedScore}] ${i.title}`) };
 }

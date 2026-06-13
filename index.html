@@ -29,6 +29,35 @@
 <!-- RSS feed — updated on each news-refresh run. SITE_URL is set via env var. -->
 <link rel="alternate" type="application/rss+xml" title="Cadence 步频 — PT Research Signal" href="/rss.xml">
 
+<!-- Structured data (JSON-LD). Organization + WebSite — the main SEO signal a
+     client-rendered SPA can hand a crawler from the static shell. No SearchAction:
+     site search is hash-based client-side, so there is no real result-URL template
+     for Google's sitelinks searchbox to target. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://incadencept.com/#organization",
+      "name": "Cadence 步频",
+      "url": "https://incadencept.com/",
+      "logo": "https://incadencept.com/design-system/assets/logo-mark.svg",
+      "description": "Daily curated physical therapy & rehab research for clinicians. AI-scored signal from JOSPT, PTJ, PubMed and 20+ journals."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://incadencept.com/#website",
+      "url": "https://incadencept.com/",
+      "name": "Cadence 步频",
+      "description": "Daily curated physical therapy & rehab research for clinicians, in English and 中文.",
+      "publisher": { "@id": "https://incadencept.com/#organization" },
+      "inLanguage": ["en", "zh-CN"]
+    }
+  ]
+}
+</script>
+
 <!-- Brand / fonts / design tokens -->
 <link rel="icon" href="design-system/assets/logo-mark.svg">
 <link rel="stylesheet" href="design-system/styles.css">

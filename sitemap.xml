@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cadence is a hash-routed SPA (#curated / #all / #about are not separate
+     URLs), so the sitemap lists only the canonical root. No <lastmod>: this is
+     a static file with no updater, and a stale lastmod is worse than none. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://incadencept.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
