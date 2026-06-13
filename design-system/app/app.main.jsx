@@ -16,7 +16,7 @@ const cdDayLabels = () => {
 
 function FeedToolbar({ view, count }) {
   const t = window.CD_T;
-  const id = ['curated', 'all', 'daily', 'saved', 'sources', 'feedback'].includes(view) ? view : 'curated';
+  const id = ['curated', 'all', 'daily', 'saved', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
@@ -407,6 +407,75 @@ function FeedbackView() {
         <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--signal-down)' }}>{t('fb.error')}</span>
       )}
     </form>
+  );
+}
+
+// About view — static brand / mission / founder page. All copy lives in
+// CD_DICT (about.*), so en/zh stay fully separated per the language-toggle
+// rule. CTAs call onView() to hop to Sources / Feedback (which also rewrites
+// the hash, keeping deep links intact).
+function AboutView({ onView }) {
+  const t = window.CD_T;
+  const sectionTitle = {
+    margin: '0 0 14px', display: 'flex', alignItems: 'center', gap: 9,
+    fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: 'var(--text-primary)',
+  };
+  const para = {
+    margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 14.5,
+    lineHeight: 1.75, color: 'var(--text-secondary)',
+  };
+  const card = {
+    background: 'var(--surface-card)', border: '1px solid var(--border-subtle)',
+    borderRadius: 'var(--radius-lg)', padding: '20px 22px', boxShadow: 'var(--shadow-xs)',
+  };
+  return (
+    <div style={{ maxWidth: 680, display: 'flex', flexDirection: 'column', gap: 36 }}>
+      {/* Brand statement — hero */}
+      <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 19, lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>
+        {t('about.brand')}
+      </p>
+
+      {/* How it works — three numbered steps */}
+      <section>
+        <h2 style={sectionTitle}><Icon name="workflow" size={18} style={{ color: 'var(--green-700)' }} />{t('about.how.title')}</h2>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 13 }}>
+          {[1, 2, 3].map((n) => (
+            <div key={n} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: 'var(--green-600)', flex: 'none', width: 18, marginTop: 2 }}>{n}</span>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('about.how.' + n)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why I built this — founder story */}
+      <section>
+        <h2 style={sectionTitle}><Icon name="heart" size={18} style={{ color: 'var(--green-700)' }} />{t('about.why.title')}</h2>
+        {['p1', 'p2', 'p3', 'p4'].map((k) => (
+          <p key={k} style={para}>{t('about.why.' + k)}</p>
+        ))}
+      </section>
+
+      {/* Source transparency — links to the Sources wall */}
+      <section style={card}>
+        <h2 style={sectionTitle}><Icon name="rss" size={17} style={{ color: 'var(--green-700)' }} />{t('about.sources.title')}</h2>
+        <p style={{ ...para, marginBottom: 16 }}>{t('about.sources.body')}</p>
+        <Button variant="secondary" size="sm" iconStart="rss" onClick={() => onView('sources')}>{t('about.sources.cta')}</Button>
+      </section>
+
+      {/* Disclaimer */}
+      <section>
+        <h2 style={sectionTitle}><Icon name="info" size={17} style={{ color: 'var(--green-700)' }} />{t('about.disclaimer.title')}</h2>
+        <p style={{ ...para, margin: 0, fontSize: 13, color: 'var(--text-tertiary)' }}>{t('about.disclaimer.body')}</p>
+      </section>
+
+      {/* Contact — links to the Feedback form */}
+      <section>
+        <h2 style={sectionTitle}><Icon name="message-circle" size={17} style={{ color: 'var(--green-700)' }} />{t('about.contact.title')}</h2>
+        <p style={{ ...para, marginBottom: 16 }}>{t('about.contact.body')}</p>
+        <Button size="sm" iconStart="message-circle" onClick={() => onView('feedback')}>{t('about.contact.cta')}</Button>
+      </section>
+    </div>
   );
 }
 
@@ -927,7 +996,7 @@ function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
 // ── Hash-based deep linking ──────────────────────────────────────────────────
 // Format: #view/category?q=query  (daily uses #daily/YYYY-MM-DD)
 // Examples: #curated  #all/neurological  #curated?q=balance  #daily/2026-06-12
-const CD_VIEWS = ['curated', 'all', 'daily', 'saved', 'sources', 'feedback'];
+const CD_VIEWS = ['curated', 'all', 'daily', 'saved', 'sources', 'about', 'feedback'];
 const CD_CATS  = ['all', 'orthopedic', 'neurological', 'sports', 'pediatric',
                   'geriatric', 'cardiopulmonary', 'manual-modality', 'practice', 'rehab-tech'];
 
@@ -1053,6 +1122,7 @@ function FeedApp() {
   const isDaily = view === 'daily';
   const isSources = view === 'sources';
   const isFeedback = view === 'feedback';
+  const isAbout = view === 'about';
   const q = query.trim().toLowerCase();
 
   // DigestRail "Today's Signal" handler — set selected state + smooth-scroll
@@ -1160,7 +1230,7 @@ function FeedApp() {
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
-          {!isDaily && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />}
+          {!isDaily && <FeedToolbar view={view} count={isSources || isFeedback || isAbout ? null : stories.length} />}
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
@@ -1179,6 +1249,12 @@ function FeedApp() {
               no category tabs / signal rail / story list. */}
           {isFeedback && (
             <FeedbackView />
+          )}
+
+          {/* About branch — static brand / mission / founder page;
+              short-circuits the feed like Feedback. CTAs hop to other views. */}
+          {isAbout && (
+            <AboutView onView={setView} />
           )}
 
           {/* Daily edition branch — AIHOT-style fixed daily slices with their
@@ -1222,7 +1298,7 @@ function FeedApp() {
             <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} />
           )}
 
-          {!isSources && !isFeedback && !isDaily && (
+          {!isSources && !isFeedback && !isDaily && !isAbout && (
             <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
               background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
               {/* Mobile: 9 pills don't fit — single-row horizontal scroll
@@ -1253,14 +1329,14 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && !isFeedback && !isDaily && grouped.length === 0 && !archiveLoading && (
+          {!isSources && !isFeedback && !isDaily && !isAbout && grouped.length === 0 && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-tertiary)', fontFamily: 'var(--font-sans)' }}>
               <Icon name="search-x" size={28} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
               <div>{q ? `${t('emptySearch')} “${query}”` : (view === 'saved' ? t('emptySaved') : isDaily ? t('emptyDaily') : t('emptyNone'))}</div>
             </div>
           )}
 
-          {!isSources && !isFeedback && !isDaily && visibleGroups.map((g) => (
+          {!isSources && !isFeedback && !isDaily && !isAbout && visibleGroups.map((g) => (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
@@ -1293,7 +1369,7 @@ function FeedApp() {
           ))}
 
           {/* Load more — only in All view when there are more date-groups to show */}
-          {!isSources && !isFeedback && !isDaily && hasMoreDays && !archiveLoading && (
+          {!isSources && !isFeedback && !isDaily && !isAbout && hasMoreDays && !archiveLoading && (
             <div style={{ textAlign: 'center', padding: '8px 0 24px' }}>
               <Button variant="secondary" size="sm"
                 onClick={() => setVisibleDays((v) => v + ALL_PAGE_SIZE)}>
@@ -1306,7 +1382,7 @@ function FeedApp() {
           )}
         </main>
 
-        {!isSources && !isFeedback && !isMobile && (isDaily
+        {!isSources && !isFeedback && !isAbout && !isMobile && (isDaily
           ? <DailyArchiveRail current={dailyDate} onPick={setDailyDate} />
           : <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
         )}
