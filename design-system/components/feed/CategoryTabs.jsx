@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../core/Icon.jsx';
 import { CATEGORIES, XCUTS, getCategory, catShort } from './categories.js';
 
-function Tab({ id, label, icon, accent, active, onClick }) {
+function Tab({ id, label, icon, accent, active, onClick, index }) {
   const [hover, setHover] = React.useState(false);
   const solid = accent ? `var(--cat-${accent})` : 'var(--green-700)';
   return (
@@ -21,6 +21,11 @@ function Tab({ id, label, icon, accent, active, onClick }) {
         color: active ? 'var(--paper)' : 'var(--text-secondary)',
       }}
     >
+      {index != null && (
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, letterSpacing: '0.02em', opacity: active ? 0.7 : 0.5 }}>
+          {String(index).padStart(2, '0')}
+        </span>
+      )}
       {icon && (
         <span style={{ width: 8, height: 8, borderRadius: '999px', background: active ? solid : solid, flex: 'none', opacity: active ? 1 : 0.85 }} />
       )}
@@ -44,8 +49,8 @@ export function CategoryTabs({ value = 'all', onChange = () => {}, includeAll = 
       {includeAll && (
         <Tab id="all" label={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '全部' : 'All'} icon={null} accent={null} active={value === 'all'} onClick={onChange} />
       )}
-      {CATEGORIES.map((c) => (
-        <Tab key={c.id} id={c.id} label={catShort(c)} icon={c.icon} accent={c.accent} active={value === c.id} onClick={onChange} />
+      {CATEGORIES.map((c, i) => (
+        <Tab key={c.id} id={c.id} label={catShort(c)} icon={c.icon} accent={c.accent} index={i + 1} active={value === c.id} onClick={onChange} />
       ))}
       {/* Cross-cutting overlays (e.g. 康复科技) — same pill UI, but selecting
           one filters on the overlay flag, not the category field. */}
