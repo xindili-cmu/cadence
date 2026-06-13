@@ -254,7 +254,12 @@ const TECH_ZH = [
   '手机应用', '移动应用', '应用程序', '数字健康', '数字疗法', '游戏化', '脑机接口',
 ];
 function isTech(item) {
-  const en = `${item.title || ''} ${item.summary || ''} ${(item.tags || []).join(' ')}`;
+  // Title + summary ONLY — LLM-assigned tags are deliberately excluded: they
+  // hallucinate at the margin (an *online survey* of Indonesian stroke rehab
+  // services got tagged `telehealth` → wrongly badged 康复科技, Cindy
+  // 2026-06-13). If a story is genuinely about tech, the tech term appears in
+  // the title or summary; a tag alone is not evidence.
+  const en = `${item.title || ''} ${item.summary || ''}`;
   const zh = `${item.titleZh || ''} ${item.summaryZh || ''}`;
   // zh summaries often keep English acronyms (VR/AI/ML), so run both rule sets
   // over both languages.
@@ -554,8 +559,17 @@ tags 规则：
 category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
 - **cardiopulmonary 不是"任何心脏/肾脏/代谢疾病"**：它只收心肺**康复**（COPD 肺康复、心脏术后康复、运动耐量训练、呼吸肌训练）。药物试验（finerenone、retatrutide、GLP-1、他汀、SGLT2）、脏器疾病本身（慢性肾病、糖尿病、肿瘤）即使带"cardio"字样也与 PT 无关，一律丢弃，不要因为沾边就硬塞进 cardiopulmonary。整刊 feed 的 [Editorial]/[Correspondence]/[Comment] 段落除非直接讲康复干预，否则默认丢。
 
+studyDesign 规则（仅 tags[0]==="research" 的条目需填）：
+从标题/摘要判断研究设计，取以下五个值之一：
+  "RCT"      — 随机（对照）试验（含 pilot RCT）
+  "系统综述"  — systematic review 和/或 meta-analysis
+  "观察研究"  — 队列 / 横断面 / 病例对照 / 前瞻 / 回顾性观察
+  "综述"      — 叙述综述 / scoping review / 文献综述（非系统）
+  "述评"      — editorial / commentary / 专家意见 / perspective
+news / guideline / policy 条目不填 studyDesign（省略该字段）。
+
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","tags":["research","spine"],"summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","tags":["research","spine"],"studyDesign":"RCT","summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
@@ -950,6 +964,8 @@ async function main() {
       ...(c.summaryZh ? { summaryZh: c.summaryZh } : {}),
       ...(c.curatedReasonEn ? { curatedReasonEn: c.curatedReasonEn } : {}),
       tags: c.tags || [],
+      // Study-design badge (XHS card): RCT / 系统综述 / 观察研究 / 综述 / 述评
+      ...(c.studyDesign ? { studyDesign: c.studyDesign } : {}),
       // Journal identity for the IF / JCR-quartile badge (journals.json lookup)
       ...(o.journal ? { journal: o.journal } : {}),
       ...(o.related?.length ? { related: o.related } : {})
