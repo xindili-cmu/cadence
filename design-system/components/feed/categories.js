@@ -23,6 +23,12 @@ export function catShort(cat) {
 
 export const CATEGORY_MAP = CATEGORIES.reduce((m, c) => { m[c.id] = c; return m; }, {});
 
+// Taxonomy index (1-based) — the catalogue position shown as 01–08 on tags.
+export function catIndex(id) {
+  const i = CATEGORIES.findIndex((c) => c.id === id);
+  return i >= 0 ? i + 1 : null;
+}
+
 export function getCategory(id) {
   return CATEGORY_MAP[id] || { id, label: id, short: id, icon: 'circle', accent: 'practice' };
 }

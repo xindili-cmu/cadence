@@ -55,6 +55,16 @@
   --signal-warn: #C8861E;
   --signal-info: var(--blue-500);
 
+  /* ---- SIGNAL score tiers — a 3-step authority scale within the blue family
+     (not traffic lights): navy ≥85 practice-changing · scrubs 65–84 worth
+     knowing · clay <65 reference. Consumed by SignalScore. ---- */
+  --signal-high:      var(--blue-800);
+  --signal-high-soft: #E7EEF5;
+  --signal-mid:       var(--blue-600);
+  --signal-mid-soft:  #EAF1F8;
+  --signal-low:       var(--ink-500);
+  --signal-low-soft:  var(--ink-100);
+
   /* ============================================================
      Category accents — one hue per PT feed category.
      Solid / soft tint / ink-on-tint. Hues from designer round 1

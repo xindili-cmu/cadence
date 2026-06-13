@@ -29,6 +29,12 @@ function catShort(cat) {
 
 const CATEGORY_MAP = CATEGORIES.reduce((m, c) => { m[c.id] = c; return m; }, {});
 
+// Taxonomy index (1-based) — the catalogue position shown as 01–08 on tags.
+function catIndex(id) {
+  const i = CATEGORIES.findIndex((c) => c.id === id);
+  return i >= 0 ? i + 1 : null;
+}
+
 function getCategory(id) {
   return CATEGORY_MAP[id] || { id, label: id, short: id, icon: 'circle', accent: 'practice' };
 }
@@ -295,41 +301,88 @@ function Input({
 
 
 /* ===== components/feed/SignalScore.jsx ===== */
-/**
- * SignalScore — GreenStack's selection score (0–100). The higher the score,
- * the stronger the editorial signal that a story matters to practitioners.
- * Echoes the "精选 NN" badge from the AIHOT reference, restyled as a calm
- * mono chip. `variant`: 'chip' (default) · 'bar' (chip + strength meter).
- */
-function SignalScore({ score = 0, variant = 'chip', size = 'md', style, ...rest }) {
-  const v = Math.max(0, Math.min(100, Math.round(score)));
-  const tier = v >= 85 ? 'high' : v >= 65 ? 'mid' : 'low';
-  const color = tier === 'high' ? 'var(--green-700)' : tier === 'mid' ? 'var(--green-600)' : 'var(--ink-500)';
-  const bg = tier === 'high' ? 'var(--green-100)' : tier === 'mid' ? 'var(--green-50)' : 'var(--ink-100)';
-  const dims = size === 'sm' ? { font: 11, pad: '2px 7px', label: 9 } : { font: 12, pad: '3px 9px', label: 10 };
+// SIGNAL tiers — a 3-step authority scale (not traffic lights).
+// ≥85 practice-changing · 65–84 worth knowing · <65 reference.
+function signalTier(v) {
+  if (v >= 85) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '可改变实践', en: 'Practice-changing' };
+  if (v >= 65) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
+  return { key: 'low', color: 'var(--signal-low)', soft: 'var(--signal-low-soft)', zh: '参考', en: 'For reference' };
+}
 
-  const chip = (
-    <span style={{
-      display: 'inline-flex', alignItems: 'baseline', gap: 5, padding: dims.pad,
-      background: bg, color, borderRadius: 'var(--radius-sm)',
-      fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: dims.font, letterSpacing: '0.02em',
-    }}>
-      <span style={{ fontSize: dims.label, fontWeight: 500, opacity: 0.7, letterSpacing: '0.08em' }}>SIGNAL</span>
-      {v}
+function signalTierLabel(t, lang) {
+  return (lang || (typeof window !== 'undefined' && window.CD_LANG) || 'zh') === 'zh' ? t.zh : t.en;
+}
+
+// Strength meter — N segments, filled = round(value/100 * segs).
+function SignalMeter({ value, color, segs = 10, w = 7, h = 5, gap = 2.5 }) {
+  const filled = Math.round((value / 100) * segs);
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'flex-end', gap }}>
+      {Array.from({ length: segs }).map((_, i) => (
+        <span key={i} style={{ width: w, height: h, borderRadius: 1, flex: 'none', background: i < filled ? color : 'var(--ink-200)' }} />
+      ))}
     </span>
   );
+}
 
-  if (variant === 'bar') {
+/**
+ * SignalScore — Cadence's editorial selection score (0–100), rendered as a real
+ * data point rather than a flat label. Higher = stronger signal a story matters.
+ *  · variant 'badge' — boxed data point for the feed card meta row (default).
+ *  · variant 'chip'  — compact inline pill for the rail / dense rows.
+ *  · variant 'block' — hero gutter block (big numeral + /100 + tier + meter).
+ * Back-compat: legacy `size="sm"` callers map to the compact chip.
+ */
+function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) {
+  const v = Math.max(0, Math.min(100, Math.round(score)));
+  const t = signalTier(v);
+  const vr = variant || (size === 'sm' ? 'chip' : 'badge');
+
+  if (vr === 'chip') {
     return (
-      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, ...style }} {...rest}>
-        {chip}
-        <span style={{ width: 48, height: 4, borderRadius: '999px', background: 'var(--ink-200)', overflow: 'hidden', flex: 'none' }}>
-          <span style={{ display: 'block', width: `${v}%`, height: '100%', background: color, borderRadius: '999px' }} />
-        </span>
+      <span style={{
+        display: 'inline-flex', alignItems: 'center', gap: 5, padding: '2px 7px 2px 6px',
+        background: t.soft, borderRadius: 'var(--radius-sm)', whiteSpace: 'nowrap', ...style,
+      }} {...rest}>
+        <span style={{ width: 4, height: 12, borderRadius: 1, background: t.color, flex: 'none' }} />
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, fontWeight: 600, letterSpacing: '0.1em', color: t.color, opacity: 0.85 }}>SIGNAL</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: t.color }}>{v}</span>
       </span>
     );
   }
-  return <span style={style} {...rest}>{chip}</span>;
+
+  if (vr === 'block') {
+    return (
+      <span style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 7, ...style }} {...rest}>
+        <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <span style={{ width: 5, height: 5, borderRadius: '999px', background: t.color }} />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.18em', color: 'var(--text-tertiary)' }}>SIGNAL</span>
+        </span>
+        <span style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 46, fontWeight: 600, lineHeight: 0.9, color: t.color, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 500, color: 'var(--text-tertiary)' }}>/100</span>
+        </span>
+        <SignalMeter value={v} color={t.color} w={8} h={6} gap={3} />
+        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 600, color: t.color, letterSpacing: '-0.005em' }}>{signalTierLabel(t, lang)}</span>
+      </span>
+    );
+  }
+
+  // 'badge' — the default card-meta data point.
+  return (
+    <span style={{
+      display: 'inline-flex', alignItems: 'center', gap: 8, padding: '4px 9px 4px 7px',
+      background: t.soft, border: `1px solid ${t.color}22`, borderRadius: 'var(--radius-sm)',
+      whiteSpace: 'nowrap', ...style,
+    }} {...rest}>
+      <span style={{ width: 3, alignSelf: 'stretch', borderRadius: 2, background: t.color }} />
+      <span style={{ display: 'inline-flex', flexDirection: 'column', lineHeight: 1, gap: 2 }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8.5, fontWeight: 600, letterSpacing: '0.16em', color: 'var(--text-tertiary)' }}>SIGNAL</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 600, color: t.color, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
+      </span>
+      <SignalMeter value={v} color={t.color} segs={5} w={4} h={9} gap={2} />
+    </span>
+  );
 }
 
 
@@ -337,15 +390,17 @@ function SignalScore({ score = 0, variant = 'chip', size = 'md', style, ...rest 
 /**
  * CategoryTag — the colored label that classifies a story by ESG category.
  * `variant`: 'soft' (tinted pill, default) · 'solid' · 'outline' · 'dot' (text + color dot).
+ * `withIndex`: prepend the taxonomy catalogue number (01–08) in mono.
  */
 function CategoryTag({
-  category, variant = 'soft', size = 'md', withIcon = true, useShort = false, style, ...rest
+  category, variant = 'soft', size = 'md', withIcon = true, withIndex = false, useShort = false, style, ...rest
 }) {
   const cat = getCategory(category);
   const solid = `var(--cat-${cat.accent})`;
   const soft = `var(--cat-${cat.accent}-soft)`;
   const ink = `var(--cat-${cat.accent}-ink)`;
   const label = useShort ? catShort(cat) : catLabel(cat);
+  const idx = catIndex(category);
 
   const dims = size === 'sm'
     ? { font: 11, pad: '2px 7px', gap: 4, icon: 12, radius: 'var(--radius-sm)' }
@@ -375,6 +430,11 @@ function CategoryTag({
       fontFamily: 'var(--font-sans)', fontSize: dims.font, fontWeight: 500,
       letterSpacing: '0.005em', lineHeight: 1.3, whiteSpace: 'nowrap', ...skin, ...style,
     }} {...rest}>
+      {withIndex && idx != null && (
+        <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: dims.font - 1, letterSpacing: '0.02em', opacity: variant === 'solid' ? 0.85 : 0.6 }}>
+          {String(idx).padStart(2, '0')}
+        </span>
+      )}
       {withIcon && <Icon name={cat.icon} size={dims.icon} strokeWidth={2} />}
       {label}
     </span>
@@ -501,8 +561,8 @@ function NewsCard({
 
       {/* meta row */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
-        {typeof score === 'number' && <SignalScore score={score} size={isCompact ? 'sm' : 'md'} />}
-        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort={isLead ? false : true} />
+        {typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />}
+        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort={isLead ? false : true} withIndex />
         {tech && (
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: 4,
@@ -552,17 +612,25 @@ function NewsCard({
       {/* why it matters — always shown for default/lead; compact shows it only
           when the card is selected (expanded state). */}
       {whyItMatters && (!isCompact || selected) && (
-        <div style={{
-          display: 'flex', gap: 9, marginTop: 14, padding: '11px 13px',
-          background: 'var(--green-50)', border: '1px solid var(--green-100)',
-          borderRadius: 'var(--radius-md)',
+        <aside style={{
+          position: 'relative', display: 'flex', gap: isLead ? 12 : 10, marginTop: 14,
+          padding: isLead ? '14px 16px 14px 16px' : '12px 14px 12px 14px',
+          background: 'var(--blue-50)', border: '1px solid var(--blue-100)',
+          borderLeft: '3px solid var(--blue-600)', borderRadius: 'var(--radius-md)',
         }}>
-          <span style={{ color: 'var(--green-600)', marginTop: 1 }}><Icon name="sparkles" size={15} strokeWidth={2} /></span>
-          <div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>{t('whyMatters', 'Why it matters')}</div>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--ink-700)' }}>{whyItMatters}</div>
+          <span style={{ flex: 'none', marginTop: 1, color: 'var(--blue-600)' }}>
+            <Icon name="stethoscope" size={isLead ? 18 : 16} strokeWidth={2} />
+          </span>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 13 : 12, fontWeight: 700, color: 'var(--blue-800)', letterSpacing: '-0.005em', whiteSpace: 'nowrap' }}>{t('whyMatters', 'Why it matters')}</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8.5, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--blue-500)', whiteSpace: 'nowrap' }}>
+                {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? 'Why it matters' : 'Cadence take'}
+              </span>
+            </div>
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 14.5 : 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{whyItMatters}</div>
           </div>
-        </div>
+        </aside>
       )}
 
       {/* footer */}

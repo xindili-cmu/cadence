@@ -66,8 +66,8 @@ export function NewsCard({
 
       {/* meta row */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
-        {typeof score === 'number' && <SignalScore score={score} size={isCompact ? 'sm' : 'md'} />}
-        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort={isLead ? false : true} />
+        {typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />}
+        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort={isLead ? false : true} withIndex />
         {tech && (
           <span style={{
             display: 'inline-flex', alignItems: 'center', gap: 4,
@@ -117,17 +117,25 @@ export function NewsCard({
       {/* why it matters — always shown for default/lead; compact shows it only
           when the card is selected (expanded state). */}
       {whyItMatters && (!isCompact || selected) && (
-        <div style={{
-          display: 'flex', gap: 9, marginTop: 14, padding: '11px 13px',
-          background: 'var(--green-50)', border: '1px solid var(--green-100)',
-          borderRadius: 'var(--radius-md)',
+        <aside style={{
+          position: 'relative', display: 'flex', gap: isLead ? 12 : 10, marginTop: 14,
+          padding: isLead ? '14px 16px 14px 16px' : '12px 14px 12px 14px',
+          background: 'var(--blue-50)', border: '1px solid var(--blue-100)',
+          borderLeft: '3px solid var(--blue-600)', borderRadius: 'var(--radius-md)',
         }}>
-          <span style={{ color: 'var(--green-600)', marginTop: 1 }}><Icon name="sparkles" size={15} strokeWidth={2} /></span>
-          <div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--green-700)', marginBottom: 3 }}>{t('whyMatters', 'Why it matters')}</div>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--ink-700)' }}>{whyItMatters}</div>
+          <span style={{ flex: 'none', marginTop: 1, color: 'var(--blue-600)' }}>
+            <Icon name="stethoscope" size={isLead ? 18 : 16} strokeWidth={2} />
+          </span>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 4 }}>
+              <span style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 13 : 12, fontWeight: 700, color: 'var(--blue-800)', letterSpacing: '-0.005em', whiteSpace: 'nowrap' }}>{t('whyMatters', 'Why it matters')}</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8.5, fontWeight: 500, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--blue-500)', whiteSpace: 'nowrap' }}>
+                {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? 'Why it matters' : 'Cadence take'}
+              </span>
+            </div>
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 14.5 : 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{whyItMatters}</div>
           </div>
-        </div>
+        </aside>
       )}
 
       {/* footer */}

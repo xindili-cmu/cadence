@@ -1,19 +1,21 @@
 import React from 'react';
 import { Icon } from '../core/Icon.jsx';
-import { getCategory, catLabel, catShort } from './categories.js';
+import { getCategory, catLabel, catShort, catIndex } from './categories.js';
 
 /**
  * CategoryTag — the colored label that classifies a story by ESG category.
  * `variant`: 'soft' (tinted pill, default) · 'solid' · 'outline' · 'dot' (text + color dot).
+ * `withIndex`: prepend the taxonomy catalogue number (01–08) in mono.
  */
 export function CategoryTag({
-  category, variant = 'soft', size = 'md', withIcon = true, useShort = false, style, ...rest
+  category, variant = 'soft', size = 'md', withIcon = true, withIndex = false, useShort = false, style, ...rest
 }) {
   const cat = getCategory(category);
   const solid = `var(--cat-${cat.accent})`;
   const soft = `var(--cat-${cat.accent}-soft)`;
   const ink = `var(--cat-${cat.accent}-ink)`;
   const label = useShort ? catShort(cat) : catLabel(cat);
+  const idx = catIndex(category);
 
   const dims = size === 'sm'
     ? { font: 11, pad: '2px 7px', gap: 4, icon: 12, radius: 'var(--radius-sm)' }
@@ -43,6 +45,11 @@ export function CategoryTag({
       fontFamily: 'var(--font-sans)', fontSize: dims.font, fontWeight: 500,
       letterSpacing: '0.005em', lineHeight: 1.3, whiteSpace: 'nowrap', ...skin, ...style,
     }} {...rest}>
+      {withIndex && idx != null && (
+        <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: dims.font - 1, letterSpacing: '0.02em', opacity: variant === 'solid' ? 0.85 : 0.6 }}>
+          {String(idx).padStart(2, '0')}
+        </span>
+      )}
       {withIcon && <Icon name={cat.icon} size={dims.icon} strokeWidth={2} />}
       {label}
     </span>
