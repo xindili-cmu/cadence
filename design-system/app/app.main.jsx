@@ -411,6 +411,9 @@ function FeedbackView() {
 }
 
 function SourcesGrid({ stories }) {
+  const [srcSearch, setSrcSearch] = React.useState('');
+  const [srcKind, setSrcKind] = React.useState('all');
+
   // Live stats keyed by wallSource — journal-attributed name from app.data.jsx
   // (PubMed-pipeline stories credit their journal's card, not "PubMed";
   // unmatched stories fall back to s.source).
@@ -440,17 +443,82 @@ function SourcesGrid({ stories }) {
     };
   });
 
+  // Apply search + kind filter before grouping
+  const filteredWall = wall.filter((s) => {
+    if (srcSearch) {
+      const q = srcSearch.toLowerCase();
+      if (!s.name.toLowerCase().includes(q) && !(s.domain || '').toLowerCase().includes(q)) return false;
+    }
+    if (srcKind !== 'all') {
+      const sec = KIND_SECTIONS.find((k) => k.key === srcKind);
+      if (!sec || !sec.kinds.includes(s.kind)) return false;
+    }
+    return true;
+  });
+
   // Group by outlet kind — the natural axis for a source wall
   const sections = KIND_SECTIONS
     .map((sec) => ({
       ...sec,
-      items: wall.filter((s) => sec.kinds.includes(s.kind))
+      items: filteredWall.filter((s) => sec.kinds.includes(s.kind))
         .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
     }))
     .filter((sec) => sec.items.length);
 
+  const kindPills = [
+    { key: 'all', label: window.CD_T ? window.CD_T('kindFilter.all', 'All') : 'All' },
+    ...KIND_SECTIONS.map((s) => ({ key: s.key, label: window.CD_T ? window.CD_T('kind.' + s.key, s.label) : s.label })),
+  ];
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+      {/* Filter bar */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}>
+        {/* Search input */}
+        <div style={{ position: 'relative', flex: '1 1 180px', minWidth: 140, maxWidth: 280 }}>
+          <span style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-tertiary)', pointerEvents: 'none', lineHeight: 1 }}>
+            {React.createElement(lucide.Search, { size: 13 })}
+          </span>
+          <input
+            type="search"
+            placeholder={window.CD_T ? window.CD_T('sources.search', 'Search sources…') : 'Search sources…'}
+            value={srcSearch}
+            onChange={(e) => setSrcSearch(e.target.value)}
+            style={{
+              width: '100%', paddingLeft: 30, paddingRight: 10, height: 32,
+              border: '1px solid var(--border-subtle)', borderRadius: 6,
+              background: 'var(--surface-card)', color: 'var(--text-primary)',
+              fontSize: 13, outline: 'none', fontFamily: 'inherit',
+            }}
+          />
+        </div>
+        {/* Kind pills */}
+        <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+          {kindPills.map((p) => (
+            <button key={p.key} onClick={() => setSrcKind(p.key)} style={{
+              padding: '4px 10px', borderRadius: 20, border: '1px solid',
+              borderColor: srcKind === p.key ? 'var(--green-600)' : 'var(--border-subtle)',
+              background: srcKind === p.key ? 'var(--green-50)' : 'transparent',
+              color: srcKind === p.key ? 'var(--green-700)' : 'var(--text-secondary)',
+              fontSize: 12, cursor: 'pointer', fontFamily: 'var(--font-mono)',
+              fontWeight: srcKind === p.key ? 600 : 400, letterSpacing: '0.03em',
+            }}>
+              {p.label}
+            </button>
+          ))}
+        </div>
+        {/* Result count */}
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginLeft: 'auto' }}>
+          {filteredWall.length}
+        </span>
+      </div>
+
+      {sections.length === 0 && (
+        <div style={{ textAlign: 'center', padding: '40px 0', color: 'var(--text-tertiary)', fontSize: 13 }}>
+          {window.CD_T ? window.CD_T('sources.noMatch', 'No sources match') : 'No sources match'}
+        </div>
+      )}
+
       {sections.map((sec) => (
         <section key={sec.label}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 10px' }}>
@@ -856,17 +924,64 @@ function DailyBriefView({ L, savedMap, toggleSave, date, onDate, mobile }) {
   );
 }
 
+// ── Hash-based deep linking ──────────────────────────────────────────────────
+// Format: #view/category?q=query  (daily uses #daily/YYYY-MM-DD)
+// Examples: #curated  #all/neurological  #curated?q=balance  #daily/2026-06-12
+const CD_VIEWS = ['curated', 'all', 'daily', 'saved', 'sources', 'feedback'];
+const CD_CATS  = ['all', 'orthopedic', 'neurological', 'sports', 'pediatric',
+                  'geriatric', 'cardiopulmonary', 'manual-modality', 'practice', 'rehab-tech'];
+
+function cdParseHash() {
+  const raw = (location.hash || '').replace(/^#/, '') || 'curated';
+  const [pathPart, qs] = raw.split('?');
+  const segs = pathPart.split('/');
+  const view = CD_VIEWS.includes(segs[0]) ? segs[0] : 'curated';
+  const cat  = (view !== 'daily' && CD_CATS.includes(segs[1])) ? segs[1] : 'all';
+  const date = (view === 'daily' && /^\d{4}-\d{2}-\d{2}$/.test(segs[1])) ? segs[1] : null;
+  const q    = new URLSearchParams(qs || '').get('q') || '';
+  return { view, category: cat, query: q, dailyDate: date };
+}
+
+function cdWriteHash(view, category, query, dailyDate) {
+  let h = view;
+  if (view === 'daily' && dailyDate) h += '/' + dailyDate;
+  else if (category && category !== 'all') h += '/' + category;
+  if (query) h += '?q=' + encodeURIComponent(query);
+  if (h !== (location.hash || '').replace(/^#/, ''))
+    history.replaceState(null, '', '#' + h);
+}
+
 function FeedApp() {
   // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
   // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
   const isMobile = window.useCdMobile();
-  const [view, setView] = React.useState('curated');
-  const [category, setCategory] = React.useState('all');
-  const [query, setQuery] = React.useState('');
+
+  // State initialised from hash so bookmarked URLs restore the right view.
+  const _h0 = cdParseHash();
+  const [view, setView] = React.useState(_h0.view);
+  const [category, setCategory] = React.useState(_h0.category);
+  const [query, setQuery] = React.useState(_h0.query);
   const [selected, setSelected] = React.useState(null);
   // Daily-edition date — lifted here so DailyBriefView and the right-rail
   // archive (DailyArchiveRail) share one source of truth. null = latest.
-  const [dailyDate, setDailyDate] = React.useState(null);
+  const [dailyDate, setDailyDate] = React.useState(_h0.dailyDate);
+
+  // Write hash when state changes; read hash on browser back/forward.
+  const _hashBusy = React.useRef(false);
+  React.useEffect(() => {
+    if (_hashBusy.current) return;
+    cdWriteHash(view, category, query, dailyDate);
+  }, [view, category, query, dailyDate]);
+  React.useEffect(() => {
+    const onHash = () => {
+      _hashBusy.current = true;
+      const h = cdParseHash();
+      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate);
+      requestAnimationFrame(() => { _hashBusy.current = false; });
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   // Saved stories — full snapshots keyed by id, persisted to localStorage so
   // bookmarks survive reloads AND survive the story rotating out of news.json.
@@ -1075,11 +1190,30 @@ function FeedApp() {
 
           {/* Device-local storage disclosure — bookmarks live in this browser's
               localStorage: no account, no server, no sync. Shown on every visit
-              to Saved so the boundary is never a surprise. */}
+              to Saved so the boundary is never a surprise. Export button lets
+              users save a JSON snapshot of their bookmarks to disk. */}
           {!isSources && view === 'saved' && (
-            <div style={{ display: 'flex', gap: 9, alignItems: 'flex-start', marginBottom: 16, padding: '10px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.5, color: 'var(--text-secondary)' }}>
-              <Icon name="monitor-smartphone" size={15} style={{ color: 'var(--ink-300)', marginTop: 1, flex: 'none' }} />
-              <span>{t('savedNote')}</span>
+            <div style={{ display: 'flex', gap: 9, alignItems: 'center', marginBottom: 16, padding: '10px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.5, color: 'var(--text-secondary)' }}>
+              <Icon name="monitor-smartphone" size={15} style={{ color: 'var(--ink-300)', flex: 'none' }} />
+              <span style={{ flex: 1 }}>{t('savedNote')}</span>
+              {Object.keys(savedMap).length > 0 && (
+                <button
+                  onClick={() => {
+                    const items = Object.values(savedMap);
+                    const date = new Intl.DateTimeFormat('en-CA').format(new Date());
+                    const blob = new Blob([JSON.stringify({ exportedAt: new Date().toISOString(), count: items.length, items }, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url; a.download = `cadence-saved-${date}.json`;
+                    document.body.appendChild(a); a.click();
+                    document.body.removeChild(a); URL.revokeObjectURL(url);
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', gap: 5, padding: '4px 10px', borderRadius: 6, border: '1px solid var(--border-subtle)', background: 'transparent', color: 'var(--text-secondary)', fontSize: 12, cursor: 'pointer', fontFamily: 'var(--font-mono)', letterSpacing: '0.03em', flex: 'none', whiteSpace: 'nowrap' }}
+                >
+                  {React.createElement(lucide.Download, { size: 12 })}
+                  {t('savedExport') || 'Export'}
+                </button>
+              )}
             </div>
           )}
 
