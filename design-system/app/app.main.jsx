@@ -889,6 +889,8 @@ function FeedApp() {
   // from archive/*.json). null = not requested yet; [] = loaded-but-empty or
   // load failed (feed still renders); array = archive-only stories.
   const [archiveStories, setArchiveStories] = React.useState(null);
+  // {loaded, total} — updated per-month as files resolve; null = not started.
+  const [archiveProgress, setArchiveProgress] = React.useState(null);
   const archiveLoading = view === 'all' && archiveStories === null;
   React.useEffect(() => {
     // Sources view also wants the archive: wall counts are all-time (live feed
@@ -896,9 +898,20 @@ function FeedApp() {
     // cards permanently at zero). Same cached promise, so no extra cost.
     if ((view !== 'all' && view !== 'sources') || archiveStories !== null) return;
     let alive = true;
-    window.CD_LOAD_ARCHIVE().then((items) => { if (alive) setArchiveStories(items); });
+    const onProgress = (loaded, total) => {
+      if (alive) setArchiveProgress({ loaded, total });
+    };
+    window.CD_LOAD_ARCHIVE(onProgress).then((items) => {
+      if (alive) { setArchiveStories(items); setArchiveProgress(null); }
+    });
     return () => { alive = false; };
   }, [view, archiveStories]);
+
+  // All-view pagination: show N date-groups at a time so we never dump
+  // hundreds of cards into the DOM at once. Reset when the filter changes.
+  const ALL_PAGE_SIZE = 7;
+  const [visibleDays, setVisibleDays] = React.useState(ALL_PAGE_SIZE);
+  React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query]);
 
   // 中英切换 — setLang re-renders the tree; every component reads
   // CD_LANG / CD_T at render time, so the flip is instant and complete.
@@ -991,16 +1004,26 @@ function FeedApp() {
       map.get(k).push(s);
     });
     return [...map.entries()]
-      .sort((a, b) => b[0].localeCompare(a[0]))
+      .sort((a, b) => {
+        // Unknown-date bucket always sinks to the bottom regardless of sort order.
+        if (a[0] === '0000-00-00') return 1;
+        if (b[0] === '0000-00-00') return -1;
+        return b[0].localeCompare(a[0]);
+      })
       .map(([k, items]) => ({
         key: k,
-        label: k === '0000-00-00' ? t('older') : new Date(k + 'T12:00:00Z')
-          .toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
+        label: k === '0000-00-00'
+          ? t('unknownDate')
+          : new Date(k + 'T12:00:00Z').toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
         items: items.sort((a, b) => b.score - a.score),
       }));
   })();
 
   const grouped = view === 'all' ? groupedByDate : groupedByDay;
+  // For the All view, slice to visibleDays groups so we never render the full
+  // archive at once. Other views are small enough (today/yesterday/older) to render whole.
+  const visibleGroups = view === 'all' ? grouped.slice(0, visibleDays) : grouped;
+  const hasMoreDays = view === 'all' && grouped.length > visibleDays;
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
   const leadId = (!compact && !isDaily && view !== 'saved' && grouped.length && grouped[0].items.length)
@@ -1077,11 +1100,22 @@ function FeedApp() {
           )}
 
           {/* Archive still in flight — feed items already render above; this
-              strip just signals that older stories are on their way. */}
+              strip just signals that older stories are on their way. Shows
+              per-month progress (e.g. "3 / 8") once the manifest is loaded. */}
           {!isSources && archiveLoading && (
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, margin: '0 0 14px', padding: '8px 12px', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>
               <Icon name="loader-circle" size={13} style={{ color: 'var(--ink-300)' }} />
               <span>{t('loadingArchive')}</span>
+              {archiveProgress && archiveProgress.total > 0 && (
+                <>
+                  <span style={{ flex: 1 }} />
+                  <span>{archiveProgress.loaded} / {archiveProgress.total}</span>
+                  {/* progress bar */}
+                  <span style={{ width: 60, height: 3, borderRadius: 999, background: 'var(--border-subtle)', overflow: 'hidden', flex: 'none' }}>
+                    <span style={{ display: 'block', height: '100%', borderRadius: 999, background: 'var(--green-500)', width: `${Math.round(archiveProgress.loaded / archiveProgress.total * 100)}%`, transition: 'width 0.2s ease' }} />
+                  </span>
+                </>
+              )}
             </div>
           )}
 
@@ -1092,7 +1126,7 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && !isFeedback && !isDaily && grouped.map((g) => (
+          {!isSources && !isFeedback && !isDaily && visibleGroups.map((g) => (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
@@ -1112,7 +1146,7 @@ function FeedApp() {
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} tech={s.tech}
-                        title={s.title} summary={s.summary} whyItMatters={compact ? null : s.why}
+                        title={s.title} summary={s.summary} whyItMatters={s.why}
                         selected={selected === s.id}
                         saved={!!savedMap[s.id]} onToggleSave={() => toggleSave(raw)}
                         onClick={() => setSelected(selected === s.id ? null : s.id)} />
@@ -1123,6 +1157,19 @@ function FeedApp() {
               </div>
             </section>
           ))}
+
+          {/* Load more — only in All view when there are more date-groups to show */}
+          {!isSources && !isFeedback && !isDaily && hasMoreDays && !archiveLoading && (
+            <div style={{ textAlign: 'center', padding: '8px 0 24px' }}>
+              <Button variant="secondary" size="sm"
+                onClick={() => setVisibleDays((v) => v + ALL_PAGE_SIZE)}>
+                {zh ? `再加载 ${ALL_PAGE_SIZE} 天` : `Load ${ALL_PAGE_SIZE} more days`}
+                <span style={{ marginLeft: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
+                  ({grouped.length - visibleDays} {zh ? '天剩余' : 'remaining'})
+                </span>
+              </Button>
+            </div>
+          )}
         </main>
 
         {!isSources && !isFeedback && !isMobile && (isDaily

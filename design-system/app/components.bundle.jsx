@@ -556,19 +556,22 @@ function NewsCard({
           }}>{title}</a>
       </h3>
 
-      {/* summary — clamped by default (2 lines, lead 4); the selected card
-          shows it in full. Clicking a card selects it, clicking again
-          deselects, so the clamp doubles as an expand/collapse. */}
-      {summary && !isCompact && (
+      {/* summary — compact: always shown as a 2-line teaser; expands to full
+          when selected. Default/lead: same expand-on-select behaviour (2 or 4
+          lines clamped, full when selected). */}
+      {summary && (
         <p style={{
-          margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)',
+          margin: isCompact ? '6px 0 0' : '8px 0 0',
+          fontFamily: 'var(--font-sans)',
+          fontSize: isCompact ? 13 : 'var(--text-base)',
           lineHeight: 1.5, color: 'var(--text-secondary)',
           ...(selected ? {} : { display: '-webkit-box', WebkitLineClamp: isLead ? 4 : 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }),
         }}>{summary}</p>
       )}
 
-      {/* why it matters */}
-      {whyItMatters && !isCompact && (
+      {/* why it matters — always shown for default/lead; compact shows it only
+          when the card is selected (expanded state). */}
+      {whyItMatters && (!isCompact || selected) && (
         <div style={{
           display: 'flex', gap: 9, marginTop: 14, padding: '11px 13px',
           background: 'var(--green-50)', border: '1px solid var(--green-100)',

@@ -36,7 +36,7 @@ window.CD_DICT = {
     savedNote: "Bookmarks are stored locally in this browser — no account needed. They won't follow you to another device or browser, and clearing site data removes them.",
     today: 'Today', yesterday: 'Yesterday', older: 'Earlier this week',
     storyOne: 'story', storyMany: 'stories',
-    loadingArchive: 'Loading the full archive…',
+    loadingArchive: 'Loading the full archive…', unknownDate: 'Date unknown',
     emptySearch: 'No stories match', emptySaved: 'Nothing saved yet — tap the bookmark icon on any story.',
     emptyDaily: 'No stories from yesterday yet — check back after the early-morning crawl (05:30 Beijing).', emptyNone: 'No stories yet.',
     'daily.stories': 'STORIES', 'daily.edition': 'DAILY EDITION',
@@ -99,7 +99,7 @@ window.CD_DICT = {
     savedNote: '收藏保存在当前浏览器本地，无需账号——但不会同步到其他设备或浏览器，清除站点数据后会丢失。',
     today: '今天', yesterday: '昨天', older: '本周早些时候',
     storyOne: '条', storyMany: '条',
-    loadingArchive: '正在加载历史归档…',
+    loadingArchive: '正在加载历史归档…', unknownDate: '日期不详',
     emptySearch: '没有匹配的文章：', emptySaved: '还没有收藏——点击任意卡片上的书签图标。',
     emptyDaily: '昨天还没有文章——每日抓取（北京时间早上 5:30）后再来看看。', emptyNone: '暂无文章。',
     'daily.stories': '篇', 'daily.edition': '步频日报',
@@ -346,10 +346,15 @@ window.CD_DATA_READY = (async () => {
 // (already-in-feed stories are deduped out by sourceUrl/id) in CD_STORIES
 // shape, newest first. Cached promise: at most one network round per session.
 window.CD_ARCHIVE_READY = null;
-window.CD_LOAD_ARCHIVE = () => {
+// onProgress(loaded, total) — called after each month file finishes.
+// Only fires on the first load; subsequent callers get the cached promise
+// with no callback (archive is already in memory).
+window.CD_LOAD_ARCHIVE = (onProgress) => {
   if (window.CD_ARCHIVE_READY) return window.CD_ARCHIVE_READY;
   window.CD_ARCHIVE_READY = (async () => {
     try {
+      // Manifest changes when new months are added — keep no-store so we
+      // always get the current list of files.
       const idxRes = await fetch('archive/index.json', { cache: 'no-store' });
       if (!idxRes.ok) throw new Error(`archive/index.json HTTP ${idxRes.status}`);
       const manifest = await idxRes.json();
@@ -363,10 +368,17 @@ window.CD_LOAD_ARCHIVE = () => {
         if (s.sourceUrl) seen.add(s.sourceUrl);
         if (s.id) seen.add(s.id);
       });
+      let loaded = 0;
+      const total = files.length;
+      if (onProgress) onProgress(0, total);
+      // Month files are static (historical) — let the browser cache them.
+      // Only the manifest (index.json) needs no-store since it changes on
+      // each new month. This avoids re-downloading all history every session.
       const months = await Promise.all(files.map((f) =>
-        fetch(`archive/${f}`, { cache: 'no-store' })
+        fetch(`archive/${f}`, { cache: 'default' })
           .then((r) => (r.ok ? r.json() : { items: [] }))
           .catch(() => ({ items: [] }))
+          .then((data) => { loaded++; if (onProgress) onProgress(loaded, total); return data; })
       ));
       const out = [];
       for (const data of months) {
