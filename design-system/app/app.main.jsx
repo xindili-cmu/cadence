@@ -451,7 +451,7 @@ function AboutView({ onView }) {
       {/* Why I built this — founder story */}
       <section>
         <h2 style={sectionTitle}><Icon name="heart" size={18} style={{ color: 'var(--green-700)' }} />{t('about.why.title')}</h2>
-        {['p1', 'p2', 'p3', 'p4'].map((k) => (
+        {['p1', 'p2', 'p3'].map((k) => (
           <p key={k} style={para}>{t('about.why.' + k)}</p>
         ))}
       </section>
