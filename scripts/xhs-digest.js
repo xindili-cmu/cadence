@@ -8,8 +8,9 @@
  * free to run anywhere.
  *
  * Output (xhs/YYYY-MM-DD/):
- *   cover.png            3:4 封面 (1242×1656)
+ *   cover.png            3:4 封面 (1242×1656)，头条标题做钩子
  *   01.png … 0N.png      每篇一张内页卡
+ *   0(N+1).png           尾页：标签档位说明 + 关注引导
  *   caption.txt          小红书标题 + 正文 + 话题标签
  *
  * Selection: stories published on the Beijing-time "yesterday" (or the date
@@ -31,7 +32,7 @@ const path = require('path');
 // CADENCE_ROOT override lets the script run from outside the repo (e.g. a
 // sandbox with its own node_modules) while reading/writing the real data.
 const ROOT = process.env.CADENCE_ROOT || path.join(__dirname, '..');
-const OUT_ROOT = path.join(ROOT, 'xhs');
+const OUT_ROOT = process.env.XHS_OUT || path.join(ROOT, 'xhs');
 const MAX_ITEMS = 8;
 const MIN_ITEMS = 5;
 
@@ -56,6 +57,9 @@ const CAT = {
   practice:        { zh: '行业与执业', soft: '#E8EAEC', ink: '#31363D' },
 };
 const catOf = (id) => CAT[id] || { zh: id || '其他', soft: C.ink50, ink: C.ink600 };
+
+// 信号分 → 人话三档（分布实测 60–85，中位 75）；尾页有统一说明
+const tierOf = (score) => (score >= 80 ? '强信号' : score >= 70 ? '值得读' : '参考');
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 function beijingToday() {
@@ -132,7 +136,7 @@ function pageShell(footerRight, ...body) {
           h('div', { display: 'flex', width: 16, height: 16, borderRadius: 99, backgroundColor: C.blue700 }),
           txt({ fontFamily: SANS, fontWeight: 700, fontSize: 30, letterSpacing: 2, color: C.ink900 }, 'CADENCE 步频'),
         ),
-        txt({ fontFamily: SANS, fontWeight: 500, fontSize: 26, color: C.ink500, letterSpacing: 4 }, '康复科研日报'),
+        txt({ fontFamily: SANS, fontWeight: 500, fontSize: 26, color: C.ink500, letterSpacing: 4 }, '步频日报'),
       ),
       ...body,
     ),
@@ -146,25 +150,31 @@ function pageShell(footerRight, ...body) {
   );
 }
 
-function coverCard(dateStr, stories, meta) {
+// 封面：头条标题做钩子（品牌框架恒定），TOP n 降级为栏目标签，篇数放日期行
+function coverCard(dateStr, stories) {
   const d = zhDate(dateStr);
-  const top3 = stories.slice(0, 3);
-  return pageShell(`${d.full} · ${d.weekday}`,
-    col({ flex: 1, justifyContent: 'center', gap: 0 },
-      txt({ fontFamily: SANS, fontWeight: 500, fontSize: 30, color: C.blue700, letterSpacing: 10, marginBottom: 28 }, '昨日高分文献'),
-      row({ alignItems: 'flex-end', gap: 24, marginBottom: 20 },
-        txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 170, lineHeight: 1.05, color: C.ink900 }, 'TOP'),
-        txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 230, lineHeight: 0.95, color: C.blue700 }, String(stories.length)),
+  const lead = stories[0];
+  const rest = stories.slice(1, 3);
+  const cat = catOf(lead.category);
+  return pageShell(`${d.full} · ${d.weekday} · 共 ${stories.length} 篇`,
+    col({ flex: 1, justifyContent: 'center' },
+      txt({ fontFamily: SANS, fontWeight: 700, fontSize: 30, color: C.blue700, letterSpacing: 8, marginBottom: 40 }, `昨日高分文献 TOP ${stories.length}`),
+      txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 84, lineHeight: 1.38, color: C.ink900, marginBottom: 40, lineClamp: 4 },
+        trim(lead.titleZh || lead.title, 44)),
+      row({ gap: 16, marginBottom: 56 },
+        h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: cat.soft },
+          txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: cat.ink }, cat.zh)),
+        h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: C.blue100 },
+          txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700 }, `今日最高 · ${tierOf(lead.curatedScore)}`)),
       ),
-      txt({ fontFamily: SANS, fontSize: 30, color: C.ink600, lineHeight: 1.7, marginBottom: 64 },
-        `${meta.journalCount ? `监测 ${meta.journalCount} 本 PT/康复期刊，` : ''}AI 通读昨天的新文献，这 ${stories.length} 篇最值得看`),
-      col({ gap: 22 },
-        ...top3.map((s, i) => row({ gap: 22, alignItems: 'flex-start' },
-          txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 40, color: i === 0 ? C.blue700 : C.ink500, marginTop: -2 }, String(i + 1)),
-          txt({ fontFamily: SANS, fontWeight: 500, fontSize: 33, lineHeight: 1.5, color: C.ink900, flex: 1, lineClamp: 2 }, trim(s.titleZh || s.title, 52)),
+      h('div', { display: 'flex', width: 72, height: 3, backgroundColor: C.ink200, marginBottom: 44 }),
+      col({ gap: 26 },
+        ...rest.map((s, i) => row({ gap: 22, alignItems: 'flex-start' },
+          txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 38, color: C.ink500, marginTop: -2 }, String(i + 2)),
+          txt({ fontFamily: SANS, fontWeight: 500, fontSize: 31, lineHeight: 1.5, color: C.ink600, flex: 1, lineClamp: 2 }, trim(s.titleZh || s.title, 48)),
         )),
         stories.length > 3
-          ? txt({ fontFamily: SANS, fontSize: 28, color: C.ink500, marginTop: 10 }, `…还有 ${stories.length - 3} 篇，往后翻 →`)
+          ? txt({ fontFamily: SANS, fontSize: 28, color: C.ink500, marginTop: 8 }, `…还有 ${stories.length - 3} 篇，往后翻 →`)
           : null,
       ),
     ),
@@ -184,7 +194,7 @@ function storyCard(s, rank, total, dateStr) {
         s.tech ? h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: '#DFEDEE' },
           txt({ fontFamily: SANS, fontWeight: 500, fontSize: 27, color: '#1E5258' }, '康复科技')) : null,
         h('div', { display: 'flex', padding: '8px 22px', borderRadius: 10, backgroundColor: C.blue100 },
-          txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700 }, `信号分 ${s.curatedScore}`)),
+          txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700 }, tierOf(s.curatedScore))),
       ),
       col({ flex: 1, justifyContent: 'center' },
         txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 56, lineHeight: 1.42, color: C.ink900, marginBottom: 44, lineClamp: 4 },
@@ -207,11 +217,39 @@ function storyCard(s, rank, total, dateStr) {
   );
 }
 
+// 尾页：收口 + 标签档位说明 + 关注/公众号引导
+function endCard(dateStr, stories, meta) {
+  const d = zhDate(dateStr);
+  return pageShell(`${d.full} · ${d.weekday}`,
+    col({ flex: 1, justifyContent: 'center' },
+      txt({ fontFamily: SANS, fontWeight: 700, fontSize: 30, color: C.blue700, letterSpacing: 8, marginBottom: 44 }, '今天就到这里'),
+      col({ marginBottom: 44 },
+        txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 84, lineHeight: 1.4, color: C.ink900 }, '每天一份'),
+        txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 84, lineHeight: 1.4, color: C.ink900 }, '步频日报'),
+      ),
+      txt({ fontFamily: SANS, fontSize: 31, lineHeight: 1.74, color: C.ink600, marginBottom: 64 },
+        `${meta.journalCount ? `监测 ${meta.journalCount} 本 PT/康复期刊，` : ''}AI 通读每天的新文献，只留最值得看的几篇`),
+      row({ width: '100%', alignItems: 'stretch', marginBottom: 72 },
+        h('div', { display: 'flex', width: 6, borderRadius: 99, backgroundColor: C.blue700, marginRight: 26 }),
+        col({ flex: 1, gap: 12, padding: '4px 0' },
+          txt({ fontFamily: SANS, fontWeight: 700, fontSize: 26, letterSpacing: 4, color: C.blue700 }, '图上的标签怎么读'),
+          txt({ fontFamily: SANS, fontSize: 30, lineHeight: 1.74, color: C.ink600 },
+            'AI 给每篇新文献打分后换算成三档：强信号（80 分以上）· 值得读（70–79）· 参考（70 以下）'),
+        ),
+      ),
+      col({ padding: '36px 40px', borderRadius: 16, backgroundColor: C.blue50, border: `1px solid ${C.ink200}`, gap: 14 },
+        txt({ fontFamily: SANS, fontWeight: 700, fontSize: 32, color: C.ink900 }, '关注 @Cadence步频，每天跟上新证据'),
+        txt({ fontFamily: SANS, fontSize: 28, lineHeight: 1.6, color: C.ink600 }, '公众号同名「Cadence步频」，同步日更'),
+      ),
+    ),
+  );
+}
+
 // ── Caption ──────────────────────────────────────────────────────────────────
 function buildCaption(dateStr, stories, spansTwoDays) {
   const d = zhDate(dateStr);
   const lead = stories[0];
-  const title = `${d.short} 康复科研日报｜昨日高分文献Top${stories.length}`;
+  const title = `${d.short} 步频日报｜昨日高分文献Top${stories.length}`;
   const lines = stories.map((s, i) => `${i + 1}️⃣ ${trim(s.titleZh || s.title, 40)}`);
   const cats = [...new Set(stories.map((s) => catOf(s.category).zh))];
   const body = [
@@ -219,7 +257,7 @@ function buildCaption(dateStr, stories, spansTwoDays) {
     '',
     ...lines,
     '',
-    `📌 最高分：${trim(lead.titleZh || lead.title, 40)}（信号分 ${lead.curatedScore}）`,
+    `📌 最高分：${trim(lead.titleZh || lead.title, 40)}（${tierOf(lead.curatedScore)}）`,
     `${trim(lead.curatedReason, 80)}`,
     '',
     `涉及方向：${cats.join(' / ')}`,
@@ -267,10 +305,12 @@ async function main() {
     console.log(`  ✓ ${file} (${(png.length / 1024).toFixed(0)} KB)`);
   };
 
-  await render(coverCard(dateStr, stories, { journalCount }), 'cover.png');
+  await render(coverCard(dateStr, stories), 'cover.png');
   for (let i = 0; i < stories.length; i++) {
     await render(storyCard(stories[i], i + 1, stories.length, dateStr), `${String(i + 1).padStart(2, '0')}.png`);
   }
+  // 尾页接在最后一篇之后（8 篇时为 09.png），与编号图一起按文件名升序上传即可
+  await render(endCard(dateStr, stories, { journalCount }), `${String(stories.length + 1).padStart(2, '0')}.png`);
   fs.writeFileSync(path.join(outDir, 'caption.txt'), buildCaption(dateStr, stories, spansTwoDays));
   console.log(`  ✓ caption.txt\n  → ${path.relative(ROOT, outDir)}/`);
 }
