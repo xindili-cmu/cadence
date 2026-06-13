@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!-- Source template for og-card.png. Render to PNG with headless Chrome at
+     1200x630 (see command in chat). Real Cadence lockup: skewed equalizer mark
+     + IBM Plex "Cadence" + LXGW WenKai "步频". Tagline + PT positioning +
+     bilingual signal/noise line. -->
+<link rel="stylesheet" href="design-system/styles.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  #card {
+    width: 1200px; height: 630px; background: #2C5A96;
+    padding: 64px 88px 60px; display: flex; flex-direction: column; justify-content: space-between;
+    font-family: 'IBM Plex Sans', sans-serif; overflow: hidden;
+  }
+  .mark { display: block; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 23px; letter-spacing: 0.18em; text-transform: uppercase; color: #93B8DE; }
+  .word { font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 110px; letter-spacing: -0.018em; line-height: 1; color: #FFFFFF; white-space: nowrap; }
+  .word .d { color: #93B8DE; }
+  .zh { font-family: 'LXGW WenKai Light', 'IBM Plex Sans', sans-serif; font-size: 100px; line-height: 1; color: #FFFFFF; white-space: nowrap; }
+  .rule { width: 360px; height: 2px; background: #4A82BE; margin: 24px 0 20px; }
+  .line-en { font-family: 'Spectral', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.35; color: #FFFFFF; }
+  .line-zh { font-family: 'Spectral', 'Noto Serif SC', serif; font-size: 27px; line-height: 1.4; color: #C9D8EC; margin-top: 9px; }
+  .url { font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #93B8DE; text-align: right; }
+</style>
+</head>
+<body>
+<div id="card">
+  <div>
+    <svg class="mark" width="120" height="105" viewBox="446 107 580 508" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="skewX(-22.490)" fill="#FFFFFF">
+        <rect x="664.6" y="410" width="40.5" height="92"/>
+        <rect x="745.6" y="343" width="42.5" height="159"/>
+        <rect x="832.5" y="277" width="42.6" height="225"/>
+        <rect x="930.0" y="121" width="46.7" height="474"/>
+        <rect x="1035.4" y="344" width="46.9" height="158"/>
+        <rect x="1128.9" y="415" width="39.9" height="87"/>
+      </g>
+    </svg>
+    <div class="eyebrow" style="margin-top:20px;">Keeping&nbsp;pace&nbsp;with&nbsp;the&nbsp;evidence</div>
+  </div>
+
+  <div>
+    <div style="display:flex; align-items:baseline; gap:30px;">
+      <span class="word">Ca<span class="d">dence</span></span>
+      <span class="zh">步频</span>
+    </div>
+    <div class="rule"></div>
+    <div class="line-en">Physical therapy &amp; rehab. Signal, not noise.</div>
+    <div class="line-zh">每天替你筛掉噪音，只把最值得读的几条留下来。</div>
+  </div>
+
+  <div class="url">incadencept.com</div>
+</div>
+</body>
+</html>

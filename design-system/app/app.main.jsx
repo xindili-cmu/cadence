@@ -435,7 +435,7 @@ function AboutView({ onView, mobile }) {
   ];
 
   return (
-    <div style={{ maxWidth: 720, display: 'flex', flexDirection: 'column', gap: mobile ? 36 : 44 }}>
+    <div style={{ maxWidth: 820, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: mobile ? 36 : 44 }}>
       {/* Header unit — magazine-feature hero + stat row kept together */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         {/* Hero — wordmark title, hairline rule, serif lead, supporting line */}
@@ -1221,7 +1221,7 @@ function FeedApp() {
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
         {!isMobile && <NavRail view={view} onView={setView} />}
 
-        <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : 'var(--feed-column)', padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
+        <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
           {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />}
 
