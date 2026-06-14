@@ -16,3 +16,13 @@ package-lock.json
 bun.lockb
 README.md
 .DS_Store
+
+# Internal / operational files — not part of the public site.
+# (sources.json, journals.json, news.json, archive/, briefs/ ARE fetched by
+# the client app, so they must stay served — do NOT add them here.)
+PUBLISHING.md
+scrape-ledger.json
+journals-to-add.template.json
+prototype-daily-rounds.html
+og-card.html
+design-input-r2/
