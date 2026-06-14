@@ -29,7 +29,7 @@ window.CD_DICT = {
     'about.how.3': 'An editorial layer filters out off-topic noise, keeping the signal that matters to rehab.',
     'about.why.title': 'Why I built this',
     'about.why.p1': "I studied physical therapy and spent two years in the clinic. A PT's day is packed end to end with patients and your focus is pulled in every direction; by the time it slows down, there's no energy left to keep up with new research, guidelines, or where the field is heading.",
-    'about.why.p2': 'I later studied data analytics for my master’s, but never left rehab behind. I kept wondering: could I use data to automate the two or three hours I once spent digging through the literature every day? And it is not only therapists drowning in it. Students, educators, and strength coaches are all stuck against the same wall of time.',
+    'about.why.p2': 'I later moved into data, but never left rehab behind. I kept wondering: could I use data to automate the two or three hours I once spent digging through the literature every day? And it is not only therapists drowning in it. Students, educators, and strength coaches are all stuck against the same wall of time.',
     'about.why.p3': 'In June 2026, my team and I built Cadence. It does those two or three hours of filtering for you and keeps only the few signals worth reading. Whether you are a therapist, a rehab student or educator, or a strength coach, you can catch up with the whole field in a few minutes.',
     'about.sources.title': 'Source transparency',
     'about.sources.body': 'Every source Cadence indexes is listed on the Sources page: journals, associations, and industry outlets, with how each one is wired in.',
@@ -113,7 +113,7 @@ window.CD_DICT = {
     'about.how.3': '编辑层过滤掉无关噪音，只留下对康复真正重要的信号。',
     'about.why.title': '为什么做这个',
     'about.why.p1': '主播本人本科读物理治疗，毕业后做了两年临床。PT 的一天是被患者填满的，心思是涣散的，等忙完，根本没精力再去追最新的研究、指南和行业动态。',
-    'about.why.p2': '后来主播读了数据分析硕士，但一直没离开康复。主播常想：能不能用数据，把当年每天花两三个小时翻文献的事自动化？而且被信息淹没的不只是治疗师，康复的学生、老师、体能教练，都困在同样的时间里。',
+    'about.why.p2': '后来主播转去做数据，但一直没离开康复。主播常想：能不能用数据，把当年每天花两三个小时翻文献的事自动化？而且被信息淹没的不只是治疗师，康复的学生、老师、体能教练，都困在同样的时间里。',
     'about.why.p3': '2026 年 6 月，我和团队一起做了步频 Cadence，替你做完那两三个小时的筛选，只留最值得读的几条。无论你是治疗师、康复师生还是体能教练，几分钟就能跟上整个领域。',
     'about.sources.title': '信源透明',
     'about.sources.body': '步频收录的所有信源都列在「信源」页，包括期刊、学会与行业媒体，以及每个信源的接入方式。',
@@ -299,11 +299,13 @@ function cdTransformItem(item) {
     title:       item.title,
     summary:     item.summary,
     why:         item.curatedReason,
+    limitation:  item.limitation,    // one-line study caveat (may be absent)
     // Bilingual content fields (cron-generated; may be absent on older items —
     // the display layer falls back to the original-language field).
     titleZh:     item.titleZh,
     summaryZh:   item.summaryZh,
     whyEn:       item.curatedReasonEn,
+    limitationEn: item.limitationEn,
     tags:        item.tags || [],
     tech:        !!item.tech, // 康复科技 overlay flag (cross-cutting, see XCUTS)
     related:     item.related || [],  // other outlets covering the same story (关联讨论)
