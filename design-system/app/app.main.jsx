@@ -499,13 +499,14 @@ function MetronomeMotif({ height = 320, color = 'var(--blue-600)', opacity = 0.0
   );
 }
 
-// Section running head — the editorial "journal" rule.
-function RunningHead({ index, label }) {
+// Section head — small blue eyebrow + large serif headline (editorial, no § rule).
+function SectionHead({ eyebrow, headline, mobile }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 22 }}>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', color: 'var(--blue-600)', whiteSpace: 'nowrap' }}>§ {index}</span>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>{label}</span>
-      <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+    <div style={{ marginBottom: headline ? 30 : 18 }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: headline ? 16 : 0 }}>{eyebrow}</div>
+      {headline && (
+        <h2 style={{ margin: 0, maxWidth: 880, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-4xl)', lineHeight: 1.12, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>{headline}</h2>
+      )}
     </div>
   );
 }
@@ -606,7 +607,7 @@ function AboutView({ onView, mobile }) {
 
       {/* §01 缘起 — hook + founder story (kept), signed off */}
       <section>
-        <RunningHead index="01" label={tt('缘起', 'Why Cadence')} />
+        <SectionHead mobile={mobile} eyebrow={tt('缘起', 'Why Cadence')} />
         <blockquote style={{ margin: '0 0 28px', maxWidth: 840, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-xl)' : 'var(--text-2xl)', lineHeight: 1.3, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
           {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
           <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
@@ -619,7 +620,7 @@ function AboutView({ onView, mobile }) {
 
       {/* §02 方法 — three steps with live demos (incl. SIGNAL legend) */}
       <section>
-        <RunningHead index="02" label={tt('方法', 'How it works')} />
+        <SectionHead mobile={mobile} eyebrow={tt('方法', 'How it works')} headline={tt('从噪声里，捞出信号。', 'Signal, pulled from the noise.')} />
         <div>
           {window.ABOUT.steps.map((s, i) => (
             <div key={s.idx} className="cd-about-step" style={i === 0 ? { borderTop: 'none', paddingTop: 0 } : undefined}>
@@ -636,7 +637,7 @@ function AboutView({ onView, mobile }) {
 
       {/* §03 专科体系 — one-line clinical scope per specialty */}
       <section>
-        <RunningHead index="03" label={tt('专科体系', 'The taxonomy')} />
+        <SectionHead mobile={mobile} eyebrow={tt('专科体系', 'The taxonomy')} headline={tt('九个专科，各归其位。', 'Nine specialties, each in its place.')} />
         <p style={{ margin: '0 0 22px', maxWidth: 620, ...para, marginBottom: 22 }}>{tt('我们不做泛泛的「康复」标签。每项研究都归入一个具体专科，让你只读与自己相关的内容。', 'We don’t use a vague “rehab” label. Every study is filed into a specific specialty, so you read only what’s relevant to you.')}</p>
         <div className="cd-about-tax">
           {window.CATEGORIES.map((c, i) => {
@@ -677,7 +678,7 @@ function AboutView({ onView, mobile }) {
 
       {/* §04 来源与原则 */}
       <section>
-        <RunningHead index="04" label={tt('来源与原则', 'Sources & principles')} />
+        <SectionHead mobile={mobile} eyebrow={tt('来源与原则', 'Sources & principles')} headline={tt('可信的来源，透明的标准。', 'Credible sources, transparent standards.')} />
         <div className="cd-about-srcwrap">
           <div>
             <h3 style={secTitle}>{tt('我们读什么', 'What we read')}</h3>
@@ -713,7 +714,7 @@ function AboutView({ onView, mobile }) {
 
       {/* 适合谁 — audience strip */}
       <section>
-        <div style={{ marginBottom: 18, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{tt('适合谁', 'Who it’s for')}</div>
+        <SectionHead mobile={mobile} eyebrow={tt('适合谁', 'Who it’s for')} headline={tt('为站在床旁的人而做。', 'Built for the people at the bedside.')} />
         <div className="cd-about-aud">
           {window.ABOUT.audience.map((a, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '24px 20px', background: 'var(--surface-card)' }}>
