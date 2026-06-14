@@ -328,6 +328,52 @@ window.CD_NAV = [
   { id: 'feedback', label: 'Feedback',    icon: 'message-circle' },
 ];
 
+// ── /about page content — structural facts only, no invented traction. ────────
+window.ABOUT = {
+  steps: [
+    { idx: '01', demo: 'sources', zh: '采集', en: 'Ingest',
+      bodyZh: '每天清晨，自动抓取 JOSPT、PTJ、BJSM、PubMed 等 40 余个期刊与数据库的新发表研究。',
+      bodyEn: 'Each morning we pull newly published studies from JOSPT, PTJ, BJSM, PubMed and 40+ other journals and databases.' },
+    { idx: '02', demo: 'signal', zh: '评分', en: 'Score',
+      bodyZh: 'AI 为每项发现打出 0–100 的 SIGNAL 评分——衡量它在多大程度上应当改变临床实践。评分综合研究设计、样本量、效应量与期刊影响力。',
+      bodyEn: 'Our AI gives each finding a 0–100 SIGNAL score — how much it should change practice — weighing study design, sample size, effect size and journal impact.' },
+    { idx: '03', demo: 'file', zh: '归类', en: 'File',
+      bodyZh: '每项研究归入九大专科之一，并附上一句「为什么重要」——用第二人称、可执行的临床要点，回答「我明天该不该改变做法」。',
+      bodyEn: 'Every study is filed into one of nine specialties with a one-line “why it matters” — second-person, actionable, answering “should I change what I do tomorrow?”' },
+  ],
+  scopes: {
+    orthopedic:        { zh: '肌骨损伤 · 术后 · 肌腱与关节', en: 'Musculoskeletal · post-op · tendon & joint' },
+    neurological:      { zh: '卒中 · 脊髓损伤 · 帕金森', en: 'Stroke · SCI · Parkinson’s' },
+    sports:            { zh: '运动损伤 · 回归赛场 · 表现', en: 'Injury · return-to-sport · performance' },
+    pediatric:         { zh: '发育 · 脑瘫 · 儿科神经', en: 'Development · cerebral palsy · paeds neuro' },
+    geriatric:         { zh: '跌倒 · 衰弱 · 平衡与步态', en: 'Falls · frailty · balance & gait' },
+    cardiopulmonary:   { zh: '心脏 · 肺 · 重症后康复', en: 'Cardiac · pulmonary · post-ICU' },
+    'manual-modality': { zh: '手法治疗 · 电疗 · 物理因子', en: 'Manual therapy · electro · modalities' },
+    practice:          { zh: '循证实践 · 政策 · 报销', en: 'Evidence-based practice · policy · payment' },
+    'rehab-tech':      { zh: '可穿戴 · 外骨骼 · 远程康复——横切所有专科', en: 'Wearables · exoskeletons · telerehab — across every specialty' },
+  },
+  sources: [
+    { name: 'JOSPT',            favicon: 'jospt.org.png',               zh: '骨科运动物理治疗', en: 'Orthopaedic & sports PT' },
+    { name: 'Physical Therapy', favicon: 'apta.org.png',                zh: 'APTA 官方期刊', en: 'The APTA journal' },
+    { name: 'IJSPT',            favicon: 'ijspt.org.png',               zh: '国际运动物理治疗', en: 'Intl. sports PT' },
+    { name: 'BJSM',             favicon: 'bmj.com.png',                 zh: '英国运动医学', en: 'Br J Sports Med' },
+    { name: 'PubMed',           favicon: 'pubmed.ncbi.nlm.nih.gov.png', zh: '全库索引', en: 'Full-library index' },
+    { name: 'The Lancet',       favicon: 'thelancet.com.png',          zh: '综合医学', en: 'General medicine' },
+    { name: 'JAMA Network',     favicon: 'jamanetwork.com.png',        zh: '综合医学', en: 'General medicine' },
+  ],
+  principles: [
+    { zh: '用数字说话：样本量、效应量、随访窗与影响因子，一律照实呈现。', en: 'Numbers first: sample size, effect size, follow-up window and impact factor, stated plainly.' },
+    { zh: '评分透明：SIGNAL 衡量的是证据强度，不是新闻热度。', en: 'Transparent scoring: SIGNAL measures evidential strength, not news heat.' },
+    { zh: '中文优先，英文对照：每项研究都有中英双语摘要。', en: 'Chinese-first, English alongside: every study carries a bilingual summary.' },
+  ],
+  audience: [
+    { icon: 'stethoscope',    zh: '物理治疗师', en: 'Physical therapists' },
+    { icon: 'activity',       zh: '运动防护与队医', en: 'Sports medicine & ATs' },
+    { icon: 'graduation-cap', zh: '教育者与学生', en: 'Educators & students' },
+    { icon: 'building-2',     zh: '康复科室与诊所', en: 'Rehab departments & clinics' },
+  ],
+};
+
 // ── Async load → render ─────────────────────────────────────────────────────
 // Module-level promise so app.main.jsx can render after the data is available;
 // avoids a flash of empty feed.

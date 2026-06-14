@@ -485,82 +485,257 @@ function FeedbackView() {
 // CD_DICT (about.*), so en/zh stay fully separated per the language-toggle
 // rule. CTAs call onView() to hop to Sources / Feedback (which also rewrites
 // the hash, keeping deep links intact).
+// ── /about helpers ───────────────────────────────────────────────────────────
+// Brand-mark motif (six skewed strokes) — a faint oversized texture.
+function MetronomeMotif({ height = 320, color = 'var(--blue-600)', opacity = 0.06, style }) {
+  const rects = [[664.6, 410, 40.5, 92], [745.6, 343, 42.5, 159], [832.5, 277, 42.6, 225], [930.0, 121, 46.7, 474], [1035.4, 344, 46.9, 158], [1128.9, 415, 39.9, 87]];
+  const w = Math.round(height * 580 / 508);
+  return (
+    <svg width={w} height={height} viewBox="446 107 580 508" aria-hidden="true" style={{ display: 'block', opacity, ...style }}>
+      <g transform="skewX(-22.490)" fill={color}>
+        {rects.map((r, i) => <rect key={i} x={r[0]} y={r[1]} width={r[2]} height={r[3]} />)}
+      </g>
+    </svg>
+  );
+}
+
+// Section running head — the editorial "journal" rule.
+function RunningHead({ index, label }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 22 }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', color: 'var(--blue-600)', whiteSpace: 'nowrap' }}>§ {index}</span>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>{label}</span>
+      <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+    </div>
+  );
+}
+
 function AboutView({ onView, mobile }) {
   const t = window.CD_T;
   const zh = window.CD_LANG === 'zh';
-  const srcCount = (window.CD_SOURCES || []).length || 20;
+  const srcCount = (window.CD_SOURCES || []).length || 40;
+  const tt = (a, b) => (zh ? a : b);
 
-  const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const para = { margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.85, color: 'var(--text-secondary)' };
-
+  const secTitle = { margin: '0 0 18px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)' };
+  const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const stats = [
-    { v: String(srcCount), l: zh ? '专业信源' : 'sources' },
-    { v: '8', l: zh ? '临床专科' : 'specialties' },
-    { v: '05:30', l: zh ? '每日更新' : 'daily refresh' },
-    { v: '中·EN', l: zh ? '双语' : 'bilingual' },
+    { v: '40+', l: tt('证据来源', 'Sources') },
+    { v: '8', l: tt('临床专科', 'Specialties') },
+    { v: '0–100', l: tt('SIGNAL 评分', 'SIGNAL score') },
+    { v: tt('每日', 'Daily'), l: tt('更新', 'Updated') },
   ];
-  const steps = ['1', '2', '3'];
-  const actions = [
-    { title: t('about.sources.title'), body: t('about.sources.body'), cta: t('about.sources.cta'), view: 'sources' },
-    { title: t('about.contact.title'), body: t('about.contact.body'), cta: t('about.contact.cta'), view: 'feedback' },
-  ];
+
+  // §02 step demos
+  const stepDemo = (which) => {
+    if (which === 'sources') {
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          {window.ABOUT.sources.slice(0, 6).map((s) => (
+            <span key={s.name} title={s.name} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 40, height: 40, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)' }}>
+              <img src={'design-system/assets/favicons/' + s.favicon} alt="" width="22" height="22" style={{ borderRadius: 4 }} />
+            </span>
+          ))}
+          <span style={{ display: 'inline-flex', alignItems: 'center', height: 40, padding: '0 12px', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>+ {tt('30 余种', '30 more')}</span>
+        </div>
+      );
+    }
+    if (which === 'signal') {
+      const tiers = [['≥ 90', tt('可改变实践', 'Practice-changing'), 'var(--signal-high)'], ['80–89', tt('值得关注', 'Worth knowing'), 'var(--signal-mid)'], ['65–79', tt('参考', 'For reference'), 'var(--signal-low)']];
+      return (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 28, flexWrap: 'wrap' }}>
+          <window.SignalScore score={91} variant="block" />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {tiers.map(([r, label, c]) => (
+              <div key={r} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                <span style={{ width: 4, height: 14, borderRadius: 2, background: c, flex: 'none' }} />
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, color: c, minWidth: 50 }}>{r}</span>
+                <span style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <window.CategoryTag category="orthopedic" withIndex />
+          <window.CategoryTag category="neurological" withIndex />
+          <window.CategoryTag category="sports" withIndex />
+        </div>
+        <div style={{ display: 'flex', gap: 12, padding: '14px 16px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--blue-600)', borderRadius: 'var(--radius-md)' }}>
+          <Icon name="stethoscope" size={18} style={{ color: 'var(--blue-600)', marginTop: 2 }} />
+          <div>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: 4 }}>{tt('为什么重要', 'Why it matters')}</div>
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--text-primary)', maxWidth: 340 }}>{tt('优先采用渐进式负荷训练，而非被动疗法。', 'Prioritise progressive loading over passive modalities.')}</div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
-    <div style={{ maxWidth: 820, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: mobile ? 36 : 44 }}>
-      {/* Header unit — magazine-feature hero + stat row kept together */}
+    <div style={{ maxWidth: 980, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: mobile ? 40 : 56 }}>
+      <style>{`
+        .cd-about-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+        .cd-about-step{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;padding:24px 0;border-top:1px solid var(--border-subtle)}
+        .cd-about-tax{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+        .cd-about-srcwrap{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
+        .cd-about-srcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+        .cd-about-aud{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden}
+        @media (max-width:860px){.cd-about-cols{grid-template-columns:1fr;gap:18px}.cd-about-step{grid-template-columns:1fr;gap:18px;align-items:flex-start}.cd-about-srcwrap{grid-template-columns:1fr;gap:32px}}
+      `}</style>
+
+      {/* Hero — wordmark + rule + brand standfirst + instrument stats */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-        {/* Hero — wordmark title, hairline rule, serif lead, supporting line */}
         <section>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: 16 }}>{zh ? '步频 · Cadence' : 'Cadence · 步频'}</div>
           <div style={{ height: 1, background: 'var(--border-subtle)', marginBottom: 20 }} />
-          <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>{t('about.brand')}</p>
+          <p style={{ margin: 0, maxWidth: 680, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>{t('about.brand')}</p>
         </section>
-
-        {/* Stats — hairline-bounded row, no cards */}
         <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
           {stats.map((s, i) => (
             <div key={i} style={{ flex: 1, textAlign: 'center', padding: '18px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1 }}>{s.v}</div>
-              <div style={{ marginTop: 6, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)' }}>{s.l}</div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>{s.v}</div>
+              <div style={{ marginTop: 8, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{s.l}</div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* How it works — editorial numbered list */}
+      {/* §01 缘起 — hook + founder story (kept), signed off */}
       <section>
-        <h2 style={h2}><Icon name="workflow" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.how.title')}</h2>
+        <RunningHead index="01" label={tt('缘起', 'Why Cadence')} />
+        <blockquote style={{ margin: '0 0 28px', maxWidth: 840, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-xl)' : 'var(--text-2xl)', lineHeight: 1.3, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
+          {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
+          <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
+        </blockquote>
+        {['p1', 'p2', 'p3'].map((k) => (
+          <p key={k} style={{ ...para, maxWidth: 680 }}>{t('about.why.' + k)}</p>
+        ))}
+        <div style={{ marginTop: 6, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
+      </section>
+
+      {/* §02 方法 — three steps with live demos (incl. SIGNAL legend) */}
+      <section>
+        <RunningHead index="02" label={tt('方法', 'How it works')} />
         <div>
-          {steps.map((k, i) => (
-            <div key={k} style={{ display: 'flex', gap: 18, alignItems: 'baseline', paddingBottom: 18, marginBottom: 18, borderBottom: i < steps.length - 1 ? '1px solid var(--border-subtle)' : 'none' }}>
-              <span style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--blue-600)', flex: 'none', width: 28 }}>{'0' + k}</span>
-              <span style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.7, color: 'var(--text-secondary)' }}>{t('about.how.' + k)}</span>
+          {window.ABOUT.steps.map((s, i) => (
+            <div key={s.idx} className="cd-about-step" style={i === 0 ? { borderTop: 'none', paddingTop: 0 } : undefined}>
+              <div>
+                <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: 'var(--text-3xl)', color: 'var(--blue-300)', letterSpacing: '-0.02em', lineHeight: 1 }}>{s.idx}</span>
+                <h3 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)' }}>{tt(s.zh, s.en)}</h3>
+                <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.7, color: 'var(--text-secondary)' }}>{tt(s.bodyZh, s.bodyEn)}</p>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', minHeight: 110 }}>{stepDemo(s.demo)}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Founder story — plain prose, signed off */}
+      {/* §03 专科体系 — one-line clinical scope per specialty */}
       <section>
-        <h2 style={h2}><Icon name="heart" size={19} style={{ color: 'var(--blue-600)' }} />{t('about.why.title')}</h2>
-        {['p1', 'p2', 'p3'].map((k) => (
-          <p key={k} style={para}>{t('about.why.' + k)}</p>
-        ))}
-        <div style={{ marginTop: 6, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
+        <RunningHead index="03" label={tt('专科体系', 'The taxonomy')} />
+        <p style={{ margin: '0 0 22px', maxWidth: 620, ...para, marginBottom: 22 }}>{tt('我们不做泛泛的「康复」标签。每项研究都归入一个具体专科，让你只读与自己相关的内容。', 'We don’t use a vague “rehab” label. Every study is filed into a specific specialty, so you read only what’s relevant to you.')}</p>
+        <div className="cd-about-tax">
+          {window.CATEGORIES.map((c, i) => {
+            const solid = `var(--cat-${c.accent})`, soft = `var(--cat-${c.accent}-soft)`;
+            const sc = window.ABOUT.scopes[c.id] || {};
+            return (
+              <div key={c.id} style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minWidth: 24, height: 20, padding: '0 6px', background: solid, color: '#fff', borderRadius: 'var(--radius-xs)', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600 }}>{String(i + 1).padStart(2, '0')}</span>
+                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 'var(--radius-md)', background: soft }}>
+                    <Icon name={c.icon} size={17} strokeWidth={2} style={{ color: solid }} />
+                  </span>
+                </div>
+                <div style={{ margin: '16px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--text-primary)' }}>{zh ? (c.labelZh || c.label) : c.label}</div>
+                <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--text-secondary)' }}>{tt(sc.zh, sc.en)}</p>
+              </div>
+            );
+          })}
+        </div>
+        {(window.XCUTS || []).slice(0, 1).map((x) => {
+          const sc = window.ABOUT.scopes['rehab-tech'] || {};
+          return (
+            <div key={x.id} style={{ marginTop: 14, display: 'flex', gap: 14, alignItems: 'flex-start', background: 'var(--cat-tech-soft)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: '18px 20px' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 32, height: 32, borderRadius: 'var(--radius-md)', background: '#fff', flex: 'none' }}>
+                <Icon name={x.icon} size={17} strokeWidth={2} style={{ color: 'var(--cat-tech)' }} />
+              </span>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, flexWrap: 'wrap' }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--cat-tech-ink)' }}>✦ {zh ? (x.labelZh || x.label) : x.label}</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--cat-tech)' }}>{tt('横切维度', 'Cross-cutting overlay')}</span>
+                </div>
+                <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--cat-tech-ink)' }}>{tt(sc.zh, sc.en)}</p>
+              </div>
+            </div>
+          );
+        })}
       </section>
 
-      {/* Next steps — text link rows, no cards */}
-      <div style={{ borderTop: '1px solid var(--border-subtle)' }}>
-        {actions.map((a) => (
-          <button key={a.view} type="button" onClick={() => onView(a.view)}
-            style={{ width: '100%', textAlign: 'left', cursor: 'pointer', background: 'none', border: 'none', borderBottom: '1px solid var(--border-subtle)', padding: '18px 2px', display: 'flex', alignItems: 'center', gap: 16 }}>
-            <span style={{ flex: 1 }}>
-              <span style={{ display: 'block', fontFamily: 'var(--font-display)', fontSize: 'var(--text-lg)', fontWeight: 600, color: 'var(--text-primary)', marginBottom: 4 }}>{a.title}</span>
-              <span style={{ display: 'block', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{a.body}</span>
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 6, flex: 'none', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', fontWeight: 500, color: 'var(--blue-600)' }}>{!mobile && a.cta}<Icon name="arrow-right" size={16} /></span>
-          </button>
-        ))}
+      {/* §04 来源与原则 */}
+      <section>
+        <RunningHead index="04" label={tt('来源与原则', 'Sources & principles')} />
+        <div className="cd-about-srcwrap">
+          <div>
+            <h3 style={secTitle}>{tt('我们读什么', 'What we read')}</h3>
+            <div className="cd-about-srcgrid">
+              {window.ABOUT.sources.map((s) => (
+                <div key={s.name} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)' }}>
+                  <img src={'design-system/assets/favicons/' + s.favicon} alt="" width="28" height="28" style={{ borderRadius: 6, flex: 'none' }} />
+                  <div style={{ minWidth: 0 }}>
+                    <div style={{ fontFamily: 'var(--font-sans)', fontWeight: 500, fontSize: 'var(--text-sm)', color: 'var(--text-primary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{s.name}</div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>{tt(s.zh, s.en)}</div>
+                  </div>
+                </div>
+              ))}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: '12px 14px', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--text-secondary)' }}>+ 30+</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-tertiary)' }}>{tt('更多来源', 'more')}</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 style={secTitle}>{tt('我们的原则', 'Our principles')}</h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {window.ABOUT.principles.map((p, i) => (
+                <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+                  <Icon name="check" size={18} strokeWidth={2.25} style={{ color: 'var(--blue-600)', marginTop: 2, flex: 'none' }} />
+                  <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{tt(p.zh, p.en)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 适合谁 — audience strip */}
+      <section>
+        <div style={{ marginBottom: 18, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{tt('适合谁', 'Who it’s for')}</div>
+        <div className="cd-about-aud">
+          {window.ABOUT.audience.map((a, i) => (
+            <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '24px 20px', background: 'var(--surface-card)' }}>
+              <Icon name={a.icon} size={22} style={{ color: 'var(--blue-600)' }} />
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--text-primary)' }}>{tt(a.zh, a.en)}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA — the one dark surface */}
+      <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--surface-inverse)', borderRadius: 'var(--radius-2xl)', padding: mobile ? '32px 24px' : '56px 56px' }}>
+        <div aria-hidden="true" style={{ position: 'absolute', right: -60, bottom: -120, pointerEvents: 'none' }}><MetronomeMotif height={320} color="#FFFFFF" opacity={0.06} /></div>
+        <div style={{ position: 'relative', maxWidth: 560 }}>
+          <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--text-on-inverse)', fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-3xl)', lineHeight: 1.15, letterSpacing: '-0.01em' }}>{tt('每天 5 分钟，跟上你专科的全部重要证据。', 'Five minutes a day. The evidence that matters, in your specialty.')}</h2>
+          <div style={{ marginTop: 24, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
+            <button type="button" onClick={() => onView('curated')} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '11px 20px', background: 'var(--blue-600)', color: '#fff', border: 'none', borderRadius: 'var(--radius-pill)', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', fontWeight: 600, cursor: 'pointer' }}>
+              {tt('开始阅读今日摘要', "Read today’s digest")} <Icon name="arrow-right" size={16} />
+            </button>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'rgba(250,250,246,0.55)' }}>{tt('中文优先 · 英文对照', 'Chinese-first · English alongside')}</span>
+          </div>
+        </div>
       </div>
 
       {/* Follow us — QR codes for RedNote (XHS) + WeChat official account */}
