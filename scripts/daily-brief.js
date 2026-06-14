@@ -27,8 +27,18 @@ const { callAnthropic, callGemini, LLM_PROVIDER } = require('./news-refresh.js')
 const DRY_RUN = process.env.DRY_RUN === 'true';
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 const DAILY_DIR = path.join(__dirname, '..', 'briefs', 'daily');
-const WINDOW_HOURS_WEEKDAY = 26;  // daily full-run cadence + slack
-const WINDOW_HOURS_WEEKEND = 50;  // Sat/Sun: merge two days of articles (journals go quiet on weekends)
+const IDX_PATH = path.join(DAILY_DIR, 'index.json');
+const LEDGER_PATH = path.join(DAILY_DIR, 'published-ledger.json'); // B: already-published sourceUrls
+const LEDGER_RETENTION_DAYS = 45;  // prune ledger rows older than this (Beijing date)
+// Window caps — NOT the window itself. The real window is a relay baton: it
+// starts where the previous edition's window ended (see prevWindowEnd), so
+// consecutive editions partition time with zero overlap. These caps only bound
+// how far back a single run may reach if a prior run was missed (outage), so a
+// gap never dumps an unbounded backlog. Weekend gets a wider cap because
+// journals go quiet, so a Mon-morning recovery may need to reach across two
+// quiet days. Weekday/weekend is decided in Beijing time (beijingWeekday).
+const WINDOW_HOURS_WEEKDAY = 26;
+const WINDOW_HOURS_WEEKEND = 50;
 
 // Beijing calendar weekday at run time (0=Sun, 6=Sat).
 function beijingWeekday() {
@@ -56,6 +66,48 @@ const CAT_ZH = {
 // 05:30 next day Beijing; the edition belongs to the Beijing morning it serves).
 function beijingDate() {
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai' }).format(new Date());
+}
+
+// A — relay baton: the end (windowEnd) of the most recent edition STRICTLY
+// before today. The next window starts here, so no time span is ever covered by
+// two editions. Returns ms epoch, or null when there is no prior edition (or it
+// predates this field — graceful bootstrap to the cap window). Looking only at
+// dates < today keeps same-day reruns idempotent.
+function prevWindowEnd(todayDate) {
+  try {
+    const idx = JSON.parse(fs.readFileSync(IDX_PATH, 'utf8'));
+    const prior = (idx.editions || [])
+      .filter(e => e.date < todayDate && e.windowEnd)
+      .sort((a, b) => b.date.localeCompare(a.date));
+    return prior.length ? Date.parse(prior[0].windowEnd) : null;
+  } catch { return null; }
+}
+
+// B — published-URL ledger. On first run (file absent) seed it from every
+// existing edition so the very next edition already dedups against history —
+// no leakage during rollout. Shape: { updatedAt, urls: [{ url, date }] }.
+function loadLedger() {
+  try {
+    const l = JSON.parse(fs.readFileSync(LEDGER_PATH, 'utf8'));
+    if (l && Array.isArray(l.urls)) return l;
+  } catch { /* missing / malformed → seed below */ }
+  const urls = [];
+  try {
+    for (const f of fs.readdirSync(DAILY_DIR)) {
+      if (!/^\d{4}-\d{2}-\d{2}\.json$/.test(f)) continue;
+      const e = JSON.parse(fs.readFileSync(path.join(DAILY_DIR, f), 'utf8'));
+      const all = (e.sections || []).flatMap(s => s.items || []).concat(e.flashes || []);
+      for (const i of all) if (i.sourceUrl) urls.push({ url: i.sourceUrl, date: e.date });
+    }
+  } catch { /* no editions yet */ }
+  return { updatedAt: null, urls };
+}
+
+// Beijing-calendar date string N days before `fromDate` (YYYY-MM-DD).
+function isoDateNDaysAgo(n, fromDate) {
+  const d = new Date(`${fromDate}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - n);
+  return d.toISOString().slice(0, 10);
 }
 
 // Strict-ish JSON extraction: LLMs occasionally wrap output in ``` fences.
@@ -116,21 +168,54 @@ function fallbackLead(sections, stats) {
   };
 }
 
+// Core selection (extracted for deterministic testing): keep items whose
+// publishedAt is in the relay window (cutoff, nowMs], drop any sourceUrl already
+// published (publishedBefore) or seen earlier in this same window, score-desc.
+function selectWindowItems(items, cutoff, nowMs, publishedBefore = new Set()) {
+  let ledgerSkips = 0;
+  const seen = new Set();
+  const windowItems = (items || [])
+    .filter(i => {
+      const ts = new Date(i.publishedAt).getTime();
+      if (!(ts > cutoff && ts <= nowMs)) return false;                          // relay window
+      if (publishedBefore.has(i.sourceUrl)) { ledgerSkips++; return false; }    // already published
+      if (seen.has(i.sourceUrl)) return false;                                  // dup inside window
+      seen.add(i.sourceUrl);
+      return true;
+    })
+    .sort((a, b) => b.curatedScore - a.curatedScore);
+  return { windowItems, ledgerSkips };
+}
+
 async function main() {
   console.log(`\n📰 步频网页日报 — ${new Date().toISOString()}`);
   if (process.env.REFRESH_MODE === 'direct') { console.log('  direct mode — daily edition is a full-run product, skipping.'); return; }
 
   const data = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
+  const dateStr = beijingDate();
   const WINDOW_HOURS = windowHours();
   const isWeekend = WINDOW_HOURS === WINDOW_HOURS_WEEKEND;
-  const cutoff = Date.now() - WINDOW_HOURS * 3600 * 1000;
-  const windowItems = (data.items || [])
-    .filter(i => new Date(i.publishedAt).getTime() >= cutoff)
-    .sort((a, b) => b.curatedScore - a.curatedScore);
+  const nowMs = Date.now();
+  const capCutoff = nowMs - WINDOW_HOURS * 3600 * 1000;
 
-  if (!windowItems.length) { console.log(`  近 ${WINDOW_HOURS}h 无新条目，今日不出刊。`); return; }
+  // A — relay baton: this window picks up exactly where the previous edition's
+  // window ended, clamped so a missed run never reaches back past the cap.
+  const prevEnd = prevWindowEnd(dateStr);
+  const cutoff = prevEnd != null ? Math.max(prevEnd, capCutoff) : capCutoff;
 
-  const dateStr = beijingDate();
+  // B — ledger reconcile: drop any sourceUrl already shipped in a PRIOR edition
+  // (date !== today keeps same-day reruns idempotent), plus de-dup within the
+  // window. Belt-and-suspenders: even if the relay window ever overlaps (clock
+  // skew, manual rerun), no URL can go out twice.
+  const ledger = loadLedger();
+  const publishedBefore = new Set(ledger.urls.filter(u => u.date !== dateStr).map(u => u.url));
+  const { windowItems, ledgerSkips } = selectWindowItems(data.items, cutoff, nowMs, publishedBefore);
+
+  const winSpan = `${new Date(cutoff).toISOString().slice(5, 16).replace('T', ' ')}→${new Date(nowMs).toISOString().slice(5, 16).replace('T', ' ')}Z`;
+  if (!windowItems.length) {
+    console.log(`  窗口 ${winSpan} 无新条目（账本去重跳过 ${ledgerSkips} 条），今日不出刊。`);
+    return;
+  }
 
   // Sections: fixed category order, score-desc inside, capped. Overflow → 快讯.
   const sections = [];
@@ -163,7 +248,7 @@ async function main() {
     topScore: sectionItems.length ? sectionItems[0].curatedScore : null,
   };
 
-  console.log(`  ${stats.events} 条进刊 · ${stats.specialties} 个版块 · ${flashes.length} 条快讯 · 窗口 ${WINDOW_HOURS}h${isWeekend ? '（周末合并）' : ''} · LLM: ${LLM_PROVIDER}`);
+  console.log(`  ${stats.events} 条进刊 · ${stats.specialties} 个版块 · ${flashes.length} 条快讯 · 窗口 ${winSpan}（接力${prevEnd != null ? '' : '·首期回看' + WINDOW_HOURS + 'h'}${isWeekend ? '·周末上限' + WINDOW_HOURS + 'h' : ''}）· 账本去重跳过 ${ledgerSkips} 条 · LLM: ${LLM_PROVIDER}`);
 
   if (DRY_RUN) {
     console.log('  DRY_RUN — sections:', sections.map(s => `${s.category}×${s.items.length}`).join(' '));
@@ -173,10 +258,13 @@ async function main() {
   let lead = await generateLead(dateStr, sections, stats);
   if (!lead) { console.warn('  ⚠️ 导语生成失败，使用确定性导语。'); lead = fallbackLead(sections, stats); }
 
+  const windowEnd = new Date(nowMs).toISOString();
   const edition = {
     date: dateStr,
     generatedAt: new Date().toISOString(),
-    windowHours: WINDOW_HOURS,
+    windowHours: WINDOW_HOURS,       // the cap in force (relay governs the actual span)
+    windowStart: new Date(cutoff).toISOString(),
+    windowEnd,                       // next edition's relay baton starts here
     lead,
     stats,
     sections,   // items are full news.json snapshots — render-ready, rotation-proof
@@ -186,24 +274,34 @@ async function main() {
   fs.mkdirSync(DAILY_DIR, { recursive: true });
   fs.writeFileSync(path.join(DAILY_DIR, `${dateStr}.json`), JSON.stringify(edition, null, 1) + '\n');
 
-  // Manifest: replace same-date entry (reruns), newest first.
-  const idxPath = path.join(DAILY_DIR, 'index.json');
+  // Manifest: replace same-date entry (reruns), newest first. windowEnd is the
+  // relay baton prevWindowEnd() reads for the next edition.
   let editions = [];
-  try { editions = (JSON.parse(fs.readFileSync(idxPath, 'utf8')).editions || []); } catch { /* first edition */ }
+  try { editions = (JSON.parse(fs.readFileSync(IDX_PATH, 'utf8')).editions || []); } catch { /* first edition */ }
   editions = editions.filter(e => e.date !== dateStr);
   editions.push({
     date: dateStr,
     leadTitle: lead.titleEn, leadTitleZh: lead.titleZh,
     events: stats.events,
+    windowEnd,
   });
   editions.sort((a, b) => b.date.localeCompare(a.date));
-  fs.writeFileSync(idxPath, JSON.stringify({ updatedAt: new Date().toISOString(), editions }, null, 1) + '\n');
+  fs.writeFileSync(IDX_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), editions }, null, 1) + '\n');
 
-  console.log(`  ✅ briefs/daily/${dateStr}.json + index.json（共 ${editions.length} 期）`);
+  // B — advance the published-URL ledger: drop today's old rows (idempotent
+  // reruns), add this edition's URLs, prune rows past the retention horizon.
+  const editionUrls = windowItems.map(i => i.sourceUrl).filter(Boolean);
+  const minDate = isoDateNDaysAgo(LEDGER_RETENTION_DAYS, dateStr);
+  const ledgerRows = ledger.urls
+    .filter(u => u.date !== dateStr && u.date >= minDate)
+    .concat(editionUrls.map(url => ({ url, date: dateStr })));
+  fs.writeFileSync(LEDGER_PATH, JSON.stringify({ updatedAt: new Date().toISOString(), urls: ledgerRows }, null, 1) + '\n');
+
+  console.log(`  ✅ briefs/daily/${dateStr}.json + index.json（共 ${editions.length} 期）· 账本 ${ledgerRows.length} 条`);
 }
 
 if (require.main === module) {
   main().catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main };
+module.exports = { main, selectWindowItems, isoDateNDaysAgo };
