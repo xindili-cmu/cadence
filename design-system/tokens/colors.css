@@ -35,18 +35,21 @@
   --green-900: var(--blue-900);
   --green-950: var(--blue-950);
 
-  /* ---- Ink / neutral scale (blue-cooled charcoal) ---- */
-  --ink-900: #16202B;
-  --ink-800: #212D3A;
-  --ink-700: #35414E;
-  --ink-600: #4D5965;
-  --ink-500: #64717F;
-  --ink-400: #93A0AC;
-  --ink-300: #C0C9D2;
-  --ink-200: #DFE5EA;
-  --ink-100: #EDF0F4;
-  --ink-50:  #F4F7FA;
-  --paper:   #F7F9FB;   /* cool editorial page background */
+  /* ---- Ink / neutral scale (warm "clay ink" greige) ----
+     Tuned to sit on warm cream paper — the NEJM/Cochrane print warmth.
+     Headlines on ink-900, body on ink-700/600, meta ink-500, hairlines ink-200. */
+  --ink-950: #14130F;
+  --ink-900: #1E1C17;
+  --ink-800: #2C2A23;
+  --ink-700: #45413A;
+  --ink-600: #5E5A4F;
+  --ink-500: #7A7568;
+  --ink-400: #9D978A;
+  --ink-300: #C4BEAF;
+  --ink-200: #E4DFD1;
+  --ink-100: #EFEBE0;
+  --ink-50:  #F6F3EA;
+  --paper:   #FAFAF6;   /* warm editorial page background */
   --white:   #FFFFFF;
 
   /* ---- Signal / status ---- */
