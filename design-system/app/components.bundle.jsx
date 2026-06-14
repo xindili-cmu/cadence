@@ -684,7 +684,7 @@ function NewsCard({
         {selectedSpine}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
           {typeof score === 'number' && <SignalScore score={score} variant="badge" />}
-          <CategoryTag category={category} size="md" useShort withIndex />
+          <CategoryTag category={category} size="md" useShort />
           {techChip}
           <span style={{ flex: 1 }} />
           {timeEl}
@@ -711,7 +711,7 @@ function NewsCard({
           )}
           <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
-              <CategoryTag category={category} size="md" useShort={false} withIndex />
+              <CategoryTag category={category} size="md" useShort={false} />
               {techChip}
               <span style={{ flex: 1 }} />
               {timeEl}
@@ -732,7 +732,7 @@ function NewsCard({
       {selectedSpine}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
         {typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />}
-        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort withIndex />
+        <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort />
         {techChip}
         <span style={{ flex: 1 }} />
         {timeEl}
