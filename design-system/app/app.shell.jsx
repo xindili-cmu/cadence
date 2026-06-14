@@ -23,6 +23,12 @@ function useCdMobile() {
 
 function AppHeader({ query, onQuery, lang, onLang, mobile }) {
   const t = window.CD_T;
+  const zh = lang === 'zh';
+  // Today's date — bilingual, auto-updates. zh: 2026年6月13日 周六 · en: Sat, Jun 13, 2026
+  const _now = new Date();
+  const dateStr = zh
+    ? `${_now.getFullYear()}年${_now.getMonth() + 1}月${_now.getDate()}日 ${'周日周一周二周三周四周五周六'.slice(_now.getDay() * 2, _now.getDay() * 2 + 2)}`
+    : _now.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 20, height: 'var(--header-height)',
@@ -46,12 +52,15 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
             <Logo variant="lockup" height={22} />
           </div>
         )}
-        {/* Masthead motto — English in both languages. Spectral uppercase, wide
-            tracking. Centered in the content area; hidden on mobile (no room). */}
+        {/* Context title + today's date — sits just past the logo divider, in
+            the content area. Brand-level line (not the page heading, which the
+            FeedToolbar still renders). Hidden on mobile (no room next to search). */}
         {!mobile && (
           <React.Fragment>
-            <span style={{ flex: 1 }} />
-            <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? '今日康复信号' : "Today's rehab signal"}</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>{dateStr}</span>
+            </div>
             <span style={{ flex: 1 }} />
           </React.Fragment>
         )}
