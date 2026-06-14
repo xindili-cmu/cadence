@@ -502,8 +502,8 @@ function MetronomeMotif({ height = 320, color = 'var(--blue-600)', opacity = 0.0
 // Section head — small blue eyebrow + large serif headline (editorial, no § rule).
 function SectionHead({ eyebrow, headline, mobile }) {
   return (
-    <div style={{ marginBottom: headline ? 30 : 18 }}>
-      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: headline ? 16 : 0 }}>{eyebrow}</div>
+    <div style={{ marginBottom: headline ? 40 : 24 }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: headline ? 18 : 0 }}>{eyebrow}</div>
       {headline && (
         <h2 style={{ margin: 0, maxWidth: 880, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-4xl)', lineHeight: 1.12, letterSpacing: '-0.02em', color: 'var(--text-primary)' }}>{headline}</h2>
       )}
@@ -577,10 +577,10 @@ function AboutView({ onView, mobile }) {
   };
 
   return (
-    <div style={{ maxWidth: 980, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: mobile ? 40 : 56 }}>
+    <div style={{ maxWidth: 980, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: mobile ? 'var(--space-14, 56px)' : 'var(--space-24)' }}>
       <style>{`
         .cd-about-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-        .cd-about-step{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;padding:24px 0;border-top:1px solid var(--border-subtle)}
+        .cd-about-step{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;padding:40px 0;border-top:1px solid var(--border-subtle)}
         .cd-about-tax{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
         .cd-about-srcwrap{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
         .cd-about-srcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
@@ -597,7 +597,7 @@ function AboutView({ onView, mobile }) {
         </section>
         <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
           {stats.map((s, i) => (
-            <div key={i} style={{ flex: 1, textAlign: 'center', padding: '18px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
+            <div key={i} style={{ flex: 1, textAlign: 'center', padding: '24px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>{s.v}</div>
               <div style={{ marginTop: 8, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{s.l}</div>
             </div>
@@ -608,7 +608,7 @@ function AboutView({ onView, mobile }) {
       {/* §01 缘起 — hook + founder story (kept), signed off */}
       <section>
         <SectionHead mobile={mobile} eyebrow={tt('缘起', 'Why Cadence')} />
-        <blockquote style={{ margin: '0 0 28px', maxWidth: 840, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-xl)' : 'var(--text-2xl)', lineHeight: 1.3, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
+        <blockquote style={{ margin: '0 0 36px', maxWidth: 840, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-xl)' : 'var(--text-2xl)', lineHeight: 1.4, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
           {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
           <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
         </blockquote>
