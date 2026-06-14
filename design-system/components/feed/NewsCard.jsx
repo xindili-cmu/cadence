@@ -25,6 +25,7 @@ function SourceMonogram({ source, accent }) {
 export function NewsCard({
   title, summary, source, sourceUrl = '#', time, date, category,
   score, whyItMatters, variant = 'default', selected = false,
+  mobile = false, // narrow-screen layout: lead card drops its left SIGNAL gutter
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   onClick, onOpen, style, ...rest
@@ -40,7 +41,7 @@ export function NewsCard({
   const borderColor = selected ? 'var(--green-600)'
     : hover ? 'var(--green-300)' : 'var(--border-subtle)';
 
-  const titleSize = isLead ? 'var(--text-2xl)' : isCompact ? 'var(--text-base)' : 'var(--text-lg)';
+  const titleSize = isLead ? (mobile ? 'var(--text-xl)' : 'var(--text-2xl)') : isCompact ? 'var(--text-base)' : 'var(--text-lg)';
 
   // ── shared sub-elements (reused by both the default and lead layouts) ──
   const techChip = tech && (
@@ -152,7 +153,7 @@ export function NewsCard({
       background: selected ? 'var(--surface-active)' : 'var(--surface-card)',
       border: `1px solid ${borderColor}`,
       borderRadius: 'var(--radius-lg)',
-      padding: isCompact ? '14px 16px' : isLead ? '22px 24px' : '18px 20px',
+      padding: isCompact ? '14px 16px' : isLead ? (mobile ? '18px 16px' : '22px 24px') : (mobile ? '16px 16px' : '18px 20px'),
       boxShadow: hover && !selected ? 'var(--shadow-card-hover)' : 'var(--shadow-xs)',
       transform: hover && !selected ? 'translateY(-1px)' : 'none',
       transition: 'var(--transition-card)', cursor: onClick ? 'pointer' : 'default',
@@ -164,6 +165,29 @@ export function NewsCard({
   const selectedSpine = selected && (
     <span style={{ position: 'absolute', left: 0, top: 12, bottom: 12, width: 3, borderRadius: '0 3px 3px 0', background: 'var(--green-600)' }} />
   );
+
+  // ── mobile lead: the desktop left-gutter layout collapses badly on narrow
+  //    screens (tall empty left column + a cramped right measure), so drop the
+  //    gutter entirely — SIGNAL rides the top meta row as a badge and the
+  //    headline runs full-width, same skeleton as the default card. ──
+  if (isLead && mobile) {
+    return (
+      <article {...articleProps}>
+        {selectedSpine}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
+          {typeof score === 'number' && <SignalScore score={score} variant="badge" />}
+          <CategoryTag category={category} size="md" useShort withIndex />
+          {techChip}
+          <span style={{ flex: 1 }} />
+          {timeEl}
+        </div>
+        {titleEl}
+        {summaryEl}
+        {whyEl}
+        {footerEl}
+      </article>
+    );
+  }
 
   // ── lead variant: pull the SIGNAL score into a left gutter so the top story
   //    reads as the day's headline data point. ──

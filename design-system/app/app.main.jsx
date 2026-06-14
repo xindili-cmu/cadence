@@ -90,11 +90,11 @@ function SpecialtySelect({ value = 'all', onChange = () => {} }) {
 // page falls back to the pure timeline. Hover the source count to see who's
 // covering the story; click scrolls to the card in the feed.
 
-function HotTopicsStrip({ topics, onPick }) {
+function HotTopicsStrip({ topics, onPick, mobile = false }) {
   const tr = window.CD_T; // `t` is taken by the topic loop variable below
   if (!topics || !topics.length) return null;
   return (
-    <section style={{ marginBottom: 20, padding: '14px 18px 10px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+    <section style={{ marginBottom: 20, padding: mobile ? '14px 14px 10px' : '14px 18px 10px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 8 }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 700, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--green-700)' }}>{tr('hotNow')}</span>
         <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{tr('hotSub')}</span>
@@ -109,20 +109,40 @@ function HotTopicsStrip({ topics, onPick }) {
           const tip = isTheme && (t.members || []).length
             ? t.members.map((m) => `${m.source} — ${window.CD_LANG === 'zh' ? (m.titleZh || m.title) : m.title}`).join('\n')
             : (t.sources || []).join(' · ');
+          const idxEl = (
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
+          );
+          const titleEl = (
+            <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
+          );
+          const catEl = cat && (
+            <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>
+          );
+          const metaEl = (
+            <span title={tip}
+              style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
+              {isTheme
+                ? `${tr('themeHeat')}${t.tag ? ` · ${t.tag}` : ''} · ${t.sourceCount} ${tr('nOutlets')}`
+                : `${t.sourceCount} ${tr('nSources')}`}
+            </span>
+          );
           return (
             <li key={t.id} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
-              <button type="button" onClick={() => onPick && onPick(t.id)}
-                style={{ display: 'flex', alignItems: 'baseline', gap: 10, width: '100%', padding: '8px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
-                <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
-                {cat && <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>}
-                <span title={tip}
-                  style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
-                  {isTheme
-                    ? `${tr('themeHeat')}${t.tag ? ` · ${t.tag}` : ''} · ${t.sourceCount} ${tr('nOutlets')}`
-                    : `${t.sourceCount} ${tr('nSources')}`}
-                </span>
-              </button>
+              {mobile ? (
+                // Narrow screens: title gets the full width on line 1; the tag +
+                // heat meta drop to a second, indented line so nothing truncates
+                // against the right edge.
+                <button type="button" onClick={() => onPick && onPick(t.id)}
+                  style={{ display: 'flex', flexDirection: 'column', gap: 5, width: '100%', padding: '9px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
+                  <span style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>{idxEl}{titleEl}</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', paddingLeft: 24 }}>{catEl}{metaEl}</span>
+                </button>
+              ) : (
+                <button type="button" onClick={() => onPick && onPick(t.id)}
+                  style={{ display: 'flex', alignItems: 'baseline', gap: 10, width: '100%', padding: '8px 2px', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
+                  {idxEl}{titleEl}{catEl}{metaEl}
+                </button>
+              )}
             </li>
           );
         })}
@@ -1322,7 +1342,7 @@ function FeedApp() {
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
           {!isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
-            <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} />
+            <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} mobile={isMobile} />
           )}
 
           {!isSources && !isFeedback && !isDaily && !isAbout && (
@@ -1384,6 +1404,7 @@ function FeedApp() {
                           show their journal, e.g. IJSPT, not the pipeline); raw source as fallback */}
                       <NewsCard
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
+                        mobile={isMobile}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} tech={s.tech}
                         title={s.title} summary={s.summary} whyItMatters={s.why}

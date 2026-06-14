@@ -346,36 +346,89 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
 // ── Mobile chrome ────────────────────────────────────────────────────────────
 
 // MobileTabBar — NavRail's mobile counterpart: fixed bottom tab bar, native-app
-// style (Cindy 2026-06-11). Same CD_NAV items, short labels (navS.*) so all
-// five tabs fit at 320px. safe-area padding clears the iPhone home indicator.
+// style (Cindy 2026-06-11). Four primary content tabs + a "More" overflow that
+// holds the low-frequency meta links (About / Feedback) — mirrors the desktop
+// rail, which already sinks those two to a secondary group, and keeps the bar
+// to five targets so each stays tappable at 320px (was six, which crammed the
+// row — Cindy 2026-06-14). safe-area padding clears the iPhone home indicator.
 function MobileTabBar({ view, onView }) {
+  const [moreOpen, setMoreOpen] = React.useState(false);
+  const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
+  const PRIMARY = ['curated', 'all', 'daily', 'sources'];
+  const primary = window.CD_NAV.filter((i) => PRIMARY.includes(i.id));
+  const overflow = window.CD_NAV.filter((i) => !PRIMARY.includes(i.id)); // about, feedback
+  const moreActive = overflow.some((i) => i.id === view);
+
+  const go = (id) => { onView(id); setMoreOpen(false); window.scrollTo({ top: 0 }); };
+  const tabStyle = (active) => ({
+    flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3,
+    padding: '8px 0 7px', background: 'none', border: 'none', cursor: 'pointer',
+    fontFamily: 'var(--font-sans)', fontSize: 10.5, fontWeight: active ? 600 : 500,
+    color: active ? 'var(--green-800)' : 'var(--text-tertiary)',
+    transition: 'var(--transition-colors)',
+  });
+
   return (
-    <nav style={{
-      position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 30,
-      display: 'flex', alignItems: 'stretch',
-      background: 'rgba(250,250,246,0.92)', backdropFilter: 'saturate(180%) blur(12px)',
-      borderTop: '1px solid var(--border-subtle)',
-      paddingBottom: 'env(safe-area-inset-bottom)',
-    }}>
-      {window.CD_NAV.map((item) => {
-        const active = view === item.id;
-        return (
-          <button key={item.id} type="button"
-            onClick={() => { onView(item.id); window.scrollTo({ top: 0 }); }}
-            aria-current={active ? 'page' : undefined}
-            style={{
-              flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3,
-              padding: '8px 0 7px', background: 'none', border: 'none', cursor: 'pointer',
-              fontFamily: 'var(--font-sans)', fontSize: 10.5, fontWeight: active ? 600 : 500,
-              color: active ? 'var(--green-800)' : 'var(--text-tertiary)',
-              transition: 'var(--transition-colors)',
-            }}>
-            <Icon name={item.icon} size={20} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
-            {window.CD_T('navS.' + item.id, item.label)}
-          </button>
-        );
-      })}
-    </nav>
+    <>
+      {/* tap-scrim — closes the overflow sheet when tapping anywhere off it.
+          Sits below the nav (z30 < z31) so the bar's own buttons stay live. */}
+      {moreOpen && (
+        <div onClick={() => setMoreOpen(false)} style={{ position: 'fixed', inset: 0, zIndex: 30 }} />
+      )}
+      {/* overflow sheet — floats just above the bar, right-aligned over More. */}
+      {moreOpen && (
+        <div role="menu" style={{
+          position: 'fixed', right: 10, zIndex: 32,
+          bottom: 'calc(58px + env(safe-area-inset-bottom))',
+          minWidth: 168, padding: 6,
+          background: 'var(--surface-card)', border: '1px solid var(--border-subtle)',
+          borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-card-hover)',
+        }}>
+          {overflow.map((item) => {
+            const active = view === item.id;
+            return (
+              <button key={item.id} type="button" role="menuitem" onClick={() => go(item.id)}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 10, width: '100%',
+                  padding: '10px 12px', borderRadius: 'var(--radius-md)', border: 'none', cursor: 'pointer',
+                  background: active ? 'var(--surface-active)' : 'transparent',
+                  fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: active ? 600 : 500,
+                  color: active ? 'var(--green-800)' : 'var(--text-secondary)', textAlign: 'left',
+                }}>
+                <Icon name={item.icon} size={17} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
+                {window.CD_T('nav.' + item.id, item.label)}
+              </button>
+            );
+          })}
+        </div>
+      )}
+      <nav style={{
+        position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 31,
+        display: 'flex', alignItems: 'stretch',
+        background: 'rgba(250,250,246,0.92)', backdropFilter: 'saturate(180%) blur(12px)',
+        borderTop: '1px solid var(--border-subtle)',
+        paddingBottom: 'env(safe-area-inset-bottom)',
+      }}>
+        {primary.map((item) => {
+          const active = view === item.id;
+          return (
+            <button key={item.id} type="button" onClick={() => go(item.id)}
+              aria-current={active ? 'page' : undefined} style={tabStyle(active)}>
+              <Icon name={item.icon} size={20} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
+              {window.CD_T('navS.' + item.id, item.label)}
+            </button>
+          );
+        })}
+        {/* More — toggles the overflow sheet holding the meta links. */}
+        <button type="button" onClick={() => setMoreOpen((o) => !o)}
+          aria-haspopup="menu" aria-expanded={moreOpen}
+          aria-current={moreActive ? 'page' : undefined}
+          style={tabStyle(moreActive || moreOpen)}>
+          <Icon name="ellipsis" size={20} style={{ color: (moreActive || moreOpen) ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
+          {zh ? '更多' : 'More'}
+        </button>
+      </nav>
+    </>
   );
 }
 
