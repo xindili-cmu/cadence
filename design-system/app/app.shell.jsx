@@ -48,8 +48,10 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
         {mobile ? (
           <Logo variant="lockup" height={20} />
         ) : (
-          <div style={{ width: 'var(--rail-left)', flex: 'none', alignSelf: 'stretch', display: 'flex', alignItems: 'center', borderRight: '1px solid var(--border-subtle)' }}>
+          <div style={{ width: 'var(--rail-left)', flex: 'none', alignSelf: 'stretch', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 4, borderRight: '1px solid var(--border-subtle)' }}>
             <Logo variant="lockup" height={22} />
+            {/* Brand tagline — lives under the wordmark (English in both langs). */}
+            <span style={{ fontFamily: 'var(--font-display)', fontSize: 9.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Keeping pace with the evidence</span>
           </div>
         )}
         {/* Context title + today's date — sits just past the logo divider, in
@@ -142,10 +144,10 @@ function NavRail({ view, onView, category, onCategory }) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             <SpecBtn id="all" label={zh ? '全部' : 'All'} dot={null} idx={null} active={category === 'all'} onClick={onCategory} />
             {CATEGORIES.map((c, i) => (
-              <SpecBtn key={c.id} id={c.id} label={catShort(c)} dot={`var(--cat-${c.accent})`} idx={String(i + 1).padStart(2, '0')} active={category === c.id} onClick={onCategory} />
+              <SpecBtn key={c.id} id={c.id} label={catLabel(c)} dot={`var(--cat-${c.accent})`} idx={String(i + 1).padStart(2, '0')} active={category === c.id} onClick={onCategory} />
             ))}
             {(window.XCUTS || []).map((x) => (
-              <SpecBtn key={x.id} id={x.id} label={catShort(x)} dot={`var(--cat-${x.accent})`} idx={'✦'} active={category === x.id} onClick={onCategory} />
+              <SpecBtn key={x.id} id={x.id} label={catLabel(x)} dot={`var(--cat-${x.accent})`} idx={'✦'} active={category === x.id} onClick={onCategory} />
             ))}
           </div>
         </>
