@@ -26,41 +26,52 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 20, height: 'var(--header-height)',
-      display: 'flex', alignItems: 'center', gap: mobile ? 12 : 20, padding: mobile ? '0 14px' : '0 24px',
       background: 'rgba(250,250,246,0.86)', backdropFilter: 'saturate(180%) blur(12px)',
       borderBottom: '1px solid var(--border-subtle)',
     }}>
-      <Logo variant="lockup" height={mobile ? 20 : 22} />
-      {/* Masthead motto — English in both languages (Cindy 2026-06-11; the
-          brief zh-motto experiment is reverted). Spectral uppercase, wide
-          tracking (her option-4 pick, 2026-06-10). Centered between lockup
-          and search: the empty space separates it from the 文楷 步频 so the
-          two faces stop fighting in one cluster.
-          Hidden on mobile — no room next to lockup + search + lang toggle. */}
-      {!mobile && (
-        <React.Fragment>
-          <span style={{ flex: 1 }} />
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
-          <span style={{ flex: 1 }} />
-        </React.Fragment>
-      )}
-      {/* Public read-only platform — no bell / brief CTA / avatar (Cindy 2026-06-10).
-          Header actions: search + language toggle only. */}
-      <div style={{ flex: mobile ? 1 : 'none', width: mobile ? 'auto' : 'min(340px, 30vw)', minWidth: 0 }}>
-        <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t('searchPlaceholder')} />
+      {/* Inner wrapper shares the body's content-max + padding so the logo
+          column lines up exactly with the nav rail below it. */}
+      <div style={{
+        maxWidth: 'var(--content-max)', margin: '0 auto', height: '100%',
+        display: 'flex', alignItems: 'center', gap: mobile ? 12 : 20,
+        padding: mobile ? '0 14px' : '0 24px',
+      }}>
+        {/* Desktop: logo sits in the sidebar column (width = --rail-left),
+            full-height hairline divider on its right edge, aligned with NavRail.
+            Mobile: plain inline lockup (no rail, so no column/divider). */}
+        {mobile ? (
+          <Logo variant="lockup" height={20} />
+        ) : (
+          <div style={{ width: 'var(--rail-left)', flex: 'none', alignSelf: 'stretch', display: 'flex', alignItems: 'center', borderRight: '1px solid var(--border-subtle)' }}>
+            <Logo variant="lockup" height={22} />
+          </div>
+        )}
+        {/* Masthead motto — English in both languages. Spectral uppercase, wide
+            tracking. Centered in the content area; hidden on mobile (no room). */}
+        {!mobile && (
+          <React.Fragment>
+            <span style={{ flex: 1 }} />
+            <span style={{ fontFamily: 'var(--font-display)', fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>Keeping pace with the evidence</span>
+            <span style={{ flex: 1 }} />
+          </React.Fragment>
+        )}
+        {/* Public read-only platform — header actions: search + language toggle. */}
+        <div style={{ flex: mobile ? 1 : 'none', width: mobile ? 'auto' : 'min(340px, 30vw)', minWidth: 0 }}>
+          <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t('searchPlaceholder')} />
+        </div>
+        {/* 中英切换 — shows the language you'd switch TO. Device-local pref. */}
+        <button type="button" onClick={onLang}
+          aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6, padding: '5px 11px', flex: 'none',
+            background: 'transparent', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-pill)',
+            fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, color: 'var(--text-secondary)',
+            cursor: 'pointer', transition: 'var(--transition-colors)',
+          }}>
+          <Icon name="languages" size={14} style={{ color: 'var(--text-tertiary)' }} />
+          {lang === 'zh' ? 'EN' : '中文'}
+        </button>
       </div>
-      {/* 中英切换 — shows the language you'd switch TO. Device-local pref. */}
-      <button type="button" onClick={onLang}
-        aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
-        style={{
-          display: 'inline-flex', alignItems: 'center', gap: 6, padding: '5px 11px', flex: 'none',
-          background: 'transparent', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-pill)',
-          fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, color: 'var(--text-secondary)',
-          cursor: 'pointer', transition: 'var(--transition-colors)',
-        }}>
-        <Icon name="languages" size={14} style={{ color: 'var(--text-tertiary)' }} />
-        {lang === 'zh' ? 'EN' : '中文'}
-      </button>
     </header>
   );
 }
@@ -198,8 +209,10 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
           </p>
         )}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-          {counts.map((c) => (
-            <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 8, opacity: c.n === 0 ? 0.5 : 1 }}>
+          {/* Only specialties with stories today — keeps the pulse from reading
+              as a wall of zeros on light days. The rest collapse to one line. */}
+          {counts.filter((c) => c.n > 0).map((c) => (
+            <div key={c.id} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, color: 'var(--ink-400)', width: 16, flex: 'none' }}>{String(c.idx).padStart(2, '0')}</span>
               <span style={{ width: 8, height: 8, borderRadius: '999px', background: `var(--cat-${c.accent})`, flex: 'none' }} />
               <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--text-secondary)', flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{catLabel(c)}</span>
@@ -209,10 +222,19 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', width: 12, textAlign: 'right' }}>{c.n}</span>
             </div>
           ))}
-          {/* Cross-cutting overlay rows (e.g. 康复科技) — separated by a
-              hairline because they count across the specialties above. */}
+          {/* Remaining specialties with nothing today — one quiet line. */}
+          {(counts.length - activeCats) > 0 && (
+            <div style={{ fontFamily: 'var(--font-sans)', fontSize: 11.5, color: 'var(--text-tertiary)', paddingTop: activeCats ? 2 : 0 }}>
+              {pulseZh
+                ? `其余 ${counts.length - activeCats} 个专科今日无更新`
+                : `${counts.length - activeCats} more ${counts.length - activeCats === 1 ? 'specialty' : 'specialties'} quiet today`}
+            </div>
+          )}
+          {/* Cross-cutting overlay (e.g. 康复科技) — only when it has items today;
+              separated by a hairline because it counts across the specialties. */}
           {(window.XCUTS || []).map((x) => {
             const n = stories.filter((s) => s[x.flag]).length;
+            if (!n) return null;
             return (
               <div key={x.id} style={{ display: 'flex', alignItems: 'center', gap: 8, borderTop: '1px solid var(--border-subtle)', paddingTop: 9 }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--ink-400)', width: 16, flex: 'none', textAlign: 'center' }}>✦</span>
