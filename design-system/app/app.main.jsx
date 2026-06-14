@@ -563,6 +563,27 @@ function AboutView({ onView, mobile }) {
         ))}
       </div>
 
+      {/* Follow us — QR codes for RedNote (XHS) + WeChat official account */}
+      <section>
+        <h2 style={h2}><Icon name="qr-code" size={19} style={{ color: 'var(--blue-600)' }} />{zh ? '关注我们' : 'Follow us'}</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: mobile ? 20 : 32 }}>
+          {[
+            { img: 'design-system/assets/social/xhs-qr.png', plat: zh ? '小红书' : 'RedNote', handle: 'in_cadence', tip: zh ? '扫码，或搜小红书号' : 'Scan, or search the RedNote ID' },
+            { img: 'design-system/assets/social/wechat-qr.png', plat: zh ? '微信公众号' : 'WeChat', handle: 'Cadence 步频', tip: zh ? '微信扫码关注' : 'Scan in WeChat to follow' },
+          ].map((q) => (
+            <div key={q.plat} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, flex: '1 1 160px', maxWidth: 210 }}>
+              <img src={q.img} alt={`${q.plat} QR`} width={148} height={148}
+                style={{ width: 148, height: 148, borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', background: '#fff', padding: 8, boxShadow: 'var(--shadow-xs)' }} />
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontWeight: 600, color: 'var(--text-primary)' }}>{q.plat}</div>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 2 }}>{q.handle}</div>
+                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.5, color: 'var(--text-tertiary)', marginTop: 4 }}>{q.tip}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Disclaimer — quiet footnote */}
       <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
         <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
