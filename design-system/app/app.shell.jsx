@@ -58,18 +58,17 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
             the content area. Brand-level line (not the page heading, which the
             FeedToolbar still renders). Hidden on mobile (no room next to search). */}
         {!mobile && (
-          <React.Fragment>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? '今日康复信号' : "Today's rehab signal"}</span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>{dateStr}</span>
-            </div>
-            <span style={{ flex: 1 }} />
-          </React.Fragment>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? '今日康复信号' : "Today's rehab signal"}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>{dateStr}</span>
+          </div>
         )}
-        {/* Public read-only platform — header actions: search + language toggle. */}
-        <div style={{ flex: mobile ? 1 : 'none', width: mobile ? 'auto' : 'min(340px, 30vw)', minWidth: 0 }}>
+        {/* Public read-only platform — header actions: search + language toggle.
+            Search sits directly right of the title; EN is pushed to the far right. */}
+        <div style={{ flex: mobile ? 1 : 'none', width: mobile ? 'auto' : 'min(420px, 38vw)', minWidth: 0 }}>
           <Input icon="search" size="sm" value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t('searchPlaceholder')} />
         </div>
+        {!mobile && <span style={{ flex: 1 }} />}
         {/* 中英切换 — shows the language you'd switch TO. Device-local pref. */}
         <button type="button" onClick={onLang}
           aria-label={lang === 'zh' ? 'Switch to English' : '切换到中文'}
