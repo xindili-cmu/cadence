@@ -190,8 +190,24 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   const maxN = Math.max(1, ...counts.map((c) => c.n));
   const activeCats = counts.filter((c) => c.n > 0).length;
   const pulseZh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
+  // AI 速读 — a grounded one-line digest. Counts + top signal are COMPUTED from
+  // the AI-scored data (no generative prose, so nothing to hallucinate); the
+  // top story's own title carries the "strongest signal". Retraction/flag lines
+  // are intentionally omitted until the data carries a real marker for them.
+  const briefTop = top[0];
+  const brief = pulseZh
+    ? `今日共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。最强信号：${briefTop.title}（SIGNAL ${briefTop.score}）。`
+    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} today across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Top signal: ${briefTop.title} (SIGNAL ${briefTop.score}).`;
   return (
     <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderLeft: '1px solid var(--border-subtle)' }}>
+      {/* AI 速读 — the one dark surface in the chrome (deliberate focal contrast). */}
+      <div style={{ background: 'var(--ink-900)', borderRadius: 'var(--radius-lg)', padding: '16px 18px', marginBottom: 16, boxShadow: 'var(--shadow-xs)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 9 }}>
+          <Icon name="sparkles" size={15} style={{ color: 'var(--blue-300)' }} />
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-300)' }}>{pulseZh ? 'AI 速读' : 'AI briefing'}</span>
+        </div>
+        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.65, color: 'var(--text-on-inverse)' }}>{brief}</p>
+      </div>
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
           <Icon name="sun" size={16} style={{ color: 'var(--green-700)' }} />
