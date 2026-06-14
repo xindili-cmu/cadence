@@ -590,10 +590,22 @@ function AboutView({ onView, mobile }) {
 
       {/* Hero — wordmark + rule + brand standfirst + instrument stats */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-        <section>
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-2xl)' : 'var(--text-3xl)', fontWeight: 600, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: 16 }}>{zh ? '步频 · Cadence' : 'Cadence · 步频'}</div>
-          <div style={{ height: 1, background: 'var(--border-subtle)', marginBottom: 20 }} />
-          <p style={{ margin: 0, maxWidth: 680, fontFamily: 'var(--font-display)', fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.7, fontWeight: 500, color: 'var(--text-primary)' }}>{t('about.brand')}</p>
+        <section style={{ position: 'relative', overflow: 'hidden' }}>
+          <div aria-hidden="true" style={{ position: 'absolute', top: -40, right: -120, pointerEvents: 'none' }}>
+            <MetronomeMotif height={460} opacity={0.05} />
+          </div>
+          <div style={{ position: 'relative' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{tt('我们是谁 / 为什么', 'Who we are / why')}</div>
+            <h1 style={{ margin: '20px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(38px, 6.5vw, 68px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+              {zh
+                ? <span>跟上证据的<br />步频<span style={{ color: 'var(--blue-600)' }}>。</span></span>
+                : <span>Keep pace with<br />the <span style={{ color: 'var(--blue-600)' }}>evidence.</span></span>}
+            </h1>
+            <p style={{ margin: '28px 0 0', maxWidth: 660, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+              {tt('每天，步频从 40 余个期刊与数据库中筛选最新康复研究，用 AI 为每项发现打出 SIGNAL 评分，并归入九大专科——让你 5 分钟掌握真正可能改变实践的证据。',
+                'Every day, Cadence scans 40+ journals and databases for the latest rehabilitation research, scores each finding with an AI SIGNAL rating, and files it into nine clinical specialties — so you grasp what might actually change practice in five minutes.')}
+            </p>
+          </div>
         </section>
         <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
           {stats.map((s, i) => (
@@ -612,10 +624,12 @@ function AboutView({ onView, mobile }) {
           {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
           <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
         </blockquote>
-        {['p1', 'p2', 'p3'].map((k) => (
-          <p key={k} style={{ ...para, maxWidth: 680 }}>{t('about.why.' + k)}</p>
-        ))}
-        <div style={{ marginTop: 6, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
+        <div className="cd-about-cols">
+          <p style={{ ...para, margin: 0 }}>{t('about.why.p1')}</p>
+          <p style={{ ...para, margin: 0 }}>{t('about.why.p2')}</p>
+        </div>
+        <p style={{ ...para, marginTop: 24, marginBottom: 0, maxWidth: 680 }}>{t('about.why.p3')}</p>
+        <div style={{ marginTop: 14, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
       </section>
 
       {/* §02 方法 — three steps with live demos (incl. SIGNAL legend) */}
