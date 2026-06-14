@@ -35,10 +35,13 @@ const fs = require('fs');
 const path = require('path');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
-const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'anthropic').toLowerCase();
+const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001';
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const DEEPSEEK_API_KEY = process.env.DEEPSEEK_API_KEY;
+const DEEPSEEK_MODEL = process.env.DEEPSEEK_MODEL || 'deepseek-v4-pro';
 const DRY_RUN = process.env.DRY_RUN === 'true';
 // 'full' = Exa + PubMed + RSS (daily sweep). 'direct' = PubMed + RSS only —
 // free to run, so it polls every 2h AIHOT-style; exits before the LLM call
@@ -545,7 +548,7 @@ tags 规则：
   - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（如 ACL、COPD、RCT）保留英文。
   - summaryZh：summary 的中文版，同样 1-2 句、front-load 变化点、保留数字。不是 summary 的直译腔，要像中文期刊导读。
   - curatedReasonEn：curatedReason 的英文版，**同一个 take、同样的口吻规则**（second-person、直接下判断、禁条件句开头、禁空效用措辞）。不是翻译练习——写给英文读者的同一条专业意见。
-- curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么、该做什么、别做什么。
+- curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么。涉及"该做 / 别做"这类临床动作指令时，遵守下方"行动建议护栏"。
   - 禁止条件句开头（"如果你在使用…"、"如果你关注…"、"如果你治疗…"）——默认读者就是干这行的，直接说事。
   - 禁止空效用措辞："有参考价值"、"帮助你决策"、"值得关注"、"提供了依据/证据/支持"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
   - 口吻是资深同行，不是客服。可以泼冷水（"证据只有短期小样本，别急着写进常规方案"），可以站队（"这基本坐实了运动疗法该是一线"）。
@@ -553,7 +556,9 @@ tags 规则：
   - 正例："腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。"
   - 正例："5 年随访坐实了运动疗法对退行性半月板撕裂的非劣效。下次跟骨科讨论转诊，这是你手里最硬的一张牌。"
 - 数字优先于形容词（样本量、效应量、报销金额、生效日期）。不用 emoji。
-- 不夸大研究结论：单个小样本研究不写成实践改变；研究限制（样本量小、无对照、随访短、行业资助）在 curatedReason 里点出。
+- limitation（一句话局限，单独字段）：**凡 studyDesign 有值（research 类）必填**——给读者一句"适用边界"，从研究设计层面说，不是硬挑刺：单一结局指标、特定人群、外推性、随访长度、单中心 vs 多中心、行业资助、替代终点、异质性等，挑最该让读者留神的一条。**即便是高质量大样本 RCT 也有边界（至少是人群 / 结局 / 外推性），照样写一句，不要留空。** 但只能基于研究设计本身能读出的信息——绝不编造数字或不存在的缺陷；只有当标题 / 摘要里真的读不出任何设计信息时才留 ""。news / guideline / policy / 述评 类一律留 ""。limitationEn 为其英文版；limitation 为 "" 时 limitationEn 也留 ""。
+- 行动建议护栏：临床动作指令（该做 / 别做 / 改用 / 推荐某处置）只在证据等级足够时给——studyDesign 为 RCT 或 系统综述、且 curatedScore≥80；弱证据（观察 / 综述 / 述评 / 个案 / news）只点相关性与适用边界，不下动作指令。
+- 措辞强度匹配证据强度：大样本 RCT / 长随访 / 系统综述可下肯定判断（"坐实"、"非劣效成立"）；单个小样本 / 观察研究 / 短随访不得用"证明、确证、坐实、必然"等定论措辞，改写成"提示 / 可能 / 倾向于"。不夸大：单个小样本不写成实践改变。
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
 
 category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
@@ -569,15 +574,13 @@ studyDesign 规则（仅 tags[0]==="research" 的条目需填）：
 news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","tags":["research","spine"],"studyDesign":"RCT","summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","limitation":"一句话证据局限，判断不出留空字符串","limitationEn":"One-line study limitation, blank string if none","tags":["research","spine"],"studyDesign":"RCT","summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
   const userPrompt = `请策展以下 ${items.length} 条新闻：\n\n${JSON.stringify(items, null, 2)}`;
 
-  const text = LLM_PROVIDER === 'gemini'
-    ? await callGemini(systemPrompt, userPrompt)
-    : await callAnthropic(systemPrompt, userPrompt);
+  const text = await callLLM(systemPrompt, userPrompt);
   if (!text) return [];
   return repairEnglishReasons(parseCuratedArray(text));
 }
@@ -605,9 +608,7 @@ async function repairEnglishReasons(curated) {
     const batch = bad.slice(off, off + 10);
     const user = `重写以下 ${batch.length} 条：\n\n` + JSON.stringify(
       batch.map((c, i) => ({ index: i, title: c.summary || '', curatedReason: c.curatedReason })), null, 2);
-    const text = LLM_PROVIDER === 'gemini'
-      ? await callGemini(REPAIR_SYSTEM, user)
-      : await callAnthropic(REPAIR_SYSTEM, user);
+    const text = await callLLM(REPAIR_SYSTEM, user);
     const fixed = parseCuratedArray(text || '');
     fixed.forEach(f => {
       const c = batch[f.index];
@@ -631,16 +632,32 @@ function parseCuratedArray(raw) {
   try {
     return JSON.parse(text);
   } catch (e) {
-    console.error(`  Parse error: ${e.message} — attempting truncation salvage`);
-    for (let cut = text.lastIndexOf('}'); cut > 0; cut = text.lastIndexOf('}', cut - 1)) {
-      try {
-        const salvaged = JSON.parse(text.slice(0, cut + 1) + ']');
-        console.error(`  Salvaged ${salvaged.length} complete items from truncated response`);
-        return salvaged;
-      } catch { /* keep cutting */ }
+    console.error(`  Parse error: ${e.message} — extracting complete objects`);
+    // Scan for every balanced top-level {...} object (string-aware) and parse
+    // each independently. Robust to a premature ], trailing prose, or split
+    // arrays — the old tail-truncation salvage dropped any object that came
+    // AFTER a stray ] (e.g. when Haiku closes the array early then continues).
+    const items = [];
+    let depth = 0, objStart = -1, inStr = false, esc = false;
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === '\\') esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+      if (ch === '"') inStr = true;
+      else if (ch === '{') { if (depth === 0) objStart = i; depth++; }
+      else if (ch === '}') {
+        if (depth > 0 && --depth === 0 && objStart !== -1) {
+          try { items.push(JSON.parse(text.slice(objStart, i + 1))); } catch { /* skip malformed */ }
+          objStart = -1;
+        }
+      }
     }
-    console.error('  Salvage failed — 0 items');
-    return [];
+    console.error(`  Recovered ${items.length} complete items`);
+    return items;
   }
 }
 
@@ -653,7 +670,7 @@ async function callAnthropic(systemPrompt, userPrompt) {
       'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: ANTHROPIC_MODEL,
       max_tokens: 8000, // 40-item batches overflow 4000 (truncation salvage loses tail items)
       system: systemPrompt,
       messages: [{ role: 'user', content: userPrompt }]
@@ -713,6 +730,44 @@ async function callGemini(systemPrompt, userPrompt) {
     }
   }
   return '';
+}
+
+// DeepSeek — OpenAI-compatible endpoint. Thinking mode defaults to ENABLED on
+// V4; we disable it so the batch JSON comes back fast/cheap without burning
+// output budget on chain-of-thought (parity with the Gemini thinkingBudget:0
+// above). Model is swappable via DEEPSEEK_MODEL (deepseek-v4-flash / -pro).
+async function callDeepSeek(systemPrompt, userPrompt) {
+  const res = await fetch('https://api.deepseek.com/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${DEEPSEEK_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: DEEPSEEK_MODEL,
+      max_tokens: 8000,
+      thinking: { type: 'disabled' },
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
+      ]
+    })
+  });
+
+  if (!res.ok) {
+    console.error(`  DeepSeek error: ${res.status} ${(await res.text()).slice(0, 200)}`);
+    return '';
+  }
+
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || '';
+}
+
+// One place to route a (system, user) prompt to the configured provider.
+function callLLM(systemPrompt, userPrompt) {
+  if (LLM_PROVIDER === 'gemini') return callGemini(systemPrompt, userPrompt);
+  if (LLM_PROVIDER === 'deepseek') return callDeepSeek(systemPrompt, userPrompt);
+  return callAnthropic(systemPrompt, userPrompt);
 }
 
 // ── Dedup / clustering ──────────────────────────────────────────────────────
@@ -890,9 +945,11 @@ function computeHotTopics(items) {
 async function main() {
   console.log(`\n⚡ Cadence PT News Refresh — ${new Date().toISOString()}`);
   if (DRY_RUN) { console.log('  DRY_RUN mode\n'); return; }
-  const llmKey = LLM_PROVIDER === 'gemini' ? GEMINI_API_KEY : ANTHROPIC_API_KEY;
+  const llmKeyByProvider = { gemini: GEMINI_API_KEY, deepseek: DEEPSEEK_API_KEY, anthropic: ANTHROPIC_API_KEY };
+  const llmKeyName = { gemini: 'GEMINI_API_KEY', deepseek: 'DEEPSEEK_API_KEY', anthropic: 'ANTHROPIC_API_KEY' }[LLM_PROVIDER] || 'ANTHROPIC_API_KEY';
+  const llmKey = llmKeyByProvider[LLM_PROVIDER] || ANTHROPIC_API_KEY;
   const needExa = REFRESH_MODE !== 'direct';
-  if ((needExa && !EXA_API_KEY) || !llmKey) { console.error(`❌ Missing API keys (${needExa ? 'EXA_API_KEY + ' : ''}${LLM_PROVIDER === 'gemini' ? 'GEMINI_API_KEY' : 'ANTHROPIC_API_KEY'})`); process.exit(1); }
+  if ((needExa && !EXA_API_KEY) || !llmKey) { console.error(`❌ Missing API keys (${needExa ? 'EXA_API_KEY + ' : ''}${llmKeyName})`); process.exit(1); }
   console.log(`  LLM provider: ${LLM_PROVIDER} · mode: ${REFRESH_MODE}`);
 
   let raw = [];
@@ -963,6 +1020,10 @@ async function main() {
       ...(c.titleZh ? { titleZh: c.titleZh } : {}),
       ...(c.summaryZh ? { summaryZh: c.summaryZh } : {}),
       ...(c.curatedReasonEn ? { curatedReasonEn: c.curatedReasonEn } : {}),
+      // One-line study limitation — emitted only when the model could ground it
+      // in the title/abstract; absent (not "") when there's nothing to say.
+      ...(c.limitation ? { limitation: c.limitation } : {}),
+      ...(c.limitationEn ? { limitationEn: c.limitationEn } : {}),
       tags: c.tags || [],
       // Study-design badge (XHS card): RCT / 系统综述 / 观察研究 / 综述 / 述评
       ...(c.studyDesign ? { studyDesign: c.studyDesign } : {}),
@@ -1138,4 +1199,4 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, callAnthropic, callGemini, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant };

@@ -48,12 +48,15 @@ jobs:
           # explicitly so it stays the source of truth.
           SITE_URL: https://incadencept.com
           EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
-          # LLM provider switch: set repo Variable LLM_PROVIDER=gemini (Settings →
-          # Secrets and variables → Actions → Variables) + Secret GEMINI_API_KEY
-          # to run on Gemini's free tier; defaults to anthropic.
+          # LLM provider switch (Settings → Secrets and variables → Actions):
+          # code default is deepseek + deepseek-v4-pro (needs Secret
+          # DEEPSEEK_API_KEY). Override with repo Variable LLM_PROVIDER=anthropic
+          # | gemini (+ matching Secret), or DEEPSEEK_MODEL=deepseek-v4-flash.
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           # 2-hourly cron → free direct legs; daily 21:30 UTC cron and manual
           # dispatch (unless overridden) → full sweep.
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
@@ -64,6 +67,8 @@ jobs:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/wechat-brief.js
 
@@ -75,6 +80,8 @@ jobs:
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
         run: node scripts/daily-brief.js
 
