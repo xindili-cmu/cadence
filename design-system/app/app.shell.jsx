@@ -198,6 +198,24 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   const brief = pulseZh
     ? `今日共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。最强信号：${briefTop.title}（SIGNAL ${briefTop.score}）。`
     : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} today across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Top signal: ${briefTop.title} (SIGNAL ${briefTop.score}).`;
+  // 本周信号榜 — quiet-day rescue (Cindy 2026-06-14). When today is thin (≤2),
+  // surface the last 7 days' highest-SIGNAL items so the rail isn't a near-empty
+  // box. Ranked by score, ties broken newest-first; today's already-shown items
+  // are removed so the board never repeats the Today's Signal list. Draws from
+  // the canonical CD_STORIES pool (all dates), not `stories` (today only).
+  const quietDay = stories.length <= 2;
+  const shownIds = new Set(top.map((s) => s.id));
+  const nowMs = Date.now();
+  const weekly = quietDay
+    ? (window.CD_STORIES || [])
+        .filter((s) => {
+          if (!s.publishedAt) return false;
+          const age = nowMs - new Date(s.publishedAt).getTime();
+          return age >= 0 && age <= 7 * 864e5 && !shownIds.has(s.id);
+        })
+        .sort((a, b) => (b.score - a.score) || (new Date(b.publishedAt) - new Date(a.publishedAt)))
+        .slice(0, 5)
+    : [];
   return (
     <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderLeft: '1px solid var(--border-subtle)' }}>
       {/* AI 速读 — the one dark surface in the chrome (deliberate focal contrast). */}
@@ -228,6 +246,32 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
           ))}
         </div>
       </div>
+
+      {/* 本周信号榜 — only on quiet days; mirrors Today's Signal row styling so the
+          two cards read as siblings, differentiated by the trophy + 7-day kicker. */}
+      {weekly.length > 0 && (
+        <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)', marginTop: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 3 }}>
+            <Icon name="trophy" size={16} style={{ color: 'var(--green-700)' }} />
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, color: 'var(--text-primary)' }}>{window.CD_T('weeklyTop')}</span>
+          </div>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 14, paddingLeft: 24 }}>{window.CD_T('weeklyTopSub')}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {weekly.map((s, i) => (
+              <button key={s.id} type="button" onClick={() => onPick(s.id)} style={{ display: 'flex', gap: 10, textAlign: 'left', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: 'var(--green-600)', flex: 'none', width: 16 }}>{i + 1}</span>
+                <span style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+                  <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, fontWeight: 500, lineHeight: 1.35, color: 'var(--text-primary)' }}>{s.title}</span>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <SignalScore score={s.score} size="sm" />
+                    <CategoryTag category={s.category} size="sm" variant="dot" />
+                  </span>
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div style={{ marginTop: 16, padding: '0 18px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
