@@ -532,7 +532,7 @@ function SourceMonogram({ source, accent }) {
  */
 function NewsCard({
   title, summary, source, sourceUrl = '#', time, date, category,
-  score, whyItMatters, variant = 'default', selected = false,
+  score, whyItMatters, limitation, variant = 'default', selected = false,
   mobile = false, // narrow-screen layout: lead card drops its left SIGNAL gutter
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
@@ -616,6 +616,12 @@ function NewsCard({
           </span>
         </div>
         <div style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 14.5 : 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{whyItMatters}</div>
+        {limitation && (
+          <div style={{ display: 'flex', gap: 6, marginTop: 8, paddingTop: 8, borderTop: '1px dashed var(--blue-200)' }}>
+            <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 9, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--ink-500)', marginTop: 2, whiteSpace: 'nowrap' }}>{(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '局限' : 'Limit'}</span>
+            <span style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 13 : 12.5, lineHeight: 1.55, color: 'var(--ink-600)' }}>{limitation}</span>
+          </div>
+        )}
       </div>
     </aside>
   );

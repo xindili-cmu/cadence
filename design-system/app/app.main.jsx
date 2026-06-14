@@ -909,7 +909,6 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   const pos = editions ? editions.findIndex((e) => e.date === date) : -1;
   const prevEd = pos >= 0 && pos < editions.length - 1 ? editions[pos + 1] : null;
   const nextEd = pos > 0 ? editions[pos - 1] : null;
-  const leadPara = zh ? (edition.lead.paragraphZh || edition.lead.paragraphEn) : (edition.lead.paragraphEn || edition.lead.paragraphZh);
 
   // 晨间查房 tiering (Cindy 2026-06-12): organized by evidence/actionability,
   // not specialty — the axis AIHOT doesn't have. Tier 1 = top signal with its
@@ -945,11 +944,9 @@ function DailyBriefView({ L, date, onDate, mobile }) {
       <DailyMasthead edition={edition} zh={zh} />
       <DailyPulse items={allItems} />
 
-      {/* LLM editor's note — one quiet italic line, only when a real (non-
-          fallback) lead paragraph exists. */}
-      {leadPara && !edition.lead.fallback && (
-        <p style={{ margin: '0 auto 24px', maxWidth: 560, textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 14.5, lineHeight: 1.7, color: 'var(--text-secondary)' }}>{leadPara}</p>
-      )}
+      {/* Editor's-note lead paragraph removed (Cindy 2026-06-14): the LLM prose
+          read as machine-generated, restated the DailyPulse counts above it, and
+          could miscount. The masthead + pulse + tier-1 lead carry the page. */}
 
       {/* Tier 1 — the one story worth 5 minutes, with its clinical take */}
       {leadStory && (
@@ -962,6 +959,12 @@ function DailyBriefView({ L, date, onDate, mobile }) {
               <div style={{ marginTop: 12, padding: '10px 14px', background: 'var(--green-100, var(--surface-active))', borderRadius: 'var(--radius-md)' }}>
                 <div style={{ ...kicker, fontSize: 10, color: 'var(--green-700)', marginBottom: 4 }}>{t('daily.take')}</div>
                 <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.6, color: 'var(--green-900, var(--text-primary))' }}>{leadStory.why}</div>
+                {leadStory.limitation && (
+                  <div style={{ display: 'flex', gap: 6, marginTop: 8, paddingTop: 8, borderTop: '1px dashed var(--green-300, var(--border-subtle))' }}>
+                    <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 9, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginTop: 2 }}>{zh ? '局限' : 'Limit'}</span>
+                    <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>{leadStory.limitation}</span>
+                  </div>
+                )}
               </div>
             )}
             {srcLine(leadStory)}
@@ -1199,7 +1202,7 @@ function FeedApp() {
   // Missing bilingual fields fall back to the original language.
   const L = React.useCallback((s) => (zh
     ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
-    : { ...s, why: s.whyEn || s.why }), [zh]);
+    : { ...s, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
 
   const DAY_LABELS = cdDayLabels();
 
@@ -1407,7 +1410,7 @@ function FeedApp() {
                         mobile={isMobile}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} tech={s.tech}
-                        title={s.title} summary={s.summary} whyItMatters={s.why}
+                        title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
                         selected={selected === s.id}
                         onClick={() => setSelected(selected === s.id ? null : s.id)} />
                       {!compact && <RelatedRow related={s.related} />}
