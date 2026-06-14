@@ -112,7 +112,7 @@ function NavRail({ view, onView, category, onCategory }) {
   const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 7px' };
   return (
-    <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start' }}>
+    <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderRight: '1px solid var(--border-subtle)' }}>
       <div style={eyebrow}>{zh ? '浏览' : 'Browse'}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         {window.CD_NAV.map((item) => {
@@ -171,7 +171,7 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   const activeCats = counts.filter((c) => c.n > 0).length;
   const pulseZh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   return (
-    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start' }}>
+    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderLeft: '1px solid var(--border-subtle)' }}>
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
           <Icon name="sun" size={16} style={{ color: 'var(--green-700)' }} />

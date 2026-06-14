@@ -797,7 +797,7 @@ function DailyArchiveRail({ current, onPick }) {
   const leadOf = (e) => (zh ? (e.leadTitleZh || e.leadTitle) : (e.leadTitle || e.leadTitleZh)) || '';
 
   return (
-    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', maxHeight: 'calc(100vh - var(--header-height))', overflowY: 'auto' }}>
+    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', maxHeight: 'calc(100vh - var(--header-height))', overflowY: 'auto', borderLeft: '1px solid var(--border-subtle)' }}>
       <button type="button" onClick={() => onPick(latest.date)}
         style={{ display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer', padding: '14px 16px', marginBottom: 16, background: current === latest.date ? 'var(--surface-active)' : 'var(--surface-card)', border: '1.5px solid var(--green-600)', borderRadius: 'var(--radius-lg)', fontFamily: 'var(--font-sans)' }}>
         <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--green-800, var(--text-primary))' }}>{t('daily.latestIssue')}</div>
