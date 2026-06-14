@@ -109,29 +109,39 @@ function SpecBtn({ id, label, dot, idx, active, onClick }) {
   );
 }
 
+// NavBtn — one view row in the left rail. `small` marks the demoted secondary
+// links (about / feedback) that sink to the rail bottom.
+function NavBtn({ item, active, onView, small }) {
+  return (
+    <button type="button" onClick={() => onView(item.id)} style={{
+      display: 'flex', alignItems: 'center', gap: small ? 9 : 11, padding: small ? '7px 12px' : '9px 12px', borderRadius: 'var(--radius-md)',
+      border: 'none', cursor: 'pointer', textAlign: 'left', width: '100%',
+      fontFamily: 'var(--font-sans)', fontSize: small ? 13 : 14, fontWeight: active ? 600 : 500,
+      background: active ? 'var(--surface-active)' : 'transparent',
+      color: active ? 'var(--green-800)' : (small ? 'var(--text-tertiary)' : 'var(--text-secondary)'),
+      transition: 'var(--transition-colors)',
+    }}>
+      <Icon name={item.icon} size={small ? 16 : 17} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
+      {window.CD_T('nav.' + item.id, item.label)}
+    </button>
+  );
+}
+
 function NavRail({ view, onView, category, onCategory }) {
   const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 7px' };
+  // 关于 / 反馈 are low-frequency meta links → sunk to the rail bottom, leaving
+  // the content views (curated / all / daily / sources) as the primary group.
+  const SECONDARY = ['about', 'feedback'];
+  const primaryNav = window.CD_NAV.filter((i) => !SECONDARY.includes(i.id));
+  const secondaryNav = window.CD_NAV.filter((i) => SECONDARY.includes(i.id));
   return (
-    <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderRight: '1px solid var(--border-subtle)' }}>
+    <nav style={{ width: 'var(--rail-left)', flex: 'none', padding: '20px 14px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', height: 'calc(100vh - var(--header-height))', overflowY: 'auto', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border-subtle)' }}>
       <div style={eyebrow}>{zh ? '浏览' : 'Browse'}</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        {window.CD_NAV.map((item) => {
-          const active = view === item.id;
-          return (
-            <button key={item.id} type="button" onClick={() => onView(item.id)} style={{
-              display: 'flex', alignItems: 'center', gap: 11, padding: '9px 12px', borderRadius: 'var(--radius-md)',
-              border: 'none', cursor: 'pointer', textAlign: 'left', width: '100%',
-              fontFamily: 'var(--font-sans)', fontSize: 14, fontWeight: active ? 600 : 500,
-              background: active ? 'var(--surface-active)' : 'transparent',
-              color: active ? 'var(--green-800)' : 'var(--text-secondary)',
-              transition: 'var(--transition-colors)',
-            }}>
-              <Icon name={item.icon} size={17} style={{ color: active ? 'var(--green-700)' : 'var(--text-tertiary)' }} />
-              {window.CD_T('nav.' + item.id, item.label)}
-            </button>
-          );
-        })}
+        {primaryNav.map((item) => (
+          <NavBtn key={item.id} item={item} active={view === item.id} onView={onView} />
+        ))}
       </div>
 
       {/* Specialty filter — moved here from the old top tab bar. Selecting one
@@ -151,6 +161,15 @@ function NavRail({ view, onView, category, onCategory }) {
           </div>
         </>
       )}
+
+      {/* Secondary / meta links — sunk to the rail bottom, smaller + muted. */}
+      <div style={{ marginTop: 'auto', paddingTop: 16 }}>
+        <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: 8, display: 'flex', flexDirection: 'column', gap: 2 }}>
+          {secondaryNav.map((item) => (
+            <NavBtn key={item.id} item={item} active={view === item.id} onView={onView} small />
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }
