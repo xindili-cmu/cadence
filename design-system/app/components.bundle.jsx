@@ -301,12 +301,19 @@ function Input({
 
 
 /* ===== components/feed/SignalScore.jsx ===== */
-// SIGNAL tiers — a 3-step authority scale (not traffic lights).
-// ≥85 practice-changing · 65–84 worth knowing · <65 reference.
+// SIGNAL tiers — aligned to the cron scoring rubric (news-refresh.js):
+// ≥90 practice-changing · 80–89 worth knowing · 65–79 reference.
 function signalTier(v) {
-  if (v >= 85) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '可改变实践', en: 'Practice-changing' };
-  if (v >= 65) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
+  if (v >= 90) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '可改变实践', en: 'Practice-changing' };
+  if (v >= 80) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
   return { key: 'low', color: 'var(--signal-low)', soft: 'var(--signal-low-soft)', zh: '参考', en: 'For reference' };
+}
+
+// Hover explainer — what the score means + the tier cutoffs.
+function signalTip(lang) {
+  return (lang || (typeof window !== 'undefined' && window.CD_LANG) || 'zh') === 'zh'
+    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。90+ 可改变实践 · 80+ 值得关注 · 65+ 参考'
+    : 'SIGNAL: AI rating of clinical impact (0–100). 90+ practice-changing · 80+ worth knowing · 65+ reference';
 }
 
 function signalTierLabel(t, lang) {
@@ -337,10 +344,11 @@ function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) 
   const v = Math.max(0, Math.min(100, Math.round(score)));
   const t = signalTier(v);
   const vr = variant || (size === 'sm' ? 'chip' : 'badge');
+  const tip = signalTip(lang);
 
   if (vr === 'chip') {
     return (
-      <span style={{
+      <span title={tip} style={{
         display: 'inline-flex', alignItems: 'center', gap: 5, padding: '2px 7px 2px 6px',
         background: t.soft, borderRadius: 'var(--radius-sm)', whiteSpace: 'nowrap', ...style,
       }} {...rest}>
@@ -353,7 +361,7 @@ function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) 
 
   if (vr === 'block') {
     return (
-      <span style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 7, ...style }} {...rest}>
+      <span title={tip} style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap: 7, ...style }} {...rest}>
         <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{ width: 5, height: 5, borderRadius: '999px', background: t.color }} />
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.18em', color: 'var(--text-tertiary)' }}>SIGNAL</span>
@@ -370,7 +378,7 @@ function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) 
 
   // 'badge' — the default card-meta data point.
   return (
-    <span style={{
+    <span title={tip} style={{
       display: 'inline-flex', alignItems: 'center', gap: 8, padding: '4px 9px 4px 7px',
       background: t.soft, border: `1px solid ${t.color}22`, borderRadius: 'var(--radius-sm)',
       whiteSpace: 'nowrap', ...style,
