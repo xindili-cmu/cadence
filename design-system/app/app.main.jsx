@@ -624,7 +624,7 @@ function AboutView({ onView, mobile }) {
       {/* §01 缘起 — hook + founder story (kept), signed off */}
       <section>
         <SectionHead mobile={mobile} eyebrow={tt('缘起', 'Why Cadence')} />
-        <blockquote style={{ margin: '0 0 36px', maxWidth: 840, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-xl)' : 'var(--text-2xl)', lineHeight: 1.4, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
+        <blockquote style={{ margin: '0 0 40px', maxWidth: 900, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(26px, 3.6vw, 44px)', lineHeight: 1.25, letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>
           {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
           <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
         </blockquote>
