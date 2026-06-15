@@ -628,11 +628,11 @@ function AboutView({ onView, mobile }) {
           {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
           <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
         </blockquote>
-        <div className="cd-about-cols">
-          <p style={{ ...para, margin: 0 }}>{t('about.why.p1')}</p>
-          <p style={{ ...para, margin: 0 }}>{t('about.why.p2')}</p>
+        <div style={{ maxWidth: 680 }}>
+          <p style={{ ...para }}>{t('about.why.p1')}</p>
+          <p style={{ ...para }}>{t('about.why.p2')}</p>
+          <p style={{ ...para, marginBottom: 0 }}>{t('about.why.p3')}</p>
         </div>
-        <p style={{ ...para, marginTop: 24, marginBottom: 0, maxWidth: 680 }}>{t('about.why.p3')}</p>
         <div style={{ marginTop: 14, fontFamily: 'var(--font-display)', fontSize: 'var(--text-base)', fontStyle: 'italic', color: 'var(--text-tertiary)' }}>{zh ? '— 步频团队' : '— The Cadence team'}</div>
       </section>
 
