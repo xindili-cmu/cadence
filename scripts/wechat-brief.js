@@ -86,6 +86,18 @@ async function main() {
   fs.writeFileSync(mdPath, md.trim() + '\n');
   fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.html`), mdToWechatHtml(md, dateStr));
   console.log(`  ✅ briefs/${dateStr}.md + .html`);
+
+  // 2.35:1 WeChat cover banner — same satori pipeline. Non-fatal: a cover
+  // failure must never block the brief itself.
+  try {
+    const { renderCover } = require('./wechat-cover.js');
+    const [, mm, dd] = dateStr.split('-');
+    const out = path.join(BRIEFS_DIR, `${dateStr}-cover.png`);
+    await renderCover({ headline: '今日康复信号', eyebrow: `${+mm}.${+dd} 日报 · ${recent.length} 篇`, out });
+    console.log(`  ✅ briefs/${dateStr}-cover.png`);
+  } catch (e) {
+    console.error('  ⚠️  cover render failed (non-fatal):', e.message);
+  }
 }
 
 // Minimal md → WeChat-paste HTML. Inline styles only; classes don't survive
