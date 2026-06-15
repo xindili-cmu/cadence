@@ -49,6 +49,13 @@ function windowHours() {
   const day = beijingWeekday();
   return (day === 0 || day === 6) ? WINDOW_HOURS_WEEKEND : WINDOW_HOURS_WEEKDAY;
 }
+// Age guard for 今日: firstSeen decides what enters the window, but a study
+// whose publishedAt is older than this (e.g. a years-old paper a feed only just
+// surfaced, or a catch-up backfill) is kept OUT of the daily edition so it can't
+// headline "今日". It still lands in the main feed (news.json) normally — this
+// only governs the daily edition. Generous enough for real publisher delays,
+// tight enough to block ancient backfill. One number to tune.
+const MAX_PUBLISH_AGE_DAYS = 14;
 const SECTION_CAP = 6;         // per-section item ceiling — keeps one edition scannable
 
 // Section order mirrors the site's CATEGORIES order (components/feed/categories.js).
@@ -169,22 +176,35 @@ function fallbackLead(sections, stats) {
 }
 
 // Core selection (extracted for deterministic testing): keep items whose
-// publishedAt is in the relay window (cutoff, nowMs], drop any sourceUrl already
-// published (publishedBefore) or seen earlier in this same window, score-desc.
-function selectWindowItems(items, cutoff, nowMs, publishedBefore = new Set()) {
+// firstSeen (ingestion time; fallback publishedAt for legacy items) is in the
+// relay window (cutoff, nowMs], drop any sourceUrl already published
+// (publishedBefore) or seen earlier in this same window, score-desc.
+// Windowing on firstSeen, not publishedAt, is deliberate: journals' publish
+// dates lag ingestion by days, so a publishedAt window starves "今日" of items
+// we actually caught today. firstSeen tracks what we caught, matching the
+// daily-update promise. publishFloor (epoch ms) is the age guard: an item whose
+// publishedAt is older than the floor is excluded even if freshly caught, so a
+// years-old paper can't headline 今日. publishFloor=0 disables the guard
+// (legacy/test callers, and items lacking a parseable publishedAt are unaffected).
+function selectWindowItems(items, cutoff, nowMs, publishedBefore = new Set(), publishFloor = 0) {
   let ledgerSkips = 0;
+  let ageSkips = 0;
   const seen = new Set();
   const windowItems = (items || [])
     .filter(i => {
-      const ts = new Date(i.publishedAt).getTime();
-      if (!(ts > cutoff && ts <= nowMs)) return false;                          // relay window
+      const ts = new Date(i.firstSeen || i.publishedAt).getTime();
+      if (!(ts > cutoff && ts <= nowMs)) return false;                          // relay window (firstSeen)
+      // Age guard: firstSeen got it INTO the window; publishedAt keeps a
+      // genuinely ancient study OUT. Only excludes old items, never adds any.
+      const pub = new Date(i.publishedAt).getTime();
+      if (publishFloor && !Number.isNaN(pub) && pub < publishFloor) { ageSkips++; return false; } // too old for 今日
       if (publishedBefore.has(i.sourceUrl)) { ledgerSkips++; return false; }    // already published
       if (seen.has(i.sourceUrl)) return false;                                  // dup inside window
       seen.add(i.sourceUrl);
       return true;
     })
     .sort((a, b) => b.curatedScore - a.curatedScore);
-  return { windowItems, ledgerSkips };
+  return { windowItems, ledgerSkips, ageSkips };
 }
 
 async function main() {
@@ -209,11 +229,12 @@ async function main() {
   // skew, manual rerun), no URL can go out twice.
   const ledger = loadLedger();
   const publishedBefore = new Set(ledger.urls.filter(u => u.date !== dateStr).map(u => u.url));
-  const { windowItems, ledgerSkips } = selectWindowItems(data.items, cutoff, nowMs, publishedBefore);
+  const publishFloor = nowMs - MAX_PUBLISH_AGE_DAYS * 24 * 3600 * 1000;
+  const { windowItems, ledgerSkips, ageSkips } = selectWindowItems(data.items, cutoff, nowMs, publishedBefore, publishFloor);
 
   const winSpan = `${new Date(cutoff).toISOString().slice(5, 16).replace('T', ' ')}→${new Date(nowMs).toISOString().slice(5, 16).replace('T', ' ')}Z`;
   if (!windowItems.length) {
-    console.log(`  窗口 ${winSpan} 无新条目（账本去重跳过 ${ledgerSkips} 条），今日不出刊。`);
+    console.log(`  窗口 ${winSpan} 无新条目（账本去重跳过 ${ledgerSkips} 条，超龄跳过 ${ageSkips} 条），今日不出刊。`);
     return;
   }
 

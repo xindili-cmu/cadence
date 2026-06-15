@@ -835,6 +835,11 @@ function clusterItems(items, keepBest) {
       }
     }
     if (related.length) main.related = related;
+    // Keep the EARLIEST firstSeen across cluster members, so a re-found story
+    // re-curated today doesn't reset its ingestion time and re-enter the window.
+    // ISO strings sort chronologically. (publishedAt is the legacy fallback.)
+    const firstSeens = c.members.map(m => m.firstSeen || m.publishedAt).filter(Boolean).sort();
+    if (firstSeens.length) main.firstSeen = firstSeens[0];
     return main;
   });
 }
@@ -1014,6 +1019,11 @@ async function main() {
       source: o.source,
       sourceUrl: o.url,
       publishedAt: o.publishedDate,
+      // Ingestion time — when WE first caught this item. The daily edition
+      // windows on firstSeen, not publishedAt, so a journal's lagged publish
+      // date can't keep a freshly-ingested study out of "今日". publishedAt
+      // still drives display, hot-topic decay, and the 7-day carry cutoff.
+      firstSeen: new Date().toISOString(),
       curatedScore: c.curatedScore,
       curatedReason: c.curatedReason,
       // Bilingual fields (中英切换) — optional in old data, required in new runs.
@@ -1052,7 +1062,9 @@ async function main() {
       .filter(i => new Date(i.publishedAt) > cutoff)
       // Re-validate against the roster so items from since-removed sources
       // age out immediately, and relabel in case a source was renamed.
-      .map(i => ({ ...i, source: matchSource(i.sourceUrl) }))
+      // Backfill firstSeen for legacy items (pre-firstSeen) from publishedAt —
+      // a past date, so the migration never dumps the whole feed into one edition.
+      .map(i => ({ ...i, source: matchSource(i.sourceUrl), firstSeen: i.firstSeen || i.publishedAt }))
       .filter(i => i.source)
       // Apply the relevance gate to carried-over items too, so off-topic
       // content curated before this gate existed ages out on the next run.
