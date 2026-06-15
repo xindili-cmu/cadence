@@ -588,10 +588,14 @@ function AboutView({ onView, mobile }) {
         @media (max-width:860px){.cd-about-cols{grid-template-columns:1fr;gap:18px}.cd-about-step{grid-template-columns:1fr;gap:18px;align-items:flex-start}.cd-about-srcwrap{grid-template-columns:1fr;gap:32px}}
       `}</style>
 
-      {/* Hero — wordmark + rule + brand standfirst + instrument stats */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-        <section style={{ position: 'relative', overflow: 'hidden' }}>
-          <div aria-hidden="true" style={{ position: 'absolute', top: -40, right: -120, pointerEvents: 'none' }}>
+      {/* Hero — masthead rule + big headline + lead + instrument stats */}
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', paddingTop: mobile ? 4 : 8, paddingBottom: 'var(--space-5, 20px)', borderBottom: '1px solid var(--border-subtle)', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>
+          <span style={{ color: 'var(--blue-600)', fontWeight: 600 }}>{tt('关于 · 步频', 'About · Cadence')}</span>
+          <span>{tt('临床证据情报 · 每日更新', 'Clinical evidence intelligence · daily')}</span>
+        </div>
+        <section style={{ position: 'relative', overflow: 'hidden', paddingTop: mobile ? 'var(--space-10)' : 'var(--space-16)' }}>
+          <div aria-hidden="true" style={{ position: 'absolute', top: 0, right: -120, pointerEvents: 'none' }}>
             <MetronomeMotif height={460} opacity={0.05} />
           </div>
           <div style={{ position: 'relative' }}>
@@ -607,7 +611,7 @@ function AboutView({ onView, mobile }) {
             </p>
           </div>
         </section>
-        <div style={{ display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
+        <div style={{ marginTop: mobile ? 'var(--space-10)' : 'var(--space-16)', display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
           {stats.map((s, i) => (
             <div key={i} style={{ flex: 1, textAlign: 'center', padding: '24px 4px', borderLeft: i ? '1px solid var(--border-subtle)' : 'none' }}>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--blue-600)', lineHeight: 1, fontVariantNumeric: 'tabular-nums' }}>{s.v}</div>
