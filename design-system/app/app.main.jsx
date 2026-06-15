@@ -752,7 +752,7 @@ function AboutView({ onView, mobile }) {
             <button type="button" onClick={() => onView('curated')} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '11px 20px', background: 'var(--blue-600)', color: '#fff', border: 'none', borderRadius: 'var(--radius-pill)', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', fontWeight: 600, cursor: 'pointer' }}>
               {tt('开始阅读今日摘要', "Read today’s digest")} <Icon name="arrow-right" size={16} />
             </button>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'rgba(250,250,246,0.55)' }}>{tt('中文优先 · 英文对照', 'Chinese-first · English alongside')}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'rgba(250,250,246,0.55)' }}>{tt('中英双语 · 随时切换', 'Bilingual · switch anytime')}</span>
           </div>
         </div>
       </div>

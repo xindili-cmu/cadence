@@ -364,7 +364,7 @@ window.ABOUT = {
   principles: [
     { zh: '用数字说话：样本量、效应量、随访窗与影响因子，一律照实呈现。', en: 'Numbers first: sample size, effect size, follow-up window and impact factor, stated plainly.' },
     { zh: '评分透明：SIGNAL 衡量的是证据强度，不是新闻热度。', en: 'Transparent scoring: SIGNAL measures evidential strength, not news heat.' },
-    { zh: '中文优先，英文对照：每项研究都有中英双语摘要。', en: 'Chinese-first, English alongside: every study carries a bilingual summary.' },
+    { zh: '中英双语：每项研究都配有完整的中英文摘要，一键切换。', en: 'Fully bilingual: every study carries a complete Chinese + English summary, one tap to switch.' },
   ],
   audience: [
     { icon: 'stethoscope',    zh: '物理治疗师', en: 'Physical therapists' },
