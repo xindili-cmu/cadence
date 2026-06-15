@@ -367,18 +367,11 @@ window.ABOUT = {
     { zh: '中英双语：每项研究都配有完整的中英文摘要，一键切换。', en: 'Fully bilingual: every study carries a complete Chinese + English summary, one tap to switch.' },
   ],
   audience: [
-    { icon: 'stethoscope',     zh: '物理治疗师', en: 'Physical therapists' },
-    { icon: 'shield',          zh: '运动防护', en: 'Athletic trainers' },
-    { icon: 'briefcase-medical', zh: '队医', en: 'Team physicians' },
-    { icon: 'activity',        zh: '运动医学', en: 'Sports medicine' },
-    { icon: 'dumbbell',        zh: '运动康复师', en: 'Sports rehab therapists' },
-    { icon: 'microscope',      zh: '研究者', en: 'Researchers' },
-    { icon: 'clipboard-check', zh: '循证实践者', en: 'EBP clinicians' },
-    { icon: 'graduation-cap',  zh: '临床教育者', en: 'Clinical educators' },
-    { icon: 'presentation',    zh: '高校教师', en: 'University faculty' },
-    { icon: 'book-open',       zh: '康复专业学生', en: 'Rehab students' },
-    { icon: 'building-2',      zh: '康复科室', en: 'Rehab departments' },
-    { icon: 'hospital',        zh: '诊所', en: 'Clinics' },
+    { icon: 'stethoscope',    zh: '物理治疗师', en: 'Physical therapists' },
+    { icon: 'activity',       zh: '运动防护与队医', en: 'Athletic trainers & team physicians' },
+    { icon: 'microscope',     zh: '研究与循证', en: 'Researchers & EBP clinicians' },
+    { icon: 'graduation-cap', zh: '教育者与学生', en: 'Educators & students' },
+    { icon: 'building-2',     zh: '康复科室与诊所', en: 'Rehab departments & clinics' },
   ],
 };
 
