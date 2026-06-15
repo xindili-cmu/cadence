@@ -369,7 +369,10 @@ window.ABOUT = {
   audience: [
     { icon: 'stethoscope',    zh: '物理治疗师', en: 'Physical therapists' },
     { icon: 'activity',       zh: '运动防护与队医', en: 'Sports medicine & ATs' },
-    { icon: 'graduation-cap', zh: '教育者与学生', en: 'Educators & students' },
+    { icon: 'dumbbell',       zh: '运动康复师', en: 'Sports rehab therapists' },
+    { icon: 'microscope',     zh: '研究者与循证实践者', en: 'Researchers & EBP clinicians' },
+    { icon: 'graduation-cap', zh: '临床教育者', en: 'Clinical educators' },
+    { icon: 'book-open',      zh: '治疗专业学生', en: 'Therapy students' },
     { icon: 'building-2',     zh: '康复科室与诊所', en: 'Rehab departments & clinics' },
   ],
 };
