@@ -789,10 +789,27 @@ function AboutView({ onView, mobile }) {
         </div>
       </section>
 
-      {/* Disclaimer — quiet footnote */}
-      <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
-        <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
-      </p>
+      {/* Footer — logo + tagline · contact · disclaimer fine print · copyright */}
+      <footer style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: mobile ? 28 : 40, display: 'flex', flexDirection: 'column', gap: 24 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 32, flexWrap: 'wrap' }}>
+          <div style={{ maxWidth: 340 }}>
+            <window.Logo variant="lockup" height={22} />
+            <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: '0.02em', color: 'var(--text-tertiary)' }}>{tt('与证据保持同步', 'Keeping pace with the evidence')}</p>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{tt('联系', 'Contact')}</span>
+            <a href="mailto:hello@incadencept.com" style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)', textDecoration: 'none' }}>hello@incadencept.com</a>
+            <button type="button" onClick={() => onView('curated')} style={{ alignSelf: 'flex-start', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>{tt('今日摘要', 'Today’s digest')}</button>
+          </div>
+        </div>
+        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+          <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', paddingTop: 4, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.04em', color: 'var(--text-tertiary)' }}>
+          <span>© 2026 Cadence 步频</span>
+          <span>incadencept.com</span>
+        </div>
+      </footer>
     </div>
   );
 }
