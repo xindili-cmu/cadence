@@ -600,15 +600,28 @@ function AboutView({ onView, mobile }) {
           </div>
           <div style={{ position: 'relative' }}>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 500, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{tt('我们是谁 / 为什么', 'Who we are / why')}</div>
-            <h1 style={{ margin: '20px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(38px, 6.5vw, 68px)', lineHeight: 1.05, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
+            <h1 style={{ margin: '20px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(32px, 5.5vw, 56px)', lineHeight: 1.12, letterSpacing: '-0.025em', color: 'var(--text-primary)' }}>
               {zh
-                ? <span>跟上证据的<br />步频<span style={{ color: 'var(--blue-600)' }}>。</span></span>
-                : <span>Keep pace with<br />the <span style={{ color: 'var(--blue-600)' }}>evidence.</span></span>}
+                ? <span>打破认知断代，<br />跟上全球证据的<span style={{ color: 'var(--blue-600)' }}>步频</span>。</span>
+                : <span>Close the knowledge gap.<br />Keep pace with <span style={{ color: 'var(--blue-600)' }}>global evidence.</span></span>}
             </h1>
-            <p style={{ margin: '28px 0 0', maxWidth: 660, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
-              {tt('每天，步频从 40 余个期刊与数据库中筛选最新康复研究，用 AI 为每项发现打出 SIGNAL 评分，并归入九大专科——让你 5 分钟掌握真正可能改变实践的证据。',
-                'Every day, Cadence scans 40+ journals and databases for the latest rehabilitation research, scores each finding with an AI SIGNAL rating, and files it into nine clinical specialties — so you grasp what might actually change practice in five minutes.')}
-            </p>
+            <div style={{ margin: '28px 0 0', maxWidth: 680, display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+                {tt('今天，国际上的康复医学正在以周为单位快速进化。然而在国内，我们教材上的理论、临床上的手段，很多还停留在 10 年、甚至 20 年前的框架里。我们不是不想追最新的技术，而是隔着信息差的壁垒，根本不知道外面已经进化到了哪里。',
+                  'Worldwide, rehabilitation medicine now evolves by the week. In China, though, much of our textbook theory and clinical practice is still framed by ideas from 10 — even 20 — years ago. It isn’t that we don’t want the latest; the information gap leaves us unsure how far the field has already moved.')}
+              </p>
+              <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.5, color: 'var(--text-primary)' }}>
+                {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
+              </p>
+              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+                {tt('每天，步频从全球 40 余个顶级期刊与数据库中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
+                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 40+ top journals and databases worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
+              </p>
+              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+                {tt('每天 5 分钟，把全球最新的临床证据，变成你推开诊室大门、面对患者时最硬核的知识武装。',
+                  'Five minutes a day turns the world’s newest clinical evidence into the knowledge you carry through the clinic door, in front of your patient.')}
+              </p>
+            </div>
           </div>
         </section>
         <div style={{ marginTop: mobile ? 'var(--space-10)' : 'var(--space-16)', display: 'flex', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
@@ -625,8 +638,8 @@ function AboutView({ onView, mobile }) {
       <section>
         <SectionHead mobile={mobile} eyebrow={tt('缘起', 'Why Cadence')} />
         <blockquote style={{ margin: '0 0 40px', maxWidth: 900, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(26px, 3.6vw, 44px)', lineHeight: 1.25, letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>
-          {tt('每周有数百篇康复研究发表。没有人能全部读完——', 'Hundreds of rehab papers are published every week. No one can read them all — ')}
-          <span style={{ color: 'var(--text-tertiary)' }}>{tt('但错过的那一篇，可能正是该改变你处方的那一篇。', 'but the one you miss may be the one that should change your practice.')}</span>
+          {tt('每周有数百篇康复研究在国际上发表。没有人能全部读完，', 'Hundreds of rehab papers are published internationally every week. No one can read them all — ')}
+          <span style={{ color: 'var(--text-tertiary)' }}>{tt('但如果完全不读，我们的技术就会留在过去。', 'but read none, and your practice stays in the past.')}</span>
         </blockquote>
         <div style={{ maxWidth: 680 }}>
           <p style={{ ...para }}>{t('about.why.p1')}</p>
@@ -655,7 +668,7 @@ function AboutView({ onView, mobile }) {
 
       {/* §03 专科体系 — one-line clinical scope per specialty */}
       <section>
-        <SectionHead mobile={mobile} eyebrow={tt('专科体系', 'The taxonomy')} headline={tt('九个专科，各归其位。', 'Nine specialties, each in its place.')} />
+        <SectionHead mobile={mobile} eyebrow={tt('专科体系', 'The taxonomy')} headline={tt('八个专科，各归其位。', 'Eight specialties, each in its place.')} />
         <p style={{ margin: '0 0 22px', maxWidth: 620, ...para, marginBottom: 22 }}>{tt('我们不做泛泛的「康复」标签。每项研究都归入一个具体专科，让你只读与自己相关的内容。', 'We don’t use a vague “rehab” label. Every study is filed into a specific specialty, so you read only what’s relevant to you.')}</p>
         <div className="cd-about-tax">
           {window.CATEGORIES.map((c, i) => {
