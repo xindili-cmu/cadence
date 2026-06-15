@@ -35,6 +35,12 @@ const ROOT = process.env.CADENCE_ROOT || path.join(__dirname, '..');
 const OUT_ROOT = process.env.XHS_OUT || path.join(ROOT, 'xhs');
 const MAX_ITEMS = 8;
 const MIN_ITEMS = 5;
+// One-off "精选/合集" framing (run with DIGEST_MODE=curated) for posting a
+// backlog of earlier high-scoring items. Story selection is unchanged; only the
+// dateless wording differs (cover headline + footer, caption title + intro), so
+// a post made today isn't mislabeled "昨日". Default (unset) keeps daily wording.
+const CURATED = process.env.DIGEST_MODE === 'curated';
+const HEADLINE = CURATED ? '近期高分文献' : '昨日高分文献';
 
 // 1242×1656 = 小红书 3:4 竖版标准
 const W = 1242, H = 1656;
@@ -156,9 +162,9 @@ function coverCard(dateStr, stories) {
   const lead = stories[0];
   const rest = stories.slice(1, 3);
   const cat = catOf(lead.category);
-  return pageShell(`${d.full} · ${d.weekday} · 共 ${stories.length} 篇`,
+  return pageShell(CURATED ? `步频精选 · 共 ${stories.length} 篇` : `${d.full} · ${d.weekday} · 共 ${stories.length} 篇`,
     col({ flex: 1, justifyContent: 'center' },
-      txt({ fontFamily: SANS, fontWeight: 700, fontSize: 30, color: C.blue700, letterSpacing: 8, marginBottom: 40 }, `昨日高分文献 TOP ${stories.length}`),
+      txt({ fontFamily: SANS, fontWeight: 700, fontSize: 30, color: C.blue700, letterSpacing: 8, marginBottom: 40 }, `${HEADLINE} TOP ${stories.length}`),
       txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 84, lineHeight: 1.38, color: C.ink900, marginBottom: 40, lineClamp: 4 },
         trim(lead.titleZh || lead.title, 44)),
       row({ gap: 16, marginBottom: 56 },
@@ -251,16 +257,20 @@ function endCard(dateStr, stories, meta) {
 function buildCaption(dateStr, stories, spansTwoDays) {
   const d = zhDate(dateStr);
   const lead = stories[0];
-  const title = `${d.short} 步频日报｜昨日高分文献Top${stories.length}`;
-  const lines = stories.map((s, i) => `${i + 1}️⃣ ${trim(s.titleZh || s.title, 40)}`);
+  const title = CURATED
+    ? `步频精选｜近期康复高分文献 Top${stories.length}`
+    : `${d.short} 步频日报｜昨日高分文献Top${stories.length}`;
+  const lines = stories.map((s, i) => `${i + 1}️⃣ ${CURATED ? (s.titleZh || s.title) : trim(s.titleZh || s.title, 40)}`);
   const cats = [...new Set(stories.map((s) => catOf(s.category).zh))];
   const body = [
-    `AI 帮你刷完了${spansTwoDays ? '这两天' : '昨天'}的康复新文献，挑出 ${stories.length} 篇最值得看的👇`,
+    CURATED
+      ? `我们替你刷完了近期的康复新文献，精选 ${stories.length} 篇最值得看的👇`
+      : `AI 帮你刷完了${spansTwoDays ? '这两天' : '昨天'}的康复新文献，挑出 ${stories.length} 篇最值得看的👇`,
     '',
     ...lines,
     '',
-    `📌 最高分：${trim(lead.titleZh || lead.title, 40)}（${tierOf(lead.curatedScore)}）`,
-    `${trim(lead.curatedReason, 80)}`,
+    `📌 最高分：${CURATED ? (lead.titleZh || lead.title) : trim(lead.titleZh || lead.title, 40)}（${tierOf(lead.curatedScore)}）`,
+    `${CURATED ? lead.curatedReason : trim(lead.curatedReason, 80)}`,
     '',
     `涉及方向：${cats.join(' / ')}`,
     '每篇的摘要和「为什么重要」都在图里，翻完记得收藏～',
