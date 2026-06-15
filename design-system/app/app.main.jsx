@@ -732,7 +732,7 @@ function AboutView({ onView, mobile }) {
 
       {/* 适合谁 — audience strip */}
       <section>
-        <SectionHead mobile={mobile} eyebrow={tt('适合谁', 'Who it’s for')} headline={tt('为站在床旁的人而做。', 'Built for the people at the bedside.')} />
+        <SectionHead mobile={mobile} eyebrow={tt('适合谁', 'Who it’s for')} headline={tt('为现在、或将要站在床旁的人而做。', 'Built for those at the bedside — now or one day.')} />
         <div className="cd-about-aud">
           {window.ABOUT.audience.map((a, i) => (
             <div key={i} style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '24px 20px', background: 'var(--surface-card)' }}>
