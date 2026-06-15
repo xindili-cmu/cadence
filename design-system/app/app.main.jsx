@@ -637,9 +637,12 @@ function AboutView({ onView, mobile }) {
       {/* §01 缘起 — hook + founder story (kept), signed off */}
       <section>
         <SectionHead mobile={mobile} eyebrow={tt('缘起', 'Why Cadence')} />
-        <blockquote style={{ margin: '0 0 40px', maxWidth: 900, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(26px, 3.6vw, 44px)', lineHeight: 1.25, letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>
-          {tt('每周有数百篇康复研究在国际上发表。没有人能全部读完，', 'Hundreds of rehab papers are published internationally every week. No one can read them all — ')}
-          <span style={{ color: 'var(--text-tertiary)' }}>{tt('但如果完全不读，我们的技术就会留在过去。', 'but read none, and your practice stays in the past.')}</span>
+        <blockquote style={{ margin: '0 0 40px', maxWidth: 760, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(28px, 3.6vw, 44px)', lineHeight: 1.32, letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>
+          {zh ? (
+            <React.Fragment>全球每周数百篇康复研究，<br />没人能全部读完——<br /><span style={{ color: 'var(--text-tertiary)' }}>但不读，技术就停在过去。</span></React.Fragment>
+          ) : (
+            <React.Fragment>Hundreds of rehab studies, worldwide,<br />more than anyone can read —<br /><span style={{ color: 'var(--text-tertiary)' }}>read none, and you stay in the past.</span></React.Fragment>
+          )}
         </blockquote>
         <div style={{ maxWidth: 680 }}>
           <p style={{ ...para }}>{t('about.why.p1')}</p>
