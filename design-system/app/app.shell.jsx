@@ -222,7 +222,7 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
         .slice(0, 5)
     : [];
   return (
-    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', borderLeft: '1px solid var(--border-subtle)' }}>
+    <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', height: 'calc(100vh - var(--header-height))', overflowY: 'auto', borderLeft: '1px solid var(--border-subtle)' }}>
       {/* AI 速读 — the one dark surface in the chrome (deliberate focal contrast). */}
       <div style={{ background: 'var(--ink-900)', borderRadius: 'var(--radius-lg)', padding: '16px 18px', marginBottom: 16, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 9 }}>
