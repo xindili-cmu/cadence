@@ -9,7 +9,8 @@
     "build-app": "node scripts/build-bundle.js && node scripts/build-app.js",
     "xhs": "node scripts/xhs-digest.js",
     "x": "node scripts/x-thread.js",
-    "test-x": "DRY_RUN=true node scripts/x-thread.js"
+    "test-x": "DRY_RUN=true node scripts/x-thread.js",
+    "linkedin-card": "node scripts/linkedin-card.js"
   },
   "devDependencies": {
     "@expo-google-fonts/noto-sans-sc": "^0.4.3",
