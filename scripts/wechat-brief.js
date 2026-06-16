@@ -21,7 +21,10 @@
 
 const fs = require('fs');
 const path = require('path');
-const { callAnthropic, callGemini, LLM_PROVIDER } = require('./news-refresh.js');
+// callLLM routes to whichever provider news-refresh is configured for
+// (deepseek default · gemini · anthropic), so the 公众号 article uses the SAME
+// model as curation instead of silently falling back to Anthropic.
+const { callLLM, LLM_PROVIDER } = require('./news-refresh.js');
 
 const DRY_RUN = process.env.DRY_RUN === 'true';
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
@@ -76,9 +79,7 @@ async function main() {
   const userPrompt = `日期：${dateStr}\n\n${hot.length ? `今日热点：\n${JSON.stringify(hot.map(h => ({ title: h.title, sourceCount: h.sourceCount, sources: h.sources })), null, 1)}\n\n` : ''}条目：\n${JSON.stringify(payload, null, 1)}`;
 
   console.log(`  ${recent.length} 条进刊，热点 ${hot.length} 条，LLM: ${LLM_PROVIDER}`);
-  const md = LLM_PROVIDER === 'gemini'
-    ? await callGemini(systemPrompt, userPrompt)
-    : await callAnthropic(systemPrompt, userPrompt);
+  const md = await callLLM(systemPrompt, userPrompt);
   if (!md || md.length < 200) { console.error('  ❌ 生成失败或过短，今日不写文件。'); process.exit(1); }
 
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
