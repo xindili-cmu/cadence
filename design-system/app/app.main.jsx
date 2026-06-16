@@ -1,17 +1,23 @@
 // Cadence UI kit — main feed screen + composition root.
 const { NewsCard, CategoryTabs, Button, Icon } = window;
 
-// Day labels computed per render — they follow both the calendar and the
-// active language (locale-formatted dates).
+// Day labels for the curated feed groups. Fixed to Beijing time (matches the
+// 05:30 crawl rhythm) and framed by INGESTION — the groups are "今日收录 /
+// Added today", since stories are bucketed by firstSeen, not publish date.
+// The card itself still shows the real publish date.
 const cdDayLabels = () => {
-  const t = window.CD_T;
-  const locale = window.CD_LANG === 'zh' ? 'zh-CN' : 'en-US';
-  const fmt = (offset, key) => {
-    const d = new Date();
-    d.setDate(d.getDate() - offset);
-    return `${t(key)} — ${d.toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' })}`;
+  const zh = window.CD_LANG === 'zh';
+  const locale = zh ? 'zh-CN' : 'en-US';
+  const fmt = (offset, labelZh, labelEn) => {
+    const d = new Date(Date.now() - offset * 86400000);
+    const ds = d.toLocaleDateString(locale, { timeZone: 'Asia/Shanghai', weekday: 'long', month: 'short', day: 'numeric' });
+    return `${zh ? labelZh : labelEn} — ${ds}`;
   };
-  return { today: fmt(0, 'today'), yesterday: fmt(1, 'yesterday'), older: t('older') };
+  return {
+    today: fmt(0, '今日收录', 'Added today'),
+    yesterday: fmt(1, '昨日收录', 'Added yesterday'),
+    older: zh ? '更早收录' : 'Added earlier',
+  };
 };
 
 function FeedToolbar({ view, count }) {

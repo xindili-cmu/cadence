@@ -200,25 +200,25 @@ window.CD_SET_LANG = (lang) => {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 };
 
-// Calendar-day bucketing. Was rolling 24h windows, which made a UTC-midnight
-// story flip from 今日 to 昨日 at 08:00 Beijing mid-morning.
+// Calendar-day bucketing, fixed to BEIJING time and keyed on the INGESTION
+// timestamp (firstSeen), not the publish date. Rationale: Cadence is a daily
+// curation signal — "今天" should mean "what we surfaced today", on the same
+// Beijing-morning rhythm as the 05:30 crawl. PubMed indexes papers weeks after
+// their publish date, so bucketing by publishedAt dumped fresh curations into
+// 「较早」and left 今天 empty. cdTransformItem passes firstSeen here; the card
+// still shows the real publish date via cdFmtDate.
 //
-// Timestamp semantics (same convention as cdFmtTime below): PubMed and other
-// date-only sources are stored as exactly 00:00:00 UTC — that's a calendar
-// DATE, not an instant, so its day is read in UTC. Converting it to the
-// viewer's zone shifted everything a day back in the Americas (06-11T00:00Z
-// = 06-10 20:00 ET), which emptied today+yesterday and hid the signal rail.
-// Stamps with a real clock time are genuine instants → viewer-local date.
-function cdDayBucket(publishedAt) {
-  if (!publishedAt) return 'older';
-  const pub = new Date(publishedAt);
-  const now = new Date();
-  const isDateOnly = pub.getUTCHours() === 0 && pub.getUTCMinutes() === 0 && pub.getUTCSeconds() === 0;
-  const pubKey = isDateOnly
-    ? Date.UTC(pub.getUTCFullYear(), pub.getUTCMonth(), pub.getUTCDate())
-    : Date.UTC(pub.getFullYear(), pub.getMonth(), pub.getDate());
-  const nowKey = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
-  const diffDays = Math.round((nowKey - pubKey) / 86400000);
+// Beijing date is computed via toLocaleDateString('en-CA', Asia/Shanghai) →
+// 'YYYY-MM-DD'. China has no DST (fixed +08), so this is exact for both
+// date-only stamps (00:00 UTC → 08:00 same Beijing day) and real instants.
+function cdBeijingDayKey(ts) {
+  const s = new Date(ts).toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' }); // YYYY-MM-DD
+  const [y, m, d] = s.split('-').map(Number);
+  return Date.UTC(y, m - 1, d);
+}
+function cdDayBucket(ts) {
+  if (!ts) return 'older';
+  const diffDays = Math.round((cdBeijingDayKey(Date.now()) - cdBeijingDayKey(ts)) / 86400000);
   if (diffDays <= 0) return 'today';
   if (diffDays === 1) return 'yesterday';
   return 'older';
@@ -286,7 +286,7 @@ function cdWallSource(item) {
 function cdTransformItem(item) {
   return {
     id:          item.id,
-    day:         cdDayBucket(item.publishedAt),
+    day:         cdDayBucket(item.firstSeen || item.publishedAt),
     category:    item.category,
     score:       item.curatedScore,
     source:      item.source,

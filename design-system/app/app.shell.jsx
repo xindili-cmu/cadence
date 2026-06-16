@@ -24,11 +24,16 @@ function useCdMobile() {
 function AppHeader({ query, onQuery, lang, onLang, mobile }) {
   const t = window.CD_T;
   const zh = lang === 'zh';
-  // Today's date — bilingual, auto-updates. zh: 2026年6月13日 周六 · en: Sat, Jun 13, 2026
+  // Today's date — fixed to Beijing (matches the 05:30 crawl rhythm), so every
+  // viewer sees the same editorial "today" regardless of device timezone.
+  // zh: 2026年6月16日 周一 · en: Mon, Jun 16, 2026
   const _now = new Date();
+  const _bjYMD = _now.toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' }); // YYYY-MM-DD
+  const [_by, _bm, _bd] = _bjYMD.split('-').map(Number);
+  const _bjDow = new Date(Date.UTC(_by, _bm - 1, _bd)).getUTCDay(); // weekday of the Beijing date
   const dateStr = zh
-    ? `${_now.getFullYear()}年${_now.getMonth() + 1}月${_now.getDate()}日 ${'周日周一周二周三周四周五周六'.slice(_now.getDay() * 2, _now.getDay() * 2 + 2)}`
-    : _now.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+    ? `${_by}年${_bm}月${_bd}日 ${'周日周一周二周三周四周五周六'.slice(_bjDow * 2, _bjDow * 2 + 2)}`
+    : _now.toLocaleDateString('en-US', { timeZone: 'Asia/Shanghai', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 20, height: 'var(--header-height)',
