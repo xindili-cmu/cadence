@@ -293,6 +293,8 @@ function cdTransformItem(item) {
     wallSource:  cdWallSource(item), // curated journal if matched, else item.source (Sources wall stats)
     sourceUrl:   item.sourceUrl,
     journalMeta: cdJournalMeta(item.journal),
+    journal:     item.journal,        // raw journal name (daily 为何上榜 line)
+    studyDesign: item.studyDesign,    // evidence-tier label (daily 为何上榜 line)
     publishedAt: item.publishedAt,  // raw ISO retained for SourcesGrid "latest" sort
     time:        cdFmtTime(item.publishedAt),
     date:        cdFmtDate(item.publishedAt),

@@ -983,20 +983,124 @@ const KIND_LABEL = {
 // Items are raw news.json snapshots → cdTransformItem → NewsCard, so editions
 // keep rendering after the live feed rotates.
 
-function DailyMasthead({ edition, zh }) {
-  const t = window.CD_T;
-  const locale = zh ? 'zh-CN' : 'en-US';
-  const d = new Date(edition.date + 'T12:00:00Z');
-  // No VOL./mono masthead line — Cindy 2026-06-12: reads as AI-generated.
-  // The story count lives quietly on the date line instead.
+// ── Daily view editorial palette + helpers (ported 1:1 from the 2026-06 bundle)
+// Two specialty palettes: card/row dots (saturated, on white) use the bundle
+// `c` map; masthead dots (on navy) use a lighter set. Labels: full (cards/rows)
+// vs short (masthead). scoreColor is the bundle's 3-tier ramp. Local to the
+// daily view — the rest of the site keeps its token colors.
+const DAILY_CARD_COLOR = { orthopedic: '#3D74B8', neurological: '#6B5BB5', sports: '#2E8B6E', 'manual-modality': '#C77D3A', cardiopulmonary: '#C2553F', pediatric: '#C75D8E', geriatric: '#7A8290', 'rehab-tech': '#7A8290' };
+const DAILY_DOT_COLOR = { orthopedic: '#5E8FC4', neurological: '#9C8FD0', sports: '#5FA98C', 'manual-modality': '#D6A56B', cardiopulmonary: '#D2796A', pediatric: '#C99BD0', geriatric: '#9AA0A8', 'rehab-tech': '#9AA0A8' };
+const DAILY_CAT_LABEL = { orthopedic: '骨科康复', neurological: '神经康复', sports: '运动康复', 'manual-modality': '手法与理疗', cardiopulmonary: '心肺康复', pediatric: '儿童康复', geriatric: '老年康复', 'rehab-tech': '康复科技' };
+const DAILY_CAT_SHORT = { orthopedic: '骨科', neurological: '神经', sports: '运动', 'manual-modality': '手法', cardiopulmonary: '心肺', pediatric: '儿童', geriatric: '老年', 'rehab-tech': '科技' };
+const dailyCardColor = (c) => DAILY_CARD_COLOR[c] || '#7A8290';
+const dailyDotColor = (c) => DAILY_DOT_COLOR[c] || '#9AA0A8';
+const dailyCatLabel = (c) => DAILY_CAT_LABEL[c] || c;
+const dailyCatShort = (c) => DAILY_CAT_SHORT[c] || c;
+const dailyScoreColor = (s) => (s >= 85 ? '#2A5894' : s >= 75 ? '#1B1E23' : '#9098A0');
+
+// Meta line on every daily card: ● specialty / 信号分 score / SOURCE.
+// `highlight` = the lead card's emphasised variant (brand-blue specialty, larger).
+function DailyMeta({ s, zh, highlight }) {
+  const sep = highlight ? '#CFCBBE' : '#D8D4C8';
+  const catC = highlight ? '#3D74B8' : '#5A6068';
+  const dotC = highlight ? '#3D74B8' : dailyCardColor(s.category);
   return (
-    <header style={{ textAlign: 'center', padding: '0 0 22px', borderBottom: '3px double var(--border-strong, var(--border-default))', marginBottom: 20 }}>
-      <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 34, fontWeight: 700, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
-        {zh ? 'PTcadence日报' : 'PTcadence Daily'}
-      </h2>
-      <div style={{ marginTop: 8, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
-        {d.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', timeZone: 'UTC' })}
-        <span> · {zh ? `今日 ${edition.stats.events} 篇` : `${edition.stats.events} stories today`}</span>
+    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: highlight ? 11 : 9, fontFamily: 'var(--font-mono)', fontSize: highlight ? 13 : 12, letterSpacing: highlight ? '0.02em' : '0', color: highlight ? '#6A7078' : '#8A8F98', marginBottom: highlight ? 18 : 12 }}>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, color: catC, whiteSpace: 'nowrap' }}>
+        <span style={{ width: 7, height: 7, borderRadius: 2, background: dotC }} />{dailyCatLabel(s.category)}
+      </span>
+      <span style={{ color: sep }}>/</span>
+      <span style={{ whiteSpace: 'nowrap' }}>{zh ? '信号分' : 'Signal'} <b style={{ fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</b></span>
+      <span style={{ color: sep }}>/</span>
+      <span style={{ textTransform: 'uppercase', letterSpacing: highlight ? '0.08em' : '0.06em', whiteSpace: 'nowrap' }}>{s.wallSource || s.source}</span>
+    </div>
+  );
+}
+
+// 临床底线 · Take — clinical bottom-line (curatedReason) + limitation line.
+function DailyTake({ why, limitation, zh }) {
+  if (!why) return null;
+  return (
+    <div style={{ marginTop: 24, background: '#F7F9FC', border: '1px solid #E8EDF4', borderRadius: 13, padding: '20px 22px' }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A5894', marginBottom: 11 }}>{zh ? '临床底线 · Take' : 'Clinical Take'}</div>
+      <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.8, color: '#2B3138' }}>{why}</p>
+      {limitation && (
+        <React.Fragment>
+          <div style={{ height: 1, background: '#E3E9F1', margin: '16px 0' }} />
+          <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: '#6A7078' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', color: '#9AA0A8', marginRight: 8 }}>{zh ? '局限' : 'LIMIT'}</span>{limitation}
+          </p>
+        </React.Fragment>
+      )}
+    </div>
+  );
+}
+
+// Section header — title (h3 or mono kicker) + optional English kicker +
+// hairline rule + optional right-aligned "N 条" count. mb = margin-bottom.
+function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, marginBottom: mb }}>
+      {mono
+        ? <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#3D74B8' }}>{title}</span>
+        : <h3 style={{ margin: 0, fontWeight: 600, fontSize: 19, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{title}</h3>}
+      {engKicker && <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.05em', color: '#9AA0A8' }}>{engKicker}</span>}
+      <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
+      {count != null && <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: '#6A7078' }}>{count}{zh ? ' 条' : ''}</span>}
+    </div>
+  );
+}
+
+// 为何上榜 — why this item made the list, from STRUCTURED signals only
+// (score · study design · source). The edition has no free-text "why ranked"
+// field; we never fabricate one — these are the real inputs the curation score
+// is built from. studyDesign is a fixed controlled vocab, mapped for the EN view.
+const DAILY_STUDY_EN = { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
+function dailyWhyParts(s, zh) {
+  const parts = [zh ? `${s.score} 分` : `${s.score} pts`];
+  if (s.studyDesign) parts.push(zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign));
+  const src = s.wallSource || s.source;
+  if (src) parts.push(src);
+  return parts.join(' · ');
+}
+function DailyWhyRanked({ s, zh }) {
+  return (
+    <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1, minWidth: 220 }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3D74B8', paddingTop: 3, whiteSpace: 'nowrap' }}>{zh ? '为何上榜' : 'Why listed'}</span>
+      <span style={{ fontSize: 13.5, lineHeight: 1.6, color: '#5A6068' }}>{dailyWhyParts(s, zh)}</span>
+    </span>
+  );
+}
+
+function DailyMasthead({ edition, zh }) {
+  const d = new Date(edition.date + 'T12:00:00Z');
+  const dateStr = `${d.getUTCFullYear()}.${String(d.getUTCMonth() + 1).padStart(2, '0')}.${String(d.getUTCDate()).padStart(2, '0')}`;
+  const weekday = d.toLocaleDateString(zh ? 'zh-CN' : 'en-US', { weekday: 'short', timeZone: 'UTC' });
+  const ORDER = { orthopedic: 0, neurological: 1, 'manual-modality': 2, cardiopulmonary: 3, sports: 4, pediatric: 5, geriatric: 6, 'rehab-tech': 7 };
+  const dots = edition.sections
+    .map((sec) => ({ cat: sec.category, label: dailyCatShort(sec.category), n: sec.items.length, color: dailyDotColor(sec.category) }))
+    .filter((x) => x.n > 0)
+    .sort((a, b) => (ORDER[a.cat] ?? 99) - (ORDER[b.cat] ?? 99)); // fixed display order 骨科/神经/手法/心肺 (not a data change)
+  return (
+    <header style={{ position: 'relative', background: '#16314F', borderRadius: 18, padding: 'clamp(30px,5vw,48px)', marginBottom: 'clamp(40px,6vw,60px)', overflow: 'hidden' }}>
+      <svg width="170" height="148" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -20, bottom: -30, opacity: 0.12, pointerEvents: 'none' }}>
+        <g transform="skewX(-22.490)" fill="#FFFFFF">
+          <rect x="664.6" y="410" width="40.5" height="92" /><rect x="745.6" y="343" width="42.5" height="159" /><rect x="832.5" y="277" width="42.6" height="225" /><rect x="930.0" y="121" width="46.7" height="474" /><rect x="1035.4" y="344" width="46.9" height="158" /><rect x="1128.9" y="415" width="39.9" height="87" />
+        </g>
+      </svg>
+      <div style={{ position: 'relative' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: 18 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
+        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: 'clamp(34px,6vw,56px)', lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
+        <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: 13.5, color: '#AFC4DC' }}>
+          <span style={{ whiteSpace: 'nowrap' }}>{dateStr}　{weekday}　· {zh ? '今日 ' : ''}<b style={{ color: '#fff', fontWeight: 600 }}>{edition.stats.events}</b>{zh ? ' 篇' : ' stories'}</span>
+          <span style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px' }}>
+            {dots.map((x) => (
+              <span key={x.cat} style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
+                <span style={{ width: 8, height: 8, borderRadius: 2, background: x.color }} />{x.label} <b style={{ color: '#fff', fontWeight: 600 }}>{x.n}</b>
+              </span>
+            ))}
+          </span>
+        </div>
       </div>
     </header>
   );
@@ -1086,8 +1190,8 @@ function DailyArchiveRail({ current, onPick }) {
   return (
     <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', minHeight: 'calc(100vh - var(--header-height))', maxHeight: 'calc(100vh - var(--header-height))', overflowY: 'auto', borderLeft: '1px solid var(--border-subtle)' }}>
       <button type="button" onClick={() => onPick(latest.date)}
-        style={{ display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer', padding: '14px 16px', marginBottom: 16, background: current === latest.date ? 'var(--surface-active)' : 'var(--surface-card)', border: '1.5px solid var(--green-600)', borderRadius: 'var(--radius-lg)', fontFamily: 'var(--font-sans)' }}>
-        <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--green-800, var(--text-primary))' }}>{t('daily.latestIssue')}</div>
+        style={{ display: 'block', width: '100%', textAlign: 'left', cursor: 'pointer', padding: '14px 16px', marginBottom: 16, background: current === latest.date ? '#EEF3FA' : 'var(--surface-card)', border: '1.5px solid #3D74B8', borderRadius: 'var(--radius-lg)', fontFamily: 'var(--font-sans)' }}>
+        <div style={{ fontSize: 14, fontWeight: 600, color: '#16314F' }}>{t('daily.latestIssue')}</div>
         <div style={{ marginTop: 4, fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-secondary)' }}>{latest.date}</div>
       </button>
 
@@ -1103,8 +1207,8 @@ function DailyArchiveRail({ current, onPick }) {
               const on = e.date === current;
               return (
                 <button key={e.date} type="button" onClick={() => onPick(e.date)}
-                  style={{ display: 'flex', gap: 10, width: '100%', textAlign: 'left', cursor: on ? 'default' : 'pointer', padding: '9px 12px', background: on ? 'var(--surface-active)' : 'none', border: 'none', borderTop: i ? '1px solid var(--border-subtle)' : 'none', fontFamily: 'var(--font-sans)' }}>
-                  <span style={{ flex: 'none', width: 38, fontFamily: 'var(--font-mono)', fontSize: 11.5, color: on ? 'var(--green-700)' : 'var(--text-tertiary)', paddingTop: 1 }}>
+                  style={{ display: 'flex', gap: 10, width: '100%', textAlign: 'left', cursor: on ? 'default' : 'pointer', padding: '9px 12px', background: on ? '#EEF3FA' : 'none', border: 'none', borderTop: i ? '1px solid var(--border-subtle)' : 'none', fontFamily: 'var(--font-sans)' }}>
+                  <span style={{ flex: 'none', width: 38, fontFamily: 'var(--font-mono)', fontSize: 11.5, color: on ? '#3D74B8' : 'var(--text-tertiary)', paddingTop: 1 }}>
                     {zh ? `${+e.date.slice(8)} 日` : e.date.slice(8)}
                   </span>
                   <span style={{ flex: 1, minWidth: 0, fontSize: 12.5, lineHeight: 1.45, fontWeight: on ? 600 : 400, color: 'var(--text-primary)', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{leadOf(e)}</span>
@@ -1209,88 +1313,63 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   return (
     <div>
       <DailyMasthead edition={edition} zh={zh} />
-      <DailyPulse items={allItems} />
-
-      {/* Editor's-note lead paragraph removed (Cindy 2026-06-14): the LLM prose
-          read as machine-generated, restated the DailyPulse counts above it, and
-          could miscount. The masthead + pulse + tier-1 lead carry the page. */}
 
       {/* Tier 1 — the one story worth 5 minutes, with its clinical take */}
       {leadStory && (
-        <section style={{ marginBottom: 26 }}>
-          <div style={{ ...kicker, color: 'var(--green-700)', marginBottom: 8 }}>{t('daily.read5')}</div>
-          <div style={{ padding: '20px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-            <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, lineHeight: 1.45, color: 'var(--text-primary)' }}>{leadStory.title}</h3>
-            {leadStory.summary && <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.75, color: 'var(--text-secondary)' }}>{leadStory.summary}</p>}
-            {leadStory.why && (
-              <div style={{ marginTop: 12, padding: '10px 14px', background: 'var(--green-100, var(--surface-active))', borderRadius: 'var(--radius-md)' }}>
-                <div style={{ ...kicker, fontSize: 10, color: 'var(--green-700)', marginBottom: 4 }}>{t('daily.take')}</div>
-                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.6, color: 'var(--green-900, var(--text-primary))' }}>{leadStory.why}</div>
-                {leadStory.limitation && (
-                  <div style={{ display: 'flex', gap: 6, marginTop: 8, paddingTop: 8, borderTop: '1px dashed var(--green-300, var(--border-subtle))' }}>
-                    <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 9, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginTop: 2 }}>{zh ? '局限' : 'Limit'}</span>
-                    <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.55, color: 'var(--text-secondary)' }}>{leadStory.limitation}</span>
-                  </div>
-                )}
-              </div>
-            )}
-            {srcLine(leadStory)}
-            <RelatedRow related={leadStory.related} />
+        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#3D74B8', display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap' }}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3D74B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+              {zh ? '只有 5 分钟？读这条' : 'Only 5 minutes? Read this'}
+            </span>
+            <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
           </div>
+          <article style={{ background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 18, padding: 'clamp(24px,4.2vw,40px)', boxShadow: '0 1px 2px rgba(27,30,35,0.03), 0 18px 40px -28px rgba(27,30,35,0.22)' }}>
+            <DailyMeta s={leadStory} zh={zh} highlight />
+            <h3 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
+            {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
+            <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
+            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid #EDEAE0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
+              <DailyWhyRanked s={leadStory} zh={zh} />
+              <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#3D74B8', color: '#fff', fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 500, padding: '11px 18px', borderRadius: 10, whiteSpace: 'nowrap', textDecoration: 'none' }}>{t('readOriginal')} ↗</a>
+            </div>
+            <RelatedRow related={leadStory.related} />
+          </article>
         </section>
       )}
 
-      {/* Tier 2 — practice-changing: title + take */}
+      {/* Tier 2 — worth a closer read (practice-changing): card + take */}
       {tier2.length > 0 && (
-        <section style={{ marginBottom: 26 }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 10 }}>
-            <span style={{ ...kicker, color: 'var(--text-secondary)' }}>{t('daily.tier2')}</span>
-            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{tier2.length} {t('storyMany')}</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
+          <DailySectionHead title={zh ? '值得细读' : 'Worth a closer read'} count={tier2.length} mb={22} zh={zh} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             {tier2.map((s) => (
-              <div key={s.id || s.sourceUrl} style={{ padding: '14px 18px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-400)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 15, fontWeight: 600, lineHeight: 1.5, color: 'var(--text-primary)' }}>{s.title}</div>
-                {(s.why || s.summary) && <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.65, color: 'var(--text-secondary)' }}>{s.why || s.summary}</p>}
-                {srcLine(s)}
-                <RelatedRow related={s.related} />
-              </div>
+              <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none', color: 'inherit', background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 14, padding: 26 }}>
+                <DailyMeta s={s} zh={zh} />
+                <h4 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(17px,2.4vw,20px)', lineHeight: 1.4, letterSpacing: '-0.005em', color: 'var(--text-primary)' }}>{s.title}</h4>
+                {s.summary && <p style={{ margin: '11px 0 0', fontSize: 15, lineHeight: 1.74, color: '#5A6068' }}>{s.summary}</p>}
+              </a>
             ))}
           </div>
         </section>
       )}
 
-      {/* Tier 3 — worth knowing: compact rows, click to expand the summary */}
+      {/* Tier 3 — worth knowing: compact cards linking out */}
       {tier3.length > 0 && (
-        <section style={{ marginBottom: 28 }}>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 10 }}>
-            <span style={{ ...kicker, color: 'var(--text-secondary)' }}>{t('daily.tier3')}</span>
-            <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{tier3.length} {t('storyMany')}</span>
+        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
+          <DailySectionHead title={zh ? '了解即可' : 'Worth knowing'} count={tier3.length} mb={8} zh={zh} />
+          <div>
+            {tier3.map((s) => (
+              <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer"
+                style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '16px 6px', borderBottom: '1px solid #ECE9DF', textDecoration: 'none', color: 'inherit' }}>
+                <span style={{ flexShrink: 0, width: 34, fontFamily: 'var(--font-mono)', fontSize: 15, fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</span>
+                <span style={{ flex: 1, minWidth: 0, fontSize: 15.5, lineHeight: 1.5, color: '#262A30' }}>{s.title}</span>
+                <span style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-mono)', fontSize: 12, color: '#8A8F98' }}>
+                  <span style={{ width: 7, height: 7, borderRadius: 2, background: dailyCardColor(s.category) }} />{dailyCatLabel(s.category)}
+                </span>
+              </a>
+            ))}
           </div>
-          <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
-            {tier3.map((s, i) => {
-              const key = s.id || s.sourceUrl;
-              const open = selected === key;
-              const cat = window.getCategory ? window.getCategory(s.category) : null;
-              return (
-                <div key={key} onClick={() => setSelected(open ? null : key)}
-                  style={{ padding: '11px 16px', cursor: 'pointer', borderTop: i ? '1px solid var(--border-subtle)' : 'none', background: open ? 'var(--surface-active)' : 'none' }}>
-                  <div style={{ display: 'flex', gap: 10, alignItems: 'baseline' }}>
-                    <span style={{ flex: 1, fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.5, color: 'var(--text-primary)' }}>{s.title}</span>
-                    <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{cat && window.catLabel ? window.catLabel(cat) : ''} · {s.score}</span>
-                  </div>
-                  {open && (
-                    <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
-                      {s.summary} <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-          <div style={{ marginTop: 6, textAlign: 'right', fontFamily: 'var(--font-sans)', fontSize: 11, color: 'var(--text-tertiary)' }}>{t('daily.expand')}</div>
         </section>
       )}
 
@@ -1318,22 +1397,37 @@ function DailyBriefView({ L, date, onDate, mobile }) {
       {/* Handoff share card (交接班卡) — built to be screenshotted or copied
           into a WeChat group; brand name is the full 「Cadence步频」. */}
       {top3.length > 0 && (
-        <section style={{ marginBottom: 30 }}>
-          <div style={{ ...kicker, color: 'var(--text-tertiary)', marginBottom: 10 }}>{t('daily.share')}</div>
-          <div style={{ maxWidth: 340, margin: '0 auto', padding: '16px 18px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginBottom: 10 }}>
-              <span>Cadence步频 · {dShort} {t('daily.shift')}</span><span>{top3.length} {t('storyMany')} / 90s</span>
-            </div>
-            {top3.map((s, n) => (
-              <div key={s.id || n} style={{ fontFamily: 'var(--font-sans)', fontSize: 13, lineHeight: 1.55, marginBottom: 8 }}>
-                <b style={{ color: 'var(--green-700)' }}>{n + 1}</b> {s.title}
-              </div>
-            ))}
-            <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: 8, fontFamily: 'var(--font-sans)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>{t('daily.shareFoot')}</div>
+        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#9AA0A8' }}>{zh ? '交接班卡' : 'Handoff card'}</span>
+            <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
           </div>
-          <div style={{ textAlign: 'center', marginTop: 10 }}>
-            <Button size="sm" variant="ghost" iconStart="copy" onClick={copyShare}>{t('daily.copy')}</Button>
-            {copied && <span style={{ marginLeft: 8, fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--green-700)' }}>{t('daily.copied')}</span>}
+          <div style={{ position: 'relative', background: '#1E3A5F', borderRadius: 18, padding: 'clamp(26px,4.6vw,40px)', color: '#EAF1FA', overflow: 'hidden' }}>
+            <svg width="120" height="105" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -14, top: -10, opacity: 0.10, pointerEvents: 'none' }}>
+              <g transform="skewX(-22.490)" fill="#FFFFFF"><rect x="664.6" y="410" width="40.5" height="92" /><rect x="745.6" y="343" width="42.5" height="159" /><rect x="832.5" y="277" width="42.6" height="225" /><rect x="930.0" y="121" width="46.7" height="474" /><rect x="1035.4" y="344" width="46.9" height="158" /><rect x="1128.9" y="415" width="39.9" height="87" /></g>
+            </svg>
+            <div style={{ position: 'relative' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 14, flexWrap: 'wrap' }}>
+                <span style={{ fontFamily: 'var(--font-sans)', fontWeight: 600, fontSize: 15, color: '#fff' }}>Cadence<span style={{ fontFamily: "'LXGW WenKai Light', var(--font-sans)", color: '#7FA5D0', marginLeft: 6 }}>步频</span></span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 13, color: '#AFC4DC' }}>{dShort} {t('daily.shift')} · {top3.length} {t('storyMany')}/90s</span>
+              </div>
+              <div style={{ height: 1, background: 'rgba(255,255,255,0.14)', margin: '20px 0 4px' }} />
+              <ol style={{ margin: 0, padding: 0, listStyle: 'none' }}>
+                {top3.map((s, n) => (
+                  <li key={s.id || n} style={{ display: 'flex', gap: 14, padding: '15px 0', borderBottom: n < top3.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}>
+                    <span style={{ flexShrink: 0, width: 18, fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 600, color: '#7FA5D0' }}>{n + 1}</span>
+                    <span style={{ fontSize: 15, lineHeight: 1.55, color: '#E6EEF8' }}>{s.title}</span>
+                  </li>
+                ))}
+              </ol>
+              <div style={{ height: 1, background: 'rgba(255,255,255,0.14)', margin: '4px 0 18px' }} />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
+                <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.5, color: '#9FB6D4' }}>{t('daily.shareFoot')}</span>
+                <button type="button" onClick={copyShare} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, background: 'none', color: '#CFE0F2', border: '1px solid rgba(255,255,255,0.28)', cursor: 'pointer', fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 500, padding: '10px 18px', borderRadius: 999 }}>
+                  {copied ? (zh ? '已复制 ✓' : 'Copied ✓') : (zh ? '复制为微信文字' : 'Copy for WeChat')}
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       )}
