@@ -79,8 +79,17 @@ async function main() {
   const userPrompt = `日期：${dateStr}\n\n${hot.length ? `今日热点：\n${JSON.stringify(hot.map(h => ({ title: h.title, sourceCount: h.sourceCount, sources: h.sources })), null, 1)}\n\n` : ''}条目：\n${JSON.stringify(payload, null, 1)}`;
 
   console.log(`  ${recent.length} 条进刊，热点 ${hot.length} 条，LLM: ${LLM_PROVIDER}`);
-  const md = await callLLM(systemPrompt, userPrompt);
+  // 公众号文章要 Markdown 散文，必须用文本模式调 LLM。若走 JSON 响应模式
+  // （curation 用的那套），模型会吐出一个 JSON 对象而不是文章。
+  const md = await callLLM(systemPrompt, userPrompt, { json: false });
   if (!md || md.length < 200) { console.error('  ❌ 生成失败或过短，今日不写文件。'); process.exit(1); }
+  // 守卫：若返回的是 JSON 对象/数组（疑似响应被强制成 JSON 模式），宁可今天不发，
+  // 也不要把 JSON 当正文写进 .md/.html（那会得到一篇“原始 JSON”的废文）。
+  const head = md.trim().replace(/^```(?:json)?\s*/i, '');
+  if (head.startsWith('{') || head.startsWith('[')) {
+    console.error('  ❌ 生成结果像 JSON 而非 Markdown 正文，疑似响应被强制成 JSON 模式；今日不写文件。');
+    process.exit(1);
+  }
 
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
   const mdPath = path.join(BRIEFS_DIR, `${dateStr}.md`);

@@ -686,7 +686,7 @@ async function callAnthropic(systemPrompt, userPrompt) {
   return data.content?.map(c => c.text || '').join('') || '';
 }
 
-async function callGemini(systemPrompt, userPrompt) {
+async function callGemini(systemPrompt, userPrompt, json = true) {
   // Free tier hits 503 UNAVAILABLE during demand spikes — retry with backoff,
   // then fall back to flash-lite (separate capacity pool).
   const models = [GEMINI_MODEL, 'gemini-2.5-flash-lite'];
@@ -709,9 +709,12 @@ async function callGemini(systemPrompt, userPrompt) {
           contents: [{ role: 'user', parts: [{ text: userPrompt }] }],
           generationConfig: {
             maxOutputTokens: 16384,
-            responseMimeType: 'application/json',
+            // JSON-response mode is for the curation step. Callers that want
+            // Markdown prose (e.g. the 公众号 brief) pass json:false — forcing
+            // application/json there makes the model emit a JSON object, not an article.
+            ...(json ? { responseMimeType: 'application/json' } : {}),
             // Thinking tokens count toward maxOutputTokens — disable so the
-            // budget goes entirely to the JSON payload.
+            // budget goes entirely to the response payload.
             thinkingConfig: { thinkingBudget: 0 }
           }
         })
@@ -764,8 +767,8 @@ async function callDeepSeek(systemPrompt, userPrompt) {
 }
 
 // One place to route a (system, user) prompt to the configured provider.
-function callLLM(systemPrompt, userPrompt) {
-  if (LLM_PROVIDER === 'gemini') return callGemini(systemPrompt, userPrompt);
+function callLLM(systemPrompt, userPrompt, { json = true } = {}) {
+  if (LLM_PROVIDER === 'gemini') return callGemini(systemPrompt, userPrompt, json);
   if (LLM_PROVIDER === 'deepseek') return callDeepSeek(systemPrompt, userPrompt);
   return callAnthropic(systemPrompt, userPrompt);
 }
