@@ -30,6 +30,9 @@ const DRY_RUN = process.env.DRY_RUN === 'true';
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 const BRIEFS_DIR = path.join(__dirname, '..', 'briefs');
 const WINDOW_HOURS = 26; // daily 07:00 UTC run + slack
+// Single clickable destination for原文 (WeChat strips inline links; the站内
+// 当天页 lists every item with working links). Mirrors x-thread.js.
+const SITE_URL = (process.env.SITE_URL || 'https://incadencept.com').replace(/\/$/, '');
 
 const CAT_ZH = {
   orthopedic: '骨科与肌骨', neurological: '神经康复', sports: '运动康复',
@@ -72,11 +75,11 @@ async function main() {
 1. 开头 2-3 句导语：今天信号的整体观感（几条、哪个方向值得花时间），口语但专业。
 2. ${hot.length ? '一节「## 今日热点」：列出热点条目（编号），每条一行：标题加粗 + 几家信源在报。' : '（今天无热点节，跳过）'}
 3. 按分类分节（## 分类名），每条目格式：
-   - **中文标题**（英文标题翻译成自然的中文，信息保真，不标题党）[编号n]
+   - **中文标题**（英文标题翻译成自然的中文，信息保真，不标题党）
    - 一段 2-3 句：先一句研究/新闻本身（含样本量/效应量等关键数字，输入 summary 里有就用，没有不编造），再给 take（基于输入的 take 润色，保持判断力度，不得弱化为"值得关注"式空话）。
    - 末行小字格式：来源 · 信号分 score${'｜多信源时附'}（另有 X 家信源在报）
-4. 结尾一节「## 参考链接」：按编号列出 [n] url（纯文本，每行一条）。
-5. 最后一行：—— 步频 · Evidence in motion · 每日为临床 PT 筛信号
+
+不要输出「参考链接」小节，也不要在标题后加 [数字] 编号——原文链接通过文末统一附加的站点链接提供（站内当天页面列出全部文献且可点）。文末的站点链接与署名由系统统一追加，你不用写。
 
 禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字。除开头「标题：」「摘要：」两行外，正文里不要再出现说明性标签或解释文字。`;
 
@@ -115,6 +118,15 @@ async function main() {
     const firstPara = article.split(/\n{2,}/).find(b => b.trim() && !b.trim().startsWith('#')) || '';
     digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
   }
+
+  // 文末统一附加可点的站点链接（站内当天页列出全部文献、链接可点）+ 署名。
+  // 微信会剥掉正文内联链接，所以不再逐条列 URL 脚注（与站点链接重复且点不动）。
+  // 先清掉模型可能仍残留的「参考链接」小节或自带署名，避免重复。
+  article = article
+    .replace(/\n#{1,6}\s*参考链接[\s\S]*$/m, '')
+    .replace(/\n*——\s*步频[^\n]*\s*$/m, '')
+    .trim();
+  article += `\n\n原文与完整文献列表 → ${SITE_URL}/#daily/${dateStr}\n\n—— 步频 · Evidence in motion · 每日为临床 PT 筛信号`;
 
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
   const mdPath = path.join(BRIEFS_DIR, `${dateStr}.md`);
