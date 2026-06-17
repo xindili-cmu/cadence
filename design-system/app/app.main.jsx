@@ -1056,18 +1056,23 @@ function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
 // field; we never fabricate one — these are the real inputs the curation score
 // is built from. studyDesign is a fixed controlled vocab, mapped for the EN view.
 const DAILY_STUDY_EN = { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
+// 为何上榜 value: 研究类型 · 来源 (evidence tier + journal). The score is
+// deliberately omitted — it lives in the meta line and "ranked because it scored
+// high" is circular. No free-text "why ranked" field exists, so we never fabricate.
 function dailyWhyParts(s, zh) {
-  const parts = [zh ? `${s.score} 分` : `${s.score} pts`];
+  const parts = [];
   if (s.studyDesign) parts.push(zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign));
   const src = s.wallSource || s.source;
   if (src) parts.push(src);
   return parts.join(' · ');
 }
 function DailyWhyRanked({ s, zh }) {
+  const v = dailyWhyParts(s, zh);
+  if (!v) return null;
   return (
     <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1, minWidth: 220 }}>
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3D74B8', paddingTop: 3, whiteSpace: 'nowrap' }}>{zh ? '为何上榜' : 'Why listed'}</span>
-      <span style={{ fontSize: 13.5, lineHeight: 1.6, color: '#5A6068' }}>{dailyWhyParts(s, zh)}</span>
+      <span style={{ fontSize: 13.5, lineHeight: 1.6, color: '#5A6068' }}>{v}</span>
     </span>
   );
 }
