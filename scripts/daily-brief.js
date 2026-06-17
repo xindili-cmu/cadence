@@ -132,9 +132,22 @@ async function generateLead(dateStr, sections, stats) {
   const digest = sections.flatMap(sec => sec.items.map(i => ({
     category: CAT_ZH[sec.category] || sec.category,
     title: i.title, titleZh: i.titleZh || null,
-    score: i.curatedScore, source: i.source,
+    score: i.curatedScore, studyDesign: i.studyDesign || null, source: i.source,
     multiSource: (i.related || []).length + 1,
   })));
+
+  // Highest-signal items by global score-desc. The lead must treat these as the
+  // entries worth headlining, and must take each study's type verbatim from
+  // studyDesign rather than inferring it (the source of the 06-16 CTS mislabel).
+  const top = sections.flatMap(s => s.items)
+    .slice().sort((a, b) => b.curatedScore - a.curatedScore)
+    .slice(0, 3)
+    .map(i => ({
+      titleZh: i.titleZh || i.title,
+      score: i.curatedScore,
+      studyDesign: i.studyDesign || null,
+      category: CAT_ZH[i.category] || i.category,
+    }));
 
   const systemPrompt = `你是「步频 Cadence」（面向物理治疗/康复临床医师的循证新闻品牌）日报的主编。口吻：资深同行，给判断不给 recap，数字优先于形容词，不夸大单项研究，不用 emoji 和感叹号。
 
@@ -142,13 +155,14 @@ async function generateLead(dateStr, sections, stats) {
 {
   "titleZh": "中文头条标题——当天最值得临床 PT 花时间的一条或一个趋势，≤25 字，信息保真不标题党",
   "titleEn": "英文头条标题，与中文同义，简洁",
-  "paragraphZh": "中文导语 2-3 句：今天信号的整体观感（几条、哪个方向值得花时间、哪条证据等级最高），口语但专业",
+  "paragraphZh": "中文导语 2-3 句：今天信号的整体观感（几条、哪个方向值得花时间、哪条 curatedScore 最高最值得关注），口语但专业",
   "paragraphEn": "英文导语，与中文同义，自然英文而非直译"
 }
 
-禁止虚构数字；条目里没有的信息不要编。`;
+禁止虚构数字；条目里没有的信息不要编。
+研究类型（RCT／系统综述／综述／观察研究／述评）必须直接采用条目提供的 studyDesign 字段，严禁自行推断或改写；提及"最值得关注／证据等级最高"时，以 curatedScore 最高的条目（见"最高分条目"）为准。`;
 
-  const userPrompt = `日期：${dateStr}\n统计：${JSON.stringify(stats)}\n条目：\n${JSON.stringify(digest, null, 1)}`;
+  const userPrompt = `日期：${dateStr}\n统计：${JSON.stringify(stats)}\n最高分条目（已按分数降序，研究类型以 studyDesign 为准）：\n${JSON.stringify(top, null, 1)}\n条目：\n${JSON.stringify(digest, null, 1)}`;
 
   // Network/API failures degrade to the deterministic fallback lead — the
   // edition itself never depends on the LLM being reachable.
@@ -266,7 +280,7 @@ async function main() {
     specialties: sections.length,
     multiSource: windowItems.filter(i => (i.related || []).length > 0).length,
     sources: new Set(windowItems.map(i => i.source)).size,
-    topScore: sectionItems.length ? sectionItems[0].curatedScore : null,
+    topScore: sectionItems.length ? Math.max(...sectionItems.map(i => i.curatedScore)) : null,
   };
 
   console.log(`  ${stats.events} 条进刊 · ${stats.specialties} 个版块 · ${flashes.length} 条快讯 · 窗口 ${winSpan}（接力${prevEnd != null ? '' : '·首期回看' + WINDOW_HOURS + 'h'}${isWeekend ? '·周末上限' + WINDOW_HOURS + 'h' : ''}）· 账本去重跳过 ${ledgerSkips} 条 · LLM: ${LLM_PROVIDER}`);

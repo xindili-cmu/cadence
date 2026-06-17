@@ -7,6 +7,7 @@
     "refresh": "node scripts/news-refresh.js",
     "test-refresh": "DRY_RUN=true node scripts/news-refresh.js",
     "build-app": "node scripts/build-bundle.js && node scripts/build-app.js",
+    "lint-daily": "node scripts/lint-daily.js",
     "xhs": "node scripts/xhs-digest.js",
     "x": "node scripts/x-thread.js",
     "test-x": "DRY_RUN=true node scripts/x-thread.js",

@@ -5,6 +5,19 @@
 
 ---
 
+## 发布前预检（所有渠道共用）
+
+任何渠道发布前，先校验当天这期日报数据：
+
+```bash
+npm run lint-daily            # 默认校验最新一期
+npm run lint-daily 2026-06-16 # 或指定某天
+```
+
+PASS（exit 0）才继续；报错（exit 1）就停下修——它专抓发布前那类问题：研究类型误标、漏 `curatedReasonEn`、`topScore` 与实际最高分不符等。只报错不自动改，缺内容回生成 / backfill，别手凑。
+
+---
+
 ## 小红书（XHS）— 半自动
 
 每天产物在 `xhs/YYYY-MM-DD/`：`cover.png` + `01.png … 0N.png`（每篇一张）+ 尾页 `0(N+1).png`（标签档位说明+关注引导）+ `caption.txt`（首行=标题，其余=正文）。
