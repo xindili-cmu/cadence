@@ -867,22 +867,17 @@ function dropStaleByUrl(items) {
 }
 
 // ── Hot topics (当前热点) ────────────────────────────────────────────────────
-// Heat = distinct-source count with exponential time decay (half-life 2 days).
-// Two legs:
-//   1. story-level — the same story covered by ≥2 independent outlets
-//      (original behaviour; rare in a vertical as narrow as PT, which is why
-//      the strip stayed empty for the first week of operation)
-//   2. theme-level — ≥2 distinct outlets publishing *different research papers*
-//      that share a specific sub-tag (e.g. two vestibular papers from PubMed +
-//      JOSPT within days of each other). Only research items (tags[0] ===
-//      'research') aggregate — editorials/correspondence/news don't count as an
-//      active research theme. tags[0] is the content-type tag
-//      (research/news/guideline/policy), never a theme — skipped, along with
-//      a denylist of tags too generic to be a topic.
-// Story-level wins on id collision. Empty array on quiet days → strip hidden.
-// Each topic carries kind: 'story' | 'theme' so the UI can label genuine
-// multi-source corroboration differently from theme co-occurrence; theme
-// topics also carry members[] (the distinct papers that fired the topic).
+// Theme-level only (Cindy 2026-06-17): in a research-paper vertical the old
+// story-level leg — the same story covered by ≥2 independent outlets — almost
+// never fires (papers aren't multi-outlet "covered" the way news is), so the
+// strip is in practice an active-research-themes tracker; that leg was dropped.
+// A theme = ≥2 distinct outlets publishing *different research papers* sharing a
+// specific sub-tag within a 4-day window (e.g. two vestibular papers from PubMed
+// + JOSPT days apart). Only research items (tags[0] === 'research') aggregate;
+// tags[0] is the content-type tag, never a theme, and a denylist of too-generic
+// tags is skipped. Heat = distinct-source count × exponential time decay
+// (half-life 2 days). Each topic carries kind:'theme' + members[] (the distinct
+// papers that fired it). Empty array on quiet days → strip hidden.
 
 const GENERIC_TAGS = new Set(['research', 'news', 'guideline', 'policy', 'rehabilitation', 'physical-therapy', 'pt', 'rehab', 'therapy', 'clinical']);
 
@@ -890,20 +885,7 @@ function computeHotTopics(items) {
   const now = Date.now();
   const decay = (publishedAt) => Math.pow(0.5, Math.max(0, (now - new Date(publishedAt).getTime()) / 86400000) / 2);
 
-  // Leg 1 — story-level multi-source coverage.
-  const storyTopics = items
-    .map(i => {
-      const sourceCount = 1 + (i.related?.length || 0);
-      return {
-        id: i.id, title: i.title, sourceUrl: i.sourceUrl, category: i.category,
-        publishedAt: i.publishedAt, sourceCount, kind: 'story',
-        sources: [i.source, ...(i.related || []).map(r => r.source)],
-        heat: Math.round(sourceCount * decay(i.publishedAt) * 100) / 100
-      };
-    })
-    .filter(t => t.sourceCount >= 2);
-
-  // Leg 2 — theme-level: shared sub-tag, distinct sources, 4-day window.
+  // Theme-level: shared sub-tag, distinct sources, 4-day window.
   // Only research items aggregate into a theme. "Theme heat" is meant to signal
   // an active *research* area; editorials, correspondence, news and policy
   // (tags[0] !== 'research') were inflating themes and surfacing off-topic
@@ -941,7 +923,7 @@ function computeHotTopics(items) {
   }
 
   const seen = new Set();
-  return [...storyTopics, ...themeTopics]
+  return themeTopics
     .filter(t => t.heat >= 1.2)
     .sort((a, b) => b.heat - a.heat)
     .filter(t => (seen.has(t.id) ? false : seen.add(t.id)))
