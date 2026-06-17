@@ -63,7 +63,11 @@ async function main() {
 
   const systemPrompt = `你是「步频」（Cadence 的中文刊名）公众号的编辑。步频是面向物理治疗/康复临床医师的循证新闻品牌，口吻：资深同行，给 take 不给 recap，数字优先于形容词，不夸大单项研究，不用 emoji，不用感叹号堆砌。
 
-把输入的条目写成一篇公众号日报，纯 Markdown 输出，结构严格如下：
+先输出两行元信息，再空一行输出正文：
+标题：一句话标题，含日期（格式 M.D），≤30 字，点出当天最值得看的方向或最高分研究，不堆数字、不标题党。
+摘要：一句话，≤100 字，概括当天看点，用于公众号摘要栏。
+
+然后把输入的条目写成一篇公众号日报正文，纯 Markdown，结构严格如下：
 
 1. 开头 2-3 句导语：今天信号的整体观感（几条、哪个方向值得花时间），口语但专业。
 2. ${hot.length ? '一节「## 今日热点」：列出热点条目（编号），每条一行：标题加粗 + 几家信源在报。' : '（今天无热点节，跳过）'}
@@ -74,7 +78,7 @@ async function main() {
 4. 结尾一节「## 参考链接」：按编号列出 [n] url（纯文本，每行一条）。
 5. 最后一行：—— 步频 · Evidence in motion · 每日为临床 PT 筛信号
 
-禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字、输出 Markdown 之外的任何说明文字。`;
+禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字。除开头「标题：」「摘要：」两行外，正文里不要再出现说明性标签或解释文字。`;
 
   const userPrompt = `日期：${dateStr}\n\n${hot.length ? `今日热点：\n${JSON.stringify(hot.map(h => ({ title: h.title, sourceCount: h.sourceCount, sources: h.sources })), null, 1)}\n\n` : ''}条目：\n${JSON.stringify(payload, null, 1)}`;
 
@@ -91,11 +95,36 @@ async function main() {
     process.exit(1);
   }
 
+  // 从生成结果里抽出开头的「标题：」「摘要：」两行；其余为正文 Markdown。
+  let title = '', digest = '', article = md.trim();
+  {
+    const kept = [];
+    for (const line of article.split('\n')) {
+      const mt = line.match(/^\s*标题[:：]\s*(.+)$/);
+      const mz = line.match(/^\s*摘要[:：]\s*(.+)$/);
+      if (!title && mt) { title = mt[1].trim(); continue; }
+      if (!digest && mz) { digest = mz[1].trim(); continue; }
+      kept.push(line);
+    }
+    article = kept.join('\n').trim();
+  }
+  // 回退：模型没按格式给时，标题用模板、摘要取正文首段，绝不让这俩为空。
+  const [, mmT, ddT] = dateStr.split('-');
+  if (!title) title = `步频日报丨${+mmT}.${+ddT} 康复信号 ${recent.length} 条`;
+  if (!digest) {
+    const firstPara = article.split(/\n{2,}/).find(b => b.trim() && !b.trim().startsWith('#')) || '';
+    digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
+  }
+
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
   const mdPath = path.join(BRIEFS_DIR, `${dateStr}.md`);
-  fs.writeFileSync(mdPath, md.trim() + '\n');
-  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.html`), mdToWechatHtml(md, dateStr));
-  console.log(`  ✅ briefs/${dateStr}.md + .html`);
+  fs.writeFileSync(mdPath, article + '\n');
+  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.html`), mdToWechatHtml(article, dateStr));
+  // 标题 + 摘要 写到 sidecar，公众号「标题栏 / 摘要栏」直接复制。
+  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.meta.txt`), `标题：${title}\n摘要：${digest}\n`);
+  console.log(`  ✅ briefs/${dateStr}.md + .html + .meta.txt`);
+  console.log(`     标题：${title}`);
+  console.log(`     摘要：${digest}`);
 
   // 2.35:1 WeChat cover banner — same satori pipeline. Non-fatal: a cover
   // failure must never block the brief itself.
