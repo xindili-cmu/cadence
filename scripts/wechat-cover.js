@@ -29,10 +29,22 @@ const txt = (style, s) => h('div', { display: 'flex', ...style }, String(s));
 const chip = (s) => h('div', { display: 'flex', padding: '8px 20px', borderRadius: 10, backgroundColor: C.blue100 },
   txt({ fontFamily: SANS, fontWeight: 500, fontSize: 26, color: C.blue700 }, s));
 
-// Keep the serif headline on one line — satori has no auto-shrink.
-const fitHeadline = (s) => (s && s.length > 9 ? s.slice(0, 9) : s || '');
+// Headline now carries the day's actual hook (the issue title). satori has no
+// auto-shrink, so pick a font size by length and cap to ~2 lines; drop the
+// leading date (the eyebrow already shows it).
+const CONTENT_W = W - 88 * 2; // inner width after horizontal padding
+function fitHeadline(raw) {
+  let s = String(raw || '').replace(/^\s*\d{1,2}[.\-/]\d{1,2}\s*/, '').trim();
+  if (!s) s = '今日康复信号';
+  const size = s.length <= 9 ? 92 : s.length <= 16 ? 70 : s.length <= 26 ? 56 : 48;
+  const perLine = Math.floor(CONTENT_W / (size * 1.02));
+  const maxChars = perLine * 2; // at most two lines
+  if (s.length > maxChars) s = s.slice(0, maxChars - 1).trim() + '…';
+  return { text: s, size };
+}
 
 function cover({ headline, eyebrow }) {
+  const fh = fitHeadline(headline);
   return col({ width: W, height: H, backgroundColor: C.paper, padding: '64px 88px', justifyContent: 'space-between' },
     row({ justifyContent: 'space-between', alignItems: 'center', width: '100%' },
       row({ alignItems: 'center', gap: 16 },
@@ -43,7 +55,7 @@ function cover({ headline, eyebrow }) {
     ),
     col({ gap: 22 },
       txt({ fontFamily: SANS, fontWeight: 700, fontSize: 27, color: C.blue700, letterSpacing: 10 }, eyebrow),
-      txt({ fontFamily: SERIF, fontWeight: 700, fontSize: 96, color: C.ink900, lineHeight: 1.25 }, fitHeadline(headline)),
+      txt({ fontFamily: SERIF, fontWeight: 700, fontSize: fh.size, color: C.ink900, lineHeight: 1.2, maxWidth: CONTENT_W, flexWrap: 'wrap' }, fh.text),
     ),
     row({ gap: 16 }, chip('强信号优先'), chip('临床 PT 速读'), chip('中 · EN 双语')),
   );

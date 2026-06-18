@@ -144,7 +144,7 @@ async function main() {
     const { renderCover } = require('./wechat-cover.js');
     const [, mm, dd] = dateStr.split('-');
     const out = path.join(BRIEFS_DIR, `${dateStr}-cover.png`);
-    await renderCover({ headline: '今日康复信号', eyebrow: `${+mm}.${+dd} 日报 · ${recent.length} 篇`, out });
+    await renderCover({ headline: title || '今日康复信号', eyebrow: `${+mm}.${+dd} 日报 · ${recent.length} 篇`, out });
     console.log(`  ✅ briefs/${dateStr}-cover.png`);
   } catch (e) {
     console.error('  ⚠️  cover render failed (non-fatal):', e.message);
