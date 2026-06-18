@@ -1316,13 +1316,12 @@ function DailyBriefView({ L, date, onDate, mobile }) {
             <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
           </div>
           <article style={{ background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 18, padding: 'clamp(24px,4.2vw,40px)', boxShadow: '0 1px 2px rgba(27,30,35,0.03), 0 18px 40px -28px rgba(27,30,35,0.22)' }}>
-            <DailyMeta s={leadStory} zh={zh} highlight />
-            <h3 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
-            {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
-            <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
-            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid #EDEAE0', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-              <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#3D74B8', color: '#fff', fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 500, padding: '11px 18px', borderRadius: 10, whiteSpace: 'nowrap', textDecoration: 'none' }}>{t('readOriginal')} ↗</a>
-            </div>
+            <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+              <DailyMeta s={leadStory} zh={zh} highlight />
+              <h3 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
+              {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
+              <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
+            </a>
             <RelatedRow related={leadStory.related} />
           </article>
         </section>
