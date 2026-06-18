@@ -57,35 +57,55 @@ async function main() {
   const hot = (data.hotTopics || []).slice(0, 3);
   const dateStr = new Date().toISOString().slice(0, 10);
 
-  const payload = recent.map((i, n) => ({
-    n: n + 1, title: i.title, summary: i.summary, take: i.curatedReason,
-    category: CAT_ZH[i.category] || i.category, source: i.source,
-    score: i.curatedScore, url: i.sourceUrl,
-    multiSource: (i.related || []).map(r => r.source),
-  }));
+  // (b) 把每条热点解析成 data.items 里的完整条目，用真实 summary/take 写作，
+  // 而不是只把标题丢给模型让它脑补——既堵住凭标题编造，又能把最强的双信源研究
+  // 写实。热点条目并入「详写集合」，与进刊条目按 id 去重、按分数排序。
+  const byId = new Map((data.items || []).map(i => [i.id, i]));
+  const hotResolved = hot
+    .map(h => ({ h, item: byId.get(h.id) || (data.items || []).find(i => i.title === h.title) }))
+    .filter(x => x.item);
+  const hotById = new Map(hotResolved.map(x => [x.item.id, x.h]));
+  const seen = new Set();
+  const writeups = [...recent, ...hotResolved.map(x => x.item)]
+    .filter(i => { if (!i || seen.has(i.id)) return false; seen.add(i.id); return true; })
+    .sort((a, b) => b.curatedScore - a.curatedScore)
+    .slice(0, 12);
+
+  const payload = writeups.map((i, n) => {
+    const ht = hotById.get(i.id);
+    return {
+      n: n + 1, title: i.title, summary: i.summary, take: i.curatedReason,
+      category: CAT_ZH[i.category] || i.category, source: i.source,
+      score: i.curatedScore, url: i.sourceUrl,
+      multiSource: ht ? (ht.sources || []).filter(s => s !== i.source) : (i.related || []).map(r => r.source),
+    };
+  });
+  // 「## 今日热点」中文索引——指向下面已写实的同一批条目。
+  const hotIndex = hotResolved.map(x => ({ titleZh: x.item.titleZh || x.item.title, sourceCount: x.h.sourceCount }));
 
   const systemPrompt = `你是「步频」（Cadence 的中文刊名）公众号的编辑。步频是面向物理治疗/康复临床医师的循证新闻品牌，口吻：资深同行，给 take 不给 recap，数字优先于形容词，不夸大单项研究，不用 emoji，不用感叹号堆砌。
 
 先输出两行元信息，再空一行输出正文：
-标题：一句话标题，含日期（格式 M.D），≤30 字，点出当天最值得看的方向或最高分研究，不堆数字、不标题党。
+标题：一句话标题，含日期（格式 M.D，放在标题最前面，如「6.18 …」，不要塞进结尾括号），≤30 字。写成「临床痛点解决型」——先点出临床 PT 会碰到的问题或处置决策，再带出当天最值得看的证据抓手，让人一看就觉得「这是我门诊会遇到的事」，而不是复述论文标题或只报方向。不堆数字、不标题党、不夸大；当天若没有明显能落地的研究，再退回点出最高分方向。
 摘要：一句话，≤100 字，概括当天看点，用于公众号摘要栏。
 
 然后把输入的条目写成一篇公众号日报正文，纯 Markdown，结构严格如下：
 
-1. 开头 2-3 句导语：今天信号的整体观感（几条、哪个方向值得花时间），口语但专业。
-2. ${hot.length ? '一节「## 今日热点」：列出热点条目（编号），每条一行：标题加粗 + 几家信源在报。' : '（今天无热点节，跳过）'}
-3. 按分类分节（## 分类名），每条目格式：
+1. 开头 2-3 句导语：今天信号的整体观感（几条、哪个方向值得花时间），优先点出「能改下周处置」的条目，口语但专业。
+2. ${hotIndex.length ? '一节「## 今日热点」：仅作中文索引，每个热点一行，格式「**中文标题**（X 家信源在报）」（中文标题取输入 hotIndex 的 titleZh）。这些热点已并入下面的「条目」、会在分类节里展开详细写作，本节只给一行中文标题作导引，不在本节写研究内容、数字或 take。' : '（今天无热点节，跳过）'}
+3. 按分类分节（## 分类名）——把「条目」数组里的每一条都写成详细段落（已含上面热点对应的条目，它们都带 summary/take）。所有细节只能来自该条目自己的 summary/take，输入里没有的一律不编造（样本量、效应量、人群、剂量、术语都一样）。每条目格式：
    - **中文标题**（英文标题翻译成自然的中文，信息保真，不标题党）
    - 一段 2-3 句：先一句研究/新闻本身（含样本量/效应量等关键数字，输入 summary 里有就用，没有不编造），再给 take（基于输入的 take 润色，保持判断力度，不得弱化为"值得关注"式空话）。
-   - 末行小字格式：来源 · 信号分 score${'｜多信源时附'}（另有 X 家信源在报）
+   - 「临床落地」行有条件才写：仅当该条目的 summary/take 里确实写到了适用人群或具体干预/剂量时，才以「**临床落地**：」开头补一句临床 PT 的用法。硬约束：只能复述 summary/take 里已经出现的人群、干预、剂量、谨慎点，禁止引入输入中没出现过的术语、亚组、工具名或自创建议（例如输入没提到「盆底训练」「症状日记」就绝不能写，也不得把"特定亚组"自行具体化）。summary/take 里没有可落地的人群或干预细节时，直接省略这一行，不要硬凑、不要泛化成空话。
+   - 末行小字格式：「{该条目 source 字段的实际值，如 PubMed、medRxiv} · 信号分 {该条目 score}」；当该条目 multiSource 非空时，再接「｜另有 X 家信源在报」（X = multiSource 的条数）。务必填入真实信源名，不要照抄「来源」「source」这类字面占位词。
 
 不要输出「参考链接」小节，也不要在标题后加 [数字] 编号——原文链接通过文末统一附加的站点链接提供（站内当天页面列出全部文献且可点）。文末的站点链接与署名由系统统一追加，你不用写。
 
 禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字。除开头「标题：」「摘要：」两行外，正文里不要再出现说明性标签或解释文字。`;
 
-  const userPrompt = `日期：${dateStr}\n\n${hot.length ? `今日热点：\n${JSON.stringify(hot.map(h => ({ title: h.title, sourceCount: h.sourceCount, sources: h.sources })), null, 1)}\n\n` : ''}条目：\n${JSON.stringify(payload, null, 1)}`;
+  const userPrompt = `日期：${dateStr}\n\n${hotIndex.length ? `今日热点（中文索引，正文详写在下方「条目」里）：\n${JSON.stringify(hotIndex, null, 1)}\n\n` : ''}条目：\n${JSON.stringify(payload, null, 1)}`;
 
-  console.log(`  ${recent.length} 条进刊，热点 ${hot.length} 条，LLM: ${LLM_PROVIDER}`);
+  console.log(`  ${recent.length} 条进刊，热点 ${hot.length} 条 → 详写 ${writeups.length} 条，LLM: ${LLM_PROVIDER}`);
   // 公众号文章要 Markdown 散文，必须用文本模式调 LLM。若走 JSON 响应模式
   // （curation 用的那套），模型会吐出一个 JSON 对象而不是文章。
   const md = await callLLM(systemPrompt, userPrompt, { json: false });
@@ -113,7 +133,7 @@ async function main() {
   }
   // 回退：模型没按格式给时，标题用模板、摘要取正文首段，绝不让这俩为空。
   const [, mmT, ddT] = dateStr.split('-');
-  if (!title) title = `步频日报丨${+mmT}.${+ddT} 康复信号 ${recent.length} 条`;
+  if (!title) title = `步频日报丨${+mmT}.${+ddT} 康复信号 ${writeups.length} 条`;
   if (!digest) {
     const firstPara = article.split(/\n{2,}/).find(b => b.trim() && !b.trim().startsWith('#')) || '';
     digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
@@ -144,7 +164,7 @@ async function main() {
     const { renderCover } = require('./wechat-cover.js');
     const [, mm, dd] = dateStr.split('-');
     const out = path.join(BRIEFS_DIR, `${dateStr}-cover.png`);
-    await renderCover({ headline: title || '今日康复信号', eyebrow: `${+mm}.${+dd} 日报 · ${recent.length} 篇`, out });
+    await renderCover({ headline: title || '今日康复信号', eyebrow: `${+mm}.${+dd} 日报 · ${writeups.length} 篇`, out });
     console.log(`  ✅ briefs/${dateStr}-cover.png`);
   } catch (e) {
     console.error('  ⚠️  cover render failed (non-fatal):', e.message);
@@ -153,30 +173,76 @@ async function main() {
 
 // Minimal md → WeChat-paste HTML. Inline styles only; classes don't survive
 // the WeChat editor. Scrubs blue #3D74B8 = locked brand color.
+// 逐行分类渲染：拉开「分类标题 / 条目标题 / 正文 / 临床落地 / 末行小字」的层级。
+// WeChat 编辑器只保留内联样式，故每个元素都自带 style；蓝 #3D74B8 = 锁定品牌色。
 function mdToWechatHtml(md, dateStr) {
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   const inline = (s) => esc(s)
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\[(\d+)\]/g, '<span style="color:#3D74B8;font-size:12px;">[$1]</span>');
-  const blocks = md.trim().split(/\n{2,}/);
+
+  const lines = md.trim().split('\n');
   let body = '';
-  for (const b of blocks) {
-    const lines = b.split('\n');
-    if (/^##\s/.test(lines[0])) {
-      body += `<h2 style="font-size:17px;color:#3D74B8;border-left:4px solid #3D74B8;padding-left:10px;margin:28px 0 14px;font-weight:600;">${inline(lines[0].replace(/^##\s*/, ''))}</h2>`;
-      lines.shift();
+  let listBuf = [];
+  const flushList = () => {
+    if (!listBuf.length) return;
+    body += `<ul style="padding-left:20px;margin:8px 0 14px;font-size:15px;color:#555;">`
+      + listBuf.map(l => `<li style="margin:5px 0;line-height:1.75;">${inline(l)}</li>`).join('')
+      + `</ul>`;
+    listBuf = [];
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) { flushList(); continue; }
+
+    // 分类 / 今日热点 标题
+    if (/^##\s/.test(line)) {
+      flushList();
+      body += `<h2 style="font-size:17px;color:#3D74B8;border-left:4px solid #3D74B8;padding-left:10px;margin:30px 0 12px;font-weight:600;line-height:1.4;">${inline(line.replace(/^##\s*/, ''))}</h2>`;
+      continue;
     }
-    const rest = lines.join('\n').trim();
-    if (!rest) continue;
-    if (/^[-*]\s/m.test(rest)) {
-      const items = rest.split('\n').filter(l => l.trim()).map(l => `<li style="margin:6px 0;line-height:1.8;">${inline(l.replace(/^[-*]\s*/, ''))}</li>`).join('');
-      body += `<ul style="padding-left:20px;margin:10px 0;font-size:15px;color:#333;">${items}</ul>`;
-    } else {
-      body += rest.split('\n').map(l => `<p style="margin:10px 0;line-height:1.85;font-size:15px;color:#333;">${inline(l)}</p>`).join('');
+    // 列表项（如「今日热点」若用 - 列出）
+    if (/^[-*]\s/.test(line)) { listBuf.push(line.replace(/^[-*]\s*/, '')); continue; }
+    flushList();
+
+    // 末行小字：信源 · 信号分 X（｜另有 N 家信源在报）
+    if (/信号分/.test(line)) {
+      body += `<p style="margin:4px 0 0;font-size:13px;color:#9aa0a8;line-height:1.6;">${inline(line)}</p>`;
+      continue;
     }
+    // 临床落地 → 浅蓝高亮块，作为「能用上」的视觉锚点
+    if (/^\*{0,2}临床落地/.test(line)) {
+      body += `<p style="margin:8px 0 2px;padding:9px 12px;background:#eef3f9;border-left:3px solid #3D74B8;border-radius:3px;font-size:15px;color:#2b2b2b;line-height:1.75;">${inline(line)}</p>`;
+      continue;
+    }
+    // 今日热点中文索引行：**标题**（X 家信源在报）→ 紧凑
+    if (/^\*\*.+\*\*[（(]\d+\s*家信源在报[）)]\s*$/.test(line)) {
+      body += `<p style="margin:6px 0;font-size:15px;color:#333;line-height:1.7;">${inline(line)}</p>`;
+      continue;
+    }
+    // 文末 CTA（站点链接）→ 顶部分隔线
+    if (/^原文与完整文献列表/.test(line)) {
+      body += `<p style="margin:24px 0 4px;padding-top:12px;border-top:1px solid #ececec;font-size:14px;color:#555;line-height:1.7;">${inline(line)}</p>`;
+      continue;
+    }
+    // 署名小字
+    if (/^——/.test(line)) {
+      body += `<p style="margin:2px 0 0;font-size:13px;color:#9aa0a8;line-height:1.6;">${inline(line)}</p>`;
+      continue;
+    }
+    // 条目标题：整行被 ** 包裹 → 独立小标题 + 条目间留白
+    if (/^\*\*[^*].*\*\*$/.test(line)) {
+      body += `<p style="margin:22px 0 6px;font-size:16px;font-weight:600;color:#222;line-height:1.55;">${inline(line)}</p>`;
+      continue;
+    }
+    // 普通正文（含导语）
+    body += `<p style="margin:9px 0;line-height:1.85;font-size:16px;color:#333;">${inline(line)}</p>`;
   }
-  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;">
-<p style="font-size:13px;color:#8a8f98;letter-spacing:.04em;margin:0 0 4px;">步频日报 · ${dateStr}</p>
+  flushList();
+
+  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;color:#333;">
+<p style="font-size:13px;color:#9aa0a8;letter-spacing:.04em;margin:0 0 6px;">步频日报 · ${dateStr}</p>
 ${body}
 </section>\n`;
 }

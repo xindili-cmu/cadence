@@ -30,11 +30,14 @@ const chip = (s) => h('div', { display: 'flex', padding: '8px 20px', borderRadiu
   txt({ fontFamily: SANS, fontWeight: 500, fontSize: 26, color: C.blue700 }, s));
 
 // Headline now carries the day's actual hook (the issue title). satori has no
-// auto-shrink, so pick a font size by length and cap to ~2 lines; drop the
-// leading date (the eyebrow already shows it).
+// auto-shrink, so pick a font size by length and cap to ~2 lines; drop the date
+// the eyebrow already shows — whether it leads the title or trails in parens.
 const CONTENT_W = W - 88 * 2; // inner width after horizontal padding
 function fitHeadline(raw) {
-  let s = String(raw || '').replace(/^\s*\d{1,2}[.\-/]\d{1,2}\s*/, '').trim();
+  let s = String(raw || '')
+    .replace(/^\s*\d{1,2}[.\-/]\d{1,2}\s*/, '')                 // leading date: 6.18 …
+    .replace(/\s*[（(]\s*\d{1,2}[.\-/]\d{1,2}\s*[）)]\s*$/, '')  // trailing date: …（6.18）
+    .trim();
   if (!s) s = '今日康复信号';
   const size = s.length <= 9 ? 92 : s.length <= 16 ? 70 : s.length <= 26 ? 56 : 48;
   const perLine = Math.floor(CONTENT_W / (size * 1.02));
