@@ -1011,6 +1011,12 @@ function DailyMeta({ s, zh, highlight }) {
       </span>
       <span style={{ color: sep }}>/</span>
       <span style={{ whiteSpace: 'nowrap' }}>{zh ? '信号分' : 'Signal'} <b style={{ fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</b></span>
+      {highlight && s.studyDesign && (
+        <React.Fragment>
+          <span style={{ color: sep }}>/</span>
+          <span style={{ whiteSpace: 'nowrap' }}>{zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign)}</span>
+        </React.Fragment>
+      )}
       <span style={{ color: sep }}>/</span>
       <span style={{ textTransform: 'uppercase', letterSpacing: highlight ? '0.08em' : '0.06em', whiteSpace: 'nowrap' }}>{s.wallSource || s.source}</span>
     </div>
@@ -1051,31 +1057,11 @@ function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
   );
 }
 
-// 为何上榜 — why this item made the list, from STRUCTURED signals only
-// (score · study design · source). The edition has no free-text "why ranked"
-// field; we never fabricate one — these are the real inputs the curation score
-// is built from. studyDesign is a fixed controlled vocab, mapped for the EN view.
+// Study-design controlled vocab → EN label for the meta line (zh shown as-is).
+// The evidence tier (e.g. 系统综述) now lives in the featured card's meta row
+// instead of a separate "为何上榜" line — no free-text reason field exists and
+// we never fabricate one.
 const DAILY_STUDY_EN = { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
-// 为何上榜 value: 研究类型 · 来源 (evidence tier + journal). The score is
-// deliberately omitted — it lives in the meta line and "ranked because it scored
-// high" is circular. No free-text "why ranked" field exists, so we never fabricate.
-function dailyWhyParts(s, zh) {
-  const parts = [];
-  if (s.studyDesign) parts.push(zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign));
-  const src = s.wallSource || s.source;
-  if (src) parts.push(src);
-  return parts.join(' · ');
-}
-function DailyWhyRanked({ s, zh }) {
-  const v = dailyWhyParts(s, zh);
-  if (!v) return null;
-  return (
-    <span style={{ display: 'flex', alignItems: 'flex-start', gap: 10, flex: 1, minWidth: 220 }}>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#3D74B8', paddingTop: 3, whiteSpace: 'nowrap' }}>{zh ? '为何上榜' : 'Why listed'}</span>
-      <span style={{ fontSize: 13.5, lineHeight: 1.6, color: '#5A6068' }}>{v}</span>
-    </span>
-  );
-}
 
 function DailyMasthead({ edition, zh }) {
   const d = new Date(edition.date + 'T12:00:00Z');
@@ -1334,8 +1320,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
             <h3 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
             {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
             <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
-            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid #EDEAE0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-              <DailyWhyRanked s={leadStory} zh={zh} />
+            <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid #EDEAE0', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
               <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#3D74B8', color: '#fff', fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 500, padding: '11px 18px', borderRadius: 10, whiteSpace: 'nowrap', textDecoration: 'none' }}>{t('readOriginal')} ↗</a>
             </div>
             <RelatedRow related={leadStory.related} />
