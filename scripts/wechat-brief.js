@@ -173,78 +173,118 @@ async function main() {
 
 // Minimal md → WeChat-paste HTML. Inline styles only; classes don't survive
 // the WeChat editor. Scrubs blue #3D74B8 = locked brand color.
-// 逐行分类渲染：拉开「分类标题 / 条目标题 / 正文 / 临床落地 / 末行小字」的层级。
-// WeChat 编辑器只保留内联样式，故每个元素都自带 style；蓝 #3D74B8 = 锁定品牌色。
+// md → 「秀米风」公众号正文：渐变标题条 + 圆角投影卡片 + 分类分隔 + 临床落地高亮 + 关注模块。
+// 全内联样式（WeChat 编辑器只保留 inline style）；蓝 #3D74B8 = 锁定品牌色。
+// 渐变一律配 background-color 实色回退：万一微信剥掉 gradient，标题条/徽标仍可读，不会白底白字。
 function mdToWechatHtml(md, dateStr) {
+  const C = { blue: '#3D74B8', blue2: '#6fa0d8', tint: '#f2f6fb', tint2: '#eaf1f9',
+    ink: '#1c2530', body: '#4a5663', mute: '#9aa6b2', warm: '#c2410c', warmbg: '#fdeede' };
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  const inline = (s) => esc(s)
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[(\d+)\]/g, '<span style="color:#3D74B8;font-size:12px;">[$1]</span>');
+  const inline = (s) => esc(s).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  const stripBold = (s) => s.replace(/^\*\*\s*/, '').replace(/\s*\*\*$/, '').trim();
+  const fmtDate = dateStr.replace(/-/g, '.');
+  const gradBg = (c1, c2, deg) => `background-color:${c1};background-image:linear-gradient(${deg || '135deg'},${c1},${c2});`;
 
+  // ---- 1) 解析 md → 结构化块 ----
   const lines = md.trim().split('\n');
-  let body = '';
-  let listBuf = [];
-  const flushList = () => {
-    if (!listBuf.length) return;
-    body += `<ul style="padding-left:20px;margin:8px 0 14px;font-size:15px;color:#555;">`
-      + listBuf.map(l => `<li style="margin:5px 0;line-height:1.75;">${inline(l)}</li>`).join('')
-      + `</ul>`;
-    listBuf = [];
-  };
+  const intro = [];
+  const items = []; // {cat, title, body[], land, src, multi}
+  let footUrl = '';
+  let cur = null, curCat = '', skip = false;
+  const pushCur = () => { if (cur) { items.push(cur); cur = null; } };
 
   for (const raw of lines) {
     const line = raw.trim();
-    if (!line) { flushList(); continue; }
+    if (!line) continue;
 
-    // 分类 / 今日热点 标题
     if (/^##\s/.test(line)) {
-      flushList();
-      body += `<h2 style="font-size:17px;color:#3D74B8;border-left:4px solid #3D74B8;padding-left:10px;margin:30px 0 12px;font-weight:600;line-height:1.4;">${inline(line.replace(/^##\s*/, ''))}</h2>`;
+      pushCur();
+      const h = line.replace(/^##\s*/, '').trim();
+      skip = /今日热点/.test(h); // 卡片自带「多源」徽标，索引节弃用
+      if (!skip) curCat = h;
       continue;
     }
-    // 列表项（如「今日热点」若用 - 列出）
-    if (/^[-*]\s/.test(line)) { listBuf.push(line.replace(/^[-*]\s*/, '')); continue; }
-    flushList();
+    if (skip) continue; // 「今日热点」索引节整段丢弃
 
-    // 末行小字：信源 · 信号分 X（｜另有 N 家信源在报）
+    if (/^原文与完整文献列表/.test(line)) { pushCur(); footUrl = (line.match(/https?:\/\/\S+/) || [''])[0]; continue; }
+    if (/^——/.test(line)) { pushCur(); continue; } // 署名由关注模块统一替代
+
+    // 末行小字：来源 · 信号分 X｜另有 N 家 —— 信号分对读者隐藏，只取信源名 + 多源数
     if (/信号分/.test(line)) {
-      body += `<p style="margin:4px 0 0;font-size:13px;color:#9aa0a8;line-height:1.6;">${inline(line)}</p>`;
+      if (cur) {
+        cur.src = line.split('·')[0].trim();
+        const m = line.match(/另有\s*(\d+)\s*家/);
+        cur.multi = m ? parseInt(m[1], 10) + 1 : 0;
+      }
       continue;
     }
-    // 临床落地 → 浅蓝高亮块，作为「能用上」的视觉锚点
     if (/^\*{0,2}临床落地/.test(line)) {
-      body += `<p style="margin:8px 0 2px;padding:9px 12px;background:#eef3f9;border-left:3px solid #3D74B8;border-radius:3px;font-size:15px;color:#2b2b2b;line-height:1.75;">${inline(line)}</p>`;
+      if (cur) cur.land = line.replace(/^\*{0,2}临床落地\*{0,2}\s*[:：]?\s*/, '').trim();
       continue;
     }
-    // 今日热点中文索引行：**标题**（X 家信源在报）→ 紧凑
-    if (/^\*\*.+\*\*[（(]\d+\s*家信源在报[）)]\s*$/.test(line)) {
-      body += `<p style="margin:6px 0;font-size:15px;color:#333;line-height:1.7;">${inline(line)}</p>`;
+    if (/^\*\*[^*].*\*\*$/.test(line)) { // 条目标题：整行 ** 包裹
+      pushCur();
+      cur = { cat: curCat, title: stripBold(line), body: [], land: '', src: '', multi: 0 };
       continue;
     }
-    // 文末 CTA（站点链接）→ 顶部分隔线
-    if (/^原文与完整文献列表/.test(line)) {
-      body += `<p style="margin:24px 0 4px;padding-top:12px;border-top:1px solid #ececec;font-size:14px;color:#555;line-height:1.7;">${inline(line)}</p>`;
-      continue;
-    }
-    // 署名小字
-    if (/^——/.test(line)) {
-      body += `<p style="margin:2px 0 0;font-size:13px;color:#9aa0a8;line-height:1.6;">${inline(line)}</p>`;
-      continue;
-    }
-    // 条目标题：整行被 ** 包裹 → 独立小标题 + 条目间留白
-    if (/^\*\*[^*].*\*\*$/.test(line)) {
-      body += `<p style="margin:22px 0 6px;font-size:16px;font-weight:600;color:#222;line-height:1.55;">${inline(line)}</p>`;
-      continue;
-    }
-    // 普通正文（含导语）
-    body += `<p style="margin:9px 0;line-height:1.85;font-size:16px;color:#333;">${inline(line)}</p>`;
+    // 其余：条目正文，或（任何条目之前）导语
+    if (cur) cur.body.push(line); else intro.push(line);
   }
-  flushList();
+  pushCur();
 
-  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;color:#333;">
-<p style="font-size:13px;color:#9aa0a8;letter-spacing:.04em;margin:0 0 6px;">步频日报 · ${dateStr}</p>
-${body}
-</section>\n`;
+  // ---- 2) 渲染 ----
+  // 回退：解析不到任何条目（LLM 格式异常）→ 朴素渲染，绝不出空文。
+  if (!items.length) {
+    const plain = lines.filter(l => l.trim())
+      .map(l => `<p style="margin:9px 0;line-height:1.85;font-size:16px;color:#333;">${inline(l.replace(/^#+\s*/, '').trim())}</p>`).join('');
+    return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;color:#333;">${plain}</section>\n`;
+  }
+
+  let h = '';
+  // 顶部渐变标题条
+  h += `<div style="${gradBg(C.blue, C.blue2)}border-radius:16px;padding:20px 18px 17px;color:#fff;">`
+    + `<div style="font-size:11px;letter-spacing:.24em;opacity:.85;">EVIDENCE IN MOTION</div>`
+    + `<div style="font-size:21px;font-weight:700;margin:7px 0 3px;letter-spacing:.02em;">步频 · 康复信号日报</div>`
+    + `<div style="font-size:12px;opacity:.92;">${fmtDate}　·　今日 ${items.length} 条精选</div></div>`;
+
+  // 导读
+  if (intro.length) {
+    h += `<div style="margin:16px 0 6px;padding:14px 15px;background:${C.tint};border-radius:12px;border-left:4px solid ${C.blue};">`
+      + `<div style="font-size:11px;color:${C.blue};font-weight:700;letter-spacing:.12em;margin-bottom:6px;">导读</div>`
+      + `<p style="margin:0;font-size:15px;color:#3a4654;line-height:1.85;">${inline(intro.join(' '))}</p></div>`;
+  }
+
+  // 卡片（按分类插装饰分隔）
+  let lastCat = '';
+  items.forEach((it, i) => {
+    if (it.cat && it.cat !== lastCat) {
+      h += `<div style="margin:24px 0 12px;text-align:center;">`
+        + `<span style="font-size:14px;font-weight:700;color:${C.blue};letter-spacing:.08em;">◆ ${esc(it.cat)} ◆</span>`
+        + `<div style="height:1px;background-image:linear-gradient(90deg,transparent,${C.blue2},transparent);margin-top:8px;"></div></div>`;
+      lastCat = it.cat;
+    }
+    h += `<div style="margin:14px 0;background:#fff;border:1px solid #eef2f6;border-radius:14px;box-shadow:0 3px 16px rgba(61,116,184,.09);overflow:hidden;">`
+      + `<div style="height:4px;${gradBg(C.blue, C.blue2, '90deg')}"></div>`
+      + `<div style="padding:14px 15px 13px;">`
+      + `<div style="margin-bottom:8px;">`
+      + `<span style="display:inline-block;width:23px;height:23px;line-height:23px;text-align:center;${gradBg(C.blue, C.blue2)}color:#fff;border-radius:50%;font-size:12px;font-weight:700;vertical-align:middle;">${i + 1}</span>`
+      + (it.multi ? `<span style="display:inline-block;font-size:12px;color:${C.warm};background:${C.warmbg};padding:2px 10px;border-radius:11px;margin-left:8px;vertical-align:middle;">✦ ${it.multi} 源共振</span>` : '')
+      + `</div>`
+      + `<p style="margin:0 0 7px;font-size:16px;font-weight:700;color:${C.ink};line-height:1.5;">${inline(it.title)}</p>`
+      + `<p style="margin:0 0 ${it.land ? '11px' : '2px'};font-size:15px;color:${C.body};line-height:1.8;">${inline(it.body.join(' '))}</p>`
+      + (it.land ? `<div style="margin:0;padding:11px 13px;background:${C.tint};border-radius:9px;font-size:14px;color:#2b3a4a;line-height:1.72;"><strong style="color:${C.blue};">💡 临床落地　</strong>${inline(it.land)}</div>` : '')
+      + (it.src ? `<p style="margin:11px 0 0;font-size:11px;color:${C.mute};">— ${esc(it.src)}</p>` : '')
+      + `</div></div>`;
+  });
+
+  // 关注模块（含原文链接文本，微信会剥内联链接故以纯文本给出）
+  h += `<div style="margin:24px 0 0;padding:16px 15px;${gradBg(C.tint2, '#f6f9fc')}border-radius:14px;text-align:center;">`
+    + `<p style="margin:0 0 6px;font-size:13px;color:${C.blue};font-weight:700;">▍步频 · Evidence in motion</p>`
+    + `<p style="margin:0 0 ${footUrl ? '10px' : '0'};font-size:12px;color:#7a8694;line-height:1.6;">每日为临床 PT 筛信号</p>`
+    + (footUrl ? `<p style="margin:0;font-size:12px;color:#7a8694;line-height:1.6;word-break:break-all;">原文与完整文献 → ${esc(footUrl)}</p>` : '')
+    + `</div>`;
+
+  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:2px 0;color:${C.ink};">${h}</section>\n`;
 }
 
 if (require.main === module) {
