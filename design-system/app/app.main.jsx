@@ -326,7 +326,7 @@ function SuggestSourceForm() {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <span style={label}>{t('src.suggest.name')} *</span>
-          <Input size="sm" value={form.name} onChange={set('name')} placeholder="e.g. JOSPT, 丁香园" />
+          <Input size="sm" value={form.name} onChange={set('name')} placeholder={t('src.suggest.namePh')} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <span style={label}>{t('src.suggest.url')} *</span>
@@ -994,8 +994,25 @@ const DAILY_CAT_LABEL = { orthopedic: '骨科康复', neurological: '神经康�
 const DAILY_CAT_SHORT = { orthopedic: '骨科', neurological: '神经', sports: '运动', 'manual-modality': '手法', cardiopulmonary: '心肺', pediatric: '儿童', geriatric: '老年', 'rehab-tech': '科技' };
 const dailyCardColor = (c) => DAILY_CARD_COLOR[c] || '#7A8290';
 const dailyDotColor = (c) => DAILY_DOT_COLOR[c] || '#9AA0A8';
-const dailyCatLabel = (c) => DAILY_CAT_LABEL[c] || c;
-const dailyCatShort = (c) => DAILY_CAT_SHORT[c] || c;
+// Bilingual: zh keeps the daily-specific wording above; en reuses the canonical
+// labels from categories.js (window.getCategory) so the EN daily view never
+// shows Chinese. getCategory returns the raw id for unknown ids (e.g. the
+// rehab-tech overlay, which never appears as a daily section), so we fall back
+// to the local map in that case rather than printing the id.
+const dailyCatLabel = (c) => {
+  if (window.CD_LANG !== 'zh' && window.getCategory) {
+    const cat = window.getCategory(c);
+    if (cat && cat.label && cat.label !== c) return cat.label;
+  }
+  return DAILY_CAT_LABEL[c] || c;
+};
+const dailyCatShort = (c) => {
+  if (window.CD_LANG !== 'zh' && window.getCategory) {
+    const cat = window.getCategory(c);
+    if (cat && cat.short && cat.short !== c) return cat.short;
+  }
+  return DAILY_CAT_SHORT[c] || c;
+};
 const dailyScoreColor = (s) => (s >= 85 ? '#2A5894' : s >= 75 ? '#1B1E23' : '#9098A0');
 
 // Meta line on every daily card: ● specialty / 信号分 score / SOURCE.
