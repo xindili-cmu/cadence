@@ -23,6 +23,18 @@ const cdDayLabels = () => {
 function FeedToolbar({ view, count }) {
   const t = window.CD_T;
   const id = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
+  // SIGNAL-score explainer: click-toggle popover (works on touch, unlike a
+  // native title tooltip). Closes on outside-click or Escape.
+  const [helpOpen, setHelpOpen] = React.useState(false);
+  const helpRef = React.useRef(null);
+  React.useEffect(() => {
+    if (!helpOpen) return;
+    const onDoc = (e) => { if (helpRef.current && !helpRef.current.contains(e.target)) setHelpOpen(false); };
+    const onKey = (e) => { if (e.key === 'Escape') setHelpOpen(false); };
+    document.addEventListener('mousedown', onDoc);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onDoc); document.removeEventListener('keydown', onKey); };
+  }, [helpOpen]);
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
@@ -33,7 +45,18 @@ function FeedToolbar({ view, count }) {
       </div>
       <span style={{ flex: 1 }} />
       {(id === 'curated' || id === 'all') && (
-        <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
+        <span ref={helpRef} style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+          <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
+          <button type="button" onClick={() => setHelpOpen((v) => !v)} aria-label={t('signalScore')} aria-expanded={helpOpen}
+            style={{ display: 'inline-flex', alignItems: 'center', padding: 2, background: 'none', border: 'none', cursor: 'pointer', color: helpOpen ? 'var(--green-700, var(--text-secondary))' : 'var(--text-tertiary)' }}>
+            <Icon name="info" size={14} />
+          </button>
+          {helpOpen && (
+            <div role="tooltip" style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, zIndex: 50, width: 'min(300px, 78vw)', padding: '12px 14px', background: 'var(--surface-card, #fff)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md, 0 10px 30px -12px rgba(27,30,35,0.25))', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.65, color: 'var(--text-secondary)', textAlign: 'left' }}>
+              {t('signalScore.help')}
+            </div>
+          )}
+        </span>
       )}
     </div>
   );
@@ -127,9 +150,7 @@ function HotTopicsStrip({ topics, onPick, mobile = false }) {
           const metaEl = (
             <span title={tip}
               style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-secondary)', borderBottom: '1px dotted var(--border-strong, var(--border-subtle))', cursor: 'help' }}>
-              {isTheme
-                ? `${tr('themeHeat')}${t.tag ? ` · ${t.tag}` : ''} · ${t.sourceCount} ${tr('nOutlets')}`
-                : `${t.sourceCount} ${tr('nSources')}`}
+              {`${tr('themeHeat')}${t.tag ? ` · ${t.tag}` : ''} · ${t.sourceCount} ${tr('nOutlets')}`}
             </span>
           );
           return (
@@ -527,7 +548,7 @@ function AboutView({ onView, mobile }) {
   const secTitle = { margin: '0 0 18px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)' };
   const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const stats = [
-    { v: '40+', l: tt('证据来源', 'Sources') },
+    { v: '50+', l: tt('证据来源', 'Sources') },
     { v: '8', l: tt('临床专科', 'Specialties') },
     { v: '0–100', l: tt('SIGNAL 评分', 'SIGNAL score') },
     { v: tt('每日', 'Daily'), l: tt('更新', 'Updated') },
@@ -620,8 +641,8 @@ function AboutView({ onView, mobile }) {
                 {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
-                {tt('每天，步频从全球 40 余个顶级期刊与数据库中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
-                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 40+ top journals and databases worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
+                {tt('每天，步频从全球 50+ 个顶级信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
+                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 50+ top sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('每天 5 分钟，把全球最新的临床证据，变成你推开诊室大门、面对患者时最硬核的知识武装。',
