@@ -131,9 +131,10 @@ async function main() {
     }
     article = kept.join('\n').trim();
   }
-  // 回退：模型没按格式给时，标题用模板、摘要取正文首段，绝不让这俩为空。
+  // 标题固定为品牌格式（含日期 M.D），不采用模型即兴标题；封面用同一 title，两处统一。
+  // 摘要仍取模型生成（内容型），回退取正文首段，绝不让其为空。
   const [, mmT, ddT] = dateStr.split('-');
-  if (!title) title = `步频日报丨${+mmT}.${+ddT} 康复信号 ${writeups.length} 条`;
+  title = `步频日报丨${+mmT}.${+ddT} 高分康复文献速读`;
   if (!digest) {
     const firstPara = article.split(/\n{2,}/).find(b => b.trim() && !b.trim().startsWith('#')) || '';
     digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
@@ -240,51 +241,58 @@ function mdToWechatHtml(md, dateStr) {
     return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;color:#333;">${plain}</section>\n`;
   }
 
+  const ICON = { '神经康复': '🧠', '手法与理疗': '🤲', '骨科与肌骨': '🦴', '运动康复': '🏃',
+    '儿童康复': '🧒', '老年康复': '🧓', '心肺康复': '🫁', '行业与执业': '📋' };
+  const deep = '#2f5d99', canvas = '#eef2f7', gold = '#a9760a', goldbg = '#fbf0d4';
+
   let h = '';
   // 顶部渐变标题条
-  h += `<div style="${gradBg(C.blue, C.blue2)}border-radius:16px;padding:20px 18px 17px;color:#fff;">`
-    + `<div style="font-size:11px;letter-spacing:.24em;opacity:.85;">EVIDENCE IN MOTION</div>`
-    + `<div style="font-size:21px;font-weight:700;margin:7px 0 3px;letter-spacing:.02em;">步频 · 康复信号日报</div>`
-    + `<div style="font-size:12px;opacity:.92;">${fmtDate}　·　今日 ${items.length} 条精选</div></div>`;
+  h += `<div style="${gradBg(deep, C.blue2)}border-radius:18px;padding:22px 20px 18px;color:#fff;box-shadow:0 6px 20px rgba(47,93,153,.22);">`
+    + `<div style="font-size:11px;letter-spacing:.26em;opacity:.82;">EVIDENCE IN MOTION</div>`
+    + `<div style="font-size:22px;font-weight:800;margin:8px 0 0;letter-spacing:.02em;">步频 · 康复信号日报</div>`
+    + `<div style="height:2px;width:40px;background:rgba(255,255,255,.55);border-radius:2px;margin:9px 0;"></div>`
+    + `<div style="font-size:12px;opacity:.9;">${fmtDate}　·　今日 ${items.length} 条精选</div></div>`;
 
-  // 导读
+  // 导读（悬浮白卡）
   if (intro.length) {
-    h += `<div style="margin:16px 0 6px;padding:14px 15px;background:${C.tint};border-radius:12px;border-left:4px solid ${C.blue};">`
-      + `<div style="font-size:11px;color:${C.blue};font-weight:700;letter-spacing:.12em;margin-bottom:6px;">导读</div>`
-      + `<p style="margin:0;font-size:15px;color:#3a4654;line-height:1.85;">${inline(intro.join(' '))}</p></div>`;
+    h += `<div style="margin:16px 0 4px;padding:14px 16px;background:#fff;border-radius:13px;box-shadow:0 4px 16px rgba(31,46,64,.06);">`
+      + `<div style="font-size:11px;color:${C.blue};font-weight:800;letter-spacing:.16em;margin-bottom:7px;">导读 · DAILY BRIEF</div>`
+      + `<p style="margin:0;font-size:15px;color:#3a4654;line-height:1.9;">${inline(intro.join(' '))}</p></div>`;
   }
 
-  // 卡片（按分类插装饰分隔）
+  // 卡片（分类用图标 + 短下划线分组）
   let lastCat = '';
   items.forEach((it, i) => {
     if (it.cat && it.cat !== lastCat) {
-      h += `<div style="margin:24px 0 12px;text-align:center;">`
-        + `<span style="font-size:14px;font-weight:700;color:${C.blue};letter-spacing:.08em;">◆ ${esc(it.cat)} ◆</span>`
-        + `<div style="height:1px;background-image:linear-gradient(90deg,transparent,${C.blue2},transparent);margin-top:8px;"></div></div>`;
+      const ic = ICON[it.cat] || '🔹';
+      h += `<div style="margin:26px 0 13px;">`
+        + `<div style="font-size:15px;font-weight:800;color:${deep};letter-spacing:.04em;margin-bottom:7px;">${ic}　${esc(it.cat)}</div>`
+        + `<div style="height:3px;width:42px;${gradBg(C.blue, C.blue2, '90deg')}border-radius:2px;"></div></div>`;
       lastCat = it.cat;
     }
-    h += `<div style="margin:14px 0;background:#fff;border:1px solid #eef2f6;border-radius:14px;box-shadow:0 3px 16px rgba(61,116,184,.09);overflow:hidden;">`
-      + `<div style="height:4px;${gradBg(C.blue, C.blue2, '90deg')}"></div>`
-      + `<div style="padding:14px 15px 13px;">`
-      + `<div style="margin-bottom:8px;">`
-      + `<span style="display:inline-block;width:23px;height:23px;line-height:23px;text-align:center;${gradBg(C.blue, C.blue2)}color:#fff;border-radius:50%;font-size:12px;font-weight:700;vertical-align:middle;">${i + 1}</span>`
-      + (it.multi ? `<span style="display:inline-block;font-size:12px;color:${C.warm};background:${C.warmbg};padding:2px 10px;border-radius:11px;margin-left:8px;vertical-align:middle;">✦ ${it.multi} 源共振</span>` : '')
+    h += `<div style="margin:0 0 13px;background:#fff;border-radius:16px;box-shadow:0 4px 18px rgba(31,46,64,.08);overflow:hidden;">`
+      + `<div style="padding:15px 16px 14px;">`
+      + `<div style="margin-bottom:9px;">`
+      + `<span style="display:inline-block;height:24px;line-height:24px;text-align:center;${gradBg(deep, C.blue2)}color:#fff;border-radius:7px;font-size:12px;font-weight:700;letter-spacing:.06em;padding:0 8px;vertical-align:middle;">No.${String(i + 1).padStart(2, '0')}</span>`
+      + (it.multi ? `<span style="display:inline-block;font-size:12px;color:${gold};background:${goldbg};padding:2px 10px;border-radius:11px;margin-left:8px;vertical-align:middle;">✦ ${it.multi} 源共振</span>` : '')
       + `</div>`
-      + `<p style="margin:0 0 7px;font-size:16px;font-weight:700;color:${C.ink};line-height:1.5;">${inline(it.title)}</p>`
-      + `<p style="margin:0 0 ${it.land ? '11px' : '2px'};font-size:15px;color:${C.body};line-height:1.8;">${inline(it.body.join(' '))}</p>`
-      + (it.land ? `<div style="margin:0;padding:11px 13px;background:${C.tint};border-radius:9px;font-size:14px;color:#2b3a4a;line-height:1.72;"><strong style="color:${C.blue};">💡 临床落地　</strong>${inline(it.land)}</div>` : '')
-      + (it.src ? `<p style="margin:11px 0 0;font-size:11px;color:${C.mute};">— ${esc(it.src)}</p>` : '')
+      + `<p style="margin:0 0 8px;font-size:17px;font-weight:700;color:${C.ink};line-height:1.5;">${inline(it.title)}</p>`
+      + `<p style="margin:0 0 ${it.land ? '12px' : '2px'};font-size:15px;color:${C.body};line-height:1.85;">${inline(it.body.join(' '))}</p>`
+      + (it.land ? `<div style="margin:0;background:${C.tint};border-radius:10px;padding:11px 13px;border-left:3px solid ${C.blue};">`
+          + `<div style="font-size:11px;font-weight:800;color:${C.blue};letter-spacing:.12em;margin-bottom:4px;">💡 临床落地</div>`
+          + `<div style="font-size:14px;color:#2b3a4a;line-height:1.72;">${inline(it.land)}</div></div>` : '')
+      + (it.src ? `<p style="margin:11px 0 0;font-size:11px;color:${C.mute};letter-spacing:.04em;">SOURCE · ${esc(it.src)}</p>` : '')
       + `</div></div>`;
   });
 
   // 关注模块（含原文链接文本，微信会剥内联链接故以纯文本给出）
-  h += `<div style="margin:24px 0 0;padding:16px 15px;${gradBg(C.tint2, '#f6f9fc')}border-radius:14px;text-align:center;">`
-    + `<p style="margin:0 0 6px;font-size:13px;color:${C.blue};font-weight:700;">▍步频 · Evidence in motion</p>`
-    + `<p style="margin:0 0 ${footUrl ? '10px' : '0'};font-size:12px;color:#7a8694;line-height:1.6;">每日为临床 PT 筛信号</p>`
-    + (footUrl ? `<p style="margin:0;font-size:12px;color:#7a8694;line-height:1.6;word-break:break-all;">原文与完整文献 → ${esc(footUrl)}</p>` : '')
+  h += `<div style="margin:24px 0 0;padding:18px 16px;background:#fff;border-radius:15px;box-shadow:0 4px 16px rgba(31,46,64,.06);text-align:center;">`
+    + `<div style="display:inline-block;${gradBg(deep, C.blue2)}color:#fff;font-size:13px;font-weight:700;padding:7px 20px;border-radius:18px;margin-bottom:10px;">▍步频 · Evidence in motion</div>`
+    + `<p style="margin:0 0 ${footUrl ? '8px' : '0'};font-size:12px;color:#7a8694;line-height:1.7;">每日为临床 PT 筛信号</p>`
+    + (footUrl ? `<p style="margin:0;font-size:12px;color:#9aa6b2;line-height:1.6;word-break:break-all;">原文与完整文献 → ${esc(footUrl)}</p>` : '')
     + `</div>`;
 
-  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:2px 0;color:${C.ink};">${h}</section>\n`;
+  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;background:${canvas};padding:18px 14px 22px;color:${C.ink};">${h}</section>\n`;
 }
 
 if (require.main === module) {

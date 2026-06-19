@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!-- Source template for linkedin-cover.png. Render to PNG with headless Chrome at
+     1128x191 (LinkedIn company-page banner). Same lockup/fonts as og-card.html:
+     skewed equalizer mark + IBM Plex "Cadence" + LXGW WenKai "步频".
+     Render: chrome --headless --screenshot=linkedin-cover.png --window-size=1128,191 \
+             --default-background-color=00000000 --hide-scrollbars linkedin-cover.html
+     (NOTE: LinkedIn overlays the round logo at the lower-left, so the lockup is
+      pushed toward center-right to stay clear of it.) -->
+<link rel="stylesheet" href="design-system/fonts.css">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1128px; height: 191px; }
+  #card {
+    width: 1128px; height: 191px; background: #2C5A96;
+    padding: 26px 64px; display: flex; align-items: center; justify-content: space-between;
+    font-family: 'IBM Plex Sans', sans-serif; overflow: hidden;
+  }
+  .left { display: flex; flex-direction: column; gap: 10px; padding-left: 150px; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: 0.20em; text-transform: uppercase; color: #93B8DE; }
+  .lockup { display: flex; align-items: baseline; gap: 18px; }
+  .word { font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 62px; letter-spacing: -0.018em; line-height: 1; color: #FFFFFF; white-space: nowrap; }
+  .word .d { color: #93B8DE; }
+  .zh { font-family: 'LXGW WenKai Light', 'IBM Plex Sans', sans-serif; font-size: 56px; line-height: 1; color: #FFFFFF; white-space: nowrap; }
+  .tag { font-family: 'Spectral', Georgia, serif; font-weight: 500; font-size: 19px; color: #C9D8EC; }
+  .right { display: flex; flex-direction: column; align-items: flex-end; gap: 18px; height: 100%; justify-content: space-between; padding: 6px 0; }
+  .url { font-family: 'IBM Plex Mono', monospace; font-size: 16px; color: #93B8DE; }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="left">
+    <div class="eyebrow">Keeping&nbsp;pace&nbsp;with&nbsp;the&nbsp;evidence</div>
+    <div class="lockup">
+      <span class="word">Ca<span class="d">dence</span></span>
+      <span class="zh">步频</span>
+    </div>
+    <div class="tag">Physical therapy &amp; rehab. Signal, not noise.</div>
+  </div>
+  <div class="right">
+    <svg width="92" height="80" viewBox="446 107 580 508" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g transform="skewX(-22.490)" fill="#FFFFFF">
+        <rect x="664.6" y="410" width="40.5" height="92"/>
+        <rect x="745.6" y="343" width="42.5" height="159"/>
+        <rect x="832.5" y="277" width="42.6" height="225"/>
+        <rect x="930.0" y="121" width="46.7" height="474"/>
+        <rect x="1035.4" y="344" width="46.9" height="158"/>
+        <rect x="1128.9" y="415" width="39.9" height="87"/>
+      </g>
+    </svg>
+    <div class="url">incadencept.com</div>
+  </div>
+</div>
+</body>
+</html>
