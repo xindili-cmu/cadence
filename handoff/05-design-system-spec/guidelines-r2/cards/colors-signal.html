@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Signal & status" subtitle="Selection signal + improvement / caution / regulatory status" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-sans); padding: 24px; }
+  .row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .sig { display: flex; align-items: center; gap: 9px; padding: 11px 14px; background: var(--surface-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); }
+  .dot { width: 13px; height: 13px; border-radius: 999px; }
+  .t { font-size: 12.5px; font-weight: 600; color: var(--ink-800); }
+  .h { font-family: var(--font-mono); font-size: 10px; color: var(--text-tertiary); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sig"><span class="dot" style="background:var(--signal-up)"></span><div><div class="t">Improvement</div><div class="h">#1E8E5E</div></div></div>
+    <div class="sig"><span class="dot" style="background:var(--signal-down)"></span><div><div class="t">Caution · terracotta</div><div class="h">#B4552D</div></div></div>
+    <div class="sig"><span class="dot" style="background:var(--signal-warn)"></span><div><div class="t">Warn</div><div class="h">#C8861E</div></div></div>
+    <div class="sig"><span class="dot" style="background:var(--blue-600)"></span><div><div class="t">Signal · selection</div><div class="h">--blue-600</div></div></div>
+  </div>
+</body>
+</html>

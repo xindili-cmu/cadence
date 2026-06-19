@@ -1,0 +1,32 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Radii & elevation" subtitle="Restrained corners · soft low shadows (hover-raise only)" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); padding: 28px 30px; font-family: var(--font-mono); }
+  .wrap { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+  .grp { display: flex; gap: 14px; align-items: center; }
+  .box { width: 62px; height: 62px; background: var(--surface-card); border: 1px solid var(--border-default); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 5px; }
+  .lab { font-size: 9.5px; color: var(--text-tertiary); }
+  .sep { width: 1px; height: 62px; background: var(--border-subtle); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="grp">
+      <div class="box" style="border-radius:3px"><span class="lab">xs 3</span></div>
+      <div class="box" style="border-radius:6px"><span class="lab">sm 6</span></div>
+      <div class="box" style="border-radius:8px"><span class="lab">md 8</span></div>
+      <div class="box" style="border-radius:12px"><span class="lab">lg 12</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="grp">
+      <div class="box" style="border:none;border-radius:8px;box-shadow:var(--shadow-sm)"><span class="lab">sm</span></div>
+      <div class="box" style="border:none;border-radius:8px;box-shadow:var(--shadow-md)"><span class="lab">md</span></div>
+      <div class="box" style="border:none;border-radius:8px;box-shadow:var(--shadow-lg)"><span class="lab">lg</span></div>
+    </div>
+  </div>
+</body>
+</html>

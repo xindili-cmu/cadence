@@ -1,0 +1,36 @@
+<!-- @dsCard group="Colors" viewport="700x210" name="Neutrals — blue-cooled ink & paper" subtitle="Cool editorial charcoal → paper. Borders, surfaces, text roles" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-mono); padding: 22px; }
+  .lab { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-tertiary); margin: 0 0 8px; }
+  .row { display: flex; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 13px; }
+  .sw { flex: 1; height: 60px; display: flex; align-items: flex-end; padding: 7px; }
+  .sw span { font-size: 9.5px; }
+  .dark span { color: rgba(255,255,255,.9); }
+  .light span { color: var(--ink-700); }
+</style>
+</head>
+<body>
+  <p class="lab">Ink</p>
+  <div class="row">
+    <div class="sw dark" style="background:var(--ink-900)"><span>900 #16202B</span></div>
+    <div class="sw dark" style="background:var(--ink-700)"><span>700 #35414E</span></div>
+    <div class="sw dark" style="background:var(--ink-600)"><span>600 #4D5965</span></div>
+    <div class="sw dark" style="background:var(--ink-500)"><span>500 #64717F</span></div>
+    <div class="sw light" style="background:var(--ink-300)"><span>300 #C0C9D2</span></div>
+  </div>
+  <p class="lab">Paper &amp; border</p>
+  <div class="row">
+    <div class="sw light" style="background:var(--white);border-right:1px solid var(--border-subtle)"><span>white</span></div>
+    <div class="sw light" style="background:var(--paper)"><span>paper #F7F9FB</span></div>
+    <div class="sw light" style="background:var(--ink-100)"><span>ink-100</span></div>
+    <div class="sw light" style="background:var(--ink-200)"><span>border-subtle</span></div>
+    <div class="sw light" style="background:var(--ink-300)"><span>border</span></div>
+    <div class="sw light" style="background:var(--ink-400)"><span>border-strong</span></div>
+  </div>
+</body>
+</html>

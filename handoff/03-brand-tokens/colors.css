@@ -1,0 +1,145 @@
+/* ============================================================
+   Cadence — Color tokens
+   Primary: Scrubs Blue (#3D74B8) — the clinical uniform blue,
+   pressed one step darker for text contrast.
+   Accent (links): kept in the blue family; terracotta reserved
+   for signal-down / regulatory emphasis via signal tokens.
+   ============================================================ */
+
+:root {
+  /* ---- Brand scrubs-blue scale ---- */
+  --blue-50:  #F2F7FC;
+  --blue-100: #E2EDF8;
+  --blue-200: #C5DBF0;
+  --blue-300: #93B8DE;
+  --blue-400: #6396C9;
+  --blue-500: #4A82BE;
+  --blue-600: #3D74B8;  /* PRIMARY scrubs blue */
+  --blue-700: #2C5A96;
+  --blue-800: #224674;
+  --blue-900: #183354;
+  --blue-950: #0F2238;
+
+  /* ---- Back-compat aliases ----
+     Ring-1 components (NewsCard etc.) reference --green-* directly.
+     Keep them verbatim per methodology 02; alias the old names here. */
+  --green-50:  var(--blue-50);
+  --green-100: var(--blue-100);
+  --green-200: var(--blue-200);
+  --green-300: var(--blue-300);
+  --green-400: var(--blue-400);
+  --green-500: var(--blue-500);
+  --green-600: var(--blue-600);
+  --green-700: var(--blue-700);
+  --green-800: var(--blue-800);
+  --green-900: var(--blue-900);
+  --green-950: var(--blue-950);
+
+  /* ---- Ink / neutral scale (warm "clay ink" greige) ----
+     Tuned to sit on warm cream paper — the NEJM/Cochrane print warmth.
+     Headlines on ink-900, body on ink-700/600, meta ink-500, hairlines ink-200. */
+  --ink-950: #14130F;
+  --ink-900: #1E1C17;
+  --ink-800: #2C2A23;
+  --ink-700: #45413A;
+  --ink-600: #5E5A4F;
+  --ink-500: #7A7568;
+  --ink-400: #9D978A;
+  --ink-300: #C4BEAF;
+  --ink-200: #E4DFD1;
+  --ink-100: #EFEBE0;
+  --ink-50:  #F6F3EA;
+  --paper:   #FAFAF6;   /* warm editorial page background */
+  --white:   #FFFFFF;
+
+  /* ---- Signal / status ---- */
+  --signal-up:   #1E8E5E;  /* positive / improvement */
+  --signal-down: #B4552D;  /* negative — terracotta, pairs with scrubs blue */
+  --signal-warn: #C8861E;
+  --signal-info: var(--blue-500);
+
+  /* ---- SIGNAL score tiers — a 3-step authority scale within the blue family
+     (not traffic lights): navy ≥85 practice-changing · scrubs 65–84 worth
+     knowing · clay <65 reference. Consumed by SignalScore. ---- */
+  --signal-high:      var(--blue-800);
+  --signal-high-soft: #E7EEF5;
+  --signal-mid:       var(--blue-600);
+  --signal-mid-soft:  #EAF1F8;
+  --signal-low:       var(--ink-500);
+  --signal-low-soft:  var(--ink-100);
+
+  /* ============================================================
+     Category accents — one hue per PT feed category.
+     Solid / soft tint / ink-on-tint. Hues from designer round 1
+     (Fulcrum kit — name-agnostic); ink values derived for contrast.
+     ============================================================ */
+  --cat-ortho:       #3C4C6E;  /* 1 · Orthopedic (slate indigo) */
+  --cat-ortho-soft:  #E8EAF1;
+  --cat-ortho-ink:   #2B3850;
+
+  --cat-neuro:       #463E7C;  /* 2 · Neurological (deep violet) */
+  --cat-neuro-soft:  #E9E6F1;
+  --cat-neuro-ink:   #332D5C;
+
+  --cat-sports:      #9B4A2C;  /* 3 · Sports & Athletic (burnt sienna) */
+  --cat-sports-soft: #F5E6DD;
+  --cat-sports-ink:  #75361F;
+
+  --cat-pediatric:      #876418;  /* 4 · Pediatric (ochre) */
+  --cat-pediatric-soft: #F2EAD3;
+  --cat-pediatric-ink:  #694E12;
+
+  --cat-geriatric:      #2F5D52;  /* 5 · Geriatric (pine) */
+  --cat-geriatric-soft: #DFEAE6;
+  --cat-geriatric-ink:  #22463D;
+
+  --cat-cardiopulm:      #8C3B43;  /* 6 · Cardiopulmonary (garnet) */
+  --cat-cardiopulm-soft: #F4E2E3;
+  --cat-cardiopulm-ink:  #6A2C32;
+
+  --cat-manual:      #545F2E;  /* 7 · Manual & Modalities (moss) */
+  --cat-manual-soft: #EBEEDB;
+  --cat-manual-ink:  #3E4621;
+
+  --cat-practice:      #434952;  /* 8 · Practice & Profession (graphite) */
+  --cat-practice-soft: #E8EAEC;
+  --cat-practice-ink:  #31363D;
+
+  --cat-tech:      #2A6F77;  /* 9 · Rehab Tech (teal) — cross-cutting overlay,
+                                not a 9th specialty: items keep their clinical
+                                category and additionally carry tech:true */
+  --cat-tech-soft: #DFEDEE;
+  --cat-tech-ink:  #1E5258;
+
+  /* ============================================================
+     Semantic aliases — reference these in components, not raw scales
+     ============================================================ */
+  --color-primary:        var(--blue-600);
+  --color-primary-hover:  var(--blue-700);
+  --color-primary-press:  var(--blue-800);
+  --color-primary-soft:   var(--blue-100);
+  --color-primary-softer: var(--blue-50);
+  --on-primary:           var(--white);
+
+  --surface-page:    var(--paper);
+  --surface-card:    var(--white);
+  --surface-raised:  var(--white);
+  --surface-sunken:  var(--ink-50);
+  --surface-hover:   var(--ink-50);
+  --surface-active:  var(--blue-50);
+  --surface-inverse: var(--ink-900);
+
+  --border-subtle:  var(--ink-200);
+  --border-default: var(--ink-300);
+  --border-strong:  var(--ink-400);
+  --border-focus:   var(--blue-500);
+
+  --text-primary:   var(--ink-900);
+  --text-secondary: var(--ink-600);
+  --text-tertiary:  var(--ink-500);
+  --text-disabled:  var(--ink-400);
+  --text-link:      var(--blue-700);
+  --text-on-inverse: var(--paper);
+
+  --focus-ring: 0 0 0 3px var(--blue-200);
+}

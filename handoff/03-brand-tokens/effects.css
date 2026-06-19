@@ -1,0 +1,35 @@
+/* ============================================================
+   GreenStack — Elevation, borders, motion tokens
+   Shadows are soft and low-contrast — this is an editorial product,
+   not a card-heavy dashboard. Most separation comes from hairline
+   borders; shadow appears on hover/raise only.
+   ============================================================ */
+
+:root {
+  --shadow-none: none;
+  --shadow-xs: 0 1px 2px rgba(13, 32, 27, 0.05);
+  --shadow-sm: 0 1px 3px rgba(13, 32, 27, 0.06), 0 1px 2px rgba(13, 32, 27, 0.04);
+  --shadow-md: 0 6px 16px -4px rgba(13, 32, 27, 0.10), 0 2px 6px -2px rgba(13, 32, 27, 0.06);
+  --shadow-lg: 0 16px 40px -8px rgba(13, 32, 27, 0.16), 0 4px 12px -4px rgba(13, 32, 27, 0.08);
+  --shadow-inset: inset 0 1px 2px rgba(13, 32, 27, 0.06);
+
+  /* Hover lift used by interactive cards */
+  --shadow-card-hover: 0 10px 28px -8px rgba(13, 32, 27, 0.14), 0 2px 6px -2px rgba(13, 32, 27, 0.06);
+
+  /* Motion — quick, no bounce. Restrained, professional. */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-in:       cubic-bezier(0.4, 0, 1, 1); /* @kind other */
+
+  --duration-fast:  120ms; /* @kind other */
+  --duration-base:  180ms; /* @kind other */
+  --duration-slow:  260ms; /* @kind other */
+
+  --transition-colors: color var(--duration-fast) var(--ease-standard),
+                       background-color var(--duration-fast) var(--ease-standard),
+                       border-color var(--duration-fast) var(--ease-standard);
+  --transition-transform: transform var(--duration-base) var(--ease-out);
+  --transition-card: box-shadow var(--duration-base) var(--ease-out),
+                     border-color var(--duration-base) var(--ease-standard),
+                     transform var(--duration-base) var(--ease-out);
+}

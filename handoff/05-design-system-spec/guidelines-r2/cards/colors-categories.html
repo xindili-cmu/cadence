@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x250" name="Specialty accents — 8 categories" subtitle="One hue per PT specialty. Solid bar + soft/ink chip" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; background: var(--surface-page); font-family: var(--font-sans); padding: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cat { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border-subtle); }
+  .solid { height: 40px; }
+  .meta { padding: 7px 9px; }
+  .nm { font-size: 12px; font-weight: 600; color: var(--ink-800); }
+  .chip { display: inline-block; margin-top: 5px; font-family: var(--font-mono); font-size: 9.5px; padding: 2px 6px; border-radius: 3px; }
+</style>
+</head>
+<body>
+  <div class="grid">
+    <div class="cat"><div class="solid" style="background:var(--cat-ortho)"></div><div class="meta"><div class="nm">Orthopedic</div><span class="chip" style="background:var(--cat-ortho-soft);color:var(--cat-ortho-ink)">#3C4C6E</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-neuro)"></div><div class="meta"><div class="nm">Neurological</div><span class="chip" style="background:var(--cat-neuro-soft);color:var(--cat-neuro-ink)">#463E7C</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-sports)"></div><div class="meta"><div class="nm">Sports</div><span class="chip" style="background:var(--cat-sports-soft);color:var(--cat-sports-ink)">#9B4A2C</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-pediatric)"></div><div class="meta"><div class="nm">Pediatric</div><span class="chip" style="background:var(--cat-pediatric-soft);color:var(--cat-pediatric-ink)">#876418</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-geriatric)"></div><div class="meta"><div class="nm">Geriatric</div><span class="chip" style="background:var(--cat-geriatric-soft);color:var(--cat-geriatric-ink)">#2F5D52</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-cardiopulm)"></div><div class="meta"><div class="nm">Cardiopulm</div><span class="chip" style="background:var(--cat-cardiopulm-soft);color:var(--cat-cardiopulm-ink)">#8C3B43</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-manual)"></div><div class="meta"><div class="nm">Manual &amp; Mod.</div><span class="chip" style="background:var(--cat-manual-soft);color:var(--cat-manual-ink)">#545F2E</span></div></div>
+    <div class="cat"><div class="solid" style="background:var(--cat-practice)"></div><div class="meta"><div class="nm">Practice</div><span class="chip" style="background:var(--cat-practice-soft);color:var(--cat-practice-ink)">#434952</span></div></div>
+  </div>
+</body>
+</html>
