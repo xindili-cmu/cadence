@@ -264,8 +264,8 @@ function buildCaption(dateStr, stories, spansTwoDays) {
   const cats = [...new Set(stories.map((s) => catOf(s.category).zh))];
   const body = [
     CURATED
-      ? `我们替你刷完了近期的康复新文献，精选 ${stories.length} 篇最值得看的👇`
-      : `AI 帮你刷完了${spansTwoDays ? '这两天' : '昨天'}的康复新文献，挑出 ${stories.length} 篇最值得看的👇`,
+      ? `我们帮你刷完了近期的康复新文献，精选 ${stories.length} 篇最值得看的👇`
+      : `我们帮你刷完了${spansTwoDays ? '这两天' : '昨天'}的康复新文献，挑出 ${stories.length} 篇最值得看的👇`,
     '',
     ...lines,
     '',
