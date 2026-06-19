@@ -754,7 +754,7 @@ function AboutView({ onView, mobile }) {
                 </div>
               ))}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: '12px 14px', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--text-secondary)' }}>+ 30+</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--text-secondary)' }}>+ 40+</span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-tertiary)' }}>{tt('更多来源', 'more')}</span>
               </div>
             </div>
