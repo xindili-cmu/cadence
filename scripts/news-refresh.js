@@ -34,6 +34,11 @@
 const fs = require('fs');
 const path = require('path');
 
+// Embedding-based hot topics (semantic clustering over Voyage vectors). Both
+// modules are CLI-guarded, so requiring them here has no side effects.
+const { embedMissing } = require('./embed-items');
+const { computeHotTopicsEmbed } = require('./hot-topics-embed');
+
 const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
@@ -1059,8 +1064,20 @@ async function main() {
   // Cluster-aware merge: a re-found story unions its related-source list
   // instead of being silently dropped, so heat can build across days.
   const merged = clusterItems([...final, ...existing], byCuratedScore).slice(0, MAX_ITEMS);
-  const hotTopics = computeHotTopics(merged);
-  console.log(`   Hot topics: ${hotTopics.length}`);
+  // Hot topics: prefer semantic clustering over Voyage embeddings; fall back to
+  // the legacy tag+source heuristic if VOYAGE_API_KEY is missing or the API
+  // errors, so a refresh never breaks on the embedding path.
+  let hotTopics;
+  try {
+    if (!process.env.VOYAGE_API_KEY) throw new Error('VOYAGE_API_KEY not set');
+    const embCache = await embedMissing(merged, { verbose: true });
+    hotTopics = computeHotTopicsEmbed(merged, embCache);
+    console.log(`   Hot topics (embedding): ${hotTopics.length}`);
+  } catch (e) {
+    console.warn(`   ⚠️  embedding hot-topics unavailable (${e.message}); using tag-based fallback`);
+    hotTopics = computeHotTopics(merged);
+    console.log(`   Hot topics (tag-based): ${hotTopics.length}`);
+  }
 
   // Archive — every item that makes it into news.json is mirrored once into
   // archive/YYYY-MM.json so stories rotating out (7-day cutoff / MAX_ITEMS cap)

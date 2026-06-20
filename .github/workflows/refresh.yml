@@ -57,6 +57,9 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          # Embedding-based hot topics (Voyage). If the Secret is absent,
+          # news-refresh.js silently falls back to the legacy tag-based heuristic.
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
           # 2-hourly cron → free direct legs; daily 21:30 UTC cron and manual
           # dispatch (unless overridden) → full sweep.
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}
