@@ -1525,6 +1525,8 @@ function FeedApp() {
   const [category, setCategory] = React.useState(_h0.category);
   const [ctype, setCtype] = React.useState(_h0.ctype);
   const [minScore, setMinScore] = React.useState(_h0.minScore);
+  const [sigHelpOpen, setSigHelpOpen] = React.useState(false);
+  const sigHelpRef = React.useRef(null);
   const [query, setQuery] = React.useState(_h0.query);
   const [selected, setSelected] = React.useState(null);
   // Daily-edition date — lifted here so DailyBriefView and the right-rail
@@ -1576,6 +1578,16 @@ function FeedApp() {
   const ALL_PAGE_SIZE = 7;
   const [visibleDays, setVisibleDays] = React.useState(ALL_PAGE_SIZE);
   React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query, ctype, minScore]);
+
+  // Slider's SIGNAL-score explainer popover: close on outside-click / Escape.
+  React.useEffect(() => {
+    if (!sigHelpOpen) return;
+    const onDoc = (e) => { if (sigHelpRef.current && !sigHelpRef.current.contains(e.target)) setSigHelpOpen(false); };
+    const onKey = (e) => { if (e.key === 'Escape') setSigHelpOpen(false); };
+    document.addEventListener('mousedown', onDoc);
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('mousedown', onDoc); document.removeEventListener('keydown', onKey); };
+  }, [sigHelpOpen]);
 
   // 中英切换 — setLang re-renders the tree; every component reads
   // CD_LANG / CD_T at render time, so the flip is instant and complete.
@@ -1756,15 +1768,27 @@ function FeedApp() {
                 {/* Signal-score filter — drag the slider to set a minimum score.
                     Far left (≤60) = all; drag right raises the floor (data spans 60–85). */}
                 <span style={{ flex: 'none', width: 1, alignSelf: 'stretch', minHeight: 20, background: 'var(--border-subtle)', margin: '0 2px' }} />
-                <div style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                <div style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}
                   title={zh ? '拖动设置信号分下限' : 'Drag to set a minimum Signal score'}>
                   <input type="range" min={60} max={85} step={5} value={minScore || 60}
                     onChange={(e) => { const v = +e.target.value; setMinScore(v <= 60 ? 0 : v); }}
                     aria-label={zh ? '信号分下限' : 'Minimum Signal score'}
                     style={{ width: 104, accentColor: 'var(--signal-mid)', cursor: 'pointer' }} />
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', minWidth: 52,
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', minWidth: 66,
                     color: minScore ? 'var(--signal-mid)' : 'var(--text-tertiary)' }}>
-                    {minScore ? `≥ ${minScore}` : (zh ? '全部' : 'All')}</span>
+                    {minScore ? (zh ? `信号 ≥ ${minScore}` : `Signal ≥ ${minScore}`) : (zh ? '信号·全部' : 'Signal: all')}</span>
+                  <span ref={sigHelpRef} style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}>
+                    <button type="button" onClick={() => setSigHelpOpen((v) => !v)} aria-label={t('signalScore')} aria-expanded={sigHelpOpen}
+                      style={{ display: 'inline-flex', alignItems: 'center', padding: 2, background: 'none', border: 'none', cursor: 'pointer',
+                        color: sigHelpOpen ? 'var(--green-700, var(--text-secondary))' : 'var(--text-tertiary)' }}>
+                      <Icon name="info" size={14} />
+                    </button>
+                    {sigHelpOpen && (
+                      <div role="tooltip" style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, zIndex: 50, width: 'min(300px, 78vw)', padding: '12px 14px', background: 'var(--surface-card, #fff)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md, 0 10px 30px -12px rgba(27,30,35,0.25))', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.65, color: 'var(--text-secondary)', textAlign: 'left' }}>
+                        {t('signalScore.help')}
+                      </div>
+                    )}
+                  </span>
                 </div>
               </div>
             </div>
