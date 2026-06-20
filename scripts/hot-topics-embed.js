@@ -124,30 +124,45 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
     // theme. "Covered across N journals" is the honest hotness signal for a
     // literature feed. Fall back to the fetch source when journal is missing.
     const journals = new Set(members.map(m => m.journal || m.source).filter(Boolean));
-    // Dominant sub-tag → the `tag` field the UI shows as the theme label.
+    // Sub-tags ranked by frequency → the `tag` field the UI shows as the theme
+    // label. Keep the full ranking so duplicate labels can be broken below.
     const tagCount = {};
     for (const m of members) for (const t of (m.tags || []).slice(1)) {
       if (!GENERIC_TAGS.has(t)) tagCount[t] = (tagCount[t] || 0) + 1;
     }
-    const tag = Object.entries(tagCount).sort((a, b) => b[1] - a[1])[0]?.[0] || top.category;
+    const tagRanked = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).map(e => e[0]);
+    const tag = tagRanked[0] || top.category;
     return {
       id: top.id, title: top.title, sourceUrl: top.sourceUrl, category: top.category,
       publishedAt: newest.publishedAt,
       // sourceCount/sources now carry JOURNALS (client recomputes heat =
       // sourceCount × decay; wechat-brief lists them as "X 家期刊在报").
       sourceCount: journals.size, sources: [...journals],
-      tag, kind: 'theme',
+      tag, kind: 'theme', _tagRanked: tagRanked,
       members: members.map(m => ({ source: m.source, journal: m.journal, title: m.title, titleZh: m.titleZh })),
       heat: Math.round(journals.size * decay(newest.publishedAt) * 100) / 100,
     };
   });
 
   const seen = new Set();
-  return topics
+  const top = topics
     .filter(t => t.heat >= 1.2)                 // mirror the client-side hide rule
     .sort((a, b) => b.heat - a.heat)
     .filter(t => (seen.has(t.id) ? false : seen.add(t.id)))
     .slice(0, 5);
+
+  // Distinct labels: when two themes share a dominant sub-tag (e.g. two stroke
+  // clusters), the higher-heat one keeps it and the next takes its most common
+  // *unused* sub-tag — so the strip never shows the same tag twice. Strip the
+  // temporary ranking field so it never reaches news.json.
+  const usedTags = new Set();
+  for (const t of top) {
+    const pick = (t._tagRanked || []).find(tg => !usedTags.has(tg)) || t.tag;
+    t.tag = pick;
+    usedTags.add(pick);
+    delete t._tagRanked;
+  }
+  return top;
 }
 
 module.exports = { computeHotTopicsEmbed };
