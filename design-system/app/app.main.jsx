@@ -1034,7 +1034,7 @@ const dailyCatShort = (c) => {
   }
   return DAILY_CAT_SHORT[c] || c;
 };
-const dailyScoreColor = (s) => (s >= 85 ? '#2A5894' : s >= 75 ? '#1B1E23' : '#9098A0');
+const dailyScoreColor = (s) => (s >= 90 ? '#2A5894' : s >= 80 ? '#1B1E23' : '#9098A0');
 
 // Meta line on every daily card: ● specialty / 信号分 score / SOURCE.
 // `highlight` = the lead card's emphasised variant (brand-blue specialty, larger).
@@ -1312,7 +1312,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
 
   // 晨间查房 tiering (Cindy 2026-06-12): organized by evidence/actionability,
   // not specialty — the axis AIHOT doesn't have. Tier 1 = top signal with its
-  // clinical take; tier 2 = practice-changing (score ≥ 80); tier 3 = compact
+  // clinical take; tier 2 = worth-knowing & up (score ≥ 80); tier 3 = compact
   // expandable rows. Driven entirely by curatedScore — no extra LLM call.
   const allItems = edition.sections.flatMap((sec) => sec.items).map(window.cdTransformItem);
   const ranked = [...allItems].sort((a, b) => b.score - a.score);
@@ -1496,16 +1496,19 @@ function cdParseHash() {
   const date = (view === 'daily' && /^\d{4}-\d{2}-\d{2}$/.test(segs[1])) ? segs[1] : null;
   const q    = params.get('q') || '';
   const type = CD_CTYPES.includes(params.get('type')) ? params.get('type') : 'all';
-  return { view, category: cat, query: q, dailyDate: date, ctype: type };
+  const _min = parseInt(params.get('min'), 10);
+  const min  = (_min >= 65 && _min <= 85) ? Math.round(_min / 5) * 5 : 0;
+  return { view, category: cat, query: q, dailyDate: date, ctype: type, minScore: min };
 }
 
-function cdWriteHash(view, category, query, dailyDate, ctype) {
+function cdWriteHash(view, category, query, dailyDate, ctype, minScore) {
   let h = view;
   if (view === 'daily' && dailyDate) h += '/' + dailyDate;
   else if (category && category !== 'all') h += '/' + category;
   const params = [];
   if (query) params.push('q=' + encodeURIComponent(query));
   if (ctype && ctype !== 'all') params.push('type=' + ctype);
+  if (minScore) params.push('min=' + minScore);
   if (params.length) h += '?' + params.join('&');
   if (h !== (location.hash || '').replace(/^#/, ''))
     history.replaceState(null, '', '#' + h);
@@ -1521,6 +1524,7 @@ function FeedApp() {
   const [view, setView] = React.useState(_h0.view);
   const [category, setCategory] = React.useState(_h0.category);
   const [ctype, setCtype] = React.useState(_h0.ctype);
+  const [minScore, setMinScore] = React.useState(_h0.minScore);
   const [query, setQuery] = React.useState(_h0.query);
   const [selected, setSelected] = React.useState(null);
   // Daily-edition date — lifted here so DailyBriefView and the right-rail
@@ -1531,13 +1535,13 @@ function FeedApp() {
   const _hashBusy = React.useRef(false);
   React.useEffect(() => {
     if (_hashBusy.current) return;
-    cdWriteHash(view, category, query, dailyDate, ctype);
-  }, [view, category, query, dailyDate, ctype]);
+    cdWriteHash(view, category, query, dailyDate, ctype, minScore);
+  }, [view, category, query, dailyDate, ctype, minScore]);
   React.useEffect(() => {
     const onHash = () => {
       _hashBusy.current = true;
       const h = cdParseHash();
-      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate); setCtype(h.ctype);
+      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate); setCtype(h.ctype); setMinScore(h.minScore);
       requestAnimationFrame(() => { _hashBusy.current = false; });
     };
     window.addEventListener('hashchange', onHash);
@@ -1571,7 +1575,7 @@ function FeedApp() {
   // hundreds of cards into the DOM at once. Reset when the filter changes.
   const ALL_PAGE_SIZE = 7;
   const [visibleDays, setVisibleDays] = React.useState(ALL_PAGE_SIZE);
-  React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query, ctype]);
+  React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query, ctype, minScore]);
 
   // 中英切换 — setLang re-renders the tree; every component reads
   // CD_LANG / CD_T at render time, so the flip is instant and complete.
@@ -1621,6 +1625,8 @@ function FeedApp() {
     else if (category !== 'all' && s.category !== category) return false;
     // Content-type axis (research / news / guideline / policy) = tags[0].
     if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
+    // Signal-score floor (opt-in, ?min=80) — only items at/above the threshold.
+    if (minScore && s.score < minScore) return false;
     // Search across both languages regardless of display language.
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
@@ -1732,7 +1738,7 @@ function FeedApp() {
           )}
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
-          {!isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
+          {!isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && !minScore && (
             <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} mobile={isMobile} />
           )}
 
@@ -1747,6 +1753,19 @@ function FeedApp() {
                 <TypeTabs value={ctype} onChange={setCtype}
                   className={isMobile ? 'cd-hscroll' : undefined}
                   style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2, flex: 1, minWidth: 0 } : undefined} />
+                {/* Signal-score filter — drag the slider to set a minimum score.
+                    Far left (≤60) = all; drag right raises the floor (data spans 60–85). */}
+                <span style={{ flex: 'none', width: 1, alignSelf: 'stretch', minHeight: 20, background: 'var(--border-subtle)', margin: '0 2px' }} />
+                <div style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                  title={zh ? '拖动设置信号分下限' : 'Drag to set a minimum Signal score'}>
+                  <input type="range" min={60} max={85} step={5} value={minScore || 60}
+                    onChange={(e) => { const v = +e.target.value; setMinScore(v <= 60 ? 0 : v); }}
+                    aria-label={zh ? '信号分下限' : 'Minimum Signal score'}
+                    style={{ width: 104, accentColor: 'var(--signal-mid)', cursor: 'pointer' }} />
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', minWidth: 52,
+                    color: minScore ? 'var(--signal-mid)' : 'var(--text-tertiary)' }}>
+                    {minScore ? `≥ ${minScore}` : (zh ? '全部' : 'All')}</span>
+                </div>
               </div>
             </div>
           )}

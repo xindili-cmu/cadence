@@ -59,8 +59,8 @@
   --signal-info: var(--blue-500);
 
   /* ---- SIGNAL score tiers — a 3-step authority scale within the blue family
-     (not traffic lights): navy ≥85 practice-changing · scrubs 65–84 worth
-     knowing · clay <65 reference. Consumed by SignalScore. ---- */
+     (not traffic lights): navy ≥90 practice-changing · scrubs 80–89 worth
+     knowing · clay 65–79 reference. Consumed by SignalScore. ---- */
   --signal-high:      var(--blue-800);
   --signal-high-soft: #E7EEF5;
   --signal-mid:       var(--blue-600);
