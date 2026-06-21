@@ -146,12 +146,13 @@
       "practice"
     ],
     "scrape": [
-      "https://www.apta.org/news"
+      "https://www.apta.org/news",
+      "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs"
     ]
   },
   {
     "name": "APA (AU)",
-    "domain": "physiotherapy.asn.au",
+    "domain": "australian.physio",
     "url": "https://australian.physio",
     "kind": "association",
     "regions": [
@@ -159,6 +160,9 @@
     ],
     "cats": [
       "practice"
+    ],
+    "scrape": [
+      "https://australian.physio/inmotion"
     ]
   },
   {
@@ -216,6 +220,9 @@
     ],
     "cats": [
       "practice"
+    ],
+    "scrape": [
+      "https://www.statnews.com/category/health/"
     ]
   },
   {
@@ -228,6 +235,9 @@
     ],
     "cats": [
       "practice"
+    ],
+    "scrape": [
+      "https://www.modernhealthcare.com/"
     ]
   },
   {
@@ -240,18 +250,24 @@
     ],
     "cats": [
       "practice"
+    ],
+    "scrape": [
+      "https://www.reuters.com/business/healthcare-pharmaceuticals/"
     ]
   },
   {
     "name": "Physiopedia",
-    "domain": "physio-pedia.com",
-    "url": "https://www.physio-pedia.com",
+    "domain": "physiospot.com",
+    "url": "https://www.physiospot.com",
     "kind": "platform",
     "regions": [
       "Global"
     ],
     "cats": [
       "manual-modality"
+    ],
+    "rss": [
+      "https://www.physiospot.com/feed/"
     ]
   },
   {
@@ -264,6 +280,9 @@
     ],
     "cats": [
       "practice"
+    ],
+    "scrape": [
+      "https://www.webpt.com/blog"
     ]
   },
   {
@@ -291,6 +310,57 @@
     "kind": "news",
     "regions": [
       "CN"
+    ],
+    "cats": [
+      "practice"
+    ],
+    "scrape": [
+      "https://www.cn-healthcare.com/"
+    ]
+  },
+  {
+    "name": "AJMC",
+    "domain": "ajmc.com",
+    "url": "https://www.ajmc.com",
+    "kind": "news",
+    "regions": [
+      "US"
+    ],
+    "cats": [
+      "practice"
+    ]
+  },
+  {
+    "name": "Medical Dialogues",
+    "domain": "medicaldialogues.in",
+    "url": "https://www.medicaldialogues.in",
+    "kind": "news",
+    "regions": [
+      "IN"
+    ],
+    "cats": [
+      "practice"
+    ]
+  },
+  {
+    "name": "Spinal Surgery News",
+    "domain": "spinalsurgerynews.com",
+    "url": "https://www.spinalsurgerynews.com",
+    "kind": "news",
+    "regions": [
+      "UK"
+    ],
+    "cats": [
+      "orthopedic"
+    ]
+  },
+  {
+    "name": "Doctorally",
+    "domain": "doctorally.tw",
+    "url": "https://health.doctorally.tw",
+    "kind": "news",
+    "regions": [
+      "TW"
     ],
     "cats": [
       "practice"

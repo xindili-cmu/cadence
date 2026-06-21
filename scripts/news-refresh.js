@@ -312,12 +312,27 @@ const REHAB_SIGNAL = [
   /\bpulmonary rehab/i, /\bcardiac rehab/i, /\bsit-to-stand\b/i,
   '康复', '物理治疗', '运动', '步态', '平衡', '肌力', '功能',
 ];
+// Retraction / withdrawal notices — invalid science, drop regardless of topic
+// (a retracted PT study still shouldn't surface).
+const RETRACTION = [/撤稿/, /\bretraction\b/i, /\bretracted\b/i, /\bwithdrawn\b/i];
+// Journal front-matter — obituaries, world-report news, perspectives, photo
+// competitions, prizes, book reviews. These ride in on journal RSS (esp. The
+// Lancet) and get mis-tagged "news". Match the bracketed section tags (EN + ZH).
+// Treated like SOFT: drop unless a rehab signal is present, so a genuine rehab
+// editorial/comment still survives.
+const JOURNAL_FRONT_MATTER = [
+  /\[\s*(editorial|perspectives?|comment|correspondence|obituary|world report|department of error|dept\.? of error|profile|feature|book review|in memoriam)\s*\]/i,
+  /[\[【（]\s*(评论|视角|世界报道|讣告|社论|通讯|书评|人物|特写|来信)\s*[\]】）]/,
+  /\bwakley prize\b/i, /\bphoto(graphy)? competition\b/i, /摄影比赛/,
+];
 function isRehabRelevant(item) {
   const text = `${item.title || ''} ${item.summary || ''} ${item.titleZh || ''} ${item.summaryZh || ''}`;
   if (OFFTOPIC_HARD.some((re) => re.test(text))) return false; // pharma trial → drop, no veto
-  if (!OFFTOPIC_SOFT.some((re) => re.test(text))) return true; // nothing off-topic → keep
+  if (RETRACTION.some((re) => re.test(text))) return false;    // retraction notice → drop, no veto
+  const offtopic = OFFTOPIC_SOFT.some((re) => re.test(text)) || JOURNAL_FRONT_MATTER.some((re) => re.test(text));
+  if (!offtopic) return true;                                  // nothing off-topic → keep
   const rehab = REHAB_SIGNAL.some((p) => (p instanceof RegExp ? p.test(text) : text.includes(p)));
-  return rehab; // disease-state term present → keep only if a rehab signal vetoes
+  return rehab; // disease-state OR front-matter term present → keep only if a rehab signal vetoes
 }
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
@@ -1045,13 +1060,30 @@ async function main() {
     })
     .sort((a, b) => b.curatedScore - a.curatedScore);
 
-  // Merge with existing (keep 7 days)
+  // Merge with existing — carry window differs by content type (tags[0]).
+  // Research gets a fresh PubMed stream daily, so the original publishedAt-based
+  // 7-day window keeps it current. Guideline / policy / news are rare and often
+  // near-static, and their publishedAt is frequently the ORIGINAL (old)
+  // publication date — a publishedAt window would drop them on the very next run
+  // and leave their front tabs empty (only "All"/archive would show them).
+  // Retain those on firstSeen (when WE caught it) with a longer window so the
+  // tabs stay populated between updates.
+  const CARRY_DAYS = { news: 30, guideline: 90, policy: 90 }; // non-research: firstSeen-based
+  const RESEARCH_CARRY_DAYS = 7;                              // research / default: publishedAt-based
+  const _carryNow = Date.now();
+  const inCarryWindow = (i) => {
+    const ext = CARRY_DAYS[(i.tags || [])[0]];
+    if (ext != null) {
+      const seen = new Date(i.firstSeen || i.publishedAt).getTime();
+      return seen > _carryNow - ext * 86400000;
+    }
+    return new Date(i.publishedAt).getTime() > _carryNow - RESEARCH_CARRY_DAYS * 86400000;
+  };
   let existing = [];
   try {
     const old = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
-    const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - 7);
     existing = (old.items || [])
-      .filter(i => new Date(i.publishedAt) > cutoff)
+      .filter(inCarryWindow)
       // Re-validate against the roster so items from since-removed sources
       // age out immediately, and relabel in case a source was renamed.
       // Backfill firstSeen for legacy items (pre-firstSeen) from publishedAt —
