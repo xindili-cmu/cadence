@@ -249,17 +249,17 @@ const PUBMED_QUERIES = [
 // archive (scripts/backfill-tech.js). Tune the lists, rerun the backfill.
 const TECH_PATTERNS = [
   /\bmachine[ -]learning\b/i, /\bdeep[ -]learning\b/i, /\bartificial intelligence\b/i,
-  /\bneural network/i, /\bAI\b/, /\bML\b/,
+  /\b(artificial|convolutional|recurrent|graph|deep)[ -]neural network/i, /\bAI\b/, /\bML\b/,
   /\bvirtual reality\b/i, /\bVR\b/, /\baugmented reality\b/i, /\bmixed reality\b/i,
   /\bexoskeleton/i, /\brobot/i, /\bwearable/i, /\bsensor(s|-based)?\b/i,
   /\btele-?rehab/i, /\btelehealth\b/i, /\btelemedicine\b/i, /\bm-?health\b/i,
   /\bsmartphone/i, /\bmobile app/i, /\bapp-based\b/i, /\bdigital health\b/i,
-  /\bdigital therapeutic/i, /\bgamif/i, /\bvideo ?gam/i, /\bbrain[- ]computer interface/i,
+  /\bdigital therapeutic/i, /\bdigital rehab/i, /\bremotely[ -]delivered\b/i, /\bgamif/i, /\bvideo ?gam/i, /\bbrain[- ]computer interface/i,
 ];
 const TECH_ZH = [
-  '机器学习', '人工智能', '深度学习', '神经网络', '虚拟现实', '增强现实', '混合现实',
+  '机器学习', '人工智能', '深度学习', '人工神经网络', '卷积神经网络', '循环神经网络', '图神经网络', '虚拟现实', '增强现实', '混合现实',
   '外骨骼', '机器人', '可穿戴', '传感器', '远程康复', '远程医疗', '智能手机',
-  '手机应用', '移动应用', '应用程序', '数字健康', '数字疗法', '游戏化', '脑机接口',
+  '手机应用', '移动应用', '应用程序', '数字健康', '数字疗法', '数字康复', '远程运动', '游戏化', '脑机接口',
 ];
 function isTech(item) {
   // Title + summary ONLY — LLM-assigned tags are deliberately excluded: they
