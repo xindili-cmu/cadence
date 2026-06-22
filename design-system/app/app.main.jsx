@@ -136,13 +136,13 @@ function HotTopicsStrip({ topics, onPick, mobile = false }) {
           // fall back to the presence of `tag` (theme topics always have one).
           const isTheme = (t.kind || (t.tag ? 'theme' : 'story')) === 'theme';
           const tip = isTheme && (t.members || []).length
-            ? t.members.map((m) => `${m.source} — ${window.CD_LANG === 'zh' ? (m.titleZh || m.title) : m.title}`).join('\n')
+            ? t.members.map((m) => `${m.source} — ${window.CD_LANG === 'zh' ? (m.titleZh || m.title) : (m.titleEn || m.title)}`).join('\n')
             : (t.sources || []).join(' · ');
           const idxEl = (
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 700, color: i === 0 ? 'var(--green-700)' : 'var(--text-tertiary)', flex: 'none', width: 14 }}>{i + 1}</span>
           );
           const titleEl = (
-            <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : t.title}</span>
+            <span style={{ flex: 1, minWidth: 0, fontSize: 13.5, fontWeight: 500, lineHeight: 1.4, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{window.CD_LANG === 'zh' ? (t.titleZh || t.title) : (t.titleEn || t.title)}</span>
           );
           const catEl = cat && (
             <span style={{ flex: 'none', padding: '1px 7px', borderRadius: 'var(--radius-sm)', fontSize: 10.5, fontWeight: 500, background: `var(--cat-${cat.accent}-soft)`, color: `var(--cat-${cat.accent}-ink)`, whiteSpace: 'nowrap' }}>{cat.short || cat.label}</span>
@@ -1365,13 +1365,16 @@ function DailyBriefView({ L, date, onDate, mobile }) {
         </section>
       )}
 
-      {/* Tier 2 — worth a closer read (practice-changing): card + take */}
+      {/* Tier 2 — worth a closer read (practice-changing): 2-col cards with a
+          left specialty color-bar (mixed in from the "信号墙" concept, 2026-06-22).
+          Collapses to a single column on mobile. */}
       {tier2.length > 0 && (
         <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
           <DailySectionHead title={zh ? '值得细读' : 'Worth a closer read'} count={tier2.length} mb={22} zh={zh} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : '1fr 1fr', gap: 16, alignItems: 'start' }}>
             {tier2.map((s) => (
-              <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none', color: 'inherit', background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 14, padding: 26 }}>
+              <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'block', textDecoration: 'none', color: 'inherit', background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 14, padding: '24px 24px 24px 26px', overflow: 'hidden' }}>
+                <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: dailyCardColor(s.category) }} />
                 <DailyMeta s={s} zh={zh} />
                 <h4 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(17px,2.4vw,20px)', lineHeight: 1.4, letterSpacing: '-0.005em', color: 'var(--text-primary)' }}>{s.title}</h4>
                 {s.summary && <p style={{ margin: '11px 0 0', fontSize: 15, lineHeight: 1.74, color: '#5A6068' }}>{s.summary}</p>}
@@ -1381,19 +1384,19 @@ function DailyBriefView({ L, date, onDate, mobile }) {
         </section>
       )}
 
-      {/* Tier 3 — worth knowing: compact cards linking out */}
+      {/* Tier 3 — worth knowing: dense 2-col grid of compact cards (mixed in from
+          the "信号墙" concept, 2026-06-22). score · specialty dot · 2-line title.
+          Collapses to a single column on mobile. */}
       {tier3.length > 0 && (
         <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
-          <DailySectionHead title={zh ? '了解即可' : 'Worth knowing'} count={tier3.length} mb={8} zh={zh} />
-          <div>
+          <DailySectionHead title={zh ? '了解即可' : 'Worth knowing'} count={tier3.length} mb={14} zh={zh} />
+          <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : '1fr 1fr', gap: 10 }}>
             {tier3.map((s) => (
               <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '16px 6px', borderBottom: '1px solid #ECE9DF', textDecoration: 'none', color: 'inherit' }}>
-                <span style={{ flexShrink: 0, width: 34, fontFamily: 'var(--font-mono)', fontSize: 15, fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</span>
-                <span style={{ flex: 1, minWidth: 0, fontSize: 15.5, lineHeight: 1.5, color: '#262A30' }}>{s.title}</span>
-                <span style={{ flexShrink: 0, display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-mono)', fontSize: 12, color: '#8A8F98' }}>
-                  <span style={{ width: 7, height: 7, borderRadius: 2, background: dailyCardColor(s.category) }} />{dailyCatLabel(s.category)}
-                </span>
+                style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', background: '#FFFFFF', border: '1px solid #ECE9DF', borderRadius: 10, textDecoration: 'none', color: 'inherit' }}>
+                <span style={{ flexShrink: 0, width: 28, fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</span>
+                <span title={dailyCatLabel(s.category)} style={{ flexShrink: 0, width: 7, height: 7, borderRadius: 2, background: dailyCardColor(s.category) }} />
+                <span style={{ flex: 1, minWidth: 0, fontSize: 14.5, lineHeight: 1.5, color: '#262A30', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{s.title}</span>
               </a>
             ))}
           </div>
@@ -1412,7 +1415,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
               <li key={f.sourceUrl || i} style={{ borderTop: i ? '1px solid var(--border-subtle)' : 'none' }}>
                 <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer"
                   style={{ display: 'flex', alignItems: 'baseline', gap: 10, padding: '9px 14px', textDecoration: 'none', fontFamily: 'var(--font-sans)' }}>
-                  <span style={{ flex: 1, minWidth: 0, fontSize: 13, lineHeight: 1.5, color: 'var(--text-primary)' }}>{zh ? (f.titleZh || f.title) : f.title}</span>
+                  <span style={{ flex: 1, minWidth: 0, fontSize: 13, lineHeight: 1.5, color: 'var(--text-primary)' }}>{zh ? (f.titleZh || f.title) : (f.titleEn || f.title)}</span>
                   <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{f.source}</span>
                 </a>
               </li>
@@ -1606,7 +1609,9 @@ function FeedApp() {
   // Missing bilingual fields fall back to the original language.
   const L = React.useCallback((s) => (zh
     ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
-    : { ...s, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
+    // titleEn covers non-English-source items (e.g. 中文 source): their `title`
+    // is the original (Chinese), so en mode needs an explicit English title.
+    : { ...s, title: s.titleEn || s.title, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
 
   const DAY_LABELS = cdDayLabels();
 
@@ -1640,7 +1645,7 @@ function FeedApp() {
     // Signal-score floor (opt-in, ?min=80) — only items at/above the threshold.
     if (minScore && s.score < minScore) return false;
     // Search across both languages regardless of display language.
-    if (q && !(`${s.title} ${s.titleZh || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
+    if (q && !(`${s.title} ${s.titleZh || ''} ${s.titleEn || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
   };
   // All view draws from the merged pool (live feed + archive-only stories);
