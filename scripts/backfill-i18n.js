@@ -19,7 +19,10 @@ if (fs.existsSync(ENV_PATH)) {
   }
 }
 
-const { callAnthropic, callGemini, LLM_PROVIDER } = require('./news-refresh.js');
+// Route through callLLM so the script honours LLM_PROVIDER (default 'deepseek').
+// Previously this only dispatched gemini-vs-anthropic and silently ignored
+// the deepseek default, forcing every run onto Anthropic.
+const { callLLM, LLM_PROVIDER } = require('./news-refresh.js');
 
 const SYSTEM = `你是 Cadence（步频）物理治疗新闻站的双语编辑。对输入的每条新闻补三个字段：
 - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（ACL、COPD、RCT 等）保留英文。
@@ -55,7 +58,7 @@ async function backfillFile(filePath) {
       id: i.id, title: i.title, summary: i.summary, curatedReason: i.curatedReason,
     }));
     const user = `补全以下 ${batch.length} 条：\n\n${JSON.stringify(batch, null, 2)}`;
-    const text = LLM_PROVIDER === 'gemini' ? await callGemini(SYSTEM, user) : await callAnthropic(SYSTEM, user);
+    const text = await callLLM(SYSTEM, user);
     const out = parseArray(text);
     out.forEach(o => { if (o.id) byId[o.id] = o; });
     console.log(`  batch ${off / 8 + 1}: ${out.length}/${batch.length} translated`);

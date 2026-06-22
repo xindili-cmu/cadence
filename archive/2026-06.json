@@ -1386,7 +1386,9 @@
         "technology",
         "rehabilitation-robotics"
       ],
-      "tech": true
+      "tech": true,
+      "titleZh": "单节点传感器 + Transformer-CNN 模型实现腰部康复动作识别",
+      "summaryZh": "一项研究提出基于 Transformer-卷积神经网络的模型，仅使用单个惯性传感器节点即可识别腰部康复训练动作。"
     },
     {
       "id": "news-1781060650094-7",
@@ -1402,7 +1404,9 @@
         "research",
         "spine",
         "orthotics"
-      ]
+      ],
+      "titleZh": "腰骶矫形器治疗慢性非特异性腰痛：系统综述的临床效果证据",
+      "summaryZh": "一项系统综述评估了腰骶矫形器在慢性非特异性腰痛中的临床有效性。"
     },
     {
       "id": "news-1781175847816-17",
@@ -1503,7 +1507,9 @@
         "parkinson",
         "vestibular"
       ],
-      "studyDesign": "观察研究"
+      "studyDesign": "观察研究",
+      "titleZh": "帕金森病伴 Pisa 综合征患者的中枢前庭处理异常",
+      "summaryZh": "该研究发现，伴 Pisa 综合征的帕金森病患者存在特异性的中枢前庭处理改变。"
     },
     {
       "id": "news-1781154195335-8",
@@ -1541,7 +1547,9 @@
         "falls-prevention",
         "balance",
         "strength-training"
-      ]
+      ],
+      "titleZh": "运动预防帕金森病患者跌倒：一项 RCT",
+      "summaryZh": "该 RCT 纳入 231 名帕金森病患者，验证针对平衡差、下肢肌力弱及步态冻结的低监督运动方案能否预防跌倒。"
     },
     {
       "id": "news-1781088546366-4",
@@ -1579,7 +1587,9 @@
         "pelvic-floor",
         "chronic-pain",
         "neurological"
-      ]
+      ],
+      "titleZh": "慢性盆腔痛女性的感觉运动功能与身体知觉改变：范围综述",
+      "summaryZh": "一篇范围综述探讨了慢性盆腔痛女性在感觉、运动功能及身体知觉方面的多维异常。"
     },
     {
       "id": "news-1781060650094-24",
@@ -1595,7 +1605,9 @@
         "research",
         "spinal-cord",
         "ethics"
-      ]
+      ],
+      "titleZh": "脊髓损伤运动康复 RCT 中的女性受试者参与度：系统综述",
+      "summaryZh": "一项系统综述调查了脊髓损伤后运动康复随机对照试验中女性的参与比例，揭示潜在性别代表性鸿沟。"
     },
     {
       "id": "news-1781060650094-0",
@@ -1611,7 +1623,9 @@
         "research",
         "spine",
         "chronic-pain"
-      ]
+      ],
+      "titleZh": "核心稳定性 vs. 姿势控制训练对慢性非特异性腰痛的效果比较",
+      "summaryZh": "该综述对比了核心稳定性训练与姿势控制训练在慢性非特异性腰痛患者疼痛、失能和感觉运动功能方面的效果。"
     },
     {
       "id": "news-1781175847816-18",
@@ -1650,7 +1664,9 @@
         "gait",
         "neurological",
         "modalities"
-      ]
+      ],
+      "titleZh": "感觉刺激与物理治疗有效改善帕金森病步态表现",
+      "summaryZh": "AJMC 报道指出，感觉刺激和物理治疗（包括电刺激与平衡干预）可有效改善帕金森病患者步态。"
     },
     {
       "id": "news-1781154195335-6",
@@ -1688,7 +1704,10 @@
         "spine",
         "education",
         "patient-education"
-      ]
+      ],
+      "titleZh": "透明度≠循证：YouTube腰痛自我管理视频的质量与指南一致性分析",
+      "summaryZh": "该研究对YouTube腰痛自我管理视频进行多维度质量分析，发现视频的透明度并不等同于内容遵循循证指南。",
+      "curatedReasonEn": "Your patients are watching this stuff. This study arms you with the specific failings of YouTube's most-viewed low back pain self-management videos so you can directly debunk them in the clinic."
     },
     {
       "id": "news-1781060650094-12",
@@ -1705,7 +1724,10 @@
         "knee",
         "modalities",
         "post-surgical"
-      ]
+      ],
+      "titleZh": "冷疗联合标准康复能否加速膝关节置换术后早期功能恢复：一项回顾性队列研究",
+      "summaryZh": "这项回顾性队列研究评估了冷疗联合标准康复对膝关节置换术后早期功能恢复的影响，为冷疗作为辅助手段的有效性提供数据。",
+      "curatedReasonEn": "Cryotherapy is cheap and common, but the evidence for adding it to standard rehab post-TKA is weak. This retrospective study won't settle the debate, so don't oversell the modality's impact to your patients based on this design."
     },
     {
       "id": "news-1781176763531-39",
@@ -1741,7 +1763,10 @@
         "research",
         "shoulder",
         "manual-therapy"
-      ]
+      ],
+      "titleZh": "HVLA高速低幅冲击与肌肉能量技术对冻结肩活动度及疼痛的效果对比",
+      "summaryZh": "该研究在粘连性关节囊炎患者中对比了HVLA冲击手法与MET对肩关节活动度和疼痛的效果。",
+      "curatedReasonEn": "A rare head-to-head of HVLA and MET for adhesive capsulitis is the only reason to read this—but the sample is small and the journal weak, so don't rewrite your protocols. The stage of frozen shoulder should still dictate your technique choice; aggressive HVLA in the freezing stage is a bad bet."
     },
     {
       "id": "news-1781060650094-4",
@@ -1759,7 +1784,10 @@
         "musculoskeletal",
         "technology"
       ],
-      "tech": true
+      "tech": true,
+      "titleZh": "肌肉骨骼疾病的数字化康复干预：临床效果与实施挑战综述",
+      "summaryZh": "该综述梳理了数字化康复干预在肌肉骨骼疾病中的临床有效性证据及实际推广面临的实施障碍。",
+      "curatedReasonEn": "Digital rehab tools are flooding the market, but this review tells you where the evidence holds and where it's just marketing. Pay attention to the implementation barriers—they're where your clinical judgment saves a protocol from failing."
     },
     {
       "id": "news-1781060650094-13",
@@ -1777,7 +1805,10 @@
         "post-surgical",
         "rotator-cuff",
         "adhesive-capsulitis"
-      ]
+      ],
+      "titleZh": "肩关节镜术后康复实证指南：旋转肌袖、Bankart、SLAP及五十肩",
+      "summaryZh": "这份详尽的中文实证指南规定了旋转肌袖、Bankart、SLAP及五十肩关节镜术后的康复方案，强调根据撕裂大小决定活动时机。",
+      "curatedReasonEn": "If you treat Chinese-speaking patients or practice in a Chinese-language market, this evidence-based guideline for post-arthroscopy protocols gives you a direct, clinically ready roadmap that respects tear-size-specific timing."
     },
     {
       "id": "news-1781060650094-23",
@@ -1794,7 +1825,10 @@
         "spinal-cord",
         "icu-rehab",
         "neurological-recovery"
-      ]
+      ],
+      "titleZh": "急性创伤性脊髓损伤的平均动脉压强化管理：神经功能恢复与死亡率的系统综述及Meta分析",
+      "summaryZh": "该系统综述与Meta分析评估了将平均动脉压维持在85–90 mmHg对急性创伤性脊髓损伤后神经功能恢复及死亡率的影响。",
+      "curatedReasonEn": "This meta-analysis on MAP augmentation targets for acute SCI recovery hands you the specific hemodynamic numbers your ICU colleagues are chasing, so you can align your early rehab expectations and avoid clashing with the medical team's goals."
     },
     {
       "id": "news-1781154195335-35",
@@ -1853,7 +1887,10 @@
         "pelvic-floor",
         "sports",
         "women's-health"
-      ]
+      ],
+      "titleZh": "女性马拉松跑者盆底功能障碍症状患病率：智利圣地亚哥马拉松的横断面研究",
+      "summaryZh": "这项横断面研究调查了智利圣地亚哥马拉松女性跑者的盆底功能障碍症状患病率，揭示了高强度耐力运动对盆底的影响。",
+      "curatedReasonEn": "Your female runners are almost certainly not telling you about their pelvic floor symptoms. This cross-sectional data gives you the prevalence numbers to justify screening it in every female endurance athlete, no matter what they initially present for."
     },
     {
       "id": "news-1781154195335-33",
@@ -1911,7 +1948,10 @@
         "research",
         "spine",
         "manual-therapy"
-      ]
+      ],
+      "titleZh": "膈肌肌筋膜松解对慢性非特异性腰痛疼痛、活动度与失能的短期效果：一项随机假对照试验",
+      "summaryZh": "这项随机假对照试验研究膈肌肌筋膜松解对慢性非特异性腰痛患者的短期影响，初步验证了该手法在疼痛与功能改善上的效果。",
+      "curatedReasonEn": "A sham-controlled RCT on diaphragmatic release for low back pain is the minimum level of evidence needed to justify this technique. The short-term effect size tells you whether it's worth adding to your session or just a clinical placebo."
     },
     {
       "id": "news-1781088546366-3",
@@ -1927,7 +1967,10 @@
         "research",
         "spine"
       ],
-      "studyDesign": "RCT"
+      "studyDesign": "RCT",
+      "titleZh": "长期运动疗法对伴严重功能受限的轴性脊柱关节炎：一项 RCT 的成本-效用分析",
+      "summaryZh": "这项 RCT 评估了长期运动疗法在伴严重功能受限的轴性脊柱关节炎患者中的成本-效用，为康复经济学提供直接数据。",
+      "curatedReasonEn": "This RCT puts a price tag on long-term exercise for axSpA with severe disability. Stop guessing whether your program is “worth it”—here’s cost-utility data you can cite when justifying rehab intensity and duration to payers."
     },
     {
       "id": "news-1781060650094-5",
@@ -1945,7 +1988,10 @@
         "practice",
         "best-practice",
         "regulation"
-      ]
+      ],
+      "titleZh": "GIRFT 发布脊柱疼痛评估管理最佳实践工具，面向英国初级保健",
+      "summaryZh": "英国 GIRFT 项目推出面向初级保健医生的脊柱疼痛评估与管理最佳实践工具，旨在优化诊疗路径。",
+      "curatedReasonEn": "GIRFT drops a primary care spine pathway tool. You need to know what triage logic your patients went through before they land in rehab, so skim it—even if you’re not in the UK, the stratification framework sharpens your own clinical reasoning."
     },
     {
       "id": "news-1781088546366-13",
@@ -1962,7 +2008,10 @@
         "spine",
         "manual-modality"
       ],
-      "studyDesign": "RCT"
+      "studyDesign": "RCT",
+      "titleZh": "肌肉能量技术与姿势释放技术对下腰痛的疗效比较",
+      "summaryZh": "一项比较研究显示，肌肉能量技术（MET）与姿势释放技术对下腰痛均有效果，但未报告显著组间差异。",
+      "curatedReasonEn": "MET vs. positional release for low back pain—both work, no clear winner here. Pick whichever fits your flow, but don’t marry one technique based on this comparative study alone; the effect-size gap isn’t big enough to ditch either from your toolbox."
     },
     {
       "id": "news-1781060650094-8",
@@ -1979,7 +2028,10 @@
         "pelvic-floor",
         "women's-health",
         "postpartum"
-      ]
+      ],
+      "titleZh": "JAMA：盆底肌训练可减少产后压力性尿失禁",
+      "summaryZh": "JAMA 报告指出，盆底肌训练可显著减少产后压力性尿失禁的发生。",
+      "curatedReasonEn": "JAMA confirms pelvic floor training cuts postpartum SUI. If you see postpartum patients, you’re not “suggesting” a few exercises anymore—this is a non-negotiable core of your program. Use this level of evidence to lock in adherence early."
     },
     {
       "id": "news-1781060650094-19",
@@ -1996,7 +2048,10 @@
         "parkinson",
         "balance",
         "home-exercise"
-      ]
+      ],
+      "titleZh": "JMIR：居家正念瑜伽运动对帕金森病患者平衡与移动能力影响的 RCT 方案",
+      "summaryZh": "一项 RCT 方案将评估居家、融合正念与瑜伽的运动项目对帕金森病患者平衡与移动能力的影响。",
+      "curatedReasonEn": "A home-based mindfulness-yoga RCT protocol for Parkinson’s balance and mobility. Watch this space—if the results hold, this is a scalable, low-resource add-on your neuro patients will actually do. Pilots of this model now before the RCT drops so you’re not late to adopt."
     },
     {
       "id": "news-1781088546366-24",
@@ -2013,7 +2068,10 @@
         "spinal-cord",
         "electro"
       ],
-      "studyDesign": "系统综述"
+      "studyDesign": "系统综述",
+      "titleZh": "脊髓电刺激治疗脊髓损伤后自主神经功能障碍：系统综述",
+      "summaryZh": "该系统综述探讨脊髓电刺激管理脊髓损伤后自主神经功能障碍的证据，初步显示潜在获益但证据有限。",
+      "curatedReasonEn": "Systematic review on SCS for autonomic dysfunction post-SCI—early, messy, but promising. Don’t jump to a referral based on this alone, because the evidence base is thin. Flag it in your neuro rehab radar so when clearer patient selection windows emerge, you’re ready."
     },
     {
       "id": "news-1781210474039-8",
