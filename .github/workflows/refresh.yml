@@ -41,6 +41,20 @@ jobs:
         with:
           node-version: '22'
 
+      # satori + resvg + Noto fonts power the WeChat 2.35:1 cover banner
+      # (wechat-brief.js → wechat-cover.js). Without node_modules the cover
+      # render throws and is swallowed as "non-fatal", so the daily issue
+      # shipped html/md/meta but no -cover.png. Same cache key as
+      # xhs-digest.yml so both workflows share the ~200 MB font download.
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: xhs-deps-${{ hashFiles('package.json') }}
+
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+
       - name: Run PT news refresh
         env:
           # Production site URL — fills the RSS channel <link> and atom:self link.
