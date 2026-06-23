@@ -99,7 +99,7 @@ async function main() {
    - 「临床落地」行有条件才写：仅当该条目的 summary/take 里确实写到了适用人群或具体干预/剂量时，才以「**临床落地**：」开头补一句临床 PT 的用法。硬约束：只能复述 summary/take 里已经出现的人群、干预、剂量、谨慎点，禁止引入输入中没出现过的术语、亚组、工具名或自创建议（例如输入没提到「盆底训练」「症状日记」就绝不能写，也不得把"特定亚组"自行具体化）。summary/take 里没有可落地的人群或干预细节时，直接省略这一行，不要硬凑、不要泛化成空话。
    - 末行小字格式：「{该条目 source 字段的实际值，如 PubMed、medRxiv} · 信号分 {该条目 score}」；当该条目 multiSource 非空时，再接「｜另有 X 家信源在报」（X = multiSource 的条数）。务必填入真实信源名，不要照抄「来源」「source」这类字面占位词。
 
-不要输出「参考链接」小节，也不要在标题后加 [数字] 编号——原文链接通过文末统一附加的站点链接提供（站内当天页面列出全部文献且可点）。文末的站点链接与署名由系统统一追加，你不用写。
+不要输出「参考链接」小节，也不要在标题后加 [数字] 编号——可点原文统一走文末「阅读原文」（站内当天页列出全部文献且可点）。文末的「阅读原文」指引与署名由系统统一追加，你不用写，正文里也不要出现任何 http 链接。
 
 禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字。除开头「标题：」「摘要：」两行外，正文里不要再出现说明性标签或解释文字。`;
 
@@ -140,21 +140,24 @@ async function main() {
     digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
   }
 
-  // 文末统一附加可点的站点链接（站内当天页列出全部文献、链接可点）+ 署名。
-  // 微信会剥掉正文内联链接，所以不再逐条列 URL 脚注（与站点链接重复且点不动）。
-  // 先清掉模型可能仍残留的「参考链接」小节或自带署名，避免重复。
+  // 文末不再放站外 URL：未认证号正文外链点不动，且每期都贴站外链接会被判“导流”、
+  // 拖累账号助推资格。改为正文只留文字指引，真正可点的站点链接放进微信编辑器底部
+  // 「阅读原文」字段（未认证号唯一可点的站外位），URL 写到 .meta.txt 供复制。
+  // 先清掉模型可能仍残留的「参考链接」小节、旧的站外链接行或自带署名，避免重复。
   article = article
     .replace(/\n#{1,6}\s*参考链接[\s\S]*$/m, '')
+    .replace(/\n*原文与完整文献列表[^\n]*$/m, '')
     .replace(/\n*——\s*步频[^\n]*\s*$/m, '')
     .trim();
-  article += `\n\n原文与完整文献列表 → ${SITE_URL}/#daily/${dateStr}\n\n—— 步频 · Evidence in motion · 每日为临床 PT 筛信号`;
+  const readMoreUrl = `${SITE_URL}/#daily/${dateStr}`;
+  article += `\n\n全部文献与可点原文 → 见文末「阅读原文」\n\n—— 步频 · Evidence in motion · 每日为临床 PT 筛信号`;
 
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
   const mdPath = path.join(BRIEFS_DIR, `${dateStr}.md`);
   fs.writeFileSync(mdPath, article + '\n');
   fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.html`), mdToWechatHtml(article, dateStr));
-  // 标题 + 摘要 写到 sidecar，公众号「标题栏 / 摘要栏」直接复制。
-  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.meta.txt`), `标题：${title}\n摘要：${digest}\n`);
+  // 标题 + 摘要 + 阅读原文 URL 写到 sidecar，公众号「标题栏 / 摘要栏 / 阅读原文」直接复制。
+  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.meta.txt`), `标题：${title}\n摘要：${digest}\n阅读原文（粘到编辑器底部「阅读原文」字段）：${readMoreUrl}\n`);
   console.log(`  ✅ briefs/${dateStr}.md + .html + .meta.txt`);
   console.log(`     标题：${title}`);
   console.log(`     摘要：${digest}`);
@@ -190,7 +193,6 @@ function mdToWechatHtml(md, dateStr) {
   const lines = md.trim().split('\n');
   const intro = [];
   const items = []; // {cat, title, body[], land, src, multi}
-  let footUrl = '';
   let cur = null, curCat = '', skip = false;
   const pushCur = () => { if (cur) { items.push(cur); cur = null; } };
 
@@ -207,7 +209,7 @@ function mdToWechatHtml(md, dateStr) {
     }
     if (skip) continue; // 「今日热点」索引节整段丢弃
 
-    if (/^原文与完整文献列表/.test(line)) { pushCur(); footUrl = (line.match(/https?:\/\/\S+/) || [''])[0]; continue; }
+    if (/^全部文献与可点原文/.test(line) || /^原文与完整文献列表/.test(line)) { pushCur(); continue; }
     if (/^——/.test(line)) { pushCur(); continue; } // 署名由关注模块统一替代
 
     // 末行小字：来源 · 信号分 X｜另有 N 家 —— 信号分对读者隐藏，只取信源名 + 多源数
@@ -285,14 +287,20 @@ function mdToWechatHtml(md, dateStr) {
       + `</div></div>`;
   });
 
-  // 关注模块（含原文链接文本，微信会剥内联链接故以纯文本给出）
+  // 关注模块（不放站外 URL；可点原文统一走文末「阅读原文」）
   h += `<div style="margin:24px 0 0;padding:18px 16px;background:#fff;border-radius:15px;box-shadow:0 4px 16px rgba(31,46,64,.06);text-align:center;">`
     + `<div style="display:inline-block;${gradBg(deep, C.blue2)}color:#fff;font-size:13px;font-weight:700;padding:7px 20px;border-radius:18px;margin-bottom:10px;">▍步频 · Evidence in motion</div>`
-    + `<p style="margin:0 0 ${footUrl ? '8px' : '0'};font-size:12px;color:#7a8694;line-height:1.7;">每日为临床 PT 筛信号</p>`
-    + (footUrl ? `<p style="margin:0;font-size:12px;color:#9aa6b2;line-height:1.6;word-break:break-all;">原文与完整文献 → ${esc(footUrl)}</p>` : '')
+    + `<p style="margin:0 0 8px;font-size:12px;color:#7a8694;line-height:1.7;">每日为临床 PT 筛信号</p>`
+    + `<p style="margin:0;font-size:12px;color:#9aa6b2;line-height:1.6;">全部文献与可点原文 → 见文末「阅读原文」</p>`
     + `</div>`;
 
-  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;background:${canvas};padding:18px 14px 22px;color:${C.ink};">${h}</section>\n`;
+  // 免责声明（医疗/康复内容必备：面向专业人员、非诊疗建议、版权归原作者）
+  h += `<div style="margin:14px 0 0;padding:13px 4px 0;border-top:1px solid #dfe5ec;">`
+    + `<p style="margin:0;font-size:11px;color:${C.mute};line-height:1.7;">内容仅供康复专业人员参考，不构成对患者的诊疗建议。本文为文献中文摘要导读，各文献版权归原作者及发表平台所有，完整内容请查阅原文。</p></div>`;
+
+  // 根治：微信会剥 <div> 背景/阴影，统一转成 <section>（正文已 esc，不会误伤内容里的 <）。
+  const hSafe = h.replace(/<div(\s|>)/g, '<section$1').replace(/<\/div>/g, '</section>');
+  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;background:${canvas};padding:18px 14px 22px;color:${C.ink};">${hSafe}</section>\n`;
 }
 
 if (require.main === module) {
