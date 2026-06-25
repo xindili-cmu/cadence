@@ -1659,15 +1659,16 @@ function FeedApp() {
   // DailyBriefView below — it short-circuits the feed like Sources/Feedback,
   // so no daily-specific story filtering happens here anymore.
 
+  // Single ranking rule used by every group/lead sort below so the feed's
+  // "按证据强度精选" promise holds uniformly: SIGNAL desc, ties → newer first.
+  // (One definition avoids the day/All views drifting apart — Cindy 2026-06-25.)
+  const bySignal = (a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || ''));
+
   // Curated / All grouping = by day (today / yesterday / older).
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
-    // Within each day, rank by SIGNAL (ties → newer first) so the feed matches its
-    // "按证据强度精选" promise — previously unsorted, which sank high-score news
-    // (e.g. an 80 CMS rule) below lower-scored research (Cindy 2026-06-25).
     .map((d) => ({ key: d, label: DAY_LABELS[d],
-      items: stories.filter((s) => s.day === d)
-        .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || ''))) }))
+      items: stories.filter((s) => s.day === d).sort(bySignal) }))
     .filter((g) => g.items.length);
 
   // All view spans weeks of archive — today/yesterday/older would dump nearly
@@ -1694,7 +1695,7 @@ function FeedApp() {
         label: k === '0000-00-00'
           ? t('unknownDate')
           : new Date(k + 'T12:00:00Z').toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
-        items: items.sort((a, b) => b.score - a.score),
+        items: items.sort(bySignal),
       }));
   })();
 
@@ -1706,7 +1707,7 @@ function FeedApp() {
 
   // Lead story = top-scoring in the first day-group, only on Curated view.
   const leadId = (!compact && !isDaily && grouped.length && grouped[0].items.length)
-    ? [...grouped[0].items].sort((a, b) => b.score - a.score)[0].id : null;
+    ? [...grouped[0].items].sort(bySignal)[0].id : null;
 
   // Rail day: Daily-brief view pins yesterday; other views prefer today but
   // fall back to yesterday when today is still empty (e.g. before the 15:00
