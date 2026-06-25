@@ -529,7 +529,7 @@ async function curateWithClaude(rawItems) {
   const items = rawItems.slice(0, CURATE_TOP_N).map((item, i) => ({
     index: i,
     title: item.title,
-    text: item.text?.substring(0, 400),
+    text: item.text?.substring(0, 800), // 入库已存 800；曾砍到 400 把 Methods 段样本量切掉，逼模型臆测 n（2026-06-25）
     category: item.category,
     source: item.source,
     url: item.url?.substring(0, 120),
@@ -563,11 +563,12 @@ tags 规则：
 - **陈旧内容检查**：核对 url 路径和正文里的年份/试验线索。博客或聚合站转载多年前的旧研究（即使 publishedDate 显示很新）一律 <60；研究本身年代久但新闻点是"新指南/新政策引用了它"则按新闻点正常评分。blogspot / 内容农场域名默认重扣。
 
 编辑标准：
-- summary：1-2 句中性英文，front-load "what changed"。研究类必带样本量 + 关键效应量（或 p 值 / CI），原文没给就不编造。
+- summary：1-2 句中性英文，front-load "what changed"。研究类**优先**带样本量 + 关键效应量（或 p 值 / CI）——但**只在所给 text 中明确出现该数字时才写入，并照抄原值**；text 里没有就省略数字，**绝不臆测，也不得套用本批其他条目的数字**。
 - **双语字段（站点有中英切换，三个字段全部必填）**：
   - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（如 ACL、COPD、RCT）保留英文。
   - summaryZh：summary 的中文版，同样 1-2 句、front-load 变化点、保留数字。不是 summary 的直译腔，要像中文期刊导读。
   - curatedReasonEn：curatedReason 的英文版，**同一个 take、同样的口吻规则**（second-person、直接下判断、禁条件句开头、禁空效用措辞）。不是翻译练习——写给英文读者的同一条专业意见。
+  - titleEn：**仅当原始 title 不是英文时**（如中文源标题）才填——专业、紧凑的英文标题，缩写（ACL、SLAP、RCT 等）保留。title 本身已是英文则**省略该字段**（英文模式直接用 title）。
 - curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么。涉及"该做 / 别做"这类临床动作指令时，遵守下方"行动建议护栏"。
   - 禁止条件句开头（"如果你在使用…"、"如果你关注…"、"如果你治疗…"）——默认读者就是干这行的，直接说事。
   - 禁止空效用措辞："有参考价值"、"帮助你决策"、"值得关注"、"提供了依据/证据/支持"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
@@ -596,7 +597,7 @@ studyDesign 规则（仅 tags[0]==="research" 的条目需填）：
 news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
 请只返回 JSON 数组（不要 markdown 代码块），格式：
-[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","limitation":"一句话证据局限，判断不出留空字符串","limitationEn":"One-line study limitation, blank string if none","tags":["research","spine"],"studyDesign":"RCT","summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","category":"orthopedic（仅输入为 null 时必填）"}]
+[{"index":0,"curatedScore":85,"curatedReason":"中文 why-it-matters，第二人称给 take","curatedReasonEn":"Same take in English, same voice rules","limitation":"一句话证据局限，判断不出留空字符串","limitationEn":"One-line study limitation, blank string if none","tags":["research","spine"],"studyDesign":"RCT","summary":"One-line English neutral summary","titleZh":"中文标题","summaryZh":"中文摘要，1-2 句，保留数字","titleEn":"English title（仅当原始 title 非英文时；否则省略）","category":"orthopedic（仅输入为 null 时必填）"}]
 
 只保留 curatedScore >= 65 的条目。`;
 
@@ -1035,6 +1036,8 @@ async function main() {
       curatedReason: c.curatedReason,
       // Bilingual fields (中英切换) — optional in old data, required in new runs.
       ...(c.titleZh ? { titleZh: c.titleZh } : {}),
+      // English title for non-English-source items (model omits it when title is already English).
+      ...(c.titleEn ? { titleEn: c.titleEn } : {}),
       ...(c.summaryZh ? { summaryZh: c.summaryZh } : {}),
       ...(c.curatedReasonEn ? { curatedReasonEn: c.curatedReasonEn } : {}),
       // One-line study limitation — emitted only when the model could ground it
