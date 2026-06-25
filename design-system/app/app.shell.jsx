@@ -186,7 +186,12 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   // Nothing published in the window yet (e.g. China-morning before the 05:30
   // Beijing crawl) → render nothing instead of an empty box + zeroed pulse.
   if (!stories.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
-  const top = [...stories].sort((a, b) => b.score - a.score).slice(0, 3);
+  // Rank by SIGNAL; on ties take the newer item so a backfilled older paper
+  // never out-ranks a same-score fresh one as today's headline (Cindy 2026-06-24).
+  // ISO-string compare is null-safe and chronological; matches the weekly board.
+  const top = [...stories]
+    .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
+    .slice(0, 3);
   // Ranked distribution: keep each specialty's taxonomy index (01–08) but sort
   // rows by today's volume so the most-covered area reads first.
   const counts = CATEGORIES
@@ -201,8 +206,8 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   // are intentionally omitted until the data carries a real marker for them.
   const briefTop = top[0];
   const brief = pulseZh
-    ? `今日共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。最强信号：${briefTop.title}（SIGNAL ${briefTop.score}）。`
-    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} today across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Top signal: ${briefTop.title} (SIGNAL ${briefTop.score}).`;
+    ? `今日共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。本期最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
+    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} today across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
   // 本周信号榜 — quiet-day rescue (Cindy 2026-06-14). When today is thin (≤2),
   // surface the last 7 days' highest-SIGNAL items so the rail isn't a near-empty
   // box. Ranked by score, ties broken newest-first; today's already-shown items
@@ -443,7 +448,12 @@ function MobileTabBar({ view, onView }) {
 function MobileSignalCard({ stories, dayKey = 'today', onPick }) {
   const [open, setOpen] = React.useState(true);
   if (!stories.length) return null;
-  const top = [...stories].sort((a, b) => b.score - a.score).slice(0, 3);
+  // Rank by SIGNAL; on ties take the newer item so a backfilled older paper
+  // never out-ranks a same-score fresh one as today's headline (Cindy 2026-06-24).
+  // ISO-string compare is null-safe and chronological; matches the weekly board.
+  const top = [...stories]
+    .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
+    .slice(0, 3);
   return (
     <section style={{ marginBottom: 16, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)', overflow: 'hidden' }}>
       <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open}
