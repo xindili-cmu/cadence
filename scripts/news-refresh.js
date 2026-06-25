@@ -585,7 +585,7 @@ tags 规则：
 category 规则：输入里 category 为 null 的条目（来自期刊 RSS 整刊 feed，没有预设分类），你必须在返回里给出 category 字段，取值为上面 8 个 slug 之一；判断不了或与 PT/康复无关的直接丢弃（不返回该 index）。category 已有值的条目不要改。整刊 feed 里大量内容与 PT 无关（药物试验、外科技术、公共卫生政策），无关即丢，宁缺毋滥。
 - **cardiopulmonary 不是"任何心脏/肾脏/代谢疾病"**：它只收心肺**康复**（COPD 肺康复、心脏术后康复、运动耐量训练、呼吸肌训练）。药物试验（finerenone、retatrutide、GLP-1、他汀、SGLT2）、脏器疾病本身（慢性肾病、糖尿病、肿瘤）即使带"cardio"字样也与 PT 无关，一律丢弃，不要因为沾边就硬塞进 cardiopulmonary。整刊 feed 的 [Editorial]/[Correspondence]/[Comment] 段落除非直接讲康复干预，否则默认丢。
 - **按主要临床条件归类，不按患者年龄/人群**：神经退行病（帕金森、阿尔茨海默）、脊髓损伤、卒中归 neurological；呼吸系统病（COPD、哮喘、OSA）归 cardiopulmonary——即便受试者是老年人，也不要因"老年"就归 geriatric。geriatric 只收以衰老/衰弱本身为主题的研究（跌倒预防、肌少症、衰弱、综合老年评估等）。
-- **manual-modality 仅当干预本身是手法或理疗**（手法治疗 / 关节松动 / 推拿、干针、激光、电疗、冲击波、治疗性超声等）：一般脊柱/腰痛综述、外科或介入决策框架归 orthopedic，运动损伤预防归 sports——不要因为"沾脊柱/沾肌骨"就塞进 manual-modality。
+- **manual-modality 仅当干预本身是手法或理疗**（手法治疗 / 关节松动 / 推拿、干针、激光、电疗、冲击波、治疗性超声等）：一般脊柱/腰痛综述、外科或介入决策框架归 orthopedic，运动损伤预防归 sports——不要因为"沾脊柱/沾肌骨"就塞进 manual-modality。**反向亦然——干预手段优先于解剖部位**：当研究主干预本身就是上述手法/理疗（如手法治疗颈痛、关节松动、干针、激光、冲击波、贴扎的 RCT），即便病症在颈/腰/肩/膝等骨科部位，也归 manual-modality，不要因"是骨科部位"而归 orthopedic。
 
 studyDesign 规则（仅 tags[0]==="research" 的条目需填）：
 从标题/摘要判断研究设计，取以下五个值之一：

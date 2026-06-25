@@ -131,14 +131,22 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
       if (!GENERIC_TAGS.has(t)) tagCount[t] = (tagCount[t] || 0) + 1;
     }
     const tagRanked = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).map(e => e[0]);
-    const tag = tagRanked[0] || top.category;
+    // The badge labels the REP card the reader sees, so it must be a sub-tag the
+    // rep itself carries — otherwise the dedup pass below can stamp a cluster with
+    // a tag no visible paper has (an all-spinal-cord cluster shown as
+    // "brain-injury" just because spinal-cord was taken by a higher theme).
+    // Rank the rep's own non-generic sub-tags by cluster frequency; fall back to
+    // cluster-dominant / category only when the rep carries no sub-tag.
+    const repTags = new Set((top.tags || []).slice(1).filter(t => !GENERIC_TAGS.has(t)));
+    const repTagRanked = tagRanked.filter(t => repTags.has(t));
+    const tag = repTagRanked[0] || tagRanked[0] || top.category;
     return {
       id: top.id, title: top.title, sourceUrl: top.sourceUrl, category: top.category,
       publishedAt: newest.publishedAt,
       // sourceCount/sources now carry JOURNALS (client recomputes heat =
       // sourceCount × decay; wechat-brief lists them as "X 家期刊在报").
       sourceCount: journals.size, sources: [...journals],
-      tag, kind: 'theme', _tagRanked: tagRanked,
+      tag, kind: 'theme', _repTagRanked: repTagRanked,
       members: members.map(m => ({ source: m.source, journal: m.journal, title: m.title, titleZh: m.titleZh })),
       heat: Math.round(journals.size * decay(newest.publishedAt) * 100) / 100,
     };
@@ -157,10 +165,13 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
   // temporary ranking field so it never reaches news.json.
   const usedTags = new Set();
   for (const t of top) {
-    const pick = (t._tagRanked || []).find(tg => !usedTags.has(tg)) || t.tag;
+    // Prefer an unused tag the rep actually carries; if every rep tag is already
+    // taken, keep the true (possibly duplicate) tag rather than mislabel the
+    // cluster with an off-card tag.
+    const pick = (t._repTagRanked || []).find(tg => !usedTags.has(tg)) || t.tag;
     t.tag = pick;
     usedTags.add(pick);
-    delete t._tagRanked;
+    delete t._repTagRanked;
   }
   return top;
 }

@@ -1662,7 +1662,12 @@ function FeedApp() {
   // Curated / All grouping = by day (today / yesterday / older).
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
-    .map((d) => ({ key: d, label: DAY_LABELS[d], items: stories.filter((s) => s.day === d) }))
+    // Within each day, rank by SIGNAL (ties → newer first) so the feed matches its
+    // "按证据强度精选" promise — previously unsorted, which sank high-score news
+    // (e.g. an 80 CMS rule) below lower-scored research (Cindy 2026-06-25).
+    .map((d) => ({ key: d, label: DAY_LABELS[d],
+      items: stories.filter((s) => s.day === d)
+        .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || ''))) }))
     .filter((g) => g.items.length);
 
   // All view spans weeks of archive — today/yesterday/older would dump nearly
