@@ -291,6 +291,7 @@ function cdTransformItem(item) {
     // Bilingual content fields (cron-generated; may be absent on older items —
     // the display layer falls back to the original-language field).
     titleZh:     item.titleZh,
+    titleEn:     item.titleEn,        // English title for non-English-source items (en mode)
     summaryZh:   item.summaryZh,
     whyEn:       item.curatedReasonEn,
     limitationEn: item.limitationEn,
@@ -404,6 +405,7 @@ window.CD_DATA_READY = (async () => {
       .map((t) => ({
         ...t,
         titleZh: t.titleZh || (cdById[t.id] && cdById[t.id].titleZh), // zh title via the representative story
+        titleEn: t.titleEn || (cdById[t.id] && cdById[t.id].titleEn), // en title via the representative story
         heat: t.sourceCount * Math.pow(0.5, Math.max(0, (Date.now() - new Date(t.publishedAt)) / 86400000) / 2),
       }))
       .filter((t) => t.heat >= 1.2)

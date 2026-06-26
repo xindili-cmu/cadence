@@ -635,7 +635,7 @@ function AboutView({ onView, mobile }) {
             <div style={{ margin: '28px 0 0', maxWidth: 680, display: 'flex', flexDirection: 'column', gap: 16 }}>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('今天，国际上的康复医学正在以周为单位快速进化。然而在国内，我们教材上的理论、临床上的手段，很多还停留在 10 年、甚至 20 年前的框架里。我们不是不想追最新的技术，而是隔着信息差的壁垒，根本不知道外面已经进化到了哪里。',
-                  'Worldwide, rehabilitation medicine now evolves by the week. In China, though, much of our textbook theory and clinical practice is still framed by ideas from 10 — even 20 — years ago. It isn’t that we don’t want the latest; the information gap leaves us unsure how far the field has already moved.')}
+                  'Worldwide, rehabilitation medicine now evolves by the week. Yet much of the textbook theory and clinical practice we rely on is still framed by ideas from 10 or even 20 years ago. It isn’t that we don’t want the latest; the information gap leaves us unsure how far the field has already moved.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.5, color: 'var(--text-primary)' }}>
                 {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
