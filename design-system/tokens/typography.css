@@ -6,7 +6,12 @@
    ============================================================ */
 
 :root {
-  --font-display: 'Spectral', 'Noto Serif SC', 'Songti SC', Georgia, 'Times New Roman', serif;
+  /* NB: 'Noto Serif SC' deliberately omitted — its only @font-face (fonts.css) is a
+     900-weight 6-glyph subset (今日康复信号) for the daily masthead, pinned via
+     unicode-range. Listing it here made those 6 chars render in 900 Black inside
+     ordinary titles (e.g. 日 in 日历年, 康复), an unintended bold. The masthead
+     requests 'Noto Serif SC' explicitly, so it still works. CJK display falls to Songti SC. */
+  --font-display: 'Spectral', 'Songti SC', Georgia, 'Times New Roman', serif;
   --font-sans: 'IBM Plex Sans', 'Noto Sans SC', 'PingFang SC', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
