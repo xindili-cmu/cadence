@@ -30,9 +30,8 @@ const DRY_RUN = process.env.DRY_RUN === 'true';
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 const BRIEFS_DIR = path.join(__dirname, '..', 'briefs');
 const WINDOW_HOURS = 26; // daily 07:00 UTC run + slack
-// Single clickable destination for原文 (WeChat strips inline links; the站内
-// 当天页 lists every item with working links). Mirrors x-thread.js.
-const SITE_URL = (process.env.SITE_URL || 'https://incadencept.com').replace(/\/$/, '');
+// 站外链接已彻底移除（公众号助推合规 / 5.4 导流内容）：日报不再把可点原文导向
+// incadencept.com，正文/页脚/「阅读原文」字段一律零站外指向。
 
 const CAT_ZH = {
   orthopedic: '骨科与肌骨', neurological: '神经康复', sports: '运动康复',
@@ -99,7 +98,7 @@ async function main() {
    - 「临床落地」行有条件才写：仅当该条目的 summary/take 里确实写到了适用人群或具体干预/剂量时，才以「**临床落地**：」开头补一句临床 PT 的用法。硬约束：只能复述 summary/take 里已经出现的人群、干预、剂量、谨慎点，禁止引入输入中没出现过的术语、亚组、工具名或自创建议（例如输入没提到「盆底训练」「症状日记」就绝不能写，也不得把"特定亚组"自行具体化）。summary/take 里没有可落地的人群或干预细节时，直接省略这一行，不要硬凑、不要泛化成空话。
    - 末行小字格式：「{该条目 source 字段的实际值，如 PubMed、medRxiv} · 信号分 {该条目 score}」；当该条目 multiSource 非空时，再接「｜另有 X 家信源在报」（X = multiSource 的条数）。务必填入真实信源名，不要照抄「来源」「source」这类字面占位词。
 
-不要输出「参考链接」小节，也不要在标题后加 [数字] 编号——可点原文统一走文末「阅读原文」（站内当天页列出全部文献且可点）。文末的「阅读原文」指引与署名由系统统一追加，你不用写，正文里也不要出现任何 http 链接。
+不要输出「参考链接」小节，也不要在标题后加 [数字] 编号。正文与结尾一律不得出现任何 http 链接、网址、二维码或「阅读原文」等站外引导（公众号助推合规要求：含站外链接会被判导流而拒推）。文献只以信源名（如 PubMed）呈现，不挂可点原文；署名由系统统一追加，你不用写。
 
 禁止：寒暄、自我介绍、"小编"、互动求关注话术、虚构数字。除开头「标题：」「摘要：」两行外，正文里不要再出现说明性标签或解释文字。`;
 
@@ -140,24 +139,25 @@ async function main() {
     digest = firstPara.replace(/\s+/g, ' ').trim().slice(0, 100);
   }
 
-  // 文末不再放站外 URL：未认证号正文外链点不动，且每期都贴站外链接会被判“导流”、
-  // 拖累账号助推资格。改为正文只留文字指引，真正可点的站点链接放进微信编辑器底部
-  // 「阅读原文」字段（未认证号唯一可点的站外位），URL 写到 .meta.txt 供复制。
-  // 先清掉模型可能仍残留的「参考链接」小节、旧的站外链接行或自带署名，避免重复。
+  // 助推合规（5.4 导流内容）：助推推的就是这篇已发的文，只要它带「阅读原文」外链
+  // (incadencept.com) 或「见文末阅读原文」CTA 就会被判导流拒推（6.24 即如此）。故彻底
+  // 去掉所有站外指向：正文只留品牌署名，文献以信源名 (PubMed 等) 列出但不挂可点原文，
+  // 读者需要原文自行检索。先清掉模型可能残留的「参考链接」小节 / 旧站外行 / 导流 CTA / 自带署名。
   article = article
     .replace(/\n#{1,6}\s*参考链接[\s\S]*$/m, '')
     .replace(/\n*原文与完整文献列表[^\n]*$/m, '')
+    .replace(/\n*全部文献与可点原文[^\n]*$/m, '')
     .replace(/\n*——\s*步频[^\n]*\s*$/m, '')
     .trim();
-  const readMoreUrl = `${SITE_URL}/#daily/${dateStr}`;
-  article += `\n\n全部文献与可点原文 → 见文末「阅读原文」\n\n—— 步频 · Evidence in motion · 每日为临床 PT 筛信号`;
+  article += `\n\n—— 步频 · Evidence in motion · 每日为临床 PT 筛信号`;
 
   fs.mkdirSync(BRIEFS_DIR, { recursive: true });
   const mdPath = path.join(BRIEFS_DIR, `${dateStr}.md`);
   fs.writeFileSync(mdPath, article + '\n');
   fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.html`), mdToWechatHtml(article, dateStr));
-  // 标题 + 摘要 + 阅读原文 URL 写到 sidecar，公众号「标题栏 / 摘要栏 / 阅读原文」直接复制。
-  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.meta.txt`), `标题：${title}\n摘要：${digest}\n阅读原文（粘到编辑器底部「阅读原文」字段）：${readMoreUrl}\n`);
+  // 标题 + 摘要 写到 sidecar，公众号「标题栏 / 摘要栏」直接复制。
+  // 助推合规：「阅读原文」字段留空，不挂任何站外链接（外链 = 5.4 导流，会被拒推）。
+  fs.writeFileSync(path.join(BRIEFS_DIR, `${dateStr}.meta.txt`), `标题：${title}\n摘要：${digest}\n阅读原文：留空（助推合规，勿挂站外链接）\n`);
   console.log(`  ✅ briefs/${dateStr}.md + .html + .meta.txt`);
   console.log(`     标题：${title}`);
   console.log(`     摘要：${digest}`);
@@ -243,64 +243,52 @@ function mdToWechatHtml(md, dateStr) {
     return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;padding:4px 2px;color:#333;">${plain}</section>\n`;
   }
 
-  const ICON = { '神经康复': '🧠', '手法与理疗': '🤲', '骨科与肌骨': '🦴', '运动康复': '🏃',
-    '儿童康复': '🧒', '老年康复': '🧓', '心肺康复': '🫁', '行业与执业': '📋' };
-  const deep = '#2f5d99', canvas = '#eef2f7', gold = '#a9760a', goldbg = '#fbf0d4';
+  // 极简克制版：去大色块、几乎不用蓝、暖墨色、发丝线分隔、安静序号、零英文标签。
+  const ink = '#1f1d1b', warmBody = '#44413d', mute = '#9b958d', accent = C.blue, hair = '#e8e5e0';
 
   let h = '';
-  // 顶部渐变标题条
-  h += `<div style="${gradBg(deep, C.blue2)}border-radius:18px;padding:22px 20px 18px;color:#fff;box-shadow:0 6px 20px rgba(47,93,153,.22);">`
-    + `<div style="font-size:11px;letter-spacing:.26em;opacity:.82;">EVIDENCE IN MOTION</div>`
-    + `<div style="font-size:22px;font-weight:800;margin:8px 0 0;letter-spacing:.02em;">步频 · 康复信号日报</div>`
-    + `<div style="height:2px;width:40px;background:rgba(255,255,255,.55);border-radius:2px;margin:9px 0;"></div>`
-    + `<div style="font-size:12px;opacity:.9;">${fmtDate}　·　今日 ${items.length} 条精选</div></div>`;
+  // 极简刊头：小字名 + 粗黑线（不重复微信自带标题、不用大色块）
+  h += `<div style="padding:0 0 12px;border-bottom:2px solid ${ink};">`
+    + `<div style="font-size:14px;font-weight:700;color:${ink};letter-spacing:.06em;">步频 · 康复信号</div>`
+    + `<div style="font-size:12px;color:${mute};margin-top:4px;">${fmtDate}　今日 ${items.length} 条</div></div>`;
 
-  // 导读（悬浮白卡）
+  // 导读：纯文字 lead，无卡片无英文
   if (intro.length) {
-    h += `<div style="margin:16px 0 4px;padding:14px 16px;background:#fff;border-radius:13px;box-shadow:0 4px 16px rgba(31,46,64,.06);">`
-      + `<div style="font-size:11px;color:${C.blue};font-weight:800;letter-spacing:.16em;margin-bottom:7px;">导读 · DAILY BRIEF</div>`
-      + `<p style="margin:0;font-size:15px;color:#3a4654;line-height:1.9;">${inline(intro.join(' '))}</p></div>`;
+    h += `<div style="margin:20px 0 0;">`
+      + `<div style="font-size:11px;color:${mute};letter-spacing:.22em;margin-bottom:5px;">导读</div>`
+      + `<p style="margin:0;font-size:16px;color:#2b2825;line-height:1.95;">${inline(intro.join(' '))}</p></div>`;
   }
 
-  // 卡片（分类用图标 + 短下划线分组）
+  // 条目：分类小标签（唯一的蓝点缀）+ 发丝线分隔 + 浅灰序号
   let lastCat = '';
   items.forEach((it, i) => {
-    if (it.cat && it.cat !== lastCat) {
-      const ic = ICON[it.cat] || '🔹';
-      h += `<div style="margin:26px 0 13px;">`
-        + `<div style="font-size:15px;font-weight:800;color:${deep};letter-spacing:.04em;margin-bottom:7px;">${ic}　${esc(it.cat)}</div>`
-        + `<div style="height:3px;width:42px;${gradBg(C.blue, C.blue2, '90deg')}border-radius:2px;"></div></div>`;
+    const firstInCat = it.cat && it.cat !== lastCat;
+    if (firstInCat) {
+      h += `<div style="margin:32px 0 0;font-size:12px;color:${accent};letter-spacing:.16em;font-weight:700;">${esc(it.cat)}</div>`;
       lastCat = it.cat;
     }
-    h += `<div style="margin:0 0 13px;background:#fff;border-radius:16px;box-shadow:0 4px 18px rgba(31,46,64,.08);overflow:hidden;">`
-      + `<div style="padding:15px 16px 14px;">`
-      + `<div style="margin-bottom:9px;">`
-      + `<span style="display:inline-block;height:24px;line-height:24px;text-align:center;${gradBg(deep, C.blue2)}color:#fff;border-radius:7px;font-size:12px;font-weight:700;letter-spacing:.06em;padding:0 8px;vertical-align:middle;">No.${String(i + 1).padStart(2, '0')}</span>`
-      + (it.multi ? `<span style="display:inline-block;font-size:12px;color:${gold};background:${goldbg};padding:2px 10px;border-radius:11px;margin-left:8px;vertical-align:middle;">✦ ${it.multi} 源共振</span>` : '')
-      + `</div>`
-      + `<p style="margin:0 0 8px;font-size:17px;font-weight:700;color:${C.ink};line-height:1.5;">${inline(it.title)}</p>`
-      + `<p style="margin:0 0 ${it.land ? '12px' : '2px'};font-size:15px;color:${C.body};line-height:1.85;">${inline(it.body.join(' '))}</p>`
-      + (it.land ? `<div style="margin:0;background:${C.tint};border-radius:10px;padding:11px 13px;border-left:3px solid ${C.blue};">`
-          + `<div style="font-size:11px;font-weight:800;color:${C.blue};letter-spacing:.12em;margin-bottom:4px;">💡 临床落地</div>`
-          + `<div style="font-size:14px;color:#2b3a4a;line-height:1.72;">${inline(it.land)}</div></div>` : '')
-      + (it.src ? `<p style="margin:11px 0 0;font-size:11px;color:${C.mute};letter-spacing:.04em;">SOURCE · ${esc(it.src)}</p>` : '')
-      + `</div></div>`;
+    const nn = String(i + 1).padStart(2, '0');
+    const sep = firstInCat ? 'margin-top:14px;' : `border-top:1px solid ${hair};margin-top:16px;padding-top:16px;`;
+    h += `<div style="${sep}">`
+      + `<p style="margin:0 0 9px;font-size:19px;font-weight:700;color:${ink};line-height:1.5;"><span style="color:#cfc7bc;font-weight:800;margin-right:9px;">${nn}</span>${inline(it.title)}</p>`
+      + `<p style="margin:0;font-size:16px;color:${warmBody};line-height:1.95;">${inline(it.body.join(' '))}</p>`
+      + (it.land ? `<div style="margin:13px 0 0;padding-left:13px;border-left:2px solid ${accent};font-size:15px;color:#3a3733;line-height:1.82;"><span style="color:${accent};font-weight:700;">临床落地　</span>${inline(it.land)}</div>` : '')
+      + (it.src ? `<p style="margin:11px 0 0;font-size:12px;color:${mute};">${esc(it.src)}${it.multi ? ` · ${it.multi} 源印证` : ''}</p>` : '')
+      + `</div>`;
   });
 
-  // 关注模块（不放站外 URL；可点原文统一走文末「阅读原文」）
-  h += `<div style="margin:24px 0 0;padding:18px 16px;background:#fff;border-radius:15px;box-shadow:0 4px 16px rgba(31,46,64,.06);text-align:center;">`
-    + `<div style="display:inline-block;${gradBg(deep, C.blue2)}color:#fff;font-size:13px;font-weight:700;padding:7px 20px;border-radius:18px;margin-bottom:10px;">▍步频 · Evidence in motion</div>`
-    + `<p style="margin:0 0 8px;font-size:12px;color:#7a8694;line-height:1.7;">每日为临床 PT 筛信号</p>`
-    + `<p style="margin:0;font-size:12px;color:#9aa6b2;line-height:1.6;">全部文献与可点原文 → 见文末「阅读原文」</p>`
-    + `</div>`;
+  // 页脚（助推合规：零站外指向，不放任何 URL / 阅读原文 CTA）
+  h += `<div style="margin:32px 0 0;padding-top:14px;border-top:2px solid ${ink};">`
+    + `<p style="margin:0;font-size:13px;font-weight:700;color:${ink};">步频</p>`
+    + `<p style="margin:5px 0 0;font-size:12px;color:${mute};line-height:1.75;">每日为临床 PT 筛信号</p></div>`;
 
   // 免责声明（医疗/康复内容必备：面向专业人员、非诊疗建议、版权归原作者）
-  h += `<div style="margin:14px 0 0;padding:13px 4px 0;border-top:1px solid #dfe5ec;">`
-    + `<p style="margin:0;font-size:11px;color:${C.mute};line-height:1.7;">内容仅供康复专业人员参考，不构成对患者的诊疗建议。本文为文献中文摘要导读，各文献版权归原作者及发表平台所有，完整内容请查阅原文。</p></div>`;
+  h += `<div style="margin:14px 0 0;padding:12px 0 0;border-top:1px solid ${hair};">`
+    + `<p style="margin:0;font-size:11px;color:${mute};line-height:1.7;">内容仅供康复专业人员参考，不构成对患者的诊疗建议。本文为文献中文摘要导读，各文献版权归原作者及发表平台所有，完整内容请查阅原文。</p></div>`;
 
-  // 根治：微信会剥 <div> 背景/阴影，统一转成 <section>（正文已 esc，不会误伤内容里的 <）。
+  // 根治：微信会剥 <div> 背景/边框，统一转成 <section>（正文已 esc，不会误伤内容里的 <）。
   const hSafe = h.replace(/<div(\s|>)/g, '<section$1').replace(/<\/div>/g, '</section>');
-  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;background:${canvas};padding:18px 14px 22px;color:${C.ink};">${hSafe}</section>\n`;
+  return `<section style="font-family:-apple-system,'PingFang SC','Noto Sans SC',sans-serif;background:#fdfcfa;padding:20px 18px 24px;color:${ink};">${hSafe}</section>\n`;
 }
 
 if (require.main === module) {
