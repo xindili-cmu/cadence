@@ -56,10 +56,21 @@ const catOf = (c) => CAT[c] || { zh: '研究', en: 'Research' };
 const HASHTAGS_EN = '#PhysicalTherapy #Physiotherapy #Rehabilitation #SportsMedicine #EvidenceBasedPractice';
 const HASHTAGS_ZH = '#物理治疗 #康复医学 #循证医学 #运动康复 #PhysicalTherapy';
 
+// Common English abbreviations/initialisms whose internal "." must NOT be
+// treated as a sentence end (e.g. "U.S. Education" was getting cut at "U.S.").
+const ABBR_RE = /\b(?:[A-Za-z]\.(?:[A-Za-z]\.)+|e\.g|i\.e|vs|etc|et al|al|Dr|Mr|Mrs|Ms|Prof|Fig|No|Inc|Ltd|Co|St|approx|cf|Jr|Sr|U\.S|U\.K)\./g;
+const DOT_MASK = String.fromCharCode(1); // unambiguous placeholder, restored after split
+
 function firstSentence(s, zh) {
   if (!s) return '';
-  const m = zh ? s.split(/(?<=[。！？])/)[0] : s.split(/(?<=[.!?])\s/)[0];
-  return (m || s).trim();
+  if (zh) {
+    const m = s.split(/(?<=[。！？])/)[0];
+    return (m || s).trim();
+  }
+  // Mask abbreviation periods, split on the first real sentence end, then restore.
+  const masked = s.replace(ABBR_RE, m => m.replace(/\./g, DOT_MASK));
+  const first = masked.split(/(?<=[.!?])\s/)[0] || masked;
+  return first.split(DOT_MASK).join('.').trim();
 }
 
 function pickEdition(arg) {
