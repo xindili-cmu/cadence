@@ -53,6 +53,12 @@ const CAT = {
 };
 const catOf = (c) => CAT[c] || { zh: '研究', en: 'Research' };
 
+// Keycap-emoji numbering. Plain "1." markers get swallowed by LinkedIn's
+// list auto-format (numbers stripped, blank lines collapsed, weird indent);
+// emoji digits are ordinary characters that survive any copy path.
+const KEYCAPS = ['0️⃣', '1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣'];
+const numMark = (n) => (n >= 1 && n <= 9 ? KEYCAPS[n] : n === 10 ? '🔟' : `${n}.`);
+
 const HASHTAGS_EN = '#PhysicalTherapy #Physiotherapy #Rehabilitation #SportsMedicine #EvidenceBasedPractice';
 const HASHTAGS_ZH = '#物理治疗 #康复医学 #循证医学 #运动康复 #PhysicalTherapy';
 
@@ -112,7 +118,7 @@ function buildPost(ed, items, zh) {
     const gloss = firstSentence(zh ? (it.curatedReason || it.summaryZh) : (it.curatedReasonEn || it.summary), zh);
     const tag = zh ? c.zh : c.en;
     const jrnl = it.journal ? `${zh ? '—' : '—'} ${it.journal}` : '';
-    lines.push(`${i + 1}. [${tag}] ${title}`);
+    lines.push(`${numMark(i + 1)} [${tag}] ${title}`);
     if (gloss) lines.push(gloss);
     if (jrnl) lines.push(jrnl.trim());
     lines.push('');
@@ -135,7 +141,7 @@ function buildSources(items, zh) {
   const head = zh ? '来源(按精选顺序):' : 'Sources (in order):';
   const body = items.map((it, i) => {
     const title = zh ? (it.titleZh || it.title) : it.title;
-    return `${i + 1}. ${title}\n${it.sourceUrl || ''}`;
+    return `${numMark(i + 1)} ${title}\n${it.sourceUrl || ''}`;
   }).join('\n\n');
   return `${head}\n\n${body}\n`;
 }
