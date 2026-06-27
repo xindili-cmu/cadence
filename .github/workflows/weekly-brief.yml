@@ -1,0 +1,78 @@
+# 步频周报 · 策略复盘 (weekly strategic brief)
+#
+# Recaps the Beijing week that just shipped and sets up the next one — built
+# from repo data (news.json + archive/), so it needs no API key to run. If the
+# optional GSC_SA_KEY secret is present, it also pulls Search Console numbers
+# for incadencept.com.
+#
+# Runs Sunday 23:30 UTC = Monday 07:30 Beijing, after the Beijing week (Mon–Sun)
+# is fully complete. Lands before the Tuesday publishing day resumes.
+#
+# Pure Node (JSON + fetch + crypto) — no satori/resvg/esbuild — so it skips the
+# ~200 MB font/node_modules install the daily crons need.
+#
+# Optional GSC setup (Search Console search performance):
+#   1. Google Cloud → create a service account → create a JSON key.
+#   2. Enable "Google Search Console API" for that project.
+#   3. In Search Console → Settings → Users and permissions, add the service
+#      account email (xxx@xxx.iam.gserviceaccount.com) as a Full/Restricted user
+#      on the incadencept.com property.
+#   4. GitHub repo → Settings → Secrets and variables → Actions → New secret
+#      GSC_SA_KEY = the full service-account JSON (paste as-is).
+#   (Optional Variable GSC_SITE_URL, defaults to sc-domain:incadencept.com.)
+name: Weekly Strategic Brief
+
+on:
+  schedule:
+    - cron: '30 23 * * 0'   # Sunday 23:30 UTC = Monday 07:30 Beijing
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Cover the Beijing week containing this date (YYYY-MM-DD); empty = last completed week'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-brief
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Generate weekly brief
+        env:
+          # Optional — section self-skips if this secret is absent.
+          GSC_SA_KEY: ${{ secrets.GSC_SA_KEY }}
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+        run: node scripts/weekly-brief.js ${{ github.event.inputs.date }}
+
+      - name: Commit brief
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add briefs/weekly
+          if git diff --staged --quiet; then
+            echo "No weekly brief changes to commit"
+            exit 0
+          fi
+          git commit -m "📊 步频周报 $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt..."
+            if git push; then exit 0; fi
+            echo "Push rejected — merging latest origin/main..."
+            git pull --no-rebase --no-edit || true
+          done
+          echo "✗ Push failed after 3 attempts."
+          exit 1
