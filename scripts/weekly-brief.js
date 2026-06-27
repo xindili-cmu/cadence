@@ -55,6 +55,15 @@ const FS_COVERAGE_MIN = 0.9;
 // GSC windows are shifted back this many days to compare two finalized weeks.
 const GSC_LAG_DAYS = Number(process.env.GSC_LAG_DAYS || 3);
 
+// Optional email delivery (Resend). When RESEND_API_KEY is set, a finished brief
+// is emailed to MAIL_TO. MAIL_FROM defaults to Resend's shared onboarding sender,
+// which can ONLY reach the Resend account owner's own address without domain
+// verification; set MAIL_FROM to a verified address (e.g. brief@incadencept.com)
+// after verifying the domain in Resend. Incomplete/DRY runs never email.
+const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const MAIL_TO = process.env.MAIL_TO || 'cindylips2001@gmail.com';
+const MAIL_FROM = process.env.MAIL_FROM || 'Cadence 步频 <onboarding@resend.dev>';
+
 // Signal tiers (curatedScore): ≥90 强信号 · 80–89 值得读 · 65–79 参考
 const TIER = { strong: 90, worth: 80, ref: 65 };
 
@@ -307,6 +316,71 @@ async function getGSC(win) {
   } catch (e) {
     return { error: String(e.message || e) };
   }
+}
+
+// ----------------------------------------------------------------------------
+// Optional email delivery (Resend HTTP API; zero dependency)
+// ----------------------------------------------------------------------------
+
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+/** Inline markdown → HTML on already-escaped text (markup chars are ASCII-safe). */
+function inlineMd(s) {
+  return escHtml(s)
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+}
+/** Minimal markdown → HTML covering exactly what this brief emits: h1/h2,
+ *  pipe tables, blockquotes, bullet lists, paragraphs, links, bold. */
+function mdToHtml(md) {
+  const lines = String(md).split('\n');
+  const out = [];
+  const isRow = (s) => /^\|.*\|\s*$/.test(s);
+  const isSep = (s) => /^\|[\s:|-]+\|\s*$/.test(s);
+  const cells = (s) => s.slice(1, s.lastIndexOf('|')).split('|').map((c) => c.trim());
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (line.trim() === '') { i++; continue; }
+    if (/^#\s+/.test(line)) { out.push(`<h1 style="font-size:20px;margin:16px 0 4px">${inlineMd(line.replace(/^#\s+/, ''))}</h1>`); i++; continue; }
+    if (/^##\s+/.test(line)) { out.push(`<h2 style="font-size:16px;margin:18px 0 4px">${inlineMd(line.replace(/^##\s+/, ''))}</h2>`); i++; continue; }
+    if (isRow(line) && i + 1 < lines.length && isSep(lines[i + 1])) {
+      const head = cells(line);
+      i += 2;
+      const body = [];
+      while (i < lines.length && isRow(lines[i])) { body.push(cells(lines[i])); i++; }
+      const th = head.map((h) => `<th style="border:1px solid #ddd;padding:5px 9px;text-align:left;background:#f6f6f6">${inlineMd(h)}</th>`).join('');
+      const rows = body.map((r) => '<tr>' + r.map((c) => `<td style="border:1px solid #ddd;padding:5px 9px">${inlineMd(c)}</td>`).join('') + '</tr>').join('');
+      out.push(`<table style="border-collapse:collapse;margin:6px 0;font-size:13px"><tr>${th}</tr>${rows}</table>`);
+      continue;
+    }
+    if (/^>\s?/.test(line)) {
+      const q = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) { q.push(inlineMd(lines[i].replace(/^>\s?/, ''))); i++; }
+      out.push(`<blockquote style="margin:8px 0;padding:6px 12px;border-left:3px solid #ccc;color:#555;font-size:13px">${q.join('<br>')}</blockquote>`);
+      continue;
+    }
+    if (/^-\s+/.test(line)) {
+      const items = [];
+      while (i < lines.length && /^-\s+/.test(lines[i])) { items.push(`<li>${inlineMd(lines[i].replace(/^-\s+/, ''))}</li>`); i++; }
+      out.push(`<ul style="margin:6px 0;padding-left:20px">${items.join('')}</ul>`);
+      continue;
+    }
+    out.push(`<p style="margin:6px 0">${inlineMd(line)}</p>`);
+    i++;
+  }
+  return `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:#222;max-width:700px">${out.join('\n')}</div>`;
+}
+async function sendEmail({ subject, md }) {
+  if (!RESEND_API_KEY) return { skipped: true };
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ from: MAIL_FROM, to: [MAIL_TO], subject, text: md, html: mdToHtml(md) }),
+  });
+  if (!res.ok) throw new Error(`resend ${res.status}: ${await res.text()}`);
+  return { id: (await res.json()).id };
 }
 
 // ----------------------------------------------------------------------------
@@ -563,7 +637,9 @@ async function main() {
 
   if (DRY) {
     console.log(md);
-    console.error(`\n[dry-run] ${tag} (${range}) · axis=${axis}${incomplete ? ' · INCOMPLETE' : ''} · ${cur.total} vs ${prev.total} · gsc=${gsc.skipped ? 'skipped' : gsc.error ? 'error' : 'ok'}`);
+    // MAIL_PREVIEW=true prints the HTML email body to stderr for eyeballing.
+    if (String(process.env.MAIL_PREVIEW || '').toLowerCase() === 'true') console.error(mdToHtml(md));
+    console.error(`\n[dry-run] ${tag} (${range}) · axis=${axis}${incomplete ? ' · INCOMPLETE' : ''} · ${cur.total} vs ${prev.total} · gsc=${gsc.skipped ? 'skipped' : gsc.error ? 'error' : 'ok'} · mail=${RESEND_API_KEY ? 'on' : 'off'}`);
     return;
   }
 
@@ -587,7 +663,19 @@ async function main() {
   idx.weeks.sort((a, b) => (a.tag < b.tag ? 1 : -1));
   fs.writeFileSync(idxPath, JSON.stringify(idx, null, 2));
 
-  console.log(`✓ briefs/weekly/${file} · axis=${axis} · ${cur.total} vs ${prev.total} · gsc=${gsc.skipped ? 'skipped' : gsc.error ? 'error' : 'ok'}`);
+  // Email the finished brief (optional; never fatal — the brief is already saved).
+  let mail = RESEND_API_KEY ? 'pending' : 'off';
+  if (RESEND_API_KEY) {
+    try {
+      const r = await sendEmail({ subject: `步频周报 · ${range}（${tag}）`, md });
+      mail = r.id ? `sent ${r.id}` : 'sent';
+    } catch (e) {
+      mail = 'FAILED';
+      console.error(`✗ 邮件发送失败（周报已写入，不影响提交）：${e.message || e}`);
+    }
+  }
+
+  console.log(`✓ briefs/weekly/${file} · axis=${axis} · ${cur.total} vs ${prev.total} · gsc=${gsc.skipped ? 'skipped' : gsc.error ? 'error' : 'ok'} · mail=${mail}`);
 }
 
 main().catch((e) => {

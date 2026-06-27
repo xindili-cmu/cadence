@@ -56,6 +56,18 @@ jobs:
           # Optional — section self-skips if this secret is absent.
           GSC_SA_KEY: ${{ secrets.GSC_SA_KEY }}
           GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+          # Optional email delivery via Resend — self-skips if RESEND_API_KEY absent.
+          #   1. Sign up at resend.com (with the address you want the brief sent to).
+          #   2. Create an API key → add repo secret RESEND_API_KEY.
+          #   3. Done. The default sender (onboarding@resend.dev) can email the
+          #      Resend account owner's own address with no DNS setup. First mail
+          #      may land in spam/promotions — mark "not spam" once.
+          #   Optional Variables: MAIL_TO (defaults to cindylips2001@gmail.com),
+          #   MAIL_FROM (set to brief@incadencept.com after verifying the domain
+          #   in Resend → lets you send to any recipient and improves deliverability).
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_TO: ${{ vars.MAIL_TO }}
+          MAIL_FROM: ${{ vars.MAIL_FROM }}
         run: node scripts/weekly-brief.js ${{ github.event.inputs.date }}
 
       - name: Commit brief
