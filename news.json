@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-27T17:34:27.651Z",
-    "totalItems": 73,
+    "lastUpdated": "2026-06-27T19:49:26.630Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -15,22 +15,28 @@
   },
   "hotTopics": [
     {
-      "id": "news-1782220755787-13",
-      "title": "Smallest worthwhile effect of anterior cruciate ligament reconstruction compared with non-surgical management: a benefit-harm trade-off study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331698/",
-      "category": "sports",
+      "id": "news-1782589765810-0",
+      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [commentary].",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331696/",
+      "category": "orthopedic",
       "publishedAt": "2026-06-27T09:07:34.231Z",
       "sourceCount": 5,
       "sources": [
         "Journal of physiotherapy",
         "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "Current reviews in musculoskeletal medicine",
+        "Physical therapy",
         "The American journal of sports medicine",
         "BMC musculoskeletal disorders"
       ],
-      "tag": "return-to-sport",
+      "tag": "knee",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [commentary].",
+          "titleZh": "评价性评论：退行性半月板撕裂和膝关节疼痛中，附加物理治疗或激励性短信未比单独家庭运动方案更能改善疼痛"
+        },
         {
           "source": "PubMed",
           "journal": "Journal of physiotherapy",
@@ -45,9 +51,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "Current reviews in musculoskeletal medicine",
-          "title": "Management of Labral Tears Associated with Glenohumeral Instability in Athletes.",
-          "titleZh": "运动员盂肱关节不稳相关盂唇撕裂的治疗管理"
+          "journal": "Physical therapy",
+          "title": "Between the Snap and the Return: A Prospective Narrative Analysis of Four Voices from inside Anterior Cruciate Ligament Reconstruction Recovery.",
+          "titleZh": "从断裂到回归：前交叉韧带重建恢复期四位患者声音的前瞻性叙事分析"
         },
         {
           "source": "PubMed",
@@ -62,7 +68,7 @@
           "titleZh": "腘绳肌损伤后重返运动的加权标准：系统综述与方法学质量分析"
         }
       ],
-      "heat": 4.43
+      "heat": 4.28
     },
     {
       "id": "news-1782304323281-8",
@@ -74,9 +80,9 @@
       "sources": [
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "medRxiv",
-        "Disability and rehabilitation",
         "NeuroRehabilitation",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physical medicine and rehabilitation",
+        "Disability and rehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -94,12 +100,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Immersive virtual reality for upper limb rehabilitation in people with MS: a randomised, controlled feasibility study.",
-          "titleZh": "沉浸式虚拟现实上肢康复在多发性硬化症患者中的随机对照可行性研究"
-        },
-        {
-          "source": "PubMed",
           "journal": "NeuroRehabilitation",
           "title": "Rehabilitation and Management in Lateral Medullary Stroke (Wallenberg Syndrome): A Scoping Review and Evidence Map.",
           "titleZh": "外侧延髓卒中（Wallenberg综合征）的康复和管理：范围综述和证据图"
@@ -109,29 +109,96 @@
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Neurogenic bowel dysfunction in multiple sclerosis: clinical determinants and its association with bladder dysfunction in a multicenter study.",
           "titleZh": "多发性硬化症的神经源性肠功能障碍：一项多中心研究的临床决定因素及其与膀胱功能障碍的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Immersive virtual reality for upper limb rehabilitation in people with MS: a randomised, controlled feasibility study.",
+          "titleZh": "沉浸式虚拟现实上肢康复在多发性硬化症患者中的随机对照可行性研究"
         }
       ],
-      "heat": 4.43
+      "heat": 4.28
     },
     {
-      "id": "news-1782380889209-2",
-      "title": "Cognitive strategies for improving activity-level outcomes post stroke: an integrative review.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42341741/",
-      "category": "neurological",
-      "publishedAt": "2026-06-26T09:54:10.504Z",
-      "sourceCount": 7,
+      "id": "news-1782589765812-9",
+      "title": "Efficacy of High-Intensity Laser Therapy for Meralgia Paresthetica: A Randomized, Double-Blind, Sham-Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42307460/",
+      "category": "manual-modality",
+      "publishedAt": "2026-06-27T00:00:00.000Z",
+      "sourceCount": 5,
       "sources": [
+        "American journal of physical medicine & rehabilitation",
+        "Physiotherapy theory and practice",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Archives of Physical Medicine and Rehabilitation",
+        "BMC musculoskeletal disorders"
+      ],
+      "tag": "laser",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Efficacy of High-Intensity Laser Therapy for Meralgia Paresthetica: A Randomized, Double-Blind, Sham-Controlled Trial.",
+          "titleZh": "高强度激光治疗股外侧皮神经卡压综合征的疗效：一项随机、双盲、假对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Investigation of the Effectiveness of Extracorporeal Shock Wave Therapy and Kinesiotaping in Individuals With Carpal Tunnel Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "体外冲击波疗法和肌内效贴在腕管综合征患者中的有效性研究：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Shortwave diathermy for managing knee osteoarthritis: A systematic review with meta-analysis.",
+          "titleZh": "短波透热疗法治疗膝骨关节炎：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effect of Visceral Manipulation Versus Integrated Neuromuscular Inhibition Technique in Shoulder Impingement Syndrome.",
+          "titleZh": "内脏手法与整合神经肌肉抑制技术在肩峰撞击综合征中的效果比较"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "COMPARISON OF ULTRASOUND-GUIDED LAVAGE AND SUBACROMIAL BURSA INJECTION FOR CALCIFIC TENDINITIS: A PROSPECTIVE, RANDOMIZED, DOUBLE-BLIND TRIAL",
+          "titleZh": "超声引导下灌洗与肩峰下滑囊注射治疗钙化性肌腱炎的比较：一项前瞻性、随机、双盲试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Accuracy of visual estimation of shoulder abduction by expert physiotherapists: a comparative study using 3D motion capture.",
+          "titleZh": "专家物理治疗师肩关节外展目视评估的准确性：一项使用3D运动捕捉的比较研究"
+        }
+      ],
+      "heat": 3.76
+    },
+    {
+      "id": "news-1782589765812-7",
+      "title": "\"Are Cardiac Rehabilitation Programs Effective in Improving Aerobic Capacity for People with Transient Ischemic Attack and Stroke? A Rapid Review and Meta-analysis\".",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42307458/",
+      "category": "cardiopulmonary",
+      "publishedAt": "2026-06-26T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "American journal of physical medicine & rehabilitation",
         "Topics in stroke rehabilitation",
         "Disability and rehabilitation",
         "Gait & posture",
-        "Physiotherapy theory and practice",
-        "Neurorehabilitation and neural repair",
         "Archives of Physical Medicine and Rehabilitation",
         "medRxiv"
       ],
-      "tag": "stroke",
+      "tag": "TIA",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "\"Are Cardiac Rehabilitation Programs Effective in Improving Aerobic Capacity for People with Transient Ischemic Attack and Stroke? A Rapid Review and Meta-analysis\".",
+          "titleZh": "心脏康复计划在改善短暂性脑缺血发作和卒中患者有氧能力方面的有效性：一项快速综述和Meta分析"
+        },
         {
           "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
@@ -151,6 +218,49 @@
           "titleZh": "亚急性卒中患者步态时空参数在预测独立户外行走能力方面的增量预测价值：一项回顾性队列研究"
         },
         {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Apraxia in Patients with Cognitive Impairment: Evidence from Familiar Tool Use",
+          "titleZh": "认知障碍患者的失用症：来自熟悉工具使用的证据"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Better immediate declarative memory is associated with forgetting during locomotor adaptation in chronic stroke and in older adults",
+          "titleZh": "更好的即时陈述性记忆与慢性卒中和老年人步态适应性遗忘相关"
+        }
+      ],
+      "heat": 3.19
+    },
+    {
+      "id": "news-1782246470822-10",
+      "title": "Living with spinal cord injury in the community of Bangladesh: a comprehensive analysis using the ICF framework.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42334199/",
+      "category": "neurological",
+      "publishedAt": "2026-06-25T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Journal of rehabilitation medicine",
+        "Archives of Physical Medicine and Rehabilitation",
+        "Disability and rehabilitation",
+        "Physiotherapy theory and practice",
+        "Clinical rehabilitation"
+      ],
+      "tag": "spinal-cord",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Living with spinal cord injury in the community of Bangladesh: a comprehensive analysis using the ICF framework.",
+          "titleZh": "孟加拉国社区脊髓损伤患者生活状况：基于 ICF 框架的综合分析"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Companionship as a mediator of the relationship between marital status and psychosocial outcomes: Findings in individuals with spinal cord injury.",
+          "titleZh": "陪伴在脊髓损伤患者婚姻状况与心理社会结局关系中的中介作用。"
+        },
+        {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Employers' perceptions of supporting an employee's work reintegration following stroke.",
@@ -164,152 +274,83 @@
         },
         {
           "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Changes in Unimanual and Bimanual Upper Extremity Use During the Subacute Phase Post-Stroke Assessed in Supervised and Unsupervised Contexts.",
-          "titleZh": "卒中亚急性期单侧和双侧上肢使用在有监督和无监督环境下的变化"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Cortical activation and functional connectivity during thumb-to-finger opposition in patients with stroke with varying functional levels: insights from fNIRS.",
-          "titleZh": "fNIRS 研究揭示卒中患者在拇指对指任务中，皮层激活和功能连接随功能水平变化"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Apraxia in Patients with Cognitive Impairment: Evidence from Familiar Tool Use",
-          "titleZh": "认知障碍患者的失用症：来自熟悉工具使用的证据"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Better immediate declarative memory is associated with forgetting during locomotor adaptation in chronic stroke and in older adults",
-          "titleZh": "更好的即时陈述性记忆与慢性卒中和老年人步态适应性遗忘相关"
+          "journal": "Clinical rehabilitation",
+          "title": "Implementation and evaluation of a stroke sexual health practice profile for rehabilitation in Ontario, Canada.",
+          "titleZh": "在加拿大安大略省实施和评估卒中康复性健康实践规范"
         }
       ],
-      "heat": 4.43
-    },
-    {
-      "id": "news-1782581667112-0",
-      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331701/",
-      "category": "orthopedic",
-      "publishedAt": "2026-06-26T09:54:16.558Z",
-      "sourceCount": 5,
-      "sources": [
-        "Journal of physiotherapy",
-        "Physiotherapy theory and practice",
-        "Brazilian journal of physical therapy",
-        "JAMA",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
-          "titleZh": "评价性研究：退行性半月板撕裂和膝关节疼痛患者，家庭锻炼与额外物理治疗或励志短信相比，疼痛改善无显著差异"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Shortwave diathermy for managing knee osteoarthritis: A systematic review with meta-analysis.",
-          "titleZh": "短波透热疗法治疗膝骨关节炎：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Effectiveness of physical therapy techniques and methods in the management of endometriosis symptoms: A systematic review with meta-analysis.",
-          "titleZh": "物理治疗技术和方法在子宫内膜异位症症状管理中的有效性：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "JAMA",
-          "title": "Low Back Pain: A Review.",
-          "titleZh": "腰痛：一篇综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Perceptions of Chronic Low Back Pain and Physiotherapy in India: A Qualitative Study.",
-          "titleZh": "印度慢性腰痛患者对物理治疗的认知：一项定性研究"
-        }
-      ],
-      "heat": 3.16
-    },
-    {
-      "id": "news-1782405552573-2",
-      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [commentary].",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331699/",
-      "category": "cardiopulmonary",
-      "publishedAt": "2026-06-25T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Journal of physiotherapy",
-        "Brazilian journal of physical therapy",
-        "Musculoskeletal science & practice",
-        "BMC musculoskeletal disorders",
-        "PM & R : the journal of injury, function, and rehabilitation"
-      ],
-      "tag": "telehealth",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [commentary].",
-          "titleZh": "批判性评估论文：移动端肺康复对慢性阻塞性肺疾病的运动能力改善与中心化康复相当，且健康状况改善更优。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Physiotherapy management of Long-COVID: an evidence-based approach.",
-          "titleZh": "长新冠的物理治疗管理：一种基于证据的方法"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Perspectives on an advanced practice physiotherapy-led model for musculoskeletal care in Canada: A qualitative study of patients and multidisciplinary clinicians.",
-          "titleZh": "加拿大先进执业物理治疗师主导的肌肉骨骼护理模式：患者和多学科临床医生的定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "Decision support in the management of musculoskeletal disorders: a qualitative study of physiotherapists' and patients' experiences.",
-          "titleZh": "骨骼肌肉疾病管理中的决策支持：物理治疗师和患者经验的定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Implementing Live Long Walk Strong: Practice-based evidence on adapting a physical therapy program across diverse contexts.",
-          "titleZh": "“活得久走得稳”项目实施：跨多样化背景下物理治疗项目适应的实践证据"
-        }
-      ],
-      "heat": 1.94
+      "heat": 1.88
     }
   ],
   "items": [
     {
-      "id": "news-1782581667112-0",
-      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
-      "summary": "For degenerative meniscal tear and knee pain, home exercise alone provides comparable pain improvement to home exercise supplemented with physiotherapy or motivational text messages.",
+      "id": "news-1782589765810-0",
+      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [commentary].",
+      "summary": "This commentary suggests that adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain.",
       "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331701/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331696/",
       "publishedAt": "2026-06-23T00:00:00.000Z",
       "firstSeen": "2026-06-23T13:19:15.783Z",
       "curatedScore": 85,
-      "curatedReason": "针对退行性半月板撕裂和膝关节疼痛，家庭锻炼方案的疼痛改善效果并不劣于在此基础上增加物理治疗或励志短信。这坐实了家庭运动处方在轻中度膝骨关节炎管理中的核心地位。",
-      "titleZh": "评价性研究：退行性半月板撕裂和膝关节疼痛患者，家庭锻炼与额外物理治疗或励志短信相比，疼痛改善无显著差异",
-      "summaryZh": "针对退行性半月板撕裂和膝关节疼痛患者，研究表明单纯家庭锻炼在疼痛改善方面与额外增加物理治疗或励志短信无显著差异。",
-      "curatedReasonEn": "For degenerative meniscal tears and knee pain, adding physiotherapy or motivational text messages to home exercise alone does not improve pain further. This reinforces the core role of home exercise prescriptions in managing mild to moderate knee osteoarthritis.",
+      "curatedReason": "对于退行性半月板撕裂和膝关节疼痛，家庭运动方案仍然是基石。附加物理治疗或激励性短信干预的短期效果，在疼痛改善上并没有超越单纯家庭运动，提示现阶段不应过度加码辅助手段。",
+      "titleZh": "评价性评论：退行性半月板撕裂和膝关节疼痛中，附加物理治疗或激励性短信未比单独家庭运动方案更能改善疼痛",
+      "curatedReasonEn": "For degenerative meniscal tears and knee pain, a home exercise program remains the cornerstone. Adding physiotherapy or motivational text messages did not improve pain beyond home exercise alone in the short term, suggesting these adjuncts may not offer significant added benefit.",
+      "limitation": "这是一篇评论性文章，基于其他研究的综述。",
+      "limitationEn": "This is a commentary based on a synopsis of other studies.",
       "tags": [
         "research",
         "knee"
       ],
-      "studyDesign": "系统综述",
+      "studyDesign": "述评",
       "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1782589765812-7",
+      "title": "\"Are Cardiac Rehabilitation Programs Effective in Improving Aerobic Capacity for People with Transient Ischemic Attack and Stroke? A Rapid Review and Meta-analysis\".",
+      "summary": "A rapid review and meta-analysis of nine studies (n=490) found that cardiac rehabilitation improved aerobic capacity by 28 meters (95% CI 16m to 39m, P<0.00001) for people with TIA or stroke, with promising improvements in systolic blood pressure and self-reported diet.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42307458/",
+      "publishedAt": "2026-06-17T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 85,
+      "curatedReason": "这项快速综述和Meta分析为卒中或TIA患者参与运动心脏康复计划提供了强有力的证据：该计划能显著改善有氧能力（平均增加28米）。这意味着你可以更积极地将这些患者转诊或纳入心脏康复计划。",
+      "titleZh": "心脏康复计划在改善短暂性脑缺血发作和卒中患者有氧能力方面的有效性：一项快速综述和Meta分析",
+      "curatedReasonEn": "This rapid review and meta-analysis provides strong evidence for exercise-based cardiac rehabilitation in stroke or TIA patients: it significantly improves aerobic capacity (mean increase of 28m). This means you can more actively refer or integrate these patients into cardiac rehab programs.",
+      "limitation": "纳入研究的质量普遍较低至中等，且Meta分析仅纳入3项研究，可能影响结果的稳健性。",
+      "limitationEn": "The included studies were of low to moderate quality, and only three were pooled for meta-analysis, which may affect the robustness of the findings.",
+      "tags": [
+        "research",
+        "stroke",
+        "TIA",
+        "aerobic-capacity"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
+    {
+      "id": "news-1782589765812-3",
+      "title": "Manual therapy promotes prefrontal neural efficiency in chronic non-specific neck pain: An fNIRS-Based randomized controlled trial.",
+      "summary": "A randomized controlled trial (n=30) found that combined manual therapy and exercise improved pain (VAS) and disability (NDI), and increased prefrontal neural efficiency in chronic non-specific neck pain patients compared to exercise alone, as measured by fNIRS.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42289173/",
+      "publishedAt": "2026-06-15T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 80,
+      "curatedReason": "这项RCT研究揭示了手法治疗联合运动训练在慢性非特异性颈痛患者中，可能通过提高前额叶神经效率来改善临床症状。这为你在临床实践中解释手法治疗的神经生理机制提供了初步证据。",
+      "titleZh": "手法治疗通过fNIRS证据显示可提升慢性非特异性颈痛患者的前额叶神经效率：一项随机对照试验",
+      "curatedReasonEn": "This RCT suggests that manual therapy combined with exercise may improve clinical symptoms in chronic non-specific neck pain by enhancing prefrontal neural efficiency. This provides initial evidence for explaining the neurophysiological mechanisms of manual therapy in your practice.",
+      "limitation": "研究样本量较小（n=30），且随访期较短（6周），可能限制结果的长期稳定性和外推性。",
+      "limitationEn": "The study had a small sample size (n=30) and a short follow-up period (6 weeks), which may limit the long-term stability and generalizability of the results.",
+      "tags": [
+        "research",
+        "spine",
+        "manual-therapy"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Musculoskeletal science & practice"
     },
     {
       "id": "news-1782405552573-2",
@@ -336,191 +377,191 @@
       "journal": "Journal of physiotherapy"
     },
     {
-      "id": "news-1782581667114-8",
-      "title": "Effectiveness of physical therapy techniques and methods in the management of endometriosis symptoms: A systematic review with meta-analysis.",
-      "summary": "A systematic review with meta-analysis evaluated the effectiveness of physical therapy methods and techniques in improving endometriosis symptoms, finding positive effects.",
+      "id": "news-1782589765812-9",
+      "title": "Efficacy of High-Intensity Laser Therapy for Meralgia Paresthetica: A Randomized, Double-Blind, Sham-Controlled Trial.",
+      "summary": "A randomized, double-blind, sham-controlled trial (n=54) showed that High-Intensity Laser Therapy (HILT) significantly improved pain (NPRS, P=0.006), function (LEFS, P=0.043), and lateral femoral cutaneous nerve sensory conduction velocity (P=0.027) at week 12 compared to sham in Meralgia Paresthetica.",
       "category": "manual-modality",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42308873/",
-      "publishedAt": "2026-06-18T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42307460/",
+      "publishedAt": "2026-06-17T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
       "curatedScore": 80,
-      "curatedReason": "本系统综述和荟萃分析证实了物理治疗技术在改善子宫内膜异位症症状方面的有效性。这为你的临床实践提供了明确的证据支持，可以更自信地将手法治疗或其他物理治疗手段纳入子宫内膜异位症患者的康复方案。",
-      "titleZh": "物理治疗技术和方法在子宫内膜异位症症状管理中的有效性：一项系统综述和荟萃分析",
-      "summaryZh": "一项系统综述和荟萃分析评估了不同物理治疗方法和技术在改善子宫内膜异位症症状方面的有效性，结果显示有积极作用。",
-      "curatedReasonEn": "This systematic review and meta-analysis confirms the effectiveness of physical therapy techniques in improving endometriosis symptoms. This provides clear evidence to support your clinical practice, allowing you to more confidently incorporate manual therapy or other physical therapy modalities into the rehabilitation plans for patients with endometriosis.",
-      "limitation": "所纳入研究的异质性可能影响结果的总体解释。",
-      "limitationEn": "Heterogeneity among included studies may affect the overall interpretation of results.",
+      "curatedReason": "高强度激光治疗（HILT）对股外侧皮神经卡压综合征（MP）引起的疼痛、功能障碍和神经传导速度改善有显著效果。对于MP患者，HILT值得你作为一种有效的非侵入性治疗方案纳入考虑。",
+      "titleZh": "高强度激光治疗股外侧皮神经卡压综合征的疗效：一项随机、双盲、假对照试验",
+      "curatedReasonEn": "High-intensity laser therapy (HILT) significantly improves pain, dysfunction, and nerve conduction velocity in meralgia paresthetica (MP). For MP patients, HILT is a valuable non-invasive treatment option to consider.",
+      "limitation": "研究样本量相对较小（54名分析患者），且随访时间为12周，长期效果仍需进一步验证。",
+      "limitationEn": "The study had a relatively small sample size (54 analyzed patients) and a 12-week follow-up, so long-term effects still require further validation.",
       "tags": [
         "research",
-        "pelvic-floor"
+        "laser",
+        "neuropathy"
       ],
-      "studyDesign": "系统综述",
-      "journal": "Brazilian journal of physical therapy"
+      "studyDesign": "RCT",
+      "journal": "American journal of physical medicine & rehabilitation"
     },
     {
-      "id": "news-1782581667113-1",
-      "title": "Perspectives on an advanced practice physiotherapy-led model for musculoskeletal care in Canada: A qualitative study of patients and multidisciplinary clinicians.",
-      "summary": "A qualitative study explored the perspectives of patients and multidisciplinary clinicians on an Advanced Practice Physiotherapy (APP)-led musculoskeletal care model in Canada to inform sustainable implementation strategies.",
+      "id": "news-1782589765811-1",
+      "title": "Appropriate translational designs for determining causal force-based (manual therapy) treatment mechanisms.",
+      "summary": "This commentary outlines five causal research designs for investigating the treatment mechanisms of force-based manual therapies, bridging basic science and practical applications.",
       "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42320267/",
-      "publishedAt": "2026-06-20T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.113Z",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42302672/",
+      "publishedAt": "2026-06-17T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.811Z",
       "curatedScore": 75,
-      "curatedReason": "加拿大 APP 牵头的 MSK 护理模式虽然有潜力缓解医疗负担，但在实际整合中面临系统性障碍。要推进这种模式，必须更好地理解患者和多学科临床医生的视角，从而制定可持续的实施策略。",
-      "titleZh": "加拿大先进执业物理治疗师主导的肌肉骨骼护理模式：患者和多学科临床医生的定性研究",
-      "summaryZh": "本定性研究探讨了加拿大患者和多学科临床医生对先进执业物理治疗师（APP）主导的肌肉骨骼护理模式的看法，以期为可持续实施提供策略。",
-      "curatedReasonEn": "While the APP-led MSK care model in Canada holds promise for alleviating healthcare burden, it faces systemic barriers to integration. Advancing this model requires a better understanding of patient and multidisciplinary clinician perspectives to inform sustainable implementation strategies.",
-      "limitation": "定性研究，样本量有限，结果外推性受限。",
-      "limitationEn": "Qualitative study with a limited sample size, restricting the generalizability of findings.",
+      "curatedReason": "如果你在研究手法治疗的作用机制，这篇评论文章提出了五种因果研究设计，可以帮助你更好地构建研究框架，从“是否有效”转向“为何有效”的深层机制探讨。",
+      "titleZh": "探讨基于力的手法治疗因果机制的适当转化研究设计",
+      "curatedReasonEn": "If you're researching the mechanisms of manual therapy, this commentary outlines five causal research designs, helping you structure studies to delve into \"why\" treatments work, beyond just \"whether\" they work.",
+      "limitation": "这是一篇专家评论文章，未提供原始数据。",
+      "limitationEn": "This is an expert commentary and does not provide original data.",
       "tags": [
         "research",
-        "telehealth",
-        "workforce"
+        "manipulation",
+        "causal-mechanisms"
       ],
-      "studyDesign": "观察研究",
+      "studyDesign": "述评",
       "journal": "Musculoskeletal science & practice"
     },
     {
-      "id": "news-1782581667114-3",
-      "title": "Changes in Unimanual and Bimanual Upper Extremity Use During the Subacute Phase Post-Stroke Assessed in Supervised and Unsupervised Contexts.",
-      "summary": "This longitudinal study characterized changes in unimanual and bimanual upper extremity use in 41 subacute stroke patients (28.4 [8.0] days since stroke) across daily life, therapy, and functional assessment contexts using accelerometers.",
-      "category": "neurological",
+      "id": "news-1782589765812-4",
+      "title": "Effect of Visceral Manipulation Versus Integrated Neuromuscular Inhibition Technique in Shoulder Impingement Syndrome.",
+      "summary": "A randomized controlled trial (n=75) found that both Visceral Manipulation and Integrated Neuromuscular Inhibition Technique significantly improved pain intensity, shoulder function, and range of motion in patients with shoulder impingement syndrome.",
+      "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42318890/",
-      "publishedAt": "2026-06-19T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42287703/",
+      "publishedAt": "2026-06-15T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
       "curatedScore": 75,
-      "curatedReason": "本研究揭示了卒中亚急性期患侧上肢在有监督和无监督环境下的使用变化模式。这能帮助你更精确地评估患者在不同场景下的真实运动表现，优化康复干预方案。",
-      "titleZh": "卒中亚急性期单侧和双侧上肢使用在有监督和无监督环境下的变化",
-      "summaryZh": "这项纵向研究通过加速计评估了41名亚急性期卒中患者（卒中后28.4 [8.0]天）在日常生活、治疗和功能评估等三种环境下，单侧和双侧上肢使用模式的变化。",
-      "curatedReasonEn": "This study reveals changes in paretic upper extremity use during the subacute phase post-stroke in both supervised and unsupervised contexts. This can help you more accurately assess patients' real-world motor performance in different settings and optimize rehabilitation interventions.",
-      "limitation": "样本量较小（n=41），可能影响结果的普遍性。",
-      "limitationEn": "Small sample size (n=41), potentially affecting the generalizability of results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Neurorehabilitation and neural repair"
-    },
-    {
-      "id": "news-1782581667114-5",
-      "title": "Implementing Live Long Walk Strong: Practice-based evidence on adapting a physical therapy program across diverse contexts.",
-      "summary": "A process evaluation described the adaptation of the age-friendly physical therapy program \"Live Long Walk Strong\" across four diverse clinical settings within the Veterans Health Administration, highlighting encountered barriers and made adaptations.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42321910/",
-      "publishedAt": "2026-06-20T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
-      "curatedScore": 75,
-      "curatedReason": "Live Long Walk Strong 项目的实践经验表明，物理治疗计划在不同临床环境下需要灵活调整。这对你来说是个提醒：康复方案并非一成不变，需要结合具体情境进行个性化适应，尤其是在老年康复领域。",
-      "titleZh": "“活得久走得稳”项目实施：跨多样化背景下物理治疗项目适应的实践证据",
-      "summaryZh": "一项过程评估描述了“活得久走得稳”这一适老物理治疗项目在美国退伍军人健康管理局下属四个不同临床环境中的适应情况，并强调了遇到的障碍和所做的调整。",
-      "curatedReasonEn": "Practical experience from the Live Long Walk Strong program indicates that physical therapy programs require flexible adaptation across diverse clinical contexts. This is a reminder for you: rehabilitation protocols are not one-size-fits-all and need to be individualized to specific settings, especially in geriatric rehabilitation.",
-      "limitation": "过程评估，主要侧重于项目适应性而非临床疗效。",
-      "limitationEn": "Process evaluation, primarily focusing on program adaptability rather than clinical efficacy.",
-      "tags": [
-        "research",
-        "falls-prevention",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "PM & R : the journal of injury, function, and rehabilitation"
-    },
-    {
-      "id": "news-1782581667113-2",
-      "title": "Development of a predictive model for postoperative erectile function recovery in male patients with incomplete traumatic cervical spinal cord injury.",
-      "summary": "A retrospective cohort study developed a clinical prediction model for erectile function recovery in 207 male patients (aged 18-60 years) with incomplete traumatic cervical spinal cord injury (ASIA B-D) undergoing posterior cervical surgery.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42321425/",
-      "publishedAt": "2026-06-20T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.113Z",
-      "curatedScore": 70,
-      "curatedReason": "这项回顾性队列研究为不完全性创伤性颈脊髓损伤男性患者术后勃起功能恢复提供了预测模型。这个模型可能有助于你早期识别高危患者，进行针对性的康复管理。",
-      "titleZh": "不完全性创伤性颈脊髓损伤男性患者术后勃起功能恢复预测模型的开发",
-      "summaryZh": "一项回顾性队列研究开发了一个临床预测模型，用于预测207名不完全性创伤性颈脊髓损伤（ASIA B-D）男性患者在接受后路颈椎手术后的勃起功能恢复情况。",
-      "curatedReasonEn": "This retrospective cohort study provides a predictive model for postoperative erectile function recovery in male patients with incomplete traumatic cervical spinal cord injury. This model may help you identify high-risk patients early for targeted rehabilitation management.",
-      "limitation": "回顾性研究，存在选择偏倚，且预测模型需进一步前瞻性验证。",
-      "limitationEn": "Retrospective study with potential selection bias; the predictive model requires further prospective validation.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
-    },
-    {
-      "id": "news-1782581667114-4",
-      "title": "Management of Labral Tears Associated with Glenohumeral Instability in Athletes.",
-      "summary": "This review examines current literature on the evaluation and management of labral pathology with associated glenohumeral instability in athletes, focusing on rehabilitation and return to sport, noting increased recognition of posterior and combined capsulolabral injuries.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42315812/",
-      "publishedAt": "2026-06-19T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述深入探讨了运动员盂唇撕裂伴盂肱关节不稳的评估和管理，并强调了康复和重返运动的重要性。它将帮你理解最新的处理进展，特别是在后方和复合型损伤管理方面。",
-      "titleZh": "运动员盂肱关节不稳相关盂唇撕裂的治疗管理",
-      "summaryZh": "本综述探讨了运动员盂肱关节不稳相关盂唇撕裂的评估和管理，重点关注康复和重返运动，指出后方和复合型盂唇损伤的识别日益增多。",
-      "curatedReasonEn": "This review delves into the evaluation and management of labral tears with glenohumeral instability in athletes, emphasizing rehabilitation and return to sport. It will help you understand the latest advancements in management, especially for posterior and combined capsulolabral injuries.",
-      "limitation": "作为综述，其证据级别取决于所引用研究的质量，不提供新的实证数据。",
-      "limitationEn": "As a review, its evidence level depends on the quality of cited studies and it does not provide new empirical data.",
+      "curatedReason": "对于肩峰撞击综合征患者，内脏手法与整合神经肌肉抑制技术都能有效改善疼痛、功能和关节活动度。当常规手段效果不佳或你想探索不同维度干预时，可以考虑内脏手法作为一种补充思路。",
+      "titleZh": "内脏手法与整合神经肌肉抑制技术在肩峰撞击综合征中的效果比较",
+      "curatedReasonEn": "Both Visceral Manipulation (VM) and Integrated Neuromuscular Inhibition Technique (INIT) effectively improve pain, function, and ROM in shoulder impingement syndrome. Consider VM as a complementary approach when conventional methods are insufficient or when exploring different intervention dimensions.",
+      "limitation": "研究排除了严重肩关节病变，结果可能不适用于所有肩峰撞击综合征患者。",
+      "limitationEn": "The study excluded severe shoulder joint pathologies, so the results may not apply to all patients with shoulder impingement syndrome.",
       "tags": [
         "research",
         "shoulder",
-        "return-to-sport"
+        "manual-therapy"
       ],
-      "studyDesign": "综述",
-      "journal": "Current reviews in musculoskeletal medicine"
+      "studyDesign": "RCT",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
     },
     {
-      "id": "news-1782581667114-7",
-      "title": "Physiotherapy management of Long-COVID: an evidence-based approach.",
-      "summary": "This review describes the physiotherapy management of Long-COVID, a heterogeneous and multisystemic condition, based on current evidence, highlighting strategies to manage its sequelae.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42320154/",
-      "publishedAt": "2026-06-19T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述总结了 Long-COVID 物理治疗管理的现有证据。它帮你梳理了多系统症状的康复策略，但也要注意，Long-COVID 异质性高，仍需基于个体情况精细化调整方案。",
-      "titleZh": "长新冠的物理治疗管理：一种基于证据的方法",
-      "summaryZh": "本综述根据现有证据，描述了长新冠（一种异质性多系统疾病）的物理治疗管理方法，重点介绍了其后遗症的应对策略。",
-      "curatedReasonEn": "This review summarizes current evidence for physiotherapy management of Long-COVID. It helps you outline rehabilitation strategies for multi-system symptoms, but also note that Long-COVID is highly heterogeneous and still requires individualized adjustments based on patient specific conditions.",
-      "limitation": "作为综述，其证据级别取决于所引用研究的质量，不提供新的实证数据。",
-      "limitationEn": "As a review, its evidence level depends on the quality of cited studies and it does not provide new empirical data.",
-      "tags": [
-        "research",
-        "covid-19"
-      ],
-      "studyDesign": "综述",
-      "journal": "Brazilian journal of physical therapy"
-    },
-    {
-      "id": "news-1782581667114-9",
-      "title": "Low Back Pain: A Review.",
-      "summary": "This JAMA review provides a comprehensive overview of low back pain, defined as pain localized below the costal margin and above the inferior gluteal fold, affecting approximately 619 million people worldwide and being the leading cause of years lived with disability.",
+      "id": "news-1782589765812-10",
+      "title": "Investigation of the Effectiveness of Extracorporeal Shock Wave Therapy and Kinesiotaping in Individuals With Carpal Tunnel Syndrome: A Randomized Controlled Trial.",
+      "summary": "A randomized controlled trial (n=54) found that extracorporeal shock wave therapy (ESWT) and kinesiotaping (KT) combined with wrist splinting and nerve-tendon gliding exercises significantly improved pain, grip strength, symptom severity, and functional status in individuals with mild to moderate Carpal Tunnel Syndrome.",
       "category": "manual-modality",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42295944/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42296467/",
       "publishedAt": "2026-06-15T00:00:00.000Z",
-      "firstSeen": "2026-06-27T17:34:27.114Z",
-      "curatedScore": 70,
-      "curatedReason": "《JAMA》的这篇综述全面概述了腰痛的定义、流行病学和分类，强调了其作为全球致残首要原因的地位。它为你提供了一个高质量的腰痛知识框架，有助于你理解当前诊疗趋势。",
-      "titleZh": "腰痛：一篇综述",
-      "summaryZh": "这篇《JAMA》综述全面概述了腰痛，其定义为肋弓以下、臀下褶皱以上区域的疼痛，影响全球约6.19亿人，是全球致残的首要原因。",
-      "curatedReasonEn": "This JAMA review provides a comprehensive overview of low back pain's definition, epidemiology, and classification, highlighting its status as the leading global cause of disability. It offers you a high-quality framework for understanding low back pain, aiding in your grasp of current diagnostic and treatment trends.",
-      "limitation": "作为一篇一般性综述，它主要提供背景信息，而非新的干预证据。",
-      "limitationEn": "As a general review, it primarily offers background information rather than new intervention evidence.",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 75,
+      "curatedReason": "对于轻中度腕管综合征，体外冲击波疗法（ESWT）联合腕关节夹板和神经-肌腱滑动练习能进一步改善患者的疼痛、握力和功能。如果你已经在使用常规治疗，可以考虑引入ESWT来增强疗效。",
+      "titleZh": "体外冲击波疗法和肌内效贴在腕管综合征患者中的有效性研究：一项随机对照试验",
+      "curatedReasonEn": "For mild to moderate Carpal Tunnel Syndrome (CTS), Extracorporeal Shock Wave Therapy (ESWT) combined with wrist splinting and nerve-tendon gliding exercises further improves patient pain, grip strength, and function. If you're using conventional treatments, consider adding ESWT to enhance efficacy.",
+      "limitation": "研究仅评估了短期效果，对长期随访和复发率未作评估。",
+      "limitationEn": "The study only assessed short-term effects, without evaluating long-term follow-up or recurrence rates.",
       "tags": [
         "research",
-        "spine"
+        "electro",
+        "taping",
+        "hand-wrist"
+      ],
+      "studyDesign": "RCT",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
+    {
+      "id": "news-1782589765812-23",
+      "title": "COMPARISON OF ULTRASOUND-GUIDED LAVAGE AND SUBACROMIAL BURSA INJECTION FOR CALCIFIC TENDINITIS: A PROSPECTIVE, RANDOMIZED, DOUBLE-BLIND TRIAL",
+      "summary": "This prospective, randomized, double-blind trial aimed to compare ultrasound-guided subacromial bursa injection and ultrasound-guided lavage for calcific tendinitis based on clinical and ultrasonographic findings.",
+      "category": "orthopedic",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00792-6/fulltext?rss=yes",
+      "publishedAt": "2026-06-27T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 75,
+      "curatedReason": "超声引导下抽吸灌洗（lavage）和肩峰下滑囊注射（SBI）在钙化性肌腱炎的治疗中均显示出积极效果。这项试验提供了两者在临床和超声表现上比较的证据，你可根据患者具体情况和自身技术选择更合适的方案。",
+      "titleZh": "超声引导下灌洗与肩峰下滑囊注射治疗钙化性肌腱炎的比较：一项前瞻性、随机、双盲试验",
+      "curatedReasonEn": "Both ultrasound-guided lavage and subacromial bursa injection (SBI) show positive effects in treating calcific tendinitis. This trial provides comparative evidence on their clinical and ultrasonographic outcomes, allowing you to choose the more suitable option based on patient specifics and your expertise.",
+      "limitation": "研究未提及具体样本量和随访时间，可能影响结果的可靠性和长期有效性。",
+      "limitationEn": "The study did not mention the specific sample size or follow-up period, which may affect the reliability and long-term effectiveness of the results.",
+      "tags": [
+        "research",
+        "shoulder",
+        "ultrasound-guided-injection"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1782589765812-2",
+      "title": "Accuracy of visual estimation of shoulder abduction by expert physiotherapists: a comparative study using 3D motion capture.",
+      "summary": "This comparative study found that expert physiotherapists' visual estimations of shoulder abduction showed significant discrepancies compared to 3D motion capture, with a mean absolute difference of 8.9° and 95% limits of agreement of ±17.0°.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42298485/",
+      "publishedAt": "2026-06-16T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 70,
+      "curatedReason": "临床上肩关节活动度（ROM）的目视评估仍被广泛使用。这项研究提示，即使是资深物理治疗师，在肩关节外展的目视评估上与3D运动捕捉的客观数据也存在显著差异，这意味着你应警惕其潜在的测量误差。",
+      "titleZh": "专家物理治疗师肩关节外展目视评估的准确性：一项使用3D运动捕捉的比较研究",
+      "curatedReasonEn": "Visual estimation of shoulder ROM is common in clinic. This study indicates that even expert physiotherapists show significant discrepancies in shoulder abduction visual estimation compared to 3D motion capture, highlighting potential measurement errors you should be aware of.",
+      "limitation": "研究样本量较小（4名健康受试者，24段视频），可能影响结果的外推性。",
+      "limitationEn": "The study involved a small sample (4 healthy participants, 24 video recordings), which may limit the generalizability of the findings.",
+      "tags": [
+        "research",
+        "shoulder",
+        "assessment"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1782589765812-5",
+      "title": "Between the Snap and the Return: A Prospective Narrative Analysis of Four Voices from inside Anterior Cruciate Ligament Reconstruction Recovery.",
+      "summary": "This longitudinal qualitative study explored the prospective narrative experiences of four adults (aged 20-29) undergoing ACL reconstruction recovery in Sweden, from injury to self-defined rehabilitation goals.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42297040/",
+      "publishedAt": "2026-06-16T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 70,
+      "curatedReason": "这项定性研究提供了ACL重建术后患者在康复过程中，从受伤到重返运动目标的个人叙事。这有助于你更好地理解患者的心理和体验变化，从而提供更全面的个体化支持。",
+      "titleZh": "从断裂到回归：前交叉韧带重建恢复期四位患者声音的前瞻性叙事分析",
+      "curatedReasonEn": "This qualitative study offers individual narratives of ACL reconstruction patients from injury to return-to-sport goals. This can help you better understand patients' psychological and experiential changes, enabling more comprehensive, individualized support.",
+      "limitation": "这是一项小样本的定性研究，仅纳入4名患者，其发现主要提供深入的个人洞察，而非可推广的量化结论。",
+      "limitationEn": "This is a small-sample qualitative study (4 patients), providing in-depth personal insights rather than generalizable quantitative conclusions.",
+      "tags": [
+        "research",
+        "acl",
+        "psychological-factors"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy"
+    },
+    {
+      "id": "news-1782589765812-8",
+      "title": "Toward Precision Cardiac Rehabilitation: Current Limitations and Future Opportunities of Omics and Artificial Intelligence.",
+      "summary": "This article reviews the current limitations and future opportunities of omics and artificial intelligence in achieving precision cardiac rehabilitation by leveraging advanced multi-modal data for individualized cardiac care.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42295671/",
+      "publishedAt": "2026-06-15T00:00:00.000Z",
+      "firstSeen": "2026-06-27T19:49:25.812Z",
+      "curatedScore": 70,
+      "curatedReason": "精准心脏康复是未来方向，整合组学和人工智能有望为个体化心脏康复方案提供更深层依据。作为临床医生，你应该关注这些新兴技术如何可能改变未来的康复评估和干预策略。",
+      "titleZh": "迈向精准心脏康复：组学和人工智能的当前局限与未来机遇",
+      "curatedReasonEn": "Precision cardiac rehabilitation is the future; integrating omics and AI holds promise for individualized rehab. As a clinician, you should follow how these emerging technologies might transform future rehab assessments and interventions.",
+      "limitation": "这是一篇综述文章，主要探讨概念和未来方向，并未提供新的临床证据。",
+      "limitationEn": "This is a review article focusing on concepts and future directions, not new clinical evidence.",
+      "tags": [
+        "research",
+        "precision-medicine",
+        "AI",
+        "omics"
       ],
       "studyDesign": "综述",
-      "journal": "JAMA"
+      "journal": "Sports medicine (Auckland, N.Z.)",
+      "tech": true
     },
     {
       "id": "news-1782551307451-2",
