@@ -529,7 +529,8 @@ async function fetchScrapes() {
 
 // ── Claude Curation ─────────────────────────────────────────────────────────
 
-async function curateWithClaude(rawItems) {
+// llm 默认走真实 callLLM；测试可注入 stub 覆盖落库前的 fixItem 接线（无网络）。
+async function curateWithClaude(rawItems, llm = callLLM) {
   const items = rawItems.slice(0, CURATE_TOP_N).map((item, i) => ({
     index: i,
     title: item.title,
@@ -607,10 +608,10 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
   const userPrompt = `请策展以下 ${items.length} 条新闻：\n\n${JSON.stringify(items, null, 2)}`;
 
-  const text = await callLLM(systemPrompt, userPrompt);
+  const text = await llm(systemPrompt, userPrompt);
   if (!text) return [];
   const curated = await repairEnglishReasons(parseCuratedArray(text));
-  return curated.map(fixItem); // 落库前确定性校正已知错译
+  return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
 }
 
 // 语言兜底：curatedReason 必须是中文，但模型偶尔会无视提示词、把英文 take
