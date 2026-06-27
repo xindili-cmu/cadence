@@ -38,6 +38,8 @@ const path = require('path');
 // modules are CLI-guarded, so requiring them here has no side effects.
 const { embedMissing } = require('./embed-items');
 const { computeHotTopicsEmbed } = require('./hot-topics-embed');
+// 已知固定错译的确定性校正（如 hamstring 的 胕绳肌→腘绳肌）。在模型 JSON 落库前跑。
+const { fixItem } = require('./term-fixes');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
@@ -607,7 +609,8 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
   const text = await callLLM(systemPrompt, userPrompt);
   if (!text) return [];
-  return repairEnglishReasons(parseCuratedArray(text));
+  const curated = await repairEnglishReasons(parseCuratedArray(text));
+  return curated.map(fixItem); // 落库前确定性校正已知错译
 }
 
 // 语言兜底：curatedReason 必须是中文，但模型偶尔会无视提示词、把英文 take
