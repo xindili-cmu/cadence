@@ -57,12 +57,16 @@ function oldWhitelistFix(item) {
     ok(d.curatedScore === 85, 'fixItem 不动 number');
   }
 
-  console.log('B. 判别力：旧白名单实现必须在这些字段上 fail');
+  console.log('B. 判别力（成对）：同一份脏数据，legacy 留脏 ∧ 新递归洗净');
   {
-    const old = makeDirty();
-    oldWhitelistFix(old);
-    ok(old.noteZh.includes(WRONG), '旧实现漏掉 noteZh（证明用例有判别力）');
-    ok(old.members[0].summaryZh.includes(WRONG), '旧实现漏掉 members[].summaryZh（证明用例有判别力）');
+    // 成对断言放一起：左半=legacy 漏字，右半=新实现洗净。这同时是永久反证——
+    // 若有人把 fixItem 改回白名单逻辑，右半立刻转红。
+    const legacy = oldWhitelistFix(makeDirty());
+    const fixed = fixItem(makeDirty());
+    ok(legacy.noteZh.includes(WRONG) && !fixed.noteZh.includes(WRONG),
+      'noteZh：legacy 留脏 ∧ 新洗净（白名单外字段）');
+    ok(legacy.members[0].summaryZh.includes(WRONG) && !fixed.members[0].summaryZh.includes(WRONG),
+      'members[].summaryZh：legacy 留脏 ∧ 新洗净（更深一层）');
   }
 
   console.log('C. 集成：真实 curateWithClaude 走 fixItem 接线（注入 llm stub，无网络）');
@@ -73,6 +77,10 @@ function oldWhitelistFix(item) {
     const out = await curateWithClaude(rawItems, async () => mockJSON); // 注入 stub
     assert.ok(Array.isArray(out) && out.length === 1, 'curateWithClaude 返回 1 条');
     const c = out[0];
+    // 前提守卫：本段成立的前提是 parseCuratedArray 原样透传非标准字段。若哪天它改成
+    // schema 收窄，下面的 .includes 会抛 TypeError、红得不知所云——这行先把它变成人话。
+    assert.ok('noteZh' in c && Array.isArray(c.members) && 'summaryZh' in c.members[0],
+      'parseCuratedArray 透传了 noteZh / members[].summaryZh（C 段前提）');
     ok(!c.curatedReason.includes(WRONG), '接线后 curatedReason 干净');
     ok(!c.noteZh.includes(WRONG), '接线后 noteZh 干净（白名单外）');
     ok(!c.members[0].summaryZh.includes(WRONG), '接线后 members[].summaryZh 干净（嵌套）');
