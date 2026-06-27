@@ -228,6 +228,19 @@ function cdFmtDate(publishedAt) {
   return new Date(publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
+// "新收录" / "New" chip. Cadence buckets items by ingestion day (firstSeen), but
+// the feed is ordered by publishedAt. PubMed routinely indexes older papers, so a
+// freshly-surfaced item can land days deep in the feed — and the firstSeen-based
+// rail counts (e.g. "Rehab Tech 2") then won't match what the reader sees at the
+// top. Mark items whose surface day trails publication by ≥3 days (the ~14%
+// long-lag tail) with the date Cadence picked them up, so the two reconcile.
+function cdSurfacedLabel(firstSeen, publishedAt) {
+  if (!firstSeen || !publishedAt) return '';
+  const lagDays = (cdBeijingDayKey(firstSeen) - cdBeijingDayKey(publishedAt)) / 86400000;
+  if (lagDays < 3) return '';
+  return new Date(firstSeen).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
 // ── Journal IF / JCR-quartile lookup ─────────────────────────────────────────
 // journals.json is a small hand-maintained table (updated once a year when the
 // new JCR drops). Items carry a `journal` field (canonical name from sources.json
@@ -284,6 +297,7 @@ function cdTransformItem(item) {
     publishedAt: item.publishedAt,  // raw ISO retained for SourcesGrid "latest" sort
     time:        cdFmtTime(item.publishedAt),
     date:        cdFmtDate(item.publishedAt),
+    surfaced:    cdSurfacedLabel(item.firstSeen, item.publishedAt), // 新收录 chip when firstSeen ≫ publishedAt
     title:       item.title,
     summary:     item.summary,
     why:         item.curatedReason,

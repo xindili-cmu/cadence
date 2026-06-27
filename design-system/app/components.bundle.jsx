@@ -536,6 +536,7 @@ function NewsCard({
   mobile = false, // narrow-screen layout: lead card drops its left SIGNAL gutter
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
+  surfaced, // "新收录"/"New" chip — firstSeen date string when surfaced ≫ published, else ''
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = useState(false);
@@ -621,7 +622,7 @@ function NewsCard({
   );
 
   const footerEl = (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: isCompact ? 8 : 14 }}>
+    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginTop: isCompact ? 8 : 14 }}>
       <SourceMonogram source={source} accent={cat.accent} />
       <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, color: 'var(--text-secondary)' }}>{source}</span>
       {journalMeta && (
@@ -637,6 +638,17 @@ function NewsCard({
       )}
       <span style={{ color: 'var(--ink-300)' }}>·</span>
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{date}</span>
+      {surfaced && (
+        <span
+          title={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '本平台收录日期（原文发表较早，故在信息流中靠后）' : 'Date Cadence surfaced this (published earlier, so it sits further down the feed)'}
+          style={{
+            fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, whiteSpace: 'nowrap',
+            padding: '1px 6px', borderRadius: 'var(--radius-xs)', cursor: 'default',
+            background: 'var(--blue-50)', border: '1px solid var(--blue-100)', color: 'var(--blue-800)',
+          }}>
+          {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '新收录' : 'New'} · {surfaced}
+        </span>
+      )}
       <span style={{ flex: 1 }} />
       <button
         type="button"

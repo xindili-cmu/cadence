@@ -205,9 +205,13 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   // top story's own title carries the "strongest signal". Retraction/flag lines
   // are intentionally omitted until the data carries a real marker for them.
   const briefTop = top[0];
+  // Wording must track the rail's actual bucket: on quiet days (Sun/Mon, before
+  // the crawl) the rail falls back to yesterday, so the briefing can't say "today".
+  const whenZh = dayKey === 'today' ? '今日' : '昨日';
+  const whenEn = dayKey === 'today' ? 'today' : 'yesterday';
   const brief = pulseZh
-    ? `今日共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。本期最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
-    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} today across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
+    ? `${whenZh}共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。本期最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
+    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} ${whenEn} across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
   // 本周信号榜 — quiet-day rescue (Cindy 2026-06-14). When today is thin (≤2),
   // surface the last 7 days' highest-SIGNAL items so the rail isn't a near-empty
   // box. Ranked by score, ties broken newest-first; today's already-shown items

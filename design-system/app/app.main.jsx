@@ -1851,7 +1851,7 @@ function FeedApp() {
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
                         mobile={isMobile}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                        journalMeta={s.journalMeta} tech={s.tech}
+                        journalMeta={s.journalMeta} tech={s.tech} surfaced={s.surfaced}
                         title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
                         selected={selected === s.id}
                         onClick={() => setSelected(selected === s.id ? null : s.id)} />
