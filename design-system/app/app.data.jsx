@@ -225,7 +225,7 @@ function cdFmtTime(publishedAt) {
 
 function cdFmtDate(publishedAt) {
   if (!publishedAt) return '';
-  return new Date(publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return new Date(publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'Asia/Shanghai' });
 }
 
 // "新收录" / "New" chip. Cadence buckets items by ingestion day (firstSeen), but
@@ -238,7 +238,7 @@ function cdSurfacedLabel(firstSeen, publishedAt) {
   if (!firstSeen || !publishedAt) return '';
   const lagDays = (cdBeijingDayKey(firstSeen) - cdBeijingDayKey(publishedAt)) / 86400000;
   if (lagDays < 3) return '';
-  return new Date(firstSeen).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return new Date(firstSeen).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'Asia/Shanghai' });
 }
 
 // ── Journal IF / JCR-quartile lookup ─────────────────────────────────────────

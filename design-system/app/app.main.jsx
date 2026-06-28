@@ -1,21 +1,15 @@
 // Cadence UI kit — main feed screen + composition root.
 const { NewsCard, CategoryTabs, Button, Icon } = window;
 
-// Day labels for the curated feed groups. Fixed to Beijing time (matches the
-// 05:30 crawl rhythm) and framed by INGESTION — the groups are "今日收录 /
-// Added today", since stories are bucketed by firstSeen, not publish date.
-// The card itself still shows the real publish date.
+// Day labels for the curated feed groups - static relative words (no dates) so
+// they never disagree with the viewer's clock. Grouping is by INGESTION day
+// (firstSeen, bucketed in Beijing - see cdDayBucket); the edition's one absolute
+// date lives in the header. Cards still show their real publish date.
 const cdDayLabels = () => {
   const zh = window.CD_LANG === 'zh';
-  const locale = zh ? 'zh-CN' : 'en-US';
-  const fmt = (offset, labelZh, labelEn) => {
-    const d = new Date(Date.now() - offset * 86400000);
-    const ds = d.toLocaleDateString(locale, { timeZone: 'Asia/Shanghai', weekday: 'long', month: 'short', day: 'numeric' });
-    return `${zh ? labelZh : labelEn} — ${ds}`;
-  };
   return {
-    today: fmt(0, '今日收录', 'Added today'),
-    yesterday: fmt(1, '昨日收录', 'Added yesterday'),
+    today: zh ? '今日收录' : "Today's Research",
+    yesterday: zh ? '昨日收录' : 'Added yesterday',
     older: zh ? '更早收录' : 'Added earlier',
   };
 };
