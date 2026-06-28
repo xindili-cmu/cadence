@@ -210,8 +210,8 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
   const whenZh = dayKey === 'today' ? '今日' : '昨日';
   const whenEn = dayKey === 'today' ? 'today' : 'yesterday';
   const brief = pulseZh
-    ? `${whenZh}共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。本期最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
-    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} ${whenEn} across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
+    ? `${whenZh}共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。${whenZh}最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
+    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} ${whenEn} across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal ${whenEn}: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
   // 本周信号榜 — quiet-day rescue (Cindy 2026-06-14). When today is thin (≤2),
   // surface the last 7 days' highest-SIGNAL items so the rail isn't a near-empty
   // box. Ranked by score, ties broken newest-first; today's already-shown items
