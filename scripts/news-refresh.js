@@ -381,12 +381,20 @@ const TITLE_ACRONYMS = new Set([
 ]);
 function normalizeTitle(title) {
   if (!title || typeof title !== 'string') return title;
-  const letters = title.replace(/[^A-Za-z]/g, '');
-  if (letters.length < 8) return title;                       // too short to judge
+  // Strip stray wrapping quotes some RSS feeds add around the WHOLE title
+  // (e.g. `"Are CR programs effective…".`). Only fire when the title both opens
+  // with a quote AND closes with one (optionally before trailing punctuation), so
+  // internal quotes (`Effect of "mirror therapy" on gait`) are left alone.
+  let t = title;
+  if (/^[“"「『]/.test(t) && /[”"」』][.。!?]?\s*$/.test(t)) {
+    t = t.replace(/^[“"「『]+\s*/, '').replace(/\s*[”"」』]+(?=[.。!?]?\s*$)/, '');
+  }
+  const letters = t.replace(/[^A-Za-z]/g, '');
+  if (letters.length < 8) return t;                           // too short to judge
   const upperRatio = letters.replace(/[^A-Z]/g, '').length / letters.length;
-  if (upperRatio < 0.85) return title;                        // not shouty → leave as-is
+  if (upperRatio < 0.85) return t;                            // not shouty → return de-quoted
   // Lowercase each word unless it's a known acronym, then restore sentence caps.
-  let s = title.replace(/[A-Za-z][A-Za-z.&'’-]*/g, (w) => {
+  let s = t.replace(/[A-Za-z][A-Za-z.&'’-]*/g, (w) => {
     const bare = w.replace(/[^A-Za-z&]/g, '').toUpperCase();
     return TITLE_ACRONYMS.has(bare) ? bare : w.toLowerCase();
   });
@@ -1079,15 +1087,41 @@ async function main() {
   const curated = await curateWithClaude(unique);
   console.log(`   Curated: ${curated.length} items`);
 
+  // Archive-aware identity. The append-only archive (archive/YYYY-MM.json) keeps
+  // each URL's ORIGINAL firstSeen / curatedScore / id from when we first caught
+  // it. A research paper that briefly left the feed and got re-found here must
+  // reuse that identity — else it re-stamps firstSeen to today (false "新收录"),
+  // re-rolls a non-deterministic LLM score (the 85↔90 churn), and gets a new id
+  // (breaking weekly-brief's id-dedup against the archive). Keyed by canonical
+  // URL; keep the earliest firstSeen if a URL somehow has multiple rows.
+  const archByUrl = (() => {
+    const m = new Map();
+    try {
+      const dir = path.join(__dirname, '..', 'archive');
+      for (const f of fs.readdirSync(dir)) {
+        if (!/^\d{4}-\d{2}\.json$/.test(f)) continue;
+        for (const a of (JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')).items || [])) {
+          if (!a.sourceUrl || !a.firstSeen) continue;
+          const k = canonicalUrl(a.sourceUrl);
+          const prev = m.get(k);
+          if (!prev || a.firstSeen < prev.firstSeen) m.set(k, { firstSeen: a.firstSeen, curatedScore: a.curatedScore, id: a.id });
+        }
+      }
+    } catch {}
+    return m;
+  })();
+
   const VALID_CATS = new Set(['orthopedic', 'neurological', 'sports', 'pediatric', 'geriatric', 'cardiopulmonary', 'manual-modality', 'practice']);
   const final = curated.map(c => {
     const o = unique[c.index];
     if (!o) return null;
+    // Reuse the archived identity (firstSeen / score / id) if we've caught this URL before.
+    const prior = archByUrl.get(canonicalUrl(o.url));
     // RSS whole-journal items arrive with category:null — critic assigns one.
     const category = o.category || (VALID_CATS.has(c.category) ? c.category : null);
     if (!category) return null;
     const item = {
-      id: `news-${Date.now()}-${c.index}`,
+      id: prior?.id || `news-${Date.now()}-${c.index}`,
       title: normalizeTitle(o.title),
       summary: c.summary || o.highlights || o.text?.substring(0, 200),
       category,
@@ -1096,10 +1130,13 @@ async function main() {
       publishedAt: o.publishedDate,
       // Ingestion time — when WE first caught this item. The daily edition
       // windows on firstSeen, not publishedAt, so a journal's lagged publish
-      // date can't keep a freshly-ingested study out of "今日". publishedAt
-      // still drives display, hot-topic decay, and the 7-day carry cutoff.
-      firstSeen: new Date().toISOString(),
-      curatedScore: c.curatedScore,
+      // date can't keep a freshly-ingested study out of "今日". Reuse the
+      // archived firstSeen when we've seen this URL before, so a re-found paper
+      // keeps its true catch date instead of resetting to today.
+      firstSeen: prior?.firstSeen || new Date().toISOString(),
+      // Pin the original score: re-curation is non-deterministic, so a re-found
+      // paper keeps the score it first earned (avoids the 85↔90 churn).
+      curatedScore: prior && typeof prior.curatedScore === 'number' ? prior.curatedScore : c.curatedScore,
       curatedReason: c.curatedReason,
       // Bilingual fields (中英切换) — optional in old data, required in new runs.
       ...(c.titleZh ? { titleZh: c.titleZh } : {}),
@@ -1130,24 +1167,23 @@ async function main() {
     })
     .sort((a, b) => b.curatedScore - a.curatedScore);
 
-  // Merge with existing — carry window differs by content type (tags[0]).
-  // Research gets a fresh PubMed stream daily, so the original publishedAt-based
-  // 7-day window keeps it current. Guideline / policy / news are rare and often
-  // near-static, and their publishedAt is frequently the ORIGINAL (old)
-  // publication date — a publishedAt window would drop them on the very next run
-  // and leave their front tabs empty (only "All"/archive would show them).
-  // Retain those on firstSeen (when WE caught it) with a longer window so the
-  // tabs stay populated between updates.
-  const CARRY_DAYS = { news: 30, guideline: 90, policy: 90 }; // non-research: firstSeen-based
-  const RESEARCH_CARRY_DAYS = 7;                              // research / default: publishedAt-based
+  // Merge with existing — EVERY item carries on firstSeen (when WE caught it).
+  // News / guideline / policy are rare and near-static, so they get long windows.
+  // Research previously used a 7-day publishedAt window, but the same paper keeps
+  // surfacing from PubMed for up to PUBMED_LOOKBACK_DAYS (edat). A 7-day window
+  // dropped it at day 7 while PubMed still returned it through day 14 — the gap
+  // re-ingested it as "novel" every run, resetting firstSeen (false "新收录") and
+  // re-rolling a non-deterministic LLM score. Carrying research on firstSeen for
+  // the SAME span as the PubMed window keeps it continuously in the feed, so the
+  // incremental gate suppresses the re-find (no re-curation, no churn) and it
+  // retires cleanly only when PubMed stops returning it.
+  const CARRY_DAYS = { news: 30, guideline: 90, policy: 90 }; // firstSeen-based
+  const RESEARCH_CARRY_DAYS = PUBMED_LOOKBACK_DAYS;           // research / default: firstSeen-based, aligned to the PubMed edat window
   const _carryNow = Date.now();
   const inCarryWindow = (i) => {
-    const ext = CARRY_DAYS[(i.tags || [])[0]];
-    if (ext != null) {
-      const seen = new Date(i.firstSeen || i.publishedAt).getTime();
-      return seen > _carryNow - ext * 86400000;
-    }
-    return new Date(i.publishedAt).getTime() > _carryNow - RESEARCH_CARRY_DAYS * 86400000;
+    const ext = CARRY_DAYS[(i.tags || [])[0]] ?? RESEARCH_CARRY_DAYS;
+    const seen = new Date(i.firstSeen || i.publishedAt).getTime();
+    return seen > _carryNow - ext * 86400000;
   };
   let existing = [];
   try {
@@ -1158,7 +1194,23 @@ async function main() {
       // age out immediately, and relabel in case a source was renamed.
       // Backfill firstSeen for legacy items (pre-firstSeen) from publishedAt —
       // a past date, so the migration never dumps the whole feed into one edition.
-      .map(i => ({ ...i, title: normalizeTitle(i.title), ...(i.titleEn ? { titleEn: normalizeTitle(i.titleEn) } : {}), source: matchSource(i.sourceUrl), firstSeen: i.firstSeen || i.publishedAt }))
+      // Heal already-churned carried items too: if the archive holds an earlier
+      // firstSeen / original score / original id for this URL, restore them so a
+      // previously-churned entry converges back to its true identity in-place.
+      .map(i => {
+        const prior = archByUrl.get(canonicalUrl(i.sourceUrl));
+        const baseSeen = i.firstSeen || i.publishedAt;
+        const firstSeen = prior && prior.firstSeen < baseSeen ? prior.firstSeen : baseSeen;
+        return {
+          ...i,
+          title: normalizeTitle(i.title),
+          ...(i.titleEn ? { titleEn: normalizeTitle(i.titleEn) } : {}),
+          source: matchSource(i.sourceUrl),
+          firstSeen,
+          ...(prior && prior.id ? { id: prior.id } : {}),
+          ...(prior && typeof prior.curatedScore === 'number' ? { curatedScore: prior.curatedScore } : {}),
+        };
+      })
       .filter(i => i.source)
       // Apply the relevance gate to carried-over items too, so off-topic
       // content curated before this gate existed ages out on the next run.
