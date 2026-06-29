@@ -124,15 +124,10 @@ function buildPost(ed, items, zh) {
     lines.push('');
   });
 
-  if (zh) {
-    lines.push(`完整简报(含每条来源与评分):${SITE_URL}`);
-    lines.push('');
-    lines.push(HASHTAGS_ZH);
-  } else {
-    lines.push(`Full brief, every source scored: ${SITE_URL}`);
-    lines.push('');
-    lines.push(HASHTAGS_EN);
-  }
+  // No in-body site link: LinkedIn penalizes outbound-link "bridging" posts,
+  // and this matches the WeChat 去导流换助推 decision. Citations live in the
+  // first-comment sources file. Value is delivered by the body + signal card.
+  lines.push(zh ? HASHTAGS_ZH : HASHTAGS_EN);
   return lines.join('\n').replace(/\n{3,}/g, '\n\n').trim() + '\n';
 }
 
