@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-06-29T23:29:58.609Z",
-    "totalItems": 72,
+    "lastUpdated": "2026-06-30T04:38:39.314Z",
+    "totalItems": 73,
     "categories": [
       "orthopedic",
       "neurological",
@@ -24,8 +24,8 @@
       "sources": [
         "Pain",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "medRxiv",
         "Musculoskeletal science & practice",
-        "Physiotherapy",
         "Journal of rehabilitation medicine"
       ],
       "tag": "pain",
@@ -44,16 +44,9 @@
           "titleZh": "印度慢性腰痛和物理治疗认知：一项定性研究"
         },
         {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Perspectives on an advanced practice physiotherapy-led model for musculoskeletal care in Canada: A qualitative study of patients and multidisciplinary clinicians.",
-          "titleZh": "加拿大骨骼肌肉护理中高级执业物理治疗主导模式的视角：患者和多学科临床医生的定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Adapting the MSK-HQ for paediatric musculoskeletal care: Insights from a national survey and focus group of physiotherapists.",
-          "titleZh": "为儿科肌肉骨骼护理调整 MSK-HQ：来自全国物理治疗师调查和焦点小组的见解。"
+          "source": "medRxiv",
+          "title": "Effects of Aerobic Exercise on Inflammatory Biomarkers, Pain Intensity, and Quality of Life in Patients with Non-Specific Chronic Low Back Pain: A Randomized Controlled Trial",
+          "titleZh": "有氧运动对非特异性慢性腰痛患者炎症生物标志物、疼痛强度和生活质量的影响：一项随机对照试验"
         },
         {
           "source": "PubMed",
@@ -68,27 +61,39 @@
           "titleZh": "跨诊断运动质量评分在康复评估中的评估者间信度和结构效度"
         }
       ],
-      "heat": 5
+      "heat": 4.64
     },
     {
-      "id": "news-1781721520686-14",
-      "title": "Efficacy of High-Intensity Laser Therapy for Meralgia Paresthetica: A Randomized, Double-Blind, Sham-Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42307460/",
-      "category": "manual-modality",
+      "id": "news-1782220755783-0",
+      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331701/",
+      "category": "orthopedic",
       "publishedAt": "2026-06-29T00:00:00.000Z",
       "sourceCount": 7,
       "sources": [
+        "Journal of physiotherapy",
+        "Brazilian journal of physical therapy",
         "American journal of physical medicine & rehabilitation",
         "Physiotherapy theory and practice",
-        "BMC musculoskeletal disorders",
         "Archives of Physical Medicine and Rehabilitation",
         "Archives of physiotherapy",
-        "Brazilian journal of physical therapy",
         "Musculoskeletal science & practice"
       ],
-      "tag": "laser",
+      "tag": "knee",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
+          "titleZh": "评价论文：退行性半月板撕裂和膝痛患者，增加物理治疗或励志短信未比单独居家锻炼更能改善疼痛"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Effectiveness of physical therapy techniques and methods in the management of endometriosis symptoms: A systematic review with meta-analysis.",
+          "titleZh": "物理治疗技术和方法在子宫内膜异位症症状管理中的有效性：一项系统综述与荟萃分析"
+        },
         {
           "source": "PubMed",
           "journal": "American journal of physical medicine & rehabilitation",
@@ -108,12 +113,6 @@
           "titleZh": "数字测压计测量终末期膝骨关节炎患者压力痛阈值的信度研究：一项单中心研究"
         },
         {
-          "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "Accuracy of visual estimation of shoulder abduction by expert physiotherapists: a comparative study using 3D motion capture.",
-          "titleZh": "专家物理治疗师对肩关节外展目测评估的准确性：一项使用 3D 运动捕捉的比较研究"
-        },
-        {
           "source": "Archives of PM&R",
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "Comparison of ultrasound-guided lavage and subacromial bursa injection for calcific tendinitis: A prospective, randomized, double-blind trial",
@@ -127,18 +126,12 @@
         },
         {
           "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Effectiveness of physical therapy techniques and methods in the management of endometriosis symptoms: A systematic review with meta-analysis.",
-          "titleZh": "物理治疗技术和方法在子宫内膜异位症症状管理中的有效性：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
           "journal": "Musculoskeletal science & practice",
           "title": "Appropriate translational designs for determining causal force-based (manual therapy) treatment mechanisms.",
           "titleZh": "确定基于力的（手法治疗）治疗因果机制的适当转化设计"
         }
       ],
-      "heat": 4.99
+      "heat": 4.63
     },
     {
       "id": "news-1782749691197-13",
@@ -149,11 +142,11 @@
       "sourceCount": 6,
       "sources": [
         "Archives of Physical Medicine and Rehabilitation",
-        "PM & R : the journal of injury, function, and rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC musculoskeletal disorders",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "Musculoskeletal science & practice",
         "Physiotherapy",
-        "Brazilian journal of physical therapy"
+        "BMC musculoskeletal disorders"
       ],
       "tag": "technology",
       "kind": "theme",
@@ -166,15 +159,27 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Validating an Activity Monitor for Acute Care Patients: The Patient/Resident Mobility Tracker (PREEMPT).",
+          "titleZh": "验证用于急性期住院患者的活动监测器：患者/居民移动追踪器（PREEMPT）。"
+        },
+        {
+          "source": "PubMed",
           "journal": "PM & R : the journal of injury, function, and rehabilitation",
           "title": "Implementing Live Long Walk Strong: Practice-based evidence on adapting a physical therapy program across diverse contexts.",
           "titleZh": "实施“活得久，走得稳”项目：在不同背景下调整物理治疗项目的实践证据"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Validating an Activity Monitor for Acute Care Patients: The Patient/Resident Mobility Tracker (PREEMPT).",
-          "titleZh": "验证用于急性期住院患者的活动监测器：患者/居民移动追踪器（PREEMPT）。"
+          "journal": "Musculoskeletal science & practice",
+          "title": "Perspectives on an advanced practice physiotherapy-led model for musculoskeletal care in Canada: A qualitative study of patients and multidisciplinary clinicians.",
+          "titleZh": "加拿大骨骼肌肉护理中高级执业物理治疗主导模式的视角：患者和多学科临床医生的定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Adapting the MSK-HQ for paediatric musculoskeletal care: Insights from a national survey and focus group of physiotherapists.",
+          "titleZh": "为儿科肌肉骨骼护理调整 MSK-HQ：来自全国物理治疗师调查和焦点小组的见解。"
         },
         {
           "source": "PubMed",
@@ -187,15 +192,91 @@
           "journal": "Physiotherapy",
           "title": "Usefulness of ChatGPT in physiotherapy practice: A scoping review.",
           "titleZh": "ChatGPT 在物理治疗实践中的应用：一项范围综述。"
+        }
+      ],
+      "heat": 3.97
+    },
+    {
+      "id": "news-1782304323281-8",
+      "title": "rTMS Over Dorsolateral Prefrontal Cortex Augments Dual-Task Training for Mobility, Balance and Cognition in Sub-Acute Stroke: A Randomized Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42339584/",
+      "category": "neurological",
+      "publishedAt": "2026-06-28T00:00:00.000Z",
+      "sourceCount": 8,
+      "sources": [
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Topics in stroke rehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "NeuroRehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "medRxiv",
+        "Gait & posture",
+        "Disability and rehabilitation"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "rTMS Over Dorsolateral Prefrontal Cortex Augments Dual-Task Training for Mobility, Balance and Cognition in Sub-Acute Stroke: A Randomized Controlled Trial.",
+          "titleZh": "重复经颅磁刺激DLPFC可增强亚急性卒中患者双任务训练在活动能力、平衡和认知上的效果：随机对照试验"
         },
         {
           "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Physiotherapy management of Long-COVID: an evidence-based approach.",
-          "titleZh": "Long-COVID 的物理治疗管理：一种基于证据的方法"
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Cortical activation and functional connectivity during thumb-to-finger opposition in patients with stroke with varying functional levels: insights from fNIRS.",
+          "titleZh": "fNIRS 研究揭示卒中患者在拇指对指任务中，皮层激活和功能连接随功能水平变化"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Cognitive strategies for improving activity-level outcomes post stroke: an integrative review.",
+          "titleZh": "卒中后认知策略对改善活动水平结局的整合性综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Are Cardiac Rehabilitation Programs Effective in Improving Aerobic Capacity for People with Transient Ischemic Attack and Stroke? A Rapid Review and Meta-analysis.",
+          "titleZh": "心脏康复项目能否有效改善短暂性脑缺血发作和卒中患者的有氧能力？一项快速综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Rehabilitation and Management in Lateral Medullary Stroke (Wallenberg Syndrome): A Scoping Review and Evidence Map.",
+          "titleZh": "外侧延髓梗死（Wallenberg 综合征）的康复与管理：一项范围综述和证据图谱"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Education level amplifies the mediating pathway of rehabilitation motivation between metacognition and quality of life in stroke survivors.",
+          "titleZh": "教育水平放大康复动机在卒中幸存者元认知与生活质量间的中介作用。"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Apraxia in Patients with Cognitive Impairment: Evidence from Familiar Tool Use",
+          "titleZh": "认知障碍患者的失用症：来自熟悉工具使用的证据"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Better immediate declarative memory is associated with forgetting during locomotor adaptation in chronic stroke and in older adults",
+          "titleZh": "更好的即时陈述性记忆与慢性卒中和老年人步态适应性遗忘相关"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Incremental predictive value of spatiotemporal gait parameters beyond clinical measures for achieving independent outdoor ambulation in subacute stroke patients: A retrospective cohort study.",
+          "titleZh": "亚急性卒中患者步态时空参数在预测独立户外行走能力方面的增量预测价值：一项回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Barriers, facilitators and promising interventions for reducing sedentary behaviour during and after stroke rehabilitation - A scoping review.",
+          "titleZh": "卒中康复期间和之后减少久坐行为的障碍、促进因素和有前景的干预措施：一项范围综述"
         }
       ],
-      "heat": 4.27
+      "heat": 3.74
     },
     {
       "id": "news-1782709443598-1",
@@ -203,11 +284,10 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42365913/",
       "category": "neurological",
       "publishedAt": "2026-06-29T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Journal of rehabilitation medicine",
-        "Topics in stroke rehabilitation",
         "Disability and rehabilitation",
         "Clinical rehabilitation"
       ],
@@ -228,12 +308,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Education level amplifies the mediating pathway of rehabilitation motivation between metacognition and quality of life in stroke survivors.",
-          "titleZh": "教育水平放大康复动机在卒中幸存者元认知与生活质量间的中介作用。"
-        },
-        {
-          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Demographic disparities in health-related social needs among caregivers of stroke survivors: an exploratory cross-sectional study.",
           "titleZh": "卒中幸存者照护者健康相关社会需求的人口学差异：一项探索性横断面研究"
@@ -249,89 +323,87 @@
           "journal": "Clinical rehabilitation",
           "title": "Implementation and evaluation of a stroke sexual health practice profile for rehabilitation in Ontario, Canada.",
           "titleZh": "在加拿大安大略省实施和评估卒中康复性健康实践规范"
-        }
-      ],
-      "heat": 3.56
-    },
-    {
-      "id": "news-1782757625419-3",
-      "title": "Comparative Effects of Land-Based and Aquatic Physiotherapy on Functional and Neuromuscular Outcomes in the Rigid-Akinetic Subtype of Parkinson's Disease: A Randomized Clinical Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42370487/",
-      "category": "neurological",
-      "publishedAt": "2026-06-29T18:26:22.957Z",
-      "sourceCount": 3,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Archives of physical medicine and rehabilitation",
-        "Disability and rehabilitation"
-      ],
-      "tag": "parkinson",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Comparative Effects of Land-Based and Aquatic Physiotherapy on Functional and Neuromuscular Outcomes in the Rigid-Akinetic Subtype of Parkinson's Disease: A Randomized Clinical Trial.",
-          "titleZh": "陆上和水下物理治疗对僵直-运动迟缓型帕金森病功能和神经肌肉结局的比较效果：一项随机临床试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Neurogenic bowel dysfunction in multiple sclerosis: clinical determinants and its association with bladder dysfunction in a multicenter study.",
-          "titleZh": "多发性硬化症的神经源性肠功能障碍：一项多中心研究的临床决定因素及其与膀胱功能障碍的关联"
         },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Immersive virtual reality for upper limb rehabilitation in people with MS: a randomised, controlled feasibility study.",
-          "titleZh": "沉浸式虚拟现实上肢康复在多发性硬化症患者中的随机对照可行性研究"
+          "title": "Experiences and coping with kinesiophobia in patients with post-stroke limb dysfunction: a qualitative study.",
+          "titleZh": "卒中后肢体功能障碍患者运动恐惧的经历与应对：一项定性研究"
         }
       ],
-      "heat": 2.79
+      "heat": 2.64
     }
   ],
   "items": [
     {
-      "id": "news-1782257624773-0",
-      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [commentary].",
-      "summary": "A critically appraised paper review suggests that adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain.",
+      "id": "news-1782220755783-0",
+      "title": "Critically appraised papers: Adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone for degenerative meniscal tear and knee pain [synopsis].",
+      "summary": "A critically appraised paper found that adding physiotherapy or motivational text messages to home exercise alone did not improve pain outcomes beyond home exercise for degenerative meniscal tear and knee pain.",
       "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331696/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331701/",
       "publishedAt": "2026-06-23T00:00:00.000Z",
       "firstSeen": "2026-06-23T13:19:15.783Z",
       "curatedScore": 85,
-      "curatedReason": "关于退行性半月板撕裂和膝痛，最新评论指出，相比单纯居家锻炼，增加物理治疗或励志短信并不能带来额外的疼痛改善。在设计康复方案时，请把重点放在高效益、低成本的干预上。",
-      "titleZh": "评论：增加物理治疗或励志短信未能超越单纯居家锻炼，改善退行性半月板撕裂和膝痛",
-      "summaryZh": "一项批判性评估的论文评论指出，对于退行性半月板撕裂和膝痛，在单纯居家锻炼基础上增加物理治疗或励志短信，并不能进一步改善疼痛。",
-      "curatedReasonEn": "For degenerative meniscal tears and knee pain, recent commentary indicates that adding physiotherapy or motivational text messages does not improve pain beyond home exercise alone. When designing rehabilitation programs, focus on high-impact, low-cost interventions.",
+      "curatedReason": "对于退行性半月板撕裂合并膝痛，这项荟萃分析显示，在单独居家锻炼基础上，增加物理治疗或励志短信未能进一步改善疼痛。这提示，居家锻炼在管理这类膝痛中已具备相当的基线效应。",
+      "titleZh": "评价论文：退行性半月板撕裂和膝痛患者，增加物理治疗或励志短信未比单独居家锻炼更能改善疼痛",
+      "summaryZh": "一篇评价论文指出，对于退行性半月板撕裂和膝痛患者，在单独居家锻炼基础上增加物理治疗或励志短信，未能进一步改善疼痛。",
+      "curatedReasonEn": "For degenerative meniscal tear with knee pain, this meta-analysis indicates that adding physiotherapy or motivational text messages to home exercise alone did not further improve pain. This suggests that home exercise already provides a substantial baseline effect in managing this type of knee pain.",
+      "limitation": "原始研究可能存在异质性。",
+      "limitationEn": "Potential heterogeneity among original studies.",
       "tags": [
-        "news",
-        "knee",
-        "meniscus"
+        "research",
+        "knee"
       ],
+      "studyDesign": "系统综述",
       "journal": "Journal of physiotherapy"
     },
     {
-      "id": "news-1782254605962-4",
-      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [synopsis].",
-      "summary": "A critically appraised paper synopsis highlights that mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than center-based pulmonary rehabilitation for chronic obstructive pulmonary disease.",
+      "id": "news-1782220755787-20",
+      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [commentary].",
+      "summary": "A critically appraised paper indicated that mobile-based pulmonary rehabilitation improved exercise capacity as much as, and health status more than, centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease.",
       "category": "cardiopulmonary",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331695/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331699/",
       "publishedAt": "2026-06-23T00:00:00.000Z",
       "firstSeen": "2026-06-23T13:19:15.787Z",
       "curatedScore": 85,
-      "curatedReason": "对于慢性阻塞性肺疾病（COPD）患者，移动端肺康复在运动能力改善方面不劣于中心内康复，且对健康状况的改善更优。这意味着远程医疗在心肺康复领域有巨大潜力，可显著提升可及性。",
-      "titleZh": "评论：移动端肺康复改善COPD患者运动能力与中心内康复相当，且对健康状况改善更优",
-      "summaryZh": "一份批判性评估的论文概要强调，对于慢性阻塞性肺疾病，移动端肺康复在改善运动能力方面不劣于中心内康复，并且对健康状况的改善效果更好。",
-      "curatedReasonEn": "For COPD patients, mobile-based pulmonary rehabilitation is non-inferior to center-based rehabilitation for exercise capacity improvement, and even superior for health status. This signifies immense potential for telehealth in cardiopulmonary rehab, greatly enhancing accessibility.",
+      "curatedReason": "移动端肺康复在COPD患者中的运动能力改善方面不劣于中心内康复，并且在健康状况改善上更优。这是推行远程康复的重要支持。",
+      "titleZh": "评价论文：移动端肺康复在慢阻肺患者中改善运动能力与中心内康复相当，且健康状况改善更优",
+      "summaryZh": "一篇评价论文显示，移动端肺康复在慢阻肺（COPD）患者中改善运动能力与中心内康复相当，且健康状况改善更优。",
+      "curatedReasonEn": "Mobile-based pulmonary rehabilitation is non-inferior to center-based rehabilitation for improving exercise capacity in COPD patients, and superior in improving health status. This provides significant support for promoting telehealth rehabilitation.",
+      "limitation": "作为评述性文章，未提供原始研究的具体数据和方法细节。",
+      "limitationEn": "As a commentary, it does not provide specific data and methodological details of the original research.",
       "tags": [
-        "news",
-        "copd",
-        "telehealth"
+        "research",
+        "telehealth",
+        "COPD"
       ],
+      "studyDesign": "述评",
       "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1782794318743-12",
+      "title": "Effects of Aerobic Exercise on Inflammatory Biomarkers, Pain Intensity, and Quality of Life in Patients with Non-Specific Chronic Low Back Pain: A Randomized Controlled Trial",
+      "summary": "A randomized controlled trial with 41 participants found that 12 weeks of supervised aerobic cycling three times weekly reduced inflammatory biomarkers and pain intensity, and improved quality of life in patients with non-specific chronic low back pain compared to health education alone.",
+      "category": "orthopedic",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.06.21.26356027v1?rss=1",
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "firstSeen": "2026-06-30T04:38:38.743Z",
+      "curatedScore": 70,
+      "curatedReason": "这项RCT提示，有氧运动可能通过改善炎症生物标志物来减轻非特异性慢性腰痛。尽管研究规模不大，但为运动干预的生理机制提供了进一步的线索。",
+      "titleZh": "有氧运动对非特异性慢性腰痛患者炎症生物标志物、疼痛强度和生活质量的影响：一项随机对照试验",
+      "summaryZh": "一项纳入41名参与者的随机对照试验显示，每周三次、持续12周的有氧骑行运动，相较于单纯健康教育，能降低非特异性慢性腰痛患者的炎症生物标志物和疼痛强度，并改善生活质量。",
+      "curatedReasonEn": "This RCT suggests that aerobic exercise may alleviate non-specific chronic low back pain by improving inflammatory biomarkers. Although the study size is small, it provides further clues into the physiological mechanisms of exercise intervention.",
+      "limitation": "样本量较小（41名参与者），可能影响结果的普遍性。",
+      "limitationEn": "The small sample size (41 participants) may limit the generalizability of the findings.",
+      "tags": [
+        "research",
+        "spine",
+        "aerobic-exercise"
+      ],
+      "studyDesign": "RCT"
     },
     {
       "id": "news-1782775797705-0",
