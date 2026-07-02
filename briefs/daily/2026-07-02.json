@@ -1,0 +1,354 @@
+{
+ "date": "2026-07-02",
+ "generatedAt": "2026-07-01T22:45:51.611Z",
+ "windowHours": 26,
+ "windowStart": "2026-06-30T22:46:58.922Z",
+ "windowEnd": "2026-07-01T22:45:49.815Z",
+ "lead": {
+  "titleZh": "美国CMS提议2027年提高居家医疗支付2.4%，行业与执业领域有5条更新",
+  "titleEn": "US CMS proposes 2.4% Medicare payment increase for home health; 5 updates in industry & practice",
+  "paragraphZh": "今日共15条信号，行业与执业方向值得重点关注，有5条更新，其中最高分条目是美国CMS提议2027年将居家医疗服务提供者Medicare支付提高2.4%。此外，神经康复领域有1个系统综述和1个观察研究，分数并列80，均值得细看。",
+  "paragraphEn": "Today's 15 signals highlight 5 updates in industry and practice, with the top-scoring item being the US CMS proposal for a 2.4% Medicare payment increase for home health providers in 2027. Additionally, neurorehabilitation features a system review and an observational study, both scoring 80, warranting closer attention."
+ },
+ "stats": {
+  "events": 15,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1782911662629-0",
+     "title": "Short-term effects of therapeutic massage alone or combined with conventional physiotherapy in myofascial pain syndrome: A randomized controlled trial.",
+     "summary": "A randomized controlled trial (n=60) found that therapeutic massage alone or combined with conventional physiotherapy may provide superior short-term effects on pain, pressure pain threshold, muscle activity, functional disability, and quality of life in individuals with chronic upper trapezius myofascial pain syndrome compared to conventional physiotherapy alone.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42381473/",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-01T13:14:22.630Z",
+     "curatedScore": 75,
+     "curatedReason": "对于肌筋膜疼痛综合征，治疗性按摩单独使用或与传统理疗结合，短期效果可能均优于单纯传统理疗，在疼痛缓解和功能改善上有积极作用。",
+     "titleZh": "治疗性按摩单独或联合传统理疗对肌筋膜疼痛综合征的短期疗效：一项随机对照试验。",
+     "summaryZh": "一项随机对照试验（n=60）发现，对于慢性斜方肌上部肌筋膜疼痛综合征患者，治疗性按摩单独使用或与传统理疗结合，在疼痛、压痛阈、肌肉活动、功能障碍和生活质量方面，短期效果可能优于单纯传统理疗。",
+     "curatedReasonEn": "For myofascial pain syndrome, therapeutic massage, either alone or combined with conventional physiotherapy, may offer superior short-term effects in pain relief and functional improvement compared to conventional physiotherapy alone.",
+     "limitation": "本研究的样本量为60人，研究设计为单中心RCT，可能存在局限性且随访期较短。",
+     "limitationEn": "This study has a sample size of 60 participants and is a single-center RCT, which may limit generalizability and has a short follow-up period.",
+     "tags": [
+      "research",
+      "dry-needling"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy theory and practice"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1782937145422-2",
+     "title": "Patterns of Outcome Measure Utilization in Stroke Rehabilitation Lower Extremity Trials Conducted in Low-to-Middle versus High-Income Countries.",
+     "summary": "A systematic review of 1,548 RCTs found that low-to-middle income countries utilized more generalized impairment and activities of daily living outcome measures in stroke rehabilitation lower extremity trials compared to high-income countries, often relying on patient observation.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42383860/",
+     "publishedAt": "2026-07-01T20:18:17.781Z",
+     "firstSeen": "2026-07-01T20:19:05.422Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究揭示了中低收入国家与高收入国家在卒中康复下肢运动试验中结局指标选择的显著差异。你在跨文化背景下评估研究或设计试验时，需要警惕这种测量偏倚，这会影响结果的可比性和普适性。",
+     "titleZh": "中低收入国家与高收入国家在卒中康复下肢试验中结局指标利用模式的比较。",
+     "summaryZh": "一项对1548项RCT的系统综述发现，中低收入国家在卒中康复下肢运动试验中，与高收入国家相比，更多地使用依赖患者观察的、更通用的功能障碍和日常生活活动结局指标。",
+     "curatedReasonEn": "This study reveals significant differences in outcome measure selection in stroke rehabilitation lower extremity trials between low-to-middle income and high-income countries. When evaluating research or designing trials in cross-cultural contexts, be aware of this measurement bias, which affects comparability and generalizability of results.",
+     "limitation": "本系统综述的局限性在于其依赖于已发表研究的数据，可能受限于原始研究报告的质量和完整性。",
+     "limitationEn": "The limitation of this systematic review is its reliance on data from published studies, which may be constrained by the quality and completeness of original study reports.",
+     "tags": [
+      "research",
+      "stroke",
+      "outcome-measures"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "American journal of physical medicine & rehabilitation"
+    },
+    {
+     "id": "news-1782881873872-1",
+     "title": "Anti-Compensatory Saccades Changes After Visuo-Vestibular Physical Therapy in People With Acute Unilateral Vestibulopathy: A Prospective Observational Study.",
+     "summary": "In 92 patients with acute unilateral vestibulopathy, an 8-week visuo-vestibular physical therapy program improved anti-compensatory saccades, which reflect vestibulo-saccadic interaction.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42379159/",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-01T04:57:53.872Z",
+     "curatedScore": 80,
+     "curatedReason": "这项前瞻性观察研究提示，对于急性单侧前庭病患者，视-前庭物理治疗可以改善抗代偿性眼跳。将 SHIMP 评估的抗代偿性眼跳作为中枢代偿的标志物，能帮你更客观地追踪和优化神经康复方案。",
+     "titleZh": "急性单侧前庭病患者视-前庭物理治疗后抗代偿性眼跳的变化：一项前瞻性观察研究。",
+     "summaryZh": "一项前瞻性观察研究显示，92名急性单侧前庭病患者在接受为期8周的视-前庭物理治疗后，其抗代偿性眼跳（反映前庭-眼跳相互作用）有所改善。",
+     "curatedReasonEn": "This prospective observational study suggests that visuo-vestibular physical therapy can improve anti-compensatory saccades in patients with acute unilateral vestibulopathy. Utilizing anti-compensatory saccades, as assessed by SHIMP, as a marker of central compensation can help you objectively track and optimize neurorehabilitation protocols.",
+     "limitation": "本研究为单中心观察性研究，且未设对照组，可能存在混杂因素。",
+     "limitationEn": "This was a single-center observational study without a control group, which may introduce confounding factors.",
+     "tags": [
+      "research",
+      "vestibular"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+     "id": "news-1782945940321-2",
+     "title": "Self-management in neurological disorders: a scoping review of behavior change theories, strategies, contents, and impact.",
+     "summary": "A scoping review of 18 studies on neurological conditions (stroke, spinal cord injury, multiple sclerosis) identified and mapped behavior change theories and techniques in self-management interventions to improve functioning outcomes.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42384979/",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-01T22:45:40.321Z",
+     "curatedScore": 75,
+     "curatedReason": "这项范围综述揭示了神经疾病自我管理干预的理论和策略，为你的临床实践提供了现有证据的概览，但强调仍需更多高质量研究。",
+     "titleZh": "神经系统疾病中的自我管理：行为改变理论、策略、内容及影响的范围综述。",
+     "summaryZh": "一项涵盖18项研究（包括卒中、脊髓损伤、多发性硬化）的范围综述，识别并梳理了旨在改善神经系统疾病患者功能结果的自我管理干预中的行为改变理论和技术。",
+     "curatedReasonEn": "This scoping review reveals the theories and strategies behind self-management interventions for neurological disorders, offering an overview of current evidence for your clinical practice, but emphasizes the need for more high-quality research.",
+     "limitation": "纳入研究数量有限（18项），且涵盖的神经系统疾病类型较为广泛，可能影响其特异性。",
+     "limitationEn": "The limited number of included studies (18) and the broad range of neurological conditions covered may affect specificity.",
+     "tags": [
+      "research",
+      "stroke",
+      "spinal-cord",
+      "ms",
+      "self-management"
+     ],
+     "studyDesign": "综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1782911662631-3",
+     "title": "Online group exercise for people with Parkinson's disease: rehabilitation and fitness professionals' experiences to inform physiotherapy practice and service delivery - a qualitative interview study.",
+     "summary": "A qualitative interview study explored the experiences of 10 rehabilitation and fitness professionals delivering online group exercise for people with Parkinson's disease (PwP), informing physiotherapy practice and service delivery.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42381496/",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-01T13:14:22.631Z",
+     "curatedScore": 75,
+     "curatedReason": "在线团体运动已显示出对帕金森病患者的可行性和益处。作为临床医生，你可以借鉴这篇定性研究中专业人士的经验，优化你的在线康复服务，以更好地满足帕金森病患者的需求。",
+     "titleZh": "帕金森病患者的在线团体运动：康复和健身专业人员的经验以指导物理治疗实践和服务提供——一项定性访谈研究。",
+     "summaryZh": "一项定性访谈研究探讨了10名康复和健身专业人员为帕金森病患者提供在线团体运动的经验，为物理治疗实践和服务提供提供信息。",
+     "curatedReasonEn": "Online group exercise has shown feasibility and benefits for people with Parkinson's disease. As a clinician, you can draw from the experiences of professionals in this qualitative study to optimize your online rehabilitation services and better meet the needs of PwP.",
+     "limitation": "作为定性研究，其结果不具有普遍性，受访者仅为10名专业人员。",
+     "limitationEn": "As a qualitative study, its findings are not generalizable, and it only included 10 professionals.",
+     "tags": [
+      "research",
+      "parkinson",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1782937145422-3",
+     "title": "The use of focus of attention for instruction and feedback during telehealth physiotherapy: An observational study.",
+     "summary": "An exploratory observational study examined how six pediatric physiotherapists used focus of attention for instruction and feedback during telehealth for clients with neurodevelopmental disorders, involving 12 client-physiotherapist dyads.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42384045/",
+     "publishedAt": "2026-07-01T20:18:19.711Z",
+     "firstSeen": "2026-07-01T20:19:05.422Z",
+     "curatedScore": 70,
+     "curatedReason": "这项探索性观察研究首次直接评估了儿科物理治疗师在远程医疗中运用注意力焦点的情况。了解注意力焦点在远程治疗中的应用有助于你优化远程指导和反馈策略，尤其是在资源受限的环境中。",
+     "titleZh": "远程物理治疗中运用注意力焦点进行指导和反馈：一项观察性研究。",
+     "summaryZh": "一项探索性观察研究考察了六名儿科物理治疗师在通过远程医疗对神经发育障碍患者进行指导和反馈时如何使用注意力焦点，共涉及12对患者-治疗师。",
+     "curatedReasonEn": "This exploratory observational study is the first to directly assess pediatric physiotherapists' use of focus of attention in telehealth. Understanding how focus of attention is applied in remote therapy can help you optimize telehealth instruction and feedback strategies, especially in resource-limited settings.",
+     "limitation": "本研究为小样本观察性设计，结果的外推性有限，且不能确定因果关系。",
+     "limitationEn": "This study is a small-sample observational design with limited generalizability and cannot establish causality.",
+     "tags": [
+      "research",
+      "telehealth",
+      "motor-learning"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1782911662631-4",
+     "title": "Early-Stage Symptomatic Hip Osteoarthritis: A Window of Opportunity.",
+     "summary": "This article highlights the growing prevalence of early-stage symptomatic hip osteoarthritis in young adults and emphasizes the importance of early identification and intervention to potentially alter the disease trajectory.",
+     "category": "geriatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42381613/",
+     "publishedAt": "2026-07-01T13:13:47.848Z",
+     "firstSeen": "2026-07-01T13:14:22.631Z",
+     "curatedScore": 70,
+     "curatedReason": "髋关节骨关节炎的早期识别和干预至关重要。你需要关注年轻患者的早期症状，及时进行评估和治疗，这可能有助于改变疾病进程，避免其发展为重症。",
+     "titleZh": "早期有症状的髋关节骨关节炎：一个干预的窗口期。",
+     "summaryZh": "这篇文章强调了年轻成人早期有症状髋关节骨关节炎的日益流行，并指出早期识别和干预对于潜在改变疾病进程的重要性。",
+     "curatedReasonEn": "Early identification and intervention for hip osteoarthritis are crucial. You need to pay attention to early symptoms in younger patients, and timely assessment and treatment may help alter the disease trajectory and prevent progression to severe stages.",
+     "limitation": "这是一篇观点性文章，并非原创研究，主要基于现有文献进行论述。",
+     "limitationEn": "This is a perspective piece, not original research, and primarily discusses based on existing literature.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "述评",
+     "journal": "The Journal of orthopaedic and sports physical therapy"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1782945940322-16",
+     "title": "CMS proposes 2.4% Medicare pay increase for home health providers",
+     "summary": "CMS proposes a 2.4% increase in Medicare payments for home health agencies in 2027.",
+     "category": "practice",
+     "source": "Modern Healthcare",
+     "sourceUrl": "https://www.modernhealthcare.com/politics-regulation/mh-cms-home-health-pay-2027/",
+     "publishedAt": "2026-07-01T22:45:25.301Z",
+     "firstSeen": "2026-07-01T22:45:40.322Z",
+     "curatedScore": 85,
+     "curatedReason": "美国CMS提议的2.4%Medicare居家康复支付增加，将直接影响你的诊所运营和财务规划。你需要密切关注最终政策，并据此调整业务策略。",
+     "titleZh": "美国CMS提议2027年提高居家医疗服务提供者Medicare支付2.4%。",
+     "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）提议在2027年将居家健康机构的Medicare支付上调2.4%。",
+     "curatedReasonEn": "The proposed 2.4% Medicare pay increase for home health providers by US CMS will directly impact your clinic's operations and financial planning. You need to closely monitor the final policy and adjust your business strategy accordingly.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "US"
+     ]
+    },
+    {
+     "id": "news-1782942823572-15",
+     "title": "Read more about CMS Proposes Updates to Strengthen Medicare Program Integrity, Combat Fraud, and Expand Access to Home Health Care",
+     "summary": "CMS proposes updates to strengthen Medicare program integrity, combat fraud, and expand access to home health care in the US.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-proposes-updates-strengthen-medicare-program-integrity-combat-fraud-expand-access-home-health",
+     "publishedAt": "2026-07-01T21:53:22.639Z",
+     "firstSeen": "2026-07-01T21:53:43.572Z",
+     "curatedScore": 80,
+     "curatedReason": "美国 CMS 发布了加强 Medicare 项目诚信、打击欺诈并扩大居家健康护理可及性的拟议更新。这些政策直接影响居家物理治疗服务的报销和合规要求，提醒你关注其最终规则，以调整你的运营和实践。",
+     "titleZh": "CMS 提议更新以加强 Medicare 项目诚信、打击欺诈并扩大居家健康护理可及性",
+     "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）提议更新其政策，旨在加强 Medicare 项目的诚信，打击欺诈，并扩大居家健康护理服务的可及性。",
+     "curatedReasonEn": "CMS has released proposed updates to strengthen Medicare program integrity, combat fraud, and expand access to home health care in the US. These policies directly impact reimbursement and compliance requirements for home physical therapy services, urging you to monitor the final rules to adjust your operations and practice.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "telehealth"
+     ]
+    },
+    {
+     "id": "news-1782942823572-16",
+     "title": "Read more about Calendar Year (CY) 2027 Home Health Prospective Payment System Proposed Rule Fact Sheet (CMS-1844-P)",
+     "summary": "CMS has released a fact sheet for the Calendar Year 2027 Home Health Prospective Payment System Proposed Rule (CMS-1844-P) in the US.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-home-health-prospective-payment-system-proposed-rule-fact-sheet-cms-1844-p",
+     "publishedAt": "2026-07-01T21:53:22.639Z",
+     "firstSeen": "2026-07-01T21:53:43.572Z",
+     "curatedScore": 75,
+     "curatedReason": "CMS 2027 财年居家健康前瞻性支付系统（PPS）的拟议规则将直接影响美国居家物理治疗服务的支付方式和费率。这要求你密切关注这些潜在变化，评估其对诊所收入和运营策略的影响。",
+     "titleZh": "2027 日历年居家健康前瞻性支付系统拟议规则情况说明书 (CMS-1844-P)",
+     "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）发布了 2027 日历年居家健康前瞻性支付系统拟议规则 (CMS-1844-P) 的情况说明书。",
+     "curatedReasonEn": "CMS's proposed rule for the Calendar Year 2027 Home Health Prospective Payment System (PPS) will directly impact payment methods and rates for home physical therapy services in the US. This requires you to closely monitor these potential changes and assess their impact on your clinic's revenue and operational strategies.",
+     "tags": [
+      "policy",
+      "reimbursement"
+     ]
+    },
+    {
+     "id": "news-1782901104954-12",
+     "title": "Promoting Client-Centered Communication in Rehabilitation: Strategies for Managing Difficult Conversations",
+     "summary": "This article discusses strategies for promoting client-centered communication in rehabilitation, emphasizing its importance for managing difficult conversations and improving client-clinician relationships and outcomes.",
+     "category": "practice",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00755-0/fulltext?rss=yes",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-01T10:18:24.954Z",
+     "curatedScore": 75,
+     "curatedReason": "康复治疗中，掌握以客户为中心的沟通策略对于管理复杂对话和情境至关重要。这有助于你维护医患关系，并优化治疗结局。",
+     "titleZh": "在康复治疗中促进以客户为中心的沟通：管理困难对话的策略",
+     "summaryZh": "本文探讨了在康复治疗中促进以客户为中心的沟通策略，强调其在管理困难对话、改善医患关系和治疗结局方面的重要性。",
+     "curatedReasonEn": "Mastering client-centered communication strategies is crucial in rehabilitation for managing complex conversations and situations. This will help you maintain client-clinician relationships and optimize treatment outcomes.",
+     "tags": [
+      "news",
+      "education",
+      "ethics"
+     ],
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1782901104954-15",
+     "title": "The $10M gift that’s helping launch a hospital-at-home program",
+     "summary": "A $10 million gift is helping to launch a hospital-at-home program at Dartmouth Health, signaling significant investment in alternative care models.",
+     "category": "practice",
+     "source": "Modern Healthcare",
+     "sourceUrl": "https://www.modernhealthcare.com/post-acute-care/mh-dartmouth-health-hospital-at-home-program/",
+     "publishedAt": "2026-07-01T10:18:11.838Z",
+     "firstSeen": "2026-07-01T10:18:24.954Z",
+     "curatedScore": 70,
+     "curatedReason": "一家医疗机构获得千万美元捐赠用于启动“居家医院”项目，这提示了院外康复和居家护理模式日益增长的认可度与资金投入，关注这类模式的拓展机会。",
+     "titleZh": "千万美元捐赠助力启动居家医院项目",
+     "summaryZh": "一笔 1000 万美元的捐赠正在帮助达特茅斯健康中心启动一项“居家医院”项目，这标志着对替代护理模式的重大投资。",
+     "curatedReasonEn": "A healthcare organization received a $10M gift to launch a hospital-at-home program, indicating growing recognition and funding for out-of-hospital rehabilitation and home care models. Look for opportunities to expand into these models.",
+     "tags": [
+      "news",
+      "telehealth"
+     ]
+    },
+    {
+     "id": "news-1782937145422-15",
+     "title": "Allegheny Health Network closes deal to buy Heritage Valley",
+     "summary": "Allegheny Health Network has completed a deal to acquire Heritage Valley Health System.",
+     "category": "practice",
+     "source": "Modern Healthcare",
+     "sourceUrl": "https://www.modernhealthcare.com/providers/mh-allegheny-health-network-heritage-valley/",
+     "publishedAt": "2026-07-01T20:18:44.327Z",
+     "firstSeen": "2026-07-01T20:19:05.422Z",
+     "curatedScore": 65,
+     "curatedReason": "Allegheny Health Network 收购 Heritage Valley Health System，这是医疗市场整合的最新动态。你需要留意这种大型整合对地区医疗服务可及性和转诊网络可能产生的影响。",
+     "titleZh": "Allegheny Health Network 完成对 Heritage Valley 的收购。",
+     "summaryZh": "Allegheny Health Network 已完成收购 Heritage Valley Health System 的交易。",
+     "curatedReasonEn": "Allegheny Health Network's acquisition of Heritage Valley Health System is the latest development in healthcare market consolidation. You should monitor how such large-scale integrations might affect regional healthcare access and referral networks.",
+     "tags": [
+      "news",
+      "market"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "Cigna’s CEO vows to put patients first. Wall Street is watching",
+   "titleZh": "信诺 CEO 誓言患者优先，华尔街密切关注",
+   "source": "Modern Healthcare",
+   "sourceUrl": "https://www.modernhealthcare.com/insurance/mh-cigna-brian-evanko-rebates-pbm/",
+   "publishedAt": "2026-07-01T16:42:02.328Z"
+  },
+  {
+   "title": "July 1, 2026 How Smarter Workflows Strengthen the Entire Revenue Cycle",
+   "titleZh": "2026年7月1日：更智能的工作流程如何强化整个营收周期。",
+   "source": "WebPT",
+   "sourceUrl": "https://www.webpt.com/blog/how-smarter-workflows-strengthen-the-entire-revenue-cycle",
+   "publishedAt": "2026-07-01T13:14:07.064Z"
+  }
+ ]
+}
