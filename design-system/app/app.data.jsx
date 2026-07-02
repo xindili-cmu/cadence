@@ -204,6 +204,13 @@ window.CD_DICT = {
 };
 
 window.CD_LANG = (() => {
+  // Shared-link override (?lang=en on permalinks from the EN email/LinkedIn):
+  // wins for this session only — deliberately NOT persisted, so a zh reader
+  // opening one English link isn't flipped permanently.
+  try {
+    const q = new URLSearchParams(location.search).get('lang');
+    if (q === 'en' || q === 'zh') return q;
+  } catch (e) { /* noop */ }
   try {
     const v = localStorage.getItem('cd-lang');
     if (v === 'en' || v === 'zh') return v;
@@ -218,6 +225,16 @@ window.CD_SET_LANG = (lang) => {
   window.CD_LANG = lang;
   try { localStorage.setItem('cd-lang', lang); } catch (e) { /* noop */ }
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  // An explicit toggle outranks a shared-link ?lang= override — strip the
+  // param so a reload doesn't snap the reader back to the link's language.
+  try {
+    const qs = new URLSearchParams(location.search);
+    if (qs.has('lang')) {
+      qs.delete('lang');
+      const rest = qs.toString();
+      history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+    }
+  } catch (e) { /* noop */ }
 };
 
 // Calendar-day bucketing, fixed to BEIJING time and keyed on the INGESTION

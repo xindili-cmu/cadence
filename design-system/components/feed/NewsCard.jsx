@@ -4,6 +4,25 @@ import { CategoryTag } from './CategoryTag.jsx';
 import { SignalScore } from './SignalScore.jsx';
 import { getCategory } from './categories.js';
 
+// Clipboard helper shared by the card's copy-link button and the story
+// detail overlay (app.main.jsx, via window.cdCopyText). execCommand fallback
+// covers non-secure contexts / older WebViews (WeChat in-app browser).
+export function cdCopyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => cdCopyTextLegacy(text));
+  }
+  return Promise.resolve(cdCopyTextLegacy(text));
+}
+function cdCopyTextLegacy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch {}
+  document.body.removeChild(ta);
+}
+
 function SourceMonogram({ source, accent }) {
   const letter = (source || '?').trim().charAt(0).toUpperCase();
   return (
@@ -29,9 +48,11 @@ export function NewsCard({
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   surfaced, // "新收录"/"New" chip — firstSeen date string when surfaced ≫ published, else ''
+  permalink, // canonical on-site URL (/?item=<id>) — copy-link button + crawlable <a>
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
   // i18n — CD_T is defined by app.data.jsx; fall back to the English literal
   // so the component still works standalone (e.g. in the design-system preview).
   const t = (typeof window !== 'undefined' && window.CD_T) || ((k, fb) => fb);
@@ -117,7 +138,7 @@ export function NewsCard({
     <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginTop: isCompact ? 8 : 14 }}>
       <SourceMonogram source={source} accent={cat.accent} />
       <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, color: 'var(--text-secondary)' }}>{source}</span>
-      {journalMeta && (
+      {journalMeta && journalMeta.if != null && (
         <span
           title={`${journalMeta.name} — ${t('ifTip', 'Journal impact factor')} · ${journalMeta.year} JCR`}
           style={{
@@ -142,6 +163,31 @@ export function NewsCard({
         </span>
       )}
       <span style={{ flex: 1 }} />
+      {permalink && (
+        // Real <a href> (not a button) so crawlers discover the per-item URL
+        // from the feed itself; click is intercepted to copy instead of
+        // navigate. en readers copy an &lang=en link (edge worker serves the
+        // English share card); href stays the language-neutral canonical.
+        <a href={permalink}
+          onClick={(e) => {
+            e.preventDefault(); e.stopPropagation();
+            const u = new URL(permalink, location.origin);
+            if (typeof window !== 'undefined' && window.CD_LANG === 'en') u.searchParams.set('lang', 'en');
+            cdCopyText(u.href);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 1600);
+          }}
+          title={t('copyLink', 'Copy link')}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none',
+            fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+            color: copied ? 'var(--green-700)' : (hover ? 'var(--text-secondary)' : 'var(--text-tertiary)'),
+            transition: 'var(--transition-colors)',
+          }}>
+          <Icon name={copied ? 'check' : 'link'} size={14} strokeWidth={2} />
+          {copied ? t('linkCopied', 'Copied') : t('copyLink', 'Copy link')}
+        </a>
+      )}
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onOpen ? onOpen() : window.open(sourceUrl, '_blank'); }}

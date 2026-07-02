@@ -10,10 +10,12 @@
 // Failure posture: any error falls through to the untouched asset response —
 // the site can never be taken down by this shim.
 
-// zh-first copy (core audience), en fallback — mirrors the app's zh default.
-function storyMeta(story) {
-  const title = story.titleZh || story.title || '';
-  const rawDesc = story.summaryZh || story.summary || '';
+// Locale-aware copy: links shared from the EN edition carry &lang=en and get
+// English og fields (US market); default stays zh-first (core audience).
+function storyMeta(story, lang) {
+  const en = lang === 'en';
+  const title = (en ? (story.titleEn || story.title) : (story.titleZh || story.title)) || '';
+  const rawDesc = (en ? (story.summary || story.summaryZh) : (story.summaryZh || story.summary)) || '';
   const desc = rawDesc.length > 200 ? rawDesc.slice(0, 199) + '…' : rawDesc;
   return { title, desc };
 }
@@ -53,11 +55,13 @@ export default {
       const story = await findStory(id, url, env);
       if (!story) return assetResp;
 
-      const { title, desc } = storyMeta(story);
+      const lang = url.searchParams.get('lang') === 'en' ? 'en' : 'zh';
+      const { title, desc } = storyMeta(story, lang);
       if (!title) return assetResp;
-      const pageTitle = `${title} — Cadence 步频`;
-      // Canonical self-URL for this story. id is our own slug ([\w.-]+ today),
-      // but encode defensively; the <link> below is built from this string.
+      const pageTitle = `${title} — ${lang === 'en' ? 'Cadence' : 'Cadence 步频'}`;
+      // Canonical self-URL for this story: language-independent (?item= only),
+      // so Google folds ?lang= variants into one canonical URL. id is our own
+      // slug ([\w.-]+ today), but encode defensively.
       const canonical = `${url.origin}/?item=${encodeURIComponent(id)}`;
 
       // HTMLRewriter escapes attribute values / text content itself; the one

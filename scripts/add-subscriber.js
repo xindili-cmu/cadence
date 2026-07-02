@@ -2,11 +2,18 @@
 /**
  * add-subscriber.js — add subscriber email(s) to the Resend segment.
  *
- * Intake flow: the site's subscribe card posts to Formspree (kind:'subscribe');
- * Cindy copies new addresses from the Formspree notification emails and runs:
+ * Intake flow: the site's subscribe card posts to Formspree (kind:'subscribe',
+ * with a `lang` field); Cindy copies new addresses from the Formspree
+ * notification emails and runs:
  *
  *   RESEND_API_KEY=re_xxx RESEND_SEGMENT_ID=xxx \
  *   node scripts/add-subscriber.js a@x.com b@y.com
+ *
+ * English-edition subscribers (Formspree shows lang:'en') go to the EN
+ * segment instead — pass --lang=en and set RESEND_SEGMENT_ID_EN:
+ *
+ *   RESEND_API_KEY=re_xxx RESEND_SEGMENT_ID_EN=xxx \
+ *   node scripts/add-subscriber.js --lang=en a@x.com
  *
  * Duplicates are safe: Resend keys contacts by email. Unsubscribed contacts
  * stay unsubscribed (this script never flips unsubscribed back to false for
@@ -14,15 +21,27 @@
  */
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
-const RESEND_SEGMENT_ID = process.env.RESEND_SEGMENT_ID || '';
 
-const emails = process.argv.slice(2).map((e) => e.trim().toLowerCase()).filter(Boolean);
+const args = process.argv.slice(2);
+const EN = args.includes('--lang=en');
+// Fail loudly on any other flag (e.g. --lang=EN, --Lang=en typos) so a
+// mis-typed language never silently lands a subscriber in the wrong segment.
+const badFlags = args.filter((a) => a.startsWith('--') && a !== '--lang=en');
+if (badFlags.length) {
+  console.error(`✗ unknown flag(s): ${badFlags.join(' ')} — only --lang=en is supported.`);
+  process.exit(1);
+}
+const RESEND_SEGMENT_ID = EN
+  ? (process.env.RESEND_SEGMENT_ID_EN || '')
+  : (process.env.RESEND_SEGMENT_ID || '');
+
+const emails = args.filter((a) => !a.startsWith('--')).map((e) => e.trim().toLowerCase()).filter(Boolean);
 if (!RESEND_API_KEY || !RESEND_SEGMENT_ID) {
-  console.error('✗ set RESEND_API_KEY and RESEND_SEGMENT_ID env vars.');
+  console.error(`✗ set RESEND_API_KEY and ${EN ? 'RESEND_SEGMENT_ID_EN' : 'RESEND_SEGMENT_ID'} env vars.`);
   process.exit(1);
 }
 if (!emails.length) {
-  console.error('usage: node scripts/add-subscriber.js email [email …]');
+  console.error('usage: node scripts/add-subscriber.js [--lang=en] email [email …]');
   process.exit(1);
 }
 const RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

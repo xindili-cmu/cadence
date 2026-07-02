@@ -1,18 +1,21 @@
 import React from 'react';
 
-// SIGNAL tiers — aligned to the cron scoring rubric (news-refresh.js):
-// ≥90 practice-changing · 80–89 worth knowing · 65–79 reference.
+// SIGNAL tiers — PRESENTATION bands aligned to the actual score distribution
+// (decision 2026-07-01, do NOT re-unify with the cron rubric: the rubric tops
+// out near 90, so a ≥90 "practice-changing" display band was permanently
+// empty — ~2/387 items ever. Display ≠ rubric.)
+// ≥85 strong signal · 75–84 worth knowing · 65–74 reference.
 function signalTier(v) {
-  if (v >= 90) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '可改变实践', en: 'Practice-changing' };
-  if (v >= 80) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
+  if (v >= 85) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '强信号', en: 'Strong signal' };
+  if (v >= 75) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
   return { key: 'low', color: 'var(--signal-low)', soft: 'var(--signal-low-soft)', zh: '参考', en: 'For reference' };
 }
 
 // Hover explainer — what the score means + the tier cutoffs.
 function signalTip(lang) {
   return (lang || (typeof window !== 'undefined' && window.CD_LANG) || 'zh') === 'zh'
-    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。90+ 可改变实践 · 80+ 值得关注 · 65+ 参考'
-    : 'SIGNAL: AI rating of clinical impact (0–100). 90+ practice-changing · 80+ worth knowing · 65+ reference';
+    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。85+ 强信号 · 75+ 值得关注 · 65+ 参考'
+    : 'SIGNAL: AI rating of clinical impact (0–100). 85+ strong signal · 75+ worth knowing · 65+ reference';
 }
 
 function signalTierLabel(t, lang) {

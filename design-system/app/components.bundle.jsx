@@ -301,19 +301,22 @@ function Input({
 
 
 /* ===== components/feed/SignalScore.jsx ===== */
-// SIGNAL tiers — aligned to the cron scoring rubric (news-refresh.js):
-// ≥90 practice-changing · 80–89 worth knowing · 65–79 reference.
+// SIGNAL tiers — PRESENTATION bands aligned to the actual score distribution
+// (decision 2026-07-01, do NOT re-unify with the cron rubric: the rubric tops
+// out near 90, so a ≥90 "practice-changing" display band was permanently
+// empty — ~2/387 items ever. Display ≠ rubric.)
+// ≥85 strong signal · 75–84 worth knowing · 65–74 reference.
 function signalTier(v) {
-  if (v >= 90) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '可改变实践', en: 'Practice-changing' };
-  if (v >= 80) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
+  if (v >= 85) return { key: 'high', color: 'var(--signal-high)', soft: 'var(--signal-high-soft)', zh: '强信号', en: 'Strong signal' };
+  if (v >= 75) return { key: 'mid', color: 'var(--signal-mid)', soft: 'var(--signal-mid-soft)', zh: '值得关注', en: 'Worth knowing' };
   return { key: 'low', color: 'var(--signal-low)', soft: 'var(--signal-low-soft)', zh: '参考', en: 'For reference' };
 }
 
 // Hover explainer — what the score means + the tier cutoffs.
 function signalTip(lang) {
   return (lang || (typeof window !== 'undefined' && window.CD_LANG) || 'zh') === 'zh'
-    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。90+ 可改变实践 · 80+ 值得关注 · 65+ 参考'
-    : 'SIGNAL: AI rating of clinical impact (0–100). 90+ practice-changing · 80+ worth knowing · 65+ reference';
+    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。85+ 强信号 · 75+ 值得关注 · 65+ 参考'
+    : 'SIGNAL: AI rating of clinical impact (0–100). 85+ strong signal · 75+ worth knowing · 65+ reference';
 }
 
 function signalTierLabel(t, lang) {
@@ -512,6 +515,25 @@ function CategoryTabs({ value = 'all', onChange = () => {}, includeAll = true, s
 
 
 /* ===== components/feed/NewsCard.jsx ===== */
+// Clipboard helper shared by the card's copy-link button and the story
+// detail overlay (app.main.jsx, via window.cdCopyText). execCommand fallback
+// covers non-secure contexts / older WebViews (WeChat in-app browser).
+function cdCopyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text).catch(() => cdCopyTextLegacy(text));
+  }
+  return Promise.resolve(cdCopyTextLegacy(text));
+}
+function cdCopyTextLegacy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); } catch {}
+  document.body.removeChild(ta);
+}
+
 function SourceMonogram({ source, accent }) {
   const letter = (source || '?').trim().charAt(0).toUpperCase();
   return (
@@ -537,9 +559,11 @@ function NewsCard({
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   surfaced, // "新收录"/"New" chip — firstSeen date string when surfaced ≫ published, else ''
+  permalink, // canonical on-site URL (/?item=<id>) — copy-link button + crawlable <a>
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = useState(false);
+  const [copied, setCopied] = useState(false);
   // i18n — CD_T is defined by app.data.jsx; fall back to the English literal
   // so the component still works standalone (e.g. in the design-system preview).
   const t = (typeof window !== 'undefined' && window.CD_T) || ((k, fb) => fb);
@@ -625,7 +649,7 @@ function NewsCard({
     <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginTop: isCompact ? 8 : 14 }}>
       <SourceMonogram source={source} accent={cat.accent} />
       <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, color: 'var(--text-secondary)' }}>{source}</span>
-      {journalMeta && (
+      {journalMeta && journalMeta.if != null && (
         <span
           title={`${journalMeta.name} — ${t('ifTip', 'Journal impact factor')} · ${journalMeta.year} JCR`}
           style={{
@@ -650,6 +674,31 @@ function NewsCard({
         </span>
       )}
       <span style={{ flex: 1 }} />
+      {permalink && (
+        // Real <a href> (not a button) so crawlers discover the per-item URL
+        // from the feed itself; click is intercepted to copy instead of
+        // navigate. en readers copy an &lang=en link (edge worker serves the
+        // English share card); href stays the language-neutral canonical.
+        <a href={permalink}
+          onClick={(e) => {
+            e.preventDefault(); e.stopPropagation();
+            const u = new URL(permalink, location.origin);
+            if (typeof window !== 'undefined' && window.CD_LANG === 'en') u.searchParams.set('lang', 'en');
+            cdCopyText(u.href);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 1600);
+          }}
+          title={t('copyLink', 'Copy link')}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none',
+            fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+            color: copied ? 'var(--green-700)' : (hover ? 'var(--text-secondary)' : 'var(--text-tertiary)'),
+            transition: 'var(--transition-colors)',
+          }}>
+          <Icon name={copied ? 'check' : 'link'} size={14} strokeWidth={2} />
+          {copied ? t('linkCopied', 'Copied') : t('copyLink', 'Copy link')}
+        </a>
+      )}
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onOpen ? onOpen() : window.open(sourceUrl, '_blank'); }}
@@ -758,4 +807,4 @@ function NewsCard({
 }
 
 
-Object.assign(window, { Logo, Button, Input, Icon, CategoryTag, CategoryTabs, SignalScore, NewsCard, CATEGORIES, CATEGORY_MAP, getCategory, catVars, catLabel, catShort, XCUTS });
+Object.assign(window, { Logo, Button, Input, Icon, CategoryTag, CategoryTabs, SignalScore, NewsCard, CATEGORIES, CATEGORY_MAP, getCategory, catVars, catLabel, catShort, XCUTS, cdCopyText });

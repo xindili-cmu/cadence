@@ -14,10 +14,15 @@
  *   node scripts/weekly-signal-email.js              # last completed Beijing week
  *   node scripts/weekly-signal-email.js 2026-06-22   # the week containing that date
  *   DRY_RUN=true node scripts/weekly-signal-email.js # preview file only, no API call
+ *   EDITION=en node scripts/weekly-signal-email.js   # English edition (US market)
  *
  * Env:
+ *   EDITION            — 'zh' (default) or 'en'. en uses the items' English
+ *                        fields, English copy, &lang=en story links, and drafts
+ *                        to the EN segment (RESEND_SEGMENT_ID_EN).
  *   RESEND_API_KEY     — required to create the draft (else preview-only + warning)
- *   RESEND_SEGMENT_ID  — Resend segment (audience) holding subscribers; required to draft
+ *   RESEND_SEGMENT_ID  — Resend segment (audience) holding zh subscribers; required to draft
+ *   RESEND_SEGMENT_ID_EN — segment holding en subscribers (required when EDITION=en)
  *   MAIL_FROM          — verified sender, e.g. "Cadence 步频 <weekly@incadencept.com>"
  *                        (domain must be verified in Resend; the shared
  *                        onboarding@resend.dev sender cannot broadcast to real
@@ -34,9 +39,16 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const DRY = String(process.env.DRY_RUN || '').toLowerCase() === 'true';
+// EDITION (not LANG — LANG is a POSIX locale var the shell may already set).
+const EDITION = String(process.env.EDITION || 'zh').toLowerCase() === 'en' ? 'en' : 'zh';
+const EN = EDITION === 'en';
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
-const RESEND_SEGMENT_ID = process.env.RESEND_SEGMENT_ID || '';
-const MAIL_FROM = process.env.MAIL_FROM || 'Cadence 步频 <weekly@incadencept.com>';
+const RESEND_SEGMENT_ID = EN
+  ? (process.env.RESEND_SEGMENT_ID_EN || '')
+  : (process.env.RESEND_SEGMENT_ID || '');
+const MAIL_FROM = process.env.MAIL_FROM || (EN
+  ? 'Cadence <weekly@incadencept.com>'
+  : 'Cadence 步频 <weekly@incadencept.com>');
 const SITE_URL = (process.env.SITE_URL || 'https://incadencept.com').replace(/\/$/, '');
 
 const HOUR = 3600e3;
@@ -106,15 +118,43 @@ function tierColor(score) {
   return score >= 85 ? '#2F6B4F' : score >= 75 ? '#3D74B8' : '#8A8F98';
 }
 function tierLabel(score) {
+  if (EN) return score >= 85 ? 'Strong signal' : score >= 75 ? 'Worth knowing' : 'For reference';
   return score >= 85 ? '强信号' : score >= 75 ? '值得关注' : '参考';
 }
 
+// Edition copy — everything reader-facing lives here so zh/en never drift
+// structurally, only in words.
+const COPY = EN ? {
+  htmlLang: 'en',
+  masthead: 'Cadence',
+  edition: 'Weekly Signal',
+  intro: (n) => `The ${n} highest-SIGNAL papers from last week's rehab literature. Each comes with one line on why it matters — click a title for the full summary and source.`,
+  readMore: 'Read more →',
+  footerMore: (site) => `More: <a href="${site}/?lang=en" style="color:#3D74B8;text-decoration:none;">incadencept.com</a> · <a href="${site}/rss.xml" style="color:#3D74B8;text-decoration:none;">RSS</a>`,
+  disclaimer: 'SIGNAL scores are AI-generated from titles and abstracts; not clinical advice.',
+  unsubPrefix: 'Don’t want these emails? ',
+  unsub: 'Unsubscribe',
+  subject: (range) => `Cadence Weekly Signal | ${range} top-scored rehab research`,
+} : {
+  htmlLang: 'zh-CN',
+  masthead: 'Cadence 步频',
+  edition: '每周最强信号',
+  intro: (n) => `上周全球康复文献里，信号分最高的 ${n} 篇。每篇附一句「为什么重要」，点标题看完整摘要与原文。`,
+  readMore: '阅读详情 →',
+  footerMore: (site) => `更多内容：<a href="${site}/" style="color:#3D74B8;text-decoration:none;">incadencept.com</a> · 公众号「Cadence步频」 · 小红书 in_cadence`,
+  disclaimer: 'SIGNAL 分由 AI 基于标题与摘要评出，不构成临床建议。',
+  unsubPrefix: '不想再收到这封邮件？',
+  unsub: '一键退订',
+  subject: (range) => `步频·每周最强信号 | ${range} 高分康复文献`,
+};
+
 function buildHtml({ picks, range }) {
   const rows = picks.map((i, idx) => {
-    const url = `${SITE_URL}/?item=${encodeURIComponent(i.id)}`;
-    const title = i.titleZh || i.title;
+    // en links carry &lang=en so the story page opens in English.
+    const url = `${SITE_URL}/?item=${encodeURIComponent(i.id)}${EN ? '&lang=en' : ''}`;
+    const title = EN ? (i.titleEn || i.title) : (i.titleZh || i.title);
     const src = [i.journal || i.source, (i.publishedAt || '').slice(0, 10)].filter(Boolean).join(' · ');
-    const reason = i.curatedReason || i.summary || '';
+    const reason = EN ? (i.curatedReasonEn || i.summary || '') : (i.curatedReason || i.summary || '');
     return `
       <tr><td style="padding:${idx ? '22px' : '6px'} 0 0;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
@@ -127,7 +167,7 @@ function buildHtml({ picks, range }) {
               <a href="${esc(url)}" style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;font-weight:600;line-height:1.45;color:#1B1E23;text-decoration:none;">${esc(title)}</a>
               <div style="font-family:Menlo,Consolas,monospace;font-size:11px;color:#93A0AC;margin-top:5px;">${esc(src)}</div>
               <div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:13.5px;line-height:1.65;color:#4A5058;margin-top:8px;">${esc(reason)}</div>
-              <div style="margin-top:8px;"><a href="${esc(url)}" style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12.5px;font-weight:600;color:#3D74B8;text-decoration:none;">阅读详情 →</a></div>
+              <div style="margin-top:8px;"><a href="${esc(url)}" style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12.5px;font-weight:600;color:#3D74B8;text-decoration:none;">${COPY.readMore}</a></div>
             </td>
           </tr>
         </table>
@@ -135,27 +175,27 @@ function buildHtml({ picks, range }) {
   }).join('\n');
 
   return `<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<html lang="${COPY.htmlLang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
 <body style="margin:0;padding:0;background:#FAFAF6;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FAFAF6;border-collapse:collapse;">
     <tr><td align="center" style="padding:28px 16px;">
       <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;border-collapse:collapse;">
         <!-- masthead -->
         <tr><td style="padding:0 0 14px;border-bottom:2px solid #1B1E23;">
-          <span style="font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:#1B1E23;">Cadence 步频</span>
-          <span style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12px;color:#93A0AC;">&nbsp;·&nbsp;每周最强信号 · ${esc(range)}</span>
+          <span style="font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:700;color:#1B1E23;">${COPY.masthead}</span>
+          <span style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12px;color:#93A0AC;">&nbsp;·&nbsp;${COPY.edition} · ${esc(range)}</span>
         </td></tr>
         <tr><td style="padding:16px 0 4px;">
-          <p style="margin:0;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:13.5px;line-height:1.7;color:#4A5058;">上周全球康复文献里，信号分最高的 ${picks.length} 篇。每篇附一句「为什么重要」，点标题看完整摘要与原文。</p>
+          <p style="margin:0;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:13.5px;line-height:1.7;color:#4A5058;">${COPY.intro(picks.length)}</p>
         </td></tr>
         ${rows}
         <!-- footer -->
         <tr><td style="padding:26px 0 0;">
           <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-top:1px solid #E4E2DA;">
             <tr><td style="padding:14px 0 0;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:12px;line-height:1.8;color:#93A0AC;">
-              更多内容：<a href="${SITE_URL}/" style="color:#3D74B8;text-decoration:none;">incadencept.com</a> · 公众号「Cadence步频」 · 小红书 in_cadence<br>
-              SIGNAL 分由 AI 基于标题与摘要评出，不构成临床建议。<br>
-              不想再收到这封邮件？<a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#93A0AC;">一键退订</a>
+              ${COPY.footerMore(SITE_URL)}<br>
+              ${COPY.disclaimer}<br>
+              ${COPY.unsubPrefix}<a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#93A0AC;">${COPY.unsub}</a>
             </td></tr>
           </table>
         </td></tr>
@@ -225,19 +265,19 @@ async function createDraftBroadcast({ subject, html }) {
     return;
   }
 
-  const subject = `步频·每周最强信号 | ${range} 高分康复文献`;
+  const subject = COPY.subject(range);
   const html = buildHtml({ picks, range });
 
-  // Always write the local preview.
+  // Always write the local preview (en edition gets a -en suffix).
   const outDir = path.join(ROOT, 'briefs', 'email');
   fs.mkdirSync(outDir, { recursive: true });
-  const outFile = path.join(outDir, `${fmtYMD(start)}.html`);
+  const outFile = path.join(outDir, `${fmtYMD(start)}${EN ? '-en' : ''}.html`);
   fs.writeFileSync(outFile, html);
-  console.log(`✓ preview → briefs/email/${path.basename(outFile)} (${picks.length} items · ${range})`);
+  console.log(`✓ preview → briefs/email/${path.basename(outFile)} (${picks.length} items · ${range} · ${EDITION})`);
 
   if (DRY) { console.log('[dry-run] skipping Resend draft.'); return; }
   if (!RESEND_API_KEY || !RESEND_SEGMENT_ID) {
-    console.log('⚠ RESEND_API_KEY / RESEND_SEGMENT_ID not set — preview only, no draft created.');
+    console.log(`⚠ RESEND_API_KEY / ${EN ? 'RESEND_SEGMENT_ID_EN' : 'RESEND_SEGMENT_ID'} not set — preview only, no draft created.`);
     return;
   }
   const r = await createDraftBroadcast({ subject, html });

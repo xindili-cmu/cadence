@@ -1688,7 +1688,10 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
 
   const [copied, setCopied] = React.useState(false);
   const copyHere = () => {
-    cdCopyText(location.origin + cdItemUrl(id));
+    // Mirror the card's copy-link behavior: en readers share &lang=en links.
+    const u = new URL(cdItemUrl(id), location.origin);
+    if (window.CD_LANG === 'en') u.searchParams.set('lang', 'en');
+    cdCopyText(u.href);
     setCopied(true);
     setTimeout(() => setCopied(false), 1600);
   };
