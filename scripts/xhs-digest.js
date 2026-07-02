@@ -64,8 +64,8 @@ const CAT = {
 };
 const catOf = (id) => CAT[id] || { zh: id || '其他', soft: C.ink50, ink: C.ink600 };
 
-// 信号分 → 人话三档（分布实测 60–85，中位 75）；尾页有统一说明
-const tierOf = (score) => (score >= 90 ? '强信号' : score >= 80 ? '值得读' : '参考');
+// 信号分 → 人话三档（85+ 强信号 · 75+ 值得读 · 65+ 参考，对齐网页 SIGNAL 档）；尾页有统一说明
+const tierOf = (score) => (score >= 85 ? '强信号' : score >= 75 ? '值得读' : '参考');
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 function beijingToday() {
@@ -242,7 +242,7 @@ function endCard(dateStr, stories, meta) {
         col({ flex: 1, gap: 12, padding: '4px 0' },
           txt({ fontFamily: SANS, fontWeight: 700, fontSize: 26, letterSpacing: 4, color: C.blue700 }, '图上的标签怎么读'),
           txt({ fontFamily: SANS, fontSize: 30, lineHeight: 1.74, color: C.ink600 },
-            'AI 给每篇新文献打分后换算成三档：强信号（90 分以上）· 值得读（80–89）· 参考（65–79）'),
+            'AI 给每篇新文献打分后换算成三档：强信号（85 分以上）· 值得读（75–84）· 参考（65–74）'),
         ),
       ),
       col({ padding: '36px 40px', borderRadius: 16, backgroundColor: C.blue50, border: `1px solid ${C.ink200}`, gap: 14 },

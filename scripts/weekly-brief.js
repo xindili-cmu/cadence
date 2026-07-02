@@ -64,8 +64,8 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
 const MAIL_TO = process.env.MAIL_TO || 'cindylips2001@gmail.com';
 const MAIL_FROM = process.env.MAIL_FROM || 'Cadence 步频 <onboarding@resend.dev>';
 
-// Signal tiers (curatedScore): ≥90 强信号 · 80–89 值得读 · 65–79 参考
-const TIER = { strong: 90, worth: 80, ref: 65 };
+// Signal tiers (curatedScore, presentation bands): ≥85 强信号 · 75–84 值得读 · 65–74 参考
+const TIER = { strong: 85, worth: 75, ref: 65 };
 
 const CATEGORY_LABELS = {
   orthopedic: '骨科',
@@ -425,7 +425,7 @@ function render(ctx) {
     L.push(`> 🚧 **本周尚未结束（已过 ${elapsedDays}/7 天）** —— 数据不完整，本期已抑制百分比与所有「下降」告警，环比仅供参考。`);
     L.push(``);
   }
-  L.push(`> 周环比按「${axisLabel}」单一口径统计，两周一致。信号分档：≥90 强信号 · 80–89 值得读 · 65–79 参考。`);
+  L.push(`> 周环比按「${axisLabel}」单一口径统计，两周一致。信号分档：≥85 强信号 · 75–84 值得读 · 65–74 参考。`);
   if (axis === 'publishedAt') {
     L.push(`>`);
     L.push(
@@ -459,9 +459,9 @@ function render(ctx) {
   L.push(`| 指标 | 本周 | 上周 | ${wowHdr} |`);
   L.push(`| --- | ---: | ---: | ---: |`);
   L.push(`| ${verb}总量 | ${cur.total} | ${prev.total} | ${delta(cur.total, prev.total, showPct)} |`);
-  L.push(`| 强信号 ≥90 | ${cur.tier.strong} | ${prev.tier.strong} | ${delta(cur.tier.strong, prev.tier.strong, showPct)} |`);
-  L.push(`| 值得读 80–89 | ${cur.tier.worth} | ${prev.tier.worth} | ${delta(cur.tier.worth, prev.tier.worth, showPct)} |`);
-  L.push(`| 参考 65–79 | ${cur.tier.ref} | ${prev.tier.ref} | ${delta(cur.tier.ref, prev.tier.ref, showPct)} |`);
+  L.push(`| 强信号 ≥85 | ${cur.tier.strong} | ${prev.tier.strong} | ${delta(cur.tier.strong, prev.tier.strong, showPct)} |`);
+  L.push(`| 值得读 75–84 | ${cur.tier.worth} | ${prev.tier.worth} | ${delta(cur.tier.worth, prev.tier.worth, showPct)} |`);
+  L.push(`| 参考 65–74 | ${cur.tier.ref} | ${prev.tier.ref} | ${delta(cur.tier.ref, prev.tier.ref, showPct)} |`);
   L.push(``);
   // Note precedence: an unfinished week is partial data (worst case); else the
   // publishedAt baseline is contaminated by curation-lag / launch backfill; a

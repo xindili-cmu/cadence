@@ -24,13 +24,14 @@ if (fs.existsSync(ENV_PATH)) {
 // the deepseek default, forcing every run onto Anthropic.
 const { callLLM, LLM_PROVIDER } = require('./news-refresh.js');
 
-const SYSTEM = `你是 Cadence（步频）物理治疗新闻站的双语编辑。对输入的每条新闻补三个字段：
+const SYSTEM = `你是 Cadence（步频）物理治疗新闻站的双语编辑。对输入的每条新闻补这些字段：
 - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（ACL、COPD、RCT 等）保留英文。
 - summaryZh：summary 的中文版，1-2 句，front-load 变化点，保留所有数字（样本量、效应量、p 值）。要像中文期刊导读，不要直译腔。
 - curatedReasonEn：curatedReason（中文 why-it-matters）的英文版。同一个 take、同样口吻：second-person、直接下判断、不用条件句开头（"If you treat…"禁止）、不用空效用措辞（"provides evidence/helps you decide/worth noting"禁止）。资深同行口吻，可以泼冷水、可以站队。
+- titleEn：**仅当输入 title 本身不是英文时**（例如中文源标题），给出专业、紧凑的英文标题；缩写（ACL、SLAP、RCT 等）保留。若 title 已是英文，**省略该字段、不要返回 titleEn**。
 
 请只返回 JSON 数组（不要 markdown 代码块）：
-[{"id":"news-…","titleZh":"…","summaryZh":"…","curatedReasonEn":"…"}]`;
+[{"id":"news-…","titleZh":"…","summaryZh":"…","curatedReasonEn":"…","titleEn":"… 仅非英文标题时"}]`;
 
 function parseArray(raw) {
   let text = raw.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
@@ -45,10 +46,17 @@ function parseArray(raw) {
   }
 }
 
+// A title is "non-English" if it carries CJK characters — those source items
+// (e.g. 健康界 / 丁香园 / Doctorally) keep their original-language `title`, so
+// en mode needs an explicit titleEn. English-source titles never get one.
+const NON_EN_TITLE = (s) => /[㐀-鿿぀-ヿ가-힯]/.test(s || '');
+
 async function backfillFile(filePath) {
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const items = data.items || [];
-  const todo = items.filter(i => !(i.titleZh && i.summaryZh && i.curatedReasonEn));
+  const todo = items.filter(i =>
+    !(i.titleZh && i.summaryZh && i.curatedReasonEn)        // missing any bilingual field
+    || (NON_EN_TITLE(i.title) && !i.titleEn));              // …or a 中文 title still lacking titleEn
   console.log(`${path.basename(filePath)}: ${items.length} items, ${todo.length} need backfill`);
   if (!todo.length) return;
 
@@ -71,6 +79,7 @@ async function backfillFile(filePath) {
     if (o.titleZh) i.titleZh = i.titleZh || o.titleZh;
     if (o.summaryZh) i.summaryZh = i.summaryZh || o.summaryZh;
     if (o.curatedReasonEn) i.curatedReasonEn = i.curatedReasonEn || o.curatedReasonEn;
+    if (o.titleEn) i.titleEn = i.titleEn || o.titleEn;
     patched++;
   }
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));

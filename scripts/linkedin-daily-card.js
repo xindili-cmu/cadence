@@ -10,8 +10,8 @@
  * 2026-06 REDESIGN — "Signal waveform", on the real Cadence design system:
  *   warm editorial paper (#FAFAF6), clay ink, scrubs blue as ACCENT (never a
  *   full-bleed gradient). Header (mono eyebrow + 6-bar skewed mark) · Spectral
- *   headline · category-keyed accent rule · a 3-tier SIGNAL legend (navy ≥90 /
- *   scrubs 80–89 / clay 65–79) · N scored items, each a skewed "signal bar"
+ *   headline · category-keyed accent rule · a 3-tier SIGNAL legend (navy ≥85 /
+ *   scrubs 75–84 / clay 65–74) · N scored items, each a skewed "signal bar"
  *   whose HEIGHT encodes the score and whose COLOR encodes the tier — echoing
  *   the brand equalizer mark — beside a colored specialty keyword + Plex Sans
  *   title · footer lockup (Cadence 步频 · incadencept.com). Hairline-led,
@@ -80,11 +80,11 @@ const catOf = (c) => CAT[c] || { label: 'Research', solid: '#434952' };
 const tagOf = (c) => catOf(c).label.toUpperCase();
 
 // SIGNAL authority scale inside the blue family (NOT traffic lights):
-// navy ≥90 practice-changing · scrubs 80–89 worth knowing · clay 65–79 reference.
-const tierFg = (s) => (s >= 90 ? '#224674' : s >= 80 ? C.blue : C.ink500);
+// navy ≥85 strong signal · scrubs 75–84 worth knowing · clay 65–74 reference.
+const tierFg = (s) => (s >= 85 ? '#224674' : s >= 75 ? C.blue : C.ink500);
 // score → BIG serif score size (px). The score is the per-row focal anchor;
 // stronger signals read larger, so the eye lands on the day's best evidence.
-const scoreSize = (s) => (s >= 90 ? 56 : s >= 80 ? 50 : s >= 70 ? 44 : 40);
+const scoreSize = (s) => (s >= 85 ? 56 : s >= 75 ? 50 : s >= 70 ? 44 : 40);
 // score → slim signal-bar height (px). A compact waveform accent UNDER the
 // number (subordinate to it), mapping the 65–100 band onto a small range.
 const barH = (s) => Math.max(10, Math.round(((s - 60) / 40) * 30) + 12);
@@ -96,9 +96,9 @@ const HEAD_LH = 1.1;
 
 // ranges use ASCII only (the mono TTF subset lacks ≥ and en-dash glyphs).
 const TIERS = [
-  { color: '#224674', label: 'PRACTICE-CHANGING', range: '90+' },
-  { color: C.blue,    label: 'WORTH KNOWING',     range: '80-89' },
-  { color: C.ink500,  label: 'REFERENCE',         range: '65-79' },
+  { color: '#224674', label: 'STRONG SIGNAL',     range: '85+' },
+  { color: C.blue,    label: 'WORTH KNOWING',     range: '75-84' },
+  { color: C.ink500,  label: 'REFERENCE',         range: '65-74' },
 ];
 
 // ---- satori element helpers (flexbox only; explicit flexDirection) ----

@@ -211,51 +211,6 @@
     ]
   },
   {
-    "name": "STAT",
-    "domain": "statnews.com",
-    "url": "https://www.statnews.com",
-    "kind": "news",
-    "regions": [
-      "US"
-    ],
-    "cats": [
-      "practice"
-    ],
-    "scrape": [
-      "https://www.statnews.com/category/health/"
-    ]
-  },
-  {
-    "name": "Modern Healthcare",
-    "domain": "modernhealthcare.com",
-    "url": "https://www.modernhealthcare.com",
-    "kind": "news",
-    "regions": [
-      "US"
-    ],
-    "cats": [
-      "practice"
-    ],
-    "scrape": [
-      "https://www.modernhealthcare.com/"
-    ]
-  },
-  {
-    "name": "Reuters",
-    "domain": "reuters.com",
-    "url": "https://www.reuters.com",
-    "kind": "news",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "practice"
-    ],
-    "scrape": [
-      "https://www.reuters.com/business/healthcare-pharmaceuticals/"
-    ]
-  },
-  {
     "name": "Physiopedia",
     "domain": "physiospot.com",
     "url": "https://www.physiospot.com",
@@ -316,18 +271,6 @@
     ],
     "scrape": [
       "https://www.cn-healthcare.com/"
-    ]
-  },
-  {
-    "name": "AJMC",
-    "domain": "ajmc.com",
-    "url": "https://www.ajmc.com",
-    "kind": "news",
-    "regions": [
-      "US"
-    ],
-    "cats": [
-      "practice"
     ]
   },
   {
