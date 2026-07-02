@@ -90,6 +90,19 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
         run: node scripts/weekly-signal-email.js ${{ github.event.inputs.date }}
 
+      # English edition (US market, STRATEGY-US.md) — same draft-only posture.
+      # Self-skips to preview-only until repo Variable RESEND_SEGMENT_ID_EN is
+      # set (Resend → create an "weekly-signal-en" segment → Variable = its ID).
+      - name: Draft weekly signal email (EN)
+        if: always()
+        env:
+          EDITION: en
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID_EN: ${{ vars.RESEND_SEGMENT_ID_EN }}
+          MAIL_FROM: ${{ vars.MAIL_FROM_EN }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node scripts/weekly-signal-email.js ${{ github.event.inputs.date }}
+
       - name: Commit brief
         run: |
           git config user.name "github-actions[bot]"
