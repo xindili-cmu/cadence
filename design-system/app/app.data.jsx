@@ -46,11 +46,28 @@ window.CD_DICT = {
     'fb.send': 'Send it', 'fb.sending': 'Sending…', 'fb.sent': 'Signal received — thank you. I read every single one.',
     'fb.error': 'Could not send — please try again.', 'fb.again': 'Send another',
     searchPlaceholder: 'Search stories, sources, companies…',
-    signalScore: 'Signal score', 'signalScore.help': '0–100 SIGNAL score — how much a finding should change practice — weighing study design, sample size, effect size and journal impact. It measures evidential strength, not news heat.',
+    signalScore: 'Signal score', 'signalScore.help': '0–100 SIGNAL score — how much a finding deserves a clinician\'s attention, weighing study design, sample size, effect size and journal impact. Scored by AI from the title and abstract, not the full text. 85+ strong signal · 75+ worth knowing · 65+ for reference. It measures evidential strength, not news heat — and it is not a clinical recommendation.',
     ifTip: 'Journal impact factor',
     hotNow: 'Active themes', hotSub: 'Research themes several recent papers converge on', themeHeat: 'Theme', nOutlets: 'outlets',
     alsoCovered: 'Also covered by',
     whyMatters: 'Why it matters', readOriginal: 'Read original',
+    copyLink: 'Copy link', linkCopied: 'Copied',
+    'sub.title': 'Don\'t lose the pace',
+    'sub.body': 'An email digest of the week\'s strongest signals is in the works. Leave your address and you\'ll be first to get it when it ships.',
+    'sub.placeholder': 'you@example.com',
+    'sub.cta': 'Subscribe',
+    'sub.sending': 'Sending…',
+    'sub.sent': 'Received — you\'re on the list.',
+    'sub.error': 'Something broke — try again, or email hello@incadencept.com.',
+    'sub.channels': 'Also on',
+    'sub.wechat': 'WeChat',
+    'sub.xhs': 'RedNote',
+    'sparse.note': 'Coverage in this specialty is still thin — we\'re actively expanding its journal roster. The All view has every story we\'ve ever filed here.',
+    'sparse.cta': 'Open All stories',
+    'item.loading': 'Loading story…',
+    'item.notFound': 'Couldn\'t load this story — it may have been removed, or the connection failed. Try reloading.',
+    'item.backToFeed': 'Back to the feed',
+    'item.limitTitle': 'Limitation',
     'sources.search': 'Search sources…', 'sources.noMatch': 'No sources match',
     'kindFilter.all': 'All',
     today: 'Today', yesterday: 'Yesterday', older: 'Earlier this week',
@@ -63,7 +80,7 @@ window.CD_DICT = {
     'daily.archiveTitle': 'Past editions', 'daily.eventsN': 'stories',
     'daily.loading': 'Loading edition…',
     'daily.empty': 'No editions yet — the first one is generated after the next morning crawl (05:30 Beijing).',
-    'daily.autoNote': 'Updated daily · AI-screened, human-checked',
+    'daily.autoNote': 'Updated daily · AI-screened',
     'daily.shift': 'morning', 'daily.shareFoot': 'Full text & references → WeChat 「Cadence步频」 · same name on Xiaohongshu',
     'daily.latestIssue': 'Latest edition',
     yesterdaySignal: "Yesterday's signal", todaysSignal: "Today's Signal", categoryPulse: 'Today by specialty',
@@ -123,11 +140,28 @@ window.CD_DICT = {
     'fb.send': '发送', 'fb.sending': '发送中…', 'fb.sent': '信号已收到，谢谢你。每一条我都会看。',
     'fb.error': '发送失败——请再试一次。', 'fb.again': '再发一条',
     searchPlaceholder: '搜索文章、信源、机构…',
-    signalScore: '信号分', 'signalScore.help': '0–100 的 SIGNAL 评分，衡量一项发现在多大程度上应当改变临床实践；综合研究设计、样本量、效应量与期刊影响力。衡量的是证据强度，不是新闻热度。',
+    signalScore: '信号分', 'signalScore.help': '0–100 的 SIGNAL 评分，衡量一项发现值得临床人关注的程度；综合研究设计、样本量、效应量与期刊影响力。由 AI 基于标题与摘要评出，未读全文。85+ 强信号 · 75+ 值得关注 · 65+ 参考。衡量的是证据强度，不是新闻热度，也不构成临床建议。',
     ifTip: '期刊影响因子',
     hotNow: '活跃主题', hotSub: '近期多篇论文聚焦的研究主题', themeHeat: '主题热度', nOutlets: '刊',
     alsoCovered: '同题报道',
     whyMatters: '为什么重要', readOriginal: '阅读原文',
+    copyLink: '复制链接', linkCopied: '已复制',
+    'sub.title': '别掉出步频',
+    'sub.body': '「每周最强信号」邮件版正在筹备。留下邮箱，上线后你会第一批收到。',
+    'sub.placeholder': 'you@example.com',
+    'sub.cta': '订阅',
+    'sub.sending': '发送中…',
+    'sub.sent': '收到——你已在名单上。',
+    'sub.error': '出了点问题——请重试，或写信 hello@incadencept.com。',
+    'sub.channels': '也可关注',
+    'sub.wechat': '微信公众号',
+    'sub.xhs': '小红书',
+    'sparse.note': '这个专科目前收录还不多——我们正在扩充它的期刊来源。All 视图里有该科的全部历史收录。',
+    'sparse.cta': '查看全部文章',
+    'item.loading': '正在加载文章…',
+    'item.notFound': '未能加载这篇文章——可能已下架，也可能是网络加载失败，可刷新重试。',
+    'item.backToFeed': '回到信息流',
+    'item.limitTitle': '局限性',
     'sources.search': '搜索来源…', 'sources.noMatch': '无匹配来源',
     'kindFilter.all': '全部',
     today: '今天', yesterday: '昨天', older: '本周早些时候',
@@ -140,7 +174,7 @@ window.CD_DICT = {
     'daily.archiveTitle': '历史日报', 'daily.eventsN': '事件',
     'daily.loading': '正在加载日报…',
     'daily.empty': '还没有日报——下一次早间抓取（北京时间 5:30）后生成第一期。',
-    'daily.autoNote': '每日自动更新 · AI 初筛、人工把关',
+    'daily.autoNote': '每日自动更新 · AI 初筛',
     'daily.shift': '早班', 'daily.shareFoot': '全文与参考链接 → 公众号「Cadence步频」 · 小红书同名',
     'daily.latestIssue': '最新一期',
     yesterdaySignal: '昨日信号', todaysSignal: '今日信号', categoryPulse: '今日专科分布',
@@ -338,8 +372,8 @@ window.ABOUT = {
       bodyZh: '每天清晨，自动抓取 JOSPT、PTJ、BJSM、PubMed 等 50+ 个信源的新发表研究。',
       bodyEn: 'Each morning we pull newly published studies from JOSPT, PTJ, BJSM, PubMed and 50+ sources in all.' },
     { idx: '02', demo: 'signal', zh: '评分', en: 'Score',
-      bodyZh: 'AI 为每项发现打出 0–100 的 SIGNAL 评分——衡量它在多大程度上应当改变临床实践。评分综合研究设计、样本量、效应量与期刊影响力。',
-      bodyEn: 'Our AI gives each finding a 0–100 SIGNAL score — how much it should change practice — weighing study design, sample size, effect size and journal impact.' },
+      bodyZh: 'AI 为每项发现打出 0–100 的 SIGNAL 评分——衡量它值得临床人关注的程度。评分综合研究设计、样本量、效应量与期刊影响力。',
+      bodyEn: 'Our AI gives each finding a 0–100 SIGNAL score — how much it deserves a clinician’s attention — weighing study design, sample size, effect size and journal impact.' },
     { idx: '03', demo: 'file', zh: '归类', en: 'File',
       bodyZh: '每项研究归入八大专科之一，并附上一句「为什么重要」——用第二人称、可执行的临床要点，回答「我明天该不该改变做法」。',
       bodyEn: 'Every study is filed into one of eight specialties with a one-line “why it matters” — second-person, actionable, answering “should I change what I do tomorrow?”' },
@@ -455,9 +489,10 @@ window.CD_LOAD_ARCHIVE = (onProgress) => {
       const manifest = await idxRes.json();
       const files = (manifest.months || []).map((m) => m.file).filter(Boolean);
       // Dedupe against the live feed AND across month files (a story can sit
-      // in two month files if it straddles a month boundary). Feed ids are
-      // regenerated per run, so sourceUrl is the stable identity; id is kept
-      // as a secondary guard.
+      // in two month files if it straddles a month boundary). Ids are stable
+      // since the archive-identity fix (news-refresh.js, 2026-06-29), but
+      // pre-fix archive rows may carry a different id for the same URL — so
+      // sourceUrl stays the primary identity, id the secondary guard.
       const seen = new Set();
       (window.CD_STORIES || []).forEach((s) => {
         if (s.sourceUrl) seen.add(s.sourceUrl);
@@ -489,6 +524,9 @@ window.CD_LOAD_ARCHIVE = (onProgress) => {
       return out;
     } catch (err) {
       console.error('[Cadence] archive load failed:', err);
+      // Don't cache a failed load for the whole session — reset the promise so
+      // the next caller (e.g. reopening a permalink) retries the network.
+      window.CD_ARCHIVE_READY = null;
       return [];
     }
   })();

@@ -101,8 +101,15 @@ function SpecialtySelect({ value = 'all', onChange = () => {} }) {
       background: 'var(--surface-card)', cursor: 'pointer',
     }}>
       <option value="all">{zh ? '全部专科' : 'All specialties'}</option>
-      {cats.map((c, i) => <option key={c.id} value={c.id}>{String(i + 1).padStart(2, '0')} {window.catShort(c)}</option>)}
-      {xcuts.map((x) => <option key={x.id} value={x.id}>✦ {window.catShort(x)}</option>)}
+      {/* Counts mirror the desktop NavRail — expectation-setting on mobile too. */}
+      {cats.map((c, i) => {
+        const n = (window.CD_STORIES || []).filter((s) => s.category === c.id).length;
+        return <option key={c.id} value={c.id}>{String(i + 1).padStart(2, '0')} {window.catShort(c)} · {n}</option>;
+      })}
+      {xcuts.map((x) => {
+        const n = (window.CD_STORIES || []).filter((s) => s[x.flag]).length;
+        return <option key={x.id} value={x.id}>✦ {window.catShort(x)} · {n}</option>;
+      })}
     </select>
   );
 }
@@ -383,6 +390,83 @@ const FB_KINDS = [
   { id: 'other',   icon: 'smile' },
 ];
 
+// ── SubscribeCard (订阅) ─────────────────────────────────────────────────────
+// The site's one retention surface: capture an email at the natural "finished
+// reading" moment (feed bottom). Posts to the same Formspree inbox as feedback
+// (kind:'subscribe') — no new backend. Channel links ride along for readers
+// who live in WeChat/XHS instead of email.
+function SubscribeCard({ onAbout, mobile }) {
+  const t = window.CD_T;
+  const [email, setEmail] = React.useState('');
+  const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
+  async function submit(e) {
+    e.preventDefault();
+    if (!valid || status === 'sending') return;
+    setStatus('sending');
+    try {
+      const res = await fetch(CD_FEEDBACK_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Cadence subscribe',
+          kind: 'subscribe',
+          email: email.trim(),
+          lang: window.CD_LANG,
+          pageUrl: window.location.href,
+        }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setStatus('sent');
+    } catch (err) {
+      console.error('[Cadence] subscribe submit failed:', err);
+      setStatus('error');
+    }
+  }
+
+  const chLink = { display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: 'var(--font-sans)', fontSize: 12.5, fontWeight: 600, color: 'var(--text-secondary)', textDecoration: 'none', background: 'none', border: 'none', padding: 0, cursor: 'pointer' };
+  return (
+    <section style={{ margin: '10px 0 26px', padding: mobile ? '18px 16px' : '22px 24px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
+        <Icon name="radio" size={17} style={{ color: 'var(--green-600)' }} />
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)' }}>{t('sub.title')}</span>
+      </div>
+      {status === 'sent' ? (
+        <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
+      ) : (
+        <>
+          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
+          <form onSubmit={submit} style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+            <div style={{ flex: '1 1 200px', minWidth: 180 }}>
+              <Input size="sm" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                placeholder={t('sub.placeholder')} aria-label="Email" maxLength={200} />
+            </div>
+            <Button type="submit" size="sm" iconStart="send" disabled={!valid || status === 'sending'}>
+              {status === 'sending' ? t('sub.sending') : t('sub.cta')}
+            </Button>
+          </form>
+          {status === 'error' && (
+            <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--signal-down)' }}>{t('sub.error')}</p>
+          )}
+        </>
+      )}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 14, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{t('sub.channels')}</span>
+        <button type="button" onClick={onAbout} style={chLink}>
+          <Icon name="message-circle" size={13} /> {t('sub.wechat')}
+        </button>
+        <a href="https://xhslink.com/m/8LpaT1OLeDw" target="_blank" rel="noopener noreferrer" style={chLink}>
+          <Icon name="book-open" size={13} /> {t('sub.xhs')}
+        </a>
+        <a href="/rss.xml" target="_blank" rel="noopener noreferrer" style={chLink}>
+          <Icon name="rss" size={13} /> RSS
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function FeedbackView() {
   const t = window.CD_T;
   const zh = window.CD_LANG === 'zh';
@@ -563,10 +647,12 @@ function AboutView({ onView, mobile }) {
       );
     }
     if (which === 'signal') {
-      const tiers = [['≥ 90', tt('可改变实践', 'Practice-changing'), 'var(--signal-high)'], ['80–89', tt('值得关注', 'Worth knowing'), 'var(--signal-mid)'], ['65–79', tt('参考', 'For reference'), 'var(--signal-low)']];
+      const tiers = [['≥ 85', tt('强信号', 'Strong signal'), 'var(--signal-high)'], ['75–84', tt('值得关注', 'Worth knowing'), 'var(--signal-mid)'], ['65–74', tt('参考', 'For reference'), 'var(--signal-low)']];
       return (
         <div style={{ display: 'flex', alignItems: 'center', gap: 28, flexWrap: 'wrap' }}>
-          <window.SignalScore score={91} variant="block" />
+          {/* Demo score matches the real ceiling of the current distribution
+              (85) — a 90s demo would promise a tier the feed never shows. */}
+          <window.SignalScore score={85} variant="block" />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {tiers.map(([r, label, c]) => (
               <div key={r} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
@@ -687,6 +773,22 @@ function AboutView({ onView, mobile }) {
               <div style={{ display: 'flex', alignItems: 'center', minHeight: 110 }}>{stepDemo(s.demo)}</div>
             </div>
           ))}
+        </div>
+
+        {/* 评分方法与局限 — the honest fine print a skeptical clinician looks
+            for before trusting a number (adversarial-review fix #3, 2026-07-01). */}
+        <div style={{ marginTop: 36, maxWidth: 760, padding: '18px 20px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--blue-600)', borderRadius: 'var(--radius-md)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: 10 }}>
+            {tt('评分方法与局限', 'How scoring works — and its limits')}
+          </div>
+          <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+            {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。85+ 强信号 · 75+ 值得关注 · 65+ 参考。',
+              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out. 85+ strong signal · 75+ worth knowing · 65+ for reference.')}
+          </p>
+          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+            {tt('两点局限请知悉：评分基于摘要而非全文，研究细节与局限以原文为准；分数不是研究质量认证，也不构成临床建议——请结合你的临床判断与患者的具体情况使用。',
+              'Two limits to know: scoring reads the abstract, not the full text — details and limitations defer to the original paper; and a score is neither a quality certification nor a clinical recommendation — pair it with your own judgment and your patient’s context.')}
+          </p>
         </div>
       </section>
 
@@ -1028,7 +1130,7 @@ const dailyCatShort = (c) => {
   }
   return DAILY_CAT_SHORT[c] || c;
 };
-const dailyScoreColor = (s) => (s >= 90 ? '#2A5894' : s >= 80 ? '#1B1E23' : '#9098A0');
+const dailyScoreColor = (s) => (s >= 85 ? '#2A5894' : s >= 75 ? '#1B1E23' : '#9098A0');
 
 // Meta line on every daily card: ● specialty / 信号分 score / SOURCE.
 // `highlight` = the lead card's emphasised variant (brand-blue specialty, larger).
@@ -1306,13 +1408,13 @@ function DailyBriefView({ L, date, onDate, mobile }) {
 
   // 晨间查房 tiering (Cindy 2026-06-12): organized by evidence/actionability,
   // not specialty — the axis AIHOT doesn't have. Tier 1 = top signal with its
-  // clinical take; tier 2 = worth-knowing & up (score ≥ 80); tier 3 = compact
+  // clinical take; tier 2 = worth-knowing & up (score ≥ 75); tier 3 = compact
   // expandable rows. Driven entirely by curatedScore — no extra LLM call.
   const allItems = edition.sections.flatMap((sec) => sec.items).map(window.cdTransformItem);
   const ranked = [...allItems].sort((a, b) => b.score - a.score);
   const leadStory = ranked.length ? L(ranked[0]) : null;
-  const tier2 = ranked.slice(1).filter((s) => s.score >= 80).map(L);
-  const tier3 = ranked.slice(1).filter((s) => s.score < 80).map(L);
+  const tier2 = ranked.slice(1).filter((s) => s.score >= 75).map(L);
+  const tier3 = ranked.slice(1).filter((s) => s.score < 75).map(L);
   const top3 = ranked.slice(0, 3).map(L);
   const [mm, dd] = edition.date.slice(5).split('-');
   const dShort = `${+mm}.${+dd}`;
@@ -1359,7 +1461,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
         </section>
       )}
 
-      {/* Tier 2 — worth a closer read (practice-changing): 2-col cards with a
+      {/* Tier 2 — worth a closer read (score ≥ 75): 2-col cards with a
           left specialty color-bar (mixed in from the "信号墙" concept, 2026-06-22).
           Collapses to a single column on mobile. */}
       {tier2.length > 0 && (
@@ -1511,6 +1613,181 @@ function cdWriteHash(view, category, query, dailyDate, ctype, minScore) {
     history.replaceState(null, '', '#' + h);
 }
 
+// ── Per-item permalink (?item=<id>) ─────────────────────────────────────────
+// Real query-param URLs (not hash) so each story is a distinct, indexable URL:
+// https://incadencept.com/?item=news-… . Path stays "/" so relative asset /
+// fetch paths keep resolving — no <base> tag, no wrangler SPA-fallback change.
+// Item ids are stable across cron runs since the archive-identity fix
+// (news-refresh.js reuses the archived id per canonical URL, 2026-06-29).
+function cdItemParam() {
+  try { return new URLSearchParams(location.search).get('item') || null; }
+  catch { return null; }
+}
+function cdItemUrl(id) { return '/?item=' + encodeURIComponent(id); }
+
+/**
+ * StoryDetailOverlay — the landing surface for a shared/deep-linked story.
+ * Resolves the id against the live feed first, then lazily against the
+ * archive (CD_LOAD_ARCHIVE), so permalinks keep working after a story rotates
+ * out of news.json. While open it sets document.title + canonical + Article
+ * JSON-LD for crawlers (Googlebot renders this app fully — GSC verified).
+ */
+function StoryDetailOverlay({ id, L, onClose, mobile }) {
+  const t = window.CD_T;
+  const findLive = () => (window.CD_STORIES || []).find((s) => s.id === id) || null;
+  const [story, setStory] = React.useState(findLive);
+  const [missing, setMissing] = React.useState(false);
+
+  // Not in the live feed → search the archive (cached promise, one load/session).
+  React.useEffect(() => {
+    if (story) return;
+    let alive = true;
+    window.CD_LOAD_ARCHIVE().then((items) => {
+      if (!alive) return;
+      const hit = findLive() || (items || []).find((s) => s.id === id) || null;
+      if (hit) setStory(hit); else setMissing(true);
+    });
+    return () => { alive = false; };
+  }, [id]);
+
+  // Lock body scroll + close on Escape while the overlay is up.
+  React.useEffect(() => {
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => { document.body.style.overflow = prev; document.removeEventListener('keydown', onKey); };
+  }, [onClose]);
+
+  // SEO head state for this URL: title / canonical / Article JSON-LD.
+  // Cleaned up on close so the SPA's default head is restored.
+  React.useEffect(() => {
+    if (!story) return;
+    const s = L(story);
+    const prevTitle = document.title;
+    document.title = `${s.title} — Cadence 步频`;
+    const link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = location.origin + cdItemUrl(story.id);
+    const ld = document.createElement('script');
+    ld.type = 'application/ld+json';
+    ld.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: s.title,
+      description: s.summary || undefined,
+      datePublished: story.publishedAt || undefined,
+      url: location.origin + cdItemUrl(story.id),
+      isBasedOn: story.sourceUrl || undefined,
+      publisher: { '@id': 'https://incadencept.com/#organization' },
+    });
+    document.head.appendChild(link);
+    document.head.appendChild(ld);
+    return () => { document.title = prevTitle; link.remove(); ld.remove(); };
+  }, [story, L]);
+
+  const [copied, setCopied] = React.useState(false);
+  const copyHere = () => {
+    cdCopyText(location.origin + cdItemUrl(id));
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1600);
+  };
+
+  const s = story ? L(story) : null;
+  const panelStyle = {
+    width: mobile ? '100%' : 'min(680px, calc(100vw - 48px))',
+    maxHeight: mobile ? '92vh' : '86vh', overflowY: 'auto',
+    background: 'var(--surface-card)', border: '1px solid var(--border-subtle)',
+    borderRadius: mobile ? 'var(--radius-lg) var(--radius-lg) 0 0' : 'var(--radius-lg)',
+    boxShadow: 'var(--shadow-md, 0 20px 50px -12px rgba(27,30,35,0.35))',
+    padding: mobile ? '20px 18px calc(20px + env(safe-area-inset-bottom))' : '26px 28px',
+  };
+  return (
+    <div role="dialog" aria-modal="true"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+      style={{
+        position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(27,30,35,0.45)',
+        display: 'flex', alignItems: mobile ? 'flex-end' : 'center', justifyContent: 'center',
+      }}>
+      <div style={panelStyle}>
+        {/* header row: category + score · close */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
+          {s && <CategoryTag category={story.category} size="sm" />}
+          {s && <SignalScore score={story.score} size="sm" lang={window.CD_LANG} />}
+          <span style={{ flex: 1 }} />
+          <button type="button" onClick={onClose} aria-label="Close"
+            style={{ display: 'inline-flex', padding: 6, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-tertiary)' }}>
+            <Icon name="x" size={18} />
+          </button>
+        </div>
+
+        {!s && !missing && (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '28px 0', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-tertiary)' }}>
+            <Icon name="loader-circle" size={14} /> {t('item.loading')}
+          </div>
+        )}
+
+        {missing && (
+          <div style={{ textAlign: 'center', padding: '28px 0 12px' }}>
+            <Icon name="search-x" size={26} style={{ color: 'var(--ink-300)', margin: '0 auto 10px' }} />
+            <p style={{ margin: '0 0 18px', fontFamily: 'var(--font-sans)', fontSize: 14, color: 'var(--text-secondary)' }}>{t('item.notFound')}</p>
+            <Button onClick={onClose}>{t('item.backToFeed')}</Button>
+          </div>
+        )}
+
+        {s && (
+          <>
+            <h2 style={{ margin: '0 0 10px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 20 : 24, lineHeight: 1.25, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>
+              {s.title}
+            </h2>
+            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginBottom: 16, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
+              <span style={{ fontWeight: 500 }}>{story.wallSource || story.source}</span>
+              {story.journalMeta && story.journalMeta.if != null && (
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, padding: '1px 6px', borderRadius: 'var(--radius-xs)', background: 'var(--green-50)', border: '1px solid var(--green-100)', color: 'var(--green-700)' }}>
+                  IF {story.journalMeta.if} · {story.journalMeta.quartile}
+                </span>
+              )}
+              <span style={{ color: 'var(--ink-300)' }}>·</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{story.date}</span>
+            </div>
+            {s.summary && (
+              <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 15, lineHeight: 1.65, color: 'var(--text-secondary)' }}>{s.summary}</p>
+            )}
+            {s.why && (
+              <aside style={{
+                display: 'flex', gap: 10, padding: '12px 14px', marginBottom: 14,
+                background: 'var(--blue-50)', border: '1px solid var(--blue-100)',
+                borderLeft: '3px solid var(--blue-600)', borderRadius: 'var(--radius-md)',
+              }}>
+                <span style={{ flex: 'none', marginTop: 1, color: 'var(--blue-600)' }}><Icon name="stethoscope" size={16} strokeWidth={2} /></span>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 700, color: 'var(--blue-800)', marginBottom: 4 }}>{t('whyMatters')}</div>
+                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{s.why}</div>
+                </div>
+              </aside>
+            )}
+            {s.limitation && (
+              <p style={{ margin: '0 0 18px', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+                <strong style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>{t('item.limitTitle')}:</strong> {s.limitation}
+              </p>
+            )}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+              <Button iconEnd="arrow-up-right" onClick={() => window.open(story.sourceUrl, '_blank', 'noopener')}>
+                {t('readOriginal')}
+              </Button>
+              <button type="button" onClick={copyHere}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: 'transparent', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, color: copied ? 'var(--green-700)' : 'var(--text-tertiary)' }}>
+                <Icon name={copied ? 'check' : 'link'} size={14} strokeWidth={2} />
+                {copied ? t('linkCopied') : t('copyLink')}
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function FeedApp() {
   // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
   // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
@@ -1526,6 +1803,22 @@ function FeedApp() {
   const sigHelpRef = React.useRef(null);
   const [query, setQuery] = React.useState(_h0.query);
   const [selected, setSelected] = React.useState(null);
+  // Deep-linked story (?item=<id> in the real query string, not the hash).
+  // pushState on close so browser Back returns to the story; popstate syncs.
+  const [itemId, setItemId] = React.useState(cdItemParam());
+  const closeItem = React.useCallback(() => {
+    setItemId(null);
+    // Strip only ?item= — other params (utm_* etc.) survive the close.
+    const qs = new URLSearchParams(location.search);
+    qs.delete('item');
+    const rest = qs.toString();
+    history.pushState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+  }, []);
+  React.useEffect(() => {
+    const onPop = () => setItemId(cdItemParam());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
   // Daily-edition date — lifted here so DailyBriefView and the right-rail
   // archive (DailyArchiveRail) share one source of truth. null = latest.
   const [dailyDate, setDailyDate] = React.useState(_h0.dailyDate);
@@ -1826,6 +2119,22 @@ function FeedApp() {
             </div>
           )}
 
+          {/* Sparse-specialty honesty note — a filtered Curated view with < 3
+              hits states the coverage gap instead of letting the near-empty
+              feed do the talking (adversarial-review fix #4, 2026-07-01). */}
+          {view === 'curated' && !isSources && !isFeedback && !isDaily && !isAbout && category !== 'all' && !q && ctype === 'all' && !minScore && stories.length > 0 && stories.length < 3 && (
+            <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', margin: '0 0 14px', padding: '12px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)' }}>
+              <Icon name="info" size={15} style={{ color: 'var(--text-tertiary)', flex: 'none', marginTop: 2 }} />
+              <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+                {t('sparse.note')}{' '}
+                <button type="button" onClick={() => setView('all')}
+                  style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 600, color: 'var(--green-700)', textDecoration: 'underline', textUnderlineOffset: 2 }}>
+                  {t('sparse.cta')}
+                </button>
+              </div>
+            </div>
+          )}
+
           {!isSources && !isFeedback && !isDaily && !isAbout && visibleGroups.map((g) => (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
@@ -1847,6 +2156,7 @@ function FeedApp() {
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} tech={s.tech} surfaced={s.surfaced}
                         title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
+                        permalink={cdItemUrl(s.id)}
                         selected={selected === s.id}
                         onClick={() => setSelected(selected === s.id ? null : s.id)} />
                       {!compact && <RelatedRow related={s.related} />}
@@ -1869,6 +2179,12 @@ function FeedApp() {
               </Button>
             </div>
           )}
+
+          {/* Subscribe — the retention surface, at the natural end-of-reading
+              point on both feed views (adversarial-review fix #2, 2026-07-01). */}
+          {!isSources && !isFeedback && !isDaily && !isAbout && grouped.length > 0 && (
+            <SubscribeCard mobile={isMobile} onAbout={() => setView('about')} />
+          )}
         </main>
 
         {!isSources && !isFeedback && !isAbout && !isMobile && (isDaily
@@ -1876,6 +2192,11 @@ function FeedApp() {
           : <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
         )}
       </div>
+
+      {/* Deep-linked story (?item=<id>) — the permalink landing surface.
+          key={itemId} remounts on id change so stale story/missing state can
+          never render under a different id's URL (audit P2-3). */}
+      {itemId && <StoryDetailOverlay key={itemId} id={itemId} L={L} onClose={closeItem} mobile={isMobile} />}
 
       {isMobile && <MobileTabBar view={view} onView={setView} />}
     </div>

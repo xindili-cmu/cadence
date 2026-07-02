@@ -619,7 +619,7 @@ Cadence / 步频 是独立物理治疗专业新闻品牌，覆盖临床研究、
 5. Geriatric (geriatric) — 老年康复 / 跌倒预防 / 衰弱
 6. Cardiopulmonary (cardiopulmonary) — 心肺康复 / COPD / 心脏康复
 7. Manual Therapy & Modalities (manual-modality) — 手法与理疗。sub-tags: dry-needling, iastm, electro, laser, taping, manipulation
-8. Practice & Profession (practice) — 行业与执业。sub-tags: reimbursement, regulation, telehealth, education, ethics, workforce
+8. Practice & Profession (practice) — **物理治疗行业与执业本身**（PT / PTA 的报销、执业范围、远程 PT、教育认证、伦理、PT 劳动力）。sub-tags: reimbursement, regulation, telehealth, education, ethics, workforce。**边界：只收直接关系 PT 临床执业的内容。**通用医疗系统商业 / 财经 / 政策机制——医院并购、私募基金、保险公司财报或探查、Medicaid / ACA 参保机制、医疗高管任命、非 PT 岗位的劳动力短缺、通用医疗 AI 治理——即便沾 "healthcare" 也一律丢弃（不返回该 index）：那是行业财经新闻，不是 PT 执业新闻。判据：一个临床 PT 读完能不能改变他明天怎么执业 / 收费 / 转诊；不能就丢。
 
 tags 规则：
 - tags[0] 必须是内容类型，四选一：research（期刊论文 / 系统综述 / RCT）/ news（行业新闻 / 产品 / 公司动态）/ guideline（临床实践指南发布或更新）/ policy（监管 / 报销 / 执业规则）。判断不清时按主要信息价值归类。
@@ -1328,7 +1328,7 @@ async function main() {
     const top = [...merged].sort((a, b) => b.curatedScore - a.curatedScore).slice(0, 20);
     const items = top.map(i => `  <item>
     <title>${xmlEsc(i.title)}</title>
-    <link>${xmlEsc(i.sourceUrl)}</link>
+    <link>${SITE_URL}/?item=${xmlEsc(encodeURIComponent(i.id))}</link>
     <guid isPermaLink="true">${xmlEsc(i.sourceUrl)}</guid>
     <pubDate>${rssDate(i.publishedAt)}</pubDate>
     <description><![CDATA[${(i.summary || i.curatedReason || '').replace(/]]>/g, ']]]]><![CDATA[>')}]]></description>
@@ -1351,10 +1351,20 @@ ${items}
     console.log('   rss.xml 已更新');
   } catch (e) { console.error('   ⚠️  rss.xml 生成失败:', e.message); }
 
+  // ── Sitemap ─────────────────────────────────────────────────────────────────
+  // Root + one /?item=<id> permalink per story (live + archive) so every item
+  // is an indexable URL. Same SITE_URL convention as the RSS block above.
+  try {
+    const { buildSitemap } = require('./build-sitemap');
+    const { urls } = buildSitemap();
+    console.log(`   sitemap.xml 已更新 (${urls} URLs)`);
+  } catch (e) { console.error('   ⚠️  sitemap.xml 生成失败:', e.message); }
+
   // NOTE: the homepage <head> keeps brand-level static og:title/description on
   // purpose — the index.html canonical title should be stable ("Cadence — daily
-  // PT evidence"), not rewritten to the top article each run. Per-article rich
-  // previews would need per-article URLs (which the hash SPA doesn't have).
+  // PT evidence"), not rewritten to the top article each run. Per-article
+  // permalinks are /?item=<id> (client-rendered title/canonical/JSON-LD);
+  // static og tags for those URLs would need edge-side injection — not done yet.
 
   return { newItems: final.length, totalItems: merged.length,
     headlines: merged.slice(0, 5).map(i => `[${i.curatedScore}] ${i.title}`) };

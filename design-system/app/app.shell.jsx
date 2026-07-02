@@ -97,7 +97,7 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
 // semantically wrong ("Following" implies user-curated subscriptions).
 // SpecBtn — one specialty row in the left rail's 专科 section. Index (01–08 or
 // ✦ for the tech overlay) + accent dot + label; active state mirrors the nav.
-function SpecBtn({ id, label, dot, idx, active, onClick }) {
+function SpecBtn({ id, label, dot, idx, active, onClick, count }) {
   return (
     <button type="button" onClick={() => onClick(id)} style={{
       display: 'flex', alignItems: 'center', gap: 8, padding: '6px 12px', borderRadius: 'var(--radius-md)',
@@ -109,7 +109,14 @@ function SpecBtn({ id, label, dot, idx, active, onClick }) {
     }}>
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, width: 14, flex: 'none', textAlign: idx === '✦' ? 'center' : 'left', color: active ? 'var(--green-600)' : 'var(--ink-400)' }}>{idx || ''}</span>
       <span style={{ width: 7, height: 7, borderRadius: '999px', flex: 'none', background: dot || 'transparent' }} />
-      <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label}</span>
+      <span style={{ flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{label}</span>
+      {/* Live-feed count — honest expectation-setting per specialty: a reader
+          sees "1" before clicking, not an empty feed after (fix #4). */}
+      {typeof count === 'number' && (
+        <span
+          title={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '当前信息流收录数（不含更早的历史归档）' : 'Stories in the current feed (archive not counted)'}
+          style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, flex: 'none', color: active ? 'var(--green-600)' : 'var(--ink-300)', fontVariantNumeric: 'tabular-nums' }}>{count}</span>
+      )}
     </button>
   );
 }
@@ -156,13 +163,24 @@ function NavRail({ view, onView, category, onCategory }) {
           <div style={{ height: 1, background: 'var(--border-subtle)', margin: '16px 8px 14px' }} />
           <div style={eyebrow}>{zh ? '专科' : 'Specialty'}</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-            <SpecBtn id="all" label={zh ? '全部' : 'All'} dot={null} idx={null} active={category === 'all'} onClick={onCategory} />
-            {CATEGORIES.map((c, i) => (
-              <SpecBtn key={c.id} id={c.id} label={catLabel(c)} dot={`var(--cat-${c.accent})`} idx={String(i + 1).padStart(2, '0')} active={category === c.id} onClick={onCategory} />
-            ))}
-            {(window.XCUTS || []).map((x) => (
-              <SpecBtn key={x.id} id={x.id} label={catLabel(x)} dot={`var(--cat-${x.accent})`} idx={'✦'} active={category === x.id} onClick={onCategory} />
-            ))}
+            {/* Per-specialty live-feed counts, computed once per render from
+                the canonical pool. Cheap (≤ ~100 items) and always current. */}
+            {(() => {
+              const pool = window.CD_STORIES || [];
+              const nOf = (c) => pool.filter((s) => s.category === c).length;
+              const nFlag = (f) => pool.filter((s) => s[f]).length;
+              return (
+                <>
+                  <SpecBtn id="all" label={zh ? '全部' : 'All'} dot={null} idx={null} active={category === 'all'} onClick={onCategory} count={pool.length} />
+                  {CATEGORIES.map((c, i) => (
+                    <SpecBtn key={c.id} id={c.id} label={catLabel(c)} dot={`var(--cat-${c.accent})`} idx={String(i + 1).padStart(2, '0')} active={category === c.id} onClick={onCategory} count={nOf(c.id)} />
+                  ))}
+                  {(window.XCUTS || []).map((x) => (
+                    <SpecBtn key={x.id} id={x.id} label={catLabel(x)} dot={`var(--cat-${x.accent})`} idx={'✦'} active={category === x.id} onClick={onCategory} count={nFlag(x.flag)} />
+                  ))}
+                </>
+              );
+            })()}
           </div>
         </>
       )}
