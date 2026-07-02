@@ -70,11 +70,31 @@ jobs:
           MAIL_FROM: ${{ vars.MAIL_FROM }}
         run: node scripts/weekly-brief.js ${{ github.event.inputs.date }}
 
+      # 「每周最强信号」subscriber digest — creates a DRAFT broadcast in Resend
+      # (never sends; Cindy reviews at resend.com/broadcasts and clicks Send —
+      # 发布永远由人). Self-skips to preview-only when RESEND_SEGMENT_ID is
+      # absent. One-time setup:
+      #   1. Resend → Domains → verify incadencept.com (add the DNS records in
+      #      Cloudflare; required before broadcasting to real subscribers).
+      #   2. Resend → Audiences/Segments → create one (e.g. "weekly-signal")
+      #      → repo Variable RESEND_SEGMENT_ID = its ID.
+      #   3. Variable MAIL_FROM = Cadence 步频 <weekly@incadencept.com>.
+      #   4. Subscribers arrive via the site's subscribe card → Formspree
+      #      notifications → node scripts/add-subscriber.js <email>.
+      - name: Draft weekly signal email
+        if: always()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ vars.RESEND_SEGMENT_ID }}
+          MAIL_FROM: ${{ vars.MAIL_FROM }}
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node scripts/weekly-signal-email.js ${{ github.event.inputs.date }}
+
       - name: Commit brief
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add briefs/weekly
+          git add briefs/weekly briefs/email
           if git diff --staged --quiet; then
             echo "No weekly brief changes to commit"
             exit 0
