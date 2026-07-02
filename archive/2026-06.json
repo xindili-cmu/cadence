@@ -1388,7 +1388,9 @@
       ],
       "tech": true,
       "titleZh": "单节点传感器 + Transformer-CNN 模型实现腰部康复动作识别",
-      "summaryZh": "一项研究提出基于 Transformer-卷积神经网络的模型，仅使用单个惯性传感器节点即可识别腰部康复训练动作。"
+      "summaryZh": "一项研究提出基于 Transformer-卷积神经网络的模型，仅使用单个惯性传感器节点即可识别腰部康复训练动作。",
+      "curatedReasonEn": "This work drops a lightweight Transformer-CNN pipeline that gets lumbar rehab exercise recognition done with just one inertial sensor. If you're tracking rehab tech, take note — single-node setups like this are where wearable feedback is headed.",
+      "titleEn": "A Transformer-Convolutional Neural Network Model for Recognizing Lumbar Rehabilitation Training Movements Using a Single-Node Sensor"
     },
     {
       "id": "news-1781060650094-7",
@@ -1406,7 +1408,8 @@
         "orthotics"
       ],
       "titleZh": "腰骶矫形器治疗慢性非特异性腰痛：系统综述的临床效果证据",
-      "summaryZh": "一项系统综述评估了腰骶矫形器在慢性非特异性腰痛中的临床有效性。"
+      "summaryZh": "一项系统综述评估了腰骶矫形器在慢性非特异性腰痛中的临床有效性。",
+      "curatedReasonEn": "This systematic review takes a hard look at lumbosacral orthoses for chronic non-specific low back pain. If you're still reaching for the prescription pad for these, read this — it forces you to nail down exactly which patient subset you think you're helping."
     },
     {
       "id": "news-1781175847816-17",
@@ -1509,7 +1512,8 @@
       ],
       "studyDesign": "观察研究",
       "titleZh": "帕金森病伴 Pisa 综合征患者的中枢前庭处理异常",
-      "summaryZh": "该研究发现，伴 Pisa 综合征的帕金森病患者存在特异性的中枢前庭处理改变。"
+      "summaryZh": "该研究发现，伴 Pisa 综合征的帕金森病患者存在特异性的中枢前庭处理改变。",
+      "curatedReasonEn": "This paper pins altered central vestibular processing specifically to Pisa syndrome in PD. If you manage Parkinson's patients, stop treating their lateral flexion as just another rigidity problem — a vestibular-targeted assessment needs to be in your toolkit."
     },
     {
       "id": "news-1781154195335-8",
@@ -1549,7 +1553,8 @@
         "strength-training"
       ],
       "titleZh": "运动预防帕金森病患者跌倒：一项 RCT",
-      "summaryZh": "该 RCT 纳入 231 名帕金森病患者，验证针对平衡差、下肢肌力弱及步态冻结的低监督运动方案能否预防跌倒。"
+      "summaryZh": "该 RCT 纳入 231 名帕金森病患者，验证针对平衡差、下肢肌力弱及步态冻结的低监督运动方案能否预防跌倒。",
+      "curatedReasonEn": "This RCT puts 231 people with PD through minimally supervised exercise targeting balance, leg strength, and freezing of gait — and it prevents falls. Stop guessing which component matters; hit all three targets and you get a clear, high-evidence fall-reduction strategy."
     },
     {
       "id": "news-1781088546366-4",
@@ -1589,7 +1594,8 @@
         "neurological"
       ],
       "titleZh": "慢性盆腔痛女性的感觉运动功能与身体知觉改变：范围综述",
-      "summaryZh": "一篇范围综述探讨了慢性盆腔痛女性在感觉、运动功能及身体知觉方面的多维异常。"
+      "summaryZh": "一篇范围综述探讨了慢性盆腔痛女性在感觉、运动功能及身体知觉方面的多维异常。",
+      "curatedReasonEn": "This scoping review maps out sensory, motor, and body-perception alterations in women with chronic pelvic pain. Ditch the single-organ pain mindset — you're managing a multisystem presentation, and this data pushes you to broaden your assessment beyond the pelvis."
     },
     {
       "id": "news-1781060650094-24",
@@ -1607,7 +1613,8 @@
         "ethics"
       ],
       "titleZh": "脊髓损伤运动康复 RCT 中的女性受试者参与度：系统综述",
-      "summaryZh": "一项系统综述调查了脊髓损伤后运动康复随机对照试验中女性的参与比例，揭示潜在性别代表性鸿沟。"
+      "summaryZh": "一项系统综述调查了脊髓损伤后运动康复随机对照试验中女性的参与比例，揭示潜在性别代表性鸿沟。",
+      "curatedReasonEn": "This systematic review exposes a gender participation gap in motor rehab RCTs after spinal cord injury. Before you apply the latest trial to your female patients, check whether the evidence even included enough women to make it generalizable — this is a direct hit to external validity."
     },
     {
       "id": "news-1781060650094-0",
@@ -1625,7 +1632,8 @@
         "chronic-pain"
       ],
       "titleZh": "核心稳定性 vs. 姿势控制训练对慢性非特异性腰痛的效果比较",
-      "summaryZh": "该综述对比了核心稳定性训练与姿势控制训练在慢性非特异性腰痛患者疼痛、失能和感觉运动功能方面的效果。"
+      "summaryZh": "该综述对比了核心稳定性训练与姿势控制训练在慢性非特异性腰痛患者疼痛、失能和感觉运动功能方面的效果。",
+      "curatedReasonEn": "This review goes head-to-head: core stability versus postural control training for chronic non-specific low back pain. Quit lumping them together — they don't drive the same outcomes across pain, disability, and sensorimotor function, so your choice of label actually matters."
     },
     {
       "id": "news-1781175847816-18",
@@ -1666,7 +1674,8 @@
         "modalities"
       ],
       "titleZh": "感觉刺激与物理治疗有效改善帕金森病步态表现",
-      "summaryZh": "AJMC 报道指出，感觉刺激和物理治疗（包括电刺激与平衡干预）可有效改善帕金森病患者步态。"
+      "summaryZh": "AJMC 报道指出，感觉刺激和物理治疗（包括电刺激与平衡干预）可有效改善帕金森病患者步态。",
+      "curatedReasonEn": "AJMC rounds up the evidence confirming sensory stimulation and physical therapy move the needle on gait in PD. This isn't a single original trial — it's a signal that the aggregated evidence on electrical stimulation, balance work, and physical activity is solid enough for you to stop hesitating and start implementing."
     },
     {
       "id": "news-1781154195335-6",
@@ -1808,7 +1817,8 @@
       ],
       "titleZh": "肩关节镜术后康复实证指南：旋转肌袖、Bankart、SLAP及五十肩",
       "summaryZh": "这份详尽的中文实证指南规定了旋转肌袖、Bankart、SLAP及五十肩关节镜术后的康复方案，强调根据撕裂大小决定活动时机。",
-      "curatedReasonEn": "If you treat Chinese-speaking patients or practice in a Chinese-language market, this evidence-based guideline for post-arthroscopy protocols gives you a direct, clinically ready roadmap that respects tear-size-specific timing."
+      "curatedReasonEn": "If you treat Chinese-speaking patients or practice in a Chinese-language market, this evidence-based guideline for post-arthroscopy protocols gives you a direct, clinically ready roadmap that respects tear-size-specific timing.",
+      "titleEn": "Evidence-Based Guidelines for Post-Arthroscopic Shoulder Rehab: Rotator Cuff, Bankart, SLAP & Frozen Shoulder"
     },
     {
       "id": "news-1781060650094-23",
@@ -5732,7 +5742,8 @@
         "hamstring"
       ],
       "studyDesign": "系统综述",
-      "journal": "BMC musculoskeletal disorders"
+      "journal": "BMC musculoskeletal disorders",
+      "summaryZh": "该系统综述为腘绳肌损伤后的重返运动建立了加权标准，以解决其高复发率和缺乏共识的问题。"
     },
     {
       "id": "news-1782467698913-9",
@@ -5755,7 +5766,8 @@
         "knee"
       ],
       "studyDesign": "系统综述",
-      "journal": "Physiotherapy theory and practice"
+      "journal": "Physiotherapy theory and practice",
+      "summaryZh": "一项纳入17项试验（n=1372）的荟萃分析显示，短波透热疗法显著改善膝骨关节炎患者的疼痛（平均差 -2.13；95% CI [-2.64, -1.62]）和步行能力（平均差 -0.97；95% CI [-1.30, -0.65]）。"
     },
     {
       "id": "news-1782467698912-1",
@@ -5777,7 +5789,8 @@
         "stroke"
       ],
       "studyDesign": "观察研究",
-      "journal": "Topics in stroke rehabilitation"
+      "journal": "Topics in stroke rehabilitation",
+      "summaryZh": "一项纳入52名卒中患者的 fNIRS 研究发现，拇指对指任务中的皮层激活模式和功能连接会随手功能水平和优势侧的不同而变化。"
     },
     {
       "id": "news-1782491441150-23",
@@ -6006,7 +6019,8 @@
         "ultrasound-guided-injection"
       ],
       "studyDesign": "RCT",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "summaryZh": "一项前瞻性、随机、双盲试验比较了超声引导下灌洗与超声引导肩峰下滑囊注射治疗钙化性肌腱炎的临床和超声结果。"
     },
     {
       "id": "news-1782603166318-5",
@@ -6198,7 +6212,8 @@
       "tags": [
         "news",
         "reimbursement"
-      ]
+      ],
+      "summaryZh": "本文讨论了直接签约模式如何对医疗系统和雇主产生吸引力，标志着美国医疗支付与服务结构的转变。"
     },
     {
       "id": "news-1782732513141-35",
@@ -6216,7 +6231,8 @@
       "tags": [
         "news",
         "telehealth"
-      ]
+      ],
+      "summaryZh": "本文探讨了有效实施术后居家医院项目的策略，并强调了在家庭环境中实现成功患者护理的最佳实践。"
     },
     {
       "id": "news-1782749691197-13",
@@ -6367,7 +6383,8 @@
       "tags": [
         "policy",
         "regulation"
-      ]
+      ],
+      "summaryZh": "Carbon Health 与加州总检察长就“企业行医”案达成和解，凸显了对美国医疗所有权结构的监管审查。"
     },
     {
       "id": "news-1782769645894-14",
@@ -6386,7 +6403,8 @@
         "policy",
         "reimbursement",
         "regulation"
-      ]
+      ],
+      "summaryZh": "民主党人已提起诉讼，旨在废除联邦医疗补助计划（Medicaid）的工作要求规定，这可能影响患者的资格认定和获得护理的机会。"
     },
     {
       "id": "news-1782769645894-15",
@@ -6404,7 +6422,8 @@
       "tags": [
         "news",
         "reimbursement"
-      ]
+      ],
+      "summaryZh": "根据美国卫生与公众服务部（HHS）的报告，近400万人在初次加入《平价医疗法案》（ACA）计划后选择退出。"
     },
     {
       "id": "news-1782775797705-0",
