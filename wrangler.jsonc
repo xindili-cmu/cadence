@@ -1,11 +1,19 @@
 {
   // Cadence — static site served via Cloudflare Workers assets.
   // Exclusions live in .assetsignore (node_modules etc. must not upload).
+  //
+  // worker.js runs ONLY for the root document (run_worker_first patterns):
+  // it rewrites <head> og/title metadata for /?item=<id> share links so
+  // crawlers see the story's own title/summary. All other paths are served
+  // straight from assets with zero worker invocations.
   "name": "cadence",
   "compatibility_date": "2026-06-01",
+  "main": "worker.js",
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/", "/index.html"]
   }
 }
