@@ -1,0 +1,643 @@
+{
+ "date": "2026-07-04",
+ "generatedAt": "2026-07-03T22:32:59.248Z",
+ "windowHours": 50,
+ "windowStart": "2026-07-02T22:35:19.337Z",
+ "windowEnd": "2026-07-03T22:32:57.360Z",
+ "lead": {
+  "titleZh": "聚焦肌骨与儿康：两项最高分研究，RCT 关注骨骼肌肉功能障碍，观察研究探索儿科结局指标",
+  "titleEn": "Musculoskeletal and Pediatrics in Focus: Two Top-Scoring Studies, RCT on MSD, Observational Study on Pediatric Outcomes",
+  "paragraphZh": "今天共有 28 份新信号，覆盖 5 个专科方向，其中 2 项达到最高分 85。最值得关注的是骨科与肌骨领域的 RCT 结果，它对骨骼肌肉功能障碍的诊断与治疗一线方案提供了前瞻性证据。同期儿童康复领域的观察研究，则探讨了儿科物理治疗核心患者报告结局集的开发。",
+  "paragraphEn": "Today's signal features 28 new entries across 5 specialties, with two studies reaching a top score of 85. Of note, an RCT in Orthopedics and Musculoskeletal presents prospective evidence on frontline diagnosis and treatment for musculoskeletal dysfunctions. Concurrently, an observational study in Pediatric Rehabilitation explores the development of a core patient-reported outcome set for pediatric physical therapy."
+ },
+ "stats": {
+  "events": 28,
+  "specialties": 5,
+  "multiSource": 2,
+  "sources": 6,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1783076660306-0",
+     "title": "Frontline agreement in diagnosis and treatment for musculoskeletal dysfunctions. A prospective, randomized, controlled study.",
+     "summary": "This RCT found high agreement in diagnosis, treatment, and discharge decisions between physiotherapists (APP role) and resident physicians compared to senior physicians for non-urgent musculoskeletal conditions in the emergency department.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42396265/",
+     "publishedAt": "2026-07-03T11:03:33.217Z",
+     "firstSeen": "2026-07-03T11:04:20.306Z",
+     "curatedScore": 85,
+     "curatedReason": "在急诊场景中，物理治疗师（APP）与住院医师在骨科诊断、治疗及出院决策上与资深医师的判断高度一致。这意味着在骨骼肌肉疾病的早期管理中，物理治疗师可以承担更重要的角色，减轻急诊压力。",
+     "titleZh": "骨骼肌肉功能障碍诊断与治疗一线方案：前瞻性随机对照研究",
+     "summaryZh": "这项随机对照试验发现，在急诊科处理非紧急骨骼肌肉疾病时，物理治疗师（APP）与住院医师在诊断、治疗和出院决策上与资深医师的判断高度一致。",
+     "curatedReasonEn": "In the ED, advanced practice physiotherapists (APPs) showed high agreement with senior physicians on musculoskeletal diagnoses, treatments, and discharge decisions, mirroring resident physicians. This supports expanding the PT's role in early MSK management within emergency settings to alleviate ED burden.",
+     "limitation": "本研究为单中心试验。",
+     "limitationEn": "This was a single-center study.",
+     "tags": [
+      "research",
+      "practice"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of physiotherapy"
+    },
+    {
+     "id": "news-1783117964967-5",
+     "title": "Consensus practice guidelines on interventions for cervical spine (facet) joint pain from a multispecialty international working group",
+     "summary": "Consensus practice guidelines on interventions for cervical spine (facet) joint pain were developed by a multispecialty international working group.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "https://rapm.bmj.com/content/rapm/47/1/3.full.pdf",
+     "publishedAt": "2026-07-01T22:30:33.196Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 75,
+     "curatedReason": "这份多专业国际工作组发布的颈椎（小关节）疼痛干预共识指南，虽然发表于多年前，但其更新可能具有长期参考价值。你可以将此作为评估和管理慢性颈痛的权威参考，尤其是对那些复杂或难治性病例。",
+     "titleZh": "多专业国际工作组发布的颈椎（小关节）疼痛干预共识实践指南",
+     "summaryZh": "一份由多专业国际工作组制定的颈椎（小关节）疼痛干预共识实践指南已经发布。",
+     "curatedReasonEn": "This consensus practice guideline on interventions for cervical spine (facet) joint pain from a multispecialty international working group, though published several years ago, may still have long-term relevance. You can use this as an authoritative reference for assessing and managing chronic neck pain, especially for complex or refractory cases.",
+     "limitation": "虽然是共识指南，但具体证据等级未明确，需要审慎解读其推荐强度。",
+     "limitationEn": "Although it is a consensus guideline, the specific evidence grades are not clearly stated, requiring careful interpretation of its recommendation strength.",
+     "tags": [
+      "guideline",
+      "spine"
+     ],
+     "studyDesign": "述评"
+    },
+    {
+     "id": "news-1783117964967-9",
+     "title": "Use of Extracorporeal Shockwave Therapy for the Management of Bone Pathologies: A Systematic Review",
+     "summary": "A systematic review evaluated the efficacy and outcomes of extracorporeal shockwave therapy (ESWT) for bone pathologies, including fractures, osteonecrosis/avascular necrosis, bone stress injury, medial tibial stress syndrome, and bone marrow edema syndrome.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41495929/",
+     "publishedAt": "2026-07-01T03:39:05.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 75,
+     "curatedReason": "这项系统综述评估了体外冲击波疗法（ESWT）治疗骨病（如骨折、骨坏死、应力性骨损伤、胫骨内侧应力综合征）的疗效。你可以将此作为冲击波干预这些骨病的证据参考，但要注意其在特定病理上的证据强度。",
+     "titleZh": "体外冲击波疗法在骨病管理中的应用：一项系统综述",
+     "summaryZh": "一项系统综述评估了体外冲击波疗法（ESWT）在骨病管理中的疗效和结局，包括骨折、骨坏死/缺血性坏死、骨应力性损伤、胫骨内侧应力综合征和骨髓水肿综合征。",
+     "curatedReasonEn": "This systematic review evaluated the efficacy of extracorporeal shockwave therapy (ESWT) for bone pathologies (e.g., fractures, osteonecrosis, bone stress injury, medial tibial stress syndrome). You can use this as evidence for shockwave interventions in these bone conditions, but be mindful of the evidence strength for specific pathologies.",
+     "limitation": "综述纳入了多种研究设计，可能导致证据异质性较高，无法对所有适应症给出统一的强度结论。",
+     "limitationEn": "The review included various study designs, potentially leading to high heterogeneity of evidence and preventing uniform strong conclusions for all indications.",
+     "tags": [
+      "research",
+      "manual-modality",
+      "electro"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783117964967-8",
+     "title": "Intravaginal dehydroepiandrosterone for the treatment of vulvovaginal atrophy: a systematic review and meta-analysis",
+     "summary": "A systematic review and meta-analysis assessed the therapeutic efficacy of intravaginal dehydroepiandrosterone (DHEA) for vulvovaginal atrophy in postmenopausal women.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41589851/",
+     "publishedAt": "2026-07-01T09:44:22.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 70,
+     "curatedReason": "这项系统综述和荟萃分析评估了阴道内脱氢表雄酮（DHEA）治疗外阴阴道萎缩的疗效。虽然 DHEA 主要是药物治疗，但了解其疗效背景有助于你更全面地评估患者状况，并与主治医师讨论联合治疗方案，尤其是在物理治疗辅助手段不佳时。",
+     "titleZh": "阴道内脱氢表雄酮治疗外阴阴道萎缩：一项系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析评估了绝经后女性使用阴道内脱氢表雄酮（DHEA）治疗外阴阴道萎缩的疗效。",
+     "curatedReasonEn": "This systematic review and meta-analysis evaluated the efficacy of intravaginal dehydroepiandrosterone (DHEA) for vulvovaginal atrophy. While DHEA is primarily a pharmaceutical treatment, understanding its efficacy context helps you comprehensively assess patient conditions and discuss combination therapies with primary physicians, especially when physical therapy alone is insufficient.",
+     "limitation": "综述未提供具体纳入研究的数量和患者样本量，限制了结论的精确性。",
+     "limitationEn": "The review did not provide the specific number of included studies and patient sample sizes, limiting the precision of the conclusions.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783117964967-4",
+     "title": "Comparison between ultrasound guided pericapsular nerve group (PENG) block and interscalene brachial plexus block for postoperative analgesia following shoulder arthroscopy: a randomized controlled trial | BMC Anesthesiology | Springer Nature Link",
+     "summary": "A randomized controlled trial compared ultrasound-guided pericapsular nerve group (PENG) block and interscalene brachial plexus block for postoperative analgesia following shoulder arthroscopy.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12871-026-04038-w",
+     "publishedAt": "2026-06-29T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 65,
+     "curatedReason": "这项随机对照试验比较了两种神经阻滞方案在肩关节镜术后镇痛的效果。虽然主要关注点是麻醉，但其结果可作为你了解术后疼痛管理选择的背景信息，尤其是在术后早期康复疼痛控制的转诊考量中。",
+     "titleZh": "随机对照试验：超声引导下囊周神经组 (PENG) 阻滞与斜角肌间臂丛神经阻滞对肩关节镜术后镇痛的比较",
+     "summaryZh": "一项随机对照试验比较了超声引导下囊周神经组 (PENG) 阻滞与斜角肌间臂丛神经阻滞在肩关节镜术后镇痛方面的效果。",
+     "curatedReasonEn": "This randomized controlled trial compared two nerve block techniques for postoperative analgesia after shoulder arthroscopy. While the primary focus is anesthesia, the results provide background information on postoperative pain management options, particularly for referral considerations in early rehabilitation pain control.",
+     "limitation": "研究主要关注麻醉效果，其对长期康复结局的影响未被评估。",
+     "limitationEn": "The study primarily focused on anesthetic efficacy, and its impact on long-term rehabilitation outcomes was not assessed.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "RCT"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1783101190185-1",
+     "title": "Improved Flexor Spasticity in Patients with Chronic Stroke Using a Dynamic Wrist-Hand Stretching Device: A Pilot Randomized Controlled Trial.",
+     "summary": "A pilot RCT involving 30 chronic stroke patients found that a novel dynamic wrist-hand stretching device improved flexor spasticity and hand function, offering a potential tool for long-term management.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42396838/",
+     "publishedAt": "2026-07-03T00:00:00.000Z",
+     "firstSeen": "2026-07-03T17:53:10.185Z",
+     "curatedScore": 80,
+     "curatedReason": "这款动态腕手牵伸器械在慢性卒中患者屈肌痉挛管理上，显示出改善痉挛和手功能潜能，为需要居家长期管理又缺乏监督的患者提供了新工具。可以开始关注同类器械的临床验证与可及性。",
+     "titleZh": "动态腕手牵伸器械改善慢性卒中患者屈肌痉挛：一项初步随机对照试验",
+     "summaryZh": "一项纳入30名慢性卒中患者的初步随机对照试验发现，一款新型动态腕手牵伸器械能改善屈肌痉挛并提升手功能，为长期管理提供了潜在工具。",
+     "curatedReasonEn": "This dynamic wrist-hand stretching device shows potential in managing flexor spasticity and improving hand function in chronic stroke patients, offering a new tool for those requiring long-term home management with minimal supervision. Start monitoring the clinical validation and availability of similar devices.",
+     "limitation": "这是一项小样本的初步随机对照试验，结果可能无法完全推广至更广泛的卒中人群，且长期效果有待进一步验证。",
+     "limitationEn": "This is a pilot randomized controlled trial with a small sample size, so the results may not be fully generalizable to a broader stroke population, and long-term efficacy needs further validation.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "NeuroRehabilitation"
+    },
+    {
+     "id": "news-1783117964967-17",
+     "title": "A preliminary analysis of the inflammatory protein landscape in the CSF of mid- to late-stage Parkinson’s disease: associations with motor severity and subtypes | BMC Neurology | Springer Nature Link",
+     "summary": "A preliminary analysis characterized the inflammatory protein landscape in the CSF of mid- to late-stage Parkinson’s disease and its associations with motor severity and subtypes.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12883-026-05109-8",
+     "publishedAt": "2026-07-01T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 65,
+     "curatedReason": "这项初步分析探讨了中晚期帕金森病脑脊液中炎症蛋白与运动严重程度和亚型的关联。了解这些生物标志物有助于你更深入地理解帕金森病的病理生理机制，但目前不直接影响康复实践。",
+     "titleZh": "中晚期帕金森病脑脊液炎症蛋白图谱的初步分析：与运动严重程度和亚型的关联",
+     "summaryZh": "一项初步分析研究了中晚期帕金森病患者脑脊液中的炎症蛋白图谱及其与运动严重程度和亚型的关联。",
+     "curatedReasonEn": "This preliminary analysis explores the association between inflammatory proteins in the CSF of mid- to late-stage Parkinson's disease and motor severity and subtypes. Understanding these biomarkers helps you gain a deeper understanding of the pathophysiological mechanisms of Parkinson's disease, but it does not directly affect rehabilitation practice at present.",
+     "limitation": "这是一项初步分析，样本量和研究设计可能限制了结论的普遍性和确定性。",
+     "limitationEn": "This is a preliminary analysis, and the sample size and study design may limit the generalizability and certainty of the conclusions.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964967-18",
+     "title": "Cannabidiol alleviates traumatic brain injury-induced neuronal damage and cognitive deficits by inhibiting ferroptosis via the TRPV1/MCU/PI3K/Akt pathway",
+     "summary": "This research found that cannabidiol (CBD) alleviates traumatic brain injury-induced neuronal damage and cognitive deficits by inhibiting ferroptosis via the TRPV1/MCU/PI3K/Akt pathway.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42365227/",
+     "publishedAt": "2026-06-27T23:35:56.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 65,
+     "curatedReason": "这项研究揭示了大麻二酚（CBD）通过抑制铁死亡途径，减轻创伤性脑损伤（TBI）引起的神经元损伤和认知功能障碍。虽然是药物机制研究，但了解这些潜在的神经保护策略对未来 TBI 康复的整体管理有启发作用，关注其临床转化潜力。",
+     "titleZh": "大麻二酚通过抑制 TRPV1/MCU/PI3K/Akt 途径的铁死亡，减轻创伤性脑损伤引起的神经元损伤和认知缺陷",
+     "summaryZh": "这项研究发现，大麻二酚（CBD）通过抑制 TRPV1/MCU/PI3K/Akt 途径的铁死亡，减轻了创伤性脑损伤引起的神经元损伤和认知缺陷。",
+     "curatedReasonEn": "This study reveals that cannabidiol (CBD) alleviates traumatic brain injury (TBI)-induced neuronal damage and cognitive deficits by inhibiting the ferroptosis pathway. While this is a drug mechanism study, understanding these potential neuroprotective strategies is insightful for the overall management of future TBI rehabilitation. Pay attention to its potential for clinical translation.",
+     "limitation": "这是一项细胞和动物模型研究，其结果不能直接推断到人体临床实践。",
+     "limitationEn": "This is a cell and animal model study, and its results cannot be directly extrapolated to human clinical practice.",
+     "tags": [
+      "research",
+      "brain-injury"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1783117964967-23",
+     "title": "Role of Platelet-Rich Plasma Injection in Anterior Cruciate Ligament Reconstruction: A Meta-Analysis of Randomized Controlled Trials",
+     "summary": "A meta-analysis of randomized controlled trials investigated the role of platelet-rich plasma injection in anterior cruciate ligament reconstruction.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42072250/?fc=None&ff=20260627142217&v=2.20.0",
+     "publishedAt": "2026-06-27T18:24:17.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 80,
+     "curatedReason": "这项荟萃分析评估了富血小板血浆（PRP）注射在前交叉韧带重建术中的作用。结果提示 PRP 可能并非 ACL 重建术后的常规辅助方案。你在康复计划中应优先考虑成熟的运动疗法，对 PRP 的推荐需持谨慎态度。",
+     "titleZh": "富血小板血浆注射在前交叉韧带重建术中的作用：一项随机对照试验的荟萃分析",
+     "summaryZh": "一项随机对照试验的荟萃分析研究了富血小板血浆注射在前交叉韧带重建术中的作用。",
+     "curatedReasonEn": "This meta-analysis evaluated the role of platelet-rich plasma (PRP) injection in anterior cruciate ligament reconstruction. The results suggest that PRP may not be a routine adjunctive therapy after ACL reconstruction. You should prioritize established exercise therapies in your rehabilitation plans and be cautious when recommending PRP.",
+     "limitation": "未提及具体纳入 RCT 的数量和样本量，可能影响结论的稳健性。",
+     "limitationEn": "The specific number and sample size of included RCTs were not mentioned, which may affect the robustness of the conclusions.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783117964968-25",
+     "title": "Sex differences in sit-and-reach flexibility in children and adolescents: A meta-analysis - ScienceDirect",
+     "summary": "A meta-analysis examined sex differences in sit-and-reach flexibility in children and adolescents.",
+     "category": "sports",
+     "source": "Gait & Posture",
+     "sourceUrl": "https://www.sciencedirect.com/science/article/abs/pii/S1360859226000926",
+     "publishedAt": "2026-07-01T17:59:17.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 75,
+     "curatedReason": "这项荟萃分析揭示了儿童和青少年在坐位体前屈柔韧性方面的性别差异。你可以在评估儿童和青少年的柔韧性时，将这些性别差异纳入考虑，以提供更具个体化的运动表现和损伤预防建议。",
+     "titleZh": "儿童和青少年坐位体前屈柔韧性的性别差异：一项荟萃分析",
+     "summaryZh": "一项荟萃分析研究了儿童和青少年坐位体前屈柔韧性方面的性别差异。",
+     "curatedReasonEn": "This meta-analysis reveals sex differences in sit-and-reach flexibility in children and adolescents. You can incorporate these sex differences when assessing flexibility in children and adolescents to provide more individualized recommendations for athletic performance and injury prevention.",
+     "limitation": "荟萃分析的结果可能受纳入研究异质性的影响，需要审慎解读其普适性。",
+     "limitationEn": "The results of the meta-analysis may be influenced by the heterogeneity of the included studies, requiring careful interpretation of their generalizability.",
+     "tags": [
+      "research",
+      "pediatric"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783117964967-22",
+     "title": "Prevalence of femoroacetabular impingement syndrome and related hip morphologies, and its developmental dose-response relationship in professional female football players: a multicentre cohort study (PROFE)",
+     "summary": "A multicentre cohort study investigated the prevalence of femoroacetabular impingement syndrome and related hip morphologies, and its developmental dose-response relationship in professional female football players.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41702794/?fc=None&ff=20260627142225&v=2.20.0",
+     "publishedAt": "2026-06-27T18:26:58.000Z",
+     "firstSeen": "2026-07-03T22:32:44.967Z",
+     "curatedScore": 70,
+     "curatedReason": "这项多中心队列研究调查了职业女足球运动员股髋臼撞击综合征（FAI）及其相关髋部形态的患病率和发育剂量-反应关系。你可以将这些数据作为评估和预防女性运动员 FAI 的参考，尤其是在早期识别风险和制定针对性训练计划时。",
+     "titleZh": "多中心队列研究：职业女足球运动员股髋臼撞击综合征及相关髋部形态的患病率和发育剂量-反应关系",
+     "summaryZh": "一项多中心队列研究调查了职业女足球运动员股髋臼撞击综合征及其相关髋部形态的患病率，以及其发育剂量-反应关系。",
+     "curatedReasonEn": "This multicentre cohort study investigated the prevalence and developmental dose-response relationship of femoroacetabular impingement syndrome (FAI) and related hip morphologies in professional female football players. You can use these data as a reference for assessing and preventing FAI in female athletes, especially in early risk identification and targeted training program development.",
+     "limitation": "作为队列研究，无法建立因果关系，且结果可能受到混杂因素的影响。",
+     "limitationEn": "As a cohort study, it cannot establish causality, and the results may be influenced by confounding factors.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-24",
+     "title": "Gastrocnemius medialis muscle architecture and its relationship with countermovement jump performance differ between male academy soccer players and control participants | European Journal of Applied Physiology | Springer Nature Link",
+     "summary": "This study found that gastrocnemius medialis muscle architecture and its relationship with countermovement jump performance differed between male academy soccer players and control participants.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00421-026-06311-9",
+     "publishedAt": "2026-06-29T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 65,
+     "curatedReason": "这项研究比较了男性足球青训球员与对照组腓肠肌内侧肌肉结构和反向跳跃表现的差异。这些生理学和生物力学数据有助于你更好地理解高水平足球运动员的特有适应性，为运动表现训练和损伤预防提供参考。",
+     "titleZh": "男性足球青训球员与对照组腓肠肌内侧肌肉结构及与反向跳跃表现的关系差异",
+     "summaryZh": "这项研究发现，男性足球青训球员与对照组在腓肠肌内侧肌肉结构及其与反向跳跃表现的关系上存在差异。",
+     "curatedReasonEn": "This study compared gastrocnemius medialis muscle architecture and countermovement jump performance between male academy soccer players and control participants. These physiological and biomechanical data help you better understand the unique adaptations of high-level soccer players, providing a reference for athletic performance training and injury prevention.",
+     "limitation": "研究对象仅限于男性足球青训球员，结果可能不适用于其他运动员群体或普通人群。",
+     "limitationEn": "The study subjects were limited to male academy soccer players, and the results may not be applicable to other athlete populations or the general population.",
+     "tags": [
+      "research",
+      "sports"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-26",
+     "title": "The longitudinal analysis of the effect of compression wear on muscle lactate recovery rate using bioimpedance: A case study - ScienceDirect",
+     "summary": "A case study longitudinally analyzed the effect of compression wear on muscle lactate recovery rate using bioimpedance.",
+     "category": "sports",
+     "source": "Gait & Posture",
+     "sourceUrl": "https://www.sciencedirect.com/science/article/abs/pii/S1746809426005768",
+     "publishedAt": "2026-07-01T14:51:04.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 65,
+     "curatedReason": "这项案例研究纵向分析了压力衣对肌肉乳酸恢复率的影响。你可以将此作为了解运动后恢复策略的辅助信息，但需注意这仅是个案研究，其结论不能直接推广到所有患者。",
+     "titleZh": "压力衣对肌肉乳酸恢复率影响的纵向分析：一项生物阻抗案例研究",
+     "summaryZh": "一项案例研究利用生物阻抗技术，纵向分析了压力衣对肌肉乳酸恢复率的影响。",
+     "curatedReasonEn": "This case study longitudinally analyzed the effect of compression wear on muscle lactate recovery rate. You can use this as supplementary information to understand post-exercise recovery strategies, but note that this is a case study, and its conclusions cannot be directly generalized to all patients.",
+     "limitation": "这是一项单案例研究，其结果不具有普遍性，无法作为指导临床实践的强证据。",
+     "limitationEn": "This is a single case study, and its results are not generalizable and cannot serve as strong evidence for guiding clinical practice.",
+     "tags": [
+      "research",
+      "sports"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1783101190186-3",
+     "title": "Development of a Core Patient-Reported Outcome (Measures) Set for Pediatric Physical Therapy.",
+     "summary": "A study developed a core set of nine patient-reported outcomes (PROs) and corresponding measures (PROMs) for pediatric physical therapy, grouped into three domains (functioning, general well-being, and social/environmental), to standardize assessment in practice, research, and quality assessment.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42397350/",
+     "publishedAt": "2026-07-03T00:00:00.000Z",
+     "firstSeen": "2026-07-03T17:53:10.186Z",
+     "curatedScore": 85,
+     "curatedReason": "核心患者报告结局（PROs）及其测量工具（PROMs）的开发，能帮助儿科物理治疗师在日常实践、研究和质量评估中更标准化地评估疗效。未来可期待其推广应用，提升儿科PT的循证实践水平。",
+     "titleZh": "儿科物理治疗核心患者报告结局（测量）集的开发",
+     "summaryZh": "一项研究开发了一套包含九个核心患者报告结局（PROs）及其测量工具（PROMs），分为三个领域（功能、整体健康和社会/环境），旨在标准化儿科物理治疗在实践、研究和质量评估中的疗效评估。",
+     "limitation": "PROs 和 PROMs 的开发是一个复杂过程，其最终的临床实用性和心理测量学特性仍需在不同人群中进行广泛验证。",
+     "limitationEn": "The development of PROs and PROMs is a complex process, and their ultimate clinical utility and psychometric properties still require extensive validation across diverse populations.",
+     "tags": [
+      "research",
+      "patient-reported-outcomes"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Pediatric physical therapy : the official publication of the Section on Pediatrics of the American Physical Therapy Association"
+    },
+    {
+     "id": "news-1783117964968-27",
+     "title": "",
+     "summary": "This is a study protocol for a randomized controlled trial of the Baby HABIT-ILE intervention in infants aged 6–18 months with unilateral cerebral palsy.",
+     "category": "pediatric",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/14/2/e078383.full.pdf",
+     "publishedAt": "2026-07-03T22:30:50.139Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 70,
+     "curatedReason": "这是一项针对 6-18 个月单侧脑瘫婴儿的 Baby HABIT-ILE 干预随机对照试验的研究方案。你可以关注这类早期干预方案的设计思路和预期结果，这对于了解脑瘫儿童的早期康复策略至关重要。",
+     "titleZh": "Baby HABIT-ILE 干预：6-18 个月单侧脑瘫婴儿随机对照试验研究方案",
+     "summaryZh": "这是一项针对 6-18 个月单侧脑瘫婴儿的 Baby HABIT-ILE 干预随机对照试验的研究方案。",
+     "curatedReasonEn": "This is a study protocol for a randomized controlled trial of Baby HABIT-ILE intervention in infants aged 6–18 months with unilateral cerebral palsy. You can pay attention to the design ideas and expected results of such early intervention programs, which are crucial for understanding early rehabilitation strategies for children with cerebral palsy.",
+     "limitation": "这是一项研究方案，尚未发布最终结果，因此不能提供实际的临床证据。",
+     "limitationEn": "This is a study protocol, and the final results have not yet been published, so it cannot provide actual clinical evidence.",
+     "tags": [
+      "research",
+      "pediatric"
+     ],
+     "studyDesign": "RCT",
+     "related": [
+      {
+       "source": "CMS",
+       "sourceUrl": "https://www.cms.gov/files/document/mm14427-hcpcs-codes-used-skilled-nursing-facility-consolidated-billing-enforcement-july-2026.pdf",
+       "title": ""
+      }
+     ]
+    },
+    {
+     "id": "news-1783117964968-29",
+     "title": "Beyond skills: Reimagining clinical education for a transformative future | Myezwa | South African Journal of Physiotherapy",
+     "summary": "This editorial discusses reimagining clinical education for a transformative future in physiotherapy.",
+     "category": "pediatric",
+     "source": "SA J Physiother",
+     "sourceUrl": "https://sajp.co.za/index.php/sajp/article/view/2377/4272",
+     "publishedAt": "2026-06-26T18:12:28.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇社论呼吁重新构想物理治疗临床教育，超越单纯技能培养，迈向变革性未来。你可以将这篇评论视为对行业教育改革的最新思考，关注其提出的理念如何影响你或你所在机构的 PT 教育实践。",
+     "titleZh": "超越技能：重新构想物理治疗临床教育，迈向变革性未来",
+     "summaryZh": "这篇社论探讨了重新构想物理治疗临床教育，以迈向变革性未来的议题。",
+     "curatedReasonEn": "This editorial calls for reimagining physiotherapy clinical education beyond mere skill development, towards a transformative future. You can view this commentary as the latest thinking on industry education reform, focusing on how its proposed ideas might influence your or your institution's PT education practices.",
+     "limitation": "作为社论，其观点不基于系统性证据，旨在引发讨论和思考，不提供具体临床干预指导。",
+     "limitationEn": "As an editorial, its views are not based on systematic evidence and are intended to provoke discussion and thought, not to provide specific clinical intervention guidance.",
+     "tags": [
+      "research",
+      "education"
+     ],
+     "studyDesign": "述评"
+    },
+    {
+     "id": "news-1783117964968-31",
+     "title": "Piloting a Tier 1 Strength-Based Parent Education Play Program: Promoting Play Within the Family Context",
+     "summary": "A pilot, mixed-methods group, pre-post study assessed the effectiveness of a Tier 1 strength-based play program on parents' ability to support their child's play and build parental sense of competence.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42166274/",
+     "publishedAt": "2026-07-01T15:11:37.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 70,
+     "curatedReason": "这项试点研究评估了以优势为基础的亲子教育游戏项目对父母支持孩子游戏能力和提升父母胜任感的效果。你可以参考这种以家庭为中心的早期干预模式，将其融入你的儿科物理治疗实践中，以增强家庭参与和赋能。",
+     "titleZh": "试点一项基于优势的亲子教育游戏项目：促进家庭环境中的游戏",
+     "summaryZh": "一项混合方法组前瞻性试点研究评估了分级制（Tier 1）优势导向游戏项目对父母支持孩子游戏能力和提升父母胜任感的有效性。",
+     "curatedReasonEn": "This pilot study assessed the effectiveness of a Tier 1 strength-based parent education play program on parents' ability to support their child's play and build parental sense of competence. You can refer to this family-centered early intervention model and integrate it into your pediatric physical therapy practice to enhance family engagement and empowerment.",
+     "limitation": "作为试点研究，样本量较小（46 名家长，12 名分配到电子组），且为混合方法设计，需要更大规模的 RCT 验证。",
+     "limitationEn": "As a pilot study, the sample size is small (46 parents, 12 assigned to e-group), and it uses a mixed-methods design, requiring larger-scale RCTs for validation.",
+     "tags": [
+      "research",
+      "pediatric"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-33",
+     "title": "Experience-based co-design to refine a remote parent-mediated intervention program for preterm infants after NICU discharge: a qualitative study | BMC Pediatrics | Springer Nature Link",
+     "summary": "A qualitative study used experience-based co-design to refine a remote parent-mediated intervention program for preterm infants after NICU discharge.",
+     "category": "pediatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12887-026-07231-5",
+     "publishedAt": "2026-06-27T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 70,
+     "curatedReason": "这项定性研究使用经验共创设计，旨在优化早产儿 NICU 出院后的远程亲子干预项目。你可以从中了解远程康复项目在儿科领域的实施和优化过程，并汲取经验，以提升远程干预的依从性和效果。",
+     "titleZh": "经验共创设计优化 NICU 出院早产儿远程亲子干预项目：一项定性研究",
+     "summaryZh": "一项定性研究采用经验共创设计，旨在优化早产儿从新生儿重症监护室（NICU）出院后的远程亲子干预项目。",
+     "curatedReasonEn": "This qualitative study used experience-based co-design to refine a remote parent-mediated intervention program for preterm infants after NICU discharge. You can learn about the implementation and optimization process of remote rehabilitation programs in the pediatric field and draw lessons to improve the adherence and effectiveness of remote interventions.",
+     "limitation": "作为定性研究，其结果不具有普遍性，需要进一步的定量研究来验证干预的有效性。",
+     "limitationEn": "As a qualitative study, its results are not generalizable and require further quantitative research to validate the effectiveness of the intervention.",
+     "tags": [
+      "research",
+      "pediatric",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-28",
+     "title": "Fracture Risk Following Hardware Removal in Children With Arthrogryposis",
+     "summary": "This study aimed to identify the incidence of fracture and infection following hardware removal in children with arthrogryposis and compare them to a matched cohort of patients with cerebral palsy.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41191822/",
+     "publishedAt": "2026-07-01T12:28:17.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 65,
+     "curatedReason": "这项研究旨在识别关节挛缩症患儿硬件移除后骨折和感染的发生率。了解这些并发症风险有助于你在术后康复中更加警惕，并与外科医生共同管理潜在风险。",
+     "titleZh": "关节挛缩症患儿硬件移除后的骨折风险",
+     "summaryZh": "这项研究旨在确定关节挛缩症患儿硬件移除后骨折和感染的发生率，并与匹配的脑瘫患者队列进行比较。",
+     "curatedReasonEn": "This study aims to identify the incidence of fractures and infections following hardware removal in children with arthrogryposis. Understanding these complication risks helps you be more vigilant in postoperative rehabilitation and co-manage potential risks with surgeons.",
+     "limitation": "这是一项回顾性研究，可能存在选择偏倚和数据完整性问题，结果需要谨慎解读。",
+     "limitationEn": "This is a retrospective study, which may have selection bias and data completeness issues, so the results need to be interpreted cautiously.",
+     "tags": [
+      "research",
+      "pediatric"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1783117964968-39",
+     "title": "Personalized blood flow restriction training at variable occlusion pressures improves multisystem function in overweight and obese older women - European Journal of Applied Physiology",
+     "summary": "This research found that personalized blood flow restriction training at variable occlusion pressures improved multisystem function in overweight and obese older women.",
+     "category": "geriatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00421-026-06299-2",
+     "publishedAt": "2026-06-29T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究表明，个性化血流限制（BFR）训练在不同血管阻力压力下能改善超重和肥胖老年女性的多系统功能。你可以将 BFR 视为老年患者，特别是衰弱或超重老年女性，力量和功能训练的有效辅助手段，但务必在专业指导下个性化设置阻力。",
+     "titleZh": "个性化血流限制训练在超重和肥胖老年女性中改善多系统功能",
+     "summaryZh": "这项研究发现，个性化血流限制训练在不同阻力压力下能够改善超重和肥胖老年女性的多系统功能。",
+     "curatedReasonEn": "This study indicates that personalized blood flow restriction (BFR) training at variable occlusion pressures improves multisystem function in overweight and obese older women. You can consider BFR an effective adjunct for strength and functional training in elderly patients, especially frail or overweight older women, but ensure personalized resistance settings under professional guidance.",
+     "limitation": "研究对象仅限于超重和肥胖的老年女性，结果可能不适用于其他人群。",
+     "limitationEn": "The study subjects were limited to overweight and obese older women, and the results may not be applicable to other populations.",
+     "tags": [
+      "research",
+      "geriatric"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783052054926-16",
+     "title": "Multi-Domain Benefits of Exergaming for Sarcopenia Management in Institutionalized Older Adults: Physical, Psychological, and Social Outcomes.",
+     "summary": "This pragmatic quasi-experimental study (N=72) found that a 12-week exergaming intervention (Nintendo Switch Ring Fit Adventure) significantly improved physical, psychological, and social outcomes in institutionalized older adults with sarcopenia.",
+     "category": "geriatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42372958/",
+     "publishedAt": "2026-06-30T00:00:00.000Z",
+     "firstSeen": "2026-07-03T04:14:14.926Z",
+     "curatedScore": 80,
+     "curatedReason": "为期 12 周的体感游戏干预（如 Nintendo Switch Ring Fit Adventure）对机构养老的老年肌少症患者在身体、心理和社会功能上均有益。你可以考虑将此类互动性游戏纳入老年康复方案，作为提升多领域结局的有效工具。",
+     "titleZh": "体感游戏对机构养老老年肌少症患者的多领域益处：身体、心理和社会结局。",
+     "summaryZh": "这项纳入 72 名机构养老老年肌少症患者的准实验研究发现，为期 12 周的体感游戏干预（任天堂 Switch 健身环大冒险）显著改善了患者的身体、心理和社会结局。",
+     "curatedReasonEn": "A 12-week exergaming intervention (e.g., Nintendo Switch Ring Fit Adventure) benefits institutionalized older adults with sarcopenia across physical, psychological, and social outcomes. You can consider integrating such interactive games into geriatric rehabilitation programs as an effective tool for improving multi-domain outcomes.",
+     "limitation": "本研究为准实验设计，缺乏随机化，可能存在选择偏倚。",
+     "limitationEn": "This was a quasi-experimental design lacking randomization, which may introduce selection bias.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of physical medicine and rehabilitation",
+     "related": [
+      {
+       "source": "Archives of PM&R",
+       "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00791-4/fulltext?rss=yes",
+       "title": "Multi-Domain Benefits of Exergaming for Sarcopenia Management in Institutionalized Older Adults: Physical, Psychological, and Social Outcomes"
+      }
+     ]
+    },
+    {
+     "id": "news-1783117964968-35",
+     "title": "Associations between nutritional risk indices and fall history in older adults: a retrospective cross-sectional study | BMC Geriatrics | Springer Nature Link",
+     "summary": "A retrospective cross-sectional study found associations between nutritional risk indices and fall history in older adults.",
+     "category": "geriatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-07714-1",
+     "publishedAt": "2026-06-27T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 75,
+     "curatedReason": "这项回顾性横断面研究发现营养风险指数与老年人跌倒史之间存在关联。这意味着你在评估老年患者跌倒风险时，需要将营养状况纳入考量，并与营养师协作，提供更全面的预防策略。",
+     "titleZh": "营养风险指数与老年人跌倒史的关联：一项回顾性横断面研究",
+     "summaryZh": "一项回顾性横断面研究发现，老年人的营养风险指数与跌倒史之间存在关联。",
+     "curatedReasonEn": "This retrospective cross-sectional study found an association between nutritional risk indices and a history of falls in older adults. This implies that when assessing fall risk in elderly patients, you need to consider nutritional status and collaborate with dietitians to provide more comprehensive prevention strategies.",
+     "limitation": "作为回顾性横断面研究，不能建立因果关系，且可能存在回忆偏倚。",
+     "limitationEn": "As a retrospective cross-sectional study, it cannot establish causality and may be subject to recall bias.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-36",
+     "title": "Exercise, daily physical activity, and age-specific cumulative incidence of mobility decline: an 8-year cohort study of locomotive syndrome | European Review of Aging and Physical Activity | Springer Nature Link",
+     "summary": "An 8-year cohort study investigated exercise, daily physical activity, and age-specific cumulative incidence of mobility decline in locomotive syndrome.",
+     "category": "geriatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s11556-026-00424-y",
+     "publishedAt": "2026-06-29T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 75,
+     "curatedReason": "这项 8 年队列研究分析了运动、日常身体活动与机能综合征移动能力下降的年龄特异性累积发生率。该研究强调了身体活动对老年人移动能力维护的重要性，进一步强化了你推广运动干预作为预防衰弱的核心手段的证据。",
+     "titleZh": "运动、日常身体活动与移动能力下降的年龄特异性累积发生率：一项机能综合征的 8 年队列研究",
+     "summaryZh": "一项为期 8 年的队列研究调查了运动、日常身体活动与机能综合征中移动能力下降的年龄特异性累积发生率。",
+     "curatedReasonEn": "This 8-year cohort study analyzed the age-specific cumulative incidence of mobility decline in locomotive syndrome, considering exercise and daily physical activity. This study underscores the importance of physical activity for maintaining mobility in older adults, further strengthening the evidence for promoting exercise interventions as a core strategy to prevent frailty.",
+     "limitation": "作为队列研究，虽然观察时间长，但仍可能存在未测量混杂因素对结果的影响。",
+     "limitationEn": "As a cohort study, although the observation period is long, unmeasured confounding factors may still influence the results.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783117964968-38",
+     "title": "Abdominal Aortic Calcification on Lumbar X-rays Predicts Hip Fracture Risk: Study Reveals",
+     "summary": "A study found that abdominal aortic calcification (AAC) visible on routine lumbar spine X-rays is significantly associated with an increased risk of hip fractures in older adults, with an AAC score of 5 or higher strongly linked to fracture occurrence.",
+     "category": "geriatric",
+     "source": "Medical Dialogues",
+     "sourceUrl": "https://medicaldialogues.in/orthopaedics/news/abdominal-aortic-calcification-on-lumbar-x-rays-predicts-hip-fracture-risk-study-reveals-173190",
+     "publishedAt": "2026-06-29T15:15:03.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究发现，腰椎 X 光片上的腹主动脉钙化（AAC）可预测髋部骨折风险。你可以将 AAC 评分作为评估老年患者骨折风险的一个额外影像学指标，尤其是在常规腰椎检查中顺带发现时，及时转诊至骨科或老年科进行干预。",
+     "titleZh": "研究揭示：腰椎 X 光片上的腹主动脉钙化可预测髋部骨折风险",
+     "summaryZh": "一项研究发现，常规腰椎 X 光片上可见的腹主动脉钙化（AAC）与老年人髋部骨折风险显著相关，AAC 评分 5 分或更高与骨折发生率密切相关。",
+     "curatedReasonEn": "This study found that abdominal aortic calcification (AAC) on lumbar X-rays predicts hip fracture risk. You can use AAC scores as an additional imaging indicator when assessing fracture risk in elderly patients, especially when incidentally found during routine lumbar spine examinations, to facilitate timely referral to orthopedics or geriatrics for intervention.",
+     "limitation": "作为观察性研究，不能建立因果关系，且研究仅限于日本患者，结果可能存在地域差异。",
+     "limitationEn": "As an observational study, it cannot establish causality, and the study was limited to Japanese patients, so the results may have regional differences.",
+     "tags": [
+      "news",
+      "fall-prevention",
+      "hip"
+     ]
+    },
+    {
+     "id": "news-1783117964968-37",
+     "title": "Study protocol for FAXAge: a randomized, controlled clinical trial of fasting and exercise to slow aging in humans | GeroScience | Springer Nature Link",
+     "summary": "This is the study protocol for FAXAge, a randomized, controlled clinical trial of fasting and exercise to slow aging in humans.",
+     "category": "geriatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s11357-026-02362-0",
+     "publishedAt": "2026-06-29T00:00:00.000Z",
+     "firstSeen": "2026-07-03T22:32:44.968Z",
+     "curatedScore": 70,
+     "curatedReason": "这是 FAXAge 研究的方案，一项随机对照临床试验，旨在通过禁食和运动来延缓人类衰老。虽然是方案，但你可以关注其在运动干预设计上的细节，以及如何将禁食等生活方式干预纳入康复研究的框架，这代表了抗衰老领域的前沿探索。",
+     "titleZh": "FAXAge 研究方案：一项通过禁食和运动延缓人类衰老的随机对照临床试验",
+     "summaryZh": "这是 FAXAge 研究方案，一项旨在通过禁食和运动延缓人类衰老的随机对照临床试验。",
+     "curatedReasonEn": "This is the protocol for the FAXAge study, a randomized controlled clinical trial designed to slow aging in humans through fasting and exercise. Although it is a protocol, you can pay attention to the details of its exercise intervention design and how lifestyle interventions like fasting are incorporated into rehabilitation research frameworks, representing cutting-edge exploration in anti-aging.",
+     "limitation": "这是一项研究方案，尚未发布最终结果，因此不能提供实际的临床证据。",
+     "limitationEn": "This is a study protocol, and the final results have not yet been published, so it cannot provide actual clinical evidence.",
+     "tags": [
+      "research",
+      "geriatric"
+     ],
+     "studyDesign": "RCT"
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "Training Early Childhood Educators to Observe, Assess and Enhance Discrete Play Skills | Early Childhood Education Journal | Springer Nature Link",
+   "titleZh": "培训早期儿童教育者观察、评估和增强离散游戏技能",
+   "source": "Sports Medicine",
+   "sourceUrl": "https://link.springer.com/article/10.1007/s10643-026-02228-2",
+   "publishedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+   "title": "Predicting 18-month M-CHAT-R/F With PediaTracTMv3.0 Motor and Social/Communication/Cognition Domains | Journal of Autism and Developmental Disorders | Springer Nature Link",
+   "titleZh": "利用 PediaTracTMv3.0 运动和社会/沟通/认知领域预测 18 个月 M-CHAT-R/F",
+   "source": "Sports Medicine",
+   "sourceUrl": "https://link.springer.com/article/10.1007/s10803-026-07406-0",
+   "publishedAt": "2026-06-29T00:00:00.000Z"
+  },
+  {
+   "title": "Implementation and effectiveness of the web‑based skills training START NOW in adolescents in residential youth care: a cluster randomized controlled trial | Child and Adolescent Psychiatry and Mental Health | Springer Nature Link",
+   "titleZh": "网络技能训练 START NOW 在青少年住宿式青年照护中的实施和有效性：一项集群随机对照试验",
+   "source": "Sports Medicine",
+   "sourceUrl": "https://link.springer.com/article/10.1186/s13034-026-01127-z",
+   "publishedAt": "2026-06-29T00:00:00.000Z"
+  }
+ ]
+}
