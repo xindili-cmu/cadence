@@ -29,6 +29,40 @@
 <!-- RSS feed — updated on each news-refresh run. SITE_URL is set via env var. -->
 <link rel="alternate" type="application/rss+xml" title="Cadence 步频 — PT Research Signal" href="/rss.xml">
 
+<!-- Language + canonical + hreflang.
+     Runs before the app bundle. Language resolution MUST mirror CD_LANG in
+     design-system/app (?lang param → localStorage cd-lang → navigator.language),
+     so the <html lang> attribute matches the content the app renders on first
+     paint — previously it stayed "en" until the user clicked the toggle.
+     Canonical strips ?lang (language variants are alternates, not duplicates)
+     but keeps ?item= so each story permalink canonicalizes to itself. -->
+<script>
+(function () {
+  var lang;
+  try { var q = new URLSearchParams(location.search).get('lang'); if (q === 'en' || q === 'zh') lang = q; } catch (e) {}
+  if (!lang) { try { var s = localStorage.getItem('cd-lang'); if (s === 'en' || s === 'zh') lang = s; } catch (e) {} }
+  if (!lang) lang = (navigator.language || '').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+  var origin = 'https://incadencept.com';
+  var item;
+  try { item = new URLSearchParams(location.search).get('item'); } catch (e) {}
+  var path = item ? '/?item=' + encodeURIComponent(item) : '/';
+
+  function link(rel, href, hreflang) {
+    var l = document.createElement('link');
+    l.rel = rel; l.href = href;
+    if (hreflang) l.hreflang = hreflang;
+    document.head.appendChild(l);
+  }
+  link('canonical', origin + path);
+  var sep = item ? '&' : '?';
+  link('alternate', origin + path + sep + 'lang=zh', 'zh-CN');
+  link('alternate', origin + path + sep + 'lang=en', 'en');
+  link('alternate', origin + path, 'x-default');
+})();
+</script>
+
 <!-- Structured data (JSON-LD). Organization + WebSite — the main SEO signal a
      client-rendered SPA can hand a crawler from the static shell. No SearchAction:
      site search is hash-based client-side, so there is no real result-URL template
