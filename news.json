@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-04T10:29:19.552Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-07-04T14:04:07.039Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -95,7 +95,7 @@
           "titleZh": "12 周股后肌群动态拉伸对关节柔韧性和肌肉骨骼特性的影响"
         }
       ],
-      "heat": 7.57
+      "heat": 7.19
     },
     {
       "id": "news-1782813883000-2",
@@ -215,7 +215,7 @@
           "titleZh": "患者对康复技术持积极态度，且技术促进了治疗强度"
         }
       ],
-      "heat": 6.08
+      "heat": 5.77
     },
     {
       "id": "news-1782220755787-13",
@@ -275,7 +275,7 @@
           "titleZh": "随机对照预试验：营养建议能否增强运动疗法对跟腱病的治疗效果？"
         }
       ],
-      "heat": 4.3
+      "heat": 4.08
     },
     {
       "id": "news-1783149593311-2",
@@ -323,7 +323,7 @@
           "titleZh": "体外冲击波疗法在骨病管理中的应用：一项系统综述"
         }
       ],
-      "heat": 3.82
+      "heat": 3.63
     },
     {
       "id": "news-1783076660306-0",
@@ -365,30 +365,54 @@
           "titleZh": "WalkBack (步行与教育) 腰痛预防项目对物理治疗师而言是可接受的，但其优化实施依赖于培训、灵活性和系统层面的支持：一项定性研究。"
         }
       ],
-      "heat": 2.87
+      "heat": 2.72
     }
   ],
   "items": [
     {
-      "id": "news-1782220755787-20",
-      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [commentary].",
-      "summary": "This commentary appraises a study finding mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than center-based pulmonary rehabilitation for chronic obstructive pulmonary disease.",
+      "id": "news-1782254605962-4",
+      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [synopsis].",
+      "summary": "This critically appraised paper indicates that mobile-based pulmonary rehabilitation provides comparable improvements in exercise capacity and superior improvements in health status compared to center-based pulmonary rehabilitation for patients with chronic obstructive pulmonary disease.",
       "category": "cardiopulmonary",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331699/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331695/",
       "publishedAt": "2026-06-23T00:00:00.000Z",
       "firstSeen": "2026-06-23T13:19:15.787Z",
       "curatedScore": 85,
-      "curatedReason": "移动端肺康复在锻炼能力方面不劣于中心内康复，且对健康状况改善更优。这意味着远程医疗模型可以在慢阻肺患者中推广。",
-      "titleZh": "述评：移动端肺康复在慢阻肺患者中的锻炼能力不劣于中心内康复，健康状况改善更优",
-      "summaryZh": "这篇述评评估了一项研究，该研究发现移动端肺康复在慢性阻塞性肺疾病患者中，对锻炼能力的改善不劣于中心内肺康复，并且对健康状况的改善更优。",
-      "curatedReasonEn": "Mobile-based pulmonary rehabilitation is non-inferior to center-based for exercise capacity and superior for health status, suggesting that telehealth models can be expanded for COPD patients.",
+      "curatedReason": "这项关键评估论文（CAP）提示，移动端肺康复在运动能力上不劣于中心化康复，并在健康状态改善上表现更优。考虑在你的 COPD 患者管理中增加移动端方案。",
+      "titleZh": "关键评估论文：移动端肺康复对慢性阻塞性肺疾病患者运动能力的改善与中心化康复相当，健康状况改善更优。",
+      "summaryZh": "这篇关键评估论文指出，对于慢性阻塞性肺疾病患者，移动端肺康复在运动能力方面的改善与中心化肺康复相当，而在健康状况方面的改善则更为显著。",
+      "curatedReasonEn": "This critically appraised paper (CAP) suggests that mobile-based pulmonary rehabilitation is non-inferior to center-based rehab for exercise capacity and superior for health status in COPD patients. Consider incorporating mobile solutions in your COPD patient management.",
+      "tags": [
+        "news",
+        "copd",
+        "telehealth"
+      ],
+      "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1781948788522-8",
+      "title": "Implementing Live Long Walk Strong: Practice-based evidence on adapting a physical therapy program across diverse contexts.",
+      "summary": "This process evaluation describes the adaptation of 'Live Long Walk Strong,' an age-friendly physical therapy program for older adults, across four diverse clinical settings within the Veterans Health Administration (urban outpatient, rural outpatient, skilled nursing facility, and virtual). It identifies barriers encountered and adaptations made during implementation by 11 physical therapists and physical therapist assistants.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42321910/",
+      "publishedAt": "2026-06-20T00:00:00.000Z",
+      "firstSeen": "2026-06-20T09:46:28.522Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇报告展示了如何在不同临床场景（包括远程医疗）中落地老年康复项目，为你的实践适应性调整提供了参考案例。",
+      "titleZh": "“活得久走得稳”项目实施：多元背景下物理治疗方案调整的实践证据",
+      "summaryZh": "这项过程评估描述了“活得久走得稳”——一个针对老年人的友老型物理治疗项目，在美国退伍军人健康管理局下属的四种不同临床环境（城市门诊、乡村门诊、专业护理机构和远程医疗）中的适应性调整。报告识别了 11 名物理治疗师和物理治疗师助理在实施过程中遇到的障碍和所做的调整。",
+      "curatedReasonEn": "This report provides a case study on adapting a geriatric rehabilitation program across diverse clinical settings, including telehealth, offering insights for your own practice adjustments.",
+      "limitation": "这是一项过程评估，而非疗效研究，不涉及干预效果的量化评估。",
+      "limitationEn": "This is a process evaluation, not an efficacy study, and does not quantify intervention outcomes.",
       "tags": [
         "research",
         "telehealth"
       ],
-      "studyDesign": "述评",
-      "journal": "Journal of physiotherapy"
+      "studyDesign": "观察研究",
+      "journal": "PM & R : the journal of injury, function, and rehabilitation",
+      "tech": true
     },
     {
       "id": "news-1783149593311-2",
