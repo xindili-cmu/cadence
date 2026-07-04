@@ -60,28 +60,44 @@ function FeedToolbar({ view, count }) {
 // The front filter axis: research / news / guideline / policy (tags[0]). Only 5
 // values, so it never wraps. Specialty moved to the left rail (desktop) / the
 // SpecialtySelect dropdown (mobile).
-function TypeTabs({ value = 'all', onChange = () => {}, className, style }) {
+function TypeTabs({ value = 'all', onChange = () => {}, pool = [], className, style }) {
   const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
-  const types = [
-    ['all', zh ? '全部' : 'All'],
-    ['research', zh ? '研究论文' : 'Research'],
-    ['news', zh ? '新闻' : 'News'],
-    ['guideline', zh ? '指南' : 'Guidelines'],
-    ['policy', zh ? '政策' : 'Policy'],
+  // Counts from the CURRENT view's pool (curated = live feed, all = +archive),
+  // by tags[0]. Content types are sparse by nature — guideline/news/policy can
+  // be empty in the live feed after the US-industry-news source cull. An empty
+  // tab that still looks clickable is the same "dead promise" as an empty
+  // specialty tab, so zero-count types are hidden here (same honesty rule as
+  // the specialty rail counts + sparse-specialty notice). 'all'/'research' are
+  // the product's spine and always show; the selected tab always shows so a
+  // ?type= deep-link stays visible and dismissable even when its pool is empty.
+  const counts = {};
+  for (const s of pool) { const k = (s.tags || [])[0]; if (k) counts[k] = (counts[k] || 0) + 1; }
+  const defs = [
+    ['all', zh ? '全部' : 'All', pool.length, true],
+    ['research', zh ? '研究论文' : 'Research', counts.research || 0, true],
+    ['news', zh ? '新闻' : 'News', counts.news || 0, false],
+    ['guideline', zh ? '指南' : 'Guidelines', counts.guideline || 0, false],
+    ['policy', zh ? '政策' : 'Policy', counts.policy || 0, false],
   ];
+  const types = defs.filter(([id,, n, always]) => always || n > 0 || value === id);
   return (
     <div role="tablist" className={className} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center', ...style }}>
-      {types.map(([id, label]) => {
+      {types.map(([id, label, n]) => {
         const on = value === id;
         return (
           <button key={id} type="button" role="tab" aria-selected={on} onClick={() => onChange(id)} style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '7px 13px', borderRadius: 'var(--radius-pill)', whiteSpace: 'nowrap', cursor: 'pointer',
             fontFamily: 'var(--font-sans)', fontSize: 13.5, fontWeight: on ? 600 : 500,
             border: `1px solid ${on ? 'transparent' : 'var(--border-subtle)'}`,
             background: on ? 'var(--ink-900)' : 'var(--surface-card)',
             color: on ? 'var(--paper)' : 'var(--text-secondary)',
             transition: 'var(--transition-colors)',
-          }}>{label}</button>
+          }}>
+            {label}
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 500, fontVariantNumeric: 'tabular-nums',
+              color: on ? 'rgba(255,255,255,0.6)' : 'var(--ink-300)' }}>{n}</span>
+          </button>
         );
       })}
     </div>
@@ -626,7 +642,7 @@ function AboutView({ onView, mobile }) {
   const secTitle = { margin: '0 0 18px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)' };
   const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const stats = [
-    { v: '50+', l: tt('证据来源', 'Sources') },
+    { v: '50', l: tt('证据来源', 'Sources') },
     { v: '8', l: tt('临床专科', 'Specialties') },
     { v: '0–100', l: tt('SIGNAL 评分', 'SIGNAL score') },
     { v: tt('每日', 'Daily'), l: tt('更新', 'Updated') },
@@ -721,8 +737,8 @@ function AboutView({ onView, mobile }) {
                 {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
-                {tt('每天，步频从全球 50+ 个顶级信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
-                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 50+ top sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
+                {tt('每天，步频从全球 50 个顶级信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
+                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 50 top sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('每天 5 分钟，把全球最新的临床证据，变成你推开诊室大门、面对患者时最硬核的知识武装。',
@@ -1897,11 +1913,17 @@ function FeedApp() {
   // final call after trying mixed): zh mode is all-Chinese (titleZh/summaryZh/
   // 中文 reason), en mode is all-English (title/summary/curatedReasonEn).
   // Missing bilingual fields fall back to the original language.
+  //
+  // en-mode guard (2026-07-04): the pipeline occasionally wrote a CHINESE
+  // summary into `summary` (~30% of PubMed items before the repair pass).
+  // Rendering that in en mode breaks the English experience, so a CJK summary
+  // is suppressed — the card still shows the English title + Cadence take.
+  // Backfill (scripts/backfill-summary-en.js) rewrites the data itself.
   const L = React.useCallback((s) => (zh
     ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
     // titleEn covers non-English-source items (e.g. 中文 source): their `title`
     // is the original (Chinese), so en mode needs an explicit English title.
-    : { ...s, title: s.titleEn || s.title, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
+    : { ...s, title: s.titleEn || s.title, summary: /[一-鿿]/.test(s.summary || '') ? '' : s.summary, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
 
   const DAY_LABELS = cdDayLabels();
 
@@ -1927,15 +1949,22 @@ function FeedApp() {
   // Cross-cutting pills (XCUTS, e.g. 康复科技) filter on their overlay flag
   // instead of the category field, so a neuro VR trial matches both 神经 and 科技.
   const xcut = (window.XCUTS || []).find((x) => x.id === category);
-  const matchesFilter = (s) => {
+  // Everything EXCEPT the content-type axis — reused for TypeTabs counts so
+  // each type's tally reflects the current specialty/search/score selection
+  // (a type with 0 hits under the active filters is hidden, not shown empty).
+  const matchesExceptType = (s) => {
     if (xcut) { if (!s[xcut.flag]) return false; }
     else if (category !== 'all' && s.category !== category) return false;
-    // Content-type axis (research / news / guideline / policy) = tags[0].
-    if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
     // Signal-score floor (opt-in, ?min=80) — only items at/above the threshold.
     if (minScore && s.score < minScore) return false;
     // Search across both languages regardless of display language.
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.titleEn || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
+    return true;
+  };
+  const matchesFilter = (s) => {
+    if (!matchesExceptType(s)) return false;
+    // Content-type axis (research / news / guideline / policy) = tags[0].
+    if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
     return true;
   };
   // All view draws from the merged pool (live feed + archive-only stories);
@@ -1944,6 +1973,8 @@ function FeedApp() {
     ? window.CD_STORIES.concat(archiveStories || [])
     : window.CD_STORIES;
   let stories = pool.filter(matchesFilter);
+  // Pool for the type-tab counts: same view, all filters applied except type.
+  const typeCountPool = pool.filter(matchesExceptType);
 
   // Daily brief view renders pre-built editions (briefs/daily/*.json) via
   // DailyBriefView below — it short-circuits the feed like Sources/Feedback,
@@ -2063,7 +2094,7 @@ function FeedApp() {
                   .cd-hscroll hides the scrollbar (defined in index.html). */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 {isMobile && <SpecialtySelect value={category} onChange={setCategory} />}
-                <TypeTabs value={ctype} onChange={setCtype}
+                <TypeTabs value={ctype} onChange={setCtype} pool={typeCountPool}
                   className={isMobile ? 'cd-hscroll' : undefined}
                   style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2, flex: 1, minWidth: 0 } : undefined} />
                 {/* Signal-score filter — drag the slider to set a minimum score.

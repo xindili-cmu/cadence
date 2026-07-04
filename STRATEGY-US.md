@@ -60,7 +60,8 @@
 ## 8. 风险
 
 - **主线分散**(PRINCIPLES: keep the main thing)→ 用第 6 节锚点强制止损;
-- **口径毛边**:sources.json 恰好 50 个,宣传写 "50+" → 改文案为 "50" 或补 1–2 个真实源;
+- **口径毛边**:~~sources.json 恰好 50 个,宣传写 "50+"~~ → 已修(2026-07-04):全站(index.html meta / JSON-LD / about 文案)统一为 "50";
+- **EN 摘要断裂(2026-07-04 对抗式审查发现,已修)**:§1 "英文字段全部已存在"当时不成立——29% 条目(22/75,全部 PubMed leg)的 `summary` 字段被模型写成了中文,英文界面和 `&lang=en` 分享卡直接露中文(线上实测)。修复:news-refresh.js 加 repairChineseSummaries 兜底 + EN 渲染/worker CJK 守卫 + `scripts/backfill-summary-en.js` 洗存量数据;
 - **EN 邮件冷启动**:目前订阅者以中文用户为主,EN segment 从零开始——预期前几期个位数,别被吓到。
 
 ---

@@ -12,10 +12,18 @@
 
 // Locale-aware copy: links shared from the EN edition carry &lang=en and get
 // English og fields (US market); default stays zh-first (core audience).
+const CJK_RE = /[一-鿿]/;
 function storyMeta(story, lang) {
   const en = lang === 'en';
   const title = (en ? (story.titleEn || story.title) : (story.titleZh || story.title)) || '';
-  const rawDesc = (en ? (story.summary || story.summaryZh) : (story.summaryZh || story.summary)) || '';
+  // en guard (2026-07-04): the pipeline occasionally wrote a Chinese summary
+  // into `summary` — an EN share card (LinkedIn daily path) must never carry a
+  // Chinese description. Fall back to the English take (curatedReasonEn),
+  // which is English by construction; last resort is an empty description.
+  const enDesc = !CJK_RE.test(story.summary || '')
+    ? (story.summary || story.curatedReasonEn || '')
+    : (story.curatedReasonEn || '');
+  const rawDesc = (en ? enDesc : (story.summaryZh || story.summary)) || '';
   const desc = rawDesc.length > 200 ? rawDesc.slice(0, 199) + '…' : rawDesc;
   return { title, desc };
 }

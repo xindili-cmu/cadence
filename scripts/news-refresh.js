@@ -634,7 +634,7 @@ tags 规则：
 - **陈旧内容检查**：核对 url 路径和正文里的年份/试验线索。博客或聚合站转载多年前的旧研究（即使 publishedDate 显示很新）一律 <60；研究本身年代久但新闻点是"新指南/新政策引用了它"则按新闻点正常评分。blogspot / 内容农场域名默认重扣。
 
 编辑标准：
-- summary：1-2 句中性英文，front-load "what changed"。研究类**优先**带样本量 + 关键效应量（或 p 值 / CI）——但**只在所给 text 中明确出现该数字时才写入，并照抄原值**；text 里没有就省略数字，**绝不臆测，也不得套用本批其他条目的数字**。**summary 必须讲研究"发现了什么"（方向 / 结论），不是罗列做了哪些统计**——出现 "calculated mean differences, 95% CI, I² statistic, using the GRADE approach" 这类只讲方法不给结果的写法即重写；摘要里读不出结论方向时，如实写"the review did not report a pooled direction"之类，不要用方法清单充数。
+- summary：1-2 句中性英文——**必须是英文（English only），绝不能写中文**：它是英文界面与英文分享卡的正文字段，中文摘要只属于 summaryZh。front-load "what changed"。研究类**优先**带样本量 + 关键效应量（或 p 值 / CI）——但**只在所给 text 中明确出现该数字时才写入，并照抄原值**；text 里没有就省略数字，**绝不臆测，也不得套用本批其他条目的数字**。**summary 必须讲研究"发现了什么"（方向 / 结论），不是罗列做了哪些统计**——出现 "calculated mean differences, 95% CI, I² statistic, using the GRADE approach" 这类只讲方法不给结果的写法即重写；摘要里读不出结论方向时，如实写"the review did not report a pooled direction"之类，不要用方法清单充数。
 - **双语字段（站点有中英切换，三个字段全部必填）**：
   - titleZh：标题的中文翻译。专业、紧凑，不逐字直译；解剖结构 / 干预手段用临床通用中文译名，缩写（如 ACL、COPD、RCT）保留英文。
   - summaryZh：summary 的中文版，同样 1-2 句、front-load 变化点、保留数字。不是 summary 的直译腔，要像中文期刊导读。
@@ -679,7 +679,8 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
   const text = await llm(systemPrompt, userPrompt);
   if (!text) return [];
-  const curated = await repairEnglishReasons(parseCuratedArray(text));
+  let curated = await repairEnglishReasons(parseCuratedArray(text));
+  curated = await repairChineseSummaries(curated);
   return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
 }
 
@@ -717,6 +718,40 @@ async function repairEnglishReasons(curated) {
   }
   const still = curated.filter(c => c.curatedReason && !CJK_RE.test(c.curatedReason)).length;
   if (still) console.log(`   ⚠️  ${still} reasons still English after repair (kept as-is)`);
+  return curated;
+}
+
+// 镜像兜底：summary 必须是英文（它是英文界面 + 英文分享卡的正文），但模型
+// 会以 ~30% 的频率无视提示词、把中文摘要塞进 summary（2026-07-04 审查实测
+// 22/75 条，全部 PubMed leg）。检测含 CJK 的 summary：先把中文版挪去
+// summaryZh（若缺），再批量请模型重写英文版。修复失败的条目保持原样。
+const SUMMARY_EN_REPAIR_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的英文编辑。下面每条的 summary 本应是英文，却生成成了中文。请把每条改写成 1-2 句中性英文：
+- front-load "what changed"——先说结论方向，再说条件。
+- 保留原文里的所有数字（样本量、效应量、p 值 / CI），照抄原值，绝不臆测。
+- 缩写（RCT、ACL、COPD 等）保留。专业、紧凑，不是逐字翻译。
+- 只讲研究"发现了什么"，不罗列统计方法。
+
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"summary":"English summary"}]`;
+
+async function repairChineseSummaries(curated) {
+  const bad = curated.filter(c => CJK_RE.test(c.summary || ''));
+  if (!bad.length) return curated;
+  console.log(`   🛠  ${bad.length} summary came back in Chinese — rewriting in English`);
+  for (let off = 0; off < bad.length; off += 10) {
+    const batch = bad.slice(off, off + 10);
+    const user = `重写以下 ${batch.length} 条：\n\n` + JSON.stringify(
+      batch.map((c, i) => ({ index: i, summary: c.summary })), null, 2);
+    const text = await callLLM(SUMMARY_EN_REPAIR_SYSTEM, user);
+    const fixed = parseCuratedArray(text || '');
+    fixed.forEach(f => {
+      const c = batch[f.index];
+      if (!c || !f.summary || CJK_RE.test(f.summary)) return;
+      if (!c.summaryZh) c.summaryZh = c.summary; // 中文版别丢
+      c.summary = f.summary;
+    });
+  }
+  const still = curated.filter(c => CJK_RE.test(c.summary || '')).length;
+  if (still) console.log(`   ⚠️  ${still} summaries still Chinese after repair (kept as-is)`);
   return curated;
 }
 
@@ -1340,7 +1375,7 @@ async function main() {
 <channel>
   <title>Cadence 步频 — PT Research Signal</title>
   <link>${SITE_URL}/</link>
-  <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 50+ journals.</description>
+  <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 50 sources.</description>
   <language>en</language>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
   <ttl>360</ttl>${SITE_URL ? `\n  <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>` : ''}
