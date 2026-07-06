@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-06T20:22:45.002Z",
+    "lastUpdated": "2026-07-06T21:51:34.132Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -105,7 +105,7 @@
           "titleZh": "慢性卒中和脊髓损伤中经皮脊髓电刺激结合上肢机器人训练：个体神经生理和临床反应"
         }
       ],
-      "heat": 6.71
+      "heat": 6.56
     },
     {
       "id": "news-1782220755787-13",
@@ -186,7 +186,7 @@
           "titleZh": "膝关节骨关节炎基因动脉栓塞术 (GAUCHO) 研究：亚胺培南/西司他丁与微球栓塞剂的 12 个月临床结果单盲随机对照试验"
         }
       ],
-      "heat": 6.32
+      "heat": 6.19
     },
     {
       "id": "news-1783149593311-2",
@@ -194,12 +194,11 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42399091/",
       "category": "orthopedic",
       "publishedAt": "2026-07-06T13:19:28.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         "British journal of sports medicine",
         "British Journal of Sports Medicine",
         "Sports Medicine",
-        "Journal of physiotherapy",
         "Archives of Physical Medicine and Rehabilitation"
       ],
       "tag": "orthopedic",
@@ -223,18 +222,6 @@
           "titleZh": "个性化血流限制训练在超重和肥胖老年女性中改善多系统功能"
         },
         {
-          "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [synopsis].",
-          "titleZh": "批判性评估：基于移动设备的肺康复与中心化肺康复在慢性阻塞性肺疾病患者中的效果"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Exercise-based cancer telerehabilitation is safe but not superior to a single session of physiotherapy for improving quality of life: a randomised trial.",
-          "titleZh": "癌症运动远程康复是安全的，但其改善生活质量的效果不优于单次物理治疗：一项随机试验"
-        },
-        {
           "source": "Archives of PM&R",
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "The effectiveness of perioperative respiratory muscle exercise in elderly cardiac surgery patients: a randomized controlled trial",
@@ -253,7 +240,7 @@
           "titleZh": "预防喀麦隆足球运动员猝死：Marc-Vivien Foe 悲剧性死亡 22 年后的随访"
         }
       ],
-      "heat": 4.52
+      "heat": 3.54
     },
     {
       "id": "news-1783076660306-0",
@@ -301,7 +288,7 @@
           "titleZh": "治疗性按摩单独或联合常规物理治疗在肌筋膜疼痛综合征中的短期效果：一项随机对照试验"
         }
       ],
-      "heat": 2.71
+      "heat": 2.65
     },
     {
       "id": "news-1783015551755-0",
@@ -357,10 +344,53 @@
           "titleZh": "WalkBack（步行与教育）腰痛预防项目获得物理治疗师认可，但其优化实施依赖培训、灵活性和系统性支持：一项定性研究"
         }
       ],
-      "heat": 1.86
+      "heat": 1.82
     }
   ],
   "items": [
+    {
+      "id": "news-1782220755787-20",
+      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [commentary].",
+      "summary": "This critically appraised paper discusses that mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than center-based pulmonary rehabilitation for chronic obstructive pulmonary disease.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331699/",
+      "publishedAt": "2026-06-23T00:00:00.000Z",
+      "firstSeen": "2026-06-23T13:19:15.787Z",
+      "curatedScore": 85,
+      "curatedReason": "这项批判性评估文章强调了移动端肺康复与中心肺康复在改善 COPD 患者运动能力方面的非劣效性，并显示了对健康状况的优越性。这坐实了移动端康复在慢阻肺管理中的核心地位，尤其是在资源受限或依从性不佳的场景下，可以积极推广。",
+      "titleZh": "批判性评估：移动端肺康复在改善慢阻肺患者运动能力方面与中心肺康复相当，但在健康状况方面更优越",
+      "summaryZh": "一篇批判性评估文章指出，对于慢性阻塞性肺疾病（COPD）患者，移动端肺康复在提高运动能力方面与中心肺康复效果相当，且在改善健康状况方面表现更优。",
+      "curatedReasonEn": "This critically appraised paper highlights the non-inferiority of mobile-based pulmonary rehabilitation compared to center-based rehabilitation in improving exercise capacity, and its superiority in health status for COPD patients. This solidifies the central role of mobile rehabilitation in COPD management; actively promote it, especially in resource-limited or low-adherence scenarios.",
+      "tags": [
+        "news",
+        "telehealth"
+      ],
+      "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1782153023647-5",
+      "title": "Barriers and Trends to Early Mobilization in Children With a Traumatic Brain Injury.",
+      "summary": "This retrospective cohort study identified barriers to early mobility in 80 children with traumatic brain injury in a pediatric ICU. High mobility occurred in 53% of OT and 56.3% of PT sessions, with common barriers noted.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42328753/",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "firstSeen": "2026-06-22T18:30:23.647Z",
+      "curatedScore": 70,
+      "curatedReason": "这项回顾性研究量化了儿科创伤性脑损伤患者早期活动的障碍，突出重症监护期间常见的治疗依从性问题。请留意这些障碍，并在实践中与医疗团队积极沟通，以最大化早期活动的机会。",
+      "titleZh": "创伤性脑损伤患儿早期活动面临的障碍和趋势",
+      "summaryZh": "一项回顾性队列研究分析了80名儿科ICU创伤性脑损伤患儿的早期活动情况和障碍。结果显示，高水平活动在53%的OT和56.3%的PT治疗中实现，并记录了常见障碍。",
+      "curatedReasonEn": "This retrospective study quantifies barriers to early mobilization in pediatric TBI patients, highlighting common adherence issues during ICU stays. Be aware of these barriers and actively communicate with the medical team to maximize early mobility opportunities in your practice.",
+      "limitation": "这是一项回顾性单中心研究，结果的外推性有限，且可能存在信息偏差。",
+      "limitationEn": "This is a retrospective single-center study, limiting generalizability and potentially subject to information bias.",
+      "tags": [
+        "research",
+        "brain-injury"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
     {
       "id": "news-1783149593311-2",
       "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
@@ -410,30 +440,6 @@
       "journal": "Archives of physiotherapy"
     },
     {
-      "id": "news-1782131401122-6",
-      "title": "Two-Year Outcomes of the Proximal Hamstring Avulsion Rehabilitation Regimes: Longitudinal Versus Accelerated Protocol (PHARRLAP) Study: A Randomized Controlled Trial.",
-      "summary": "A 2-year follow-up RCT found that an accelerated rehabilitation (AR) protocol for proximal hamstring tendon repair was non-inferior to a conservative (CR) protocol in restoring strength and functional symmetry, with similar complication rates.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42324766/",
-      "publishedAt": "2026-06-22T00:00:00.000Z",
-      "firstSeen": "2026-06-22T12:30:01.122Z",
-      "curatedScore": 85,
-      "curatedReason": "这项 2 年随访的随机对照试验（RCT）比较了近端腘绳肌肌腱修复术后保守（CR）与加速（AR）康复方案。研究发现，AR 方案在恢复力量和功能对称性方面，与 CR 方案相比，在 2 年时表现出相当的临床结果，且并发症和再损伤的发生率相似。对于运动员康复，这提供了高级别证据，支持在适当患者中采用更快的康复进程。",
-      "titleZh": "近端腘绳肌肌腱修复术后康复方案（长期 vs 加速）的两年随访结果：PHARRLAP 研究",
-      "titleEn": "Two-Year Outcomes of the Proximal Hamstring Avulsion Rehabilitation Regimes: Longitudinal Versus Accelerated Protocol (PHARRLAP) Study: A Randomized Controlled Trial.",
-      "summaryZh": "一项为期两年的随机对照试验（RCT）发现，近端腘绳肌肌腱修复术后的加速康复（AR）方案在恢复力量和功能对称性方面，与保守康复（CR）方案相比，在两年时表现相当，且并发症发生率相似。",
-      "curatedReasonEn": "This 2-year follow-up RCT comparing conservative (CR) versus accelerated (AR) rehabilitation pathways after proximal hamstring tendon repair found AR to be non-inferior to CR in restoring strength and functional symmetry at 2 years, with similar rates of complications and reinjury. This provides high-level evidence supporting a faster rehabilitation progression in appropriate athletes.",
-      "limitation": "The study involved patients undergoing repair for acute tendon avulsions involving at least two tendons; findings may not generalize to all proximal hamstring injuries or repair types.",
-      "limitationEn": "The study involved patients undergoing repair for acute tendon avulsions involving at least two tendons; findings may not generalize to all proximal hamstring injuries or repair types.",
-      "tags": [
-        "research",
-        "sports"
-      ],
-      "studyDesign": "RCT",
-      "journal": "The American journal of sports medicine"
-    },
-    {
       "id": "news-1783101190186-3",
       "title": "Development of a Core Patient-Reported Outcome (Measures) Set for Pediatric Physical Therapy.",
       "summary": "A study developed a core set of nine patient-reported outcomes (PROs) and corresponding measures (PROMs) for pediatric physical therapy practice, research, and quality assessment, covering functioning and other domains.",
@@ -456,30 +462,6 @@
       ],
       "studyDesign": "综述",
       "journal": "Pediatric physical therapy : the official publication of the Section on Pediatrics of the American Physical Therapy Association"
-    },
-    {
-      "id": "news-1782254605962-4",
-      "title": "Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [synopsis].",
-      "summary": "A critical appraisal indicates that mobile-based pulmonary rehabilitation is as effective as center-based pulmonary rehabilitation for improving exercise capacity in COPD patients and may be superior for improving health status.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42331695/",
-      "publishedAt": "2026-06-23T00:00:00.000Z",
-      "firstSeen": "2026-06-23T13:19:15.787Z",
-      "curatedScore": 85,
-      "curatedReason": "这项批判性评估指出，基于移动设备的肺康复在改善慢性阻塞性肺疾病（COPD）患者运动能力方面，效果与中心化肺康复相当，但在改善健康状态方面可能更优。对于心肺康复从业者，这提供了支持利用远程医疗进行 COPD 肺康复的证据，尤其是在健康状态改善方面。",
-      "titleZh": "批判性评估：基于移动设备的肺康复与中心化肺康复在慢性阻塞性肺疾病患者中的效果",
-      "titleEn": "[Editorial] Critically appraised paper: Mobile-based pulmonary rehabilitation improved exercise capacity as much as and health status more than centre-based pulmonary rehabilitation for chronic obstructive pulmonary disease [synopsis].",
-      "summaryZh": "一项批判性评估指出，基于移动设备的肺康复在改善慢性阻塞性肺疾病（COPD）患者运动能力方面与中心化肺康复相当，但在改善健康状态方面可能更优。",
-      "curatedReasonEn": "This critical appraisal suggests that mobile-based pulmonary rehabilitation is comparable to center-based pulmonary rehabilitation for improving exercise capacity in COPD patients, and potentially superior for improving health status. For cardiopulmonary rehabilitation professionals, this provides evidence supporting the use of telehealth for COPD pulmonary rehabilitation, particularly in enhancing health status.",
-      "limitation": "This is a synopsis of a larger study and may not include all details of the original research.",
-      "limitationEn": "This is a synopsis of a larger study and may not include all details of the original research.",
-      "tags": [
-        "research",
-        "cardiopulmonary"
-      ],
-      "studyDesign": "综述",
-      "journal": "Journal of physiotherapy"
     },
     {
       "id": "news-1783369364423-27",
