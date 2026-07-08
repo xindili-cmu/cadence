@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-08T06:41:54.291Z",
+    "lastUpdated": "2026-07-08T10:33:03.079Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,12 +19,11 @@
       "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42411984/",
       "category": "neurological",
-      "publishedAt": "2026-07-14T13:00:31.000Z",
-      "sourceCount": 9,
+      "publishedAt": "2026-07-07T23:17:23.069Z",
+      "sourceCount": 8,
       "sources": [
         "Clinical rehabilitation",
         "Gait & Posture",
-        "PubMed",
         "NeuroRehabilitation",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
@@ -45,11 +44,6 @@
           "source": "Gait & Posture",
           "title": "Advances in research on the role of VEGF family members in ischemic stroke - ScienceDirect",
           "titleZh": "VEGF家族成员在缺血性卒中中作用研究进展"
-        },
-        {
-          "source": "PubMed",
-          "title": "Thrombectomy for Pediatric Large Vessel Occlusion Stroke With Mild Presenting Symptoms",
-          "titleZh": "轻度症状表现的儿童大血管闭塞性卒中血栓切除术"
         },
         {
           "source": "PubMed",
@@ -118,26 +112,38 @@
           "titleZh": "脊髓损伤患者孤独感的关联因素"
         }
       ],
-      "heat": 9
+      "heat": 6.8
     },
     {
-      "id": "news-1782995044051-0",
-      "title": "Preoperative physiotherapy and one-year patient-reported outcomes after primary total knee arthroplasty: a registry-based cohort study of 1,688 patients.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42387883/",
+      "id": "news-1783506782219-0",
+      "title": "In safe hands - patients with knee and hip osteoarthritis expectations and experience of physical therapist-led triage in a secondary care setting.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42414961/",
       "category": "orthopedic",
-      "publishedAt": "2026-07-07T22:34:26.687Z",
+      "publishedAt": "2026-07-08T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "Journal of rehabilitation medicine",
         "BMC musculoskeletal disorders",
-        "PubMed",
         "The Journal of orthopaedic and sports physical therapy",
+        "Journal of rehabilitation medicine",
         "British Journal of Sports Medicine",
-        "JOSPT"
+        "Pain",
+        "Physiotherapy theory and practice"
       ],
       "tag": "knee",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "In safe hands - patients with knee and hip osteoarthritis expectations and experience of physical therapist-led triage in a secondary care setting.",
+          "titleZh": "膝髋骨关节炎患者对二级护理中物理治疗师主导分诊的期望与体验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Early-Stage Symptomatic Hip Osteoarthritis: A Window of Opportunity.",
+          "titleZh": "早期症状性髋骨关节炎：一个干预的窗口期"
+        },
         {
           "source": "PubMed",
           "journal": "Journal of rehabilitation medicine",
@@ -151,6 +157,56 @@
           "titleZh": "膝关节置换术后长期活动限制建议存在重大分歧：一项针对瑞典物理治疗师的调查"
         },
         {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Rehabilitation and outcomes following revision total hip replacement: patients experiences, optimised rehabilitation interventions and opioid use (PhD Academy Award)",
+          "titleZh": "翻修全髋关节置换术后的康复和结局：患者体验、优化康复干预和阿片类药物使用（博士学院奖）"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Pain",
+          "title": "Predictive socio-cultural factors of pain intensity, disability, and quality of life in patients with nonspecific musculoskeletal pain: a prospective cohort study.",
+          "titleZh": "预测非特异性肌肉骨骼疼痛患者疼痛强度、残疾和生活质量的社会文化因素：一项前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Reliability of digital algometer-based pressure pain threshold measurement in patients with end-stage knee osteoarthritis: a single-center reliability study.",
+          "titleZh": "数字测痛仪在终末期膝骨关节炎患者中压痛阈测量信度研究：一项单中心信度研究"
+        }
+      ],
+      "heat": 5.15
+    },
+    {
+      "id": "news-1782467698913-5",
+      "title": "Establishing weighted criteria for return to play after hamstring injury: a systematic review and methodological quality analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42351065/",
+      "category": "sports",
+      "publishedAt": "2026-07-07T22:34:26.687Z",
+      "sourceCount": 6,
+      "sources": [
+        "BMC musculoskeletal disorders",
+        "JOSPT",
+        "PubMed",
+        "International journal of sports physical therapy",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+      ],
+      "tag": "sports-injury",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Establishing weighted criteria for return to play after hamstring injury: a systematic review and methodological quality analysis.",
+          "titleZh": "膕绳肌损伤后重返运动的加权标准建立：一项系统综述和方法学质量分析"
+        },
+        {
+          "source": "JOSPT",
+          "title": "Rehabilitation of Long-Standing Groin Pain in Athletes: A Scoping Review of Exercise Content and Reporting | Journal of Orthopaedic & Sports Physical Therapy",
+          "titleZh": "运动员慢性腹股沟疼痛的康复：运动内容与报告的范围综述"
+        },
+        {
           "source": "PubMed",
           "title": "Comparative Outcomes of Circumferential Versus Segmental Labral Reconstruction in Hip Arthroscopy: A Systematic Review and Meta-analysis",
           "titleZh": "髋关节镜下环形与节段性盂唇重建的比较结局：一项系统综述和Meta分析"
@@ -159,56 +215,6 @@
           "source": "PubMed",
           "title": "Hip Arthroscopic Labral Repair for Femoroacetabular Impingement Yields High Return-to-Sport Rates and Improved Outcomes in Basketball Players",
           "titleZh": "髋关节镜下盂唇修复术治疗股骨髋臼撞击使篮球运动员获得高重返运动率和改善的结局"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of orthopaedic and sports physical therapy",
-          "title": "Early-Stage Symptomatic Hip Osteoarthritis: A Window of Opportunity.",
-          "titleZh": "早期症状性髋骨关节炎：一个干预的窗口期"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Rehabilitation and outcomes following revision total hip replacement: patients experiences, optimised rehabilitation interventions and opioid use (PhD Academy Award)",
-          "titleZh": "翻修全髋关节置换术后的康复和结局：患者体验、优化康复干预和阿片类药物使用（博士学院奖）"
-        },
-        {
-          "source": "JOSPT",
-          "title": "Rehabilitation of Long-Standing Groin Pain in Athletes: A Scoping Review of Exercise Content and Reporting | Journal of Orthopaedic & Sports Physical Therapy",
-          "titleZh": "运动员慢性腹股沟疼痛的康复：运动内容与报告的范围综述"
-        }
-      ],
-      "heat": 5.34
-    },
-    {
-      "id": "news-1783418636531-5",
-      "title": "Cross-Education Effect on Force Production Capacity After Unilateral Resistance Training in Clinical Populations: A Systematic Review with Meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42410073/",
-      "category": "neurological",
-      "publishedAt": "2026-07-07T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "Sports medicine (Auckland, N.Z.)",
-        "British journal of sports medicine",
-        "BMC musculoskeletal disorders",
-        "International journal of sports physical therapy",
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "Clinical biomechanics (Bristol, Avon)"
-      ],
-      "tag": "spinal-cord",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Sports medicine (Auckland, N.Z.)",
-          "title": "Cross-Education Effect on Force Production Capacity After Unilateral Resistance Training in Clinical Populations: A Systematic Review with Meta-analysis.",
-          "titleZh": "单侧阻力训练后交叉教育效应对临床人群力量产生能力的影响：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "British journal of sports medicine",
-          "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
-          "titleZh": "血流限制训练在肌肉骨骼康复中是否比传统训练有额外益处？一项系统综述和Meta分析"
         },
         {
           "source": "PubMed",
@@ -236,24 +242,17 @@
         },
         {
           "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Effects of Dynamic Taping on Dynamic Balance and Proprioception in Recreational Athletes with Chronic Ankle Instability.",
-          "titleZh": "动态贴扎对慢性踝关节不稳休闲运动员动态平衡和本体感觉的影响"
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Physical Activity in Women With Obesity: Fatigue, Knee Symptoms, and Functional Capacity.",
+          "titleZh": "肥胖女性的身体活动：疲劳、膝关节症状与功能能力的关系"
         },
         {
           "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "Biomechanical effects of Kinesio versus Mulligan ankle taping on balance and ankle function in chronic STROKE: A randomized controlled trial.",
-          "titleZh": "Kinesio 贴扎与 Mulligan 踝关节贴扎对慢性卒中患者平衡和踝关节功能的生物力学效应：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Figure-of-Eight Taping Combined with Rehabilitation for Multidirectional Shoulder Instability in a School-Age Female Karate Athlete: A Case Report.",
-          "titleZh": "八字贴扎结合康复训练治疗学龄空手道运动员多方向肩关节不稳：病例报告"
+          "title": "Risk Factors for Musculoskeletal Injuries in Military Recruits: The Impact of Sex, Body Fat Percentage, and Physical Fitness",
+          "titleZh": "军事新兵肌肉骨骼损伤的风险因素：性别、体脂百分比和体能的影响"
         }
       ],
-      "heat": 3.85
+      "heat": 5.05
     },
     {
       "id": "news-1782813882998-0",
@@ -321,60 +320,152 @@
           "titleZh": "物理治疗学生数字模拟超声训练：前瞻性随机对照试验"
         }
       ],
-      "heat": 3.85
+      "heat": 3.64
     },
     {
-      "id": "news-1783052054926-16",
-      "title": "Multi-Domain Benefits of Exergaming for Sarcopenia Management in Institutionalized Older Adults: Physical, Psychological, and Social Outcomes.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42372958/",
-      "category": "geriatric",
-      "publishedAt": "2026-07-05T00:00:00.000Z",
-      "sourceCount": 5,
+      "id": "news-1783418636531-5",
+      "title": "Cross-Education Effect on Force Production Capacity After Unilateral Resistance Training in Clinical Populations: A Systematic Review with Meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42410073/",
+      "category": "neurological",
+      "publishedAt": "2026-07-07T00:00:00.000Z",
+      "sourceCount": 4,
       "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Spine",
-        "Journal of geriatric physical therapy (2001)"
+        "Sports medicine (Auckland, N.Z.)",
+        "NeuroRehabilitation",
+        "International journal of sports physical therapy",
+        "Clinical biomechanics (Bristol, Avon)"
       ],
-      "tag": "sarcopenia",
+      "tag": "spinal-cord",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Multi-Domain Benefits of Exergaming for Sarcopenia Management in Institutionalized Older Adults: Physical, Psychological, and Social Outcomes.",
-          "titleZh": "体感游戏对机构养老老年肌少症患者的多领域益处：身体、心理和社会结局"
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "Cross-Education Effect on Force Production Capacity After Unilateral Resistance Training in Clinical Populations: A Systematic Review with Meta-analysis.",
+          "titleZh": "单侧阻力训练后交叉教育效应对临床人群力量产生能力的影响：一项系统综述与荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Validating an Activity Monitor for Acute Care Patients: The Patient/Resident Mobility Tracker (PREEMPT).",
-          "titleZh": "验证用于急性护理患者的活动监测仪：患者/居民移动追踪器（PREEMPT）"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Trends in Intrinsic Capacity: Evidence from 32 Countries",
-          "titleZh": "内在能力趋势：来自 32 个国家的证据"
+          "journal": "NeuroRehabilitation",
+          "title": "Improved Flexor Spasticity in Patients with Chronic Stroke Using a Dynamic Wrist-Hand Stretching Device: A Pilot Randomized Controlled Trial.",
+          "titleZh": "动态腕手牵伸装置改善慢性卒中患者屈肌痉挛：一项试点随机对照试验"
         },
         {
           "source": "PubMed",
-          "journal": "Spine",
-          "title": "Sarcopenia Increases Adjacent Segment Degeneration Risk within 3 Years of Anterior Cervical Discectomy and Fusion.",
-          "titleZh": "肌少症增加颈椎前路椎间盘切除融合术后3年内邻近节段退变的风险"
+          "journal": "International journal of sports physical therapy",
+          "title": "Effects of Dynamic Taping on Dynamic Balance and Proprioception in Recreational Athletes with Chronic Ankle Instability.",
+          "titleZh": "动态贴扎对慢性踝关节不稳休闲运动员动态平衡和本体感觉的影响"
         },
         {
           "source": "PubMed",
-          "journal": "Journal of geriatric physical therapy (2001)",
-          "title": "The Perspective and Needs of Older Adults With Osteoporosis With a Recent Upper Extremity Fragility Fracture Concerning Fall Risk and Fear of Falling.",
-          "titleZh": "骨质疏松性上肢脆性骨折老年患者对跌倒风险和跌倒恐惧的看法和需求"
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "Biomechanical effects of Kinesio versus Mulligan ankle taping on balance and ankle function in chronic STROKE: A randomized controlled trial.",
+          "titleZh": "Kinesio 贴扎与 Mulligan 踝关节贴扎对慢性卒中患者平衡和踝关节功能的生物力学效应：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Figure-of-Eight Taping Combined with Rehabilitation for Multidirectional Shoulder Instability in a School-Age Female Karate Athlete: A Case Report.",
+          "titleZh": "八字贴扎结合康复训练治疗学龄空手道运动员多方向肩关节不稳：病例报告"
         }
       ],
-      "heat": 1.6
+      "heat": 2.43
     }
   ],
   "items": [
+    {
+      "id": "news-1783101190185-1",
+      "title": "Improved Flexor Spasticity in Patients with Chronic Stroke Using a Dynamic Wrist-Hand Stretching Device: A Pilot Randomized Controlled Trial.",
+      "summary": "A pilot RCT (n=30) found that a novel dynamic wrist-hand stretching device, Hand Stretcher®, significantly improved flexor spasticity and increased wrist range of motion in chronic stroke patients with mild-to-moderate spasticity over 8 weeks compared to a control group.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42396838/",
+      "publishedAt": "2026-07-03T00:00:00.000Z",
+      "firstSeen": "2026-07-03T17:53:10.185Z",
+      "curatedScore": 80,
+      "curatedReason": "新型动态腕手牵伸装置有望改善慢性卒中患者屈肌痉挛。这项小型 RCT 提示，对于轻中度痉挛的患者，该装置可有效降低 MAS 评分和提高 ROM，为传统手动牵伸提供了辅助方案。",
+      "titleZh": "动态腕手牵伸装置改善慢性卒中患者屈肌痉挛：一项试点随机对照试验",
+      "summaryZh": "一项试点随机对照试验（n=30）发现，与对照组相比，Hand Stretcher® 动态腕手牵伸装置在 8 周内显著改善了慢性卒中轻中度痉挛患者的屈肌痉挛并增加了腕关节活动度。",
+      "curatedReasonEn": "A novel dynamic wrist-hand stretching device shows promise in improving flexor spasticity in chronic stroke patients. This small RCT suggests that for patients with mild-to-moderate spasticity, the device effectively reduces MAS scores and increases ROM, offering an adjunctive option to traditional manual stretching.",
+      "limitation": "这是一项初步的试点研究，样本量较小，长期疗效和更广泛人群的适用性尚待大型 RCT 验证。",
+      "limitationEn": "This is a preliminary pilot study with a small sample size; long-term efficacy and applicability to a broader population require validation through larger RCTs.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "RCT",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1783015551757-4",
+      "title": "Efficacy and Modulating Factors of Repetitive Transcranial Magnetic Stimulation on Motor Function in Parkinson's Disease: A Meta-Analysis.",
+      "summary": "This meta-analysis evaluated the short-term and long-term therapeutic effects of repetitive transcranial magnetic stimulation (rTMS) on motor function in Parkinson's disease, identifying stimulation site, coil type, and stimulation frequency as key modulating factors.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42390328/",
+      "publishedAt": "2026-07-02T00:00:00.000Z",
+      "firstSeen": "2026-07-02T18:05:51.757Z",
+      "curatedScore": 80,
+      "curatedReason": "这篇荟萃分析再次确认了重复经颅磁刺激（rTMS）对帕金森病运动功能的短期改善作用。刺激部位（如运动皮层）和高频刺激是关键调节因素，临床实践中可作为优化 rTMS 方案的参考。",
+      "titleZh": "重复经颅磁刺激对帕金森病运动功能疗效及调节因素的荟萃分析",
+      "summaryZh": "这项荟萃分析评估了重复经颅磁刺激（rTMS）对帕金森病患者运动功能的短期和长期治疗效果，并确定了刺激部位、线圈类型和刺激频率是关键的调节因素。",
+      "curatedReasonEn": "This meta-analysis reconfirms the short-term motor function improvement of rTMS in Parkinson's disease. Stimulation site (e.g., motor cortex) and high-frequency stimulation are key modulating factors that can guide optimization of rTMS protocols in clinical practice.",
+      "limitation": "荟萃分析纳入的原始研究异质性可能较高，且主要评估短期效应，长期疗效和不同 rTMS 方案的最佳组合仍需更多高质量研究。",
+      "limitationEn": "The included studies in this meta-analysis may have high heterogeneity, and mainly evaluated short-term effects; long-term efficacy and optimal combinations of different rTMS protocols still require more high-quality research.",
+      "tags": [
+        "research",
+        "parkinson"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1782467698913-5",
+      "title": "Establishing weighted criteria for return to play after hamstring injury: a systematic review and methodological quality analysis.",
+      "summary": "This systematic review established weighted criteria for return to play after hamstring injury by analyzing studies from PubMed, Sportdiscuss, WOS, and Scielo databases, aiming to address the high recurrence rate due to lack of consensus.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42351065/",
+      "publishedAt": "2026-06-26T00:00:00.000Z",
+      "firstSeen": "2026-06-26T09:54:58.913Z",
+      "curatedScore": 80,
+      "curatedReason": "膕绳肌损伤后的重返运动标准缺乏共识，导致高复发率。这篇系统综述试图建立加权标准，作为临床指导，你可以在制定或调整重返运动方案时参考其中的证据质量分析，以降低患者再损伤风险。",
+      "titleZh": "膕绳肌损伤后重返运动的加权标准建立：一项系统综述和方法学质量分析",
+      "summaryZh": "这项系统综述通过分析 PubMed、Sportdiscuss、WOS 和 Scielo 数据库的研究，建立了膕绳肌损伤后重返运动的加权标准，旨在解决因缺乏共识导致的高复发率问题。",
+      "curatedReasonEn": "Lack of consensus on return-to-play criteria after hamstring injury contributes to high recurrence rates. This systematic review aims to establish weighted criteria as clinical guidance. You can refer to its evidence quality analysis when developing or adjusting return-to-play protocols to reduce patient re-injury risk.",
+      "limitation": "本系统综述发现现有研究方法学质量差异大，且缺乏统一的重返运动标准，提示仍需更多高质量研究来确立最佳实践。",
+      "limitationEn": "This systematic review found significant heterogeneity in methodological quality among existing studies and a lack of unified return-to-play criteria, indicating a need for more high-quality research to establish best practices.",
+      "tags": [
+        "research",
+        "sports-injury"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1783506782219-0",
+      "title": "In safe hands - patients with knee and hip osteoarthritis expectations and experience of physical therapist-led triage in a secondary care setting.",
+      "summary": "This qualitative study explored the expectations and experiences of hip or knee osteoarthritis patients regarding physical therapist-led triage in a Swedish orthopedic clinic, finding that while care quality was perceived as good, patient participation in decision-making and fulfillment of assessment expectations were lower.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42414961/",
+      "publishedAt": "2026-07-08T00:00:00.000Z",
+      "firstSeen": "2026-07-08T10:33:02.220Z",
+      "curatedScore": 75,
+      "curatedReason": "骨关节炎患者对物理治疗师主导的分诊（PT-led triage）期望值高，但对决策参与度和评估满足度较低。这意味着即便 PT 主导分诊能提高就诊可及性，患者体验设计也需优化，不能只关注诊疗结果。",
+      "titleZh": "膝髋骨关节炎患者对二级护理中物理治疗师主导分诊的期望与体验",
+      "summaryZh": "这项定性研究探讨了瑞典骨科诊所中，膝髋骨关节炎患者对物理治疗师主导分诊的期望和体验。研究发现，虽然患者认为护理质量良好，但他们在决策参与度和评估期望满足度方面较低。",
+      "curatedReasonEn": "Patients with OA have high expectations for PT-led triage, but report lower satisfaction with decision-making participation and assessment fulfillment. This suggests that while PT-led triage improves access, patient experience design needs optimization beyond just clinical outcomes.",
+      "limitation": "本研究采用探索性定性设计，样本量小，结果的外推性有限。",
+      "limitationEn": "This study used an exploratory qualitative design with a small sample size, limiting the generalizability of the findings.",
+      "tags": [
+        "research",
+        "knee",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC musculoskeletal disorders"
+    },
     {
       "id": "news-1783455552962-1",
       "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
@@ -2028,91 +2119,6 @@
         "neuroplasticity"
       ],
       "studyDesign": "综述"
-    },
-    {
-      "id": "news-1783463898493-17",
-      "title": "How does exercise dose affect patients with long-term osteoarthritis ...",
-      "summary": "This study protocol outlines the SWENOR Study, a randomized controlled trial in Sweden and Norway, investigating how exercise dose affects patients with long-term osteoarthritis of the knee.",
-      "category": "orthopedic",
-      "source": "BJSM",
-      "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/8/5/e018471.full.pdf",
-      "publishedAt": "2026-07-01T22:34:13.794Z",
-      "firstSeen": "2026-07-07T22:38:18.493Z",
-      "curatedScore": 65,
-      "curatedReason": "这份研究协议描述了一项关于运动剂量如何影响长期膝骨关节炎患者的随机对照试验（SWENOR 研究）。如果你关注运动处方在骨关节炎管理中的优化，这将是一项值得关注的未来研究。",
-      "titleZh": "运动剂量如何影响长期膝骨关节炎患者？一项在瑞典和挪威进行的随机对照试验研究协议：SWENOR 研究",
-      "summaryZh": "这份研究协议概述了SWENOR研究，这是一项在瑞典和挪威进行的随机对照试验，旨在探讨运动剂量如何影响长期膝骨关节炎患者。",
-      "curatedReasonEn": "This study protocol outlines a randomized controlled trial (SWENOR Study) on how exercise dose affects patients with long-term knee osteoarthritis. If you are focused on optimizing exercise prescriptions in osteoarthritis management, this will be a future study to watch.",
-      "tags": [
-        "policy",
-        "knee",
-        "osteoarthritis"
-      ]
-    },
-    {
-      "id": "news-1783463898493-18",
-      "title": "Efficacy of Tuina in chronic low back pain with anxiety - BMJ Open",
-      "summary": "This is a study protocol for a randomized controlled trial investigating the efficacy of Tuina in treating chronic low back pain with anxiety.",
-      "category": "orthopedic",
-      "source": "BJSM",
-      "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/13/10/e073671.full.pdf",
-      "publishedAt": "2026-07-02T22:34:13.794Z",
-      "firstSeen": "2026-07-07T22:38:18.493Z",
-      "curatedScore": 65,
-      "curatedReason": "这份研究协议描述了一项关于推拿（Tuina）治疗伴焦虑的慢性腰痛的随机对照试验。如果你对结合传统疗法和心理因素的干预感兴趣，可以关注这项研究的最终结果。",
-      "titleZh": "推拿治疗伴焦虑慢性腰痛的疗效：一项随机对照试验的研究方案",
-      "summaryZh": "这是一项随机对照试验的研究方案，旨在调查推拿治疗伴焦虑的慢性腰痛的疗效。",
-      "curatedReasonEn": "This study protocol outlines a randomized controlled trial on the efficacy of Tuina for chronic low back pain with anxiety. If you are interested in interventions combining traditional therapy with psychological factors, you might follow the eventual results of this study.",
-      "tags": [
-        "policy",
-        "spine",
-        "manual-therapy"
-      ]
-    },
-    {
-      "id": "news-1783463898494-24",
-      "title": "Teriparatide as an Adjunct in Managing Delayed Union of Long Bone Fractures: Insights from a Tertiary Care Center",
-      "summary": "A prospective interventional study on 48 adult patients with delayed union of long bone fractures evaluated the efficacy and safety of teriparatide (recombinant human parathyroid hormone) in promoting fracture healing, suggesting its promise as a biological enhancer of bone healing.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42294947/",
-      "publishedAt": "2026-07-01T03:06:18.000Z",
-      "firstSeen": "2026-07-07T22:38:18.494Z",
-      "curatedScore": 65,
-      "curatedReason": "这项前瞻性干预研究旨在评估特立帕肽作为长骨骨折延迟愈合的辅助治疗效果。虽然特立帕肽是药物干预，但其对骨愈合的影响间接关系到康复进程，关注这类药物进展，可更好地与医生协同管理患者。",
-      "titleZh": "特立帕肽作为长骨骨折延迟愈合辅助治疗的见解：来自三级医疗中心的研究",
-      "summaryZh": "一项针对48名长骨骨折延迟愈合成年患者的前瞻性干预研究评估了特立帕肽（重组人甲状旁腺激素）在促进骨折愈合方面的疗效和安全性，提示其作为骨愈合生物增强剂的潜力。",
-      "curatedReasonEn": "This prospective interventional study aims to evaluate teriparatide as an adjunct for delayed union of long bone fractures. While teriparatide is a pharmaceutical intervention, its impact on bone healing is indirectly related to the rehabilitation process. Staying informed on such drug advancements allows for better collaborative patient management with physicians.",
-      "limitation": "研究对象仅限于单一中心的48名患者，样本量小且外推性有限。",
-      "limitationEn": "The study is limited to 48 patients from a single center, with a small sample size and limited generalizability.",
-      "tags": [
-        "research",
-        "bone-injury"
-      ],
-      "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1783463898494-28",
-      "title": "Thrombectomy for Pediatric Large Vessel Occlusion Stroke With Mild Presenting Symptoms",
-      "summary": "A case-control study pooling data from 4 published cohorts aimed to determine if thrombectomy is associated with superior functional outcomes compared with medical management alone in pediatric patients with acute large vessel occlusion (LVO) stroke and mild presenting symptoms.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42314104/",
-      "publishedAt": "2026-07-14T13:00:31.000Z",
-      "firstSeen": "2026-07-07T22:38:18.494Z",
-      "curatedScore": 65,
-      "curatedReason": "这项针对儿童大血管闭塞性卒中的研究，探讨了血栓切除术在轻度症状患者中的益处。虽然卒中康复是你的核心工作，但了解神经介入治疗的最新进展和适应症，有助于你更早地识别潜在病例，并进行恰当转诊。",
-      "titleZh": "轻度症状表现的儿童大血管闭塞性卒中血栓切除术",
-      "summaryZh": "一项汇总了4个已发表队列数据的病例对照研究旨在确定血栓切除术在轻度症状表现的急性大血管闭塞性卒中儿童患者中，是否与单独药物治疗相比具有更优的功能结局。",
-      "curatedReasonEn": "This study on pediatric large vessel occlusion stroke investigates the benefit of thrombectomy in patients with mild presenting symptoms. While stroke rehabilitation is your core work, understanding the latest advancements and indications in neurointerventional treatments helps you identify potential cases earlier and make appropriate referrals.",
-      "limitation": "这是一项病例对照研究，而非随机对照试验，存在选择偏倚的风险。",
-      "limitationEn": "This is a case-control study, not a randomized clinical trial, carrying a risk of selection bias.",
-      "tags": [
-        "research",
-        "stroke",
-        "pediatric"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
