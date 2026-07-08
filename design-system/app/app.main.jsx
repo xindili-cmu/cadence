@@ -1273,7 +1273,11 @@ function DailyMasthead({ edition, zh }) {
         <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: 18 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
         <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: 'clamp(34px,6vw,56px)', lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
         <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: 13.5, color: '#AFC4DC' }}>
-          <span style={{ whiteSpace: 'nowrap' }}>{dateStr}　{weekday}　· {zh ? '今日 ' : ''}<b style={{ color: '#fff', fontWeight: 600 }}>{edition.stats.events}</b>{zh ? ' 篇' : ' stories'}</span>
+          {/* "本期/this edition", not "今日/today" — the edition is a relay
+              window minus already-published dedup, so its count legitimately
+              differs from the rail's calendar-day count (23 vs 19 confusion,
+              2026-07-08 adversarial-review fix #9). */}
+          <span style={{ whiteSpace: 'nowrap' }}>{dateStr}　{weekday}　· {zh ? '本期 ' : ''}<b style={{ color: '#fff', fontWeight: 600 }}>{edition.stats.events}</b>{zh ? ' 篇' : ' stories this edition'}</span>
           <span style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px' }}>
             {dots.map((x) => (
               <span key={x.cat} style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
@@ -1573,7 +1577,10 @@ function DailyBriefView({ L, date, onDate, mobile }) {
                 <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer"
                   style={{ display: 'flex', alignItems: 'baseline', gap: 10, padding: '9px 14px', textDecoration: 'none', fontFamily: 'var(--font-sans)' }}>
                   <span style={{ flex: 1, minWidth: 0, fontSize: 13, lineHeight: 1.5, color: 'var(--text-primary)' }}>{zh ? (f.titleZh || f.title) : (f.titleEn || f.title)}</span>
-                  <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{f.source}</span>
+                  {/* Journal name over pipeline name — "PubMed" is not a journal
+                      (2026-07-08 adversarial-review fix #10; old editions lack
+                      journal and fall back to source). */}
+                  <span style={{ flex: 'none', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{f.journal || f.source}</span>
                 </a>
               </li>
             ))}

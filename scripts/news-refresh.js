@@ -641,9 +641,10 @@ tags 规则：
   - curatedReasonEn：curatedReason 的英文版，**同一个 take、同样的口吻规则**（second-person、直接下判断、禁条件句开头、禁空效用措辞）。不是翻译练习——写给英文读者的同一条专业意见。
   - titleEn：**仅当原始 title 不是英文时**（如中文源标题）才填——专业、紧凑的英文标题，缩写（ACL、SLAP、RCT 等）保留。title 本身已是英文则**省略该字段**（英文模式直接用 title）。
 - curatedReason ("why it matters")：1-2 句中文，**第二人称**对临床读者说话，给 take 而不是 recap——直接下判断：这条改变什么、不改变什么。涉及"该做 / 别做"这类临床动作指令时，遵守下方"行动建议护栏"。
+  - **禁止 recap 开头**：第一句不得复述研究做了什么（"这项研究评估了…"、"该综述估计了…患病率"、"This study examined…"）——那是 summary 的活，已经说过一遍。why-it-matters 必须从判断 / 临床影响开始。
   - 禁止条件句开头（"如果你在使用…"、"如果你关注…"、"如果你治疗…"）——默认读者就是干这行的，直接说事。
-  - 禁止空效用措辞："有参考价值"、"帮助你决策"、"值得关注"、"提供了依据/证据/支持"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
-  - curatedReasonEn 同样禁止英文版空话："you can use this as a basis for clinical decisions"、"provides valuable insights"、"serves as a(n up-to-date) reference"、"worth your attention / monitoring"、"can inform your … consultations"、"this provides evidence on …"、"high-level evidence"——出现即重写成带方向的判断（说清这条改变什么 / 别做什么）。
+  - 禁止空效用措辞："有参考价值"、"帮助你决策"、"帮助你了解/筛查/制定"、"值得关注"、"提供了依据/证据/支持"、"为你提供…"、"增强你的信心"、"有指导意义"、"可以了解"——这些词出现即重写。
+  - curatedReasonEn 同样禁止英文版空话："you can use this as a basis for clinical decisions"、"provides valuable insights"、"provides you with the latest evidence/specific data"、"helping you understand / screen / develop / make…"、"guiding you to…"、"represents the latest collective wisdom"、"serves as a(n up-to-date) reference"、"worth your attention / monitoring"、"can inform your … consultations"、"this provides evidence on …"、"high-level evidence"——出现即重写成带方向的判断（说清这条改变什么 / 别做什么）。
   - 口吻是资深同行，不是客服。可以泼冷水（"证据只有短期小样本，别急着写进常规方案"），可以站队（"这基本坐实了运动疗法该是一线"）。
   - 反例（禁止这种写法）："如果你在使用或考虑为患者推荐腰骶矫形器，这篇综述能为你提供基于证据的考量，帮助你决策。"
   - 正例："腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。"
@@ -681,6 +682,7 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   if (!text) return [];
   let curated = await repairEnglishReasons(parseCuratedArray(text));
   curated = await repairChineseSummaries(curated);
+  curated = await repairBoilerplateReasons(curated); // 反模板腔（对抗性审查 #8）
   return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
 }
 
@@ -752,6 +754,62 @@ async function repairChineseSummaries(curated) {
   }
   const still = curated.filter(c => CJK_RE.test(c.summary || '')).length;
   if (still) console.log(`   ⚠️  ${still} summaries still Chinese after repair (kept as-is)`);
+  return curated;
+}
+
+// 模板腔兜底（2026-07-08 对抗性审查 #8）：why-it-matters 的价值在判断，但模型
+// 高频回落到两种样板——(a) 第一句复述 summary（"这项研究评估了…"/"This study
+// examined…"），(b) 空效用句式（"provides you with the latest evidence…,
+// helping you…" / "帮助你了解…"）。提示词已禁；这里做确定性检测 + 批量重写。
+// 检测刻意收窄避免误伤真判断（"该系统综述坐实了…"不命中——recap 判定要求
+// 主语后面跟"评估/考察/examined/compared"类动词）；重写后仍命中的保留原文。
+const REASON_SLOP_EN = new RegExp([
+  '^this\\b[^.]{0,80}\\b(study|review|trial|meta-analysis|analysis|consensus|editorial|rct|cohort|protocol)\\b[^.]{0,40}\\b(examined|explored|investigated|evaluated|assessed|estimated|compared|analy[sz]ed|monitored|surveyed|reviewed|identified|determined|generated|provides recommendations|aims to)',
+  'provides? you with', 'provides (valuable|the latest|specific)',
+  'help(s|ing)? you (better )?(understand|screen|develop|make|select|identify)',
+  'guiding you to', 'represents the latest', 'warrants your (attention|consideration)',
+].join('|'), 'i');
+const REASON_SLOP_ZH = new RegExp([
+  '^(这项|这篇|该|本)[^，。]{0,20}(研究|综述|试验|荟萃分析|述评|共识)[^，。]{0,15}(探讨|考察|评估|比较|分析|调查|检验|估计|纳入|旨在|研究了)',
+  '为你提供', '帮助你(更好地)?(了解|理解|筛查|制定|做出|识别|选择)',
+  '提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解)', '值得你?(关注|留意)',
+].join('|'));
+
+const REASON_SLOP_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的资深编辑。下面每条的 why-it-matters（curatedReason 中文 / curatedReasonEn 英文）写成了模板腔：要么第一句在复述研究做了什么（summary 已经说过），要么是空效用句式（"provides you with the latest evidence…"、"帮助你了解…"）。请基于给出的 summary 重写这两个字段，各 1-2 句：
+- 从判断开始，不从"这项研究 / This study"开始——直接说这条改变什么、不改变什么、该做什么、别做什么。
+- 第二人称、资深同行口吻，可以泼冷水、可以站队；措辞强度匹配证据强度（小样本 / 观察研究用"提示 / 可能"，不下定论；studyDesign 为 RCT 或系统综述且分数高才可下动作指令）。
+- 禁空效用措辞（中英）："有参考价值 / 值得关注 / 帮助你… / 为你提供…"，"provides you with / helping you / valuable insights / worth your attention"。
+- 保留原文里的数字；缩写（RCT、ACL 等）保留英文。curatedReason 必须中文，curatedReasonEn 必须英文，是同一条意见的两个语言版本。
+
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"curatedReason":"中文","curatedReasonEn":"English"}]`;
+
+async function repairBoilerplateReasons(curated) {
+  const isSlop = c =>
+    (c.curatedReasonEn && REASON_SLOP_EN.test(c.curatedReasonEn)) ||
+    (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
+  const bad = curated.filter(isSlop);
+  if (!bad.length) return curated;
+  console.log(`   🛠  ${bad.length} why-it-matters read as boilerplate — rewriting as takes`);
+  for (let off = 0; off < bad.length; off += 10) {
+    const batch = bad.slice(off, off + 10);
+    const user = `重写以下 ${batch.length} 条：\n\n` + JSON.stringify(
+      batch.map((c, i) => ({
+        index: i, summary: c.summary || '', studyDesign: c.studyDesign || '',
+        curatedScore: c.curatedScore, curatedReason: c.curatedReason || '', curatedReasonEn: c.curatedReasonEn || '',
+      })), null, 2);
+    const text = await callLLM(REASON_SLOP_SYSTEM, user);
+    const fixed = parseCuratedArray(text || '');
+    fixed.forEach(f => {
+      const c = batch[f.index];
+      if (!c) return;
+      // Accept each language independently, and only when the rewrite actually
+      // cleared the pattern — a failed rewrite must not replace the original.
+      if (f.curatedReason && CJK_RE.test(f.curatedReason) && !REASON_SLOP_ZH.test(f.curatedReason)) c.curatedReason = f.curatedReason;
+      if (f.curatedReasonEn && !CJK_RE.test(f.curatedReasonEn) && !REASON_SLOP_EN.test(f.curatedReasonEn)) c.curatedReasonEn = f.curatedReasonEn;
+    });
+  }
+  const still = curated.filter(isSlop).length;
+  if (still) console.log(`   ⚠️  ${still} reasons still boilerplate after rewrite (kept as-is)`);
   return curated;
 }
 

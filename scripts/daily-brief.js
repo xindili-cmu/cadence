@@ -263,6 +263,9 @@ async function main() {
       flashes.push({
         title: extra.title, titleZh: extra.titleZh || null,
         source: extra.source, sourceUrl: extra.sourceUrl, publishedAt: extra.publishedAt,
+        // Real journal name for the flash-row label — "PubMed" is a pipeline,
+        // not a journal (2026-07-08 adversarial-review fix #10).
+        journal: extra.journal || null,
       });
     }
   }
@@ -271,6 +274,7 @@ async function main() {
     flashes.push({
       title: stray.title, titleZh: stray.titleZh || null,
       source: stray.source, sourceUrl: stray.sourceUrl, publishedAt: stray.publishedAt,
+      journal: stray.journal || null,
     });
   }
 
