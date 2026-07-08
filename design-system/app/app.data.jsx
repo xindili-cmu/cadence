@@ -45,10 +45,10 @@ window.CD_DICT = {
     'fb.contactLabel': 'Where to reach you', 'fb.optional': 'optional', 'fb.contactPlaceholder': 'Email or WeChat — only if you want a reply',
     'fb.send': 'Send it', 'fb.sending': 'Sending…', 'fb.sent': 'Signal received — thank you. I read every single one.',
     'fb.error': 'Could not send — please try again.', 'fb.again': 'Send another',
-    searchPlaceholder: 'Search stories, sources, companies…',
+    searchPlaceholder: 'Search studies, journals, topics…',
     signalScore: 'Signal score', 'signalScore.help': '0–100 SIGNAL score — how much a finding deserves a clinician\'s attention, weighing study design, sample size, effect size and journal impact. Scored by AI from the title and abstract, not the full text. 85+ strong signal · 75+ worth knowing · 65+ for reference. It measures evidential strength, not news heat — and it is not a clinical recommendation.',
     ifTip: 'Journal impact factor',
-    hotNow: 'Active themes', hotSub: 'Research themes several recent papers converge on', themeHeat: 'Theme', nOutlets: 'outlets',
+    hotNow: 'Active themes', hotSub: 'Research themes several recent papers converge on', themeHeat: 'Theme', nOutlets: 'journals',
     alsoCovered: 'Also covered by',
     whyMatters: 'Why it matters', readOriginal: 'Read original',
     copyLink: 'Copy link', linkCopied: 'Copied',
@@ -139,7 +139,7 @@ window.CD_DICT = {
     'fb.contactLabel': '怎么找到你', 'fb.optional': '选填', 'fb.contactPlaceholder': '邮箱或微信——想要回复再填',
     'fb.send': '发送', 'fb.sending': '发送中…', 'fb.sent': '信号已收到，谢谢你。每一条我都会看。',
     'fb.error': '发送失败——请再试一次。', 'fb.again': '再发一条',
-    searchPlaceholder: '搜索文章、信源、机构…',
+    searchPlaceholder: '搜索文献、期刊、主题…',
     signalScore: '信号分', 'signalScore.help': '0–100 的 SIGNAL 评分，衡量一项发现值得临床人关注的程度；综合研究设计、样本量、效应量与期刊影响力。由 AI 基于标题与摘要评出，未读全文。85+ 强信号 · 75+ 值得关注 · 65+ 参考。衡量的是证据强度，不是新闻热度，也不构成临床建议。',
     ifTip: '期刊影响因子',
     hotNow: '活跃主题', hotSub: '近期多篇论文聚焦的研究主题', themeHeat: '主题热度', nOutlets: '刊',
@@ -333,7 +333,56 @@ function cdWallSource(item) {
   return item.source;
 }
 
+// ── Title hygiene (2026-07-08 adversarial-review fix) ───────────────────────
+// Scraped titles occasionally carry publisher tails ("… | APTA") or arrive
+// empty (one BJSM RSS item shipped a blank title on 2026-07-04). Strip the
+// tail conservatively and fall back to the summary's first sentence so the
+// feed never renders an untitled card.
+//   " | Tail"  — stripped whenever the remainder is still a real title
+//                (pipes are vanishingly rare inside paper titles);
+//   " - Tail"  — stripped only when the tail matches the item's source or
+//                journal (hyphens are common inside real titles).
+function cdCleanTitle(raw, item) {
+  let t = (raw || '').trim();
+  const pi = t.lastIndexOf(' | ');
+  if (pi >= 20 && t.slice(pi + 3).trim().length <= 40) t = t.slice(0, pi).trim();
+  const hi = t.lastIndexOf(' - ');
+  if (hi >= 20) {
+    const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/gi, ' ').trim();
+    const tail = norm(t.slice(hi + 3));
+    if (tail && (tail === norm(item.source) || tail === norm(item.journal))) t = t.slice(0, hi).trim();
+  }
+  return t;
+}
+function cdTitleFallback(item) {
+  const s = (item.summary || item.summaryZh || '').trim();
+  if (!s) return '(Untitled)';
+  // No lookbehind (breaks older WebViews at parse time) — take up to the first
+  // sentence-ending punctuation mark.
+  const m = s.match(/^.{10,}?[.。！!?？]/);
+  const first = (m ? m[0] : s).trim();
+  return first.length > 110 ? first.slice(0, 110).trim() + '…' : first;
+}
+
+// studyDesign (ZH pipeline label) → EN display label. Shared by the card chip,
+// the daily brief meta line, and anything else via window.CD_STUDY_EN.
+window.CD_STUDY_EN = {
+  '系统综述': 'Systematic review', 'meta分析': 'Meta-analysis', 'Meta分析': 'Meta-analysis',
+  '观察研究': 'Observational', '队列研究': 'Cohort', '横断面研究': 'Cross-sectional',
+  '综述': 'Review', '述评': 'Editorial', '社论': 'Editorial', '评论': 'Commentary',
+  'RCT': 'RCT', '指南': 'Guideline', '共识': 'Consensus', '研究方案': 'Protocol',
+  '病例报告': 'Case report', '质性研究': 'Qualitative',
+};
+// Non-evidence designs (editorials, commentaries, protocols) — kept in the
+// feed with their chip, but excluded from "Today's Signal" / AI-briefing top
+// slots and the daily lead, where "highest signal" must mean primary evidence
+// or evidence synthesis (2026-07-08 adversarial-review fix: an editorial was
+// the day's #1 "signal").
+window.cdIsNonEvidence = (studyDesign) =>
+  /述评|社论|评论|研究方案|editorial|commentary|viewpoint|perspective|protocol/i.test(studyDesign || '');
+
 function cdTransformItem(item) {
+  const _title = cdCleanTitle(item.title, item) || cdTitleFallback(item);
   return {
     id:          item.id,
     day:         cdDayBucket(item.firstSeen || item.publishedAt),
@@ -349,14 +398,14 @@ function cdTransformItem(item) {
     time:        cdFmtTime(item.publishedAt),
     date:        cdFmtDate(item.publishedAt),
     surfaced:    cdSurfacedLabel(item.firstSeen, item.publishedAt), // 新收录 chip when firstSeen ≫ publishedAt
-    title:       item.title,
+    title:       _title,
     summary:     item.summary,
     why:         item.curatedReason,
     limitation:  item.limitation,    // one-line study caveat (may be absent)
     // Bilingual content fields (cron-generated; may be absent on older items —
     // the display layer falls back to the original-language field).
-    titleZh:     item.titleZh,
-    titleEn:     item.titleEn,        // English title for non-English-source items (en mode)
+    titleZh:     cdCleanTitle(item.titleZh, item) || undefined,
+    titleEn:     cdCleanTitle(item.titleEn, item) || undefined, // English title for non-English-source items (en mode)
     summaryZh:   item.summaryZh,
     whyEn:       item.curatedReasonEn,
     limitationEn: item.limitationEn,

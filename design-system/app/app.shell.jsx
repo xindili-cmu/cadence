@@ -197,17 +197,29 @@ function NavRail({ view, onView, category, onCategory }) {
   );
 }
 
-function DigestRail({ stories, dayKey = 'today', onPick }) {
+function DigestRail({ stories, dayKey = 'today', onPick, children }) {
   // 为什么是这八类 — taxonomy rationale, collapsed under the pulse so the rail
   // stays scannable; copy lives in CD_DICT (whyCats / whyCatsBody).
   const [whyOpen, setWhyOpen] = React.useState(false);
   // Nothing published in the window yet (e.g. China-morning before the 05:30
-  // Beijing crawl) → render nothing instead of an empty box + zeroed pulse.
-  if (!stories.length) return <aside style={{ width: 'var(--rail-right)', flex: 'none' }} />;
+  // Beijing crawl) → render only the slot content (e.g. the subscribe box)
+  // instead of an empty box + zeroed pulse.
+  if (!stories.length) {
+    return (
+      <aside style={{ width: 'var(--rail-right)', flex: 'none', padding: '20px 0 40px 22px', position: 'sticky', top: 'var(--header-height)', alignSelf: 'flex-start', borderLeft: '1px solid var(--border-subtle)' }}>
+        {children}
+      </aside>
+    );
+  }
   // Rank by SIGNAL; on ties take the newer item so a backfilled older paper
   // never out-ranks a same-score fresh one as today's headline (Cindy 2026-06-24).
   // ISO-string compare is null-safe and chronological; matches the weekly board.
-  const top = [...stories]
+  // Editorials/commentaries/protocols are excluded from the top slots — the
+  // "highest signal" must be primary evidence or a synthesis, not an opinion
+  // piece (2026-07-08 adversarial-review fix). Falls back to the full pool if
+  // the day happens to be non-evidence only.
+  const evPool = stories.filter((s) => !window.cdIsNonEvidence(s.studyDesign));
+  const top = [...(evPool.length ? evPool : stories)]
     .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
     .slice(0, 3);
   // Ranked distribution: keep each specialty's taxonomy index (01–08) but sort
@@ -278,6 +290,10 @@ function DigestRail({ stories, dayKey = 'today', onPick }) {
           ))}
         </div>
       </div>
+
+      {/* Slot — the rail's persistent subscribe box (adversarial-review fix,
+          2026-07-08: the feed-bottom card alone was buried under 75 cards). */}
+      {children}
 
       {/* 本周信号榜 — only on quiet days; mirrors Today's Signal row styling so the
           two cards read as siblings, differentiated by the trophy + 7-day kicker. */}
@@ -470,10 +486,10 @@ function MobileTabBar({ view, onView }) {
 function MobileSignalCard({ stories, dayKey = 'today', onPick }) {
   const [open, setOpen] = React.useState(true);
   if (!stories.length) return null;
-  // Rank by SIGNAL; on ties take the newer item so a backfilled older paper
-  // never out-ranks a same-score fresh one as today's headline (Cindy 2026-06-24).
-  // ISO-string compare is null-safe and chronological; matches the weekly board.
-  const top = [...stories]
+  // Rank by SIGNAL; ties → newer first. Mirrors DigestRail, including the
+  // non-evidence exclusion (editorials/protocols never take a top slot).
+  const evPool = stories.filter((s) => !window.cdIsNonEvidence(s.studyDesign));
+  const top = [...(evPool.length ? evPool : stories)]
     .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
     .slice(0, 3);
   return (

@@ -407,11 +407,14 @@ const FB_KINDS = [
 ];
 
 // ── SubscribeCard (订阅) ─────────────────────────────────────────────────────
-// The site's one retention surface: capture an email at the natural "finished
-// reading" moment (feed bottom). Posts to the same Formspree inbox as feedback
-// (kind:'subscribe') — no new backend. Channel links ride along for readers
-// who live in WeChat/XHS instead of email.
-function SubscribeCard({ onAbout, mobile }) {
+// The retention surface: capture an email. Posts to the same Formspree inbox
+// as feedback (kind:'subscribe') — no new backend. Channel links ride along
+// for readers who live in WeChat/XHS instead of email.
+// `compact` (2026-07-08 adversarial-review fix): a stacked, channels-row-free
+// variant for the desktop right rail and the About page, where the full card's
+// width/channel links don't fit. The feed-bottom card alone was buried under
+// 75 cards — the one email入口 needs to live above the fold too.
+function SubscribeCard({ onAbout, mobile, compact }) {
   const t = window.CD_T;
   const [email, setEmail] = React.useState('');
   const [status, setStatus] = React.useState('idle'); // idle | sending | sent | error
@@ -439,6 +442,36 @@ function SubscribeCard({ onAbout, mobile }) {
       console.error('[Cadence] subscribe submit failed:', err);
       setStatus('error');
     }
+  }
+
+  // Compact: vertical stack sized for a ~300px column, no channels row
+  // (the contexts it renders in already carry the channel links / QR codes).
+  if (compact) {
+    return (
+      <section style={{ margin: '16px 0 0', padding: '16px 18px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--green-600)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 6 }}>
+          <Icon name="radio" size={15} style={{ color: 'var(--green-600)' }} />
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 14.5, fontWeight: 600, color: 'var(--text-primary)' }}>{t('sub.title')}</span>
+        </div>
+        {status === 'sent' ? (
+          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
+        ) : (
+          <>
+            <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
+            <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <Input size="sm" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
+                placeholder={t('sub.placeholder')} aria-label="Email" maxLength={200} />
+              <Button type="submit" size="sm" iconStart="send" disabled={!valid || status === 'sending'}>
+                {status === 'sending' ? t('sub.sending') : t('sub.cta')}
+              </Button>
+            </form>
+            {status === 'error' && (
+              <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--signal-down)' }}>{t('sub.error')}</p>
+            )}
+          </>
+        )}
+      </section>
+    );
   }
 
   const chLink = { display: 'inline-flex', alignItems: 'center', gap: 5, fontFamily: 'var(--font-sans)', fontSize: 12.5, fontWeight: 600, color: 'var(--text-secondary)', textDecoration: 'none', background: 'none', border: 'none', padding: 0, cursor: 'pointer' };
@@ -914,9 +947,14 @@ function AboutView({ onView, mobile }) {
         </div>
       </div>
 
-      {/* Follow us — QR codes for RedNote (XHS) + WeChat official account */}
+      {/* Follow us — email first (2026-07-08 adversarial-review fix: this page
+          previously offered EN visitors only WeChat/XHS QR codes — zero email
+          capture on the About surface), then QR codes for RedNote + WeChat. */}
       <section>
         <h2 style={h2}><Icon name="qr-code" size={19} style={{ color: 'var(--blue-600)' }} />{zh ? '关注我们' : 'Follow us'}</h2>
+        <div style={{ maxWidth: 420, margin: '0 0 26px' }}>
+          <SubscribeCard compact />
+        </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: mobile ? 20 : 32 }}>
           {[
             { img: 'design-system/assets/social/xhs-qr.png', plat: zh ? '小红书' : 'RedNote', handle: 'in_cadence', href: 'https://xhslink.com/m/8LpaT1OLeDw', tip: zh ? '点击或扫码访问主页' : 'Tap or scan to open the profile' },
@@ -1211,7 +1249,9 @@ function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
 // The evidence tier (e.g. 系统综述) now lives in the featured card's meta row
 // instead of a separate "为何上榜" line — no free-text reason field exists and
 // we never fabricate one.
-const DAILY_STUDY_EN = { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
+// Shared ZH→EN study-design map lives in app.data.jsx (window.CD_STUDY_EN);
+// this alias keeps the daily brief's existing call sites unchanged.
+const DAILY_STUDY_EN = window.CD_STUDY_EN || { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
 
 function DailyMasthead({ edition, zh }) {
   const d = new Date(edition.date + 'T12:00:00Z');
@@ -1428,10 +1468,15 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   // expandable rows. Driven entirely by curatedScore — no extra LLM call.
   const allItems = edition.sections.flatMap((sec) => sec.items).map(window.cdTransformItem);
   const ranked = [...allItems].sort((a, b) => b.score - a.score);
-  const leadStory = ranked.length ? L(ranked[0]) : null;
-  const tier2 = ranked.slice(1).filter((s) => s.score >= 75).map(L);
-  const tier3 = ranked.slice(1).filter((s) => s.score < 75).map(L);
-  const top3 = ranked.slice(0, 3).map(L);
+  // Lead = highest-scored PRIMARY EVIDENCE (or synthesis). Editorials /
+  // commentaries / protocols keep their tier-2/3 spots but can't headline
+  // "Only 5 minutes? Read this" (2026-07-08 adversarial-review fix).
+  const leadRaw = ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign)) || ranked[0] || null;
+  const leadStory = leadRaw ? L(leadRaw) : null;
+  const rest = ranked.filter((s) => s !== leadRaw);
+  const tier2 = rest.filter((s) => s.score >= 75).map(L);
+  const tier3 = rest.filter((s) => s.score < 75).map(L);
+  const top3 = (leadRaw ? [leadRaw, ...rest] : rest).slice(0, 3).map(L);
   const [mm, dd] = edition.date.slice(5).split('-');
   const dShort = `${+mm}.${+dd}`;
 
@@ -1537,8 +1582,11 @@ function DailyBriefView({ L, date, onDate, mobile }) {
       )}
 
       {/* Handoff share card (交接班卡) — built to be screenshotted or copied
-          into a WeChat group; brand name is the full 「Cadence步频」. */}
-      {top3.length > 0 && (
+          into a WeChat group; brand name is the full 「Cadence步频」.
+          ZH-only (2026-07-08 adversarial-review fix): it's an internal WeChat
+          workflow surface — EN readers were being pointed at WeChat/XHS they
+          can't open. The EN daily now ends with the SubscribeCard instead. */}
+      {zh && top3.length > 0 && (
         <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#9AA0A8' }}>{zh ? '交接班卡' : 'Handoff card'}</span>
@@ -1832,6 +1880,21 @@ function FeedApp() {
     qs.delete('item');
     const rest = qs.toString();
     history.pushState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+  }, []);
+  // End/Home page-jump keys (2026-07-08 adversarial-review fix: they were
+  // dead in the feed, and the subscribe card lives at the bottom). Skips
+  // inputs/textareas and open dialogs so typing/overlay behavior is untouched.
+  React.useEffect(() => {
+    const onEndHome = (e) => {
+      if (e.key !== 'End' && e.key !== 'Home') return;
+      const el = e.target;
+      if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+      if (document.body.style.overflow === 'hidden') return; // story overlay open
+      e.preventDefault();
+      window.scrollTo({ top: e.key === 'End' ? document.documentElement.scrollHeight : 0 });
+    };
+    window.addEventListener('keydown', onEndHome);
+    return () => window.removeEventListener('keydown', onEndHome);
   }, []);
   React.useEffect(() => {
     const onPop = () => setItemId(cdItemParam());
@@ -2188,7 +2251,7 @@ function FeedApp() {
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
                         mobile={isMobile}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                        journalMeta={s.journalMeta} tech={s.tech} surfaced={s.surfaced}
+                        journalMeta={s.journalMeta} studyDesign={s.studyDesign} tech={s.tech} surfaced={s.surfaced}
                         title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
                         permalink={cdItemUrl(s.id)}
                         selected={selected === s.id}
@@ -2215,15 +2278,22 @@ function FeedApp() {
           )}
 
           {/* Subscribe — the retention surface, at the natural end-of-reading
-              point on both feed views (adversarial-review fix #2, 2026-07-01). */}
-          {!isSources && !isFeedback && !isDaily && !isAbout && grouped.length > 0 && (
+              point on the feed views AND the daily brief (2026-07-08: the EN
+              daily page previously ended with the ZH-only handoff card). */}
+          {!isSources && !isFeedback && !isAbout && (isDaily || grouped.length > 0) && (
             <SubscribeCard mobile={isMobile} onAbout={() => setView('about')} />
           )}
         </main>
 
         {!isSources && !isFeedback && !isAbout && !isMobile && (isDaily
           ? <DailyArchiveRail current={dailyDate} onPick={setDailyDate} />
-          : <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory} />
+          : (
+            <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory}>
+              {/* Persistent above-the-fold email入口 (adversarial-review fix,
+                  2026-07-08) — the feed-bottom card sits under 75 cards. */}
+              <SubscribeCard compact onAbout={() => setView('about')} />
+            </DigestRail>
+          )
         )}
       </div>
 

@@ -46,6 +46,7 @@ export function NewsCard({
   score, whyItMatters, variant = 'default', selected = false,
   mobile = false, // narrow-screen layout: lead card drops its left SIGNAL gutter
   journalMeta, // { if, quartile, year } from journals.json — IF/JCR badge, research items only
+  studyDesign, // evidence-tier label from the pipeline (RCT / 系统综述 / 述评 …) — meta-row chip
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   surfaced, // "新收录"/"New" chip — firstSeen date string when surfaced ≫ published, else ''
   permalink, // canonical on-site URL (/?item=<id>) — copy-link button + crawlable <a>
@@ -78,20 +79,51 @@ export function NewsCard({
     </span>
   );
 
-  const timeEl = (
-    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap' }}>
-      {time}
-    </span>
+  // Crawl-time clock stamps ("04:19", identical across a batch) confused more
+  // than they informed — the card footer already carries the publish date, so
+  // the meta-row time is gone (2026-07-08 adversarial-review fix). The `time`
+  // prop is still accepted for compatibility but no longer rendered.
+  const timeEl = null;
+
+  // Evidence-tier chip (RCT / Systematic review / Editorial …). ZH pipeline
+  // labels render as-is in ZH mode; EN mode maps via window.CD_STUDY_EN.
+  const designLabel = studyDesign && (
+    (typeof window !== 'undefined' && window.CD_LANG === 'zh')
+      ? studyDesign
+      : ((typeof window !== 'undefined' && window.CD_STUDY_EN && window.CD_STUDY_EN[studyDesign]) || studyDesign)
+  );
+  const designChip = designLabel && (
+    <span style={{
+      padding: isCompact ? '2px 7px' : '3px 9px', borderRadius: 'var(--radius-pill)',
+      fontFamily: 'var(--font-sans)', fontSize: isCompact ? 11 : 12, fontWeight: 500,
+      background: 'var(--surface-page)', border: '1px solid var(--border-subtle)',
+      color: 'var(--text-secondary)', whiteSpace: 'nowrap',
+    }}>{designLabel}</span>
   );
 
+  // Title → on-site story detail (2026-07-08 adversarial-review fix). It used
+  // to jump straight to the external journal, so the site's own permalinks had
+  // zero internal links and every title click was a bounce. Plain left-click
+  // opens the detail overlay in-app (pushState + popstate so Back works);
+  // modifier/middle clicks keep browser-default new-tab behavior on the real
+  // href. Falls back to the external sourceUrl when there's no permalink.
+  const openDetail = (e) => {
+    e.stopPropagation();
+    if (!permalink) return; // external fallback — default <a> behavior
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
+    history.pushState(null, '', permalink + location.hash);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
   const titleEl = (
     <h3 style={{
       margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600,
       fontSize: titleSize, lineHeight: isLead ? 1.22 : 1.3,
       letterSpacing: '-0.01em',
     }}>
-      <a href={sourceUrl} target="_blank" rel="noopener noreferrer"
-        onClick={(e) => e.stopPropagation()}
+      <a href={permalink || sourceUrl}
+        {...(permalink ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+        onClick={openDetail}
         style={{
           color: 'var(--text-primary)',
           textDecoration: hover ? 'underline' : 'none', textDecorationColor: 'var(--green-300)',
@@ -235,6 +267,7 @@ export function NewsCard({
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
           {typeof score === 'number' && <SignalScore score={score} variant="badge" />}
           <CategoryTag category={category} size="md" useShort />
+          {designChip}
           {techChip}
           <span style={{ flex: 1 }} />
           {timeEl}
@@ -262,6 +295,7 @@ export function NewsCard({
           <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
               <CategoryTag category={category} size="md" useShort={false} />
+              {designChip}
               {techChip}
               <span style={{ flex: 1 }} />
               {timeEl}
@@ -283,6 +317,7 @@ export function NewsCard({
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
         {typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />}
         <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort />
+        {designChip}
         {techChip}
         <span style={{ flex: 1 }} />
         {timeEl}
