@@ -379,7 +379,7 @@ const TITLE_ACRONYMS = new Set([
   'CMS','FDA','APTA','AAOS','GIRFT','BMI','ROM','ADL','ADLS','MSK','DOMS','GRADE',
   'ASIA','COVID','SARS','HIV','MRI','CT','EMG','ECG','EEG','FNIRS','DLPFC','ESRD',
 ]);
-function normalizeTitle(title) {
+function normalizeTitle(title, meta = {}) {
   if (!title || typeof title !== 'string') return title;
   // Strip stray wrapping quotes some RSS feeds add around the WHOLE title
   // (e.g. `"Are CR programs effective…".`). Only fire when the title both opens
@@ -388,6 +388,22 @@ function normalizeTitle(title) {
   let t = title;
   if (/^[“"「『]/.test(t) && /[”"」』][.。!?]?\s*$/.test(t)) {
     t = t.replace(/^[“"「『]+\s*/, '').replace(/\s*[”"」』]+(?=[.。!?]?\s*$)/, '');
+  }
+  // Strip scraped publisher tails at the SOURCE so downstream consumers
+  // (wechat-brief / xhs-digest / linkedin-brief read raw news.json titles)
+  // never see them; the frontend has a mirror of this as a legacy-data
+  // fallback (2026-07-08 adversarial-review fix).
+  //   " | Tail" — stripped whenever the remainder is still a real title
+  //               (pipes are vanishingly rare inside paper titles);
+  //   " - Tail" — stripped only when the tail matches the item's source or
+  //               journal name (hyphens are common inside real titles).
+  const pi = t.lastIndexOf(' | ');
+  if (pi >= 20 && t.slice(pi + 3).trim().length <= 40) t = t.slice(0, pi).trim();
+  const hy = t.lastIndexOf(' - ');
+  if (hy >= 20 && (meta.source || meta.journal)) {
+    const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/gi, ' ').trim();
+    const tail = norm(t.slice(hy + 3));
+    if (tail && (tail === norm(meta.source) || tail === norm(meta.journal))) t = t.slice(0, hy).trim();
   }
   const letters = t.replace(/[^A-Za-z]/g, '');
   if (letters.length < 8) return t;                           // too short to judge
@@ -782,6 +798,43 @@ const REASON_SLOP_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的�
 - 保留原文里的数字；缩写（RCT、ACL 等）保留英文。curatedReason 必须中文，curatedReasonEn 必须英文，是同一条意见的两个语言版本。
 
 请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"curatedReason":"中文","curatedReasonEn":"English"}]`;
+
+// Active-Themes 主题短语（2026-07-08 对抗性审查）：theme 名过去直接用代表论文
+// 的全题截断——读者读到的是半句论文题，不是"主题"。这里用一次小批量 LLM 调用
+// 为每个簇生成中英双语主题短语；调用失败或产出不合格就静默回退（themeZh/En
+// 缺省，前端 falls back to 代表论文题），刷新永远不因此中断。
+const THEME_LABEL_SYSTEM = `你是 Cadence（步频）物理治疗文献站的编辑。下面每个 theme 是近几天多篇康复研究聚成的簇（给出成员论文标题与分类）。请为每个簇起主题短语：
+- themeZh：6-18 字中文短语，概括这簇论文共同的研究主题——是"主题名"，不是任何一篇标题的复述，句末不加标点
+- themeEn：3-9 个英文单词的同一主题短语，不加句号；缩写（ACL、RCT、COPD 等）保留
+- 短语要具体（「卒中后步态的可穿戴量化」好过「神经康复进展」）
+
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"themeZh":"…","themeEn":"…"}]`;
+
+async function labelHotTopics(topics) {
+  if (!topics || !topics.length) return topics;
+  try {
+    const user = `为以下 ${topics.length} 个 theme 起短语：\n\n` + JSON.stringify(
+      topics.map((t, i) => ({
+        index: i, category: t.category,
+        memberTitles: (t.members || []).slice(0, 6).map(m => m.title),
+      })), null, 2);
+    const text = await callLLM(THEME_LABEL_SYSTEM, user);
+    const fixed = parseCuratedArray(text || '');
+    fixed.forEach(f => {
+      const t = topics[f.index];
+      if (!t) return;
+      const zh = (f.themeZh || '').trim();
+      const en = (f.themeEn || '').trim();
+      // Accept only well-formed phrases — a bad label is worse than the fallback.
+      if (zh && CJK_RE.test(zh) && zh.length <= 24) t.themeZh = zh;
+      if (en && !CJK_RE.test(en) && en.split(/\s+/).length <= 12) t.themeEn = en;
+    });
+    console.log(`   🏷  themed ${topics.filter(t => t.themeZh || t.themeEn).length}/${topics.length} hot topics`);
+  } catch (e) {
+    console.warn(`   ⚠️  theme labeling failed (${e.message}) — rep titles will show instead`);
+  }
+  return topics;
+}
 
 async function repairBoilerplateReasons(curated) {
   const isSlop = c =>
@@ -1213,10 +1266,21 @@ async function main() {
     // RSS whole-journal items arrive with category:null — critic assigns one.
     const category = o.category || (VALID_CATS.has(c.category) ? c.category : null);
     if (!category) return null;
+    // Empty-title guard (one BJSM RSS item shipped a blank title, 2026-07-04):
+    // fall back to the summary's first sentence rather than an untitled card.
+    const _cleanTitle = normalizeTitle(o.title, o);
+    const _summary = c.summary || o.highlights || o.text?.substring(0, 200);
+    const _fallbackTitle = () => {
+      const s = (_summary || '').trim();
+      if (!s) return '(Untitled)';
+      const m = s.match(/^.{10,}?[.。！!?？]/);
+      const first = (m ? m[0] : s).trim();
+      return first.length > 110 ? first.slice(0, 110).trim() + '…' : first;
+    };
     const item = {
       id: prior?.id || `news-${Date.now()}-${c.index}`,
-      title: normalizeTitle(o.title),
-      summary: c.summary || o.highlights || o.text?.substring(0, 200),
+      title: (_cleanTitle || '').trim() || _fallbackTitle(),
+      summary: _summary,
       category,
       source: o.source,
       sourceUrl: o.url,
@@ -1296,8 +1360,8 @@ async function main() {
         const firstSeen = prior && prior.firstSeen < baseSeen ? prior.firstSeen : baseSeen;
         return {
           ...i,
-          title: normalizeTitle(i.title),
-          ...(i.titleEn ? { titleEn: normalizeTitle(i.titleEn) } : {}),
+          title: normalizeTitle(i.title, i),
+          ...(i.titleEn ? { titleEn: normalizeTitle(i.titleEn, i) } : {}),
           source: matchSource(i.sourceUrl),
           firstSeen,
           ...(prior && prior.id ? { id: prior.id } : {}),
@@ -1327,6 +1391,7 @@ async function main() {
     hotTopics = computeHotTopics(merged);
     console.log(`   Hot topics (tag-based): ${hotTopics.length}`);
   }
+  hotTopics = await labelHotTopics(hotTopics); // 双语主题短语（对抗性审查：theme 名不再是论文题截断）
 
   // Archive — every item that makes it into news.json is mirrored once into
   // archive/YYYY-MM.json so stories rotating out (7-day cutoff / MAX_ITEMS cap)
@@ -1472,4 +1537,4 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons };

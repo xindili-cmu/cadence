@@ -44,6 +44,27 @@ const byCuratedScore = (a, b) => (b.curatedScore || 0) - (a.curatedScore || 0);
 const GENERIC_TAGS = new Set(['research', 'news', 'guideline', 'policy', 'rehabilitation',
   'physical-therapy', 'pt', 'rehab', 'therapy', 'clinical']);
 
+// Sub-tag axes from the curation prompt's taxonomy. A theme badge must make
+// sense for the theme's own category — the model sometimes free-assigns
+// cross-axis tags ("regulation" on an MSK diagnosis cluster, 2026-07-08
+// adversarial review), and a wrong badge is worse than no badge.
+const SUBTAG_AXES = {
+  orthopedic: ['spine', 'knee', 'shoulder', 'hand-wrist', 'foot-ankle', 'hip', 'pelvic-floor'],
+  neurological: ['stroke', 'parkinson', 'ms', 'brain-injury', 'spinal-cord', 'vestibular'],
+  'manual-modality': ['dry-needling', 'iastm', 'electro', 'laser', 'taping', 'manipulation'],
+  practice: ['reimbursement', 'regulation', 'telehealth', 'education', 'ethics', 'workforce'],
+};
+const AXIS_TAGS = new Set(Object.values(SUBTAG_AXES).flat());
+// Axis categories accept only their own axis tags; free-tag categories
+// (sports / pediatric / geriatric / cardiopulmonary…) accept any non-generic
+// tag EXCEPT one that belongs to some other category's axis.
+function validThemeTag(tag, category) {
+  if (!tag || GENERIC_TAGS.has(tag)) return false;
+  const axis = SUBTAG_AXES[category];
+  if (axis) return axis.includes(tag);
+  return !AXIS_TAGS.has(tag);
+}
+
 function normalize(v) {
   let n = 0; for (const x of v) n += x * x; n = Math.sqrt(n) || 1;
   return v.map(x => x / n);
@@ -128,7 +149,7 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
     // label. Keep the full ranking so duplicate labels can be broken below.
     const tagCount = {};
     for (const m of members) for (const t of (m.tags || []).slice(1)) {
-      if (!GENERIC_TAGS.has(t)) tagCount[t] = (tagCount[t] || 0) + 1;
+      if (validThemeTag(t, top.category)) tagCount[t] = (tagCount[t] || 0) + 1;
     }
     const tagRanked = Object.entries(tagCount).sort((a, b) => b[1] - a[1]).map(e => e[0]);
     // The badge labels the REP card the reader sees, so it must be a sub-tag the
@@ -137,9 +158,11 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
     // "brain-injury" just because spinal-cord was taken by a higher theme).
     // Rank the rep's own non-generic sub-tags by cluster frequency; fall back to
     // cluster-dominant / category only when the rep carries no sub-tag.
-    const repTags = new Set((top.tags || []).slice(1).filter(t => !GENERIC_TAGS.has(t)));
+    const repTags = new Set((top.tags || []).slice(1).filter(t => validThemeTag(t, top.category)));
     const repTagRanked = tagRanked.filter(t => repTags.has(t));
-    const tag = repTagRanked[0] || tagRanked[0] || top.category;
+    // No valid sub-tag → tag stays null and the UI hides the badge (the
+    // category chip next to the theme already carries the specialty).
+    const tag = repTagRanked[0] || tagRanked[0] || null;
     return {
       id: top.id, title: top.title, sourceUrl: top.sourceUrl, category: top.category,
       publishedAt: newest.publishedAt,
@@ -170,7 +193,7 @@ function computeHotTopicsEmbed(items, cache, opts = {}) {
     // cluster with an off-card tag.
     const pick = (t._repTagRanked || []).find(tg => !usedTags.has(tg)) || t.tag;
     t.tag = pick;
-    usedTags.add(pick);
+    if (pick) usedTags.add(pick);
     delete t._repTagRanked;
   }
   return top;
