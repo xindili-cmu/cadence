@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-09T11:22:33.477Z",
+    "lastUpdated": "2026-07-09T15:38:01.229Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,7 +20,7 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42419477/",
       "category": "geriatric",
       "publishedAt": "2026-07-09T07:56:02.558Z",
-      "sourceCount": 9,
+      "sourceCount": 7,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "BMC musculoskeletal disorders",
@@ -28,11 +28,9 @@
         "Physiotherapy theory and practice",
         "The Journal of manual & manipulative therapy",
         "Journal of geriatric physical therapy (2001)",
-        "The Journal of orthopaedic and sports physical therapy",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Pain"
+        "The Journal of orthopaedic and sports physical therapy"
       ],
-      "tag": "reimbursement",
+      "tag": "practice",
       "kind": "theme",
       "members": [
         {
@@ -82,21 +80,11 @@
           "journal": "The Journal of orthopaedic and sports physical therapy",
           "title": "Early-Stage Symptomatic Hip Osteoarthritis: A Window of Opportunity.",
           "titleZh": "早期有症状的髋关节骨关节炎：一个“机会窗口”"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Physical Activity in Women With Obesity: Fatigue, Knee Symptoms, and Functional Capacity.",
-          "titleZh": "肥胖女性的身体活动：疲劳、膝关节症状与功能能力"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Pain",
-          "title": "Predictive socio-cultural factors of pain intensity, disability, and quality of life in patients with nonspecific musculoskeletal pain: a prospective cohort study.",
-          "titleZh": "非特异性肌肉骨骼疼痛患者疼痛强度、残疾和生活质量的预测性社会文化因素：一项前瞻性队列研究"
         }
       ],
-      "heat": 8.56
+      "heat": 6.26,
+      "themeZh": "骨关节炎和关节置换的围手术期管理",
+      "themeEn": "Perioperative Management of Osteoarthritis and Joint Replacement"
     },
     {
       "id": "news-1783455552962-1",
@@ -185,7 +173,9 @@
           "titleZh": "卒中患者空间和时间优先口头指令对步态时空参数的影响：一项组内重复测量研究"
         }
       ],
-      "heat": 4.8
+      "heat": 4.51,
+      "themeZh": "卒中及脊髓损伤后的神经康复干预与服务",
+      "themeEn": "Stroke and SCI Neurorehabilitation Interventions and Services"
     },
     {
       "id": "news-1783521886933-0",
@@ -224,7 +214,7 @@
         },
         {
           "source": "Sports Medicine",
-          "title": "Effects of OsteoStrong vs. dynamic multicomponent exercise on physical function in older women in the BONEMORE randomized controlled trial | Aging Clinical and Experimental Research | Springer Nature Link",
+          "title": "Effects of OsteoStrong vs. dynamic multicomponent exercise on physical function in older women in the BONEMORE randomized controlled trial | Aging Clinical and Experimental Research",
           "titleZh": "BONEMORE 随机对照试验：OsteoStrong 与动态多组分运动对老年女性身体机能影响的比较"
         },
         {
@@ -234,7 +224,9 @@
           "titleZh": "内在能力趋势：来自 32 个国家的证据"
         }
       ],
-      "heat": 3
+      "heat": 2.82,
+      "themeZh": "可穿戴设备和运动疗法量化身体活动与功能",
+      "themeEn": "Wearable Quantified Physical Activity and Function"
     },
     {
       "id": "news-1783521886936-26",
@@ -307,7 +299,9 @@
           "titleZh": "心态、努力和支持——前交叉韧带损伤患者重返运动决策的基础。来自 NACOX 队列的定性分析"
         }
       ],
-      "heat": 2.71
+      "heat": 2.55,
+      "themeZh": "竞技运动员运动损伤与疾病的预防和康复",
+      "themeEn": "Athlete Injury and Illness Prevention and Rehab"
     },
     {
       "id": "news-1783418636531-5",
@@ -350,10 +344,81 @@
           "titleZh": "Kinesio 贴扎与 Mulligan 踝关节贴扎对慢性卒中患者平衡和踝关节生物力学功能的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.7
+      "heat": 1.6,
+      "themeZh": "神经肌肉功能障碍的康复技术和效应",
+      "themeEn": "Neuromuscular Dysfunction Rehabilitation Techniques and Effects"
     }
   ],
   "items": [
+    {
+      "id": "news-1783149593311-2",
+      "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
+      "summary": "A systematic review and meta-analysis found that low-load exercise with blood flow restriction (LLE-BFR) offers additional benefits over conventional low-load exercise (LLE) and is comparable to high-load exercise (HLE) in improving muscle strength, disability, and pain in individuals with musculoskeletal conditions.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42399091/",
+      "publishedAt": "2026-07-04T00:00:00.000Z",
+      "firstSeen": "2026-07-04T07:19:53.311Z",
+      "curatedScore": 85,
+      "curatedReason": "遇到肌骨患者的肌力、残疾或疼痛问题，别再局限于传统低负荷训练了。这项高质量系统综述提示，低负荷血流限制训练（LLE-BFR）效果优于传统低负荷训练，且能达到高负荷训练的效果，尤其适用于无法承受高负荷的患者。",
+      "titleZh": "与常规肌骨康复训练相比，血流限制训练是否提供额外益处？一项系统综述和荟萃分析",
+      "summaryZh": "一项系统综述和荟萃分析发现，在肌骨疾病患者中，低负荷血流限制训练（LLE-BFR）在改善肌肉力量、残疾和疼痛方面优于传统低负荷训练（LLE），且与高负荷训练（HLE）效果相当。",
+      "curatedReasonEn": "For patients with musculoskeletal conditions struggling with muscle strength, disability, or pain, reconsider conventional low-load exercise. This high-quality systematic review suggests LLE-BFR is superior to conventional low-load exercise and comparable to high-load exercise, especially beneficial for those unable to tolerate high loads.",
+      "limitation": "未明确报告纳入研究的异质性程度和整体证据质量分级。",
+      "limitationEn": "The degree of heterogeneity among included studies and the overall GRADE evidence quality were not explicitly reported.",
+      "tags": [
+        "research",
+        "dry-needling"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "British journal of sports medicine"
+    },
+    {
+      "id": "news-1783076660306-0",
+      "title": "Frontline agreement in diagnosis and treatment for musculoskeletal dysfunctions. A prospective, randomized, controlled study.",
+      "summary": "A randomized controlled trial found good agreement in diagnosis, treatment, and discharge decisions between physiotherapists and resident physicians compared with senior physicians in the emergency department for musculoskeletal conditions.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42396265/",
+      "publishedAt": "2026-07-03T00:00:00.000Z",
+      "firstSeen": "2026-07-03T11:04:20.306Z",
+      "curatedScore": 85,
+      "curatedReason": "这项 RCT 表明，在急诊科（ED）环境中，高级物理治疗师与医生在肌骨功能障碍的诊断和治疗决策上具有良好的一致性。这意味着物理治疗师可以安全有效地承担 ED 初筛角色，能显著缓解 ED 压力，并在你未来的执业范围拓展中提供支持。",
+      "titleZh": "肌骨功能障碍诊断和治疗的一线共识：一项前瞻性随机对照研究",
+      "summaryZh": "一项随机对照试验发现，在急诊科处理肌骨疾病时，物理治疗师与住院医师在诊断、治疗和出院决策方面与资深医师有良好的一致性。",
+      "curatedReasonEn": "This RCT indicates good agreement between advanced physiotherapists and physicians on diagnosis and treatment decisions for musculoskeletal dysfunctions in the emergency department (ED). This suggests that physiotherapists can safely and effectively assume an ED triage role, significantly alleviating ED pressure, and supporting future scope of practice expansion.",
+      "limitation": "研究仅在一家医院的急诊科进行，结果的外推性可能受限。",
+      "limitationEn": "The study was conducted in a single hospital ED, which may limit the generalizability of its findings.",
+      "tags": [
+        "research",
+        "practice"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physiotherapy"
+    },
+    {
+      "id": "news-1783336166985-0",
+      "title": "Figure-of-Eight Taping Combined with Rehabilitation for Multidirectional Shoulder Instability in a School-Age Female Karate Athlete: A Case Report.",
+      "summary": "A case report describes a 12-year-old female karate athlete with multidirectional shoulder instability (MDI) whose exercise therapy was effectively facilitated through figure-of-eight taping.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42404368/",
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "firstSeen": "2026-07-06T11:09:26.985Z",
+      "curatedScore": 65,
+      "curatedReason": "本病例报告展示了八字形贴扎如何辅助一名年轻空手道运动员的多方向肩关节不稳康复训练。作为个案，它仅提供初步观察，请勿将其外推为常规治疗策略。",
+      "titleZh": "八字形贴扎联合康复治疗学龄期空手道女运动员多方向肩关节不稳：一病例报告",
+      "summaryZh": "一篇病例报告描述了一名 12 岁患有多方向肩关节不稳（MDI）的空手道女运动员，其运动疗法通过八字形贴扎得到了有效辅助。",
+      "curatedReasonEn": "This case report illustrates how figure-of-eight taping facilitated rehabilitation for a young karate athlete with multidirectional shoulder instability. As a case study, it offers preliminary observations but should not be generalized as a routine treatment strategy.",
+      "limitation": "本研究为单病例报告，外推性非常有限。",
+      "limitationEn": "This is a single case report with very limited generalizability.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International journal of sports physical therapy"
+    },
     {
       "id": "news-1783521886933-0",
       "title": "Quantifying Physical Activity Through Step Count Estimation Across Multiple Wearable Sensor Configurations: A Validation Study in Post-Stroke and Healthy Adults.",
@@ -1715,7 +1780,7 @@
     },
     {
       "id": "news-1783463898494-21",
-      "title": "APTA Report Finds Demand for Pelvic Health Physical Therapy Outpaces Access | APTA",
+      "title": "APTA Report Finds Demand for Pelvic Health Physical Therapy Outpaces Access",
       "summary": "A new APTA report, \"APTA State of Pelvic Health Physical Therapy,\" reveals that the demand for pelvic health physical therapy in the U.S. significantly outpaces access, highlighting challenges in workforce, access, and awareness.",
       "category": "orthopedic",
       "source": "APTA",
@@ -1736,7 +1801,7 @@
     },
     {
       "id": "news-1783549915401-36",
-      "title": "Pioneering programme launched to test breakthrough spinal treatment in UK rehab centres - Spinal Surgery News",
+      "title": "Pioneering programme launched to test breakthrough spinal treatment in UK rehab centres",
       "summary": "The UK has launched a pioneering program to test the ARC-EX system, the first dedicated treatment for paralysis approved by UK regulators, which combines targeted electrical spinal cord stimulation with rehabilitation exercises to restore strength and movement in spinal cord injury patients.",
       "category": "neurological",
       "source": "Spinal Surgery News",
@@ -1779,7 +1844,7 @@
     },
     {
       "id": "news-1783377876089-12",
-      "title": "Effects of OsteoStrong vs. dynamic multicomponent exercise on physical function in older women in the BONEMORE randomized controlled trial | Aging Clinical and Experimental Research | Springer Nature Link",
+      "title": "Effects of OsteoStrong vs. dynamic multicomponent exercise on physical function in older women in the BONEMORE randomized controlled trial | Aging Clinical and Experimental Research",
       "summary": "This randomized controlled trial compared the effects of OsteoStrong versus dynamic multicomponent exercise on physical function in older women, providing insights into interventions for age-related decline.",
       "category": "orthopedic",
       "source": "Sports Medicine",
@@ -1985,7 +2050,7 @@
     },
     {
       "id": "news-1783463898493-14",
-      "title": "Treadmill training with rhythmic auditory cueing and/or visual feedback for persons with Multiple Sclerosis: feasibility and effects on gait parameters in a clinical randomized controlled trial | medRxiv",
+      "title": "Treadmill training with rhythmic auditory cueing and/or visual feedback for persons with Multiple Sclerosis: feasibility and effects on gait parameters in a clinical randomized controlled trial",
       "summary": "This clinical randomized controlled trial explored the feasibility and effects of treadmill training with visual feedback (VF) and VF plus rhythmic auditory cueing (VF+RAC) on gait parameters in persons with Multiple Sclerosis (MS) during clinical rehabilitation.",
       "category": "orthopedic",
       "source": "medRxiv",
@@ -2025,75 +2090,6 @@
       "tags": [
         "research",
         "shoulder"
-      ],
-      "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1783031710275-29",
-      "title": "ChainBMD: A deep learning framework for stroke evaluation and guidance using kinetic chain graphs and temporal analysis - ScienceDirect",
-      "summary": "ChainBMD is a deep learning framework designed for stroke evaluation and guidance, utilizing kinetic chain graphs and temporal analysis, offering advancements in interpretable wearable sensing and human motion evaluation for training guidance.",
-      "category": "neurological",
-      "source": "Gait & Posture",
-      "sourceUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0957417426009061",
-      "publishedAt": "2026-07-01T08:47:43.000Z",
-      "firstSeen": "2026-07-02T22:35:10.275Z",
-      "curatedScore": 70,
-      "curatedReason": "ChainBMD 深度学习框架利用动力链图和时间分析进行卒中评估和指导，为卒中康复的客观评估和个性化训练提供了新思路。未来，你或能通过此类 AI 工具更精准地评估患者功能障碍并设计干预方案。",
-      "titleZh": "ChainBMD：基于动力链图和时间分析的深度学习卒中评估与指导框架",
-      "summaryZh": "ChainBMD 是一个旨在用于卒中评估和指导的深度学习框架，它利用动力链图和时间分析，在可解释的穿戴式传感和人体运动评估方面取得了进展，以提供训练指导。",
-      "curatedReasonEn": "The ChainBMD deep learning framework, which uses kinetic chain graphs and temporal analysis for stroke evaluation and guidance, offers new approaches for objective assessment and personalized training in stroke rehabilitation. In the future, you may be able to use such AI tools to more accurately assess patient functional impairments and design intervention programs.",
-      "limitation": "作为技术框架研究，其临床验证结果（如对患者功能恢复的实际影响）仍需进一步的大规模临床试验来评估。",
-      "limitationEn": "As a technical framework study, its clinical validation results (e.g., actual impact on patient functional recovery) still require further large-scale clinical trials.",
-      "tags": [
-        "research",
-        "stroke",
-        "ai-rehab"
-      ],
-      "studyDesign": "述评",
-      "tech": true
-    },
-    {
-      "id": "news-1783549915401-31",
-      "title": "Neurorobotics for Neurorehabilitation: Clinical Applications and Future Research Direction | Springer Nature Link",
-      "summary": "This article reviews neurorobotics for neurorehabilitation, covering current clinical applications and identifying future research directions, highlighting the evolving role of robotics in neurological recovery.",
-      "category": "neurological",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/rwe/10.1007/978-981-96-7448-0_35-1",
-      "publishedAt": "2026-07-07T21:16:40.000Z",
-      "firstSeen": "2026-07-08T22:31:55.401Z",
-      "curatedScore": 70,
-      "curatedReason": "神经康复领域正迅速被神经机器人技术改变。你应关注这些前沿进展，因为机器人辅助治疗将越来越普遍。提前了解其临床应用和局限性，能帮助你更好地规划未来的执业方向和技术学习。",
-      "titleZh": "神经机器人技术在神经康复中的临床应用及未来研究方向",
-      "summaryZh": "本文综述了神经机器人技术在神经康复中的临床应用，并指明了未来的研究方向，突出了机器人技术在神经恢复中日益重要的作用。",
-      "curatedReasonEn": "The field of neurorehabilitation is rapidly being transformed by neurorobotics. You should pay attention to these cutting-edge advancements, as robot-assisted therapy will become increasingly prevalent. Understanding its clinical applications and limitations in advance will help you better plan your future practice and technical learning.",
-      "limitation": "这是一篇综述，其内容可能侧重于技术介绍和展望，而非提供新的临床实践证据。",
-      "limitationEn": "This is a review, and its content may focus on technological introductions and outlooks rather than providing new clinical practice evidence.",
-      "tags": [
-        "research",
-        "robotics"
-      ],
-      "studyDesign": "综述",
-      "tech": true
-    },
-    {
-      "id": "news-1783031710275-33",
-      "title": "Branched-chain amino acids alleviate Parkinson’s neurodegeneration via microbial propionate-dependent restoration of the PI3K/Akt/mTORC1 axis - ScienceDirect",
-      "summary": "This research suggests branched-chain amino acids alleviate Parkinson's neurodegeneration by restoring the PI3K/Akt/mTORC1 axis via microbial propionate, highlighting the gut-brain axis in disease pathology.",
-      "category": "neurological",
-      "source": "Gait & Posture",
-      "sourceUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0161589026001136",
-      "publishedAt": "2026-07-01T05:23:58.000Z",
-      "firstSeen": "2026-07-02T22:35:10.275Z",
-      "curatedScore": 70,
-      "curatedReason": "这项基础研究揭示了支链氨基酸可能通过肠道微生物丙酸盐依赖的 PI3K/Akt/mTORC1 信号通路来缓解帕金森病神经退行性病变。作为康复专业人士，这提示你营养干预和肠道健康可能在神经康复中扮演更重要的角色。",
-      "titleZh": "支链氨基酸通过微生物丙酸盐依赖的 PI3K/Akt/mTORC1 轴恢复缓解帕金森病神经退行性病变",
-      "summaryZh": "这项研究表明，支链氨基酸可能通过微生物丙酸盐依赖的 PI3K/Akt/mTORC1 轴的恢复来缓解帕金森病的神经退行性病变，突出了肠脑轴在该病理学中的作用。",
-      "curatedReasonEn": "This basic research reveals that branched-chain amino acids may alleviate Parkinson's neurodegeneration via microbial propionate-dependent PI3K/Akt/mTORC1 signaling. As a rehabilitation professional, this suggests that nutritional interventions and gut health may play a more significant role in neurorehabilitation.",
-      "limitation": "本研究为分子免疫学领域的基础研究，其结果尚不能直接应用于临床实践，需要进一步的转化研究和人体试验。",
-      "limitationEn": "This is a basic research study in molecular immunology, and its results cannot be directly applied to clinical practice without further translational research and human trials.",
-      "tags": [
-        "research",
-        "parkinson"
       ],
       "studyDesign": "观察研究"
     }
