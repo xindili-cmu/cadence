@@ -1,0 +1,508 @@
+{
+ "date": "2026-07-09",
+ "generatedAt": "2026-07-08T22:32:12.578Z",
+ "windowHours": 26,
+ "windowStart": "2026-07-07T22:38:30.156Z",
+ "windowEnd": "2026-07-08T22:32:10.440Z",
+ "lead": {
+  "titleZh": "卒中步数估算进展，ACL 共识后续：聚焦神经和运动康复，兼顾支付改革",
+  "titleEn": "Stroke Step Count Estimation, ACL Consensus Update: Neurorehab and Sports Rehab in Focus, Payment Reform Noted",
+  "paragraphZh": "今日共有 29 份新条目，覆盖 4 个亚专业。神经康复和运动康复各有 3 份 curatedScore 为 85 的条目值得关注。其中，关于多可穿戴传感器配置下卒中后步数估算的观察研究，以及 2018 年国际奥委会儿科 ACL 损伤共识声明的后续是重点。此外，强制性捆绑支付对下肢关节置换术前康复服务交付的影响值得行业同仁思考。",
+  "paragraphEn": "Today's edition features 29 new entries across 4 specialties. Both neurorehabilitation and sports rehabilitation each present 3 entries with a curatedScore of 85, warranting attention. Key highlights include an observational study on step count estimation in post-stroke individuals using multiple wearable sensor configurations, and a follow-up to the 2018 IOC consensus statement on pediatric ACL injuries. Additionally, the impact of mandatory bundled payments on prehabilitation delivery for lower extremity joint replacement is relevant for industry professionals."
+ },
+ "stats": {
+  "events": 29,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1783506782219-0",
+     "title": "In safe hands - patients with knee and hip osteoarthritis expectations and experience of physical therapist-led triage in a secondary care setting.",
+     "summary": "This qualitative study explored the expectations and experiences of hip or knee osteoarthritis patients regarding physical therapist-led triage in a Swedish orthopedic clinic, finding that while care quality was perceived as good, patient participation in decision-making and fulfillment of assessment expectations were lower.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42414961/",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-08T10:33:02.220Z",
+     "curatedScore": 75,
+     "curatedReason": "骨关节炎患者对物理治疗师主导的分诊（PT-led triage）期望值高，但对决策参与度和评估满足度较低。这意味着即便 PT 主导分诊能提高就诊可及性，患者体验设计也需优化，不能只关注诊疗结果。",
+     "titleZh": "膝髋骨关节炎患者对二级护理中物理治疗师主导分诊的期望与体验",
+     "summaryZh": "这项定性研究探讨了瑞典骨科诊所中，膝髋骨关节炎患者对物理治疗师主导分诊的期望和体验。研究发现，虽然患者认为护理质量良好，但他们在决策参与度和评估期望满足度方面较低。",
+     "curatedReasonEn": "Patients with OA have high expectations for PT-led triage, but report lower satisfaction with decision-making participation and assessment fulfillment. This suggests that while PT-led triage improves access, patient experience design needs optimization beyond just clinical outcomes.",
+     "limitation": "本研究采用探索性定性设计，样本量小，结果的外推性有限。",
+     "limitationEn": "This study used an exploratory qualitative design with a small sample size, limiting the generalizability of the findings.",
+     "tags": [
+      "research",
+      "knee",
+      "hip"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC musculoskeletal disorders"
+    },
+    {
+     "id": "news-1783549915401-24",
+     "title": "Understanding the clinical profile of patients with frozen shoulder",
+     "summary": "This longitudinal multicenter observational study (n=NA) characterized the clinical profile of patients with frozen shoulder, contributing to a better understanding of its progression and symptoms.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/12/11/e056563.full.pdf",
+     "publishedAt": "2026-07-02T22:29:45.214Z",
+     "firstSeen": "2026-07-08T22:31:55.401Z",
+     "curatedScore": 70,
+     "curatedReason": "冻结肩的临床特征复杂，不同阶段的进展和症状表现各异。这项观察性研究提供了更全面的疾病画像，提醒你在评估和诊断时要考虑其多变性，避免“一刀切”的治疗方法。",
+     "titleZh": "了解冻结肩患者的临床特征：一项纵向多中心观察性研究",
+     "summaryZh": "这项纵向多中心观察性研究（n=NA）描述了冻结肩患者的临床特征，有助于更好地理解其进展和症状。",
+     "curatedReasonEn": "Frozen shoulder presents with complex clinical features, with varying progression and symptoms across different stages. This observational study provides a more comprehensive disease profile, reminding you to consider its variability during assessment and diagnosis, avoiding a one-size-fits-all approach.",
+     "limitation": "作为一项观察性研究，它描述了冻结肩的临床特征，但不能建立因果关系，也无法评估特定干预措施的疗效。",
+     "limitationEn": "As an observational study, it describes the clinical profile of frozen shoulder but cannot establish causality or evaluate the efficacy of specific interventions.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1783549915401-36",
+     "title": "Pioneering programme launched to test breakthrough spinal treatment in UK rehab centres - Spinal Surgery News",
+     "summary": "The UK has launched a pioneering program to test the ARC-EX system, the first dedicated treatment for paralysis approved by UK regulators, which combines targeted electrical spinal cord stimulation with rehabilitation exercises to restore strength and movement in spinal cord injury patients.",
+     "category": "neurological",
+     "source": "Spinal Surgery News",
+     "sourceUrl": "https://www.spinalsurgerynews.com/2026/07/pioneering-programme-launched-to-test-breakthrough-spinal-treatment-in-uk-rehab-centres/153428",
+     "publishedAt": "2026-07-08T10:51:07.000Z",
+     "firstSeen": "2026-07-08T22:31:55.401Z",
+     "curatedScore": 85,
+     "curatedReason": "英国率先推出开创性脊髓治疗 ARC-EX 系统，结合靶向电刺激和康复运动，帮助脊髓损伤患者恢复力量和运动。这对你来说是重大进展，预示着新的辅助技术将进入临床，可提升脊髓损伤康复的疗效。",
+     "titleZh": "英国康复中心推出开创性项目，测试突破性脊髓治疗方案",
+     "summaryZh": "英国推出一项开创性项目，旨在测试 ARC-EX 系统——英国监管机构批准的首个针对瘫痪的专用治疗方案。该系统结合了靶向电脊髓刺激与康复运动，以帮助脊髓损伤患者恢复力量和运动。",
+     "curatedReasonEn": "The UK has launched the groundbreaking ARC-EX system for spinal treatment, combining targeted electrical stimulation with rehabilitation exercises to help spinal cord injury patients regain strength and movement. This is a significant development for you, signaling new assistive technologies entering clinical practice that can enhance the efficacy of spinal cord injury rehabilitation.",
+     "tags": [
+      "news",
+      "spinal-cord",
+      "electro",
+      "assistive-tech"
+     ]
+    },
+    {
+     "id": "news-1783521886933-0",
+     "title": "Quantifying Physical Activity Through Step Count Estimation Across Multiple Wearable Sensor Configurations: A Validation Study in Post-Stroke and Healthy Adults.",
+     "summary": "A validation study compared the accuracy of stride count estimation across multiple wearable sensor configurations (wrists, hips, ankles) and data processing algorithms in 18 post-stroke and 18 healthy adults against a gold-standard instrumented treadmill across various walking speeds.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42417037/",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-08T14:44:46.933Z",
+     "curatedScore": 85,
+     "curatedReason": "这是一项在卒中患者和健康成年人中验证可穿戴步数追踪器准确性的重要研究。其详细的传感器配置和步行速度比较，能帮你更好地理解和选择临床步态评估工具。",
+     "titleZh": "多可穿戴传感器配置下步数估算对卒中后和健康成人身体活动的量化：一项验证研究",
+     "summaryZh": "一项验证研究比较了 18 名卒中后患者和 18 名健康成人在不同步行速度下，多种可穿戴传感器配置（腕部、髋部、踝部）及数据处理算法估算步数的准确性，并与金标准仪器化跑步机进行了对比。",
+     "curatedReasonEn": "This is a crucial validation study on the accuracy of wearable step trackers in post-stroke and healthy adults. Its detailed comparison of sensor configurations and walking speeds will help you better understand and select clinical gait assessment tools.",
+     "limitation": "研究样本量较小，可能限制了结果的普遍性。",
+     "limitationEn": "The study had a small sample size, which may limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "NeuroRehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1783521886935-4",
+     "title": "Subtype-specific optimal cut-off values of the Berg Balance Scale for predicting independent walking in inpatient stroke rehabilitation: a multicentre cohort study.",
+     "summary": "A multicenter retrospective cohort study of 565 stroke patients determined that admission Berg Balance Scale scores independently predict independent walking at discharge, and derived subtype-specific optimal cut-off values for ischemic and hemorrhagic stroke using multivariable logistic regression.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42415680/",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-08T14:44:46.935Z",
+     "curatedScore": 80,
+     "curatedReason": "这项多中心队列研究确定了入院时 Berg 平衡量表（BBS）评分可预测卒中患者出院时的独立行走能力，并提供了缺血性与出血性卒中的亚型特异性最佳截点值。这能帮助你更精准地进行早期预后判断和康复方案制定。",
+     "titleZh": "卒中住院康复中 Berg 平衡量表预测独立行走能力的亚型特异性最佳截点值：一项多中心队列研究",
+     "summaryZh": "一项对 565 名卒中患者进行的多中心回顾性队列研究发现，入院时 Berg 平衡量表评分能独立预测出院时的独立行走能力，并通过多变量逻辑回归推导出了缺血性与出血性卒中的亚型特异性最佳截点值。",
+     "curatedReasonEn": "This multicenter cohort study determined that admission Berg Balance Scale (BBS) scores independently predict independent walking at discharge for stroke patients and provided subtype-specific optimal cut-off values for ischemic and hemorrhagic stroke. This can help you make more precise early prognostic judgments and rehabilitation planning.",
+     "limitation": "研究是回顾性队列设计，可能存在数据缺失和混杂因素。",
+     "limitationEn": "The study was a retrospective cohort design, potentially having missing data and confounding factors.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of rehabilitation medicine"
+    },
+    {
+     "id": "news-1783533299017-0",
+     "title": "Effects of spatial and temporal pre-verbal prioritized instructions on spatiotemporal gait parameters in stroke patients: A within-subject repeated-measures study.",
+     "summary": "In 27 stroke patients, both spatial (matching step length) and temporal (matching step timing) prioritized verbal instructions significantly improved spatiotemporal gait parameters compared to no prioritization, with distinct effects on step length and timing symmetry.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42417715/",
+     "publishedAt": "2026-07-08T17:54:28.305Z",
+     "firstSeen": "2026-07-08T17:54:59.018Z",
+     "curatedScore": 75,
+     "curatedReason": "针对卒中步态不对称，空间优先（匹配步长）和时间优先（匹配步频）指令都改善了步态对称性，但影响的具体参数不同。临床中可依此微调言语指令，但别过度强调，短期试验。",
+     "titleZh": "卒中患者空间和时间优先言语指令对步态时空参数的影响：一项受试者内重复测量研究",
+     "summaryZh": "一项针对 27 名卒中患者的研究显示，与无优先指令相比，空间优先（匹配步长）和时间优先（匹配步频）的言语指令均显著改善了步态时空参数，且对步长和步态对称性有不同的影响。",
+     "curatedReasonEn": "For stroke gait asymmetry, both spatial (matching step length) and temporal (matching step timing) prioritized instructions improved gait symmetry, though affecting different parameters. Clinicians can refine verbal cues based on this, but don't overemphasize given the short-term trial.",
+     "limitation": "研究样本量较小（n=27），且是单一时间点的短期效应观察。",
+     "limitationEn": "The study has a small sample size (n=27) and observed only short-term, single-time-point effects.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice"
+    },
+    {
+     "id": "news-1783521886934-1",
+     "title": "Feasibility of Integrating Music Therapy into Routine Speech-Language Rehabilitation for Post-Stroke Aphasia: A Real-World Outpatient Study.",
+     "summary": "This quasi-experimental study explored the feasibility of integrating a structured music therapy protocol into conventional speech-language therapy for post-stroke aphasia in an outpatient setting in Thailand, and examined preliminary language performance outcomes.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42417018/",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-08T14:44:46.934Z",
+     "curatedScore": 75,
+     "curatedReason": "这项探索性研究提示音乐疗法与传统言语治疗相结合，对卒中后失语症患者具有可行性，并显示出初步积极效果。作为早期证据，它值得你关注，但还需要更强力的证据来指导常规实践。",
+     "titleZh": "音乐疗法整合至卒中后失语症常规言语语言康复的可行性：一项真实世界门诊研究",
+     "summaryZh": "这项准实验研究探讨了在泰国门诊环境下，将结构化音乐疗法方案整合到卒中后失语症常规言语语言治疗中的可行性，并考察了初步的语言表现结果。",
+     "curatedReasonEn": "This exploratory study suggests the feasibility of integrating music therapy with conventional speech therapy for post-stroke aphasia, showing preliminary positive outcomes. As early evidence, it warrants your attention, but stronger evidence is needed for routine practice guidance.",
+     "limitation": "该研究为准实验设计，而非随机对照试验，可能存在选择偏倚。",
+     "limitationEn": "This quasi-experimental study, not an RCT, may be subject to selection bias.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "NeuroRehabilitation"
+    },
+    {
+     "id": "news-1783549915401-31",
+     "title": "Neurorobotics for Neurorehabilitation: Clinical Applications and Future Research Direction | Springer Nature Link",
+     "summary": "This article reviews neurorobotics for neurorehabilitation, covering current clinical applications and identifying future research directions, highlighting the evolving role of robotics in neurological recovery.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/rwe/10.1007/978-981-96-7448-0_35-1",
+     "publishedAt": "2026-07-07T21:16:40.000Z",
+     "firstSeen": "2026-07-08T22:31:55.401Z",
+     "curatedScore": 70,
+     "curatedReason": "神经康复领域正迅速被神经机器人技术改变。你应关注这些前沿进展，因为机器人辅助治疗将越来越普遍。提前了解其临床应用和局限性，能帮助你更好地规划未来的执业方向和技术学习。",
+     "titleZh": "神经机器人技术在神经康复中的临床应用及未来研究方向",
+     "summaryZh": "本文综述了神经机器人技术在神经康复中的临床应用，并指明了未来的研究方向，突出了机器人技术在神经恢复中日益重要的作用。",
+     "curatedReasonEn": "The field of neurorehabilitation is rapidly being transformed by neurorobotics. You should pay attention to these cutting-edge advancements, as robot-assisted therapy will become increasingly prevalent. Understanding its clinical applications and limitations in advance will help you better plan your future practice and technical learning.",
+     "limitation": "这是一篇综述，其内容可能侧重于技术介绍和展望，而非提供新的临床实践证据。",
+     "limitationEn": "This is a review, and its content may focus on technological introductions and outlooks rather than providing new clinical practice evidence.",
+     "tags": [
+      "research",
+      "robotics"
+     ],
+     "studyDesign": "综述",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1783521886935-18",
+     "title": "Follow up to the 2018 IOC consensus statement on paediatric ACL injuries: towards a broader vision of care",
+     "summary": "This editorial provides an update to the 2018 IOC consensus statement on pediatric ACL injuries, examining recent advances, current evidence, and persistent challenges in prevention, individualized management, surgical strategies, and long-term holistic care.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/998?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T14:44:46.935Z",
+     "curatedScore": 85,
+     "curatedReason": "这篇社论跟进了 2018 年 IOC 关于儿童 ACL 损伤的共识声明，概述了新的研究进展和挑战。它提供了儿科 ACL 损伤预防、个体化管理、手术策略和长期护理的最新视角，能帮助你与患者和外科医生进行更深入的讨论。",
+     "titleZh": "2018 年国际奥委会儿科 ACL 损伤共识声明的后续：迈向更广阔的护理视野",
+     "summaryZh": "这篇社论更新了 2018 年国际奥委会关于儿科 ACL 损伤的共识声明，审视了预防、个体化管理、手术策略和长期整体护理方面的最新进展、现有证据和持续挑战。",
+     "curatedReasonEn": "This editorial follows up on the 2018 IOC consensus statement on pediatric ACL injuries, outlining new research advances and challenges. It provides the latest perspectives on pediatric ACL injury prevention, individualized management, surgical strategies, and long-term holistic care, enabling you to engage in deeper discussions with patients and surgeons.",
+     "tags": [
+      "policy",
+      "ACL",
+      "pediatric-sports"
+     ],
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1783521886936-28",
+     "title": "Prevalence of eating disorders and disordered eating in athletes: a systematic review and meta-analysis",
+     "summary": "A systematic review and meta-analysis estimated the prevalence of eating disorders and disordered eating among athletes across training levels and assessment methods, identifying moderators associated with prevalence estimates by searching PubMed/MEDLINE, Scopus, Web of Science, and SportDiscus up to December 2024.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1051?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T14:44:46.936Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述和荟萃分析估计了运动员饮食失调和紊乱饮食的患病率，并识别了相关调节因素。它为你提供了运动员心理健康的最新证据，能帮助你筛查高风险运动员并制定预防策略。",
+     "titleZh": "运动员饮食失调和紊乱饮食的患病率：一项系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析估计了运动员在不同训练水平和评估方法下饮食失调和紊乱饮食的患病率，并通过检索 PubMed/MEDLINE、Scopus、Web of Science 和 SportDiscus 至 2024 年 12 月，识别了与患病率估计相关的调节因素。",
+     "curatedReasonEn": "This systematic review and meta-analysis estimated the prevalence of eating disorders and disordered eating in athletes and identified associated moderators. It provides you with the latest evidence on athlete mental health, helping you screen high-risk athletes and develop prevention strategies.",
+     "limitation": "研究纳入的原始研究可能存在异质性，影响荟萃分析结果的解释。",
+     "limitationEn": "The included primary studies may have heterogeneity, affecting the interpretation of meta-analysis results.",
+     "tags": [
+      "research",
+      "mental-health",
+      "nutrition"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1783521886935-23",
+     "title": "Mental health in tennis: a cross-organisational hybrid summit-Delphi consensus process",
+     "summary": "A cross-organizational hybrid summit-Delphi consensus process generated recommendations for the tennis community on providing mental healthcare and promoting mental wellness among elite tennis athletes, including juniors, involving 83 participants from various governing bodies and the broader tennis ecosystem.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1011?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T14:44:46.935Z",
+     "curatedScore": 80,
+     "curatedReason": "这项由多组织参与的共识研究，为网球运动员（包括青少年精英）的心理健康护理和促进提供了建议。它代表了行业内对这一关键领域的最新集体智慧，指导你为运动员提供更全面的支持。",
+     "titleZh": "网球运动员心理健康：一项跨组织混合峰会-德尔菲共识流程",
+     "summaryZh": "一项跨组织混合峰会-德尔菲共识流程为网球界在精英网球运动员（包括青少年运动员）的心理健康护理和健康促进方面提出了建议，共有来自各管理机构和更广泛网球生态系统的 83 名参与者。",
+     "curatedReasonEn": "This multi-organizational consensus study provides recommendations for mental healthcare and mental wellness promotion among elite tennis athletes, including juniors. It represents the latest collective wisdom in the industry on this critical area, guiding you to provide more comprehensive support for athletes.",
+     "limitation": "Delphi 共识过程依赖专家意见，可能受专家构成和潜在偏见影响。",
+     "limitationEn": "The Delphi consensus process relies on expert opinions, which may be influenced by expert composition and potential biases.",
+     "tags": [
+      "research",
+      "mental-health",
+      "youth-sports"
+     ],
+     "studyDesign": "综述",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1783521886936-26",
+     "title": "Incidence of injury and illness at the Paris 2024 Paralympic Games: post-pandemic trends and sport-specific risks",
+     "summary": "This prospective observational study monitored 4450 athletes during the 14-day Paris 2024 Paralympic Games, reporting injury and illness epidemiology, including incidence (8.6 per 1000 athlete days), prevalence (10.9%), and sport-specific risks (e.g., Taekwondo 27.3).",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1036?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T14:44:46.936Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究提供了 2024 年巴黎残奥会的损伤和疾病流行病学数据，包括特定运动的风险。这些数据能帮助你了解残奥运动员的独特损伤模式，从而更有效地制定预防和康复策略。",
+     "titleZh": "2024 年巴黎残奥会损伤和疾病发生率：后疫情时代趋势与特定运动风险",
+     "summaryZh": "这项前瞻性观察研究在 2024 年巴黎残奥会期间监测了 4450 名运动员，报告了损伤和疾病的流行病学数据，包括发生率（每 1000 运动员日 8.6 例）、患病率（10.9%）以及特定运动风险（例如跆拳道 27.3）。",
+     "curatedReasonEn": "This study provides epidemiological data on injuries and illnesses at the Paris 2024 Paralympic Games, including sport-specific risks. This data can help you understand the unique injury patterns of Paralympic athletes, allowing for more effective prevention and rehabilitation strategies.",
+     "limitation": "研究的监测周期仅限于赛事期间，无法评估长期损伤风险。",
+     "limitationEn": "The study's monitoring period was limited to the Games, preventing assessment of long-term injury risks.",
+     "tags": [
+      "research",
+      "para-athletics",
+      "injury-epidemiology"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1783546480565-12",
+     "title": "Composite severity score for race-related incidents in cycling",
+     "summary": "This paper proposes an incident-level severity framework for surveillance in mass-start cycling sports to provide deeper insights into race incident severity beyond traditional injury incidence measures.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1000?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T21:34:40.565Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究提出的自行车赛事故复合严重程度评分框架，为运动康复临床医师和研究者评估和分类自行车相关事件提供了新工具。这有助于更系统地理解损伤机制和预防策略，尤其是在集体出发、高速骑行背景下。",
+     "titleZh": "自行车赛中与竞赛相关的事故复合严重程度评分",
+     "summaryZh": "本文提出了一个用于集体出发自行车赛事故监测的严重程度框架，旨在提供超越传统损伤发生率测量的更深层事故严重程度洞察。",
+     "curatedReasonEn": "This study's proposed composite severity score framework for race-related incidents in cycling offers a new tool for sports rehabilitation clinicians and researchers to assess and classify cycling events. This will aid in a more systematic understanding of injury mechanisms and prevention strategies, particularly in mass-start, high-speed cycling contexts.",
+     "limitation": "本研究仅提出了一个评分框架，未进行实际验证和广泛应用评估。",
+     "limitationEn": "This study only proposed a scoring framework, without actual validation or extensive application assessment.",
+     "tags": [
+      "research",
+      "cycling",
+      "injury-prevention"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1783546480566-14",
+     "title": "Ready to respond? Safeguarding structures in European National Olympic Committees",
+     "summary": "A cross-sectional survey of 20 European National Olympic Committees (NOCs) assessed safeguarding structures and readiness to respond to interpersonal violence, identifying common challenges despite high officer appointment rates.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1021?rss=1",
+     "publishedAt": "2026-07-08T08:19:38.000Z",
+     "firstSeen": "2026-07-08T21:34:40.566Z",
+     "curatedScore": 75,
+     "curatedReason": "这项针对欧洲各国奥委会（NOCs）的调查揭示了运动中人际暴力保障机制的现状和差距。作为运动康复领域的从业者，你应了解这些结构性问题，并思考如何在自己的实践中更好地识别、报告和支持受害者，确保运动员的安全。",
+     "titleZh": "准备好应对了吗？欧洲国家奥委会的保障结构",
+     "summaryZh": "一项针对 20 个欧洲国家奥委会（NOCs）的横断面调查评估了人际暴力保障结构和响应准备情况，尽管保障官员任命率高，但仍识别出常见挑战。",
+     "curatedReasonEn": "This survey of European National Olympic Committees (NOCs) reveals the status and gaps in safeguarding structures against interpersonal violence in sports. As a practitioner in sports rehabilitation, you should understand these structural issues and consider how to better identify, report, and support victims in your practice to ensure athlete safety.",
+     "limitation": "本研究为横断面调查，依赖于自我报告数据，可能存在报告偏差。",
+     "limitationEn": "This is a cross-sectional survey relying on self-reported data, which may introduce reporting bias.",
+     "tags": [
+      "research",
+      "athlete-safety",
+      "organizational-readiness"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1783521886936-32",
+     "title": "The Impact of Mandatory Bundled Payment on Prehabilitation Delivery for Lower Extremity Joint Replacement",
+     "summary": "This study aims to determine the effect of mandatory bundled payment for inpatient lower extremity joint replacement on the delivery of preoperative rehabilitation (prehabilitation).",
+     "category": "practice",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00796-3/fulltext?rss=yes",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-08T14:44:46.936Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究旨在评估强制性捆绑式支付对下肢关节置换术前康复（prehabilitation）交付的影响。这对美国的 PT 执业者非常重要，因为报销模式的改变直接影响你提供服务的方式和收入。",
+     "titleZh": "强制性捆绑支付对下肢关节置换术前康复服务交付的影响",
+     "summaryZh": "这项研究旨在确定针对住院下肢关节置换的强制性捆绑支付对术前康复（prehabilitation）服务交付的影响。",
+     "curatedReasonEn": "This study aims to evaluate the impact of mandatory bundled payments on prehabilitation delivery for lower extremity joint replacement. This is highly relevant for US PT practitioners, as changes in reimbursement models directly affect how you deliver services and your revenue.",
+     "limitation": "研究设计或方法在摘要中未详细说明，无法评估潜在偏倚。",
+     "limitationEn": "The study design or methods were not detailed in the abstract, preventing assessment of potential biases.",
+     "tags": [
+      "research",
+      "reimbursement",
+      "orthopedic"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "Ethical Considerations Toward Harmonizing Human and Machine Agency in Embodied Neurotechnologies | Neuroethics | Springer Nature Link",
+   "titleZh": "具身神经技术中人机智能和谐化的伦理考量",
+   "source": "Sports Medicine",
+   "sourceUrl": "https://link.springer.com/article/10.1007/s12152-026-09657-1",
+   "publishedAt": "2026-07-06T00:00:00.000Z",
+   "journal": null
+  },
+  {
+   "title": "Enhanced Gait Variability Index in Neurological and Geriatric Rehabilitation: A Scoping Review.",
+   "titleZh": "增强型步态变异性指数在神经和老年康复中的应用：一项范围综述",
+   "source": "PubMed",
+   "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42417016/",
+   "publishedAt": "2026-07-08T00:00:00.000Z",
+   "journal": "NeuroRehabilitation"
+  },
+  {
+   "title": "Tongfu-Xingshen Capsule ameliorates ischemic stroke by inhibiting pyroptosis-mediated neuroinflammation",
+   "titleZh": "通腑醒神胶囊通过抑制细胞焦亡介导的神经炎症改善缺血性卒中",
+   "source": "PubMed",
+   "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41911986/",
+   "publishedAt": "2026-07-15T03:06:49.000Z",
+   "journal": null
+  },
+  {
+   "title": "Serum Biomarkers in Paediatric Neurosurgery: Traumatic Brain Injury and Beyond | Springer Nature Link",
+   "titleZh": "儿科神经外科中的血清生物标志物：创伤性脑损伤及其他",
+   "source": "Sports Medicine",
+   "sourceUrl": "https://link.springer.com/chapter/10.1007/978-3-032-22008-0_2",
+   "publishedAt": "2026-07-03T21:48:40.000Z",
+   "journal": null
+  },
+  {
+   "title": "Utilization of physiotherapy services and associated factors among stroke survivors attending hospitals in Gondar Town, Northwest Ethiopia.",
+   "titleZh": "埃塞俄比亚贡德尔镇卒中幸存者物理治疗服务利用及其相关因素研究",
+   "source": "PubMed",
+   "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42416484/",
+   "publishedAt": "2026-07-08T00:00:00.000Z",
+   "journal": "Archives of physiotherapy"
+  },
+  {
+   "title": "Building the foundations: organisational leadership for athlete mental health",
+   "titleZh": "奠定基础：运动员心理健康的组织领导力",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/995?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Monitoring an athletes performance-state after they return to sport is a significant challenge in ACL injury research and applied practice",
+   "titleZh": "ACL 损伤研究和实践中，监测运动员重返运动后的表现状态是一项重大挑战",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1007?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Factors associated with return-to-sport outcomes following pathogen-confirmed acute respiratory infections in athletes: AWARE X study",
+   "titleZh": "病原体确诊急性呼吸道感染运动员重返运动结果相关因素：AWARE X 研究",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1028?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Impact of heat exposure on muscle-tendon properties and mechanics (PhD Academy Award)",
+   "titleZh": "热暴露对肌肉-肌腱特性和力学的影响（博士学院奖）",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1069?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Towards safer and smarter boxing: technology, health and performance",
+   "titleZh": "迈向更安全、更智能的拳击：技术、健康与表现",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1005?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Correction: ACTIVATE: physical activity assessment, prescription and promotion in clinical practice by healthcare professionals - a consensus study initiated by the International Federation of Sports Physical Therapy",
+   "titleZh": "更正：ACTIVATE——国际运动物理治疗联合会发起的关于医疗专业人员在临床实践中进行身体活动评估、处方和推广的共识研究",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/e4?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "#Beyondthelikes: the influence of social media on athletes mental health",
+   "titleZh": "#超越点赞：社交媒体对运动员心理健康的影响",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1003?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Sudden cardiac arrest preparedness in African football: evidence from Cameroon and implications for global sport",
+   "titleZh": "非洲足球心源性猝死准备情况：喀麦隆的证据及对全球体育的影响",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1045?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Infographic. Video analysis of muscle strains in sport: qualitative and quantitative situational characteristics across muscle groups",
+   "titleZh": "信息图。运动中肌肉拉伤的视频分析：跨肌群的定性与定量情境特征",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1064?rss=1",
+   "publishedAt": "2026-07-08T08:19:38.000Z",
+   "journal": "British Journal of Sports Medicine"
+  }
+ ]
+}
