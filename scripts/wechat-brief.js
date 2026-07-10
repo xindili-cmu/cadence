@@ -39,6 +39,41 @@ const CAT_ZH = {
   'manual-modality': '手法与理疗', practice: '行业与执业',
 };
 
+// 单刊上限（2026-07-10 决策：单刊浓度治理落在选稿层，不动 feed 数据层）。
+// 期刊按期出刊、单日倾泻一批（7-08 BJSM 曾占日报 6/11），按分贪心取满 limit
+// 但同一刊最多 cap 条，被跳过的位置由次高分的非饱和刊补上。
+// 浓度按「刊」算，不按抓取渠道：PubMed 是管线不是刊（见 daily-brief.js
+// 2026-07-08 fix #10），按 source 记数会把跨多刊的 PubMed 条目误杀。
+// RSS 源简称与 PubMed 全称刊名归一；journal 缺失且源是聚合管线时不设限
+//（刊未知，宁可放过不误杀）。
+// exemptIds（热点/双信源故事）豁免跳过——编辑意图是必须进刊——但计入配额，
+// 避免「豁免 + 配额」叠出更多同刊条目。
+const SOURCE_CAP = 3;
+const CAP_ALIAS = {
+  'bjsm': 'british journal of sports medicine',
+  'jospt': 'journal of orthopaedic & sports physical therapy',
+  'archives of pm&r': 'archives of physical medicine and rehabilitation',
+};
+const CAP_AGGREGATORS = new Set(['pubmed']);
+function capKey(i) {
+  const raw = ((i.journal || i.source || '') + '').trim().toLowerCase();
+  if (!i.journal && CAP_AGGREGATORS.has(raw)) return null; // 刊未知，不计数
+  return CAP_ALIAS[raw] || raw;
+}
+function pickDiverse(items, limit, cap, exemptIds = new Set()) {
+  const tally = new Map();
+  const out = [];
+  for (const i of items) {
+    if (out.length >= limit) break;
+    const k = capKey(i);
+    const c = k ? (tally.get(k) || 0) : 0;
+    if (k && c >= cap && !exemptIds.has(i.id)) continue;
+    if (k) tally.set(k, c + 1);
+    out.push(i);
+  }
+  return out;
+}
+
 async function main() {
   console.log(`\n📮 步频公众号日报 — ${new Date().toISOString()}`);
   if (process.env.REFRESH_MODE === 'direct') { console.log('  direct mode — brief is a daily-full-run product, skipping.'); return; }
@@ -46,10 +81,11 @@ async function main() {
 
   const data = JSON.parse(fs.readFileSync(NEWS_PATH, 'utf8'));
   const cutoff = Date.now() - WINDOW_HOURS * 3600 * 1000;
+  // 不再预切 12：候选池保持完整，让 pickDiverse 在被 cap 掉同源条目后
+  // 仍有次高分的其他源可补位（预切会把补位候选一起切掉）。
   const recent = (data.items || [])
     .filter(i => new Date(i.publishedAt).getTime() >= cutoff)
-    .sort((a, b) => b.curatedScore - a.curatedScore)
-    .slice(0, 12); // 公众号一屏读完，不做无限长文
+    .sort((a, b) => b.curatedScore - a.curatedScore);
 
   if (!recent.length) { console.log('  近 24h 无新条目，今日不发刊。'); return; }
 
@@ -65,10 +101,11 @@ async function main() {
     .filter(x => x.item);
   const hotById = new Map(hotResolved.map(x => [x.item.id, x.h]));
   const seen = new Set();
-  const writeups = [...recent, ...hotResolved.map(x => x.item)]
+  const pool = [...recent, ...hotResolved.map(x => x.item)]
     .filter(i => { if (!i || seen.has(i.id)) return false; seen.add(i.id); return true; })
-    .sort((a, b) => b.curatedScore - a.curatedScore)
-    .slice(0, 12);
+    .sort((a, b) => b.curatedScore - a.curatedScore);
+  // 12 = 公众号一屏读完，不做无限长文
+  const writeups = pickDiverse(pool, 12, SOURCE_CAP, new Set(hotResolved.map(x => x.item.id)));
 
   const payload = writeups.map((i, n) => {
     const ht = hotById.get(i.id);

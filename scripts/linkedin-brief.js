@@ -87,9 +87,36 @@ function pickEdition(arg) {
   return path.join(DAILY_DIR, files[files.length - 1]);
 }
 
+// 单刊上限（2026-07-10 决策：单刊浓度治理落在选稿层）。5 条帖子里同一刊
+// 最多 2 条，被跳过的位置由次高分的其他刊补上。浓度按「刊」算：journal
+// 优先，缺失退 source；PubMed 是管线不是刊，journal 缺失时不设限；RSS 源
+// 简称与 PubMed 全称刊名归一（与 wechat-brief.js 同一套规则）。
+const SOURCE_CAP = 2;
+const CAP_ALIAS = {
+  'bjsm': 'british journal of sports medicine',
+  'jospt': 'journal of orthopaedic & sports physical therapy',
+  'archives of pm&r': 'archives of physical medicine and rehabilitation',
+};
+const CAP_AGGREGATORS = new Set(['pubmed']);
+function capKey(i) {
+  const raw = ((i.journal || i.source || '') + '').trim().toLowerCase();
+  if (!i.journal && CAP_AGGREGATORS.has(raw)) return null; // 刊未知，不计数
+  return CAP_ALIAS[raw] || raw;
+}
 function topItems(ed, n) {
-  return (ed.sections || []).flatMap(s => s.items || [])
-    .slice().sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, n);
+  const sorted = (ed.sections || []).flatMap(s => s.items || [])
+    .slice().sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0));
+  const tally = new Map();
+  const out = [];
+  for (const i of sorted) {
+    if (out.length >= n) break;
+    const k = capKey(i);
+    const c = k ? (tally.get(k) || 0) : 0;
+    if (k && c >= SOURCE_CAP) continue;
+    if (k) tally.set(k, c + 1);
+    out.push(i);
+  }
+  return out;
 }
 
 function buildPost(ed, items, zh) {
