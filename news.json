@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-11T17:26:31.525Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-07-11T19:36:12.242Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -114,9 +114,9 @@
           "titleZh": "偏瘫患者下肢本体感觉对平衡和步态的影响：生物力学分析"
         }
       ],
-      "heat": 5.5,
-      "themeZh": "卒中后多领域康复干预的有效性与可行性",
-      "themeEn": "Stroke rehabilitation interventions: efficacy and feasibility"
+      "heat": 5.33,
+      "themeZh": "卒中后多领域康复干预的效用与可行性研究",
+      "themeEn": "Post-stroke rehabilitation interventions efficacy and feasibility"
     },
     {
       "id": "news-1783583816206-6",
@@ -184,9 +184,9 @@
           "titleZh": "膝关节置换术后长期活动限制建议的重大差异：一项针对瑞典物理治疗师的调查"
         }
       ],
-      "heat": 3.3,
-      "themeZh": "老年骨关节炎与风湿性关节炎的运动及非药物管理",
-      "themeEn": "Exercise and non-pharmacological management for osteoarthritis"
+      "heat": 3.2,
+      "themeZh": "老年患者关节炎和关节置换的运动康复管理",
+      "themeEn": "Exercise rehab for geriatric arthritis and joint replacement"
     },
     {
       "id": "news-1783778329417-21",
@@ -227,9 +227,9 @@
           "titleZh": "增强步态变异指数在神经和老年康复中的应用：范围综述"
         }
       ],
-      "heat": 2.33,
-      "themeZh": "可穿戴设备结合机器学习的步态量化与分析",
-      "themeEn": "Wearable sensors and machine learning for gait analysis"
+      "heat": 2.26,
+      "themeZh": "可穿戴设备和机器学习的步态量化与分析",
+      "themeEn": "Wearable-based gait quantification and analysis via machine learning"
     },
     {
       "id": "news-1783149593311-2",
@@ -272,9 +272,9 @@
           "titleZh": "治疗性按摩单独或联合常规物理治疗对肌筋膜疼痛综合征的短期效果：一项随机对照试验"
         }
       ],
-      "heat": 2.2,
-      "themeZh": "肌骨康复中不同物理疗法的效果对比",
-      "themeEn": "Comparing physical therapy effectiveness in musculoskeletal rehabilitation"
+      "heat": 2.13,
+      "themeZh": "物理疗法对肌肉骨骼和神经系统疾病的疗效",
+      "themeEn": "Physical therapy efficacy for musculoskeletal and neurological conditions"
     },
     {
       "id": "news-1783101190186-3",
@@ -323,12 +323,35 @@
           "titleZh": "远程物理治疗中注意力焦点在指令和反馈中的应用：一项观察性研究"
         }
       ],
-      "heat": 2.2,
-      "themeZh": "儿科物理治疗结局测量与治疗实践经验",
-      "themeEn": "Pediatric PT outcomes and practice insights"
+      "heat": 2.13,
+      "themeZh": "儿童物理治疗的成果测量与康复经验",
+      "themeEn": "Pediatric physiotherapy outcomes and rehabilitation experiences"
     }
   ],
   "items": [
+    {
+      "id": "news-1782551307451-6",
+      "title": "Mindset, Effort, and Support-the foundation for patients' decision to return to sport after an anterior cruciate ligament injury. A qualitative analysis from the NACOX Cohort.",
+      "summary": "A qualitative analysis of 275 ACL-injured patients, with 112 reporting RTS, identified three key categories influencing return-to-sport decisions: motivation/driving forces, treatment/recovery, and medical clearance/readiness, underpinned by mindset, effort, and support.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42361655/",
+      "publishedAt": "2026-06-27T00:00:00.000Z",
+      "firstSeen": "2026-06-27T09:08:27.451Z",
+      "curatedScore": 75,
+      "curatedReason": "本项定性研究强调，ACL 损伤患者重返运动的决策受“心态、努力和支持”三大要素驱动。下次评估患者重返运动意愿时，除了体能指标，请纳入这些主观因素，它们是提高依从性和成功率的关键。",
+      "titleZh": "心态、努力与支持：ACL 损伤患者重返运动决策的基础——NACOX 队列定性分析",
+      "summaryZh": "对 275 名 ACL 损伤患者进行的定性分析显示，112 名重返运动的患者其决策受到“动机与驱动力”、“治疗与康复”以及“医学许可与准备度”三大因素的影响，核心是患者的心态、努力和支持。",
+      "curatedReasonEn": "This qualitative study highlights that patients' decision to return to sport (RTS) after ACL injury is driven by three main factors: \"mindset, effort, and support.\" When assessing patients' readiness for RTS, integrate these subjective factors alongside objective physical metrics. They are crucial for improving adherence and success rates.",
+      "limitation": "本研究为定性分析，其结果主要来自患者自由文本回答，可能存在信息饱和度不足和回忆偏倚。",
+      "limitationEn": "This is a qualitative study, and its findings are primarily derived from patients' free-text responses, which may have limitations regarding data saturation and recall bias.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    },
     {
       "id": "news-1783783619847-16",
       "title": "Sexual function during primary rehabilitation after spinal cord injury: A descriptive analysis from a population-based cohort",
