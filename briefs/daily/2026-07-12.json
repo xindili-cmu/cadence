@@ -1,0 +1,378 @@
+{
+ "date": "2026-07-12",
+ "generatedAt": "2026-07-11T22:14:11.474Z",
+ "windowHours": 50,
+ "windowStart": "2026-07-10T22:31:36.136Z",
+ "windowEnd": "2026-07-11T22:13:09.708Z",
+ "lead": {
+  "titleZh": "多模态数据融合驱动膝骨关节炎机器学习分类",
+  "titleEn": "Multimodal Data Fusion Enhances Knee Osteoarthritis Machine Learning Classification",
+  "paragraphZh": "今日关注的 15 个条目中，最高评分（85 分）的条目来自骨科与肌骨领域，一项观察研究探讨了步态、平衡与红外热成像的多模态数据整合在膝骨关节炎机器学习分类中的应用。此外，一条 RCT 研究发现术前康复可改善老年脊柱融合术患者的外科结局，值得关注。",
+  "paragraphEn": "Among today's 15 entries, the highest score (85) comes from the Orthopedics and Musculoskeletal category, featuring a cross-sectional study on integrating gait, balance, and infrared thermography for machine learning classification of knee osteoarthritis. Additionally, an RCT indicates that prehabilitation can improve surgical outcomes in older adults undergoing spinal fusion."
+ },
+ "stats": {
+  "events": 15,
+  "specialties": 3,
+  "multiSource": 0,
+  "sources": 3,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1783778329417-21",
+     "title": "Multimodal Integration of Gait, Balance, and Infrared Thermography Enhances Machine-Learning Classification of Knee Osteoarthritis: A Cross-Sectional Study",
+     "summary": "Combining gait, balance, and infrared thermography data significantly enhances machine-learning classification of knee osteoarthritis (KOA) compared to single-domain models, improving discrimination between KOA patients and healthy controls.",
+     "category": "orthopedic",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00809-9/fulltext?rss=yes",
+     "publishedAt": "2026-07-11T00:00:00.000Z",
+     "firstSeen": "2026-07-11T13:58:49.417Z",
+     "curatedScore": 85,
+     "curatedReason": "这项研究表明，结合步态、平衡和红外热成像数据，能显著提高膝关节骨关节炎（KOA）的机器学习分类准确性。这提示你未来在 KOA 评估中，可以考虑整合多模态生物力学和热成像信息，以更精准地识别和管理患者。",
+     "titleZh": "步态、平衡与红外热成像的多模态整合增强膝骨关节炎的机器学习分类：一项横断面研究",
+     "summaryZh": "一项横断面研究显示，结合步态、平衡和红外热成像数据，能显著提升膝关节骨关节炎（KOA）的机器学习分类能力，相比单一领域模型，更能有效区分 KOA 患者与健康对照。",
+     "curatedReasonEn": "This study indicates that combining gait, balance, and infrared thermography data significantly improves machine-learning classification accuracy for knee osteoarthritis (KOA). This suggests that in future KOA assessments, you could consider integrating multi-modal biomechanical and thermal imaging information for more precise patient identification and management.",
+     "limitation": "这是一项横断面研究，无法推断多模态整合对疾病进展或干预效果的预测能力。",
+     "limitationEn": "As a cross-sectional study, it cannot infer the predictive power of multimodal integration on disease progression or intervention efficacy.",
+     "tags": [
+      "research",
+      "knee",
+      "diagnosis",
+      "imaging"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1783807981581-17",
+     "title": "Prehabilitation Improves Surgical Outcomes in Older Adults Undergoing Spinal Fusion: Study",
+     "summary": "A randomized clinical trial found that a multimodal prehabilitation program before spinal fusion surgery in older adults was associated with lower postoperative complications and shorter hospital stays compared to standard care, though control group patients showed better physical function at 90 days.",
+     "category": "orthopedic",
+     "source": "Medical Dialogues",
+     "sourceUrl": "https://medicaldialogues.in/orthopaedics/news/prehabilitation-improves-surgical-outcomes-in-older-adults-undergoing-spinal-fusion-study-173229",
+     "publishedAt": "2026-07-10T14:45:09.000Z",
+     "firstSeen": "2026-07-11T22:13:01.581Z",
+     "curatedScore": 80,
+     "curatedReason": "脊柱融合术前康复（prehabilitation）可显著降低老年患者术后并发症风险并缩短住院时间。对于这类高龄患者，术前强化干预应作为常规实践考量，尽管 90 天随访时对照组物理功能表现更优提示长期效果需进一步关注。",
+     "titleZh": "研究发现术前康复可改善老年脊柱融合术患者的外科结局",
+     "summaryZh": "一项随机临床试验发现，与标准护理相比，老年脊柱融合术前多模式康复计划可降低术后并发症风险并缩短住院时间，但对照组患者在 90 天随访时表现出更好的物理功能。",
+     "curatedReasonEn": "Prehabilitation before spinal fusion surgery can significantly reduce postoperative complications and shorten hospital stays in older adults. For high-risk older patients, intensive pre-surgical intervention should be considered routine practice, though the control group's better physical function at 90 days suggests a need for further attention to long-term outcomes.",
+     "limitation": "研究指出 90 天随访时对照组物理功能表现更优，提示术前康复的长期效益可能存在限制，或需调整方案。",
+     "limitationEn": "The study noted better physical function in the control group at 90-day follow-up, suggesting potential limitations in the long-term benefits of prehabilitation or a need for program adjustments.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1783807981581-21",
+     "title": "Mattress impact on lifestyle and back pain: a 25-year orthopedic literature review guideline | Journal of Orthopaedics and Traumatology",
+     "summary": "A 25-year orthopedic literature review guideline evaluated whether mattress characteristics impact sleep quality and low back pain, concluding that inadequate bedding support may lead to morning stiffness and discomfort.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s10195-026-00945-3",
+     "publishedAt": "2026-07-10T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.581Z",
+     "curatedScore": 75,
+     "curatedReason": "床垫对生活方式和背痛的影响综述强调了睡眠表面对肌肉骨骼健康的重要性。在评估患者背痛时，请务必询问其睡眠环境，并针对性地给出床垫选择建议。",
+     "titleZh": "床垫对生活方式和背痛的影响：一项 25 年骨科文献综述指南",
+     "summaryZh": "一项为期 25 年的骨科文献综述指南评估了床垫特性是否影响睡眠质量和腰背痛，结论是床垫支撑不足可能导致晨僵和不适。",
+     "curatedReasonEn": "This review on mattress impact on lifestyle and back pain highlights the importance of sleeping surfaces for musculoskeletal health. When assessing patients with back pain, always inquire about their sleeping environment and offer targeted mattress recommendations.",
+     "limitation": "该综述未提供具体样本量和研究设计细节，限制了证据等级的评估。",
+     "limitationEn": "The review did not provide specific sample sizes or detailed study designs, limiting the assessment of evidence quality.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "综述"
+    },
+    {
+     "id": "news-1783807981581-18",
+     "title": "Online versus offline Fugl-Meyer lower extremity training for physical therapy students: a randomized study | BMC Medical Education",
+     "summary": "This randomized study compared online versus offline Fugl-Meyer lower extremity training for physical therapy students, aiming to improve FMA-LE standardization, with findings suggesting comparable effectiveness between the two methods.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12909-026-09634-5",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.581Z",
+     "curatedScore": 70,
+     "curatedReason": "针对物理治疗学生的 Fugl-Meyer 下肢评估 (FMA-LE) 培训，线上和线下教学效果差异不大。这意味着在教育资源受限或需要远程教学时，线上模式是可行的，可以作为补充或替代方案。",
+     "titleZh": "物理治疗学生 Fugl-Meyer 下肢训练的线上与线下模式比较：一项随机研究",
+     "summaryZh": "这项随机研究比较了物理治疗学生 Fugl-Meyer 下肢评估训练的线上与线下模式，旨在提高 FMA-LE 的标准化水平，结果表明两种方法的效果相当。",
+     "curatedReasonEn": "For physical therapy students' Fugl-Meyer Lower Extremity Assessment (FMA-LE) training, online and offline teaching methods show comparable effectiveness. This suggests online modalities are viable for supplementary or alternative education when resources are limited or remote teaching is needed.",
+     "limitation": "研究对象为物理治疗学生而非临床医生，结果对临床实践的直接指导意义有限。",
+     "limitationEn": "The study subjects were physical therapy students, not clinicians, limiting the direct applicability of results to clinical practice.",
+     "tags": [
+      "research",
+      "education"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783807981582-23",
+     "title": "Differences in Pelvic Floor Morphometry for Women with Persistent Pelvic Pain and Deep Infiltrating Endometriosis—A Cross-Sectional Study | International Urogynecology Journal",
+     "summary": "This cross-sectional study aims to describe the morphometry of the pelvic floor in a large population of women with persistent pelvic pain and deep infiltrating endometriosis compared to those without pain.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06752-y",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 70,
+     "curatedReason": "持续性盆腔疼痛 (PPP) 和深部浸润性子宫内膜异位症 (DIE) 女性的盆底形态测量学存在差异。这提示你在治疗这些患者时，需要考虑盆底结构可能存在的特定改变，从而指导评估和干预。",
+     "titleZh": "持续性盆腔疼痛和深部浸润性子宫内膜异位症女性盆底形态测量学差异：一项横断面研究",
+     "summaryZh": "这项横断面研究旨在描述大量持续性盆腔疼痛和深部浸润性子宫内膜异位症女性与无疼痛女性的盆底形态测量学差异。",
+     "curatedReasonEn": "There are differences in pelvic floor morphometry for women with persistent pelvic pain (PPP) and deep infiltrating endometriosis (DIE). This suggests that when treating these patients, you need to consider specific structural changes in the pelvic floor, guiding your assessment and intervention.",
+     "limitation": "本研究为横断面研究，无法揭示盆底形态改变与疼痛之间的因果关系。",
+     "limitationEn": "This is a cross-sectional study, unable to reveal causal relationships between pelvic floor morphometric changes and pain.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783807981582-24",
+     "title": "Long-Term Comparison of Patient-Reported Outcomes Following Six Surgical Procedures for Apical Suspension | International Urogynecology Journal",
+     "summary": "A nationwide cohort study with 3–14 years of follow-up assessed long-term patient-reported outcomes across six surgical procedures for first-time vaginal vault suspension for apical prolapse.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06795-1",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 70,
+     "curatedReason": "针对初次阴道穹窿悬吊术，这项为期 3-14 年的全国性队列研究显示，不同术式的患者报告结局存在长期差异。在康复管理中，你应考虑患者具体术式，这提示了其术后恢复和功能预期的潜在区别。",
+     "titleZh": "六种穹窿悬吊术式患者报告结局的长期比较",
+     "summaryZh": "一项随访 3-14 年的全国性队列研究评估了六种首次阴道穹窿悬吊术式在治疗子宫脱垂方面的长期患者报告结局。",
+     "curatedReasonEn": "For first-time vaginal vault suspension, this 3-14 year nationwide cohort study reveals long-term differences in patient-reported outcomes across six surgical procedures. In rehabilitation management, you should consider the specific surgical approach, which indicates potential variations in post-operative recovery and functional expectations.",
+     "limitation": "研究为全国性队列研究，可能存在混杂因素，且未详细说明患者报告结局的具体测量方法。",
+     "limitationEn": "The study is a nationwide cohort study, which may have confounding factors and does not detail the specific measurement methods for patient-reported outcomes.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1783807981582-28",
+     "title": "Integrating serum neurotrophin profiles and quantitative EEG for predicting motor outcomes in acute ischemic stroke | BMC Neurology",
+     "summary": "This study investigated whether integrating serum neurotrophin profiles with quantitative electroencephalography (qEEG) parameters enhances predictive accuracy for 6-month motor outcomes beyond conventional clinical factors in acute ischemic stroke.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12883-026-05048-4",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 75,
+     "curatedReason": "在急性缺血性卒中患者中，如果你能结合血清神经营养因子和 qEEG 参数，对 6 个月运动结局的预测会更准确。这意味着，早期个性化康复方案的制定将拥有更精细的生物标记物支持。",
+     "titleZh": "整合血清神经营养因子谱和定量脑电图预测急性缺血性卒中运动结局",
+     "summaryZh": "这项研究旨在探讨整合血清神经营养因子谱与定量脑电图 (qEEG) 参数是否能提高急性缺血性卒中患者 6 个月运动结局的预测准确性，超越传统临床因素。",
+     "curatedReasonEn": "In acute ischemic stroke patients, combining serum neurotrophin profiles with qEEG parameters improves the predictive accuracy for 6-month motor outcomes. This implies that early, personalized rehabilitation planning can be supported by more refined biomarker data.",
+     "limitation": "研究未提供具体的预测准确性提升量，限制了临床意义的量化评估。",
+     "limitationEn": "The study did not provide specific increments in predictive accuracy, limiting the quantitative assessment of clinical significance.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783783619847-16",
+     "title": "Sexual function during primary rehabilitation after spinal cord injury: A descriptive analysis from a population-based cohort",
+     "summary": "This descriptive analysis aims to characterize the prevalence and risk factors for sexual dysfunction and its symptoms, including altered arousal, orgasmic dysfunction, female menstrual dysfunction, and male erectile and ejaculatory dysfunction, during primary spinal cord injury rehabilitation.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00811-7/fulltext?rss=yes",
+     "publishedAt": "2026-07-11T00:00:00.000Z",
+     "firstSeen": "2026-07-11T15:26:59.847Z",
+     "curatedScore": 75,
+     "curatedReason": "脊髓损伤患者的性功能障碍是常见但常被忽视的问题。这份人口队列的描述性分析提醒你，在初级康复阶段就需要关注患者这方面的需求和风险因素，并将其纳入评估和干预计划。",
+     "titleZh": "脊髓损伤初级康复期间的性功能：一项基于人群队列的描述性分析",
+     "summaryZh": "这项描述性分析旨在阐明脊髓损伤初级康复期间性功能障碍及其症状（包括性唤起和性高潮障碍、女性月经失调以及男性勃起和射精功能障碍）的分布和风险因素。",
+     "curatedReasonEn": "Sexual dysfunction is a common but often overlooked issue in individuals with spinal cord injury. This descriptive analysis from a population-based cohort underscores the need to address patients' sexual health concerns and risk factors during primary rehabilitation, integrating them into assessment and intervention plans.",
+     "limitation": "本研究为描述性分析，无法建立因果关系，且未提供干预效果评估。",
+     "limitationEn": "This descriptive analysis cannot establish causality and did not assess intervention effectiveness.",
+     "tags": [
+      "research",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1783807981582-30",
+     "title": "MRI-based evidence of rectus capitis posterior minor hypertrophy and its correlation with disease duration in Parkinson’s disease | BMC Medical Imaging",
+     "summary": "This study found MRI-based evidence of rectus capitis posterior minor hypertrophy and its correlation with disease duration in Parkinson's disease, suggesting implications for cerebrospinal fluid dynamics and glymphatic system function.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12880-026-02571-1",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 70,
+     "curatedReason": "MRI 证据表明，小头后直肌肥大与帕金森病病程相关。这可能为帕金森病相关的颈部症状提供了新的生物标志物线索，值得你在评估帕金森患者时留意。",
+     "titleZh": "帕金森病小头后直肌肥大的 MRI 证据及其与病程的相关性",
+     "summaryZh": "本研究发现帕金森病患者小头后直肌肥大的 MRI 证据及其与病程的相关性，提示其对脑脊液动力学和淋巴系统功能的影响。",
+     "curatedReasonEn": "MRI evidence suggests rectus capitis posterior minor hypertrophy correlates with Parkinson's disease duration. This potentially offers a new biomarker clue for Parkinson's-related neck symptoms, something to note when assessing Parkinson's patients.",
+     "limitation": "本研究为横断面观察研究，无法确立小头后直肌肥大与帕金森病病程的因果关系。",
+     "limitationEn": "This is a cross-sectional observational study, which cannot establish a causal relationship between rectus capitis posterior minor hypertrophy and the duration of Parkinson's disease.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783807981582-29",
+     "title": "Melatonin promotes recovery from ischemic stroke by modulating microglia polarization and inhibiting oligodendrocyte pyroptosis via the RORα/AMPKα/STAT1 pathway | Journal of Translational Medicine",
+     "summary": "This study investigated how melatonin promotes recovery from ischemic stroke by modulating microglia polarization and inhibiting oligodendrocyte pyroptosis via the RORα/AMPKα/STAT1 pathway.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12967-026-08596-y",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 65,
+     "curatedReason": "褪黑素在缺血性卒中后通过调节小胶质细胞极化和抑制少突胶质细胞焦亡来促进恢复。尽管机制研究对未来治疗方向有启发，但目前主要停留在动物实验和分子层面，离临床应用尚远。",
+     "titleZh": "褪黑素通过调节小胶质细胞极化和抑制少突胶质细胞焦亡促进缺血性卒中恢复",
+     "summaryZh": "本研究探讨了褪黑素如何通过 RORα/AMPKα/STAT1 途径调节小胶质细胞极化和抑制少突胶质细胞焦亡，从而促进缺血性卒中后的恢复。",
+     "curatedReasonEn": "Melatonin promotes recovery from ischemic stroke by modulating microglia polarization and inhibiting oligodendrocyte pyroptosis. While mechanistic research is insightful for future treatment directions, it currently remains at the animal and molecular level, far from clinical application.",
+     "limitation": "这是一项机制研究，主要基于动物模型和分子机制，其结果不能直接应用于人类临床治疗。",
+     "limitationEn": "This is a mechanistic study, primarily based on animal models and molecular mechanisms; its results cannot be directly applied to human clinical treatment.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783807981582-31",
+     "title": "Correlative ultrastructural mapping of Lewy pathology reveals regional diversity in Parkinson’s and dementia with Lewy bodies | Acta Neuropathologica",
+     "summary": "This study used correlative ultrastructural mapping to reveal regional diversity in Lewy pathology in Parkinson's disease and dementia with Lewy bodies, defined by neuronal accumulation of misfolded α-synuclein.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00401-026-03039-w",
+     "publishedAt": "2026-07-08T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 65,
+     "curatedReason": "Lewy 小体病理的超微结构图谱揭示了帕金森病和路易体痴呆在不同脑区的多样性。这项基础研究加深了我们对疾病病理机制的理解，但距离指导临床干预仍有距离。",
+     "titleZh": "路易体病理相关超微结构图谱揭示帕金森病和路易体痴呆的区域多样性",
+     "summaryZh": "本研究通过路易体病理相关超微结构图谱，揭示了帕金森病和路易体痴呆中由错误折叠 α-突触核蛋白神经元积累定义的区域多样性。",
+     "curatedReasonEn": "Correlative ultrastructural mapping of Lewy pathology reveals regional diversity in Parkinson's and dementia with Lewy bodies. This foundational research enhances our understanding of disease pathological mechanisms, but it is still far from guiding clinical intervention.",
+     "limitation": "这是一项基础病理学研究，主要关注疾病机制，结果不直接涉及临床康复干预。",
+     "limitationEn": "This is a basic pathology study focused on disease mechanisms, and the results do not directly involve clinical rehabilitation interventions.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1783807981582-34",
+     "title": "Impact of Complicated Diabetes Mellitus in Patients Following Severe Traumatic Brain Injury | Neurocritical Care",
+     "summary": "This study hypothesized that post-TBI mortality in patients with complicated diabetes mellitus is severity-dependent, driven by pre-existing diabetic complications rather than the diagnosis of DM alone, using a large cohort analysis.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s12028-026-02585-1",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 65,
+     "curatedReason": "本研究假设，严重创伤性脑损伤 (TBI) 后并发糖尿病对死亡率的影响，主要由既往糖尿病并发症驱动，而非单纯糖尿病诊断。这提示你管理 TBI 合并糖尿病患者时，需要评估其糖尿病并发症状态，进行精细化管理。",
+     "titleZh": "复杂糖尿病对严重创伤性脑损伤患者的影响",
+     "summaryZh": "这项研究假设，复杂糖尿病对严重创伤性脑损伤 (TBI) 患者的 TBI 后死亡率影响是严重程度依赖性的，由既往糖尿病并发症而非单纯糖尿病诊断驱动，并采用大型队列分析进行验证。",
+     "curatedReasonEn": "This study hypothesizes that the impact of complicated diabetes mellitus on mortality after severe traumatic brain injury (TBI) is primarily driven by pre-existing diabetic complications, rather than the diagnosis of diabetes alone. This suggests that when managing TBI patients with diabetes, you need to assess their diabetic complication status for refined management.",
+     "limitation": "研究关注的是死亡率而非康复结局，对物理治疗实践的直接指导意义有限。",
+     "limitationEn": "The study focuses on mortality rather than rehabilitation outcomes, which has limited direct guidance for physical therapy practice.",
+     "tags": [
+      "research",
+      "brain-injury"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1783807981582-39",
+     "title": "The Impact of a Single Bout of Antagonist Stretching on Agonist Muscle Performance and Range of Motion: A Systematic review and Meta-analysis | Sports Medicine - Open",
+     "summary": "This systematic review and meta-analysis investigated the impact of a single bout of antagonist stretching on agonist muscle performance and range of motion, aiming to synthesize conflicting findings.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01065-2",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 80,
+     "curatedReason": "单次拮抗肌牵伸对拮抗肌表现和关节活动度 (ROM) 的影响，这项系统综述和荟萃分析提供了确凿证据。这意味着你可以在运动前暖身中策略性地应用拮抗肌牵伸来优化表现或改善 ROM。",
+     "titleZh": "单次拮抗肌牵伸对拮抗肌表现和关节活动度的影响：一项系统综述和荟萃分析",
+     "summaryZh": "这项系统综述和荟萃分析探讨了单次拮抗肌牵伸对拮抗肌表现和关节活动度 (ROM) 的影响，旨在综合现有相互矛盾的研究结果。",
+     "curatedReasonEn": "This systematic review and meta-analysis provides solid evidence on the impact of a single bout of antagonist stretching on agonist muscle performance and range of motion (ROM). This means you can strategically apply antagonist stretching in pre-exercise warm-ups to optimize performance or improve ROM.",
+     "limitation": "该综述未提供具体的效应量，限制了临床实践中牵伸强度和持续时间的精确指导。",
+     "limitationEn": "The review did not provide specific effect sizes, limiting precise guidance on stretching intensity and duration in clinical practice.",
+     "tags": [
+      "research",
+      "flexibility",
+      "exercise-physiology"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783807981582-36",
+     "title": "Electromyography patterns during running in injured versus healthy runners: a systematic review | BMC Musculoskeletal Disorders",
+     "summary": "This systematic review compared electromyography patterns during running in injured versus healthy runners, highlighting the link between biomechanical factors, muscle coordination, and running injuries.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10064-z",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 70,
+     "curatedReason": "一项关于受伤和健康跑步者跑步过程中肌电图模式的系统综述揭示了两者之间的差异。在评估和康复跑步受伤患者时，可以利用肌电图数据进行精细化分析，以指导步态调整和肌肉强化。",
+     "titleZh": "受伤与健康跑步者跑步过程中肌电图模式的系统综述",
+     "summaryZh": "这项系统综述比较了受伤与健康跑步者在跑步过程中的肌电图模式，强调了生物力学因素、肌肉协调与跑步损伤之间的关联。",
+     "curatedReasonEn": "A systematic review on electromyography patterns during running in injured versus healthy runners reveals differences. When assessing and rehabilitating injured runners, you can use EMG data for detailed analysis to guide gait adjustments and muscle strengthening.",
+     "limitation": "综述中包含的研究可能存在方法学异质性，影响了结果的普遍性。",
+     "limitationEn": "The studies included in the review may have methodological heterogeneity, affecting the generalizability of the results.",
+     "tags": [
+      "research",
+      "running",
+      "biomechanics"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1783807981582-38",
+     "title": "Scapular dyskinesis with preserved structure and function in largely asymptomatic junior elite tennis players: a 2D video and multimodal cross-sectional study | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A 2D video and multimodal cross-sectional study found scapular dyskinesis with preserved structure and function in largely asymptomatic junior elite tennis players.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01872-w",
+     "publishedAt": "2026-07-09T00:00:00.000Z",
+     "firstSeen": "2026-07-11T22:13:01.582Z",
+     "curatedScore": 70,
+     "curatedReason": "青少年精英网球运动员在功能和结构正常的情况下出现肩胛骨运动障碍。这表明运动障碍并非总是与疼痛或功能受损直接相关，你在评估肩胛骨运动时应更全面，避免过度诊断。",
+     "titleZh": "青少年精英网球运动员肩胛骨运动障碍：2D 视频和多模式横断面研究",
+     "summaryZh": "一项 2D 视频和多模式横断面研究发现，在大多数无症状的青少年精英网球运动员中，存在结构和功能保持完好的肩胛骨运动障碍。",
+     "curatedReasonEn": "Scapular dyskinesis was observed in largely asymptomatic junior elite tennis players with preserved structure and function. This indicates that dyskinesis is not always directly related to pain or impaired function, so you should adopt a more comprehensive approach when assessing scapular motion to avoid overdiagnosis.",
+     "limitation": "本研究为横断面研究，无法确定肩胛骨运动障碍是原因还是结果，也无法评估其长期影响。",
+     "limitationEn": "This is a cross-sectional study, unable to determine whether scapular dyskinesis is a cause or effect, nor can it assess its long-term impact.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
