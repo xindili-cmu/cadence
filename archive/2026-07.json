@@ -7591,6 +7591,31 @@
       "studyDesign": "综述",
       "journal": "Clinical rehabilitation",
       "tech": true
+    },
+    {
+      "id": "news-1783850586141-27",
+      "title": "Prediction of Exercise Intolerance in the Recovery Period After Cardiovascular Surgery Using Perioperative Clinical Parameters",
+      "summary": "This study aims to develop and validate a machine learning model using perioperative clinical parameters to predict reduced exercise capacity at 3 months post-cardiovascular surgery.",
+      "category": "cardiopulmonary",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00814-2/fulltext?rss=yes",
+      "publishedAt": "2026-07-12T00:00:00.000Z",
+      "firstSeen": "2026-07-12T10:03:06.141Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究旨在开发一个机器学习模型，利用心血管手术出院时的临床参数预测术后3个月的运动耐量受损情况。如果你在心肺康复领域工作，这个模型未来可能帮助你更早识别高风险患者，从而实现更精准的康复干预。",
+      "titleZh": "利用围手术期临床参数预测心血管手术后恢复期运动不耐受性",
+      "summaryZh": "本研究旨在开发和验证一个机器学习模型，通过围手术期临床参数预测心血管手术后3个月的运动能力下降情况。",
+      "curatedReasonEn": "This study aims to develop a machine learning model to predict impaired exercise capacity at 3 months post-cardiovascular surgery using clinical parameters available at hospital discharge. If you work in cardiopulmonary rehabilitation, this model could help you identify high-risk patients earlier, leading to more precise rehabilitation interventions.",
+      "limitation": "这是一项预测模型开发研究，需要进一步的外部验证才能在临床中广泛应用。",
+      "limitationEn": "This is a predictive model development study, requiring further external validation for broad clinical application.",
+      "tags": [
+        "research",
+        "cardiac-rehabilitation",
+        "exercise-capacity"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "tech": true
     }
   ]
 }
