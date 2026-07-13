@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-13T07:48:09.332Z",
+    "lastUpdated": "2026-07-13T11:33:07.047Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42411984/",
       "category": "cardiopulmonary",
       "publishedAt": "2026-07-13T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 6,
       "sources": [
         "Clinical rehabilitation",
         "NeuroRehabilitation",
-        "Sports Medicine",
-        "The South African journal of physiotherapy",
         "Archives of physiotherapy",
+        "The South African journal of physiotherapy",
         "Archives of Physical Medicine and Rehabilitation",
         "Disability and rehabilitation"
       ],
@@ -41,6 +40,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Identifying Gaps in Rehabilitation Strategies for Chronic Stroke: A Systematic Review of Evidence in Patients With and Without Nerve Transfer.",
+          "titleZh": "识别慢性卒中康复策略的差距：一项关于神经转移与非神经转移患者证据的系统综述"
+        },
+        {
+          "source": "PubMed",
           "journal": "Clinical rehabilitation",
           "title": "Telerehabilitation during the hospital-to-home transition for stroke survivors: A scoping review.",
           "titleZh": "卒中幸存者出院回家过渡期的远程康复：一项范围界定综述"
@@ -52,27 +57,16 @@
           "titleZh": "将音乐疗法整合到卒中后失语症常规言语语言康复中的可行性：一项真实世界门诊研究"
         },
         {
-          "source": "Sports Medicine",
-          "title": "Effectiveness of non-pharmacological interventions for lower limb motor impairment in post-stroke hemiplegia: a systematic review and Bayesian network meta-analysis | Journal of NeuroEngineering and Rehabilitation",
-          "titleZh": "卒中后偏瘫下肢运动障碍非药物干预的有效性：一项系统综述与贝叶斯网络荟萃分析"
-        },
-        {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Identifying Gaps in Rehabilitation Strategies for Chronic Stroke: A Systematic Review of Evidence in Patients With and Without Nerve Transfer.",
-          "titleZh": "识别慢性卒中康复策略的差距：一项关于神经转移与非神经转移患者证据的系统综述"
+          "journal": "Archives of physiotherapy",
+          "title": "Utilization of physiotherapy services and associated factors among stroke survivors attending hospitals in Gondar Town, Northwest Ethiopia.",
+          "titleZh": "埃塞俄比亚 Gondar 镇医院中风幸存者物理治疗服务利用率及相关因素。"
         },
         {
           "source": "PubMed",
           "journal": "The South African journal of physiotherapy",
           "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
           "titleZh": "物理治疗师在卒中康复中运动学习的知识、态度和实践。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physiotherapy",
-          "title": "Utilization of physiotherapy services and associated factors among stroke survivors attending hospitals in Gondar Town, Northwest Ethiopia.",
-          "titleZh": "埃塞俄比亚 Gondar 镇医院中风幸存者物理治疗服务利用率及相关因素。"
         },
         {
           "source": "Archives of PM&R",
@@ -99,9 +93,9 @@
           "titleZh": "“如果你不解决这些问题，最终会制造更多问题”：一项关于帕金森病患者及其照护伙伴家庭口腔护理的定性研究"
         }
       ],
-      "heat": 6.25,
-      "themeZh": "卒中康复的非药物干预、远程医疗与实施",
-      "themeEn": "Stroke rehabilitation: non-pharmacological interventions, telerehab, implementation"
+      "heat": 5.08,
+      "themeZh": "卒中康复策略与服务模式",
+      "themeEn": "Stroke Rehabilitation Strategies and Service Models"
     },
     {
       "id": "news-1783149593311-2",
@@ -112,12 +106,12 @@
       "sourceCount": 5,
       "sources": [
         "British journal of sports medicine",
-        "Sports Medicine",
-        "Physiotherapy",
         "Physiotherapy theory and practice",
+        "Physiotherapy",
+        "Sports Medicine",
         "BMC musculoskeletal disorders"
       ],
-      "tag": "shoulder",
+      "tag": "pelvic-floor",
       "kind": "theme",
       "members": [
         {
@@ -127,26 +121,16 @@
           "titleZh": "与常规锻炼相比，血流限制锻炼在肌肉骨骼康复中是否提供额外益处？一项系统综述和荟萃分析"
         },
         {
-          "source": "Sports Medicine",
-          "title": "The Impact of a Single Bout of Antagonist Stretching on Agonist Muscle Performance and Range of Motion: A Systematic review and Meta-analysis",
-          "titleZh": "拮抗肌单次牵伸对激动肌表现和关节活动范围的影响：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Effects of physical exercise on spasticity in people with multiple sclerosis: A systematic review.",
-          "titleZh": "体育锻炼对多发性硬化症患者痉挛的影响：一项系统综述"
-        },
-        {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Short-term effects of therapeutic massage alone or combined with conventional physiotherapy in myofascial pain syndrome: A randomized controlled trial.",
           "titleZh": "治疗性按摩单独或联合常规物理治疗对肌筋膜疼痛综合征的短期疗效：一项随机对照试验。"
         },
         {
-          "source": "Sports Medicine",
-          "title": "Effect of pain neuroscience education on pain, kinesiophobia, disability, and quality of life in patients with frozen shoulder: a randomized controlled trial",
-          "titleZh": "疼痛神经科学教育对肩周炎患者疼痛、运动恐惧症、功能障碍和生活质量的影响：一项随机对照试验"
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Effects of physical exercise on spasticity in people with multiple sclerosis: A systematic review.",
+          "titleZh": "体育锻炼对多发性硬化症患者痉挛的影响：一项系统综述"
         },
         {
           "source": "Sports Medicine",
@@ -160,9 +144,9 @@
           "titleZh": "普拉提与居家锻炼治疗慢性非特异性腰痛的成本效益：一项基于试验的经济学评估"
         }
       ],
-      "heat": 5,
-      "themeZh": "肌肉骨骼康复中的运动、手法和疼痛教育",
-      "themeEn": "Exercise, manual therapy, pain education in MSK rehab"
+      "heat": 4.73,
+      "themeZh": "肌肉骨骼疾病的物理治疗方法疗效",
+      "themeEn": "Musculoskeletal Rehabilitation Therapy Effectiveness"
     },
     {
       "id": "news-1783076660306-0",
@@ -258,9 +242,9 @@
           "titleZh": "肥胖女性的身体活动：疲劳、膝关节症状和功能能力"
         }
       ],
-      "heat": 4.02,
-      "themeZh": "肌肉骨骼物理治疗服务模式与实施",
-      "themeEn": "MSK physiotherapy service models and implementation"
+      "heat": 3.81,
+      "themeZh": "数字与虚拟技术在骨科康复中的应用",
+      "themeEn": "Digital and Virtual Orthopedic Rehabilitation"
     },
     {
       "id": "news-1783894428434-16",
@@ -320,9 +304,9 @@
           "titleZh": "“8”字贴扎配合康复治疗学龄女性空手道运动员多方向肩关节不稳：一病例报告"
         }
       ],
-      "heat": 3.15,
-      "themeZh": "下肢损伤康复的负重、肌电与生物力学",
-      "themeEn": "Lower limb injury rehab: weight-bearing, EMG, biomechanics"
+      "heat": 2.98,
+      "themeZh": "下肢运动损伤康复训练与生物力学",
+      "themeEn": "Lower Limb Injury Rehab Biomechanics"
     },
     {
       "id": "news-1783521886933-0",
@@ -371,12 +355,125 @@
           "titleZh": "下肢本体感觉对偏瘫患者平衡和步态的影响：生物力学分析"
         }
       ],
-      "heat": 1.26,
-      "themeZh": "卒中后步态和平衡的可穿戴量化与评估",
-      "themeEn": "Wearable quantification of post-stroke gait and balance"
+      "heat": 1.2,
+      "themeZh": "神经系统疾病步态与平衡量化评估",
+      "themeEn": "Neurological Gait and Balance Quantification"
     }
   ],
   "items": [
+    {
+      "id": "news-1783546480565-12",
+      "title": "Composite severity score for race-related incidents in cycling",
+      "summary": "This paper proposes an incident-level severity framework for surveillance in cycling, moving beyond traditional injury incidence to provide insight into the relative severity of race incidents, including crashes and other safety-affecting occurrences.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1000?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-08T21:34:40.565Z",
+      "curatedScore": 75,
+      "curatedReason": "别再只盯着损伤率了。这个框架提示我们，评估自行车赛事风险，应将重点放在事件的整体严重程度，而不仅仅是受伤。它帮你更全面地识别和预防训练及比赛中的各种安全问题。",
+      "titleZh": "自行车赛事中与种族相关事件的综合严重程度评分",
+      "summaryZh": "一篇论文提出了一个用于自行车赛事监测的事件严重程度框架，超越了传统的损伤发生率，以深入了解包括碰撞在内的赛事事件及其对安全影响的相对严重程度。",
+      "curatedReasonEn": "Stop fixating solely on injury rates. This framework suggests that when assessing cycling race risks, we should focus on the overall severity of incidents, not just injuries. It helps you more comprehensively identify and prevent various safety issues in training and competition.",
+      "limitation": "提出的框架尚未经过外部验证，需要进一步研究来评估其在不同环境下的普适性和可靠性。",
+      "limitationEn": "The proposed framework has not yet undergone external validation, requiring further research to assess its generalizability and reliability in different contexts.",
+      "tags": [
+        "research",
+        "cycling",
+        "injury-prevention"
+      ],
+      "studyDesign": "述评",
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1783546480566-14",
+      "title": "Ready to respond? Safeguarding structures in European National Olympic Committees",
+      "summary": "A cross-sectional survey of 20 European National Olympic Committees (NOCs) assessed their safeguarding structures, finding that while 19/20 NOCs had safeguarding officers, most roles were combined, and gaps existed in policies, reporting, and case management.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1021?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-08T21:34:40.566Z",
+      "curatedScore": 75,
+      "curatedReason": "这项针对欧洲 20 个国家奥委会的调查显示，尽管大多数机构已设保障官员，但缺乏专职人员、政策和案例管理流程仍是普遍问题。这提示你在与国际体育组织合作或指导运动员时，要留意其内部保障机制的实际能力和差距。",
+      "titleZh": "准备好应对了吗？欧洲国家奥委会的保障结构",
+      "summaryZh": "一项针对 20 个欧洲国家奥委会（NOCs）的横断面调查评估了他们的保障结构，发现 19/20 的 NOC 设有保障官员，但大多数角色为兼职，并且在政策、报告和案例管理方面存在不足。",
+      "curatedReasonEn": "This survey of 20 European National Olympic Committees reveals that while most have safeguarding officers, common issues include a lack of dedicated personnel, comprehensive policies, and robust case management. This suggests that when collaborating with international sports organizations or guiding athletes, you should be aware of the actual capabilities and gaps in their internal safeguarding mechanisms.",
+      "limitation": "研究仅限于 20 个欧洲国家奥委会，其结果可能不完全代表全球其他地区或不同规模体育组织的状况。",
+      "limitationEn": "The study was limited to 20 European National Olympic Committees, and its findings may not fully represent the situation in other global regions or sports organizations of different sizes.",
+      "tags": [
+        "research",
+        "sports-governance",
+        "athlete-safety"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1783521886936-31",
+      "title": "Impact of heat exposure on muscle-tendon properties and mechanics (PhD Academy Award)",
+      "summary": "A PhD study investigated the effects of passive heat exposure and active heat acclimation on neuromuscular and musculotendinous systems, focusing on the gastrocnemius medialis muscle-tendon unit, to understand its responses under different heat stress conditions in vivo.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/1069?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-08T14:44:46.936Z",
+      "curatedScore": 75,
+      "curatedReason": "这项博士研究提示，在热环境下，你的运动员小腿肌肉-肌腱单元的神经肌肉和力学特性可能改变。这意味着在高温训练或比赛中，你需要更谨慎地评估跟腱负荷，并相应调整康复计划，以预防损伤或优化表现。",
+      "titleZh": "热暴露对肌肉-肌腱特性和力学的影响（博士学位奖）",
+      "summaryZh": "一项博士研究探讨了被动热暴露和主动热适应对神经肌肉和肌肉肌腱系统的影响，重点关注小腿三头肌-跟腱单元，旨在了解其在不同热应激条件下的体内反应。",
+      "curatedReasonEn": "This PhD study suggests that in hot environments, the neuromuscular and mechanical properties of your athletes' gastrocnemius medialis muscle-tendon unit may change. This implies that during high-temperature training or competition, you need to more carefully assess Achilles tendon loading and adjust rehabilitation plans accordingly to prevent injury or optimize performance.",
+      "limitation": "研究主要集中在小腿三头肌-跟腱单元，其发现对其他肌群或不同类型运动的外推性可能有限。",
+      "limitationEn": "The study primarily focused on the gastrocnemius medialis muscle-tendon unit, and its findings may have limited generalizability to other muscle groups or different types of athletic movements.",
+      "tags": [
+        "research",
+        "heat-stress",
+        "muscle-physiology",
+        "tendon-mechanics"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1783521886935-15",
+      "title": "Correction: ACTIVATE: physical activity assessment, prescription and promotion in clinical practice by healthcare professionals - a consensus study initiated by the International Federation of Sports Physical Therapy",
+      "summary": "A correction has been issued for the ACTIVATE consensus study, initiated by the International Federation of Sports Physical Therapy, regarding a corrected reference (reference 57) in the original publication.",
+      "category": "practice",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/e4?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-08T14:44:46.935Z",
+      "curatedScore": 70,
+      "curatedReason": "这是一则勘误，提醒你之前发布的一项关于医疗专业人员在临床实践中评估、开具和促进体育活动共识研究，其引用文献有修正。如果你在查阅该共识时引用了该文献，请核对更新。",
+      "titleZh": "勘误：ACTIVATE：国际运动物理治疗联合会发起的医疗专业人员在临床实践中评估、开具和促进体育活动共识研究",
+      "summaryZh": "国际运动物理治疗联合会发起的 ACTIVATE 共识研究发布勘误，原文献 57 已得到修正。",
+      "curatedReasonEn": "This is a correction notice regarding a consensus study on physical activity assessment, prescription, and promotion in clinical practice by healthcare professionals, indicating an updated reference. If you previously cited this consensus, please verify the update.",
+      "tags": [
+        "news",
+        "education"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1783583816206-18",
+      "title": "Correction: Body composition and physical fitness in transgender versus cisgender individuals: a systematic review with meta-analysis",
+      "summary": "A correction has been made to a systematic review and meta-analysis comparing body composition and physical fitness in transgender versus cisgender individuals, with three studies removed due to re-examination of eligibility criteria.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/e5?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-09T07:56:56.206Z",
+      "curatedScore": 65,
+      "curatedReason": "这是一项系统综述的勘误，有三项研究被移除，因为它发现这些研究仅包含激素治疗前的参与者，不符合纳排标准。即便主要结论未变，你在引用时也应知悉这是基于修正后数据集的综述。",
+      "titleZh": "勘误：跨性别与顺性别个体身体成分和体能的系统综述与荟萃分析",
+      "summaryZh": "一项比较跨性别与顺性别个体身体成分和体能的系统综述和荟萃分析已发布勘误，移除三项因不符合激素治疗前参与者纳入标准的原始研究。",
+      "curatedReasonEn": "This is a correction notice for a systematic review where three studies were removed because they only included pre-GAHT participants, not meeting the inclusion criteria. While the main conclusions remain unchanged, you should be aware that the review is now based on a revised dataset when citing it.",
+      "tags": [
+        "news",
+        "transgender"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
     {
       "id": "news-1783149593311-2",
       "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
@@ -2029,117 +2126,6 @@
         "pelvic-floor"
       ],
       "studyDesign": "系统综述"
-    },
-    {
-      "id": "news-1783463898494-21",
-      "title": "APTA Report Finds Demand for Pelvic Health Physical Therapy Outpaces Access",
-      "summary": "A new APTA report, \"APTA State of Pelvic Health Physical Therapy,\" reveals that demand for pelvic health physical therapy in the U.S. currently outpaces access, identifying key challenges in workforce, awareness, and timely care.",
-      "category": "orthopedic",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/07/06/demand-pelvic-health-physical-therapy-outpaces-access",
-      "publishedAt": "2026-07-06T13:21:12.000Z",
-      "firstSeen": "2026-07-07T22:38:18.494Z",
-      "curatedScore": 85,
-      "curatedReason": "APTA 报告指出，美国盆底物理治疗的需求远超供给。这意味着该领域市场潜力巨大，若你考虑专业发展或诊所扩张，盆底物理治疗无疑是一个值得抓住的增长点。不过，也要留意报告提及的劳动力、可及性和公众认知挑战，这会影响你把握市场机会的方式。",
-      "titleZh": "APTA 报告：盆底物理治疗需求超出可及性",
-      "summaryZh": "美国物理治疗协会 (APTA) 的一份新报告《APTA 盆底物理治疗现状》显示，美国盆底物理治疗的需求目前超出了可及性，指出了劳动力、认知和及时护理方面的关键挑战。",
-      "curatedReasonEn": "The APTA report reveals that demand for pelvic health physical therapy in the U.S. significantly outpaces supply. This indicates immense market potential; if you're considering professional development or clinic expansion, pelvic health physical therapy is undeniably a growth area to seize. However, also pay attention to the workforce, access, and public awareness challenges mentioned in the report, as these will influence how you capitalize on market opportunities.",
-      "tags": [
-        "news",
-        "pelvic-floor",
-        "workforce",
-        "telehealth"
-      ]
-    },
-    {
-      "id": "news-1783722684279-28",
-      "title": "Effectiveness of non-pharmacological interventions for lower limb motor impairment in post-stroke hemiplegia: a systematic review and Bayesian network meta-analysis | Journal of NeuroEngineering and Rehabilitation",
-      "summary": "This systematic review and Bayesian network meta-analysis evaluated the effectiveness of non-pharmacological interventions for lower limb motor impairment in post-stroke hemiplegia.",
-      "category": "neurological",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02081-9",
-      "publishedAt": "2026-07-09T00:00:00.000Z",
-      "firstSeen": "2026-07-10T22:31:24.279Z",
-      "curatedScore": 85,
-      "curatedReason": "这项贝叶斯网络荟萃分析为卒中后偏瘫下肢运动障碍的非药物干预提供了高等级证据。在制定患者康复方案时，你应优先采纳其中证据级别高的干预措施，以最大化患者的恢复潜力。该分析有助于指导你做出更精准的临床决策。",
-      "titleZh": "卒中后偏瘫下肢运动障碍非药物干预的有效性：一项系统综述与贝叶斯网络荟萃分析",
-      "summaryZh": "这项系统综述和贝叶斯网络荟萃分析评估了卒中后偏瘫下肢运动障碍非药物干预的有效性。",
-      "curatedReasonEn": "This Bayesian network meta-analysis provides high-level evidence for non-pharmacological interventions for lower limb motor impairment in post-stroke hemiplegia. When developing rehabilitation plans, you should prioritize interventions with strong evidence to maximize patient recovery potential. This analysis can guide you in making more precise clinical decisions.",
-      "limitation": "贝叶斯网络荟萃分析的局限性在于纳入研究的异质性可能影响结果的稳健性。",
-      "limitationEn": "A limitation of Bayesian network meta-analysis is that heterogeneity among included studies can affect the robustness of the results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "系统综述"
-    },
-    {
-      "id": "news-1783377876090-32",
-      "title": "Prevention strategies and modifiable risk factors for upper extremity injury: a systematic review and meta-analysis for the female, woman and girl Athlete Injury pRevention (FAIR) consensus",
-      "summary": "This systematic review and meta-analysis identifies prevention strategies and modifiable risk factors for upper extremity injury in female, woman, and girl athletes as part of the FAIR consensus.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "https://bjsm.bmj.com/content/bjsports/early/2025/10/24/bjsports-2025-109907.full.pdf",
-      "publishedAt": "2025-10-24T00:00:00.000Z",
-      "firstSeen": "2026-07-06T22:44:36.090Z",
-      "curatedScore": 80,
-      "curatedReason": "这份系统综述和荟萃分析总结了女性运动员上肢损伤的预防策略和可修改风险因素。你在指导女性运动员时，应参考这些证据来设计更具针对性的损伤预防方案，并关注女性特有的生理和生物力学因素。",
-      "titleZh": "女性运动员上肢损伤预防策略与可修改风险因素：一项系统综述与荟萃分析",
-      "summaryZh": "这项系统综述和荟萃分析作为 FAIR 共识的一部分，旨在确定女性运动员上肢损伤的预防策略和可修改风险因素。",
-      "curatedReasonEn": "This systematic review and meta-analysis summarizes prevention strategies and modifiable risk factors for upper extremity injuries in female athletes. When coaching female athletes, you should refer to this evidence to design more targeted injury prevention programs and pay attention to female-specific physiological and biomechanical factors.",
-      "limitation": "系统综述的局限在于纳入研究的异质性，可能导致证据等级和结论的适用范围受限。",
-      "limitationEn": "A limitation of systematic reviews is the heterogeneity of included studies, which can restrict the applicability of evidence levels and conclusions.",
-      "tags": [
-        "research",
-        "injury-prevention",
-        "women-health"
-      ],
-      "studyDesign": "系统综述"
-    },
-    {
-      "id": "news-1783807981582-39",
-      "title": "The Impact of a Single Bout of Antagonist Stretching on Agonist Muscle Performance and Range of Motion: A Systematic review and Meta-analysis",
-      "summary": "This systematic review and meta-analysis investigated the impact of a single bout of antagonist stretching on agonist muscle performance and range of motion, addressing conflicting findings in current literature.",
-      "category": "sports",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01065-2",
-      "publishedAt": "2026-07-09T00:00:00.000Z",
-      "firstSeen": "2026-07-11T22:13:01.582Z",
-      "curatedScore": 80,
-      "curatedReason": "这项系统综述和荟萃分析评估了拮抗肌单次牵伸对激动肌表现和关节活动范围的影响。在制定热身或拉伸方案时，你需要权衡拮抗肌牵伸对后续运动表现的潜在影响，尤其是需要爆发力的运动，确保平衡柔韧性与力量输出的需求。",
-      "titleZh": "拮抗肌单次牵伸对激动肌表现和关节活动范围的影响：一项系统综述与荟萃分析",
-      "summaryZh": "这项系统综述和荟萃分析调查了拮抗肌单次牵伸对激动肌表现和关节活动范围的影响，旨在解决当前文献中存在的冲突发现。",
-      "curatedReasonEn": "This systematic review and meta-analysis suggests that a single bout of antagonist stretching might affect agonist muscle performance. When designing warm-up or stretching protocols, you need to carefully weigh the potential impact of antagonist stretching on subsequent explosive power, ensuring a balance between flexibility and power output.",
-      "limitation": "系统综述和荟萃分析可能存在纳入研究异质性，导致结果解释需谨慎，且对不同运动类型的影响可能不同。",
-      "limitationEn": "Systematic reviews and meta-analyses may have heterogeneity among included studies, requiring cautious interpretation of results, and the impact on different sports types may vary.",
-      "tags": [
-        "research",
-        "stretching",
-        "muscle-performance"
-      ],
-      "studyDesign": "系统综述"
-    },
-    {
-      "id": "news-1783722684278-16",
-      "title": "Effect of pain neuroscience education on pain, kinesiophobia, disability, and quality of life in patients with frozen shoulder: a randomized controlled trial",
-      "summary": "This randomized controlled trial investigated the effect of pain neuroscience education on pain, kinesiophobia, disability, and quality of life in patients with frozen shoulder.",
-      "category": "orthopedic",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s43161-026-00366-7",
-      "publishedAt": "2026-07-08T00:00:00.000Z",
-      "firstSeen": "2026-07-10T22:31:24.278Z",
-      "curatedScore": 75,
-      "curatedReason": "疼痛神经科学教育（PNE）对肩周炎患者的疼痛、运动恐惧症、功能障碍和生活质量有显著改善。将 PNE 纳入肩周炎的综合治疗方案中，能增强患者的自我效能和症状管理能力。",
-      "titleZh": "疼痛神经科学教育对肩周炎患者疼痛、运动恐惧症、功能障碍和生活质量的影响：一项随机对照试验",
-      "summaryZh": "这项随机对照试验探讨了疼痛神经科学教育对肩周炎患者疼痛、运动恐惧症、功能障碍和生活质量的影响。",
-      "curatedReasonEn": "Pain Neuroscience Education (PNE) significantly improves pain, kinesiophobia, disability, and quality of life in patients with frozen shoulder. Integrating PNE into a comprehensive treatment plan for frozen shoulder can enhance patient self-efficacy and symptom management.",
-      "limitation": "本研究为单中心随机对照试验，其结果外推性可能受限。",
-      "limitationEn": "This was a single-center randomized controlled trial, and the generalizability of its findings may be limited.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "RCT"
     }
   ]
 }
