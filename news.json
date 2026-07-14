@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-14T11:49:12.546Z",
+    "lastUpdated": "2026-07-14T14:18:28.845Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -132,9 +132,9 @@
           "titleZh": "下肢本体感觉对偏瘫患者平衡和步态的影响：生物力学分析"
         }
       ],
-      "heat": 10.19,
-      "themeZh": "卒中与脑损伤后功能恢复的评估、预后及康复管理",
-      "themeEn": "Stroke & Brain Injury Recovery Prognosis and Management"
+      "heat": 9.83,
+      "themeZh": "卒中后认知与移动功能恢复及远程康复",
+      "themeEn": "Post-stroke Cognitive, Mobility Recovery and Telerehab"
     },
     {
       "id": "news-1783981101082-3",
@@ -182,9 +182,9 @@
           "titleZh": "体育锻炼对多发性硬化症患者痉挛的影响：一项系统综述。"
         }
       ],
-      "heat": 2.98,
-      "themeZh": "骨科康复中运动疗法对疼痛与功能改善的有效性",
-      "themeEn": "Exercise Efficacy in Orthopedic Pain and Function"
+      "heat": 2.88,
+      "themeZh": "运动疗法对慢性疼痛与肌肉骨骼康复的益处",
+      "themeEn": "Exercise Therapy for Pain, Musculoskeletal Rehab"
     },
     {
       "id": "news-1783583816206-6",
@@ -261,34 +261,51 @@
           "titleZh": "肌少症增加颈椎前路椎间盘切除融合术后3年内邻近节段退变的风险"
         }
       ],
-      "heat": 1.69,
-      "themeEn": "Perioperative Rehab & Lifestyle for Older Adults"
+      "heat": 1.63,
+      "themeZh": "髋膝骨关节炎与关节置换术后康复管理",
+      "themeEn": "Knee Hip OA, Post-Arthroplasty Rehab Management"
     }
   ],
   "items": [
     {
-      "id": "news-1782813883000-5",
-      "title": "Exercise-based cancer telerehabilitation is safe but not superior to a single session of physiotherapy for improving quality of life: a randomised trial.",
-      "summary": "An 8-week, twice-weekly physiotherapist-led exercise telerehabilitation program was safe but not superior to a single in-person assessment and advice session for improving health-related quality of life in adult cancer survivors.",
-      "category": "practice",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42373398/",
-      "publishedAt": "2026-06-30T00:00:00.000Z",
-      "firstSeen": "2026-06-30T10:04:43.000Z",
-      "curatedScore": 70,
-      "curatedReason": "远程运动康复对肿瘤幸存者的生活质量与面对面单次指导相比，没有显著优势。继续将远程康复作为一种可行的交付模式，但应管理患者的预期，尤其是在生活质量改善方面。",
-      "titleZh": "基于运动的癌症远程康复是安全的，但改善生活质量不优于单次物理治疗：一项随机试验",
-      "summaryZh": "一项为期 8 周、每周两次由物理治疗师主导的远程运动康复计划对成人癌症幸存者来说是安全的，但在改善健康相关生活质量方面，并不优于单次面对面评估和建议。",
-      "curatedReasonEn": "Remote exercise telerehabilitation for cancer survivors showed no significant superiority over a single in-person session for quality of life. Continue to offer telerehabilitation as a viable delivery model, but manage patient expectations regarding quality-of-life improvements.",
-      "limitation": "研究未报告成本效益分析的具体结果，且随访期和样本量细节未完整提供。",
-      "limitationEn": "The study did not report specific cost-effectiveness results, and details on follow-up period and sample size were not fully provided.",
+      "id": "news-1784038706950-14",
+      "title": "APTA, Hartford HealthCare Launch Frailty Pilot to Advance Value-Based Care",
+      "summary": "APTA and Hartford HealthCare have launched a pilot program focusing on frailty to advance value-based care, highlighting the expanding role of physical therapy in preventive and integrated health models.",
+      "category": "geriatric",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/article/2026/07/14/apta-hartford-healthcare-launch-frailty-pilot",
+      "publishedAt": "2026-07-14T14:18:01.876Z",
+      "firstSeen": "2026-07-14T14:18:26.950Z",
+      "curatedScore": 85,
+      "curatedReason": "APTA 此次联手 Hartford HealthCare 开展衰弱试点项目，明确了一个信号：物理治疗在价值医疗体系中的地位正日益巩固。留意你所在区域是否有这类预示 PT 市场机会的整合性项目，尤其是针对老年衰弱的预防和管理。",
+      "titleZh": "APTA 与 Hartford HealthCare 启动衰弱试点项目，推进价值医疗",
+      "summaryZh": "APTA 与 Hartford HealthCare 合作启动一项衰弱试点项目，旨在推进价值医疗，突显了物理治疗在预防和整合健康模型中日益增长的作用。",
+      "curatedReasonEn": "This APTA-Hartford HealthCare frailty pilot solidifies physical therapy's growing role within value-based care models. Keep an eye out for similar integrated programs in your market, especially those targeting geriatric frailty prevention and management, as they signal direct PT opportunities.",
       "tags": [
-        "research",
-        "telehealth"
+        "news",
+        "reimbursement",
+        "value-based-care"
+      ]
+    },
+    {
+      "id": "news-1783521886935-15",
+      "title": "Correction: ACTIVATE: physical activity assessment, prescription and promotion in clinical practice by healthcare professionals - a consensus study initiated by the International Federation of Sports Physical Therapy",
+      "summary": "A correction was issued for the ACTIVATE consensus study, which focused on physical activity assessment, prescription, and promotion in clinical practice by healthcare professionals, initiated by the International Federation of Sports Physical Therapy. Reference 57 has been corrected.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/e4?rss=1",
+      "publishedAt": "2026-07-08T08:19:38.000Z",
+      "firstSeen": "2026-07-08T14:44:46.935Z",
+      "curatedScore": 70,
+      "curatedReason": "作为物理治疗师，ACTIVATE 共识研究为你在临床实践中评估、开具和促进患者体育活动提供了框架。该更正确保了引用的准确性，但对核心建议无实质影响。",
+      "titleZh": "更正：ACTIVATE：国际运动物理治疗联合会发起的关于医疗专业人员在临床实践中评估、开具和促进体育活动的共识研究",
+      "summaryZh": "国际运动物理治疗联合会发起的一项关于医疗专业人员在临床实践中评估、开具和促进体育活动的 ACTIVATE 共识研究发布了更正，其中参考文献 57 已被修正。",
+      "curatedReasonEn": "As a physical therapist, the ACTIVATE consensus study provides a framework for assessing, prescribing, and promoting physical activity in clinical practice. This correction ensures citation accuracy but does not alter the core recommendations.",
+      "tags": [
+        "news",
+        "physical-activity"
       ],
-      "studyDesign": "RCT",
-      "journal": "Journal of physiotherapy",
-      "tech": true
+      "journal": "British Journal of Sports Medicine"
     },
     {
       "id": "news-1783546480565-12",
@@ -1992,26 +2009,6 @@
         "stroke"
       ],
       "studyDesign": "系统综述"
-    },
-    {
-      "id": "news-1783549915401-36",
-      "title": "Pioneering programme launched to test breakthrough spinal treatment in UK rehab centres",
-      "summary": "A pioneering program has launched in UK rehab centers to test the real-world impact of Onward Medical's ARC-EX system, a UK-approved spinal cord injury treatment combining targeted electrical spinal cord stimulation with rehabilitation exercises.",
-      "category": "neurological",
-      "source": "Spinal Surgery News",
-      "sourceUrl": "https://www.spinalsurgerynews.com/2026/07/pioneering-programme-launched-to-test-breakthrough-spinal-treatment-in-uk-rehab-centres/153428",
-      "publishedAt": "2026-07-08T10:51:07.000Z",
-      "firstSeen": "2026-07-08T22:31:55.401Z",
-      "curatedScore": 85,
-      "curatedReason": "UK 监管机构批准的 ARC-EX 系统结合电刺激与康复训练，为脊髓损伤患者提供了新的治疗突破。你应该密切关注这类技术在临床中心的实际应用效果，这可能改变你未来对脊髓损伤患者的康复策略，并可能影响转诊建议。",
-      "titleZh": "英国康复中心启动创新项目，测试突破性脊髓损伤治疗方案",
-      "summaryZh": "英国康复中心启动一项创新项目，测试 Onward Medical 公司的 ARC-EX 系统在真实世界中的效果；该系统是英国批准的脊髓损伤治疗方案，结合了靶向电脊髓刺激和康复训练。",
-      "curatedReasonEn": "The UK-regulated ARC-EX system, combining electrical stimulation with rehabilitation exercises, offers a new treatment breakthrough for spinal cord injury patients. You should closely monitor the real-world effectiveness of such technologies in clinical centers, as this could change your future rehabilitation strategies for SCI patients and potentially influence referral recommendations.",
-      "tags": [
-        "news",
-        "spinal-cord",
-        "regulation"
-      ]
     }
   ]
 }
