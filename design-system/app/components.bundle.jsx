@@ -312,11 +312,13 @@ function signalTier(v) {
   return { key: 'low', color: 'var(--signal-low)', soft: 'var(--signal-low-soft)', zh: '参考', en: 'For reference' };
 }
 
-// Hover explainer — what the score means + the tier cutoffs.
+// Hover explainer — what the score means + the tier cutoffs. No "(0–100)":
+// scores cluster on 5-point marks, so a percent-style scale implies precision
+// the rubric doesn't have (2026-07-15 adversarial review — tier-led display).
 function signalTip(lang) {
   return (lang || (typeof window !== 'undefined' && window.CD_LANG) || 'zh') === 'zh'
-    ? 'SIGNAL：AI 对临床实践影响的评分（0–100）。85+ 强信号 · 75+ 值得关注 · 65+ 参考'
-    : 'SIGNAL: AI rating of clinical impact (0–100). 85+ strong signal · 75+ worth knowing · 65+ reference';
+    ? 'SIGNAL：AI 评估的证据强度档位。85+ 强信号 · 75–84 值得关注 · 65–74 参考'
+    : 'SIGNAL: AI-rated evidence-strength tier. 85+ strong signal · 75–84 worth knowing · 65–74 reference';
 }
 
 function signalTierLabel(t, lang) {
@@ -369,12 +371,11 @@ function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) 
           <span style={{ width: 5, height: 5, borderRadius: '999px', background: t.color }} />
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 600, letterSpacing: '0.18em', color: 'var(--text-tertiary)' }}>SIGNAL</span>
         </span>
-        <span style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 46, fontWeight: 600, lineHeight: 0.9, color: t.color, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 500, color: 'var(--text-tertiary)' }}>/100</span>
-        </span>
+        {/* No "/100" — tier-led display; the numeral is an ordinal data point,
+            not a percentage (2026-07-15 adversarial review). */}
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 46, fontWeight: 600, lineHeight: 0.9, color: t.color, letterSpacing: '-0.02em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
         <SignalMeter value={v} color={t.color} w={8} h={6} gap={3} />
-        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 600, color: t.color, letterSpacing: '-0.005em' }}>{signalTierLabel(t, lang)}</span>
+        <span style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, fontWeight: 700, color: t.color, letterSpacing: '-0.005em' }}>{signalTierLabel(t, lang)}</span>
       </span>
     );
   }
@@ -392,6 +393,10 @@ function SignalScore({ score = 0, variant, size = 'md', lang, style, ...rest }) 
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 600, color: t.color, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
       </span>
       <SignalMeter value={v} color={t.color} segs={5} w={4} h={9} gap={2} />
+      {/* Tier word on the card badge — tier-led display: with scores clustering
+          on 5-point marks the tier carries the meaning, the numeral the detail
+          (2026-07-15 adversarial review). */}
+      <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 600, color: t.color, letterSpacing: '-0.005em' }}>{signalTierLabel(t, lang)}</span>
     </span>
   );
 }
