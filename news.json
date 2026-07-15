@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-15T15:55:33.728Z",
+    "lastUpdated": "2026-07-15T17:42:25.449Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,15 +19,15 @@
       "title": "Distinct Patterns of Mobility Recovery After Stroke Using Routine Clinical Data",
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.08.26357600v1?rss=1",
       "category": "neurological",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
+      "publishedAt": "2026-07-15T00:00:00.000Z",
       "sourceCount": 8,
       "sources": [
         "medRxiv",
         "Topics in stroke rehabilitation",
         "NeuroRehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
-        "Clinical rehabilitation",
         "The South African journal of physiotherapy",
+        "Clinical rehabilitation",
         "Sports Medicine",
         "American journal of physical medicine & rehabilitation"
       ],
@@ -71,15 +71,15 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
-          "titleZh": "心血管康复对短暂性脑缺血发作和轻度卒中患者的有效性：一项随机对照试验。"
-        },
-        {
-          "source": "PubMed",
           "journal": "The South African journal of physiotherapy",
           "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
           "titleZh": "南非物理治疗师在卒中康复中运动学习的知识、态度和实践"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
+          "titleZh": "心血管康复对短暂性脑缺血发作和轻度卒中患者的有效性：一项随机对照试验。"
         },
         {
           "source": "Sports Medicine",
@@ -91,6 +91,12 @@
           "journal": "NeuroRehabilitation",
           "title": "Identifying Gaps in Rehabilitation Strategies for Chronic Stroke: A Systematic Review of Evidence in Patients With and Without Nerve Transfer.",
           "titleZh": "识别慢性卒中康复策略的空白：有无神经移植患者证据的系统综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
+          "titleZh": "基于 ICF 评估和干预在卒中康复中的应用：一项叙述性综述"
         },
         {
           "source": "PubMed",
@@ -115,9 +121,9 @@
           "titleZh": "基于行为改变技术促进老年癌症患者体力活动和营养的移动健康干预：一项 N-of-1 试验方案"
         }
       ],
-      "heat": 4.49,
-      "themeZh": "卒中后认知、运动功能障碍与疲劳康复研究",
-      "themeEn": "Post-Stroke Cognitive and Motor Recovery"
+      "heat": 6.2,
+      "themeZh": "卒中与创伤性脑损伤后功能恢复与预后",
+      "themeEn": "Stroke and TBI Functional Recovery and Prognosis"
     },
     {
       "id": "news-1784130931913-13",
@@ -125,11 +131,14 @@
       "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00815-4/fulltext?rss=yes",
       "category": "manual-modality",
       "publishedAt": "2026-07-15T00:00:00.000Z",
-      "sourceCount": 3,
+      "sourceCount": 6,
       "sources": [
         "Archives of Physical Medicine and Rehabilitation",
         "The Journal of manual & manipulative therapy",
-        "Sports Medicine"
+        "Sports Medicine",
+        "British journal of sports medicine",
+        "The South African journal of physiotherapy",
+        "Physiotherapy"
       ],
       "tag": "electro",
       "kind": "theme",
@@ -162,14 +171,60 @@
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "Adherence to exercise intervention including pain threshold, exercise and physiotherapy sessions for patients with chronic rotator cuff tendinopathy",
           "titleZh": "慢性肩袖肌腱病患者运动干预（含疼痛阈值、运动和物理治疗）的依从性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
+          "titleZh": "血流限制运动在肌肉骨骼康复中是否比传统运动有额外益处？一项系统综述和荟萃分析。"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Effects of exercise on physical function and pain in adults with rheumatoid arthritis: an exit meta-analysis of randomized controlled trials",
+          "titleZh": "运动对类风湿关节炎成人身体功能和疼痛的影响：一项随机对照试验的荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The South African journal of physiotherapy",
+          "title": "Exploration of lifestyle interventions for individuals with knee osteoarthritis: A scoping review.",
+          "titleZh": "膝骨关节炎患者生活方式干预的探索：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Effects of physical exercise on spasticity in people with multiple sclerosis: A systematic review.",
+          "titleZh": "体育锻炼对多发性硬化症患者痉挛影响的系统综述。"
         }
       ],
-      "heat": 2.38,
-      "themeZh": "超声引导神经刺激与手法治疗在慢性疼痛中的应用",
-      "themeEn": "Manual Therapy for Chronic Musculoskeletal Pain"
+      "heat": 4.65,
+      "themeZh": "上肢疼痛的物理治疗与手动疗法干预",
+      "themeEn": "Upper Extremity Pain Manual Therapy Interventions"
     }
   ],
   "items": [
+    {
+      "id": "news-1784137344002-0",
+      "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
+      "summary": "A narrative review synthesized 166 studies on ICF-based assessments and interventions in post-stroke rehabilitation, mapping 546 assessments to the ICF framework, with over 80% overlap with UK Stroke Guideline topics.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42454985/",
+      "publishedAt": "2026-07-15T00:00:00.000Z",
+      "firstSeen": "2026-07-15T17:42:24.002Z",
+      "curatedScore": 75,
+      "curatedReason": "ICF 框架下的评估和干预在卒中康复中得到广泛应用，本综述帮你快速了解现有研究主要集中在哪些方面、与 UK 指南的契合度。但具体应用策略还得看未来更高级别的证据。",
+      "titleZh": "基于 ICF 评估和干预在卒中康复中的应用：一项叙述性综述",
+      "summaryZh": "一项叙述性综述综合了 166 项关于卒中后康复中基于 ICF 评估和干预的研究，将 546 项评估映射到 ICF 框架，与英国卒中指南主题重叠超过 80%。",
+      "curatedReasonEn": "ICF-based assessments and interventions are widely used in stroke rehabilitation. This review helps you quickly understand current research focus areas and alignment with UK guidelines. However, specific application strategies still require higher-level evidence.",
+      "limitation": "本综述属于叙述性综述，可能存在选择偏倚，且未提供具体干预措施的疗效数据。",
+      "limitationEn": "This is a narrative review, which may be subject to selection bias and does not provide efficacy data for specific interventions.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "综述",
+      "journal": "NeuroRehabilitation"
+    },
     {
       "id": "news-1784130931913-13",
       "title": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation for chronic lateral elbow pain: a randomized controlled trial",
@@ -193,30 +248,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1782911662631-4",
-      "title": "Early-Stage Symptomatic Hip Osteoarthritis: A Window of Opportunity.",
-      "summary": "This perspective emphasizes the growing prevalence of hip osteoarthritis in young adults and highlights the critical importance of early-stage identification and intervention to potentially alter its trajectory, noting it receives less attention than knee OA.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42381613/",
-      "publishedAt": "2026-07-01T00:00:00.000Z",
-      "firstSeen": "2026-07-01T13:14:22.631Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇述评强调了早期有症状髋关节骨关节炎识别和干预的重要性，提示临床医生需更早介入以改善患者长期预后。虽然没有具体干预方案，但提醒你要关注年轻患者髋关节疼痛。",
-      "titleZh": "早期有症状髋关节骨关节炎：一个干预的窗口期",
-      "summaryZh": "这篇述评强调了年轻成人髋关节骨关节炎日益普遍，并指出早期识别和干预对于改变其疾病进程至关重要，认为该领域受到的关注不足。",
-      "curatedReasonEn": "This perspective highlights the importance of early identification and intervention for symptomatic hip osteoarthritis, urging clinicians to intervene sooner for better long-term patient outcomes. While it doesn't provide specific protocols, it reminds you to pay attention to hip pain in younger adults.",
-      "limitation": "这是一篇述评，主要基于专家意见和现有文献回顾，并非原创研究，因此不提供新的证据。",
-      "limitationEn": "This is a perspective piece, primarily based on expert opinion and existing literature review, not original research, so it doesn't offer new evidence.",
-      "tags": [
-        "research",
-        "hip",
-        "degenerative-joint-disease"
-      ],
-      "studyDesign": "述评",
-      "journal": "The Journal of orthopaedic and sports physical therapy"
     },
     {
       "id": "news-1782937145422-3",
