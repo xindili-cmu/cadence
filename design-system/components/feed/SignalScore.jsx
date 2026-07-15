@@ -92,10 +92,6 @@ export function SignalScore({ score = 0, variant, size = 'md', lang, style, ...r
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 600, color: t.color, letterSpacing: '-0.01em', fontVariantNumeric: 'tabular-nums' }}>{v}</span>
       </span>
       <SignalMeter value={v} color={t.color} segs={5} w={4} h={9} gap={2} />
-      {/* Tier word on the card badge — tier-led display: with scores clustering
-          on 5-point marks the tier carries the meaning, the numeral the detail
-          (2026-07-15 adversarial review). */}
-      <span style={{ fontFamily: 'var(--font-sans)', fontSize: 11, fontWeight: 600, color: t.color, letterSpacing: '-0.005em' }}>{signalTierLabel(t, lang)}</span>
     </span>
   );
 }
