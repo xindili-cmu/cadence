@@ -2093,7 +2093,19 @@ function FeedApp() {
   // Single ranking rule used by every group/lead sort below so the feed's
   // "按证据强度精选" promise holds uniformly: SIGNAL desc, ties → newer first.
   // (One definition avoids the day/All views drifting apart — Cindy 2026-06-25.)
-  const bySignal = (a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || ''));
+  // Tiebreak is firstSeen (ms-precision ingestion time), not publishedAt: scores
+  // cluster on 5-point marks so ties are common, and publishedAt is day-grained
+  // (all T00:00:00Z) — it left same-day同分 items in unstable array order, which
+  // read as "no ranking" among the three 85s on the homepage (2026-07-15
+  // adversarial review). publishedAt stays as a final fallback.
+  // id is the final, purely-deterministic tiebreak: a handful of items share a
+  // firstSeen to the ms (same crawl batch), and without a stable last key their
+  // relative order can flip between renders. id is unique + stable.
+  const bySignal = (a, b) =>
+    (b.score - a.score) ||
+    ((b.firstSeen || '').localeCompare(a.firstSeen || '')) ||
+    ((b.publishedAt || '').localeCompare(a.publishedAt || '')) ||
+    ((b.id || '').localeCompare(a.id || ''));
 
   // Curated / All grouping = by day (today / yesterday / older).
   const dayBuckets = ['today', 'yesterday', 'older'];

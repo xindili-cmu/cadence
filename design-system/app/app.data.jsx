@@ -397,6 +397,7 @@ function cdTransformItem(item) {
     journal:     item.journal,        // raw journal name (daily 为何上榜 line)
     studyDesign: item.studyDesign,    // evidence-tier label (daily 为何上榜 line)
     publishedAt: item.publishedAt,  // raw ISO retained for SourcesGrid "latest" sort
+    firstSeen:   item.firstSeen,    // ms-precision ingestion time — same-score tiebreak (bySignal)
     time:        cdFmtTime(item.publishedAt),
     date:        cdFmtDate(item.publishedAt),
     surfaced:    cdSurfacedLabel(item.firstSeen, item.publishedAt), // 新收录 chip when firstSeen ≫ publishedAt
