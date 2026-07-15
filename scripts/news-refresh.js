@@ -869,7 +869,7 @@ async function repairBoilerplateReasons(curated) {
       if (f.curatedReasonEn && !CJK_RE.test(f.curatedReasonEn) && !REASON_SLOP_EN.test(f.curatedReasonEn)) c.curatedReasonEn = f.curatedReasonEn;
     });
   }
-  const still = curated.filter(isSlop).length;
+  const still = curated.filter(isReasonSlop).length;
   if (still) console.log(`   ⚠️  ${still} reasons still boilerplate after rewrite (kept as-is)`);
   return curated;
 }
