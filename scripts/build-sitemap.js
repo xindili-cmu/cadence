@@ -46,9 +46,22 @@ function buildSitemap() {
     }
   } catch {}
 
+  // Daily-brief permalinks (?daily=YYYY-MM-DD): worker.js rewrites their head
+  // meta, the app boots straight into that edition (2026-07-15 adversarial
+  // review — the #daily/<date> hash route alone isn't indexable).
+  let dailyDates = [];
+  try {
+    dailyDates = fs.readdirSync(path.join(ROOT, 'briefs', 'daily'))
+      .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .map((f) => f.slice(0, 10))
+      .sort().reverse();
+  } catch {}
+
   const day = (iso) => (iso || '').slice(0, 10);
   const urls = [
     `  <url>\n    <loc>${SITE_URL}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>`,
+    ...dailyDates.map((d) =>
+      `  <url>\n    <loc>${SITE_URL}/?daily=${d}</loc>\n    <lastmod>${d}</lastmod>\n  </url>`),
     ...items.map((i) => {
       const lastmod = day(i.firstSeen) || day(i.publishedAt);
       return `  <url>\n    <loc>${SITE_URL}/?item=${xmlEsc(encodeURIComponent(i.id))}</loc>` +

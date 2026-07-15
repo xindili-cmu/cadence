@@ -19,7 +19,19 @@ const SOURCES = require(path.join(__dirname, '..', 'sources.json'));
 const OUT_DIR = path.join(__dirname, '..', 'design-system', 'assets', 'favicons');
 const FORCE = process.argv.includes('--force');
 
-const hosts = [...new Set(SOURCES.map((s) => (s.domain || '').split('/')[0]).filter(Boolean))];
+// Hosts whose real favicon is near-white and invisible on the white source
+// card — worse than no icon (2026-07-15 adversarial review). Skipped so the
+// letter-avatar fallback renders instead; also delete any previously fetched
+// copy. Re-check before removing an entry.
+const NEAR_WHITE = new Set(['link.springer.com', 'content.iospress.com', 'medrxiv.org']);
+
+const hosts = [...new Set(SOURCES.map((s) => (s.domain || '').split('/')[0]).filter(Boolean))]
+  .filter((h) => {
+    if (!NEAR_WHITE.has(h)) return true;
+    const stale = path.join(OUT_DIR, `${h}.png`);
+    if (fs.existsSync(stale)) { fs.unlinkSync(stale); console.log(`  ✂ ${h} (near-white icon — letter avatar instead)`); }
+    return false;
+  });
 
 (async () => {
   fs.mkdirSync(OUT_DIR, { recursive: true });

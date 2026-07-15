@@ -18,7 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { repairBoilerplateReasons } = require('./news-refresh');
+const { repairBoilerplateReasons, isReasonSlop } = require('./news-refresh');
 
 const ROOT = path.join(__dirname, '..');
 const NEWS_PATH = path.join(ROOT, 'news.json');
@@ -27,13 +27,11 @@ const ARCHIVE_DIR = path.join(ROOT, 'archive');
 const DRY = process.argv.includes('--dry');
 const DO_ARCHIVE = process.argv.includes('--archive');
 
-// Mirror of the detection in news-refresh.js — used here only for the --dry
-// count and the changed-item report (the rewrite itself reuses the shared fn).
-const SLOP_EN = /^this\b[^.]{0,80}\b(study|review|trial|meta-analysis|analysis|consensus|editorial|rct|cohort|protocol)\b[^.]{0,40}\b(examined|explored|investigated|evaluated|assessed|estimated|compared|analy[sz]ed|monitored|surveyed|reviewed|identified|determined|generated|provides recommendations|aims to)|provides? you with|provides (valuable|the latest|specific)|help(s|ing)? you (better )?(understand|screen|develop|make|select|identify)|guiding you to|represents the latest|warrants your (attention|consideration)/i;
-const SLOP_ZH = /^(这项|这篇|该|本)[^，。]{0,20}(研究|综述|试验|荟萃分析|述评|共识)[^，。]{0,15}(探讨|考察|评估|比较|分析|调查|检验|估计|纳入|旨在|研究了)|为你提供|帮助你(更好地)?(了解|理解|筛查|制定|做出|识别|选择)|提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解)|值得你?(关注|留意)/;
-const isSlop = (i) =>
-  (i.curatedReasonEn && SLOP_EN.test(i.curatedReasonEn)) ||
-  (i.curatedReason && SLOP_ZH.test(i.curatedReason));
+// Detection reuses the exported source-of-truth from news-refresh.js, so the
+// --dry count and the changed-item report can never drift from what the rewrite
+// actually targets (2026-07-15 adversarial review — a duplicated regex here had
+// gone stale).
+const isSlop = isReasonSlop;
 
 async function processFile(file) {
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));

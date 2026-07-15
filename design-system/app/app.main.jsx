@@ -471,6 +471,9 @@ function SubscribeCard({ onAbout, mobile, compact }) {
             {status === 'error' && (
               <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12, color: 'var(--signal-down)' }}>{t('sub.error')}</p>
             )}
+            {/* Privacy note — collecting clinician emails needs plain use/opt-out
+                wording (2026-07-15 adversarial review). */}
+            <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 11, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
           </>
         )}
       </section>
@@ -501,6 +504,8 @@ function SubscribeCard({ onAbout, mobile, compact }) {
           {status === 'error' && (
             <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--signal-down)' }}>{t('sub.error')}</p>
           )}
+          {/* Privacy note — plain use/opt-out wording (2026-07-15 adversarial review). */}
+          <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 11.5, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
         </>
       )}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 14, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
@@ -680,7 +685,7 @@ function AboutView({ onView, mobile }) {
   const stats = [
     { v: '50', l: tt('证据来源', 'Sources') },
     { v: '8', l: tt('临床专科', 'Specialties') },
-    { v: '0–100', l: tt('SIGNAL 评分', 'SIGNAL score') },
+    { v: tt('3 档', '3 tiers'), l: tt('SIGNAL 信号档', 'SIGNAL rating') },
     { v: tt('每日', 'Daily'), l: tt('更新', 'Updated') },
   ];
 
@@ -834,12 +839,24 @@ function AboutView({ onView, mobile }) {
             {tt('评分方法与局限', 'How scoring works — and its limits')}
           </div>
           <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
-            {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。85+ 强信号 · 75+ 值得关注 · 65+ 参考。',
-              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out. 85+ strong signal · 75+ worth knowing · 65+ for reference.')}
+            {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。评估结果落在三个档位：85+ 强信号 · 75–84 值得关注 · 65–74 参考——档位是结论，数字只是档内的粗略位置，并非百分制精度。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。',
+              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out.')}
           </p>
           <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('两点局限请知悉：评分基于摘要而非全文，研究细节与局限以原文为准；分数不是研究质量认证，也不构成临床建议——请结合你的临床判断与患者的具体情况使用。',
               'Two limits to know: scoring reads the abstract, not the full text — details and limitations defer to the original paper; and a score is neither a quality certification nor a clinical recommendation — pair it with your own judgment and your patient’s context.')}
+          </p>
+        </div>
+
+        {/* Privacy — collecting clinician emails needs a plain statement of use,
+            processors, and opt-out (2026-07-15 adversarial review). */}
+        <div style={{ marginTop: 16, maxWidth: 760, padding: '18px 20px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderLeft: '3px solid var(--border-strong, var(--border-default))', borderRadius: 'var(--radius-md)' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 10 }}>
+            {tt('隐私', 'Privacy')}
+          </div>
+          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+            {tt('订阅邮箱仅用于发送周报，经表单服务 Formspree 提交、由 Resend 发送，不用于其他用途、不出售或共享给广告方；退订即停。反馈内容仅用于改进 Cadence。联系：hello@incadencept.com',
+              'Subscriber emails are used only to send the weekly digest — submitted via Formspree, delivered via Resend, never sold or shared with advertisers; unsubscribing stops everything. Feedback is used only to improve Cadence. Contact: hello@incadencept.com')}
           </p>
         </div>
       </section>
@@ -1162,10 +1179,10 @@ const KIND_LABEL = {
 // `c` map; masthead dots (on navy) use a lighter set. Labels: full (cards/rows)
 // vs short (masthead). scoreColor is the bundle's 3-tier ramp. Local to the
 // daily view — the rest of the site keeps its token colors.
-const DAILY_CARD_COLOR = { orthopedic: '#3D74B8', neurological: '#6B5BB5', sports: '#2E8B6E', 'manual-modality': '#C77D3A', cardiopulmonary: '#C2553F', pediatric: '#C75D8E', geriatric: '#7A8290', 'rehab-tech': '#7A8290' };
-const DAILY_DOT_COLOR = { orthopedic: '#5E8FC4', neurological: '#9C8FD0', sports: '#5FA98C', 'manual-modality': '#D6A56B', cardiopulmonary: '#D2796A', pediatric: '#C99BD0', geriatric: '#9AA0A8', 'rehab-tech': '#9AA0A8' };
-const DAILY_CAT_LABEL = { orthopedic: '骨科康复', neurological: '神经康复', sports: '运动康复', 'manual-modality': '手法与理疗', cardiopulmonary: '心肺康复', pediatric: '儿童康复', geriatric: '老年康复', 'rehab-tech': '康复科技' };
-const DAILY_CAT_SHORT = { orthopedic: '骨科', neurological: '神经', sports: '运动', 'manual-modality': '手法', cardiopulmonary: '心肺', pediatric: '儿童', geriatric: '老年', 'rehab-tech': '科技' };
+const DAILY_CARD_COLOR = { orthopedic: '#3D74B8', neurological: '#6B5BB5', sports: '#2E8B6E', 'manual-modality': '#C77D3A', cardiopulmonary: '#C2553F', pediatric: '#C75D8E', geriatric: '#7A8290', 'rehab-tech': '#7A8290', practice: '#7A8290' };
+const DAILY_DOT_COLOR = { orthopedic: '#5E8FC4', neurological: '#9C8FD0', sports: '#5FA98C', 'manual-modality': '#D6A56B', cardiopulmonary: '#D2796A', pediatric: '#C99BD0', geriatric: '#9AA0A8', 'rehab-tech': '#9AA0A8', practice: '#9AA0A8' };
+const DAILY_CAT_LABEL = { orthopedic: '骨科康复', neurological: '神经康复', sports: '运动康复', 'manual-modality': '手法与理疗', cardiopulmonary: '心肺康复', pediatric: '儿童康复', geriatric: '老年康复', 'rehab-tech': '康复科技', practice: '行业与执业' };
+const DAILY_CAT_SHORT = { orthopedic: '骨科', neurological: '神经', sports: '运动', 'manual-modality': '手法', cardiopulmonary: '心肺', pediatric: '儿童', geriatric: '老年', 'rehab-tech': '科技', practice: '执业' };
 const dailyCardColor = (c) => DAILY_CARD_COLOR[c] || '#7A8290';
 const dailyDotColor = (c) => DAILY_DOT_COLOR[c] || '#9AA0A8';
 // Bilingual: zh keeps the daily-specific wording above; en reuses the canonical
@@ -1739,7 +1756,9 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
     if (!story) return;
     const s = L(story);
     const prevTitle = document.title;
-    document.title = `${s.title} — Cadence 步频`;
+    // Suffix follows the edition (worker.js does the same for crawlers):
+    // EN readers shouldn't get a Chinese-branded tab title.
+    document.title = `${s.title} — ${window.CD_LANG === 'en' ? 'Cadence' : 'Cadence 步频'}`;
     const link = document.createElement('link');
     link.rel = 'canonical';
     link.href = location.origin + cdItemUrl(story.id);
@@ -1871,7 +1890,25 @@ function FeedApp() {
   const isMobile = window.useCdMobile();
 
   // State initialised from hash so bookmarked URLs restore the right view.
-  const _h0 = cdParseHash();
+  // Real-URL daily permalink (?daily=YYYY-MM-DD) — the crawler-visible twin of
+  // #daily/<date>: worker.js rewrites its <head> meta, build-sitemap.js lists
+  // it (2026-07-15 adversarial review — hash routes aren't indexable). Consume
+  // once at boot: translate to the hash route and strip the param so later
+  // hash navigation isn't pinned back to the daily view.
+  const _h0 = React.useMemo(() => {
+    const h = cdParseHash();
+    try {
+      const qs = new URLSearchParams(location.search);
+      const dq = qs.get('daily');
+      if (dq && /^\d{4}-\d{2}-\d{2}$/.test(dq)) {
+        qs.delete('daily');
+        const rest = qs.toString();
+        history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + '#daily/' + dq);
+        return { ...h, view: 'daily', dailyDate: dq };
+      }
+    } catch {}
+    return h;
+  }, []);
   const [view, setView] = React.useState(_h0.view);
   const [category, setCategory] = React.useState(_h0.category);
   const [ctype, setCtype] = React.useState(_h0.ctype);
@@ -2113,7 +2150,11 @@ function FeedApp() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--surface-page)' }}>
-      <AppHeader query={query} onQuery={setQuery} lang={lang} onLang={toggleLang} mobile={isMobile} />
+      {/* Typing in the header search while on a view that doesn't consume the
+          query (daily/sources/about/feedback) used to write ?q= into the hash
+          and change nothing on screen — a silent no-op (2026-07-15 adversarial
+          review #3). Jump to All stories so results always appear. */}
+      <AppHeader query={query} onQuery={(v) => { setQuery(v); if (v && view !== 'curated' && view !== 'all') setView('all'); }} lang={lang} onLang={toggleLang} mobile={isMobile} />
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
         {!isMobile && <NavRail view={view} onView={setView} category={category}
           onCategory={(c) => { setCategory(c); if (view !== 'curated' && view !== 'all') setView('curated'); }} />}

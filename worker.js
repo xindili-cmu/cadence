@@ -50,45 +50,104 @@ async function findStory(id, url, env) {
   return null;
 }
 
+// Daily-brief permalink meta (?daily=YYYY-MM-DD). Same crawler story as
+// ?item=: the app's daily view lives behind #daily/<date>, which crawlers
+// never see — this real-URL twin gets its own title/description/canonical
+// and is listed in the sitemap (2026-07-15 adversarial review).
+async function dailyMeta(date, url, env, lang) {
+  try {
+    const r = await env.ASSETS.fetch(new Request(new URL(`/briefs/daily/${date}.json`, url)));
+    if (!r.ok) return null;
+    const d = await r.json();
+    const en = lang === 'en';
+    const lead = d.lead || {};
+    const leadTitle = (en ? (lead.titleEn || lead.titleZh) : (lead.titleZh || lead.titleEn)) || '';
+    const title = en
+      ? `Daily brief ${date}${leadTitle ? ` — ${leadTitle}` : ''}`
+      : `每日简报 ${date}${leadTitle ? ` — ${leadTitle}` : ''}`;
+    const rawDesc = (en ? (lead.paragraphEn || '') : (lead.paragraphZh || '')) ||
+      (en ? `Curated rehab evidence for ${date}.` : `${date} 康复证据精选。`);
+    const desc = rawDesc.length > 200 ? rawDesc.slice(0, 199) + '…' : rawDesc;
+    return { title, desc };
+  } catch { return null; }
+}
+
+// Shared head rewrite for both permalink kinds.
+function rewriteHead(assetResp, { pageTitle, title, desc, canonical, lang }) {
+  const rw = new HTMLRewriter()
+    .on('title', { element(el) { el.setInnerContent(pageTitle); } })
+    .on('meta[name="description"]', { element(el) { el.setAttribute('content', desc); } })
+    .on('meta[property="og:type"]', { element(el) { el.setAttribute('content', 'article'); } })
+    .on('meta[property="og:title"]', { element(el) { el.setAttribute('content', title); } })
+    .on('meta[property="og:description"]', { element(el) { el.setAttribute('content', desc); } })
+    .on('meta[property="og:url"]', { element(el) { el.setAttribute('content', canonical); } })
+    .on('meta[name="twitter:title"]', { element(el) { el.setAttribute('content', title); } })
+    .on('meta[name="twitter:description"]', { element(el) { el.setAttribute('content', desc); } })
+    .on('head', {
+      element(el) {
+        el.append(`<link rel="canonical" href="${canonical}">`, { html: true });
+      },
+    });
+  // EN shares shouldn't carry a Chinese-branded image alt (the og:image itself
+  // is the shared site card for both editions).
+  if (lang === 'en') {
+    rw.on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence — keeping pace with the evidence'); } });
+  }
+  return rw.transform(assetResp);
+}
+
 export default {
   async fetch(request, env) {
     const assetResp = await env.ASSETS.fetch(request);
     try {
       const url = new URL(request.url);
-      const id = url.searchParams.get('item');
-      if (!id) return assetResp;
       const ct = assetResp.headers.get('content-type') || '';
       if (!ct.includes('text/html')) return assetResp;
+
+      const id = url.searchParams.get('item');
+      const daily = url.searchParams.get('daily');
+      const lang = url.searchParams.get('lang') === 'en' ? 'en' : 'zh';
+      const brand = lang === 'en' ? 'Cadence' : 'Cadence 步频';
+
+      if (!id && !daily) {
+        // Plain EN homepage (?lang=en, no permalink): the only zh leak in its
+        // share card is the image alt — fix just that, touch nothing else.
+        if (lang !== 'en') return assetResp;
+        return new HTMLRewriter()
+          .on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence — keeping pace with the evidence'); } })
+          .transform(assetResp);
+      }
+
+      if (!id && /^\d{4}-\d{2}-\d{2}$/.test(daily || '')) {
+        const dm = await dailyMeta(daily, url, env, lang);
+        if (!dm) return assetResp;
+        return rewriteHead(assetResp, {
+          pageTitle: `${dm.title} — ${brand}`,
+          title: dm.title,
+          desc: dm.desc,
+          canonical: `${url.origin}/?daily=${daily}`,
+          lang,
+        });
+      }
+      if (!id) return assetResp;
 
       const story = await findStory(id, url, env);
       if (!story) return assetResp;
 
-      const lang = url.searchParams.get('lang') === 'en' ? 'en' : 'zh';
       const { title, desc } = storyMeta(story, lang);
       if (!title) return assetResp;
-      const pageTitle = `${title} — ${lang === 'en' ? 'Cadence' : 'Cadence 步频'}`;
       // Canonical self-URL for this story: language-independent (?item= only),
       // so Google folds ?lang= variants into one canonical URL. id is our own
       // slug ([\w.-]+ today), but encode defensively.
-      const canonical = `${url.origin}/?item=${encodeURIComponent(id)}`;
-
       // HTMLRewriter escapes attribute values / text content itself; the one
       // `html: true` append uses only the encoded canonical URL.
-      return new HTMLRewriter()
-        .on('title', { element(el) { el.setInnerContent(pageTitle); } })
-        .on('meta[name="description"]', { element(el) { el.setAttribute('content', desc); } })
-        .on('meta[property="og:type"]', { element(el) { el.setAttribute('content', 'article'); } })
-        .on('meta[property="og:title"]', { element(el) { el.setAttribute('content', title); } })
-        .on('meta[property="og:description"]', { element(el) { el.setAttribute('content', desc); } })
-        .on('meta[property="og:url"]', { element(el) { el.setAttribute('content', canonical); } })
-        .on('meta[name="twitter:title"]', { element(el) { el.setAttribute('content', title); } })
-        .on('meta[name="twitter:description"]', { element(el) { el.setAttribute('content', desc); } })
-        .on('head', {
-          element(el) {
-            el.append(`<link rel="canonical" href="${canonical}">`, { html: true });
-          },
-        })
-        .transform(assetResp);
+      return rewriteHead(assetResp, {
+        pageTitle: `${title} — ${brand}`,
+        title,
+        desc,
+        canonical: `${url.origin}/?item=${encodeURIComponent(id)}`,
+        lang,
+      });
     } catch (err) {
       // Never let share-card polish break the page itself.
       console.error('[cadence-worker] og rewrite failed:', err && err.message);

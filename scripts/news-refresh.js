@@ -389,6 +389,12 @@ function normalizeTitle(title, meta = {}) {
   if (/^[“"「『]/.test(t) && /[”"」』][.。!?]?\s*$/.test(t)) {
     t = t.replace(/^[“"「『]+\s*/, '').replace(/\s*[”"」』]+(?=[.。!?]?\s*$)/, '');
   }
+  // Strip scraped link-text prefixes ("Read more about X" / "Read more: X").
+  // Newsroom listing pages (e.g. cms.gov) use the anchor text as the headline,
+  // so the prefix leaks into title AND from there into briefings/social copy
+  // (2026-07-15 adversarial-review fix). Only fire when a real title remains.
+  const rm = t.match(/^read more(?: about)?[:\s]+(.{15,})$/i);
+  if (rm) t = rm[1].charAt(0).toUpperCase() + rm[1].slice(1);
   // Strip scraped publisher tails at the SOURCE so downstream consumers
   // (wechat-brief / xhs-digest / linkedin-brief read raw news.json titles)
   // never see them; the frontend has a mirror of this as a legacy-data
@@ -780,15 +786,20 @@ async function repairChineseSummaries(curated) {
 // 检测刻意收窄避免误伤真判断（"该系统综述坐实了…"不命中——recap 判定要求
 // 主语后面跟"评估/考察/examined/compared"类动词）；重写后仍命中的保留原文。
 const REASON_SLOP_EN = new RegExp([
-  '^this\\b[^.]{0,80}\\b(study|review|trial|meta-analysis|analysis|consensus|editorial|rct|cohort|protocol)\\b[^.]{0,40}\\b(examined|explored|investigated|evaluated|assessed|estimated|compared|analy[sz]ed|monitored|surveyed|reviewed|identified|determined|generated|provides recommendations|aims to)',
-  'provides? you with', 'provides (valuable|the latest|specific)',
+  '^this\\b[^.]{0,80}\\b(study|review|trial|meta-analysis|analysis|consensus|editorial|rct|cohort|protocol)\\b[^.]{0,40}\\b(examined|explored|investigated|evaluated|assessed|estimated|compared|analy[sz]ed|monitored|surveyed|reviewed|identified|determined|generated|provides recommendations|aims to|follows up on|provides an update)',
+  'provides? you with', 'provides (valuable|the latest|specific|new|important|useful)',
+  'provides the latest (perspectives?|views?|insights?|evidence)',
   'help(s|ing)? you (better )?(understand|screen|develop|make|select|identify)',
+  '(enabling|allowing|empowering) you to', 'you (will|can|may) (gain|get|obtain)',
+  'gain (a )?(deeper |better |valuable )?(insight|insights|understanding|perspective)',
   'guiding you to', 'represents the latest', 'warrants your (attention|consideration)',
+  '(offers?|provides?) (valuable |important |useful )?(insight|insights|perspective|guidance)',
 ].join('|'), 'i');
 const REASON_SLOP_ZH = new RegExp([
-  '^(这项|这篇|该|本)[^，。]{0,20}(研究|综述|试验|荟萃分析|述评|共识)[^，。]{0,15}(探讨|考察|评估|比较|分析|调查|检验|估计|纳入|旨在|研究了)',
-  '为你提供', '帮助你(更好地)?(了解|理解|筛查|制定|做出|识别|选择)',
-  '提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解)', '值得你?(关注|留意)',
+  '^(这项|这篇|该|本)[^，。]{0,20}(研究|综述|试验|荟萃分析|述评|共识|社论)[^，。]{0,15}(探讨|考察|评估|比较|分析|调查|检验|估计|纳入|旨在|研究了|跟进|概述)',
+  '为你提供', '帮助你(更好地)?(了解|理解|筛查|制定|做出|识别|选择|与|进行)', '能?帮助你',
+  '让你(能|可以)?(更好地)?(了解|理解|进行|获得|开展)', '你(将|能|可)(获得|得到|了解)',
+  '提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解|视角|视野)', '值得你?(关注|留意)',
 ].join('|'));
 
 const REASON_SLOP_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的资深编辑。下面每条的 why-it-matters（curatedReason 中文 / curatedReasonEn 英文）写成了模板腔：要么第一句在复述研究做了什么（summary 已经说过），要么是空效用句式（"provides you with the latest evidence…"、"帮助你了解…"）。请基于给出的 summary 重写这两个字段，各 1-2 句：
@@ -837,10 +848,7 @@ async function labelHotTopics(topics) {
 }
 
 async function repairBoilerplateReasons(curated) {
-  const isSlop = c =>
-    (c.curatedReasonEn && REASON_SLOP_EN.test(c.curatedReasonEn)) ||
-    (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
-  const bad = curated.filter(isSlop);
+  const bad = curated.filter(isReasonSlop);
   if (!bad.length) return curated;
   console.log(`   🛠  ${bad.length} why-it-matters read as boilerplate — rewriting as takes`);
   for (let off = 0; off < bad.length; off += 10) {
@@ -1408,7 +1416,17 @@ async function main() {
     const archPath = path.join(ARCHIVE_DIR, `${new Date().toISOString().slice(0, 7)}.json`);
     let arch = [];
     try { arch = JSON.parse(fs.readFileSync(archPath, 'utf8')).items || []; } catch {}
-    const known = new Set(arch.map(i => canonicalUrl(i.sourceUrl)));
+    // Dedupe against EVERY month file, not just the current one — a story that
+    // entered June's archive and survives in the feed into July would otherwise
+    // be appended again to July's file (2026-07-15 adversarial-review fix; the
+    // frontend/sitemap dedupe by id was masking this at display time only).
+    const known = new Set();
+    try {
+      for (const f of fs.readdirSync(ARCHIVE_DIR).filter(f => /^\d{4}-\d{2}\.json$/.test(f))) {
+        const its = (JSON.parse(fs.readFileSync(path.join(ARCHIVE_DIR, f), 'utf8')).items) || [];
+        for (const i of its) known.add(canonicalUrl(i.sourceUrl));
+      }
+    } catch { arch.forEach(i => known.add(canonicalUrl(i.sourceUrl))); }
     const additions = merged.filter(i => !known.has(canonicalUrl(i.sourceUrl)));
     if (additions.length) {
       arch.push(...additions);
@@ -1417,10 +1435,11 @@ async function main() {
     }
 
     // Integrity check: the archive is meant to be a strict superset of the feed.
-    // If anything in news.json isn't in this month's archive, a story will be
+    // If anything in news.json isn't in ANY month's archive, a story will be
     // lost the moment it rotates out — exactly the bug that dropped the 5 early
     // articles. Surface it loudly rather than letting it pass silently.
-    const archUrls = new Set(arch.map(i => canonicalUrl(i.sourceUrl)));
+    // (`known` covers all months; this run's additions land in `arch`.)
+    const archUrls = new Set([...known, ...arch.map(i => canonicalUrl(i.sourceUrl))]);
     const orphans = merged.filter(i => !archUrls.has(canonicalUrl(i.sourceUrl)));
     if (orphans.length) {
       console.error(`   ⚠️  ARCHIVE GAP: ${orphans.length} feed item(s) not archived — will be lost on rotation:`);
@@ -1537,4 +1556,12 @@ if (require.main === module) {
   }).catch(e => { console.error('❌', e); process.exit(1); });
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons };
+// isReasonSlop — the single source of truth for boilerplate/recap detection,
+// exported so backfill-reasons.js reports the same hits it rewrites (no drifting
+// duplicate regex; 2026-07-15 adversarial review).
+function isReasonSlop(c) {
+  return (c.curatedReasonEn && REASON_SLOP_EN.test(c.curatedReasonEn)) ||
+    (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
+}
+
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, isReasonSlop };
