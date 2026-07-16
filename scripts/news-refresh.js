@@ -395,6 +395,13 @@ function normalizeTitle(title, meta = {}) {
   // (2026-07-15 adversarial-review fix). Only fire when a real title remains.
   const rm = t.match(/^read more(?: about)?[:\s]+(.{15,})$/i);
   if (rm) t = rm[1].charAt(0).toUpperCase() + rm[1].slice(1);
+  // Strip a leading publish-date prefix that some blogs bake into the headline
+  // (e.g. WebPT: "July 15, 2026 The 2027 Proposed Rule is Out…"). Only fire when
+  // a real title (≥15 chars) remains after the date (2026-07-16 adversarial
+  // review — this leaked into the AI-briefing headline). Whole month name or
+  // 3-letter abbrev, "Mon D, YYYY", optional separator.
+  const dp = t.match(/^(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t)?(?:ember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?\s+\d{1,2},?\s+\d{4}[\s.:—–-]*(.{15,})$/i);
+  if (dp) t = dp[1].charAt(0).toUpperCase() + dp[1].slice(1);
   // Strip scraped publisher tails at the SOURCE so downstream consumers
   // (wechat-brief / xhs-digest / linkedin-brief read raw news.json titles)
   // never see them; the frontend has a mirror of this as a legacy-data

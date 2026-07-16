@@ -31,9 +31,13 @@ const ARCHIVE_DIR = path.join(ROOT, 'archive');
 
 const stripPrefix = (title) => {
   if (!title || typeof title !== 'string') return title;
-  const m = title.match(/^read more(?: about)?[:\s]+(.{15,})$/i);
-  if (!m) return title;
-  return m[1].charAt(0).toUpperCase() + m[1].slice(1);
+  let t = title;
+  const m = t.match(/^read more(?: about)?[:\s]+(.{15,})$/i);
+  if (m) t = m[1].charAt(0).toUpperCase() + m[1].slice(1);
+  // Leading publish-date prefix (WebPT-style "July 15, 2026 The 2027…").
+  const dp = t.match(/^(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t)?(?:ember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?\s+\d{1,2},?\s+\d{4}[\s.:—–-]*(.{15,})$/i);
+  if (dp) t = dp[1].charAt(0).toUpperCase() + dp[1].slice(1);
+  return t;
 };
 
 let titlesFixed = 0;
