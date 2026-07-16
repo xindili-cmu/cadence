@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-16T14:28:00.174Z",
+    "lastUpdated": "2026-07-16T17:43:12.726Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,12 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.08.26357600v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-07-15T23:16:04.112Z",
-      "sourceCount": 11,
+      "sourceCount": 10,
       "sources": [
         "medRxiv",
         "Sports Medicine",
         "NeuroRehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
-        "Clinical rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Topics in stroke rehabilitation",
         "The South African journal of physiotherapy",
@@ -67,9 +66,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
-          "titleZh": "心血管康复对短暂性脑缺血发作和轻度卒中患者的有效性：一项随机对照试验。"
+          "journal": "NeuroRehabilitation",
+          "title": "Identifying Gaps in Rehabilitation Strategies for Chronic Stroke: A Systematic Review of Evidence in Patients With and Without Nerve Transfer.",
+          "titleZh": "慢性卒中康复策略中的差距识别：神经移植术患者与非神经移植术患者的证据系统综述"
         },
         {
           "source": "PubMed",
@@ -102,12 +101,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Quantifying Physical Activity Through Step Count Estimation Across Multiple Wearable Sensor Configurations: A Validation Study in Post-Stroke and Healthy Adults.",
-          "titleZh": "通过多重可穿戴传感器配置量化身体活动步数估计：一项卒中后和健康成年人的验证研究。"
-        },
-        {
-          "source": "PubMed",
           "journal": "Gait & posture",
           "title": "Impact of lower limb proprioception on balance and gait in hemiparetic patients: biomechanical analysis.",
           "titleZh": "下肢本体感觉对偏瘫患者平衡和步态的影响：生物力学分析"
@@ -125,23 +118,23 @@
           "titleZh": "三肢瘫患者的任务导向训练：卒中后偏瘫合并对侧上肢既往瘫痪的病例报告"
         }
       ],
-      "heat": 8.83,
-      "themeZh": "卒中与脑损伤后运动和认知功能障碍的评估与预后",
-      "themeEn": "Stroke & Brain Injury Motor Cognitive Prognosis"
+      "heat": 7.66,
+      "themeZh": "急性卒中与脑损伤后功能恢复的预测与康复",
+      "themeEn": "Predicting Post-Stroke and Brain Injury Recovery"
     },
     {
       "id": "news-1784212077850-14",
       "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials",
       "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00817-8/fulltext?rss=yes",
       "category": "orthopedic",
-      "publishedAt": "2026-07-16T06:35:25.420Z",
+      "publishedAt": "2026-07-16T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
         "Archives of Physical Medicine and Rehabilitation",
         "Sports Medicine",
         "BMC musculoskeletal disorders",
-        "The Journal of manual & manipulative therapy",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physiotherapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -163,6 +156,38 @@
           "title": "Cost-effectiveness of Pilates compared with home-based exercises for people with chronic non-specific low back pain: a trial-based economic evaluation.",
           "titleZh": "普拉提与居家锻炼治疗慢性非特异性腰痛的成本效益：一项基于试验的经济学评价。"
         },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physiotherapy",
+          "title": "Frontline agreement in diagnosis and treatment for musculoskeletal dysfunctions. A prospective, randomized, controlled study.",
+          "titleZh": "肌肉骨骼功能障碍诊断和治疗的一线协议：一项前瞻性、随机对照研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Prevalence, Patterns, Treatment Outcomes and Costs of Physiotherapy-Managed Musculoskeletal Disorders in Nigeria.",
+          "titleZh": "尼日利亚物理治疗师管理肌肉骨骼疾病的患病率、模式、治疗结果和成本。"
+        }
+      ],
+      "heat": 3.87,
+      "themeZh": "慢性下腰痛综合性干预的效益与成本分析",
+      "themeEn": "Interventions and Cost-Effectiveness for Chronic LBP"
+    },
+    {
+      "id": "news-1784130931913-13",
+      "title": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation for chronic lateral elbow pain: a randomized controlled trial",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00815-4/fulltext?rss=yes",
+      "category": "manual-modality",
+      "publishedAt": "2026-07-16T06:35:25.420Z",
+      "sourceCount": 3,
+      "sources": [
+        "Archives of Physical Medicine and Rehabilitation",
+        "The Journal of manual & manipulative therapy",
+        "Archives of physical medicine and rehabilitation"
+      ],
+      "tag": "electro",
+      "kind": "theme",
+      "members": [
         {
           "source": "Archives of PM&R",
           "journal": "Archives of Physical Medicine and Rehabilitation",
@@ -188,9 +213,9 @@
           "titleZh": "慢性肩袖肌腱病患者在包含疼痛阈值、运动和物理治疗的干预中的依从性研究"
         }
       ],
-      "heat": 4.46,
-      "themeZh": "慢性脊柱与关节疼痛的物理治疗与干预疗效",
-      "themeEn": "Chronic Spine & Joint Pain Interventions"
+      "heat": 2.55,
+      "themeZh": "上肢与肩部疼痛的物理治疗与手法疗效",
+      "themeEn": "Upper Extremity and Shoulder Pain Therapies"
     },
     {
       "id": "news-1783640474701-0",
@@ -238,48 +263,79 @@
           "titleZh": "沉浸式 sEMG 触发虚拟现实游戏训练对卒中后吞咽困难的疗效和安全性：一项随机单盲对照试验"
         }
       ],
-      "heat": 2.03,
-      "themeZh": "数字与虚拟康复技术在神经骨科中的应用与评估",
-      "themeEn": "Digital & Virtual Rehab for Neuro-Orthopedics"
-    },
-    {
-      "id": "news-1783839922088-0",
-      "title": "Acute Modulation of Lumbar Motor Unit Behavior During Experimentally Induced Low Back Pain: A Motor Unit Decomposition Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42435379/",
-      "category": "orthopedic",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Sports Medicine",
-        "medRxiv"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Acute Modulation of Lumbar Motor Unit Behavior During Experimentally Induced Low Back Pain: A Motor Unit Decomposition Analysis.",
-          "titleZh": "实验诱导急性腰痛期间腰部运动单位行为的急性调节：一项运动单位分解分析。"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Online modulation of neural drive to lower motor neurons with high-definition transcranial alternating current stimulation (HD-tACS) | Journal of NeuroEngineering and Rehabilitation",
-          "titleZh": "高精度经颅交流电刺激（HD-tACS）在线调节下运动神经元神经驱动"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Development and Preliminary Clinical Feasibility of a Wearable Nanovibration Delivery Device for Localised Bone Stimulation in Individuals with Spinal Cord Injury",
-          "titleZh": "用于脊髓损伤患者局部骨骼刺激的可穿戴纳米振动传输设备的开发和初步临床可行性"
-        }
-      ],
-      "heat": 1.22,
-      "themeZh": "腰背疼痛与脊髓损伤的神经肌肉调控新进展",
-      "themeEn": "Neuromuscular Modulation for Back Pain & SCI"
+      "heat": 1.94,
+      "themeZh": "虚拟与远程康复技术在神经肌肉疾病中的应用",
+      "themeEn": "Virtual and Telerehabilitation for Neuromusculoskeletal Disorders"
     }
   ],
   "items": [
+    {
+      "id": "news-1783778329417-21",
+      "title": "Multimodal Integration of Gait, Balance, and Infrared Thermography Enhances Machine-Learning Classification of Knee Osteoarthritis: A Cross-Sectional Study",
+      "summary": "This cross-sectional study found that multimodal integration of gait, balance, and infrared thermography data enhanced machine-learning classification of knee osteoarthritis (KOA) compared to single-domain models.",
+      "category": "orthopedic",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00809-9/fulltext?rss=yes",
+      "publishedAt": "2026-07-11T00:00:00.000Z",
+      "firstSeen": "2026-07-11T13:58:49.417Z",
+      "curatedScore": 85,
+      "curatedReason": "将步态、平衡和红外热成像多模态数据整合到机器学习模型中，能提高膝骨关节炎的诊断分类准确性。这提示你未来在评估 KOA 患者时，可考虑结合多维度的生物力学和生理指标，以实现更精准的诊断和治疗分层。",
+      "titleZh": "步态、平衡与红外热成像多模态整合增强膝骨关节炎的机器学习分类：一项横断面研究",
+      "summaryZh": "一项横断面研究发现，将步态、平衡和红外热成像数据进行多模态整合，能提升机器学习模型在膝骨关节炎（KOA）与健康对照组之间分类的准确性，优于单一领域模型。",
+      "curatedReasonEn": "Integrating multimodal data from gait, balance, and infrared thermography into machine learning models improves the diagnostic classification accuracy for knee osteoarthritis. This suggests that in future KOA patient assessments, you might consider combining multi-dimensional biomechanical and physiological indicators for more precise diagnosis and treatment stratification.",
+      "limitation": "这是一项横断面研究，无法建立因果关系，且模型的外推性需进一步验证。",
+      "limitationEn": "This is a cross-sectional study, which cannot establish causality, and the generalizability of the model requires further validation.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1783620844352-2",
+      "title": "Identifying Gaps in Rehabilitation Strategies for Chronic Stroke: A Systematic Review of Evidence in Patients With and Without Nerve Transfer.",
+      "summary": "A systematic review identified gaps in rehabilitation strategies for chronic stroke, particularly in the detailed comparison and description of rehabilitation protocols between contralateral C7 (CC7) nerve transfer and technology-assisted/high-dose rehabilitation approaches for upper limb impairment.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42423505/",
+      "publishedAt": "2026-07-09T00:00:00.000Z",
+      "firstSeen": "2026-07-09T18:14:04.352Z",
+      "curatedScore": 80,
+      "curatedReason": "这项系统综述指出了慢性卒中患者上肢康复的证据空白，特别是在神经移植术后康复方案剂量、内容和交付模式方面。这提示你在设计方案或参与神经移植讨论时，需审慎评估现有证据并积极探索个性化方案。",
+      "titleZh": "慢性卒中康复策略中的差距识别：神经移植术患者与非神经移植术患者的证据系统综述",
+      "summaryZh": "一项系统综述指出，在慢性卒中患者上肢功能障碍康复中，对侧C7神经移植与技术辅助/高剂量康复这两种路径的康复策略缺乏直接比较和详细描述，存在证据空白。",
+      "curatedReasonEn": "This systematic review highlights evidence gaps in upper limb rehabilitation for chronic stroke, especially regarding the dose, content, and delivery models of post-nerve transfer rehabilitation. This indicates you should critically evaluate existing evidence and proactively explore personalized treatment plans when designing protocols or engaging in nerve transfer discussions.",
+      "limitation": "该综述未提供具体纳入研究的详细康复方案描述，且未直接比较不同康复路径的效果。",
+      "limitationEn": "The review did not provide detailed descriptions of rehabilitation protocols from included studies, nor did it directly compare the efficacy of different rehabilitation pathways.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1784223790770-14",
+      "title": "CMS Modernizes Nursing Home Oversight with New Risk-Based Survey Approach Designed to Highlight High Performance, Encourage Improvement",
+      "summary": "CMS is modernizing nursing home oversight with a new risk-based survey approach designed to identify high-performing facilities and encourage improvement in care.",
+      "category": "geriatric",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-modernizes-nursing-home-oversight-new-risk-based-survey-approach-designed-highlight-high",
+      "publishedAt": "2026-07-16T17:42:58.452Z",
+      "firstSeen": "2026-07-16T17:43:10.770Z",
+      "curatedScore": 70,
+      "curatedReason": "CMS 正在推行养老院监管的新风险导向调查方法，旨在突出高性能机构并鼓励改进。虽然不是直接针对 PT 执业的政策，但你的机构如果服务老年康复，需关注这些监管导向，因为它们会影响你所在机构的整体评估和资源分配。",
+      "titleZh": "CMS 采用新风险导向调查方法，实现养老院监管现代化，旨在突出高绩效、鼓励改进",
+      "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）正通过新的风险导向调查方法，使养老院监管现代化，以识别高绩效机构并促进服务质量提升。",
+      "curatedReasonEn": "CMS is implementing a new risk-based survey approach for nursing home oversight, aiming to highlight high-performing facilities and encourage improvement. While not directly targeting PT practice, if your facility provides geriatric rehabilitation services, you should monitor these regulatory directions as they will impact your facility's overall evaluation and resource allocation.",
+      "tags": [
+        "policy",
+        "regulation",
+        "US"
+      ]
+    },
     {
       "id": "news-1784212077850-14",
       "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials",
@@ -1971,77 +2027,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Pediatric physical therapy : the official publication of the Section on Pediatrics of the American Physical Therapy Association"
-    },
-    {
-      "id": "news-1783583816206-6",
-      "title": "The Impact of Mandatory Bundled Payment on Prehabilitation Delivery for Lower Extremity Joint Replacement.",
-      "summary": "A difference-in-differences analysis found that the implementation of the Comprehensive Care for Joint Replacement (CJR) mandatory bundled payment model led to a significant 18.5 percentage point reduction in prehabilitation delivery for lower extremity joint replacement in CJR treatment areas compared to control areas.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42419477/",
-      "publishedAt": "2026-07-09T00:00:00.000Z",
-      "firstSeen": "2026-07-08T14:44:46.936Z",
-      "curatedScore": 85,
-      "curatedReason": "这项研究发现，美国强制性捆绑支付模式（CJR）导致了下肢关节置换术前康复（prehabilitation）服务提供比例的显著下降。这意味着在类似的捆绑支付或按绩效付费的医保模式下，你可能会面临转诊量减少或需要调整服务模式以适应新的报销环境，务必密切关注你所在地区的政策动态。",
-      "titleZh": "强制性捆绑支付对下肢关节置换术前康复服务提供的影响。",
-      "summaryZh": "一项双重差分分析显示，美国强制性捆绑支付模式（CJR）实施后，下肢关节置换术前康复服务的提供比例在 CJR 治疗区较对照区显著下降了 18.5 个百分点。",
-      "curatedReasonEn": "This study found that the mandatory bundled payment model (CJR) in the US led to a significant decrease in the provision of prehabilitation services for lower extremity joint replacement. This means that under similar bundled payment or pay-for-performance healthcare models, you may experience reduced referrals or need to adjust your service model to adapt to new reimbursement environments. Close attention to policy changes in your region is crucial.",
-      "limitation": "研究数据来自 Medicare 受益人，其结论可能无法完全推广到其他商业保险或自费患者群体。",
-      "limitationEn": "The study data is from Medicare beneficiaries, so its conclusions may not be fully generalizable to other commercial insurance or self-pay patient populations.",
-      "tags": [
-        "research",
-        "practice",
-        "reimbursement",
-        "regulation",
-        "US-market"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
-      "id": "news-1783455552962-1",
-      "title": "The effectiveness of cardiovascular rehabilitation for transient ischaemic attack and mild stroke: A randomised controlled trial.",
-      "summary": "A randomized controlled trial of 140 TIA/mild stroke participants found that a 6-week integrated cardiovascular rehabilitation program did not significantly improve 6-minute walk test distance or moderate-to-vigorous physical activity over 6 months compared to usual care.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42411984/",
-      "publishedAt": "2026-07-07T00:00:00.000Z",
-      "firstSeen": "2026-07-07T20:19:12.962Z",
-      "curatedScore": 85,
-      "curatedReason": "这项随机对照试验显示，针对短暂性脑缺血发作（TIA）或轻度卒中患者的整合性心血管康复项目，在 6 个月内未能显著改善功能性运动能力和身体活动水平。这意味着你可能需要重新审视或调整这类患者的康复目标和干预策略，尤其是在强调传统心血管康复模式时。",
-      "titleZh": "心血管康复对短暂性脑缺血发作和轻度卒中患者的有效性：一项随机对照试验。",
-      "summaryZh": "一项纳入 140 名短暂性脑缺血发作（TIA）或轻度卒中患者的随机对照试验显示，为期 6 周的整合性心血管康复项目在 6 个月内，未能显著改善患者的 6 分钟步行距离或中高强度身体活动水平，与常规护理相比无明显优势。",
-      "curatedReasonEn": "This randomized controlled trial shows that an integrated cardiovascular rehabilitation program for transient ischemic attack (TIA) or mild stroke patients did not significantly improve functional exercise capacity and physical activity levels over 6 months. This suggests you may need to re-evaluate or adjust rehabilitation goals and intervention strategies for these patients, especially when emphasizing traditional cardiovascular rehabilitation models.",
-      "limitation": "研究未详细报告干预组和对照组在基线时的具体差异，可能影响结果解释。",
-      "limitationEn": "The study did not report detailed baseline differences between intervention and control groups, which might affect result interpretation.",
-      "tags": [
-        "research",
-        "cardiac-rehab",
-        "stroke"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1783521886935-18",
-      "title": "Follow up to the 2018 IOC consensus statement on paediatric ACL injuries: towards a broader vision of care",
-      "summary": "An editorial updates the 2018 IOC consensus statement on pediatric ACL injuries, emphasizing a broader vision of care encompassing prevention, individualized management, evolving surgical strategies, and long-term holistic care.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/14/998?rss=1",
-      "publishedAt": "2026-07-08T08:19:38.000Z",
-      "firstSeen": "2026-07-08T14:44:46.935Z",
-      "curatedScore": 85,
-      "curatedReason": "国际奥委会（IOC）2018 年儿童前交叉韧带（ACL）损伤共识声明的后续进展，强调了对该损伤的更广泛关注，包括预防、个体化管理、手术策略和长期全方位护理。这提示你，在处理儿童 ACL 损伤时，应采纳多维度、全周期的干预方法，而非仅仅关注急性期的治疗。",
-      "titleZh": "2018 年国际奥委会儿童前交叉韧带损伤共识声明的后续进展：迈向更广阔的护理愿景。",
-      "summaryZh": "一篇社论更新了 2018 年国际奥委会（IOC）关于儿童前交叉韧带（ACL）损伤的共识声明，强调了在预防、个体化管理、手术策略演变和长期全方位护理方面，需要更广阔的护理愿景。",
-      "curatedReasonEn": "The follow-up to the 2018 International Olympic Committee (IOC) consensus statement on pediatric anterior cruciate ligament (ACL) injuries emphasizes a broader vision of care, including prevention, individualized management, surgical strategies, and long-term holistic care. This suggests that when dealing with pediatric ACL injuries, you should adopt a multi-dimensional, full-cycle intervention approach rather than focusing solely on acute treatment.",
-      "tags": [
-        "news",
-        "knee",
-        "pediatric-sports-injury"
-      ],
-      "journal": "British Journal of Sports Medicine"
     }
   ]
 }
