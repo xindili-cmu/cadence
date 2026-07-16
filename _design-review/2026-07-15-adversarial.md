@@ -68,3 +68,26 @@
 - `npm test`(term-fixes)16/16 通过
 - 全部 JS/JSON 语法校验通过;`fix-title-artifacts.js` 幂等自检干净(二次 dry-run 0 改动)
 - 构建产物(app.min.js / components.bundle.jsx)交 CI,未在沙箱跑 esbuild
+
+---
+
+## 07-16 追加(初版上线后的后续发现)
+
+| # | 严重度 | 问题 | 处置 | 提交 |
+|---|---|---|---|---|
+| 13 | 高(回归) | B4 重构删掉局部 `isSlop` 定义,漏改 `repairBoilerplateReasons` 末尾一处引用 → 下次 cron 洗空话时 ReferenceError,整条每日刷新崩 | 末尾引用改 `isReasonSlop` | `bfb4f69` |
+| 14 | 中 | 同分排序次级键是 `publishedAt`(仅到日,当天条目全 T00:00:00Z)→ 同分同天退化成不稳定数组序,首页三条 85「看着没排序」 | `bySignal` 次级键改 firstSeen(ms)→ publishedAt → id,完全确定 | `ad7c29a` |
+| 15 | 中 | AI 速读把最高分论文的完整长标题原样嵌进句子,标题与概览糊成一坨、论文尾句号渗进分数后缀 | 标题加引号 + 去尾句号 + 截断(zh 22 字/en 10 词) | 待 |
+| 16 | 低 | rail 头条(app.shell.jsx top)同分次级键仍 `publishedAt`,与 `bySignal` 漂移,可能 rail 头条 ≠ 精选头条 | 对齐成 firstSeen → publishedAt → id | 待(同 15) |
+| — | 呈现 | 档位词加到列表卡 badge 上太长 | badge 去档位词,只留 hero block | 已修 |
+
+### 教训 / 流程改进
+
+- **`isSlop` 回归的根因**:改脚本时只做 `node --check`(语法)不够,它抓不到「引用已删除标识符」这类运行期错误。`news-refresh.js` 这类 cron 核心脚本,改后应 `DRY_RUN=true node scripts/news-refresh.js` 实跑一遍确认整条链通。
+- **单一定义原则的收益**:`isReasonSlop` 导出后 backfill 复用,消除了重复正则漂移;但重构「收敛为单一定义」的过程本身要把所有旧引用点找全(这次就漏了一处)。
+
+### 仍未做(需你 / 另开一轮)
+
+- 历史 archive 空话 backfill(news.json 已由 Cindy `ded28fe` 洗净;archive ~195 条可选,建议不管)
+- 移动端真机验(微信/小红书 webview)
+- 未审角落:无障碍/键盘可达性、加载性能(app.min.js ~182KB + embeddings.json + vendor)
