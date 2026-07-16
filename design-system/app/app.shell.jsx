@@ -167,7 +167,7 @@ function NavRail({ view, onView, category, onCategory }) {
               as a permanent 0 and the number's range is ambiguous between the
               Curated and All views (2026-07-16 adversarial review). */}
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10.5, lineHeight: 1.45, color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 9px' }}>
-            {zh ? '近期收录篇数,不含历史归档' : 'Recent intake — excludes archive'}
+            {zh ? '近期收录的篇数' : 'From the recent feed'}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             {/* Per-specialty live-feed counts, computed once per render from
