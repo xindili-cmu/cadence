@@ -219,8 +219,14 @@ function DigestRail({ stories, dayKey = 'today', onPick, children }) {
   // piece (2026-07-08 adversarial-review fix). Falls back to the full pool if
   // the day happens to be non-evidence only.
   const evPool = stories.filter((s) => !window.cdIsNonEvidence(s.studyDesign));
+  // Tiebreak matches the feed's bySignal (firstSeen ms → publishedAt → id) so the
+  // rail's headline can't disagree with the Curated lead among same-score items
+  // (2026-07-16 adversarial review — was publishedAt only, day-grained).
   const top = [...(evPool.length ? evPool : stories)]
-    .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
+    .sort((a, b) => (b.score - a.score) ||
+      ((b.firstSeen || '').localeCompare(a.firstSeen || '')) ||
+      ((b.publishedAt || '').localeCompare(a.publishedAt || '')) ||
+      ((b.id || '').localeCompare(a.id || '')))
     .slice(0, 3);
   // Ranked distribution: keep each specialty's taxonomy index (01–08) but sort
   // rows by today's volume so the most-covered area reads first.
@@ -239,9 +245,24 @@ function DigestRail({ stories, dayKey = 'today', onPick, children }) {
   // the crawl) the rail falls back to yesterday, so the briefing can't say "today".
   const whenZh = dayKey === 'today' ? '今日' : '昨日';
   const whenEn = dayKey === 'today' ? 'today' : 'yesterday';
+  // Set the headline off as its own quoted, length-capped clause: a full paper
+  // title (esp. a long one) dropped raw into the sentence blurred into the
+  // surrounding copy and dragged its trailing period into the score suffix
+  // (2026-07-16 adversarial review). Quote marks mark the boundary; the clamp
+  // keeps the card from ballooning; the trailing period is stripped.
+  const briefHeadline = (() => {
+    let s = (briefTop.title || '').replace(/[.。]\s*$/, '').trim();
+    if (pulseZh) {
+      if (s.length > 22) s = s.slice(0, 22) + '…';
+      return `「${s}」`;
+    }
+    const w = s.split(/\s+/);
+    if (w.length > 10) s = w.slice(0, 10).join(' ') + '…';
+    return `“${s}”`;
+  })();
   const brief = pulseZh
-    ? `${whenZh}共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。${whenZh}最高信号分：${briefTop.title}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
-    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} ${whenEn} across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal ${whenEn}: ${briefTop.title} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
+    ? `${whenZh}共 ${stories.length} 篇，覆盖 ${activeCats} 个专科。${whenZh}最高信号分：${briefHeadline}（SIGNAL ${briefTop.score}·${briefTop.date}）。`
+    : `${stories.length} ${stories.length === 1 ? 'item' : 'items'} ${whenEn} across ${activeCats} ${activeCats === 1 ? 'specialty' : 'specialties'}. Highest signal ${whenEn}: ${briefHeadline} (SIGNAL ${briefTop.score} · ${briefTop.date}).`;
   // 本周信号榜 — quiet-day rescue (Cindy 2026-06-14). When today is thin (≤2),
   // surface the last 7 days' highest-SIGNAL items so the rail isn't a near-empty
   // box. Ranked by score, ties broken newest-first; today's already-shown items
@@ -489,8 +510,14 @@ function MobileSignalCard({ stories, dayKey = 'today', onPick }) {
   // Rank by SIGNAL; ties → newer first. Mirrors DigestRail, including the
   // non-evidence exclusion (editorials/protocols never take a top slot).
   const evPool = stories.filter((s) => !window.cdIsNonEvidence(s.studyDesign));
+  // Tiebreak matches the feed's bySignal (firstSeen ms → publishedAt → id) so the
+  // rail's headline can't disagree with the Curated lead among same-score items
+  // (2026-07-16 adversarial review — was publishedAt only, day-grained).
   const top = [...(evPool.length ? evPool : stories)]
-    .sort((a, b) => (b.score - a.score) || ((b.publishedAt || '').localeCompare(a.publishedAt || '')))
+    .sort((a, b) => (b.score - a.score) ||
+      ((b.firstSeen || '').localeCompare(a.firstSeen || '')) ||
+      ((b.publishedAt || '').localeCompare(a.publishedAt || '')) ||
+      ((b.id || '').localeCompare(a.id || '')))
     .slice(0, 3);
   return (
     <section style={{ marginBottom: 16, background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)', overflow: 'hidden' }}>
