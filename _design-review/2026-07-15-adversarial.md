@@ -79,6 +79,7 @@
 | 14 | 中 | 同分排序次级键是 `publishedAt`(仅到日,当天条目全 T00:00:00Z)→ 同分同天退化成不稳定数组序,首页三条 85「看着没排序」 | `bySignal` 次级键改 firstSeen(ms)→ publishedAt → id,完全确定 | `ad7c29a` |
 | 15 | 中 | AI 速读把最高分论文的完整长标题原样嵌进句子,标题与概览糊成一坨、论文尾句号渗进分数后缀 | 标题加引号 + 去尾句号 + 截断(zh 22 字/en 10 词) | 待 |
 | 16 | 低 | rail 头条(app.shell.jsx top)同分次级键仍 `publishedAt`,与 `bySignal` 漂移,可能 rail 头条 ≠ 精选头条 | 对齐成 firstSeen → publishedAt → id | 待(同 15) |
+| 17 | 中 | 精选/All 页顶部「Signal score」是**死按钮**(有排序图标却没绑点击,伪装成可选);且它旁边的 info-i 与下方信号滑块的 i 重复(同一段说明) | 改成真的「信号分 ⇄ 最新收录」切换(?sort=recent 可 deep-link,All 视图 recent 时按收录日分组);去掉重复的 i,只留滑块那个 | 待 |
 | — | 呈现 | 档位词加到列表卡 badge 上太长 | badge 去档位词,只留 hero block | 已修 |
 
 ### 教训 / 流程改进

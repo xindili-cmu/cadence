@@ -14,21 +14,9 @@ const cdDayLabels = () => {
   };
 };
 
-function FeedToolbar({ view, count }) {
+function FeedToolbar({ view, count, sortBy = 'signal', onSort }) {
   const t = window.CD_T;
   const id = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
-  // SIGNAL-score explainer: click-toggle popover (works on touch, unlike a
-  // native title tooltip). Closes on outside-click or Escape.
-  const [helpOpen, setHelpOpen] = React.useState(false);
-  const helpRef = React.useRef(null);
-  React.useEffect(() => {
-    if (!helpOpen) return;
-    const onDoc = (e) => { if (helpRef.current && !helpRef.current.contains(e.target)) setHelpOpen(false); };
-    const onKey = (e) => { if (e.key === 'Escape') setHelpOpen(false); };
-    document.addEventListener('mousedown', onDoc);
-    document.addEventListener('keydown', onKey);
-    return () => { document.removeEventListener('mousedown', onDoc); document.removeEventListener('keydown', onKey); };
-  }, [helpOpen]);
   return (
     <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
       <div>
@@ -39,17 +27,23 @@ function FeedToolbar({ view, count }) {
       </div>
       <span style={{ flex: 1 }} />
       {(id === 'curated' || id === 'all') && (
-        <span ref={helpRef} style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-          <Button variant="ghost" size="sm" iconStart="arrow-down-wide-narrow">{t('signalScore')}</Button>
-          <button type="button" onClick={() => setHelpOpen((v) => !v)} aria-label={t('signalScore')} aria-expanded={helpOpen}
-            style={{ display: 'inline-flex', alignItems: 'center', padding: 2, background: 'none', border: 'none', cursor: 'pointer', color: helpOpen ? 'var(--green-700, var(--text-secondary))' : 'var(--text-tertiary)' }}>
-            <Icon name="info" size={14} />
-          </button>
-          {helpOpen && (
-            <div role="tooltip" style={{ position: 'absolute', top: 'calc(100% + 8px)', right: 0, zIndex: 50, width: 'min(300px, 78vw)', padding: '12px 14px', background: 'var(--surface-card, #fff)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md, 0 10px 30px -12px rgba(27,30,35,0.25))', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.65, color: 'var(--text-secondary)', textAlign: 'left' }}>
-              {t('signalScore.help')}
-            </div>
-          )}
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2 }}>
+          {/* Real sort toggle: Signal score ⇄ Most recent. (Was a dead button
+              styled like a control but wired to nothing — 2026-07-16 review.)
+              The SIGNAL explainer 'i' lives only on the score slider below now,
+              so it isn't duplicated here. */}
+          {['signal', 'recent'].map((k) => {
+            const on = sortBy === k;
+            return (
+              <Button key={k} variant={on ? 'soft' : 'ghost'} size="sm"
+                iconStart={k === 'signal' ? 'arrow-down-wide-narrow' : 'clock'}
+                aria-pressed={on}
+                onClick={() => onSort && onSort(k)}
+                style={on ? undefined : { color: 'var(--text-tertiary)' }}>
+                {t(k === 'signal' ? 'sort.signal' : 'sort.recent')}
+              </Button>
+            );
+          })}
         </span>
       )}
     </div>
@@ -1688,10 +1682,12 @@ function cdParseHash() {
   const type = CD_CTYPES.includes(params.get('type')) ? params.get('type') : 'all';
   const _min = parseInt(params.get('min'), 10);
   const min  = (_min >= 65 && _min <= 85) ? Math.round(_min / 5) * 5 : 0;
-  return { view, category: cat, query: q, dailyDate: date, ctype: type, minScore: min };
+  // Sort axis: 'signal' (default, evidence strength) or 'recent' (firstSeen).
+  const sort = params.get('sort') === 'recent' ? 'recent' : 'signal';
+  return { view, category: cat, query: q, dailyDate: date, ctype: type, minScore: min, sort };
 }
 
-function cdWriteHash(view, category, query, dailyDate, ctype, minScore) {
+function cdWriteHash(view, category, query, dailyDate, ctype, minScore, sort) {
   let h = view;
   if (view === 'daily' && dailyDate) h += '/' + dailyDate;
   else if (category && category !== 'all') h += '/' + category;
@@ -1699,6 +1695,7 @@ function cdWriteHash(view, category, query, dailyDate, ctype, minScore) {
   if (query) params.push('q=' + encodeURIComponent(query));
   if (ctype && ctype !== 'all') params.push('type=' + ctype);
   if (minScore) params.push('min=' + minScore);
+  if (sort === 'recent') params.push('sort=recent');
   if (params.length) h += '?' + params.join('&');
   if (h !== (location.hash || '').replace(/^#/, ''))
     history.replaceState(null, '', '#' + h);
@@ -1913,6 +1910,7 @@ function FeedApp() {
   const [category, setCategory] = React.useState(_h0.category);
   const [ctype, setCtype] = React.useState(_h0.ctype);
   const [minScore, setMinScore] = React.useState(_h0.minScore);
+  const [sortBy, setSortBy] = React.useState(_h0.sort); // 'signal' | 'recent'
   const [sigHelpOpen, setSigHelpOpen] = React.useState(false);
   const sigHelpRef = React.useRef(null);
   const [query, setQuery] = React.useState(_h0.query);
@@ -1956,13 +1954,13 @@ function FeedApp() {
   const _hashBusy = React.useRef(false);
   React.useEffect(() => {
     if (_hashBusy.current) return;
-    cdWriteHash(view, category, query, dailyDate, ctype, minScore);
-  }, [view, category, query, dailyDate, ctype, minScore]);
+    cdWriteHash(view, category, query, dailyDate, ctype, minScore, sortBy);
+  }, [view, category, query, dailyDate, ctype, minScore, sortBy]);
   React.useEffect(() => {
     const onHash = () => {
       _hashBusy.current = true;
       const h = cdParseHash();
-      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate); setCtype(h.ctype); setMinScore(h.minScore);
+      setView(h.view); setCategory(h.category); setQuery(h.query); setDailyDate(h.dailyDate); setCtype(h.ctype); setMinScore(h.minScore); setSortBy(h.sort);
       requestAnimationFrame(() => { _hashBusy.current = false; });
     };
     window.addEventListener('hashchange', onHash);
@@ -2106,23 +2104,35 @@ function FeedApp() {
     ((b.firstSeen || '').localeCompare(a.firstSeen || '')) ||
     ((b.publishedAt || '').localeCompare(a.publishedAt || '')) ||
     ((b.id || '').localeCompare(a.id || ''));
+  // 'Most recent' axis (sortBy === 'recent'): newest ingestion first. firstSeen
+  // is ms-precision; score then id keep it deterministic (2026-07-16 review —
+  // the "Signal score" control was a dead label, now a real signal/recent toggle).
+  const byRecent = (a, b) =>
+    ((b.firstSeen || '').localeCompare(a.firstSeen || '')) ||
+    (b.score - a.score) ||
+    ((b.id || '').localeCompare(a.id || ''));
+  const activeSort = sortBy === 'recent' ? byRecent : bySignal;
 
   // Curated / All grouping = by day (today / yesterday / older).
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
     .map((d) => ({ key: d, label: DAY_LABELS[d],
-      items: stories.filter((s) => s.day === d).sort(bySignal) }))
+      items: stories.filter((s) => s.day === d).sort(activeSort) }))
     .filter((g) => g.items.length);
 
   // All view spans weeks of archive — today/yesterday/older would dump nearly
   // everything into one "older" heap. Group by calendar date instead (aihot
-  // pattern), newest day first, within a day sorted by score desc.
+  // pattern), newest day first, within a day sorted by the active axis.
+  // Grouping key follows the sort: by publishedAt for 'signal', by firstSeen for
+  // 'recent' — so "most recent" genuinely surfaces recently-ingested items
+  // (incl. backfilled older papers that carry a 新收录 chip), not publish date.
   const groupedByDate = (() => {
     if (view !== 'all') return [];
     const locale = window.CD_LANG === 'zh' ? 'zh-CN' : 'en-US';
+    const dateOf = (s) => ((sortBy === 'recent' ? s.firstSeen : s.publishedAt) || '').slice(0, 10) || '0000-00-00';
     const map = new Map();
     stories.forEach((s) => {
-      const k = (s.publishedAt || '').slice(0, 10) || '0000-00-00';
+      const k = dateOf(s);
       if (!map.has(k)) map.set(k, []);
       map.get(k).push(s);
     });
@@ -2138,7 +2148,7 @@ function FeedApp() {
         label: k === '0000-00-00'
           ? t('unknownDate')
           : new Date(k + 'T12:00:00Z').toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
-        items: items.sort(bySignal),
+        items: items.sort(activeSort),
       }));
   })();
 
@@ -2148,9 +2158,10 @@ function FeedApp() {
   const visibleGroups = view === 'all' ? grouped.slice(0, visibleDays) : grouped;
   const hasMoreDays = view === 'all' && grouped.length > visibleDays;
 
-  // Lead story = top-scoring in the first day-group, only on Curated view.
+  // Lead story = first item of the first group under the active sort, Curated
+  // only (highest signal, or most recently ingested when sorted by recent).
   const leadId = (!compact && !isDaily && grouped.length && grouped[0].items.length)
-    ? [...grouped[0].items].sort(bySignal)[0].id : null;
+    ? [...grouped[0].items].sort(activeSort)[0].id : null;
 
   // Rail day: Daily-brief view pins yesterday; other views prefer today but
   // fall back to yesterday when today is still empty (e.g. before the 15:00
@@ -2173,7 +2184,7 @@ function FeedApp() {
 
         <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
-          {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} />}
+          {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} sortBy={sortBy} onSort={setSortBy} />}
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
