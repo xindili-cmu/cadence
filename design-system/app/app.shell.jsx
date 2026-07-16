@@ -161,7 +161,14 @@ function NavRail({ view, onView, category, onCategory }) {
       {typeof onCategory === 'function' && (
         <>
           <div style={{ height: 1, background: 'var(--border-subtle)', margin: '16px 8px 14px' }} />
-          <div style={eyebrow}>{zh ? '专科' : 'Specialty'}</div>
+          <div style={{ ...eyebrow, margin: '0 0 3px' }}>{zh ? '专科' : 'Specialty'}</div>
+          {/* Scope note: these counts are the live-feed window only, not the
+              full archive — otherwise a slow specialty (practice/policy) reads
+              as a permanent 0 and the number's range is ambiguous between the
+              Curated and All views (2026-07-16 adversarial review). */}
+          <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10.5, lineHeight: 1.45, color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 9px' }}>
+            {zh ? '近期收录篇数,不含历史归档' : 'Recent intake — excludes archive'}
+          </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             {/* Per-specialty live-feed counts, computed once per render from
                 the canonical pool. Cheap (≤ ~100 items) and always current. */}
