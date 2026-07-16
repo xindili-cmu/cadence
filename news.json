@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-16T10:23:19.270Z",
+    "lastUpdated": "2026-07-16T11:56:53.269Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,19 +20,16 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.08.26357600v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-07-15T23:16:04.112Z",
-      "sourceCount": 11,
+      "sourceCount": 8,
       "sources": [
         "medRxiv",
         "Sports Medicine",
-        "NeuroRehabilitation",
-        "Clinical rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Topics in stroke rehabilitation",
-        "The South African journal of physiotherapy",
-        "Gait & posture",
-        "Physiotherapy theory and practice",
-        "American journal of physical medicine & rehabilitation"
+        "NeuroRehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "Clinical rehabilitation",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "The South African journal of physiotherapy"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -49,9 +46,21 @@
         },
         {
           "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Professional reintegration after stroke: experiences of Portuguese stroke survivors.",
+          "titleZh": "卒中后重返工作：葡萄牙卒中幸存者的经验"
+        },
+        {
+          "source": "PubMed",
           "journal": "NeuroRehabilitation",
           "title": "Incomplete Cognitive Assessment in Post-Acute Stroke Rehabilitation: Recovering Clinically Interpretable Relationships from Routine Neuropsychological Data.",
           "titleZh": "卒中后急性期康复中不完整认知评估：从常规神经心理学数据中恢复临床可解释关系"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Retrospective analysis of the relationship between post-stroke fatigue and aphasia severity",
+          "titleZh": "卒中后疲劳与失语症严重程度关系的回顾性分析"
         },
         {
           "source": "PubMed",
@@ -90,38 +99,14 @@
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Professional reintegration after stroke: experiences of Portuguese stroke survivors.",
-          "titleZh": "卒中后重返工作：葡萄牙卒中幸存者的经验"
-        },
-        {
-          "source": "PubMed",
           "journal": "The South African journal of physiotherapy",
           "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
           "titleZh": "南非物理治疗师在卒中康复中运动学习的知识、态度和实践"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "Impact of lower limb proprioception on balance and gait in hemiparetic patients: biomechanical analysis.",
-          "titleZh": "下肢本体感觉对偏瘫患者平衡和步态的影响：生物力学分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Effects of spatial and temporal pre-verbal prioritized instructions on spatiotemporal gait parameters in stroke patients: A within-subject repeated-measures study.",
-          "titleZh": "空间和时间优先口头指令对卒中患者时空步态参数的影响：一项自身重复测量研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Task-Oriented training in a Patient with Triplegia: Post-Stroke Hemiparesis Complicating Pre-Existing Contralateral Upper Extremity Paralysis: A Case Report.",
-          "titleZh": "三肢瘫患者的任务导向训练：一例卒中偏瘫合并对侧上肢既往瘫痪的病例报告。"
         }
       ],
-      "heat": 9.37,
-      "themeZh": "卒中后功能障碍的评估与康复策略",
-      "themeEn": "Stroke Impairment Assessment and Rehabilitation Strategies"
+      "heat": 6.66,
+      "themeZh": "卒中后多维度康复进展：从生物标志物到功能恢复",
+      "themeEn": "Stroke Recovery: Biomarkers, Cognition, Mobility"
     },
     {
       "id": "news-1784130931913-13",
@@ -129,11 +114,14 @@
       "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00815-4/fulltext?rss=yes",
       "category": "manual-modality",
       "publishedAt": "2026-07-16T06:35:25.420Z",
-      "sourceCount": 3,
+      "sourceCount": 6,
       "sources": [
         "Archives of Physical Medicine and Rehabilitation",
         "The Journal of manual & manipulative therapy",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physical medicine and rehabilitation",
+        "British journal of sports medicine",
+        "Sports Medicine",
+        "Physiotherapy"
       ],
       "tag": "electro",
       "kind": "theme",
@@ -161,11 +149,28 @@
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Adherence to exercise intervention including pain threshold, exercise and physiotherapy sessions for patients with chronic rotator cuff tendinopathy.",
           "titleZh": "慢性肩袖肌腱病患者在包含疼痛阈值、运动和物理治疗的干预中的依从性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis.",
+          "titleZh": "血流限制运动在肌肉骨骼康复中是否比传统运动有额外益处？一项系统综述和荟萃分析。"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "The Impact of a Single Bout of Antagonist Stretching on Agonist Muscle Performance and Range of Motion: A Systematic review and Meta-analysis",
+          "titleZh": "单次拮抗肌牵伸对主动肌表现和运动范围的影响：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Effects of physical exercise on spasticity in people with multiple sclerosis: A systematic review.",
+          "titleZh": "体育锻炼对多发性硬化症患者痉挛影响的系统综述。"
         }
       ],
-      "heat": 2.84,
-      "themeZh": "上肢与脊柱疼痛的手法和物理治疗技术",
-      "themeEn": "Manual Therapy for Upper Limb and Spine Pain"
+      "heat": 5.55,
+      "themeZh": "肌肉骨骼疼痛：手法、电刺激与运动干预疗效比较",
+      "themeEn": "Musculoskeletal Pain: Manual Therapy, Stimulation, Exercise"
     },
     {
       "id": "news-1783640474701-0",
@@ -213,9 +218,9 @@
           "titleZh": "沉浸式 sEMG 触发虚拟现实游戏训练对卒中后吞咽困难的疗效和安全性：一项随机单盲对照试验"
         }
       ],
-      "heat": 2.15,
-      "themeZh": "虚拟与远程康复在多类疾病中的应用",
-      "themeEn": "Virtual and Telerehabilitation Across Conditions"
+      "heat": 2.1,
+      "themeZh": "虚拟与远程康复模式对多类疾病的疗效",
+      "themeEn": "Virtual & Telerehabilitation for Diverse Conditions"
     },
     {
       "id": "news-1783839922088-0",
@@ -249,12 +254,55 @@
           "titleZh": "用于脊髓损伤患者局部骨骼刺激的可穿戴纳米振动传输设备的开发和初步临床可行性"
         }
       ],
-      "heat": 1.29,
-      "themeZh": "脊柱损伤与疼痛的神经肌肉机制及干预",
-      "themeEn": "Neuromuscular Mechanisms and Interventions for Spinal Pain"
+      "heat": 1.26,
+      "themeZh": "腰背痛与脊髓损伤的神经生理学与刺激干预",
+      "themeEn": "Neuromodulation for Spinal Pain & Injury"
     }
   ],
   "items": [
+    {
+      "id": "news-1784203011176-13",
+      "title": "July 15, 2026 The 2027 Proposed Rule is Out. Here's What You Need to Know.",
+      "summary": "The 2027 Proposed Rule for Medicare in the US has been released, outlining key changes that physical therapists need to understand regarding reimbursement and practice guidelines.",
+      "category": "practice",
+      "source": "WebPT",
+      "sourceUrl": "https://www.webpt.com/blog/the-2027-proposed-rule-is-out-heres-what-you-need-to-know",
+      "publishedAt": "2026-07-16T11:56:40.433Z",
+      "firstSeen": "2026-07-16T11:56:51.176Z",
+      "curatedScore": 85,
+      "curatedReason": "2027 年美国 Medicare 拟议规则通常涵盖了物理治疗服务的报销费率、支付政策和监管更新。仔细研读这些变化，尤其是在远程医疗、MIPS 绩效考核和执业范围方面的潜在调整，将直接影响你未来的执业收入和运营模式。",
+      "titleZh": "2027 年 Medicare 拟议规则出炉：你需要了解的要点",
+      "summaryZh": "美国 Medicare 2027 年拟议规则已发布，其中包含物理治疗师需了解的报销和执业指南的关键变化。",
+      "curatedReasonEn": "The 2027 US Medicare proposed rule typically covers reimbursement rates, payment policies, and regulatory updates for physical therapy services. Thoroughly reviewing these changes, especially potential adjustments to telehealth, MIPS performance, and scope of practice, will directly impact your future practice revenue and operational model.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1784010694052-27",
+      "title": "Retrospective analysis of the relationship between post-stroke fatigue and aphasia severity",
+      "summary": "A retrospective analysis investigates the relationship between post-stroke fatigue, affecting 25-85% of survivors, and aphasia severity, noting that fatigue is a chronic condition not reliably predicted by stroke type or physical impairment.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00812-9/fulltext?rss=yes",
+      "publishedAt": "2026-07-13T00:00:00.000Z",
+      "firstSeen": "2026-07-14T06:31:34.052Z",
+      "curatedScore": 68,
+      "curatedReason": "卒中后疲劳与失语症严重程度之间的关联可能有助于在早期识别高风险患者。在评估卒中康复患者时，除了传统运动和认知功能外，也要关注情绪、语言和疲劳症状的交叉影响。",
+      "titleZh": "卒中后疲劳与失语症严重程度关系的回顾性分析",
+      "summaryZh": "一项回顾性分析探讨了卒中后疲劳（影响 25-85% 的卒中幸存者）与失语症严重程度之间的关系，指出卒中后疲劳是慢性症状，并非由卒中类型或共存躯体障碍可靠预测。",
+      "curatedReasonEn": "The potential link between post-stroke fatigue and aphasia severity can help identify high-risk patients earlier. When assessing stroke rehabilitation patients, consider the intersecting impact of emotional, language, and fatigue symptoms alongside traditional motor and cognitive functions.",
+      "limitation": "本研究为回顾性分析，无法确立因果关系。",
+      "limitationEn": "As a retrospective analysis, this study cannot establish causality.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
     {
       "id": "news-1783928886957-0",
       "title": "Cost-effectiveness of Pilates compared with home-based exercises for people with chronic non-specific low back pain: a trial-based economic evaluation.",
@@ -1978,53 +2026,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1783035225281-12",
-      "title": "Sarcopenia Increases Adjacent Segment Degeneration Risk within 3 Years of Anterior Cervical Discectomy and Fusion.",
-      "summary": "An exploratory retrospective cohort study found that sarcopenia independently increases the risk of adjacent segment degeneration (ASD) within 3 years following anterior cervical discectomy and fusion (ACDF) (HR 2.22; 95% CI, 1.34-3.67; P=0.002).",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42391334/",
-      "publishedAt": "2026-07-02T00:00:00.000Z",
-      "firstSeen": "2026-07-02T23:33:45.281Z",
-      "curatedScore": 80,
-      "curatedReason": "这项回顾性队列研究表明，肌肉减少症会增加颈椎前路椎间盘切除融合术（ACDF）后 3 年内发生邻近节段退变的风险。在对 ACDF 术后患者进行评估时，你需要将肌肉减少症作为独立风险因素纳入考量，并建议高风险患者进行术前干预或更密切的术后随访。",
-      "titleZh": "肌肉减少症增加颈椎前路椎间盘切除融合术后 3 年内邻近节段退变的风险。",
-      "summaryZh": "一项探索性回顾性队列研究发现，肌肉减少症会独立增加颈椎前路椎间盘切除融合术（ACDF）后 3 年内发生邻近节段退变（ASD）的风险（HR 2.22；95% CI，1.34-3.67；P=0.002）。",
-      "curatedReasonEn": "This retrospective cohort study indicates that sarcopenia increases the risk of adjacent segment degeneration within 3 years following anterior cervical discectomy and fusion (ACDF). When evaluating post-ACDF patients, you should consider sarcopenia as an independent risk factor and recommend preoperative interventions or closer postoperative follow-up for high-risk patients.",
-      "limitation": "研究为回顾性队列设计，存在选择偏倚和混杂因素未完全控制的风险。",
-      "limitationEn": "The study is a retrospective cohort design, carrying risks of selection bias and incompletely controlled confounding factors.",
-      "tags": [
-        "research",
-        "spine",
-        "sarcopenia"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Spine"
-    },
-    {
-      "id": "news-1784010694051-2",
-      "title": "Task-Oriented training in a Patient with Triplegia: Post-Stroke Hemiparesis Complicating Pre-Existing Contralateral Upper Extremity Paralysis: A Case Report.",
-      "summary": "A case report demonstrates that task-oriented training facilitated functional independence in a 75-year-old man with triplegia following stroke, showing significant improvements in Fugl-Meyer Assessment-UE scores (from 3 to 43) and Motor Activity Log.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42442929/",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T06:31:34.052Z",
-      "curatedScore": 68,
-      "curatedReason": "本病例报告展示了任务导向训练在卒中后三肢瘫患者中的潜在益处，尤其是在预先存在肢体瘫痪的情况下。这提示你，即使是复杂的神经损伤患者，强化任务导向训练也能带来功能改善，但毕竟只是个案。",
-      "titleZh": "三肢瘫患者的任务导向训练：一例卒中偏瘫合并对侧上肢既往瘫痪的病例报告。",
-      "summaryZh": "一项病例报告显示，在一名75岁、卒中后出现三肢瘫（右侧偏瘫合并左侧上肢既往瘫痪）的患者中，任务导向训练显著提高了其功能独立性，Fugl-Meyer 上肢评分为 3 分提升至 43 分，并在 1 年随访时维持在 41 分。",
-      "curatedReasonEn": "This case report demonstrates the potential benefits of task-oriented training in a patient with post-stroke triplegia, especially with pre-existing limb paralysis. This suggests that even in patients with complex neurological injuries, intensive task-oriented training can lead to functional improvements, though it is only a case study.",
-      "limitation": "本研究为单例病例报告，结论的普适性极低。",
-      "limitationEn": "This study is a single case report, and the generalizability of its conclusions is very low.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "American journal of physical medicine & rehabilitation"
     }
   ]
 }
