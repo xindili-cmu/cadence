@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-18T15:18:23.753Z",
+    "lastUpdated": "2026-07-18T17:27:08.059Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,18 +20,17 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.08.26357600v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-07-18T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 9,
       "sources": [
         "medRxiv",
         "Topics in stroke rehabilitation",
         "NeuroRehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
         "Disability and rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "The South African journal of physiotherapy",
         "Archives of physical medicine and rehabilitation",
         "Clinical rehabilitation",
-        "Journal of rehabilitation medicine"
+        "Journal of rehabilitation medicine",
+        "The South African journal of physiotherapy"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -67,18 +66,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
-          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The South African journal of physiotherapy",
-          "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
-          "titleZh": "物理治疗师在卒中康复中运动学习的知识、态度和实践"
-        },
-        {
-          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
           "titleZh": "物理与认知联合康复与卒中后痴呆发生率的关联：一项美国多中心回顾性队列研究"
@@ -106,11 +93,17 @@
           "journal": "Journal of rehabilitation medicine",
           "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
           "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及其测量集范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The South African journal of physiotherapy",
+          "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
+          "titleZh": "物理治疗师在卒中康复中运动学习的知识、态度和实践"
         }
       ],
-      "heat": 8.02,
-      "themeZh": "卒中后功能障碍的评估与康复干预",
-      "themeEn": "Post-Stroke Impairment Assessment and Rehabilitation"
+      "heat": 7,
+      "themeZh": "卒中后认知、心理与躯体功能恢复的多维度评估",
+      "themeEn": "Multidimensional Stroke Recovery Assessment"
     },
     {
       "id": "news-1784329952320-0",
@@ -180,9 +173,9 @@
           "titleZh": "尼日利亚物理治疗管理的肌肉骨骼疾病的患病率、模式、治疗结果和成本"
         }
       ],
-      "heat": 5.55,
-      "themeZh": "膝骨关节炎的虚拟现实辅助康复与生活干预",
-      "themeEn": "Virtual Reality, Lifestyle for Knee OA"
+      "heat": 5.38,
+      "themeZh": "膝骨关节炎康复的虚现实技术与多模态评估",
+      "themeEn": "VR & Multimodal Assessment for Knee OA"
     },
     {
       "id": "news-1784269918695-0",
@@ -235,28 +228,11 @@
           "journal": "The Journal of manual & manipulative therapy",
           "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
           "titleZh": "对脊柱进行检查和治疗以缓解上肢疼痛：一个病例系列"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
-          "titleZh": "不同关节松动技术对肩关节囊炎的比较疗效：随机对照试验的系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Adherence to exercise intervention including pain threshold, exercise and physiotherapy sessions for patients with chronic rotator cuff tendinopathy.",
-          "titleZh": "慢性肩袖肌腱病患者运动干预（含疼痛阈值、运动和物理治疗）的依从性研究"
-        },
-        {
-          "source": "PubMed",
-          "title": "Kinesiophobia and its impact on shoulder function in patients following arthroscopic rotator cuff repair of the supraspinatus tendon: a cross-sectional study",
-          "titleZh": "肩袖修复术后患者的运动恐惧症及其对肩关节功能的影响：一项横断面研究"
         }
       ],
-      "heat": 2.83,
-      "themeZh": "慢性疼痛的生物心理社会与物理治疗",
-      "themeEn": "Biopsychosocial and Physical Therapy for Chronic Pain"
+      "heat": 2.75,
+      "themeZh": "慢性腰背痛与上肢痛的生物心理社会干预",
+      "themeEn": "Biopsychosocial Interventions for Chronic Pain"
     },
     {
       "id": "news-1784368225605-13",
@@ -291,46 +267,77 @@
           "titleZh": "利用围手术期临床参数预测心血管外科术后恢复期的运动不耐受"
         }
       ],
-      "heat": 2.41,
-      "themeZh": "老年患者营养、COPD 与心血管术后康复",
-      "themeEn": "Geriatric Nutrition, COPD, Post-Cardiovascular Surgery Recovery"
+      "heat": 2.33,
+      "themeZh": "老年心肺疾病与截肢患者康复的管理与预测",
+      "themeEn": "Geriatric Cardiopulmonary & Amputee Rehab Management"
     },
     {
-      "id": "news-1783722684279-26",
-      "title": "Immediate Weight-Bearing and Early Ambulation Rehabilitation After Femoral Neck System Fixation for Undisplaced Femoral Neck Fractures: A Prospective Randomized Controlled Trial",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s43465-026-01894-z",
+      "id": "news-1784050637091-0",
+      "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42446287/",
       "category": "orthopedic",
-      "publishedAt": "2026-07-18T00:00:00.000Z",
-      "sourceCount": 2,
+      "publishedAt": "2026-07-16T00:00:00.000Z",
+      "sourceCount": 4,
       "sources": [
-        "Sports Medicine",
-        "medRxiv"
+        "The Journal of manual & manipulative therapy",
+        "Archives of physical medicine and rehabilitation",
+        "PubMed",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
-      "tag": "hip",
+      "tag": "shoulder",
       "kind": "theme",
       "members": [
         {
-          "source": "Sports Medicine",
-          "title": "Immediate Weight-Bearing and Early Ambulation Rehabilitation After Femoral Neck System Fixation for Undisplaced Femoral Neck Fractures: A Prospective Randomized Controlled Trial",
-          "titleZh": "无移位股骨颈骨折股骨颈系统内固定术后立即负重和早期活动康复：一项前瞻性随机对照试验"
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
+          "titleZh": "不同关节松动技术对肩关节囊炎的比较疗效：随机对照试验的系统综述和荟萃分析"
         },
         {
-          "source": "medRxiv",
-          "title": "Modified Ghost System combining action, observation, and vibration stimulation for recovery after distal radius fracture surgery: A single-arm clinical feasibility study protocol",
-          "titleZh": "改良 Ghost 系统结合动作观察与振动刺激，用于桡骨远端骨折术后康复：一项单臂临床可行性研究方案"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Adherence to exercise intervention including pain threshold, exercise and physiotherapy sessions for patients with chronic rotator cuff tendinopathy.",
+          "titleZh": "慢性肩袖肌腱病患者运动干预（含疼痛阈值、运动和物理治疗）的依从性研究"
         },
         {
-          "source": "medRxiv",
-          "title": "Development and Preliminary Clinical Feasibility of a Wearable Nanovibration Delivery Device for Localised Bone Stimulation in Individuals with Spinal Cord Injury",
-          "titleZh": "用于脊髓损伤患者局部骨刺激的可穿戴纳米振动递送设备的开发和初步临床可行性"
+          "source": "PubMed",
+          "title": "Kinesiophobia and its impact on shoulder function in patients following arthroscopic rotator cuff repair of the supraspinatus tendon: a cross-sectional study",
+          "titleZh": "肩袖修复术后患者的运动恐惧症及其对肩关节功能的影响：一项横断面研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
+          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
         }
       ],
-      "heat": 1.6,
-      "themeZh": "骨折与脊髓损伤的早期负重与智能康复",
-      "themeEn": "Early Weight-Bearing, Smart Rehab for Fractures"
+      "heat": 1.55
     }
   ],
   "items": [
+    {
+      "id": "news-1783149593311-7",
+      "title": "Eight weeks of visual perturbation training effects on unanticipated cutting lower-limb biomechanics and errors in male athletes following anterior cruciate ligament reconstruction: a randomized controlled clinical trial (RCT).",
+      "summary": "An RCT of 24 ACLR male athletes found that eight weeks of visual perturbation training improved unanticipated cutting lower-limb biomechanics and reduced errors, addressing neuromuscular deficits beyond typical return-to-sport protocols.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42399823/",
+      "publishedAt": "2026-07-04T00:00:00.000Z",
+      "firstSeen": "2026-07-04T07:19:53.311Z",
+      "curatedScore": 75,
+      "curatedReason": "ACL 术后重返运动，不要只盯着本体感觉和肌力。视觉扰动下的神经肌肉控制是薄弱环节，这研究提示加入视觉扰动训练能改善不预期切向运动时的生物力学和错误率。",
+      "titleZh": "ACL 重建术后男性运动员视觉扰动训练对不预期切向运动下肢生物力学及错误的影响：一项随机对照临床试验",
+      "summaryZh": "一项对 24 名 ACLR 男性运动员的随机对照试验发现，为期八周的视觉扰动训练改善了不预期切向运动中的下肢生物力学和错误率，解决了常规重返运动方案未能充分恢复的神经肌肉缺陷。",
+      "curatedReasonEn": "For ACLR athletes returning to sport, don't just focus on proprioception and strength. This study suggests that visual perturbation training can improve lower-limb biomechanics and reduce errors during unanticipated cutting maneuvers by addressing sensorimotor deficits.",
+      "limitation": "本研究样本量为 24 名男性运动员，且仅限于 ACLR 后的重返运动阶段，结果外推需谨慎。",
+      "limitationEn": "This study involved only 24 male athletes and focused on the return-to-sport phase post-ACLR, so generalizability requires caution.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC musculoskeletal disorders"
+    },
     {
       "id": "news-1784387901466-12",
       "title": "Modified Ghost System combining action, observation, and vibration stimulation for recovery after distal radius fracture surgery: A single-arm clinical feasibility study protocol",
@@ -2088,28 +2095,6 @@
         "news",
         "spine"
       ]
-    },
-    {
-      "id": "news-1784240946090-16",
-      "title": "Effects of a 4-week neuromuscular balance training program on knee proprioception, functional performance, and landing errors in national-level female wrestlers: a randomized controlled trial",
-      "summary": "A 4-week neuromuscular balance training program improved knee proprioception, functional performance, and reduced landing errors in 22 national-level female wrestlers in a randomized controlled trial.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42437939/",
-      "publishedAt": "2026-07-13T21:09:14.000Z",
-      "firstSeen": "2026-07-16T22:29:06.090Z",
-      "curatedScore": 75,
-      "titleZh": "4周神经肌肉平衡训练对国家级女子摔跤运动员膝关节本体感觉、功能表现和落地错误的影响：一项随机对照试验",
-      "summaryZh": "一项随机对照试验发现，为期4周的神经肌肉平衡训练项目改善了22名国家级女子摔跤运动员的膝关节本体感觉、功能表现，并减少了落地错误。",
-      "curatedReasonEn": "This RCT suggests that a short-term (4-week) neuromuscular balance training program can improve knee proprioception, functional performance, and landing errors in national-level female wrestlers. For high-level athletes, consider incorporating this intervention into training plans to reduce lower extremity injury risk.",
-      "limitation": "本研究样本量较小（22名摔跤运动员），结果外推至其他人群或长期效果需谨慎。",
-      "limitationEn": "The study has a small sample size (22 wrestlers), and results should be generalized to other populations or long-term effects with caution.",
-      "tags": [
-        "research",
-        "knee",
-        "sports"
-      ],
-      "studyDesign": "RCT"
     }
   ]
 }
