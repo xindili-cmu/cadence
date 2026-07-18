@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-18T11:27:11.480Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-07-18T13:54:15.035Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -108,9 +108,9 @@
           "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及其测量集范围综述"
         }
       ],
-      "heat": 8.48,
-      "themeZh": "卒中后多维度功能障碍的评估与康复",
-      "themeEn": "Post-stroke multi-dimensional impairment assessment and rehab"
+      "heat": 8.18,
+      "themeZh": "卒中后认知、运动、心理与社会功能康复评估与实践",
+      "themeEn": "Stroke Recovery: Cognitive, Motor, Psychosocial Rehabilitation"
     },
     {
       "id": "news-1784329952320-0",
@@ -180,9 +180,9 @@
           "titleZh": "尼日利亚物理治疗管理的肌肉骨骼疾病的患病率、模式、治疗结果和成本"
         }
       ],
-      "heat": 5.86,
-      "themeZh": "膝骨关节炎的创新康复干预与效果",
-      "themeEn": "Innovative Knee OA rehab interventions and outcomes"
+      "heat": 5.66,
+      "themeZh": "膝骨关节炎综合管理与虚拟物理治疗模型",
+      "themeEn": "Knee OA Management & Virtual PT"
     },
     {
       "id": "news-1784269918695-0",
@@ -254,9 +254,9 @@
           "titleZh": "肩袖修复术后患者的运动恐惧症及其对肩关节功能的影响：一项横断面研究"
         }
       ],
-      "heat": 3,
-      "themeZh": "慢性疼痛的综合干预策略与疗效",
-      "themeEn": "Comprehensive chronic pain interventions and efficacy"
+      "heat": 2.89,
+      "themeZh": "慢性疼痛的多模式生物心理社会干预",
+      "themeEn": "Multimodal Biopsychosocial Interventions for Chronic Pain"
     },
     {
       "id": "news-1784368225605-13",
@@ -291,9 +291,9 @@
           "titleZh": "利用围手术期临床参数预测心血管外科术后恢复期的运动不耐受"
         }
       ],
-      "heat": 2.54,
-      "themeZh": "老年或重症患者康复的预测因素",
-      "themeEn": "Predictors of elderly/critical patient rehabilitation"
+      "heat": 2.45,
+      "themeZh": "老年心肺与截肢患者的预后与康复管理",
+      "themeEn": "Geriatric Cardio-Pulmonary & Amputee Rehabilitation"
     },
     {
       "id": "news-1783839922090-5",
@@ -332,12 +332,36 @@
           "titleZh": "利用神经可塑性改善脑瘫婴儿运动表现：GAME 随机对照试验的研究方案"
         }
       ],
-      "heat": 2.48,
-      "themeZh": "脊髓损伤与儿童神经康复的辅助技术",
-      "themeEn": "Assistive tech for SCI and pediatric neurorehab"
+      "heat": 2.39,
+      "themeZh": "脊髓损伤与神经可塑性的新型干预技术",
+      "themeEn": "Novel Interventions for SCI & Neuroplasticity"
     }
   ],
   "items": [
+    {
+      "id": "news-1783149593311-7",
+      "title": "Eight weeks of visual perturbation training effects on unanticipated cutting lower-limb biomechanics and errors in male athletes following anterior cruciate ligament reconstruction: a randomized controlled clinical trial (RCT).",
+      "summary": "This RCT explores how eight weeks of visual perturbation training affects unanticipated cutting lower-limb biomechanics and errors in 24 male athletes following ACL reconstruction, suggesting its role in restoring neuromuscular deficits.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42399823/",
+      "publishedAt": "2026-07-04T00:00:00.000Z",
+      "firstSeen": "2026-07-04T07:19:53.311Z",
+      "curatedScore": 75,
+      "curatedReason": "ACL 术后重返运动训练，不仅要关注本体感觉，还要重视视觉扰动下的神经肌肉控制。这项研究提示，将视觉扰动训练整合到康复方案中，可以改善患者在复杂运动中的下肢生物力学和决策错误，帮助他们更安全、有效地重返运动。",
+      "titleZh": "前交叉韧带重建术后男性运动员视觉扰动训练对无预警变向运动下肢生物力学及错误的影响：一项随机对照临床试验",
+      "summaryZh": "这项随机对照临床试验探讨了对 24 名 ACLR 术后男性运动员进行八周视觉扰动训练如何影响无预警变向运动中的下肢生物力学和错误，提示其在恢复神经肌肉缺陷方面的作用。",
+      "curatedReasonEn": "For ACL reconstruction patients returning to sport, neuromuscular control under visual perturbation is as crucial as proprioception. This study suggests integrating visual perturbation training into rehabilitation protocols can improve lower-limb biomechanics and decision-making errors during complex movements, aiding safer and more effective return to sport.",
+      "limitation": "本研究的长期随访结果尚未可知，且样本量较小，仅限于男性运动员，外推至其他人群需谨慎。",
+      "limitationEn": "Long-term follow-up results are not yet available, and the study has a small sample size, limited to male athletes, so generalization to other populations should be done cautiously.",
+      "tags": [
+        "research",
+        "knee",
+        "return-to-sport"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC musculoskeletal disorders"
+    },
     {
       "id": "news-1784368225605-13",
       "title": "Undernutrition is associated with higher rate of reamputation or survival, lower mobility and lower quality of life following dysvascular major lower limb amputation: a longitudinal observational study",
