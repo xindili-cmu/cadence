@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-18T08:14:10.138Z",
-    "totalItems": 73,
+    "lastUpdated": "2026-07-18T09:50:27.562Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -20,17 +20,18 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.08.26357600v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-07-18T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "sources": [
         "medRxiv",
         "Topics in stroke rehabilitation",
         "NeuroRehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
         "Disability and rehabilitation",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "The South African journal of physiotherapy",
         "Archives of physical medicine and rehabilitation",
         "Clinical rehabilitation",
-        "Journal of rehabilitation medicine",
-        "The South African journal of physiotherapy"
+        "Journal of rehabilitation medicine"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -66,6 +67,18 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
+          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The South African journal of physiotherapy",
+          "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
+          "titleZh": "物理治疗师在卒中康复中运动学习的知识、态度和实践"
+        },
+        {
+          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
           "titleZh": "物理与认知联合康复与卒中后痴呆发生率的关联：一项美国多中心回顾性队列研究"
@@ -93,17 +106,11 @@
           "journal": "Journal of rehabilitation medicine",
           "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
           "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及其测量集范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The South African journal of physiotherapy",
-          "title": "Physiotherapists' knowledge, attitude and practice of motor learning in stroke rehabilitation.",
-          "titleZh": "物理治疗师在卒中康复中运动学习的知识、态度和实践"
         }
       ],
-      "heat": 7.99,
-      "themeZh": "卒中后认知、疲劳、运动与社会功能康复",
-      "themeEn": "Post-stroke Cognitive, Motor, Social Recovery"
+      "heat": 8.68,
+      "themeZh": "卒中后多维功能障碍的临床评估与康复",
+      "themeEn": "Stroke Multidimensional Impairment Assessment & Rehab"
     },
     {
       "id": "news-1784329952320-0",
@@ -173,9 +180,9 @@
           "titleZh": "尼日利亚物理治疗管理的肌肉骨骼疾病的患病率、模式、治疗结果和成本"
         }
       ],
-      "heat": 6.14,
-      "themeZh": "膝骨关节炎的虚拟现实辅助与多模式评估",
-      "themeEn": "VR-assisted & Multimodal Knee OA Assessment"
+      "heat": 6,
+      "themeZh": "膝关节骨性关节炎的多元康复干预及效能",
+      "themeEn": "Knee OA Multimodal Rehab & Efficacy"
     },
     {
       "id": "news-1784269918695-0",
@@ -183,11 +190,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42462840/",
       "category": "orthopedic",
       "publishedAt": "2026-07-17T00:00:00.000Z",
-      "sourceCount": 3,
+      "sourceCount": 5,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "BMC musculoskeletal disorders",
-        "PubMed"
+        "PubMed",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "The Journal of manual & manipulative therapy"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -214,28 +223,19 @@
           "source": "PubMed",
           "title": "Ultrasound-guided platelet-rich plasma myofascial injection for chronic low back pain: a retrospective study",
           "titleZh": "超声引导下富血小板血浆肌筋膜注射治疗慢性腰痛：一项回顾性研究"
-        }
-      ],
-      "heat": 1.88,
-      "themeZh": "慢性疼痛的生物心理社会与介入治疗",
-      "themeEn": "Biopsychosocial & Interventional Chronic Pain Therapy"
-    },
-    {
-      "id": "news-1784050637091-0",
-      "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42446287/",
-      "category": "orthopedic",
-      "publishedAt": "2026-07-16T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "The Journal of manual & manipulative therapy",
-        "Archives of physical medicine and rehabilitation",
-        "PubMed",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Acute Modulation of Lumbar Motor Unit Behavior During Experimentally Induced Low Back Pain: A Motor Unit Decomposition Analysis.",
+          "titleZh": "实验诱导急性腰痛时腰部运动单位行为的急性调节：一项运动单位分解分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
+          "titleZh": "对脊柱进行检查和治疗以缓解上肢疼痛：一个病例系列"
+        },
         {
           "source": "PubMed",
           "journal": "The Journal of manual & manipulative therapy",
@@ -252,69 +252,139 @@
           "source": "PubMed",
           "title": "Kinesiophobia and its impact on shoulder function in patients following arthroscopic rotator cuff repair of the supraspinatus tendon: a cross-sectional study",
           "titleZh": "肩袖修复术后患者的运动恐惧症及其对肩关节功能的影响：一项横断面研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
-          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
-          "titleZh": "对脊柱进行检查和治疗以缓解上肢疼痛：一个病例系列"
         }
       ],
-      "heat": 1.78,
-      "themeZh": "肩部疼痛与功能障碍的评估与康复",
-      "themeEn": "Shoulder Pain and Dysfunction Rehabilitation"
+      "heat": 3.07,
+      "themeZh": "慢性疼痛的生物心理社会干预与物理治疗",
+      "themeEn": "Chronic Pain Biopsychosocial & PT"
     },
     {
-      "id": "news-1784237332927-15",
-      "title": "Towards strengthening rehabilitation within health systems: a scoping review of rehabilitation-specific quality indicators",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00819-1/fulltext?rss=yes",
-      "category": "practice",
-      "publishedAt": "2026-07-16T00:00:00.000Z",
-      "sourceCount": 4,
+      "id": "news-1784368225605-13",
+      "title": "Undernutrition is associated with higher rate of reamputation or survival, lower mobility and lower quality of life following dysvascular major lower limb amputation: a longitudinal observational study",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00839-7/fulltext?rss=yes",
+      "category": "geriatric",
+      "publishedAt": "2026-07-18T00:00:00.000Z",
+      "sourceCount": 3,
       "sources": [
         "Archives of Physical Medicine and Rehabilitation",
-        "Clinical rehabilitation",
-        "medRxiv",
-        "Sports Medicine"
+        "Sports Medicine",
+        "Archives of physical medicine and rehabilitation"
       ],
-      "tag": "telehealth",
+      "tag": "amputation",
       "kind": "theme",
       "members": [
         {
           "source": "Archives of PM&R",
           "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Towards strengthening rehabilitation within health systems: a scoping review of rehabilitation-specific quality indicators",
-          "titleZh": "旨在加强卫生系统内康复服务的范围综述：康复特异性质量指标"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Telerehabilitation during the hospital-to-home transition for stroke survivors: A scoping review.",
-          "titleZh": "卒中幸存者出院返家阶段远程康复：范围综述"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Real-World Outcomes of a Telephone-Based Virtual Cognitive Rehabilitation Therapy Program: A Retrospective Cohort Analysis",
-          "titleZh": "电话虚拟认知康复治疗项目的真实世界结果：一项回顾性队列分析"
+          "title": "Undernutrition is associated with higher rate of reamputation or survival, lower mobility and lower quality of life following dysvascular major lower limb amputation: a longitudinal observational study",
+          "titleZh": "血管性下肢大截肢后营养不良与更高的再截肢率或生存率、更低的活动能力和生活质量相关：一项纵向观察性研究"
         },
         {
           "source": "Sports Medicine",
-          "title": "A Scoping Review of Methods for Extrapolating Costs and Effects in Economic Evaluations of Remote Monitoring",
-          "titleZh": "远程监测经济学评估中成本和效应外推方法学的范围综述"
+          "title": "Timely management of COPD exacerbations is associated with limited acute deterioration and early recovery: a prospective observational study",
+          "titleZh": "慢性阻塞性肺疾病急性加重及时管理与有限的急性恶化和早期恢复相关：一项前瞻性观察研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Prediction of Exercise Intolerance in the Recovery Period After Cardiovascular Surgery Using Perioperative Clinical Parameters.",
+          "titleZh": "利用围手术期临床参数预测心血管外科术后恢复期的运动不耐受"
         }
       ],
-      "heat": 1.78,
-      "themeZh": "康复医疗中的远程医疗与质量指标",
-      "themeEn": "Telerehabilitation and Quality Indicators in Healthcare"
+      "heat": 2.6,
+      "themeZh": "老年与心肺疾病患者的术后康复与营养管理",
+      "themeEn": "Geriatric & Cardiopulmonary Post-op Rehab & Nutrition"
+    },
+    {
+      "id": "news-1783839922090-5",
+      "title": "Sexual function during primary rehabilitation after spinal cord injury: A descriptive analysis from a population-based cohort.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42435929/",
+      "category": "neurological",
+      "publishedAt": "2026-07-17T22:10:15.427Z",
+      "sourceCount": 3,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "medRxiv",
+        "BJSM"
+      ],
+      "tag": "spinal-cord",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Sexual function during primary rehabilitation after spinal cord injury: A descriptive analysis from a population-based cohort.",
+          "titleZh": "脊髓损伤初级康复期间的性功能：基于人群队列的描述性分析"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Development and Preliminary Clinical Feasibility of a Wearable Nanovibration Delivery Device for Localised Bone Stimulation in Individuals with Spinal Cord Injury",
+          "titleZh": "用于脊髓损伤患者局部骨刺激的可穿戴纳米振动递送设备的开发和初步临床可行性"
+        },
+        {
+          "source": "BJSM",
+          "title": "Factors influencing virtual reality use in paediatric acquired ...",
+          "titleZh": "影响虚拟现实在儿科获得性脑损伤上肢康复中使用的因素：一项定性研究"
+        },
+        {
+          "source": "BJSM",
+          "title": "Harnessing neuroplasticity to improve motor performance ...",
+          "titleZh": "利用神经可塑性改善脑瘫婴儿运动表现：GAME 随机对照试验的研究方案"
+        }
+      ],
+      "heat": 2.53,
+      "themeZh": "脊髓损伤与神经损伤康复的新技术应用",
+      "themeEn": "SCI & Neurological Injury Rehab Tech"
     }
   ],
   "items": [
+    {
+      "id": "news-1783149593311-7",
+      "title": "Eight weeks of visual perturbation training effects on unanticipated cutting lower-limb biomechanics and errors in male athletes following anterior cruciate ligament reconstruction: a randomized controlled clinical trial (RCT).",
+      "summary": "An RCT with 24 ACLR male athletes who had returned to sport showed that 8 weeks of visual perturbation training improved unanticipated cutting lower-limb biomechanics and reduced errors.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42399823/",
+      "publishedAt": "2026-07-04T00:00:00.000Z",
+      "firstSeen": "2026-07-04T07:19:53.311Z",
+      "curatedScore": 75,
+      "curatedReason": "ACL 重建术后重返运动训练，不妨考虑加入视觉扰动训练。这项 RCT 提示，8 周的视觉扰动训练能改善运动员在意外变向时的下肢生物力学和错误率，尤其针对神经肌肉控制不足的患者。",
+      "titleZh": "前交叉韧带重建术后男性运动员 8 周视觉扰动训练对非预期变向时下肢生物力学和错误率的影响：一项随机对照临床试验",
+      "summaryZh": "一项针对 24 名 ACLR 术后男性运动员的随机对照试验（RCT）显示，8 周的视觉扰动训练改善了运动员在非预期变向时的下肢生物力学和错误率。",
+      "curatedReasonEn": "Consider incorporating visual perturbation training into return-to-sport protocols for ACL reconstruction athletes. This RCT suggests that 8 weeks of visual perturbation training can improve lower-limb biomechanics and reduce errors during unanticipated cutting maneuvers, particularly for athletes with neuromotor control deficits.",
+      "limitation": "研究样本量相对较小，且只针对男性运动员。",
+      "limitationEn": "The study had a relatively small sample size and focused exclusively on male athletes.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1784368225605-13",
+      "title": "Undernutrition is associated with higher rate of reamputation or survival, lower mobility and lower quality of life following dysvascular major lower limb amputation: a longitudinal observational study",
+      "summary": "A longitudinal observational study investigating the association between undernutrition and various outcomes post-dysvascular major lower limb amputation found that undernutrition is linked to higher reamputation rates, lower mobility, and reduced quality of life.",
+      "category": "geriatric",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00839-7/fulltext?rss=yes",
+      "publishedAt": "2026-07-18T00:00:00.000Z",
+      "firstSeen": "2026-07-18T09:50:25.605Z",
+      "curatedScore": 75,
+      "curatedReason": "对于截肢患者，营养状况不佳不仅仅是伴随问题，它还与更差的移动能力、更低的生存率和更高的再截肢风险相关。在康复过程中，务必筛查并管理患者的营养状态。",
+      "titleZh": "血管性下肢大截肢后营养不良与更高的再截肢率或生存率、更低的活动能力和生活质量相关：一项纵向观察性研究",
+      "summaryZh": "一项纵向观察性研究发现，在血管性下肢大截肢术后，营养不良与更高的再截肢率、更低的活动能力和较差的生活质量相关。",
+      "curatedReasonEn": "Undernutrition in amputee patients is not merely a comorbidity; it is associated with poorer mobility, lower survival rates, and a higher risk of reamputation. Ensure you screen for and manage nutritional status during rehabilitation.",
+      "limitation": "这是一项观察性研究，无法建立因果关系，可能存在混杂因素。",
+      "limitationEn": "This was an observational study, which cannot establish causality and may be subject to confounding factors.",
+      "tags": [
+        "research",
+        "amputation",
+        "rehabilitation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
     {
       "id": "news-1784243681116-13",
       "title": "[Correspondence] From targets to minutes: making movement advice actionable",
