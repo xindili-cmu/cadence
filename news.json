@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-20T18:24:46.899Z",
-    "totalItems": 72,
+    "lastUpdated": "2026-07-20T20:02:03.432Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -106,9 +106,9 @@
           "titleZh": "间歇性口咽管喂养与鼻胃管喂养对卒中后吞咽困难患者的胃动力、反流风险和临床疗效的多模态评估：一项随机对照试验"
         }
       ],
-      "heat": 4.88,
-      "themeZh": "卒中后康复与功能恢复的多元影响因素",
-      "themeEn": "Multifactorial Influences on Stroke Recovery and Function"
+      "heat": 4.77,
+      "themeZh": "卒中后多维度康复与预后：从运动到社会融合",
+      "themeEn": "Post-stroke multidimensional recovery and prognosis"
     },
     {
       "id": "news-1784443552593-0",
@@ -175,9 +175,9 @@
           "titleZh": "实验性诱导急性腰痛期间腰部运动单元行为的急性调节：一项运动单元分解分析。"
         }
       ],
-      "heat": 3.25,
-      "themeZh": "腰痛的生物心理社会模型与综合干预",
-      "themeEn": "Biopsychosocial Model and Interventions for Low Back Pain"
+      "heat": 3.18,
+      "themeZh": "腰痛的生物心理社会治疗与成本效益评估",
+      "themeEn": "Biopsychosocial interventions for low back pain"
     },
     {
       "id": "news-1783640474701-0",
@@ -224,9 +224,9 @@
           "titleZh": "NumbersPlayRoom VR：一款支持学龄儿童数字认知的严肃游戏"
         }
       ],
-      "heat": 2.64,
-      "themeZh": "虚拟和远程康复在多病症中的应用",
-      "themeEn": "Virtual and Telerehabilitation Across Diverse Conditions"
+      "heat": 2.58,
+      "themeZh": "虚拟与远程康复技术在多种疾病中的应用",
+      "themeEn": "Virtual and telerehabilitation applications"
     },
     {
       "id": "news-1783713343182-0",
@@ -273,9 +273,9 @@
           "titleZh": "“如果你不解决这些问题，最终只会制造更多问题”：一项探索帕金森病患者及其照护者居家口腔护理经验的定性研究"
         }
       ],
-      "heat": 2.17,
-      "themeZh": "儿童与帕金森病患者康复中的照护视角",
-      "themeEn": "Care Perspectives in Pediatric and Parkinson's Rehabilitation"
+      "heat": 2.12,
+      "themeZh": "儿童脑瘫与帕金森病照护中的多学科挑战",
+      "themeEn": "Multidisciplinary challenges in CP and Parkinson’s"
     },
     {
       "id": "news-1784329952320-0",
@@ -331,12 +331,83 @@
           "titleZh": "针对节段间控制的康复训练在运动性腹股沟疼痛中的临床和生物力学效果：205 名患者的前瞻性队列研究"
         }
       ],
-      "heat": 2.11,
-      "themeZh": "膝关节骨关节炎及韧带损伤的康复进展",
-      "themeEn": "Advances in Knee OA and Ligament Injury Rehabilitation"
+      "heat": 2.06,
+      "themeZh": "膝关节骨关节炎与韧带损伤的康复与生物力学",
+      "themeEn": "Knee OA and ligament injury rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1783336166988-6",
+      "title": "Triceps Surae Neuromuscular Activity During Single-leg Jumping Tasks in Individuals After Anterior Cruciate Ligament Reconstruction.",
+      "summary": "Individuals post-ACL reconstruction showed lower triceps surae EMG activity during single-leg jumping tasks compared to healthy controls, suggesting neuromuscular differences.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42404365/",
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "firstSeen": "2026-07-06T11:09:26.988Z",
+      "curatedScore": 75,
+      "curatedReason": "ACL 重建术后患者单腿跳跃时比健康对照组有跟腱三头肌（triceps surae）EMG 活动降低的趋势。提醒你在康复评估时关注这一代偿模式，并将其纳入重返运动训练策略。",
+      "titleZh": "前交叉韧带重建术后患者单腿跳跃时跟腱三头肌的神经肌肉活动",
+      "summaryZh": "研究发现，ACL 重建术后患者在单腿跳跃任务中，跟腱三头肌的肌电活动低于健康对照组，提示存在神经肌肉差异。",
+      "curatedReasonEn": "Individuals post-ACL reconstruction tend to exhibit reduced triceps surae EMG activity during single-leg jumping compared to healthy controls. This highlights a compensatory pattern for you to consider in rehabilitation assessments and integrate into return-to-sport training strategies.",
+      "limitation": "本研究只观察了EMG活动，没有评估临床功能或长期预后。",
+      "limitationEn": "This study only observed EMG activity and did not evaluate clinical function or long-term prognosis.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International journal of sports physical therapy"
+    },
+    {
+      "id": "news-1783336166988-8",
+      "title": "Factors Affecting Clinical Decision Making for Blood Flow Restriction Training in Pediatric and Adolescent Patients Following Anterior Cruciate Ligament Injury.",
+      "summary": "A cross-sectional survey investigated factors influencing physical therapists' clinical decision-making for blood flow restriction training (BFRT) in pediatric and adolescent patients post-ACL injury.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42404361/",
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "firstSeen": "2026-07-06T11:09:26.988Z",
+      "curatedScore": 75,
+      "curatedReason": "对于儿童和青少年 ACL 术后患者，BFRT 的应用仍存在争议。这项调查提示，在临床决策中，同行主要受个人经验和患者依从性的影响，而非统一的指南。这告诉我们，目前 BFRT 在儿科领域的应用尚未成熟。",
+      "titleZh": "影响儿童和青少年前交叉韧带损伤患者血流限制训练临床决策的因素",
+      "summaryZh": "一项横断面调查研究了影响物理治疗师在儿童和青少年 ACL 损伤患者中应用血流限制训练（BFRT）的临床决策因素。",
+      "curatedReasonEn": "For pediatric and adolescent patients post-ACL injury, BFRT remains a contentious intervention. This survey suggests that clinicians' decisions are primarily driven by personal experience and patient adherence, not standardized guidelines. This indicates the immaturity of BFRT application in the pediatric population.",
+      "limitation": "本研究为横断面调查，依赖于物理治疗师的自我报告，可能存在回忆偏倚和报告偏倚。",
+      "limitationEn": "This cross-sectional survey relies on self-reported data from physical therapists, which may introduce recall and reporting bias.",
+      "tags": [
+        "research",
+        "knee",
+        "telehealth"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International journal of sports physical therapy"
+    },
+    {
+      "id": "news-1783336166989-12",
+      "title": "Effects of Dynamic Taping on Dynamic Balance and Proprioception in Recreational Athletes with Chronic Ankle Instability.",
+      "summary": "A single-blind RCT (N=28) found dynamic taping (DT) and sports taping (ST) similarly improved dynamic balance and proprioception in recreational athletes with chronic ankle instability, suggesting DT as a viable alternative.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42404364/",
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "firstSeen": "2026-07-06T11:09:26.989Z",
+      "curatedScore": 75,
+      "curatedReason": "动态贴扎（DT）对比传统运动贴扎（ST）在改善慢性踝关节不稳（CAI）患者的动态平衡和本体感觉方面显示出非劣效。在需要支撑但又不限制运动的场景，你可以考虑 DT 作为 ST 的替代方案。",
+      "titleZh": "动态贴扎对慢性踝关节不稳休闲运动员动态平衡和本体感觉的影响",
+      "summaryZh": "一项单盲随机对照试验（N=28）显示，动态贴扎和传统运动贴扎在改善慢性踝关节不稳休闲运动员的动态平衡和本体感觉方面效果相似，提示动态贴扎可作为可行替代方案。",
+      "curatedReasonEn": "Dynamic Taping (DT) demonstrates non-inferiority compared to Sports Taping (ST) in improving dynamic balance and proprioception in recreational athletes with Chronic Ankle Instability (CAI). You can consider DT as an alternative to ST when support is needed without restricting movement.",
+      "limitation": "本研究样本量较小（28 名），且仅评估了即时效应，长期效果尚不明确。",
+      "limitationEn": "This study had a small sample size (28 participants) and evaluated only immediate effects, with long-term outcomes remaining unclear.",
+      "tags": [
+        "research",
+        "taping",
+        "foot-ankle"
+      ],
+      "studyDesign": "RCT",
+      "journal": "International journal of sports physical therapy"
+    },
     {
       "id": "news-1784243681116-13",
       "title": "[Correspondence] From targets to minutes: making movement advice actionable",
