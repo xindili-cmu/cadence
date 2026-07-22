@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-22T14:30:14.784Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-07-22T17:45:02.741Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -15,12 +15,132 @@
   },
   "hotTopics": [
     {
+      "id": "news-1784355836027-0",
+      "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468873/",
+      "category": "neurological",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "sourceCount": 10,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "NeuroRehabilitation",
+        "Neurorehabilitation and neural repair",
+        "Topics in stroke rehabilitation",
+        "Sports Medicine",
+        "Journal of rehabilitation medicine",
+        "Disability and rehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "PubMed",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
+          "titleZh": "物理与认知康复结合与卒中后痴呆的关系：一项美国多中心回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
+          "titleZh": "基于 ICF 的评估和干预在卒中后康复中的应用：一项叙述性综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Correlation of Motor-Task Related Brain Activation Changes With Motor Performance Changes Induced by Constraint-Induced Therapy After Stroke.",
+          "titleZh": "卒中后限制性运动疗法（CIMT）引起的运动任务相关脑激活变化与运动表现变化的关联。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Transcutaneous spinal cord stimulation for stroke rehabilitation: a scoping review.",
+          "titleZh": "经皮脊髓电刺激在卒中康复中的应用：一项范围综述"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Specific mode acupoint electrical stimulation combined with NGF for neurological recovery in ischemic stroke convalescence: A randomized controlled study",
+          "titleZh": "特定模式穴位电刺激结合NGF促进缺血性卒中恢复期神经功能恢复：一项随机对照研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "The Combined Use of Non-Invasive Neurostimulation with Interactive Digital Technologies in Spinal Cord Injury Rehabilitation: A Scoping Review.",
+          "titleZh": "非侵入性神经刺激与互动数字技术在脊髓损伤康复中的联合应用：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
+          "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及结局测量集范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
+          "titleZh": "脑干卒中成人住院患者的吞咽康复是否能改善健康相关结局？一项系统综述与荟萃分析。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "A Multimodal Assessment of Gastric Motility, reflux risk, and Clinical Efficacy: Intermittent Oro-Esophageal versus Nasogastric Tube Feeding for Post-Stroke Dysphagia in a Randomized Controlled Trial.",
+          "titleZh": "间歇性口咽管喂养与鼻胃管喂养在卒中后吞咽困难患者中的胃肠动力、反流风险和临床疗效：一项随机对照试验的多模式评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Task-Oriented training in a Patient with Triplegia: Post-Stroke Hemiparesis Complicating Pre-Existing Contralateral Upper Extremity Paralysis: A Case Report.",
+          "titleZh": "三肢瘫患者的任务导向训练：卒中后偏瘫并发原有对侧上肢瘫痪一例报告"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "The Oxford visual perception screen detects visual perception difficulties in sub-acute adult stroke survivors: an early cross-sectional diagnostic accuracy study.",
+          "titleZh": "牛津视觉感知筛查在亚急性期成人卒中幸存者中检测视觉感知困难：一项早期横断面诊断准确性研究"
+        },
+        {
+          "source": "PubMed",
+          "title": "Evaluation of stroke-associated risk alleles in a multi-ethnic Singaporean ischemic stroke cohort",
+          "titleZh": "新加坡多民族缺血性卒中队列中卒中相关风险等位基因的评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
+          "titleZh": "卒中幸存者健康行为促进因素和障碍的探索：一项多视角定性研究"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Patient-and Caregiver-Centered Outcomes in Survivors of Severe Stroke with Respiratory Failure at 6 Months: A Substudy of the SETPOINT2 Trial",
+          "titleZh": "重度卒中合并呼吸衰竭幸存者6个月时以患者和照护者为中心的结局：Setpoint2试验的一项亚研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
+          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Professional reintegration after stroke: experiences of Portuguese stroke survivors.",
+          "titleZh": "卒中后职业再融合：葡萄牙卒中幸存者的经验"
+        }
+      ],
+      "heat": 7.74,
+      "themeZh": "卒中后脑功能康复的新技术与多模式干预",
+      "themeEn": "Post-stroke Brain Function Rehabilitation Technologies and Interventions"
+    },
+    {
       "id": "news-1784329952320-0",
       "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468005/",
       "category": "orthopedic",
       "publishedAt": "2026-07-21T22:23:56.607Z",
-      "sourceCount": 7,
+      "sourceCount": 8,
       "sources": [
         "American journal of physical medicine & rehabilitation",
         "Sports Medicine",
@@ -28,7 +148,8 @@
         "The Journal of manual & manipulative therapy",
         "BJSM",
         "Archives of physical medicine and rehabilitation",
-        "BMC musculoskeletal disorders"
+        "BMC musculoskeletal disorders",
+        "PubMed"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -86,121 +207,78 @@
         },
         {
           "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
-          "titleZh": "针对上肢疼痛的脊柱检查和治疗：一个病例系列"
+          "title": "Acute effects of aerobic versus combined aerobic and cervical-upper extremity resistance exercise on pressure pain threshold, pain perception, and fatigue in workers exposed to high ergonomic risk with chronic non-specific neck pain: a randomized controlled trial",
+          "titleZh": "有氧运动与有氧结合颈部-上肢阻力运动对高人体工程学风险、慢性非特异性颈痛工人压力痛阈、疼痛感知和疲劳的急性影响：一项随机对照试验"
         }
       ],
-      "heat": 5.55,
-      "themeZh": "骨关节炎和肩周炎的物理治疗方法疗效分析",
-      "themeEn": "Rehabilitation for OA and Shoulder Stiffness"
+      "heat": 6.05,
+      "themeZh": "骨关节炎与肩周炎的物理治疗与康复",
+      "themeEn": "Physical Therapy for OA and Shoulder Stiffness"
     },
     {
-      "id": "news-1784355836027-0",
-      "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468873/",
-      "category": "neurological",
-      "publishedAt": "2026-07-21T00:00:00.000Z",
-      "sourceCount": 9,
+      "id": "news-1784742300473-2",
+      "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481208/",
+      "category": "orthopedic",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "sourceCount": 7,
       "sources": [
+        "British journal of sports medicine",
+        "BMC musculoskeletal disorders",
         "Archives of physical medicine and rehabilitation",
-        "NeuroRehabilitation",
-        "Journal of rehabilitation medicine",
-        "Topics in stroke rehabilitation",
-        "Sports Medicine",
-        "American journal of physical medicine & rehabilitation",
-        "Disability and rehabilitation",
+        "Physical therapy",
+        "Archives of physiotherapy",
         "PubMed",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
-      "tag": "stroke",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
+          "titleZh": "个体化游泳与教育项目治疗慢性腰痛的有效性（EduSwim）：一项随机对照试验。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Cost-effectiveness of Pilates compared with home-based exercises for people with chronic non-specific low back pain: a trial-based economic evaluation.",
+          "titleZh": "普拉提与家庭运动对慢性非特异性腰痛患者的成本效益比较：一项基于试验的经济学评估"
+        },
+        {
+          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
-          "titleZh": "物理与认知康复结合与卒中后痴呆的关系：一项美国多中心回顾性队列研究"
+          "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+          "titleZh": "生物心理社会联合干预对慢性腰痛的疗效：随机对照试验的系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
-          "titleZh": "基于 ICF 的评估和干预在卒中后康复中的应用：一项叙述性综述"
+          "journal": "Physical therapy",
+          "title": "The RESOLVE Trial: A Stepped-Wedge, Cluster-Randomized Clinical Trial Evaluating the Effects of Clinical Practice Guidelines and Psychologically Informed Physical Therapy on Low Back Pain Outcomes in Service Members and Veterans.",
+          "titleZh": "RESOLVE 试验：评估临床实践指南与心理知情物理治疗对军人及退伍军人腰痛结局影响的阶梯楔形集群随机临床试验"
         },
         {
           "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
-          "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及结局测量集范围综述"
+          "journal": "Archives of physiotherapy",
+          "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
+          "titleZh": "腰骶关节功能障碍中腰椎翻滚和改良 SIMS 手法治疗临床效果的系统综述。"
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Transcutaneous spinal cord stimulation for stroke rehabilitation: a scoping review.",
-          "titleZh": "经皮脊髓电刺激在卒中康复中的应用：一项范围综述"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Specific mode acupoint electrical stimulation combined with NGF for neurological recovery in ischemic stroke convalescence: A randomized controlled study",
-          "titleZh": "特定模式穴位电刺激结合NGF促进缺血性卒中恢复期神经功能恢复：一项随机对照研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "The Combined Use of Non-Invasive Neurostimulation with Interactive Digital Technologies in Spinal Cord Injury Rehabilitation: A Scoping Review.",
-          "titleZh": "非侵入性神经刺激与互动数字技术在脊髓损伤康复中的联合应用：一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Task-Oriented training in a Patient with Triplegia: Post-Stroke Hemiparesis Complicating Pre-Existing Contralateral Upper Extremity Paralysis: A Case Report.",
-          "titleZh": "三肢瘫患者的任务导向训练：卒中后偏瘫并发原有对侧上肢瘫痪一例报告"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The Oxford visual perception screen detects visual perception difficulties in sub-acute adult stroke survivors: an early cross-sectional diagnostic accuracy study.",
-          "titleZh": "牛津视觉感知筛查在亚急性期成人卒中幸存者中检测视觉感知困难：一项早期横断面诊断准确性研究"
-        },
-        {
-          "source": "PubMed",
-          "title": "Evaluation of stroke-associated risk alleles in a multi-ethnic Singaporean ischemic stroke cohort",
-          "titleZh": "新加坡多民族缺血性卒中队列中卒中相关风险等位基因的评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
-          "titleZh": "卒中幸存者健康行为促进因素和障碍的探索：一项多视角定性研究"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Patient-and Caregiver-Centered Outcomes in Survivors of Severe Stroke with Respiratory Failure at 6 Months: A Substudy of the SETPOINT2 Trial",
-          "titleZh": "重度卒中合并呼吸衰竭幸存者6个月时以患者和照护者为中心的结局：Setpoint2试验的一项亚研究"
+          "title": "The association between diabetes mellitus and low back pain: a systematic review and meta-analysis",
+          "titleZh": "糖尿病与下腰痛的关联：一项系统综述和Meta分析"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
-          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Professional reintegration after stroke: experiences of Portuguese stroke survivors.",
-          "titleZh": "卒中后职业再融合：葡萄牙卒中幸存者的经验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "A Multimodal Assessment of Gastric Motility, reflux risk, and Clinical Efficacy: Intermittent Oro-Esophageal versus Nasogastric Tube Feeding for Post-Stroke Dysphagia in a Randomized Controlled Trial.",
-          "titleZh": "间歇性口咽管喂养与鼻胃管喂养在卒中后吞咽困难患者中的胃肠动力、反流风险和临床疗效：一项随机对照试验的多模式评估"
+          "title": "Acute Modulation of Lumbar Motor Unit Behavior During Experimentally Induced Low Back Pain: A Motor Unit Decomposition Analysis.",
+          "titleZh": "实验诱导急性腰痛期间腰部运动单位行为的急性调节：一项运动单位分解分析"
         }
       ],
-      "heat": 5.16,
-      "themeZh": "脑卒中与脊髓损伤康复新技术与评估工具",
-      "themeEn": "Novel Neurorehabilitation Interventions and Assessments"
+      "heat": 5.42,
+      "themeZh": "慢性腰痛的综合康复管理与循证实践",
+      "themeEn": "Comprehensive Rehabilitation for Chronic Low Back Pain"
     },
     {
       "id": "news-1784656144823-1",
@@ -252,87 +330,26 @@
           "titleZh": "虚拟现实刺激调节球囊活动和前庭系统反应"
         }
       ],
-      "heat": 3.96,
-      "themeZh": "虚拟现实与远程康复技术在神经康复中的应用",
-      "themeEn": "VR and Telerehabilitation in Neurological Recovery"
+      "heat": 3.78,
+      "themeZh": "神经系统疾病患者的远程与虚拟现实康复",
+      "themeEn": "Telerehabilitation and VR for Neurological Conditions"
     },
     {
-      "id": "news-1784616432086-6",
-      "title": "Exploring equity in telehealth interventions in physiotherapy: A meta-epidemiological study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42475876/",
-      "category": "practice",
-      "publishedAt": "2026-07-21T00:00:00.000Z",
+      "id": "news-1784240946091-29",
+      "title": "Comparative biomechanical strength of autografts for ligament reconstruction: quadriceps, rectus femoris, peroneus longus, patellar, hamstring configurations (quadruple and braided) and iliotibial band: an exploratory cadaveric biomechanical study",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42449305/",
+      "category": "orthopedic",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
       "sourceCount": 4,
       "sources": [
-        "Brazilian journal of physical therapy",
-        "Physical therapy",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Disability and rehabilitation"
-      ],
-      "tag": "telehealth",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Exploring equity in telehealth interventions in physiotherapy: A meta-epidemiological study.",
-          "titleZh": "探索物理治疗远程干预中的公平性：一项荟萃流行病学研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Perspectives of Private Practice Physical Therapy Health Care Systems Participating in a Pragmatic Clinical Trial: A Qualitative Study.",
-          "titleZh": "参与实用临床试验的私人执业物理治疗医疗系统的视角：一项定性研究"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Towards strengthening rehabilitation within health systems: a scoping review of rehabilitation-specific quality indicators",
-          "titleZh": "加强卫生系统内康复：康复特异性质量指标的范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "\"My aim is to contribute to a meaningful life.\" Experiences of physiotherapists treating children and adolescents with cerebral palsy experiencing pain-a qualitative study.",
-          "titleZh": "“我的目标是为有意义的生活做出贡献。”——物理治疗师治疗经历脑瘫疼痛的儿童和青少年：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "\"If you don't sort out these problems, you end up building problems\": a qualitative study exploring mouthcare at home with people with Parkinson's and their partners in care.",
-          "titleZh": "“如果你不解决这些问题，最终会堆积成更多问题”：一项探索帕金森病患者及其照护伙伴在家进行口腔护理的定性研究"
-        }
-      ],
-      "heat": 2.29,
-      "themeZh": "物理治疗实践中服务公平与质量提升研究",
-      "themeEn": "Equity and Quality in Physiotherapy Practice"
-    },
-    {
-      "id": "news-1784675788320-7",
-      "title": "Enhancing dynamic postural stability during gait in Parkinson's disease with textured insoles and auditory cue training: a randomized controlled trial study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42480110/",
-      "category": "neurological",
-      "publishedAt": "2026-07-21T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Disability and rehabilitation",
+        "PubMed",
         "Sports Medicine",
-        "PubMed"
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "Archives of physical medicine and rehabilitation"
       ],
-      "tag": "parkinson",
+      "tag": "knee",
       "kind": "theme",
       "members": [
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Enhancing dynamic postural stability during gait in Parkinson's disease with textured insoles and auditory cue training: a randomized controlled trial study.",
-          "titleZh": "纹理鞋垫与听觉提示训练联合增强帕金森病患者步态动态姿势稳定性：一项随机对照试验"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Exploratory Assessment of Robotic Ankle Foot Orthosis Stiffness and Neutral Angle on Stair Ambulation in Individuals with Cerebral Palsy",
-          "titleZh": "探索性评估机器人踝足矫形器刚度和中立角度对脑瘫患者楼梯行走的影响"
-        },
         {
           "source": "PubMed",
           "title": "Comparative biomechanical strength of autografts for ligament reconstruction: quadriceps, rectus femoris, peroneus longus, patellar, hamstring configurations (quadruple and braided) and iliotibial band: an exploratory cadaveric biomechanical study",
@@ -347,14 +364,193 @@
           "source": "Sports Medicine",
           "title": "Contralateral Balance Training Improves Postural Control and Functional Recovery After Arthroscopic Anterior Talofibular Ligament Repair: A Prospective, Randomized, Single-Blind Trial",
           "titleZh": "对侧平衡训练改善关节镜下前距腓韧带修复术后的姿势控制和功能恢复：一项前瞻性、随机、单盲试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
+          "titleZh": "ACL 重建术后康复中的离心骑行：专家课程。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Prediction of Exercise Intolerance in the Recovery Period After Cardiovascular Surgery Using Perioperative Clinical Parameters.",
+          "titleZh": "利用围手术期临床参数预测心血管手术后恢复期的运动不耐受"
         }
       ],
-      "heat": 1.72,
-      "themeZh": "神经系统疾病步态与平衡障碍的生物力学干预",
-      "themeEn": "Biomechanical Gait and Balance Interventions"
+      "heat": 3.1,
+      "themeZh": "韧带重建与损伤恢复的生物力学与训练",
+      "themeEn": "Ligament Reconstruction Biomechanics and Rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1784742300473-2",
+      "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
+      "summary": "This RCT assessed an individualized swimming and education program for chronic low back pain compared to education alone, delivered via telehealth sessions over 8 weeks, with disability (RMDQ) as the primary outcome.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481208/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 85,
+      "curatedReason": "这项 RCT 为慢性非特异性腰痛的游泳干预提供了高质量证据。你可以依据这项研究，更有信心地将个体化游泳与教育方案纳入患者治疗计划。",
+      "titleZh": "个体化游泳与教育项目治疗慢性腰痛的有效性（EduSwim）：一项随机对照试验。",
+      "summaryZh": "这项随机对照试验评估了为期 8 周、通过远程物理治疗提供的个体化游泳与教育项目，与单纯教育相比，对慢性腰痛患者的有效性，主要结局是残疾程度（RMDQ）。",
+      "curatedReasonEn": "This RCT provides high-quality evidence for swimming intervention in chronic non-specific low back pain. You can use this research to more confidently integrate individualized swimming and education programs into patient treatment plans.",
+      "limitation": "研究结果可能受远程物理治疗交付方式影响，外推到面诊环境需谨慎。",
+      "limitationEn": "Results may be influenced by the telehealth delivery method, and generalization to in-person settings should be cautious.",
+      "tags": [
+        "research",
+        "spine",
+        "exercise"
+      ],
+      "studyDesign": "RCT",
+      "journal": "British journal of sports medicine",
+      "tech": true
+    },
+    {
+      "id": "news-1784742300473-19",
+      "title": "APTA Members Unite to Advance Payment Advocacy Via New SPARC Forum and Pledge",
+      "summary": "APTA members are uniting to advance payment advocacy through the newly formed SPARC Forum and a pledge to support these efforts.",
+      "category": "practice",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/article/2026/07/22/apta-members-unite-advance-payment-advocacy-via-new-sparc-forum-pledge",
+      "publishedAt": "2026-07-22T17:44:28.505Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 85,
+      "curatedReason": "APTA 成立新论坛 SPARC，旨在推进支付倡导。这将直接影响你在美国市场上的物理治疗报销环境和执业收入，务必关注其后续动向。",
+      "titleZh": "APTA 成员通过新 SPARC 论坛和承诺团结起来推动支付倡导。",
+      "summaryZh": "APTA 成员正通过新成立的 SPARC 论坛及相关承诺，共同推进支付倡导工作。",
+      "curatedReasonEn": "APTA has launched SPARC, a new forum to advance payment advocacy. This will directly impact the physical therapy reimbursement environment and your practice revenue in the US market, so be sure to monitor its developments.",
+      "tags": [
+        "news",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1784742300472-1",
+      "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
+      "summary": "This systematic review evaluated the clinical efficacy of lumbar roll and modified SIMS manipulation techniques for sacroiliac joint dysfunction, searching databases for studies published between January 2021 and December 2025.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42483277/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.472Z",
+      "curatedScore": 80,
+      "curatedReason": "关于腰骶关节功能障碍的手法治疗，该系统综述应能帮你厘清腰椎翻滚和改良 SIMS 手法作为干预的最新证据，指导你的临床实践。",
+      "titleZh": "腰骶关节功能障碍中腰椎翻滚和改良 SIMS 手法治疗临床效果的系统综述。",
+      "summaryZh": "该系统综述评估了腰椎翻滚和改良 SIMS 手法治疗骶髂关节功能障碍的临床疗效，检索了 2021 年 1 月至 2025 年 12 月发表的相关研究。",
+      "curatedReasonEn": "This systematic review on manual therapy for sacroiliac joint dysfunction should clarify the latest evidence for lumbar roll and modified SIMS manipulation, guiding your clinical practice.",
+      "limitation": "研究仅纳入了 2021-2025 年间发表的文献，可能错过早期重要研究。",
+      "limitationEn": "The review only included studies published between 2021 and 2025, potentially missing earlier significant research.",
+      "tags": [
+        "research",
+        "spine",
+        "manipulation"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of physiotherapy"
+    },
+    {
+      "id": "news-1784742300473-3",
+      "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
+      "summary": "This systematic review and meta-analysis with 12 studies and 443 participants explored the effectiveness of dysphagia rehabilitation in inpatients with brainstem stroke, categorizing interventions into traditional swallowing therapy or device inclusion.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484106/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 80,
+      "curatedReason": "脑干卒中住院患者的吞咽康复，目前看来，传统吞咽疗法或结合器械干预都有一定效果。作为系统综述和荟萃分析，它总结了 12 项研究，为选择干预方案提供了当前最佳证据。",
+      "titleZh": "脑干卒中成人住院患者的吞咽康复是否能改善健康相关结局？一项系统综述与荟萃分析。",
+      "summaryZh": "这项包含 12 项研究、443 名参与者的系统综述与荟萃分析探讨了脑干卒中住院患者吞咽康复的有效性，将干预措施分为传统吞咽疗法或器械辅助。",
+      "curatedReasonEn": "For dysphagia rehabilitation in inpatients with brainstem stroke, both traditional swallowing therapy and device-inclusive interventions appear beneficial. As a systematic review and meta-analysis, it consolidates 12 studies, offering the best current evidence for intervention selection.",
+      "limitation": "纳入研究的异质性可能影响荟萃分析的整体结论。",
+      "limitationEn": "Heterogeneity among included studies may affect the overall conclusions of the meta-analysis.",
+      "tags": [
+        "research",
+        "stroke",
+        "dysphagia"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1784742300471-0",
+      "title": "Responsiveness of the Arabic version of the lower extremity functional scale in individuals with lower extremity musculoskeletal disorders.",
+      "summary": "This study examined the responsiveness of the Arabic version of the Lower Extremity Functional Scale (LEFS) in 74 participants with lower extremity musculoskeletal disorders, finding its change scores correlated well with other outcome measures.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484462/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.471Z",
+      "curatedScore": 75,
+      "curatedReason": "LEFS 阿拉伯语版在下肢肌肉骨骼疾病患者中显示出良好的响应性。如果你服务阿拉伯语患者，该量表是一个可靠的评估工具。",
+      "titleZh": "下肢功能量表阿拉伯语版在下肢肌肉骨骼疾病患者中的响应性。",
+      "summaryZh": "这项研究评估了下肢功能量表（LEFS）阿拉伯语版在 74 名下肢肌肉骨骼疾病患者中的响应性，发现其分数变化与其他结局测量值关联良好。",
+      "curatedReasonEn": "The Arabic version of LEFS demonstrates good responsiveness in individuals with lower extremity musculoskeletal disorders. If you serve Arabic-speaking patients, this scale is a reliable assessment tool.",
+      "limitation": "本研究为观察性研究，样本量中等，可能存在选择偏倚。",
+      "limitationEn": "This was an observational study with a moderate sample size, and selection bias may be present.",
+      "tags": [
+        "research",
+        "foot-ankle",
+        "knee",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1784742300473-4",
+      "title": "Correlation of Motor-Task Related Brain Activation Changes With Motor Performance Changes Induced by Constraint-Induced Therapy After Stroke.",
+      "summary": "This study evaluated motor-task related brain activation changes and their relationship to functional recovery in 42 hemiparetic stroke participants undergoing CIMT during subacute and chronic periods, using fMRI and WMFT.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481175/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 75,
+      "curatedReason": "CIMT 对卒中偏瘫患者的疗效我们已知晓，但这项观察研究进一步提示，其效果可能与特定的脑激活模式改变有关。虽然是小样本（42 人）观察研究，但为理解 CIMT 的作用机制提供了神经影像学线索。",
+      "titleZh": "卒中后限制性运动疗法（CIMT）引起的运动任务相关脑激活变化与运动表现变化的关联。",
+      "summaryZh": "这项研究评估了 42 名偏瘫卒中患者在亚急性期和慢性期接受 CIMT 治疗期间，运动任务相关脑激活变化与功能恢复的关联，使用了 fMRI 和 WMFT 进行评估。",
+      "curatedReasonEn": "While CIMT's efficacy for hemiparetic stroke patients is established, this observational study suggests its benefits may correlate with specific changes in brain activation patterns. Though a small-sample (42 participants) observational study, it offers neuroimaging clues to the mechanisms underpinning CIMT.",
+      "limitation": "研究的 fMRI 分析结果可能存在多重比较问题，且样本量相对较小。",
+      "limitationEn": "The fMRI analysis results may have multiple comparison issues, and the sample size is relatively small.",
+      "tags": [
+        "research",
+        "stroke",
+        "brain-injury"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair"
+    },
+    {
+      "id": "news-1784742300473-6",
+      "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
+      "summary": "This masterclass discusses the increasing use of eccentric training in ACL-R rehabilitation, noting its potential benefits for quadriceps strength and return-to-sport performance, while emphasizing gradual and individualized implementation.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42480265/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 70,
+      "curatedReason": "关于 ACL 重建术后离心训练的实施，这篇综述提醒你关注早期离心训练的潜在益处。在考虑将其纳入康复计划时，要注重个体化和循序渐进。",
+      "titleZh": "ACL 重建术后康复中的离心骑行：专家课程。",
+      "summaryZh": "这篇专家课程讨论了离心训练在 ACL 重建术后康复中日益增长的应用，指出其对股四头肌力量和重返运动表现的潜在益处，同时强调应循序渐进和个体化实施。",
+      "curatedReasonEn": "Regarding the implementation of eccentric training after ACL reconstruction, this review highlights the potential benefits of early eccentric training. When considering incorporating it into rehabilitation, focus on individualization and gradual progression.",
+      "limitation": "本文性质更偏向专家观点或述评，缺乏系统性证据整合。",
+      "limitationEn": "This article is more akin to an expert opinion or commentary, lacking systematic evidence integration.",
+      "tags": [
+        "research",
+        "knee",
+        "ACL-R",
+        "eccentric-training"
+      ],
+      "studyDesign": "综述",
+      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    },
     {
       "id": "news-1784583402996-11",
       "title": "Measurement Characteristics and Clinical Utility of the 6-Minute Walk Test Among People with Stroke",
@@ -473,30 +669,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1783583816206-6",
-      "title": "The Impact of Mandatory Bundled Payment on Prehabilitation Delivery for Lower Extremity Joint Replacement.",
-      "summary": "A difference-in-differences analysis (n=62,217 Medicare beneficiaries) in the U.S. found that the Comprehensive Care for Joint Replacement (CJR) mandatory bundled payment model did not significantly affect the proportion of hospitals delivering prehabilitation for lower extremity joint replacement.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42419477/",
-      "publishedAt": "2026-07-09T00:00:00.000Z",
-      "firstSeen": "2026-07-08T14:44:46.936Z",
-      "curatedScore": 85,
-      "curatedReason": "这项研究发现美国强制性整体支付模式（CJR）对下肢关节置换术前康复（prehabilitation）的实施没有显著影响。这意味着如果你在美国参与类似的支付模式，目前的政策并未激励你常规开展术前康复，但研究也并未否定术前康复本身的价值。",
-      "titleZh": "强制性整体支付模式对下肢关节置换术前康复提供的影响",
-      "summaryZh": "一项在美国进行（n=62,217 名 Medicare 受益人）的“差异中差异”分析发现，综合关节置换护理（CJR）强制性整体支付模式并未显著影响医院提供下肢关节置换术前康复的比例。",
-      "curatedReasonEn": "This study found no significant impact of the mandatory bundled payment model (CJR) in the U.S. on the delivery of prehabilitation for lower extremity joint replacement. This means if you are involved in similar payment models in the U.S., current policies do not incentivize routine prehabilitation, but the study does not negate the value of prehabilitation itself.",
-      "limitation": "研究仅评估了强制性整体支付模式对术前康复实施率的影响，并未直接评估术前康复本身的临床效益。",
-      "limitationEn": "The study only evaluated the impact of the mandatory bundled payment model on prehabilitation delivery rates, and did not directly assess the clinical benefits of prehabilitation itself.",
-      "tags": [
-        "research",
-        "reimbursement",
-        "regulation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
     },
     {
       "id": "news-1784503081651-0",
@@ -1986,121 +2158,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Topics in stroke rehabilitation"
-    },
-    {
-      "id": "news-1784044334843-14",
-      "title": "Development and Preliminary Clinical Feasibility of a Wearable Nanovibration Delivery Device for Localised Bone Stimulation in Individuals with Spinal Cord Injury",
-      "summary": "Researchers developed and evaluated the preliminary clinical feasibility of a wearable device delivering localized 1 kHz nanovibration to the distal femur for bone stimulation in individuals with spinal cord injury (SCI), showing successful delivery and monitoring.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.09.26357644v1?rss=1",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T15:52:14.843Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究提出了一种针对脊髓损伤患者的可穿戴纳米振动骨刺激设备，在小样本健康受试者和SCI患者中展现了初步可行性。尽管前景乐观，但其在预防或逆转SCI骨质流失方面的临床疗效和长期安全性仍需大规模RCT验证，目前不宜推广应用。",
-      "titleZh": "用于脊髓损伤患者局部骨刺激的可穿戴纳振动输送设备的开发及初步临床可行性",
-      "summaryZh": "研究人员开发并评估了一种可穿戴设备，用于为脊髓损伤（SCI）患者的股骨远端提供局部 1 kHz 纳振动骨刺激，结果显示该设备能成功输送和监测振动，具有初步临床可行性。",
-      "curatedReasonEn": "This study proposes a wearable nanovibration bone stimulation device for SCI patients, showing preliminary feasibility in a small sample of healthy subjects and SCI patients. While promising, its clinical efficacy in preventing or reversing SCI-related bone loss and long-term safety require large-scale RCT validation; it is not ready for widespread clinical use.",
-      "limitation": "该研究处于早期阶段，仅评估了设备的初步可行性，样本量小，且主要基于健康志愿者和少数 SCI 患者。",
-      "limitationEn": "This study is in an early stage, only evaluating preliminary device feasibility with a small sample, primarily based on healthy volunteers and a few SCI patients.",
-      "tags": [
-        "research",
-        "spinal-cord",
-        "wearable-device"
-      ],
-      "studyDesign": "观察研究",
-      "tech": true
-    },
-    {
-      "id": "news-1784050637092-1",
-      "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
-      "summary": "A case series described three patients with upper extremity pain (elbow, shoulder, wrist) who received spine mobilization or manipulation techniques, achieving clinically significant improvements in self-reported disability.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42445995/",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T17:37:17.092Z",
-      "curatedScore": 65,
-      "curatedReason": "这个病例系列提醒你，上肢疼痛患者可能存在脊柱功能障碍。但鉴于这只是 3 个病例，仅能作为临床提示，不能直接推广到日常实践。",
-      "titleZh": "针对上肢疼痛的脊柱检查和治疗：一个病例系列",
-      "summaryZh": "一个病例系列描述了三名上肢疼痛患者（肘、肩、腕），他们接受了脊柱松动或手法治疗技术，并在自我报告的残疾程度方面取得了临床显著改善。",
-      "curatedReasonEn": "This case series reminds you that upper extremity pain patients might have concurrent spine dysfunction. However, given it's only 3 cases, it serves as a clinical prompt, not a direct recommendation for routine practice.",
-      "limitation": "病例系列证据等级低，仅包含 3 名患者，缺乏对照组，无法得出普遍性结论。",
-      "limitationEn": "As a case series, the evidence level is low, involving only 3 patients with no control group, preventing generalizable conclusions.",
-      "tags": [
-        "research",
-        "spine",
-        "shoulder"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "The Journal of manual & manipulative therapy"
-    },
-    {
-      "id": "news-1783928886959-4",
-      "title": "\"If you don't sort out these problems, you end up building problems\": a qualitative study exploring mouthcare at home with people with Parkinson's and their partners in care.",
-      "summary": "A qualitative study, using semi-structured interviews with 13 people with Parkinson's and 7 partners in care, explored experiences and barriers to performing mouthcare activities at home, identifying three main themes.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42437568/",
-      "publishedAt": "2026-07-13T00:00:00.000Z",
-      "firstSeen": "2026-07-13T07:48:06.959Z",
-      "curatedScore": 65,
-      "curatedReason": "帕金森病患者在家中进行口腔护理面临多重障碍，不仅是运动症状，还包括疲劳、情绪低落和缺乏支持。作为临床医生，我们需要认识到口腔护理对患者生活质量的重要性，并提供更个性化、考虑照护者负担的策略。",
-      "titleZh": "“如果你不解决这些问题，最终会堆积成更多问题”：一项探索帕金森病患者及其照护伙伴在家进行口腔护理的定性研究",
-      "summaryZh": "一项定性研究通过对 13 名帕金森病患者和 7 名照护伙伴进行半结构化访谈，探讨了在家进行口腔护理的经验和障碍，并确定了三个主要主题。",
-      "curatedReasonEn": "People with Parkinson's face multiple barriers to home mouthcare, including not only motor symptoms but also fatigue, low mood, and lack of support. As clinicians, we must recognize the importance of oral care for their quality of life and offer more personalized strategies that consider the burden on caregivers.",
-      "limitation": "定性研究样本量较小（20 人），结果可能不具普遍性，主要反映了特定人群的经验。",
-      "limitationEn": "As a qualitative study with a small sample size (20 individuals), the findings may not be generalizable and primarily reflect the experiences of a specific population.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1784038706950-14",
-      "title": "APTA, Hartford HealthCare Launch Frailty Pilot to Advance Value-Based Care",
-      "summary": "APTA and Hartford HealthCare launched a pilot program to test an early frailty identification and intervention model, aiming to advance value-based care and position physical therapists at the forefront of prevention for aging populations.",
-      "category": "geriatric",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/07/14/apta-hartford-healthcare-launch-frailty-pilot",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T14:18:26.950Z",
-      "curatedScore": 85,
-      "curatedReason": "APTA 与 Hartford HealthCare 启动了一项针对衰弱的试点项目，旨在通过物理治疗师主导的早期识别和干预，推动基于价值的照护模式。这预示着美国物理治疗在预防老年衰弱和价值医疗体系中的角色将得到加强，值得你密切关注其后续成果，为你在实践中争取更重要的预防和管理角色提供佐证。",
-      "titleZh": "APTA 与 Hartford HealthCare 启动衰弱试点项目，推进价值医疗",
-      "summaryZh": "APTA 和 Hartford HealthCare 启动了一项试点项目，旨在通过衰弱的早期识别和干预模型，推动价值医疗，并将物理治疗师置于老年人口预防工作的前沿。",
-      "curatedReasonEn": "APTA and Hartford HealthCare have launched a frailty pilot program, aiming to advance value-based care through physical therapist-led early identification and intervention. This signals a strengthening role for physical therapy in preventing geriatric frailty and within value-based healthcare in the US. You should closely monitor its outcomes to support your practice in advocating for a more significant role in prevention and management.",
-      "limitation": "这是一个初步的试点项目，其效果和成本效益仍需进一步的数据验证和长期观察。",
-      "limitationEn": "This is a preliminary pilot project, and its efficacy and cost-effectiveness still require further data validation and long-term observation.",
-      "tags": [
-        "policy",
-        "reimbursement",
-        "workforce"
-      ]
-    },
-    {
-      "id": "news-1784586557489-32",
-      "title": "High-intensity interval training in cancer patients: a bayesian meta-analysis of effects on VO2max, dose–response, and adherence | BMC Sports Science, Medicine and Rehabilitation",
-      "summary": "A Bayesian meta-analysis on high-intensity interval training (HIIT) in cancer patients investigated its effects on VO2max, dose-response, and adherence, confirming positive impacts and good patient tolerance.",
-      "category": "cardiopulmonary",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01876-6",
-      "publishedAt": "2026-07-20T04:19:02.000Z",
-      "firstSeen": "2026-07-20T22:29:17.489Z",
-      "curatedScore": 80,
-      "curatedReason": "这项针对癌症患者高强度间歇训练（HIIT）的贝叶斯荟萃分析，证实了 HIIT 对最大摄氧量（VO2max）的积极影响、剂量反应关系以及良好的依从性。这表明你可以更有信心地将 HIIT 纳入癌症患者的康复方案，但仍需根据个体情况调整，确保安全性和有效性。",
-      "titleZh": "癌症患者高强度间歇训练：VO2max、剂量反应和依从性的贝叶斯荟萃分析",
-      "summaryZh": "一项针对癌症患者高强度间歇训练（HIIT）的贝叶斯荟萃分析，研究了其对最大摄氧量（VO2max）、剂量反应和依从性的影响，证实了积极效果和良好的患者耐受性。",
-      "curatedReasonEn": "This Bayesian meta-analysis on high-intensity interval training (HIIT) in cancer patients confirms its positive impact on VO2max, dose-response relationship, and good adherence. This suggests you can more confidently incorporate HIIT into cancer patient rehabilitation programs, while still individualizing adjustments to ensure safety and effectiveness.",
-      "limitation": "虽然是贝叶斯荟萃分析，但癌症患者群体异质性大，不同癌症类型和治疗阶段的适用性仍需谨慎考虑。",
-      "limitationEn": "Although a Bayesian meta-analysis, the cancer patient population is highly heterogeneous, and applicability across different cancer types and treatment stages still requires careful consideration.",
-      "tags": [
-        "research",
-        "exercise-physiology"
-      ],
-      "studyDesign": "系统综述"
     }
   ]
 }
