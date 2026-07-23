@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-23T03:50:21.621Z",
+    "lastUpdated": "2026-07-23T06:43:18.083Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -140,9 +140,9 @@
           "titleZh": "ICF 在卒中后康复评估与干预中的应用：叙述性综述"
         }
       ],
-      "heat": 6.02,
-      "themeZh": "卒中后康复管理：社会心理、认知与身体功能",
-      "themeEn": "Post-stroke Rehabilitation Management: Psychosocial, Cognitive, Physical"
+      "heat": 5.78,
+      "themeZh": "卒中后身心康复及其社会功能整合",
+      "themeEn": "Post-Stroke Rehabilitation and Social Reintegration"
     },
     {
       "id": "news-1784269918695-0",
@@ -157,9 +157,9 @@
         "British journal of sports medicine",
         "BMC musculoskeletal disorders",
         "PubMed",
-        "Sports Medicine",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "The Journal of manual & manipulative therapy"
+        "The Journal of manual & manipulative therapy",
+        "Sports Medicine"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -194,11 +194,6 @@
           "titleZh": "糖尿病与下腰痛的关联：一项系统综述和Meta分析"
         },
         {
-          "source": "Sports Medicine",
-          "title": "Associations of physical activity, pain intensity, and quality of life with work ability among Nigerian nurses with mechanical low back pain: a cross-sectional survey",
-          "titleZh": "尼日利亚机械性下腰痛护士的身体活动、疼痛强度和生活质量与工作能力的相关性：横断面调查"
-        },
-        {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
           "title": "Acute Modulation of Lumbar Motor Unit Behavior During Experimentally Induced Low Back Pain: A Motor Unit Decomposition Analysis.",
@@ -209,11 +204,21 @@
           "journal": "The Journal of manual & manipulative therapy",
           "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
           "titleZh": "上肢疼痛患者的脊柱检查与治疗：病例系列研究"
+        },
+        {
+          "source": "PubMed",
+          "title": "Acute effects of aerobic versus combined aerobic and cervical-upper extremity resistance exercise on pressure pain threshold, pain perception, and fatigue in workers exposed to high ergonomic risk with chronic non-specific neck pain: a randomized controlled trial",
+          "titleZh": "有氧运动与有氧结合颈部-上肢阻力运动对高人体工程学风险、慢性非特异性颈痛工人压力痛阈、疼痛感知和疲劳的急性影响：一项随机对照试验"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Associations of physical activity, pain intensity, and quality of life with work ability among Nigerian nurses with mechanical low back pain: a cross-sectional survey",
+          "titleZh": "尼日利亚机械性下腰痛护士的身体活动、疼痛强度和生活质量与工作能力的相关性：横断面调查"
         }
       ],
-      "heat": 5.35,
-      "themeZh": "慢性腰痛的整合干预与健康行为影响因素",
-      "themeEn": "Integrated Interventions for Chronic Low Back Pain"
+      "heat": 5.13,
+      "themeZh": "慢性腰痛的生物心理社会干预与管理",
+      "themeEn": "Biopsychosocial Interventions for Chronic Low Back Pain"
     },
     {
       "id": "news-1784050637091-0",
@@ -221,14 +226,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42446287/",
       "category": "orthopedic",
       "publishedAt": "2026-07-22T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
         "The Journal of manual & manipulative therapy",
-        "Archives of physiotherapy",
+        "BMC musculoskeletal disorders",
+        "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Sports Medicine",
         "The South African journal of physiotherapy",
-        "Medical Dialogues"
+        "Medical Dialogues",
+        "Archives of physiotherapy"
       ],
       "tag": "shoulder",
       "kind": "theme",
@@ -241,9 +248,21 @@
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physiotherapy",
-          "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
-          "titleZh": "腰骶关节功能障碍中腰椎翻滚和改良 SIMS 手法治疗临床效果的系统综述。"
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Effects of resistance-band shoulder exercise on pain, range of motion, and functional disability in diabetic adults with adhesive capsulitis: a pilot randomized controlled trial.",
+          "titleZh": "阻力带肩部锻炼对糖尿病合并粘连性肩囊炎患者疼痛、活动度和功能障碍的影响：一项试点随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Adherence to exercise intervention including pain threshold, exercise and physiotherapy sessions for patients with chronic rotator cuff tendinopathy.",
+          "titleZh": "慢性肩袖肌腱病患者运动干预（含疼痛阈值、运动和物理治疗）的依从性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation for chronic lateral elbow pain: a randomized controlled trial.",
+          "titleZh": "超声引导下经皮电神经刺激联合运动治疗慢性肱骨外上髁炎的长期效益：一项随机对照试验"
         },
         {
           "source": "PubMed",
@@ -266,11 +285,17 @@
           "source": "Medical Dialogues",
           "title": "Kinesiotaping May Reduce Early Swelling After Knee Replacement, states study",
           "titleZh": "研究称肌内效贴布可减少膝关节置换术后早期肿胀"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physiotherapy",
+          "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
+          "titleZh": "腰骶关节功能障碍中腰椎翻滚和改良 SIMS 手法治疗临床效果的系统综述。"
         }
       ],
-      "heat": 4.01,
-      "themeZh": "骨关节炎及肩周炎的物理治疗与康复技术",
-      "themeEn": "Physical Therapy for Arthritis and Capsulitis"
+      "heat": 5.13,
+      "themeZh": "肩肘膝关节疼痛的物理治疗与康复",
+      "themeEn": "Physiotherapy for Shoulder, Elbow, Knee Pain"
     },
     {
       "id": "news-1784759546749-23",
@@ -323,21 +348,11 @@
           "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
           "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
           "titleZh": "ACL 重建术后康复中的离心骑行：专家课程。"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Contralateral Balance Training Improves Postural Control and Functional Recovery After Arthroscopic Anterior Talofibular Ligament Repair: A Prospective, Randomized, Single-Blind Trial",
-          "titleZh": "对侧平衡训练改善关节镜下前距腓韧带修复术后的姿势控制和功能恢复：一项前瞻性、随机、单盲试验"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Diagnostic accuracy of biodex balance system stability indices under single- and dual-task conditions in individuals with chronic ankle instability | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "Biodex 平衡系统稳定性指标在慢性踝关节不稳患者单任务和双任务条件下的诊断准确性"
         }
       ],
-      "heat": 3.7,
-      "themeZh": "ACL损伤后运动表现与生物力学康复",
-      "themeEn": "ACL Injury: Performance and Biomechanics Rehabilitation"
+      "heat": 3.55,
+      "themeZh": "ACL损伤的性别差异与重建生物力学",
+      "themeEn": "ACL Injury: Sex, Biomechanics, Reconstruction"
     },
     {
       "id": "news-1784778604370-13",
@@ -379,6 +394,11 @@
         },
         {
           "source": "Sports Medicine",
+          "title": "Diagnostic accuracy of biodex balance system stability indices under single- and dual-task conditions in individuals with chronic ankle instability | BMC Sports Science, Medicine and Rehabilitation",
+          "titleZh": "Biodex 平衡系统稳定性指标在慢性踝关节不稳患者单任务和双任务条件下的诊断准确性"
+        },
+        {
+          "source": "Sports Medicine",
           "title": "Handgrip and leg strength and risk of severe fall injuries in adults aged ≥ 80 years: a prospective HUNT study",
           "titleZh": "80 岁及以上成年人握力和腿部力量与严重跌倒损伤风险：一项前瞻性 HUNT 研究"
         },
@@ -388,12 +408,35 @@
           "titleZh": "不同跌倒风险评估组身体健康变量的特征：一项横断面研究"
         }
       ],
-      "heat": 2.68,
-      "themeZh": "步态平衡训练及跌倒风险评估与干预",
-      "themeEn": "Gait Balance Training and Fall Risk Intervention"
+      "heat": 2.57,
+      "themeZh": "神经系统疾病与老龄化人群的平衡干预",
+      "themeEn": "Balance Interventions for Neurological & Elderly"
     }
   ],
   "items": [
+    {
+      "id": "news-1784616432084-0",
+      "title": "Effects of resistance-band shoulder exercise on pain, range of motion, and functional disability in diabetic adults with adhesive capsulitis: a pilot randomized controlled trial.",
+      "summary": "A pilot randomized controlled trial with 28 diabetic adults with adhesive capsulitis suggested that resistance-band shoulder exercises may improve pain, range of motion, and functional disability.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42477667/",
+      "publishedAt": "2026-07-21T00:00:00.000Z",
+      "firstSeen": "2026-07-21T06:47:12.084Z",
+      "curatedScore": 75,
+      "curatedReason": "针对糖尿病合并粘连性肩囊炎的患者，阻力带肩部锻炼可能有助于缓解疼痛、改善活动度和功能。但这是一个小样本试点研究，还需要更大规模的 RCT 来确证其临床效益。",
+      "titleZh": "阻力带肩部锻炼对糖尿病合并粘连性肩囊炎患者疼痛、活动度和功能障碍的影响：一项试点随机对照试验",
+      "summaryZh": "一项针对 28 名糖尿病合并粘连性肩囊炎成年人的试点随机对照试验表明，阻力带肩部锻炼可能改善疼痛、活动度和功能障碍。",
+      "curatedReasonEn": "Resistance-band shoulder exercises may help alleviate pain, improve range of motion, and functional disability in diabetic adults with adhesive capsulitis. However, this is a small pilot study, and larger RCTs are needed to confirm its clinical benefits.",
+      "limitation": "这是一项小样本试点研究，样本量为 28 例，不足以得出确切的临床实践改变结论。",
+      "limitationEn": "This is a small pilot study with a sample size of 28, insufficient to draw definitive conclusions for clinical practice changes.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC musculoskeletal disorders"
+    },
     {
       "id": "news-1783583816206-6",
       "title": "The Impact of Mandatory Bundled Payment on Prehabilitation Delivery for Lower Extremity Joint Replacement.",
@@ -2110,29 +2153,6 @@
         "hamstring",
         "return-to-sport"
       ]
-    },
-    {
-      "id": "news-1784672751876-37",
-      "title": "Contralateral Balance Training Improves Postural Control and Functional Recovery After Arthroscopic Anterior Talofibular Ligament Repair: A Prospective, Randomized, Single-Blind Trial",
-      "summary": "A prospective, randomized, single-blind trial found that contralateral balance training improves postural control and functional recovery after arthroscopic anterior talofibular ligament repair.",
-      "category": "sports",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01078-x",
-      "publishedAt": "2026-07-18T00:00:00.000Z",
-      "firstSeen": "2026-07-21T22:25:51.876Z",
-      "curatedScore": 75,
-      "curatedReason": "对侧平衡训练在关节镜下前距腓韧带修复术后，可以改善姿势控制和功能恢复。这提示你在术后康复中，除了患侧训练，也应考虑将对侧平衡训练作为重要组成部分，以促进整体功能恢复。",
-      "titleZh": "对侧平衡训练改善关节镜下前距腓韧带修复术后的姿势控制和功能恢复：一项前瞻性、随机、单盲试验",
-      "summaryZh": "一项前瞻性、随机、单盲试验发现，对侧平衡训练可改善关节镜下前距腓韧带修复术后的姿势控制和功能恢复。",
-      "curatedReasonEn": "Contralateral balance training improves postural control and functional recovery after arthroscopic anterior talofibular ligament repair. This suggests that in postoperative rehabilitation, in addition to ipsilateral training, you should consider contralateral balance training as a crucial component to promote overall functional recovery.",
-      "limitation": "本研究为单盲试验，可能存在一定偏倚，且长期随访数据有待观察。",
-      "limitationEn": "This study is a single-blind trial, which may introduce some bias, and long-term follow-up data are pending.",
-      "tags": [
-        "research",
-        "foot-ankle",
-        "sports-injury"
-      ],
-      "studyDesign": "RCT"
     }
   ]
 }
