@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-24T10:30:52.420Z",
+    "lastUpdated": "2026-07-24T14:17:19.328Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,17 +19,16 @@
       "title": "Association of combined physical and cognitive rehabilitation with post-stroke dementia: a U.S. multicenter retrospective cohort study.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468873/",
       "category": "neurological",
-      "publishedAt": "2026-07-23T00:00:00.000Z",
-      "sourceCount": 8,
+      "publishedAt": "2026-07-24T00:00:00.000Z",
+      "sourceCount": 7,
       "sources": [
         "Archives of physical medicine and rehabilitation",
-        "NeuroRehabilitation",
         "Journal of rehabilitation medicine",
-        "Topics in stroke rehabilitation",
-        "Sports Medicine",
         "Disability and rehabilitation",
+        "Topics in stroke rehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
-        "Neurorehabilitation and neural repair"
+        "Neurorehabilitation and neural repair",
+        "NeuroRehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -42,31 +41,33 @@
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
-          "titleZh": "ICF 在卒中后康复评估与干预中的应用：叙述性综述"
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Outpatient rehabilitation can prevent suicide after acquired brain injury.",
+          "titleZh": "门诊康复可预防获得性脑损伤后的自杀"
         },
         {
           "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
-          "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及其测量集范围综述"
+          "journal": "Disability and rehabilitation",
+          "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
+          "titleZh": "脑干卒中成人住院患者吞咽障碍康复是否改善健康相关结局：系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "A Multimodal Assessment of Gastric Motility, reflux risk, and Clinical Efficacy: Intermittent Oro-Esophageal versus Nasogastric Tube Feeding for Post-Stroke Dysphagia in a Randomized Controlled Trial.",
+          "titleZh": "间歇性口食管管饲与鼻胃管饲对卒中后吞咽困难患者胃动力、反流风险和临床疗效的多模式评估：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
+          "titleZh": "探索卒中幸存者健康行为的促进因素和障碍：一项多视角定性研究（患者、家属和医疗专业人员）"
         },
         {
           "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
-          "title": "Transcutaneous spinal cord stimulation for stroke rehabilitation: a scoping review.",
-          "titleZh": "经皮脊髓电刺激用于卒中康复：范围综述"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Specific mode acupoint electrical stimulation combined with NGF for neurological recovery in ischemic stroke convalescence: A randomized controlled study",
-          "titleZh": "特定模式穴位电刺激联合NGF促进缺血性卒中恢复期神经功能恢复：一项随机对照研究"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "γ-transcranial alternating current stimulation improves upper-limb motor function in stroke patients and modulates oscillatory imbalance: a pilot randomized controlled trial | Journal of NeuroEngineering and Rehabilitation",
-          "titleZh": "γ-经颅交流电刺激改善卒中患者上肢运动功能并调节振荡失衡：一项前瞻性随机对照试验"
+          "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
+          "titleZh": "信息和通信技术在促进专职医疗人员在中风后护理中遵守指南方面的实施策略：一项范围综述"
         },
         {
           "source": "PubMed",
@@ -91,35 +92,83 @@
           "journal": "NeuroRehabilitation",
           "title": "Factors Explaining Limited Daily Hand-use in Individuals with Fair-Good Motor Ability Post-Stroke.",
           "titleZh": "解释卒中后运动能力良好个体日常手部使用受限的因素"
-        },
+        }
+      ],
+      "heat": 5.69,
+      "themeZh": "卒中后认知与吞咽障碍康复策略",
+      "themeEn": "Post-stroke Cognitive and Dysphagia Rehabilitation"
+    },
+    {
+      "id": "news-1784230650897-1",
+      "title": "Transcutaneous spinal cord stimulation for stroke rehabilitation: a scoping review.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42460690/",
+      "category": "neurological",
+      "publishedAt": "2026-07-23T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Topics in stroke rehabilitation",
+        "Sports Medicine",
+        "Journal of rehabilitation medicine",
+        "NeuroRehabilitation",
+        "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
-          "titleZh": "脑干卒中成人住院患者吞咽障碍康复是否改善健康相关结局：系统综述和荟萃分析"
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Transcutaneous spinal cord stimulation for stroke rehabilitation: a scoping review.",
+          "titleZh": "经皮脊髓电刺激用于卒中康复：范围综述"
         },
         {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "A Multimodal Assessment of Gastric Motility, reflux risk, and Clinical Efficacy: Intermittent Oro-Esophageal versus Nasogastric Tube Feeding for Post-Stroke Dysphagia in a Randomized Controlled Trial.",
-          "titleZh": "间歇性口食管管饲与鼻胃管饲对卒中后吞咽困难患者胃动力、反流风险和临床疗效的多模式评估：一项随机对照试验"
+          "source": "Sports Medicine",
+          "title": "Specific mode acupoint electrical stimulation combined with NGF for neurological recovery in ischemic stroke convalescence: A randomized controlled study",
+          "titleZh": "特定模式穴位电刺激联合NGF促进缺血性卒中恢复期神经功能恢复：一项随机对照研究"
         },
         {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
-          "titleZh": "探索卒中幸存者健康行为的促进因素和障碍：一项多视角定性研究（患者、家属和医疗专业人员）"
+          "source": "Sports Medicine",
+          "title": "γ-transcranial alternating current stimulation improves upper-limb motor function in stroke patients and modulates oscillatory imbalance: a pilot randomized controlled trial | Journal of NeuroEngineering and Rehabilitation",
+          "titleZh": "γ-经颅交流电刺激改善卒中患者上肢运动功能并调节振荡失衡：一项前瞻性随机对照试验"
         },
         {
           "source": "PubMed",
           "journal": "Journal of rehabilitation medicine",
-          "title": "Outpatient rehabilitation can prevent suicide after acquired brain injury.",
-          "titleZh": "门诊康复可预防获得性脑损伤后的自杀"
+          "title": "A scoping review of outcome and outcome measure sets for adults with spinal cord injury, stroke, and traumatic brain injury.",
+          "titleZh": "脊髓损伤、卒中和创伤性脑损伤成人结局及其测量集范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Applications of ICF-Based Assessments and Interventions in Post-Stroke Rehabilitation: A Narrative Review.",
+          "titleZh": "ICF 在卒中后康复评估与干预中的应用：叙述性综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
+          "title": "Advancing spine connectomics and neural integration through machine learning and neuroengineering: a narrative review.",
+          "titleZh": "机器学习和神经工程推动脊柱连接组学和神经整合研究进展：叙述性综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "The Combined Use of Non-Invasive Neurostimulation with Interactive Digital Technologies in Spinal Cord Injury Rehabilitation: A Scoping Review.",
+          "titleZh": "非侵入性神经刺激与交互式数字技术联合应用于脊髓损伤康复的范围综述"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Clinical trial landscape of cell therapy for spinal cord injury: from integrated practices to future developments",
+          "titleZh": "脊髓损伤细胞疗法的临床试验概况：从综合实践到未来发展"
+        },
+        {
+          "source": "Sports Medicine",
+          "title": "Betulinic Acid Promotes Motor Function Recovery After Spinal Cord Injury by Inhibiting Apoptosis Through Myc/NF-κB Signaling Pathway",
+          "titleZh": "桦木酸通过抑制Myc/NF-κB信号通路凋亡促进脊髓损伤后的运动功能恢复"
         }
       ],
-      "heat": 4.86,
-      "themeZh": "卒中后认知与运动功能康复的新方法与评估",
-      "themeEn": "Post-stroke Cognitive and Motor Rehabilitation Innovations"
+      "heat": 2.88,
+      "themeZh": "卒中与脊髓损伤的神经调控及康复技术",
+      "themeEn": "Neuromodulation for Stroke and SCI Rehabilitation"
     },
     {
       "id": "news-1784742300473-2",
@@ -192,9 +241,9 @@
           "titleZh": "Semmelweis框架：临床实践指南中证据基础和专家意见的结构化方法"
         }
       ],
-      "heat": 3.01,
-      "themeZh": "慢性腰背痛的运动康复、生物心理社会干预与评估",
-      "themeEn": "Chronic Low Back Pain Rehabilitation & Biopsychosocial Interventions"
+      "heat": 2.85,
+      "themeZh": "慢性腰痛的整合式生物心理社会康复",
+      "themeEn": "Integrated Biopsychosocial for Chronic Low Back Pain"
     },
     {
       "id": "news-1784309643256-0",
@@ -233,9 +282,9 @@
           "titleZh": "SmartMe&You家庭远程监控严肃视频游戏表现与健康受试者及帕金森病患者认知状态和静息态脑电图标记相关"
         }
       ],
-      "heat": 2.52,
-      "themeZh": "虚拟现实和数字技术在平衡与认知康复中的应用",
-      "themeEn": "VR & Digital Tech for Balance & Cognition"
+      "heat": 2.39,
+      "themeZh": "数字技术在平衡与前庭功能康复应用",
+      "themeEn": "Digital Tech for Balance and Vestibular Rehab"
     },
     {
       "id": "news-1784845814845-34",
@@ -302,64 +351,35 @@
           "titleZh": "衰弱、生理储备和手术复原力：迈向动态应激-恢复模型"
         }
       ],
-      "heat": 2.43,
-      "themeZh": "老年肌少症和虚弱的数字健康与居家活动干预",
-      "themeEn": "Digital Health & Home Mobility for Sarcopenia"
-    },
-    {
-      "id": "news-1784329952320-0",
-      "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468005/",
-      "category": "orthopedic",
-      "publishedAt": "2026-07-22T22:30:34.165Z",
-      "sourceCount": 4,
-      "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "Sports Medicine",
-        "Medical Dialogues",
-        "BJSM"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
-          "titleZh": "虚拟现实辅助物理治疗对膝骨关节炎患者的疗效：系统综述和 Meta 分析"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Effectiveness of Visual Needle Knife Release in Treating Knee Osteoarthritis: A Meta-analysis",
-          "titleZh": "可视化针刀松解术治疗膝骨关节炎的有效性：一项Meta分析"
-        },
-        {
-          "source": "Medical Dialogues",
-          "title": "Kinesiotaping May Reduce Early Swelling After Knee Replacement, states study",
-          "titleZh": "研究称肌内效贴布可减少膝关节置换术后早期肿胀"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "The effect of an eight-week FIFA 11+ program on the landing error scoring system following functional fatigue in adolescent female soccer players with dynamic knee valgus | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "八周 FIFA 11+ 方案对青少年女性足球运动员动态膝外翻功能性疲劳后着陆错误评分系统的影响"
-        },
-        {
-          "source": "BJSM",
-          "title": "Let's talk about sex (and gender) after ACL injury: a ...",
-          "titleZh": "ACL 损伤后性别（sex and gender）对自我报告活动和膝关节相关结局的影响：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "Sports Medicine",
-          "title": "Survey of underlying risk factors and epidemiology of anterior knee pain in semi-professional male basketball players | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "半职业男子篮球运动员前膝痛潜在风险因素和流行病学调查"
-        }
-      ],
-      "heat": 2.38,
-      "themeZh": "膝关节骨关节炎与运动损伤的物理治疗与康复",
-      "themeEn": "Knee Osteoarthritis and Sports Injury Rehab"
+      "heat": 2.3,
+      "themeZh": "老年肌少症和虚弱的数字健康干预",
+      "themeEn": "Digital Health for Sarcopenia and Frailty"
     }
   ],
   "items": [
+    {
+      "id": "news-1784902636899-0",
+      "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
+      "summary": "A scoping review identified information and communication technologies (ICTs) used in implementation strategies for stroke guidelines in post-acute care, noting their underexplored potential to improve allied health professionals' adherence.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42494115/",
+      "publishedAt": "2026-07-24T00:00:00.000Z",
+      "firstSeen": "2026-07-24T14:17:16.899Z",
+      "curatedScore": 75,
+      "curatedReason": "这项范围综述提醒你，中风后康复指南的依从性仍不足。尽管信息和通信技术（ICTs）有望提升依从性，但目前其应用和效果仍需深入探索，别指望它能立刻成为改变实践的核心工具。",
+      "titleZh": "信息和通信技术在促进专职医疗人员在中风后护理中遵守指南方面的实施策略：一项范围综述",
+      "summaryZh": "一项范围综述识别并映射了在卒中急性期后护理中，促进专职医疗人员遵守指南的信息和通信技术（ICTs），指出这些技术在实施策略中的应用潜力尚未充分挖掘。",
+      "curatedReasonEn": "This scoping review highlights the inadequate adherence to post-stroke rehabilitation guidelines. While ICTs show promise for improving adherence, their current application and efficacy warrant further exploration; do not expect them to be an immediate game-changer in practice.",
+      "limitation": "本研究为范围综述，主要侧重于识别和映射现有技术，而非评估其干预效果。",
+      "limitationEn": "This scoping review primarily focuses on identifying and mapping existing technologies rather than evaluating their interventional effects.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "综述",
+      "journal": "Topics in stroke rehabilitation"
+    },
     {
       "id": "news-1784742300473-2",
       "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
@@ -2086,29 +2106,6 @@
       "tags": [
         "research",
         "fall-prevention"
-      ],
-      "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1784759546748-15",
-      "title": "Associations of physical activity, pain intensity, and quality of life with work ability among Nigerian nurses with mechanical low back pain: a cross-sectional survey",
-      "summary": "A cross-sectional survey in Nigeria explored associations of physical activity, pain intensity, and quality of life with work ability among nurses experiencing mechanical low back pain.",
-      "category": "orthopedic",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12912-026-05070-4",
-      "publishedAt": "2026-07-19T00:00:00.000Z",
-      "firstSeen": "2026-07-22T22:32:26.748Z",
-      "curatedScore": 70,
-      "curatedReason": "尼日利亚护士的机械性下腰痛与身体活动、疼痛强度和生活质量之间的关联提示，在职业健康干预中应关注这些因素，以提高工作能力。这为发展针对职业人群的康复方案提供了背景信息。",
-      "titleZh": "尼日利亚机械性下腰痛护士的身体活动、疼痛强度和生活质量与工作能力的相关性：横断面调查",
-      "summaryZh": "一项在尼日利亚进行的横断面调查探讨了患有机械性下腰痛的护士中，身体活动、疼痛强度和生活质量与工作能力之间的关联。",
-      "curatedReasonEn": "Associations between physical activity, pain intensity, and quality of life with work ability in Nigerian nurses with mechanical low back pain suggest these factors should be addressed in occupational health interventions to improve work ability. This provides context for developing rehabilitation programs for occupational populations.",
-      "limitation": "作为一项横断面研究，无法确立身体活动、疼痛强度和生活质量与工作能力之间的因果关系。",
-      "limitationEn": "As a cross-sectional study, it cannot establish causality between physical activity, pain intensity, quality of life, and work ability.",
-      "tags": [
-        "research",
-        "spine",
-        "workforce"
       ],
       "studyDesign": "观察研究"
     }
