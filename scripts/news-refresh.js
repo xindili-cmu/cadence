@@ -367,6 +367,115 @@ const REHAB_INTERVENTION = [
   /\bstrength training\b/i, /康复/, /物理治疗/,
 ];
 
+// ── Non-article junk gate ───────────────────────────────────────────────────
+// Roster domains also serve pages that are not articles at all. Three shapes
+// leaked onto the live feed (2026-07-26 review):
+//   1. career / job-board subdomains (careers.ahpra.gov.au → "Ahpra Careers -
+//      Recent Jobs", scored 65 and shipped);
+//   2. a journal LANDING page whose <title> is just the journal name
+//      ("Journal of Cardiopulmonary Rehabilitation and Prevention");
+//   3. CMS model pages whose scraped summary is nav chrome, not prose
+//      ("… Visit the dedicated webpage. Apply to ACCESS … the the Participant
+//      Portal"), which the curator then paraphrases into a fake "why it matters".
+// Deterministic and cheap, so URL-shaped junk is dropped BEFORE curation (no
+// LLM spend); title/summary-shaped junk is dropped in the final filter, where
+// the curated text exists. Same denylist-by-design contract as isRehabRelevant.
+const JUNK_URL = [
+  /^careers?\./i,                        // careers.ahpra.gov.au
+  /\/(careers?|jobs?|vacancies)(\/|$)/i, // …/careers, …/jobs
+  /\/(login|signin|subscribe|cart|search)(\/|$)/i,
+];
+function isJunkUrl(url) {
+  try {
+    const u = new URL(url);
+    return JUNK_URL.some((re) => re.test(u.hostname) || re.test(u.pathname));
+  } catch { return true; }        // unparseable URL is junk by definition
+}
+
+// A title that is ONLY a roster journal/source name = we scraped a landing page,
+// not an article. Compared on a punctuation-insensitive key so "Journal of
+// Cardiopulmonary Rehabilitation and Prevention" matches the roster entry.
+const _nameKey = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const ROSTER_NAME_KEYS = new Set(
+  SOURCES.flatMap(s => [s.name, s.journalName]).filter(Boolean).map(_nameKey).filter(Boolean)
+);
+// …and the same shape for journals we don't carry on the source roster: a bare
+// periodical name with no sentence in it. Real paper titles essentially never
+// open with "Journal of" and stop there, so the pattern is safe as long as we
+// also require the title to be short and clause-free.
+const PERIODICAL_OPENER = /^(the\s+)?(journal|journals|archives|annals|acta|proceedings|bulletin|revue|revista|zeitschrift|international journal|european journal|british journal|american journal|asian journal|chinese journal|frontiers in|bmc|current opinion|clinics in|seminars in)\b/i;
+function looksLikeJournalLanding(title) {
+  const t = String(title || '').trim();
+  if (!t || !PERIODICAL_OPENER.test(t)) return false;
+  if (/[:?;—–]/.test(t)) return false;               // has a subtitle/question → real article
+  if (/\d/.test(t)) return false;                    // years, cohort sizes → real article
+  return t.split(/\s+/).length <= 12;
+}
+// Nav chrome that survives a listing-page scrape. "the the" is a reliable
+// tell (menu text concatenated across elements); the rest are CTA fragments.
+const SUMMARY_BOILERPLATE = [
+  /\bthe the\b/i,
+  /\bvisit (the )?(dedicated )?(web ?page|site)\b/i,
+  /\bclick here\b/i,
+  /\b(skip to|back to) (main )?content\b/i,
+  /\bcookie (policy|settings|preferences)\b/i,
+];
+// Exa/RSS sometimes hands us the LISTING page's truncated link text as the
+// headline ("Optimised oxygenation improves functional capacity during ...").
+// A truncated headline is unshippable — it propagates verbatim into the AI
+// briefing, the WeChat brief and the LinkedIn card. repairTruncatedTitles()
+// tries to recover the real one from og:title first; anything still truncated
+// at this point is dropped rather than published.
+const isTruncatedTitle = (t) => /(\.\.\.|…)\s*$/.test(String(t || '').trim());
+
+function isJunkItem(item) {
+  // Blank headline — unrenderable. Fresh items can't reach here (the pipeline's
+  // _fallbackTitle covers them), but a few archived rows carry title:"".
+  if (!String(item.title || '').trim()) return true;
+  if (isTruncatedTitle(item.title) || isTruncatedTitle(item.titleZh)) return true;
+  const tKey = _nameKey(item.title);
+  if (ROSTER_NAME_KEYS.has(tKey)) return true;
+  if (tKey && (tKey === _nameKey(item.journal) || tKey === _nameKey(item.source))) return true;
+  if (looksLikeJournalLanding(item.title)) return true;
+  const blob = `${item.summary || ''} ${item.summaryZh || ''}`;
+  if (SUMMARY_BOILERPLATE.some((re) => re.test(blob))) return true;
+  return false;
+}
+
+// Recover full headlines for truncated titles by reading the article page's
+// og:title (falling back to <title>). Runs BEFORE curation so the LLM scores
+// and summarises the real headline, not a fragment. Best-effort and bounded:
+// failures leave the item truncated, and isJunkItem then drops it.
+async function repairTruncatedTitles(items) {
+  const targets = items.filter(i => isTruncatedTitle(i.title));
+  if (!targets.length) return items;
+  console.log(`\n✂️  Truncated titles: ${targets.length} — recovering og:title`);
+  for (const it of targets) {
+    try {
+      const res = await fetch(it.url, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; CadenceBot/1.0; +https://incadencept.com)' },
+        signal: AbortSignal.timeout(15000),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const html = await res.text();
+      const og = html.match(/<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["']/i)
+        || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:title["']/i)
+        || html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+      const full = stripTags(og?.[1] || '').trim();
+      if (full && !isTruncatedTitle(full) && full.length > 15) {
+        console.log(`   ✓ ${String(it.title).slice(0, 50)} → ${full.slice(0, 60)}`);
+        it.title = full;
+      } else {
+        console.log(`   ✗ unrecovered: ${String(it.title).slice(0, 60)}`);
+      }
+    } catch (e) {
+      console.log(`   ✗ ${String(it.title).slice(0, 50)} — ${e.message}`);
+    }
+    await sleep(400);
+  }
+  return items;
+}
+
 // ── Title normalization ─────────────────────────────────────────────────────
 // Some journal RSS feeds (notably Archives of PM&R) ship SHOUTY ALL-CAPS titles.
 // Down-case them to sentence case so the feed reads consistently, while keeping
@@ -1224,6 +1333,15 @@ async function main() {
   raw.push(...await fetchScrapes());
 
   console.log(`\n📊 Raw: ${raw.length}`);
+  // URL-shaped junk (job boards, login/cart pages) goes before curation — it can
+  // never become a story, and dropping it here saves the LLM call.
+  const _preJunk = raw.length;
+  raw = raw.filter(i => {
+    if (!isJunkUrl(i.url)) return true;
+    console.log(`   ⏭️  junk URL dropped: ${i.url}`);
+    return false;
+  });
+  if (raw.length !== _preJunk) console.log(`   Junk URLs dropped: ${_preJunk - raw.length}`);
   const fresh = dropStaleByUrl(raw);
 
   // Incremental gate: drop URLs the feed already carries (as main cards or
@@ -1241,6 +1359,7 @@ async function main() {
   if (!novel.length) { console.log('\n💤 Nothing new — skipping curation and write.'); return; }
 
   const unique = clusterItems(novel, byExaScore);
+  await repairTruncatedTitles(unique);
   unique.sort(byExaScore);
   console.log(`   Unique: ${unique.length} (${unique.filter(u => u.related?.length).length} multi-source)`);
 
@@ -1335,6 +1454,11 @@ async function main() {
     .filter(i => {
       if (isRehabRelevant(i)) return true;
       console.log(`   ⏭️  off-topic dropped: ${(i.title || '').slice(0, 70)}`);
+      return false;
+    })
+    .filter(i => {
+      if (!isJunkItem(i)) return true;
+      console.log(`   ⏭️  junk dropped: ${(i.title || '').slice(0, 70)}`);
       return false;
     })
     .sort((a, b) => b.curatedScore - a.curatedScore);
@@ -1571,4 +1695,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, isReasonSlop };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource };
