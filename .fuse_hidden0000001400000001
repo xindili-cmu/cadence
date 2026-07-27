@@ -211,9 +211,54 @@
     ]
   },
   {
+    "name": "STAT",
+    "domain": "statnews.com",
+    "url": "https://www.statnews.com",
+    "kind": "news",
+    "regions": [
+      "US"
+    ],
+    "cats": [
+      "practice"
+    ],
+    "scrape": [
+      "https://www.statnews.com/category/health/"
+    ]
+  },
+  {
+    "name": "Modern Healthcare",
+    "domain": "modernhealthcare.com",
+    "url": "https://www.modernhealthcare.com",
+    "kind": "news",
+    "regions": [
+      "US"
+    ],
+    "cats": [
+      "practice"
+    ],
+    "scrape": [
+      "https://www.modernhealthcare.com/"
+    ]
+  },
+  {
+    "name": "Reuters",
+    "domain": "reuters.com",
+    "url": "https://www.reuters.com",
+    "kind": "news",
+    "regions": [
+      "Global"
+    ],
+    "cats": [
+      "practice"
+    ],
+    "scrape": [
+      "https://www.reuters.com/business/healthcare-pharmaceuticals/"
+    ]
+  },
+  {
     "name": "Physiopedia",
     "domain": "physiospot.com",
-    "url": "https://www.physiospot.com",
+    "url": "https://www.physio-pedia.com",
     "kind": "platform",
     "regions": [
       "Global"
@@ -271,42 +316,6 @@
     ],
     "scrape": [
       "https://www.cn-healthcare.com/"
-    ]
-  },
-  {
-    "name": "Medical Dialogues",
-    "domain": "medicaldialogues.in",
-    "url": "https://www.medicaldialogues.in",
-    "kind": "news",
-    "regions": [
-      "IN"
-    ],
-    "cats": [
-      "practice"
-    ]
-  },
-  {
-    "name": "Spinal Surgery News",
-    "domain": "spinalsurgerynews.com",
-    "url": "https://www.spinalsurgerynews.com",
-    "kind": "news",
-    "regions": [
-      "UK"
-    ],
-    "cats": [
-      "orthopedic"
-    ]
-  },
-  {
-    "name": "Doctorally",
-    "domain": "doctorally.tw",
-    "url": "https://health.doctorally.tw",
-    "kind": "news",
-    "regions": [
-      "TW"
-    ],
-    "cats": [
-      "practice"
     ]
   },
   {
@@ -447,7 +456,7 @@
   },
   {
     "name": "Sports Medicine",
-    "domain": "link.springer.com/article/10.1007/s40279",
+    "domain": "link.springer.com",
     "url": "https://link.springer.com/journal/40279",
     "kind": "journal",
     "journalName": "Sports Medicine",
@@ -456,165 +465,6 @@
     ],
     "cats": [
       "sports"
-    ]
-  },
-  {
-    "name": "Sports Med - Open",
-    "domain": "link.springer.com/article/10.1186/s40798",
-    "url": "https://link.springer.com/journal/40798",
-    "kind": "journal",
-    "journalName": "Sports Medicine - Open",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "sports"
-    ]
-  },
-  {
-    "name": "BMC Musculoskelet Disord",
-    "domain": "link.springer.com/article/10.1186/s12891",
-    "url": "https://bmcmusculoskeletdisord.biomedcentral.com/",
-    "kind": "journal",
-    "journalName": "BMC Musculoskeletal Disorders",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "orthopedic",
-      "manual-modality"
-    ]
-  },
-  {
-    "name": "BMC Sports Sci Med Rehabil",
-    "domain": "link.springer.com/article/10.1186/s13102",
-    "url": "https://bmcsportsscimedrehabil.biomedcentral.com/",
-    "kind": "journal",
-    "journalName": "BMC Sports Science, Medicine and Rehabilitation",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "sports",
-      "orthopedic"
-    ]
-  },
-  {
-    "name": "J NeuroEng Rehabil",
-    "domain": "link.springer.com/article/10.1186/s12984",
-    "url": "https://jneuroengrehab.biomedcentral.com/",
-    "kind": "journal",
-    "journalName": "Journal of NeuroEngineering and Rehabilitation",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "neurological"
-    ]
-  },
-  {
-    "name": "Eur Rev Aging Phys Act",
-    "domain": "link.springer.com/article/10.1186/s11556",
-    "url": "https://eurapa.biomedcentral.com/",
-    "kind": "journal",
-    "journalName": "European Review of Aging and Physical Activity",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "geriatric"
-    ]
-  },
-  {
-    "name": "Sport Sci Health",
-    "domain": "link.springer.com/article/10.1007/s11332",
-    "url": "https://link.springer.com/journal/11332",
-    "kind": "journal",
-    "journalName": "Sport Sciences for Health",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "sports"
-    ]
-  },
-  {
-    "name": "Egypt Rheumatol Rehabil",
-    "domain": "link.springer.com/article/10.1186/s43166",
-    "url": "https://err.springeropen.com/",
-    "kind": "journal",
-    "journalName": "Egyptian Rheumatology and Rehabilitation",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "orthopedic"
-    ]
-  },
-  {
-    "name": "Bull Fac Phys Ther",
-    "domain": "link.springer.com/article/10.1186/s43161",
-    "url": "https://bfpt.springeropen.com/",
-    "kind": "journal",
-    "journalName": "Bulletin of Faculty of Physical Therapy",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "orthopedic"
-    ]
-  },
-  {
-    "name": "BMC Geriatrics",
-    "domain": "link.springer.com/article/10.1186/s12877",
-    "url": "https://bmcgeriatr.biomedcentral.com/",
-    "kind": "journal",
-    "journalName": "BMC Geriatrics",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "geriatric"
-    ]
-  },
-  {
-    "name": "Int Urogynecol J",
-    "domain": "link.springer.com/article/10.1007/s00192",
-    "url": "https://link.springer.com/journal/192",
-    "kind": "journal",
-    "journalName": "International Urogynecology Journal",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "orthopedic"
-    ]
-  },
-  {
-    "name": "Eur J Appl Physiol",
-    "domain": "link.springer.com/article/10.1007/s00421",
-    "url": "https://link.springer.com/journal/421",
-    "kind": "journal",
-    "journalName": "European Journal of Applied Physiology",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "sports",
-      "cardiopulmonary"
-    ]
-  },
-  {
-    "name": "Aging Clin Exp Res",
-    "domain": "link.springer.com/article/10.1007/s40520",
-    "url": "https://link.springer.com/journal/40520",
-    "kind": "journal",
-    "journalName": "Aging Clinical and Experimental Research",
-    "regions": [
-      "Global"
-    ],
-    "cats": [
-      "geriatric"
     ]
   },
   {
@@ -702,7 +552,7 @@
   },
   {
     "name": "Eur Spine J",
-    "domain": "link.springer.com/article/10.1007/s00586",
+    "domain": "link.springer.com",
     "url": "https://link.springer.com/journal/586",
     "kind": "journal",
     "journalName": "European Spine Journal",
@@ -848,7 +698,7 @@
   },
   {
     "name": "Curr Rev Musculoskelet Med",
-    "domain": "link.springer.com/article/10.1007/s12178",
+    "domain": "link.springer.com",
     "url": "https://link.springer.com/journal/12178",
     "kind": "journal",
     "journalName": "Current Reviews in Musculoskeletal Medicine",

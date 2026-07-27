@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadence Daily · 重新设计方案对比</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFAF6; --white:#FFFFFF;
+  --navy:#16314F; --navy2:#1E3A5F; --blue:#3D74B8; --blue-deep:#2A5894;
+  --ink900:#1E1C17; --ink800:#2C2A23; --ink700:#45413A; --ink600:#5E5A4F; --ink500:#7A7568; --ink400:#9D978A;
+  --line:#E6E3D9; --line2:#ECE9DF; --tint:#F7F9FC; --tint-line:#E8EDF4;
+  --sans:'IBM Plex Sans','Noto Sans SC','PingFang SC',system-ui,sans-serif;
+  --serif:'Noto Serif SC','Songti SC',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#EEEDE6;font-family:var(--sans);color:var(--ink900);-webkit-font-smoothing:antialiased}
+
+/* ===== Control bar ===== */
+.ctrl{position:sticky;top:0;z-index:50;background:#11253b;color:#fff;border-bottom:1px solid rgba(255,255,255,.1)}
+.ctrl-in{max-width:1180px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ctrl-brand{font-weight:600;font-size:15px;letter-spacing:.01em}
+.ctrl-brand b{color:#7FA5D0;font-weight:600;margin-left:4px}
+.ctrl-sub{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8FB0D6}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{cursor:pointer;border:1px solid rgba(255,255,255,.22);background:transparent;color:#cfe0f2;font-family:var(--sans);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;display:flex;align-items:center;gap:8px;transition:.15s}
+.tab:hover{border-color:rgba(255,255,255,.5)}
+.tab.on{background:#fff;color:#16314F;border-color:#fff}
+.tab .ti{font-family:var(--mono);font-size:11px;opacity:.7}
+.tab.on .ti{opacity:.55}
+.spacer{flex:1}
+.vp{display:flex;gap:4px;background:rgba(255,255,255,.1);border-radius:999px;padding:4px}
+.vp button{cursor:pointer;border:none;background:transparent;color:#cfe0f2;font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:999px}
+.vp button.on{background:#fff;color:#16314F}
+.concept-note{max-width:1180px;margin:0 auto;padding:0 22px}
+.concept-note .nb{max-width:1180px;margin:14px auto 0;background:#16314F;color:#cfe0f2;border-radius:12px;padding:12px 18px;font-size:13.5px;line-height:1.6}
+.concept-note .nb b{color:#fff}
+
+/* ===== Stage ===== */
+.stage-wrap{padding:26px 22px 70px;display:flex;justify-content:center}
+.stage{container-type:inline-size;background:var(--paper);width:100%;max-width:980px;border-radius:14px;box-shadow:0 8px 40px -16px rgba(20,30,45,.28);overflow:hidden;transition:max-width .25s}
+.stage.mobile{max-width:402px}
+.pad{padding:clamp(22px,4vw,46px)}
+
+/* shared atoms */
+.dot{width:7px;height:7px;border-radius:2px;display:inline-block}
+.kicker{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:8px}
+.rule{flex:1;height:1px;background:var(--line)}
+.headrow{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sechead{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+.sechead h3{margin:0;font-weight:600;font-size:19px;letter-spacing:-.01em;color:var(--ink900)}
+.sechead .cnt{font-family:var(--mono);font-size:13px;color:var(--ink600)}
+.meta{display:flex;align-items:center;flex-wrap:wrap;gap:9px;font-family:var(--mono);font-size:12px;color:#8A8F98;margin-bottom:12px}
+.meta .sep{color:#D8D4C8}
+.meta .cat{display:inline-flex;align-items:center;gap:7px}
+.meta b{font-weight:600}
+a.card{display:block;text-decoration:none;color:inherit}
+
+/* ===== MASTHEAD (shared base) ===== */
+.mast{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+.mast .eq{position:absolute;right:-16px;bottom:-24px;opacity:.12;pointer-events:none}
+.mast .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8FB0D6;margin-bottom:16px}
+.mast h1{margin:0;font-family:var(--serif);font-weight:900;font-size:clamp(30px,6cqw,52px);line-height:1.05;letter-spacing:.01em}
+.mast .info{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:space-between;gap:14px 24px;flex-wrap:wrap;font-family:var(--mono);font-size:13px;color:#AFC4DC}
+.mast .info b{color:#fff;font-weight:600}
+.mast .dots{display:flex;flex-wrap:wrap;gap:6px 16px}
+.mast .dots span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+
+@container (max-width:560px){
+  .pad{padding:20px}
+  .mast h1{font-size:30px}
+  .sechead h3{font-size:17px}
+}
+</style>
+</head>
+<body>
+<div class="ctrl">
+  <div class="ctrl-in">
+    <span class="ctrl-brand">Cadence<b>步频</b></span>
+    <span class="ctrl-sub">Daily 重新设计</span>
+    <div class="tabs" id="tabs"></div>
+    <span class="spacer"></span>
+    <div class="vp">
+      <button data-vp="desktop" class="on">桌面</button>
+      <button data-vp="mobile">手机</button>
+    </div>
+  </div>
+  <div class="concept-note"><div class="nb" id="note"></div></div>
+</div>
+
+<div class="stage-wrap">
+  <div class="stage" id="stage"></div>
+</div>
+
+<script>
+const DATA = {
+ "date": "2026-06-22",
+ "stats": {
+  "events": 19,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 3,
+  "topScore": 90
+ },
+ "lead": {
+  "titleZh": "APTA 骨科、儿科指南齐发：髋骨关节炎、发育性协调障碍均有更新",
+  "titleEn": "APTA Ortho, Peds Guidelines Released: Hip OA, DCD Updates",
+  "paragraphZh": "今日共 19 条更新，横跨 5 个专业领域。APTA 发布了多项临床实践指南，其中骨科和儿童康复方向各有 2 条得分 90 的指南最为值得关注，分别为髋骨关节炎和发育性协调障碍的最新管理策略。",
+  "paragraphEn": "Today's update features 19 entries across 5 specialties. APTA has released multiple clinical practice guidelines, with 2 guidelines scoring 90 in both Orthopedics and Pediatrics being most notable, covering the latest management strategies for hip osteoarthritis and developmental coordination disorder."
+ },
+ "sectionCounts": [
+  [
+   "orthopedic",
+   4
+  ],
+  [
+   "neurological",
+   1
+  ],
+  [
+   "pediatric",
+   2
+  ],
+  [
+   "cardiopulmonary",
+   2
+  ],
+  [
+   "practice",
+   6
+  ]
+ ],
+ "items": [
+  {
+   "t": "APTA 骨科分会：髋关节疼痛与活动受限——髋骨关节炎：2025 年修订版。",
+   "s": "APTA 骨科分会发布了关于髋关节疼痛与活动受限——髋骨关节炎的 2025 年修订版临床实践指南。",
+   "cat": "orthopedic",
+   "src": "APTA",
+   "score": 90,
+   "why": "APTA 骨科分会发布了 2025 年髋关节疼痛与活动受限——髋骨关节炎指南的修订版。这是髋关节骨关节炎物理治疗的黄金标准，请务必将其整合到你的临床决策中。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/hip-pain-and-mobility-deficitship-osteoarthritis-revision-2017-cpg"
+  },
+  {
+   "t": "2026 年美国物理治疗协会儿科物理治疗学会发布的《发育性协调障碍儿童物理治疗管理循证临床实践指南》。",
+   "s": "美国物理治疗协会儿科物理治疗学会发布了 2026 年针对发育性协调障碍儿童物理治疗管理的循证临床实践指南。",
+   "cat": "pediatric",
+   "src": "APTA",
+   "score": 90,
+   "why": "APTA 儿科物理治疗学会发布了 2026 年发育性协调障碍儿童物理治疗循证临床实践指南。这是你在管理此类患者时的权威参考，务必深入研读并应用于实践。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/physical-therapy-management-of-children-with-developmental-coordination-disorder"
+  },
+  {
+   "t": "手部疼痛和感觉缺陷：腕管综合征临床实践指南。",
+   "s": "针对手部疼痛和感觉缺陷的腕管综合征临床实践指南现已发布。",
+   "cat": "orthopedic",
+   "src": "APTA",
+   "score": 85,
+   "why": "腕管综合征 (Carpal Tunnel Syndrome) 的物理治疗临床实践指南已更新。这为你提供了最新的循证建议，确保你的评估和干预策略与时俱进。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/hand-pain-and-sensory-deficits-carpal-tunnel-syndrome-clinical-practice-guidelines"
+  },
+  {
+   "t": "足踝治疗指南。",
+   "s": "一项新的足踝治疗指南现已发布，旨在指导临床实践。",
+   "cat": "orthopedic",
+   "src": "APTA",
+   "score": 85,
+   "why": "足踝治疗指南的发布，为你提供了处理足踝问题患者的最新循证框架。这直接指导你的临床实践，让你能更有效地管理这类常见问题。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/ankle-and-foot-treatment-guideline"
+  },
+  {
+   "t": "美国骨科医师学会：肩袖损伤管理临床实践指南。",
+   "s": "美国骨科医师学会发布了肩袖损伤管理的临床实践指南。",
+   "cat": "orthopedic",
+   "src": "APTA",
+   "score": 85,
+   "why": "美国骨科医师学会发布了肩袖损伤管理临床实践指南。作为物理治疗师，理解这份指南将帮助你更好地与骨科医生协作，优化肩袖损伤患者的综合管理。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/management-of-rotator-cuff-injuries-clinical-practice-guideline"
+  },
+  {
+   "t": "儿童高活动度谱系障碍的治疗管理：循证护理指南。",
+   "s": "一项关于儿童高活动度谱系障碍治疗管理的循证护理指南已发布。",
+   "cat": "pediatric",
+   "src": "APTA",
+   "score": 85,
+   "why": "针对儿童高活动度谱系障碍的循证护理指南已发布。这意味着你在管理这类患者时，有了一套明确、科学的评估和干预框架，避免经验主义。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/therapeutic-management-pediatric-hypermobility-spectrum-disorder"
+  },
+  {
+   "t": "COPD 预防、诊断和管理全球策略。",
+   "s": "这是一项关于慢性阻塞性肺疾病（COPD）预防、诊断和管理的全球策略指南。",
+   "cat": "cardiopulmonary",
+   "src": "APTA",
+   "score": 75,
+   "why": "这是一项关于 COPD 预防、诊断和管理的全球策略指南。虽然不是直接的物理治疗指南，但了解这些宏观策略有助于你将物理治疗干预与整体管理框架相结合。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/global-strategy-prevention-diagnosis-management-copd"
+  },
+  {
+   "t": "为残疾人开具运动处方和设计身体活动方案。",
+   "s": "此指南提供了为残疾人开具运动处方和设计身体活动方案的建议。",
+   "cat": "practice",
+   "src": "APTA",
+   "score": 75,
+   "why": "这项指南关注为残疾人开具运动处方和设计身体活动方案。它提醒你在评估残疾患者时，不仅要关注功能受限，更要积极融入运动和身体活动以改善其整体健康和生活质量。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/physical-activity-programs-for-people-with-disabilities"
+  },
+  {
+   "t": "对从业者的担忧。",
+   "s": "AHPRA 提供关于对医疗从业者担忧的指引和报告流程。",
+   "cat": "practice",
+   "src": "AHPRA",
+   "score": 75,
+   "why": "AHPRA 关于从业者担忧的指引提供了在澳大利亚报告执业不当行为的途径和流程。这提醒你作为专业人士的伦理责任，以及维护行业标准的机制。",
+   "url": "https://www.ahpra.gov.au/Notifications"
+  },
+  {
+   "t": "什么是注册标准？",
+   "s": "AHPRA 解释了注册标准的定义及其在医疗执业中的重要性。",
+   "cat": "practice",
+   "src": "AHPRA",
+   "score": 75,
+   "why": "AHPRA 解释了注册标准是什么以及它们对执业的意义。这帮助你理解在澳大利亚执业的基石要求，是确保合规执业的基础。",
+   "url": "https://www.ahpra.gov.au/Registration/Registration-Standards"
+  },
+  {
+   "t": "我有一个担忧——在哪里可以报告？",
+   "s": "AHPRA 提供了关于如何报告对医疗从业者担忧的指引。",
+   "cat": "practice",
+   "src": "AHPRA",
+   "score": 75,
+   "why": "AHPRA 提供了关于如何报告对健康从业者担忧的指引。这对于维护患者安全和行业职业操守至关重要，是你作为专业人士应了解的流程。",
+   "url": "https://www.ahpra.gov.au/Notifications/Concerned-about-a-health-practitioner"
+  },
+  {
+   "t": "陪伴在脊髓损伤患者婚姻状况与心理社会结局关系中的中介作用。",
+   "s": "这项研究发现，在控制了人口统计学、损伤和经济社会特征后，陪伴在脊髓损伤患者的婚姻状况与心理社会结局之间起中介作用。",
+   "cat": "neurological",
+   "src": "Archives of PM&R",
+   "score": 70,
+   "why": "陪伴在脊髓损伤患者的婚姻状况与心理社会结局之间发挥中介作用。这提示在康复中，除了身体功能，也要关注患者的社会支持和伴侣关系，这可能直接影响他们的心理健康。",
+   "url": "https://www.archives-pmr.org/article/S0003-9993(26)00786-0/fulltext?rss=yes"
+  },
+  {
+   "t": "2025 年成人高血压预防、检测、评估和管理指南。",
+   "s": "2025 年成人高血压的预防、检测、评估和管理指南已发布。",
+   "cat": "cardiopulmonary",
+   "src": "APTA",
+   "score": 70,
+   "why": "2025 年成人高血压预防、检测、评估和管理指南已发布。虽然主要面向医师，但了解这些指南能帮助你更好地识别高血压患者的风险，并在康复过程中为他们提供运动和生活方式干预的建议。",
+   "url": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/2025-guideline-for-the-prevention-detection-evaluation-and-management-of-high-blood-pressure-in-adults"
+  },
+  {
+   "t": "如何申请注册。",
+   "s": "AHPRA 提供了如何在澳大利亚申请执业注册的详细信息。",
+   "cat": "practice",
+   "src": "AHPRA",
+   "score": 70,
+   "why": "这是 AHPRA 关于在澳大利亚申请注册的详细步骤。如果你正在考虑在澳大利亚执业，这份指引是你必须遵循的官方路径。",
+   "url": "https://www.ahpra.gov.au/Registration/Applying-for-registration"
+  },
+  {
+   "t": "检查我的员工注册状态。",
+   "s": "AHPRA 提供工具以供检查医疗从业者的注册状态。",
+   "cat": "practice",
+   "src": "AHPRA",
+   "score": 70,
+   "why": "AHPRA 提供了查询从业者注册状态的工具。在雇佣新员工或核实合作方资质时，这是你确保其合规性的官方途径。",
+   "url": "https://www.ahpra.gov.au/Registration/Registers-of-Practitioners"
+  }
+ ],
+ "flashes": [
+  {
+   "t": "监督与合规。",
+   "src": "AHPRA",
+   "url": "https://www.ahpra.gov.au/Registration/Monitoring-and-compliance"
+  },
+  {
+   "t": "有人对你提出担忧吗？",
+   "src": "AHPRA",
+   "url": "https://www.ahpra.gov.au/Notifications/Has-a-concern-been-raised-about-you"
+  },
+  {
+   "t": "通知流程。",
+   "src": "AHPRA",
+   "url": "https://www.ahpra.gov.au/Notifications/How-we-manage-concerns/Assessment"
+  },
+  {
+   "t": "谁可以提出通知。",
+   "src": "AHPRA",
+   "url": "https://www.ahpra.gov.au/Notifications/Further-information"
+  }
+ ]
+};
+
+const CAT = {
+  orthopedic:{zh:'骨科康复',short:'骨科',c:'#3D74B8',dot:'#5E8FC4'},
+  neurological:{zh:'神经康复',short:'神经',c:'#6B5BB5',dot:'#9C8FD0'},
+  sports:{zh:'运动康复',short:'运动',c:'#2E8B6E',dot:'#5FA98C'},
+  'manual-modality':{zh:'手法与理疗',short:'手法',c:'#C77D3A',dot:'#D6A56B'},
+  cardiopulmonary:{zh:'心肺康复',short:'心肺',c:'#C2553F',dot:'#D2796A'},
+  pediatric:{zh:'儿童康复',short:'儿童',c:'#C75D8E',dot:'#C99BD0'},
+  geriatric:{zh:'老年康复',short:'老年',c:'#7A8290',dot:'#9AA0A8'},
+  practice:{zh:'临床实践',short:'实践',c:'#5A7D8C',dot:'#8AAAB6'},
+  'rehab-tech':{zh:'康复科技',short:'科技',c:'#7A8290',dot:'#9AA0A8'},
+};
+const catOf = c => CAT[c] || {zh:c,short:c,c:'#7A8290',dot:'#9AA0A8'};
+const scoreColor = s => s>=90?'#2A5894':s>=80?'#1B1E23':'#9098A0';
+const esc = s => (s||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+
+// derived tiers
+const ranked = [...DATA.items].sort((a,b)=>b.score-a.score);
+const lead = ranked[0];
+const tier2 = ranked.slice(1).filter(s=>s.score>=80);
+const tier3 = ranked.slice(1).filter(s=>s.score<80);
+const top3 = ranked.slice(0,3);
+
+function dateBits(){
+  const d=new Date(DATA.date+'T12:00:00Z');
+  const ds=`${d.getUTCFullYear()}.${String(d.getUTCMonth()+1).padStart(2,'0')}.${String(d.getUTCDate()).padStart(2,'0')}`;
+  const wd=d.toLocaleDateString('zh-CN',{weekday:'short',timeZone:'UTC'});
+  return {ds,wd};
+}
+const EQ='<svg class="eq" width="160" height="140" viewBox="446 107 580 508" aria-hidden="true"><g transform="skewX(-22.49)" fill="#fff"><rect x="664.6" y="410" width="40.5" height="92"/><rect x="745.6" y="343" width="42.5" height="159"/><rect x="832.5" y="277" width="42.6" height="225"/><rect x="930" y="121" width="46.7" height="474"/><rect x="1035.4" y="344" width="46.9" height="158"/><rect x="1128.9" y="415" width="39.9" height="87"/></g></svg>';
+const CLOCK='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3D74B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+
+function dotsRow(light){
+  const order={orthopedic:0,neurological:1,'manual-modality':2,cardiopulmonary:3,sports:4,pediatric:5,geriatric:6,practice:7,'rehab-tech':8};
+  const counts={}; DATA.items.forEach(s=>counts[s.cat]=(counts[s.cat]||0)+1);
+  return Object.entries(counts).sort((a,b)=>(order[a[0]]??99)-(order[b[0]]??99))
+    .map(([c,n])=>`<span><span class="dot" style="background:${catOf(c).dot}"></span>${catOf(c).short} <b>${n}</b></span>`).join('');
+}
+function meta(s){
+  const c=catOf(s.cat);
+  return `<div class="meta"><span class="cat" style="color:#5A6068"><span class="dot" style="background:${c.c}"></span>${c.zh}</span>`
+    +`<span class="sep">/</span><span>信号分 <b style="color:${scoreColor(s.score)}">${s.score}</b></span>`
+    +`<span class="sep">/</span><span style="text-transform:uppercase;letter-spacing:.06em">${esc(s.src)}</span></div>`;
+}
+
+/* ============ CONCEPT A — 聚焦 Focus (editorial refresh) ============ */
+function conceptA(){
+  const {ds,wd}=dateBits();
+  const c=catOf(lead.cat);
+  return `
+  <header class="mast pad">${EQ}
+    <div style="position:relative">
+      <div class="eyebrow">每日简报 · Daily Briefing</div>
+      <h1>今日康复信号</h1>
+      <div class="info">
+        <span>${ds}　${wd}　· 今日 <b>${DATA.stats.events}</b> 篇</span>
+        <span class="dots">${dotsRow()}</span>
+      </div>
+    </div>
+  </header>
+  <div class="pad" style="padding-top:clamp(30px,5cqw,52px)">
+    <div class="headrow"><span class="kicker">${CLOCK} 只有 5 分钟？读这条</span><span class="rule"></span></div>
+    <a class="card" href="${lead.url}" style="background:#fff;border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4cqw,38px);box-shadow:0 1px 2px rgba(27,30,35,.03),0 18px 40px -28px rgba(27,30,35,.22);display:block">
+      <div class="meta" style="font-size:13px;gap:11px"><span class="cat" style="color:${c.c}"><span class="dot" style="background:${c.c}"></span>${c.zh}</span><span class="sep">/</span><span>信号分 <b style="color:${scoreColor(lead.score)}">${lead.score}</b></span><span class="sep">/</span><span style="text-transform:uppercase;letter-spacing:.08em">${esc(lead.src)}</span></div>
+      <h2 style="margin:0;font-weight:600;font-size:clamp(21px,3.6cqw,29px);line-height:1.3;letter-spacing:-.01em;color:var(--ink900)">${esc(lead.t)}</h2>
+      <p style="margin:16px 0 0;font-size:16px;line-height:1.78;color:#43474E">${esc(lead.s)}</p>
+      <div style="margin-top:24px;background:var(--tint);border:1px solid var(--tint-line);border-radius:13px;padding:20px 22px">
+        <div style="font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:11px">临床底线 · Take</div>
+        <p style="margin:0;font-size:15.5px;line-height:1.8;color:#2B3138">${esc(lead.why)}</p>
+      </div>
+    </a>
+  </div>
+  <div class="pad" style="padding-top:0">
+    <div class="sechead"><h3>值得细读</h3><span class="rule"></span><span class="cnt">${tier2.length} 条</span></div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      ${tier2.map(s=>`<a class="card" href="${s.url}" style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+        ${meta(s)}
+        <h4 style="margin:0;font-weight:600;font-size:clamp(16px,2.4cqw,19px);line-height:1.4;color:var(--ink900)">${esc(s.t)}</h4>
+        ${s.s?`<p style="margin:11px 0 0;font-size:14.5px;line-height:1.72;color:#5A6068">${esc(s.s)}</p>`:''}
+      </a>`).join('')}
+    </div>
+  </div>
+  <div class="pad" style="padding-top:6px">
+    <div class="sechead"><h3>了解即可</h3><span class="rule"></span><span class="cnt">${tier3.length} 条</span></div>
+    <div>
+      ${tier3.map(s=>`<a class="card" href="${s.url}" style="display:flex;align-items:center;gap:16px;padding:15px 4px;border-bottom:1px solid var(--line2)">
+        <span style="flex:none;width:32px;font-family:var(--mono);font-size:15px;font-weight:600;color:${scoreColor(s.score)}">${s.score}</span>
+        <span style="flex:1;min-width:0;font-size:15px;line-height:1.5;color:#262A30">${esc(s.t)}</span>
+        <span style="flex:none;display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;color:#8A8F98"><span class="dot" style="background:${catOf(s.cat).c}"></span>${catOf(s.cat).short}</span>
+      </a>`).join('')}
+    </div>
+  </div>`;
+}
+
+/* ============ CONCEPT B — 信号墙 Signal Board (dense, score-forward) ============ */
+function conceptB(){
+  const {ds,wd}=dateBits();
+  const c=catOf(lead.cat);
+  const pulse=Object.entries(DATA.items.reduce((a,s)=>(a[s.cat]=(a[s.cat]||0)+1,a),{}))
+    .sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<span style="white-space:nowrap">${catOf(k).short} <b style="color:#fff">${n}</b></span>`).join('<span style="color:#3a5a7e">·</span>');
+  return `
+  <header class="mast pad" style="padding-bottom:0">${EQ}
+    <div style="position:relative">
+      <div class="eyebrow">每日简报 · ${ds} ${wd}</div>
+      <h1 style="font-size:clamp(28px,5.4cqw,46px)">今日康复信号</h1>
+      <div style="margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12.5px;color:#AFC4DC;align-items:center">${pulse}</div>
+      <div style="margin-top:18px;padding:14px 0 18px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;font-family:var(--mono);font-size:12.5px;color:#9FB6D4;flex-wrap:wrap;gap:10px"><span>共 <b style="color:#fff">${DATA.stats.events}</b> 篇 · ${DATA.stats.specialties} 个专业</span><span>最高信号分 <b style="color:#fff">${DATA.stats.topScore}</b></span></div>
+    </div>
+  </header>
+  <div class="pad">
+    <div class="headrow"><span class="kicker">${CLOCK} 头条 · 5 分钟必读</span><span class="rule"></span></div>
+    <a class="card" href="${lead.url}" style="display:grid;grid-template-columns:96px 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden">
+      <div style="background:${c.c};color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 8px;text-align:center">
+        <div style="font-family:var(--mono);font-size:34px;font-weight:600;line-height:1">${lead.score}</div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;opacity:.85;margin-top:6px">信号分</div>
+      </div>
+      <div style="padding:clamp(20px,3.6cqw,32px)">
+        <div class="meta"><span class="cat" style="color:${c.c}"><span class="dot" style="background:${c.c}"></span>${c.zh}</span><span class="sep">/</span><span style="text-transform:uppercase;letter-spacing:.06em">${esc(lead.src)}</span></div>
+        <h2 style="margin:0;font-weight:600;font-size:clamp(20px,3.2cqw,26px);line-height:1.32;color:var(--ink900)">${esc(lead.t)}</h2>
+        <div style="margin-top:16px;border-left:3px solid var(--blue);padding-left:14px"><div style="font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:7px">临床底线</div><p style="margin:0;font-size:14.5px;line-height:1.72;color:#3B414A">${esc(lead.why)}</p></div>
+      </div>
+    </a>
+  </div>
+  <div class="pad" style="padding-top:0">
+    <div class="sechead"><h3>值得细读</h3><span class="rule"></span><span class="cnt">${tier2.length} 条</span></div>
+    <div class="gridB">
+      ${tier2.map(s=>{const cc=catOf(s.cat);return `<a class="card" href="${s.url}" style="position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 20px 20px 22px;overflow:hidden">
+        <span style="position:absolute;left:0;top:0;bottom:0;width:4px;background:${cc.c}"></span>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:9px"><span style="font-family:var(--mono);font-size:22px;font-weight:600;color:${scoreColor(s.score)};line-height:1">${s.score}</span><span style="font-family:var(--mono);font-size:11px;color:${cc.c}">${cc.short}</span><span style="flex:1"></span><span style="font-family:var(--mono);font-size:11px;color:#9AA0A8;text-transform:uppercase">${esc(s.src)}</span></div>
+        <h4 style="margin:0;font-weight:600;font-size:16px;line-height:1.42;color:var(--ink900)">${esc(s.t)}</h4>
+        ${s.s?`<p style="margin:9px 0 0;font-size:13.5px;line-height:1.65;color:#5A6068">${esc(s.s)}</p>`:''}
+      </a>`}).join('')}
+    </div>
+  </div>
+  <div class="pad" style="padding-top:6px">
+    <div class="sechead"><h3>了解即可</h3><span class="rule"></span><span class="cnt">${tier3.length} 条</span></div>
+    <div class="grid3">
+      ${tier3.map(s=>`<a class="card" href="${s.url}" style="display:flex;align-items:center;gap:12px;padding:11px 12px;background:#fff;border:1px solid var(--line2);border-radius:9px">
+        <span style="flex:none;width:26px;font-family:var(--mono);font-size:13.5px;font-weight:600;color:${scoreColor(s.score)}">${s.score}</span>
+        <span style="flex:none;width:6px;height:6px;border-radius:2px;background:${catOf(s.cat).c}"></span>
+        <span style="flex:1;min-width:0;font-size:13.5px;line-height:1.45;color:#2A2E34;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical">${esc(s.t)}</span>
+      </a>`).join('')}
+    </div>
+  </div>
+  <style>
+    .gridB{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .grid3{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @container (max-width:640px){.gridB{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}}
+  </style>`;
+}
+
+/* ============ CONCEPT C — 查房动线 Rounds Timeline (minimal) ============ */
+function conceptC(){
+  const {ds,wd}=dateBits();
+  function node(s,opts={}){
+    const cc=catOf(s.cat);
+    return `<a class="card tl-node" href="${s.url}">
+      <div class="tl-rail"><span class="tl-score" style="color:${scoreColor(s.score)}">${s.score}</span><span class="tl-dot" style="background:${cc.c}"></span></div>
+      <div class="tl-body">
+        <div class="meta" style="margin-bottom:8px"><span class="cat" style="color:${cc.c}"><span class="dot" style="background:${cc.c}"></span>${cc.zh}</span><span class="sep">/</span><span style="text-transform:uppercase;letter-spacing:.06em">${esc(s.src)}</span></div>
+        <div style="font-weight:600;font-size:${opts.lead?'clamp(20px,3.2cqw,26px)':'16.5px'};line-height:1.4;color:var(--ink900)">${esc(s.t)}</div>
+        ${opts.lead?`<p style="margin:14px 0 0;font-size:15.5px;line-height:1.76;color:#43474E">${esc(s.s)}</p>
+          <div style="margin-top:16px;background:var(--tint);border:1px solid var(--tint-line);border-radius:11px;padding:16px 18px"><div style="font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:8px">临床底线 · Take</div><p style="margin:0;font-size:14.5px;line-height:1.74;color:#2B3138">${esc(s.why)}</p></div>`
+          :(opts.sum&&s.s?`<p style="margin:7px 0 0;font-size:13.5px;line-height:1.6;color:#6A7068">${esc(s.s)}</p>`:'')}
+      </div>
+    </a>`;
+  }
+  function divider(label,n){return `<div class="tl-div"><span class="tl-div-rail"></span><span class="tl-div-label">${label}</span><span style="font-family:var(--mono);font-size:11px;color:var(--ink400)">${n} 条</span><span class="rule"></span></div>`;}
+  return `
+  <header class="mast pad" style="background:linear-gradient(180deg,#16314F,#1b3a5f);padding-top:28px;padding-bottom:26px">${EQ}
+    <div style="position:relative">
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
+        <span style="font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8FB0D6">晨间查房</span>
+        <span style="font-family:var(--mono);font-size:12px;color:#AFC4DC">${ds} ${wd} · ${DATA.stats.events} 篇</span>
+      </div>
+      <h1 style="font-size:clamp(26px,5cqw,42px);margin-top:10px">按信号分排出的今日动线</h1>
+    </div>
+  </header>
+  <div class="pad tl">
+    ${divider('5 分钟必读',1)}
+    ${node(lead,{lead:true})}
+    ${divider('值得细读',tier2.length)}
+    ${tier2.map(s=>node(s,{sum:true})).join('')}
+    ${divider('了解即可',tier3.length)}
+    ${tier3.map(s=>node(s)).join('')}
+  </div>
+  <style>
+    .tl{position:relative}
+    .tl-div{display:flex;align-items:center;gap:12px;margin:30px 0 16px}
+    .tl-div:first-child{margin-top:0}
+    .tl-div-rail{width:54px;flex:none}
+    .tl-div-label{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+    .tl-node{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line2)}
+    .tl-rail{width:54px;flex:none;display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:2px;position:relative}
+    .tl-rail:before{content:"";position:absolute;top:-16px;bottom:-16px;left:50%;width:1px;background:var(--line);transform:translateX(-.5px)}
+    .tl-score{font-family:var(--mono);font-size:18px;font-weight:600;background:var(--paper);z-index:1;padding:2px 0}
+    .tl-dot{width:9px;height:9px;border-radius:3px;background:#999;z-index:1;box-shadow:0 0 0 4px var(--paper)}
+    .tl-body{flex:1;min-width:0}
+    @container (max-width:560px){.tl-rail{width:40px}.tl-div-rail{width:40px}.tl-node{gap:12px}}
+  </style>`;
+}
+
+const CONCEPTS={
+  A:{name:'A · 聚焦',ti:'Focus',note:'<b>聚焦 Focus</b> — 现有版式的精修：保留 navy 刊头与「5 分钟」头条，加大字号与留白，单栏编辑流。改动最小、最稳，主打<b>视觉刷新</b>。',fn:conceptA},
+  B:{name:'B · 信号墙',ti:'Board',note:'<b>信号墙 Board</b> — 信号分前置：头条带大号分数块，「值得细读」改双栏卡片(色条标专业)，「了解即可」做密排网格。信息密度高、可扫读，主打<b>层级重组</b>。',fn:conceptB},
+  C:{name:'C · 查房动线',ti:'Timeline',note:'<b>查房动线 Timeline</b> — 极简单流：全部内容按信号分排成一条带左侧分数轨的时间线，分区只用安静的分隔标。最克制、移动端最顺，主打<b>移动体验</b>。',fn:conceptC},
+};
+let cur='A', vp='desktop';
+const stage=document.getElementById('stage'), tabsEl=document.getElementById('tabs'), noteEl=document.getElementById('note');
+Object.entries(CONCEPTS).forEach(([k,c])=>{
+  const b=document.createElement('button');b.className='tab'+(k===cur?' on':'');b.dataset.k=k;
+  b.innerHTML=`${c.name} <span class="ti">${c.ti}</span>`;b.onclick=()=>{cur=k;render();};tabsEl.appendChild(b);
+});
+document.querySelectorAll('.vp button').forEach(b=>b.onclick=()=>{vp=b.dataset.vp;render();});
+function render(){
+  stage.className='stage'+(vp==='mobile'?' mobile':'');
+  stage.innerHTML=CONCEPTS[cur].fn();
+  noteEl.innerHTML=CONCEPTS[cur].note;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.k===cur));
+  document.querySelectorAll('.vp button').forEach(t=>t.classList.toggle('on',t.dataset.vp===vp));
+  window.scrollTo({top:0});
+}
+render();
+</script>
+</body>
+</html>
