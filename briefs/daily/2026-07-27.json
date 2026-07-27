@@ -1,0 +1,368 @@
+{
+ "date": "2026-07-27",
+ "generatedAt": "2026-07-26T22:28:39.003Z",
+ "windowHours": 26,
+ "windowStart": "2026-07-25T22:16:47.681Z",
+ "windowEnd": "2026-07-26T22:28:37.398Z",
+ "lead": {
+  "titleZh": "分层融合物理治疗整合数字健康，对颈肩痛具备成本效益",
+  "titleEn": "Stratified PT with Digital Health Cost-Effective for Neck/Shoulder Pain",
+  "paragraphZh": "今日共 14 篇文章，涵盖 7 个专科方向。骨科与肌骨康复一篇 RCT 显示，分层融合物理治疗结合数字健康对颈肩痛具有成本效益，curatedScore 达 85 分，最值得临床关注。此外，心肺康复方向有一项 RCT 提示优化氧合可改善 COPD 患者功能。",
+  "paragraphEn": "Today's 14 articles span 7 specialties. An RCT in Orthopedics/Musculoskeletal Rehabilitation, scoring 85, indicates that stratified physiotherapy integrated with digital health is cost-effective for neck and/or shoulder pain, warranting clinical attention. Additionally, a Cardiopulmonary Rehabilitation RCT suggests optimized oxygenation improves functional capacity in COPD patients."
+ },
+ "stats": {
+  "events": 14,
+  "specialties": 7,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1785049661034-0",
+     "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
+     "summary": "A cluster randomized clinical trial found that a Stratified Blended Physiotherapy Approach (SBPA), integrating prognostic risk stratification with digital health, was cost-effective compared to usual physiotherapy for 136 patients with neck and/or shoulder pain.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
+     "publishedAt": "2026-07-26T00:00:00.000Z",
+     "firstSeen": "2026-07-26T07:07:41.034Z",
+     "curatedScore": 85,
+     "curatedReason": "分层融合物理治疗（结合风险分层和数字健康）在颈肩痛患者中，不仅临床效果不劣于常规物理治疗，成本效益也更好。这意味着你可以开始考虑在临床实践中更积极地整合基于风险分层的数字健康工具，尤其是在资源有限的初级诊疗环境。",
+     "titleZh": "分层融合物理治疗结合数字健康对颈肩痛的成本效益：一项整群随机临床试验结果",
+     "summaryZh": "一项整群随机临床试验评估了分层融合物理治疗（SBPA，结合预后风险分层与数字健康）与常规物理治疗相比，对 136 名颈肩痛患者的成本效益。结果显示 SBPA 具有成本效益。",
+     "curatedReasonEn": "Stratified blended physiotherapy (combining risk stratification with digital health) for neck and shoulder pain is not only clinically non-inferior to usual physiotherapy but also more cost-effective. This suggests you can start considering more active integration of risk-stratified digital health tools into your practice, especially in resource-limited primary care settings.",
+     "limitation": "本研究的患者样本量相对较小，且仅在荷兰初级诊疗环境进行，结果的外推性需谨慎。",
+     "limitationEn": "The relatively small patient sample size and its focus on a primary care setting in the Netherlands may limit the generalizability of these findings.",
+     "tags": [
+      "research",
+      "spine",
+      "shoulder",
+      "telehealth"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of physical medicine and rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1785104907740-4",
+     "title": "Changes in Urgency Urinary Incontinence Symptoms After Stress Urinary Incontinence Surgery in Women | International Urogynecology Journal",
+     "summary": "An observational study investigated changes in urgency urinary incontinence symptoms after stress urinary incontinence surgery in women, noting potential improvements, worsening, or de novo onset.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06813-2",
+     "publishedAt": "2026-07-21T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 75,
+     "curatedReason": "这项观察研究发现压力性尿失禁手术可能改善或加重急迫性尿失禁症状，甚至引起新发症状。在术前咨询时，务必告知患者这些潜在风险，并强调术后对急迫性症状的持续评估和管理的重要性。",
+     "titleZh": "女性压力性尿失禁手术后急迫性尿失禁症状的变化",
+     "summaryZh": "一项观察性研究探讨了女性压力性尿失禁手术后急迫性尿失禁症状的变化，指出可能改善、恶化或新发。",
+     "curatedReasonEn": "This observational study found that stress urinary incontinence surgery can either improve or worsen urgency urinary incontinence symptoms, or even cause de novo symptoms. During preoperative counseling, it is crucial to inform patients about these potential risks and emphasize the importance of ongoing assessment and management of urgency symptoms post-surgery.",
+     "limitation": "该研究为观察性研究，未能明确说明因果关系。",
+     "limitationEn": "This observational study did not clearly establish causality.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785104907740-2",
+     "title": "Modifiable health-risk patterns among patients with back pain: a latent class analysis | BMC Musculoskeletal Disorders",
+     "summary": "A latent class analysis identified modifiable health-risk patterns among patients with back pain, providing insights into comorbidity profiles.",
+     "category": "orthopedic",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10256-7",
+     "publishedAt": "2026-07-20T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究利用潜在类别分析揭示了背痛患者中可修改的健康风险模式。了解这些模式能帮助你更精准地识别和干预患者的共病风险，优化康复策略。",
+     "titleZh": "背痛患者中可修改的健康风险模式：一项潜在类别分析",
+     "summaryZh": "一项潜在类别分析在背痛患者中识别了可修改的健康风险模式，为共病概况提供了见解。",
+     "curatedReasonEn": "You need to identify comorbidity risks in back pain patients more precisely. This latent class analysis reveals multiple modifiable health-risk patterns. Understanding these patterns will help you tailor intervention plans and improve rehabilitation outcomes.",
+     "limitation": "潜在类别分析为观察性研究，无法直接建立因果关系，且结果可能受限于所纳入变量。",
+     "limitationEn": "Latent class analysis is observational and cannot establish direct causality; results may be limited by included variables.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1785104907740-7",
+     "title": "Cerebellar Transcranial Alternating Current Stimulation: Frequency-Specific Modulation of Human Gait | The Cerebellum",
+     "summary": "Research found that cerebellar transcranial alternating current stimulation can frequency-specifically modulate human gait, suggesting potential for neurorehabilitation.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s12311-026-02037-8",
+     "publishedAt": "2026-07-20T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 75,
+     "curatedReason": "小脑经颅交流电刺激能频率特异性地调节人类步态，这为神经康复带来了新的可能性。尽管目前仍是早期研究，但它提示我们，未来这种技术可能用于改善帕金森或卒中患者的步态障碍，值得持续关注。",
+     "titleZh": "小脑经颅交流电刺激：频率特异性调节人类步态",
+     "summaryZh": "研究发现小脑经颅交流电刺激能够频率特异性地调节人类步态，提示了其在神经康复中的潜力。",
+     "curatedReasonEn": "Cerebellar transcranial alternating current stimulation can frequency-specifically modulate human gait, opening new possibilities for neurorehabilitation. While still early-stage research, it suggests that this technique may be used to improve gait deficits in Parkinson's or stroke patients in the future, warranting continued attention.",
+     "limitation": "本研究主要关注健康受试者的步态调节机制，尚未在神经系统疾病患者中验证其临床疗效。",
+     "limitationEn": "This study primarily focused on gait modulation mechanisms in healthy subjects and has not yet validated clinical efficacy in patients with neurological disorders.",
+     "tags": [
+      "research",
+      "vestibular",
+      "stroke",
+      "parkinson"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785049661036-1",
+     "title": "Positive Psychology Interventions for Adults with Spinal Cord Injury: A Systematic Review and Meta-analysis.",
+     "summary": "A systematic review and meta-analysis of eight studies published between 2000 and 2025 indicated that positive psychology interventions (PPIs) may improve health and well-being outcomes in adults with spinal cord injury.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501930/",
+     "publishedAt": "2026-07-26T00:00:00.000Z",
+     "firstSeen": "2026-07-26T07:07:41.036Z",
+     "curatedScore": 75,
+     "curatedReason": "积极心理学干预对脊髓损伤患者的心理健康和幸福感有潜在益处。虽然证据仍在早期阶段，你可以关注这类非传统干预，作为全面康复计划的辅助手段，尤其是在患者心理调适方面。",
+     "titleZh": "积极心理学干预对脊髓损伤成人患者的影响：一项系统综述和 Meta 分析",
+     "summaryZh": "一项系统综述和 Meta 分析纳入了 2000 年至 2025 年间发表的 8 项研究，旨在评估积极心理学干预（PPIs）对脊髓损伤（SCI）成人患者健康和幸福结局的影响，结果提示 PPIs 可能带来改善。",
+     "curatedReasonEn": "Positive psychology interventions show potential benefits for mental health and well-being in adults with spinal cord injury. While evidence is still emerging, you can consider these non-traditional interventions as adjuncts to comprehensive rehabilitation plans, especially for psychological adjustment.",
+     "limitation": "纳入的试验数量较少（8项），且干预措施和结果指标可能存在异质性，影响汇总结果的稳健性。",
+     "limitationEn": "The limited number of included studies (8) and potential heterogeneity in interventions and outcome measures may affect the robustness of the pooled results.",
+     "tags": [
+      "research",
+      "spinal-cord"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "id": "news-1785104907740-9",
+     "title": "Reprogramming microglia via ShK-modified extracellular vesicles promotes immunomodulation and functional recovery after spinal cord injury | Journal of Nanobiotechnology",
+     "summary": "Research showed that reprogramming microglia via ShK-modified extracellular vesicles promoted immunomodulation and functional recovery after spinal cord injury in animal models.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12951-026-04822-3",
+     "publishedAt": "2026-07-22T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究发现通过 ShK 修饰的细胞外囊泡重编程小胶质细胞，能促进脊髓损伤后的免疫调节和功能恢复。虽然仍处于基础研究阶段，这为脊髓损伤康复提供了新的靶点和生物治疗方向。",
+     "titleZh": "ShK 修饰细胞外囊泡重编程小胶质细胞促进脊髓损伤后免疫调节和功能恢复",
+     "summaryZh": "研究表明，通过 ShK 修饰的细胞外囊泡重编程小胶质细胞，能促进脊髓损伤动物模型中的免疫调节和功能恢复。",
+     "curatedReasonEn": "This study found that reprogramming microglia via ShK-modified extracellular vesicles promotes immunomodulation and functional recovery after spinal cord injury. While still in basic research, this offers new targets and biological therapeutic directions for spinal cord injury rehabilitation.",
+     "limitation": "本研究为动物模型研究，其结果在人体中的转化和临床疗效尚待验证。",
+     "limitationEn": "This study was conducted in animal models, and its translation to human application and clinical efficacy still need to be verified.",
+     "tags": [
+      "research",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1785104907740-12",
+     "title": "Situational characteristics of muscle strains in sport - BJSM blog - social media's leading SEM voice",
+     "summary": "In this blog, we outline and discuss the underlying injury patterns of muscle strains in sport. Our recent study, published in BJSM, included data from 21 studies reporting on real-world injury events by using video footage of 728 muscle strains [1].\n...\nMuscle strains are among the most common injuries in sports, and numerous preventive approaches have been developed to address them. Despite these efforts, incidence of muscle strains remains high [2]. With the growing availability of video footages capturing real-world injury events, videos analysis has emerged as a valuable research tool [3,4]. Examining the sequence of events, injury contact mechanisms,",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "https://blogs.bmj.com/bjsm/2026/07/21/situational-characteristics-of-muscle-strains-in-sport/",
+     "publishedAt": "2026-07-21T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇博客文章总结了对运动中肌肉拉伤情境特征的研究。了解肌肉拉伤的实际发生模式，能帮助你优化预防策略和重返运动方案，更精准地评估风险。",
+     "curatedReasonEn": "To prevent muscle strains in sports more effectively and design return-to-sport programs, you must understand the actual situational characteristics of muscle strains. This blog post summarizes relevant research and will help you assess risks more precisely, avoiding ineffective interventions.",
+     "limitation": "博客文章是基于现有研究的总结，但并未提供原始研究的具体数据和方法学细节。",
+     "limitationEn": "The blog post summarizes existing research but does not provide specific data or detailed methodology from the original studies.",
+     "tags": [
+      "news",
+      "injury-prevention"
+     ]
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1785104907740-18",
+     "title": "AOT study protocol of a randomised controlled trial",
+     "summary": "The PAM-AOT study protocol outlines a randomized controlled trial investigating whether a pathological model can improve paretic hand abilities in hemiplegic children.",
+     "category": "pediatric",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/11/12/e053910.full.pdf",
+     "publishedAt": "2026-07-26T22:26:27.974Z",
+     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "curatedScore": 65,
+     "curatedReason": "这是一项随机对照试验的方案，旨在探讨病理模型能否改善偏瘫儿童患手能力。方案本身无法提供临床结论，但你应关注其未来研究结果，这可能为儿童偏瘫手部康复提供新思路。",
+     "titleZh": "病理模型能否改善偏瘫儿童患手能力？PAM-AOT 随机对照试验方案",
+     "summaryZh": "PAM-AOT 研究方案概述了一项随机对照试验，旨在探讨病理模型能否改善偏瘫儿童的患手能力。",
+     "curatedReasonEn": "This is a protocol for an RCT investigating whether a pathological model can improve paretic hand abilities in hemiplegic children. While the protocol itself doesn't offer clinical conclusions, you should monitor its future results, as it may provide new insights for hand rehabilitation in pediatric hemiplegia.",
+     "limitation": "本研究仅为试验方案，尚未产生临床数据或结论。",
+     "limitationEn": "This study is only a trial protocol and has not yet produced clinical data or conclusions.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "RCT"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1785104907741-21",
+     "title": "Associations of uric acid with wearable sensor-derived digital gait characteristics in older adults: vigor, symmetry, and stability | BMC Geriatrics",
+     "summary": "A study found associations of uric acid levels with wearable sensor-derived digital gait characteristics (vigor, symmetry, and stability) in older adults.",
+     "category": "geriatric",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-07993-8",
+     "publishedAt": "2026-07-21T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 70,
+     "curatedReason": "尿酸水平可能与老年人的步态活力、对称性和稳定性相关。这项研究提示，尿酸或许能作为识别步态异常高风险老年患者的生物标志物，值得你在临床中留意。",
+     "titleZh": "老年人尿酸与可穿戴传感器衍生的数字步态特征（活力、对称性和稳定性）的关联",
+     "summaryZh": "一项研究发现老年人的尿酸水平与可穿戴传感器衍生的数字步态特征（活力、对称性和稳定性）之间存在关联。",
+     "curatedReasonEn": "Uric acid levels may be associated with gait vigor, symmetry, and stability in older adults. This study suggests that uric acid could serve as a biomarker to identify older patients at high risk for gait abnormalities, which is worth noting in your clinical practice.",
+     "limitation": "这是一项横断面研究，无法建立尿酸与步态特征之间的因果关系。",
+     "limitationEn": "This was a cross-sectional study, which cannot establish a causal relationship between uric acid and gait characteristics.",
+     "tags": [
+      "research",
+      "gait-training"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1785104907741-27",
+     "title": "Optimised oxygenation improves functional capacity during ...",
+     "summary": "An RCT demonstrated that optimized oxygenation improved functional capacity during daily activities in patients with COPD on long-term oxygen therapy.",
+     "category": "cardiopulmonary",
+     "source": "BJSM",
+     "sourceUrl": "https://thorax.bmj.com/content/thoraxjnl/80/11/803.full.pdf",
+     "publishedAt": "2026-07-26T22:26:37.979Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 80,
+     "curatedReason": "这项随机交叉试验显示，优化氧合能改善长期氧疗 COPD 患者日常活动的功能能力。这基本坐实了在长期氧疗中，优化氧合对改善患者生活质量和功能独立的价值。你在临床中应充分评估患者氧合状态，并考虑调整氧疗方案以达到最佳功能效益。",
+     "titleZh": "优化氧合改善长期氧疗 COPD 患者日常活动的功能能力：一项随机交叉试验",
+     "summaryZh": "一项随机交叉试验表明，优化氧合改善了长期氧疗的慢性阻塞性肺疾病（COPD）患者在日常活动中的功能能力。",
+     "curatedReasonEn": "This randomized crossover trial showed that optimized oxygenation improves functional capacity during daily activities in COPD patients on long-term oxygen therapy. This essentially confirms the value of optimized oxygenation in improving quality of life and functional independence for patients on long-term oxygen therapy. In clinical practice, you should fully assess patients' oxygenation status and consider adjusting oxygen therapy to achieve optimal functional benefits.",
+     "limitation": "这是一项交叉试验，虽然有助于减少个体差异，但可能存在残余效应。",
+     "limitationEn": "This was a crossover trial, which, while reducing individual variability, might have carryover effects.",
+     "tags": [
+      "research",
+      "COPD"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1785104907741-29",
+     "title": "Comprehensive Individualized nursing intervention enhances health outcomes and quality of life in patients with heart failure | BMC Cardiovascular Disorders",
+     "summary": "A study found that comprehensive individualized nursing intervention enhanced health outcomes and quality of life in patients with heart failure.",
+     "category": "cardiopulmonary",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12872-026-06190-0",
+     "publishedAt": "2026-07-21T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究发现全面的个性化护理干预能改善心力衰竭患者的健康结局和生活质量。这再次强调了在心力衰竭康复中，需要超越标准化方案，为患者提供营养、活动和心理社会支持等方面的个性化策略。",
+     "titleZh": "全面个性化护理干预改善心力衰竭患者健康结局和生活质量",
+     "summaryZh": "一项研究发现，全面的个性化护理干预改善了心力衰竭患者的健康结局和生活质量。",
+     "curatedReasonEn": "This study found that comprehensive individualized nursing intervention enhances health outcomes and quality of life in patients with heart failure. This re-emphasizes the need to move beyond standardized protocols in heart failure rehabilitation, providing individualized strategies for nutrition, activity, and psychosocial support.",
+     "limitation": "研究设计为观察性研究，可能存在混杂因素，结果仍需大规模随机对照试验进一步验证。",
+     "limitationEn": "The study design is observational, potentially affected by confounding factors, and results require further validation by large-scale randomized controlled trials.",
+     "tags": [
+      "research",
+      "cardiac-rehabilitation"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785104907741-23",
+     "title": "Journal of Cardiopulmonary Rehabilitation and Prevention",
+     "summary": "Journal of Cardiopulmonary Rehabilitation and Prevention \n\n \n\n \n\n \n\n \n\n \n\n \n\n### March 2026 - Volume 46 - Issue 2\n\n- Editor-in-Chief: Todd M. Brown, MD, MAACVPR\n- ISSN: 1932-7501\n- Online ISSN: 1932-751x\n- Frequency: 6 issues / year Impact Factor:&#160 3.1 5-Year Impact Factor:&#160 3.2 Cite Score:&#160 5.4\n- Ranking: Cardiac & Cardiovascular Systems: 70/230 (69.8%ile) Rehabilitation: 20/165 (88%ile) Cardiology and Cardiovascular Medicine: 119/397 (70%ile) Pulmonary and Respiratory Medicine: 53/159 (66%ile)\n\neTOC Alert\n\n### ​​Special Announcement: JCRP Offers Rapid Peer Review!​\n\nThe Journal of Cardiopulmonary Rehabilitation and Prevention is pleased to offer select submissions expedited peer review and editorial decision.​\n\nQualifying manuscripts include those previously submitted to a hi",
+     "category": "cardiopulmonary",
+     "source": "AJPM&R",
+     "sourceUrl": "https://journals.lww.com/jcrjournal/pages/default.aspx",
+     "publishedAt": "2026-07-26T06:26:35.944Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 65,
+     "curatedReason": "《心肺康复与预防杂志》现在提供快速同行评审服务。这意味着该领域的最新研究成果会更快发布，你可借此更快获取前沿信息，保持知识更新。",
+     "curatedReasonEn": "The Journal of Cardiopulmonary Rehabilitation and Prevention now offers rapid peer review. This could mean that the latest research in the field will be published more quickly, making it a valuable source for cutting-edge information.",
+     "tags": [
+      "news"
+     ]
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1785104907741-37",
+     "title": "Ahpra Careers - Recent Jobs",
+     "summary": "Ahpra Careers - Recent Jobs\n\n# Current opportunities\n\n## Find opportunities of your interest\n\nSend me jobs like these\n\nWe will email you new jobs that match this search.\n\nGreat, we can send you jobs like this, if this is your first time signing up, please check your inbox to confirm your subscription.\n\nThe email address was invalid, please check for errors.\n\nYou must agree to the privacy statement\n\nSubscribe\n\n## Search results\n\n| Position | Location | Closes |\n| --- | --- | --- |\n| Regulatory Advisor - Notifications | Multiple locations | 27 Apr 2026 |\n| Are you motivated by work that helps prevent harm and strengthens trust in healthcare? Join Ahpra as a Regulatory Advisor and help protect public safety. |\n| Procurement Specialist | Brisbane, Melbourne | 10 Apr 2026 |\n| Play a key role de",
+     "category": "practice",
+     "source": "AHPRA",
+     "sourceUrl": "https://careers.ahpra.gov.au/",
+     "publishedAt": "2026-07-26T12:26:46.346Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 65,
+     "curatedReason": "澳大利亚卫生从业者监管机构 (Ahpra) 正在招聘多个职位。如果你在澳大利亚，并对监管或行政岗位感兴趣，这是一个了解行业动态和职业发展机会的窗口。",
+     "curatedReasonEn": "The Australian Health Practitioner Regulation Agency (Ahpra) is recruiting for various positions. If you are in Australia and interested in regulatory or administrative roles, this is an opportunity to learn about industry trends and career development.",
+     "tags": [
+      "news",
+      "workforce",
+      "Australia"
+     ]
+    },
+    {
+     "id": "news-1785104907741-39",
+     "title": "Critical Review of Public Policy and Health Care in China: The Case of Public Insurance | Society",
+     "summary": "A critical review discussed public policy and healthcare in China, focusing on the case of public insurance.",
+     "category": "practice",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s12115-026-01271-4",
+     "publishedAt": "2026-07-20T00:00:00.000Z",
+     "firstSeen": "2026-07-26T22:28:27.741Z",
+     "curatedScore": 65,
+     "curatedReason": "这篇述评聚焦中国公共保险案例，批判性地讨论了中国的公共政策和医疗保健。它提供了中国医疗保险体系的宏观视角，但与物理治疗的具体临床执业没有直接关系。",
+     "titleZh": "中国公共政策和医疗保健的批判性审查：以公共保险为例",
+     "summaryZh": "一篇批判性评论讨论了中国的公共政策和医疗保健，重点关注公共保险案例。",
+     "curatedReasonEn": "This critical review discusses public policy and healthcare in China, focusing on public insurance. It offers a macro perspective on China's healthcare insurance system, but it is not directly related to specific physical therapy clinical practice.",
+     "limitation": "该评论文章侧重于宏观政策分析，与物理治疗的微观临床实践无直接关联。",
+     "limitationEn": "This commentary focuses on macro-level policy analysis, with no direct relevance to micro-level clinical practice in physical therapy.",
+     "tags": [
+      "research",
+      "policy",
+      "China"
+     ],
+     "studyDesign": "述评"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

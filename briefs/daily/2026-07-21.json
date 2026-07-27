@@ -1,0 +1,413 @@
+{
+ "date": "2026-07-21",
+ "generatedAt": "2026-07-20T22:29:31.045Z",
+ "windowHours": 26,
+ "windowStart": "2026-07-19T22:17:02.205Z",
+ "windowEnd": "2026-07-20T22:29:28.904Z",
+ "lead": {
+  "titleZh": "RCT 证实心理信息物理疗法有效改善服役人员腰痛结局",
+  "titleEn": "RCT Confirms Psychologically Informed PT Improves Low Back Pain Outcomes in Service Members",
+  "paragraphZh": "今日共有 16 条更新，涵盖 6 个专科。最高分条目是两项得分 82 的研究，其中一项是来自骨科与肌骨领域的 RCT，明确指出临床实践指南和心理信息物理疗法对服役人员和退伍军人腰痛结局的积极影响。另一项高分研究是神经康复领域的观察研究，探讨了卒中患者 6 分钟步行测试的测量特性与临床应用价值，值得关注。",
+  "paragraphEn": "Today's update includes 16 items across 6 specialties. The top-scoring entries are two studies with a score of 82. One is an RCT in Orthopedics and Musculoskeletal, indicating a positive impact of clinical practice guidelines and psychologically informed physical therapy on low back pain outcomes in service members and veterans. The other high-scoring study is an observational study in Neurorehabilitation, focusing on the measurement characteristics and clinical utility of the 6-minute walk test in stroke patients, which warrants attention."
+ },
+ "stats": {
+  "events": 16,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 7,
+  "topScore": 82
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1784503081651-0",
+     "title": "The RESOLVE Trial: A Stepped-Wedge, Cluster-Randomized Clinical Trial Evaluating the Effects of Clinical Practice Guidelines and Psychologically Informed Physical Therapy on Low Back Pain Outcomes in Service Members and Veterans.",
+     "summary": "A stepped-wedge, cluster-randomized trial evaluating a clinical practice guideline and psychologically informed physical therapy (CPG+PIPT) implementation strategy found it reduced LBP-related disability, pain, and healthcare utilization in military and veteran settings.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42472470/",
+     "publishedAt": "2026-07-19T00:00:00.000Z",
+     "firstSeen": "2026-07-19T23:18:01.651Z",
+     "curatedScore": 82,
+     "curatedReason": "这项多中心、阶梯式整群随机试验验证了临床指南结合心理干预策略对腰痛患者的疗效，提供了临床决策的重要依据。关注其在军事和退伍军人医疗环境中的应用。",
+     "titleZh": "RESOLVE试验：一项评估临床实践指南和心理信息物理疗法对服役人员和退伍军人腰痛结局影响的分层整群随机临床试验。",
+     "titleEn": "The RESOLVE Trial: A Stepped-Wedge, Cluster-Randomized Clinical Trial Evaluating the Effects of Clinical Practice Guidelines and Psychologically Informed Physical Therapy on Low Back Pain Outcomes in Service Members and Veterans.",
+     "summaryZh": "一项评估临床实践指南与心理信息物理疗法（CPG+PIPT）实施策略的阶梯式整群随机试验，结果显示该策略在军事和退伍军人医疗环境中可减少腰痛相关残疾、疼痛及下游医疗利用。",
+     "curatedReasonEn": "This multi-site, stepped-wedge, cluster-randomized trial validates the effectiveness of clinical guidelines combined with psychologically informed physical therapy for low back pain, offering significant clinical decision-making insights. Focus on its application in military and veteran healthcare settings.",
+     "limitation": "研究仅涵盖军事和退伍军人医疗环境，结果的外推性需谨慎。",
+     "limitationEn": "The study is limited to military and veteran healthcare settings, requiring caution in extrapolating results.",
+     "tags": [
+      "research",
+      "spine",
+      "low-back-pain"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physical therapy"
+    },
+    {
+     "id": "news-1784586557488-14",
+     "title": "Hip range of motion is differentially associated with pain sensitivity in individuals with and without knee osteoarthritis",
+     "summary": "This cross-sectional study aimed to investigate the association between knee pain sensitivity and hip rotator range of motion (ROM) in individuals with and without knee osteoarthritis (KOA), finding differential associations.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42443848/",
+     "publishedAt": "2026-07-13T00:00:00.000Z",
+     "firstSeen": "2026-07-20T22:29:17.488Z",
+     "curatedScore": 75,
+     "curatedReason": "髋关节活动度与膝骨关节炎（KOA）患者和非 KOA 个体的疼痛敏感性存在差异关联。这提示你在评估 KOA 患者时，除了膝关节本身，也要关注髋关节的功能状态及其对疼痛感知的影响。",
+     "titleZh": "髋关节活动度与膝骨关节炎患者和无病个体疼痛敏感性的差异关联",
+     "summaryZh": "这项横断面研究旨在调查膝关节疼痛敏感性与髋关节旋转活动度在膝骨关节炎（KOA）患者和无 KOA 个体中的关联，发现存在差异性关联。",
+     "curatedReasonEn": "Hip range of motion is differentially associated with pain sensitivity in individuals with and without knee osteoarthritis (KOA). This suggests that when evaluating KOA patients, you should also consider hip joint function and its influence on pain perception, beyond the knee itself.",
+     "limitation": "本研究为横断面设计，无法建立因果关系，且样本量未明确。",
+     "limitationEn": "This cross-sectional study cannot establish causality and the sample size was not explicitly stated.",
+     "tags": [
+      "research",
+      "knee",
+      "hip"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1784583402996-11",
+     "title": "Measurement Characteristics and Clinical Utility of the 6-Minute Walk Test Among People with Stroke",
+     "summary": "This study focuses on the measurement characteristics and clinical utility of the 6-Minute Walk Test (6MWT) in individuals with stroke.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(25)01134-7/fulltext?rss=yes",
+     "publishedAt": "2026-07-20T00:00:00.000Z",
+     "firstSeen": "2026-07-20T21:36:42.996Z",
+     "curatedScore": 82,
+     "curatedReason": "卒中患者的 6 分钟步行测试（6MWT）仍是功能评估的重要工具，但你知道它在不同亚组里的测量特性和敏感性差异吗？了解这些细节能帮你更好地解读结果，并根据患者具体情况调整你的康复策略。",
+     "titleZh": "卒中患者 6 分钟步行测试的测量特性和临床应用价值",
+     "summaryZh": "本研究探讨了卒中患者 6 分钟步行测试（6MWT）的测量特性和临床应用价值。",
+     "curatedReasonEn": "The 6-Minute Walk Test (6MWT) remains a vital tool for assessing function in stroke patients. However, do you know the differences in its measurement characteristics and sensitivity across various subgroups? Understanding these details will help you better interpret results and tailor your rehabilitation strategies to the patient's specific condition.",
+     "tags": [
+      "research",
+      "stroke",
+      "assessment"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1784503081653-7",
+     "title": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
+     "summary": "A qualitative study involving stroke survivors, family caregivers, and healthcare professionals in China explored facilitators and barriers to post-stroke health behaviors related to secondary prevention, interpreting findings through the Adaptive Leadership Framework.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42472447/",
+     "publishedAt": "2026-07-19T00:00:00.000Z",
+     "firstSeen": "2026-07-19T23:18:01.653Z",
+     "curatedScore": 75,
+     "curatedReason": "这项定性研究提示，卒中后二级预防的健康行为受患者、家属及医护人员多重因素影响。理解这些障碍和促进因素，有助于制定更有效的干预措施。",
+     "titleZh": "卒中幸存者健康行为的促进与障碍因素探索：一项多视角定性研究。",
+     "titleEn": "Exploring facilitators and barriers to health behaviors in stroke survivors: a multi-perspective qualitative study of patients, families, and healthcare professionals.",
+     "summaryZh": "一项在中国进行的涉及卒中幸存者、家庭照顾者和医疗专业人员的研究，通过适应性领导框架探讨了与二次预防相关的卒中后健康行为的促进和障碍因素。",
+     "curatedReasonEn": "This qualitative study suggests that secondary prevention health behaviors post-stroke are influenced by multiple factors from patients, families, and healthcare professionals. Understanding these barriers and facilitators can help develop more effective interventions.",
+     "limitation": "研究为定性研究，样本量为17例卒中幸存者、10例家属及11名医护人员，且仅限于三家康复医院。",
+     "limitationEn": "This is a qualitative study with a sample size of 17 stroke survivors, 10 family caregivers, and 11 healthcare professionals, limited to three rehabilitation hospitals.",
+     "tags": [
+      "research",
+      "stroke",
+      "health-behaviors"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1784586557488-16",
+     "title": "Robotics and Exoskeletons in Neurorehabilitation",
+     "summary": "This publication provides an overview of robotics and exoskeletons in neurorehabilitation, highlighting technological advancements in the field.",
+     "category": "neurological",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/rwe/10.1007/978-981-96-7448-0_61-1",
+     "publishedAt": "2026-07-20T07:41:16.000Z",
+     "firstSeen": "2026-07-20T22:29:17.488Z",
+     "curatedScore": 70,
+     "curatedReason": "机器人和外骨骼在神经康复领域的技术进步，正重新定义我们治疗卒中、脊髓损伤等患者的方式。关注这些趋势，预判未来数年内它们如何融入你的日常实践。",
+     "titleZh": "神经康复中的机器人和外骨骼",
+     "summaryZh": "这篇出版物概述了神经康复中的机器人和外骨骼技术，强调了该领域的技术进步。",
+     "curatedReasonEn": "Technological advancements in robotics and exoskeletons for neurorehabilitation are redefining how we treat patients with conditions like stroke and spinal cord injury. Pay attention to these trends to anticipate how they will integrate into your daily practice in the coming years.",
+     "tags": [
+      "news",
+      "stroke",
+      "spinal-cord"
+     ],
+     "tech": true
+    },
+    {
+     "id": "news-1784586557488-18",
+     "title": "Disability and Rehabilitation, Volume 48, Issue 15 (2026)",
+     "summary": "The latest issue of \"Disability and Rehabilitation, Volume 48, Issue 15\" has been published, featuring various research articles.",
+     "category": "neurological",
+     "source": "Disabil Rehabil",
+     "sourceUrl": "https://www.tandfonline.com/toc/idre20/current",
+     "publishedAt": "2026-07-18T22:27:38.600Z",
+     "firstSeen": "2026-07-20T22:29:17.488Z",
+     "curatedScore": 65,
+     "curatedReason": "《残疾与康复》期刊的最新一期收录了多篇神经康复相关研究。你可以浏览目录，了解该领域最新进展。",
+     "titleZh": "《残疾与康复》第 48 卷第 15 期（2026）",
+     "summaryZh": "《残疾与康复》第 48 卷第 15 期已出版，收录了多篇研究文章。",
+     "curatedReasonEn": "The latest issue of \"Disability and Rehabilitation\" features multiple studies relevant to neurological rehabilitation. You can browse the table of contents to stay updated on advancements in the field.",
+     "tags": [
+      "news"
+     ]
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1784586557488-19",
+     "title": "Let's talk about sex (and gender) after ACL injury: a ...",
+     "summary": "A systematic review and meta-analysis investigated the influence of sex and gender on self-reported activity and knee-related outcomes after ACL injury.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "https://bjsm.bmj.com/content/bjsports/57/10/602.full.pdf",
+     "publishedAt": "2026-07-20T22:27:43.369Z",
+     "firstSeen": "2026-07-20T22:29:17.488Z",
+     "curatedScore": 75,
+     "curatedReason": "在评估和康复 ACL 损伤患者时，你必须考虑性别对自我报告活动和膝关节结局的影响。这项系统综述和荟萃分析明确显示了性别差异，提示你需要提供更个性化的干预方案。",
+     "titleZh": "ACL 损伤后关于性别与活动的讨论：自我报告活动和膝关节相关结局的系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析探讨了 ACL 损伤后性别对自我报告活动和膝关节相关结局的影响。",
+     "curatedReasonEn": "When evaluating and rehabilitating ACL injury patients, you must consider the influence of sex on self-reported activity and knee-related outcomes. This systematic review and meta-analysis clearly demonstrates sex differences, indicating the need for more personalized intervention plans.",
+     "limitation": "研究发表于 2023 年，部分数据可能不是最新。",
+     "limitationEn": "The study was published in 2023, and some data may not be the most recent.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1784586557489-32",
+     "title": "High-intensity interval training in cancer patients: a bayesian meta-analysis of effects on VO2max, dose–response, and adherence | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A Bayesian meta-analysis on high-intensity interval training (HIIT) in cancer patients investigated its effects on VO2max, dose-response, and adherence, confirming positive impacts and good patient tolerance.",
+     "category": "cardiopulmonary",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01876-6",
+     "publishedAt": "2026-07-20T04:19:02.000Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 80,
+     "curatedReason": "这项针对癌症患者高强度间歇训练（HIIT）的贝叶斯荟萃分析，证实了 HIIT 对最大摄氧量（VO2max）的积极影响、剂量反应关系以及良好的依从性。这表明你可以更有信心地将 HIIT 纳入癌症患者的康复方案，但仍需根据个体情况调整，确保安全性和有效性。",
+     "titleZh": "癌症患者高强度间歇训练：VO2max、剂量反应和依从性的贝叶斯荟萃分析",
+     "summaryZh": "一项针对癌症患者高强度间歇训练（HIIT）的贝叶斯荟萃分析，研究了其对最大摄氧量（VO2max）、剂量反应和依从性的影响，证实了积极效果和良好的患者耐受性。",
+     "curatedReasonEn": "This Bayesian meta-analysis on high-intensity interval training (HIIT) in cancer patients confirms its positive impact on VO2max, dose-response relationship, and good adherence. This suggests you can more confidently incorporate HIIT into cancer patient rehabilitation programs, while still individualizing adjustments to ensure safety and effectiveness.",
+     "limitation": "虽然是贝叶斯荟萃分析，但癌症患者群体异质性大，不同癌症类型和治疗阶段的适用性仍需谨慎考虑。",
+     "limitationEn": "Although a Bayesian meta-analysis, the cancer patient population is highly heterogeneous, and applicability across different cancer types and treatment stages still requires careful consideration.",
+     "tags": [
+      "research",
+      "exercise-physiology"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1784586557489-33",
+     "title": "Supervised pulmonary rehabilitation using minimal or ...",
+     "summary": "A propensity-matched analysis found that supervised pulmonary rehabilitation using minimal or specialist exercise equipment in COPD patients produced similar outcomes, suggesting that complex equipment is not essential.",
+     "category": "cardiopulmonary",
+     "source": "BJSM",
+     "sourceUrl": "https://thorax.bmj.com/content/thoraxjnl/76/3/264.full.pdf",
+     "publishedAt": "2026-07-20T22:27:56.762Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 75,
+     "curatedReason": "针对 COPD 患者，无论使用最少还是专业运动设备进行的有监督肺康复，都能产生相似的效果。这提示你，不必过分依赖昂贵设备，简易运动器材也能有效开展肺康复，提高其在资源有限环境下的可及性。",
+     "titleZh": "COPD 患者使用最少或专业运动设备进行有监督肺康复：倾向匹配分析",
+     "summaryZh": "一项倾向匹配分析发现，COPD 患者无论使用最少还是专业运动设备进行有监督肺康复，都能产生相似的结果，表明复杂设备并非必需。",
+     "curatedReasonEn": "Supervised pulmonary rehabilitation for COPD patients, whether using minimal or specialist exercise equipment, yields similar effects. This suggests that you don't need to over-rely on expensive equipment; simple exercise tools can effectively deliver pulmonary rehabilitation, increasing its accessibility in resource-limited settings.",
+     "limitation": "本研究为回顾性匹配分析，而非随机对照试验，可能存在未控制的混杂因素。",
+     "limitationEn": "This is a retrospective matched-pair analysis, not a randomized controlled trial, and may have unaddressed confounding factors.",
+     "tags": [
+      "research",
+      "copd"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1784586557489-34",
+     "title": "Investigating primary healthcare practitioners' barriers and ...",
+     "summary": "A mixed-methods study using the Theoretical Domains Framework investigated primary healthcare practitioners' barriers and enablers to referring COPD patients to pulmonary rehabilitation.",
+     "category": "cardiopulmonary",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/12/1/e046875.full.pdf",
+     "publishedAt": "2026-07-20T22:27:56.762Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 75,
+     "curatedReason": "要提高 COPD 肺康复的转诊率和患者依从性，你需要了解初级保健医生在转诊中的具体障碍和促成因素。这项研究指明了沟通和协作的重点，以便你能更有效地与他们合作。",
+     "titleZh": "调查初级保健医生转诊 COPD 患者至肺康复的障碍和促成因素：一项基于理论领域框架的混合方法研究",
+     "summaryZh": "一项采用理论领域框架的混合方法研究，调查了初级保健医生将 COPD 患者转诊至肺康复的障碍和促成因素。",
+     "curatedReasonEn": "This study explores barriers and enablers for primary healthcare practitioners referring COPD patients to pulmonary rehabilitation. This can help you understand key points for communication and collaboration with primary care physicians, thereby increasing referral rates and patient adherence to COPD pulmonary rehabilitation.",
+     "limitation": "这是一项混合方法研究，其定性部分可能受访谈者主观性影响，定量部分未明确具体数据。",
+     "limitationEn": "This is a mixed-methods study; its qualitative component may be influenced by interviewee subjectivity, and the quantitative component does not specify concrete data.",
+     "tags": [
+      "research",
+      "copd"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1784586557489-35",
+     "title": "based exercise adherence after stroke: a Delphi consensus",
+     "summary": "A Delphi consensus study aimed to develop strategies to support home-based exercise adherence after stroke, providing a framework for improving patient engagement in rehabilitation.",
+     "category": "cardiopulmonary",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/12/1/e055946.full.pdf",
+     "publishedAt": "2026-07-20T22:27:58.412Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 75,
+     "curatedReason": "这项德尔菲共识研究为支持卒中后居家运动依从性制定了策略。你可以参考这些策略，改进你对卒中患者居家康复的指导和支持，提高其长期依从性。",
+     "titleZh": "支持卒中后居家运动依从性策略的制定：一项德尔菲共识",
+     "summaryZh": "一项德尔菲共识研究旨在制定支持卒中后居家运动依从性的策略，为改善患者康复参与度提供了框架。",
+     "curatedReasonEn": "This Delphi consensus study developed strategies to support home-based exercise adherence after stroke. You can refer to these strategies to improve your guidance and support for stroke patients' home-based rehabilitation, enhancing their long-term adherence.",
+     "limitation": "德尔菲共识研究结果依赖于专家意见，而非直接临床证据，可能存在专家群体代表性偏差。",
+     "limitationEn": "Delphi consensus results rely on expert opinions rather than direct clinical evidence, which may lead to biases in expert panel representation.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1784586557489-38",
+     "title": "The impact of timing on bright light therapy: Alleviating anhedonia and circadian rhythm disturbances in depression patients: a randomized controlled trial",
+     "summary": "A single-blind, placebo-controlled randomized controlled trial (n=81) investigated the effectiveness of bright light therapy (BLT) at different times (morning vs. evening) in alleviating anhedonia and circadian rhythm disturbances in depression patients.",
+     "category": "manual-modality",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/41785919/",
+     "publishedAt": "2026-07-15T00:00:00.000Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 70,
+     "curatedReason": "这项随机对照试验显示，不同时间段的强光疗法对抑郁症患者的快感缺失和昼夜节律紊乱有影响。这提示你在康复中遇到伴有抑郁和睡眠问题的患者时，可以考虑将强光疗法作为辅助干预，但需要关注具体应用时机。",
+     "titleZh": "时机对强光疗法的影响：缓解抑郁症患者的快感缺失和昼夜节律紊乱：一项随机对照试验",
+     "summaryZh": "一项单盲、安慰剂对照的随机对照试验（n=81）调查了不同时间（早晨 vs. 晚上）强光疗法在缓解抑郁症患者快感缺失和昼夜节律紊乱方面的有效性。",
+     "curatedReasonEn": "This randomized controlled trial shows that bright light therapy at different timings affects anhedonia and circadian rhythm disturbances in depression patients. This suggests that when you encounter patients with depression and sleep problems in rehabilitation, you can consider bright light therapy as an adjunctive intervention, but pay attention to the specific timing of application.",
+     "limitation": "本研究为单盲设计，且样本量相对较小（n=81），结果的普遍性和长期有效性需进一步验证。",
+     "limitationEn": "This study was single-blinded and had a relatively small sample size (n=81); the generalizability and long-term effectiveness of the results require further validation.",
+     "tags": [
+      "research",
+      "electro"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1784586557489-37",
+     "title": "Biomechanical patterns associated with body mass index in percutaneous transforaminal endoscopic decompression models of elderly lumbar spinal stenosis with severe disc degeneration and osteoporosis: a finite element study",
+     "summary": "A finite element study investigated BMI-related biomechanical patterns in elderly lumbar spinal stenosis patients with severe disc degeneration and osteoporosis following percutaneous transforaminal endoscopic decompression (PTED), focusing on postoperative kinematics and load redistribution.",
+     "category": "manual-modality",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42449306/",
+     "publishedAt": "2026-07-14T00:00:00.000Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 65,
+     "curatedReason": "这项有限元研究探讨了老年腰椎管狭窄症患者经皮椎间孔内窥镜减压术（PTED）后，BMI 对生物力学模式的影响。目前该研究属于工程力学建模范畴，不能直接指导临床康复方案，但可作为了解手术对脊柱生物力学影响的参考。",
+     "titleZh": "BMI 对经皮椎间孔内窥镜减压术治疗重度椎间盘退变和骨质疏松老年腰椎管狭窄症生物力学模式的影响：一项有限元研究",
+     "summaryZh": "一项有限元研究调查了 BMI 对经皮椎间孔内窥镜减压术 (PTED) 治疗重度椎间盘退变和骨质疏松老年腰椎管狭窄症患者生物力学模式的影响，重点关注术后运动学和载荷再分配。",
+     "curatedReasonEn": "This finite element study explores the impact of BMI on biomechanical patterns after percutaneous transforaminal endoscopic decompression (PTED) in elderly patients with lumbar spinal stenosis. Currently, this study falls within the scope of engineering mechanics modeling and cannot directly guide clinical rehabilitation protocols, but it can serve as a reference for understanding the biomechanical effects of surgery on the spine.",
+     "limitation": "这是一项有限元研究，属于计算机模拟，结果的临床转化性和现实应用性有待进一步验证。",
+     "limitationEn": "This is a finite element study, which is a computer simulation; the clinical translatability and real-world applicability of its results require further validation.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1784586557489-39",
+     "title": "Acupressure Improves Quality of Life During Radiotherapy for Head and Neck Cancer: Study",
+     "summary": "Researchers found that traditional and auricular acupressure improved physical, psychological, social, environmental, and overall quality of life in head and neck cancer patients undergoing radiotherapy, suggesting it may be a safe, low-risk supportive therapy.",
+     "category": "manual-modality",
+     "source": "Medical Dialogues",
+     "sourceUrl": "https://medicaldialogues.in/oncology/news/acupressure-improves-quality-of-life-during-radiotherapy-for-head-and-neck-cancer-study-175334",
+     "publishedAt": "2026-07-19T00:00:00.000Z",
+     "firstSeen": "2026-07-20T22:29:17.489Z",
+     "curatedScore": 65,
+     "curatedReason": "传统和耳穴按压法改善了头颈癌放疗患者的生活质量。尽管证据仍在累积中，你可以在临床上将按压作为安全、低风险的辅助疗法，帮助患者缓解治疗期间的不适。",
+     "titleZh": "研究：按压疗法改善头颈癌放疗期间的生活质量",
+     "summaryZh": "研究人员发现，传统和耳穴按压法改善了头颈癌放疗患者的生理、心理、社会、环境和整体生活质量，表明它可能是一种安全、低风险的辅助疗法。",
+     "curatedReasonEn": "Traditional and auricular acupressure improved quality of life for head and neck cancer radiotherapy patients. While evidence is still accumulating, you can clinically use acupressure as a safe, low-risk adjunctive therapy to help patients alleviate discomfort during treatment.",
+     "limitation": "这是一篇新闻报道，基于一项研究的结论，但未提供研究的具体方法、样本量和详细数据，无法评估证据等级。",
+     "limitationEn": "This is a news report based on a study's conclusion, but it does not provide specific methods, sample size, or detailed data from the study, making it impossible to assess the level of evidence.",
+     "tags": [
+      "news"
+     ]
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1784532939930-4",
+     "title": "[Perspectives] The art of fidelity: clinical documentation and ambient AI",
+     "summary": "A perspective piece highlights the current limitations of ambient AI in clinical documentation, noting its tendency to miss crucial patient narratives like caregiving burden and medication adherence issues, even while accurately recording medical facts.",
+     "category": "practice",
+     "source": "The Lancet",
+     "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01388-7/fulltext?rss=yes",
+     "publishedAt": "2026-07-18T00:00:00.000Z",
+     "firstSeen": "2026-07-20T07:35:39.930Z",
+     "curatedScore": 75,
+     "curatedReason": "人工智能在医疗记录中的应用正在改变工作流程，但你也应警惕其在抓取患者核心问题时的局限性，尤其是那些未被直接言明的社会心理因素。",
+     "titleZh": "人工智能病历：忠实度与临床洞察的平衡",
+     "summaryZh": "一篇评论文章指出，环境人工智能在临床记录方面存在局限性，它可能忽略患者重要的叙述，如护理负担和药物依从性问题，即使其医学记录准确无误。",
+     "curatedReasonEn": "AI's application in medical documentation is transforming workflows, but you should be wary of its limitations in capturing core patient issues, especially unspoken psychosocial factors.",
+     "tags": [
+      "news",
+      "telehealth"
+     ],
+     "journal": "The Lancet",
+     "tech": true
+    },
+    {
+     "id": "news-1784503081653-10",
+     "title": "Perspectives of Private Practice Physical Therapy Health Care Systems Participating in a Pragmatic Clinical Trial: A Qualitative Study.",
+     "summary": "A qualitative study sharing the perspectives of four private practice physical therapy health care systems participating in a pragmatic clinical trial (FM-TIPS) may benefit clinicians and researchers considering non-academic settings in research.",
+     "category": "practice",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42472467/",
+     "publishedAt": "2026-07-19T00:00:00.000Z",
+     "firstSeen": "2026-07-19T23:18:01.653Z",
+     "curatedScore": 70,
+     "curatedReason": "对于考虑在私立诊所开展临床研究的同行，这项定性研究提示了与学术机构不同的挑战与机遇。然而，仅有 4 个系统参与，结果的外推性有限。",
+     "titleZh": "参与实用临床试验的私营物理治疗医疗系统参与者的视角：一项定性研究。",
+     "titleEn": "Perspectives of Private Practice Physical Therapy Health Care Systems Participating in a Pragmatic Clinical Trial: A Qualitative Study.",
+     "summaryZh": "一项定性研究分享了参与实用临床试验（FM-TIPS）的四家私营物理治疗医疗系统的视角，可能有助于考虑非学术环境参与研究的临床医生和研究人员。",
+     "curatedReasonEn": "For peers considering clinical research in private practice, this qualitative study highlights distinct challenges and opportunities compared to academic settings. However, with only 4 systems involved, the generalizability of findings is limited.",
+     "limitation": "研究的视角仅限于参与一项具体试验的四家诊所。",
+     "limitationEn": "The perspectives are limited to four clinics involved in one specific trial.",
+     "tags": [
+      "research",
+      "practice",
+      "private-practice"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physical therapy"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
