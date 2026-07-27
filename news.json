@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-27T17:59:10.651Z",
-    "totalItems": 43,
+    "lastUpdated": "2026-07-27T20:00:06.749Z",
+    "totalItems": 44,
     "categories": [
       "orthopedic",
       "neurological",
@@ -93,9 +93,9 @@
           "titleZh": "间歇性口咽管饲法与鼻胃管饲法治疗卒中后吞咽困难的多模态评估：一项随机对照试验"
         }
       ],
-      "heat": 4.63,
-      "themeZh": "卒中后康复策略、并发症与生活质量研究",
-      "themeEn": "Post-stroke rehabilitation, complications, and quality of life"
+      "heat": 4.49,
+      "themeZh": "卒中后康复：多维因素与干预策略",
+      "themeEn": "Stroke Rehabilitation: Multifactorial Interventions and Outcomes"
     },
     {
       "id": "news-1785049661034-0",
@@ -138,9 +138,9 @@
           "titleZh": "信息和通信技术在促进专职医疗人员卒中后康复指南依从性实施策略中的应用：一项范围综述"
         }
       ],
-      "heat": 2.18,
-      "themeZh": "数字健康与远程医疗在物理治疗中的应用与评估",
-      "themeEn": "Digital health and telehealth in physiotherapy"
+      "heat": 2.12,
+      "themeZh": "数字健康技术在物理治疗与康复中的应用",
+      "themeEn": "Digital Health in Physiotherapy and Rehabilitation"
     },
     {
       "id": "news-1784829048252-0",
@@ -176,9 +176,9 @@
           "titleZh": "积极心理学干预对脊髓损伤成人患者的影响：一项系统综述和 Meta 分析"
         }
       ],
-      "heat": 1.64,
-      "themeZh": "脊髓损伤康复中的神经调控与心理干预",
-      "themeEn": "Neurostimulation and psychological SCI rehabilitation"
+      "heat": 1.59,
+      "themeZh": "脊髓损伤康复：神经技术与心理干预",
+      "themeEn": "SCI Rehabilitation: Neurotech and Psychological Interventions"
     },
     {
       "id": "news-1784742300472-1",
@@ -221,12 +221,36 @@
           "titleZh": "针对上肢疼痛的脊柱检查和治疗：一个病例系列"
         }
       ],
-      "heat": 1.54,
-      "themeZh": "脊柱与下肢疼痛的评估、定义与治疗",
-      "themeEn": "Spine and lower extremity pain management"
+      "heat": 1.5,
+      "themeZh": "脊柱相关疼痛的评估与非手术治疗",
+      "themeEn": "Spine Pain Assessment and Non-surgical Treatment"
     }
   ],
   "items": [
+    {
+      "id": "news-1783928886960-12",
+      "title": "Prediction of Exercise Intolerance in the Recovery Period After Cardiovascular Surgery Using Perioperative Clinical Parameters.",
+      "summary": "This retrospective cohort study (N=590) developed and validated a machine learning model to predict reduced exercise capacity 3 months post-cardiovascular surgery using clinical parameters available at hospital discharge.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42437656/",
+      "publishedAt": "2026-07-13T00:00:00.000Z",
+      "firstSeen": "2026-07-13T07:48:06.960Z",
+      "curatedScore": 70,
+      "curatedReason": "本研究提示，我们或许能利用患者出院时的临床数据，通过机器学习模型识别心血管术后 3 个月内运动能力下降的高风险患者。尽管是回顾性研究，但这一工具值得未来前瞻性验证，以期实现早期干预。",
+      "titleZh": "利用围手术期临床参数预测心血管手术后恢复期运动不耐受",
+      "summaryZh": "这项回顾性队列研究（N=590）开发并验证了一个机器学习模型，用于利用患者出院时的临床参数，预测心血管手术后 3 个月的运动能力下降。",
+      "curatedReasonEn": "This study suggests that machine learning models, using clinical data at discharge, might help identify patients at high risk of reduced exercise capacity 3 months post-cardiovascular surgery. While retrospective, this tool warrants prospective validation for earlier intervention.",
+      "limitation": "本研究为单中心回顾性队列研究，且纳入患者年龄限制在 75 岁以下，结果外推性有限。",
+      "limitationEn": "This was a single-center retrospective cohort study, and the inclusion of patients aged ≤ 75 years limits the generalizability of the findings.",
+      "tags": [
+        "research",
+        "heart-rehabilitation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1785175148947-0",
       "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
