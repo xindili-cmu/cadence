@@ -1,72 +1,49 @@
 {
  "date": "2026-07-27",
- "generatedAt": "2026-07-27T11:53:30.615Z",
+ "generatedAt": "2026-07-27T11:54:59.869Z",
  "windowHours": 26,
- "windowStart": "2026-07-26T09:53:24.358Z",
- "windowEnd": "2026-07-27T11:53:24.358Z",
+ "windowStart": "2026-07-26T09:54:55.774Z",
+ "windowEnd": "2026-07-27T11:54:55.774Z",
  "lead": {
-  "titleZh": "女性SUI术后急迫性尿失禁症状变化成焦点，多个观察研究关注可修改风险因素",
-  "titleEn": "Post-SUI Surgery Urgency Incontinence Changes in Focus; Modifiable Risk Patterns Emerge Across Cohorts",
-  "paragraphZh": "今日5条条目分布在4个专科，最高分条目（75分）来自尿失禁手术后遗症追踪的观察研究。背痛患者的可修改健康风险模式分析与运动肌肉拉伤的情境特征并列次高（70分）。同时期儿童康复和老年康复分别推进了偏瘫患手能力的RCT方案和步态生物标志物的传感器研究，但分数在65-70分段。总体信号：骨科与肌骨领域继续主导议程，可修改因素的分层识别正成为热点。",
-  "paragraphEn": "Today's five items span four specialties, with the highest-scored entry (75) tracking post-SUI surgery urgency incontinence outcomes in an observational cohort. Back pain modifiable risk profiling and sport-related muscle strain situational analysis tie at 70 points. Meanwhile, pediatric rehabilitation advances a PAM-AOT RCT protocol for hemiplegic hand function, and geriatric research correlates uric acid with wearable-derived gait metrics. The musculoskeletal track retains prominence; stratification by modifiable risk phenotypes is gaining traction."
+  "titleZh": "卒中后早期康复剂量安全性：日本医疗索赔数据观察研究",
+  "titleEn": "Early Rehabilitation Dose Safety After Stroke: Insights from Japanese National Medical Claims Data",
+  "paragraphZh": "今日 3 条信号聚焦神经、运动、儿童三大康复方向。最值得关注的是日本全国医疗索赔数据的观察研究（score 75），直接评估卒中后早期康复剂量与复合结局的安全性关联——这类真实世界证据对临床剂量决策具有参考价值。另有儿童偏瘫手功能的 RCT 方案（score 65）和运动肌肉拉伤情境特征的述评（score 70）可作补充阅读。",
+  "paragraphEn": "Three signals today span neurological, sports, and pediatric rehabilitation. The highest-scored finding (75 points) is an observational study using nationwide Japanese medical claims data, directly examining safety associations between early rehabilitation dosing and composite outcomes after stroke—real-world evidence of practical value for dosing decisions in clinical practice. A pediatric stroke RCT protocol (65 points) and situational analysis of sports muscle strains (70 points) merit supplementary review."
  },
  "stats": {
-  "events": 5,
-  "specialties": 4,
+  "events": 3,
+  "specialties": 3,
   "multiSource": 0,
-  "sources": 4,
+  "sources": 2,
   "topScore": 75
  },
  "sections": [
   {
-   "category": "orthopedic",
-   "label": "骨科与肌骨",
+   "category": "neurological",
+   "label": "神经康复",
    "items": [
     {
-     "id": "news-1785104907740-4",
-     "title": "Changes in Urgency Urinary Incontinence Symptoms After Stress Urinary Incontinence Surgery in Women",
-     "summary": "An observational study investigated changes in urgency urinary incontinence symptoms after stress urinary incontinence surgery in women, noting potential improvements, worsening, or de novo onset.",
-     "category": "orthopedic",
-     "source": "Int Urogynecol J",
-     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06813-2",
-     "publishedAt": "2026-07-21T00:00:00.000Z",
-     "firstSeen": "2026-07-26T22:28:27.740Z",
+     "id": "news-1785152713425-0",
+     "title": "Safety of Early Rehabilitation Dose After Stroke on Composite Outcomes: Analysis of Nationwide Japanese Medical Claims Data.",
+     "summary": "This study analyzed Japanese medical claims data from 2018-2022 to evaluate the safety of early in-hospital rehabilitation (20-60 min/day initiated on days 1 or 2) after stroke in patients aged ≥ 18 years, finding no increased risk of adverse events.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42504690/",
+     "publishedAt": "2026-07-27T00:00:00.000Z",
+     "firstSeen": "2026-07-27T11:45:13.425Z",
      "curatedScore": 75,
-     "curatedReason": "这项观察研究发现压力性尿失禁手术可能改善或加重急迫性尿失禁症状，甚至引起新发症状。在术前咨询时，务必告知患者这些潜在风险，并强调术后对急迫性症状的持续评估和管理的重要性。",
-     "titleZh": "女性压力性尿失禁手术后急迫性尿失禁症状的变化",
-     "summaryZh": "一项观察性研究探讨了女性压力性尿失禁手术后急迫性尿失禁症状的变化，指出可能改善、恶化或新发。",
-     "curatedReasonEn": "This observational study found that stress urinary incontinence surgery can either improve or worsen urgency urinary incontinence symptoms, or even cause de novo symptoms. During preoperative counseling, it is crucial to inform patients about these potential risks and emphasize the importance of ongoing assessment and management of urgency symptoms post-surgery.",
-     "limitation": "该研究为观察性研究，未能明确说明因果关系。",
-     "limitationEn": "This observational study did not clearly establish causality.",
+     "curatedReason": "这项日本大型索赔数据分析提示，卒中后 1-2 天内早期康复是安全的，并无额外不良事件风险。你可以放心地在卒中急性期早期介入，无需担忧安全性问题。",
+     "titleZh": "卒中后早期康复剂量对复合结局的安全性的分析：日本全国医疗索赔数据。",
+     "summaryZh": "这项基于 2018-2022 年日本医疗索赔数据的大型观察研究评估了卒中后早期（1-2 天内开始，20-60 分钟/天）院内康复的安全性，发现其并无额外不良事件风险。",
+     "curatedReasonEn": "This large Japanese claims data analysis suggests that early rehabilitation within 1-2 days post-stroke is safe, with no additional risk of adverse events. You can confidently intervene in the acute phase of stroke without safety concerns.",
+     "limitation": "本研究基于日本医保索赔数据，可能存在混杂因素，且结局指标仅限于安全性。",
+     "limitationEn": "This study, based on Japanese medical claims data, may be subject to confounding factors, and the outcome measures were limited to safety.",
      "tags": [
       "research",
-      "pelvic-floor"
+      "stroke"
      ],
      "studyDesign": "观察研究",
-     "journal": "International Urogynecology Journal"
-    },
-    {
-     "id": "news-1785104907740-2",
-     "title": "Modifiable health-risk patterns among patients with back pain: a latent class analysis",
-     "summary": "A latent class analysis identified modifiable health-risk patterns among patients with back pain, providing insights into comorbidity profiles.",
-     "category": "orthopedic",
-     "source": "BMC Musculoskelet Disord",
-     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10256-7",
-     "publishedAt": "2026-07-20T00:00:00.000Z",
-     "firstSeen": "2026-07-26T22:28:27.740Z",
-     "curatedScore": 70,
-     "curatedReason": "这项研究利用潜在类别分析揭示了背痛患者中可修改的健康风险模式。了解这些模式能帮助你更精准地识别和干预患者的共病风险，优化康复策略。",
-     "titleZh": "背痛患者中可修改的健康风险模式：一项潜在类别分析",
-     "summaryZh": "一项潜在类别分析在背痛患者中识别了可修改的健康风险模式，为共病概况提供了见解。",
-     "curatedReasonEn": "You need to identify comorbidity risks in back pain patients more precisely. This latent class analysis reveals multiple modifiable health-risk patterns. Understanding these patterns will help you tailor intervention plans and improve rehabilitation outcomes.",
-     "limitation": "潜在类别分析为观察性研究，无法直接建立因果关系，且结果可能受限于所纳入变量。",
-     "limitationEn": "Latent class analysis is observational and cannot establish direct causality; results may be limited by included variables.",
-     "tags": [
-      "research",
-      "spine"
-     ],
-     "studyDesign": "观察研究",
-     "journal": "BMC Musculoskeletal Disorders"
+     "journal": "Neurorehabilitation and neural repair"
     }
    ]
   },
@@ -91,9 +68,7 @@
      "tags": [
       "news",
       "injury-prevention"
-     ],
-     "titleZh": "BJSM 博客：运动中肌肉拉伤的情境特征分析",
-     "summaryZh": "该博客基于 BJSM 新发表的研究，通过 21 项研究和 728 起肌肉拉伤的录像分析，系统梳理损伤发生时的动作模式与接触机制，指出尽管预防手段众多，拉伤发生率依然高企。"
+     ]
     }
    ]
   },
@@ -121,36 +96,6 @@
       "research"
      ],
      "studyDesign": "RCT"
-    }
-   ]
-  },
-  {
-   "category": "geriatric",
-   "label": "老年康复",
-   "items": [
-    {
-     "id": "news-1785104907741-21",
-     "title": "Associations of uric acid with wearable sensor-derived digital gait characteristics in older adults: vigor, symmetry, and stability",
-     "summary": "A study found associations of uric acid levels with wearable sensor-derived digital gait characteristics (vigor, symmetry, and stability) in older adults.",
-     "category": "geriatric",
-     "source": "BMC Geriatrics",
-     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-07993-8",
-     "publishedAt": "2026-07-21T00:00:00.000Z",
-     "firstSeen": "2026-07-26T22:28:27.741Z",
-     "curatedScore": 70,
-     "curatedReason": "尿酸水平可能与老年人的步态活力、对称性和稳定性相关。这项研究提示，尿酸或许能作为识别步态异常高风险老年患者的生物标志物，值得你在临床中留意。",
-     "titleZh": "老年人尿酸与可穿戴传感器衍生的数字步态特征（活力、对称性和稳定性）的关联",
-     "summaryZh": "一项研究发现老年人的尿酸水平与可穿戴传感器衍生的数字步态特征（活力、对称性和稳定性）之间存在关联。",
-     "curatedReasonEn": "Uric acid levels may be associated with gait vigor, symmetry, and stability in older adults. This study suggests that uric acid could serve as a biomarker to identify older patients at high risk for gait abnormalities, which is worth noting in your clinical practice.",
-     "limitation": "这是一项横断面研究，无法建立尿酸与步态特征之间的因果关系。",
-     "limitationEn": "This was a cross-sectional study, which cannot establish a causal relationship between uric acid and gait characteristics.",
-     "tags": [
-      "research",
-      "gait-training"
-     ],
-     "studyDesign": "观察研究",
-     "tech": true,
-     "journal": "BMC Geriatrics"
     }
    ]
   }
