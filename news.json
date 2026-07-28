@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-28T17:48:03.487Z",
-    "totalItems": 71,
+    "lastUpdated": "2026-07-28T19:56:49.248Z",
+    "totalItems": 72,
     "categories": [
       "orthopedic",
       "neurological",
@@ -110,9 +110,9 @@
           "titleZh": "γ-经颅交流电刺激改善卒中患者上肢运动功能并调节震荡失衡：一项试点随机对照试验"
         }
       ],
-      "heat": 4.92,
-      "themeZh": "卒中后康复预后影响因素及并发症",
-      "themeEn": "Post-stroke rehabilitation outcomes and complications"
+      "heat": 4.77,
+      "themeZh": "卒中后康复预后因素与神经机制",
+      "themeEn": "Stroke Rehabilitation Prognosis and Neural Mechanisms"
     },
     {
       "id": "news-1785260881030-0",
@@ -172,9 +172,9 @@
           "titleZh": "数字成瘾与身体平衡：一项针对年轻人的姿势稳定性调查：一项横断面研究"
         }
       ],
-      "heat": 4.64,
-      "themeZh": "平衡功能障碍的评估与干预",
-      "themeEn": "Balance impairment assessment and intervention"
+      "heat": 4.5,
+      "themeZh": "多种因素影响老年人与慢性疾病患者的平衡和跌倒",
+      "themeEn": "Balance and Falls in Older Adults"
     },
     {
       "id": "news-1785049661034-0",
@@ -230,9 +230,9 @@
           "titleZh": "改良运动迟缓评定量表（MBRS）的内容效度、信度及现场与视频通话评估的一致性研究"
         }
       ],
-      "heat": 2.32,
-      "themeZh": "数字健康技术在物理治疗中的应用",
-      "themeEn": "Digital health in physiotherapy"
+      "heat": 2.25,
+      "themeZh": "数字健康技术在物理治疗与康复中的应用与评估",
+      "themeEn": "Digital Health in Physiotherapy and Rehabilitation"
     },
     {
       "id": "news-1784329952322-2",
@@ -289,9 +289,9 @@
           "titleZh": "多模态表型分析肌筋膜疼痛综合征：旋转剪切波弹性成像与临床网络分析的应用"
         }
       ],
-      "heat": 2.19,
-      "themeZh": "肩痛康复：评估、治疗与依从性",
-      "themeEn": "Shoulder pain rehabilitation: assessment, treatment, adherence"
+      "heat": 2.12,
+      "themeZh": "肩肘疼痛的治疗方法与康复管理",
+      "themeEn": "Shoulder and Elbow Pain Management"
     },
     {
       "id": "news-1784829048252-0",
@@ -333,12 +333,35 @@
           "titleZh": "积极心理学干预对脊髓损伤成人患者的影响：一项系统综述和 Meta 分析"
         }
       ],
-      "heat": 1.55,
-      "themeZh": "脊髓损伤康复中的神经工程与干预",
-      "themeEn": "Neuroengineering and interventions for SCI rehabilitation"
+      "heat": 1.5,
+      "themeZh": "脊髓损伤康复中的神经工程与智能技术应用",
+      "themeEn": "Neuroengineering in SCI Rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1784050637091-0",
+      "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
+      "summary": "A systematic review and meta-analysis of RCTs found similar clinical effects among different non-thrust joint mobilization techniques (alone or combined with exercise) on pain and function for shoulder adhesive capsulitis, with no significant differences in efficacy between techniques.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42446287/",
+      "publishedAt": "2026-07-14T00:00:00.000Z",
+      "firstSeen": "2026-07-14T17:37:17.091Z",
+      "curatedScore": 85,
+      "curatedReason": "针对冻结肩，这项系统综述发现各种非冲击性关节松动技术（包括关节松动术联合运动疗法）在疼痛和功能改善上效果类似，没有显著优劣。这意味着你在选择技术时有更大的灵活性，可根据患者反应和偏好来调整。",
+      "titleZh": "不同关节松动技术治疗肩周炎的比较疗效：随机对照试验的系统综述和 Meta 分析",
+      "summaryZh": "一项针对肩周炎的随机对照试验系统综述和 Meta 分析显示，不同非冲击性关节松动技术（包括单独使用或与运动结合）在改善疼痛和功能方面的临床效果相似，各技术间没有显著疗效差异。",
+      "curatedReasonEn": "For adhesive capsulitis, this systematic review found similar efficacy among various non-thrust joint mobilization techniques (including joint mobilization combined with exercise therapy) for pain and functional improvement, with no significant superiority of one over another. This gives you greater flexibility in choosing techniques, allowing for adjustments based on patient response and preference.",
+      "limitation": "原始研究存在中高异质性，且纳入研究数量和样本量有限，可能影响结果的精确性和外推性。",
+      "limitationEn": "The original studies exhibited moderate to high heterogeneity, and the limited number of included studies and sample sizes may affect the precision and generalizability of the results.",
+      "tags": [
+        "research",
+        "manipulation"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "The Journal of manual & manipulative therapy"
+    },
     {
       "id": "news-1785175148947-0",
       "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
