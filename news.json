@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-28T03:42:53.333Z",
-    "totalItems": 71,
+    "lastUpdated": "2026-07-28T10:47:10.318Z",
+    "totalItems": 72,
     "categories": [
       "orthopedic",
       "neurological",
@@ -20,14 +20,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468873/",
       "category": "neurological",
       "publishedAt": "2026-07-27T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 9,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Neurorehabilitation and neural repair",
         "Egypt Rheumatol Rehabil",
         "NeuroRehabilitation",
         "Disability and rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of rehabilitation medicine",
         "BMC Geriatrics",
         "medRxiv",
@@ -79,12 +78,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
-          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
-        },
-        {
-          "source": "PubMed",
           "journal": "Journal of rehabilitation medicine",
           "title": "Outpatient rehabilitation can prevent suicide after acquired brain injury.",
           "titleZh": "门诊康复可以预防获得性脑损伤后的自杀"
@@ -117,23 +110,81 @@
           "titleZh": "γ-经颅交流电刺激改善卒中患者上肢运动功能并调节震荡失衡：一项试点随机对照试验"
         }
       ],
-      "heat": 6.7,
-      "themeZh": "卒中后康复预后影响因素与早期干预安全性",
-      "themeEn": "Post-stroke rehabilitation predictors and early intervention safety"
+      "heat": 5.45,
+      "themeZh": "卒中后康复预后因素与综合干预研究",
+      "themeEn": "Stroke Rehabilitation Outcomes and Integrated Interventions"
+    },
+    {
+      "id": "news-1785235626855-0",
+      "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517264/",
+      "category": "geriatric",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "BMC Geriatrics",
+        "Disability and rehabilitation",
+        "BMC Sports Sci Med Rehabil",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+      ],
+      "tag": "fall-prevention",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
+          "titleZh": "防跌倒 App（SAFE app）对社区老年人跌倒风险分类的影响：单盲随机对照初步试验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "title": "Handgrip and leg strength and risk of severe fall injuries in adults aged ≥ 80 years: a prospective HUNT study",
+          "titleZh": "80 岁及以上成人手握力和腿部力量与严重跌倒伤害风险：一项前瞻性 HUNT 研究"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "title": "Associations of uric acid with wearable sensor-derived digital gait characteristics in older adults: vigor, symmetry, and stability",
+          "titleZh": "老年人尿酸与可穿戴传感器数字步态特征（活力、对称性和稳定性）的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Enhancing dynamic postural stability during gait in Parkinson's disease with textured insoles and auditory cue training: a randomized controlled trial study.",
+          "titleZh": "纹理鞋垫与听觉提示训练在帕金森病患者中增强步态动态姿势稳定性：一项随机对照试验"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "title": "Diagnostic accuracy of biodex balance system stability indices under single- and dual-task conditions in individuals with chronic ankle instability | BMC Sports Science, Medicine and Rehabilitation",
+          "titleZh": "慢性踝关节不稳患者单任务和双任务条件下 Biodex 平衡系统稳定性指标的诊断准确性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Digital Addiction and Body Balance: An Investigation of Postural Stability in Young Adults: A Cross-Sectional Study.",
+          "titleZh": "数字成瘾与身体平衡：一项针对年轻人的姿势稳定性调查：一项横断面研究"
+        }
+      ],
+      "heat": 4.28,
+      "themeZh": "老年人跌倒风险与姿态平衡的量化评估",
+      "themeEn": "Fall Risk and Postural Balance Quantification in Elderly"
     },
     {
       "id": "news-1785049661034-0",
       "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
       "category": "orthopedic",
-      "publishedAt": "2026-07-27T00:00:00.000Z",
-      "sourceCount": 3,
+      "publishedAt": "2026-07-26T00:00:00.000Z",
+      "sourceCount": 6,
       "sources": [
         "Archives of physical medicine and rehabilitation",
-        "BMC Musculoskelet Disord",
-        "medRxiv"
+        "Brazilian journal of physical therapy",
+        "BMC Geriatrics",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "Topics in stroke rehabilitation",
+        "Disability and rehabilitation"
       ],
-      "tag": "shoulder",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
@@ -143,10 +194,55 @@
           "titleZh": "分层融合物理治疗结合数字健康对颈肩痛的成本效益：一项整群随机临床试验结果"
         },
         {
-          "source": "BMC Musculoskelet Disord",
-          "title": "Video-based examination of patients with shoulder pain: a scoping review",
-          "titleZh": "肩痛患者视频评估的范围综述"
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Exploring equity in telehealth interventions in physiotherapy: A meta-epidemiological study.",
+          "titleZh": "探索物理治疗远程医疗干预中的公平性：一项荟萃流行病学研究"
         },
+        {
+          "source": "BMC Geriatrics",
+          "title": "Effectiveness of different modes of digital health interventions for sarcopenia in older adults: a systematic review and network meta-analysis",
+          "titleZh": "不同模式数字健康干预对老年肌少症患者的有效性：一项系统综述和网络 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "Lifestyle medicine innovations: Physical activity assessment in patient care and implementation of a digital health platform to support healthier movement.",
+          "titleZh": "生活方式医学创新：患者护理中的体力活动评估与数字健康平台实施以支持更健康的运动"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
+          "titleZh": "信息和通信技术在促进专职医疗人员卒中后康复指南依从性实施策略中的应用：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Content validity, reliability, and agreement between in-person and video-call assessments of the modified bradykinesia rating scale (MBRS).",
+          "titleZh": "改良运动迟缓评定量表（MBRS）的内容效度、信度及现场与视频通话评估的一致性研究"
+        }
+      ],
+      "heat": 2.57,
+      "themeZh": "数字健康技术在物理治疗中的应用与有效性",
+      "themeEn": "Digital Health in Physiotherapy Application and Effectiveness"
+    },
+    {
+      "id": "news-1784329952322-2",
+      "title": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation for chronic lateral elbow pain: a randomized controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42457107/",
+      "category": "orthopedic",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "BMC Musculoskelet Disord",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "medRxiv"
+      ],
+      "tag": "hand-wrist",
+      "kind": "theme",
+      "members": [
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -170,14 +266,25 @@
           "titleZh": "慢性肩袖肌腱病患者在包含疼痛阈值、运动和物理治疗的干预方案中的依从性研究"
         },
         {
+          "source": "BMC Musculoskelet Disord",
+          "title": "Video-based examination of patients with shoulder pain: a scoping review",
+          "titleZh": "肩痛患者视频评估的范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Assessment and Management Practices for Post-Stroke Shoulder Pain Among Rehabilitation Professionals in Vietnam: A Cross-Sectional Survey.",
+          "titleZh": "越南康复专业人员卒中后肩痛评估与管理实践：一项横断面调查"
+        },
+        {
           "source": "medRxiv",
           "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
           "titleZh": "多模态表型分析肌筋膜疼痛综合征：旋转剪切波弹性成像与临床网络分析的应用"
         }
       ],
-      "heat": 2.01,
-      "themeZh": "颈肩肘部疼痛的物理治疗与数字健康干预",
-      "themeEn": "Neck shoulder elbow pain physiotherapy & digital health"
+      "heat": 2.42,
+      "themeZh": "肩关节疼痛的干预与评估方法研究",
+      "themeEn": "Interventions and Assessments for Shoulder Pain"
     },
     {
       "id": "news-1784829048252-0",
@@ -219,98 +326,36 @@
           "titleZh": "积极心理学干预对脊髓损伤成人患者的影响：一项系统综述和 Meta 分析"
         }
       ],
-      "heat": 1.9,
-      "themeZh": "脊髓损伤康复的神经工程与心理干预",
-      "themeEn": "Neuroengineering and psychological interventions for SCI rehabilitation"
-    },
-    {
-      "id": "news-1784269918695-0",
-      "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42462840/",
-      "category": "orthopedic",
-      "publishedAt": "2026-07-25T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Physical therapy",
-        "British journal of sports medicine",
-        "Archives of physiotherapy",
-        "Musculoskeletal science & practice"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials.",
-          "titleZh": "联合生物心理社会干预对慢性腰痛的有效性：一项随机对照试验的系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "The RESOLVE Trial: A Stepped-Wedge, Cluster-Randomized Clinical Trial Evaluating the Effects of Clinical Practice Guidelines and Psychologically Informed Physical Therapy on Low Back Pain Outcomes in Service Members and Veterans.",
-          "titleZh": "RESOLVE 试验：评估临床实践指南与心理知情物理治疗对军人与退伍军人下腰痛结局影响的阶梯楔形、整群随机临床试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "British journal of sports medicine",
-          "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
-          "titleZh": "个体化游泳与教育方案治疗慢性下腰痛的有效性：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physiotherapy",
-          "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
-          "titleZh": "腰骶部翻滚和改良 SIMS 手法治疗骶髂关节功能障碍的临床结局系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Spine-related leg pain: Definitions, etiology, clinical presentation, and management.",
-          "titleZh": "脊柱相关腿痛：定义、病因、临床表现与管理"
-        }
-      ],
-      "heat": 1.68,
-      "themeZh": "慢性腰痛生物心理社会干预与管理",
-      "themeEn": "Chronic low back pain biopsychosocial management"
-    },
-    {
-      "id": "news-1784759546749-30",
-      "title": "Action observation therapy in pediatric cerebral palsy: an fNIRS-based investigation of cortical responses and balance—a randomized controlled trial | Journal of NeuroEngineering and Rehabilitation",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02097-1",
-      "category": "pediatric",
-      "publishedAt": "2026-07-26T22:26:27.974Z",
-      "sourceCount": 2,
-      "sources": [
-        "J NeuroEng Rehabil",
-        "BJSM"
-      ],
-      "tag": null,
-      "kind": "theme",
-      "members": [
-        {
-          "source": "J NeuroEng Rehabil",
-          "title": "Action observation therapy in pediatric cerebral palsy: an fNIRS-based investigation of cortical responses and balance—a randomized controlled trial | Journal of NeuroEngineering and Rehabilitation",
-          "titleZh": "儿童脑瘫行动观察疗法：基于 fNIRS 的皮质反应和平衡研究——一项随机对照试验"
-        },
-        {
-          "source": "BJSM",
-          "title": "AOT study protocol of a randomised controlled trial",
-          "titleZh": "病理模型能否改善偏瘫儿童患手能力？PAM-AOT 随机对照试验方案"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "title": "Biomechanical effects of powered knee orthoses and articulated ankle-foot orthoses in people with diparetic cerebral palsy: a pilot study | Journal of NeuroEngineering and Rehabilitation",
-          "titleZh": "动力式膝关节矫形器和踝足矫形器对双瘫型脑瘫患者的生物力学效应：一项试点研究"
-        }
-      ],
-      "heat": 1.31,
-      "themeZh": "儿童脑瘫的行动观察疗法与矫形器",
-      "themeEn": "Pediatric cerebral palsy AOT and orthoses"
+      "heat": 1.71,
+      "themeZh": "脊髓损伤的神经工程与数字技术康复",
+      "themeEn": "Neuroengineering and Digital Rehab for SCI"
     }
   ],
   "items": [
+    {
+      "id": "news-1785235626855-0",
+      "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
+      "summary": "A single-blinded randomized controlled pilot trial (N=54) found that a 12-week app-based home exercise program, combined with educational pamphlets, positively impacted community-dwelling older adults' fall risk category compared to pamphlets alone.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517264/",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "firstSeen": "2026-07-28T10:47:06.855Z",
+      "curatedScore": 75,
+      "curatedReason": "这款防跌倒 App 对社区老年人的跌倒风险分类有积极影响，但仅是小样本的初步试验，外推到大规模应用前需要更多证据。目前可作为辅助工具了解。",
+      "titleZh": "防跌倒 App（SAFE app）对社区老年人跌倒风险分类的影响：单盲随机对照初步试验",
+      "summaryZh": "一项单盲随机对照初步试验（N=54）发现，为期 12 周的基于 App 的家庭锻炼计划结合教育手册，相较于单独使用手册，对社区老年人的跌倒风险分类有积极影响。",
+      "curatedReasonEn": "This falls prevention app shows a positive impact on fall risk categorization in community-dwelling older adults. However, it's a small pilot trial, and more evidence is needed before widespread adoption. Consider it an assistive tool for now.",
+      "limitation": "这是一项小样本的初步试验（N=54），结果的外推性有限，且随访期较短。",
+      "limitationEn": "This is a small pilot trial (N=54) with limited generalizability and a short follow-up period.",
+      "tags": [
+        "research",
+        "news"
+      ],
+      "studyDesign": "RCT",
+      "journal": "PM & R : the journal of injury, function, and rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1785210171037-0",
       "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
