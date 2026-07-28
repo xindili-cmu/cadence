@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-28T10:47:10.318Z",
-    "totalItems": 72,
+    "lastUpdated": "2026-07-28T17:48:03.487Z",
+    "totalItems": 71,
     "categories": [
       "orthopedic",
       "neurological",
@@ -110,27 +110,45 @@
           "titleZh": "γ-经颅交流电刺激改善卒中患者上肢运动功能并调节震荡失衡：一项试点随机对照试验"
         }
       ],
-      "heat": 5.45,
-      "themeZh": "卒中后康复预后因素与综合干预研究",
-      "themeEn": "Stroke Rehabilitation Outcomes and Integrated Interventions"
+      "heat": 4.92,
+      "themeZh": "卒中后康复预后影响因素及并发症",
+      "themeEn": "Post-stroke rehabilitation outcomes and complications"
     },
     {
-      "id": "news-1785235626855-0",
-      "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517264/",
-      "category": "geriatric",
+      "id": "news-1785260881030-0",
+      "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517725/",
+      "category": "neurological",
       "publishedAt": "2026-07-28T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "BMC Geriatrics",
+        "Clinical rehabilitation",
         "Disability and rehabilitation",
         "BMC Sports Sci Med Rehabil",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "BMC Geriatrics",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
-      "tag": "fall-prevention",
+      "tag": "parkinson",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
+          "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Enhancing dynamic postural stability during gait in Parkinson's disease with textured insoles and auditory cue training: a randomized controlled trial study.",
+          "titleZh": "纹理鞋垫与听觉提示训练在帕金森病患者中增强步态动态姿势稳定性：一项随机对照试验"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "title": "Diagnostic accuracy of biodex balance system stability indices under single- and dual-task conditions in individuals with chronic ankle instability | BMC Sports Science, Medicine and Rehabilitation",
+          "titleZh": "慢性踝关节不稳患者单任务和双任务条件下 Biodex 平衡系统稳定性指标的诊断准确性"
+        },
         {
           "source": "PubMed",
           "journal": "PM & R : the journal of injury, function, and rehabilitation",
@@ -149,25 +167,14 @@
         },
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Enhancing dynamic postural stability during gait in Parkinson's disease with textured insoles and auditory cue training: a randomized controlled trial study.",
-          "titleZh": "纹理鞋垫与听觉提示训练在帕金森病患者中增强步态动态姿势稳定性：一项随机对照试验"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "title": "Diagnostic accuracy of biodex balance system stability indices under single- and dual-task conditions in individuals with chronic ankle instability | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "慢性踝关节不稳患者单任务和双任务条件下 Biodex 平衡系统稳定性指标的诊断准确性"
-        },
-        {
-          "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
           "title": "Digital Addiction and Body Balance: An Investigation of Postural Stability in Young Adults: A Cross-Sectional Study.",
           "titleZh": "数字成瘾与身体平衡：一项针对年轻人的姿势稳定性调查：一项横断面研究"
         }
       ],
-      "heat": 4.28,
-      "themeZh": "老年人跌倒风险与姿态平衡的量化评估",
-      "themeEn": "Fall Risk and Postural Balance Quantification in Elderly"
+      "heat": 4.64,
+      "themeZh": "平衡功能障碍的评估与干预",
+      "themeEn": "Balance impairment assessment and intervention"
     },
     {
       "id": "news-1785049661034-0",
@@ -223,9 +230,9 @@
           "titleZh": "改良运动迟缓评定量表（MBRS）的内容效度、信度及现场与视频通话评估的一致性研究"
         }
       ],
-      "heat": 2.57,
-      "themeZh": "数字健康技术在物理治疗中的应用与有效性",
-      "themeEn": "Digital Health in Physiotherapy Application and Effectiveness"
+      "heat": 2.32,
+      "themeZh": "数字健康技术在物理治疗中的应用",
+      "themeEn": "Digital health in physiotherapy"
     },
     {
       "id": "news-1784329952322-2",
@@ -282,9 +289,9 @@
           "titleZh": "多模态表型分析肌筋膜疼痛综合征：旋转剪切波弹性成像与临床网络分析的应用"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "肩关节疼痛的干预与评估方法研究",
-      "themeEn": "Interventions and Assessments for Shoulder Pain"
+      "heat": 2.19,
+      "themeZh": "肩痛康复：评估、治疗与依从性",
+      "themeEn": "Shoulder pain rehabilitation: assessment, treatment, adherence"
     },
     {
       "id": "news-1784829048252-0",
@@ -326,12 +333,62 @@
           "titleZh": "积极心理学干预对脊髓损伤成人患者的影响：一项系统综述和 Meta 分析"
         }
       ],
-      "heat": 1.71,
-      "themeZh": "脊髓损伤的神经工程与数字技术康复",
-      "themeEn": "Neuroengineering and Digital Rehab for SCI"
+      "heat": 1.55,
+      "themeZh": "脊髓损伤康复中的神经工程与干预",
+      "themeEn": "Neuroengineering and interventions for SCI rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1785175148947-0",
+      "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
+      "summary": "The American Physical Therapy Association is updating its clinical practice guideline for total knee arthroplasty, with the revision scheduled for 2026. This guideline, developed by a multidisciplinary group and based on a systematic review, includes 20 recommendations addressing benefits, harms, feasibility, and patient preferences.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42506877/",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "firstSeen": "2026-07-27T17:59:08.947Z",
+      "curatedScore": 88,
+      "curatedReason": "美国物理治疗协会（APTA）的这份膝关节置换术（TKA）临床实践指南，修订版定于 2026 年发布，基于系统综述，提出了 20 项建议。关注它能帮你确保 TKA 术后康复方案与最新循证实践对齐。",
+      "titleZh": "膝关节置换术物理治疗管理临床实践指南：2026 年修订版",
+      "summaryZh": "美国物理治疗协会（APTA）正在修订其膝关节置换术（TKA）临床实践指南，预计 2026 年发布。该指南由多学科小组基于系统综述制定，包含 20 项涵盖益处、风险、可行性和患者偏好的建议。",
+      "curatedReasonEn": "This updated clinical practice guideline from APTA for total knee arthroplasty (TKA), set for revision in 2026, offers 20 recommendations based on a systematic review. Monitor this to ensure your TKA post-operative rehab protocols align with the latest evidence-based practices.",
+      "tags": [
+        "guideline",
+        "knee"
+      ],
+      "journal": "Physical therapy",
+      "related": [
+        {
+          "source": "APTA",
+          "sourceUrl": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/physical-therapist-management-of-total-knee-arthroplasty",
+          "title": "Physical Therapist Management of Total Knee Arthroplasty: Revision 2026 (CPG+)"
+        }
+      ]
+    },
+    {
+      "id": "news-1785260881030-0",
+      "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
+      "summary": "A study with 69 knee osteoarthritis patients explored sensory integration strategies in static balance control, finding potential over-reliance on visual and vestibular inputs when proprioception is challenged.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517725/",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "firstSeen": "2026-07-28T17:48:01.030Z",
+      "curatedScore": 75,
+      "curatedReason": "这项观察性研究提示膝骨关节炎患者在平衡控制上可能过度依赖视觉和前庭系统。这提醒您评估这类患者时，注意其在本体感觉受损情况下的平衡代偿策略。",
+      "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略",
+      "summaryZh": "一项针对 69 名膝骨关节炎患者的研究发现，他们在静态平衡控制中可能存在对视觉和前庭感觉的过度依赖，尤其是在本体感觉受损时。",
+      "curatedReasonEn": "This observational study suggests that patients with knee osteoarthritis may over-rely on visual and vestibular systems for balance control. This highlights the importance of assessing compensatory balance strategies in these patients, especially when proprioception is compromised.",
+      "limitation": "本研究为观察性设计，样本量较小，且无法确立因果关系。",
+      "limitationEn": "This was an observational study with a small sample size, and it cannot establish causality.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
     {
       "id": "news-1785235626855-0",
       "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
@@ -994,26 +1051,6 @@
       "studyDesign": "观察研究"
     },
     {
-      "id": "news-1785175148947-0",
-      "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
-      "summary": "The American Physical Therapy Association is updating its clinical practice guideline for total knee arthroplasty, with the revision scheduled for 2026. This guideline, developed by a multidisciplinary group and based on a systematic review, includes 20 recommendations addressing benefits, harms, feasibility, and patient preferences.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42506877/",
-      "publishedAt": "2026-07-27T00:00:00.000Z",
-      "firstSeen": "2026-07-27T17:59:08.947Z",
-      "curatedScore": 88,
-      "curatedReason": "美国物理治疗协会（APTA）的这份膝关节置换术（TKA）临床实践指南，修订版定于 2026 年发布，基于系统综述，提出了 20 项建议。关注它能帮你确保 TKA 术后康复方案与最新循证实践对齐。",
-      "titleZh": "膝关节置换术物理治疗管理临床实践指南：2026 年修订版",
-      "summaryZh": "美国物理治疗协会（APTA）正在修订其膝关节置换术（TKA）临床实践指南，预计 2026 年发布。该指南由多学科小组基于系统综述制定，包含 20 项涵盖益处、风险、可行性和患者偏好的建议。",
-      "curatedReasonEn": "This updated clinical practice guideline from APTA for total knee arthroplasty (TKA), set for revision in 2026, offers 20 recommendations based on a systematic review. Monitor this to ensure your TKA post-operative rehab protocols align with the latest evidence-based practices.",
-      "tags": [
-        "guideline",
-        "knee"
-      ],
-      "journal": "Physical therapy"
-    },
-    {
       "id": "news-1785165510773-1",
       "title": "Saratoga Physical Therapy Associates Increases Payment Per Visit by $5 using WebPT RCM",
       "summary": "Saratoga Physical Therapy Associates increased their payment per visit by $5 after implementing WebPT RCM, demonstrating the financial benefits of optimized revenue cycle management for physical therapy practices.",
@@ -1101,30 +1138,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
-      "id": "news-1784050637091-0",
-      "title": "Comparative efficacy of different joint mobilization techniques in shoulder adhesive capsulitis: a systematic review and meta-analysis of randomized controlled trials.",
-      "summary": "This systematic review and meta-analysis compared different non-thrust joint mobilization techniques for shoulder adhesive capsulitis, reinforcing their fundamental role in conservative physical therapy management.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42446287/",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T17:37:17.091Z",
-      "curatedScore": 85,
-      "curatedReason": "在肩关节粘连性关节囊炎的保守治疗中，非冲击性关节松动术仍是基石。这项系统综述和荟萃分析比较了不同技术，为你选择具体松动方向和强度提供了更扎实的依据。",
-      "titleZh": "不同关节松动技术在肩关节粘连性关节囊炎中的比较疗效：一项随机对照试验的系统综述和荟萃分析",
-      "summaryZh": "本系统综述和荟萃分析比较了不同非冲击性关节松动技术治疗肩关节粘连性关节囊炎的疗效，重申了其在保守物理治疗管理中的基础作用。",
-      "curatedReasonEn": "Non-thrust joint mobilization remains fundamental in conservative management of shoulder adhesive capsulitis. This systematic review and meta-analysis comparing various techniques offers a more robust evidence base for selecting specific mobilization directions and intensities.",
-      "limitation": "该综述未报告纳入研究中是否存在显著异质性。",
-      "limitationEn": "The review did not report whether significant heterogeneity was present among the included studies.",
-      "tags": [
-        "research",
-        "manual-modality",
-        "shoulder"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "The Journal of manual & manipulative therapy"
     },
     {
       "id": "news-1784656144823-1",
@@ -1934,31 +1947,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1784050637092-1",
-      "title": "Examination and treatment of the spine for upper extremity pain: a case series.",
-      "summary": "This case series describes three patients with upper extremity pain who achieved significant improvements with spine mobilization or manipulation techniques, suggesting the spine as a potential source of symptoms even with atypical pain referral patterns.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42445995/",
-      "publishedAt": "2026-07-14T00:00:00.000Z",
-      "firstSeen": "2026-07-14T17:37:17.092Z",
-      "curatedScore": 65,
-      "curatedReason": "这个病例系列提示，上肢疼痛患者的脊柱功能障碍可能是症状来源。在评估上肢疼痛患者时，你应考虑全面检查脊柱，特别是当症状模式不典型时。",
-      "titleZh": "针对上肢疼痛的脊柱检查和治疗：一个病例系列",
-      "summaryZh": "本病例系列描述了三名上肢疼痛患者通过脊柱松动或手法治疗取得显著改善，提示即使疼痛模式不典型，脊柱也可能是症状的潜在来源。",
-      "curatedReasonEn": "This case series suggests that spinal dysfunction may be a source of symptoms in patients with upper extremity pain. When evaluating patients with upper extremity pain, you should consider a comprehensive spinal examination, especially when symptom patterns are atypical.",
-      "limitation": "这是一个小样本的病例系列研究，证据等级较低，无法得出普遍性结论。",
-      "limitationEn": "This is a small case series with a low level of evidence, making it impossible to draw generalizable conclusions.",
-      "tags": [
-        "research",
-        "spine",
-        "shoulder",
-        "hand-wrist"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "The Journal of manual & manipulative therapy"
     }
   ]
 }
