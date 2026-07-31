@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-30T23:29:29.441Z",
+    "lastUpdated": "2026-07-31T03:56:23.667Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
       "category": "orthopedic",
       "publishedAt": "2026-08-01T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "BJSM",
         "Brazilian journal of physical therapy",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "PubMed"
+        "Topics in stroke rehabilitation",
+        "PubMed",
+        "PM & R : the journal of injury, function, and rehabilitation"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -50,34 +51,38 @@
         },
         {
           "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
-          "titleZh": "防跌倒 App (SAFE app) 对社区老年人跌倒风险类别的影响：一项单盲随机对照试点试验"
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
+          "titleZh": "信息通信技术在促进卒中后期康复中专职医疗人员指南依从性策略中的应用：一项范围综述。"
         },
         {
           "source": "PubMed",
           "title": "Clinical implementation of artificial intelligence in adolescent mental healthcare",
           "titleZh": "人工智能在青少年心理健康护理中的临床应用"
+        },
+        {
+          "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
+          "titleZh": "防跌倒 App (SAFE app) 对社区老年人跌倒风险类别的影响：一项单盲随机对照试点试验"
         }
       ],
-      "heat": 5,
-      "themeZh": "数字健康与远程医疗在骨科康复中的应用与效益",
-      "themeEn": "Digital Health and Telehealth in Orthopedic Rehab"
+      "heat": 6,
+      "themeZh": "数字健康与远程医疗在物理治疗中的应用与效益",
+      "themeEn": "Digital Health and Telehealth in Physiotherapy"
     },
     {
-      "id": "news-1784742300473-3",
-      "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484106/",
+      "id": "news-1784742300473-4",
+      "title": "Correlation of Motor-Task Related Brain Activation Changes With Motor Performance Changes Induced by Constraint-Induced Therapy After Stroke.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481175/",
       "category": "neurological",
       "publishedAt": "2026-07-30T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 5,
       "sources": [
-        "Disability and rehabilitation",
         "Neurorehabilitation and neural repair",
-        "Topics in stroke rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "medRxiv",
         "NeuroRehabilitation",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
@@ -85,27 +90,9 @@
       "members": [
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
-          "titleZh": "脑干卒中住院成年患者吞咽障碍康复是否能改善健康相关结局：系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
           "journal": "Neurorehabilitation and neural repair",
-          "title": "Safety of Early Rehabilitation Dose After Stroke on Composite Outcomes: Analysis of Nationwide Japanese Medical Claims Data.",
-          "titleZh": "卒中后早期康复剂量对复合结局的安全影响：日本全国医疗索赔数据分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Research progress on horticultural therapy in patients with post-stroke cognitive impairment: a narrative review.",
-          "titleZh": "园艺疗法在卒中后认知障碍患者中的研究进展：一项叙述性综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Models Containing the Braden Scale Predict Activities of Daily Living Improvement in Post-Stroke Hemiplegia: A Single Center Retrospective Cohort Study.",
-          "titleZh": "包含 Braden 量表的模型可预测卒中偏瘫患者日常生活活动能力改善：一项单中心回顾性队列研究"
+          "title": "Correlation of Motor-Task Related Brain Activation Changes With Motor Performance Changes Induced by Constraint-Induced Therapy After Stroke.",
+          "titleZh": "卒中后约束诱导运动疗法引起的运动任务相关脑激活变化与运动表现变化的关联。"
         },
         {
           "source": "medRxiv",
@@ -117,6 +104,18 @@
           "journal": "NeuroRehabilitation",
           "title": "Factors Explaining Limited Daily Hand-use in Individuals with Fair-Good Motor Ability Post-Stroke.",
           "titleZh": "解释卒中后运动能力良好个体日常手部使用受限的因素"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Models Containing the Braden Scale Predict Activities of Daily Living Improvement in Post-Stroke Hemiplegia: A Single Center Retrospective Cohort Study.",
+          "titleZh": "包含 Braden 量表的模型可预测卒中偏瘫患者日常生活活动能力改善：一项单中心回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Safety of Early Rehabilitation Dose After Stroke on Composite Outcomes: Analysis of Nationwide Japanese Medical Claims Data.",
+          "titleZh": "卒中后早期康复剂量对复合结局的安全影响：日本全国医疗索赔数据分析"
         },
         {
           "source": "PubMed",
@@ -136,9 +135,9 @@
           "titleZh": "视频透视增强现实眼镜对卒中后偏向推注患者姿势垂直性的视觉修正效果研究"
         }
       ],
-      "heat": 4.99,
-      "themeZh": "卒中后吞咽障碍、运动功能障碍与ADL康复研究进展",
-      "themeEn": "Post-Stroke Dysphagia, Motor, ADL Rehabilitation"
+      "heat": 3.34,
+      "themeZh": "卒中后运动功能障碍与康复策略影响因素",
+      "themeEn": "Post-Stroke Motor Impairment and Rehabilitation"
     },
     {
       "id": "news-1785407737656-0",
@@ -146,12 +145,11 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42527106/",
       "category": "orthopedic",
       "publishedAt": "2026-07-30T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 3,
       "sources": [
         "British journal of sports medicine",
         "BMC musculoskeletal disorders",
-        "PubMed",
-        "BJSM"
+        "medRxiv"
       ],
       "tag": "shoulder",
       "kind": "theme",
@@ -169,62 +167,14 @@
           "titleZh": "弹力带肩部锻炼对糖尿病合并肩周炎患者疼痛、活动度及功能障碍的影响：一项初步随机对照试验"
         },
         {
-          "source": "PubMed",
-          "title": "Sports-Related Peripheral Nerve Injuries",
-          "titleZh": "运动相关周围神经损伤"
-        },
-        {
-          "source": "BJSM",
-          "title": "Assessment of return to play after an acute shoulder injury",
-          "titleZh": "急性肩关节损伤后重返运动的评估：一项德国多中心探索性前瞻性观察研究方案"
+          "source": "medRxiv",
+          "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
+          "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析。"
         }
       ],
-      "heat": 2.85,
-      "themeZh": "肩关节损伤（冻结肩、运动神经伤）的康复与重返运动",
-      "themeEn": "Shoulder Injury Rehab and Return to Play"
-    },
-    {
-      "id": "news-1784329952320-0",
-      "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468005/",
-      "category": "orthopedic",
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "Aging Clin Exp Res",
-        "Medical Dialogues",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
-          "titleZh": "虚拟现实辅助下的物理治疗训练对膝骨关节炎患者的疗效：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "Aging Clin Exp Res",
-          "title": "Comment on “swedish massage versus hip strengthening exercises for pain and function in older adults with knee osteoarthritis: a randomized controlled trial”",
-          "titleZh": "对“瑞典式按摩与髋部强化运动对老年膝骨关节炎患者疼痛和功能影响的随机对照试验”的评论"
-        },
-        {
-          "source": "Medical Dialogues",
-          "title": "Peri-Fracture Injections Reduce Early Postoperative Pain and Opioid Use, Suggests Study",
-          "titleZh": "研究表明骨折周围注射可减轻术后早期疼痛并减少阿片类药物使用"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Weight Bearing Decisions After Tibial Plateau Fractures: A Literature Review Based on Clinical Perspective for Physiotherapists in India.",
-          "titleZh": "胫骨平台骨折后负重决策：基于印度物理治疗师临床视角的文献综述"
-        }
-      ],
-      "heat": 2.85,
-      "themeZh": "膝关节骨关节炎与胫骨平台骨折的物理治疗",
-      "themeEn": "Knee OA and Tibial Plateau Fracture PT"
+      "heat": 2,
+      "themeZh": "粘连性关节囊炎和肌筋膜疼痛的治疗与评估",
+      "themeEn": "Treating and Assessing Adhesive Capsulitis, Myofascial Pain"
     },
     {
       "id": "news-1785450827648-4",
@@ -257,11 +207,161 @@
         }
       ],
       "heat": 2,
-      "themeZh": "帕金森病与创伤性脑损伤的神经保护与康复",
-      "themeEn": "Neuroprotection and Rehab for PD and TBI"
+      "themeZh": "帕金森病和创伤性脑损伤的神经保护与治疗",
+      "themeEn": "Neuroprotection in Parkinson's, Traumatic Brain Injury"
+    },
+    {
+      "id": "news-1784742300473-2",
+      "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481208/",
+      "category": "orthopedic",
+      "publishedAt": "2026-07-29T00:00:00.000Z",
+      "sourceCount": 3,
+      "sources": [
+        "British journal of sports medicine",
+        "Physical therapy",
+        "medRxiv"
+      ],
+      "tag": "spine",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
+          "titleZh": "个体化游泳与教育项目（EduSwim）治疗慢性腰痛的有效性：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "The RESOLVE Trial: A Stepped-Wedge, Cluster-Randomized Clinical Trial Evaluating the Effects of Clinical Practice Guidelines and Psychologically Informed Physical Therapy on Low Back Pain Outcomes in Service Members and Veterans.",
+          "titleZh": "RESOLVE 试验：一项分层随机试验，评估临床实践指南和心理知情物理治疗对军人及退伍军人腰痛结局的影响"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Could sensorimotor factors in acute low back pain explain long-term pain and disability? A secondary analysis of longitudinal data from a randomised controlled trial",
+          "titleZh": "急性腰痛中的感觉运动因素能否解释长期疼痛和残疾？一项随机对照试验纵向数据的二次分析"
+        }
+      ],
+      "heat": 1.42,
+      "themeZh": "个体化运动和心理干预对慢性腰痛的疗效",
+      "themeEn": "Individualized Exercise and Psychological Therapy for Chronic LBP"
     }
   ],
   "items": [
+    {
+      "id": "news-1784269918695-0",
+      "title": "Effectiveness of Combined Biopsychosocial Interventions for Chronic Low Back Pain: A Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+      "summary": "A systematic review and meta-analysis found combined biopsychosocial interventions to be effective in reducing pain and functional disability in adults with chronic low back pain compared to usual care or unimodal interventions.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42462840/",
+      "publishedAt": "2026-07-17T00:00:00.000Z",
+      "firstSeen": "2026-07-16T14:27:57.850Z",
+      "curatedScore": 85,
+      "curatedReason": "生物心理社会干预已被确证在慢性腰痛管理中优于单一干预和常规护理。这份高质量系统综述告诉你，在慢性腰痛患者中，联合方案应是首选。",
+      "titleZh": "生物心理社会联合干预对慢性腰痛的有效性：随机对照试验的系统综述和 Meta 分析。",
+      "summaryZh": "一项系统综述和 Meta 分析发现，生物心理社会联合干预在减轻慢性腰痛成年患者的疼痛和功能障碍方面，优于常规护理和单一干预。",
+      "curatedReasonEn": "Biopsychosocial interventions are now confirmed to be superior to unimodal and usual care for chronic low back pain. This high-quality systematic review indicates that combined approaches should be the preferred option for chronic LBP patients.",
+      "limitation": "研究未明确报告不同联合干预结构之间的效果一致性。",
+      "limitationEn": "The study did not explicitly report on the consistency of effects across different intervention structures.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1784915752823-0",
+      "title": "The Association of Depression, Anxiety, and Quality of Life with Sexual Function in Young-to-Middle-Aged Stroke Patients: A Case-Control Study.",
+      "summary": "A case-control study of young-to-middle-aged stroke patients (n=30) found significantly higher rates of sexual dysfunction compared to controls (19.3 ± 6.6 vs. 13.0 ± 3.1, p < 0.001), associated with depression, anxiety, and poorer quality of life.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42496227/",
+      "publishedAt": "2026-07-24T00:00:00.000Z",
+      "firstSeen": "2026-07-24T17:55:52.823Z",
+      "curatedScore": 75,
+      "curatedReason": "这项病例对照研究强调了卒中后年轻患者性功能障碍的高患病率，以及与抑郁、焦虑和生活质量的关联。这提示你应更早将性健康纳入卒中康复的评估和干预中。",
+      "titleZh": "中青年卒中患者的抑郁、焦虑和生活质量与性功能的关系：一项病例对照研究。",
+      "summaryZh": "一项中青年卒中患者（n=30）的病例对照研究发现，与对照组相比，卒中患者性功能障碍发生率显著更高（19.3 ± 6.6 vs. 13.0 ± 3.1, p < 0.001），且与抑郁、焦虑和生活质量下降相关。",
+      "curatedReasonEn": "This case-control study highlights the high prevalence of sexual dysfunction in younger stroke patients and its association with depression, anxiety, and quality of life. This suggests you should integrate sexual health into stroke rehabilitation assessment and intervention earlier.",
+      "limitation": "本研究为小样本（n=30）病例对照研究，结果外推性受限。",
+      "limitationEn": "This is a small sample (n=30) case-control study, limiting the generalizability of its findings.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1784902636899-0",
+      "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
+      "summary": "A scoping review mapped the use of information and communication technologies (ICTs) in implementation strategies to promote allied health professionals' guideline adherence in post-acute stroke care, categorizing ICTs based on targeted determinants of practice.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42494115/",
+      "publishedAt": "2026-07-24T00:00:00.000Z",
+      "firstSeen": "2026-07-24T14:17:16.899Z",
+      "curatedScore": 75,
+      "curatedReason": "这份综述表明，ICTs 在卒中后康复中确实有潜力提升专职医疗人员的指南依从性。你应当思考如何将这些分类的 ICT 工具，例如远程监控或决策支持系统，整合到你的实践中，以标准化护理流程。",
+      "titleZh": "信息通信技术在促进卒中后期康复中专职医疗人员指南依从性策略中的应用：一项范围综述。",
+      "summaryZh": "一项范围综述梳理了信息通信技术（ICTs）在卒中后期康复指南实施策略中的应用，并根据其作用目标对 ICTs 进行了分类。",
+      "curatedReasonEn": "This review confirms ICTs have the potential to boost allied health professionals' guideline adherence in post-acute stroke care. You should consider how to integrate these categorized ICT tools, such as remote monitoring or decision support systems, into your practice to standardize care pathways.",
+      "tags": [
+        "research",
+        "stroke",
+        "telehealth"
+      ],
+      "studyDesign": "综述",
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1784742300473-4",
+      "title": "Correlation of Motor-Task Related Brain Activation Changes With Motor Performance Changes Induced by Constraint-Induced Therapy After Stroke.",
+      "summary": "An fMRI study in 42 hemiparetic stroke patients undergoing Constraint-Induced Movement Therapy (CIMT) found changes in motor-task related brain activation correlated with improvements in functional recovery assessed by the Wolf Motor Function Test.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481175/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.473Z",
+      "curatedScore": 75,
+      "curatedReason": "这项 fMRI 研究为约束诱导运动疗法（CIMT）改善卒中后运动功能提供了神经影像学证据，显示了脑激活变化与功能恢复的关联。这加强了 CIMT 的循证基础，让你在临床沟通时更有底气。",
+      "titleZh": "卒中后约束诱导运动疗法引起的运动任务相关脑激活变化与运动表现变化的关联。",
+      "summaryZh": "一项对 42 名偏瘫卒中患者进行的 fMRI 研究发现，约束诱导运动疗法（CIMT）后运动任务相关脑激活的变化与 Wolf 运动功能测试评估的功能恢复改善相关。",
+      "curatedReasonEn": "This fMRI study provides neuroimaging evidence for Constraint-Induced Movement Therapy (CIMT) improving motor function after stroke, showing a correlation between brain activation changes and functional recovery. This strengthens CIMT's evidence base, bolstering your confidence in clinical communication.",
+      "limitation": "研究设计仅纳入亚急性期和慢性期卒中患者（n=42），结果不一定适用于所有卒中患者。",
+      "limitationEn": "The study design included only subacute and chronic stroke patients (n=42), so the results may not apply to all stroke patients.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair"
+    },
+    {
+      "id": "news-1785210171037-0",
+      "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
+      "summary": "A study explored multimodal phenotyping of myofascial pain syndrome (MPS) using rotational shear wave elastography (SWE), bioimpedance spectroscopy (BIS), range of motion (ROM), and patient-reported outcomes (PROs) in 71 adults, aiming to objectively characterize MPS subgroups.",
+      "category": "orthopedic",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.07.23.26358787v1?rss=1",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "firstSeen": "2026-07-28T03:42:51.037Z",
+      "curatedScore": 75,
+      "curatedReason": "这项纳入 71 名成年人的观察研究提示，多模态评估（如旋转剪切波弹性成像、生物阻抗谱）可能为肌筋膜疼痛综合征 (MPS) 提供更客观的生物标志物，超越单纯的 ROM 和 PROs。这有助于我们更精细地识别 MPS 亚型，但目前仍是探索阶段，距离临床常规应用尚远。",
+      "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析。",
+      "summaryZh": "一项研究通过旋转剪切波弹性成像（SWE）、生物阻抗谱（BIS）、关节活动度（ROM）和患者报告结果（PROs）对 71 名成人肌筋膜疼痛综合征（MPS）进行多模态表型分析，旨在客观描述 MPS 亚组。",
+      "curatedReasonEn": "This observational study of 71 adults suggests multimodal assessments, such as rotational shear wave elastography and bioimpedance spectroscopy, might offer more objective biomarkers for Myofascial Pain Syndrome (MPS) than ROM and PROs alone. While this could lead to more nuanced MPS subtyping, it's still an exploratory finding and far from routine clinical application.",
+      "limitation": "研究样本量较小（71 名成人），且为初步探索性研究，需要更大规模和更多中心验证。",
+      "limitationEn": "The study has a relatively small sample size (71 adults) and is preliminary and exploratory, requiring larger and multi-center validation.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1785175148947-0",
       "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
@@ -1763,126 +1863,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Physical therapy"
-    },
-    {
-      "id": "news-1784329952322-2",
-      "title": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation for chronic lateral elbow pain: a randomized controlled trial.",
-      "summary": "A randomized, double-blinded, sham-controlled trial (n=49) demonstrated mid- and long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation applied to the radial nerve, combined with exercise, for chronic lateral elbow pain in terms of pain intensity, disability, and psychological outcomes.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42457107/",
-      "publishedAt": "2026-07-16T00:00:00.000Z",
-      "firstSeen": "2026-07-17T23:12:32.322Z",
-      "curatedScore": 80,
-      "curatedReason": "超声引导下经皮电神经刺激联合运动对慢性肱骨外上髁炎的长期益处得到了 RCT 支持。下次遇到久治不愈的网球肘患者，可以考虑这一联合治疗方案。",
-      "titleZh": "超声引导下经皮电神经刺激治疗慢性肱骨外上髁炎的长期益处：一项随机对照试验",
-      "summaryZh": "一项随机、双盲、假对照临床试验评估了超声引导下对桡神经施加经皮电神经刺激联合运动对慢性肱骨外上髁炎患者中长期疼痛强度、疼痛相关残疾、心理结局和自我感知变化的影响。",
-      "curatedReasonEn": "Long-term benefits of ultrasound-guided percutaneous electrical nerve stimulation combined with exercise for chronic lateral elbow pain are supported by this RCT. Consider this combined approach for persistent lateral epicondylitis.",
-      "limitation": "样本量相对较小（n=49），可能影响结果的普遍性。",
-      "limitationEn": "The relatively small sample size (n=49) may limit the generalizability of the findings.",
-      "tags": [
-        "research",
-        "dry-needling"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
-      "id": "news-1784915752824-1",
-      "title": "Content validity, reliability, and agreement between in-person and video-call assessments of the modified bradykinesia rating scale (MBRS).",
-      "summary": "A methodological study following COSMIN guidelines evaluated the Modified Bradykinesia Rating Scale (MBRS), finding adequate content validity, test-retest reliability, and inter-rater reliability, with strong agreement between in-person and video-call assessments for assessing bradykinesia components.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42495956/",
-      "publishedAt": "2026-07-24T00:00:00.000Z",
-      "firstSeen": "2026-07-24T17:55:52.824Z",
-      "curatedScore": 80,
-      "curatedReason": "修订版缓动评定量表（MBRS）在评估运动迟缓方面显示出良好的内容效度、重测信度和评定者间信度，并且其线上视频评估与线下评估结果一致。这意味着未来在帕金森病患者评估中，远程医疗工具的可信度将进一步提高。",
-      "titleZh": "修订版缓动评定量表（MBRS）内容效度、信度及线上视频与线下评估一致性研究",
-      "summaryZh": "本方法学研究依照 COSMIN 指南，调查了修订版缓动评定量表（MBRS）评估运动迟缓（速度、幅度、节律）的内容效度、重测信度和评定者间信度，以及线下与视频通话评估的一致性。",
-      "curatedReasonEn": "The Modified Bradykinesia Rating Scale (MBRS) demonstrates good content validity, test-retest reliability, and inter-rater reliability, with strong agreement between in-person and video-call assessments. This supports the increasing trustworthiness of telehealth tools for assessing bradykinesia in Parkinson's disease.",
-      "limitation": "研究样本量未明确给出具体数值，可能对外推性造成影响。",
-      "limitationEn": "The specific sample size was not explicitly provided, which may impact generalizability.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1784742300473-3",
-      "title": "In adult patients with brainstem strokes, does dysphagia rehabilitation improve health-related outcomes compared to usual care for inpatients? A systematic review and meta-analysis.",
-      "summary": "This systematic review and meta-analysis of 12 studies (n=443 participants) explored the effectiveness of dysphagia rehabilitation on swallow function in adult inpatients with brainstem stroke, categorizing interventions into traditional swallowing therapy or device inclusion.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484106/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.473Z",
-      "curatedScore": 80,
-      "curatedReason": "对于脑干卒中患者的吞咽障碍康复，这项系统综述肯定了其对吞咽功能的有效性。它提供了当前干预措施的证据基础，支持你对这类高风险患者积极进行康复。",
-      "titleZh": "脑干卒中住院成年患者吞咽障碍康复是否能改善健康相关结局：系统综述和荟萃分析",
-      "summaryZh": "这项纳入 12 项研究（443 名参与者）的系统综述和荟萃分析，探讨了吞咽障碍康复对脑干卒中住院成年患者吞咽功能的有效性，将干预措施分为传统吞咽疗法或包含设备。",
-      "curatedReasonEn": "This systematic review affirms the effectiveness of dysphagia rehabilitation for improving swallow function in brainstem stroke patients. It provides an evidence base for current interventions, supporting your proactive rehabilitation efforts for these high-risk patients.",
-      "limitation": "本综述包含的研究异质性可能较高，且 meta 分析仅限于少数满足条件的 RCT，影响了总体结论的精确性和普适性。",
-      "limitationEn": "The included studies in this review may have high heterogeneity, and meta-analyses were limited to a few eligible RCTs, affecting the precision and generalizability of the overall conclusions.",
-      "tags": [
-        "research",
-        "stroke",
-        "brain-injury"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1784742300471-0",
-      "title": "Responsiveness of the Arabic version of the lower extremity functional scale in individuals with lower extremity musculoskeletal disorders.",
-      "summary": "This study examined the responsiveness of the Arabic version of the Lower Extremity Functional Scale (LEFS) in 74 individuals with lower extremity musculoskeletal disorders. LEFS change scores showed good correlation with other outcome measures, supporting its utility in clinical practice.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484462/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.471Z",
-      "curatedScore": 75,
-      "curatedReason": "评估量表能否响应治疗变化，是将其引入常规临床实践前的关键一步。LEFS 阿拉伯语版表现良好，为中东地区临床医师提供了工具可靠性依据。",
-      "titleZh": "下肢功能量表阿拉伯语版在下肢肌肉骨骼疾病患者中的响应度",
-      "summaryZh": "这项研究评估了下肢功能量表（LEFS）阿拉伯语版在 74 名下肢肌肉骨骼疾病患者中的响应度。LEFS 变化分数与其他结局指标显示出良好相关性，支持其在临床实践中的应用价值。",
-      "curatedReasonEn": "Evaluating a scale's responsiveness to treatment changes is crucial before its routine clinical adoption. The Arabic LEFS demonstrates good responsiveness, offering clinicians in the Middle East reliable evidence for its utility.",
-      "limitation": "研究样本量相对较小（n=74），且随访期较短（3-4周），可能限制了其在长期康复效果评估中的外推性。",
-      "limitationEn": "The study's relatively small sample size (n=74) and short follow-up period (3-4 weeks) may limit the generalizability of its findings for long-term rehabilitation outcome assessment.",
-      "tags": [
-        "research",
-        "foot-ankle",
-        "hip",
-        "knee",
-        "shoulder",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1785281222555-0",
-      "title": "Research progress on horticultural therapy in patients with post-stroke cognitive impairment: a narrative review.",
-      "summary": "This narrative review evaluated horticultural therapy (HT) for post-stroke cognitive impairment (PSCI), finding it significantly improves memory, executive function, and orientation, and categorized HT protocols into five types.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42520098/",
-      "publishedAt": "2026-07-28T00:00:00.000Z",
-      "firstSeen": "2026-07-28T23:27:02.555Z",
-      "curatedScore": 75,
-      "curatedReason": "园艺疗法在卒中后认知障碍患者中的应用仍处于早期探索阶段。目前证据主要是叙述性综述，临床实践中应谨慎评估其作为辅助手段的潜力，而非核心干预。",
-      "titleZh": "园艺疗法在卒中后认知障碍患者中的研究进展：一项叙述性综述",
-      "summaryZh": "这项叙述性综述评估了园艺疗法对卒中后认知障碍患者的治疗效果，发现其显著改善记忆、执行功能和定向力，并将园艺疗法方案分为五种类型。",
-      "curatedReasonEn": "Horticultural therapy for post-stroke cognitive impairment is still in early exploratory stages. Current evidence is primarily from narrative reviews, so consider its potential as an adjunct, not a core intervention, with caution in clinical practice.",
-      "limitation": "本研究为叙述性综述，可能存在选择偏倚且未进行系统性证据综合。",
-      "limitationEn": "This is a narrative review, which may be subject to selection bias and lacks systematic evidence synthesis.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Topics in stroke rehabilitation"
     }
   ]
 }
