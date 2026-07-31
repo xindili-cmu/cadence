@@ -1,0 +1,442 @@
+{
+ "date": "2026-08-01",
+ "generatedAt": "2026-07-31T22:31:11.135Z",
+ "windowHours": 50,
+ "windowStart": "2026-07-30T22:34:00.207Z",
+ "windowEnd": "2026-07-31T22:31:09.407Z",
+ "lead": {
+  "titleZh": "CMS 推广关节置换项目，神经康复关注结构化运动管理多发性硬化症疲劳",
+  "titleEn": "CMS Expands Joint Replacement Program; Neurorehabilitation Focuses on Structured Exercise for MS Fatigue",
+  "paragraphZh": "今日日报共 17 条更新，涵盖 6 个专科。其中，CMS 全国推广关节置换项目是本日最高分，达到 90 分，值得所有临床 PT 关注其潜在影响。此外，神经康复领域有一篇高质量的系统综述，指出结构化运动训练对多发性硬化症疲劳管理的有效性，证据等级较高。",
+  "paragraphEn": "Today's daily report features 17 updates across 6 specialties. The CMS nationwide expansion of the joint replacement program is the top score at 90, warranting attention from all clinical PTs for its potential implications. Additionally, a high-quality umbrella review in neurorehabilitation highlights the efficacy of structured exercise training for fatigue management in multiple sclerosis, indicating a strong evidence base."
+ },
+ "stats": {
+  "events": 17,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 90
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1785537056535-0",
+     "title": "Neurocognitive training with visual perturbation improves dual-task hop performance in male athletes after anterior cruciate ligament reconstruction: a randomized controlled trial | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A randomized controlled trial found that neurocognitive training with visual perturbation improved dual-task hop performance in male athletes after anterior cruciate ligament reconstruction.",
+     "category": "orthopedic",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01932-1",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.535Z",
+     "curatedScore": 85,
+     "curatedReason": "ACL 术后男性运动员康复中加入视听扰动神经认知训练，能显著提升双任务跳跃表现。在返场训练时，结合认知挑战，才能更好地模拟比赛压力。",
+     "titleZh": "视听扰动神经认知训练可改善 ACL 术后男性运动员双任务跳跃表现：一项随机对照试验",
+     "summaryZh": "一项随机对照试验显示，对于前交叉韧带（ACL）重建术后的男性运动员，结合视听扰动的神经认知训练能显著提高其双任务跳跃表现。",
+     "curatedReasonEn": "Integrating neurocognitive training with visual perturbation significantly improves dual-task hop performance in male athletes post-ACL reconstruction. This approach is crucial for return-to-sport training to simulate competitive pressure more effectively.",
+     "limitation": "研究对象仅为男性运动员，结果外推到女性或其他人群需谨慎。",
+     "limitationEn": "The study was limited to male athletes, so the generalizability of these findings to females or other populations should be considered with caution.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1785482348359-0",
+     "title": "Effectiveness of an AI-based home exercise app for rehabilitation of rotator cuff-related shoulder pain: A randomized controlled trial.",
+     "summary": "A single-center RCT (N=46) found that adding an AI-based digital rehabilitation program to standard physiotherapy significantly improved pain, function, and fear-avoidance beliefs, and reduced healthcare utilization in patients with rotator cuff-related shoulder pain.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42531919/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T07:19:08.359Z",
+     "curatedScore": 85,
+     "curatedReason": "肩袖相关肩痛的康复，基于 AI 的家庭运动 App 结合传统理疗效果显著，尤其在依从性管理上有优势。虽然是单中心小样本，但对于考虑远程康复方案的诊所，这提示了一个可行的技术路径。",
+     "titleZh": "AI 家庭运动 App 对肩袖相关肩痛康复的有效性：一项随机对照试验。",
+     "summaryZh": "一项单中心随机对照试验（N=46）发现，在标准物理治疗基础上增加 AI 家庭康复计划，能显著改善肩袖相关肩痛患者的疼痛、功能和恐惧回避信念，并减少医疗资源使用。",
+     "curatedReasonEn": "For rotator cuff-related shoulder pain, an AI-based home exercise app combined with traditional physiotherapy showed significant benefits, particularly in improving adherence. Though a single-center pilot, it suggests a viable technological pathway for clinics considering telerehabilitation solutions.",
+     "limitation": "本研究为单中心小样本 RCT (N=46)，结果推广性有限，需更大规模多中心研究验证。",
+     "limitationEn": "This was a single-center, small-sample RCT (N=46), limiting generalizability; larger, multi-center studies are needed for validation.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Musculoskeletal science & practice",
+     "tech": true
+    },
+    {
+     "id": "news-1785520637137-0",
+     "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
+     "summary": "A retrospective cohort study found that physical therapist evaluation in a Veterans Affairs Emergency Department was associated with increased 1-year physical therapist visit utilization but did not significantly change overall musculoskeletal healthcare utilization compared to traditional ED care.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42535673/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T17:57:17.137Z",
+     "curatedScore": 75,
+     "curatedReason": "急诊物理治疗师干预，对患者一年内总肌骨医疗利用率和后续 PT 就诊率的影响有待更多研究。本研究提示，相比传统急诊，有 PT 介入的急诊可能不会显著减少一年内整体肌骨医疗支出，但可以提高 PT 的利用率。",
+     "titleZh": "退伍军人事务部急诊物理治疗师评估后一年的医疗服务利用情况",
+     "summaryZh": "一项回顾性队列研究显示，在退伍军人事务部急诊接受物理治疗师评估的患者，其一年内物理治疗就诊率有所增加，但与传统急诊护理相比，整体肌骨医疗服务利用率并未显著改变。",
+     "curatedReasonEn": "The impact of ED PT intervention on one-year musculoskeletal healthcare utilization and subsequent PT visits needs further investigation. This study suggests that ED PT may not significantly reduce overall musculoskeletal healthcare costs in the long term compared to traditional ED care, but it could increase PT utilization.",
+     "limitation": "这是一项回顾性队列研究，且仅限于单一 VA 医疗系统的退伍军人，结果外推性有限。",
+     "limitationEn": "This is a retrospective cohort study limited to veterans within a single VA healthcare system, which limits the generalizability of its findings.",
+     "tags": [
+      "research",
+      "reimbursement",
+      "workforce"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physical therapy"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1785482348361-2",
+     "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+     "summary": "An umbrella review synthesizing evidence from systematic reviews and meta-analyses confirms the effectiveness of structured exercise training for fatigue in people with multiple sclerosis, with effects varying across exercise modalities and fatigue instruments.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532214/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T07:19:08.361Z",
+     "curatedScore": 88,
+     "curatedReason": "结构化运动训练对多发性硬化症（MS）相关疲劳有效性明确。这篇伞形综述强化了运动作为 MS 疲劳管理一线干预的地位，下次患者咨询时，可以更有底气地建议其开始运动计划。",
+     "titleZh": "结构化运动训练对多发性硬化症疲劳管理的疗效：系统综述和荟萃分析的伞形综述。",
+     "summaryZh": "一项伞形综述综合了系统综述和荟萃分析的证据，证实结构化运动训练对多发性硬化症患者的疲劳有效，但不同运动方式和疲劳测量工具下的效果有所差异。",
+     "curatedReasonEn": "Structured exercise training is clearly effective for fatigue in multiple sclerosis (MS). This umbrella review solidifies exercise as a first-line intervention for MS-related fatigue. When patients inquire, you can confidently recommend they initiate an exercise program.",
+     "limitation": "伞形综述可能存在原纳入研究的发表偏倚和异质性问题，需结合具体系统综述评估。",
+     "limitationEn": "Umbrella reviews may be subject to publication bias and heterogeneity from their included systematic reviews, requiring evaluation of specific systematic reviews.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "id": "news-1785454167184-1",
+     "title": "Models Containing the Braden Scale Predict Activities of Daily Living Improvement in Post-Stroke Hemiplegia: A Single Center Retrospective Cohort Study.",
+     "summary": "A single-center retrospective cohort study on 324 post-stroke hemiplegia patients developed a predictive model integrating the Braden scale to forecast activities of daily living (ADL) recovery and evaluated a comprehensive rehabilitation program.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42531336/",
+     "publishedAt": "2026-07-30T00:00:00.000Z",
+     "firstSeen": "2026-07-30T23:29:27.184Z",
+     "curatedScore": 75,
+     "curatedReason": "这项回顾性研究提示，将 Braden 量表纳入预测模型有助于评估卒中偏瘫患者日常生活活动能力（ADL）的改善潜力。这能帮你更早期识别高危患者，并据此调整康复策略和预后沟通。",
+     "titleZh": "包含 Braden 量表的模型可预测卒中偏瘫患者日常生活活动能力改善：一项单中心回顾性队列研究",
+     "summaryZh": "一项对 324 例卒中偏瘫患者进行的单中心回顾性队列研究发现，整合 Braden 量表的模型可预测日常生活活动（ADL）的改善，并评估了综合康复计划的效果。",
+     "curatedReasonEn": "This retrospective study suggests that incorporating the Braden scale into predictive models can help assess the potential for ADL improvement in post-stroke hemiplegia patients. This enables earlier identification of at-risk patients and allows for tailored rehabilitation strategies and prognosis communication.",
+     "limitation": "这是一项单中心回顾性队列研究，可能存在选择偏倚和数据完整性问题，且结果外推性有限。",
+     "limitationEn": "This was a single-center retrospective cohort study, which may be subject to selection bias and data integrity issues, with limited generalizability of results.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+     "id": "news-1785520637139-1",
+     "title": "Understanding barriers and motivators for fruit and vegetable intake in female stroke survivors: a qualitative study.",
+     "summary": "A qualitative study explored barriers and motivators to fruit and vegetable intake in ten female stroke survivors, identifying themes such as feeling \"Navigating alone\" for dietary support and a willingness to improve intake \"If it's good for me.\"",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42535618/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T17:57:17.139Z",
+     "curatedScore": 70,
+     "curatedReason": "定性研究揭示了女性卒中幸存者在蔬果摄入方面的障碍和驱动因素，特别是对营养支持的孤独感。在康复计划中，您应更主动地评估并提供个性化的饮食支持和教育，这可能有助于改善患者的整体健康。",
+     "titleZh": "了解女性卒中幸存者蔬果摄入障碍与驱动因素：一项定性研究",
+     "summaryZh": "一项定性研究探讨了十名女性卒中幸存者蔬果摄入的障碍与驱动因素，揭示了她们在饮食支持方面感到“独自摸索”以及在“如果对我有益”的前提下愿意改善摄入。",
+     "curatedReasonEn": "This qualitative study reveals barriers and motivators for fruit and vegetable intake in female stroke survivors, particularly their feelings of isolation regarding nutritional support. In your rehabilitation programs, you should proactively assess and provide personalized dietary support and education, which could contribute to improving patients' overall well-being.",
+     "limitation": "本研究为定性研究，样本量小且仅针对女性卒中幸存者，结果不具普遍性。",
+     "limitationEn": "This is a qualitative study with a small sample size focused solely on female stroke survivors, limiting the generalizability of its findings.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1785495734742-4",
+     "title": "Joint Associations of Sleep-Disordered Breathing and Cerebral Small Vessel Disease Burden With Executive Performance, Balance, and In-Hospital Falls in Patients With Subacute Supratentorial Ischemic Stroke Undergoing Inpatient Rehabilitation.",
+     "summary": "A retrospective cohort study of 1,050 adults with subacute supratentorial ischemic stroke found that sleep-disordered breathing and cerebral small vessel disease burden were jointly associated with lower executive performance, impaired balance, and higher incidence of in-hospital falls.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42533304/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T11:02:14.742Z",
+     "curatedScore": 70,
+     "curatedReason": "这项观察研究强调了睡眠呼吸障碍和脑小血管疾病负担与亚急性幕上缺血性卒中患者执行功能、平衡及住院跌倒之间的关联。这提示你在评估卒中患者时，需关注这些合并症对康复结局的潜在影响。",
+     "titleZh": "睡眠呼吸障碍和脑小血管疾病负担与亚急性幕上缺血性卒中患者执行功能、平衡及住院跌倒的联合关联。",
+     "summaryZh": "一项针对 1050 名亚急性幕上缺血性卒中患者的回顾性队列研究发现，睡眠呼吸障碍和脑小血管疾病负担与较低的执行功能、平衡障碍以及较高的住院跌倒发生率存在联合关联。",
+     "curatedReasonEn": "This observational study highlights the association between sleep-disordered breathing and cerebral small vessel disease burden with executive performance, balance, and in-hospital falls in patients with subacute supratentorial ischemic stroke. This suggests that when evaluating stroke patients, you should consider the potential impact of these comorbidities on rehabilitation outcomes.",
+     "limitation": "回顾性队列研究设计无法建立因果关系，且结果可能受未测量混杂因素影响。",
+     "limitationEn": "The retrospective cohort study design cannot establish causality, and results may be influenced by unmeasured confounding factors.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "American journal of physical medicine & rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1785537056536-6",
+     "title": "Lower-limb coordination during the rear-leg roundhouse kick in competitive taekwondo: a vector-coding analysis | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A vector-coding analysis investigated lower-limb coordination during the rear-leg roundhouse kick in competitive taekwondo.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01831-5",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.536Z",
+     "curatedScore": 70,
+     "curatedReason": "这项跆拳道下肢协调性的向量编码分析，为你在运动表现训练中分析特定动作模式提供了精细化的方法。它能帮你更精确地识别技术缺陷。",
+     "titleZh": "竞技跆拳道后腿摆踢时下肢协调性的向量编码分析",
+     "summaryZh": "一项向量编码分析研究了竞技跆拳道运动员在后腿摆踢过程中下肢的协调性。",
+     "curatedReasonEn": "This vector-coding analysis of lower-limb coordination in taekwondo offers a refined method for analyzing specific movement patterns in sports performance training. Use it to more precisely identify technical deficiencies.",
+     "limitation": "研究对象仅限于竞技跆拳道运动员，结果外推到其他运动或人群需谨慎。",
+     "limitationEn": "The study focused solely on competitive taekwondo athletes, so generalizability to other sports or populations should be considered with caution.",
+     "tags": [
+      "research",
+      "performance-training"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785537056536-5",
+     "title": "Post-traumatic dental care, mouthguard use, and preventive behaviour among athletes participating in sports with different contact intensities: a cross-sectional study | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A cross-sectional study investigated post-traumatic dental care, mouthguard use, and preventive behaviors among athletes in sports with different contact intensities.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01935-y",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.536Z",
+     "curatedScore": 65,
+     "curatedReason": "牙外伤在竞技体育中并不少见。这项研究提示，不同接触强度运动的运动员在创伤后牙科护理和护齿器使用上存在差异。尽管是牙科研究，但它提醒我们在运动康复中，应把运动员的口腔健康与全身防护一并考虑，别漏掉这个细节。",
+     "titleZh": "不同接触强度运动中运动员创伤后牙科护理、护齿器使用及预防行为：一项横断面研究",
+     "summaryZh": "一项横断面研究调查了参与不同接触强度运动的运动员在创伤后牙科护理、护齿器使用和预防行为方面的状况。",
+     "curatedReasonEn": "Dental trauma is common in competitive sports. This study suggests athletes in sports with varying contact intensities differ in post-traumatic dental care and mouthguard use. While a dental study, it reminds us to integrate oral health into comprehensive athlete protection during sports rehabilitation; don't overlook this detail.",
+     "limitation": "作为一项横断面观察研究，无法建立因果关系，且依赖自我报告数据。",
+     "limitationEn": "As a cross-sectional observational study, it cannot establish causality and relies on self-reported data.",
+     "tags": [
+      "research",
+      "injury-prevention"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785537056536-8",
+     "title": "Serum metabolomic profiling of exercise response and hyperuricemia status in athletes: a two-part exploratory study | BMC Sports Science, Medicine and Rehabilitation",
+     "summary": "A two-part exploratory study conducted serum metabolomic profiling to analyze exercise response and hyperuricemia status in athletes.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01907-2",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.536Z",
+     "curatedScore": 65,
+     "curatedReason": "这项探索性研究通过血清代谢组学分析运动员的运动反应和高尿酸血症状态，为理解运动生理学提供了潜在的新生物标志物。你未来在评估运动员代谢健康时可能会用到。",
+     "titleZh": "运动员运动反应及高尿酸血症状态的血清代谢组学分析：一项两阶段探索性研究",
+     "summaryZh": "一项两阶段探索性研究对运动员的血清代谢组进行了分析，以了解运动反应和高尿酸血症状态。",
+     "curatedReasonEn": "This exploratory study, by analyzing athletes' serum metabolomic profiles, suggests potential new biomarkers for exercise response and hyperuricemia. While still in early stages, keep an eye on these indicators for their future potential in assessing athlete metabolic health.",
+     "limitation": "这是一项探索性研究，样本量和研究设计可能限制了结论的普遍性。",
+     "limitationEn": "As an exploratory study, sample size and study design might limit the generalizability of the conclusions.",
+     "tags": [
+      "research",
+      "sports-physiology"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1785482348361-6",
+     "title": "Remotely Monitored Home-based Pulmonary Rehabilitation in Idiopathic Pulmonary Fibrosis: Results of a Randomized Controlled Trial.",
+     "summary": "A randomized controlled trial (N=29) in patients with idiopathic pulmonary fibrosis on antifibrotic therapy found that a 12-week asynchronously remotely monitored, exercise-focused home pulmonary rehabilitation program significantly improved exercise capacity (increase in 6MWD by 31.6 meters; p=0.03).",
+     "category": "cardiopulmonary",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532213/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T07:19:08.361Z",
+     "curatedScore": 85,
+     "curatedReason": "家庭远程监测的肺康复在特发性肺纤维化（IPF）患者中显示出可行性和有效性。这为那些无法进行医院内康复的 IPF 患者提供了一个重要的替代方案，拓展了肺康复的服务边界。",
+     "titleZh": "远程监测的特发性肺纤维化居家肺康复：一项随机对照试验的结果。",
+     "summaryZh": "一项针对接受抗纤维化治疗的特发性肺纤维化患者的随机对照试验（N=29）发现，为期 12 周的异步远程监测、以运动为重点的居家肺康复项目显著改善了运动能力（6MWD 增加 31.6 米；p=0.03）。",
+     "curatedReasonEn": "Remotely monitored home-based pulmonary rehabilitation demonstrates feasibility and effectiveness in idiopathic pulmonary fibrosis (IPF) patients. This offers a crucial alternative for IPF patients unable to access in-hospital rehabilitation, expanding the reach of pulmonary rehabilitation services.",
+     "limitation": "本研究样本量较小（n=29），为单中心试验，可能限制了结果的普遍适用性。",
+     "limitationEn": "The study had a small sample size (n=29) and was single-center, potentially limiting the generalizability of its findings.",
+     "tags": [
+      "research",
+      "COPD"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "id": "news-1785482348362-7",
+     "title": "Effects of Short-term High-intensity vs. Moderate-intensity Interval Training on Cardiopulmonary Fitness and Metabolic Health in Overweight or Obese Patients with Cardiovascular Disease: Evidence from China.",
+     "summary": "A retrospective study (N=145) compared 4-week supervised HIIT (N=63) vs. MIIT (N=82) in overweight/obese CVD patients. Both improved cardiopulmonary fitness (VO2peak) and metabolic health, but MIIT showed significantly better adherence (98.8% vs. 90.5%, p=0.02).",
+     "category": "cardiopulmonary",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532212/",
+     "publishedAt": "2026-07-31T00:00:00.000Z",
+     "firstSeen": "2026-07-31T07:19:08.362Z",
+     "curatedScore": 70,
+     "curatedReason": "对于超重或肥胖的心血管疾病患者，高强度间歇训练（HIIT）和中等强度间歇训练（MIIT）都能改善心肺健康和代谢指标。MIIT 组表现出更好的依从性。在实践中，您应根据患者的接受程度和具体情况，灵活选择训练强度，MIIT 可能是更现实的方案。",
+     "titleZh": "短期高强度 vs. 中等强度间歇训练对超重或肥胖心血管疾病患者心肺健康和代谢的影响：来自中国的证据。",
+     "summaryZh": "一项回顾性研究（N=145）比较了超重或肥胖的心血管疾病患者进行 4 周监督下高强度间歇训练（N=63）与中等强度间歇训练（N=82）的效果。两组均改善了心肺健康（VO2peak）和代谢指标，但中等强度组依从性显著更优（98.8% 对 90.5%，p=0.02）。",
+     "curatedReasonEn": "Both high-intensity interval training (HIIT) and moderate-intensity interval training (MIIT) improve cardiopulmonary fitness and metabolic health in overweight or obese patients with cardiovascular disease. The MIIT group showed better adherence. In practice, you should flexibly choose training intensity based on patient acceptance and specific conditions, with MIIT potentially being a more realistic option.",
+     "limitation": "本研究为回顾性研究，存在选择偏倚和混杂因素的风险，无法建立明确的因果关系。",
+     "limitationEn": "This retrospective study carries risks of selection bias and confounding factors, thus unable to establish definitive causality.",
+     "tags": [
+      "research",
+      "心脏康复"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of physical medicine and rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1785537056537-16",
+     "title": "Efficacy and Safety of Radiofrequency as a Treatment Modality for Genitourinary Syndrome of Menopause: A Systematic Review and Meta-Analysis of Randomized Controlled Trials | International Urogynecology Journal",
+     "summary": "A systematic review and meta-analysis of randomized controlled trials confirmed the efficacy and safety of radiofrequency as a treatment modality for genitourinary syndrome of menopause.",
+     "category": "manual-modality",
+     "source": "Int Urogynecol J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06818-x",
+     "publishedAt": "2026-07-30T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.537Z",
+     "curatedScore": 80,
+     "curatedReason": "绝经期泌尿生殖道综合征（GSM）的物理治疗又添一员。这项RCT系统综述明确证实射频治疗GSM安全有效，因此，你可以放心将射频作为GSM患者的物理治疗方案之一，为她们提供更多选择。",
+     "titleZh": "射频作为绝经期泌尿生殖道综合征治疗手段的疗效和安全性：一项随机对照试验的系统综述和荟萃分析",
+     "summaryZh": "一项随机对照试验的系统综述和荟萃分析证实了射频作为绝经期泌尿生殖道综合征治疗手段的疗效和安全性。",
+     "curatedReasonEn": "Another option for Genitourinary Syndrome of Menopause (GSM) physical therapy. This systematic review of RCTs definitively confirms radiofrequency treatment for GSM is safe and effective. Therefore, you can confidently integrate radiofrequency as a physical therapy option for GSM patients, offering them more choices.",
+     "limitation": "尽管是系统综述，但可能纳入的研究质量和异质性会影响整体结论。",
+     "limitationEn": "Although it is a systematic review, the quality and heterogeneity of included studies may affect the overall conclusions.",
+     "tags": [
+      "research",
+      "pelvic-floor",
+      "electro"
+     ],
+     "studyDesign": "系统综述"
+    },
+    {
+     "id": "news-1785537056537-15",
+     "title": "Would initial thoracic correction be a key factor in orthotic intervention for adolescent idiopathic scoliosis with double-curve? | European Spine Journal",
+     "summary": "A retrospective study investigated the influence of in-orthosis correction on treatment outcomes of adolescent idiopathic scoliosis (AIS) with double-curve, identifying initial thoracic correction as a key factor.",
+     "category": "manual-modality",
+     "source": "Eur Spine J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10220-y",
+     "publishedAt": "2026-07-25T00:00:00.000Z",
+     "firstSeen": "2026-07-31T22:30:56.537Z",
+     "curatedScore": 75,
+     "curatedReason": "这项回顾性研究表明，对于双弯型青少年特发性脊柱侧凸，支具内的胸段初始矫正程度是影响治疗结果的关键因素。你在评估和管理支具治疗时，要重视早期胸段矫正效果。",
+     "titleZh": "青少年特发性双弯型脊柱侧凸的支具矫正中，胸段初始矫正是否为关键因素？",
+     "summaryZh": "一项回顾性研究探讨了支具内矫正对双弯型青少年特发性脊柱侧凸（AIS）治疗结果的影响，发现初始胸段矫正可能是关键因素。",
+     "curatedReasonEn": "This retrospective study indicates that the initial thoracic correction achieved within an orthosis is a key factor influencing treatment outcomes for adolescent idiopathic scoliosis with double-curve. When assessing and managing orthotic treatment, you should prioritize early thoracic correction.",
+     "limitation": "作为一项回顾性研究，可能存在选择偏倚和数据完整性问题。",
+     "limitationEn": "As a retrospective study, it may be subject to selection bias and issues with data completeness.",
+     "tags": [
+      "research",
+      "spine",
+      "pediatric"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1785533572795-0",
+     "title": "CMS News: CMS Announces Nationwide Expansion of Proven Joint Replacement Program",
+     "summary": "CMS is expanding its bundled payment program for hip and knee replacements nationwide, impacting reimbursement and care delivery models for physical therapy providers.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-news-cms-announces-nationwide-expansion-proven-joint-replacement-program",
+     "publishedAt": "2026-07-31T21:32:42.262Z",
+     "firstSeen": "2026-07-31T21:32:52.795Z",
+     "curatedScore": 90,
+     "curatedReason": "CMS 将全国推广髋膝关节置换捆绑支付项目，这意味着更多 PT 诊所和医院将直接参与这种支付模式。需要熟悉新规，优化术后康复路径，确保绩效。",
+     "titleZh": "CMS 宣布在全国范围内推广成熟的关节置换项目",
+     "summaryZh": "美国医疗保险和医疗补助服务中心 (CMS) 宣布，将在全国范围内推广成熟的关节置换捆绑支付项目，这将影响物理治疗提供者的报销和护理提供模式。",
+     "curatedReasonEn": "CMS is expanding its bundled payment program for hip and knee replacements nationwide. This means more PT clinics and hospitals will directly engage with this payment model. Familiarize yourself with the new rules to optimize post-operative rehab pathways and ensure performance.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "us"
+     ]
+    },
+    {
+     "id": "news-1785537056537-19",
+     "title": "Prior Authorization for Certain Hospital Outpatient Department (OPD) Services",
+     "summary": "CMS established a nationwide prior authorization process for certain hospital outpatient department (OPD) services to control unnecessary volume increases and protect the Medicare Trust Fund.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/data-research/monitoring-programs/medicare-fee-service-compliance-programs/prior-authorization-pre-claim-review-initiatives/prior-authorization-certain-hospital-outpatient-department-opd-services",
+     "publishedAt": "2026-07-26T22:29:47.339Z",
+     "firstSeen": "2026-07-31T22:30:56.537Z",
+     "curatedScore": 80,
+     "curatedReason": "CMS 针对某些医院门诊部（OPD）服务建立的预先授权流程，旨在控制不必要的服务量增加。这提醒你在美国执业时，需要更早了解和遵守这类政策，以避免报销延迟或拒绝。",
+     "titleZh": "某些医院门诊部（OPD）服务的预先授权",
+     "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）已针对某些医院门诊部（OPD）服务建立了全国性的预先授权流程，以控制不必要的服务量增长并保护 Medicare 信托基金。",
+     "curatedReasonEn": "CMS's prior authorization process for certain hospital outpatient department (OPD) services aims to control unnecessary increases in service volume. This reminds you that, when practicing in the US, you need to understand and comply with such policies early to avoid reimbursement delays or denials.",
+     "limitation": "这篇新闻主要概述了政策背景，并未提供具体的物理治疗服务受影响的细节。",
+     "limitationEn": "This news primarily outlines the policy background and does not provide specific details on physical therapy services affected.",
+     "tags": [
+      "policy",
+      "regulation",
+      "reimbursement",
+      "us"
+     ]
+    },
+    {
+     "id": "news-1785533572796-1",
+     "title": "FY 2027 Hospital Inpatient Prospective Payment System and Long-Term Care Hospital Prospective Payment System Final Rule (CMS-1849-F)",
+     "summary": "The CMS FY 2027 Final Rule for Hospital Inpatient Prospective Payment System and Long-Term Care Hospital Prospective Payment System outlines updated payment policies for these facilities.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/fy-2027-hospital-inpatient-prospective-payment-system-long-term-care-hospital-prospective-payment",
+     "publishedAt": "2026-07-31T21:32:42.262Z",
+     "firstSeen": "2026-07-31T21:32:52.796Z",
+     "curatedScore": 75,
+     "curatedReason": "新规虽未直接调整 PT 报销，但住院和长期护理医院的整体支付框架变动，会直接影响你所在机构的运营和资源分配。你需要关注这些变化，以便理解医院战略调整的底层逻辑。",
+     "titleZh": "2027 财年医院住院预付费系统和长期护理医院预付费系统最终规则（CMS-1849-F）",
+     "summaryZh": "美国医疗保险和医疗补助服务中心 (CMS) 发布了 2027 财年医院住院预付费系统和长期护理医院预付费系统的最终规则，阐述了针对这些机构的最新支付政策。",
+     "curatedReasonEn": "This CMS final rule doesn't directly alter PT reimbursement, but changes to hospital inpatient and long-term care hospital payment systems directly impact your facility's operations and resource allocation. You need to understand these shifts to grasp the underlying logic of your institution's strategic adjustments.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "us"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
