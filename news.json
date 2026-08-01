@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-07-31T23:26:44.264Z",
+    "lastUpdated": "2026-08-01T03:56:41.758Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -100,9 +100,9 @@
           "titleZh": "中青年卒中患者的抑郁、焦虑和生活质量与性功能的关系：一项病例对照研究。"
         }
       ],
-      "heat": 5.7,
-      "themeZh": "卒中后康复：吞咽、平衡、手功能与早期康复安全性",
-      "themeEn": "Stroke Rehabilitation: Swallowing, Balance, Hand Function, Early Safety"
+      "heat": 5.34,
+      "themeZh": "卒中康复中患者表现与脑活动的功能性关联",
+      "themeEn": "Stroke rehabilitation: patient performance and brain activity"
     },
     {
       "id": "news-1785482348361-6",
@@ -144,9 +144,9 @@
           "titleZh": "防跌倒 App (SAFE app) 对社区老年人跌倒风险类别的影响：一项单盲随机对照试点试验"
         }
       ],
-      "heat": 4,
-      "themeZh": "居家肺康复与数字工具在跌倒预防中的应用",
-      "themeEn": "Home Pulmonary Rehab, Digital Tools for Falls Prevention"
+      "heat": 3.78,
+      "themeZh": "居家康复与数字工具在慢性疾病管理中的应用",
+      "themeEn": "Digital tools for chronic disease home rehabilitation"
     },
     {
       "id": "news-1785049661034-0",
@@ -195,9 +195,9 @@
           "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析。"
         }
       ],
-      "heat": 3.56,
-      "themeZh": "肩颈痛的数字健康与人工智能康复方案",
-      "themeEn": "Digital Health, AI for Shoulder-Neck Pain Rehab"
+      "heat": 3.34,
+      "themeZh": "肩痛康复中个性化策略与人工智能应用的效用",
+      "themeEn": "Personalized AI-based strategies for shoulder pain"
     },
     {
       "id": "news-1785049661036-1",
@@ -232,9 +232,9 @@
           "titleZh": "利西那肽对抗帕金森病中 α-突触核蛋白病理传播的神经保护作用"
         }
       ],
-      "heat": 3,
-      "themeZh": "脊髓损伤与帕金森病的神经保护和积极心理干预",
-      "themeEn": "Neuroprotection, Positive Psychology for SCI and Parkinson's"
+      "heat": 2.83,
+      "themeZh": "神经系统疾病中的积极心理与神经保护干预",
+      "themeEn": "Positive psychology and neuroprotection in neurological conditions"
     },
     {
       "id": "news-1784742300473-2",
@@ -282,12 +282,36 @@
           "titleZh": "关于腰骶部滚动手法和改良 SIMS 手法治疗骶髂关节功能障碍临床疗效的最新证据系统综述"
         }
       ],
-      "heat": 2.52,
-      "themeZh": "慢性腰痛的个体化运动、心理引导与物理治疗",
-      "themeEn": "Personalized Exercise, Psychologically Informed PT for CLBP"
+      "heat": 2.36,
+      "themeZh": "腰背痛的个体化干预与治疗方案",
+      "themeEn": "Individualized interventions for low back pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1784329952320-0",
+      "title": "Virtual Reality-assisted Physiotherapeutic Training for Patients With Knee Osteoarthritis: A Systematic Review and Meta-analysis.",
+      "summary": "A systematic review and meta-analysis of 5 RCTs found that VR-assisted physiotherapy significantly improved pain (SMD = 0.40, 95% CI: 0.14-0.65, P = 0.002), physical function (SMD = 0.37, 95% CI: 0.05-0.70, P = 0.003), and balance (SMD = 0.44, 95% CI: 0.16-0.72, P = 0.002) in patients with knee osteoarthritis compared to traditional rehabilitation.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42468005/",
+      "publishedAt": "2026-07-17T00:00:00.000Z",
+      "firstSeen": "2026-07-17T23:12:32.320Z",
+      "curatedScore": 85,
+      "curatedReason": "VR 辅助康复在缓解膝关节骨性关节炎疼痛、改善功能和平衡方面有显著效果，效应量中等。可以考虑将其纳入患者康复方案，作为传统治疗的有效补充。",
+      "titleZh": "虚拟现实辅助物理治疗对膝骨关节炎患者的效果：系统综述与 Meta 分析",
+      "summaryZh": "一项纳入 5 项随机对照试验的系统综述和 Meta 分析显示，与传统康复治疗相比，VR 辅助物理治疗能显著改善膝骨关节炎患者的疼痛 (SMD = 0.40)、身体功能 (SMD = 0.37) 和平衡 (SMD = 0.44)。",
+      "curatedReasonEn": "VR-assisted physiotherapy significantly improves pain, physical function, and balance in knee osteoarthritis patients with moderate effect sizes. Consider integrating it into rehabilitation programs as an effective adjunct to traditional treatments.",
+      "limitation": "本系统综述仅纳入 5 项 RCT，研究数量和样本量仍偏小，长期效果有待更多大样本研究验证。",
+      "limitationEn": "This systematic review included only 5 RCTs, indicating a relatively small number of studies and sample size. Long-term effects require further validation through larger studies.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "American journal of physical medicine & rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1784503081653-10",
       "title": "Perspectives of Private Practice Physical Therapy Health Care Systems Participating in a Pragmatic Clinical Trial: A Qualitative Study.",
@@ -1911,27 +1935,6 @@
         "news",
         "reimbursement"
       ]
-    },
-    {
-      "id": "news-1784742300473-6",
-      "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
-      "summary": "Eccentric cycling is increasingly used in ACL-R rehabilitation, with evidence suggesting potential benefits for quadriceps atrophy and strength deficits when introduced early (from 3 weeks post-op) in selected patients, also enhancing return-to-sport performance.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42480265/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.473Z",
-      "curatedScore": 70,
-      "curatedReason": "离心骑行在 ACL 重建术后康复中正变得越来越重要。对于特定患者，从术后 3 周开始早期引入离心骑行，可能有助于改善股四头肌萎缩和力量不足，并提升运动表现。你可以考虑将其整合到早期康复方案中。",
-      "titleZh": "ACL 重建术后康复中的离心骑行：专家课程",
-      "summaryZh": "离心骑行在 ACL 重建术后康复中日益普及，有证据表明，在特定患者术后约三周开始早期渐进式离心训练，对股四头肌萎缩和力量不足可能带来益处，并能提高重返运动表现。",
-      "curatedReasonEn": "Eccentric cycling is increasingly relevant in ACL-R rehabilitation. For selected patients, introducing it as early as 3 weeks post-op may mitigate quadriceps atrophy and strength deficits, potentially boosting return-to-sport performance. Consider integrating this into early rehabilitation protocols.",
-      "tags": [
-        "news",
-        "knee"
-      ],
-      "studyDesign": "述评",
-      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
     }
   ]
 }
