@@ -690,7 +690,9 @@ function NewsCard({
             padding: '1px 6px', borderRadius: 'var(--radius-xs)', cursor: 'default',
             background: 'var(--green-50)', border: '1px solid var(--green-100)', color: 'var(--green-700)',
           }}>
-          IF {journalMeta.if} · {journalMeta.quartile}
+          IF {journalMeta.if}
+          {journalMeta.quartile && journalMeta.quartileYear === journalMeta.year ? ` · ${journalMeta.quartile}` : ''}
+          {journalMeta.year ? ` · '${String(journalMeta.year).slice(-2)}` : ''}
         </span>
       )}
       <span style={{ color: 'var(--ink-300)' }}>·</span>
