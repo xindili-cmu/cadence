@@ -15,9 +15,14 @@ const ok = (cond, msg) => { assert.ok(cond, msg); console.log('  ✓', msg); pas
 
 // 一条「脏」curated item：每个内容字段都含错字，url 也含错字（应被保护、不替换）。
 // 每次调用返回全新对象，避免用例间互相污染。
+// summary / summaryZh 是 repairMissingFields（2026-07-28）的必填字段，缺了会被
+// 丢弃 —— C 段要断言「返回 1 条」，所以 fixture 必须是一条完整的 curated item。
+// summary 必须无 CJK，否则 repairChineseSummaries 会触发真实网络调用。
 const makeDirty = () => ({
   curatedScore: 85,
   curatedReason: `这项${WRONG}系统综述给出重返运动标准`,   // 旧白名单字段（基线）
+  summary: 'Systematic review sets return-to-sport criteria after proximal avulsion.',
+  summaryZh: `该${WRONG}系统综述给出了近端撕脱伤后的重返运动标准`,
   titleZh: `近端${WRONG}撕脱伤康复`,                       // 旧白名单字段（基线）
   noteZh: `${WRONG}补充说明`,                              // ★判别：不在旧 TEXT_FIELDS
   url: `https://example.com/${WRONG}-path`,               // ★SKIP：标识符，必须保留

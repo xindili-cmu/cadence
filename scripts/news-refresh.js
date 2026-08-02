@@ -399,6 +399,23 @@ const _nameKey = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim
 const ROSTER_NAME_KEYS = new Set(
   SOURCES.flatMap(s => [s.name, s.journalName]).filter(Boolean).map(_nameKey).filter(Boolean)
 );
+// Roster short name → real journal name. RSS/Exa items only ever carry the
+// roster SHORT name in `source` ("J NeuroEng Rehabil"), and `journal` stayed
+// empty — so the IF/JCR badge, hotTopics' 刊数 and the per-journal selection cap
+// (which counts BY JOURNAL) could only see the PubMed leg. 35/71 live rows had
+// no journal on 2026-07-28, i.e. the cap silently did not apply to them.
+const ROSTER_JOURNAL_BY_NAME = new Map(
+  SOURCES.filter(s => s.kind === 'journal' && s.journalName).map(s => [s.name, s.journalName])
+);
+// Publisher-platform chrome that scrapes bake into the headline, on either side
+// of a pipe: "Frontiers | <real title>" (prefix) and "<real title> | Springer
+// Nature Link" (suffix). Not journals — platforms — so they can't come from the
+// roster. Kept deliberately short: each entry has been seen in live data.
+const PUBLISHER_CHROME_KEYS = new Set([
+  'frontiers', 'springer nature link', 'springerlink', 'sciencedirect',
+  'taylor francis online', 'wiley online library', 'sage journals',
+  'oxford academic', 'karger publishers', 'mdpi', 'researchgate',
+].map(_nameKey));
 // …and the same shape for journals we don't carry on the source roster: a bare
 // periodical name with no sentence in it. Real paper titles essentially never
 // open with "Journal of" and stop there, so the pattern is safe as long as we
@@ -437,6 +454,13 @@ function isJunkItem(item) {
   if (ROSTER_NAME_KEYS.has(tKey)) return true;
   if (tKey && (tKey === _nameKey(item.journal) || tKey === _nameKey(item.source))) return true;
   if (looksLikeJournalLanding(item.title)) return true;
+  // A headline made of nothing but publisher/journal chrome is a landing page,
+  // not an article: "Sports Medicine | Springer Nature Link" →
+  // link.springer.com/journal/40279 (1 archive row, 2026-07-28).
+  const segs = String(item.title || '').split(' | ').map(s => s.trim()).filter(Boolean);
+  if (segs.length > 1 && segs.every(s =>
+    ROSTER_NAME_KEYS.has(_nameKey(s)) || PUBLISHER_CHROME_KEYS.has(_nameKey(s)) || looksLikeJournalLanding(s)
+  )) return true;
   const blob = `${item.summary || ''} ${item.summaryZh || ''}`;
   if (SUMMARY_BOILERPLATE.some((re) => re.test(blob))) return true;
   return false;
@@ -519,8 +543,42 @@ function normalizeTitle(title, meta = {}) {
   //               (pipes are vanishingly rare inside paper titles);
   //   " - Tail" — stripped only when the tail matches the item's source or
   //               journal name (hyphens are common inside real titles).
-  const pi = t.lastIndexOf(' | ');
-  if (pi >= 20 && t.slice(pi + 3).trim().length <= 40) t = t.slice(0, pi).trim();
+  //   The 40-char cap was too tight: the journals we actually carry routinely
+  //   run longer — "Journal of NeuroEngineering and Rehabilitation" (46) and
+  //   "BMC Sports Science, Medicine and Rehabilitation" (47) both slipped the
+  //   gate and shipped inside the headline (8 live rows, 2026-07-28 review),
+  //   while " | CMS" (3) was stripped fine — so the bug only ever showed on
+  //   long-form journal names. Now: a tail that IS a known roster / source /
+  //   journal name is stripped at any length; anything else falls back to a
+  //   length cap wide enough for those names.
+  //   Scrapes also STACK tails — "… | BMC Geriatrics | Springer Nature Link"
+  //   (5 archive rows) — so peel repeatedly instead of once. The pi >= 20 guard
+  //   protects the mirror case where the publisher is a PREFIX ("Frontiers |
+  //   Clinical effectiveness of…"): there the real title is on the RIGHT, and
+  //   slicing left would destroy it.
+  for (let guard = 0; guard < 4; guard++) {
+    const pi = t.lastIndexOf(' | ');
+    if (pi < 20) break;
+    const tail = t.slice(pi + 3).trim();
+    const tailKey = _nameKey(tail);
+    const knownName = !!tailKey && (
+      ROSTER_NAME_KEYS.has(tailKey)
+      || tailKey === _nameKey(meta.source)
+      || tailKey === _nameKey(meta.journal)
+    );
+    if (!knownName && tail.length > 70) break;
+    t = t.slice(0, pi).trim();
+  }
+  //   Mirror case — publisher as a PREFIX ("Frontiers | Clinical effectiveness
+  //   of lumbosacral orthoses…", 2 archive rows): the real title is on the
+  //   RIGHT. Gated on the left side being a known roster/platform name AND the
+  //   right side being a substantial title, so a real "X | Y" headline can't be
+  //   halved.
+  const pfx = t.indexOf(' | ');
+  if (pfx > 0 && pfx <= 24 && t.slice(pfx + 3).trim().length >= 25) {
+    const headKey = _nameKey(t.slice(0, pfx));
+    if (ROSTER_NAME_KEYS.has(headKey) || PUBLISHER_CHROME_KEYS.has(headKey)) t = t.slice(pfx + 3).trim();
+  }
   const hy = t.lastIndexOf(' - ');
   if (hy >= 20 && (meta.source || meta.journal)) {
     const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/gi, ' ').trim();
@@ -821,6 +879,9 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   let curated = await repairEnglishReasons(parseCuratedArray(text));
   curated = await repairChineseSummaries(curated);
   curated = await repairBoilerplateReasons(curated); // 反模板腔（对抗性审查 #8）
+  // 放最后：repairChineseSummaries 会把中文 summary 挪进 summaryZh 再重写英文版，
+  // 先跑缺字段兜底会把那一步的中间态误判成缺失。
+  curated = await repairMissingFields(curated, items, llm);
   return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
 }
 
@@ -893,6 +954,60 @@ async function repairChineseSummaries(curated) {
   const still = curated.filter(c => CJK_RE.test(c.summary || '')).length;
   if (still) console.log(`   ⚠️  ${still} summaries still Chinese after repair (kept as-is)`);
   return curated;
+}
+
+// 缺字段兜底（2026-07-28 复查）：模型偶尔整段漏掉 summary / titleZh / summaryZh
+// 而 curatedScore / curatedReason / tags 照给。落库端的双语字段是条件展开
+// （缺就不写字段、不报错、不打日志），summary 又会回落到 o.highlights 的原始
+// 抓取文本 —— 于是首页直接渲染出带 # / ## 的页面残渣、中文站显示英文。碰上
+// news / policy 的 30-90 天 carry 窗口，增量门又不会重新策展，缺口一旦形成就是
+// 终身的（07-24 CMS ASM FAQ、07-26 BJSM 博客、07-24 APTA 新闻三条挂了 4 天）。
+// 这里在落库前补一次；补不回来的丢弃，而不是把抓取残渣当正文发出去。
+const MISSING_REQUIRED = ['summary', 'titleZh', 'summaryZh'];
+const _blank = (v) => !String(v || '').trim();
+
+const MISSING_FIELDS_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的编辑。下面每条缺了部分字段，请基于给出的 title 和 text 补齐 missing 里列出的字段：
+- summary：1-2 句中性英文（English only，绝不能写中文），front-load 结论方向。只写 text 里明确出现的数字并照抄原值，text 里没有就省略数字，绝不臆测。
+- titleZh：title 的中文翻译，专业紧凑、不逐字直译；缩写（ACL、COPD、RCT 等）保留英文。
+- summaryZh：summary 的中文版，1-2 句，同样保留数字，像中文期刊导读，不要翻译腔。
+
+注意 text 可能是网页抓取残渣（导航菜单、markdown 标题、栏目名、CTA）——忽略这些噪声，只根据真正的内容写。如果 text 里实在读不出任何实质内容，把该字段留成空字符串，不要编。
+
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"summary":"...","titleZh":"...","summaryZh":"..."}]`;
+
+async function repairMissingFields(curated, items, llm = callLLM) {
+  const srcByIndex = new Map((items || []).map(i => [i.index, i]));
+  const bad = curated.filter(c => MISSING_REQUIRED.some(f => _blank(c[f])));
+  if (!bad.length) return curated;
+  console.log(`   🛠  ${bad.length} item(s) missing ${MISSING_REQUIRED.join('/')} — refilling`);
+  for (let off = 0; off < bad.length; off += 10) {
+    const batch = bad.slice(off, off + 10);
+    const user = `补齐以下 ${batch.length} 条：\n\n` + JSON.stringify(
+      batch.map((c, i) => {
+        const src = srcByIndex.get(c.index) || {};
+        return {
+          index: i,
+          title: src.title || '',
+          text: src.text || '',
+          missing: MISSING_REQUIRED.filter(f => _blank(c[f])),
+        };
+      }), null, 2);
+    const text = await llm(MISSING_FIELDS_SYSTEM, user);
+    parseCuratedArray(text || '').forEach(f => {
+      const c = batch[f.index];
+      if (!c) return;
+      for (const k of MISSING_REQUIRED) {
+        if (_blank(c[k]) && !_blank(f[k])) c[k] = f[k];
+      }
+    });
+  }
+  const still = curated.filter(c => MISSING_REQUIRED.some(f => _blank(c[f])));
+  if (still.length) {
+    console.log(`   ⚠️  ${still.length} item(s) still incomplete — dropped (raw scrape is unshippable):`);
+    still.forEach(c => console.log(
+      `      · ${MISSING_REQUIRED.filter(f => _blank(c[f])).join('/')} — ${(srcByIndex.get(c.index)?.title || '').slice(0, 60)}`));
+  }
+  return curated.filter(c => !MISSING_REQUIRED.some(f => _blank(c[f])));
 }
 
 // 模板腔兜底（2026-07-08 对抗性审查 #8）：why-it-matters 的价值在判断，但模型
@@ -1403,6 +1518,9 @@ async function main() {
     // Empty-title guard (one BJSM RSS item shipped a blank title, 2026-07-04):
     // fall back to the summary's first sentence rather than an untitled card.
     const _cleanTitle = normalizeTitle(o.title, o);
+    // PubMed items arrive with o.journal set; RSS/Exa roster items only carry
+    // the roster short name in o.source, so fill journal from the roster.
+    const _journal = o.journal || ROSTER_JOURNAL_BY_NAME.get(o.source) || '';
     const _summary = c.summary || o.highlights || o.text?.substring(0, 200);
     const _fallbackTitle = () => {
       const s = (_summary || '').trim();
@@ -1443,7 +1561,7 @@ async function main() {
       // Study-design badge (XHS card): RCT / 系统综述 / 观察研究 / 综述 / 述评
       ...(c.studyDesign ? { studyDesign: c.studyDesign } : {}),
       // Journal identity for the IF / JCR-quartile badge (journals.json lookup)
-      ...(o.journal ? { journal: o.journal } : {}),
+      ...(_journal ? { journal: _journal } : {}),
       ...(o.related?.length ? { related: o.related } : {})
     };
     // 康复科技 cross-cutting overlay — items keep their clinical category and
@@ -1695,4 +1813,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME };

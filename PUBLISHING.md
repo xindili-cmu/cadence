@@ -38,19 +38,37 @@ PASS（exit 0）才继续；报错（exit 1）就停下修——它专抓发布�
 
 话题标签 `#xxx` 以纯文本保留即可（自动化触发话题选择器易乱；纯文本话题一样可被搜索到）。
 
-## 公众号 — 纯手动（个人订阅号，无认证 → 无草稿/发布 API）
+## 公众号 — 手动（个人订阅号，无认证 → 无草稿/发布 API）
+
+> **为什么不能像 LinkedIn 那样代填到「群发」前**（2026-07-28 实测，别再重复试）：
+>
+> 1. Chrome 扩展导航 `mp.weixin.qq.com` 被**域名级拒绝**：`This site is not allowed due to safety restrictions.`——进不去编辑器，注入正文/传封面那套无从谈起。这一层比微信自己的自动化防护更早生效。
+> 2. computer-use（像素级操控）对**浏览器类应用只给 read tier**：能截图，点击和键盘输入被禁，连代按 `Cmd+A / Cmd+C` 都不行。
+> 3. `write_clipboard` 只有纯文本 flavor，没有 HTML flavor——「把排好版的正文塞进剪贴板让你 Cmd+V」在 Claude 侧做不到，只能在本机脚本里做（见下）。
+>
+> 结论：公众号这条**最后一步之外的自动化也做不了**，只能靠本机脚本把手动步骤压短。
 
 每天 `wechat-brief.js` 产出三件套：`briefs/YYYY-MM-DD.html`（正文，纯内联样式）、`briefs/YYYY-MM-DD-cover.png`（2.35:1 封面）、`briefs/YYYY-MM-DD.meta.txt`（标题+摘要）。**助推合规（2026-06-25 起）**：正文、页脚、「阅读原文」字段一律零站外指向——不列「参考链接」URL 脚注、不挂 `incadencept.com` 外链、不写「见文末阅读原文」CTA。原因：站外链接 = 《微信公众平台推荐运营规范》5.4 导流内容，会让助推被拒（6.24 那期即如此）。文献只以信源名（PubMed 等）呈现，读者需要原文自行检索。这样每期日报都可直接拿去**助推**。
 
-**每日 checklist：**
+**每日 checklist（用 `wechat-clip.sh`，2026-07-28 起）：**
 
-1. 双击打开 `briefs/当天.html`（浏览器渲染出排版）
-2. `Cmd+A` → `Cmd+C` 全选复制
-3. mp.weixin.qq.com 新建图文 → 正文框粘贴（内联样式保留）
-4. 标题 + 摘要从 `briefs/当天.meta.txt` 复制；封面用 `briefs/当天-cover.png`
-5. **「阅读原文」字段保持留空**（meta.txt 已注明）——挂任何站外链接都会破坏助推合规
-6. 自己点「群发」（微信要求人工 + 扫码确认）
-7. 要助推：群发后在文章「…」菜单选「助推」，正文已零导流，可正常过审
+```bash
+./scripts/wechat-clip.sh              # 最新一期
+./scripts/wechat-clip.sh 2026-07-27   # 指定某天
+./scripts/wechat-clip.sh --dry-run    # 只做校验，不碰剪贴板（Linux 也能跑）
+```
+
+脚本做四件事：**助推合规自检**（`http|incadence|阅读原文` 命中即 exit 1，确认无害可 `--force`）→ 把 `briefs/当天.html` 以 **public.html flavor** 写进剪贴板（`osascript` + `«data HTML…»`，等价于浏览器里 `Cmd+A/Cmd+C`，内联样式保留）→ Finder 里定位封面 + 打开公众号后台 → 打印 meta.txt 的标题/摘要。
+
+然后手动：
+
+1. 后台「新的创作 → 图文」→ 正文框 `Cmd+V`（编辑器直链带 session token，写死没用，所以脚本只开首页）
+2. 标题 + 摘要照终端输出填；封面用 Finder 里已选中的 `briefs/当天-cover.png`
+3. **「阅读原文」字段保持留空**（meta.txt 已注明）——挂任何站外链接都会破坏助推合规
+4. 自己点「群发」（微信要求人工 + 扫码确认）
+5. 要助推：群发后在文章「…」菜单选「助推」，正文已零导流，可正常过审
+
+> 脚本坏了 / 剪贴板没 HTML flavor（脚本会读回 `clipboard info` 校验并报错）→ 回退老路：双击开 `briefs/当天.html` → `Cmd+A` → `Cmd+C` → 粘贴。
 
 > 个人订阅号每天 1 次群发限额；5×/周（周二–周六）只用其中 5 天，周日、周一不发。
 > 助推前自查：`grep -iE 'http|incadence|阅读原文' briefs/当天.md briefs/当天.html` 应无任何命中。
