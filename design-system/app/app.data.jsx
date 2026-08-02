@@ -500,7 +500,19 @@ window.CD_DATA_READY = (async () => {
       try {
         const jrn = await jrnRes.json();
         (jrn.journals || []).forEach((j) => {
-          const meta = { name: j.name, if: j.impactFactor, quartile: j.quartile, year: jrn.jcrYear };
+          // Per-entry jcrYear wins over the table-level default: the roster is
+          // refreshed in waves (high-traffic journals first), so rows legitimately
+          // sit on different JCR vintages. The badge prints whichever applies.
+          // quartileYear tracks the quartile separately from the IF: most publishers
+          // print their JIF but not the JCR quartile, so a refreshed row often carries
+          // a new IF and a last-cycle quartile. The badge renders the quartile only
+          // when the two vintages agree (see NewsCard) — we keep the stale value here
+          // because score-calibration.js groups by quartile and needs the sample.
+          const year = j.jcrYear || jrn.jcrYear;
+          const meta = {
+            name: j.name, if: j.impactFactor, quartile: j.quartile,
+            year, quartileYear: j.quartileYear || year,
+          };
           [j.name, ...(j.aliases || [])].forEach((a) => { window.CD_JOURNALS[cdNormJournal(a)] = meta; });
         });
       } catch (e) { console.error('[Cadence] journals.json parse failed:', e); }

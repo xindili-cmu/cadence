@@ -1837,7 +1837,9 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
               <span style={{ fontWeight: 500 }}>{story.wallSource || story.source}</span>
               {story.journalMeta && story.journalMeta.if != null && (
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, padding: '1px 6px', borderRadius: 'var(--radius-xs)', background: 'var(--green-50)', border: '1px solid var(--green-100)', color: 'var(--green-700)' }}>
-                  IF {story.journalMeta.if} · {story.journalMeta.quartile}
+                  IF {story.journalMeta.if}
+                  {story.journalMeta.quartile && story.journalMeta.quartileYear === story.journalMeta.year ? ` · ${story.journalMeta.quartile}` : ''}
+                  {story.journalMeta.year ? ` · '${String(story.journalMeta.year).slice(-2)}` : ''}
                 </span>
               )}
               <span style={{ color: 'var(--ink-300)' }}>·</span>
