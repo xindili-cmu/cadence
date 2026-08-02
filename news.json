@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-02T14:02:53.067Z",
+    "lastUpdated": "2026-08-02T22:16:58.056Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,25 +15,51 @@
   },
   "hotTopics": [
     {
-      "id": "news-1785654246094-0",
-      "title": "Evaluating the impact of high dose inpatient rehabilitation gait training on post stroke physical activity: A secondary analysis of a randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42542201/",
+      "id": "news-1785049661036-1",
+      "title": "Positive Psychology Interventions for Adults with Spinal Cord Injury: A Systematic Review and Meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501930/",
       "category": "neurological",
       "publishedAt": "2026-08-02T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 10,
       "sources": [
         "Archives of physical medicine and rehabilitation",
+        "Topics in stroke rehabilitation",
+        "Disability and rehabilitation",
+        "NeuroRehabilitation",
         "Neurorehabilitation and neural repair",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "American journal of physical medicine & rehabilitation",
         "Physiotherapy theory and practice",
-        "NeuroRehabilitation",
         "medRxiv",
-        "J NeuroEng Rehabil"
+        "Journal of NeuroEngineering and Rehabilitation"
       ],
-      "tag": "stroke",
+      "tag": "spinal-cord",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Positive Psychology Interventions for Adults with Spinal Cord Injury: A Systematic Review and Meta-analysis.",
+          "titleZh": "积极心理学干预对脊髓损伤成年患者的影响：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Research progress on horticultural therapy in patients with post-stroke cognitive impairment: a narrative review.",
+          "titleZh": "园艺疗法在卒中后认知障碍患者中的研究进展：一项叙述性综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Understanding barriers and motivators for fruit and vegetable intake in female stroke survivors: a qualitative study.",
+          "titleZh": "了解女性卒中幸存者蔬果摄入的障碍与动机：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "The Association of Depression, Anxiety, and Quality of Life with Sexual Function in Young-to-Middle-Aged Stroke Patients: A Case-Control Study.",
+          "titleZh": "抑郁、焦虑和生活质量与中青年卒中患者性功能的相关性：一项病例对照研究。"
+        },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -77,7 +103,8 @@
         },
         {
           "source": "J NeuroEng Rehabil",
-          "title": "Neural mechanisms underlying loss of functional independence after stroke: EEG evidence of impaired motor-to-sensory directed connectivity on the affected side | Journal of NeuroEngineering and Rehabilitation",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Neural mechanisms underlying loss of functional independence after stroke: EEG evidence of impaired motor-to-sensory directed connectivity on the affected side",
           "titleZh": "卒中后功能独立性丧失的神经机制：患侧运动-感觉定向连接受损的脑电图证据"
         },
         {
@@ -87,9 +114,9 @@
           "titleZh": "视频透视增强现实 REHA-眼镜视觉矫正对卒中后偏侧推患者姿势垂直度的影响"
         }
       ],
-      "heat": 6.53,
-      "themeZh": "卒中后康复效果与影响因素：剂量、并发症与功能恢复",
-      "themeEn": "Stroke Rehabilitation Outcomes and Influencing Factors"
+      "heat": 7.25,
+      "themeZh": "卒中与脊髓损伤后身心健康及康复策略",
+      "themeEn": "Post-stroke SCI physical mental health"
     },
     {
       "id": "news-1785049661034-0",
@@ -105,7 +132,7 @@
         "British journal of sports medicine",
         "BMC musculoskeletal disorders",
         "medRxiv",
-        "Sports Medicine"
+        "BMC Musculoskeletal Disorders"
       ],
       "tag": "shoulder",
       "kind": "theme",
@@ -146,14 +173,15 @@
           "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析"
         },
         {
-          "source": "Sports Medicine",
-          "title": "Musculoskeletal Stretching and Arterial Stiffness: Systematic Review and Meta-analysis of Acute and Longitudinal Interventions",
-          "titleZh": "肌肉骨骼拉伸与动脉僵硬度：急性和长期干预的系统综述与荟萃分析协议"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Machine learning-based prediction of individualized musculoskeletal responses during shoulder exercises using surface electromyography: a cross-sectional, repeated-measures laboratory study",
+          "titleZh": "基于机器学习的表面肌电图预测肩部运动个体化肌肉骨骼反应"
         }
       ],
-      "heat": 5.71,
-      "themeZh": "颈肩痛及肩周炎的物理治疗与数字健康干预",
-      "themeEn": "Physiotherapy & Digital Health for Shoulder Pain"
+      "heat": 5.07,
+      "themeZh": "颈肩痛和冻结肩的多元物理治疗与评估",
+      "themeEn": "Multimodal PT for neck shoulder pain"
     },
     {
       "id": "news-1785482348361-6",
@@ -161,13 +189,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532213/",
       "category": "cardiopulmonary",
       "publishedAt": "2026-07-31T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Brazilian journal of physical therapy",
-        "Sport Sci Health",
-        "BMC Musculoskelet Disord",
-        "Topics in stroke rehabilitation"
+        "Sport Sciences for Health",
+        "BMC Musculoskeletal Disorders",
+        "Topics in stroke rehabilitation",
+        "Disability and rehabilitation"
       ],
       "tag": "exercise-therapy",
       "kind": "theme",
@@ -186,11 +215,13 @@
         },
         {
           "source": "Sport Sci Health",
+          "journal": "Sport Sciences for Health",
           "title": "Functional performance and blood pressure responses to online versus in-person multicomponent training in inactive older women: randomized controlled trial",
           "titleZh": "在线与面对面多组分训练对不活跃老年女性功能表现和血压的影响：随机对照试验协议"
         },
         {
           "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
           "title": "Effectiveness of three remote tele-prehabilitation strategies in patients awaiting lower limb arthroplasty: a three-arm randomized controlled trial",
           "titleZh": "远程术前康复在下肢关节置换术患者中的有效性：一项三组随机对照试验协议"
         },
@@ -199,34 +230,116 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
           "titleZh": "信息和通信技术在促进专职医疗人员卒中后照护指南依从性实施策略中的作用：一项范围综述。"
-        }
-      ],
-      "heat": 2.04,
-      "themeZh": "远程医疗与数字化技术在康复中的应用与效能",
-      "themeEn": "Telehealth & Digital Tech in Rehabilitation"
-    },
-    {
-      "id": "news-1784915752824-1",
-      "title": "Content validity, reliability, and agreement between in-person and video-call assessments of the modified bradykinesia rating scale (MBRS).",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42495956/",
-      "category": "neurological",
-      "publishedAt": "2026-07-30T22:17:24.656Z",
-      "sourceCount": 5,
-      "sources": [
-        "Disability and rehabilitation",
-        "Clinical rehabilitation",
-        "Sport Sci Health",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "BMC Geriatrics"
-      ],
-      "tag": "parkinson",
-      "kind": "theme",
-      "members": [
+        },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Content validity, reliability, and agreement between in-person and video-call assessments of the modified bradykinesia rating scale (MBRS).",
           "titleZh": "改良性运动迟缓评定量表（MBRS）内容效度、信度及面对面与视频评估一致性研究"
+        }
+      ],
+      "heat": 2.17,
+      "themeZh": "远程医疗在物理治疗与康复中的应用",
+      "themeEn": "Telehealth in physical therapy rehabilitation"
+    },
+    {
+      "id": "news-1785482348361-2",
+      "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532214/",
+      "category": "neurological",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "Bulletin of Faculty of Physical Therapy",
+        "Sports Medicine",
+        "Sports Medicine - Open",
+        "BMC Sports Science, Medicine and Rehabilitation"
+      ],
+      "tag": "ms",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+          "titleZh": "结构化运动训练在多发性硬化症疲劳管理中的作用：一项系统综述和荟萃分析的伞形综述"
+        },
+        {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "The effect of different intensities of aerobic exercise on neurorepair based on BDNF, PI3K, and Akt signaling pathways after ischemic stroke: a narrative review",
+          "titleZh": "不同强度有氧运动对缺血性卒中后基于 BDNF、PI3K 和 Akt 信号通路的神经修复作用：一项叙述性综述"
+        },
+        {
+          "source": "Sports Medicine",
+          "journal": "Sports Medicine",
+          "title": "Musculoskeletal Stretching and Arterial Stiffness: Systematic Review and Meta-analysis of Acute and Longitudinal Interventions",
+          "titleZh": "肌肉骨骼拉伸与动脉僵硬度：急性和长期干预的系统综述与荟萃分析协议"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Effects of Short-term High-intensity vs. Moderate-intensity Interval Training on Cardiopulmonary Fitness and Metabolic Health in Overweight or Obese Patients with Cardiovascular Disease: Evidence from China.",
+          "titleZh": "短期高强度 vs. 中等强度间歇训练对超重或肥胖心血管疾病患者心肺适能和代谢健康的影响：来自中国的证据。"
+        },
+        {
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "Delaying Early Morning Training Time in Swimmers: Effects on Sleep, Recovery and Performance—A Randomized Controlled Trial",
+          "titleZh": "推迟游泳运动员早晨训练时间：对睡眠、恢复和表现的影响——一项随机对照试验协议"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Temperature-dependent effects of post-exercise cold-water immersion on recovery: a systematic review and meta-analysis",
+          "titleZh": "运动后冷水浸泡恢复效果的温度依赖性：一项系统综述和荟萃分析协议"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "A bayesian inference and neural network model for predicting physical fitness consumption in table tennis athletes",
+          "titleZh": "预测乒乓球运动员体能消耗的贝叶斯推理和神经网络模型"
+        }
+      ],
+      "heat": 1.81,
+      "themeZh": "运动训练对神经肌肉与心肺健康的生理效应",
+      "themeEn": "Exercise effects on neuromuscular cardiopulmonary health"
+    },
+    {
+      "id": "news-1785622732938-10",
+      "title": "Effect of resistance, balance, and aerobic training on strength, mobility, balance, and quality of life in older adults with sarcopenia: a systematic review and meta-analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08020-6",
+      "category": "neurological",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "BMC Geriatrics",
+        "European Review of Aging and Physical Activity",
+        "Clinical rehabilitation",
+        "Sport Sciences for Health",
+        "PM & R : the journal of injury, function, and rehabilitation"
+      ],
+      "tag": "parkinson",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effect of resistance, balance, and aerobic training on strength, mobility, balance, and quality of life in older adults with sarcopenia: a systematic review and meta-analysis",
+          "titleZh": "抗阻、平衡和有氧训练对肌少症老年人力量、活动能力、平衡和生活质量的影响：一项系统综述和荟萃分析协议"
+        },
+        {
+          "source": "Eur Rev Aging Phys Act",
+          "journal": "European Review of Aging and Physical Activity",
+          "title": "Effect of 12-week unstable surfaces resistance training on muscle stiffness, muscle co-activation, and balance in older individuals",
+          "titleZh": "12 周不稳定平面抗阻训练对老年人肌肉僵硬、肌肉共同激活和平衡的影响"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Sarcopenia as an independent associated factor for urinary incontinence in adults: a systematic review and meta-analysis of observational studies",
+          "titleZh": "肌少症作为成人尿失禁独立相关因素：一项观察性研究的系统综述与荟萃分析"
         },
         {
           "source": "PubMed",
@@ -236,6 +349,7 @@
         },
         {
           "source": "Sport Sci Health",
+          "journal": "Sport Sciences for Health",
           "title": "Lower-limb rate of torque development, but not peak torque, is associated with balance performance in older adults with and without Parkinson’s disease: a cross-sectional study",
           "titleZh": "下肢扭矩发展速率而非峰值扭矩与帕金森病患者及老年人的平衡表现相关：一项横断面研究"
         },
@@ -247,88 +361,206 @@
         },
         {
           "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
           "title": "Machine learning-based fall risk prediction in community-dwelling older adults using dual-task spatiotemporal gait parameters",
           "titleZh": "基于机器学习的双任务时空步态参数预测社区老年人跌倒风险"
         },
         {
           "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
           "title": "A participatory fall-prevention education program (APREAL) for older inpatients in integrated nursing care wards: a quasi-experimental study",
           "titleZh": "参与式防跌倒教育项目（APREAL）对综合护理病房老年住院患者的影响：一项准实验研究"
         },
         {
           "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
           "title": "Frailty and decline in independent living in older adults: differences between the Baltic and Nordic countries",
           "titleZh": "老年人衰弱与独立生活能力下降：波罗的海和北欧国家的差异"
         },
         {
           "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
           "title": "Proxy indicators to support independent ageing-in-place in older people with frailty: a Delphi-style expert consultation survey",
           "titleZh": "支持衰弱老年人居家独立养老的代理指标：一项德尔菲式专家咨询调查"
         }
       ],
-      "heat": 1.99,
-      "themeZh": "老年人跌倒风险评估与平衡能力干预策略",
-      "themeEn": "Fall Risk Assessment & Balance Intervention"
-    },
-    {
-      "id": "news-1785622732938-14",
-      "title": "Delaying Early Morning Training Time in Swimmers: Effects on Sleep, Recovery and Performance—A Randomized Controlled Trial",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01086-x",
-      "category": "sports",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Sports Med - Open",
-        "BMC Sports Sci Med Rehabil",
-        "BMC Musculoskelet Disord",
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-      ],
-      "tag": "athletic-performance",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "Sports Med - Open",
-          "title": "Delaying Early Morning Training Time in Swimmers: Effects on Sleep, Recovery and Performance—A Randomized Controlled Trial",
-          "titleZh": "推迟游泳运动员早晨训练时间：对睡眠、恢复和表现的影响——一项随机对照试验协议"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "title": "Temperature-dependent effects of post-exercise cold-water immersion on recovery: a systematic review and meta-analysis | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "运动后冷水浸泡恢复效果的温度依赖性：一项系统综述和荟萃分析协议"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "title": "A bayesian inference and neural network model for predicting physical fitness consumption in table tennis athletes | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "预测乒乓球运动员体能消耗的贝叶斯推理和神经网络模型"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "title": "Lower-limb coordination during the rear-leg roundhouse kick in competitive taekwondo: a vector-coding analysis | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "竞技跆拳道后腿摆踢时下肢协调性的向量编码分析"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "title": "Neurocognitive training with visual perturbation improves dual-task hop performance in male athletes after anterior cruciate ligament reconstruction: a randomized controlled trial | BMC Sports Science, Medicine and Rehabilitation",
-          "titleZh": "视听扰动神经认知训练可改善 ACL 术后男性运动员双任务跳跃表现：一项随机对照试验"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "title": "Thigh muscle co-activation during a single leg hop for distance one year after ACL-reconstruction and its relationship with a 2D knee flexion score: a cross-sectional study",
-          "titleZh": "ACL 重建术后一年单腿跳远时大腿肌肉共同激活及其与二维膝关节屈曲评分的关系：一项横断面研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-          "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
-          "titleZh": "ACL 重建术后康复中的偏心骑行：专家视角"
-        }
-      ],
-      "heat": 1.63,
-      "themeZh": "竞技体育训练、恢复与损伤预防的生物力学研究",
-      "themeEn": "Sports Training, Recovery, Injury Biomechanics"
+      "heat": 1.81,
+      "themeZh": "老年人肌少症与平衡障碍的干预及风险因素",
+      "themeEn": "Sarcopenia balance in older adults"
     }
   ],
   "items": [
+    {
+      "id": "news-1785709016127-13",
+      "title": "Local Coverage Determinations",
+      "summary": "CMS outlines Local Coverage Determinations (LCDs), which define Medicare coverage for specific items and services on an intermediary or carrier-wide basis under Parts A and B.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/medicare/coverage/determination-process/local",
+      "publishedAt": "2026-07-26T22:15:51.848Z",
+      "firstSeen": "2026-08-02T22:16:56.127Z",
+      "curatedScore": 85,
+      "curatedReason": "CMS 关于地方医保覆盖决定（LCDs）的定义和流程文件明确了 Medicare B 部分覆盖服务的决策机制。你必须理解 LCDs 如何影响特定物理治疗服务的报销，因为它直接决定哪些服务能在你所在的地区获得医保支付。",
+      "titleZh": "CMS 地方医保覆盖决定（LCDs）",
+      "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）发布了关于地方医保覆盖决定（LCDs）的政策文件，明确了 Medicare A/B 部分对特定项目和服务覆盖的决定机制。",
+      "curatedReasonEn": "The CMS document on Local Coverage Determinations (LCDs) clarifies the decision-making process for Medicare Part B covered services. You must understand how LCDs affect reimbursement for specific physical therapy services, as it directly determines which services are Medicare-payable in your region.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1785364056059-35",
+      "title": "河南省人民政府办公厅关于印发河南省建立长期护理保险制度实施方案的通知-健康界",
+      "summary": "Henan Province, China, has released an implementation plan to establish a long-term care insurance system within three years, covering employed and unemployed residents.",
+      "category": "practice",
+      "source": "健康界",
+      "sourceUrl": "https://www.cn-healthcare.com/article/20260729/content-788249.html",
+      "publishedAt": "2026-07-29T00:00:00.000Z",
+      "firstSeen": "2026-07-29T22:27:36.059Z",
+      "curatedScore": 85,
+      "curatedReason": "河南省建立长期护理保险制度的实施方案，覆盖就业和未就业人群。你应关注长护险对物理治疗服务的支付范围和标准，这直接影响老年及失能患者的康复服务可及性和报销模式。",
+      "titleZh": "河南省建立长期护理保险制度实施方案的通知",
+      "summaryZh": "河南省政府办公厅印发通知，将在三年内全面建立长期护理保险制度，覆盖就业人员和未就业城乡居民，并分两类设置待遇标准。",
+      "curatedReasonEn": "Henan Province's implementation plan for long-term care insurance covers both employed and unemployed individuals. You should pay attention to the scope and standards of physical therapy service payments under long-term care insurance, as this directly impacts the accessibility and reimbursement model for rehabilitation services for elderly and disabled patients.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1785709016127-14",
+      "title": "国民健康“十五五”规划窗口期：基层与民营医疗机构重构发展逻辑|机构|医疗|健康|服务|基层|-健康界",
+      "summary": "China's \"15th Five-Year Plan for National Health\" promotes a shift from disease-centric to health-centric care, emphasizing decentralization, strengthening grassroots healthcare, and expanding rehabilitation and elderly health services.",
+      "category": "practice",
+      "source": "健康界",
+      "sourceUrl": "https://www.cn-healthcare.com/articlewm/20260731/content-1675500.html",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "firstSeen": "2026-08-02T22:16:56.127Z",
+      "curatedScore": 80,
+      "curatedReason": "中国《国民健康“十五五”规划》强调重心下沉、强基固本，并支持康复护理和老年健康服务扩容。这意味着你的执业环境将迎来重大政策机遇，应主动关注基层医疗和老年康复服务的需求增长，调整战略定位。",
+      "titleZh": "国民健康“十五五”规划窗口期：基层与民营医疗机构重构发展逻辑",
+      "summaryZh": "中国《国民健康“十五五”规划》提出，医疗卫生行业将转向以人民健康为中心，资源下沉基层，并扩容康复护理和老年健康服务，预示着基层和民营医疗机构面临转型机遇。",
+      "curatedReasonEn": "China's \"15th Five-Year Plan for National Health\" emphasizes decentralization and strengthening grassroots healthcare, while expanding rehabilitation and elderly care services. This signals significant policy opportunities for your practice; proactively monitor the growing demand for grassroots medical and elderly rehabilitation services and adjust your strategic positioning.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1783031710275-19",
+      "title": "BMJ Rapid Recommendations",
+      "summary": "The BMJ is collaborating with MAGIC to launch Rapid Recommendations, an initiative to expedite the translation of new research evidence into clinical guidelines, aiming to provide quick and transparent recommendations.",
+      "category": "orthopedic",
+      "source": "BJSM",
+      "sourceUrl": "https://www.bmj.com/rapid-recommendations",
+      "publishedAt": "2026-07-29T22:15:18.701Z",
+      "firstSeen": "2026-07-02T22:35:10.275Z",
+      "curatedScore": 70,
+      "curatedReason": "《BMJ》的快速推荐项目旨在加速高质量证据转化为临床实践，通过系统综述提供及时、可信的指南。这表明未来会有更多基于证据的临床指南快速更新，需保持关注。",
+      "titleZh": "BMJ 快速推荐项目：加速研究证据转化为临床实践",
+      "summaryZh": "《英国医学杂志》(BMJ)正与非营利项目 MAGIC 合作推出“快速推荐”，旨在加速新研究证据转化为临床实践指南，提供快速、透明且可信的推荐。",
+      "curatedReasonEn": "The BMJ's Rapid Recommendations project aims to accelerate high-quality evidence into clinical practice, providing timely and trustworthy guidelines via systematic reviews. Expect more evidence-based clinical guidelines to be rapidly updated in the future, so stay vigilant for updates.",
+      "tags": [
+        "news",
+        "regulation",
+        "education"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1785709016126-1",
+      "title": "Machine learning-based prediction of individualized musculoskeletal responses during shoulder exercises using surface electromyography: a cross-sectional, repeated-measures laboratory study",
+      "summary": "A cross-sectional laboratory study explored machine learning's ability to predict individualized musculoskeletal responses during shoulder exercises using surface electromyography.",
+      "category": "orthopedic",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10200-9",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "firstSeen": "2026-08-02T22:16:56.126Z",
+      "curatedScore": 70,
+      "curatedReason": "这项探索性研究提示，机器学习在根据表面肌电图预测肩部运动反应方面有潜力，未来可能支持个性化的康复方案。目前仍是早期技术，离临床应用还有距离。",
+      "titleZh": "基于机器学习的表面肌电图预测肩部运动个体化肌肉骨骼反应",
+      "summaryZh": "一项横断面、重复测量实验室研究，探讨了基于机器学习利用表面肌电图预测肩部运动期间个体化肌肉骨骼反应的潜力，为运动科学和康复提供了新的视角。",
+      "curatedReasonEn": "This exploratory study suggests the potential of machine learning to predict individualized musculoskeletal responses during shoulder exercises using surface EMG, which could support personalized rehabilitation. This remains an early technology, some distance from clinical application.",
+      "limitation": "这是一项横断面、重复测量实验室研究，样本量和外推性有限。",
+      "limitationEn": "This is a cross-sectional, repeated-measures laboratory study with limited sample size and generalizability.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders",
+      "tech": true
+    },
+    {
+      "id": "news-1785709016127-3",
+      "title": "Carbon fiber traction table use is associated with a lower incidence of stress shielding and cortical hypertrophy after total hip arthroplasty: a case-control study",
+      "summary": "A case-control study found that the use of carbon fiber traction tables during total hip arthroplasty was associated with a lower incidence of stress shielding and cortical hypertrophy.",
+      "category": "orthopedic",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10289-y",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "firstSeen": "2026-08-02T22:16:56.127Z",
+      "curatedScore": 70,
+      "curatedReason": "本研究提示，在全髋关节置换术中使用碳纤维牵引床可能与术后应力遮挡和皮质肥厚发生率降低相关。虽然是观察性研究，但为术中设备选择提供了初步参考。",
+      "titleZh": "碳纤维牵引床在全髋关节置换术中与应力遮挡和皮质肥厚发生率降低相关",
+      "summaryZh": "一项病例对照研究发现，在全髋关节置换术中使用碳纤维牵引床与术后应力遮挡和皮质肥厚发生率降低相关。",
+      "curatedReasonEn": "This study suggests that using a carbon fiber traction table during total hip arthroplasty may be associated with a lower incidence of postoperative stress shielding and cortical hypertrophy. Although an observational study, it offers preliminary insights for intraoperative equipment selection.",
+      "limitation": "病例对照研究的设计限制了其建立因果关系的能力，结果可能受混杂因素影响。",
+      "limitationEn": "The case-control study design limits its ability to establish causality, and results may be affected by confounding factors.",
+      "tags": [
+        "research",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1785709016126-2",
+      "title": "The prevention of heterotopic ossification around the knee: a scoping review",
+      "summary": "This scoping review explores current strategies for the prevention of heterotopic ossification around the knee.",
+      "category": "orthopedic",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10318-w",
+      "publishedAt": "2026-08-01T00:00:00.000Z",
+      "firstSeen": "2026-08-02T22:16:56.126Z",
+      "curatedScore": 65,
+      "curatedReason": "当前膝关节周围异位骨化的预防策略仍缺乏统一指南。这篇范围综述梳理了现有文献，提示我们可以参考的方案，但也明确了哪些领域尚无成熟证据，避免盲目干预。",
+      "titleZh": "膝关节周围异位骨化预防的范围综述",
+      "summaryZh": "一篇范围综述探讨了膝关节周围异位骨化的现有预防策略，总结了相关文献，旨在识别研究空白并为未来研究提供方向。",
+      "curatedReasonEn": "Current strategies for preventing heterotopic ossification around the knee lack unified guidelines. This scoping review clarifies existing approaches you might consider, but also highlights areas where robust evidence is missing, guiding against unsubstantiated interventions.",
+      "limitation": "范围综述的性质限制了其对干预效果的量化评估。",
+      "limitationEn": "The nature of a scoping review limits its ability to quantitatively assess intervention effectiveness.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "综述",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1785709016127-7",
+      "title": "Developmental Medicine & Child Neurology",
+      "summary": "Developmental Medicine & Child Neurology is a journal covering a wide range of topics related to child development and neurological disorders.",
+      "category": "pediatric",
+      "source": "PM&R",
+      "sourceUrl": "https://onlinelibrary.wiley.com/journal/14698749",
+      "publishedAt": "2026-07-30T22:15:35.504Z",
+      "firstSeen": "2026-08-02T22:16:56.127Z",
+      "curatedScore": 65,
+      "curatedReason": "《发育医学与儿童神经病学》是儿科神经康复领域的权威期刊。为了跟上该领域的最新进展，你应该定期查阅其新刊，了解发育障碍和儿童神经疾病的评估与干预前沿。",
+      "titleZh": "《发育医学与儿童神经病学》期刊",
+      "summaryZh": "《发育医学与儿童神经病学》是一本涵盖儿童发育和神经系统疾病的专业期刊，是儿科康复领域的重要资源。",
+      "curatedReasonEn": "Developmental Medicine & Child Neurology is an authoritative journal in pediatric neurorehabilitation. To stay current, you should regularly review its new issues to keep abreast of assessment and intervention advancements for developmental disorders and pediatric neurological conditions.",
+      "tags": [
+        "news",
+        "education"
+      ],
+      "journal": "PM&R"
+    },
     {
       "id": "news-1784742300472-1",
       "title": "A systematic review of current evidence on clinical outcomes of lumbar roll and modified SIMS manipulation techniques in sacroiliac joint dysfunction.",
@@ -1880,189 +2112,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physical therapy"
-    },
-    {
-      "id": "news-1785017797880-31",
-      "title": "Proposed 2027 Medicare Physician Fee Schedule: What PTs Need to Know, Part 1",
-      "summary": "The U.S. Centers for Medicare & Medicaid Services estimates a 1-3% overall payment increase for physical therapy codes under the Calendar Year 2027 Medicare Physician Fee Schedule Proposed Rule, despite a proposed 1.68% decrease to the conversion factor.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/07/24/proposed-2027-medicare-physician-fee-schedule-what-pts-need-to-know-part-1",
-      "publishedAt": "2026-07-24T00:00:00.000Z",
-      "firstSeen": "2026-07-25T22:16:37.880Z",
-      "curatedScore": 90,
-      "curatedReason": "美国医疗保险和医疗补助服务中心（CMS）提议 2027 年 Medicare 医生收费标准，预计物理治疗代码可获得 1-3% 的整体支付增长。这对于美国物理治疗师来说是积极信号，但仍需关注最终的转化系数调整。",
-      "titleZh": "2027 年 Medicare 医生收费标准拟议规则：物理治疗师需要了解什么（第一部分）",
-      "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）预计，尽管转换系数拟议下降 1.68%，2027 年 Medicare 医生收费标准拟议规则下，物理治疗代码的整体支付将增加 1-3%。",
-      "curatedReasonEn": "The US Centers for Medicare & Medicaid Services (CMS) has proposed a 1-3% overall payment increase for physical therapy codes under the 2027 Medicare Physician Fee Schedule. This is a positive sign for US physical therapists, but continue to monitor the final conversion factor adjustments.",
-      "limitation": "这是基于拟议规则的估计，最终政策可能会有所调整。",
-      "limitationEn": "This is an estimate based on a proposed rule, and the final policy may be subject to changes.",
-      "tags": [
-        "policy",
-        "reimbursement",
-        "us"
-      ]
-    },
-    {
-      "id": "news-1785537056535-0",
-      "title": "Neurocognitive training with visual perturbation improves dual-task hop performance in male athletes after anterior cruciate ligament reconstruction: a randomized controlled trial",
-      "summary": "A randomized controlled trial found that neurocognitive training with visual perturbation improved dual-task hop performance in male athletes after anterior cruciate ligament reconstruction.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01932-1",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T22:30:56.535Z",
-      "curatedScore": 85,
-      "curatedReason": "ACL 术后男性运动员康复中加入视听扰动神经认知训练，能显著提升双任务跳跃表现。在返场训练时，结合认知挑战，才能更好地模拟比赛压力。",
-      "titleZh": "视听扰动神经认知训练可改善 ACL 术后男性运动员双任务跳跃表现：一项随机对照试验",
-      "summaryZh": "一项随机对照试验显示，对于前交叉韧带（ACL）重建术后的男性运动员，结合视听扰动的神经认知训练能显著提高其双任务跳跃表现。",
-      "curatedReasonEn": "Integrating neurocognitive training with visual perturbation significantly improves dual-task hop performance in male athletes post-ACL reconstruction. This approach is crucial for return-to-sport training to simulate competitive pressure more effectively.",
-      "limitation": "研究对象仅为男性运动员，结果外推到女性或其他人群需谨慎。",
-      "limitationEn": "The study was limited to male athletes, so the generalizability of these findings to females or other populations should be considered with caution.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1784203011176-13",
-      "title": "The 2027 Proposed Rule is Out. Here's What You Need to Know.",
-      "summary": "WebPT provides an overview of the 2027 Proposed Rule for Medicare, highlighting potential impacts on physical therapy reimbursement.",
-      "category": "pediatric",
-      "source": "WebPT",
-      "sourceUrl": "https://www.webpt.com/blog/the-2027-proposed-rule-is-out-heres-what-you-need-to-know",
-      "publishedAt": "2026-07-24T00:00:00.000Z",
-      "firstSeen": "2026-07-16T11:56:51.176Z",
-      "curatedScore": 85,
-      "curatedReason": "WebPT 对 2027 年 Medicare 拟议规则的分析，提前预警了美国物理治疗师在报销方面可能面临的变化。你需要关注这些细节，以便为诊所运营和财务规划做准备。",
-      "titleZh": "2027 年 Medicare 拟议规则已发布，物理治疗师需知",
-      "summaryZh": "WebPT 发布了 2027 年 Medicare 拟议规则的概述，重点提示了可能对物理治疗报销产生的影响。",
-      "curatedReasonEn": "WebPT's analysis of the 2027 Medicare Proposed Rule provides an early warning about potential reimbursement changes for US physical therapists. You need to pay attention to these details to prepare for clinic operations and financial planning.",
-      "limitation": "这篇分析是基于拟议规则，最终政策可能会有所调整。",
-      "limitationEn": "This analysis is based on a proposed rule, and the final policy may be subject to changes.",
-      "tags": [
-        "policy",
-        "reimbursement",
-        "us"
-      ]
-    },
-    {
-      "id": "news-1785277897114-14",
-      "title": "Advocates, Leaders Drive Payment Momentum During APTA Payment Advocacy Summit",
-      "summary": "The APTA Payment Advocacy Summit convened 450 advocates and leaders to drive momentum for physical therapy payment policies, focusing on practice sustainability and patient access.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/07/27/advocates-leaders-drive-payment-momentum-during-apta-payment-advocacy-summit",
-      "publishedAt": "2026-07-27T00:00:00.000Z",
-      "firstSeen": "2026-07-28T22:31:37.114Z",
-      "curatedScore": 85,
-      "curatedReason": "APTA 支付倡导峰会汇聚了 450 位行业领袖，强调推进物理治疗支付政策，以确保执业可持续性和患者可及性。这表明 APTA 正积极争取改善美国物理治疗师的报销环境。",
-      "titleZh": "APTA 支付倡导峰会：倡导者、领导者推动支付势头",
-      "summaryZh": "APTA 支付倡导峰会汇集了 450 名倡导者和领导者，旨在推动物理治疗支付政策的进展，重点关注执业可持续性和患者可及性。",
-      "curatedReasonEn": "The APTA Payment Advocacy Summit gathered 450 leaders, emphasizing advancing physical therapy payment policies for practice sustainability and patient access. This indicates APTA is actively working to improve the reimbursement environment for US physical therapists.",
-      "limitation": "这是一篇新闻报道，不涉及具体政策细节或研究证据。",
-      "limitationEn": "This is a news report and does not involve specific policy details or research evidence.",
-      "tags": [
-        "news",
-        "reimbursement",
-        "us"
-      ]
-    },
-    {
-      "id": "news-1785537056537-16",
-      "title": "Efficacy and Safety of Radiofrequency as a Treatment Modality for Genitourinary Syndrome of Menopause: A Systematic Review and Meta-Analysis of Randomized Controlled Trials",
-      "summary": "A systematic review and meta-analysis of randomized controlled trials confirmed the efficacy and safety of radiofrequency as a treatment modality for genitourinary syndrome of menopause.",
-      "category": "manual-modality",
-      "source": "Int Urogynecol J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06818-x",
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "firstSeen": "2026-07-31T22:30:56.537Z",
-      "curatedScore": 80,
-      "curatedReason": "绝经期泌尿生殖道综合征（GSM）的物理治疗又添一员。这项RCT系统综述明确证实射频治疗GSM安全有效，因此，你可以放心将射频作为GSM患者的物理治疗方案之一，为她们提供更多选择。",
-      "titleZh": "射频作为绝经期泌尿生殖道综合征治疗手段的疗效和安全性：一项随机对照试验的系统综述和荟萃分析",
-      "summaryZh": "一项随机对照试验的系统综述和荟萃分析证实了射频作为绝经期泌尿生殖道综合征治疗手段的疗效和安全性。",
-      "curatedReasonEn": "Another option for Genitourinary Syndrome of Menopause (GSM) physical therapy. This systematic review of RCTs definitively confirms radiofrequency treatment for GSM is safe and effective. Therefore, you can confidently integrate radiofrequency as a physical therapy option for GSM patients, offering them more choices.",
-      "limitation": "尽管是系统综述，但可能纳入的研究质量和异质性会影响整体结论。",
-      "limitationEn": "Although it is a systematic review, the quality and heterogeneity of included studies may affect the overall conclusions.",
-      "tags": [
-        "research",
-        "pelvic-floor",
-        "electro"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "International Urogynecology Journal"
-    },
-    {
-      "id": "news-1785537056537-19",
-      "title": "Prior Authorization for Certain Hospital Outpatient Department (OPD) Services",
-      "summary": "CMS established a nationwide prior authorization process for certain hospital outpatient department (OPD) services to control unnecessary volume increases and protect the Medicare Trust Fund.",
-      "category": "practice",
-      "source": "CMS",
-      "sourceUrl": "https://www.cms.gov/data-research/monitoring-programs/medicare-fee-service-compliance-programs/prior-authorization-pre-claim-review-initiatives/prior-authorization-certain-hospital-outpatient-department-opd-services",
-      "publishedAt": "2026-07-26T22:29:47.339Z",
-      "firstSeen": "2026-07-31T22:30:56.537Z",
-      "curatedScore": 80,
-      "curatedReason": "CMS 针对某些医院门诊部（OPD）服务建立的预先授权流程，旨在控制不必要的服务量增加。这提醒你在美国执业时，需要更早了解和遵守这类政策，以避免报销延迟或拒绝。",
-      "titleZh": "某些医院门诊部（OPD）服务的预先授权",
-      "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）已针对某些医院门诊部（OPD）服务建立了全国性的预先授权流程，以控制不必要的服务量增长并保护 Medicare 信托基金。",
-      "curatedReasonEn": "CMS's prior authorization process for certain hospital outpatient department (OPD) services aims to control unnecessary increases in service volume. This reminds you that, when practicing in the US, you need to understand and comply with such policies early to avoid reimbursement delays or denials.",
-      "limitation": "这篇新闻主要概述了政策背景，并未提供具体的物理治疗服务受影响的细节。",
-      "limitationEn": "This news primarily outlines the policy background and does not provide specific details on physical therapy services affected.",
-      "tags": [
-        "policy",
-        "regulation",
-        "reimbursement",
-        "us"
-      ]
-    },
-    {
-      "id": "news-1785537056537-15",
-      "title": "Would initial thoracic correction be a key factor in orthotic intervention for adolescent idiopathic scoliosis with double-curve?",
-      "summary": "A retrospective study investigated the influence of in-orthosis correction on treatment outcomes of adolescent idiopathic scoliosis (AIS) with double-curve, identifying initial thoracic correction as a key factor.",
-      "category": "manual-modality",
-      "source": "Eur Spine J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10220-y",
-      "publishedAt": "2026-07-25T00:00:00.000Z",
-      "firstSeen": "2026-07-31T22:30:56.537Z",
-      "curatedScore": 75,
-      "curatedReason": "这项回顾性研究表明，对于双弯型青少年特发性脊柱侧凸，支具内的胸段初始矫正程度是影响治疗结果的关键因素。你在评估和管理支具治疗时，要重视早期胸段矫正效果。",
-      "titleZh": "青少年特发性双弯型脊柱侧凸的支具矫正中，胸段初始矫正是否为关键因素？",
-      "summaryZh": "一项回顾性研究探讨了支具内矫正对双弯型青少年特发性脊柱侧凸（AIS）治疗结果的影响，发现初始胸段矫正可能是关键因素。",
-      "curatedReasonEn": "This retrospective study indicates that the initial thoracic correction achieved within an orthosis is a key factor influencing treatment outcomes for adolescent idiopathic scoliosis with double-curve. When assessing and managing orthotic treatment, you should prioritize early thoracic correction.",
-      "limitation": "作为一项回顾性研究，可能存在选择偏倚和数据完整性问题。",
-      "limitationEn": "As a retrospective study, it may be subject to selection bias and issues with data completeness.",
-      "tags": [
-        "research",
-        "spine",
-        "pediatric"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "European Spine Journal"
-    },
-    {
-      "id": "news-1785537056536-6",
-      "title": "Lower-limb coordination during the rear-leg roundhouse kick in competitive taekwondo: a vector-coding analysis",
-      "summary": "A vector-coding analysis investigated lower-limb coordination during the rear-leg roundhouse kick in competitive taekwondo.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01831-5",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T22:30:56.536Z",
-      "curatedScore": 70,
-      "curatedReason": "这项跆拳道下肢协调性的向量编码分析，为你在运动表现训练中分析特定动作模式提供了精细化的方法。它能帮你更精确地识别技术缺陷。",
-      "titleZh": "竞技跆拳道后腿摆踢时下肢协调性的向量编码分析",
-      "summaryZh": "一项向量编码分析研究了竞技跆拳道运动员在后腿摆踢过程中下肢的协调性。",
-      "curatedReasonEn": "This vector-coding analysis of lower-limb coordination in taekwondo offers a refined method for analyzing specific movement patterns in sports performance training. Use it to more precisely identify technical deficiencies.",
-      "limitation": "研究对象仅限于竞技跆拳道运动员，结果外推到其他运动或人群需谨慎。",
-      "limitationEn": "The study focused solely on competitive taekwondo athletes, so generalizability to other sports or populations should be considered with caution.",
-      "tags": [
-        "research",
-        "performance-training"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
     }
   ]
 }
