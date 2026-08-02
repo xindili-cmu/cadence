@@ -1,23 +1,23 @@
 {
   "_comment": "期刊影响因子 / JCR 分区元数据表。文章卡片渲染时按 journal 字段实时查这张表，所以改这里全站生效。alias 匹配规则：小写、去括号注释、去开头 the、& 视为 and。",
   "_schema": {
-    "jcrYear": "表级默认 JCR 版本。单行可用同名字段覆盖——roster 是分批刷新的（先刷高频刊），不同行合法地停在不同 JCR 版本上。",
+    "jcrYear": "表级默认 JCR 数据年份(不是发布年;JCR 2025 于 2026 年 6 月底发布)。单行可用同名字段覆盖——roster 分批刷新时不同行可能停在不同版本。",
     "quartileYear": "分区单独记版本。多数出版方只公布 JIF、不公布 JCR 分区，所以刷新后常出现「新 IF + 上一版分区」。徽章只在 quartileYear === jcrYear 时显示分区；值本身保留，因为 scripts/score-calibration.js 按 quartile 分组做方向性诊断，置 null 会掐掉样本。",
     "metricsUrl": "出版方公布指标的页面，供 scripts/check-journal-metrics.js 年度比对。",
     "_pending": "已观察到疑似新值、但出版方页面未标注 JCR 年份，不足以断言版本，故未写入 impactFactor。用 Web of Science 确认年份后再提升。",
     "_blocked": "出版方站点有人机验证，按规则不绕过，需人工核。"
   },
-  "_refreshPolicy": "每年 6 月底 Clarivate 发布新版 JCR 后：先跑 node scripts/check-journal-metrics.js 拿到 diff，再逐行改 impactFactor / quartile / jcrYear / quartileYear。只在出版方明确标注年份时提升 jcrYear；未标注年份的只写 _pending，别猜。",
-  "jcrYear": 2024,
+  "_refreshPolicy": "每年 6 月底 Clarivate 发布新版 JCR 后:先跑 node scripts/check-journal-metrics.js 拿到工作清单,再逐行改。只在能确认「数据年份」时提升 jcrYear。⚠️ 年份陷阱:第三方汇编的标题年常是「发布年」而非「数据年」——2026-08-02 收到的一份《JCR IMPACT FACTOR LIST 2025》装的其实是 JCR 2024 数据,照抄会把已刷新的行覆盖回旧值并贴上新年份。试金石:核对 Topics in Stroke Rehabilitation,JCR 2024 是 2.5/Q1、JCR 2025 是 2.3/Q2;再拿 2–3 本出版方页面明确标注年份的刊交叉验证后才动手。",
+  "jcrYear": 2025,
   "updated": "2026-08-02",
   "journals": [
     {
       "name": "Journal of Orthopaedic & Sports Physical Therapy",
       "aliases": ["jospt", "journal of orthopaedic and sports physical therapy", "j orthop sports phys ther"],
-      "impactFactor": 5.8,
+      "impactFactor": 6.9,
       "quartile": "Q1",
       "metricsUrl": "https://www.jospt.org/",
-      "_note": "2026-08-02 复核:jospt.org 首页与 /journal-information(404)都没有公布 IF/分区。无法从出版方核实,保持 JCR 2024 值。"
+      "_note": "jospt.org 不公布 IF/分区,只能查 JCR。"
     },
     {
       "name": "Physical Therapy",
@@ -28,32 +28,30 @@
     {
       "name": "The Lancet",
       "aliases": ["lancet", "lancet (london, england)"],
-      "impactFactor": 88.5,
+      "impactFactor": 109,
       "quartile": "Q1",
-      "metricsUrl": "https://www.thelancet.com/lancet/about",
-      "_pending": "2026-08-02 观察到出版方页面 Impact Factor 109 / CiteScore 92.4 / 5-Year IF 115.4,页面自述「ranked no 1 globally」故分区必为 Q1。但页面未标注 JCR 年份,无法断言是 2025 版,故未提升。用 WoS 确认年份后可改 impactFactor=109 / jcrYear=2025。"
+      "metricsUrl": "https://www.thelancet.com/lancet/about"
     },
     {
       "name": "British Journal of Sports Medicine",
       "aliases": ["british journal of sports medicine", "bjsm", "br j sports med"],
-      "impactFactor": 16.2,
+      "impactFactor": 15.5,
       "quartile": "Q1",
-      "metricsUrl": "https://bjsm.bmj.com/pages/about",
-      "_pending": "2026-08-02 观察到 BMJ 页面 Impact Factor (JCR) 15.5、Impact Factor rank (JCR) 1/136(排名第一 → 必为 Q1)。页面未标 JCR 年份,故未提升。确认年份后可改 impactFactor=15.5 / jcrYear=2025。"
+      "metricsUrl": "https://bjsm.bmj.com/pages/about"
     },
     {
       "name": "JAMA",
       "aliases": ["jama", "jama-journal of the american medical association", "journal of the american medical association"],
-      "impactFactor": 55.0,
+      "impactFactor": 65.4,
       "quartile": "Q1"
     },
     {
       "name": "Archives of Physical Medicine and Rehabilitation",
       "aliases": ["archives of physical medicine and rehabilitation", "arch phys med rehabil", "archives of pm&r", "archives of pm and r"],
-      "impactFactor": 3.7,
+      "impactFactor": 4,
       "quartile": "Q1",
       "metricsUrl": "https://www.archives-pmr.org/",
-      "_pending": "2026-08-02 观察到期刊自有站 Journal Insights: Impact Factor 4 / CiteScore 6.2,无年份、无分区。ScienceDirect 的 insights 页弹 CAPTCHA(不可绕过),所以拿不到更细的口径。确认年份后可改 impactFactor=4 / jcrYear=2025。"
+      "_note": "ScienceDirect 的 insights 页弹 CAPTCHA(不可绕过);metricsUrl 指向期刊自有站,那里只给裸 IF、无年份无分区。"
     },
     {
       "name": "Journal of Physiotherapy",
@@ -67,43 +65,38 @@
       "impactFactor": 2.9,
       "quartile": "Q1",
       "metricsUrl": "https://journals.sagepub.com/home/cre",
-      "_blocked": "2026-08-02 未能核实:Sage 站点挂 Cloudflare 人机验证(「Just a moment...」),按规则不绕过。需人工打开 metricsUrl 或用 WoS 查。"
+      "_note": "metricsUrl 挂 Cloudflare 人机验证,自动化进不去,只能人工或查 JCR。"
     },
     {
       "name": "Disability and Rehabilitation",
       "aliases": ["disability and rehabilitation", "disabil rehabil"],
       "impactFactor": 2.2,
       "quartile": "Q2",
-      "jcrYear": 2025,
-      "quartileYear": 2025,
       "metricsUrl": "https://www.tandfonline.com/journals/idre20/about-this-journal#journal-metrics"
     },
     {
       "name": "Gait & Posture",
       "aliases": ["gait & posture", "gait and posture", "gait posture"],
-      "impactFactor": 2.4,
+      "impactFactor": 2.7,
       "quartile": "Q2"
     },
     {
       "name": "Physiotherapy",
       "aliases": ["physiotherapy"],
-      "impactFactor": 3.0,
+      "impactFactor": 3.1,
       "quartile": "Q1"
     },
     {
       "name": "Physiotherapy Theory and Practice",
       "aliases": ["physiotherapy theory and practice", "physiother theory pract"],
       "impactFactor": 1.6,
-      "quartile": "Q2",
-      "jcrYear": 2025,
-      "quartileYear": 2024,
-      "metricsUrl": "https://www.tandfonline.com/journals/iptp20/about-this-journal#journal-metrics",
-      "_note": "IF 1.6 来自出版方页面明确标注的 (2025)。该页未列 Impact Factor Best Quartile(只给 CiteScore Q2),故 quartile 仍是 2024 的 Q2、quartileYear=2024,徽章不显示分区。"
+      "quartile": "Q3",
+      "metricsUrl": "https://www.tandfonline.com/journals/iptp20/about-this-journal#journal-metrics"
     },
     {
       "name": "Brazilian Journal of Physical Therapy",
       "aliases": ["brazilian journal of physical therapy", "braz j phys ther"],
-      "impactFactor": 3.2,
+      "impactFactor": 3.6,
       "quartile": "Q1"
     },
     {
@@ -115,77 +108,75 @@
     {
       "name": "Journal of Manual & Manipulative Therapy",
       "aliases": ["journal of manual & manipulative therapy", "journal of manual and manipulative therapy", "j man manip ther"],
-      "impactFactor": 1.9,
+      "impactFactor": 2.1,
       "quartile": "Q2"
     },
     {
       "name": "Physical Therapy in Sport",
       "aliases": ["physical therapy in sport", "phys ther sport"],
-      "impactFactor": 2.4,
-      "quartile": "Q1"
+      "impactFactor": 2.3,
+      "quartile": "Q2"
     },
     {
       "name": "American Journal of Sports Medicine",
       "aliases": ["the american journal of sports medicine", "american journal of sports medicine", "am j sports med"],
-      "impactFactor": 4.5,
+      "impactFactor": 5.4,
       "quartile": "Q1"
     },
     {
       "name": "Sports Medicine",
       "aliases": ["sports medicine", "sports med", "sports medicine (auckland, n.z.)"],
-      "impactFactor": 9.4,
+      "impactFactor": 11,
       "quartile": "Q1"
     },
     {
       "name": "Clinical Biomechanics",
       "aliases": ["clinical biomechanics", "clinical biomechanics (bristol, avon)", "clin biomech"],
-      "impactFactor": 1.4,
+      "impactFactor": 1.8,
       "quartile": "Q3"
     },
     {
       "name": "Journal of Electromyography and Kinesiology",
       "aliases": ["journal of electromyography and kinesiology", "j electromyogr kinesiol"],
-      "impactFactor": 2.3,
+      "impactFactor": 2.7,
       "quartile": "Q1"
     },
     {
       "name": "PM&R",
       "aliases": ["pm&r", "pm and r", "pm r"],
-      "impactFactor": 2.8,
-      "quartile": "Q1"
+      "impactFactor": 2,
+      "quartile": "Q2"
     },
     {
       "name": "American Journal of Physical Medicine & Rehabilitation",
       "aliases": ["american journal of physical medicine & rehabilitation", "american journal of physical medicine and rehabilitation", "am j phys med rehabil"],
-      "impactFactor": 2.4,
-      "quartile": "Q1",
-      "metricsUrl": "https://www.ovid.com/jnls/ajpmr",
-      "_pending": "2026-08-02 观察到 Ovid(Wolters Kluwer)页面 Impact Factor 2.3,无年份、无分区;journals.lww.com 的 about 页永远不进 document_idle,注入类工具取不到内容。Ovid 产品页有滞后风险,故未提升。"
+      "impactFactor": 2.3,
+      "quartile": "Q2",
+      "metricsUrl": "https://www.ovid.com/jnls/ajpmr"
     },
     {
       "name": "Journal of Rehabilitation Medicine",
       "aliases": ["journal of rehabilitation medicine", "j rehabil med"],
       "impactFactor": 2.3,
-      "quartile": "Q1",
-      "metricsUrl": "https://medicaljournalssweden.se/jrm/about",
-      "_note": "2026-08-02 复核:出版方页面仍写「2024 Impact Factor: 2-year: 2.3; 5-year: 3.1」——明确标注是 2024 版,尚未更新到 JCR 2025。本行数值与之一致,无需改动。"
+      "quartile": "Q2",
+      "metricsUrl": "https://medicaljournalssweden.se/jrm/about"
     },
     {
       "name": "Neurorehabilitation and Neural Repair",
       "aliases": ["neurorehabilitation and neural repair", "neurorehabil neural repair"],
-      "impactFactor": 3.7,
+      "impactFactor": 4,
       "quartile": "Q1"
     },
     {
       "name": "European Spine Journal",
       "aliases": ["european spine journal", "eur spine j"],
-      "impactFactor": 2.7,
-      "quartile": "Q2"
+      "impactFactor": 3.2,
+      "quartile": "Q1"
     },
     {
       "name": "Spine",
       "aliases": ["spine", "spine (phila pa 1976)"],
-      "impactFactor": 3.5,
+      "impactFactor": 3.7,
       "quartile": "Q1"
     },
     {
@@ -193,86 +184,80 @@
       "aliases": ["bmc musculoskeletal disorders", "bmc musculoskelet disord"],
       "impactFactor": 2.8,
       "quartile": "Q2",
-      "jcrYear": 2025,
-      "quartileYear": 2024,
-      "metricsUrl": "https://bmcmusculoskeletdisord.biomedcentral.com/",
-      "_note": "BMC 页面标注 Journal Impact Factor 2.8 (2025)、5-year 3.1 (2025),但不列分区。quartile 仍是 2024 的 Q2,徽章不显示分区。"
+      "metricsUrl": "https://bmcmusculoskeletdisord.biomedcentral.com/"
     },
     {
       "name": "Pain",
       "aliases": ["pain"],
-      "impactFactor": 5.5,
+      "impactFactor": 5.8,
       "quartile": "Q1"
     },
     {
       "name": "Archives of Physiotherapy",
       "aliases": ["archives of physiotherapy", "arch physiother"],
-      "impactFactor": 2.9,
+      "impactFactor": 3.1,
       "quartile": "Q1"
     },
     {
       "name": "International Journal of Sports Physical Therapy",
       "aliases": ["international journal of sports physical therapy", "int j sports phys ther", "ijspt"],
-      "impactFactor": 2.1,
+      "impactFactor": 2.4,
       "quartile": "Q2",
       "metricsUrl": "https://ijspt.scholasticahq.com/about",
-      "_note": "2026-08-02 复核:出版方 about 页完全不公布 IF/分区(只写收录于 PubMed / CINAHL / SPORTDiscus)。无法从出版方核实,保持 JCR 2024 值。"
+      "_note": "出版方 about 页不公布 IF/分区,只能查 JCR。"
     },
     {
       "name": "NeuroRehabilitation",
       "aliases": ["neurorehabilitation", "neurorehabilitation (reading, mass.)"],
-      "impactFactor": 1.8,
+      "impactFactor": 2,
       "quartile": "Q2",
       "metricsUrl": "https://journals.sagepub.com/home/nre",
-      "_blocked": "2026-08-02 未能核实:Sage 站点挂 Cloudflare 人机验证,按规则不绕过。"
+      "_note": "metricsUrl 挂 Cloudflare 人机验证,自动化进不去,只能人工或查 JCR。"
     },
     {
       "name": "Topics in Stroke Rehabilitation",
       "aliases": ["topics in stroke rehabilitation", "top stroke rehabil"],
       "impactFactor": 2.3,
       "quartile": "Q2",
-      "jcrYear": 2025,
-      "quartileYear": 2025,
-      "metricsUrl": "https://www.tandfonline.com/journals/ytsr20/about-this-journal#journal-metrics",
-      "_note": "掉档:JCR 2024 是 2.5/Q1,2025 变成 2.3/Q2(出版方页面同时标注 IF 与 Impact Factor Best Quartile,两者都是 2025)。这条是「分区确实会年年变、不能沿用」的实证。"
+      "metricsUrl": "https://www.tandfonline.com/journals/ytsr20/about-this-journal#journal-metrics"
     },
     {
       "name": "Physiotherapy Research International",
       "aliases": ["physiotherapy research international", "physiotherapy research international : the journal for researchers and clinicians in physical therapy", "physiother res int"],
-      "impactFactor": 1.8,
+      "impactFactor": 1.7,
       "quartile": "Q2",
       "metricsUrl": "https://onlinelibrary.wiley.com/journal/14712865",
-      "_blocked": "2026-08-02 未能核实:Wiley Online Library 挂 Cloudflare 人机验证,按规则不绕过。"
+      "_note": "metricsUrl 挂 Cloudflare 人机验证,自动化进不去,只能人工或查 JCR。"
     },
     {
       "name": "Physical & Occupational Therapy in Pediatrics",
       "aliases": ["physical & occupational therapy in pediatrics", "physical and occupational therapy in pediatrics", "phys occup ther pediatr"],
-      "impactFactor": 2.1,
-      "quartile": "Q1"
+      "impactFactor": 1.4,
+      "quartile": "Q3"
     },
     {
       "name": "South African Journal of Physiotherapy",
       "aliases": ["south african journal of physiotherapy", "the south african journal of physiotherapy", "s afr j physiother"],
-      "impactFactor": 1.2,
-      "quartile": "Q2"
+      "impactFactor": 1.3,
+      "quartile": "Q3"
     },
     {
       "name": "Current Reviews in Musculoskeletal Medicine",
       "aliases": ["current reviews in musculoskeletal medicine", "curr rev musculoskelet med"],
-      "impactFactor": 3.9,
+      "impactFactor": 5,
       "quartile": "Q1"
     },
     {
       "name": "Pediatric Physical Therapy",
       "aliases": ["pediatric physical therapy", "pediatr phys ther"],
-      "impactFactor": null,
-      "quartile": null
+      "impactFactor": 1.9,
+      "quartile": "Q2"
     },
     {
       "name": "Journal of Geriatric Physical Therapy",
       "aliases": ["journal of geriatric physical therapy", "journal of geriatric physical therapy (2001)", "j geriatr phys ther"],
-      "impactFactor": null,
-      "quartile": null
+      "impactFactor": 3,
+      "quartile": "Q1"
     },
     {
       "name": "Cardiopulmonary Physical Therapy Journal",
@@ -285,10 +270,8 @@
       "aliases": ["measurement in physical education and exercise science", "meas phys educ exerc sci"],
       "impactFactor": 1.6,
       "quartile": "Q2",
-      "jcrYear": 2025,
-      "quartileYear": 2025,
       "metricsUrl": "https://www.tandfonline.com/journals/hmpe20/about-this-journal#journal-metrics",
-      "_note": "2026-08-01 加入。NLM ID 100893864,MEDLINE TA = Meas Phys Educ Exerc Sci。currentIndexingStatus=N(不在 MEDLINE 常规索引),PubMed 里只有 NIH 资助的 PMC 作者稿,建库至今共 18 条、近年约 1–3 篇/年,所以这条闸门放开后进量极少。IF/分区来自出版方页面明确标注的 (2025):1.6, Impact Factor Best Quartile Q2。"
+      "_note": "NLM ID 100893864,MEDLINE TA = Meas Phys Educ Exerc Sci。currentIndexingStatus=N(不在 MEDLINE 常规索引),PubMed 里只有 NIH 资助的 PMC 作者稿,建库至今 18 条、近年约 1–3 篇/年,闸门放开后进量极少。"
     }
   ]
 }
