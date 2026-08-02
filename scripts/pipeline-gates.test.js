@@ -8,6 +8,8 @@
 //   3. repairMissingFields：模型漏 summary/titleZh/summaryZh 时重填，兜不住就丢
 
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
 const {
   normalizeTitle,
   ROSTER_JOURNAL_BY_NAME,
@@ -123,6 +125,41 @@ async function run() {
     const complete = [{ index: 0, summary: 'x', titleZh: '中', summaryZh: '中文' }];
     const same = await repairMissingFields(complete, items, async () => { called++; return '[]'; });
     ok(same.length === 1 && called === 0, '字段齐全时直接返回，不调用 LLM');
+  }
+
+  console.log('F. 落库不变量：roster 期刊源的条目必须带 journal');
+  {
+    // 为什么 D 段不够：D 只证明「映射表本身是对的」。2026-08-02 的教训恰恰是
+    // 表是对的、回落代码也写好了、注释还很详尽 —— 但那次修复从没提交，CI 跑的
+    // HEAD 里 ROSTER_JOURNAL_BY_NAME 出现 0 次，于是 cron 连灌五天空 journal，
+    // 实时 news.json 29/75 受影响，而 D 段一路全绿。单元断言看不见「写了没上线」。
+    //
+    // 所以这里改为对产物下断言。代价是有约一天的检测延迟（回退后要等下一次 cron
+    // 重建 news.json 才转红），换来的是能抓住整类「逻辑正确但没生效」的故障：
+    // 修复被回退、修复没上线、新增期刊源忘了配 journalName。
+    //
+    // 影响面不止 IF 徽章：单刊上限的计数键是 journal || source，journal 一空就
+    // 退化成短名，同一本刊裂成两个桶（当时 BJSM 全名×48 + BJSM×24，共 12 本刊
+    // 绕过上限）。所以这条断言守的是选稿层，不是装饰层。
+    const NEWS = path.join(__dirname, '..', 'news.json');
+    if (!fs.existsSync(NEWS)) {
+      console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
+    } else {
+      const items = JSON.parse(fs.readFileSync(NEWS, 'utf8')).items || [];
+      const leaked = items.filter((i) => !i.journal && ROSTER_JOURNAL_BY_NAME.has(i.source));
+      const who = [...new Set(leaked.map((i) => i.source))].slice(0, 6).join(', ');
+      ok(leaked.length === 0,
+        `news.json ${items.length} 条里没有「roster 刊源却缺 journal」的条目`
+        + (leaked.length ? ` —— 漏 ${leaked.length} 条：${who}（回落是不是又没上线？）` : ''));
+    }
+
+    // 零延迟的那一半：新增期刊源忘了配 journalName，短名就永远回落不到全名。
+    // 这条在提交当下就会红，不用等 cron。
+    const SOURCES = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'sources.json'), 'utf8'));
+    const noName = SOURCES.filter((s) => s.kind === 'journal' && !s.journalName).map((s) => s.name);
+    ok(noName.length === 0,
+      `sources.json 里每个 kind=journal 的源都配了 journalName（共 ${SOURCES.filter((s) => s.kind === 'journal').length} 个）`
+      + (noName.length ? ` —— 缺：${noName.join(', ')}` : ''));
   }
 
   console.log(`\n✅ all ${passed} assertions passed`);
