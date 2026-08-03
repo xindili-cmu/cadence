@@ -1,0 +1,244 @@
+{
+ "date": "2026-08-04",
+ "generatedAt": "2026-08-03T22:32:58.711Z",
+ "windowHours": 26,
+ "windowStart": "2026-08-02T22:17:04.539Z",
+ "windowEnd": "2026-08-03T22:32:56.922Z",
+ "lead": {
+  "titleZh": "卒中上肢恢复预测模型验证、冠心病联合训练与 Medicare 收费，三项高分信号",
+  "titleEn": "Stroke Upper Limb Recovery Prediction, CHD Combined Training, and Medicare Fees: Three Top Signals",
+  "paragraphZh": "今天共有 8 个信号，覆盖 7 个专科方向，其中 3 个信号并列 curatedScore 最高分 85 分。一篇观察研究外部验证了卒中后上肢恢复的机器学习模型，另一篇系统综述评估了冠心病患者联合有氧和阻力训练的效果，同时，拟议的 2027 年 Medicare 医生收费标准也是临床实践中值得关注的重点。",
+  "paragraphEn": "Today's digest features 8 signals across 7 specialties, with 3 signals tied for the top curatedScore of 85. An observational study externally validated a machine learning model for predicting upper-limb recovery after stroke, while a systematic review assessed the impact of combined aerobic and resistance training in coronary heart disease patients. Additionally, the proposed 2027 Medicare Physician Fee Schedule presents a critical update for clinical practice."
+ },
+ "stats": {
+  "events": 8,
+  "specialties": 7,
+  "multiSource": 0,
+  "sources": 6,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1785757795932-0",
+     "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
+     "summary": "A randomized split-limb trial on healthy young adults found varying neuromuscular electrical stimulation (NMES) amplitude affects quadriceps isometric torque and muscle thickness. Higher amplitudes enhanced acute neuromuscular responses.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42543542/",
+     "publishedAt": "2026-08-03T00:00:00.000Z",
+     "firstSeen": "2026-08-03T11:49:55.932Z",
+     "curatedScore": 70,
+     "curatedReason": "这项随机肢体交叉试验提示，NMES 刺激幅度与股四头肌等长扭矩和肌肉厚度之间存在剂量反应关系。在健康人群中，高刺激强度可以带来更强的急性神经肌肉反应，但注意这只是急性效应，且人群是健康年轻人。",
+     "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机肢体交叉试验",
+     "summaryZh": "一项针对健康年轻人的随机肢体交叉试验表明，调整神经肌肉电刺激（NMES）幅度会影响股四头肌等长扭矩和肌肉厚度，高刺激强度可增强急性神经肌肉反应。",
+     "curatedReasonEn": "This randomized split-limb trial suggests a dose-response relationship between NMES amplitude and quadriceps isometric torque/muscle thickness. Higher stimulation intensity can lead to stronger acute neuromuscular responses in healthy young adults, but note this is an acute effect and in a healthy population.",
+     "limitation": "研究仅评估了健康年轻人的急性反应，结果外推到临床患者群体及长期效果需谨慎。",
+     "limitationEn": "The study only assessed acute responses in healthy young adults; caution is needed when generalizing these findings to clinical patient populations and long-term effects.",
+     "tags": [
+      "research",
+      "electro"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1785757795934-1",
+     "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
+     "summary": "External validation of a machine learning model for predicting 6-month upper-limb capacity after stroke showed good performance in an independent Danish cohort. Predictions were generated from baseline assessments at 2 weeks post-stroke.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
+     "publishedAt": "2026-08-03T00:00:00.000Z",
+     "firstSeen": "2026-08-03T11:49:55.934Z",
+     "curatedScore": 85,
+     "curatedReason": "这项研究对卒中后上肢恢复的机器学习预测模型进行了外部验证，结果显示，该模型在不同队列中仍能保持良好的预测性能。这意味着，在卒中早期结合机器学习工具，有助于你更可靠地规划康复方案。",
+     "titleZh": "早期预测卒中后上肢恢复的机器学习模型的外部验证",
+     "summaryZh": "一项针对卒中后上肢恢复机器学习预测模型的外部验证显示，该模型在独立的丹麦队列中仍能良好预测卒中后 6 个月上肢能力，预测基于卒中后 2 周的基线评估。",
+     "curatedReasonEn": "This study externally validated a machine learning model for predicting upper-limb recovery after stroke, demonstrating good predictive performance across different cohorts. This suggests that integrating machine learning tools early post-stroke can help you plan rehabilitation more reliably.",
+     "limitation": "研究使用的模型是基于特定队列开发的，模型在其他更广泛或异质性更强的患者群体中的表现仍需进一步验证。",
+     "limitationEn": "The model was developed on specific cohorts; its performance in broader or more heterogeneous patient populations still requires further validation.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Neurorehabilitation and neural repair",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1785796367253-3",
+     "title": "Reduced ipsilateral pre-operative forefoot pressure during gait is associated with poorer post-operative postural control in people with chronic ankle instability",
+     "summary": "A cross-sectional study found that reduced ipsilateral pre-operative forefoot pressure during gait is associated with poorer post-operative postural control in individuals with chronic ankle instability.",
+     "category": "sports",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10290-5",
+     "publishedAt": "2026-07-30T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.253Z",
+     "curatedScore": 75,
+     "curatedReason": "对于慢性踝关节不稳患者，术前步态中内侧前足压力降低可能预示术后平衡控制能力较差。这提示我们在术前评估时要关注足底压力分布，并可能需要针对性地加强术后平衡训练。",
+     "titleZh": "慢性踝关节不稳患者术前步态中同侧前足压力降低与术后姿势控制能力下降相关",
+     "summaryZh": "一项横断面研究发现，慢性踝关节不稳患者术前步态中同侧前足压力降低与术后姿势控制能力下降相关联。",
+     "curatedReasonEn": "In individuals with chronic ankle instability, reduced ipsilateral pre-operative forefoot pressure during gait may predict poorer post-operative postural control. This suggests focusing on plantar pressure distribution during pre-operative assessment and potentially intensifying post-operative balance training.",
+     "limitation": "这是一项横断面研究，无法确立因果关系，其发现可能仅为关联性而非预后性。",
+     "limitationEn": "This is a cross-sectional study, which cannot establish causality; its findings may indicate association rather than prognosis.",
+     "tags": [
+      "research",
+      "foot-ankle"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Musculoskeletal Disorders"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1785796367253-6",
+     "title": "Association between stride length variability and osteosarcopenia in community-dwelling older women: a cross-sectional study",
+     "summary": "A cross-sectional study found an association between stride length variability and osteosarcopenia in community-dwelling older women.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-07995-6",
+     "publishedAt": "2026-08-01T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.253Z",
+     "curatedScore": 75,
+     "curatedReason": "在社区居住的老年女性中，步长变异性与骨质疏松性肌少症存在关联。这提示我们，评估老年女性跌倒和骨折风险时，步态稳定性（如步长变异性）可能是一个与肌少症和骨密度同样重要的指标。",
+     "titleZh": "社区居住老年女性步长变异性与骨质疏松性肌少症的关联：一项横断面研究",
+     "summaryZh": "一项横断面研究发现，社区居住老年女性的步长变异性与骨质疏松性肌少症之间存在关联。",
+     "curatedReasonEn": "In community-dwelling older women, stride length variability is associated with osteosarcopenia. This suggests that when assessing fall and fracture risk in older women, gait stability (e.g., stride length variability) might be as important an indicator as sarcopenia and bone density.",
+     "limitation": "这是一项横断面研究，无法确定步长变异性与骨质疏松性肌少症之间的因果关系。",
+     "limitationEn": "This is a cross-sectional study, which cannot determine the causal relationship between stride length variability and osteosarcopenia.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1785796367253-7",
+     "title": "Effect of Combined Aerobic and Resistance Training on Exercise Capacity, Muscle Strength, Quality of Life, and Mortality in Patients with Coronary Heart Disease: A Systematic Review with Meta-analysis",
+     "summary": "A systematic review with meta-analysis found that combined aerobic and resistance training improves exercise capacity, muscle strength, quality of life, and mortality in patients with coronary heart disease.",
+     "category": "cardiopulmonary",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01080-3",
+     "publishedAt": "2026-08-03T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.253Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述和 Meta 分析强化了联合有氧和阻力训练对冠心病患者运动能力、肌肉力量、生活质量和死亡率的益处。继续将这两种训练模式作为心肺康复的核心。",
+     "titleZh": "联合有氧和阻力训练对冠心病患者运动能力、肌肉力量、生活质量和死亡率的影响：一项系统综述与 Meta 分析",
+     "summaryZh": "一项系统综述与 Meta 分析发现，联合有氧和阻力训练能改善冠心病患者的运动能力、肌肉力量、生活质量和死亡率。",
+     "curatedReasonEn": "This high-quality systematic review and meta-analysis confirms that combined aerobic and resistance training significantly improves exercise capacity, muscle strength, quality of life, and reduces mortality in coronary heart disease patients. It's wise to make these two training modalities core interventions in cardiopulmonary rehabilitation.",
+     "limitation": "虽然是系统综述，但其结果的异质性可能受纳入研究质量和干预方案差异的影响。",
+     "limitationEn": "Despite being a systematic review, result heterogeneity might be influenced by the quality of included studies and variations in intervention protocols.",
+     "tags": [
+      "research",
+      "cardiac-rehabilitation"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine - Open"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1785796367254-11",
+     "title": "Instrumented assessment of joint neuromechanics in upper motor neuron syndrome: a systematic review of methods, reliability, validity, and clinical relevance",
+     "summary": "A systematic review explored the instrumented assessment of joint neuromechanics in upper motor neuron syndrome, focusing on methods, reliability, validity, and clinical relevance.",
+     "category": "manual-modality",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02108-1",
+     "publishedAt": "2026-07-29T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.254Z",
+     "curatedScore": 75,
+     "curatedReason": "这项系统综述为上运动神经元综合征患者关节神经力学的器械评估提供了方法学、可靠性、有效性和临床相关性的概述。它能帮助你更好地理解和选择评估神经系统损伤后关节力学的工具，但没有直接的干预建议。",
+     "titleZh": "上运动神经元综合征关节神经力学器械评估：方法、可靠性、有效性和临床相关性系统综述",
+     "summaryZh": "一项系统综述探讨了上运动神经元综合征中关节神经力学器械评估的方法、可靠性、有效性和临床相关性。",
+     "curatedReasonEn": "This systematic review provides an overview of methods, reliability, validity, and clinical relevance for instrumented assessment of joint neuromechanics in upper motor neuron syndrome. It can help you better understand and select tools for evaluating joint mechanics after neurological injury, but offers no direct intervention recommendations.",
+     "limitation": "该综述侧重于评估方法本身，而非特定干预措施的疗效。",
+     "limitationEn": "This review focuses on assessment methods themselves, rather than the efficacy of specific interventions.",
+     "tags": [
+      "research",
+      "stroke",
+      "spinal-cord"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1785796367254-13",
+     "title": "Proposed 2027 Medicare Physician Fee Schedule: What PTs Need to Know, Part 2",
+     "summary": "CMS's proposed 2027 Medicare Physician Fee Schedule includes changes to the Quality Payment Program, potentially ending the Merit-based Incentive Payment System (MIPS) in 2029.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/08/03/proposed-2027-medicare-physician-fee-schedule-what-pts-need-to-know-part-2",
+     "publishedAt": "2026-08-03T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.254Z",
+     "curatedScore": 85,
+     "curatedReason": "美国 CMS 提议在 2029 年结束 MIPS，并改变 Medicare 医生收费标准中的实践费用计算方法。如果你是美国 PT，需密切关注这些变化，因为它们可能影响你的报销金额和质量报告要求。",
+     "titleZh": "拟议的 2027 年 Medicare 医生收费标准：PTs 需要了解的，第二部分",
+     "summaryZh": "CMS 拟议的 2027 年 Medicare 医生收费标准包括质量支付计划的调整，可能在 2029 年结束“基于绩效的激励支付系统（MIPS）”。",
+     "curatedReasonEn": "CMS in the US proposes ending MIPS in 2029 and changing how practice expenses are calculated in the Medicare Physician Fee Schedule. If you are a US PT, monitor these changes closely as they may affect your reimbursement and quality reporting requirements.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "regulation"
+     ]
+    },
+    {
+     "id": "news-1785796367254-16",
+     "title": "How PT-PTA Teams Are Expanding Access to Care",
+     "summary": "Physical therapists and physical therapist assistants are enhancing collaboration to improve access, efficiency, and patient outcomes in various care settings.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/apta-magazine/archive/2026/08/01/how-pt-pta-teams-are-expanding-access-to-care",
+     "publishedAt": "2026-08-01T00:00:00.000Z",
+     "firstSeen": "2026-08-03T22:32:47.254Z",
+     "curatedScore": 75,
+     "curatedReason": "PT-PTA 团队的有效协作是扩大护理可及性、提高效率和改善患者结局的关键。重新审视并优化你所在机构的 PT-PTA 协作模式，是确保高质量服务的重要一步。",
+     "titleZh": "PT-PTA 团队如何扩大护理可及性",
+     "summaryZh": "物理治疗师和物理治疗师助理正在加强协作，以改善各种护理环境下的服务可及性、效率和患者结局。",
+     "curatedReasonEn": "Effective PT-PTA team collaboration is crucial for expanding care access, improving efficiency, and enhancing patient outcomes. Re-evaluating and optimizing your facility's PT-PTA collaboration model is an important step towards ensuring high-quality services.",
+     "tags": [
+      "news",
+      "workforce"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
