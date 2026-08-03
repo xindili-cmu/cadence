@@ -804,6 +804,53 @@
         "education"
       ],
       "journal": "PM&R"
+    },
+    {
+      "id": "news-1785757795934-1",
+      "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
+      "summary": "External validation of a machine learning model for predicting 6-month upper-limb capacity after stroke showed good performance in an independent Danish cohort. Predictions were generated from baseline assessments at 2 weeks post-stroke.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
+      "publishedAt": "2026-08-03T00:00:00.000Z",
+      "firstSeen": "2026-08-03T11:49:55.934Z",
+      "curatedScore": 85,
+      "curatedReason": "这项研究对卒中后上肢恢复的机器学习预测模型进行了外部验证，结果显示，该模型在不同队列中仍能保持良好的预测性能。这意味着，在卒中早期结合机器学习工具，有助于你更可靠地规划康复方案。",
+      "titleZh": "早期预测卒中后上肢恢复的机器学习模型的外部验证",
+      "summaryZh": "一项针对卒中后上肢恢复机器学习预测模型的外部验证显示，该模型在独立的丹麦队列中仍能良好预测卒中后 6 个月上肢能力，预测基于卒中后 2 周的基线评估。",
+      "curatedReasonEn": "This study externally validated a machine learning model for predicting upper-limb recovery after stroke, demonstrating good predictive performance across different cohorts. This suggests that integrating machine learning tools early post-stroke can help you plan rehabilitation more reliably.",
+      "limitation": "研究使用的模型是基于特定队列开发的，模型在其他更广泛或异质性更强的患者群体中的表现仍需进一步验证。",
+      "limitationEn": "The model was developed on specific cohorts; its performance in broader or more heterogeneous patient populations still requires further validation.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair",
+      "tech": true
+    },
+    {
+      "id": "news-1785757795932-0",
+      "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
+      "summary": "A randomized split-limb trial on healthy young adults found varying neuromuscular electrical stimulation (NMES) amplitude affects quadriceps isometric torque and muscle thickness. Higher amplitudes enhanced acute neuromuscular responses.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42543542/",
+      "publishedAt": "2026-08-03T00:00:00.000Z",
+      "firstSeen": "2026-08-03T11:49:55.932Z",
+      "curatedScore": 70,
+      "curatedReason": "这项随机肢体交叉试验提示，NMES 刺激幅度与股四头肌等长扭矩和肌肉厚度之间存在剂量反应关系。在健康人群中，高刺激强度可以带来更强的急性神经肌肉反应，但注意这只是急性效应，且人群是健康年轻人。",
+      "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机肢体交叉试验",
+      "summaryZh": "一项针对健康年轻人的随机肢体交叉试验表明，调整神经肌肉电刺激（NMES）幅度会影响股四头肌等长扭矩和肌肉厚度，高刺激强度可增强急性神经肌肉反应。",
+      "curatedReasonEn": "This randomized split-limb trial suggests a dose-response relationship between NMES amplitude and quadriceps isometric torque/muscle thickness. Higher stimulation intensity can lead to stronger acute neuromuscular responses in healthy young adults, but note this is an acute effect and in a healthy population.",
+      "limitation": "研究仅评估了健康年轻人的急性反应，结果外推到临床患者群体及长期效果需谨慎。",
+      "limitationEn": "The study only assessed acute responses in healthy young adults; caution is needed when generalizing these findings to clinical patient populations and long-term effects.",
+      "tags": [
+        "research",
+        "electro"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
     }
   ]
 }
