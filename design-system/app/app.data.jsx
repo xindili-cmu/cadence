@@ -196,7 +196,7 @@ window.CD_DICT = {
     'src.noneYet': '暂未收录过该信源的文章', 'src.countTip': '累计收录',
     'src.suggest.btn': '+ 推荐信源', 'src.suggest.title': '推荐信源', 'src.suggest.review': '审核后添加',
     'src.suggest.sent': '已收到，谢谢推荐。每条建议我们都会核实，确认后加入信源墙。',
-    'src.suggest.name': '信源名称', 'src.suggest.namePh': '如 JOSPT、丁香园', 'src.suggest.url': '官网地址',
+    'src.suggest.name': '信源名称', 'src.suggest.namePh': '如 JOSPT、BJSM', 'src.suggest.url': '官网地址',
     'src.suggest.email': '邮箱（选填）', 'src.suggest.emailPh': '方便后续联系',
     'src.suggest.why': '为什么值得收录（选填）', 'src.suggest.whyPh': '它覆盖什么内容？为什么可信？',
     'src.suggest.send': '提交推荐', 'src.suggest.sending': '提交中…', 'src.suggest.cancel': '取消',

@@ -196,21 +196,6 @@
     ]
   },
   {
-    "name": "国家卫健委",
-    "domain": "nhc.gov.cn",
-    "url": "http://www.nhc.gov.cn",
-    "kind": "regulator",
-    "regions": [
-      "CN"
-    ],
-    "cats": [
-      "practice"
-    ],
-    "scrape": [
-      "http://www.nhc.gov.cn/wjw/xwdt/list.shtml"
-    ]
-  },
-  {
     "name": "Physiopedia",
     "domain": "physiospot.com",
     "url": "https://www.physiospot.com",
@@ -238,39 +223,6 @@
     ],
     "scrape": [
       "https://www.webpt.com/blog"
-    ]
-  },
-  {
-    "name": "丁香园",
-    "domain": "dxy.cn",
-    "url": "https://www.dxy.cn",
-    "kind": "platform",
-    "regions": [
-      "CN"
-    ],
-    "cats": [
-      "neurological"
-    ],
-    "scrape": [
-      {
-        "url": "https://www.dxy.cn/sub/5",
-        "category": "orthopedic"
-      }
-    ]
-  },
-  {
-    "name": "健康界",
-    "domain": "cn-healthcare.com",
-    "url": "https://www.cn-healthcare.com",
-    "kind": "news",
-    "regions": [
-      "CN"
-    ],
-    "cats": [
-      "practice"
-    ],
-    "scrape": [
-      "https://www.cn-healthcare.com/"
     ]
   },
   {
