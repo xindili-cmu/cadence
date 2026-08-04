@@ -2231,7 +2231,15 @@ function FeedApp() {
               {/* Top axis = content type. Specialty lives in the left rail on
                   desktop; on mobile it folds into the dropdown beside this bar.
                   .cd-hscroll hides the scrollbar (defined in index.html). */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              {/* flexWrap: the slider is flex:'none' and the pills are shrinkable, so
+                  every pixel of width pressure used to land on the pills — they'd stack
+                  one-per-row while the slider sat untouched (2026-08-04: EN edition was
+                  already broken at a normal 1440px desktop, "Policy" alone on row 2;
+                  ZH degraded below ~1150px). Wrapping lets the slider drop to its own
+                  line instead, so the pills always get a full row. Measured: at ≥652px
+                  bar width the layout is byte-identical to before; below that the bar is
+                  shorter at every width (ZH 366px: 207px → 106px). */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                 {isMobile && <SpecialtySelect value={category} onChange={setCategory} />}
                 <TypeTabs value={ctype} onChange={setCtype} pool={typeCountPool}
                   className={isMobile ? 'cd-hscroll' : undefined}
