@@ -32,6 +32,10 @@ jobs:
         with:
           node-version: '22'
 
+      # Same gate as refresh.yml — see the long note there.
+      - name: Assertions (npm test)
+        run: npm test
+
       - name: Install esbuild
         run: npm install --no-save --no-package-lock esbuild
 

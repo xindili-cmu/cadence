@@ -36,6 +36,11 @@ jobs:
         with:
           node-version: '22'
 
+      # Same gate as refresh.yml — see the long note there for why it is blocking
+      # and why it routes through `npm test` instead of naming scripts.
+      - name: Assertions (npm test)
+        run: npm test
+
       # No package-lock.json in this repo → npm install, not npm ci.
       # The font packages are big (~200 MB); cache keyed on package.json.
       - name: Cache node_modules

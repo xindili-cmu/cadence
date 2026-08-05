@@ -41,6 +41,23 @@ jobs:
         with:
           node-version: '22'
 
+      # Gate: run the repo's own assertions before spending any API budget.
+      # Both test files are pure node (assert/fs/path only), so this runs before
+      # `npm install` and costs ~2s.
+      #
+      # Blocking on purpose. A wedged pipeline is LOUD (no daily edition — noticed
+      # the same day, since publishing is manual 5x/week); bad data is SILENT
+      # (2026-08-02: empty `journal` shipped for 5 days unnoticed, 29/75 rows).
+      # Loud beats silent.
+      #
+      # The point of routing through `npm test` rather than naming scripts here:
+      # any assertion added to the `test` script is picked up by every workflow
+      # automatically. No workflow edit needed to wire up the next check — which
+      # is the failure this step exists to end (lint-daily sat unwired 07-26→07-28;
+      # these two test files sat unwired from the day they were written).
+      - name: Assertions (npm test)
+        run: npm test
+
       # satori + resvg + Noto fonts power the WeChat 2.35:1 cover banner
       # (wechat-brief.js → wechat-cover.js). Without node_modules the cover
       # render throws and is swallowed as "non-fatal", so the daily issue

@@ -51,6 +51,10 @@ jobs:
         with:
           node-version: '22'
 
+      # Same gate as refresh.yml — see the long note there.
+      - name: Assertions (npm test)
+        run: npm test
+
       - name: Generate weekly brief
         env:
           # Optional — section self-skips if this secret is absent.
