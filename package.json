@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "node scripts/term-fixes.test.js && node scripts/pipeline-gates.test.js",
+    "test:code": "SKIP_ARTIFACT_ASSERTS=1 npm test",
     "refresh": "node scripts/news-refresh.js",
     "test-refresh": "DRY_RUN=true node scripts/news-refresh.js",
     "build-app": "node scripts/build-bundle.js && node scripts/build-app.js",

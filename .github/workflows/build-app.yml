@@ -32,9 +32,13 @@ jobs:
         with:
           node-version: '22'
 
-      # Same gate as refresh.yml — see the long note there.
-      - name: Assertions (npm test)
-        run: npm test
+      # Same gate as refresh.yml, minus the artifact assertion. This workflow is
+      # triggered by jsx/css changes, so gating it on the state of news.json would
+      # let a data problem block an unrelated frontend fix — possibly the very fix
+      # for that problem. A gate should only stop risks on its own path.
+      # `test:code` = `npm test` with SKIP_ARTIFACT_ASSERTS=1; see pipeline-gates.test.js F.
+      - name: Assertions (npm run test:code)
+        run: npm run test:code
 
       - name: Install esbuild
         run: npm install --no-save --no-package-lock esbuild

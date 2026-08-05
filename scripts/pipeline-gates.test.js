@@ -141,8 +141,20 @@ async function run() {
     // 影响面不止 IF 徽章：单刊上限的计数键是 journal || source，journal 一空就
     // 退化成短名，同一本刊裂成两个桶（当时 BJSM 全名×48 + BJSM×24，共 12 本刊
     // 绕过上限）。所以这条断言守的是选稿层，不是装饰层。
+    //
+    // 作用域开关（SKIP_ARTIFACT_ASSERTS）：这条断言的对象是 news.json 的数据状态，
+    // 与「前端构建对不对」无关。build-app.yml 由 jsx/css 改动触发，让它因为一个数据
+    // 问题而拒绝构建，会挡住与该问题无关的前端改动 —— 包括可能正是用来修这个问题的
+    // 那次前端改动。门禁只该拦它所在那条路上的风险，所以 build-app 走 `npm run
+    // test:code` 跳过这半条。cron 走 `npm test`，照跑不误。
+    //
+    // 拆法刻意是「默认包含、显式排除」：新写的断言自动进 npm test 并被所有 cron 消费，
+    // 只有像本段这样明确依赖产物的才手动挂开关。反过来做（默认排除）会立刻重现
+    // 「写好了没接上」那类故障。
     const NEWS = path.join(__dirname, '..', 'news.json');
-    if (!fs.existsSync(NEWS)) {
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言（下面 sources.json 那条照跑）');
+    } else if (!fs.existsSync(NEWS)) {
       console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
     } else {
       const items = JSON.parse(fs.readFileSync(NEWS, 'utf8')).items || [];
