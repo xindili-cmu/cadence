@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-05T19:59:38.316Z",
-    "totalItems": 75,
+    "lastUpdated": "2026-08-05T21:38:06.684Z",
+    "totalItems": 74,
     "categories": [
       "orthopedic",
       "neurological",
@@ -15,16 +15,13 @@
   },
   "hotTopics": [
     {
-      "id": "news-1785866947551-1",
-      "title": "Outcomes of rehabilitation following device-aided therapy start in parkinson's disease: a randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42549611/",
+      "id": "news-1785757795934-1",
+      "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
       "publishedAt": "2026-08-05T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 6,
       "sources": [
-        "Journal of rehabilitation medicine",
-        "Archives of physical medicine and rehabilitation",
-        "Bulletin of Faculty of Physical Therapy",
         "Neurorehabilitation and neural repair",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "American journal of physical medicine & rehabilitation",
@@ -32,27 +29,9 @@
         "NeuroRehabilitation",
         "Physiotherapy theory and practice"
       ],
-      "tag": "parkinson",
+      "tag": "stroke",
       "kind": "theme",
       "members": [
-        {
-          "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "Outcomes of rehabilitation following device-aided therapy start in parkinson's disease: a randomized controlled trial.",
-          "titleZh": "帕金森病患者设备辅助治疗启动后康复结局：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Evaluating the impact of high dose inpatient rehabilitation gait training on post stroke physical activity: A secondary analysis of a randomized controlled trial.",
-          "titleZh": "高剂量住院康复步态训练对卒中后体力活动影响的评估：一项随机对照试验的二次分析。"
-        },
-        {
-          "source": "Bull Fac Phys Ther",
-          "journal": "Bulletin of Faculty of Physical Therapy",
-          "title": "The effect of different intensities of aerobic exercise on neurorepair based on BDNF, PI3K, and Akt signaling pathways after ischemic stroke: a narrative review",
-          "titleZh": "有氧运动强度对缺血性卒中后神经修复的影响：基于BDNF, PI3K, Akt信号通路的叙述性综述"
-        },
         {
           "source": "PubMed",
           "journal": "Neurorehabilitation and neural repair",
@@ -100,9 +79,9 @@
           "titleZh": "卒中后偏瘫患者出院后的运动恐惧症轨迹与康复结局"
         }
       ],
-      "heat": 6.74,
-      "themeZh": "卒中与帕金森病康复的剂量、预测和器械疗效",
-      "themeEn": "Stroke, PD Rehabilitation Dose, Prediction, Devices"
+      "heat": 4.39,
+      "themeZh": "卒中后肢体功能恢复的预测因素与早期康复",
+      "themeEn": "Post-stroke limb recovery prediction and early rehab"
     },
     {
       "id": "news-1785049661034-0",
@@ -110,17 +89,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
       "category": "orthopedic",
       "publishedAt": "2026-08-04T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 8,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Musculoskeletal science & practice",
         "British journal of sports medicine",
-        "Gait & posture",
         "medRxiv",
-        "Physiotherapy theory and practice",
-        "Journal of NeuroEngineering and Rehabilitation",
         "BMC Musculoskeletal Disorders",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Gait & posture",
+        "Physiotherapy theory and practice",
+        "Journal of NeuroEngineering and Rehabilitation"
       ],
       "tag": "shoulder",
       "kind": "theme",
@@ -144,6 +122,17 @@
           "titleZh": "水扩张术治疗冻结肩的疗效与最佳技术：一项系统综述"
         },
         {
+          "source": "medRxiv",
+          "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
+          "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Machine learning-based prediction of individualized musculoskeletal responses during shoulder exercises using surface electromyography: a cross-sectional, repeated-measures laboratory study",
+          "titleZh": "基于机器学习的表面肌电图预测肩部运动个体化肌肉骨骼反应"
+        },
+        {
           "source": "PubMed",
           "journal": "Gait & posture",
           "title": "The effect of combining visuo-vestibular exercises with manual therapy and exercise on sensorimotor function in chronic neck pain: A randomized controlled trial.",
@@ -165,28 +154,11 @@
           "journal": "Journal of NeuroEngineering and Rehabilitation",
           "title": "Instrumented assessment of joint neuromechanics in upper motor neuron syndrome: a systematic review of methods, reliability, validity, and clinical relevance",
           "titleZh": "上运动神经元综合征关节神经力学器械评估：方法、可靠性、有效性和临床相关性系统综述"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Multimodal Phenotyping of Myofascial Pain Syndrome Using Rotational Shear Wave Elastography and Clinical Network Analysis",
-          "titleZh": "利用旋转剪切波弹性成像和临床网络分析对肌筋膜疼痛综合征进行多模态表型分析"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Machine learning-based prediction of individualized musculoskeletal responses during shoulder exercises using surface electromyography: a cross-sectional, repeated-measures laboratory study",
-          "titleZh": "基于机器学习的表面肌电图预测肩部运动个体化肌肉骨骼反应"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
-          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机肢体交叉试验"
         }
       ],
-      "heat": 4.77,
-      "themeZh": "肩颈痛与卒中上肢康复的新型物理治疗策略",
-      "themeEn": "Novel PT for Shoulder/Neck Pain and Stroke UE"
+      "heat": 4.14,
+      "themeZh": "颈肩痛与肌筋膜疼痛综合征的精准康复策略",
+      "themeEn": "Precision rehab for neck-shoulder and myofascial pain"
     },
     {
       "id": "news-1785912408310-0",
@@ -234,9 +206,9 @@
           "titleZh": "法国物理治疗中治疗联盟的特征与特殊性：一项定性研究"
         }
       ],
-      "heat": 3,
-      "themeZh": "生物心理社会因素对下腰痛和孕期疼痛康复的影响",
-      "themeEn": "Biopsychosocial Factors in LBP and Pregnancy Pain"
+      "heat": 2.93,
+      "themeZh": "生物心理社会因素对腰背痛康复的影响",
+      "themeEn": "Biopsychosocial factors in low back pain rehab"
     },
     {
       "id": "news-1785926890245-0",
@@ -272,22 +244,21 @@
           "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.63,
-      "themeZh": "多发性硬化症相关疲劳的运动干预和监测",
-      "themeEn": "MS-Related Fatigue Exercise Interventions and Monitoring"
+      "heat": 2.57,
+      "themeZh": "多发性硬化症疲劳的运动干预与评估",
+      "themeEn": "Exercise for MS fatigue management and assessment"
     },
     {
       "id": "news-1785796367253-7",
       "title": "Effect of Combined Aerobic and Resistance Training on Exercise Capacity, Muscle Strength, Quality of Life, and Mortality in Patients with Coronary Heart Disease: A Systematic Review with Meta-analysis",
       "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01080-3",
       "category": "cardiopulmonary",
-      "publishedAt": "2026-08-04T00:00:00.000Z",
-      "sourceCount": 4,
+      "publishedAt": "2026-08-04T22:32:40.075Z",
+      "sourceCount": 3,
       "sources": [
         "Sports Medicine - Open",
         "Archives of physical medicine and rehabilitation",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "International journal of sports physical therapy"
+        "Bulletin of Faculty of Physical Therapy"
       ],
       "tag": "cardiac-rehabilitation",
       "kind": "theme",
@@ -305,72 +276,47 @@
           "titleZh": "短期高强度 vs. 中等强度间歇训练对超重或肥胖心血管疾病患者心肺适能和代谢健康的影响：来自中国的证据。"
         },
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "A bayesian inference and neural network model for predicting physical fitness consumption in table tennis athletes",
-          "titleZh": "基于贝叶斯推理和神经网络模型预测乒乓球运动员体能消耗"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Evaluating the impact of high dose inpatient rehabilitation gait training on post stroke physical activity: A secondary analysis of a randomized controlled trial.",
+          "titleZh": "高剂量住院康复步态训练对卒中后体力活动影响的评估：一项随机对照试验的二次分析。"
         },
         {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Accelerated Return to Competition Following a Full-Thickness Abdominal Wall Tear in an Elite Sprinter: A Data-informed Case Report.",
-          "titleZh": "精英短跑运动员腹壁全层撕裂后加速重返赛场：一项数据驱动的病例报告"
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "The effect of different intensities of aerobic exercise on neurorepair based on BDNF, PI3K, and Akt signaling pathways after ischemic stroke: a narrative review",
+          "titleZh": "有氧运动强度对缺血性卒中后神经修复的影响：基于BDNF, PI3K, Akt信号通路的叙述性综述"
         }
       ],
-      "heat": 2.12,
-      "themeZh": "心血管疾病患者和运动员的运动能力与体能训练",
-      "themeEn": "Exercise Capacity and Training for CVD and Athletes"
+      "heat": 2.15,
+      "themeZh": "心肺疾病与卒中后不同强度运动训练效果",
+      "themeEn": "Exercise intensity in cardiopulmonary disease and stroke"
     }
   ],
   "items": [
     {
-      "id": "news-1784742300473-2",
-      "title": "Effectiveness of an individualised swimming and education programme for chronic low back pain (EduSwim): a randomised controlled trial.",
-      "summary": "An 8-week individualized swimming and education program significantly reduced disability (RMDQ) in adults with chronic non-specific low back pain compared to education alone, with mean difference in RMDQ score of 2.2 (95% CI 0.8 to 3.6, p=0.002).",
-      "category": "practice",
+      "id": "news-1785434030685-0",
+      "title": "Effect of Visual Modification by Video See-Through Augmented Reality with REHA-Glasses on Postural Verticality in Individuals with Post-Stroke Lateropulsion.",
+      "summary": "An exploratory, single-arm interventional study investigated whether REHA-glasses, an augmented reality device modifying visual input based on body tilt, could correct lateropulsion in individuals with acute post-stroke lateropulsion, showing initial potential for postural verticality correction.",
+      "category": "neurological",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42481208/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.473Z",
-      "curatedScore": 85,
-      "curatedReason": "这项 RCT 表明，针对慢性非特异性腰痛，结合游泳的个性化康复方案在 8 周时可显著改善残疾程度。将水疗或结构化运动方案纳入远程物理治疗可能比单纯教育更有效。",
-      "titleZh": "个体化游泳与教育项目治疗慢性腰痛的有效性（EduSwim）：一项随机对照试验",
-      "summaryZh": "一项为期 8 周的个体化游泳与教育项目在慢性非特异性腰痛成人中显著降低了残疾程度（RMDQ），相较于单纯教育组，RMDQ 平均分差异为 2.2 (95% CI 0.8至3.6, p=0.002)。",
-      "curatedReasonEn": "This RCT indicates that an individualized swimming and education program significantly improved disability at 8 weeks for chronic non-specific low back pain. Integrating hydrotherapy or structured exercise programs via telehealth PT may be more effective than education alone.",
-      "limitation": "该研究主要通过远程医疗提供干预，其结果在外推至面对面康复场景时需谨慎。",
-      "limitationEn": "The intervention was delivered primarily via telehealth, so its results require careful extrapolation to in-person rehabilitation settings.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42530894/",
+      "publishedAt": "2026-07-30T00:00:00.000Z",
+      "firstSeen": "2026-07-30T17:53:50.685Z",
+      "curatedScore": 68,
+      "curatedReason": "对于急性卒中后偏向推注的患者，REHA-glasses 这种 AR 视觉矫正技术在小样本研究中初步展示了纠正姿势垂直性的潜力。虽然目前仅为探索性观察研究，但它提示 AR 技术未来或许能提供一个非侵入性且个性化的康复方向，值得期待后续高强度 RCT 验证。",
+      "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果",
+      "summaryZh": "一项探索性单臂干预研究评估了 REHA-glasses（一款基于身体倾斜调整视觉输入的增强现实设备）能否纠正急性卒中后偏向推注患者的姿势垂直度，结果显示出初步潜力。",
+      "curatedReasonEn": "For acute post-stroke lateropulsion, REHA-glasses, an AR visual correction technology, showed initial potential in a small exploratory study for correcting postural verticality. While only an observational study, it suggests AR could offer a non-invasive, personalized rehabilitation approach in the future; keep an eye out for robust RCT validation.",
+      "limitation": "这是一项小样本、单臂、单中心探索性研究，缺乏对照组，且干预由三名物理治疗师主导，可能存在主观性。",
+      "limitationEn": "This is a small-sample, single-arm, single-center exploratory study lacking a control group, and the intervention was led by three physical therapists, which may introduce subjectivity.",
       "tags": [
         "research",
-        "reimbursement",
-        "telehealth"
-      ],
-      "studyDesign": "RCT",
-      "journal": "British journal of sports medicine"
-    },
-    {
-      "id": "news-1784742300471-0",
-      "title": "Responsiveness of the Arabic version of the lower extremity functional scale in individuals with lower extremity musculoskeletal disorders.",
-      "summary": "This study evaluated the responsiveness of the Arabic version of the Lower Extremity Functional Scale (LEFS) in 74 individuals with lower extremity musculoskeletal disorders, finding its change scores correlated with other outcome measures over 3-4 weeks.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484462/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.471Z",
-      "curatedScore": 75,
-      "curatedReason": "如果你在阿拉伯语语境下执业，并且需要评估下肢肌肉骨骼疾病患者的功能性改善，该研究验证了 LEFS 阿拉伯语版的响应度，可作为临床实用工具。",
-      "titleZh": "下肢功能量表阿拉伯语版在下肢肌肉骨骼疾病患者中的响应度",
-      "summaryZh": "这项研究评估了下肢功能量表（LEFS）阿拉伯语版在 74 名下肢肌肉骨骼疾病患者中的响应度，发现其分数变化与 3-4 周内的其他结局指标相关。",
-      "curatedReasonEn": "If you practice in an Arabic-speaking context and need to assess functional improvement in patients with lower extremity musculoskeletal disorders, this study validates the responsiveness of the Arabic LEFS, making it a clinically useful tool.",
-      "limitation": "本研究的样本量相对较小，随访期为 3-4 周，可能不足以捕捉长期功能变化。",
-      "limitationEn": "The study involved a relatively small sample size and a follow-up period of 3-4 weeks, which may not capture long-term functional changes.",
-      "tags": [
-        "research",
-        "foot-ankle",
-        "knee",
-        "hip"
+        "stroke"
       ],
       "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
+      "journal": "NeuroRehabilitation",
+      "tech": true
     },
     {
       "id": "news-1784742300473-6",
