@@ -1,0 +1,34 @@
+{
+  "_readme": [
+    "谁在跑 scripts/ 里的每个脚本。wiring.test.js 断言这张表覆盖所有未被仓库内引用的脚本。",
+    "加了新脚本而没登记 → npm test 红。这不是找茬:2026 年已 5 次「写好了但没接上」",
+    "(lint-daily 空转两天、sitemap 漏 git add 冻结 12 天、journal 回落没提交空了 5 天、",
+    "两个 test 文件从没被跑过、npm run linkedin-card 指着废弃脚本)。红的那一刻你必须回答",
+    "「谁会跑它」——答不上来就是又一次。",
+    "",
+    "被 workflow / package.json / 其他脚本 require 的不用登记,检查自己看得见。",
+    "backfill-* 和 try-* 前缀自动豁免(一次性数据修复/实验,约定已确立)。"
+  ],
+
+  "external": {
+    "_note": "消费者在仓库外——检查看不见,所以必须写下来。value = 谁在驱动它。",
+    "linkedin-brief.js": "Cowork 定时任务 linkedin-daily-post(周一–周五 14:00 PT)→ 生成 post-zh/en.txt",
+    "linkedin-daily-card.js": "同上 → 生成 daily-signal.png",
+    "wechat-clip.sh": "Cindy 手动跑,公众号粘贴用(浏览器自动化被微信挡住)。见 PUBLISHING.md"
+  },
+
+  "oneoff": {
+    "_note": "一次性 / 离线工具:人在需要时手动跑,不该有自动消费者。",
+    "check-journal-metrics.js": "核对 journals.json 的 JCR 影响因子,补 IF 时手动跑",
+    "coverage-watch.js": "稀疏专科覆盖量监控(离线),看新增期刊闸门有没有效果",
+    "fetch-favicons.js": "抓取来源站 favicon 自托管,新增来源后手动跑",
+    "fix-source-attribution.js": "历史数据修复:来源归属",
+    "fix-title-artifacts.js": "历史数据修复:标题残渣(幂等,可重复跑)",
+    "reinject-from-archive.js": "从 archive 回灌条目到 feed",
+    "rescore-consistency.js": "抽样重打分,量分数抖动(诊断,烧 LLM 额度)",
+    "score-calibration.js": "分数与证据强度代理指标的一致性抽查(诊断)",
+    "xhs-intro.js": "小红书开号介绍图卡,一次性品牌物料",
+    "x-thread.js": "日报 → X(Twitter) 线程生成器,手动 `npm run x`。6-18 后没再动过,X 渠道未启用",
+    "linkedin-card.js": "⚠️ 待定:6-15 的**周**卡生成器。日更实际用的是 linkedin-daily-card.js,而 `npm run linkedin-card` 仍指向本文件。周卡若不再做就删本条+删脚本+改别名指向 daily"
+  }
+}
