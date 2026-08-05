@@ -106,6 +106,64 @@ function run() {
       + (both.length ? ` —— 重复：${both.join(', ')}` : ''));
   }
 
+  // 同一个不变量换个族群：scripts/ 靠 workflow 与 _wiring.json 接线，UI 组件靠
+  // build-bundle.js 的 FILES 清单接线。写了个组件却没写进清单 —— 构建成功、
+  // npm test 全绿、页面上就是没有那个东西。
+  //
+  // build-bundle.js 是**纯拼接**不是打包器：它按 FILES 顺序读文件、剥掉所有
+  // import 行、首尾相接。两个后果决定了下面断言什么：
+  //   · 不在 FILES 里的文件根本不存在于产物中（→ C1）
+  //   · 符号能不能用完全取决于顺序，依赖必须排在使用者前面（→ C3）
+  console.log('C. UI 组件都接进了 bundle 清单');
+  {
+    const DS = path.join(ROOT, 'design-system');
+    const CMP = path.join(DS, 'components');
+
+    // FILES 是 build-bundle.js 里的字面量数组，直接解析源码而不是 require —— 那个
+    // 脚本一被 require 就会执行并覆写 bundle。
+    const bundleSrc = fs.readFileSync(path.join(__dirname, 'build-bundle.js'), 'utf8');
+    const FILES = bundleSrc.match(/const FILES = \[([\s\S]*?)\];/)[1]
+      .split(',').map((s) => s.trim().replace(/^['"]|['"]$/g, '')).filter(Boolean);
+    const idx = new Map(FILES.map((f, i) => [f, i]));
+
+    const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) =>
+      e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+    // .d.ts 是类型声明，不参与拼接，排除。
+    const onDisk = walk(CMP)
+      .filter((f) => /\.(jsx|js)$/.test(f) && !f.endsWith('.d.ts'))
+      .map((f) => path.relative(DS, f).split(path.sep).join('/'));
+
+    // C1：磁盘上的组件必须在清单里。反过来（清单指向不存在的文件）不用断言 ——
+    // build-bundle.js 的 readFileSync 会直接抛，而删组件正好命中 build-app 的触发
+    // 路径，CI 当场就红。这里仍加一条，只为把 ENOENT 堆栈换成人话。
+    const missing = onDisk.filter((f) => !idx.has(f));
+    ok(missing.length === 0,
+      `components/ 下 ${onDisk.length} 个组件都在 build-bundle.js 的 FILES 里`
+      + (missing.length ? ` —— 漏了 ${missing.length} 个：${missing.join(', ')}（不加进 FILES 就永远不会出现在页面上）` : ''));
+
+    const ghosts = FILES.filter((f) => !fs.existsSync(path.join(DS, f)));
+    ok(ghosts.length === 0,
+      `FILES 里每条都存在于磁盘`
+      + (ghosts.length ? ` —— 文件已不存在：${ghosts.join(', ')}` : ''));
+
+    // C3：import 行会被剥掉，所以依赖必须先于使用者出现，否则拼出来的 bundle 语法
+    // 合法、esbuild 不报错、CI 全绿，而读者打开网站是白屏（TDZ）。对 CI 静默、对
+    // 读者响 —— 正是要守的那一类。
+    // 只断言「依赖在前」，不断言「顺序完全正确」：同层组件谁先谁后无所谓，不可判定。
+    const badOrder = [];
+    for (const f of FILES) {
+      const src = fs.readFileSync(path.join(DS, f), 'utf8');
+      for (const m of src.matchAll(/^import\s.*?\sfrom\s+['"](\.[^'"]+)['"]/gm)) {
+        const dep = path.posix.normalize(path.posix.join(path.posix.dirname(f), m[1]));
+        if (!idx.has(dep)) badOrder.push(`${f} 依赖 ${dep}，但它不在 FILES 里`);
+        else if (idx.get(dep) > idx.get(f)) badOrder.push(`${f}(#${idx.get(f)}) 依赖 ${dep}(#${idx.get(dep)})，依赖排在后面了`);
+      }
+    }
+    ok(badOrder.length === 0,
+      `FILES 的顺序满足依赖在前`
+      + (badOrder.length ? ` —— ${badOrder.join('；')}` : ''));
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 
