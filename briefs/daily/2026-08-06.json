@@ -1,0 +1,261 @@
+{
+ "date": "2026-08-06",
+ "generatedAt": "2026-08-05T22:33:52.098Z",
+ "windowHours": 26,
+ "windowStart": "2026-08-04T22:34:59.732Z",
+ "windowEnd": "2026-08-05T22:33:50.385Z",
+ "lead": {
+  "titleZh": "多发性硬化症疲劳测量与管理：系统综述更新",
+  "titleEn": "MS-Related Fatigue: Measurement and Management, An Umbrella Review",
+  "paragraphZh": "今日有9项新发现，覆盖6个专科领域。神经康复方向信号最多，有4条。最高分一项是关于多发性硬化症相关疲劳的测量与管理，为一项高质量系统综述。",
+  "paragraphEn": "Today's nine new findings span six specialties, with four signals in neurological rehabilitation. The top-scoring item is a high-quality umbrella review on the measurement and management of multiple sclerosis-related fatigue."
+ },
+ "stats": {
+  "events": 9,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 7,
+  "topScore": 88
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1785912408310-0",
+     "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+     "summary": "A prospective observational cohort study with 250 adults with chronic nonspecific low back pain found that lower baseline Oswestry Disability Index (ODI) scores, less pain catastrophizing, and higher pain self-efficacy predicted faster functional recovery following individualized physiotherapy.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
+     "publishedAt": "2026-08-05T00:00:00.000Z",
+     "firstSeen": "2026-08-05T06:46:48.310Z",
+     "curatedScore": 75,
+     "curatedReason": "这项前瞻性观察研究揭示了生物心理社会因素对慢性腰痛患者接受物理治疗后功能恢复时长的影响。研究强调了基线时ODI评分越低、疼痛灾难化程度越低、疼痛自我效能感越高，恢复速度越快，这支持了在评估和治疗方案设计中整合这些因素的重要性。",
+     "titleZh": "生物心理社会因素对物理治疗后慢性腰痛功能恢复的预测作用：一项生存分析研究",
+     "summaryZh": "一项对250名慢性非特异性腰痛成人进行的前瞻性观察队列研究发现，较低的基线Oswestry残疾指数（ODI）评分、较低的疼痛灾难化水平和较高的疼痛自我效能感预示着个体化物理治疗后更快速的功能恢复。",
+     "curatedReasonEn": "This prospective observational study reveals the influence of biopsychosocial factors on the timing of functional recovery in chronic low back pain patients undergoing physiotherapy. It highlights that lower baseline ODI scores, less pain catastrophizing, and higher pain self-efficacy are associated with faster recovery, underscoring the importance of integrating these factors into assessment and treatment planning.",
+     "limitation": "本研究为观察性队列研究，仅能揭示相关性，无法确立因果关系。",
+     "limitationEn": "As an observational cohort study, this research can only suggest associations and cannot establish causality.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Musculoskeletal science & practice"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1785926890245-0",
+     "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
+     "summary": "An umbrella review and meta-analysis of 46 systematic reviews found that exercise provides the most consistent benefit for MS-related fatigue, with aerobic training showing a modest but reliable reduction (SMD -0.32).",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42553000/",
+     "publishedAt": "2026-08-05T10:47:46.859Z",
+     "firstSeen": "2026-08-05T10:48:10.245Z",
+     "curatedScore": 88,
+     "curatedReason": "这份伞形综述和荟萃分析强力支持运动疗法作为多发性硬化症（MS）相关疲劳的一线干预。你可以将有氧训练和阻力训练明确纳入 MS 患者的疲劳管理方案中。",
+     "titleZh": "多发性硬化症相关疲劳的测量与管理：一项伞形综述和荟萃分析",
+     "summaryZh": "一项涵盖 46 篇系统综述的伞形综述和荟萃分析发现，运动疗法对多发性硬化症（MS）相关疲劳的益处最一致，其中有氧训练能适度但可靠地减轻疲劳（SMD -0.32）。",
+     "curatedReasonEn": "This umbrella review and meta-analysis strongly supports exercise therapy as a first-line intervention for multiple sclerosis (MS)-related fatigue. You can confidently integrate aerobic and resistance training into your fatigue management protocols for MS patients.",
+     "limitation": "该研究关注的结局指标仅限于疲劳，未报告对其他MS相关症状或生活质量的影响。",
+     "limitationEn": "The study focused exclusively on fatigue as an outcome, not reporting effects on other MS-related symptoms or quality of life.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1785952702367-1",
+     "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
+     "summary": "A study with 100 severely impaired stroke survivors investigated the feasibility of detecting residual electromyography (EMG) activity in wrist extensors to identify movement intention in patients without visible movement.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.03.26359564v1?rss=1",
+     "publishedAt": "2026-08-05T00:00:00.000Z",
+     "firstSeen": "2026-08-05T17:58:22.367Z",
+     "curatedScore": 78,
+     "curatedReason": "对于严重卒中后无自主腕伸的患者，很高比例能检测到残余肌电信号。这意味着肌电信号可能作为脑机接口的实用替代方案，为这些患者提供机器人辅助，拓宽康复干预的窗口。",
+     "titleZh": "严重受损卒中幸存者保留残余自主肌电图的比例是多少？",
+     "summaryZh": "一项针对 100 名无主动腕伸的严重受损卒中幸存者的研究，旨在探讨能否通过高密度表面肌电图（EMG）检测腕伸肌中的残余肌电活动，以评估其作为运动意图检测手段的可行性。",
+     "curatedReasonEn": "A high percentage of severely impaired stroke patients without voluntary wrist extension still show residual EMG activity. This suggests EMG could be a practical alternative for brain-computer interfaces, enabling robotic assistance and broadening rehabilitation options for these patients.",
+     "limitation": "这是一项探索性研究，旨在评估肌电信号的检测可行性，而非干预效果评估，因此不涉及临床结局。",
+     "limitationEn": "This is an exploratory study assessing EMG signal detectability, not an intervention effectiveness trial, and therefore does not involve clinical outcomes.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1785952702365-0",
+     "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
+     "summary": "A randomized controlled trial with 42 MS patients found that continuous online monitoring of walking activity with messaging reminders improved psychological health and fatigue, but had no significant effect on physical activity levels or quality of life.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42554308/",
+     "publishedAt": "2026-08-05T00:00:00.000Z",
+     "firstSeen": "2026-08-05T17:58:22.365Z",
+     "curatedScore": 75,
+     "curatedReason": "在线活动监测结合提醒能轻度改善 MS 患者的心理健康和疲劳，但对身体活动量和生活质量的改善不显著。将其作为现有干预的辅助手段，别指望它单枪匹马提升活动量。",
+     "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验",
+     "summaryZh": "一项针对 42 名多发性硬化症（MS）患者的随机对照试验显示，通过消息应用进行步行为主的身体活动持续监测和提醒，能改善患者的心理健康和疲劳，但对身体活动水平和生活质量没有显著影响。",
+     "curatedReasonEn": "Online activity monitoring with reminders showed mild improvements in psychological health and fatigue for MS patients, but no significant gains in physical activity levels or quality of life. Use it as an adjunct, not a standalone solution for activity increase.",
+     "limitation": "研究样本量较小（42 人），随访时间及干预的具体强度未详细阐述，且仅关注了计步器为主的步行活动。",
+     "limitationEn": "The study has a small sample size (42 participants), and details regarding follow-up duration and intervention intensity are not fully elaborated, focusing primarily on step-based walking activity.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy theory and practice"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1785969220953-13",
+     "title": "How many repeated observations are enough for digital gait summaries? A multi-dataset framework for sampling sufficiency in older adults",
+     "summary": "A study in the Journal of NeuroEngineering and Rehabilitation presents a multi-dataset framework to determine the sufficient number of repeated observations for digital gait summaries in older adults.",
+     "category": "geriatric",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02109-0",
+     "publishedAt": "2026-07-30T00:00:00.000Z",
+     "firstSeen": "2026-08-05T22:33:40.953Z",
+     "curatedScore": 75,
+     "curatedReason": "在老年人数字步态评估中，你需要多少重复观察才能获得可靠数据？这项观察研究提供了一个多数据集框架来帮你确定，有助于你优化采样策略，避免过度或不足采样。",
+     "titleZh": "老年人数字步态摘要需要多少次重复观察？一个多数据集采样充分性框架",
+     "summaryZh": "《神经工程与康复杂志》的一项研究提出了一个多数据集框架，用于确定老年人数字步态摘要所需的重复观察次数。",
+     "curatedReasonEn": "How many repeated observations do you need for reliable data in digital gait assessment in older adults? This observational study provides a multi-dataset framework to help you determine this, assisting you in optimizing your sampling strategy to avoid over- or under-sampling.",
+     "limitation": "作为未编辑稿件，其最终内容可能仍会修改，且研究结果的外推性可能受限于所用数据集的特性。",
+     "limitationEn": "As an unedited manuscript, its final content may still change, and the generalizability of results might be limited by the characteristics of the datasets used.",
+     "tags": [
+      "research",
+      "gait-analysis"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+     "id": "news-1785969220953-14",
+     "title": "The experience of cross-setting care transitions of long-term care residents to the emergency department: a qualitative study",
+     "summary": "A qualitative study explored the experiences of cross-setting care transitions when long-term care residents are transferred to emergency departments, highlighting challenges in information and responsibility transfer.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08059-5",
+     "publishedAt": "2026-08-01T00:00:00.000Z",
+     "firstSeen": "2026-08-05T22:33:40.953Z",
+     "curatedScore": 65,
+     "curatedReason": "当长期护理居民转诊至急诊科时，信息和责任转移的挑战是真实存在的。这项定性研究提示我们，在跨机构转诊中，你需要主动沟通，确保康复服务能有效衔接，避免服务中断。",
+     "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究",
+     "summaryZh": "一项定性研究探讨了长期护理居民转诊至急诊科时，跨机构护理过渡的经验，揭示了信息和责任转移方面的挑战。",
+     "curatedReasonEn": "When long-term care residents are transferred to emergency departments, challenges in information and responsibility transfer are real. This qualitative study suggests that in cross-setting transitions, you need to proactively communicate to ensure effective rehabilitation service continuity and avoid service disruptions.",
+     "limitation": "定性研究结果的普遍性受限，主要反映特定受访者的经验。",
+     "limitationEn": "The generalizability of qualitative study results is limited, primarily reflecting the experiences of specific interviewees.",
+     "tags": [
+      "research",
+      "regulation"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1785969220953-19",
+     "title": "Electrically assisted bicycles in adults: a scoping review of health outcomes and relevance to rehabilitation",
+     "summary": "A scoping review explored the health outcomes and rehabilitation relevance of electrically assisted bicycles in adults.",
+     "category": "cardiopulmonary",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01904-5",
+     "publishedAt": "2026-07-29T00:00:00.000Z",
+     "firstSeen": "2026-08-05T22:33:40.953Z",
+     "curatedScore": 75,
+     "curatedReason": "电动助力自行车确实可能成为促进患者活动和心肺健康的工具，特别是对那些因体力限制难以进行传统自行车运动的人。将它纳入康复计划时，应视为一种有潜力的辅助手段。",
+     "titleZh": "成人电动助力自行车：健康结局与康复相关性范围综述",
+     "summaryZh": "一项范围综述探讨了成人电动助力自行车对健康结局及其在康复中的相关性。",
+     "curatedReasonEn": "E-bikes could indeed be a viable tool for promoting activity and cardiopulmonary health, especially for patients with physical limitations who struggle with traditional cycling. Consider it a potential adjunct when integrating into rehabilitation programs.",
+     "limitation": "作为范围综述，其证据等级低于系统综述，更多是概括现有文献，而非提供综合性效应量。",
+     "limitationEn": "As a scoping review, its evidence level is lower than a systematic review, primarily summarizing existing literature rather than providing comprehensive effect sizes.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "综述",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1785969220954-21",
+     "title": "Not just alignment: body shape influences adult spinal deformity biomechanics",
+     "summary": "A study in the European Spine Journal indicates that body shape, in addition to alignment, significantly influences the biomechanics of adult spinal deformity.",
+     "category": "manual-modality",
+     "source": "Eur Spine J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10243-5",
+     "publishedAt": "2026-08-01T00:00:00.000Z",
+     "firstSeen": "2026-08-05T22:33:40.954Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究强调，除了对线，体形也会影响成人脊柱畸形的生物力学。这提示你在评估脊柱畸形患者时，需要将体形纳入考量，以便更全面地理解其生物力学负荷和功能限制。",
+     "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学",
+     "summaryZh": "《欧洲脊柱杂志》的一项研究表明，除了对线，体形也显著影响成人脊柱畸形的生物力学。",
+     "curatedReasonEn": "This study emphasizes that, in addition to alignment, body shape also influences the biomechanics of adult spinal deformity. This suggests that when assessing patients with spinal deformities, you need to consider body shape to more comprehensively understand their biomechanical load and functional limitations.",
+     "limitation": "未明确给出研究类型和样本量，影响对证据强度的判断；生物力学研究的发现可能不直接转化为临床干预建议。",
+     "limitationEn": "The study type and sample size are not explicitly provided, affecting the assessment of evidence strength; findings from biomechanical studies may not directly translate into clinical intervention recommendations.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "European Spine Journal"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1785969220954-22",
+     "title": "AI Scribes in Physical Therapy Practices",
+     "summary": "An APTA article explores the use of AI-enabled ambient scribe technology in physical therapy practices, discussing what PTs and PTAs need to know for implementation.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/apta-magazine/archive/2026/08/01/ai-scribes-in-physical-therapy-practices",
+     "publishedAt": "2026-08-01T00:00:00.000Z",
+     "firstSeen": "2026-08-05T22:33:40.954Z",
+     "curatedScore": 85,
+     "curatedReason": "APTA 这篇报告探讨了 AI 秘书在物理治疗实践中的应用。随着技术发展，了解 AI 如何辅助文档、改善工作流程、以及潜在的合规和伦理问题，对你未来的执业至关重要。你需要评估它能否在你的实践中提高效率。",
+     "titleZh": "物理治疗实践中的 AI 秘书",
+     "summaryZh": "APTA 的一篇文章探讨了 AI 驱动的环境智能秘书技术在物理治疗实践中的应用，讨论了物理治疗师和物理治疗师助理在实施该技术时需要了解的事项。",
+     "curatedReasonEn": "This APTA report discusses the application of AI scribes in physical therapy practices. As technology advances, understanding how AI can assist with documentation, improve workflow, and address potential compliance and ethical issues is crucial for your future practice. You need to evaluate whether it can enhance efficiency in your practice.",
+     "tags": [
+      "news",
+      "telehealth"
+     ],
+     "tech": true
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
