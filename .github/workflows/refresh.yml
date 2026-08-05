@@ -124,9 +124,18 @@ jobs:
       # purpose: a bad lint should show red in the Actions UI, not wedge the
       # daily publish. Wired in 2026-07-28 — the script existed since 07-26 but
       # was never called by CI, so three raw-scrape rows shipped unnoticed.
+      #
+      # LINT_META：把结论写进当天公众号那份 meta.txt 的末尾。非阻塞是对的（数据
+      # 质量问题不该卡住出刊），但「非阻塞」不该等于「静音」—— 只活在 Actions 界面
+      # 的信号在这个仓库里已经被漏掉过多次。meta.txt 是 Cindy 每天发布时一定会打开
+      # 的文件（wechat-clip.sh 会 cat 它），信号送到那里就不依赖任何人记得去翻。
+      #
+      # 日期口径必须跟 wechat-brief.js 一致（`new Date().toISOString()` = UTC），
+      # 不能用日刊的日期：日刊按北京日期命名，cron 21:30 UTC = 次日 05:30 北京，
+      # 两者差一天。这个差异是刻意的（公众号刊头写的是美国日期），别去统一它。
       - name: Lint daily edition (non-blocking)
         continue-on-error: true
-        run: node scripts/lint-daily.js
+        run: LINT_META="briefs/$(date -u +%F).meta.txt" node scripts/lint-daily.js
 
       - name: Commit news.json (with race-safe retry)
         run: |
