@@ -28,7 +28,6 @@
     "rescore-consistency.js": "抽样重打分,量分数抖动(诊断,烧 LLM 额度)",
     "score-calibration.js": "分数与证据强度代理指标的一致性抽查(诊断)",
     "xhs-intro.js": "小红书开号介绍图卡,一次性品牌物料",
-    "x-thread.js": "日报 → X(Twitter) 线程生成器,手动 `npm run x`。6-18 后没再动过,X 渠道未启用",
-    "linkedin-card.js": "⚠️ 待定:6-15 的**周**卡生成器。日更实际用的是 linkedin-daily-card.js,而 `npm run linkedin-card` 仍指向本文件。周卡若不再做就删本条+删脚本+改别名指向 daily"
+    "x-thread.js": "日报 → X(Twitter) 线程生成器,手动 `npm run x`。6-18 后没再动过,X 渠道未启用"
   }
 }
