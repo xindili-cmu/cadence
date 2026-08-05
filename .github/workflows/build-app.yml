@@ -40,6 +40,39 @@ jobs:
       - name: Assertions (npm run test:code)
         run: npm run test:code
 
+      # 手改 bundle 的检测。必须在下一步重建之前跑 —— 重建会把手改覆盖掉，之后就
+      # 再也看不出来了。
+      #
+      # 为什么不能用「bundle 是否等于 rebuild(components)」这种状态断言：CI 每次都
+      # 重建并提交，状态永远会被归一化回一致，手改被静默还原而断言一路全绿。能区分
+      # 手改的只有**变化**，不是状态 —— 所以看的是这次推送改了哪些文件。
+      #
+      # 判据：bundle 变了，而它唯一的源（design-system/components/** 与
+      # build-bundle.js 本身，见该脚本的 FILES 常量）一个都没变 → 只能是手改。
+      #
+      # 用 push 事件的 payload 而不是 git diff，省掉 fetch-depth:0（.git 有 149M）。
+      # 三个已知边界，都选择跳过而非误报：workflow_dispatch 没有 commits；payload 的
+      # commits 上限 20 条，超了会截断从而漏看源文件改动；CI 自己用 GITHUB_TOKEN 推的
+      # 「🔧 rebuild」提交不会再触发本 workflow（GitHub 的循环保护），所以不会自伤。
+      #
+      # 已知局限：同一次推送里既改了组件、又顺手改了 bundle，会被放行。那种情况重建
+      # 仍会还原手改，只是这里不报警。
+      - name: Guard against hand-edited bundle
+        run: |
+          n=$(jq -r '(.commits // []) | length' "$GITHUB_EVENT_PATH")
+          if [ "$n" -eq 0 ] || [ "$n" -ge 20 ]; then
+            echo "⊘ commits=$n（无 commits 或超出 payload 上限），跳过手改检测"
+            exit 0
+          fi
+          changed=$(jq -r '[.commits[] | .modified[], .added[]] | .[]' "$GITHUB_EVENT_PATH" | sort -u)
+          echo "本次推送改动的文件："; echo "$changed" | sed 's/^/  · /'
+          if echo "$changed" | grep -qx 'design-system/app/components.bundle.jsx' \
+             && ! echo "$changed" | grep -qE '^(design-system/components/|scripts/build-bundle\.js$)'; then
+            echo "::error file=design-system/app/components.bundle.jsx::components.bundle.jsx 是生成物(文件第 1 行就写着 AUTO-GENERATED),真源是 design-system/components/**。本次推送改了它却没动任何源文件 —— 这个改动会在下一步被 build-bundle.js 重建覆盖、静默丢失。请把改动搬到 design-system/components/ 下对应的组件里,再跑 node scripts/build-bundle.js 重新生成(纯 node,不需要 npm install)。"
+            exit 1
+          fi
+          echo "✓ 没有检测到对 bundle 的手改"
+
       - name: Install esbuild
         run: npm install --no-save --no-package-lock esbuild
 
