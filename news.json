@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-05T23:26:19.731Z",
+    "lastUpdated": "2026-08-06T03:45:45.809Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,15 +20,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
       "publishedAt": "2026-08-05T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 7,
       "sources": [
         "Neurorehabilitation and neural repair",
         "medRxiv",
         "Physiotherapy theory and practice",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "American journal of physical medicine & rehabilitation",
-        "Topics in stroke rehabilitation",
-        "Disability and rehabilitation",
-        "NeuroRehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Bulletin of Faculty of Physical Therapy"
       ],
@@ -54,27 +52,15 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Models Containing the Braden Scale Predict Activities of Daily Living Improvement in Post-Stroke Hemiplegia: A Single Center Retrospective Cohort Study.",
+          "titleZh": "包含布雷登量表的模型可预测卒中偏瘫患者日常生活活动能力（ADL）的改善：一项单中心回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
           "journal": "American journal of physical medicine & rehabilitation",
           "title": "Joint Associations of Sleep-Disordered Breathing and Cerebral Small Vessel Disease Burden With Executive Performance, Balance, and In-Hospital Falls in Patients With Subacute Supratentorial Ischemic Stroke Undergoing Inpatient Rehabilitation.",
           "titleZh": "亚急性幕上缺血性卒中患者住院康复期间睡眠呼吸障碍和脑小血管病变负担与执行功能、平衡及住院跌倒的联合关联"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Research progress on horticultural therapy in patients with post-stroke cognitive impairment: a narrative review.",
-          "titleZh": "园艺疗法在卒中后认知障碍患者中的研究进展：一项叙述性综述。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Understanding barriers and motivators for fruit and vegetable intake in female stroke survivors: a qualitative study.",
-          "titleZh": "了解女性卒中幸存者蔬果摄入的障碍与动机：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "The Association of Depression, Anxiety, and Quality of Life with Sexual Function in Young-to-Middle-Aged Stroke Patients: A Case-Control Study.",
-          "titleZh": "抑郁、焦虑和生活质量与中青年卒中患者性功能的相关性：一项病例对照研究。"
         },
         {
           "source": "PubMed",
@@ -89,9 +75,9 @@
           "titleZh": "有氧运动强度对缺血性卒中后神经修复的影响：基于BDNF, PI3K, Akt信号通路的叙述性综述"
         }
       ],
-      "heat": 6.42,
-      "themeZh": "卒中后康复预后评估与多维度干预研究",
-      "themeEn": "Stroke Recovery Prediction and Multidimensional Interventions"
+      "heat": 4.69,
+      "themeZh": "卒中后上肢功能恢复、步态训练与ADL预测研究",
+      "themeEn": "Post-stroke Upper Limb, Gait, and ADL Recovery"
     },
     {
       "id": "news-1785049661034-0",
@@ -161,9 +147,60 @@
           "titleZh": "上运动神经元综合征关节神经力学器械评估：方法、可靠性、有效性和临床相关性系统综述"
         }
       ],
-      "heat": 3.53,
-      "themeZh": "骨科疼痛及痉挛的AI与康复技术应用",
-      "themeEn": "AI & Rehab Tech for Orthopedic Pain"
+      "heat": 3.31,
+      "themeZh": "骨科疼痛管理中AI、NEUS与振动疗法应用",
+      "themeEn": "AI, NEUS, and Vibration for Orthopedic Pain"
+    },
+    {
+      "id": "news-1785912408310-0",
+      "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-05T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Musculoskeletal science & practice",
+        "Physical therapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Geriatrics"
+      ],
+      "tag": "spine",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+          "titleZh": "生物心理社会因素对物理治疗后慢性腰痛功能恢复的预测作用：一项生存分析研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
+          "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
+          "titleZh": "退伍军人事务部急诊物理治疗师评估后一年内医疗服务利用情况"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Characteristics and Specific Aspects of the Therapeutic Alliance in Physiotherapy Care: A Qualitative Study in France.",
+          "titleZh": "法国物理治疗中治疗联盟的特征与特殊性：一项定性研究"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "The experience of cross-setting care transitions of long-term care residents to the emergency department: a qualitative study",
+          "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
+        }
+      ],
+      "heat": 2.68,
+      "themeZh": "物理治疗中生物心理社会因素与医患关系",
+      "themeEn": "Biopsychosocial Factors and Therapeutic Alliance in PT"
     },
     {
       "id": "news-1785926890245-0",
@@ -199,88 +236,84 @@
           "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.5,
-      "themeZh": "多发性硬化相关疲劳的评估与运动干预",
-      "themeEn": "MS-Related Fatigue Assessment & Exercise"
-    },
-    {
-      "id": "news-1785912408310-0",
-      "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-05T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Musculoskeletal science & practice",
-        "Physical therapy",
-        "Archives of physical medicine and rehabilitation"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
-          "titleZh": "生物心理社会因素对物理治疗后慢性腰痛功能恢复的预测作用：一项生存分析研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
-          "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Positive Psychology Interventions for Adults with Spinal Cord Injury: A Systematic Review and Meta-analysis.",
-          "titleZh": "积极心理学干预对脊髓损伤成年患者的影响：一项系统综述和荟萃分析"
-        }
-      ],
-      "heat": 2.14,
-      "themeZh": "生物心理社会因素对慢性疼痛及脊髓损伤康复的影响",
-      "themeEn": "Biopsychosocial Factors in Chronic Pain Recovery"
-    },
-    {
-      "id": "news-1785482348361-6",
-      "title": "Remotely Monitored Home-based Pulmonary Rehabilitation in Idiopathic Pulmonary Fibrosis: Results of a Randomized Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532213/",
-      "category": "cardiopulmonary",
-      "publishedAt": "2026-08-04T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "Topics in stroke rehabilitation"
-      ],
-      "tag": null,
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Remotely Monitored Home-based Pulmonary Rehabilitation in Idiopathic Pulmonary Fibrosis: Results of a Randomized Controlled Trial.",
-          "titleZh": "远程监控居家肺康复在特发性肺纤维化中的应用：一项随机对照试验结果"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Telerehabilitation before and after lumbar spine surgery: A scoping review.",
-          "titleZh": "腰椎手术前后的远程康复：一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
-          "titleZh": "信息和通信技术在促进专职医疗人员卒中后照护指南依从性实施策略中的作用：一项范围综述。"
-        }
-      ],
-      "heat": 1.51,
-      "themeZh": "远程医疗在心肺与神经康复中的应用",
-      "themeEn": "Telerehabilitation in Cardiopulmonary & Neurological Rehab"
+      "heat": 2.35,
+      "themeZh": "多发性硬化症疲劳管理的运动干预与监测",
+      "themeEn": "MS Fatigue: Exercise Intervention and Monitoring"
     }
   ],
   "items": [
+    {
+      "id": "news-1784742300471-0",
+      "title": "Responsiveness of the Arabic version of the lower extremity functional scale in individuals with lower extremity musculoskeletal disorders.",
+      "summary": "This study evaluated the responsiveness of the Arabic version of the Lower Extremity Functional Scale (LEFS) in 74 individuals with lower extremity musculoskeletal disorders, finding its change scores showed good correlation with other outcome measures.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42484462/",
+      "publishedAt": "2026-07-22T00:00:00.000Z",
+      "firstSeen": "2026-07-22T17:45:00.471Z",
+      "curatedScore": 75,
+      "curatedReason": "如果你在阿拉伯语人群中使用 LEFS 量表，这项研究确认了其在评估下肢肌肉骨骼疾病患者功能变化时的良好反应性，支持了其临床应用。",
+      "titleZh": "下肢功能量表阿拉伯语版本在下肢肌肉骨骼疾病患者中的反应性研究",
+      "summaryZh": "这项研究评估了下肢功能量表（LEFS）阿拉伯语版本在 74 名下肢肌肉骨骼疾病患者中的反应性，发现其变化分数与其他结果测量指标显示出良好相关性。",
+      "curatedReasonEn": "If you use the LEFS in Arabic-speaking populations, this study confirms its good responsiveness for assessing functional changes in individuals with lower extremity musculoskeletal disorders, supporting its clinical application.",
+      "limitation": "研究样本量较小（n=74），且随访期较短（3-4周）。",
+      "limitationEn": "The study had a relatively small sample size (n=74) and a short follow-up period (3-4 weeks).",
+      "tags": [
+        "research",
+        "foot-ankle",
+        "hip",
+        "knee",
+        "pelvic-floor"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1785454167184-1",
+      "title": "Models Containing the Braden Scale Predict Activities of Daily Living Improvement in Post-Stroke Hemiplegia: A Single Center Retrospective Cohort Study.",
+      "summary": "A retrospective cohort study of 324 patients with post-stroke hemiplegia found that models incorporating the Braden scale could predict activities of daily living (ADL) improvement.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42531336/",
+      "publishedAt": "2026-07-30T00:00:00.000Z",
+      "firstSeen": "2026-07-30T23:29:27.184Z",
+      "curatedScore": 75,
+      "curatedReason": "布雷登量表通常用于评估压疮风险，但这项研究提示它可能也能作为预测卒中偏瘫患者 ADL 恢复的有效组成部分。你可以考虑在康复初期将布雷登量表整合到你的预后评估模型中。",
+      "titleZh": "包含布雷登量表的模型可预测卒中偏瘫患者日常生活活动能力（ADL）的改善：一项单中心回顾性队列研究",
+      "summaryZh": "一项对 324 名卒中偏瘫患者进行的回顾性队列研究发现，包含布雷登量表的模型能够预测其日常生活活动能力（ADL）的改善。",
+      "curatedReasonEn": "The Braden scale is typically used for pressure ulcer risk, but this study suggests it could be an effective component for predicting ADL recovery in post-stroke hemiplegia. You might consider integrating the Braden scale into your prognostic assessment models in early rehabilitation.",
+      "limitation": "这是一项单中心回顾性研究，可能存在选择偏倚和数据完整性问题。",
+      "limitationEn": "This was a single-center retrospective study, which may introduce selection bias and data integrity issues.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1785260881030-0",
+      "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
+      "summary": "A repeated-measures study on 69 older adults with knee osteoarthritis investigated sensory integration strategies for static balance control, assessing proprioceptive, visual, and vestibular contributions.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517725/",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "firstSeen": "2026-07-28T17:48:01.030Z",
+      "curatedScore": 75,
+      "curatedReason": "对于膝骨关节炎老年患者，保持静态平衡需要整合本体感觉、视觉和前庭系统。这项纳入 69 人的观察研究提示，在平衡训练中你需要考虑患者在这些感觉输入上的个体差异。",
+      "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略",
+      "summaryZh": "一项针对 69 名膝骨关节炎老年患者的重复测量研究，调查了静态平衡控制中的感觉整合策略，评估了本体感觉、视觉和前庭感觉的贡献。",
+      "curatedReasonEn": "Static balance in older adults with knee osteoarthritis relies on the integration of proprioceptive, visual, and vestibular systems. This observational study of 69 individuals suggests you should consider individual differences in these sensory inputs when designing balance training.",
+      "limitation": "这是一项单中心研究，可能限制了结果的外推性。",
+      "limitationEn": "This was a single-center study, which may limit the generalizability of its findings.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
     {
       "id": "news-1785407737656-0",
       "title": "Hydrodilatation for adhesive capsulitis: a systematic review exploring efficacy and optimal technique.",
@@ -1898,74 +1931,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1784902636899-0",
-      "title": "Information and communication technologies in implementation strategies promoting allied health professionals' guideline adherence in post-acute stroke care: a scoping review.",
-      "summary": "A scoping review identified and mapped Information and Communication Technologies (ICTs) used in implementation strategies for stroke guidelines across healthcare settings and professions, noting their underutilization despite promising potential.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42494115/",
-      "publishedAt": "2026-07-24T00:00:00.000Z",
-      "firstSeen": "2026-07-24T14:17:16.899Z",
-      "curatedScore": 75,
-      "curatedReason": "信息和通信技术（ICTs）在卒中后照护中辅助健康专业人员指南依从性的潜力尚待充分探索。这篇综述提示你，未来 ICTs 在实践指南落地方面可能大有可为。",
-      "titleZh": "信息和通信技术在促进专职医疗人员卒中后照护指南依从性实施策略中的作用：一项范围综述。",
-      "summaryZh": "一项范围综述识别并绘制了信息和通信技术 (ICTs) 在卒中指南实施策略中的应用，指出尽管其潜力巨大，但在医疗环境和专业领域中仍未得到充分利用。",
-      "curatedReasonEn": "The potential of Information and Communication Technologies (ICTs) to support allied health professionals' guideline adherence in post-acute stroke care is underexplored. This review suggests ICTs could play a significant role in future guideline implementation.",
-      "limitation": "范围综述主要目的是识别和映射现有研究，而非评估干预效果或提供具体实践建议。",
-      "limitationEn": "The primary purpose of a scoping review is to identify and map existing research, not to evaluate intervention effectiveness or provide specific practice recommendations.",
-      "tags": [
-        "research",
-        "telehealth",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Topics in stroke rehabilitation"
-    },
-    {
-      "id": "news-1785482348362-7",
-      "title": "Effects of Short-term High-intensity vs. Moderate-intensity Interval Training on Cardiopulmonary Fitness and Metabolic Health in Overweight or Obese Patients with Cardiovascular Disease: Evidence from China.",
-      "summary": "A retrospective study of 145 overweight or obese patients with cardiovascular disease found that both high-intensity interval training (HIIT, n=63) and moderate-intensity interval training (MIIT, n=82) improved cardiopulmonary fitness and metabolic health, with HIIT showing additional significant improvements.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532212/",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T07:19:08.362Z",
-      "curatedScore": 70,
-      "curatedReason": "高强度间歇训练（HIIT）和中等强度间歇训练（MIIT）都能改善心肺健康和代谢指标，但在超重或肥胖心血管疾病患者中，HIIT 额外显示出显著改善。在耐受患者中，可考虑推荐 HIIT。",
-      "titleZh": "短期高强度 vs. 中等强度间歇训练对超重或肥胖心血管疾病患者心肺适能和代谢健康的影响：来自中国的证据。",
-      "summaryZh": "一项针对 145 名超重或肥胖心血管疾病患者的回顾性研究发现，高强度间歇训练（HIIT, n=63）和中等强度间歇训练（MIIT, n=82）均能改善心肺适能和代谢健康，其中 HIIT 表现出额外的显著改善。",
-      "curatedReasonEn": "Both high-intensity interval training (HIIT) and moderate-intensity interval training (MIIT) improve cardiopulmonary fitness and metabolic health. However, in overweight or obese cardiovascular disease patients, HIIT showed additional significant improvements. Consider recommending HIIT for patients who can tolerate it.",
-      "limitation": "这是一项回顾性研究，存在选择偏倚，且缺乏随机分组。",
-      "limitationEn": "This is a retrospective study with selection bias and a lack of randomized allocation.",
-      "tags": [
-        "research",
-        "cardiac-rehab",
-        "obesity"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
-      "id": "news-1785175148947-0",
-      "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
-      "summary": "The American Physical Therapy Association has released a revised clinical practice guideline for the physical therapist management of total knee arthroplasty, featuring 20 new recommendations based on a systematic review of current literature.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42506877/",
-      "publishedAt": "2026-07-27T00:00:00.000Z",
-      "firstSeen": "2026-07-27T17:59:08.947Z",
-      "curatedScore": 88,
-      "curatedReason": "PTA 发布的膝关节置换术后管理指南更新，由多学科专家组撰写，整合了最新证据。这直接提供了你日常临床决策的依据，特别是与膝关节置换术后康复相关的 20 条具体建议。",
-      "titleZh": "物理治疗师全膝关节置换术管理的临床实践指南：2026 年修订版",
-      "summaryZh": "美国物理治疗协会发布了全膝关节置换术（TKA）物理治疗师管理临床实践指南的修订版，基于系统综述提出了 20 条新建议。",
-      "curatedReasonEn": "This updated clinical practice guideline from the APTA on total knee arthroplasty management, developed by a multidisciplinary expert group, integrates the latest evidence. It directly informs your daily clinical decision-making, especially the 20 specific recommendations for post-TKA rehabilitation.",
-      "tags": [
-        "guideline",
-        "knee"
-      ],
-      "journal": "Physical therapy"
     }
   ]
 }
