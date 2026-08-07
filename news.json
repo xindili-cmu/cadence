@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-07T07:47:47.056Z",
+    "lastUpdated": "2026-08-07T21:04:09.659Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -87,9 +87,9 @@
           "titleZh": "振动式步态参数反馈改善帕金森病步态"
         }
       ],
-      "heat": 5.36,
-      "themeZh": "虚拟现实、脑刺激与手法治疗在神经康复中的应用",
-      "themeEn": "VR, Brain Stimulation, Manual Therapy in Neurorehabilitation"
+      "heat": 4.43,
+      "themeZh": "神经调控与虚拟现实结合，改善神经损伤后的运动功能",
+      "themeEn": "Neuromodulation and VR for sensorimotor recovery"
     },
     {
       "id": "news-1785537056535-0",
@@ -143,17 +143,10 @@
           "journal": "Clinical rehabilitation",
           "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
           "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Reduced ipsilateral pre-operative forefoot pressure during gait is associated with poorer post-operative postural control in people with chronic ankle instability",
-          "titleZh": "慢性踝关节不稳患者术前步态中同侧前足压力降低与术后姿势控制能力下降相关"
         }
       ],
-      "heat": 3.16,
-      "themeZh": "肌肉激活、共收缩与平衡在骨科损伤康复中的作用",
-      "themeEn": "Muscle Activation, Co-contraction, Balance in Orthopedic Rehab"
+      "heat": 2.61,
+      "themeEn": "ACL reconstruction: balance, muscle control, biomechanics"
     },
     {
       "id": "news-1785520637137-0",
@@ -202,9 +195,9 @@
           "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
         }
       ],
-      "heat": 3.16,
-      "themeZh": "物理治疗服务的医疗利用、质量与可及性研究",
-      "themeEn": "Physical Therapy Service Utilization, Quality, Access"
+      "heat": 2.61,
+      "themeZh": "物理治疗服务利用、康复转诊与医患关系研究",
+      "themeEn": "Physiotherapy service utilization, referrals, therapeutic alliance"
     },
     {
       "id": "news-1785757795934-1",
@@ -267,9 +260,9 @@
           "titleZh": "有氧运动强度对缺血性卒中后神经修复的影响：基于BDNF, PI3K, Akt信号通路的叙述性综述"
         }
       ],
-      "heat": 3.13,
-      "themeZh": "卒中后功能恢复的早期预测与影响因素",
-      "themeEn": "Early Prediction, Determinants of Post-stroke Recovery"
+      "heat": 2.58,
+      "themeZh": "卒中后功能恢复的预测因素与康复干预",
+      "themeEn": "Stroke recovery prediction and rehabilitation interventions"
     },
     {
       "id": "news-1786064689237-22",
@@ -318,12 +311,32 @@
           "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度"
         }
       ],
-      "heat": 2.53,
-      "themeZh": "腰椎生物力学、疼痛与功能恢复的综合性研究",
-      "themeEn": "Lumbar Biomechanics, Pain, Functional Recovery"
+      "heat": 2.09,
+      "themeZh": "腰椎生物力学、脊柱畸形与慢性下腰痛的康复管理",
+      "themeEn": "Lumbar biomechanics, spinal deformity, low back pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1786136646195-0",
+      "title": "Regulatory Alignment for Predictable and Immediate Device Coverage Pathway (CMS-3487-NC) Procedural Notice Inviting Comment",
+      "summary": "CMS has issued a procedural notice inviting public comment on the Regulatory Alignment for Predictable and Immediate Device Coverage Pathway (CMS-3487-NC), aimed at streamlining Medicare coverage for certain medical devices.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/regulatory-alignment-predictable-immediate-device-coverage-pathway-cms-3487-nc-procedural-notice",
+      "publishedAt": "2026-08-07T21:04:02.636Z",
+      "firstSeen": "2026-08-07T21:04:06.195Z",
+      "curatedScore": 75,
+      "curatedReason": "这份 CMS 公告草案事关医疗器械的医保覆盖路径。如果最终通过，它将简化新设备的审批和报销流程，对提供相关创新物理治疗器械的诊所和医院将是利好，但暂时仍处于征求意见阶段。",
+      "titleZh": "CMS 就医疗器械可预测和即时覆盖路径的监管协调征求意见",
+      "summaryZh": "美国医保与医助服务中心（CMS）发布程序性通知，就“医疗器械可预测和即时覆盖路径的监管协调”（CMS-3487-NC）征求公众意见，旨在简化部分医疗器械的医保覆盖流程。",
+      "curatedReasonEn": "This draft CMS notice concerns the Medicare coverage pathway for medical devices. If finalized, it will streamline approval and reimbursement for new devices, benefiting clinics and hospitals that offer innovative physical therapy devices. However, it is currently in the public comment phase.",
+      "tags": [
+        "policy",
+        "regulation",
+        "reimbursement"
+      ]
+    },
     {
       "id": "news-1785757795934-1",
       "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
@@ -1991,29 +2004,6 @@
         "reimbursement",
         "regulation"
       ]
-    },
-    {
-      "id": "news-1785796367253-3",
-      "title": "Reduced ipsilateral pre-operative forefoot pressure during gait is associated with poorer post-operative postural control in people with chronic ankle instability",
-      "summary": "A cross-sectional study found that reduced ipsilateral pre-operative forefoot pressure during gait is associated with poorer post-operative postural control in individuals with chronic ankle instability.",
-      "category": "sports",
-      "source": "BMC Musculoskelet Disord",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10290-5",
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "firstSeen": "2026-08-03T22:32:47.253Z",
-      "curatedScore": 75,
-      "curatedReason": "对于慢性踝关节不稳患者，术前步态中内侧前足压力降低可能预示术后平衡控制能力较差。这提示我们在术前评估时要关注足底压力分布，并可能需要针对性地加强术后平衡训练。",
-      "titleZh": "慢性踝关节不稳患者术前步态中同侧前足压力降低与术后姿势控制能力下降相关",
-      "summaryZh": "一项横断面研究发现，慢性踝关节不稳患者术前步态中同侧前足压力降低与术后姿势控制能力下降相关联。",
-      "curatedReasonEn": "In individuals with chronic ankle instability, reduced ipsilateral pre-operative forefoot pressure during gait may predict poorer post-operative postural control. This suggests focusing on plantar pressure distribution during pre-operative assessment and potentially intensifying post-operative balance training.",
-      "limitation": "这是一项横断面研究，无法确立因果关系，其发现可能仅为关联性而非预后性。",
-      "limitationEn": "This is a cross-sectional study, which cannot establish causality; its findings may indicate association rather than prognosis.",
-      "tags": [
-        "research",
-        "foot-ankle"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Musculoskeletal Disorders"
     }
   ]
 }
