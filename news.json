@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-08T09:05:02.812Z",
+    "lastUpdated": "2026-08-08T10:55:28.287Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -68,9 +68,9 @@
           "titleZh": "了解女性卒中幸存者水果和蔬菜摄入的障碍和动机：一项定性研究"
         }
       ],
-      "heat": 5.26,
-      "themeZh": "卒中患者康复结局的预测与影响因素",
-      "themeEn": "Stroke Recovery Prediction and Influencing Factors"
+      "heat": 5.12,
+      "themeZh": "卒中后功能恢复的多元预测与障碍因素",
+      "themeEn": "Stroke Recovery Prediction and Barriers"
     },
     {
       "id": "news-1786082036622-3",
@@ -125,9 +125,9 @@
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
         }
       ],
-      "heat": 2.48,
-      "themeZh": "神经调控与虚现实技术在康复中的应用",
-      "themeEn": "Neuromodulation and VR in Rehabilitation"
+      "heat": 2.42,
+      "themeZh": "神经调控与虚拟现实结合的功能康复",
+      "themeEn": "Neuro-modulation and VR for Functional Recovery"
     },
     {
       "id": "news-1785520637137-0",
@@ -176,9 +176,9 @@
           "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
         }
       ],
-      "heat": 2.19,
-      "themeZh": "物理治疗服务可及性与质量管理研究",
-      "themeEn": "Physical Therapy Access and Quality Management"
+      "heat": 2.14,
+      "themeZh": "物理治疗服务的利用、质量与可及性",
+      "themeEn": "PT Service Utilization, Quality, Access"
     },
     {
       "id": "news-1786064689237-13",
@@ -251,9 +251,9 @@
           "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略"
         }
       ],
-      "heat": 1.75,
-      "themeZh": "社区老年人跌倒与肌少症的预测和干预",
-      "themeEn": "Fall and Sarcopenia Prevention in Older Adults"
+      "heat": 1.71,
+      "themeZh": "社区老年人步态、跌倒与肌少症风险评估",
+      "themeEn": "Older Adults Gait, Falls, Sarcopenia Risk"
     },
     {
       "id": "news-1786064689237-22",
@@ -302,12 +302,35 @@
           "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度"
         }
       ],
-      "heat": 1.75,
-      "themeZh": "腰椎生物力学与疼痛的功能康复",
-      "themeEn": "Lumbar Biomechanics and Pain Rehabilitation"
+      "heat": 1.71,
+      "themeZh": "腰椎生物力学、疼痛与功能恢复",
+      "themeEn": "Lumbar Biomechanics, Pain, Function Recovery"
     }
   ],
   "items": [
+    {
+      "id": "news-1785854685765-0",
+      "title": "Preliminary effects of myofascial release on chest mobility and trunk impairmentin patients with chronic stroke: a pilotRandomized controlled trial.",
+      "summary": "A pilot RCT (n=20) found that myofascial release combined with inspiratory muscle training improved chest mobility and trunk impairment in patients with chronic stroke, compared to stretching and diaphragmatic breathing.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42547890/",
+      "publishedAt": "2026-08-04T00:00:00.000Z",
+      "firstSeen": "2026-08-04T14:44:45.765Z",
+      "curatedScore": 70,
+      "curatedReason": "筋膜松解术结合吸气肌训练对慢性卒中患者胸廓活动度和躯干功能障碍有积极初步效果，提示这类结合疗法在神经康复中值得进一步探索。",
+      "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验",
+      "summaryZh": "一项纳入 20 名慢性卒中患者的初步随机对照试验显示，筋膜松解术结合吸气肌训练在改善患者胸廓活动度、躯干功能障碍方面优于传统牵伸和膈式呼吸。",
+      "curatedReasonEn": "Myofascial release combined with inspiratory muscle training shows positive preliminary effects on chest mobility and trunk impairment in chronic stroke patients, suggesting this combined therapy warrants further exploration in neurorehabilitation.",
+      "limitation": "本研究为小样本初步随机对照试验（n=20），且随访期相对较短，结果外推需谨慎。",
+      "limitationEn": "This was a small-sample pilot randomized controlled trial (n=20) with a relatively short follow-up, limiting the generalizability of the findings.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1785841163008-0",
       "title": "Telerehabilitation before and after lumbar spine surgery: A scoping review.",
@@ -1962,30 +1985,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physical therapy"
-    },
-    {
-      "id": "news-1785866947551-2",
-      "title": "Accelerated Return to Competition Following a Full-Thickness Abdominal Wall Tear in an Elite Sprinter: A Data-informed Case Report.",
-      "summary": "This case report describes the rehabilitation and accelerated return to competition for a 22-year-old elite sprinter who sustained a full-thickness lateral abdominal wall tear, emphasizing data-informed decision-making.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42549193/",
-      "publishedAt": "2026-08-04T00:00:00.000Z",
-      "firstSeen": "2026-08-04T18:09:07.551Z",
-      "curatedScore": 70,
-      "curatedReason": "对于罕见的腹壁全层撕裂，这份单病例报告提示，即便是精英运动员，通过严密监控数据也能实现加速康复和重返赛场。在处理类似损伤时，请务必关注具体的功能指标和表现数据，不要被动等待。",
-      "titleZh": "精英短跑运动员腹壁全层撕裂后加速重返赛场：一项数据驱动的病例报告",
-      "summaryZh": "本病例报告描述了一名 22 岁精英短跑运动员腹壁外侧全层撕裂后的康复和加速重返赛场过程，强调了数据驱动的决策。",
-      "curatedReasonEn": "For rare full-thickness abdominal wall tears, this single case suggests that even elite athletes can achieve accelerated rehab and return to sport with rigorous data-informed monitoring. When managing similar injuries, focus on specific functional metrics and performance data; do not passively wait.",
-      "limitation": "作为单病例报告，其发现的普适性非常有限，不能直接推断到其他患者。",
-      "limitationEn": "As a single case report, the generalizability of its findings is very limited and cannot be directly extrapolated to other patients.",
-      "tags": [
-        "research",
-        "abdominal-muscle-tear",
-        "return-to-sport"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "International journal of sports physical therapy"
     }
   ]
 }
