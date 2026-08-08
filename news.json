@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-08T13:17:02.696Z",
+    "lastUpdated": "2026-08-08T14:53:26.671Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
       "publishedAt": "2026-08-08T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
         "Neurorehabilitation and neural repair",
         "medRxiv",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Bulletin of Faculty of Physical Therapy",
         "Disability and rehabilitation"
       ],
       "tag": "stroke",
@@ -63,14 +64,26 @@
         },
         {
           "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Evaluating the impact of high dose inpatient rehabilitation gait training on post stroke physical activity: A secondary analysis of a randomized controlled trial.",
+          "titleZh": "高剂量住院步态训练对卒中后体力活动的影响：一项随机对照试验的二次分析"
+        },
+        {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "The effect of different intensities of aerobic exercise on neurorepair based on BDNF, PI3K, and Akt signaling pathways after ischemic stroke: a narrative review",
+          "titleZh": "有氧运动强度对缺血性卒中后神经修复的影响：基于BDNF, PI3K, Akt信号通路的叙述性综述"
+        },
+        {
+          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Understanding barriers and motivators for fruit and vegetable intake in female stroke survivors: a qualitative study.",
           "titleZh": "了解女性卒中幸存者水果和蔬菜摄入的障碍和动机：一项定性研究"
         }
       ],
-      "heat": 4.95,
-      "themeZh": "卒中后功能恢复的预测因素与早期管理",
-      "themeEn": "Stroke recovery prediction and early management"
+      "heat": 5.65,
+      "themeZh": "卒中后上肢功能、平衡与 ADL 恢复的预测与评估",
+      "themeEn": "Stroke Upper-Limb, Balance, ADL Recovery Prediction"
     },
     {
       "id": "news-1786082036622-3",
@@ -132,9 +145,9 @@
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
         }
       ],
-      "heat": 2.92,
-      "themeZh": "神经调控与康复训练改善运动与平衡功能",
-      "themeEn": "Neuromodulation and exercise for motor-balance"
+      "heat": 2.85,
+      "themeZh": "神经调控与虚拟现实结合疗法对运动功能恢复的影响",
+      "themeEn": "Neuromodulation and VR for Motor Function Recovery"
     },
     {
       "id": "news-1785520637137-0",
@@ -183,61 +196,60 @@
           "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
         }
       ],
-      "heat": 2.06,
-      "themeZh": "康复服务利用、质量与跨机构转诊",
-      "themeEn": "Rehab service utilization and quality"
+      "heat": 2.02,
+      "themeZh": "物理治疗服务利用、联盟与跨场景转诊的质量研究",
+      "themeEn": "PT Service Utilization, Alliance, Care Transitions"
     },
     {
-      "id": "news-1786064689237-8",
-      "title": "Region-specific hamstring activation and its dissociation from subjective contraction sensation during leg curl exercise at different hip flexion angles",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01910-7",
-      "category": "sports",
+      "id": "news-1785866947549-0",
+      "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42550503/",
+      "category": "orthopedic",
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
-        "BMC Sports Science, Medicine and Rehabilitation",
+        "Physical therapy",
+        "Musculoskeletal science & practice",
         "BMC Musculoskeletal Disorders",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Gait & posture",
-        "Clinical rehabilitation"
+        "European Spine Journal"
       ],
-      "tag": null,
+      "tag": "pelvic-floor",
       "kind": "theme",
       "members": [
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Region-specific hamstring activation and its dissociation from subjective contraction sensation during leg curl exercise at different hip flexion angles",
-          "titleZh": "不同髋关节屈曲角度下腘绳肌区域激活及其与主观收缩感知的差异"
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
+          "titleZh": "妊娠相关肌肉骨骼疼痛：当前管理、对生物心理社会健康的影响及患者对护理的满意度"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+          "titleZh": "生物心理社会因素对物理治疗后慢性腰痛功能恢复的预测作用：一项生存分析研究"
         },
         {
           "source": "BMC Musculoskelet Disord",
           "journal": "BMC Musculoskeletal Disorders",
-          "title": "Thigh muscle co-activation during a single leg hop for distance one year after ACL-reconstruction and its relationship with a 2D knee flexion score: a cross-sectional study",
-          "titleZh": "ACL 重建术后一年单腿跳远时大腿肌肉共同激活与 2D 膝屈曲评分的关系：一项横断面研究"
+          "title": "Gait adaptations and spinal curvature correlations following lumbar arthrodesis: an analytic cross-sectional study",
+          "titleZh": "腰椎关节融合术后步态适应与脊柱曲度相关性：一项分析性横断面研究"
         },
         {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
-          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Biomechanical study on the interaction between the extent of lumbar vertebral lamina and facet joint removal and segmental stability: a finite element analysis",
+          "titleZh": "腰椎椎板和关节突切除程度与节段稳定性相互作用的生物力学研究：一项有限元分析"
         },
         {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "Influence of knee hyperextension persisting into preswing on swing-phase kinematics through forward propulsion in poststroke hemiparetic gait.",
-          "titleZh": "卒中后偏瘫步态中膝关节过伸持续至摆动前期对前推进力摆动期运动学的影响"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Sensory integration strategies for static balance control in older adults with knee osteoarthritis.",
-          "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略"
+          "source": "Eur Spine J",
+          "journal": "European Spine Journal",
+          "title": "Not just alignment: body shape influences adult spinal deformity biomechanics",
+          "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
         }
       ],
-      "heat": 2.06,
-      "themeZh": "下肢肌肉活动与关节力学对步态和平衡的影响",
-      "themeEn": "Lower limb mechanics impact gait and balance"
+      "heat": 1.61,
+      "themeZh": "腰背痛、脊柱融合与脊柱畸形生物力学研究",
+      "themeEn": "Low Back Pain, Spinal Fusion Biomechanics"
     },
     {
       "id": "news-1785482348361-2",
@@ -280,12 +292,35 @@
           "titleZh": "抗阻、平衡和有氧训练对肌少症老年人力量、活动度、平衡和生活质量的影响：系统综述和荟萃分析"
         }
       ],
-      "heat": 1.36,
-      "themeZh": "多发性硬化症疲劳的管理与运动干预",
-      "themeEn": "MS fatigue management and exercise"
+      "heat": 1.33,
+      "themeZh": "多发性硬化与肌少症相关疲劳及运动干预",
+      "themeEn": "MS Fatigue and Exercise Intervention"
     }
   ],
   "items": [
+    {
+      "id": "news-1785866947549-0",
+      "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
+      "summary": "An international internet survey of 671 postpartum women revealed high prevalence of musculoskeletal pain during pregnancy, low rates of physical therapy referral, and a significant influence of pain management on patient satisfaction with prenatal care.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42550503/",
+      "publishedAt": "2026-08-04T00:00:00.000Z",
+      "firstSeen": "2026-08-04T18:09:07.549Z",
+      "curatedScore": 75,
+      "curatedReason": "这项全球性调查揭示，即便孕期肌肉骨骼疼痛普遍，物理治疗转诊率依然偏低，且疼痛管理对产前护理满意度有显著影响。提示你需要主动筛查并提供相关康复服务，以提升患者整体满意度。",
+      "titleZh": "妊娠相关肌肉骨骼疼痛：当前管理、对生物心理社会健康的影响及患者对护理的满意度",
+      "summaryZh": "一项涵盖全球 671 名产后女性的网络调查显示，妊娠期肌肉骨骼疼痛普遍，但物理治疗转诊率较低，且疼痛管理显著影响患者对产前护理的满意度。",
+      "curatedReasonEn": "This global survey highlights low physical therapy referral rates despite the prevalence of pregnancy-related musculoskeletal pain, and that pain management significantly impacts satisfaction with prenatal care. This suggests you need to proactively screen and offer relevant rehabilitation services to improve overall patient satisfaction.",
+      "limitation": "研究为回顾性网络调查，可能存在回忆偏倚和样本选择偏倚，数据多为患者自述。",
+      "limitationEn": "The study is a retrospective online survey, which may have recall bias and selection bias, with data largely based on patient self-reports.",
+      "tags": [
+        "research",
+        "pelvic-floor"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy"
+    },
     {
       "id": "news-1785866947551-2",
       "title": "Accelerated Return to Competition Following a Full-Thickness Abdominal Wall Tear in an Elite Sprinter: A Data-informed Case Report.",
@@ -1941,29 +1976,6 @@
       ],
       "studyDesign": "述评",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1785866947551-1",
-      "title": "Outcomes of rehabilitation following device-aided therapy start in parkinson's disease: a randomized controlled trial.",
-      "summary": "A randomized controlled trial (N=45) found that adding tailored primary care rehabilitation to device-aided therapy in Parkinson's disease resulted in better maintenance of patient motor skills at 6 and 12 months compared to device-aided therapy alone.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42549611/",
-      "publishedAt": "2026-08-04T00:00:00.000Z",
-      "firstSeen": "2026-08-04T18:09:07.551Z",
-      "curatedScore": 85,
-      "curatedReason": "这项 RCT 为帕金森病患者在设备辅助治疗启动后加用量身定制的基层康复提供了坚实的证据，它能更好地维持患者的运动技能。这意味着你在为帕金森患者制定康复计划时，应积极考虑在早期将个性化康复干预与设备辅助治疗相结合。",
-      "titleZh": "帕金森病患者设备辅助治疗启动后康复结局：一项随机对照试验",
-      "summaryZh": "一项随机对照试验（N=45）发现，在帕金森病设备辅助治疗基础上增加量身定制的基层康复，能更好地维持患者在 6 个月和 12 个月时的运动技能，优于仅设备辅助治疗。",
-      "curatedReasonEn": "This RCT provides robust evidence that tailored primary care rehabilitation, when added after device-aided therapy initiation in Parkinson's disease, better maintains patient motor skills. This means you should actively consider integrating personalized rehabilitation interventions with device-aided therapy early when planning rehabilitation for Parkinson's patients.",
-      "limitation": "样本量相对较小（45/54 名患者完成），可能限制结果的普适性。",
-      "limitationEn": "The relatively small sample size (45/54 patients completed) may limit the generalizability of the results.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Journal of rehabilitation medicine"
     }
   ]
 }
