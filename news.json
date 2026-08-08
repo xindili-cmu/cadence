@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-08T10:55:28.287Z",
+    "lastUpdated": "2026-08-08T13:17:02.696Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -68,9 +68,9 @@
           "titleZh": "了解女性卒中幸存者水果和蔬菜摄入的障碍和动机：一项定性研究"
         }
       ],
-      "heat": 5.12,
-      "themeZh": "卒中后功能恢复的多元预测与障碍因素",
-      "themeEn": "Stroke Recovery Prediction and Barriers"
+      "heat": 4.95,
+      "themeZh": "卒中后功能恢复的预测因素与早期管理",
+      "themeEn": "Stroke recovery prediction and early management"
     },
     {
       "id": "news-1786082036622-3",
@@ -78,11 +78,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42562200/",
       "category": "neurological",
       "publishedAt": "2026-08-07T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Gait & posture",
         "Journal of NeuroEngineering and Rehabilitation",
+        "Physiotherapy theory and practice",
         "NeuroRehabilitation"
       ],
       "tag": "stroke",
@@ -114,6 +115,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Preliminary effects of myofascial release on chest mobility and trunk impairmentin patients with chronic stroke: a pilotRandomized controlled trial.",
+          "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
+        },
+        {
+          "source": "PubMed",
           "journal": "NeuroRehabilitation",
           "title": "Effects of a Virtual Reality-Based Balance Training Program on Clinical Outcomes and Cortical Oscillatory Activity: A Combined Behavioral and EEG Study.",
           "titleZh": "虚拟现实平衡训练对临床结果和皮质振荡活动的影响：一项行为与脑电图结合研究"
@@ -125,9 +132,9 @@
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "神经调控与虚拟现实结合的功能康复",
-      "themeEn": "Neuro-modulation and VR for Functional Recovery"
+      "heat": 2.92,
+      "themeZh": "神经调控与康复训练改善运动与平衡功能",
+      "themeEn": "Neuromodulation and exercise for motor-balance"
     },
     {
       "id": "news-1785520637137-0",
@@ -176,73 +183,50 @@
           "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
         }
       ],
-      "heat": 2.14,
-      "themeZh": "物理治疗服务的利用、质量与可及性",
-      "themeEn": "PT Service Utilization, Quality, Access"
+      "heat": 2.06,
+      "themeZh": "康复服务利用、质量与跨机构转诊",
+      "themeEn": "Rehab service utilization and quality"
     },
     {
-      "id": "news-1786064689237-13",
-      "title": "What is the impact of CRP, hs-CRP, IL-6, IL-10, and TNFα in physical performance in community-dwelling older adults: a systematic review",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08080-8",
-      "category": "geriatric",
+      "id": "news-1786064689237-8",
+      "title": "Region-specific hamstring activation and its dissociation from subjective contraction sensation during leg curl exercise at different hip flexion angles",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01910-7",
+      "category": "sports",
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
-        "BMC Geriatrics",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "PM & R : the journal of injury, function, and rehabilitation",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "BMC Musculoskeletal Disorders",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Gait & posture",
         "Clinical rehabilitation"
       ],
-      "tag": "衰弱",
+      "tag": null,
       "kind": "theme",
       "members": [
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "What is the impact of CRP, hs-CRP, IL-6, IL-10, and TNFα in physical performance in community-dwelling older adults: a systematic review",
-          "titleZh": "CRP、hs-CRP、IL-6、IL-10 和 TNFα 对社区老年人身体表现的影响：一项系统综述"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Region-specific hamstring activation and its dissociation from subjective contraction sensation during leg curl exercise at different hip flexion angles",
+          "titleZh": "不同髋关节屈曲角度下腘绳肌区域激活及其与主观收缩感知的差异"
         },
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Association between stride length variability and osteosarcopenia in community-dwelling older women: a cross-sectional study",
-          "titleZh": "社区居住老年女性步幅变异性与骨质减少-肌少症的关联：一项横断面研究"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Sex- and age-specific risk factors for possible sarcopenic obesity in community-dwelling older adults: a cross-sectional study",
-          "titleZh": "社区老年人潜在肌少性肥胖的性别和年龄特异性危险因素：一项横断面研究"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "How many repeated observations are enough for digital gait summaries? A multi-dataset framework for sampling sufficiency in older adults",
-          "titleZh": "老年人数字步态摘要需要多少次重复观察？一个多数据集采样充分性框架"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Thigh muscle co-activation during a single leg hop for distance one year after ACL-reconstruction and its relationship with a 2D knee flexion score: a cross-sectional study",
+          "titleZh": "ACL 重建术后一年单腿跳远时大腿肌肉共同激活与 2D 膝屈曲评分的关系：一项横断面研究"
         },
         {
           "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
-          "titleZh": "跌倒预防 App (SAFE app) 对社区老年人跌倒风险类别的效果：单盲随机对照试点试验"
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
+          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验"
         },
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Machine learning-based fall risk prediction in community-dwelling older adults using dual-task spatiotemporal gait parameters",
-          "titleZh": "基于机器学习的社区老年人双任务时空步态参数跌倒风险预测"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Frailty and decline in independent living in older adults: differences between the Baltic and Nordic countries",
-          "titleZh": "老年人衰弱与独立生活能力下降：波罗的海和北欧国家之间的差异"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Proxy indicators to support independent ageing-in-place in older people with frailty: a Delphi-style expert consultation survey",
-          "titleZh": "支持衰弱老年人在家独立养老的替代指标：一项德尔菲式专家咨询调查"
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Influence of knee hyperextension persisting into preswing on swing-phase kinematics through forward propulsion in poststroke hemiparetic gait.",
+          "titleZh": "卒中后偏瘫步态中膝关节过伸持续至摆动前期对前推进力摆动期运动学的影响"
         },
         {
           "source": "PubMed",
@@ -251,63 +235,81 @@
           "titleZh": "膝骨关节炎老年患者静态平衡控制中的感觉整合策略"
         }
       ],
-      "heat": 1.71,
-      "themeZh": "社区老年人步态、跌倒与肌少症风险评估",
-      "themeEn": "Older Adults Gait, Falls, Sarcopenia Risk"
+      "heat": 2.06,
+      "themeZh": "下肢肌肉活动与关节力学对步态和平衡的影响",
+      "themeEn": "Lower limb mechanics impact gait and balance"
     },
     {
-      "id": "news-1786064689237-22",
-      "title": "Gait adaptations and spinal curvature correlations following lumbar arthrodesis: an analytic cross-sectional study",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10264-7",
-      "category": "manual-modality",
-      "publishedAt": "2026-08-06T00:00:00.000Z",
+      "id": "news-1785482348361-2",
+      "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532214/",
+      "category": "neurological",
+      "publishedAt": "2026-08-05T10:47:46.859Z",
       "sourceCount": 4,
       "sources": [
-        "BMC Musculoskeletal Disorders",
-        "European Spine Journal",
-        "Musculoskeletal science & practice",
-        "Physical therapy"
+        "Archives of physical medicine and rehabilitation",
+        "Disability and rehabilitation",
+        "Physiotherapy theory and practice",
+        "BMC Geriatrics"
       ],
-      "tag": null,
+      "tag": "ms",
       "kind": "theme",
       "members": [
         {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Gait adaptations and spinal curvature correlations following lumbar arthrodesis: an analytic cross-sectional study",
-          "titleZh": "腰椎关节融合术后步态适应与脊柱曲度相关性：一项分析性横断面研究"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Biomechanical study on the interaction between the extent of lumbar vertebral lamina and facet joint removal and segmental stability: a finite element analysis",
-          "titleZh": "腰椎椎板和关节突切除程度与节段稳定性相互作用的生物力学研究：一项有限元分析"
-        },
-        {
-          "source": "Eur Spine J",
-          "journal": "European Spine Journal",
-          "title": "Not just alignment: body shape influences adult spinal deformity biomechanics",
-          "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+          "titleZh": "结构化运动训练在多发性硬化症疲劳管理中的作用：一项系统综述和荟萃分析的伞形综述"
         },
         {
           "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
-          "titleZh": "生物心理社会因素对物理治疗后慢性腰痛功能恢复的预测作用：一项生存分析研究"
+          "journal": "Disability and rehabilitation",
+          "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
+          "titleZh": "多发性硬化症相关疲劳的测量与管理：一项伞形综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
-          "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度"
+          "journal": "Physiotherapy theory and practice",
+          "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
+          "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effect of resistance, balance, and aerobic training on strength, mobility, balance, and quality of life in older adults with sarcopenia: a systematic review and meta-analysis",
+          "titleZh": "抗阻、平衡和有氧训练对肌少症老年人力量、活动度、平衡和生活质量的影响：系统综述和荟萃分析"
         }
       ],
-      "heat": 1.71,
-      "themeZh": "腰椎生物力学、疼痛与功能恢复",
-      "themeEn": "Lumbar Biomechanics, Pain, Function Recovery"
+      "heat": 1.36,
+      "themeZh": "多发性硬化症疲劳的管理与运动干预",
+      "themeEn": "MS fatigue management and exercise"
     }
   ],
   "items": [
+    {
+      "id": "news-1785866947551-2",
+      "title": "Accelerated Return to Competition Following a Full-Thickness Abdominal Wall Tear in an Elite Sprinter: A Data-informed Case Report.",
+      "summary": "This case report describes the rehabilitation and return-to-competition process for a 22-year-old elite sprinter who sustained a full-thickness tear of the external oblique, internal oblique, and transversus abdominis during block acceleration.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42549193/",
+      "publishedAt": "2026-08-04T00:00:00.000Z",
+      "firstSeen": "2026-08-04T18:09:07.551Z",
+      "curatedScore": 70,
+      "curatedReason": "对于这种罕见的腹壁全层撕裂，本病例报告提示，加速康复和早期负重是可能的。虽然只是个案，但它提供了一个高水平运动员在缺乏明确指南的情况下如何成功重返赛场的实例，供你参考。",
+      "titleZh": "精英短跑运动员腹壁全层撕裂后加速重返赛场的病例报告",
+      "summaryZh": "这份病例报告描述了一名 22 岁精英短跑运动员在起跑加速时遭遇腹外斜肌、腹内斜肌和腹横肌全层撕裂后的康复和重返赛场过程。",
+      "curatedReasonEn": "For rare full-thickness abdominal wall tears, this case report suggests accelerated rehabilitation and early loading may be feasible. Though a single case, it offers a real-world example of successful return-to-competition for a high-level athlete when specific guidelines are lacking.",
+      "limitation": "本研究为单例病例报告，结论的外推性受限。",
+      "limitationEn": "This is a single case report, limiting the generalizability of its findings.",
+      "tags": [
+        "research",
+        "abdominal-tear",
+        "sprinting"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International journal of sports physical therapy"
+    },
     {
       "id": "news-1785854685765-0",
       "title": "Preliminary effects of myofascial release on chest mobility and trunk impairmentin patients with chronic stroke: a pilotRandomized controlled trial.",
@@ -1962,29 +1964,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Journal of rehabilitation medicine"
-    },
-    {
-      "id": "news-1785866947549-0",
-      "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
-      "summary": "An international internet survey of 671 women found that while musculoskeletal pain is common during pregnancy, less than 1 in 5 respondents reported being referred to physical therapy, highlighting a gap in care.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42550503/",
-      "publishedAt": "2026-08-04T00:00:00.000Z",
-      "firstSeen": "2026-08-04T18:09:07.549Z",
-      "curatedScore": 75,
-      "curatedReason": "这次国际调查显示，尽管孕期肌肉骨骼疼痛很常见，但转诊到物理治疗的比例仍然很低，只有不到 1/5 的患者获得了转诊。这提示你在诊所中应更积极地筛查孕期 MSK 疼痛，并主动推广物理治疗的价值。",
-      "titleZh": "孕期肌肉骨骼疼痛：现有管理、对生物心理社会健康的影响以及患者对护理的满意度",
-      "summaryZh": "一项对 671 名女性进行的国际在线调查显示，孕期肌肉骨骼疼痛很常见，但只有不到 1/5 的受访者表示曾被转诊至物理治疗，这突显了护理方面的缺口。",
-      "curatedReasonEn": "This international survey indicates that despite the high prevalence of pregnancy-related musculoskeletal pain, physical therapy referral rates remain low, with less than one-fifth of patients receiving referrals. This suggests you should more proactively screen for MSK pain during pregnancy and actively promote the value of physical therapy.",
-      "limitation": "研究采用互联网调查设计，可能存在选择偏倚和回忆偏倚，且无法评估因果关系。",
-      "limitationEn": "The study utilized an internet survey design, which may introduce selection and recall bias, and causality cannot be assessed.",
-      "tags": [
-        "research",
-        "pelvic-floor"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physical therapy"
     }
   ]
 }
