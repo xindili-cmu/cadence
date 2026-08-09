@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-09T05:26:39.886Z",
+    "lastUpdated": "2026-08-09T07:27:16.037Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,7 +19,7 @@
       "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
-      "publishedAt": "2026-08-09T00:00:00.000Z",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
         "Neurorehabilitation and neural repair",
@@ -72,47 +72,80 @@
           "journal": "NeuroRehabilitation",
           "title": "Effect of Visual Modification by Video See-Through Augmented Reality with REHA-Glasses on Postural Verticality in Individuals with Post-Stroke Lateropulsion.",
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
-          "titleZh": "基于项目反应理论和图模型简化脊髓损伤患者下肢功能障碍的 ICF 评估"
         }
       ],
-      "heat": 5.55,
-      "themeZh": "卒中后肢体功能与平衡恢复的预测及虚拟现实干预",
-      "themeEn": "Stroke Recovery Prediction and VR Intervention"
+      "heat": 3.81,
+      "themeZh": "卒中后功能恢复的预测模型与干预评估",
+      "themeEn": "Stroke recovery prediction and intervention"
     },
     {
-      "id": "news-1785482348361-2",
-      "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532214/",
-      "category": "neurological",
+      "id": "news-1785912408310-0",
+      "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
+      "category": "orthopedic",
       "publishedAt": "2026-08-08T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Physiotherapy theory and practice",
-        "Sports Medicine - Open",
-        "BMC Geriatrics",
-        "BMC Sports Science, Medicine and Rehabilitation"
+        "Musculoskeletal science & practice",
+        "Physical therapy",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "BMC Musculoskeletal Disorders",
+        "European Spine Journal"
       ],
-      "tag": "ms",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
-          "titleZh": "结构化运动训练在多发性硬化症疲劳管理中的作用：一项系统综述和荟萃分析的伞形综述"
+          "journal": "Musculoskeletal science & practice",
+          "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+          "titleZh": "物理治疗后慢性下腰痛功能恢复的生物心理社会预测因子：一项生存分析研究"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
-          "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
+          "journal": "Physical therapy",
+          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
+          "titleZh": "妊娠相关肌肉骨骼疼痛：当前管理、对生物心理社会健康的影响及患者对护理的满意度"
         },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Altered inter-joint coordination strategies of the lower extremity and pelvis in elite rowers with chronic low back pain",
+          "titleZh": "精英赛艇运动员慢性腰痛时下肢和骨盆的关节间协调策略改变"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Gait adaptations and spinal curvature correlations following lumbar arthrodesis: an analytic cross-sectional study",
+          "titleZh": "腰椎关节融合术后步态适应与脊柱曲度相关性：一项分析性横断面研究"
+        },
+        {
+          "source": "Eur Spine J",
+          "journal": "European Spine Journal",
+          "title": "Not just alignment: body shape influences adult spinal deformity biomechanics",
+          "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
+        }
+      ],
+      "heat": 3.17,
+      "themeZh": "生物心理社会因素对下腰痛及脊柱生物力学影响",
+      "themeEn": "Biopsychosocial factors in low back pain"
+    },
+    {
+      "id": "news-1785796367253-7",
+      "title": "Effect of Combined Aerobic and Resistance Training on Exercise Capacity, Muscle Strength, Quality of Life, and Mortality in Patients with Coronary Heart Disease: A Systematic Review with Meta-analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01080-3",
+      "category": "geriatric",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Sports Medicine - Open",
+        "BMC Geriatrics",
+        "Archives of physical medicine and rehabilitation",
+        "BMC Sports Science, Medicine and Rehabilitation"
+      ],
+      "tag": "cardiac-rehab",
+      "kind": "theme",
+      "members": [
         {
           "source": "Sports Med - Open",
           "journal": "Sports Medicine - Open",
@@ -150,66 +183,9 @@
           "titleZh": "成人电动助力自行车：健康结局与康复相关性范围综述"
         }
       ],
-      "heat": 3.27,
-      "themeEn": "Exercise Rehab for Chronic Disease Management"
-    },
-    {
-      "id": "news-1786226005319-0",
-      "title": "Altered inter-joint coordination strategies of the lower extremity and pelvis in elite rowers with chronic low back pain",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01955-8",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-08T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "BMC Musculoskeletal Disorders",
-        "European Spine Journal",
-        "Physical therapy",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Altered inter-joint coordination strategies of the lower extremity and pelvis in elite rowers with chronic low back pain",
-          "titleZh": "精英赛艇运动员慢性腰痛时下肢和骨盆的关节间协调策略改变"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Gait adaptations and spinal curvature correlations following lumbar arthrodesis: an analytic cross-sectional study",
-          "titleZh": "腰椎关节融合术后步态适应与脊柱曲度相关性：一项分析性横断面研究"
-        },
-        {
-          "source": "Eur Spine J",
-          "journal": "European Spine Journal",
-          "title": "Not just alignment: body shape influences adult spinal deformity biomechanics",
-          "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Pregnancy-Related Musculoskeletal Pain: Current Management, Influence on Biopsychosocial Health, and Patient-Reported Satisfaction With Care.",
-          "titleZh": "妊娠相关肌肉骨骼疼痛：当前管理、对生物心理社会健康的影响及患者对护理的满意度"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Weight Bearing Decisions After Tibial Plateau Fractures: A Literature Review Based on Clinical Perspective for Physiotherapists in India.",
-          "titleZh": "胫骨平台骨折后负重决策：基于印度物理治疗师临床视角的文献综述"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "The prevention of heterotopic ossification around the knee: a scoping review",
-          "titleZh": "膝关节异位骨化预防的范围性综述"
-        }
-      ],
-      "heat": 3.27,
-      "themeZh": "骨科疾患的生物力学机制、步态适应与术后管理",
-      "themeEn": "Orthopedic Biomechanics, Gait, Post-Op Management"
+      "heat": 2.54,
+      "themeZh": "老年心肺疾病患者康复训练效果评估",
+      "themeEn": "Rehab training for elderly cardiopulmonary diseases"
     },
     {
       "id": "news-1786082036622-3",
@@ -265,9 +241,9 @@
           "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
         }
       ],
-      "heat": 2.31,
-      "themeZh": "神经调控与物理疗法在神经康复中的协同作用",
-      "themeEn": "Neuromodulation and Physical Therapy Synergy"
+      "heat": 2.24,
+      "themeZh": "神经调控与物理疗法联合改善神经肌肉功能",
+      "themeEn": "Neuromodulation and PT for neuromuscular function"
     },
     {
       "id": "news-1785520637137-0",
@@ -316,12 +292,58 @@
           "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
         }
       ],
-      "heat": 1.63,
-      "themeZh": "物理治疗服务利用、质量与跨专业协作研究",
-      "themeEn": "Physical Therapy Service Utilization and Quality"
+      "heat": 1.59,
+      "themeZh": "物理治疗服务的利用、质量与跨机构转诊",
+      "themeEn": "PT service utilization, quality, and transitions"
     }
   ],
   "items": [
+    {
+      "id": "news-1785926890245-0",
+      "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
+      "summary": "An umbrella review and meta-analysis of 46 systematic reviews found that exercise provided the most consistent benefit for MS-related fatigue, with aerobic training showing a modest reduction (SMD -0.32) and resistance exercise a significant reduction (SMD -1.09).",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42553000/",
+      "publishedAt": "2026-08-05T00:00:00.000Z",
+      "firstSeen": "2026-08-05T10:48:10.245Z",
+      "curatedScore": 88,
+      "curatedReason": "这项伞形综述坐实了运动疗法在多发性硬化症（MS）相关疲劳管理中的核心地位。尤其是，有氧训练和阻力训练都显示出中等至显著的疲劳改善效应。把运动处方纳入 MS 患者的常规管理方案。",
+      "titleZh": "多发性硬化症相关疲劳的测量与管理：一项伞形综述和荟萃分析",
+      "summaryZh": "一项包含 46 篇系统综述的伞形综述和荟萃分析发现，运动疗法对多发性硬化症（MS）相关疲劳的益处最一致，其中有氧训练显示出适度缓解（SMD -0.32），阻力训练则显示出显著缓解（SMD -1.09）。",
+      "curatedReasonEn": "This umbrella review confirms the central role of exercise therapy in managing multiple sclerosis (MS)-related fatigue. Specifically, both aerobic and resistance training showed moderate to significant effects in reducing fatigue. Integrate exercise prescriptions into the routine management of MS patients.",
+      "limitation": "纳入的系统综述在方法学质量和报告异质性方面存在差异，可能影响了综合证据的强度。",
+      "limitationEn": "The included systematic reviews varied in methodological quality and reporting heterogeneity, which may affect the strength of the synthesized evidence.",
+      "tags": [
+        "research",
+        "ms"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1785912408310-0",
+      "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
+      "summary": "A prospective observational cohort study of 250 adults with chronic nonspecific low back pain found that biopsychosocial factors, including pain intensity and kinesiophobia, significantly predicted functional recovery time after physiotherapy.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
+      "publishedAt": "2026-08-05T00:00:00.000Z",
+      "firstSeen": "2026-08-05T06:46:48.310Z",
+      "curatedScore": 75,
+      "curatedReason": "这项前瞻性观察研究提示，慢性下腰痛患者进行物理治疗后的功能恢复，很大程度上受生物心理社会因素影响，特别是疼痛强度和恐惧回避信念。在制定康复计划时，除了生理功能，别忽视这些因素的评估和干预。",
+      "titleZh": "物理治疗后慢性下腰痛功能恢复的生物心理社会预测因子：一项生存分析研究",
+      "summaryZh": "一项对 250 名慢性非特异性下腰痛成年患者进行物理治疗的前瞻性观察性队列研究发现，生物心理社会因素，包括疼痛强度和运动恐惧症，显著预测了功能恢复时间。",
+      "curatedReasonEn": "This prospective observational study suggests that functional recovery in chronic low back pain patients after physiotherapy is significantly influenced by biopsychosocial factors, particularly pain intensity and kinesiophobia. When developing rehabilitation plans, do not overlook the assessment and intervention for these factors in addition to physical function.",
+      "limitation": "本研究为观察性设计，无法确立因果关系，且随访时间较短，主要结局指标依赖主观量表。",
+      "limitationEn": "This observational study cannot establish causality, has a relatively short follow-up, and relies on subjective scales for primary outcomes.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Musculoskeletal science & practice"
+    },
     {
       "id": "news-1786253197663-0",
       "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
@@ -1108,31 +1130,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Musculoskeletal science & practice",
-      "tech": true
-    },
-    {
-      "id": "news-1785049661034-0",
-      "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
-      "summary": "An economic evaluation alongside a multicenter cluster RCT (n=139) found that a Stratified Blended Physiotherapy Approach (SBPA) combining prognostic risk stratification with digital health was cost-effective compared to usual physiotherapy for neck and/or shoulder pain.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
-      "publishedAt": "2026-07-26T00:00:00.000Z",
-      "firstSeen": "2026-07-26T07:07:41.034Z",
-      "curatedScore": 85,
-      "curatedReason": "分层物理治疗结合数字健康干预，在颈部和/或肩部疼痛患者中显示出具有成本效益。这支持了将风险分层和数字化工具整合进常规临床实践，提高效率并优化资源配置。",
-      "titleZh": "分层物理治疗结合数字健康干预对比常规物理治疗对颈部和/或肩部疼痛的成本效益：一项整群随机临床试验结果",
-      "summaryZh": "一项多中心整群随机临床试验（n=139）的经济学评估发现，对于颈部和/或肩部疼痛患者，结合预后风险分层的分层混合物理治疗方案（SBPA）比常规物理治疗更具成本效益。",
-      "curatedReasonEn": "Stratified physiotherapy integrated with digital health has shown to be cost-effective for patients with neck and/or shoulder pain. This supports integrating risk stratification and digital tools into routine clinical practice to enhance efficiency and optimize resource allocation.",
-      "limitation": "该研究是在荷兰的初级保健物理治疗实践中进行的，结果的普适性可能受地理和医疗系统限制。",
-      "limitationEn": "The study was conducted in primary care physiotherapy practices in the Netherlands, and the generalizability of the results may be limited by geography and healthcare system specifics.",
-      "tags": [
-        "research",
-        "spine",
-        "shoulder"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of physical medicine and rehabilitation",
       "tech": true
     },
     {
@@ -1989,29 +1986,6 @@
         "stroke"
       ],
       "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1785952702365-0",
-      "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
-      "summary": "A randomized controlled trial with 42 MS patients found that continuous online monitoring of walking activity with messaging reminders improved psychological health and fatigue, but had no significant effect on physical activity levels or quality of life.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42554308/",
-      "publishedAt": "2026-08-05T00:00:00.000Z",
-      "firstSeen": "2026-08-05T17:58:22.365Z",
-      "curatedScore": 75,
-      "curatedReason": "在线活动监测结合提醒能轻度改善 MS 患者的心理健康和疲劳，但对身体活动量和生活质量的改善不显著。将其作为现有干预的辅助手段，别指望它单枪匹马提升活动量。",
-      "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验",
-      "summaryZh": "一项针对 42 名多发性硬化症（MS）患者的随机对照试验显示，通过消息应用进行步行为主的身体活动持续监测和提醒，能改善患者的心理健康和疲劳，但对身体活动水平和生活质量没有显著影响。",
-      "curatedReasonEn": "Online activity monitoring with reminders showed mild improvements in psychological health and fatigue for MS patients, but no significant gains in physical activity levels or quality of life. Use it as an adjunct, not a standalone solution for activity increase.",
-      "limitation": "研究样本量较小（42 人），随访时间及干预的具体强度未详细阐述，且仅关注了计步器为主的步行活动。",
-      "limitationEn": "The study has a small sample size (42 participants), and details regarding follow-up duration and intervention intensity are not fully elaborated, focusing primarily on step-based walking activity.",
-      "tags": [
-        "research",
-        "ms"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physiotherapy theory and practice"
     }
   ]
 }
