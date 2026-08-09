@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-09T10:56:48.629Z",
+    "lastUpdated": "2026-08-09T13:24:28.588Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,14 +20,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
       "publishedAt": "2026-08-09T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         "Neurorehabilitation and neural repair",
         "medRxiv",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "NeuroRehabilitation"
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -63,26 +62,14 @@
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Effects of a Virtual Reality-Based Balance Training Program on Clinical Outcomes and Cortical Oscillatory Activity: A Combined Behavioral and EEG Study.",
-          "titleZh": "虚拟现实平衡训练对临床结果和皮质振荡活动的影响：一项行为与脑电图结合研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Effect of Visual Modification by Video See-Through Augmented Reality with REHA-Glasses on Postural Verticality in Individuals with Post-Stroke Lateropulsion.",
-          "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
-        },
-        {
-          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
           "titleZh": "基于项目反应理论和图模型简化脊髓损伤患者下肢功能障碍的 ICF 评估"
         }
       ],
-      "heat": 5.12,
-      "themeZh": "卒中后上肢功能、平衡与 ADL 恢复的预测与评估",
-      "themeEn": "Stroke Upper-Limb, Balance, ADL Recovery Prediction"
+      "heat": 4.12,
+      "themeZh": "卒中与脊髓损伤后运动功能恢复的预测与评估",
+      "themeEn": "Predicting & Assessing Stroke, SCI Motor Recovery"
     },
     {
       "id": "news-1785912408310-0",
@@ -132,9 +119,74 @@
           "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
         }
       ],
-      "heat": 3.02,
-      "themeZh": "腰背痛及脊柱侧弯的生物力学与生物心理社会因素",
-      "themeEn": "Biopsychosocial and Biomechanics in Low Back Pain"
+      "heat": 2.91,
+      "themeZh": "生物心理社会因素对慢性腰痛与脊柱形变的影响",
+      "themeEn": "Biopsychosocial Impact on Chronic Low Back Pain"
+    },
+    {
+      "id": "news-1786082036622-3",
+      "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42562200/",
+      "category": "neurological",
+      "publishedAt": "2026-08-07T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "PM&R",
+        "Journal of NeuroEngineering and Rehabilitation",
+        "Gait & posture",
+        "NeuroRehabilitation",
+        "Physiotherapy theory and practice"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
+          "titleZh": "重复经颅磁刺激和经颅直流电刺激对慢性缺血性卒中后上肢机器人治疗恢复的叠加效应：一项随机、双盲、假对照试验"
+        },
+        {
+          "source": "PM&R",
+          "journal": "PM&R",
+          "title": "Low‐intensity focused ultrasound neuromodulation for drug‐resistant epilepsy: A randomized, sham‐controlled crossover trial",
+          "titleZh": "低强度聚焦超声神经调控治疗难治性癫痫：一项随机、假对照交叉试验"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Eight weeks of focal muscle vibration shows improvements in muscle co-ordination and co-contraction in cerebral palsy children: a randomized control trial",
+          "titleZh": "8周局部肌肉振动改善脑瘫儿童肌肉协调和共同收缩：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Repetitive Transcranial Magnetic Stimulation for Dizziness, Balance, and Postural Stability in Adult Patients With Chronic Peripheral Vestibular Dizziness.",
+          "titleZh": "重复经颅磁刺激治疗慢性外周前庭性眩晕成人患者的眩晕、平衡和姿势稳定性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "The effect of combining visuo-vestibular exercises with manual therapy and exercise on sensorimotor function in chronic neck pain: A randomized controlled trial.",
+          "titleZh": "视动-前庭练习与手法治疗及运动结合对慢性颈痛感觉运动功能的影响：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Effects of a Virtual Reality-Based Balance Training Program on Clinical Outcomes and Cortical Oscillatory Activity: A Combined Behavioral and EEG Study.",
+          "titleZh": "虚拟现实平衡训练对临床结果和皮质振荡活动的影响：一项行为与脑电图结合研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Preliminary effects of myofascial release on chest mobility and trunk impairmentin patients with chronic stroke: a pilotRandomized controlled trial.",
+          "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
+        }
+      ],
+      "heat": 2.47,
+      "themeZh": "神经调控与虚拟现实技术在神经康复中的应用",
+      "themeEn": "Neuromodulation and VR in Neurorehabilitation"
     },
     {
       "id": "news-1785796367253-7",
@@ -189,67 +241,9 @@
           "titleZh": "成人电动助力自行车：健康结局与康复相关性范围综述"
         }
       ],
-      "heat": 2.41,
-      "themeZh": "老年心肺疾病患者运动康复的有效性与评估",
-      "themeEn": "Exercise Rehab for Older Cardiopulmonary Patients"
-    },
-    {
-      "id": "news-1786082036622-3",
-      "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42562200/",
-      "category": "neurological",
-      "publishedAt": "2026-08-07T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "PM&R",
-        "Gait & posture",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Physiotherapy theory and practice"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
-          "titleZh": "重复经颅磁刺激和经颅直流电刺激对慢性缺血性卒中后上肢机器人治疗恢复的叠加效应：一项随机、双盲、假对照试验"
-        },
-        {
-          "source": "PM&R",
-          "journal": "PM&R",
-          "title": "Low‐intensity focused ultrasound neuromodulation for drug‐resistant epilepsy: A randomized, sham‐controlled crossover trial",
-          "titleZh": "低强度聚焦超声神经调控治疗难治性癫痫：一项随机、假对照交叉试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Repetitive Transcranial Magnetic Stimulation for Dizziness, Balance, and Postural Stability in Adult Patients With Chronic Peripheral Vestibular Dizziness.",
-          "titleZh": "重复经颅磁刺激治疗慢性外周前庭性眩晕成人患者的眩晕、平衡和姿势稳定性"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "The effect of combining visuo-vestibular exercises with manual therapy and exercise on sensorimotor function in chronic neck pain: A randomized controlled trial.",
-          "titleZh": "视动-前庭练习与手法治疗及运动结合对慢性颈痛感觉运动功能的影响：一项随机对照试验"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Eight weeks of focal muscle vibration shows improvements in muscle co-ordination and co-contraction in cerebral palsy children: a randomized control trial",
-          "titleZh": "8周局部肌肉振动改善脑瘫儿童肌肉协调和共同收缩：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Preliminary effects of myofascial release on chest mobility and trunk impairmentin patients with chronic stroke: a pilotRandomized controlled trial.",
-          "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
-        }
-      ],
-      "heat": 2.13,
-      "themeZh": "神经调控与物理治疗对神经系统疾病的疗效",
-      "themeEn": "Neuromodulation and Physical Therapy for Neurological Conditions"
+      "heat": 2.33,
+      "themeZh": "心肺疾病与衰弱老人的运动康复策略",
+      "themeEn": "Exercise Rehab for Cardiopulmonary & Sarcopenic Adults"
     },
     {
       "id": "news-1785926890245-0",
@@ -297,12 +291,38 @@
           "titleZh": "了解多发性硬化症患者的生育计划经验和信息需求：一项澳大利亚队列研究"
         }
       ],
-      "heat": 1.81,
-      "themeZh": "多发性硬化相关疲劳管理与卒中患者生活方式干预",
-      "themeEn": "MS Fatigue Management and Stroke Lifestyle Intervention"
+      "heat": 1.75,
+      "themeZh": "多发性硬化症疲劳管理与患者生活质量研究",
+      "themeEn": "MS Fatigue Management & Quality of Life"
     }
   ],
   "items": [
+    {
+      "id": "news-1785049661034-0",
+      "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
+      "summary": "A cluster randomized clinical trial (n=136) found that a Stratified Blended Physiotherapy Approach (SBPA), combining prognostic risk stratification with digital health, was more cost-effective than usual physiotherapy for patients with neck and/or shoulder pain.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
+      "publishedAt": "2026-07-26T00:00:00.000Z",
+      "firstSeen": "2026-07-26T07:07:41.034Z",
+      "curatedScore": 85,
+      "curatedReason": "分层物理治疗与数字健康结合，相比常规物理治疗，在颈肩痛患者中展现了更高的成本效益。这意味着未来支付方可能会更倾向于这种结合数字健康的分层方案，你需要开始研究如何将数字工具融入你的执业。别等报销政策来了才临时抱佛脚。",
+      "titleZh": "分层物理治疗结合数字健康治疗颈肩痛的成本效益：一项群组随机临床试验结果",
+      "summaryZh": "一项群组随机临床试验（n=136）显示，结合预后风险分层与数字健康的分层混合物理治疗方案，比常规物理治疗在颈肩痛患者中更具成本效益。",
+      "curatedReasonEn": "Stratified physiotherapy integrated with digital health demonstrated superior cost-effectiveness compared to usual physiotherapy for neck and shoulder pain. This suggests payers may favor digitally integrated, stratified approaches in the future, prompting you to explore integrating digital tools into your practice now, rather than waiting for reimbursement changes.",
+      "limitation": "本研究的受试人群和实践环境都在荷兰，其结果推及其他市场（如美国、中国、澳大利亚）时需谨慎考虑，特别是报销和技术整合的差异。",
+      "limitationEn": "The study's population and practice environment were in the Netherlands, so extrapolating results to other markets (e.g., US, China, Australia) requires caution, especially regarding reimbursement and technological integration differences.",
+      "tags": [
+        "research",
+        "spine",
+        "shoulder",
+        "telehealth"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1785952702367-1",
       "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
@@ -1971,30 +1991,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1785434030685-0",
-      "title": "Effect of Visual Modification by Video See-Through Augmented Reality with REHA-Glasses on Postural Verticality in Individuals with Post-Stroke Lateropulsion.",
-      "summary": "An exploratory, single-arm interventional study investigated whether REHA-glasses, an augmented reality device modifying visual input based on body tilt, could correct lateropulsion in individuals with acute post-stroke lateropulsion, showing initial potential for postural verticality correction.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42530894/",
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "firstSeen": "2026-07-30T17:53:50.685Z",
-      "curatedScore": 68,
-      "curatedReason": "对于急性卒中后偏向推注的患者，REHA-glasses 这种 AR 视觉矫正技术在小样本研究中初步展示了纠正姿势垂直性的潜力。虽然目前仅为探索性观察研究，但它提示 AR 技术未来或许能提供一个非侵入性且个性化的康复方向，值得期待后续高强度 RCT 验证。",
-      "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果",
-      "summaryZh": "一项探索性单臂干预研究评估了 REHA-glasses（一款基于身体倾斜调整视觉输入的增强现实设备）能否纠正急性卒中后偏向推注患者的姿势垂直度，结果显示出初步潜力。",
-      "curatedReasonEn": "For acute post-stroke lateropulsion, REHA-glasses, an AR visual correction technology, showed initial potential in a small exploratory study for correcting postural verticality. While only an observational study, it suggests AR could offer a non-invasive, personalized rehabilitation approach in the future; keep an eye out for robust RCT validation.",
-      "limitation": "这是一项小样本、单臂、单中心探索性研究，缺乏对照组，且干预由三名物理治疗师主导，可能存在主观性。",
-      "limitationEn": "This is a small-sample, single-arm, single-center exploratory study lacking a control group, and the intervention was led by three physical therapists, which may introduce subjectivity.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "NeuroRehabilitation",
-      "tech": true
     }
   ]
 }
