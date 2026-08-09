@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-09T09:06:34.635Z",
+    "lastUpdated": "2026-08-09T10:56:48.629Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,10 +19,11 @@
       "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
-      "publishedAt": "2026-08-08T00:00:00.000Z",
-      "sourceCount": 5,
+      "publishedAt": "2026-08-09T00:00:00.000Z",
+      "sourceCount": 6,
       "sources": [
         "Neurorehabilitation and neural repair",
+        "medRxiv",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
@@ -36,6 +37,11 @@
           "journal": "Neurorehabilitation and neural repair",
           "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
           "titleZh": "卒中后上肢早期恢复机器学习模型的外部验证"
+        },
+        {
+          "source": "medRxiv",
+          "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
+          "titleZh": "重度卒中幸存者中残余自主肌电图的比例"
         },
         {
           "source": "PubMed",
@@ -66,11 +72,17 @@
           "journal": "NeuroRehabilitation",
           "title": "Effect of Visual Modification by Video See-Through Augmented Reality with REHA-Glasses on Postural Verticality in Individuals with Post-Stroke Lateropulsion.",
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
+          "titleZh": "基于项目反应理论和图模型简化脊髓损伤患者下肢功能障碍的 ICF 评估"
         }
       ],
-      "heat": 3.1,
-      "themeZh": "卒中后躯体功能与平衡恢复的因素及干预",
-      "themeEn": "Stroke motor and balance recovery"
+      "heat": 5.12,
+      "themeZh": "卒中后上肢功能、平衡与 ADL 恢复的预测与评估",
+      "themeEn": "Stroke Upper-Limb, Balance, ADL Recovery Prediction"
     },
     {
       "id": "news-1785912408310-0",
@@ -120,9 +132,9 @@
           "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
         }
       ],
-      "heat": 3.1,
-      "themeZh": "生物心理社会因素影响脊柱及下肢疼痛与功能",
-      "themeEn": "Biopsychosocial factors in spinal musculoskeletal pain"
+      "heat": 3.02,
+      "themeZh": "腰背痛及脊柱侧弯的生物力学与生物心理社会因素",
+      "themeEn": "Biopsychosocial and Biomechanics in Low Back Pain"
     },
     {
       "id": "news-1785796367253-7",
@@ -177,9 +189,9 @@
           "titleZh": "成人电动助力自行车：健康结局与康复相关性范围综述"
         }
       ],
-      "heat": 2.48,
-      "themeZh": "老年心肺疾病及肌少症的运动康复干预",
-      "themeEn": "Exercise rehabilitation for elderly cardiorespiratory conditions"
+      "heat": 2.41,
+      "themeZh": "老年心肺疾病患者运动康复的有效性与评估",
+      "themeEn": "Exercise Rehab for Older Cardiopulmonary Patients"
     },
     {
       "id": "news-1786082036622-3",
@@ -235,9 +247,9 @@
           "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
         }
       ],
-      "heat": 2.19,
-      "themeZh": "神经调控联合康复技术改善神经功能障碍",
-      "themeEn": "Neuromodulation combined with rehabilitation for neurological disorders"
+      "heat": 2.13,
+      "themeZh": "神经调控与物理治疗对神经系统疾病的疗效",
+      "themeEn": "Neuromodulation and Physical Therapy for Neurological Conditions"
     },
     {
       "id": "news-1785926890245-0",
@@ -285,36 +297,33 @@
           "titleZh": "了解多发性硬化症患者的生育计划经验和信息需求：一项澳大利亚队列研究"
         }
       ],
-      "heat": 1.86,
-      "themeZh": "多发性硬化相关疲劳的管理与生活质量",
-      "themeEn": "Fatigue and QoL in multiple sclerosis"
+      "heat": 1.81,
+      "themeZh": "多发性硬化相关疲劳管理与卒中患者生活方式干预",
+      "themeEn": "MS Fatigue Management and Stroke Lifestyle Intervention"
     }
   ],
   "items": [
     {
-      "id": "news-1785049661034-0",
-      "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
-      "summary": "A cluster randomized clinical trial in the Netherlands found that a Stratified Blended Physiotherapy Approach (SBPA) for neck and/or shoulder pain was cost-effective compared to usual physiotherapy, despite similar clinical outcomes. 136 patients were analyzed.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
-      "publishedAt": "2026-07-26T00:00:00.000Z",
-      "firstSeen": "2026-07-26T07:07:41.034Z",
-      "curatedScore": 85,
-      "curatedReason": "SBPA并未带来显著的临床改善，这表明你不能指望它比常规治疗更能缓解颈肩痛。但考虑到它能降低成本，如果你正在寻找一种不牺牲疗效又能优化支出的方案，那么SBPA值得你考虑在诊所里推行。",
-      "titleZh": "分层物理治疗整合数字健康与常规物理治疗治疗颈肩痛的成本效益：一项整群随机临床试验结果",
-      "summaryZh": "一项在荷兰进行的整群随机临床试验发现，针对颈肩痛，分层整合数字健康的物理治疗方案（SBPA）与常规物理治疗相比，在临床结局相似的情况下，具有更好的成本效益。本研究共分析了 136 名患者。",
-      "curatedReasonEn": "SBPA didn't show significant clinical improvement, so don't expect it to resolve neck/shoulder pain more effectively than usual care. However, given its cost-effectiveness, if you're looking for a way to optimize spending without sacrificing outcomes, SBPA is worth considering for your clinic.",
-      "limitation": "本研究的长期成本效益和不同数字健康工具的比较效果仍需进一步探索。",
-      "limitationEn": "Long-term cost-effectiveness and comparative efficacy of different digital health tools warrant further investigation.",
+      "id": "news-1785952702367-1",
+      "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
+      "summary": "An exploratory study with 100 severely impaired stroke survivors investigated the presence of residual electromyography (EMG) activity in wrist extensor muscles, even in the absence of visible movement, suggesting feasibility for EMG-based human-machine interaction.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.03.26359564v1?rss=1",
+      "publishedAt": "2026-08-05T00:00:00.000Z",
+      "firstSeen": "2026-08-05T17:58:22.367Z",
+      "curatedScore": 78,
+      "curatedReason": "这项探索性研究提示，即便重度卒中患者手腕无可见主动运动，仍有高比例存在残余肌电信号。这为开发基于 EMG 的康复界面提供了初步依据，但目前还无法指导临床实践。",
+      "titleZh": "重度卒中幸存者中残余自主肌电图的比例",
+      "summaryZh": "一项针对 100 名重度卒中幸存者的探索性研究显示，即使腕关节无可见主动运动，仍有残余肌电活动，这为开发基于肌电图的人机交互康复技术提供了可行性证据。",
+      "curatedReasonEn": "This exploratory study suggests a high percentage of severely impaired stroke survivors, even those with no visible wrist movement, retain residual EMG activity. This provides preliminary evidence for developing EMG-based rehabilitation interfaces but does not yet inform clinical practice.",
+      "limitation": "这是一项探索性横断面研究，样本量相对较小且仅关注腕伸肌，结果的外推性有限。",
+      "limitationEn": "This is an exploratory cross-sectional study with a relatively small sample size, focusing only on wrist extensor muscles, limiting the generalizability of the findings.",
       "tags": [
         "research",
-        "news",
-        "telehealth"
+        "stroke"
       ],
-      "studyDesign": "RCT",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "tech": true
+      "studyDesign": "观察研究"
     },
     {
       "id": "news-1785952702365-0",
