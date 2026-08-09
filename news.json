@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-09T07:27:16.037Z",
+    "lastUpdated": "2026-08-09T09:06:34.635Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,10 +20,9 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42544432/",
       "category": "neurological",
       "publishedAt": "2026-08-08T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         "Neurorehabilitation and neural repair",
-        "medRxiv",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
@@ -37,11 +36,6 @@
           "journal": "Neurorehabilitation and neural repair",
           "title": "External Validation of a Machine Learning Model for the Early Prediction of Upper-Limb Recovery After Stroke.",
           "titleZh": "卒中后上肢早期恢复机器学习模型的外部验证"
-        },
-        {
-          "source": "medRxiv",
-          "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
-          "titleZh": "严重受损卒中幸存者保留残余自主肌电图的比例是多少？"
         },
         {
           "source": "PubMed",
@@ -74,9 +68,9 @@
           "titleZh": "REHA-glasses 视频透视增强现实技术对卒中后偏向推注患者姿势垂直度的视觉矫正效果"
         }
       ],
-      "heat": 3.81,
-      "themeZh": "卒中后功能恢复的预测模型与干预评估",
-      "themeEn": "Stroke recovery prediction and intervention"
+      "heat": 3.1,
+      "themeZh": "卒中后躯体功能与平衡恢复的因素及干预",
+      "themeEn": "Stroke motor and balance recovery"
     },
     {
       "id": "news-1785912408310-0",
@@ -126,9 +120,9 @@
           "titleZh": "不仅仅是力线：体形影响成人脊柱畸形生物力学"
         }
       ],
-      "heat": 3.17,
-      "themeZh": "生物心理社会因素对下腰痛及脊柱生物力学影响",
-      "themeEn": "Biopsychosocial factors in low back pain"
+      "heat": 3.1,
+      "themeZh": "生物心理社会因素影响脊柱及下肢疼痛与功能",
+      "themeEn": "Biopsychosocial factors in spinal musculoskeletal pain"
     },
     {
       "id": "news-1785796367253-7",
@@ -183,9 +177,9 @@
           "titleZh": "成人电动助力自行车：健康结局与康复相关性范围综述"
         }
       ],
-      "heat": 2.54,
-      "themeZh": "老年心肺疾病患者康复训练效果评估",
-      "themeEn": "Rehab training for elderly cardiopulmonary diseases"
+      "heat": 2.48,
+      "themeZh": "老年心肺疾病及肌少症的运动康复干预",
+      "themeEn": "Exercise rehabilitation for elderly cardiorespiratory conditions"
     },
     {
       "id": "news-1786082036622-3",
@@ -241,63 +235,111 @@
           "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
         }
       ],
-      "heat": 2.24,
-      "themeZh": "神经调控与物理疗法联合改善神经肌肉功能",
-      "themeEn": "Neuromodulation and PT for neuromuscular function"
+      "heat": 2.19,
+      "themeZh": "神经调控联合康复技术改善神经功能障碍",
+      "themeEn": "Neuromodulation combined with rehabilitation for neurological disorders"
     },
     {
-      "id": "news-1785520637137-0",
-      "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42535673/",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-06T00:00:00.000Z",
-      "sourceCount": 5,
+      "id": "news-1785926890245-0",
+      "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42553000/",
+      "category": "neurological",
+      "publishedAt": "2026-08-08T00:00:00.000Z",
+      "sourceCount": 3,
       "sources": [
-        "Physical therapy",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Brazilian journal of physical therapy",
-        "medRxiv",
-        "BMC Geriatrics"
+        "Disability and rehabilitation",
+        "Archives of physical medicine and rehabilitation",
+        "Physiotherapy theory and practice"
       ],
-      "tag": null,
+      "tag": "ms",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
-          "titleZh": "退伍军人事务部急诊科物理治疗师评估后一年的医疗资源利用情况"
+          "journal": "Disability and rehabilitation",
+          "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
+          "titleZh": "多发性硬化症相关疲劳的测量与管理：一项伞形综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Characteristics and Specific Aspects of the Therapeutic Alliance in Physiotherapy Care: A Qualitative Study in France.",
-          "titleZh": "物理治疗中治疗联盟的特点及具体方面：一项在法国进行的定性研究"
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Structured exercise training for fatigue management in multiple sclerosis: an umbrella review of systematic reviews and meta-analyses.",
+          "titleZh": "结构化运动训练在多发性硬化症疲劳管理中的作用：一项系统综述和荟萃分析的伞形综述"
         },
         {
           "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Quality indicators for Spanish hospital-based physical therapy units: a feasibility and inter-rater reliability study.",
-          "titleZh": "西班牙医院物理治疗单位质量指标的的可行性与评估者间信度研究"
+          "journal": "Physiotherapy theory and practice",
+          "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
+          "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
         },
         {
-          "source": "medRxiv",
-          "title": "Rapid growth in autism spectrum disorder referrals reshaped rehabilitation service use: A longitudinal cohort study of children and adolescents in Brazil",
-          "titleZh": "自闭症谱系障碍转诊量的快速增长重塑了康复服务的使用：一项巴西儿童和青少年纵向队列研究"
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Understanding barriers and motivators for fruit and vegetable intake in female stroke survivors: a qualitative study.",
+          "titleZh": "了解女性卒中幸存者水果和蔬菜摄入的障碍和动机：一项定性研究"
         },
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "The experience of cross-setting care transitions of long-term care residents to the emergency department: a qualitative study",
-          "titleZh": "长期护理居民转诊至急诊科的跨机构护理过渡经验：一项定性研究"
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Understanding the family planning experiences and information needs of people living with multiple sclerosis: an Australian cohort study.",
+          "titleZh": "了解多发性硬化症患者的生育计划经验和信息需求：一项澳大利亚队列研究"
         }
       ],
-      "heat": 1.59,
-      "themeZh": "物理治疗服务的利用、质量与跨机构转诊",
-      "themeEn": "PT service utilization, quality, and transitions"
+      "heat": 1.86,
+      "themeZh": "多发性硬化相关疲劳的管理与生活质量",
+      "themeEn": "Fatigue and QoL in multiple sclerosis"
     }
   ],
   "items": [
+    {
+      "id": "news-1785049661034-0",
+      "title": "Cost-effectiveness of stratified physiotherapy integrated with digital health versus usual physiotherapy for neck and/or shoulder pain: results of a cluster randomised clinical trial.",
+      "summary": "A cluster randomized clinical trial in the Netherlands found that a Stratified Blended Physiotherapy Approach (SBPA) for neck and/or shoulder pain was cost-effective compared to usual physiotherapy, despite similar clinical outcomes. 136 patients were analyzed.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42501929/",
+      "publishedAt": "2026-07-26T00:00:00.000Z",
+      "firstSeen": "2026-07-26T07:07:41.034Z",
+      "curatedScore": 85,
+      "curatedReason": "SBPA并未带来显著的临床改善，这表明你不能指望它比常规治疗更能缓解颈肩痛。但考虑到它能降低成本，如果你正在寻找一种不牺牲疗效又能优化支出的方案，那么SBPA值得你考虑在诊所里推行。",
+      "titleZh": "分层物理治疗整合数字健康与常规物理治疗治疗颈肩痛的成本效益：一项整群随机临床试验结果",
+      "summaryZh": "一项在荷兰进行的整群随机临床试验发现，针对颈肩痛，分层整合数字健康的物理治疗方案（SBPA）与常规物理治疗相比，在临床结局相似的情况下，具有更好的成本效益。本研究共分析了 136 名患者。",
+      "curatedReasonEn": "SBPA didn't show significant clinical improvement, so don't expect it to resolve neck/shoulder pain more effectively than usual care. However, given its cost-effectiveness, if you're looking for a way to optimize spending without sacrificing outcomes, SBPA is worth considering for your clinic.",
+      "limitation": "本研究的长期成本效益和不同数字健康工具的比较效果仍需进一步探索。",
+      "limitationEn": "Long-term cost-effectiveness and comparative efficacy of different digital health tools warrant further investigation.",
+      "tags": [
+        "research",
+        "news",
+        "telehealth"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1785952702365-0",
+      "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
+      "summary": "A randomized controlled trial with 42 MS patients showed that continuous online physical activity monitoring with messaging app reminders improved physical activity levels, psychological health, and quality of life.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42554308/",
+      "publishedAt": "2026-08-05T00:00:00.000Z",
+      "firstSeen": "2026-08-05T17:58:22.365Z",
+      "curatedScore": 75,
+      "curatedReason": "在线身体活动监测结合提醒能够有效提升多发性硬化症患者的身体活动水平。将这种相对低成本的干预整合到你的患者管理中，有望改善患者的健康状况和生活质量。",
+      "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验",
+      "summaryZh": "一项纳入 42 名多发性硬化症患者的随机对照试验显示，通过消息应用提醒进行的持续在线身体活动监测，能够改善患者的身体活动水平、心理健康和生活质量。",
+      "curatedReasonEn": "Online physical activity monitoring combined with reminders can effectively increase physical activity levels in patients with multiple sclerosis. Integrating this relatively low-cost intervention into your patient management holds promise for improving patient health and quality of life.",
+      "limitation": "研究样本量较小，且随访时间有限，长期效果和更广泛人群的适用性有待大型研究验证。",
+      "limitationEn": "The study had a small sample size and limited follow-up duration; long-term effects and applicability to a broader population require validation through larger studies.",
+      "tags": [
+        "research",
+        "ms",
+        "telehealth"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1785926890245-0",
       "title": "Measurements and management of multiple sclerosis-related fatigue: an umbrella review and meta-analysis.",
@@ -1944,48 +1986,6 @@
       "studyDesign": "观察研究",
       "journal": "NeuroRehabilitation",
       "tech": true
-    },
-    {
-      "id": "news-1784742300473-6",
-      "title": "Eccentric cycling for ACL-R rehabilitation: A masterclass.",
-      "summary": "This masterclass reviews the increasing implementation of eccentric training in ACL-R rehabilitation, highlighting potential benefits for quadriceps atrophy and strength deficits with early progressive eccentric exercise.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42480265/",
-      "publishedAt": "2026-07-22T00:00:00.000Z",
-      "firstSeen": "2026-07-22T17:45:00.473Z",
-      "curatedScore": 70,
-      "curatedReason": "ACL 重建术后康复中，偏心训练的应用日益增多。这份综述提示，早期渐进式偏心训练可能有助于改善股四头肌萎缩和力量不足，但具体如何融入你的康复方案，仍需结合患者情况谨慎评估。",
-      "titleZh": "ACL 重建术后康复中的偏心骑行：精要解读",
-      "summaryZh": "这份精要解读回顾了偏心训练在 ACL 重建术后康复中日益增长的应用，强调了早期渐进式偏心运动对股四头肌萎缩和力量不足的潜在益处。",
-      "curatedReasonEn": "Eccentric training is gaining traction in ACL-R rehab. This review suggests that early progressive eccentric exercise might address quadriceps atrophy and strength deficits, but its integration into your rehabilitation protocols demands careful patient-specific consideration.",
-      "tags": [
-        "news",
-        "knee"
-      ],
-      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1785952702367-1",
-      "title": "What percentage of severely impaired stroke survivors retain residual voluntary EMG?",
-      "summary": "A study with 100 severely impaired stroke survivors investigated the feasibility of detecting residual electromyography (EMG) activity in wrist extensors to identify movement intention in patients without visible movement.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.03.26359564v1?rss=1",
-      "publishedAt": "2026-08-05T00:00:00.000Z",
-      "firstSeen": "2026-08-05T17:58:22.367Z",
-      "curatedScore": 78,
-      "curatedReason": "对于严重卒中后无自主腕伸的患者，很高比例能检测到残余肌电信号。这意味着肌电信号可能作为脑机接口的实用替代方案，为这些患者提供机器人辅助，拓宽康复干预的窗口。",
-      "titleZh": "严重受损卒中幸存者保留残余自主肌电图的比例是多少？",
-      "summaryZh": "一项针对 100 名无主动腕伸的严重受损卒中幸存者的研究，旨在探讨能否通过高密度表面肌电图（EMG）检测腕伸肌中的残余肌电活动，以评估其作为运动意图检测手段的可行性。",
-      "curatedReasonEn": "A high percentage of severely impaired stroke patients without voluntary wrist extension still show residual EMG activity. This suggests EMG could be a practical alternative for brain-computer interfaces, enabling robotic assistance and broadening rehabilitation options for these patients.",
-      "limitation": "这是一项探索性研究，旨在评估肌电信号的检测可行性，而非干预效果评估，因此不涉及临床结局。",
-      "limitationEn": "This is an exploratory study assessing EMG signal detectability, not an intervention effectiveness trial, and therefore does not involve clinical outcomes.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
