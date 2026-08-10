@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-10T17:13:28.268Z",
+    "lastUpdated": "2026-08-10T19:25:46.731Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -73,9 +73,53 @@
           "titleZh": "基于项目反应理论和图模型简化脊髓损伤患者下肢功能障碍的 ICF 评估"
         }
       ],
-      "heat": 3.9,
-      "themeZh": "卒中后肢体功能恢复和跌倒风险的评估与预测",
-      "themeEn": "Stroke Recovery and Fall Risk Prediction"
+      "heat": 3.78,
+      "themeZh": "卒中后功能恢复的预测与评估",
+      "themeEn": "Stroke recovery prediction and assessment"
+    },
+    {
+      "id": "news-1785520637137-0",
+      "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42535673/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-10T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Physical therapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Brazilian journal of physical therapy",
+        "medRxiv"
+      ],
+      "tag": null,
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
+          "titleZh": "退伍军人事务部急诊科物理治疗师评估后一年的医疗资源利用情况"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Characteristics and Specific Aspects of the Therapeutic Alliance in Physiotherapy Care: A Qualitative Study in France.",
+          "titleZh": "物理治疗中治疗联盟的特点及具体方面：一项在法国进行的定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Quality indicators for Spanish hospital-based physical therapy units: a feasibility and inter-rater reliability study.",
+          "titleZh": "西班牙医院物理治疗单位质量指标的的可行性与评估者间信度研究"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Experiences of frontline physiotherapists during the COVID-19 pandemic at two tertiary hospitals in Southern Malawi: A phenomenological qualitative study",
+          "titleZh": "COVID-19 疫情期间马拉维南部两家三级医院前线物理治疗师的经历：一项现象学定性研究"
+        }
+      ],
+      "heat": 3.02,
+      "themeZh": "物理治疗实践与服务质量",
+      "themeEn": "Physical therapy practice and quality"
     },
     {
       "id": "news-1785796367253-7",
@@ -131,9 +175,9 @@
           "titleZh": "运动处方：物理治疗最重要的但也是标准化程度最低的技能"
         }
       ],
-      "heat": 2.76,
-      "themeZh": "心肺疾病患者的运动训练与康复效果",
-      "themeEn": "Exercise Training for Cardiopulmonary Diseases"
+      "heat": 2.67,
+      "themeZh": "心肺疾病患者运动康复",
+      "themeEn": "Cardiopulmonary disease exercise rehabilitation"
     },
     {
       "id": "news-1786375761144-0",
@@ -173,9 +217,9 @@
           "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验"
         }
       ],
-      "heat": 2.34,
-      "themeZh": "上肢本体感觉和肌肉功能评估与疲劳影响",
-      "themeEn": "Upper Limb Proprioception and Muscle Function"
+      "heat": 2.27,
+      "themeZh": "肌肉功能与本体感觉评估",
+      "themeEn": "Muscle function and proprioception assessment"
     },
     {
       "id": "news-1785866947551-1",
@@ -251,12 +295,58 @@
           "titleZh": "筋膜松解术对慢性卒中患者胸廓活动度和躯干功能障碍的初步影响：一项前瞻性随机对照试验"
         }
       ],
-      "heat": 1.93,
-      "themeZh": "神经调控技术改善神经系统疾病康复效果",
-      "themeEn": "Neuromodulation for Neurological Rehabilitation"
+      "heat": 1.87,
+      "themeZh": "神经调控技术在康复中的应用",
+      "themeEn": "Neuromodulation in rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1785235626855-0",
+      "title": "The effects of a falls prevention app (SAFE app) on community-dwelling adults' fall risk category: Single-blinded randomized control pilot trial.",
+      "summary": "A single-blinded randomized controlled pilot trial (N=54) found that a 12-week app-based home exercise program, combined with educational pamphlets, may reduce fall risk measures in community-dwelling adults aged 65 and older.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42517264/",
+      "publishedAt": "2026-07-28T00:00:00.000Z",
+      "firstSeen": "2026-07-28T10:47:06.855Z",
+      "curatedScore": 75,
+      "curatedReason": "试点研究提示，在老年患者中，结合了教育材料的居家运动 App 可能有助于降低跌倒风险。这项研究为未来更大规模的 RCT 提供了初步证据。",
+      "titleZh": "跌倒预防 App (SAFE app) 对社区老年人跌倒风险类别的影响：单盲随机对照试点试验",
+      "summaryZh": "一项单盲随机对照试点试验 (N=54) 发现，为期 12 周的居家运动 App 结合教育材料，可能有助于降低社区居住的 65 岁及以上老年人的跌倒风险。",
+      "curatedReasonEn": "This pilot study suggests that an app-based home exercise program combined with educational materials may help reduce fall risk in older adults. It provides preliminary evidence for larger, future RCTs.",
+      "limitation": "这是一项小样本的试点研究 (N=54)，随访期为 12 周，结果的外推性有限。",
+      "limitationEn": "This was a small-sample pilot study (N=54) with a 12-week follow-up, limiting the generalizability of its findings.",
+      "tags": [
+        "research",
+        "digital-health"
+      ],
+      "studyDesign": "RCT",
+      "journal": "PM & R : the journal of injury, function, and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1786389944691-1",
+      "title": "Experiences of frontline physiotherapists during the COVID-19 pandemic at two tertiary hospitals in Southern Malawi: A phenomenological qualitative study",
+      "summary": "A phenomenological qualitative study explored the experiences of 11 frontline physiotherapists in two tertiary hospitals in Southern Malawi during the COVID-19 pandemic, aiming to inform future workforce support plans.",
+      "category": "practice",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.07.26359182v1?rss=1",
+      "publishedAt": "2026-08-10T00:00:00.000Z",
+      "firstSeen": "2026-08-10T19:25:44.691Z",
+      "curatedScore": 70,
+      "curatedReason": "这次疫情让我们看到，像马拉维这样资源有限地区的 11 位前线物理治疗师，在疫情期间面临巨大压力，急需完善的心理支持和物资保障。别再把这些定性研究当成可有可无的，它们能直接告诉我们如何改进未来的紧急响应计划。",
+      "titleZh": "COVID-19 疫情期间马拉维南部两家三级医院前线物理治疗师的经历：一项现象学定性研究",
+      "summaryZh": "一项现象学定性研究调查了 COVID-19 疫情期间马拉维南部两家三级医院的 11 名前线物理治疗师的经历，旨在为未来的劳动力支持计划提供信息。",
+      "curatedReasonEn": "The pandemic highlighted that 11 frontline physiotherapists in resource-limited settings like Malawi faced immense pressure and urgently needed better psychological support and material resources. Stop dismissing these qualitative studies; they directly inform how we can improve future emergency response plans.",
+      "limitation": "这是一项定性研究，仅在马拉维的两个医院采访了 11 名物理治疗师，结果不具有普遍性，但提供了深入的个体经验。",
+      "limitationEn": "This qualitative study interviewed only 11 physiotherapists in two Malawian hospitals, so the findings are not generalizable but offer in-depth individual experiences.",
+      "tags": [
+        "research",
+        "workforce"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1786382006355-0",
       "title": "Applying the International Classification of Functioning, Disability and Health to Classify Upper Limb Outcome Measures in Stroke Rehabilitation: A Construct-Driven Perspective.",
@@ -1899,49 +1989,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1785407737656-0",
-      "title": "Hydrodilatation for adhesive capsulitis: a systematic review exploring efficacy and optimal technique.",
-      "summary": "This systematic review and meta-analysis of 103 studies (9951 patients, 44 RCTs) found that hydrodilatation for adhesive capsulitis provides superior short-term pain relief over corticosteroid injection or placebo, but long-term outcomes (12-24 weeks) are comparable to physical therapy.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42527106/",
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "firstSeen": "2026-07-30T10:35:37.656Z",
-      "curatedScore": 85,
-      "curatedReason": "针对粘连性囊炎，水扩张术在高强度疼痛期短期疗效优于单独类固醇注射或安慰剂，但在长期（12-24 周）与物理治疗效果相当。在考虑使用水扩张术时，你仍需搭配物理治疗以实现更持久的改善，且容量在 20-50 mL 范围内的文献支持较多。",
-      "titleZh": "粘连性囊炎的水扩张术：系统综述探讨疗效与最佳技术",
-      "summaryZh": "这项纳入 103 项研究（9951 例患者，44 项 RCT）的系统综述和荟萃分析发现，水扩张术治疗粘连性囊炎短期镇痛效果优于单独类固醇注射或安慰剂，但长期（12-24 周）疗效与物理治疗相似。",
-      "curatedReasonEn": "For adhesive capsulitis, hydrodilatation offers short-term superior pain relief during acute phases compared to corticosteroid injections alone or placebo, but its long-term efficacy (12-24 weeks) is comparable to physical therapy. When considering hydrodilatation, you should still integrate physical therapy for sustained improvements, with volumes of 20-50 mL having the most evidence.",
-      "limitation": "尽管纳入大量研究，但研究异质性高，且大部分证据等级为中低，可能影响结果的普遍性。",
-      "limitationEn": "Despite a large number of included studies, high heterogeneity and mostly moderate-to-low quality evidence may limit the generalizability of the findings.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "British journal of sports medicine"
-    },
-    {
-      "id": "news-1784961177423-0",
-      "title": "Spine-related leg pain: Definitions, etiology, clinical presentation, and management.",
-      "summary": "The International Association for the Study of Pain (IASP) has distinguished three categories of spine-related leg pain (SRLP): radiculopathy, radicular pain, and somatic referred pain, addressing inconsistent terminology and treatment variability in lumbar spine disorders.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42497502/",
-      "publishedAt": "2026-07-25T00:00:00.000Z",
-      "firstSeen": "2026-07-25T06:32:57.423Z",
-      "curatedScore": 75,
-      "curatedReason": "国际疼痛学会（IASP）对脊柱相关腿痛（SRLP）的分类更新强调了对根性痛、神经根病和躯体转诊痛的精确区分，这有助于你提升诊断准确性并优化治疗方案。理解这些新定义将直接影响你对腰椎疾病患者的评估和干预决策，避免不精确的“坐骨神经痛”标签。",
-      "titleZh": "脊柱相关腿痛：定义、病因、临床表现与管理",
-      "summaryZh": "国际疼痛学会（IASP）已将脊柱相关腿痛（SRLP）分为三个类别：神经根病、根性痛和躯体转诊痛，旨在解决腰椎疾病中术语不一致和治疗差异大的问题。",
-      "curatedReasonEn": "The updated IASP classification for Spine-Related Leg Pain (SRLP) emphasizes precise differentiation among radicular pain, radiculopathy, and somatic referred pain, which will enhance your diagnostic accuracy and optimize treatment strategies. Understanding these new definitions will directly impact your assessment and intervention decisions for lumbar spine patients, moving beyond imprecise labels like “sciatica.”",
-      "tags": [
-        "news",
-        "spine"
-      ],
-      "journal": "Musculoskeletal science & practice"
     }
   ]
 }
