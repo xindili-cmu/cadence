@@ -1298,6 +1298,14 @@ function DailyMasthead({ edition, zh }) {
                 <span style={{ width: 8, height: 8, borderRadius: 2, background: x.color }} />{x.label} <b style={{ color: '#fff', fontWeight: 600 }}>{x.n}</b>
               </span>
             ))}
+            {/* 快讯 chip — without it the section dots sum to less than 本期 N 篇
+                (SECTION_CAP overflow lands in flashes; 8-11: 21 篇 vs dots 14,
+                readers do the arithmetic) */}
+            {(edition.flashes || []).length > 0 && (
+              <span style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
+                <span style={{ width: 8, height: 8, borderRadius: 2, background: '#8FB0D6', opacity: 0.55 }} />{t('daily.flashes')} <b style={{ color: '#fff', fontWeight: 600 }}>{edition.flashes.length}</b>
+              </span>
+            )}
           </span>
         </div>
       </div>
@@ -1489,7 +1497,17 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   // Lead = highest-scored PRIMARY EVIDENCE (or synthesis). Editorials /
   // commentaries / protocols keep their tier-2/3 spots but can't headline
   // "Only 5 minutes? Read this" (2026-07-08 adversarial-review fix).
-  const leadRaw = ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign)) || ranked[0] || null;
+  // + freshness: published within 30d OF THE EDITION DATE (not "now" — editions
+  // are immutable; a now-relative guard would reshuffle old editions as they
+  // age). 2026-08-11: a scrape backlog put a March policy story at score 85 and
+  // it fronted the edition; stale items keep their tier-2/3 slots, they just
+  // can't be "read this one". Fallback chain never leaves the lead empty.
+  const edMs = Date.parse(edition.date + 'T23:59:59Z') || Date.now();
+  const isFresh = (s) => !s.publishedAt || (edMs - Date.parse(s.publishedAt)) <= 30 * 86400000;
+  const leadRaw = ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign) && isFresh(s))
+    || ranked.find((s) => isFresh(s))
+    || ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign))
+    || ranked[0] || null;
   const leadStory = leadRaw ? L(leadRaw) : null;
   const rest = ranked.filter((s) => s !== leadRaw);
   const tier2 = rest.filter((s) => s.score >= 75).map(L);
@@ -1883,10 +1901,38 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
   );
 }
 
+// Column-width probe. The wide layouts (HotTopics single-row, lead card's
+// SIGNAL gutter) need ≥ ~560px of COLUMN; the viewport breakpoint can't tell —
+// --feed-column caps at 720px but the 3-col grid squeezes the middle to ~440px
+// on smaller desktop windows, where every "desktop" branch collapsed (2026-08-11:
+// theme titles crushed to 2 chars, EN ones invisible; lead why-box a 200px
+// sliver). Measure the column itself and reuse the already-written narrow
+// branches. isMobile stays the router-level switch; this is layout-level.
+const NARROW_COLUMN_PX = 560;
+function useNarrowColumn() {
+  const ref = React.useRef(null);
+  const [narrow, setNarrow] = React.useState(false);
+  React.useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || typeof ResizeObserver === 'undefined') return undefined;
+    const ro = new ResizeObserver((entries) => {
+      const w = entries[0] && entries[0].contentRect ? entries[0].contentRect.width : 0;
+      setNarrow(w > 0 && w < NARROW_COLUMN_PX);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return [ref, narrow];
+}
+
 function FeedApp() {
   // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
   // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
   const isMobile = window.useCdMobile();
+  // Narrow COLUMN (not viewport) — routes HotTopics + lead card to their
+  // stacked variants; see useNarrowColumn above.
+  const [mainRef, narrowCol] = useNarrowColumn();
+  const stacked = isMobile || narrowCol;
 
   // State initialised from hash so bookmarked URLs restore the right view.
   // Real-URL daily permalink (?daily=YYYY-MM-DD) — the crawler-visible twin of
@@ -2184,7 +2230,7 @@ function FeedApp() {
         {!isMobile && <NavRail view={view} onView={setView} category={category}
           onCategory={(c) => { setCategory(c); if (view !== 'curated' && view !== 'all') setView('curated'); }} />}
 
-        <main style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
+        <main ref={mainRef} style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
           {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} sortBy={sortBy} onSort={setSortBy} />}
 
@@ -2222,12 +2268,19 @@ function FeedApp() {
 
           {/* Hot topics — Curated only, unfiltered view. Empty array = hidden. */}
           {!isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && !minScore && (
-            <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} mobile={isMobile} />
+            <HotTopicsStrip topics={window.CD_HOT || []} onPick={scrollToStory} mobile={stacked} />
           )}
 
           {!isSources && !isFeedback && !isDaily && !isAbout && (
-            <div style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
-              background: 'linear-gradient(var(--surface-page) 72%, transparent)' }}>
+            // Solid background + a fixed-height fade BELOW the content (the ::after
+            // strip). The old inline gradient ('72% → transparent') assumed a
+            // single-row bar; once the 2026-08-04 flexWrap fix let the slider drop
+            // to row 2, that row sat in the transparent 28% and scrolled-under
+            // cards showed through it (text-on-text). A solid box can't misjudge
+            // its own height; only the fade is fixed-size. .cd-stickybar-fade is
+            // defined in index.html next to .cd-hscroll.
+            <div className="cd-stickybar-fade" style={{ position: 'sticky', top: 'var(--header-height)', zIndex: 10, padding: '10px 0', margin: '0 0 8px',
+              background: 'var(--surface-page)' }}>
               {/* Top axis = content type. Specialty lives in the left rail on
                   desktop; on mobile it folds into the dropdown beside this bar.
                   .cd-hscroll hides the scrollbar (defined in index.html). */}
@@ -2333,7 +2386,7 @@ function FeedApp() {
                           show their journal, e.g. IJSPT, not the pipeline); raw source as fallback */}
                       <NewsCard
                         variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
-                        mobile={isMobile}
+                        mobile={stacked}
                         category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
                         journalMeta={s.journalMeta} studyDesign={s.studyDesign} tech={s.tech} surfaced={s.surfaced}
                         title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}

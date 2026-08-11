@@ -198,15 +198,21 @@ async function searchExa(query, numResults = 5) {
 // roster domain (bjsm.bmj.com → BMJ). Roster domains with a path part
 // ('academic.oup.com/ptj') also require the path prefix, so other OUP
 // journals don't masquerade as PTJ. Returns the roster name, or null.
+// `domains` = alias list for outlets reachable under several URL families
+// (BMC journals live on both biomedcentral.com and link.springer.com/article/
+// <doi-prefix> — that duality used to be modelled as two same-name roster
+// entries, which double-rendered on the sources wall, 2026-08-11).
 function matchSource(url) {
   try {
     const u = new URL(url);
     const hostname = u.hostname.replace(/^www\./, '');
     for (const s of SOURCES) {
-      const [dom, ...pathParts] = s.domain.split('/');
-      const hostOk = hostname === dom || hostname.endsWith('.' + dom);
-      const pathOk = !pathParts.length || u.pathname.startsWith('/' + pathParts.join('/'));
-      if (hostOk && pathOk) return s.name;
+      for (const cand of [s.domain, ...(s.domains || [])]) {
+        const [dom, ...pathParts] = cand.split('/');
+        const hostOk = hostname === dom || hostname.endsWith('.' + dom);
+        const pathOk = !pathParts.length || u.pathname.startsWith('/' + pathParts.join('/'));
+        if (hostOk && pathOk) return s.name;
+      }
     }
     return null;
   } catch { return null; }
@@ -720,13 +726,68 @@ async function fetchRssFeeds() {
 // ── Direct ingestion: listing-page scrape (AIHOT "网页" source type) ─────────
 // Leg 3, for roster sources with no feed (associations, regulators, zh sites).
 // Poll each `scrape` URL in sources.json, extract <a> links that resolve back
-// to the same roster source, and diff against scrape-ledger.json: only links
-// never seen before are ingested, stamped with DISCOVERY time (AIHOT does the
-// same — 发现时间). First run per source is a silent snapshot, so a freshly
-// added listing page never floods the feed with its backlog.
+// to the same roster source, and diff against scrape-ledger.json.
+//
+// Three invariants (2026-08-11, after the APTA backlog dump: the listing page
+// exposed 36 never-ledgered links in one run, 13 passed curation stamped with
+// discovery time and scored 75–85 — the oldest was a 2025-11 article shown as
+// today's lead):
+//   1. publishedDate comes from the ARTICLE (URL path, then page meta), never
+//      from the clock. An undatable link is ledgered but never fed — we don't
+//      fabricate dates, because everything downstream (curation, ranking,
+//      reader-facing "Aug 11") consumes them as fact.
+//   2. Freshness is judged against the article's own date (SCRAPE_MAX_AGE_DAYS),
+//      not against ledger novelty. "New to the ledger" ≠ "new to the world":
+//      the ledger dedupes, it does not date. A listing redesign exposing old
+//      links can no longer flood the feed.
+//   3. A burst of unseen links from one source (> SCRAPE_BURST_MAX) is treated
+//      as a re-bootstrap snapshot: ledger everything, feed nothing, log loudly.
+//      Steady state here is ~1-2 links/week/source; dozens in one run means the
+//      listing changed shape, not the world. This also catches date-parse bugs
+//      (e.g. a site that prints today's date on every page).
+// First run per source is still a silent snapshot (bootstrap). Note bootstrap
+// is per SOURCE, not per listing URL — adding a second listing URL to an
+// existing source gets no snapshot; invariants 2+3 are what protect that case.
 
 const LEDGER_PATH = path.join(__dirname, '..', 'scrape-ledger.json');
 const LEDGER_TTL_DAYS = 60;
+const SCRAPE_MAX_AGE_DAYS = 14; // same "recent" horizon as PUBMED_LOOKBACK_DAYS
+const SCRAPE_BURST_MAX = 8;     // unseen datable links per source per run
+
+// /2026/05/01/ or /2026-5-1 style segments in the URL path (apta.org and most
+// news CMSes). Returns ISO string or null; never guesses.
+function dateFromUrlPath(url) {
+  try {
+    const m = new URL(url).pathname.match(/\/(20\d{2})[/-](\d{1,2})[/-](\d{1,2})(?=[/-]|\b)/);
+    if (!m) return null;
+    const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    if (isNaN(d) || d.getUTCMonth() !== +m[2] - 1) return null; // rejects /2026/13/40/
+    return d.toISOString();
+  } catch { return null; }
+}
+
+// One extra GET per NEW link only (steady state ~1-2/week/source), looking for
+// article:published_time / datePublished / <time datetime>. Returns ISO or null.
+async function dateFromArticlePage(url) {
+  try {
+    const res = await fetch(url, { headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; CadenceBot/1.0; PT news aggregator)',
+      'Accept': 'text/html,application/xhtml+xml'
+    }, signal: AbortSignal.timeout(12000) });
+    if (!res.ok) return null;
+    const html = (await res.text()).slice(0, 300000);
+    const raw =
+      (html.match(/<meta[^>]+(?:property|name|itemprop)=["'](?:article:published_time|datePublished|og:published_time|publish-date|date)["'][^>]+content=["']([^"']+)["']/i) || [])[1]
+      || (html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name|itemprop)=["'](?:article:published_time|datePublished|og:published_time|publish-date|date)["']/i) || [])[1]
+      || (html.match(/"datePublished"\s*:\s*"([^"]+)"/) || [])[1]
+      || (html.match(/<time[^>]+datetime=["']([^"']+)["']/i) || [])[1];
+    if (!raw) return null;
+    const d = new Date(raw);
+    if (isNaN(d)) return null;
+    if (d.getTime() > Date.now() + 86400000) return null; // future date = bad meta, not a date
+    return d.toISOString();
+  } catch { return null; }
+}
 
 async function fetchScrapes() {
   let ledger = {};
@@ -735,6 +796,13 @@ async function fetchScrapes() {
   let ledgerDirty = false;
 
   for (const s of SOURCES) {
+    if (!(s.scrape || []).length) continue;
+    // Decided once per source, BEFORE any of its listings write ledger keys —
+    // previously computed inside the entry loop, so a source's second listing
+    // URL saw the first one's fresh keys and skipped its own snapshot.
+    const bootstrap = !Object.keys(ledger).some(k => k.startsWith(`${s.name}|`));
+    const candidates = []; // unseen + datable + fresh, across all this source's listings
+    let unseen = 0, undated = 0, stale = 0;
     for (const entry of s.scrape || []) {
       // Entries are either a bare URL string or {url, category} for listing
       // pages that map 1:1 onto a PT vertical (e.g. dxy.cn/sub/5 = 骨科).
@@ -760,24 +828,42 @@ async function fetchScrapes() {
           if (title.length < minLen || abs === listUrl) continue;
           links.set(canonicalUrl(abs), { url: abs, title });
         }
-        const bootstrap = !Object.keys(ledger).some(k => k.startsWith(`${s.name}|`));
-        let fresh = 0;
         for (const [canon, l] of links) {
           const key = `${s.name}|${canon}`;
           if (ledger[key]) continue;
           ledger[key] = new Date().toISOString();
           ledgerDirty = true;
+          unseen++;
           if (bootstrap) continue; // snapshot only — backlog stays out of the feed
-          fresh++;
-          out.push({
+          // Invariant 1: real article date or no feed entry at all.
+          let pub = dateFromUrlPath(l.url);
+          if (!pub) { pub = await dateFromArticlePage(l.url); await sleep(200); }
+          if (!pub) { undated++; continue; }
+          // Invariant 2: freshness against the article's own date.
+          if (Date.now() - new Date(pub).getTime() > SCRAPE_MAX_AGE_DAYS * 86400000) { stale++; continue; }
+          candidates.push({
             title: l.title, url: l.url, text: '', highlights: '',
-            publishedDate: new Date().toISOString(), // discovery time
+            publishedDate: pub,
             score: 0.5, source: s.name, category: presetCat
           });
         }
-        console.log(`   scrape:${s.name} → ${links.size} links, ${bootstrap ? 'bootstrap snapshot' : fresh + ' new'}`);
+        console.log(`   scrape:${s.name} ${listUrl} → ${links.size} links`);
       } catch (e) { console.error(`  scrape ${s.name}: ${e.message}`); }
       await sleep(300);
+    }
+    // Invariant 3: burst = listing changed shape, not the world. Everything is
+    // already ledgered above, so dropped links stay dropped on future runs —
+    // deliberate: a burst needs a human look (the log below), not a retry loop.
+    const burst = candidates.length > SCRAPE_BURST_MAX;
+    if (burst) {
+      console.error(`  ⚠️ scrape:${s.name} burst — ${candidates.length} new datable links in one run (steady state ≈1-2/week); re-bootstrap: ledgered all, fed none`);
+    } else {
+      out.push(...candidates);
+    }
+    if (bootstrap) {
+      console.log(`   scrape:${s.name} → bootstrap snapshot (${unseen} links ledgered)`);
+    } else if (unseen || undated || stale) {
+      console.log(`   scrape:${s.name} summary → ${unseen} unseen · ${undated} undated (skipped) · ${stale} stale >${SCRAPE_MAX_AGE_DAYS}d (skipped) · ${burst ? 0 : candidates.length} fed`);
     }
   }
 
@@ -1813,4 +1899,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

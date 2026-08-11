@@ -15,6 +15,8 @@ const {
   ROSTER_JOURNAL_BY_NAME,
   repairMissingFields,
   isJunkItem,
+  dateFromUrlPath,
+  SCRAPE_BURST_MAX,
 } = require('./news-refresh');
 
 let passed = 0;
@@ -172,6 +174,135 @@ async function run() {
     ok(noName.length === 0,
       `sources.json 里每个 kind=journal 的源都配了 journalName（共 ${SOURCES.filter((s) => s.kind === 'journal').length} 个）`
       + (noName.length ? ` —— 缺：${noName.join(', ')}` : ''));
+
+    // 同名条目 = 信源墙双卡 + matchSource 归属看运气。多 URL 族（BMC 在
+    // biomedcentral 和 link.springer 双住址）用 domains 别名数组表达，不开第二条
+    // （BMC Musculoskelet Disord 曾双条目双卡，2026-08-11 合并）。
+    const dupNames = Object.entries(SOURCES.reduce((m, s) => ((m[s.name] = (m[s.name] || 0) + 1), m), {}))
+      .filter(([, n]) => n > 1).map(([k, n]) => `${k}×${n}`);
+    ok(dupNames.length === 0,
+      `sources.json 无同名条目（共 ${SOURCES.length} 条）` + (dupNames.length ? ` —— ${dupNames.join(', ')}` : ''));
+  }
+
+  // --------------------------------------------------------------------------
+  console.log('\nG. 周报告警：只报直接证据，不从总量推断（2026-08-10 审计）');
+  {
+    // 背景：旧的「入库总量环比下降 → 核对抓取链路」在前 8 期响了 4 次（W26 65→47、
+    // W28 147→143、W29 143→101、W32 112→58），4 次全是误报。W28 那次是 -2.7%——
+    // 这条规则根本没有阈值。周总量是尖峰序列，从它推断故障必然狼来了；而狼来了的
+    // 提示会训练人跳过整个「给本周的提示」段落，等于把周报的行动力清零。
+    //
+    // 下面每条都按本文件的惯例带判别力：把旧规则精确复刻，断言「旧的误报 ∧ 新的沉默」，
+    // 以及「真故障来时新的照样响」。有人把哪条改回按总量判断，右半立刻转红。
+    const { silentSources, sourceShifts, categoryBaseline, dailyCounts } = require('./weekly-brief');
+
+    const DAY = 864e5;
+    const END = Date.parse('2026-08-10T00:00:00+08:00');
+    const at = (daysAgo, extra = {}) => ({ id: `x${Math.random()}`, firstSeen: new Date(END - daysAgo * DAY).toISOString(), ...extra });
+    const legacyTotalAlarm = (curTotal, prevTotal) => curTotal < prevTotal; // 旧规则原样
+
+    // G1. W32 实况：112→58，但逐日 8/8/10/7/13/5/7，没有一天断供。
+    const w32Daily = [8, 8, 10, 7, 13, 5, 7];
+    const w32Items = w32Daily.flatMap((n, i) => Array.from({ length: n }, () => at(7 - i, { source: 'PubMed' })));
+    const zeroDays = dailyCounts(w32Items, END - 7 * DAY, END, 'firstSeen').filter((d) => d.n === 0);
+    ok(legacyTotalAlarm(58, 112) && zeroDays.length === 0,
+      'W32：旧的总量规则会报警 ∧ 新的逐日探针沉默（7 天全有产出，-48% 只是上周三个爆发日的假象）');
+
+    // G2. 静默源要按各源自己的节奏判：PubMed 90 天 54 个产出日、AHPRA 只有 4 天、
+    //     最长间隔 35 天。固定天数阈值在这两者之间无解，只能自校准。
+    const regular = Array.from({ length: 21 }, (_, i) => at(20 + i * 3, { source: '规律源' })); // 每 3 天一次，停了 20 天
+    const batchy = [...Array.from({ length: 12 }, () => at(30, { source: '批量源' })), at(75, { source: '批量源' })]; // 只有 2 个产出日
+    const retired = Array.from({ length: 21 }, (_, i) => at(20 + i * 3, { source: '已下线源' }));
+    const enabled = new Set(['规律源', '批量源']); // 已下线源 不在 sources.json 里
+    const silent = silentSources([...regular, ...batchy, ...retired], END, 'firstSeen', enabled);
+    const names = silent.map((s) => s.source);
+    ok(names.includes('规律源'), '静默探针：规律产出后停摆的源会响');
+    ok(!names.includes('批量源'), '静默探针：天然批量的低频源不响（产出日太少，无节奏可比）');
+    ok(!names.includes('已下线源'), '静默探针：已从 sources.json 摘除的源不响（下线是决定，不是故障）');
+
+    // G3. 2026-07-26 的 Springer 错标（W30 实数）：Sports Medicine 66/127 = 52%，
+    //     上周 23/101 = 23%。旧规则看到同一个数字，处方却是「可补充其他来源平衡」——
+    //     信号对、诊断错。占比阶跃能把它指出来。
+    const springer = sourceShifts({ 'Sports Medicine': 66 }, { 'Sports Medicine': 23 }, 127, 101);
+    ok(springer.some((s) => s.source === 'Sports Medicine' && s.kind === 'surge'),
+      'W30 Springer 错标：占比 23%→52% 被判为结构跳变（旧规则只会说「来源集中」）');
+    ok(sourceShifts({ PubMed: 66 }, { PubMed: 23 }, 127, 101).length === 0,
+      'PubMed 豁免：它是管线不是刊，占比随其他源增减机械浮动，不该触发错标怀疑');
+
+    // G4. 方向薄弱要跟自己比。W25–W32 的每周中位：神经 23、骨科 15.5 vs 儿科 3、心肺 3.5，
+    //     所以跨方向均值线下永远压着小科——旧规则 8 期响 6 次、心肺一家占 5 次。
+    const cats = ['neurological', 'pediatric'];
+    const hist = [];
+    for (let w = 1; w <= 8; w++) {
+      const base = 1 + (w - 1) * 7;
+      for (let i = 0; i < 23; i++) hist.push(at(base, { category: 'neurological' }));
+      for (let i = 0; i < 3; i++) hist.push(at(base, { category: 'pediatric' }));
+    }
+    const baseline = categoryBaseline(hist, END, 'firstSeen', cats);
+    const thisWeek = { neurological: 14, pediatric: 2 };
+    const legacyMean = (14 + 2) / 2;
+    const legacyWeak = cats.filter((c) => thisWeek[c] < Math.max(2, legacyMean * 0.5));
+    const selfWeak = cats.filter((c) => baseline[c] >= 4 && thisWeek[c] < baseline[c] * 0.5);
+    ok(legacyWeak.includes('pediatric') && !selfWeak.includes('pediatric'),
+      '儿科 2 篇（自身中位 3）：旧的跨方向均值判它薄弱 ∧ 新的自身基线放行（它本来就小，不是本周反常）');
+    ok(categoryBaseline(hist, END, 'firstSeen', cats).neurological === 23,
+      '自身基线取该方向前 8 周中位（神经 = 23）');
+  }
+
+  // --------------------------------------------------------------------------
+  console.log('\nH. 抓取腿日期不变量：publishedAt 来自原文，不来自时钟（2026-08-11 APTA 倒灌）');
+  {
+    // 背景：抓取腿曾用 publishedDate = 发现时间。8-10 APTA 列表页暴露 36 条从未
+    // 入账的链接，13 条带着「今天」的伪日期过审、拿 75–85 分——最老的是 2025-11
+    // 的旧文，被当成当日头条。根因是把「账本没见过」当成了「世界里是新的」。
+    // 修复后：URL 路径 → 页面 meta，两者都拿不到就不进 feed，绝不编造。
+
+    // H1（零延迟）：解析器契约 + 判别力。旧行为对任何 URL 都盖今天的章。
+    ok(dateFromUrlPath('https://www.apta.org/article/2026/05/01/apta-opposes-x') === '2026-05-01T00:00:00.000Z',
+      'URL 路径里的 /2026/05/01/ 解析为真实日期');
+    ok(dateFromUrlPath('https://www.apta.org/article/some-dateless-slug') === null,
+      '无日期 URL 返回 null——宁缺毋造，undatable 的链接只入账不进 feed');
+    ok(dateFromUrlPath('https://x.org/2026/13/40/a') === null, '假日期段（13 月）不解析');
+    const legacyStamp = () => new Date().toISOString(); // 旧行为原样：发现即日期
+    ok(legacyStamp().slice(0, 10) !== '2026-05-01'
+      && dateFromUrlPath('https://www.apta.org/article/2026/05/01/x').slice(0, 10) === '2026-05-01',
+      '同一条 2026/05 旧文：旧的盖今天的章 ∧ 新的读出它自己的日期');
+
+    // H2（产物，挂 SKIP_ARTIFACT_ASSERTS——同 F 段的理由与拆法）：单元断言证明
+    // 解析器是对的，证不了「解析器在生产里被用了」。2026-08-02 空 journal 的教训
+    // 同款：回退/没上线只有产物看得出来。
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else if (!fs.existsSync(path.join(__dirname, '..', 'news.json'))) {
+      console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
+    } else {
+      const items = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8')).items || [];
+      const roster = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'sources.json'), 'utf8'));
+      const scrapeSrc = new Set(roster.filter((s) => (s.scrape || []).length).map((s) => s.name));
+      const dayOf = (s) => (s || '').slice(0, 10);
+      // 伪造签名 = publishedAt 与 firstSeen 同日，而 sourceUrl 自带的日期揭穿它。
+      // （只有 URL 能离线证伪；页面 meta 才能证伪的那部分归 fix-scrape-dates.js。）
+      const lied = items.filter((i) => scrapeSrc.has(i.source) && i.publishedAt && i.firstSeen
+        && dayOf(i.publishedAt) === dayOf(i.firstSeen)
+        && (() => { const u = dateFromUrlPath(i.sourceUrl || ''); return u && Math.abs(new Date(u) - new Date(i.publishedAt)) > 864e5; })());
+      const who = [...new Set(lied.map((i) => i.source))].slice(0, 4).join(', ');
+      ok(lied.length === 0,
+        `news.json 里没有「URL 日期揭穿 publishedAt=发现日」的抓取条目`
+        + (lied.length ? ` —— ${lied.length} 条（${who}）：抓取腿是不是又在盖章了？跑 fix-scrape-dates.js 修数据` : ''));
+      // 同日伪造洪峰：诚实的当日爆发（publishedAt 各不相同）不在此列，
+      // 所以只数 publishedAt==firstSeen 的同源同日簇。事故当天 APTA|8-10 = 13。
+      const clusters = {};
+      items.forEach((i) => {
+        if (!scrapeSrc.has(i.source) || !i.publishedAt || !i.firstSeen) return;
+        if (dayOf(i.publishedAt) !== dayOf(i.firstSeen)) return;
+        const k = `${i.source}|${dayOf(i.firstSeen)}`;
+        clusters[k] = (clusters[k] || 0) + 1;
+      });
+      const floods = Object.entries(clusters).filter(([, n]) => n > SCRAPE_BURST_MAX);
+      ok(floods.length === 0,
+        `没有单源单日 >${SCRAPE_BURST_MAX} 条的「发现即日期」簇`
+        + (floods.length ? ` —— ${floods.map(([k, n]) => `${k}×${n}`).join(', ')}` : ''));
+    }
   }
 
   console.log(`\n✅ all ${passed} assertions passed`);

@@ -112,6 +112,12 @@
   /* Mobile horizontal-scroll strips (category tabs): scrollable, scrollbar hidden */
   .cd-hscroll { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .cd-hscroll::-webkit-scrollbar { display: none; }
+  /* Sticky filter bar: solid box + fixed-height fade hanging BELOW it. Replaces
+     the old inline 'gradient → transparent' background, which assumed a 1-row
+     bar — when the slider wraps to row 2 it sat in the transparent zone and
+     cards scrolled through it (2026-08-11). */
+  .cd-stickybar-fade::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 10px;
+    background: linear-gradient(var(--surface-page), transparent); pointer-events: none; }
 </style>
 </head>
 <body>

@@ -188,9 +188,15 @@ function loadCorpus() {
       arr.forEach(add);
     }
   }
+  // Enabled-source roster: a source missing here was retired on purpose, so its
+  // silence is a decision, not a breakage (see silentSources).
+  const srcCfg = readJSON(path.join(ROOT, 'sources.json'));
+  const srcArr = Array.isArray(srcCfg) ? srcCfg : (srcCfg && (srcCfg.sources || Object.values(srcCfg).find(Array.isArray))) || [];
+  const enabledSources = new Set(srcArr.map((s) => s && s.name).filter(Boolean));
+
   return {
     items: [...byId.values()],
-    hotTopics: news.hotTopics || [],
+    enabledSources,
     meta: news.meta || {},
     categories: (news.meta && news.meta.categories) || Object.keys(CATEGORY_LABELS),
     journalById,
@@ -226,12 +232,11 @@ function tierOf(score) {
   return 'low';
 }
 function statsFor(items) {
-  const s = { total: items.length, tier: { strong: 0, worth: 0, ref: 0, low: 0 }, category: {}, source: {}, studyDesign: {} };
+  const s = { total: items.length, tier: { strong: 0, worth: 0, ref: 0, low: 0 }, category: {}, source: {} };
   for (const it of items) {
     s.tier[tierOf(it.curatedScore)]++;
     if (it.category) s.category[it.category] = (s.category[it.category] || 0) + 1;
     if (it.source) s.source[it.source] = (s.source[it.source] || 0) + 1;
-    if (it.studyDesign) s.studyDesign[it.studyDesign] = (s.studyDesign[it.studyDesign] || 0) + 1;
   }
   return s;
 }
@@ -239,6 +244,147 @@ function topN(obj, n) {
   return Object.entries(obj)
     .sort((a, b) => b[1] - a[1])
     .slice(0, n);
+}
+
+// ----------------------------------------------------------------------------
+// Pipeline-health probes (2026-08-10 audit)
+// ----------------------------------------------------------------------------
+// These replaced the old `总量环比下降 → 核对抓取链路` tip, which fired in 4 of
+// the first 8 issues (W26 65→47, W28 147→143, W29 143→101, W32 112→58) and was
+// wrong all 4 times. W28 fired on -2.7% — the rule had NO threshold. W32 fired
+// on -48% while every single day of W32 ingested 5–13 items from 4–7 distinct
+// sources; the drop was an artifact of W31's three burst days (27/21/27).
+//
+// The lesson generalises: a weekly TOTAL is a spiky series, so inferring
+// breakage from it is guaranteed to cry wolf, and a tip that cries wolf trains
+// you to skip the whole 提示 section. A broken crawler, by contrast, leaves a
+// direct fingerprint — a day with zero ingestion, or a source that was
+// reliably producing and then went silent. Alarm on the fingerprint, never on
+// the aggregate. Both probes below are false-positive-free by construction:
+// they describe the failure rather than infer it.
+
+/** Per-day ingest counts across [start,end) on the given axis (Beijing days). */
+function dailyCounts(items, start, end, axis) {
+  const out = [];
+  for (let d = start; d < end; d += DAY) out.push({ day: d, n: bucket(items, d, d + DAY, axis).length });
+  return out;
+}
+function median(ns) {
+  if (!ns.length) return 0;
+  const s = [...ns].sort((a, b) => a - b);
+  const m = s.length >> 1;
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
+/** Sources that were producing on a regular rhythm and then went quiet — the
+ *  fingerprint of a crawler that broke silently.
+ *
+ *  Calibrated against each source's OWN cadence, because a fixed "N days quiet"
+ *  threshold cannot work here: over the trailing 90 days the real sources range
+ *  from PubMed (54 producing days, max gap 2) to AHPRA (4 days, max gap 35).
+ *  A rule strict enough to stay quiet for AHPRA would never notice PubMed dying,
+ *  and a rule loose enough to catch PubMed would flag every low-cadence journal
+ *  every single week — which is what the first cut of this function did (it
+ *  fired 2–3 times per week on AHPRA / JOSPT / Gait & Posture, i.e. exactly the
+ *  alarm fatigue it was written to remove).
+ *
+ *  Three gates, each killing one false-positive class:
+ *   - `enabled`: the source is still in sources.json. Modern Healthcare had 23
+ *     items then went silent for 39 days — because it was deliberately dropped
+ *     (STRATEGY-US §7 keeps it for a future intel lane only). A removal is not
+ *     a breakage.
+ *   - `minDays`: enough distinct producing days for "its max gap" to mean
+ *     anything. JOSPT's 13 items arrived on 3 days — batchy by nature, nothing
+ *     to calibrate against.
+ *   - `gapFactor`: current silence must exceed twice the source's own worst
+ *     historical gap. Archives of PM&R (33 items / 21 days / max gap 6) going
+ *     17 days quiet clears this; BJSM at 11 days against a 6-day max does not.
+ */
+function silentSources(items, end, axis, enabled, { lookbackDays = 90, minDays = 8, gapFactor = 2, minQuiet = 10 } = {}) {
+  const byS = new Map();
+  for (const it of bucket(items, end - lookbackDays * DAY, end, axis)) {
+    const t = axisMs(it, axis);
+    if (!it.source || t === null) continue;
+    if (!byS.has(it.source)) byS.set(it.source, new Set());
+    byS.get(it.source).add(bjMidnight(t));
+  }
+  const out = [];
+  for (const [source, daySet] of byS) {
+    if (enabled && enabled.size && !enabled.has(source)) continue;
+    const days = [...daySet].sort((a, b) => a - b);
+    if (days.length < minDays) continue;
+    let maxGap = 0;
+    for (let i = 1; i < days.length; i++) maxGap = Math.max(maxGap, Math.round((days[i] - days[i - 1]) / DAY));
+    const quiet = Math.round((end - days[days.length - 1]) / DAY);
+    if (quiet >= minQuiet && quiet > maxGap * gapFactor) out.push({ source, quiet, maxGap, days: days.length, lookbackDays });
+  }
+  return out.sort((a, b) => b.quiet - a.quiet);
+}
+
+// PubMed is a pipeline, not a journal (the same reason DECISIONS-pending exempts
+// it from the per-journal cap). Its share swings mechanically whenever other
+// sources come or go — W25 saw 40%→62% purely because the rest thinned out —
+// and "check whether PubMed's journal attribution is mislabelled" is nonsense
+// advice, since attribution there is per-article.
+const SHIFT_EXEMPT = new Set(['PubMed']);
+
+/** Structural changes in the source mix. This is what would have NAMED the
+ *  2026-07-26 Springer mislabel (W30: "Sports Medicine" 66 items / 52% of the
+ *  week, up from 23% — every Springer item wrongly attributed to one journal).
+ *  The old rule saw the same number and prescribed "来源集中，可补充其他来源平衡"
+ *  — right signal, wrong diagnosis, because a share ranking cannot tell
+ *  "we over-collected from X" apart from "X's name is now on everything". A
+ *  step change in share can, and it also catches the repair (W31: the label
+ *  vanishes, BMC* appear) instead of silently returning to normal. */
+function sourceShifts(curSrc, prevSrc, curTotal, prevTotal, { minN = 5, goneN = 8, jump = 0.15, exclude = SHIFT_EXEMPT } = {}) {
+  const out = [];
+  for (const s of new Set([...Object.keys(curSrc), ...Object.keys(prevSrc)])) {
+    if (exclude.has(s)) continue;
+    const c = curSrc[s] || 0;
+    const p = prevSrc[s] || 0;
+    const cShare = curTotal ? c / curTotal : 0;
+    const pShare = prevTotal ? p / prevTotal : 0;
+    if (c >= minN && p === 0) out.push({ source: s, kind: 'new', c, p, cShare, pShare });
+    else if (p >= goneN && c === 0) out.push({ source: s, kind: 'gone', c, p, cShare, pShare });
+    else if (c >= minN && cShare - pShare >= jump) out.push({ source: s, kind: 'surge', c, p, cShare, pShare });
+  }
+  return out.sort((a, b) => b.c - a.c || b.p - a.p);
+}
+
+/** Each category's own trailing weekly median, ending at `end` (exclusive) so a
+ *  week is never part of its own baseline.
+ *
+ *  This replaced the old 薄弱 rule, which compared each category against the
+ *  MEAN ACROSS CATEGORIES that week. That rule fired in 6 of the first 8 issues
+ *  and named 心肺 5 times, 儿科/老年/手法 4 times each — because it was not
+ *  measuring news at all, it was measuring specialty size. Over W25–W32 the
+ *  per-week medians are 神经 23 and 骨科 15.5 against 儿科 3 and 心肺 3.5, so the
+ *  small specialties sit under any cross-category mean permanently, and a
+ *  permanently-lit warning carries no information.
+ *
+ *  Against its own median, W32's 儿科 2 (median 3) is an ordinary week and stays
+ *  silent, while W28's 行业/实践 1 (median 13) stands out — which is the only
+ *  kind of thinness anyone can act on. `minMedian` keeps categories whose normal
+ *  week is 2–3 items from tripping on ±1 noise, and `minWeeks` refuses to judge
+ *  before there is enough history. */
+function categoryBaseline(items, end, axis, cats, { weeks = 8, minWeeks = 4 } = {}) {
+  // Only weeks in which the pipeline actually produced something count. Before
+  // ~2026-06-11 the corpus is simply empty, and letting those weeks in as zeros
+  // drags every median toward 0, which silently disables the rule: a first cut
+  // of this function padded with zeros and never flagged anything. With the
+  // padding removed, W29's 行业/实践 (7 vs a median of 16) trips correctly.
+  // Weeks that still lack `minWeeks` of real history get NO baseline and are
+  // reported as `—` rather than judged — W28, four weeks after launch, is one.
+  const live = [];
+  for (let i = 1; i <= weeks; i++) {
+    const a = end - i * 7 * DAY;
+    const wk = bucket(items, a, a + 7 * DAY, axis);
+    if (wk.length) live.push(wk);
+  }
+  const out = {};
+  if (live.length < minWeeks) return out;
+  for (const c of cats) out[c] = median(live.map((wk) => wk.filter((it) => it.category === c).length));
+  return out;
 }
 
 // ----------------------------------------------------------------------------
@@ -392,7 +538,7 @@ function catLabel(c) {
 }
 
 function render(ctx) {
-  const { win, iso, cur, prev, curItems, hotTopics, categories, journalById, gsc, axis, curCov, prevCov, incomplete } = ctx;
+  const { win, iso, cur, prev, curItems, allItems, enabledSources, categories, journalById, gsc, axis, curCov, prevCov, incomplete } = ctx;
   const L = [];
   const range = `${fmtMD(win.coveredStart)}–${fmtMD(win.coveredEnd - DAY)}`;
   const tag = `${iso.year}-W${String(iso.week).padStart(2, '0')}`;
@@ -408,14 +554,34 @@ function render(ctx) {
 
   // Relative balance: weak = below half the per-direction mean; balanced needs
   // a tight min/max spread AND no weak direction. (Absolute "≤1" was too low.)
-  const meanC = categories.length ? cur.total / categories.length : 0;
-  const weakThresh = Math.max(2, meanC * 0.5);
-  const weak = categories.filter((c) => (cur.category[c] || 0) < weakThresh);
+  // 薄弱 = below HALF THIS CATEGORY'S OWN trailing median (see categoryBaseline
+  // for why the old cross-category mean was measuring specialty size instead).
+  const baseline = categoryBaseline(allItems, win.coveredStart, axis, categories);
+  const MIN_MEDIAN = 4;
+  const weak = categories.filter((c) => {
+    const med = baseline[c];
+    return med != null && med >= MIN_MEDIAN && (cur.category[c] || 0) < med * 0.5;
+  });
   const present = categories.map((c) => cur.category[c] || 0);
   const maxC = Math.max(1, ...present);
   const minC = Math.min(...present);
   const balanced = weak.length === 0 && minC / maxC >= 0.5;
   const concentrated = topN(cur.category, 2).filter(([, n]) => n > 0).map(([c]) => catLabel(c));
+
+  // Pipeline-health probes. Daily/silence detection is only meaningful on the
+  // firstSeen axis (publishedAt days are the world's publishing calendar, not
+  // ours) and on a finished week (a partial week trivially has "zero days").
+  const probeOk = axis === 'firstSeen' && !incomplete;
+  const daily = probeOk ? dailyCounts(curItems, win.coveredStart, win.coveredEnd, axis) : [];
+  const prevDaily = probeOk ? dailyCounts(allItems, win.prevStart, win.prevEnd, axis) : [];
+  const zeroDays = daily.filter((d) => d.n === 0);
+  const silent = probeOk ? silentSources(allItems, win.coveredEnd, axis, enabledSources) : [];
+  const shifts = sourceShifts(cur.source, prev.source, cur.total, prev.total);
+  // Rate, not count: the strong-signal COUNT rides on weekly volume, which is
+  // spiky (W31 112 → W32 58 on three burst days). The share is what actually
+  // says whether curation quality moved — W32's 15/58 = 25.9% vs W31's
+  // 14/112 = 12.5% is a doubling that the count row alone reads as "+1".
+  const strongPct = (s) => (s.total ? s.tier.strong / s.total : 0);
 
   L.push(`# 步频周报 · 策略复盘`);
   L.push(``);
@@ -448,7 +614,7 @@ function render(ctx) {
     `本周${verb} **${cur.total}** 篇${wowClause}，其中强信号 **${cur.tier.strong}** 篇、值得读 ${
       cur.tier.worth
     } 篇；覆盖 ${Object.keys(cur.category).length} 个方向，${
-      balanced ? '分布较均衡' : `集中在 ${concentrated.join('、') || '—'}，薄弱在 ${weak.map(catLabel).join('、') || '—'}`
+      weak.length ? `集中在 ${concentrated.join('、') || '—'}，${weak.map(catLabel).join('、')} 低于自身常态` : balanced ? '分布较均衡' : `集中在 ${concentrated.join('、') || '—'}`
     }。`
   );
   L.push(``);
@@ -460,9 +626,23 @@ function render(ctx) {
   L.push(`| --- | ---: | ---: | ---: |`);
   L.push(`| ${verb}总量 | ${cur.total} | ${prev.total} | ${delta(cur.total, prev.total, showPct)} |`);
   L.push(`| 强信号 ≥85 | ${cur.tier.strong} | ${prev.tier.strong} | ${delta(cur.tier.strong, prev.tier.strong, showPct)} |`);
+  const sp = strongPct(cur);
+  const spPrev = strongPct(prev);
+  L.push(
+    `| 强信号占比 | ${pctOf(sp)} | ${pctOf(spPrev)} | ${(sp - spPrev >= 0 ? '+' : '') + ((sp - spPrev) * 100).toFixed(1)}pp |`
+  );
   L.push(`| 值得读 75–84 | ${cur.tier.worth} | ${prev.tier.worth} | ${delta(cur.tier.worth, prev.tier.worth, showPct)} |`);
   L.push(`| 参考 65–74 | ${cur.tier.ref} | ${prev.tier.ref} | ${delta(cur.tier.ref, prev.tier.ref, showPct)} |`);
   L.push(``);
+  // Show the daily series, not just the total. A week's total hides whether a
+  // decline is "every day a bit thinner" (worth a look) or "three burst days
+  // last week" (nothing happened) — the exact confusion that made the old
+  // 总量 alarm useless. With the series printed, the reader can see it.
+  if (probeOk && daily.length) {
+    const med = median(daily.map((d) => d.n));
+    const medPrev = median(prevDaily.map((d) => d.n));
+    L.push(`逐日入库：${daily.map((d) => d.n).join(' · ')} —— 中位 ${med}／天（上周 ${medPrev}）`);
+  }
   // Note precedence: an unfinished week is partial data (worst case); else the
   // publishedAt baseline is contaminated by curation-lag / launch backfill; a
   // finished firstSeen week is the only clean case (no note — see comment above:
@@ -474,36 +654,54 @@ function render(ctx) {
   // 3) 方向覆盖
   L.push(`## 方向覆盖`);
   L.push(``);
-  L.push(`| 方向 | 本周 | 上周 | 环比 |`);
-  L.push(`| --- | ---: | ---: | ---: |`);
+  L.push(`| 方向 | 本周 | 上周 | 自身中位 | 环比 |`);
+  L.push(`| --- | ---: | ---: | ---: | ---: |`);
   for (const c of categories) {
     const n = cur.category[c] || 0;
     const pn = prev.category[c] || 0;
+    const med = baseline[c];
     const flag = weak.includes(c) ? ' ⚠️' : '';
-    L.push(`| ${catLabel(c)}${flag} | ${n} | ${pn} | ${delta(n, pn)} |`);
+    L.push(`| ${catLabel(c)}${flag} | ${n} | ${pn} | ${med == null ? '—' : med} | ${delta(n, pn)} |`);
   }
   L.push(``);
-  if (weak.length) L.push(`⚠️ = 低于本周方向均量的一半（相对薄弱，阈值 ${weakThresh.toFixed(1)} 篇），可作为补稿方向。`);
+  L.push(`「自身中位」= 该方向前 8 周的每周中位数。**各方向只跟自己比** —— 儿科的常态是每周 2–3 篇、神经是 20+，拿它们互比只会得出「儿科永远薄弱」这种改不动的结论。`);
+  if (weak.length) L.push(`⚠️ = 低于自身中位的一半，即这个方向本周确实反常（而非它本来就小）。`);
   L.push(``);
 
   // 4) 来源构成
   L.push(`## 来源构成（本周 Top）`);
   L.push(``);
   const srcs = topN(cur.source, 8);
-  if (srcs.length) for (const [s, n] of srcs) L.push(`- ${s} · ${n}`);
-  else L.push(`- 本周无产出`);
-  L.push(``);
-
-  // 5) 研究设计
-  const sds = topN(cur.studyDesign, 6);
-  if (sds.length) {
-    L.push(`## 研究设计分布`);
+  if (srcs.length) {
+    L.push(`| 来源 | 本周 | 占比 | 上周 | 环比 |`);
+    L.push(`| --- | ---: | ---: | ---: | ---: |`);
+    for (const [s, n] of srcs) {
+      const p = prev.source[s] || 0;
+      L.push(`| ${s} | ${n} | ${pctOf(cur.total ? n / cur.total : 0)} | ${p} | ${delta(n, p)} |`);
+    }
     L.push(``);
-    for (const [s, n] of sds) L.push(`- ${s} · ${n}`);
+    // Structure > ranking. See sourceShifts() for why (the W30 Springer mislabel).
+    if (shifts.length) {
+      const KIND = { new: '新出现', gone: '消失', surge: '占比跳升' };
+      L.push(`**结构变化**`);
+      L.push(``);
+      for (const sh of shifts.slice(0, 5)) {
+        const detail =
+          sh.kind === 'surge'
+            ? `${pctOf(sh.pShare)} → ${pctOf(sh.cShare)}（${sh.p} → ${sh.c} 篇）`
+            : `${sh.p} → ${sh.c} 篇`;
+        L.push(`- ${KIND[sh.kind]}：**${sh.source}** ${detail}`);
+      }
+      L.push(``);
+      L.push(`> 单源占比跳升 / 突然消失，先怀疑**归属标注**（同一出版商被错标成同一刊名），再怀疑抓取量 —— 2026-07-26 的 Springer 错标就是前者。`);
+      L.push(``);
+    }
+  } else {
+    L.push(`- 本周无产出`);
     L.push(``);
   }
 
-  // 6) 本周最高信号
+  // 5) 本周最高信号
   L.push(`## 本周最高信号 Top 5`);
   L.push(``);
   const top = [...curItems].sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, 5);
@@ -520,18 +718,12 @@ function render(ctx) {
   }
   L.push(``);
 
-  // 7) 当前热点 — explicitly a generation-time snapshot, NOT week-filtered
-  if (hotTopics && hotTopics.length) {
-    L.push(`## 当前热点（生成时快照，非本周筛选）`);
-    L.push(``);
-    for (const h of hotTopics.slice(0, 5)) {
-      const title = decodeEntities(h.title);
-      L.push(`- ${title}${h.sourceCount ? ` · ${h.sourceCount} 源` : ''}${h.sourceUrl ? ` — [链接](${h.sourceUrl})` : ''}`);
-    }
-    L.push(``);
-  }
+  // 「当前热点」板块删于 2026-08-10 审计：它的标题自己就承认是「生成时快照，非本周
+  // 筛选」—— 一份周报里放一段与本周正交的数据，读者无法用它做任何时间相关的判断。
+  // 8 期里跨周重复可见（Decision support 在 W25+W26、Patient Engagement 在
+  // W28+W29、Cost-effectiveness 在 W30+W31），而网站已有热点栏目承担这个信息。
 
-  // 8) GSC
+  // 6) GSC
   L.push(`## 搜索表现（GSC · incadencept.com）`);
   L.push(``);
   if (gsc.skipped) {
@@ -568,17 +760,33 @@ function render(ctx) {
   L.push(`## 给本周的提示`);
   L.push(``);
   const tips = [];
-  if (weak.length) tips.push(`补稿方向：${weak.map(catLabel).join('、')}（低于方向均量一半）。`);
-  // All count-DECLINE alarms are gated to the firstSeen axis. On publishedAt the
-  // drop may be pure curation-lag / backfill noise, so never auto-alarm there.
-  if (showPct && cur.tier.strong < prev.tier.strong)
-    tips.push(`强信号环比下降（${prev.tier.strong}→${cur.tier.strong}），关注高分文献入库节奏。`);
-  if (showPct && cur.total < prev.total)
-    tips.push(`入库总量环比下降（${prev.total}→${cur.total}），核对抓取链路是否有漏。`);
-  const topSrc = topN(cur.source, 1)[0];
-  if (topSrc && cur.total && topSrc[1] / cur.total >= 0.5)
-    tips.push(`来源集中：${topSrc[0]} 占 ${Math.round((topSrc[1] / cur.total) * 100)}%，可补充其他来源平衡。`);
-  if (!tips.length) tips.push(`本周产出与覆盖均衡，保持节奏即可。`);
+
+  // — 管线：只报直接证据，绝不从总量推断（见 statsFor 上方那段注释）。
+  if (zeroDays.length)
+    tips.push(
+      `**管线**：本周有 ${zeroDays.length} 天零入库（${zeroDays.map((d) => fmtMD(d.day)).join('、')}）—— 查这几天 news-refresh 的 Actions run 是否失败。`
+    );
+  for (const s of silent.slice(0, 3))
+    tips.push(
+      `**管线**：来源 **${s.source}** 已静默 ${s.quiet} 天，而它近 ${s.lookbackDays} 天在 ${s.days} 个日子有产出、最长间隔仅 ${s.maxGap} 天 —— 抓取可能已失效，核对该源 feed。`
+    );
+
+  // — 来源结构：跳变先怀疑标注，再怀疑抓取量。
+  for (const sh of shifts.slice(0, 2)) {
+    if (sh.kind === 'surge')
+      tips.push(`**来源**：${sh.source} 占比 ${pctOf(sh.pShare)}→${pctOf(sh.cShare)} —— 核对该源的期刊归属是否错标（对照 2026-07-26 Springer）。`);
+    else if (sh.kind === 'gone') tips.push(`**来源**：${sh.source} 本周 0 篇（上周 ${sh.p}）—— 确认是改名/归属修复，还是抓取断了。`);
+  }
+
+  // — 覆盖：处方指向白名单，不是「补稿」（那是 Cindy 拉不动的杆）。
+  for (const c of weak)
+    tips.push(`**覆盖**：${catLabel(c)} ${cur.category[c] || 0} 篇 vs 自身中位 ${baseline[c]} —— 这个方向本周反常，查是不是喂它的源断了。`);
+
+  // — 质量：用占比不用计数（计数骑在周产量上，而周产量是尖峰序列）。
+  if (showPct && prev.total >= 30 && spPrev - sp >= 0.05)
+    tips.push(`**质量**：强信号占比 ${pctOf(spPrev)}→${pctOf(sp)}（-${((spPrev - sp) * 100).toFixed(1)}pp）—— 看是选源变差还是打分漂移。`);
+
+  if (!tips.length) tips.push(`无异常：管线逐日有产出、来源结构稳定、无方向断供。保持节奏即可。`);
   for (const t of tips) L.push(`- ${t}`);
   L.push(``);
 
@@ -625,7 +833,8 @@ async function main() {
     cur,
     prev,
     curItems,
-    hotTopics: corpus.hotTopics,
+    allItems: corpus.items,
+    enabledSources: corpus.enabledSources,
     categories: corpus.categories,
     journalById: corpus.journalById,
     gsc,
@@ -678,7 +887,15 @@ async function main() {
   console.log(`✓ briefs/weekly/${file} · axis=${axis} · ${cur.total} vs ${prev.total} · gsc=${gsc.skipped ? 'skipped' : gsc.error ? 'error' : 'ok'} · mail=${mail}`);
 }
 
-main().catch((e) => {
-  console.error('weekly-brief failed:', e);
-  process.exit(1);
-});
+// Export the probe functions so pipeline-gates.test.js can assert on them
+// directly (they are pure — no fs, no network), and keep the CLI behaviour when
+// run as a script. Without the require.main guard, requiring this file would
+// generate a brief as a side effect of the test run.
+module.exports = { dailyCounts, median, silentSources, sourceShifts, categoryBaseline, statsFor, SHIFT_EXEMPT };
+
+if (require.main === module) {
+  main().catch((e) => {
+    console.error('weekly-brief failed:', e);
+    process.exit(1);
+  });
+}

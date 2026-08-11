@@ -1,21 +1,22 @@
 {
  "date": "2026-08-11",
- "generatedAt": "2026-08-10T22:05:29.012Z",
+ "generatedAt": "2026-08-11T15:18:05.680Z",
  "windowHours": 26,
- "windowStart": "2026-08-09T21:56:43.617Z",
- "windowEnd": "2026-08-10T22:05:27.377Z",
+ "windowStart": "2026-08-10T13:18:05.319Z",
+ "windowEnd": "2026-08-11T15:18:05.319Z",
  "lead": {
-  "titleZh": "APTA 联手多方推动预授权及 Medicare MPPR 重大改革",
-  "titleEn": "APTA Pushes Major Reforms in Prior Authorization and Medicare MPPR",
-  "paragraphZh": "今日共 21 条信号，有 6 条来自行业与执业方向。其中，APTA 推动预授权改革及废除 Medicare MPPR 的两项举措 curatedScore 最高，均达 85 分，值得重点关注。此外，美国运动医学学会关于力量训练的立场声明也是一个重要信号。",
-  "paragraphEn": "Today's 21 signals include 6 from the industry and practice domain. Notably, two APTA initiatives—pushing for major reforms in prior authorization and the repeal of Medicare MPPR—scored highest at 85 curatedScore, warranting primary attention. Additionally, the American College of Sports Medicine's position stand on resistance training is a significant signal."
+  "titleZh": "腕关节分级本体感觉评估的重测信度",
+  "titleEn": "Test-Retest Reliability of Hierarchical Proprioception Assessment of the Wrist",
+  "paragraphZh": "今日共 8 条信号，覆盖 6 个专科，其中 0 条为多信源报道。",
+  "paragraphEn": "8 signals across 6 specialties today, 0 with multi-source coverage.",
+  "fallback": true
  },
  "stats": {
-  "events": 21,
+  "events": 8,
   "specialties": 6,
   "multiSource": 0,
-  "sources": 6,
-  "topScore": 85
+  "sources": 5,
+  "topScore": 75
  },
  "sections": [
   {
@@ -102,46 +103,6 @@
    "category": "sports",
    "label": "运动康复",
    "items": [
-    {
-     "id": "news-1786395964493-33",
-     "title": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
-     "summary": "The American College of Sports Medicine's position stand provides an overview of reviews on resistance training prescription for muscle function, hypertrophy, and physical performance in healthy adults.",
-     "category": "sports",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/american-college-of-sports-medicine-position-stand-resistance-training-prescription-for-muscle-function-hypertrophy-and-physical-performance-in-healthy-adults-an-overview-of-reviews",
-     "publishedAt": "2026-08-10T21:05:33.998Z",
-     "firstSeen": "2026-08-10T21:06:04.493Z",
-     "curatedScore": 80,
-     "curatedReason": "这份 ACSM 立场声明，作为健康成年人力量训练处方的最新综述，对运动康复和表现训练的临床实践有直接指导意义。你可以根据其中总结的证据来优化患者的训练方案。",
-     "titleZh": "美国运动医学学会立场声明：健康成年人肌肉功能、肥大和体能表现的力量训练处方综述",
-     "summaryZh": "美国运动医学学会的立场声明，概述了健康成年人肌肉功能、肥大和体能表现的力量训练处方综述。",
-     "curatedReasonEn": "This ACSM position stand, as the latest overview of resistance training prescription for healthy adults, offers direct guidance for clinical practice in sports rehabilitation and performance training. You can use the summarized evidence to optimize your patients' training programs.",
-     "tags": [
-      "guideline",
-      "strength-training",
-      "exercise-prescription"
-     ]
-    },
-    {
-     "id": "news-1786395964493-34",
-     "title": "Female, Woman and/or Girl Athlete Injury pRevention (FAIR) Practical Recommendations: International Olympic Committee (IOC) Consensus Meeting Held in Lausanne, Switzerland, 2025",
-     "summary": "The International Olympic Committee (IOC) consensus meeting held in Lausanne, Switzerland, in 2025 issued practical recommendations for Female, Woman and/or Girl Athlete Injury pRevention (FAIR).",
-     "category": "sports",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/patient-care/evidence-based-practice-resources/cpgs/female-woman-andor-girl-athlete-injury-prevention-fair-practical-recommendations-international-olympic-committee-ioc-consensus-meeting-held-in-lausanne-switzerland-2025",
-     "publishedAt": "2026-08-10T21:05:33.998Z",
-     "firstSeen": "2026-08-10T21:06:04.493Z",
-     "curatedScore": 80,
-     "curatedReason": "IOC 共识会议发布的女性运动员损伤预防建议，对你制定女性运动康复和表现训练方案有重要指导价值。请将其纳入你的评估和干预考量。",
-     "titleZh": "女性运动员损伤预防（FAIR）实用建议：2025 年国际奥委会（IOC）瑞士洛桑共识会议",
-     "summaryZh": "2025 年在瑞士洛桑举行的国际奥委会（IOC）共识会议发布了女性运动员损伤预防（FAIR）的实用建议。",
-     "curatedReasonEn": "The IOC consensus meeting's recommendations for female athlete injury prevention provide crucial guidance for developing female sports rehabilitation and performance training programs. Incorporate them into your assessments and interventions.",
-     "tags": [
-      "guideline",
-      "female-athlete",
-      "injury-prevention"
-     ]
-    },
     {
      "id": "news-1786399515901-13",
      "title": "Understanding Anterior Cruciate Ligament Adaptation: Structural, Mechanical, and Healing Considerations",
@@ -230,183 +191,51 @@
    "label": "行业与执业",
    "items": [
     {
-     "id": "news-1786395964492-17",
-     "title": "APTA, Provider and Patient Groups Push Major Reforms to Prior Authorization",
-     "summary": "APTA, in conjunction with other provider and patient organizations, is advocating for substantial reforms to the prior authorization process.",
+     "id": "news-1786399515901-21",
+     "title": "the Exercise Harms Reporting Method (ExHaRM) - BMJ Open",
+     "summary": "This article proposes the Exercise Harms Reporting Method (ExHaRM), offering practical suggestions for improving harms reporting in exercise oncology to enhance transparency and patient safety.",
      "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/03/25/apta-provider-and-patient-groups-push-major-reforms-to-prior-authorization",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.492Z",
-     "curatedScore": 85,
-     "curatedReason": "APTA 联合其他医疗提供方及患者团体推动预授权改革，直接影响 PT 服务的报销效率和患者的可及性。这对你日常执业中的行政负担和收入有重大影响。",
-     "titleZh": "APTA 联手多方推动预授权重大改革",
-     "summaryZh": "APTA 与其他医疗提供者和患者团体联合，推动对预授权流程进行重大改革。",
-     "curatedReasonEn": "APTA, alongside other provider and patient groups, is pushing for prior authorization reforms, directly impacting the efficiency of PT service reimbursement and patient access. This has significant implications for your daily practice's administrative burden and revenue.",
+     "source": "BJSM",
+     "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/12/12/e067998.full.pdf",
+     "publishedAt": "2026-08-03T22:04:07.635Z",
+     "firstSeen": "2026-08-10T22:05:15.901Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇论文提出了《运动损伤报告方法》（ExHaRM），旨在改善肿瘤运动学中的不良事件报告。在你为肿瘤患者设计运动方案时，这提供了一个更规范的伤害报告框架。",
+     "titleZh": "运动损伤报告方法（ExHaRM）",
+     "summaryZh": "本文提出了运动损伤报告方法（ExHaRM），为改善肿瘤运动学中的损伤报告提供了实用建议，以提高透明度和患者安全。",
+     "curatedReasonEn": "This paper introduces the Exercise Harms Reporting Method (ExHaRM), aiming to improve adverse event reporting in exercise oncology. When designing exercise programs for oncology patients, this provides a more standardized framework for harm reporting.",
+     "limitation": "该文章提出了方法学建议，但并未提供该方法在实际应用中的有效性或影响的实证数据。",
+     "limitationEn": "This article proposes methodological suggestions but does not provide empirical data on the effectiveness or impact of the method in practical application.",
      "tags": [
-      "policy",
-      "reimbursement",
-      "regulation"
-     ]
-    },
-    {
-     "id": "news-1786395964492-18",
-     "title": "Coalition Pushes Congress to Repeal MPPR as Part of Medicare Payment Reform",
-     "summary": "A coalition, including APTA, is urging Congress to repeal the Multiple Procedure Payment Reduction (MPPR) as part of broader Medicare payment reform efforts.",
-     "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/03/18/coalition-pushes-congress-to-repeal-mppr-as-part-of-medicare-payment-reform",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.492Z",
-     "curatedScore": 85,
-     "curatedReason": "废除 Medicare MPPR 是 PT 行业长期以来的诉求。这项改革若能成功，将直接提升你 Medicare 服务的报销额度，改善诊所营收。",
-     "titleZh": "联盟推动国会废除 Medicare MPPR 作为支付改革的一部分",
-     "summaryZh": "包括 APTA 在内的联盟正在敦促国会废除多重程序支付减免（MPPR），作为更广泛的 Medicare 支付改革工作的一部分。",
-     "curatedReasonEn": "The repeal of Medicare MPPR is a long-standing demand of the PT industry. If successful, this reform will directly increase your Medicare service reimbursement rates and improve clinic revenue.",
-     "tags": [
-      "policy",
-      "reimbursement",
-      "regulation"
-     ]
-    },
-    {
-     "id": "news-1786395964491-15",
-     "title": "APTA Opposes Education Department's Final Rule Restricting Federal Student Loans",
-     "summary": "APTA opposes the Education Department's final rule on federal student loans, citing potential negative impacts on prospective physical therapy students.",
-     "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/05/01/apta-opposes-education-departments-final-rule-restricting-federal-student-loans",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.491Z",
-     "curatedScore": 80,
-     "curatedReason": "美国教育部关于联邦学生贷款的最终规则可能影响未来 PT/PTA 学生的入学和财务负担。这直接关系到 PT 劳动力供给和教育成本，值得密切关注。",
-     "titleZh": "APTA 反对教育部限制联邦学生贷款的最终规则",
-     "summaryZh": "APTA 反对教育部限制联邦学生贷款的最终规则，指出其可能对未来的物理治疗学生造成负面影响。",
-     "curatedReasonEn": "The Department of Education's final rule on federal student loans could impact enrollment and financial burden for future PT/PTA students. This directly affects the PT workforce supply and education costs, warranting close attention.",
-     "tags": [
-      "policy",
-      "education",
-      "workforce"
-     ]
-    },
-    {
-     "id": "news-1786395964492-16",
-     "title": "APTA Continues Fighting For Federal Student Loan Access for Future PTs",
-     "summary": "APTA continues its advocacy efforts to ensure access to federal student loans for prospective physical therapy students.",
-     "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/04/01/apta-continues-fighting-for-federal-student-loan-access-for-future-pts",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.492Z",
-     "curatedScore": 80,
-     "curatedReason": "APTA 持续为联邦学生贷款可及性发声，这对未来 PT 从业者至关重要。政策直接影响 PT 职业的教育门槛和可负担性，关乎行业人才梯队。",
-     "titleZh": "APTA 持续为未来 PT 的联邦学生贷款可及性而奋斗",
-     "summaryZh": "APTA 持续努力倡导，以确保未来的物理治疗学生能够获得联邦学生贷款。",
-     "curatedReasonEn": "APTA continues to advocate for federal student loan access, which is crucial for future PT practitioners. This policy directly impacts the educational barrier and affordability of the PT profession, affecting the talent pipeline.",
-     "tags": [
-      "policy",
-      "education",
-      "workforce"
-     ]
-    },
-    {
-     "id": "news-1786395964493-27",
-     "title": "Now Available: New Code of Ethics for the Physical Therapy Profession",
-     "summary": "A new Code of Ethics for the Physical Therapy Profession has been released, providing updated ethical guidelines for practitioners.",
-     "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/01/02/new-code-of-ethics-for-the-physical-therapy-profession",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.493Z",
-     "curatedScore": 80,
-     "curatedReason": "物理治疗专业的新版道德准则已发布。了解这些更新，确保你的执业行为符合最新伦理标准，这是所有 PT 的基本要求。",
-     "titleZh": "物理治疗专业新版道德准则现已发布",
-     "summaryZh": "物理治疗专业的新版道德准则已发布，为从业者提供了最新的伦理指导。",
-     "curatedReasonEn": "The new Code of Ethics for the physical therapy profession has been released. Familiarize yourself with these updates to ensure your practice adheres to the latest ethical standards, which is a fundamental requirement for all PTs.",
-     "tags": [
-      "guideline",
+      "news",
       "ethics"
-     ]
+     ],
+     "journal": "British Journal of Sports Medicine"
     },
     {
-     "id": "news-1786395964492-20",
-     "title": "Congress Investigating TRICARE Issues Amid Provider and Patient Disruptions",
-     "summary": "Congress is investigating issues with TRICARE, impacting providers and patients, with APTA advocating for solutions.",
+     "id": "news-1786389944691-1",
+     "title": "Experiences of frontline physiotherapists during the COVID-19 pandemic at two tertiary hospitals in Southern Malawi: A phenomenological qualitative study",
+     "summary": "A phenomenological qualitative study explored the experiences of 11 frontline physiotherapists in two tertiary hospitals in Southern Malawi during the COVID-19 pandemic, aiming to inform future workforce support plans.",
      "category": "practice",
-     "source": "APTA",
-     "sourceUrl": "https://www.apta.org/article/2026/03/05/congress-investigating-tricare-issues-amid-provider-and-patient-disruptions",
-     "publishedAt": "2026-08-10T21:05:33.447Z",
-     "firstSeen": "2026-08-10T21:06:04.492Z",
-     "curatedScore": 75,
-     "curatedReason": "国会正在调查 TRICARE 报销问题，这可能影响为军人及其家属提供服务的 PT 诊所。如果你服务该人群，请关注后续进展。",
-     "titleZh": "国会调查 TRICARE 问题，PTA 争取解决方案",
-     "summaryZh": "国会正在调查 TRICARE 的问题，这些问题影响到提供者和患者，APTA 正在积极倡导解决方案。",
-     "curatedReasonEn": "Congress is investigating TRICARE reimbursement issues, which may affect PT clinics serving military personnel and their families. If you treat this population, monitor future developments.",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.07.26359182v1?rss=1",
+     "publishedAt": "2026-08-10T00:00:00.000Z",
+     "firstSeen": "2026-08-10T19:25:44.691Z",
+     "curatedScore": 70,
+     "curatedReason": "这次疫情让我们看到，像马拉维这样资源有限地区的 11 位前线物理治疗师，在疫情期间面临巨大压力，急需完善的心理支持和物资保障。别再把这些定性研究当成可有可无的，它们能直接告诉我们如何改进未来的紧急响应计划。",
+     "titleZh": "COVID-19 疫情期间马拉维南部两家三级医院前线物理治疗师的经历：一项现象学定性研究",
+     "summaryZh": "一项现象学定性研究调查了 COVID-19 疫情期间马拉维南部两家三级医院的 11 名前线物理治疗师的经历，旨在为未来的劳动力支持计划提供信息。",
+     "curatedReasonEn": "The pandemic highlighted that 11 frontline physiotherapists in resource-limited settings like Malawi faced immense pressure and urgently needed better psychological support and material resources. Stop dismissing these qualitative studies; they directly inform how we can improve future emergency response plans.",
+     "limitation": "这是一项定性研究，仅在马拉维的两个医院采访了 11 名物理治疗师，结果不具有普遍性，但提供了深入的个体经验。",
+     "limitationEn": "This qualitative study interviewed only 11 physiotherapists in two Malawian hospitals, so the findings are not generalizable but offer in-depth individual experiences.",
      "tags": [
-      "policy",
-      "reimbursement",
-      "regulation"
-     ]
+      "research",
+      "workforce"
+     ],
+     "studyDesign": "观察研究"
     }
    ]
   }
  ],
- "flashes": [
-  {
-   "title": "Rural Health Care Workforce Shortages Highlighted in Congressional Hearing",
-   "titleZh": "国会听证会强调乡村医疗劳动力短缺问题",
-   "source": "APTA",
-   "sourceUrl": "https://www.apta.org/article/2026/02/25/rural-health-care-workforce-shortages-highlighted-in-congressional-hearing",
-   "publishedAt": "2026-08-10T21:05:33.447Z",
-   "journal": null
-  },
-  {
-   "title": "CMS Launches Models for Chronic Care Management and Lifestyle Interventions",
-   "titleZh": "CMS 启动慢病管理和生活方式干预新模式",
-   "source": "APTA",
-   "sourceUrl": "https://www.apta.org/article/2026/01/05/cms-launches-models-chronic-care-management-lifestyle-interventions",
-   "publishedAt": "2026-08-10T21:05:33.447Z",
-   "journal": null
-  },
-  {
-   "title": "Government Shutdown Ended: Telehealth Flexibilities Extended Until Jan. 30, 2026",
-   "titleZh": "政府停摆结束：远程医疗灵活性延长至 2026 年 1 月 30 日",
-   "source": "APTA",
-   "sourceUrl": "https://www.apta.org/article/2025/11/17/government-shutdown-ended-telehealth-flexibilities-extended-until-jan-30-2026",
-   "publishedAt": "2026-08-10T21:05:33.447Z",
-   "journal": null
-  },
-  {
-   "title": "the Exercise Harms Reporting Method (ExHaRM) - BMJ Open",
-   "titleZh": "运动损伤报告方法（ExHaRM）",
-   "source": "BJSM",
-   "sourceUrl": "https://bmjopen.bmj.com/content/bmjopen/12/12/e067998.full.pdf",
-   "publishedAt": "2026-08-03T22:04:07.635Z",
-   "journal": "British Journal of Sports Medicine"
-  },
-  {
-   "title": "APTA Invited to Inform Key Congressional Caucus on Medicare Payment Reform",
-   "titleZh": "APTA 获邀向国会核心小组提供 Medicare 支付改革信息",
-   "source": "APTA",
-   "sourceUrl": "https://www.apta.org/article/2026/01/21/apta-invited-to-inform-key-congressional-caucus-on-medicare-payment-reform",
-   "publishedAt": "2026-08-10T21:05:33.447Z",
-   "journal": null
-  },
-  {
-   "title": "Essential Education on Medicare Part B: New Course Free for Members",
-   "titleZh": "Medicare Part B 基础教育：会员免费新课程上线",
-   "source": "APTA",
-   "sourceUrl": "https://www.apta.org/article/2026/01/20/essential-education-on-medicare-part-b-new-course-free-for-members",
-   "publishedAt": "2026-08-10T21:05:33.447Z",
-   "journal": null
-  },
-  {
-   "title": "Experiences of frontline physiotherapists during the COVID-19 pandemic at two tertiary hospitals in Southern Malawi: A phenomenological qualitative study",
-   "titleZh": "COVID-19 疫情期间马拉维南部两家三级医院前线物理治疗师的经历：一项现象学定性研究",
-   "source": "medRxiv",
-   "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.07.26359182v1?rss=1",
-   "publishedAt": "2026-08-10T00:00:00.000Z",
-   "journal": null
-  }
- ]
+ "flashes": []
 }

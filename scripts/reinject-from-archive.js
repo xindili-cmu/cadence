@@ -41,8 +41,10 @@ function matchSource(url) {
     const u = new URL(url);
     const h = u.hostname.replace(/^www\./, '');
     for (const s of SOURCES) {
-      const [dom, ...pp] = s.domain.split('/');
-      if ((h === dom || h.endsWith('.' + dom)) && (!pp.length || u.pathname.startsWith('/' + pp.join('/')))) return s.name;
+      for (const cand of [s.domain, ...(s.domains || [])]) { // domains = alias URL families (see news-refresh matchSource)
+        const [dom, ...pp] = cand.split('/');
+        if ((h === dom || h.endsWith('.' + dom)) && (!pp.length || u.pathname.startsWith('/' + pp.join('/')))) return s.name;
+      }
     }
     return null;
   } catch { return null; }

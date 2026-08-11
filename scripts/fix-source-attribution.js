@@ -64,8 +64,13 @@ const UA = 'CadenceBot/1.0 (+https://incadencept.com; mailto:hello@incadencept.c
 const SOURCES = JSON.parse(fs.readFileSync(path.join(ROOT, 'sources.json'), 'utf8'));
 const SPRINGER_ROSTER = new Map();
 for (const s of SOURCES) {
-  const m = (s.domain || '').match(/^link\.springer\.com\/article\/(10\.\d+\/[a-z]+\d+)$/i);
-  if (m) SPRINGER_ROSTER.set(m[1].toLowerCase(), s);
+  // domain + domains: BMC journals carry their springer DOI form as an alias
+  // now (one roster entry per outlet — the same-name dual entries double-
+  // rendered on the sources wall, merged 2026-08-11).
+  for (const cand of [s.domain, ...(s.domains || [])]) {
+    const m = (cand || '').match(/^link\.springer\.com\/article\/(10\.\d+\/[a-z]+\d+)$/i);
+    if (m) SPRINGER_ROSTER.set(m[1].toLowerCase(), s);
+  }
 }
 if (!SPRINGER_ROSTER.size) {
   console.error('❌ No DOI-pinned Springer entries in sources.json — did the domain fix get reverted?');

@@ -128,7 +128,19 @@ function parseLeadJson(raw) {
   return null;
 }
 
-async function generateLead(dateStr, sections, stats) {
+// Headline pool = fresh items only: published within LEAD_FRESH_DAYS of the
+// edition. 2026-08-11: a scrape backlog fed months-old APTA stories at 75–85
+// and a March item headlined the edition. Sections/stats keep everything —
+// stale entries lose only the headline slots. Empty pool falls back to all
+// (an edition of pure late-surfacing items still gets a lead).
+const LEAD_FRESH_DAYS = 30;
+function leadPool(sections, refMs) {
+  const all = sections.flatMap(s => s.items);
+  const fresh = all.filter(i => !i.publishedAt || (refMs - Date.parse(i.publishedAt)) <= LEAD_FRESH_DAYS * 86400000);
+  return fresh.length ? fresh : all;
+}
+
+async function generateLead(dateStr, sections, stats, refMs = Date.now()) {
   const digest = sections.flatMap(sec => sec.items.map(i => ({
     category: CAT_ZH[sec.category] || sec.category,
     title: i.title, titleZh: i.titleZh || null,
@@ -136,10 +148,10 @@ async function generateLead(dateStr, sections, stats) {
     multiSource: (i.related || []).length + 1,
   })));
 
-  // Highest-signal items by global score-desc. The lead must treat these as the
-  // entries worth headlining, and must take each study's type verbatim from
-  // studyDesign rather than inferring it (the source of the 06-16 CTS mislabel).
-  const top = sections.flatMap(s => s.items)
+  // Highest-signal FRESH items by global score-desc. The lead must treat these
+  // as the entries worth headlining, and must take each study's type verbatim
+  // from studyDesign rather than inferring it (the 06-16 CTS mislabel).
+  const top = leadPool(sections, refMs)
     .slice().sort((a, b) => b.curatedScore - a.curatedScore)
     .slice(0, 3)
     .map(i => ({
@@ -178,8 +190,8 @@ async function generateLead(dateStr, sections, stats) {
 }
 
 // Deterministic fallback lead — never blocks the edition on an LLM hiccup.
-function fallbackLead(sections, stats) {
-  const top = sections.flatMap(s => s.items).sort((a, b) => b.curatedScore - a.curatedScore)[0];
+function fallbackLead(sections, stats, refMs = Date.now()) {
+  const top = leadPool(sections, refMs).slice().sort((a, b) => b.curatedScore - a.curatedScore)[0];
   return {
     titleZh: (top && (top.titleZh || top.title)) || '今日康复信号',
     titleEn: (top && top.title) || "Today's rehab signal",
@@ -294,8 +306,8 @@ async function main() {
     return;
   }
 
-  let lead = await generateLead(dateStr, sections, stats);
-  if (!lead) { console.warn('  ⚠️ 导语生成失败，使用确定性导语。'); lead = fallbackLead(sections, stats); }
+  let lead = await generateLead(dateStr, sections, stats, nowMs);
+  if (!lead) { console.warn('  ⚠️ 导语生成失败，使用确定性导语。'); lead = fallbackLead(sections, stats, nowMs); }
 
   const windowEnd = new Date(nowMs).toISOString();
   const edition = {
