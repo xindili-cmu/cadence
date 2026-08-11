@@ -88,11 +88,61 @@ const scoreSize = (s) => (s >= 85 ? 56 : s >= 75 ? 50 : s >= 70 ? 44 : 40);
 // score → slim signal-bar height (px). A compact waveform accent UNDER the
 // number (subordinate to it), mapping the 65–100 band onto a small range.
 const barH = (s) => Math.max(10, Math.round(((s - 60) / 40) * 30) + 12);
-// headline auto-shrink so long leads still fit two lines (measured against the
-// 920px content width). More aggressive than before so real titles don't spill
-// to a 3rd line and collide with the legend below.
-const headSize = (t) => (t.length > 88 ? 42 : t.length > 72 ? 46 : t.length > 56 ? 52 : 60);
 const HEAD_LH = 1.1;
+
+// ---- headline fitting (closed loop, replaces the old len-threshold guess) ----
+// The old headSize() predicted line count from character count with no feedback;
+// combined with the hard 2-line overflow:hidden clamp below, it silently clipped
+// the headline on 34 of the first 58 editions (audited 2026-08-10 — today's card
+// ended mid-sentence on "and"). Root cause: open-loop guess + hard clamp + no
+// loss signal. Fix: MEASURE with the real glyph advance widths, and when the
+// title still can't fit at the ladder floor, cut at a word boundary WITH an
+// ellipsis. Lossy output is always explicit; silent clipping is the one
+// forbidden state (card-headline.test.js asserts exactly that invariant).
+//
+// spectral-500-widths.json = hmtx advance widths extracted from the shipped
+// spectral-latin-500-normal.ttf (same file satori renders with); provenance and
+// the regeneration command live inside the JSON itself.
+const SPECTRAL_W = JSON.parse(fs.readFileSync(path.join(FONT_DIR, 'spectral-500-widths.json'), 'utf8'));
+const HEAD_MAXW = 920;                         // content width: 1080 − 2×80 padding
+const HEAD_TRACK = -1;                         // letterSpacing px/char used in card()
+const HEAD_LADDER = [60, 52, 46, 42, 38, 34];  // floor 34px stays above item titles (26px)
+
+const headTextW = (s, px) => {
+  let units = 0;
+  for (const ch of s) units += SPECTRAL_W.widths[ch] ?? SPECTRAL_W._unitsPerEm * 0.5;
+  return (units / SPECTRAL_W._unitsPerEm) * px + HEAD_TRACK * [...s].length;
+};
+
+// greedy word wrap — mirrors satori's default breaking for space-separated latin
+// text. Verified against real renders: predicted clip point on 2026-08-10
+// matched the shipped PNG word-for-word.
+const headWrap = (t, px) => {
+  const lines = []; let cur = '';
+  for (const w of String(t).split(' ')) {
+    const cand = cur ? cur + ' ' + w : w;
+    if (headTextW(cand, px) <= HEAD_MAXW) cur = cand;
+    else { if (cur) lines.push(cur); cur = w; }
+  }
+  lines.push(cur);
+  return lines;
+};
+
+// → { px, text, truncated }. Walk the ladder until the full title fits ≤2
+// lines; below the floor, drop trailing words until "<head> …" fits.
+const fitHeadline = (title) => {
+  const t = String(title);
+  for (const px of HEAD_LADDER) {
+    if (headWrap(t, px).length <= 2) return { px, text: t, truncated: false };
+  }
+  const px = HEAD_LADDER[HEAD_LADDER.length - 1];
+  const words = t.split(' ');
+  for (let k = words.length - 1; k > 0; k--) {
+    const cand = words.slice(0, k).join(' ') + ' …';
+    if (headWrap(cand, px).length <= 2) return { px, text: cand, truncated: true };
+  }
+  return { px, text: words[0] + ' …', truncated: true };
+};
 
 // ranges use ASCII only (the mono TTF subset lacks ≥ and en-dash glyphs).
 const TIERS = [
@@ -192,8 +242,9 @@ function itemRow(it, i) {
 
 function card(ed, items) {
   const headline = decode((ed.lead && ed.lead.titleEn) || 'Daily evidence');
-  const hSize = headSize(headline);
-  const headClampH = Math.ceil(hSize * HEAD_LH * 2); // hard 2-line ceiling
+  const { px: hSize, text: headText, truncated } = fitHeadline(headline);
+  if (truncated) console.warn(`  ⚠ headline truncated at ${hSize}px (explicit …): dropped "${headline.slice(headText.length - 2)}"`);
+  const headClampH = Math.ceil(hSize * HEAD_LH * 2); // 2-line box kept as a belt-and-suspenders clamp; fitHeadline guarantees the text fits it
   const dateDot = String(ed.date || '').replace(/-/g, '·');
   const heroSolid = catOf(items[0].category).solid;
 
@@ -210,7 +261,7 @@ function card(ed, items) {
     // 2-line box (overflow hidden) so a long title can never bleed into the
     // legend/items below — the rest of the card flows beneath a known height.
     h('div', { display: 'flex', width: '100%', height: headClampH, marginTop: 30, overflow: 'hidden' },
-      txt({ fontFamily: SERIF, fontWeight: 500, fontSize: hSize, lineHeight: HEAD_LH, letterSpacing: -1, color: C.ink900, width: '100%' }, headline)),
+      txt({ fontFamily: SERIF, fontWeight: 500, fontSize: hSize, lineHeight: HEAD_LH, letterSpacing: HEAD_TRACK, color: C.ink900, width: '100%' }, headText)),
     box({ width: 128, height: 4, borderRadius: 2, marginTop: 24, backgroundColor: heroSolid }),
 
     // tier legend
@@ -277,4 +328,8 @@ async function main() {
   console.log(`✓ ${path.relative(ROOT, out)} (${W}×${H}) — ${ed.date}, ${items.length} items`);
   for (const it of items) console.log(`   ${String(it.curatedScore ?? '·').padStart(3)}  [${tagOf(it.category)}]  ${(it.title || '').slice(0, 56)}`);
 }
-main().catch(e => { console.error(e); process.exit(1); });
+// Pure exports for card-headline.test.js — top level of this module is fs/path
+// only (satori/resvg load lazily inside main), so requiring it is side-effect free.
+module.exports = { fitHeadline, headWrap, headTextW, HEAD_LADDER, HEAD_MAXW, decode };
+
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });

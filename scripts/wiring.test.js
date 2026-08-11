@@ -80,6 +80,17 @@ function run() {
           + `      谁会跑它？接进某个 .github/workflow，或写进 scripts/_wiring.json 的 external/oneoff。\n`
           + `      注意：只加 package.json 别名不算数 —— 那是「怎么跑」，不是「谁会跑」。`
         : ''));
+
+    // 上面豁免 *.test.js 的理由是「由 npm test 直接点名」—— 这里闭环验证这个
+    // 理由本身，否则豁免就是个洞：「两个断言文件写好后从没被跑过」正是本仓库
+    // 五次「写好没接上」事故之一。npm test 已接进全部 workflow，所以「被 test
+    // script 点名」对测试文件而言就是「已接线」。
+    const testFiles = scriptFiles.filter((f) => /\.test\.js$/.test(f));
+    const testScript = (JSON.parse(pkgText).scripts || {}).test || '';
+    const unnamed = testFiles.filter((f) => !testScript.includes(`scripts/${f}`));
+    ok(unnamed.length === 0,
+      `每个 *.test.js 都被 npm test 点名（${testFiles.length} 个）`
+      + (unnamed.length ? ` —— 漏掉：${unnamed.join(', ')}，加进 package.json 的 test script` : ''));
   }
 
   console.log('B. 登记表本身不腐烂');
