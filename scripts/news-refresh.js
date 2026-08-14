@@ -410,6 +410,11 @@ const JUNK_URL = [
   /\/(login|signin|subscribe|cart|search)(\/|$)/i,
   /\/webinars?(\/|$)/i,                  // webpt.com/webinars/… — signup page, not an article
   /\/call-for-papers(\/|$)/i,            // wiley …/call-for-papers/si-2026-… — solicitation
+  // Three more surfaced in the date-repair pass (2026-08-15): they had no
+  // publication date to repair TO, because they are not articles.
+  /^learningcenter\./i,                  // learningcenter.apta.org/products/… — LMS course
+  /\/book\/edited-volume\//i,            // sciencedirect.com/book/… — book landing page
+  /\/customers?\//i,                     // webpt.com/customers/… — customer case study
 ];
 function isJunkUrl(url) {
   try {
@@ -826,6 +831,29 @@ async function dateFromArticlePage(url) {
     return d.toISOString();
   } catch { return null; }
 }
+
+// PMID → entrez date, straight from E-utilities (2026-08-15). A pubmed.ncbi URL
+// carries its own primary key, so for these rows there is no reason to scrape
+// HTML and guess at meta tags — ask the same API fetchPubMed() ingests from, and
+// read the same field (PubMedPubDate PubStatus="pubmed"), so a repaired row is
+// dated by exactly the ruler a freshly-ingested one would be. Used by
+// fix-scrape-dates.js; returns ISO or null, never throws.
+async function dateFromPubmedId(pmid) {
+  if (!/^\d+$/.test(String(pmid || ''))) return null;
+  try {
+    const res = await fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&rettype=abstract&id=${pmid}`,
+      { signal: AbortSignal.timeout(15000) });
+    if (!res.ok) return null;
+    const xml = await res.text();
+    const block = xml.match(/<PubMedPubDate PubStatus="pubmed">[\s\S]*?<\/PubMedPubDate>/);
+    if (!block) return null;
+    const y = xmlTag(block[0], 'Year'), m = xmlTag(block[0], 'Month'), d = xmlTag(block[0], 'Day');
+    if (!y) return null;
+    const iso = new Date(Date.UTC(+y, (+m || 1) - 1, +d || 1));
+    return isNaN(iso) ? null : iso.toISOString();
+  } catch { return null; }
+}
+const pmidFromUrl = (url) => (String(url || '').match(/pubmed\.ncbi\.nlm\.nih\.gov\/(\d+)/) || [])[1] || null;
 
 // Extend the scrape leg's invariant 1 to the Exa leg (2026-08-15). Exa is a
 // search index, so its publishedDate is whatever the crawler inferred, and on a
@@ -2001,4 +2029,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

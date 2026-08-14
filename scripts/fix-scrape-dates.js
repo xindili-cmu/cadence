@@ -37,7 +37,7 @@ const DRY = process.env.DRY_RUN === 'true';
 const ROOT = path.join(__dirname, '..');
 const ARCHIVE_DIR = path.join(ROOT, 'archive');
 
-const { dateFromUrlPath, dateFromArticlePage } = require('./news-refresh');
+const { dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl } = require('./news-refresh');
 
 // Scrape-leg sources only. Journal/RSS/PubMed rows always had real dates;
 // an RSS item legitimately shares publishedAt≈firstSeen, so scoping by source
@@ -109,6 +109,23 @@ async function repair(items, label) {
 
     // 2. Fabrication tell (publishedAt ≈ firstSeen) + no URL date → page meta.
     if (!sameDay(it.publishedAt, it.firstSeen)) continue; // date looks organic; leave it
+
+    // 2a. PubMed rows carry their primary key in the URL — ask E-utilities for
+    // the entrez date instead of scraping HTML (2026-08-15: 10 rows sat
+    // unresolved because pubmed.ncbi pages don't expose a meta tag we read).
+    const pmid = pmidFromUrl(it.sourceUrl);
+    if (pmid) {
+      let fromApi = null;
+      try { fromApi = await dateFromPubmedId(pmid); } catch { /* offline */ }
+      if (fromApi) {
+        if (Math.abs(new Date(fromApi) - new Date(it.publishedAt)) > DAY) apply(fromApi, 'pubmed api');
+      } else {
+        unresolved.push(`[${label}] ${it.source} ${it.sourceUrl}`);
+      }
+      await new Promise((r) => setTimeout(r, 350)); // NCBI rate limit
+      continue;
+    }
+
     let fromPage = null;
     try { fromPage = await dateFromArticlePage(it.sourceUrl); } catch { /* offline */ }
     if (fromPage && Math.abs(new Date(fromPage) - new Date(it.publishedAt)) > DAY) {

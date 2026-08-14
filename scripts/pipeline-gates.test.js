@@ -19,6 +19,8 @@ const {
   isReasonSlop,
   dateFromUrlPath,
   dateFromArticlePage,
+  dateFromPubmedId,
+  pmidFromUrl,
   verifyExaDates,
   searchExa,
   SCRAPE_BURST_MAX,
@@ -351,6 +353,18 @@ async function run() {
     ok((await withHtml('<meta name="citation_date" content="2026-05-02"><time datetime="2026-08-15">x</time>') || '').slice(0, 10) === '2026-05-02',
       'citation_date 优先于 <time datetime>（后者在学术站是「最后更新」）');
     ok(await withHtml('<p>nothing</p>') === null, '页面无任何日期 meta → null，不猜');
+
+    // I1d：PubMed 行的 URL 自带 PMID，走 E-utilities 拿 entrez date，
+    // 与 fetchPubMed 入库时读的是同一个字段（同一把尺子量新旧数据）。
+    ok(pmidFromUrl('https://pubmed.ncbi.nlm.nih.gov/42361357/') === '42361357', '从 URL 取出 PMID');
+    ok(pmidFromUrl('https://www.cms.gov/newsroom/x') === null, '非 PubMed URL 不误判');
+    const withXml = async (xml) => {
+      global.fetch = async () => ({ ok: true, text: async () => xml });
+      try { return await dateFromPubmedId('42361357'); } finally { global.fetch = realFetch; }
+    };
+    ok((await withXml('<PubMedPubDate PubStatus="pubmed"><Year>2026</Year><Month>6</Month><Day>26</Day></PubMedPubDate>') || '').slice(0, 10) === '2026-06-26',
+      'efetch 的 PubMedPubDate[pubmed] 被解析为 entrez date');
+    ok(await withXml('<PubmedArticle>no pubdate</PubmedArticle>') === null, 'efetch 没有该字段 → null');
 
     // I2：无法定日期 = 不是文章。127.0.0.1:1 立刻拒连 → 页面 meta 也拿不到。
     const undated = [{ url: 'http://127.0.0.1:1/medicare/payment/fee-schedules', title: 'Fee Schedules - General Information', publishedDate: '2026-08-13T17:42:29.287Z', dateUnverified: true }];

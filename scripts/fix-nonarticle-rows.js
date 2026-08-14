@@ -74,6 +74,10 @@ const EVERGREEN_URLS = new Set([
   'https://www.ahpra.gov.au/Registration/Registers-of-Practitioners',
   'https://www.ahpra.gov.au/Registration/Monitoring-and-compliance',
   'https://www.ahpra.gov.au/About-Ahpra/What-We-Do/Data-access-and-research',
+  // Conference homepage — no date to repair to, because there is no article.
+  // (The 2026-08-15 date-repair pass is what surfaced these: a row that cannot
+  // be dated from URL, page meta OR an API is usually not an article at all.)
+  'https://csm.apta.org',
 ]);
 
 const norm = (u) => String(u || '').replace(/[?#].*$/, '').replace(/\/$/, '');
