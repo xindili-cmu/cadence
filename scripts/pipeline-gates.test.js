@@ -434,6 +434,73 @@ async function run() {
     }
   }
 
+  // --------------------------------------------------------------------------
+  console.log('\nJ. JSX 里 i18n 的 t 必须在本组件里取到（2026-08-14 白屏）');
+  {
+    // 2026-08-14 daily brief 整页打不开：DailyMasthead 里的「快讯」chip 写了
+    // t('daily.flashes')，但这个组件没有 `const t = window.CD_T;` —— 本仓库的
+    // t 不是模块级导入，是每个组件自己从 window 取的一行局部变量。
+    //
+    // 为什么静默：那个 chip 只在 edition.flashes 非空时渲染。写它的那天
+    // （8-11）之后 cron 挂了两天，8-14 一次灌进 41 条、SECTION_CAP 溢出到
+    // flashes，分支第一次执行 → ReferenceError 冒到 React 根 → root 清空、
+    // 白屏、无降级。构建不会报（esbuild 把未声明标识符当全局放行），
+    // 语法检查也不会报 —— 只有渲染到那条分支才炸。
+    //
+    // 所以这里查的是「作用域」而不是「能不能跑」：整页渲染没法在纯 node 里做，
+    // 但「某个顶层组件用了 t 却没在自己块里声明」是纯静态的、可判定的。
+    // 保守优先（这条进 npm test，四个 cron 都消费它，误报的代价是全线停摆）：
+    // 行注释整行剥掉、只认顶层块、任何形式的 `const/let/var t =` 或
+    // `function t(` 都算数。宁可漏，不可误。
+    const scanUnresolvedT = (src) => {
+      const lines = src.split('\n').map((l) => l.replace(/\/\/.*$/, '')); // 剥行注释；URL 里的 // 会顺带截断该行 → 只会漏报
+      const bounds = [];
+      lines.forEach((l, i) => {
+        if (/^(export\s+)?(function |const [A-Za-z_$][\w$]*\s*=\s*(\(|function|React\.memo|memo))/.test(l)) bounds.push(i + 1);
+      });
+      const defs = new Set();
+      lines.forEach((l, i) => {
+        if (/\b(const|let|var)\s+t\s*=/.test(l) || /\bfunction\s+t\s*\(/.test(l)) defs.add(i + 1);
+      });
+      const bad = [];
+      lines.forEach((l, i) => {
+        if (!/(^|[^\w.$'"`])t\(/.test(l)) return;                 // 排除 split( / .t( / 'xxxt(' 之类
+        let start = 0;
+        for (const b of bounds) { if (b <= i + 1) start = b; else break; }
+        const end = bounds.find((b) => b > start) || lines.length + 1;
+        let declared = false;
+        for (const d of defs) if (d >= start && d < end) declared = true;
+        if (!declared) bad.push(`${i + 1}: ${lines[i].trim().slice(0, 60)}`);
+      });
+      return bad;
+    };
+
+    const jsxFiles = [];
+    const appDir = path.join(__dirname, '..', 'design-system', 'app');
+    for (const f of fs.readdirSync(appDir)) if (f.endsWith('.jsx')) jsxFiles.push(path.join(appDir, f));
+    (function walk(d) {
+      for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+        const p = path.join(d, e.name);
+        if (e.isDirectory()) walk(p);
+        else if (p.endsWith('.jsx')) jsxFiles.push(p);
+      }
+    })(path.join(__dirname, '..', 'design-system', 'components'));
+
+    const offenders = [];
+    for (const f of jsxFiles) {
+      for (const b of scanUnresolvedT(fs.readFileSync(f, 'utf8'))) offenders.push(`${path.basename(f)} L${b}`);
+    }
+    ok(offenders.length === 0,
+      `${jsxFiles.length} 个 jsx 里没有「用了 t 却没在本组件声明」的调用`
+      + (offenders.length ? ` —— ${offenders.slice(0, 3).join(' / ')}` : ''));
+
+    // 判别力：把 8-14 那行的声明注释掉，这个扫描必须重新转红。
+    const live = fs.readFileSync(path.join(appDir, 'app.main.jsx'), 'utf8');
+    const reverted = live.replace(/^(\s*)const t = window\.CD_T;(\s*\/\/ 少了这行.*)$/m, '$1// const t = window.CD_T;');
+    ok(reverted !== live && scanUnresolvedT(reverted).length > 0,
+      '判别力：还原 DailyMasthead 的 const t 后，扫描立刻抓到（不是恒真断言）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

@@ -1268,6 +1268,7 @@ function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
 const DAILY_STUDY_EN = window.CD_STUDY_EN || { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
 
 function DailyMasthead({ edition, zh }) {
+  const t = window.CD_T; // 少了这行 → 快讯 chip 一渲染就 ReferenceError，整页白屏（2026-08-14）
   const d = new Date(edition.date + 'T12:00:00Z');
   const dateStr = `${d.getUTCFullYear()}.${String(d.getUTCMonth() + 1).padStart(2, '0')}.${String(d.getUTCDate()).padStart(2, '0')}`;
   const weekday = d.toLocaleDateString(zh ? 'zh-CN' : 'en-US', { weekday: 'short', timeZone: 'UTC' });
