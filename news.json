@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-14T13:49:00.743Z",
-    "totalItems": 75,
+    "lastUpdated": "2026-08-14T15:10:40.536Z",
+    "totalItems": 74,
     "categories": [
       "orthopedic",
       "neurological",
@@ -74,9 +74,9 @@
           "titleZh": "产后即刻骶髂关节功能障碍与相关残疾：一项临床筛查与康复的横断面分析"
         }
       ],
-      "heat": 5.26,
-      "themeZh": "腰痛与盆底功能障碍的生物心理社会康复",
-      "themeEn": "Biopsychosocial Rehab for LBP, Pelvic Floor Dysfunction"
+      "heat": 5.16,
+      "themeZh": "腰背、盆底疼痛与脊柱术后康复的管理和影响因素",
+      "themeEn": "Managing low back, pelvic pain, post-spinal surgery"
     },
     {
       "id": "news-1785757795934-1",
@@ -164,9 +164,9 @@
           "titleZh": "筋膜松弛术对慢性卒中患者胸部活动度和躯干功能障碍的初步效果：一项随机对照试点研究"
         }
       ],
-      "heat": 4.05,
-      "themeZh": "卒中后上肢功能与平衡恢复的预测和量化",
-      "themeEn": "Stroke Upper-Limb, Balance Recovery Prediction, Quantification"
+      "heat": 3.98,
+      "themeZh": "卒中后上肢和平衡功能恢复的预测与量化评估",
+      "themeEn": "Stroke upper limb, balance recovery prediction"
     },
     {
       "id": "news-1786682651836-8",
@@ -216,9 +216,9 @@
           "titleZh": "结节性硬化症儿童远程医疗看护人介导行为干预的依从性：一项混合方法研究"
         }
       ],
-      "heat": 2.05,
-      "themeZh": "多发性硬化症与儿童神经发育障碍的非药物干预",
-      "themeEn": "Non-pharmacological Interventions for MS and Pediatric Neurological Disorders"
+      "heat": 2.01,
+      "themeZh": "多发性硬化症和儿童神经疾病的物理与心理干预",
+      "themeEn": "Interventions for MS and pediatric neurological conditions"
     },
     {
       "id": "news-1786686640829-14",
@@ -303,9 +303,9 @@
           "titleZh": "精英短跑运动员腹壁全层撕裂后加速重返赛场的案例报告：数据支持"
         }
       ],
-      "heat": 2,
-      "themeZh": "精英运动员心理健康问题与干预策略",
-      "themeEn": "Elite Athletes Mental Health Issues, Interventions"
+      "heat": 1.96,
+      "themeZh": "精英运动员心理健康问题的关联、识别与干预策略",
+      "themeEn": "Elite athletes' mental health challenges and support"
     },
     {
       "id": "news-1786682651837-13",
@@ -347,57 +347,34 @@
           "titleZh": "本体感觉神经肌肉促进法对体操运动员柔韧性和神经肌肉表现的影响：一项系统综述"
         }
       ],
-      "heat": 1.74,
-      "themeZh": "肌内效贴、电刺激、PNF等物理治疗技术效果",
-      "themeEn": "Effects of Kinesiology Taping, NMES, PNF"
+      "heat": 1.7,
+      "themeZh": "手法和物理治疗技术对肌骨功能的影响及应用",
+      "themeEn": "Manual, physical therapy effects on musculoskeletal function"
     }
   ],
   "items": [
     {
-      "id": "news-1785482348359-0",
-      "title": "Effectiveness of an AI-based home exercise app for rehabilitation of rotator cuff-related shoulder pain: A randomized controlled trial.",
-      "summary": "A single-center RCT (n=46) found that adding an AI-based digital rehabilitation program to standard physiotherapy for rotator cuff-related shoulder pain showed an initial improvement in pain and function, but the difference diminished over time compared to standard care alone.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42531919/",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T07:19:08.359Z",
-      "curatedScore": 85,
-      "curatedReason": "AI 辅助的家庭康复 app 仅在短期内显示出对肩袖疼痛的额外益处。在考虑整合数字工具时，关注其在依从性和长期疗效方面的独特价值，而非仅仅作为常规物理治疗的简单替代。",
-      "titleZh": "AI 家庭锻炼 app 对肩袖相关肩痛康复效果的随机对照试验",
-      "summaryZh": "一项单中心随机对照试验（n=46）发现，在标准物理治疗基础上增加 AI 辅助的数字康复项目，对肩袖相关肩痛患者的疼痛和功能有短期改善，但与单纯标准治疗相比，这种差异随时间推移而减小。",
-      "curatedReasonEn": "AI-assisted home rehab apps showed only short-term additional benefits for rotator cuff pain. When integrating digital tools, focus on their unique value in adherence and long-term efficacy, rather than as a simple substitute for conventional physiotherapy.",
-      "limitation": "本研究为单中心小样本 RCT，随访期仅 12 周，长期疗效和普适性有待更多研究证实。",
-      "limitationEn": "This was a single-center, small-sample RCT with a 12-week follow-up, limiting generalizability and long-term efficacy conclusions.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Musculoskeletal science & practice",
-      "tech": true
-    },
-    {
-      "id": "news-1785482348361-6",
-      "title": "Remotely Monitored Home-based Pulmonary Rehabilitation in Idiopathic Pulmonary Fibrosis: Results of a Randomized Controlled Trial.",
-      "summary": "A randomized controlled trial (n=29) showed that a 12-week asynchronously remotely monitored home-based pulmonary rehabilitation program for patients with idiopathic pulmonary fibrosis (IPF) was safe and effective, with outcomes comparable to traditional in-person programs.",
+      "id": "news-1785482348362-7",
+      "title": "Effects of Short-term High-intensity vs. Moderate-intensity Interval Training on Cardiopulmonary Fitness and Metabolic Health in Overweight or Obese Patients with Cardiovascular Disease: Evidence from China.",
+      "summary": "A retrospective study in China involving 145 overweight or obese CVD patients found that short-term high-intensity interval training (HIIT) may offer greater improvements in cardiopulmonary fitness and metabolic health compared to moderate-intensity interval training (MIIT).",
       "category": "cardiopulmonary",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532213/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532212/",
       "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T07:19:08.361Z",
-      "curatedScore": 85,
-      "curatedReason": "对于特发性肺纤维化（IPF）患者，远程监测的居家肺康复方案与院内方案同样安全有效。这为那些受限于出行或无法持续院内康复的患者提供了重要的治疗可及性。",
-      "titleZh": "特发性肺纤维化患者远程监测居家肺康复：一项随机对照试验结果",
-      "summaryZh": "一项随机对照试验（n=29）显示，为期 12 周的异步远程监测居家肺康复项目对特发性肺纤维化（IPF）患者安全有效，其结果与传统现场项目相当。",
-      "curatedReasonEn": "For patients with Idiopathic Pulmonary Fibrosis (IPF), remotely monitored home-based pulmonary rehabilitation is as safe and effective as in-hospital programs. This significantly improves treatment accessibility for patients with travel limitations or those unable to sustain in-person rehab.",
-      "limitation": "本研究样本量较小（n=29），需更大规模的多中心研究进一步验证其长期疗效和普适性。",
-      "limitationEn": "This study had a small sample size (n=29); larger, multi-center studies are needed to further validate long-term efficacy and generalizability.",
+      "firstSeen": "2026-07-31T07:19:08.362Z",
+      "curatedScore": 70,
+      "curatedReason": "回顾性研究提示，对于心血管疾病的超重/肥胖患者，短期高强度间歇训练（HIIT）在改善心肺适能和代谢健康方面可能优于中等强度间歇训练（MIIT）。这对指导康复方案制定有参考价值。",
+      "titleZh": "高强度与中等强度间歇训练对心血管疾病超重/肥胖患者心肺适能和代谢健康的影响：来自中国的证据",
+      "summaryZh": "一项来自中国的回顾性研究显示，对 145 名超重或肥胖心血管疾病患者，短期高强度间歇训练（HIIT）在改善心肺适能和代谢健康方面可能优于中等强度间歇训练（MIIT）。",
+      "curatedReasonEn": "This retrospective study suggests that short-term high-intensity interval training (HIIT) may be superior to moderate-intensity interval training (MIIT) for improving cardiopulmonary fitness and metabolic health in overweight/obese cardiovascular disease patients. This is valuable for guiding rehabilitation program design.",
+      "limitation": "回顾性研究设计限制了因果推断的强度，且样本量相对较小。",
+      "limitationEn": "The retrospective study design limits the strength of causal inference, and the sample size is relatively small.",
       "tags": [
         "research",
-        "telehealth"
+        "cardiovascular",
+        "obesity"
       ],
-      "studyDesign": "RCT",
+      "studyDesign": "观察研究",
       "journal": "Archives of physical medicine and rehabilitation"
     },
     {
