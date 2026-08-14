@@ -50,12 +50,47 @@ console.log(`scrape-leg sources: ${[...SCRAPE_SOURCES].join(', ') || '(none)'}`)
 const DAY = 86400000;
 const sameDay = (a, b) => (a || '').slice(0, 10) === (b || '').slice(0, 10);
 
+// 2026-08-15: the same clock fallback turned out to live on the PubMed and RSS
+// legs too, so scoping by source alone leaves ~25 rows unrepaired (Modern
+// Healthcare, PubMed, Gait & Posture, Int Urogynecol J — none of them scrape
+// sources). Those rows carry a sharper tell than publishedAt≈firstSeen: a
+// publishedAt shared to the MILLISECOND with another row. Two articles never
+// share a real publication instant to the ms; one `new Date()` in a loop does.
+//
+// Verified before trusting it: 11 of the 15 clusters have their publishedAt
+// appearing verbatim as a value in scrape-ledger.json, which records DISCOVERY
+// time — that is a stamp, not a date. The remaining 4 are explained by the two
+// fallbacks removed from news-refresh.js the same day.
+//
+// This is deliberately narrower than the source scope: an RSS item may
+// legitimately share a DAY with firstSeen (the reason the original scoping
+// exists), but never a millisecond with a different article.
+const STAMPED = new Set();
+{
+  // Count DISTINCT sourceUrls per timestamp, not raw rows: a live row is stored
+  // in both news.json and its archive month, so counting rows would read one
+  // article as a two-article cluster (and, with a naive threshold, would miss
+  // real clusters whose rows have all rotated out of the feed).
+  const seen = {};
+  const files = [path.join(ROOT, 'news.json'),
+    ...fs.readdirSync(ARCHIVE_DIR).filter((f) => /^\d{4}-\d{2}\.json$/.test(f)).map((f) => path.join(ARCHIVE_DIR, f))];
+  for (const f of files) {
+    for (const i of (JSON.parse(fs.readFileSync(f, 'utf8')).items || [])) {
+      const p = i.publishedAt || '';
+      if (!/\.\d{3}Z$/.test(p) || p.endsWith('.000Z')) continue;
+      (seen[p] = seen[p] || new Set()).add(i.sourceUrl);
+    }
+  }
+  for (const [p, urls] of Object.entries(seen)) if (urls.size > 1) STAMPED.add(p);
+}
+console.log(`clock-stamped publishedAt clusters: ${STAMPED.size}`);
+
 let fixed = 0;
 const unresolved = []; // needs network or has no discoverable date
 
 async function repair(items, label) {
   for (const it of items) {
-    if (!SCRAPE_SOURCES.has(it.source)) continue;
+    if (!SCRAPE_SOURCES.has(it.source) && !STAMPED.has(it.publishedAt)) continue;
     if (!it.sourceUrl || !it.publishedAt) continue;
 
     const apply = (iso, how) => {

@@ -121,7 +121,33 @@ function main() {
   console.log(total
     ? `\n${DRY ? '[DRY RUN] would drop' : 'Dropped'} ${total} non-article row(s).`
     : '\nNothing to drop — already clean (idempotent re-run).');
-  if (total && !DRY) console.log('Rebuild the archive index if your flow needs it, then commit before the next cron run.');
+
+  // archive/index.json caches per-month count / score range / date span, so
+  // dropping rows without rebuilding it leaves the archive page quoting counts
+  // that no longer match the files (2026-06 would still claim 312). Same shape
+  // news-refresh writes, rebuilt from disk — cheap and self-healing.
+  if (total && !DRY) {
+    const months = fs.readdirSync(ARCHIVE_DIR).filter((f) => /^\d{4}-\d{2}\.json$/.test(f)).sort().reverse();
+    const manifest = months.map((f) => {
+      const items = JSON.parse(fs.readFileSync(path.join(ARCHIVE_DIR, f), 'utf8')).items || [];
+      const scores = items.map((i) => i.curatedScore || 0);
+      const dates = items.map((i) => i.publishedAt).filter(Boolean).sort();
+      return {
+        month: f.replace('.json', ''), file: f, count: items.length,
+        maxScore: scores.length ? Math.max(...scores) : 0,
+        minScore: scores.length ? Math.min(...scores) : 0,
+        firstPublished: dates[0] || null,
+        lastPublished: dates[dates.length - 1] || null,
+      };
+    });
+    fs.writeFileSync(path.join(ARCHIVE_DIR, 'index.json'), JSON.stringify({
+      generatedAt: new Date().toISOString(),
+      totalItems: manifest.reduce((s, m) => s + m.count, 0),
+      months: manifest,
+    }, null, 2));
+    console.log(`Rebuilt archive/index.json (${manifest.reduce((s, m) => s + m.count, 0)} items).`);
+    console.log('Commit before the next cron run, or the rebuild will conflict.');
+  }
 
   // Advisory: date defect, not a content defect. Left in place deliberately.
   const stamps = clockStamped(loaded.flatMap(({ doc }) => doc.items || []));

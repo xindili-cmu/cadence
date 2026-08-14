@@ -671,11 +671,15 @@ async function fetchPubMed() {
         const journal = stripTags(xmlTag(art, 'Title'));
         // entrez date ≈ when PubMed first saw it — the freshness signal we filter on
         const pdates = art.match(/<PubMedPubDate PubStatus="pubmed">[\s\S]*?<\/PubMedPubDate>/);
-        let publishedDate = new Date().toISOString();
+        // No clock fallback (2026-08-15). A record with no parseable entrez date
+        // is an anomaly, not a fresh paper — stamping "now" made it one, and 10
+        // rows shipped that way (5 same-millisecond PubMed pairs in the archive).
+        let publishedDate = null;
         if (pdates) {
           const y = xmlTag(pdates[0], 'Year'), m = xmlTag(pdates[0], 'Month'), d = xmlTag(pdates[0], 'Day');
           if (y) publishedDate = new Date(Date.UTC(+y, (+m || 1) - 1, +d || 1)).toISOString();
         }
+        if (!publishedDate) { console.log(`   ⏭️  PubMed ${pmid}: no entrez date — skipped`); continue; }
         out.push({
           title, url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
           text: `${journal ? journal + '. ' : ''}${abstract}`.slice(0, 800),
@@ -707,10 +711,16 @@ function parseFeed(xml, sourceName) {
     if (!title || !link) continue;
     const dateRaw = stripTags(xmlTag(b, 'pubDate') || xmlTag(b, 'dc:date') || xmlTag(b, 'updated') || xmlTag(b, 'published'));
     const d = new Date(dateRaw);
+    // No clock fallback (2026-08-15). A feed entry with no parseable date is a
+    // malformed entry, not a new one; stamping "now" shipped Gait & Posture and
+    // Int Urogynecol J rows dated 2026-08-14T04:41:58.768Z (four rows, one
+    // millisecond). null is safe here — the cutoff filter below reads it as NaN
+    // and drops the row, same outcome as an out-of-window date.
+    if (isNaN(d)) { console.log(`   ⏭️  ${sourceName}: unparseable date — skipped "${title.slice(0, 50)}"`); continue; }
     items.push({
       title, url: link.trim(),
       text: stripTags(xmlTag(b, 'description') || xmlTag(b, 'summary') || xmlTag(b, 'content')).slice(0, 800),
-      highlights: '', publishedDate: isNaN(d) ? new Date().toISOString() : d.toISOString(),
+      highlights: '', publishedDate: d.toISOString(),
       score: 0.5, source: sourceName, category: null
     });
   }
@@ -796,11 +806,19 @@ async function dateFromArticlePage(url) {
     }, signal: AbortSignal.timeout(12000) });
     if (!res.ok) return null;
     const html = (await res.text()).slice(0, 300000);
-    const raw =
+    let raw =
       (html.match(/<meta[^>]+(?:property|name|itemprop)=["'](?:article:published_time|datePublished|og:published_time|publish-date|date)["'][^>]+content=["']([^"']+)["']/i) || [])[1]
       || (html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name|itemprop)=["'](?:article:published_time|datePublished|og:published_time|publish-date|date)["']/i) || [])[1]
       || (html.match(/"datePublished"\s*:\s*"([^"]+)"/) || [])[1]
+      // Highwire/Google Scholar tags — what PubMed, ScienceDirect and Springer
+      // actually publish (2026-08-15). Without these, every scholarly URL fell
+      // through to the <time datetime> guess below, which on those sites is a
+      // "last updated" widget. Ordered before it for the same reason.
+      || (html.match(/<meta[^>]+name=["']citation_(?:publication_)?date["'][^>]+content=["']([^"']+)["']/i) || [])[1]
+      || (html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']citation_(?:publication_)?date["']/i) || [])[1]
       || (html.match(/<time[^>]+datetime=["']([^"']+)["']/i) || [])[1];
+    // citation_date is often "2026/07/14" — Date() reads that, but not "2026/7".
+    if (raw && /^\d{4}\/\d{1,2}$/.test(raw.trim())) raw = raw.trim() + '/01';
     if (!raw) return null;
     const d = new Date(raw);
     if (isNaN(d)) return null;
@@ -809,13 +827,19 @@ async function dateFromArticlePage(url) {
   } catch { return null; }
 }
 
-// Extend the scrape leg's invariant 1 to the Exa leg (2026-08-15). Legs 2/3/4
-// carry a publisher-authoritative date — RSS <pubDate>, PubMed edat, and the
-// scrape leg's already-verified value. Exa does not: it is a search index, so
-// its publishedDate is whatever the crawler inferred, and on a page that never
-// had a publication date that is simply "when we crawled it". Two failure
-// shapes reached readers before this gate existed; both are in the header
-// comment on searchExa().
+// Extend the scrape leg's invariant 1 to the Exa leg (2026-08-15). Exa is a
+// search index, so its publishedDate is whatever the crawler inferred, and on a
+// page that never had a publication date that is simply "when we crawled it".
+// Two failure shapes reached readers before this gate existed; both are in the
+// header comment on searchExa().
+//
+// The other legs need no equivalent because their date is publisher-authoritative
+// WHEN PRESENT — RSS <pubDate>, PubMed entrez date, the scrape leg's verified
+// value. What they did share was the clock fallback for when it is ABSENT; that
+// is now a skip on every leg (the first pass of this fix only caught Exa and
+// left 10 PubMed + 4 RSS rows clock-stamped — grep the file for "No clock
+// fallback"). Only Exa needs re-derivation, because only Exa fabricates a
+// plausible-looking date rather than none at all.
 //
 // Runs AFTER the incremental gate so we pay one GET per genuinely-new URL only
 // (median 10/day, max 43 over the 58 days audited), and BEFORE curation so

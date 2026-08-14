@@ -18,6 +18,7 @@ const {
   isJunkUrl,
   isReasonSlop,
   dateFromUrlPath,
+  dateFromArticlePage,
   verifyExaDates,
   searchExa,
   SCRAPE_BURST_MAX,
@@ -326,6 +327,30 @@ async function run() {
       'searchExa 不再用时钟兜底 publishedDate（回退这行即红）');
     ok(/dateUnverified/.test(String(searchExa)),
       'Exa 结果标记 dateUnverified，交给 verifyExaDates 从原文重新取日期');
+
+    // I1b：同一个时钟兜底在 PubMed 与 RSS 腿上也存在——本次修复第一版只改了 Exa，
+    // 漏掉的 10 条 PubMed + 4 条 RSS 行在归档里以「同毫秒成对」的形态留了证据。
+    // 这三处必须一起为空，所以断言全文件级别：抓取时段不得再出现时钟兜底。
+    const SRC = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    const ingestBlock = SRC.slice(0, SRC.indexOf('async function curateWithClaude'));
+    ok(!/publishedDate\s*[:=][^;\n]*new Date\(\)\.toISOString\(\)/.test(ingestBlock),
+      '三条抓取腿（Exa / PubMed / RSS）都不再用时钟兜底 publishedDate');
+
+    // I1c：学术站的日期在 Highwire meta 里（PubMed / ScienceDirect / Springer），
+    // 旧解析器不认，全都掉进 <time datetime> 兜底——那在这些站上是「最后更新」。
+    // 用假 fetch 离线跑真函数，不打网络。
+    const realFetch = global.fetch;
+    const withHtml = async (html) => {
+      global.fetch = async () => ({ ok: true, text: async () => html });
+      try { return await dateFromArticlePage('https://x.test/a'); } finally { global.fetch = realFetch; }
+    };
+    ok((await withHtml('<meta name="citation_date" content="2026/07/14">') || '').slice(0, 10) === '2026-07-14',
+      'citation_date（PubMed 形态）被解析');
+    ok((await withHtml('<meta name="citation_publication_date" content="2026-06-25">') || '').slice(0, 10) === '2026-06-25',
+      'citation_publication_date（Springer 形态）被解析');
+    ok((await withHtml('<meta name="citation_date" content="2026-05-02"><time datetime="2026-08-15">x</time>') || '').slice(0, 10) === '2026-05-02',
+      'citation_date 优先于 <time datetime>（后者在学术站是「最后更新」）');
+    ok(await withHtml('<p>nothing</p>') === null, '页面无任何日期 meta → null，不猜');
 
     // I2：无法定日期 = 不是文章。127.0.0.1:1 立刻拒连 → 页面 meta 也拿不到。
     const undated = [{ url: 'http://127.0.0.1:1/medicare/payment/fee-schedules', title: 'Fee Schedules - General Information', publishedDate: '2026-08-13T17:42:29.287Z', dateUnverified: true }];
