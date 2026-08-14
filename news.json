@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-14T19:19:25.471Z",
-    "totalItems": 70,
+    "lastUpdated": "2026-08-14T20:50:13.202Z",
+    "totalItems": 72,
     "categories": [
       "orthopedic",
       "neurological",
@@ -107,9 +107,9 @@
           "titleZh": "急性康复期卒中幸存者早餐组干预 BISTRo 的可行性和可接受性研究"
         }
       ],
-      "heat": 4.28,
-      "themeZh": "卒中与帕金森病神经功能障碍的康复新技术",
-      "themeEn": "Neurological Rehabilitation Techniques for Stroke and Parkinson's"
+      "heat": 4.19,
+      "themeZh": "神经系统疾病康复的物理与神经调控干预",
+      "themeEn": "Physical and Neuromodulation Interventions for Neurorehabilitation"
     },
     {
       "id": "news-1786727744421-2",
@@ -150,9 +150,9 @@
           "titleZh": "运用项目反应理论和图形模型简化脊髓损伤下肢功能障碍患者的 ICF 评估"
         }
       ],
-      "heat": 2.27,
-      "themeZh": "脊髓损伤后心血管与呼吸功能干预及评估",
-      "themeEn": "SCI Cardiovascular and Respiratory Interventions"
+      "heat": 2.22,
+      "themeZh": "脊髓损伤后神经功能和脏器功能的康复",
+      "themeEn": "SCI Neurological and Organ Function Rehabilitation"
     },
     {
       "id": "news-1786682651836-8",
@@ -202,9 +202,9 @@
           "titleZh": "结节性硬化症儿童远程医疗看护人介导行为干预的依从性：一项混合方法研究"
         }
       ],
-      "heat": 1.89,
-      "themeZh": "多发性硬化症及儿童神经疾病的康复与照护",
-      "themeEn": "Rehabilitation and Care for MS and Pediatric Neurological Diseases"
+      "heat": 1.85,
+      "themeZh": "神经系统罕见病非药物干预与家庭支持",
+      "themeEn": "Rare Neurological Conditions Non-Pharmacological Interventions"
     },
     {
       "id": "news-1785912408310-0",
@@ -259,9 +259,9 @@
           "titleZh": "产后即刻骶髂关节功能障碍与相关残疾：一项临床筛查与康复的横断面分析"
         }
       ],
-      "heat": 1.89,
-      "themeZh": "腰背痛与骶髂关节功能障碍的评估及康复",
-      "themeEn": "Assessment and Rehabilitation for Low Back Pain"
+      "heat": 1.85,
+      "themeZh": "腰背盆腔疼痛的生物心理社会康复",
+      "themeEn": "Biopsychosocial Rehabilitation for Lumbopelvic Pain"
     },
     {
       "id": "news-1786686640829-14",
@@ -346,12 +346,83 @@
           "titleZh": "精英短跑运动员腹壁全层撕裂后加速重返赛场的案例报告：数据支持"
         }
       ],
-      "heat": 1.84,
+      "heat": 1.8,
       "themeZh": "精英运动员心理健康支持与干预策略",
-      "themeEn": "Elite Athletes Mental Health Support"
+      "themeEn": "Elite Athletes Mental Health Support Strategies"
     }
   ],
   "items": [
+    {
+      "id": "news-1785482348359-0",
+      "title": "Effectiveness of an AI-based home exercise app for rehabilitation of rotator cuff-related shoulder pain: A randomized controlled trial.",
+      "summary": "A single-center RCT (n=46) found that adding an AI-based home exercise program with real-time feedback to standard physiotherapy significantly improved pain and function in adults with rotator cuff-related shoulder pain over 12 weeks.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42531919/",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "firstSeen": "2026-07-31T07:19:08.359Z",
+      "curatedScore": 85,
+      "curatedReason": "基于 AI 的家庭康复应用能有效降低肩袖相关肩痛患者的疼痛和功能障碍，但本研究规模较小。AI 辅助居家康复是趋势，但目前还无法完全替代传统 PT 监督。",
+      "titleZh": "基于 AI 的家庭运动 App 对肩袖相关肩痛康复的有效性：一项随机对照试验。",
+      "summaryZh": "一项单中心随机对照试验（n=46）发现，在标准物理治疗基础上增加 AI 驱动的实时反馈家庭运动计划，可显著改善肩袖相关肩痛患者在 12 周内的疼痛和功能。",
+      "curatedReasonEn": "AI-based home rehabilitation apps can effectively reduce pain and disability in patients with rotator cuff-related shoulder pain, though this study was small. AI-assisted home rehab is a trend, but it's not yet a full substitute for traditional PT supervision.",
+      "limitation": "这是一项单中心小样本随机对照试验（46 名受试者），且随访期仅 12 周，结果尚需更大规模研究验证。",
+      "limitationEn": "This was a single-center randomized controlled trial with a small sample size (46 participants) and a follow-up period of only 12 weeks, requiring larger studies for validation.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Musculoskeletal science & practice",
+      "tech": true
+    },
+    {
+      "id": "news-1785482348361-6",
+      "title": "Remotely Monitored Home-based Pulmonary Rehabilitation in Idiopathic Pulmonary Fibrosis: Results of a Randomized Controlled Trial.",
+      "summary": "A randomized controlled trial (n=29) showed that a 12-week asynchronously remotely monitored, exercise-focused home pulmonary rehabilitation program improved physical activity, exercise capacity, and quality of life in patients with idiopathic pulmonary fibrosis.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532213/",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "firstSeen": "2026-07-31T07:19:08.361Z",
+      "curatedScore": 85,
+      "curatedReason": "特发性肺纤维化患者的远程家庭肺康复是可行的，且能改善运动耐量和生活质量。这意味着你能为行动不便或地理位置受限的 IPF 患者提供有效的康复方案，但远程监控的挑战仍在。",
+      "titleZh": "远程监测的特发性肺纤维化居家肺康复：一项随机对照试验结果。",
+      "summaryZh": "一项随机对照试验（n=29）显示，为期 12 周的异步远程监测居家运动肺康复计划，可改善特发性肺纤维化患者的身体活动、运动能力和生活质量。",
+      "curatedReasonEn": "Remotely monitored home-based pulmonary rehabilitation is feasible for idiopathic pulmonary fibrosis (IPF) patients and improves exercise capacity and quality of life. This allows you to offer effective rehabilitation to IPF patients with mobility or geographical limitations, though challenges in remote monitoring remain.",
+      "limitation": "本研究的样本量较小（29 名受试者完成干预），且只在特定的医院网络进行招募，可能影响结果的普遍性。",
+      "limitationEn": "This study had a small sample size (29 participants completing the intervention) and recruited from specific hospital networks, which may limit generalizability.",
+      "tags": [
+        "research",
+        "telehealth"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1785520637137-0",
+      "title": "One-year Health Care Utilization Following Physical Therapist Evaluation in a Veterans Affairs Emergency Department.",
+      "summary": "A retrospective cohort study found that Veterans receiving a physical therapist evaluation in the emergency department (ED) had lower 1-year total musculoskeletal healthcare utilization, without increasing 1-year PT visit utilization, compared to those not seen by an ED PT.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42535673/",
+      "publishedAt": "2026-07-31T00:00:00.000Z",
+      "firstSeen": "2026-07-31T17:57:17.137Z",
+      "curatedScore": 75,
+      "curatedReason": "急诊物理治疗师干预，能降低患者在就诊后一年的医疗总利用率，且不增加 PT 复诊次数。未来推行急诊 PT 模式，这是你跟医院管理层谈投入产出时最直接的证据。",
+      "titleZh": "退伍军人事务部急诊物理治疗师评估后一年医疗利用率。",
+      "summaryZh": "一项回顾性队列研究发现，在急诊室接受物理治疗师评估的退伍军人，一年内肌肉骨骼相关医疗总利用率较低，且物理治疗复诊次数并未增加。",
+      "curatedReasonEn": "Emergency department (ED) physical therapist intervention significantly reduces overall healthcare utilization within one year, without increasing PT follow-up visits. This provides direct evidence for you to advocate for ED PT integration with hospital management.",
+      "limitation": "这是一项回顾性队列研究，且仅限于单一 VA 机构的退伍军人数据，结果外推性有限。",
+      "limitationEn": "This was a retrospective cohort study limited to Veterans Affairs data from a single institution, which may limit generalizability.",
+      "tags": [
+        "research",
+        "practice",
+        "workforce"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy"
+    },
     {
       "id": "news-1786061982930-3",
       "title": "Influence of knee hyperextension persisting into preswing on swing-phase kinematics through forward propulsion in poststroke hemiparetic gait.",
@@ -374,30 +445,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Gait & posture"
-    },
-    {
-      "id": "news-1785482348362-7",
-      "title": "Effects of Short-term High-intensity vs. Moderate-intensity Interval Training on Cardiopulmonary Fitness and Metabolic Health in Overweight or Obese Patients with Cardiovascular Disease: Evidence from China.",
-      "summary": "A retrospective study of 145 overweight/obese cardiovascular disease patients in China found that 4-week supervised HIIT and MIIT both improved cardiopulmonary fitness, but HIIT showed greater improvements in peak oxygen uptake, triglycerides, HDL, and fasting glucose.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42532212/",
-      "publishedAt": "2026-07-31T00:00:00.000Z",
-      "firstSeen": "2026-07-31T07:19:08.362Z",
-      "curatedScore": 70,
-      "curatedReason": "对于超重或肥胖心血管疾病患者，短期高强度间歇训练（HIIT）与中等强度间歇训练（MIIT）均能改善心肺适能和代谢健康。但 HIIT 在改善峰值摄氧量上表现出非劣效性，并对甘油三酯、高密度脂蛋白和空腹血糖有更显著的改善。",
-      "titleZh": "短期高强度与中等强度间歇训练对超重或肥胖心血管疾病患者心肺适能及代谢健康的影响：中国证据",
-      "summaryZh": "一项对中国 145 名超重或肥胖心血管疾病患者的回顾性研究显示，为期 4 周的监督下高强度间歇训练（HIIT）和中等强度间歇训练（MIIT）均能改善心肺适能，但 HIIT 在峰值摄氧量、甘油三酯、高密度脂蛋白和空腹血糖方面有更显著的改善。",
-      "curatedReasonEn": "For overweight or obese patients with cardiovascular disease, both short-term HIIT and MIIT improve cardiopulmonary fitness and metabolic health. However, HIIT demonstrated non-inferiority in improving peak oxygen uptake, and showed more significant improvements in triglycerides, HDL, and fasting glucose.",
-      "limitation": "本研究为回顾性观察研究，存在选择偏倚风险，且随访时间较短。",
-      "limitationEn": "This retrospective observational study carries a risk of selection bias and has a relatively short follow-up period.",
-      "tags": [
-        "research",
-        "cardiac-rehab",
-        "exercise-physiology"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
     },
     {
       "id": "news-1786727744421-2",
