@@ -15,7 +15,11 @@ const {
   ROSTER_JOURNAL_BY_NAME,
   repairMissingFields,
   isJunkItem,
+  isJunkUrl,
+  isReasonSlop,
   dateFromUrlPath,
+  verifyExaDates,
+  searchExa,
   SCRAPE_BURST_MAX,
 } = require('./news-refresh');
 
@@ -302,6 +306,92 @@ async function run() {
       ok(floods.length === 0,
         `没有单源单日 >${SCRAPE_BURST_MAX} 条的「发现即日期」簇`
         + (floods.length ? ` —— ${floods.map(([k, n]) => `${k}×${n}`).join(', ')}` : ''));
+    }
+  }
+
+  // --------------------------------------------------------------------------
+  console.log('\nI. 检索腿日期不变量 + 非文章闸（2026-08-15 CMS Fee Schedules 上首条）');
+  {
+    // 背景：H 段只修了抓取腿。检索腿（Exa）同一个不变量没修——它是搜索索引，
+    // publishedDate 是爬虫推断的值，对一个从来没有发布日期的常青页就等于「我们
+    // 什么时候爬到它」，没推断出来时旧代码还会 `|| new Date().toISOString()`。
+    // 两种形态都上过线：8 条 AHPRA 注册/投诉导航页盖着同一个毫秒级运行时间戳、
+    // 70–75 分（2026-06-21），以及 CMS《Fee Schedules - General Information》
+    // ——一个常年挂着的费率索引入口——85 分上首条（2026-08-14），与同月真正的
+    // CY2027 医师收费标准拟议规则同分。分数在 practice 垂直失去了区分度。
+
+    // I1（判别力）：回退检测。修复的全部要害是「没有时钟兜底」，而这一点只在
+    // 源码里看得见——盖了章的条目和诚实的条目在产物里长得一模一样。
+    ok(!/publishedDate:\s*r\.publishedDate\s*\|\|\s*new Date\(\)/.test(String(searchExa)),
+      'searchExa 不再用时钟兜底 publishedDate（回退这行即红）');
+    ok(/dateUnverified/.test(String(searchExa)),
+      'Exa 结果标记 dateUnverified，交给 verifyExaDates 从原文重新取日期');
+
+    // I2：无法定日期 = 不是文章。127.0.0.1:1 立刻拒连 → 页面 meta 也拿不到。
+    const undated = [{ url: 'http://127.0.0.1:1/medicare/payment/fee-schedules', title: 'Fee Schedules - General Information', publishedDate: '2026-08-13T17:42:29.287Z', dateUnverified: true }];
+    ok((await verifyExaDates(undated)).length === 0,
+      'URL 无日期 ∧ 页面 meta 取不到 → 丢弃（常青索引页不是文章，不是「旧文章」）');
+
+    // I3：原文日期压过索引日期。Exa 说 8-13，URL 说 2026-05-01，以原文为准。
+    const misdated = [{ url: 'https://www.apta.org/article/2026/05/01/x', title: 'x', publishedDate: '2026-08-13T17:42:29.287Z', dateUnverified: true }];
+    const fixed = await verifyExaDates(misdated);
+    ok(fixed.length === 1 && fixed[0].publishedDate.slice(0, 10) === '2026-05-01',
+      '原文日期压过 Exa 索引日期（8-13 → 2026-05-01），且 dateUnverified 标记已清除');
+    ok(!('dateUnverified' in fixed[0]), 'dateUnverified 不泄漏到策展与产物');
+
+    // I4：其他三条腿自带权威日期（RSS pubDate / PubMed edat / 抓取腿已验），
+    // 不打标记就不该被这一关碰到——否则每天多几十次无谓 GET。
+    const rss = [{ url: 'https://example.org/no-date-in-path', publishedDate: '2026-08-01T00:00:00.000Z' }];
+    ok((await verifyExaDates(rss)).length === 1, '未标记 dateUnverified 的条目原样通过，不触发额外请求');
+
+    // I5（判别力）：旧 JUNK_URL 四条正则放走了报名页/征稿页。
+    const legacyJunk = [/^careers?\./i, /\/(careers?|jobs?|vacancies)(\/|$)/i, /\/(login|signin|subscribe|cart|search)(\/|$)/i];
+    const WEBINAR = 'https://www.webpt.com/webinars/why-healthcare-rcm-is-still-broken-and-what-comes-next';
+    const CFP = 'https://onlinelibrary.wiley.com/page/journal/14712865/call-for-papers/si-2026-000965';
+    ok(!legacyJunk.some((re) => re.test(new URL(WEBINAR).pathname)) && isJunkUrl(WEBINAR),
+      'webinar 报名页：旧闸放走（75 分上线）∧ 新闸接住');
+    ok(!legacyJunk.some((re) => re.test(new URL(CFP).pathname)) && isJunkUrl(CFP),
+      '征稿启事页：旧闸放走（70 分上线）∧ 新闸接住');
+    ok(!isJunkUrl('https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-proposed-rule'),
+      '真正的 CY2027 收费标准拟议规则不受影响——闸拦的是形态，不是话题');
+
+    // I6（判别力）：空效用措辞。中文侧每条正则原本只写了「你」，而策展实际用
+    // 「您」——这是 CMS 那条 curatedReason 逃逸的确切原因，不是漏写了某个词。
+    const CMS_ZH = 'CMS 提供的这份“收费标准”通用信息是您理解美国 Medicare 支付机制的基础。它详细列出了 Medicare 支付医生或其他服务提供者的费用清单，对您的美国诊所报销策略至关重要。';
+    const CMS_EN = 'This general information on "Fee Schedules" from CMS is fundamental for your understanding of the US Medicare payment system. It details the fee listings Medicare uses to pay doctors and other providers, which is crucial for your US clinic\'s reimbursement strategy.';
+    ok(isReasonSlop({ curatedReason: CMS_ZH, curatedReasonEn: CMS_EN }),
+      '线上那条 CMS why-it-matters 现在判为模板腔（中英两侧都命中）');
+    ok(isReasonSlop({ curatedReason: '这有助于帮助您了解报销规则' }) && isReasonSlop({ curatedReason: '这有助于帮助你了解报销规则' }),
+      '「您」与「你」两种人称同等覆盖（旧正则只认「你」）');
+    ok(!isReasonSlop({ curatedReason: '腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。' }),
+      '真正的 take 不误伤');
+
+    // I7（产物，挂 SKIP_ARTIFACT_ASSERTS）：单元断言证不了「闸在生产里被用了」。
+    // 只约束闸上线之后新入库的条目：存量污染（8 条 AHPRA + CMS 那条）要靠幂等
+    // 脚本清，不该卡住 cron——2026-08-12 gate H 全红挂掉四个 workflow 48 小时，
+    // 那次教训就是「断言的作用域必须等于修复的作用域」。
+    const GATE_SHIPPED = '2026-08-15';
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else if (!fs.existsSync(path.join(__dirname, '..', 'news.json'))) {
+      console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
+    } else {
+      const items = (JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8')).items || [])
+        .filter((i) => (i.firstSeen || '').slice(0, 10) >= GATE_SHIPPED);
+      const junk = items.filter((i) => isJunkUrl(i.sourceUrl || ''));
+      ok(junk.length === 0,
+        `${GATE_SHIPPED} 起入库的条目里没有非文章 URL`
+        + (junk.length ? ` —— ${junk.map((i) => i.sourceUrl).slice(0, 3).join(', ')}` : ''));
+      // 盖章签名：同源多条共享毫秒级 publishedAt = 同一次 run 盖的章。
+      const stamp = {};
+      items.forEach((i) => {
+        if (!/\.\d{3}Z$/.test(i.publishedAt || '') || (i.publishedAt || '').endsWith('.000Z')) return;
+        (stamp[i.publishedAt] = stamp[i.publishedAt] || []).push(i.source);
+      });
+      const stamped = Object.entries(stamp).filter(([, v]) => v.length > 1);
+      ok(stamped.length === 0,
+        `${GATE_SHIPPED} 起没有「多条共享同一毫秒 publishedAt」的盖章簇`
+        + (stamped.length ? ` —— ${stamped.map(([k, v]) => `${k}×${v.length}`).join(', ')}` : ''));
     }
   }
 

@@ -188,7 +188,19 @@ async function searchExa(query, numResults = 5) {
     url: r.url || '',
     text: r.text || '',
     highlights: (r.highlights || []).join(' '),
-    publishedDate: r.publishedDate || new Date().toISOString(),
+    // Exa's publishedDate is a SEARCH-INDEX field, not the article's own date:
+    // for an undated evergreen page it returns the crawl time, and for some
+    // results it returns nothing at all. Both shapes shipped as "today's news"
+    // (2026-08-15 audit): 8 AHPRA registration/notification nav pages stamped
+    // with one identical run timestamp and scored 70-75 (2026-06-21), and the
+    // CMS "Fee Schedules - General Information" hub — a permanent index page,
+    // no change event — leading the feed at 85 (2026-08-14).
+    // So carry it UNVERIFIED and let verifyExaDates() re-derive from the page.
+    // Never fall back to the clock: see invariant 1 on the scrape leg — the
+    // date is consumed downstream (freshness, ranking, reader-facing "Aug 14")
+    // as fact, so a fabricated one is worse than a dropped item.
+    publishedDate: r.publishedDate || null,
+    dateUnverified: true,
     score: r.score || 0,
     source: matchSource(r.url)
   })).filter(r => r.source); // off-roster results are dropped, not relabeled
@@ -386,10 +398,18 @@ const REHAB_INTERVENTION = [
 // Deterministic and cheap, so URL-shaped junk is dropped BEFORE curation (no
 // LLM spend); title/summary-shaped junk is dropped in the final filter, where
 // the curated text exists. Same denylist-by-design contract as isRehabRelevant.
+// A fourth shape surfaced in the 2026-08-15 practice-vertical audit: pages that
+// are not events but standing fixtures — a webinar signup (WebPT "Why Healthcare
+// RCM Is Still Broken", 75) and a journal call-for-papers (PM&R, 70). Both are
+// evergreen marketing/solicitation pages the rubric already says belong <60
+// ("产品软文"), but topic keywords carried them past it. URL shape is the
+// reliable tell, so they go here rather than into more prompt text.
 const JUNK_URL = [
   /^careers?\./i,                        // careers.ahpra.gov.au
   /\/(careers?|jobs?|vacancies)(\/|$)/i, // …/careers, …/jobs
   /\/(login|signin|subscribe|cart|search)(\/|$)/i,
+  /\/webinars?(\/|$)/i,                  // webpt.com/webinars/… — signup page, not an article
+  /\/call-for-papers(\/|$)/i,            // wiley …/call-for-papers/si-2026-… — solicitation
 ];
 function isJunkUrl(url) {
   try {
@@ -789,6 +809,47 @@ async function dateFromArticlePage(url) {
   } catch { return null; }
 }
 
+// Extend the scrape leg's invariant 1 to the Exa leg (2026-08-15). Legs 2/3/4
+// carry a publisher-authoritative date — RSS <pubDate>, PubMed edat, and the
+// scrape leg's already-verified value. Exa does not: it is a search index, so
+// its publishedDate is whatever the crawler inferred, and on a page that never
+// had a publication date that is simply "when we crawled it". Two failure
+// shapes reached readers before this gate existed; both are in the header
+// comment on searchExa().
+//
+// Runs AFTER the incremental gate so we pay one GET per genuinely-new URL only
+// (median 10/day, max 43 over the 58 days audited), and BEFORE curation so
+// dropped items cost no LLM spend — same placement rationale as isJunkUrl.
+//
+// An undated page is not a stale article, it is NOT AN ARTICLE: no publication
+// date anywhere means an evergreen hub/nav/index page. Dropping is correct, not
+// conservative.
+async function verifyExaDates(items) {
+  const targets = items.filter(i => i.dateUnverified);
+  if (!targets.length) return items;
+  console.log(`\n🗓️  Verifying dates on ${targets.length} Exa result(s) — index date is not a publish date`);
+  const keep = new Set();
+  for (const it of targets) {
+    let pub = dateFromUrlPath(it.url);
+    if (!pub) { pub = await dateFromArticlePage(it.url); await sleep(200); }
+    if (!pub) {
+      console.log(`   ⏭️  undated (not an article) dropped: ${(it.title || '').slice(0, 60)} — ${it.url}`);
+      continue;
+    }
+    // The page's own date wins over Exa's index date even when Exa supplied one.
+    if (it.publishedDate && Math.abs(new Date(pub) - new Date(it.publishedDate)) > 86400000) {
+      console.log(`   ↺ date corrected: ${(it.title || '').slice(0, 50)} ${String(it.publishedDate).slice(0, 10)} → ${pub.slice(0, 10)}`);
+    }
+    it.publishedDate = pub;
+    keep.add(it);
+  }
+  const out = items.filter(i => !i.dateUnverified || keep.has(i));
+  for (const i of out) delete i.dateUnverified;
+  const dropped = items.length - out.length;
+  if (dropped) console.log(`   Undated Exa results dropped: ${dropped}`);
+  return out;
+}
+
 async function fetchScrapes() {
   let ledger = {};
   try { ledger = JSON.parse(fs.readFileSync(LEDGER_PATH, 'utf8')); } catch {}
@@ -914,6 +975,10 @@ tags 规则：
 - 60-69 = 一般动态
 - <60 = 噪音（会议预告、产品软文、患者向科普、内容农场转载）
 - **陈旧内容检查**：核对 url 路径和正文里的年份/试验线索。博客或聚合站转载多年前的旧研究（即使 publishedDate 显示很新）一律 <60；研究本身年代久但新闻点是"新指南/新政策引用了它"则按新闻点正常评分。blogspot / 内容农场域名默认重扣。
+- **变化事件检查（先问这一条，再给分）**：上面每一档描述的都是*变化的量级*，所以打分前先回答"这一条里到底发生了什么变化"。答不上来的一律 <60，**不管话题多重要**：常青参考页 / 索引页 / 目录页（"X - General Information"、"关于我们"、"如何申请注册"、费率总表入口）、机构导航页、注册报名页、征稿启事、产品页。**判据是"有没有发生一件事"，不是"这个话题重不重要"** —— CMS 收费标准页、医保报销规则总表、监管机构的执业须知页，话题权重全是最高的，但它们常年挂在那里、内容没变，对读者的信息增量是零。
+  - 反例（真实事故，2026-08-14 上过首条）：CMS《Fee Schedules - General Information》—— 一个常年存在的费率索引入口，被打 85 分，与同月真正的《CY2027 医师收费标准拟议规则》同分。正确分数 <60。
+  - 对照：同一份收费标准，**"CY2027 拟议规则发布 / 费率下调 X%/ 生效日期"是事件**，按 90+ 或 80-89 正常给分；**"这里是所有收费标准的清单"不是事件**。
+  - 只要落进这一档，curatedReason 不要再写"这是你理解 X 的基础"、"对你的报销策略至关重要"这类话 —— 那正是在替一个没有新闻点的页面编造新闻价值。
 
 编辑标准：
 - summary：1-2 句中性英文——**必须是英文（English only），绝不能写中文**：它是英文界面与英文分享卡的正文字段，中文摘要只属于 summaryZh。front-load "what changed"。研究类**优先**带样本量 + 关键效应量（或 p 值 / CI）——但**只在所给 text 中明确出现该数字时才写入，并照抄原值**；text 里没有就省略数字，**绝不臆测，也不得套用本批其他条目的数字**。**summary 必须讲研究"发现了什么"（方向 / 结论），不是罗列做了哪些统计**——出现 "calculated mean differences, 95% CI, I² statistic, using the GRADE approach" 这类只讲方法不给结果的写法即重写；摘要里读不出结论方向时，如实写"the review did not report a pooled direction"之类，不要用方法清单充数。
@@ -1111,12 +1176,22 @@ const REASON_SLOP_EN = new RegExp([
   'gain (a )?(deeper |better |valuable )?(insight|insights|understanding|perspective)',
   'guiding you to', 'represents the latest', 'warrants your (attention|consideration)',
   '(offers?|provides?) (valuable |important |useful )?(insight|insights|perspective|guidance)',
+  // "…is fundamental for your understanding of the US Medicare payment system"
+  // + "…which is crucial for your US clinic's reimbursement strategy" — the CMS
+  // Fee Schedules take (2026-08-14). Pure utility assertion with no direction:
+  // it says the topic matters, never what changed. See the ZH twins below.
+  '(is|are) (fundamental|crucial|essential|key|critical|vital|important) (for|to) (your|understanding)',
 ].join('|'), 'i');
+// NOTE 2026-08-15: every 你 pattern here silently missed its 您 twin, and the
+// curator does use 您 — that is how the CMS Fee Schedules reason shipped. Match
+// both forms; this widens the whole list, not just the two new entries.
 const REASON_SLOP_ZH = new RegExp([
   '^(这项|这篇|该|本)[^，。]{0,20}(研究|综述|试验|荟萃分析|述评|共识|社论)[^，。]{0,15}(探讨|考察|评估|比较|分析|调查|检验|估计|纳入|旨在|研究了|跟进|概述)',
-  '为你提供', '帮助你(更好地)?(了解|理解|筛查|制定|做出|识别|选择|与|进行)', '能?帮助你',
-  '让你(能|可以)?(更好地)?(了解|理解|进行|获得|开展)', '你(将|能|可)(获得|得到|了解)',
-  '提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解|视角|视野)', '值得你?(关注|留意)',
+  '为[你您]提供', '帮助[你您](更好地)?(了解|理解|筛查|制定|做出|识别|选择|与|进行)', '能?帮助[你您]',
+  '让[你您](能|可以)?(更好地)?(了解|理解|进行|获得|开展)', '[你您](将|能|可)(获得|得到|了解)',
+  '提供了?(最新|具体|宝贵)?的?(证据|数据|信息|见解|视角|视野)', '值得[你您]?(关注|留意)',
+  '是[你您][^，。]{0,20}的基础',            // "是您理解美国 Medicare 支付机制的基础"
+  '对[你您][^，。]{0,25}(至关重要|极为重要|非常重要|很重要)', // "对您的报销策略至关重要"
 ].join('|'));
 
 const REASON_SLOP_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的资深编辑。下面每条的 why-it-matters（curatedReason 中文 / curatedReasonEn 英文）写成了模板腔：要么第一句在复述研究做了什么（summary 已经说过），要么是空效用句式（"provides you with the latest evidence…"、"帮助你了解…"）。请基于给出的 summary 重写这两个字段，各 1-2 句：
@@ -1559,7 +1634,10 @@ async function main() {
   console.log(`   New since last run: ${novel.length} (${fresh.length - novel.length} already in feed)`);
   if (!novel.length) { console.log('\n💤 Nothing new — skipping curation and write.'); return; }
 
-  const unique = clusterItems(novel, byExaScore);
+  const dated = await verifyExaDates(novel);
+  if (!dated.length) { console.log('\n💤 Nothing datable — skipping curation and write.'); return; }
+
+  const unique = clusterItems(dated, byExaScore);
   await repairTruncatedTitles(unique);
   unique.sort(byExaScore);
   console.log(`   Unique: ${unique.length} (${unique.filter(u => u.related?.length).length} multi-source)`);
@@ -1899,4 +1977,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
