@@ -260,6 +260,11 @@ const offRoster = new Map(); // prefix → { n, sampleDoi, sampleTitle }
   for (const f of loaded) {
     f.data.items = (f.data.items || []).filter((it) => !it.__drop);
     for (const it of f.data.items) { delete it.__drop; delete it.__skipJunk; }
+    // 掉行之后 meta.totalItems 就不再等于 items.length。news-refresh 每次 run
+    // 会重算它，所以漂移最长活到下一次 cron —— 但那期间站点侧栏显示的就是旧数
+    // （2026-08-14：meta 75 / 实际 71）。archive/index.json 下面已经重建了，
+    // news.json 自己的 meta 别漏。
+    if (f.data.meta && typeof f.data.meta.totalItems === 'number') f.data.meta.totalItems = f.data.items.length;
     fs.writeFileSync(f.p, JSON.stringify(f.data, null, 2));
   }
 

@@ -119,6 +119,11 @@ function main() {
     }
     if (keep.length === items.length) continue;
     doc.items = keep;
+    // 掉行之后 meta.totalItems 就不再等于 items.length。news-refresh 每次 run
+    // 会重算它，所以漂移最长活到下一次 cron —— 但那期间站点侧栏显示的就是旧数
+    // （2026-08-14：meta 75 / 实际 71，就是这个脚本上一次跑留下的）。下面已经
+    // 重建了 archive/index.json，news.json 自己的 meta 别漏。
+    if (doc.meta && typeof doc.meta.totalItems === 'number') doc.meta.totalItems = doc.items.length;
     if (!DRY) fs.writeFileSync(f, JSON.stringify(doc, null, 2) + '\n');
   }
 

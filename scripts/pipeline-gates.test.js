@@ -501,6 +501,43 @@ async function run() {
       '判别力：还原 DailyMasthead 的 const t 后，扫描立刻抓到（不是恒真断言）');
   }
 
+  // --------------------------------------------------------------------------
+  console.log('\nK. 换掉 news.json 的 items 数组就得同步 meta.totalItems（2026-08-14）');
+  {
+    // 2026-08-14 站点侧栏 All 显示 75、实际 71：fix-nonarticle-rows.js 掉了 6 行
+    // 却没动 doc.meta.totalItems。这些修复脚本都记得重建 archive/index.json
+    // （那是显式的一段代码），唯独漏了 news.json 自己那三行 meta —— 不对称。
+    //
+    // 漂移会自愈：news-refresh 每次 run 写 `totalItems: merged.length`。所以这
+    // **不能**做成产物断言 —— npm test 在 refresh.yml 里跑在 news-refresh 之前，
+    // 一条「meta.totalItems === items.length」的产物断言会正好卡死那次能治好它
+    // 的 run（gate H 8-12/8-13 四个 cron 全挂 48h 就是这么来的）。
+    // 静态断言没有这个问题：它只看提交进来的源码，绿了就一直绿。
+    const scriptsDir = path.join(__dirname);
+    const offenders = [];
+    let checked = 0;
+    for (const f of fs.readdirSync(scriptsDir)) {
+      if (!f.endsWith('.js') || f.endsWith('.test.js')) continue;
+      const src = fs.readFileSync(path.join(scriptsDir, f), 'utf8');
+      if (!src.includes('news.json')) continue;
+      const lines = src.split('\n').map((l) => l.replace(/\/\/.*$/, ''));
+      // 「整个 items 数组被换掉」：map/enrich 不改条数，不在此列。
+      const replaces = lines.some((l) => /[\w.]*\.items\s*=\s*(?!.*\.items\s*\.\s*map)/.test(l) && !/[=!]==?\s*$/.test(l));
+      if (!replaces) continue;
+      checked++;
+      if (!/meta\.totalItems\s*=/.test(src)) offenders.push(f);
+    }
+    ok(checked > 0, `确实扫到了会换 items 数组的脚本（${checked} 个，否则这条断言是空转）`);
+    ok(offenders.length === 0,
+      '换 items 数组的脚本都同步了 meta.totalItems'
+      + (offenders.length ? ` —— ${offenders.join(', ')}` : ''));
+
+    // 判别力：把其中一个脚本的同步行去掉，这条必须转红。
+    const probe = fs.readFileSync(path.join(scriptsDir, 'fix-nonarticle-rows.js'), 'utf8');
+    ok(/meta\.totalItems\s*=/.test(probe) && !/meta\.totalItems\s*=/.test(probe.replace(/.*meta\.totalItems\s*=.*/g, '')),
+      '判别力：去掉同步行后该脚本就落进 offenders（不是恒真断言）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

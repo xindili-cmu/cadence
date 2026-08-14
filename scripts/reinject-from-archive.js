@@ -94,6 +94,9 @@ for (const p of picks.sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 
 if (!DRY_RUN && picks.length) {
   const merged = [...live, ...picks].sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, MAX_ITEMS);
   feed.items = merged;
+  // 条数变了 meta.totalItems 就得跟着走（news-refresh 每次 run 会重算，所以漂移
+  // 最长活到下一次 cron，但那期间站点显示的是旧数）。
+  if (feed.meta && typeof feed.meta.totalItems === 'number') feed.meta.totalItems = feed.items.length;
   fs.writeFileSync(NEWS_PATH, JSON.stringify(feed, null, 2) + '\n');
   console.log(`\nnews.json: ${live.length} → ${merged.length} items (cap ${MAX_ITEMS})`);
 }
