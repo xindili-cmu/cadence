@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-16T21:41:27.705Z",
+    "lastUpdated": "2026-08-16T22:41:36.450Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -74,9 +74,9 @@
           "titleZh": "腰椎神经根病运动管理框架的开发与内容验证"
         }
       ],
-      "heat": 4.39,
-      "themeZh": "骨科慢性疼痛的生物心理社会因素与康复",
-      "themeEn": "Biopsychosocial factors and rehab for chronic orthopedic pain"
+      "heat": 4.32,
+      "themeZh": "肌骨疼痛的生物心理社会因素与物理治疗干预",
+      "themeEn": "Biopsychosocial Factors and Musculoskeletal Pain PT"
     },
     {
       "id": "news-1786856033301-1",
@@ -84,14 +84,15 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603596/",
       "category": "neurological",
       "publishedAt": "2026-08-15T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
         "Archives of physical medicine and rehabilitation",
-        "Clinical rehabilitation",
         "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
         "PM & R : the journal of injury, function, and rehabilitation",
-        "BMC Geriatrics"
+        "BMC Geriatrics",
+        "Musculoskeletal science & practice",
+        "medRxiv",
+        "Brazilian journal of physical therapy"
       ],
       "tag": "ms",
       "kind": "theme",
@@ -104,21 +105,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Physical and mental health-related quality of life outcomes of non-pharmacological interventions in early multiple sclerosis: A systematic review and meta-analysis.",
-          "titleZh": "早期多发性硬化症非药物干预对身心健康相关生活质量结局的影响：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "The effect of online physical activity monitoring on physical activity level, psychological health, fatigue, and quality of life in patients with multiple sclerosis: a randomized controlled trial.",
           "titleZh": "在线身体活动监测对多发性硬化症患者身体活动水平、心理健康、疲劳和生活质量的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Understanding the family planning experiences and information needs of people living with multiple sclerosis: an Australian cohort study.",
-          "titleZh": "了解多发性硬化症患者的家庭规划经验和信息需求：一项澳大利亚队列研究"
         },
         {
           "source": "PubMed",
@@ -131,169 +120,28 @@
           "journal": "BMC Geriatrics",
           "title": "Associations between patient quality of life and caregiver burden among older adults receiving comprehensive geriatric assessment via telemedicine: a cross-sectional study from Seha Virtual Hospital, Saudi Arabia",
           "titleZh": "沙特阿拉伯远程医疗综合老年评估中老年患者生活质量与照护者负担的关联"
-        }
-      ],
-      "heat": 3.1,
-      "themeZh": "MS及老年患者远程康复与生活质量",
-      "themeEn": "Telerehabilitation and QoL for MS and older adults"
-    },
-    {
-      "id": "news-1786877038341-0",
-      "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-16T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Musculoskeletal Disorders",
-        "BMC Geriatrics",
-        "European Spine Journal"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
-          "titleZh": "足部靶向康复治疗旋前相关膝前痛：一项病例对照研究和单盲随机对照试验"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
-          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验。"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Effects of hyperbaric oxygen therapy on human musculoskeletal pathologies in clinical studies: a systematic review",
-          "titleZh": "高压氧疗法在人类肌肉骨骼病理临床研究中的效果：一项系统综述"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Effects of opioid-free intraoperative anesthesia versus opioid-based anesthesia on postoperative immune function in elderly patients undergoing total knee arthroplasty: a single-center, prospective, randomized controlled trial",
-          "titleZh": "老年全膝关节置换术中无阿片类麻醉对术后免疫功能影响的随机对照试验"
-        },
-        {
-          "source": "Eur Spine J",
-          "journal": "European Spine Journal",
-          "title": "Association of the GAP score and roussouly-based algorithm with long-term patient-reported outcomes following adult spinal deformity surgery: a systematic review and meta-analysis",
-          "titleZh": "GAP评分和基于Roussouly的算法与成人脊柱畸形手术后长期患者报告结局的关联：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Surgical approaches for screw fixation of calcaneal fractures: a systematic review",
-          "titleZh": "跟骨骨折螺钉固定手术入路的系统综述"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Arthroscopic-assisted uni-portal spinal surgery versus unilateral biportal endoscopy for lumbar degenerative diseases: a systematic review and meta-analysis of clinical outcomes and complications",
-          "titleZh": "关节镜辅助单通道与单侧双通道脊柱内镜手术治疗腰椎退行性疾病的系统综述和Meta分析"
-        }
-      ],
-      "heat": 2.92,
-      "themeZh": "骨科疾病物理与手术治疗的评估与效果",
-      "themeEn": "Orthopedic physical and surgical treatment assessment"
-    },
-    {
-      "id": "news-1786082036622-3",
-      "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42562200/",
-      "category": "neurological",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "sourceCount": 7,
-      "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "NeuroRehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Gait & posture",
-        "Neurorehabilitation and neural repair",
-        "medRxiv",
-        "American journal of physical medicine & rehabilitation"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Additive Effects of Repetitive Transcranial Magnetic Stimulation and Transcranial Direct Current Stimulation on Robotic Therapy for Upper Extremity Recovery After Chronic Ischemic Stroke: A Randomized, Double-Blind, Sham-Controlled Trial.",
-          "titleZh": "重复经颅磁刺激和经颅直流电刺激联合机器人疗法对慢性缺血性卒中上肢恢复的累加效应：一项随机、双盲、假对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Repetitive Transcranial Magnetic Stimulation for Dizziness, Balance, and Postural Stability in Adult Patients With Chronic Peripheral Vestibular Dizziness.",
-          "titleZh": "重复经颅磁刺激对慢性周围性前庭性眩晕成年患者眩晕、平衡和姿势稳定性的影响。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Effects of a Virtual Reality-Based Balance Training Program on Clinical Outcomes and Cortical Oscillatory Activity: A Combined Behavioral and EEG Study.",
-          "titleZh": "虚拟现实平衡训练对临床结果和皮层振荡活动的影响：一项行为与脑电图结合研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "External validation of the minimal important change in the Berg Balance Scale scores of patients hospitalized for subacute stroke.",
-          "titleZh": "亚急性卒中住院患者 Berg 平衡量表评分最小重要变化值的外部验证"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Upper-Limb Paresis Severity Is Associated With Practice Dosage During Task-Oriented Training in Subacute Stroke-An Exploratory Secondary Analysis.",
-          "titleZh": "亚急性卒中患者上肢偏瘫严重程度与任务导向训练练习剂量的关联性：一项探索性二次分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
-          "titleZh": "卒中患者不同吞咽功能水平下口腔肌肉质量、舌力量和耐力的表现：一项初步研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "Influence of knee hyperextension persisting into preswing on swing-phase kinematics through forward propulsion in poststroke hemiparetic gait.",
-          "titleZh": "卒中偏瘫步态中摆前膝关节过伸对摆动期运动学和前向推进力的影响"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Applying the International Classification of Functioning, Disability and Health to Classify Upper Limb Outcome Measures in Stroke Rehabilitation: A Construct-Driven Perspective.",
-          "titleZh": "运用国际功能、残疾和健康分类法对卒中康复上肢结局测量进行分类：一项以结构为导向的视角"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
-          "titleZh": "运用项目反应理论和图形模型简化脊髓损伤下肢功能障碍患者的 ICF 评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Respiratory Function in Participants with Spinal Cord Injury of a Rehabilitation Center using Neuromuscular Electrical Stimulation.",
-          "titleZh": "康复中心长期使用神经肌肉电刺激的脊髓损伤患者呼吸功能"
+          "journal": "Musculoskeletal science & practice",
+          "title": "Experiences of telehealth e-mentoring within postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom.",
+          "titleZh": "远程电子导师制在加拿大和英国研究生骨骼肌肉物理治疗教育中的经验"
         },
         {
           "source": "medRxiv",
-          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
-          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管与自主神经反应：MACHINE 试验的探索性研究"
+          "title": "Experiences of frontline physiotherapists during the COVID-19 pandemic at two tertiary hospitals in Southern Malawi: A phenomenological qualitative study",
+          "titleZh": "COVID-19 大流行期间马拉维南部两家三级医院前线物理治疗师的经历：一项现象学定性研究"
         },
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
-          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Quality indicators for Spanish hospital-based physical therapy units: a feasibility and inter-rater reliability study.",
+          "titleZh": "西班牙医院物理治疗科室质量指标：可行性与评估者间信度研究"
         }
       ],
-      "heat": 2.56,
-      "themeZh": "卒中后肢体与平衡功能康复策略",
-      "themeEn": "Stroke limb and balance recovery strategies"
+      "heat": 3.57,
+      "themeZh": "神经康复中远程医疗和线上干预的有效性与体验",
+      "themeEn": "Telerehabilitation and Online Interventions in Neurorehab"
     },
     {
       "id": "news-1786312595011-5",
@@ -349,12 +197,230 @@
           "titleZh": "整合水疗的后交叉韧带重建术后康复：一例病例报告"
         }
       ],
-      "heat": 2.19,
-      "themeZh": "ACL损伤的预防、流行病学与康复",
-      "themeEn": "ACL injury prevention, epidemiology, and rehab"
+      "heat": 2.16,
+      "themeZh": "运动损伤的流行病学、生物力学与综合康复",
+      "themeEn": "Sports Injury Epidemiology, Biomechanics, and Rehab"
+    },
+    {
+      "id": "news-1786682651836-7",
+      "title": "Clinically interpretable prediction models of stroke functional outcomes: A national cohort study of adults in inpatient rehabilitation facilities in the US.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586400/",
+      "category": "neurological",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "Neurorehabilitation and neural repair",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Clinical rehabilitation",
+        "NeuroRehabilitation",
+        "Gait & posture"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Clinically interpretable prediction models of stroke functional outcomes: A national cohort study of adults in inpatient rehabilitation facilities in the US.",
+          "titleZh": "美国住院康复机构卒中患者功能结局的临床可解释预测模型：一项全国队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Applying the International Classification of Functioning, Disability and Health to Classify Upper Limb Outcome Measures in Stroke Rehabilitation: A Construct-Driven Perspective.",
+          "titleZh": "运用国际功能、残疾和健康分类法对卒中康复上肢结局测量进行分类：一项以结构为导向的视角"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Upper-Limb Paresis Severity Is Associated With Practice Dosage During Task-Oriented Training in Subacute Stroke-An Exploratory Secondary Analysis.",
+          "titleZh": "亚急性卒中患者上肢偏瘫严重程度与任务导向训练练习剂量的关联性：一项探索性二次分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "External validation of the minimal important change in the Berg Balance Scale scores of patients hospitalized for subacute stroke.",
+          "titleZh": "亚急性卒中住院患者 Berg 平衡量表评分最小重要变化值的外部验证"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Feasibility and acceptability of the breakfast group intervention BISTRo for stroke survivors in acute rehabilitation.",
+          "titleZh": "卒中急性期康复患者早餐小组干预BISTRo的可行性和可接受性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
+          "titleZh": "卒中患者不同吞咽功能水平下口腔肌肉质量、舌力量和耐力的表现：一项初步研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Influence of knee hyperextension persisting into preswing on swing-phase kinematics through forward propulsion in poststroke hemiparetic gait.",
+          "titleZh": "卒中偏瘫步态中摆前膝关节过伸对摆动期运动学和前向推进力的影响"
+        }
+      ],
+      "heat": 2.16,
+      "themeZh": "卒中后功能结局预测、上肢康复与吞咽功能评估",
+      "themeEn": "Stroke Outcome Prediction, Upper Limb, Swallowing"
+    },
+    {
+      "id": "news-1786877038341-0",
+      "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-16T00:00:00.000Z",
+      "sourceCount": 2,
+      "sources": [
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Journal of rehabilitation medicine"
+      ],
+      "tag": "foot-ankle",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
+          "titleZh": "足部靶向康复治疗旋前相关膝前痛：一项病例对照研究和单盲随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+          "titleZh": "肌内效贴在严重高依赖性肢体水肿患者中对肢体水肿的影响：一项随机临床试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
+          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验。"
+        }
+      ],
+      "heat": 1.44,
+      "themeZh": "肌骨物理治疗中贴扎和电刺激的效应与机制",
+      "themeEn": "Taping and Electrical Stimulation in Musculoskeletal PT"
     }
   ],
   "items": [
+    {
+      "id": "news-1786682651836-7",
+      "title": "Clinically interpretable prediction models of stroke functional outcomes: A national cohort study of adults in inpatient rehabilitation facilities in the US.",
+      "summary": "A national retrospective cohort study (n=43,745) of US stroke patients in inpatient rehabilitation facilities developed clinically interpretable machine learning models to predict self-care and mobility function at discharge using IRF-PAI variables.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586400/",
+      "publishedAt": "2026-08-12T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.836Z",
+      "curatedScore": 80,
+      "curatedReason": "这项研究基于美国大规模真实世界数据，构建了可靠的卒中康复出院功能预测模型。它能帮你预估患者自理和活动功能，辅助制定更切合实际的康复目标和出院计划。",
+      "titleZh": "美国住院康复机构卒中患者功能结局的临床可解释预测模型：一项全国队列研究",
+      "summaryZh": "一项对美国住院康复机构43,745名卒中患者进行的全国回顾性队列研究，利用IRF-PAI变量构建了临床可解释的机器学习模型，以预测出院时的自理和活动功能。",
+      "curatedReasonEn": "This study, based on large-scale US real-world data, developed reliable prediction models for stroke rehabilitation functional outcomes at discharge. It can help you estimate patient self-care and mobility functions, aiding in setting more realistic rehabilitation goals and discharge plans.",
+      "limitation": "作为回顾性队列研究，尽管样本量大，但可能存在未测量混杂因素的风险，且模型基于IRF-PAI变量，可能无法捕捉所有临床复杂性。",
+      "limitationEn": "As a retrospective cohort study, despite its large sample size, there's a risk of unmeasured confounders, and the model, based on IRF-PAI variables, may not capture all clinical complexities.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1786682651837-13",
+      "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+      "summary": "A randomized clinical trial (n=50) demonstrated that kinesiology taping at 25% tension significantly reduced the dermal elastic coefficient and limb circumference in patients with severe hyper-dependency limb oedema compared to 0% tension taping by day 9.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42592645/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.837Z",
+      "curatedScore": 80,
+      "curatedReason": "这项RCT研究表明，25%张力的肌内效贴能显著减少严重肢体水肿患者的真皮弹性系数，提示其在改善水肿方面有一定潜力。考虑将其作为辅助手段，尤其是当你希望减少组织硬度时。",
+      "titleZh": "肌内效贴在严重高依赖性肢体水肿患者中对肢体水肿的影响：一项随机临床试验",
+      "summaryZh": "一项随机临床试验（n=50）表明，与0%张力贴扎相比，25%张力的肌内效贴能显著降低严重高依赖性肢体水肿患者的真皮弹性系数和肢体周长，效应在第9天显著。",
+      "curatedReasonEn": "This RCT suggests that kinesiology taping at 25% tension significantly reduces dermal elastic coefficient in patients with severe limb edema, indicating its potential in edema reduction. Consider it as an adjunct, especially when aiming to reduce tissue stiffness.",
+      "limitation": "研究关注的是弹力系数和肢体周长，但并未评估患者功能或疼痛等更全面的临床结局，且随访时间较短。",
+      "limitationEn": "The study focused on elastic coefficient and limb circumference but did not assess broader clinical outcomes such like patient function or pain, and the follow-up period was relatively short.",
+      "tags": [
+        "research",
+        "taping"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Journal of rehabilitation medicine"
+    },
+    {
+      "id": "news-1786682651834-0",
+      "title": "Reliability and construct validity of three movement-evoked pain methods in individuals with knee osteoarthritis.",
+      "summary": "This study evaluated the reliability and construct validity of three movement-evoked pain calculation methods using performance-based tests in 111 individuals with knee osteoarthritis, finding varying levels of reliability and validity.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42595243/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.834Z",
+      "curatedScore": 75,
+      "curatedReason": "对于膝骨关节炎（KOA）患者，运动诱发疼痛的测量方法并非都一样可靠。你需要留意，本研究评估的三种计算方法，其信度和效度各有不同，这提示我们在选择评估工具时，务必结合具体临床情境，避免盲目采纳。",
+      "titleZh": "膝骨关节炎患者三种运动诱发疼痛测量方法的信度与结构效度",
+      "summaryZh": "这项研究评估了111名膝骨关节炎患者，在基于表现的测试中，三种运动诱发疼痛计算方法的信度和结构效度，发现其可靠性和有效性存在差异。",
+      "curatedReasonEn": "Not all methods for measuring movement-evoked pain in KOA are equally reliable. This study, evaluating three calculation methods, shows varying levels of reliability and validity, suggesting you must be judicious in selecting assessment tools based on your specific clinical context.",
+      "limitation": "研究样本量相对较小，且为单一中心观察性研究的二次分析，可能限制了结果的普遍性。",
+      "limitationEn": "The study's relatively small sample size and secondary analysis from a single-center observational study may limit the generalizability of the findings.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1786682651836-4",
+      "title": "Feasibility and acceptability of the breakfast group intervention BISTRo for stroke survivors in acute rehabilitation.",
+      "summary": "A mixed-methods feasibility study evaluated the BISTRo breakfast group intervention for 16 stroke survivors in UK acute rehabilitation, finding it feasible and acceptable to both patients and multidisciplinary staff.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42593360/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.836Z",
+      "curatedScore": 75,
+      "curatedReason": "这项可行性研究提示，多学科协作的早餐小组干预对卒中急性期患者是可行的且接受度良好。如果你在急性康复科工作，可以考虑将此类结构化社交用餐模式纳入日常。",
+      "titleZh": "卒中急性期康复患者早餐小组干预BISTRo的可行性和可接受性研究",
+      "summaryZh": "一项混合方法可行性研究评估了英国急性期卒中康复患者的BISTRo早餐小组干预，发现其对患者和多学科工作人员来说都具有可行性和可接受性。",
+      "curatedReasonEn": "This feasibility study suggests that a multidisciplinary breakfast group intervention is feasible and well-accepted for acute stroke survivors. If you work in acute rehabilitation, consider integrating such structured social dining models.",
+      "limitation": "本研究为小样本（16名卒中幸存者，53名工作人员）的混合方法可行性研究，其结果主要验证干预的可行性和接受度，而非临床疗效。",
+      "limitationEn": "This is a small-sample (16 stroke survivors, 53 staff) mixed-methods feasibility study, primarily validating the intervention's feasibility and acceptability rather than clinical efficacy.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1786682651836-11",
+      "title": "Methodological characteristics of perturbation-based balance training in healthy older adults: A scoping review.",
+      "summary": "This scoping review mapped the methodological features of mechanically induced perturbation-based balance training interventions in healthy older adults, analyzing studies from inception through April 2025 across multiple databases.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42594763/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.836Z",
+      "curatedScore": 75,
+      "curatedReason": "这份范围综述清晰展现了健康老年人扰动式平衡训练的研究现状。你会发现现有干预措施在方法学上仍有许多空白和不一致之处，因此在将这类训练应用于临床前，需警惕其异质性，并期待未来有更标准化、证据更强的研究出现。",
+      "titleZh": "健康老年人扰动式平衡训练的方法学特征：一项范围综述",
+      "summaryZh": "这项范围综述系统梳理了截至2025年4月，机械诱导扰动式平衡训练干预在健康老年人中的方法学特征。",
+      "curatedReasonEn": "This scoping review maps the current landscape of perturbation-based balance training in healthy older adults. You'll note significant methodological gaps and inconsistencies in existing interventions, so be cautious about heterogeneity before clinical application, and look for more standardized, evidence-backed research in the future.",
+      "limitation": "范围综述的性质决定了它着重于映射研究特征而非评估证据质量或进行元分析，因此无法提供具体的临床行动建议。",
+      "limitationEn": "The nature of a scoping review focuses on mapping study characteristics rather than assessing evidence quality or performing meta-analysis, thus it cannot provide specific clinical action recommendations.",
+      "tags": [
+        "research",
+        "fall-prevention"
+      ],
+      "studyDesign": "综述",
+      "journal": "Gait & posture"
+    },
     {
       "id": "news-1786916485796-1",
       "title": "Incidence and risk factors for rotator cuff retear after arthroscopic rotator cuff repair in middle-aged and older patients: a systematic review and meta-analysis",
@@ -1938,113 +2004,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1786686640829-7",
-      "title": "Contextualising the IOC consensus statement on mental health in elite athletes for low- and middle-income countries",
-      "summary": "This editorial discusses contextualizing the International Olympic Committee (IOC) consensus statement on mental health in elite athletes for low- and middle-income countries (LMICs), proposing adaptations for local implementation given understudied evidence gaps.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/15/1075?rss=1",
-      "publishedAt": "2026-08-12T13:39:23.000Z",
-      "firstSeen": "2026-08-14T05:50:40.829Z",
-      "curatedScore": 65,
-      "curatedReason": "这份社论强调了将国际奥委会《精英运动员心理健康共识声明》的建议，应用于中低收入国家时需要进行背景敏感的调整，提示你在不同文化和经济背景下，要考虑政策和实践的本地化。",
-      "titleZh": "国际奥委会精英运动员心理健康共识声明在中低收入国家的语境化应用",
-      "summaryZh": "这份社论讨论了如何在低收入和中等收入国家（LMICs）背景下应用国际奥委会（IOC）精英运动员心理健康共识声明，并针对证据不足的领域，提出了本地化实施的调整建议。",
-      "curatedReasonEn": "This editorial highlights the need for context-sensitive adaptation when applying the IOC Consensus Statement on Mental Health in Elite Athletes to low- and middle-income countries, reminding you to consider localization of policies and practices in diverse cultural and economic settings.",
-      "tags": [
-        "policy",
-        "mental-health"
-      ],
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786686640829-9",
-      "title": "Youth sports and mental health in sub-Saharan Africa",
-      "summary": "This editorial highlights challenges in applying the updated International Olympic Committee (IOC) consensus statement on mental health in elite athletes to youth sports in sub-Saharan Africa due to distinct social, economic, and healthcare contexts.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/15/1080?rss=1",
-      "publishedAt": "2026-08-12T13:39:23.000Z",
-      "firstSeen": "2026-08-14T05:50:40.829Z",
-      "curatedScore": 65,
-      "curatedReason": "这份社论指出，国际奥委会的精英运动员心理健康指南在撒哈拉以南非洲的青年体育中实施面临挑战，提醒你在实践中需考虑不同地区的社会、经济和医疗背景差异。",
-      "titleZh": "撒哈拉以南非洲的青年体育与心理健康",
-      "summaryZh": "这份社论强调，由于撒哈拉以南非洲独特的社会、经济和医疗背景，在当地青年体育中应用国际奥委会（IOC）最新修订的精英运动员心理健康共识声明面临挑战。",
-      "curatedReasonEn": "This editorial notes that implementing the IOC's elite athlete mental health guidelines in youth sports in Sub-Saharan Africa faces challenges, reminding you to consider social, economic, and healthcare context differences across regions in practice.",
-      "tags": [
-        "policy",
-        "mental-health"
-      ],
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786686640829-15",
-      "title": "Research priorities for advancing mental health in elite sport: a companion to the IOC consensus statement on mental health in elite athletes",
-      "summary": "This companion article to the IOC consensus statement outlines research priorities for advancing mental health in elite sport, noting a more than threefold increase in peer-reviewed publications on this topic since 2019.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/15/1187?rss=1",
-      "publishedAt": "2026-08-12T13:39:23.000Z",
-      "firstSeen": "2026-08-14T05:50:40.829Z",
-      "curatedScore": 65,
-      "curatedReason": "这份研究重点回顾了精英运动员心理健康领域的研究优先事项，揭示了该领域出版物数量的显著增长，为你的研究和临床实践提供了未来关注方向。",
-      "titleZh": "推动精英体育心理健康的研究优先事项：国际奥委会精英运动员心理健康共识声明的配套文章",
-      "summaryZh": "这篇国际奥委会共识声明的配套文章概述了推动精英体育心理健康的研究优先事项，指出自 2019 年以来，该主题的同行评审出版物数量增长了三倍多。",
-      "curatedReasonEn": "This review highlights research priorities in elite athlete mental health, revealing a significant increase in publications, providing future directions for your research and clinical practice.",
-      "tags": [
-        "research",
-        "mental-health"
-      ],
-      "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786682651836-8",
-      "title": "Physical and mental health-related quality of life outcomes of non-pharmacological interventions in early multiple sclerosis: A systematic review and meta-analysis.",
-      "summary": "A systematic review and meta-analysis found effects of non-pharmacological interventions on physical and mental health-related quality of life among adults with early diagnosed multiple sclerosis, with findings pooled using standardized mean differences.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42585300/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 85,
-      "curatedReason": "非药物干预对早期多发性硬化症（MS）患者的身心健康相关生活质量有积极影响。你可以根据这些高级别证据，更自信地将非药物策略纳入早期MS患者的治疗计划中。",
-      "titleZh": "早期多发性硬化症非药物干预对身心健康相关生活质量结局的影响：一项系统综述和荟萃分析",
-      "summaryZh": "一项系统综述和荟萃分析发现，非药物干预对早期多发性硬化症成人身心健康相关生活质量具有影响，结果采用标准化均数差进行汇总。",
-      "curatedReasonEn": "Non-pharmacological interventions positively impact physical and mental health-related quality of life in adults with early multiple sclerosis (MS). You can confidently integrate non-pharmacological strategies into early MS patient care plans, supported by this high-level evidence.",
-      "limitation": "研究未报告效应量和异质性，无法全面评估干预效果的强度和一致性。",
-      "limitationEn": "The study did not report effect sizes and heterogeneity, preventing a comprehensive evaluation of the strength and consistency of intervention effects.",
-      "tags": [
-        "research",
-        "ms"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1786682651836-12",
-      "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
-      "summary": "A systematic review and meta-analysis of 142 articles explored the effectiveness of physical exercise on cognitive function and optimal dosage in older adults with Alzheimer's disease, drawing from Embase, PsycInfo, and Ovid Medline databases.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586403/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 85,
-      "curatedReason": "体育锻炼能有效改善阿尔茨海默病（AD）老年人的认知功能，但最佳剂量尚需个体化考量。你可以将运动疗法作为AD管理的重要组成部分，但需结合患者具体情况调整方案。",
-      "titleZh": "运动干预对阿尔茨海默病老年人的影响：一项系统综述和荟萃分析",
-      "summaryZh": "一项对142篇文章的系统综述和荟萃分析，探讨了运动对阿尔茨海默病老年人认知功能的有效性和最佳剂量，数据来源于Embase、PsycInfo和Ovid Medline数据库。",
-      "curatedReasonEn": "Physical exercise effectively improves cognitive function in older adults with Alzheimer's disease (AD), though optimal dosage requires individualized consideration. You can integrate exercise therapy as a key component of AD management, but tailor protocols to each patient's specific needs.",
-      "limitation": "研究未明确报告具体效应量和异质性，可能影响对干预效果强度和一致性的全面理解。",
-      "limitationEn": "The study did not explicitly report specific effect sizes and heterogeneity, which may limit a comprehensive understanding of the strength and consistency of intervention effects.",
-      "tags": [
-        "research",
-        "认知功能"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Archives of physical medicine and rehabilitation"
     }
   ]
 }
