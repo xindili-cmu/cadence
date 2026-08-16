@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-16T07:04:38.316Z",
+    "lastUpdated": "2026-08-16T08:51:17.291Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -26,11 +26,11 @@
         "Clinical rehabilitation",
         "Physiotherapy theory and practice",
         "Disability and rehabilitation",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "BMC Geriatrics",
         "Musculoskeletal science & practice",
         "medRxiv",
-        "Brazilian journal of physical therapy",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "BMC Geriatrics"
+        "Brazilian journal of physical therapy"
       ],
       "tag": "ms",
       "kind": "theme",
@@ -61,6 +61,18 @@
         },
         {
           "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "Telerehabilitation before and after lumbar spine surgery: A scoping review.",
+          "titleZh": "腰椎手术前后远程康复：一项范围综述"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Associations between patient quality of life and caregiver burden among older adults receiving comprehensive geriatric assessment via telemedicine: a cross-sectional study from Seha Virtual Hospital, Saudi Arabia",
+          "titleZh": "沙特阿拉伯远程医疗综合老年评估中老年患者生活质量与照护者负担的关联"
+        },
+        {
+          "source": "PubMed",
           "journal": "Musculoskeletal science & practice",
           "title": "Experiences of telehealth e-mentoring within postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom.",
           "titleZh": "远程电子导师制在加拿大和英国研究生骨骼肌肉物理治疗教育中的经验"
@@ -75,23 +87,11 @@
           "journal": "Brazilian journal of physical therapy",
           "title": "Quality indicators for Spanish hospital-based physical therapy units: a feasibility and inter-rater reliability study.",
           "titleZh": "西班牙医院物理治疗科室质量指标：可行性与评估者间信度研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Telerehabilitation before and after lumbar spine surgery: A scoping review.",
-          "titleZh": "腰椎手术前后远程康复：一项范围综述"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Associations between patient quality of life and caregiver burden among older adults receiving comprehensive geriatric assessment via telemedicine: a cross-sectional study from Seha Virtual Hospital, Saudi Arabia",
-          "titleZh": "沙特阿拉伯远程医疗综合老年评估中老年患者生活质量与照护者负担的关联"
         }
       ],
-      "heat": 5.75,
-      "themeZh": "多发性硬化症康复：远程医疗、运动与生活质量",
-      "themeEn": "MS Rehabilitation: Telerehab, Exercise & QOL"
+      "heat": 5.6,
+      "themeZh": "多发性硬化与脊柱术后远程康复对生活质量的影响",
+      "themeEn": "Telerehabilitation for MS and Post-Spine Surgery QoL"
     },
     {
       "id": "news-1786082036622-3",
@@ -99,14 +99,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42562200/",
       "category": "neurological",
       "publishedAt": "2026-08-14T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
         "Neurorehabilitation and neural repair",
         "Journal of NeuroEngineering and Rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Clinical rehabilitation"
+        "Clinical rehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "medRxiv"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -170,11 +172,28 @@
           "journal": "Clinical rehabilitation",
           "title": "Feasibility and acceptability of the breakfast group intervention BISTRo for stroke survivors in acute rehabilitation.",
           "titleZh": "急性康复期卒中幸存者早餐组干预 BISTRo 的可行性和可接受性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
+          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
+          "titleZh": "运用项目反应理论和图形模型简化脊髓损伤下肢功能障碍患者的 ICF 评估"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
+          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管与自主神经反应：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 2.71,
-      "themeZh": "卒中与前庭康复：神经刺激与虚拟现实",
-      "themeEn": "Stroke & Vestibular Rehab: Neuromodulation, VR"
+      "heat": 3.52,
+      "themeZh": "卒中后功能与平衡恢复的神经调控与虚拟现实",
+      "themeEn": "Neuromodulation and VR for Stroke Recovery"
     },
     {
       "id": "news-1786312595011-5",
@@ -182,13 +201,14 @@
       "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01948-7",
       "category": "orthopedic",
       "publishedAt": "2026-08-14T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "BMC Sports Science, Medicine and Rehabilitation",
-        "Sports Medicine",
-        "Physiotherapy theory and practice",
         "BMC Musculoskeletal Disorders",
-        "International journal of sports physical therapy"
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "International journal of sports physical therapy",
+        "Sports Medicine",
+        "Physiotherapy theory and practice"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -200,22 +220,16 @@
           "titleZh": "SportsMetrics 训练对 ACL 损伤风险相关生物力学和功能表现结局的影响：一项系统综述和荟萃分析"
         },
         {
-          "source": "Sports Medicine",
-          "journal": "Sports Medicine",
-          "title": "Understanding Anterior Cruciate Ligament Adaptation: Structural, Mechanical, and Healing Considerations",
-          "titleZh": "理解前交叉韧带适应：结构、力学和愈合考量"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Integrated rehabilitation incorporating aquatic therapy following posterior cruciate ligament reconstruction: a case report.",
-          "titleZh": "整合水疗的后交叉韧带重建术后康复：一例病例报告"
-        },
-        {
           "source": "BMC Musculoskelet Disord",
           "journal": "BMC Musculoskeletal Disorders",
           "title": "Cross-cultural adaptation and psychometric assessment of the Chinese version of the University of Wisconsin Running Injury and Recovery Index in runners",
           "titleZh": "威斯康星大学跑步损伤与恢复指数中文版在跑步者中的跨文化适应与心理测量评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Impacts of ankle sprain on functional performance in under-20 soccer players: a cross-sectional study.",
+          "titleZh": "踝关节扭伤对 U20 足球运动员功能表现的影响：一项横断面研究"
         },
         {
           "source": "PubMed",
@@ -228,11 +242,23 @@
           "journal": "BMC Sports Science, Medicine and Rehabilitation",
           "title": "Situational characteristics of lower limb muscle cramps in male semi-elite football players: a video-based descriptive case series",
           "titleZh": "半精英男足运动员下肢肌肉痉挛情境特征的视频描述性病例系列研究"
+        },
+        {
+          "source": "Sports Medicine",
+          "journal": "Sports Medicine",
+          "title": "Understanding Anterior Cruciate Ligament Adaptation: Structural, Mechanical, and Healing Considerations",
+          "titleZh": "理解前交叉韧带适应：结构、力学和愈合考量"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Integrated rehabilitation incorporating aquatic therapy following posterior cruciate ligament reconstruction: a case report.",
+          "titleZh": "整合水疗的后交叉韧带重建术后康复：一例病例报告"
         }
       ],
-      "heat": 2.26,
-      "themeZh": "韧带与肌肉损伤：ACL、PCL 和运动康复",
-      "themeEn": "Ligament & Muscle Injuries: ACL, PCL Rehab"
+      "heat": 2.64,
+      "themeZh": "下肢运动损伤：预防、恢复与生物力学",
+      "themeEn": "Lower Limb Sports Injury: Prevention & Recovery"
     },
     {
       "id": "news-1786682651836-12",
@@ -301,55 +327,101 @@
           "titleZh": "卒中偏瘫步态中摆前膝关节过伸对摆动期运动学和前向推进力的影响"
         }
       ],
-      "heat": 1.92,
-      "themeZh": "老年人群运动干预：AD、KOA 与平衡训练",
-      "themeEn": "Exercise for Older Adults: AD, KOA, Balance"
+      "heat": 1.87,
+      "themeZh": "老年人与慢性病患者的运动干预与肌力训练",
+      "themeEn": "Exercise for Older Adults and Chronic Disease"
     },
     {
-      "id": "news-1786769513362-2",
-      "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42600170/",
-      "category": "neurological",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "sourceCount": 3,
+      "id": "news-1786682651837-13",
+      "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42592645/",
+      "category": "manual-modality",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "sourceCount": 4,
       "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "Archives of physical medicine and rehabilitation",
-        "medRxiv"
+        "Journal of rehabilitation medicine",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Physical & occupational therapy in pediatrics"
       ],
-      "tag": "spinal-cord",
+      "tag": "taping",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
-          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+          "titleZh": "肌内效贴布对重度依赖性肢体水肿患者的影响：一项随机临床试验"
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Simplifying ICF Assessment for Individuals with Spinal Cord Injury with Lower Limb Dysfunction Using Item Response Theory and Graphical Models.",
-          "titleZh": "运用项目反应理论和图形模型简化脊髓损伤下肢功能障碍患者的 ICF 评估"
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Acute Effects of Varying Neuromuscular Electrical Stimulation Amplitude on Quadriceps Isometric Torque and Muscle Thickness in Healthy Young Adults: A Randomized Split-Limb Trial.",
+          "titleZh": "不同神经肌肉电刺激幅度对健康年轻人股四头肌等长扭矩和肌肉厚度的急性影响：一项随机分肢试验。"
         },
         {
-          "source": "medRxiv",
-          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
-          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管与自主神经反应：MACHINE 试验的探索性研究"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of proprioceptive neuromuscular facilitation on flexibility and neuromuscular performance in gymnastics: a systematic review",
+          "titleZh": "本体感觉神经肌肉促进法对体操运动员柔韧性和神经肌肉表现的影响：一项系统综述"
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Respiratory Function in Participants with Spinal Cord Injury of a Rehabilitation Center using Neuromuscular Electrical Stimulation.",
-          "titleZh": "康复中心接受神经肌肉电刺激的脊髓损伤患者呼吸功能观察"
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Current Manual Therapy Practices in Pediatric Neurological Physiotherapy: A Cross-Sectional Survey.",
+          "titleZh": "希腊儿科神经物理治疗中手动治疗的当前实践：一项横断面调查"
         }
       ],
-      "heat": 1.35,
-      "themeZh": "脊髓损伤康复：功能评估与神经刺激",
-      "themeEn": "SCI Rehab: Function Assessment & Stimulation"
+      "heat": 1.24,
+      "themeZh": "肌内效贴、电刺激与PNF在物理治疗中的应用",
+      "themeEn": "Taping, Electrical Stimulation, and PNF in PT"
     }
   ],
   "items": [
+    {
+      "id": "news-1786682651836-9",
+      "title": "Impacts of ankle sprain on functional performance in under-20 soccer players: a cross-sectional study.",
+      "summary": "A cross-sectional study of 75 male under-20 soccer players found that those with a history of lateral ankle sprain had worse perceived ankle instability (CAIT), self-reported function (FAAM), ankle dorsiflexion (WBLT), and dynamic balance (YBT) compared to those without a history of sprain.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42580194/",
+      "publishedAt": "2026-08-11T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.836Z",
+      "curatedScore": 70,
+      "curatedReason": "有踝关节扭伤史的 U20 足球运动员在踝关节背屈活动度、本体感觉和动态平衡方面均表现出受损。这提示您在对年轻足球运动员进行伤后评估和重返赛场训练时，需全面筛查这些功能缺陷。",
+      "titleZh": "踝关节扭伤对 U20 足球运动员功能表现的影响：一项横断面研究",
+      "summaryZh": "一项对 75 名 U20 男性足球运动员进行的横断面研究发现，有踝关节扭伤史的运动员在踝关节不稳定性感知（CAIT）、自评功能（FAAM）、踝关节背屈活动度（WBLT）和动态平衡（YBT）方面均差于无扭伤史的运动员。",
+      "curatedReasonEn": "U20 soccer players with a history of ankle sprain show impaired ankle dorsiflexion, proprioception, and dynamic balance. This suggests a need for comprehensive screening of these functional deficits when assessing and training young soccer players for return to sport after injury.",
+      "limitation": "本研究为横断面观察性设计，无法确立踝关节扭伤与功能受损之间的因果关系。",
+      "limitationEn": "This cross-sectional observational study cannot establish a causal relationship between ankle sprain and functional impairment.",
+      "tags": [
+        "research",
+        "foot-ankle"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    },
+    {
+      "id": "news-1786705918574-2",
+      "title": "Mental health in elite athletes: International Olympic Committee consensus statement (2026)",
+      "summary": "The updated International Olympic Committee consensus statement (2026) emphasizes that mental health symptoms and disorders are common in elite athletes, may be sport-related, and impact performance, recommending routine screening and monitoring.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/15/1083?rss=1",
+      "publishedAt": "2026-08-12T13:39:23.000Z",
+      "firstSeen": "2026-08-14T05:50:40.829Z",
+      "curatedScore": 78,
+      "curatedReason": "这份 IOC 共识声明强调精英运动员心理健康问题普遍且可能与运动相关，并推荐使用验证工具进行常规筛查和监测。它确认了心理健康在运动康复中的重要性，你在日常实践中应更关注运动员的心理状态并考虑恰当的转诊。",
+      "titleZh": "精英运动员心理健康：国际奥委会共识声明（2026）",
+      "summaryZh": "更新后的国际奥委会共识声明（2026）强调，精英运动员的心理健康症状和障碍普遍存在，可能与运动相关并影响表现，建议进行常规筛查和监测。",
+      "curatedReasonEn": "This IOC consensus statement highlights the prevalence of mental health issues in elite athletes, their potential sport-related etiologies, and recommends routine screening and monitoring. It affirms the importance of mental health in sports rehabilitation, prompting you to pay closer attention to athletes' psychological states and consider appropriate referrals.",
+      "tags": [
+        "guideline",
+        "mental-health",
+        "athlete-care"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
     {
       "id": "news-1786682651836-10",
       "title": "Current Manual Therapy Practices in Pediatric Neurological Physiotherapy: A Cross-Sectional Survey.",
@@ -442,27 +514,6 @@
         "pelvic-floor"
       ],
       "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1786705918574-2",
-      "title": "Mental health in elite athletes: International Olympic Committee consensus statement (2026)",
-      "summary": "The updated International Olympic Committee consensus statement (2026) emphasizes that mental health symptoms and disorders are common in elite athletes, may be sport-related, and impact performance, recommending routine screening and monitoring.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/15/1083?rss=1",
-      "publishedAt": "2026-08-12T13:39:23.000Z",
-      "firstSeen": "2026-08-14T05:50:40.829Z",
-      "curatedScore": 78,
-      "curatedReason": "这份 IOC 共识声明强调精英运动员心理健康问题普遍且可能与运动相关，并推荐使用验证工具进行常规筛查和监测。它确认了心理健康在运动康复中的重要性，你在日常实践中应更关注运动员的心理状态并考虑恰当的转诊。",
-      "titleZh": "精英运动员心理健康：国际奥委会共识声明（2026）",
-      "summaryZh": "更新后的国际奥委会共识声明（2026）强调，精英运动员的心理健康症状和障碍普遍存在，可能与运动相关并影响表现，建议进行常规筛查和监测。",
-      "curatedReasonEn": "This IOC consensus statement highlights the prevalence of mental health issues in elite athletes, their potential sport-related etiologies, and recommends routine screening and monitoring. It affirms the importance of mental health in sports rehabilitation, prompting you to pay closer attention to athletes' psychological states and consider appropriate referrals.",
-      "tags": [
-        "guideline",
-        "mental-health",
-        "athlete-care"
-      ],
-      "journal": "British Journal of Sports Medicine"
     },
     {
       "id": "news-1786682651837-14",
@@ -2033,29 +2084,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1786682651836-6",
-      "title": "Respiratory Function in Participants with Spinal Cord Injury of a Rehabilitation Center using Neuromuscular Electrical Stimulation.",
-      "summary": "This cross-sectional study observed the respiratory function of 25 individuals with chronic spinal cord injury who had participated in a neuromuscular electrical stimulation (NMES) rehabilitation program for at least three years, comparing those with tetraplegia (n=6) and paraplegia (n=16).",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586402/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "本研究观察了接受神经肌肉电刺激（NMES）康复项目的脊髓损伤（SCI）患者的呼吸功能。它提供了一组长期接受NMES治疗的SCI患者呼吸功能的横断面数据，有助于了解其生理状态。",
-      "titleZh": "康复中心接受神经肌肉电刺激的脊髓损伤患者呼吸功能观察",
-      "summaryZh": "这项横断面研究观察了25名长期参与神经肌肉电刺激（NMES）康复项目的慢性脊髓损伤患者的呼吸功能，比较了截瘫组（n=6）和不完全截瘫组（n=16）。",
-      "curatedReasonEn": "This study observed the respiratory function of spinal cord injury (SCI) participants in a neuromuscular electrical stimulation (NMES) rehabilitation program. It provides cross-sectional data on the respiratory function of a group of SCI patients undergoing long-term NMES, which helps in understanding their physiological status.",
-      "limitation": "这是一项横断面研究，无法建立因果关系，且样本量较小（25人），可能存在选择偏倚。",
-      "limitationEn": "This was a cross-sectional study, so it cannot establish causality, and the small sample size (25 participants) may introduce selection bias.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
     }
   ]
 }
