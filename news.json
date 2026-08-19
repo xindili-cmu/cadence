@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-19T08:58:41.652Z",
+    "lastUpdated": "2026-08-19T13:15:20.715Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,7 +20,7 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42606315/",
       "category": "neurological",
       "publishedAt": "2026-08-18T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 10,
       "sources": [
         "NeuroRehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
@@ -29,7 +29,9 @@
         "BMC Geriatrics",
         "Disability and rehabilitation",
         "American journal of physical medicine & rehabilitation",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physical medicine and rehabilitation",
+        "Journal of NeuroEngineering and Rehabilitation",
+        "medRxiv"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -117,11 +119,28 @@
           "journal": "American journal of physical medicine & rehabilitation",
           "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
           "titleZh": "中风康复中体针、电针和耳针的比较疗效：一项随机对照试验的系统综述和 Meta 分析"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Multimodal synthesis of neural correlates of motor imagery after spinal cord injury: a systematic review",
+          "titleZh": "脊髓损伤后运动意象的神经相关性多模态综合分析：一项系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
+          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
+          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激联合活动训练对心血管和自主神经反应的影响：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 4.97,
-      "themeZh": "卒中后神经功能缺损的康复剂量、预后与评估",
-      "themeEn": "Stroke Neurological Deficit Rehabilitation Dosing, Prognosis, Assessment"
+      "heat": 5.84,
+      "themeZh": "卒中后神经康复的剂量策略与生物标志物",
+      "themeEn": "Stroke Neurorehab: Dosing & Biomarkers"
     },
     {
       "id": "news-1786682651836-12",
@@ -178,9 +197,9 @@
           "titleZh": "健康老年人次最大运动后心率恢复与心率变异性恢复的时间性解离"
         }
       ],
-      "heat": 3.73,
-      "themeZh": "老年疾病运动干预剂量与心血管健康",
-      "themeEn": "Geriatric Exercise Intervention Dosage & CVD"
+      "heat": 3.5,
+      "themeZh": "老年心肺疾病运动干预的最佳模式与剂量",
+      "themeEn": "Optimal Exercise for Geriatric Cardiopulmonary Conditions"
     },
     {
       "id": "news-1787089664273-21",
@@ -254,9 +273,9 @@
           "titleZh": "预测非帕金森病老年患者跌倒风险的新视角：磁共振帕金森指数"
         }
       ],
-      "heat": 3.73,
-      "themeZh": "老年肌少症、平衡与跌倒的康复干预",
-      "themeEn": "Geriatric Sarcopenia, Balance, Falls Rehabilitation"
+      "heat": 3.5,
+      "themeZh": "老年人肌少症、平衡与跌倒的评估及干预",
+      "themeEn": "Sarcopenia, Balance & Falls in Older Adults"
     },
     {
       "id": "news-1786999762266-10",
@@ -311,98 +330,93 @@
           "titleZh": "加拿大和英国肌骨物理治疗研究生教育中远程电子导师制度的经验"
         }
       ],
-      "heat": 2.48,
-      "themeZh": "儿童青少年慢性病运动处方与康复培训",
-      "themeEn": "Pediatric Chronic Disease Exercise Prescription, Training"
+      "heat": 2.34,
+      "themeZh": "儿童青少年慢性病与脊柱侧弯的运动疗法",
+      "themeEn": "Pediatric Exercise for Chronic & Scoliosis"
     },
     {
-      "id": "news-1786877038341-0",
-      "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
+      "id": "news-1787089664272-7",
+      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
       "category": "orthopedic",
       "publishedAt": "2026-08-17T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
+        "Sports Medicine - Open",
+        "Musculoskeletal science & practice",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Musculoskeletal Disorders",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Physiotherapy theory and practice",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physical medicine and rehabilitation",
+        "Physiotherapy theory and practice"
       ],
-      "tag": "knee",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
+          "titleZh": "腰痛患者与健康个体胸腰筋膜的差异：一项含荟萃分析的系统综述"
+        },
+        {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
-          "titleZh": "针对旋前相关前膝痛的足部康复：一项两阶段病例对照研究与单盲随机对照试验，比较手法治疗与神经肌肉训练均结合强化低染料贴布"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Effect of six weeks of ankle stretching exercises on ankle dorsiflexion range of motion and anterior knee pain in children with ankle pronation: a randomized controlled trial",
-          "titleZh": "六周踝关节牵伸运动对儿童踝关节过度内旋引起的踝关节背屈活动度和前膝痛的影响：一项随机对照试验"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Comparative effectiveness of exercise-based prehabilitation before total knee arthroplasty: a systematic review and network meta-analysis of randomized controlled trials",
-          "titleZh": "全膝关节置换术前运动基康复的比较有效性：一项随机对照试验的系统综述和网络荟萃分析"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Mucoid degeneration of the anterior cruciate ligament: a scoping review",
-          "titleZh": "前交叉韧带黏液样变性：一项范围综述"
+          "journal": "Musculoskeletal science & practice",
+          "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
+          "titleZh": "系统性炎症作为慢性腰痛运动益处的中介：细化机制视角"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Integrated rehabilitation incorporating aquatic therapy following posterior cruciate ligament reconstruction: a case report.",
-          "titleZh": "后交叉韧带重建术后结合水疗的整合康复：一例病例报告"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
-          "titleZh": "年龄分层对儿童髋关节发育不良联合截骨术结局的影响：一项基于 3 岁分界点的探索性分析"
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Development and Content Validation of an Exercise-Based Framework for the Management of Lumbar Radiculopathy.",
+          "titleZh": "腰椎神经根病变运动管理框架的开发与内容验证"
         },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Reliability and construct validity of three movement-evoked pain methods in individuals with knee osteoarthritis.",
           "titleZh": "膝骨关节炎患者三种运动诱发疼痛评估方法的信度和结构效度"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Responsiveness, Smallest Detectable Change, and Minimal Important Change of the Turkish Pelvic Floor Distress Inventory-20 Following Pelvic Floor Muscle Training.",
+          "titleZh": "盆底肌训练后土耳其语版盆底功能障碍问卷-20 的响应性、最小可检测变化和最小重要变化"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "功能性与传统物理治疗对膀胱疼痛综合征女性患者症状、心理结局及生活质量的影响：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Association Between Danish Guideline Treatments for Breast Cancer and Physiotherapy-Relevant Late Effects: A Nationwide Cohort Study.",
+          "titleZh": "丹麦乳腺癌指南治疗与物理治疗相关晚期症状的关联性分析：一项全国性队列研究"
         }
       ],
-      "heat": 2.2,
-      "themeZh": "下肢生物力学异常与膝关节疼痛的康复治疗",
-      "themeEn": "Lower Limb Biomechanics, Knee Pain Rehabilitation"
+      "heat": 2.06,
+      "themeZh": "腰背痛与膝骨关节炎的运动及疼痛管理",
+      "themeEn": "Exercise & Pain Management for LBP & OA"
     }
   ],
   "items": [
     {
-      "id": "news-1785912408310-0",
-      "title": "Biopsychosocial predictors of functional recovery in chronic low back pain following physiotherapy: A survival analysis study.",
-      "summary": "A prospective observational cohort study of 250 adults with chronic nonspecific low back pain found that pain catastrophizing and lower baseline Oswestry Disability Index scores were associated with faster functional recovery after physiotherapy.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42551333/",
-      "publishedAt": "2026-08-09T00:00:00.000Z",
-      "firstSeen": "2026-08-05T06:46:48.310Z",
-      "curatedScore": 75,
-      "curatedReason": "有意思，这项观察研究提示，疼痛灾难化程度越高、基线功能障碍越轻的慢性腰痛患者，在物理治疗后恢复可能越快。不过这是观察性数据，别误读成灾难化对恢复有益；更合理的解读是：对那些起初受限较少但心理负担重的患者，物理治疗效果可能更显著。在评估时务必纳入疼痛灾难化指标。",
-      "titleZh": "慢性腰痛患者接受物理治疗后功能恢复的生物心理社会预测因子：一项生存分析研究",
-      "summaryZh": "一项对 250 名慢性非特异性腰痛成人进行的前瞻性观察队列研究发现，疼痛灾难化和较低的基线 Oswestry 残疾指数评分与物理治疗后更快的功能恢复相关。",
-      "curatedReasonEn": "This observational study suggests that chronic LBP patients with higher pain catastrophizing and lower baseline disability may recover faster after physiotherapy. Do not misinterpret this observational data as catastrophizing being beneficial; a more plausible interpretation is that physio might be particularly effective for patients with lower initial limitations but significant psychological distress. Always include pain catastrophizing in your assessments.",
-      "limitation": "本研究为单中心前瞻性观察研究，尽管样本量较大，但其发现的关联性而非因果性，且结果的外推性可能受限于研究人群的特点。",
-      "limitationEn": "This was a single-center prospective observational study; despite the large sample size, it identified associations rather than causation, and the generalizability of the findings may be limited by the characteristics of the study population.",
+      "id": "news-1787145318583-0",
+      "title": "Trump Administration Announces $90 million to Modernize and Improve IT and Interoperability for South Dakota",
+      "summary": "The Trump Administration announced a $90 million grant to modernize and improve IT and interoperability for healthcare systems in South Dakota.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/trump-administration-announces-90-million-modernize-improve-it-interoperability-south-dakota",
+      "publishedAt": "2026-08-19T12:00:00.000Z",
+      "firstSeen": "2026-08-19T13:15:18.583Z",
+      "curatedScore": 60,
+      "curatedReason": "此新闻是关于南达科他州通用医疗IT现代化和互操作性的拨款，与物理治疗的临床执业或行业发展无直接关联。",
+      "titleZh": "特朗普政府宣布拨款9000万美元用于南达科他州IT现代化和互操作性改善",
+      "summaryZh": "特朗普政府宣布拨款9000万美元，旨在改善南达科他州的医疗信息技术现代化和互操作性。",
+      "curatedReasonEn": "This news is about a grant for general healthcare IT modernization and interoperability in South Dakota, which is not directly related to physical therapy clinical practice or industry development.",
       "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Musculoskeletal science & practice"
+        "news"
+      ]
     },
     {
       "id": "news-1786999762266-15",
