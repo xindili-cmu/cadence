@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-18T22:48:00.299Z",
+    "lastUpdated": "2026-08-19T01:58:00.492Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,27 +15,33 @@
   },
   "hotTopics": [
     {
-      "id": "news-1786856033301-1",
-      "title": "Effectiveness of In-Clinic Rehabilitation vs. Home-Based Telerehabilitation for Adults with MS in the Deep South: The TEAMS Cluster Randomized Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603596/",
+      "id": "news-1786963906997-1",
+      "title": "Effectiveness of a Personalized Robot-Assisted Trunk and Lower Limb Rehabilitation in Patients with Chronic Stroke: A Randomized Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42604971/",
       "category": "neurological",
       "publishedAt": "2026-08-18T00:00:00.000Z",
       "sourceCount": 10,
       "sources": [
+        "American journal of physical medicine & rehabilitation",
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
-        "American journal of physical medicine & rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "medRxiv",
-        "Clinical rehabilitation",
         "Neurorehabilitation and neural repair",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Clinical rehabilitation",
         "BMC Geriatrics",
         "Disability and rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
+        "Journal of NeuroEngineering and Rehabilitation",
+        "medRxiv"
       ],
-      "tag": "ms",
+      "tag": "stroke",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effectiveness of a Personalized Robot-Assisted Trunk and Lower Limb Rehabilitation in Patients with Chronic Stroke: A Randomized Controlled Trial.",
+          "titleZh": "个性化机器人辅助躯干和下肢康复对慢性卒中患者的疗效：一项随机对照试验"
+        },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -56,38 +62,15 @@
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
-          "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角。一项范围综述与合作观点"
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Applying the International Classification of Functioning, Disability and Health to Classify Upper Limb Outcome Measures in Stroke Rehabilitation: A Construct-Driven Perspective.",
+          "titleZh": "应用国际功能、残疾和健康分类 (ICF) 框架对卒中康复中上肢功能评估量表进行分类：一种结构驱动的视角"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
           "title": "Upper-Limb Paresis Severity Is Associated With Practice Dosage During Task-Oriented Training in Subacute Stroke-An Exploratory Secondary Analysis.",
           "titleZh": "上肢麻痹严重程度与亚急性卒中任务导向训练的练习剂量相关：一项探索性二次分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
-          "titleZh": "卒中患者不同吞咽功能水平下的口腔肌肉质量、舌肌力量和耐力表现：一项试点研究"
-        },
-        {
-          "source": "medRxiv",
-          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-          "titleZh": "不仅仅是手臂运动：指戴式加速计为卒中幸存者真实世界上肢功能测量提供了一种有效且敏感的替代腕戴式方案"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
-          "titleZh": "中风后运动预后早期神经影像和神经生理学生物标志物的系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Applying the International Classification of Functioning, Disability and Health to Classify Upper Limb Outcome Measures in Stroke Rehabilitation: A Construct-Driven Perspective.",
-          "titleZh": "应用国际功能、残疾和健康分类 (ICF) 框架对卒中康复中上肢功能评估量表进行分类：一种结构驱动的视角"
         },
         {
           "source": "PubMed",
@@ -109,9 +92,27 @@
         },
         {
           "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
+          "titleZh": "卒中患者不同吞咽功能水平下的口腔肌肉质量、舌肌力量和耐力表现：一项试点研究"
+        },
+        {
+          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Twenty years of the fitness and mobility exercise (FAME) program for people post-stroke: a multi-data source evaluation of implementation using the RE-AIM framework.",
           "titleZh": "卒中后 FAME 康复项目二十年：基于 RE-AIM 框架的多数据源实施评估"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "The effect of tilt-table robot-assisted training on functional outcomes in people with stroke and sarcopenia: a retrospective cohort study",
+          "titleZh": "倾斜床机器人辅助训练对卒中合并肌少症患者功能结局的影响：一项回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
+          "titleZh": "卒中后分类步态模式亚组的特征及异常步态模式定义：一项范围综述"
         },
         {
           "source": "J NeuroEng Rehabil",
@@ -131,57 +132,64 @@
           "titleZh": "慢性脊髓损伤后经皮脊髓电刺激联合活动训练对心血管和自主神经反应的影响：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 7.2,
-      "themeZh": "神经损伤后运动与吞咽功能的康复干预",
-      "themeEn": "Neurologic rehabilitation for motor and swallowing function"
+      "heat": 6.87,
+      "themeZh": "卒中康复的多种干预模式与疗效比较研究",
+      "themeEn": "Diverse Stroke Rehabilitation Interventions and Efficacy"
     },
     {
-      "id": "news-1786999762266-10",
-      "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1259?rss=1",
-      "category": "pediatric",
+      "id": "news-1786682651836-12",
+      "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586403/",
+      "category": "geriatric",
       "publishedAt": "2026-08-18T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "Sports medicine (Auckland, N.Z.)",
+        "Sport Sciences for Health",
         "British Journal of Sports Medicine",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Musculoskeletal science & practice",
+        "European Review of Aging and Physical Activity",
         "Physiotherapy theory and practice",
         "medRxiv"
       ],
-      "tag": "chronic-disease",
+      "tag": "alzheimer",
       "kind": "theme",
       "members": [
         {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
-          "titleZh": "居家体育锻炼干预对慢性病儿童和青少年的有效性和可行性：一项系统综述和荟萃分析"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+          "titleZh": "运动干预对阿尔茨海默病老年患者的疗效：一项系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-          "titleZh": "住院儿科肿瘤血液病患者的治疗性运动方案：随机临床试验。"
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
+          "titleZh": "中老年人血压管理最佳运动模式与剂量：一项包含贝叶斯模型和剂量-反应网络荟萃分析的系统综述"
+        },
+        {
+          "source": "Sport Sci Health",
+          "journal": "Sport Sciences for Health",
+          "title": "Effects of different aerobic exercise intensities on exercise capacity, quality of life and mortality in individuals with coronary artery disease: systematic review and network meta-analysis",
+          "titleZh": "不同有氧运动强度对冠心病患者运动能力、生活质量和死亡率的影响：一项系统综述和网络荟萃分析"
         },
         {
           "source": "BJSM",
           "journal": "British Journal of Sports Medicine",
-          "title": "Role of exercise in improving bone health in young paediatric patients with a history of cancer (PhD Academy Award)",
-          "titleZh": "运动在改善有癌症病史的年轻儿童患者骨骼健康中的作用（博士学院奖）"
+          "title": "Joint non-linear dose-response associations of device-measured physical activity and cardiorespiratory fitness with cardiovascular disease: a cohort and Mendelian randomisation study",
+          "titleZh": "设备测量身体活动和心肺适能与心血管疾病的联合非线性剂量反应关联：一项队列和孟德尔随机化研究"
         },
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
-          "titleZh": "康复性游戏化运动整合于青少年特发性脊柱侧凸保守治疗中：一项试点随机对照试验"
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Resting and exercise-induced occult hypertension and coronary atherosclerosis in male masters endurance athletes",
+          "titleZh": "男性精英耐力运动员静息和运动诱发隐匿性高血压与冠状动脉粥样硬化"
         },
         {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Exercise prescription: Physiotherapy's most important and least standardized skill.",
-          "titleZh": "运动处方：物理治疗中最重要但标准化程度最低的技能"
+          "source": "Eur Rev Aging Phys Act",
+          "journal": "European Review of Aging and Physical Activity",
+          "title": "Temporal dissociation between heart rate recovery and heart rate variability recovery after submaximal exercise in healthy older adults",
+          "titleZh": "健康老年人次最大运动后心率恢复与心率变异性恢复的时间性解离"
         },
         {
           "source": "PubMed",
@@ -195,9 +203,9 @@
           "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究"
         }
       ],
-      "heat": 4.32,
-      "themeZh": "儿科慢性病与肿瘤患儿的运动疗法",
-      "themeEn": "Exercise therapy in pediatric chronic diseases"
+      "heat": 4.81,
+      "themeZh": "老年人心血管健康与体力活动、运动强度关联研究",
+      "themeEn": "Older Adults' CVD, Physical Activity, Exercise Intensity"
     },
     {
       "id": "news-1787089664273-21",
@@ -205,14 +213,13 @@
       "sourceUrl": "https://link.springer.com/article/10.1007/s40520-026-03468-3",
       "category": "geriatric",
       "publishedAt": "2026-08-18T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         "Aging Clinical and Experimental Research",
         "BMC Geriatrics",
         "medRxiv",
         "Gait & posture",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
+        "BMC Sports Science, Medicine and Rehabilitation"
       ],
       "tag": "geriatric",
       "kind": "theme",
@@ -263,110 +270,11 @@
           "journal": "BMC Geriatrics",
           "title": "A new perspective in predicting fall risk in non-parkinsonian geriatric patients: the magnetic resonance parkinsonism index",
           "titleZh": "预测非帕金森病老年患者跌倒风险的新视角：磁共振帕金森指数"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "The effect of tilt-table robot-assisted training on functional outcomes in people with stroke and sarcopenia: a retrospective cohort study",
-          "titleZh": "倾斜床机器人辅助训练对卒中合并肌少症患者功能结局的影响：一项回顾性队列研究"
         }
       ],
-      "heat": 4.32,
-      "themeZh": "老年人肌少症、平衡与姿势控制的干预",
-      "themeEn": "Geriatric sarcopenia, balance, and postural control"
-    },
-    {
-      "id": "news-1787089664272-3",
-      "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42611172/",
-      "category": "geriatric",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Sports medicine (Auckland, N.Z.)",
-        "Sport Sciences for Health",
-        "British Journal of Sports Medicine",
-        "European Review of Aging and Physical Activity"
-      ],
-      "tag": "geriatric",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Sports medicine (Auckland, N.Z.)",
-          "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
-          "titleZh": "中老年人血压管理最佳运动模式与剂量：一项包含贝叶斯模型和剂量-反应网络荟萃分析的系统综述"
-        },
-        {
-          "source": "Sport Sci Health",
-          "journal": "Sport Sciences for Health",
-          "title": "Effects of different aerobic exercise intensities on exercise capacity, quality of life and mortality in individuals with coronary artery disease: systematic review and network meta-analysis",
-          "titleZh": "不同有氧运动强度对冠心病患者运动能力、生活质量和死亡率的影响：一项系统综述和网络荟萃分析"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Joint non-linear dose-response associations of device-measured physical activity and cardiorespiratory fitness with cardiovascular disease: a cohort and Mendelian randomisation study",
-          "titleZh": "设备测量身体活动和心肺适能与心血管疾病的联合非线性剂量反应关联：一项队列和孟德尔随机化研究"
-        },
-        {
-          "source": "Eur Rev Aging Phys Act",
-          "journal": "European Review of Aging and Physical Activity",
-          "title": "Temporal dissociation between heart rate recovery and heart rate variability recovery after submaximal exercise in healthy older adults",
-          "titleZh": "健康老年人次最大运动后心率恢复与心率变异性恢复的时间性解离"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Resting and exercise-induced occult hypertension and coronary atherosclerosis in male masters endurance athletes",
-          "titleZh": "男性精英耐力运动员静息和运动诱发隐匿性高血压与冠状动脉粥样硬化"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Infographic. Active commuting is linked to lower coronary atherosclerosis",
-          "titleZh": "信息图：积极通勤与较低的冠状动脉粥样硬化相关"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "High-intensity circuit training combined with sleep or dietary interventions improves cardiometabolic health, sleep health and executive function (PhD Academy Award)",
-          "titleZh": "高强度循环训练结合睡眠或饮食干预改善心血管代谢健康、睡眠健康和执行功能（博士学院奖）"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Exploring the effects of exogenous ketosis on physiological adaptation to exercise in hypoxia(PhD Academy Award)",
-          "titleZh": "探索外源性酮症对低氧环境下运动生理适应的影响（博士学院奖）"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Need to train clinicians for physical activity and exercise interventions: a call to action",
-          "titleZh": "需要培训临床医生进行身体活动和运动干预：一项行动呼吁"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Unlocking the potential of light-intensity physical activity for public health: a call to action for research",
-          "titleZh": "挖掘低强度身体活动在公共卫生中的潜力：研究的行动呼吁"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Evaluating movement breaks as a public health strategy to mitigate the harms of prolonged sitting: a large-scale pragmatic intervention",
-          "titleZh": "评估运动间歇作为减轻长时间久坐危害的公共卫生策略：一项大规模实用干预研究"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Prospective Physical Activity, Sitting and Sleep consortium (ProPASS): addressing methodological and geographical barriers to inform global public health guidelines, interventions and precision medicine",
-          "titleZh": "ProPASS 联盟：克服方法学和地理障碍以指导全球公共卫生指南、干预和精准医疗"
-        }
-      ],
-      "heat": 2.88,
-      "themeZh": "中老年人运动与心血管健康的剂量效应",
-      "themeEn": "Exercise dose-response for cardiovascular health in older adults"
+      "heat": 3.44,
+      "themeZh": "社区和机构老年人肌少症、平衡与姿态控制干预",
+      "themeEn": "Sarcopenia, Balance, Postural Control in Older Adults"
     },
     {
       "id": "news-1786877038341-0",
@@ -374,13 +282,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
       "category": "orthopedic",
       "publishedAt": "2026-08-17T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "BMC Musculoskeletal Disorders",
         "BMC Sports Science, Medicine and Rehabilitation",
         "Physiotherapy theory and practice",
-        "Physical & occupational therapy in pediatrics"
+        "Archives of physical medicine and rehabilitation",
+        "Journal of rehabilitation medicine"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -417,23 +326,292 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Current Manual Therapy Practices in Pediatric Neurological Physiotherapy: A Cross-Sectional Survey.",
-          "titleZh": "儿科神经物理治疗中手法治疗的当前实践：一项横断面调查"
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Reliability and construct validity of three movement-evoked pain methods in individuals with knee osteoarthritis.",
+          "titleZh": "膝骨关节炎患者三种运动诱发疼痛评估方法的信度和结构效度"
         },
         {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
-          "titleZh": "年龄分层对儿童髋关节发育不良联合截骨术结局的影响：一项基于 3 岁分界点的探索性分析"
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+          "titleZh": "肌内效贴对严重依赖性肢体水肿患者的疗效：一项随机临床试验"
         }
       ],
-      "heat": 2.54,
-      "themeZh": "膝关节疼痛与韧带损伤的康复策略",
-      "themeEn": "Rehabilitation strategies for knee pain and ligament injuries"
+      "heat": 2.92,
+      "themeZh": "膝关节及踝关节损伤的康复策略与疗效评估",
+      "themeEn": "Knee and Ankle Injury Rehabilitation Strategies"
+    },
+    {
+      "id": "news-1786999762266-10",
+      "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1259?rss=1",
+      "category": "pediatric",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "British Journal of Sports Medicine",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Musculoskeletal science & practice"
+      ],
+      "tag": "chronic-disease",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
+          "titleZh": "居家体育锻炼干预对慢性病儿童和青少年的有效性和可行性：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
+          "titleZh": "住院儿科肿瘤血液病患者的治疗性运动方案：随机临床试验。"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
+          "titleZh": "康复性游戏化运动整合于青少年特发性脊柱侧凸保守治疗中：一项试点随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Exercise prescription: Physiotherapy's most important and least standardized skill.",
+          "titleZh": "运动处方：物理治疗中最重要但标准化程度最低的技能"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Need to train clinicians for physical activity and exercise interventions: a call to action",
+          "titleZh": "需要培训临床医生进行身体活动和运动干预：一项行动呼吁"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Unlocking the potential of light-intensity physical activity for public health: a call to action for research",
+          "titleZh": "挖掘低强度身体活动在公共卫生中的潜力：研究的行动呼吁"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Evaluating movement breaks as a public health strategy to mitigate the harms of prolonged sitting: a large-scale pragmatic intervention",
+          "titleZh": "评估运动间歇作为减轻长时间久坐危害的公共卫生策略：一项大规模实用干预研究"
+        }
+      ],
+      "heat": 2.75,
+      "themeZh": "儿童慢性病与青少年特发性脊柱侧凸的运动干预",
+      "themeEn": "Exercise Intervention in Pediatric Chronic Diseases"
     }
   ],
   "items": [
+    {
+      "id": "news-1786963906997-1",
+      "title": "Effectiveness of a Personalized Robot-Assisted Trunk and Lower Limb Rehabilitation in Patients with Chronic Stroke: A Randomized Controlled Trial.",
+      "summary": "This RCT with 40 chronic stroke patients found that 3 months of personalized robot-assisted trunk and lower limb training, combined with conventional rehabilitation, significantly improved Functional Ambulatory Category (FAC) compared to conventional rehabilitation alone.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42604971/",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-17T10:51:46.997Z",
+      "curatedScore": 85,
+      "curatedReason": "这项 RCT 证实，新型躯干-下肢康复机器人能显著改善慢性卒中患者的步行功能。这意味着你未来可以考虑将其作为常规康复的有效补充，尤其是在提升独立行走能力方面。",
+      "titleZh": "个性化机器人辅助躯干和下肢康复对慢性卒中患者的疗效：一项随机对照试验",
+      "summaryZh": "一项包含 40 名慢性卒中患者的随机对照试验发现，为期 3 个月的个性化机器人辅助躯干-下肢训练联合常规康复，在改善功能性步行分类 (FAC) 方面显著优于单独常规康复。",
+      "curatedReasonEn": "This RCT confirms that a new trunk-lower limb rehabilitation robot significantly improves walking function in chronic stroke patients. This means you can consider it an effective supplement to conventional rehabilitation in the future, especially for improving independent ambulation.",
+      "limitation": "研究对象为慢性卒中患者，结果不一定适用于急性期或亚急性期卒中患者。",
+      "limitationEn": "The study subjects were patients with chronic stroke, and the results may not be applicable to patients in the acute or subacute phases of stroke.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "RCT",
+      "journal": "American journal of physical medicine & rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1786682651836-12",
+      "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+      "summary": "A systematic review and meta-analysis of 142 articles explored the effectiveness and optimal dosage of physical exercise on cognitive function in older adults with Alzheimer's disease.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586403/",
+      "publishedAt": "2026-08-12T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.836Z",
+      "curatedScore": 85,
+      "curatedReason": "这项系统综述和荟萃分析确认了运动干预对阿尔茨海默病老年患者认知功能的积极影响，特别是对某些认知领域。这坐实了运动疗法在 AD 管理中的关键地位，请确保将其纳入你的干预计划。",
+      "titleZh": "运动干预对阿尔茨海默病老年患者的疗效：一项系统综述和荟萃分析",
+      "summaryZh": "一项针对 142 篇文章的系统综述和荟萃分析，旨在探讨身体运动对阿尔茨海默病老年患者认知功能的有效性和最佳剂量。",
+      "curatedReasonEn": "This systematic review and meta-analysis confirms the positive impact of exercise interventions on cognitive function in older adults with Alzheimer's disease, particularly for specific cognitive domains. The critical role of exercise therapy in AD management is undeniable, so ensure it is included in your intervention plans.",
+      "limitation": "综述指出，尽管有大量文献，但运动对特定认知领域的效果和最佳剂量仍有待进一步明确。",
+      "limitationEn": "The review notes that despite substantial literature, the effectiveness of exercise on specific cognitive domains and optimal dosage remains to be confirmed.",
+      "tags": [
+        "research",
+        "alzheimer"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1786682651837-13",
+      "title": "Effect of kinesiology taping on limb oedema in patients with severe hyper-dependency using shear-wave elastography: a randomized clinical trial.",
+      "summary": "A randomized clinical trial with 50 patients found that kinesiology taping at 25% tension significantly reduced the elastic coefficient of the dermis in limb oedema compared to 0% tension taping by day 9, as measured by shear-wave elastography.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42592645/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.837Z",
+      "curatedScore": 80,
+      "curatedReason": "这项纳入 50 例患者的 RCT 首次通过剪切波弹性成像量化证实，25% 张力的肌内效贴在第 9 天能显著减少肢体水肿的真皮弹性系数。这为你在临床上处理严重依赖性肢体水肿提供了一个有效且可量化的新手段。",
+      "titleZh": "肌内效贴对严重依赖性肢体水肿患者的疗效：一项随机临床试验",
+      "summaryZh": "一项包含 50 名肢体水肿患者的随机临床试验发现，与 0% 张力肌内效贴相比，25% 张力肌内效贴在第 9 天显著降低了真皮层的弹性系数，提示其能有效减少肢体水肿。",
+      "curatedReasonEn": "This RCT is the first to quantitatively confirm, via shear-wave elastography, that kinesiology taping at 25% tension significantly reduces limb edema in severe hyper-dependency. This provides you with an effective and quantifiable new tool for managing such edema in clinical practice.",
+      "limitation": "研究随访时间较短（最长 16 天），对长期效果和不同水肿类型（如淋巴水肿）的普适性需进一步研究。",
+      "limitationEn": "The study had a short follow-up period (maximum 16 days), and further research is needed on long-term effects and generalizability to different edema types (e.g., lymphedema).",
+      "tags": [
+        "research",
+        "taping"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Journal of rehabilitation medicine"
+    },
+    {
+      "id": "news-1786963906996-0",
+      "title": "Responsiveness, Smallest Detectable Change, and Minimal Important Change of the Turkish Pelvic Floor Distress Inventory-20 Following Pelvic Floor Muscle Training.",
+      "summary": "This multicenter retrospective study in 200 women found the Turkish Pelvic Floor Distress Inventory-20 (PFDI-20) to be responsive, determining its smallest detectable change (SDC) and minimal important change (MIC) following 8 weeks of pelvic floor muscle training.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42605162/",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-17T10:51:46.996Z",
+      "curatedScore": 75,
+      "curatedReason": "有了土耳其语版 PFDI-20 的响应性、SDC 和 MIC 数据，你就能更精准地评估土耳其语患者盆底肌训练的临床改善。将这些数据作为评估保守治疗效果的量化依据。",
+      "titleZh": "盆底肌训练后土耳其语版盆底功能障碍问卷-20 的响应性、最小可检测变化和最小重要变化",
+      "summaryZh": "一项多中心回顾性研究在 200 名女性中评估了土耳其语版盆底功能障碍问卷-20 (PFDI-20) 在盆底肌训练后的响应性，并确定了其最小可检测变化 (SDC) 和最小重要变化 (MIC)。",
+      "curatedReasonEn": "With the responsiveness, SDC, and MIC data for the Turkish PFDI-20, you can more accurately assess clinical improvement in Turkish-speaking patients undergoing pelvic floor muscle training. Use these metrics as a quantitative basis for evaluating conservative treatment outcomes.",
+      "limitation": "本研究为回顾性设计，可能存在选择偏倚和数据记录不完整的问题。",
+      "limitationEn": "This study was retrospective, potentially introducing selection bias and incomplete data recording.",
+      "tags": [
+        "research",
+        "pelvic-floor"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1786942953874-0",
+      "title": "Relief increases select shoulder muscle activity, following subacromial injection in subacromial pain syndrome.",
+      "summary": "A study with 21 participants showed that subacromial injection providing immediate pain relief in subacromial pain syndrome increased activity in select shoulder muscles during humeral elevation.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42604620/",
+      "publishedAt": "2026-08-16T00:00:00.000Z",
+      "firstSeen": "2026-08-17T05:02:33.874Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究提示，肩峰下注射镇痛后，部分肩部肌肉活动会即刻增加。这可能支持疼痛减轻后早期恢复主动运动训练的策略，但还需进一步研究明确其长期临床意义。",
+      "titleZh": "肩峰下疼痛综合征患者肩峰下注射镇痛后特定肩部肌肉活动增加",
+      "summaryZh": "一项对 21 名肩峰下疼痛综合征患者的研究显示，在肩峰下注射提供即刻镇痛后，部分肩部肌肉在肱骨抬高过程中的活动性有所增加。",
+      "curatedReasonEn": "This study suggests that certain shoulder muscle activity immediately increases following subacromial injection for pain relief. This may support a strategy of early resumption of active exercise after pain reduction, but further research is needed to clarify its long-term clinical significance.",
+      "limitation": "样本量较小 (n=21)，且研究中存在肌电信号变异和记录错误。",
+      "limitationEn": "The sample size was small (n=21), and there were EMG signal variability and recording errors in the study.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
+    },
+    {
+      "id": "news-1786682651834-0",
+      "title": "Reliability and construct validity of three movement-evoked pain methods in individuals with knee osteoarthritis.",
+      "summary": "This study assessed the reliability and construct validity of three movement-evoked pain calculation methods using performance-based tests in 111 knee osteoarthritis patients, providing data on their test-retest reliability, SEM, and SDC.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42595243/",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.834Z",
+      "curatedScore": 75,
+      "curatedReason": "针对膝骨关节炎患者，这项研究提供了三种运动诱发疼痛评估方法的信效度数据。根据其可靠性、SEM 和 SDC 结果，在临床实践中选择最适合监测患者疼痛变化的工具。",
+      "titleZh": "膝骨关节炎患者三种运动诱发疼痛评估方法的信度和结构效度",
+      "summaryZh": "一项研究评估了 111 名膝骨关节炎患者中三种运动诱发疼痛计算方法（基于功能测试）的信度和结构效度，并提供了其重测信度、测量标准误 (SEM) 和最小可检测变化 (SDC) 的数据。",
+      "curatedReasonEn": "For knee osteoarthritis patients, this study provides reliability and construct validity data for three movement-evoked pain assessment methods. Based on their reliability, SEM, and SDC results, select the most suitable tool for monitoring patient pain changes in clinical practice.",
+      "limitation": "本研究为观察性纵向研究的二次分析，可能存在原始数据收集偏差或未考虑混杂因素。",
+      "limitationEn": "This study was a secondary analysis of an observational longitudinal study, potentially subject to original data collection biases or unaddressed confounders.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1786985422370-0",
+      "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
+      "summary": "A scoping review explored existing characteristics and definitions of classified gait pattern subgroups following stroke, highlighting ongoing uncertainties despite the importance of individualized gait training.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42606311/",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-17T16:50:22.370Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇范围综述强调了卒中后偏瘫步态模式分类的复杂性，提示你目前仍缺乏统一的定义和特征描述。在制定个性化步态训练方案时，请警惕现有分类体系的局限性，并持续关注新证据。",
+      "titleZh": "卒中后分类步态模式亚组的特征及异常步态模式定义：一项范围综述",
+      "summaryZh": "一项范围综述系统探讨了卒中后偏瘫步态模式亚组的现有特征和异常步态模式的定义，发现相关分类标准和特征描述仍存在不确定性。",
+      "curatedReasonEn": "This scoping review highlights the complexity of classifying hemiplegic gait patterns post-stroke, indicating a lack of uniform definitions and characteristics. When developing personalized gait training programs, be aware of the limitations of current classification systems and stay informed about new evidence.",
+      "limitation": "本综述未提供具体步态模式亚组的分类标准或临床特征数据，仅指出其不确定性。",
+      "limitationEn": "This review did not provide specific classification criteria or clinical characteristic data for gait pattern subgroups, only highlighting their uncertainty.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "综述",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1786942953876-1",
+      "title": "Ethics and Artificial Intelligence (AI) in Stroke Rehabilitation.",
+      "summary": "This article discusses the ethical implications of artificial intelligence (AI) in stroke rehabilitation, addressing considerations such as patient privacy, data security, and responsible implementation.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42604721/",
+      "publishedAt": "2026-08-16T00:00:00.000Z",
+      "firstSeen": "2026-08-17T05:02:33.876Z",
+      "curatedScore": 70,
+      "curatedReason": "引入 AI 工具时，务必关注卒中康复中的患者隐私、数据安全和决策透明度。本文探讨的伦理问题提示我们，应警惕 AI 技术在临床应用中的潜在风险和责任边界。",
+      "titleZh": "人工智能在卒中康复中的伦理",
+      "summaryZh": "本文探讨了人工智能 (AI) 在卒中康复中的伦理问题，涉及患者隐私、数据安全和负责任的实施等方面的考量。",
+      "curatedReasonEn": "When introducing AI tools, prioritize patient privacy, data security, and decision transparency in stroke rehabilitation. The ethical issues discussed in this article remind us to be vigilant about the potential risks and boundaries of responsibility when applying AI in clinical settings.",
+      "tags": [
+        "news",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1786682651837-14",
+      "title": "Relationship Between Physiological Mirror Activity and Corticomuscular Coherence During a Finger Dexterity Task Among Healthy Young and Older Adults",
+      "summary": "This cross-sectional study of 31 young and 24 older adults explored the relationship between physiological mirror activity (pMA) and corticomuscular coherence (CMC) during a left-hand finger dexterity task, finding that pMA was negatively correlated with gamma-band CMC in both groups.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.12.26360287v1?rss=1",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-14T04:44:11.837Z",
+      "curatedScore": 65,
+      "curatedReason": "这项对 31 名年轻人和 24 名老年人进行的观察研究提示，生理性镜像活动与皮层肌肉相干性在手指灵巧任务中存在负相关。这有助于你更好地理解神经康复中对侧肢体运动控制的神经生理机制，为制定干预策略提供参考。",
+      "titleZh": "健康青年和老年人手指灵巧任务中生理性镜像活动与皮层肌肉相干性的关系",
+      "summaryZh": "这项对 31 名青年和 24 名老年人进行的横断面研究，探讨了左手手指灵巧任务中生理性镜像活动 (pMA) 与皮层肌肉相干性 (CMC) 的关系，发现两组的 pMA 均与伽马波段 CMC 呈负相关。",
+      "curatedReasonEn": "This study elucidates the relationship between physiological mirror activity and corticomuscular coherence during finger dexterity tasks in young and older adults. This helps you better understand the neurophysiological mechanisms of contralateral limb motor control in neurorehabilitation, providing a reference for intervention strategies.",
+      "limitation": "本研究为横断面设计，无法建立因果关系，且受试者样本量相对较小。",
+      "limitationEn": "This study was a cross-sectional design, preventing the establishment of causality, and the sample size was relatively small.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1786877038341-0",
       "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
@@ -1943,218 +2121,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-9",
-      "title": "Dual-pillar phenotype of elite deaf female soccer players: reduced aerobic capacity and repeated-sprint ability coexisting with enhanced explosive power",
-      "summary": "A cross-sectional study of 18 elite deaf and 21 hearing female soccer players found that deaf athletes had lower maximal oxygen uptake (VO2max) and poorer repeated-sprint ability, but enhanced countermovement jump (CMJ) explosive power, suggesting a dual-pillar phenotype.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1250?rss=1",
-      "publishedAt": "2026-08-17T05:45:50.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究揭示了精英聋人女足球运动员在心肺和重复冲刺能力方面可能存在劣势，但在爆发力方面有所增强。这提示你在制定聋人运动员训练计划时，需考虑这些潜在的生理适应差异，并进行个性化调整。",
-      "titleZh": "精英聋人女足球运动员的双重表型：有氧能力和重复冲刺能力下降，但爆发力增强",
-      "summaryZh": "一项对18名精英聋人女足球运动员和21名听力女足球运动员的横断面研究发现，聋人运动员的最大摄氧量（VO2max）和重复冲刺能力较低，但反向跳跃（CMJ）爆发力增强，这提示存在一种双重表型。",
-      "curatedReasonEn": "This study reveals that elite deaf female soccer players may have deficits in cardiorespiratory and repeated-sprint ability, but enhanced explosive power. This suggests that when designing training programs for deaf athletes, you should consider these potential physiological adaptation differences and make individualized adjustments.",
-      "limitation": "研究样本量较小，且仅限于女性足球运动员，结果外推性有限。",
-      "limitationEn": "The study's small sample size and exclusive focus on female soccer players limit the generalizability of the findings.",
-      "tags": [
-        "research",
-        "sports-performance",
-        "special-population"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-11",
-      "title": "Infographic. Active commuting is linked to lower coronary atherosclerosis",
-      "summary": "An infographic summarizes findings from a population-based study demonstrating a link between active commuting (walking or cycling to work) and lower coronary atherosclerosis, supporting physical activity for cardiovascular disease prevention.",
-      "category": "cardiopulmonary",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1270?rss=1",
-      "publishedAt": "2026-08-17T05:45:51.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 70,
-      "curatedReason": "这张信息图总结的研究表明，积极通勤（步行或骑自行车上班）与较低的冠状动脉粥样硬化风险相关。这为你在患者健康教育中推广此类日常物理活动提供了直观证据。",
-      "titleZh": "信息图：积极通勤与较低的冠状动脉粥样硬化相关",
-      "summaryZh": "一张信息图总结了一项基于人群的研究结果，该研究表明积极通勤（步行或骑自行车上班）与较低的冠状动脉粥样硬化相关，支持将体育活动用于心血管疾病预防。",
-      "curatedReasonEn": "This infographic summarizes research showing that active commuting (walking or cycling to work) is linked to lower coronary atherosclerosis risk. This provides visual evidence for you to promote such routine physical activities in patient health education.",
-      "limitation": "信息图基于一项人口队列研究，无法直接推断因果关系。",
-      "limitationEn": "The infographic is based on a population cohort study, limiting direct causal inference.",
-      "tags": [
-        "research",
-        "prevention",
-        "cardiovascular"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-13",
-      "title": "Role of exercise in improving bone health in young paediatric patients with a history of cancer (PhD Academy Award)",
-      "summary": "This PhD Academy Award entry focused on assessing the impact of resistance exercise with high-impact loading and movement behaviors on bone health in young pediatric patients with a history of cancer.",
-      "category": "pediatric",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1275?rss=1",
-      "publishedAt": "2026-08-17T05:45:51.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 70,
-      "curatedReason": "这项博士研究指出，对于有癌症病史的儿童患者，高强度抗阻训练和高冲击负荷运动行为对其骨骼健康有潜在影响。在为这些患儿制定康复计划时，务必考虑并纳入能促进骨骼健康的运动干预。",
-      "titleZh": "运动在改善有癌症病史的年轻儿童患者骨骼健康中的作用（博士学院奖）",
-      "summaryZh": "这项博士学院奖研究着重评估了高强度抗阻训练和运动行为对有癌症病史的年轻儿童患者骨骼健康的影响。",
-      "curatedReasonEn": "This PhD study highlights the potential impact of high-impact resistance exercise and movement behaviors on bone health in pediatric cancer survivors. When developing rehabilitation plans for these patients, you must consider and incorporate exercise interventions that promote bone health.",
-      "limitation": "该研究为博士课题综述，缺乏具体方法学和结果细节。",
-      "limitationEn": "This is a PhD thesis overview, lacking specific methodological and results details.",
-      "tags": [
-        "research",
-        "pediatric-cancer",
-        "bone-health"
-      ],
-      "studyDesign": "综述",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-14",
-      "title": "High-intensity circuit training combined with sleep or dietary interventions improves cardiometabolic health, sleep health and executive function (PhD Academy Award)",
-      "summary": "This PhD Academy Award thesis investigated the effects of high-intensity circuit training (HICT), alone or combined with sleep or dietary interventions, on cardiometabolic health, sleep health, and executive function in women.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1277?rss=1",
-      "publishedAt": "2026-08-17T05:45:51.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 70,
-      "curatedReason": "这项博士研究探索了高强度循环训练（HICT）结合睡眠或饮食干预对女性心血管代谢健康、睡眠和执行功能的影响。这提示你在提供生活方式干预时，可以考虑多模态的HICT方案，以优化综合健康结局。",
-      "titleZh": "高强度循环训练结合睡眠或饮食干预改善心血管代谢健康、睡眠健康和执行功能（博士学院奖）",
-      "summaryZh": "这项博士学院奖论文研究了高强度循环训练（HICT）单独或结合睡眠或饮食干预对女性心血管代谢健康、睡眠健康和执行功能的影响。",
-      "curatedReasonEn": "This PhD research explored the effects of high-intensity circuit training (HICT) combined with sleep or dietary interventions on cardiometabolic health, sleep health, and executive function in women. This suggests you can consider multimodal HICT programs when delivering lifestyle interventions to optimize comprehensive health outcomes.",
-      "limitation": "该研究为博士课题综述，缺乏具体方法学和结果细节。",
-      "limitationEn": "This is a PhD thesis overview, lacking specific methodological and results details.",
-      "tags": [
-        "research",
-        "lifestyle-intervention",
-        "womens-health"
-      ],
-      "studyDesign": "综述",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-3",
-      "title": "Prospective Physical Activity, Sitting and Sleep consortium (ProPASS): addressing methodological and geographical barriers to inform global public health guidelines, interventions and precision medicine",
-      "summary": "The Prospective Physical Activity, Sitting and Sleep consortium (ProPASS) aims to address methodological and geographical barriers in informing global public health guidelines by using device-measured data instead of self-report methods for physical activity, sedentary behavior, and sleep.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1198?rss=1",
-      "publishedAt": "2026-08-17T05:45:50.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 65,
-      "curatedReason": "这项联盟计划旨在通过改进身体活动、久坐行为和睡眠的测量方法，克服传统自我报告数据的局限性，这将有助于未来制定更精准的公共卫生指南和干预措施。",
-      "titleZh": "ProPASS 联盟：克服方法学和地理障碍以指导全球公共卫生指南、干预和精准医疗",
-      "summaryZh": "ProPASS 联盟旨在通过采用设备测量数据而非自我报告方法来描述身体活动、久坐行为和睡眠，从而克服方法学和地理障碍，为全球公共卫生指南提供信息。",
-      "curatedReasonEn": "This consortium aims to overcome the limitations of traditional self-reported data by improving the measurement of physical activity, sedentary behavior, and sleep, which will aid in developing more precise public health guidelines and interventions in the future.",
-      "tags": [
-        "research",
-        "methodology"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-12",
-      "title": "Exploring the effects of exogenous ketosis on physiological adaptation to exercise in hypoxia(PhD Academy Award)",
-      "summary": "This PhD Academy Award entry investigated the potential of exogenous ketosis (EK) to mitigate adverse effects of hypoxia and augment beneficial hypoxic adaptation during exercise, exploring underlying physiological and muscular mechanisms.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1272?rss=1",
-      "publishedAt": "2026-08-17T05:45:51.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 65,
-      "curatedReason": "关于外源性酮症能否减轻缺氧不利影响并增强运动时有益的缺氧适应，这项博士研究做了机制探索。目前仍是理论阶段，不建议将此作为临床干预手段，但它为我们理解运动生理学提供了新视角。",
-      "titleZh": "探索外源性酮症对低氧环境下运动生理适应的影响（博士学院奖）",
-      "summaryZh": "这项博士学院奖研究探讨了外源性酮症（EK）在低氧环境下减轻运动不良影响和增强有利低氧适应的潜力，并深入研究了其潜在的生理和肌肉机制。",
-      "curatedReasonEn": "This PhD research explored the potential effects of exogenous ketosis on physiological adaptation to exercise in hypoxic, high-altitude environments. While specific clinical applications remain unclear, it expands your understanding of exercise physiology and nutritional interventions.",
-      "limitation": "该研究为博士课题综述，缺乏具体方法学和结果细节。",
-      "limitationEn": "This is a PhD thesis overview, lacking specific methodological and results details.",
-      "tags": [
-        "research",
-        "sports-performance",
-        "nutrition"
-      ],
-      "studyDesign": "综述",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786985422372-2",
-      "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
-      "summary": "This scoping review and collaborative viewpoint propose an integrated, mechanism-based framework for strategic dosing in neurologic motor rehabilitation, suggesting higher intensity for non-progressive conditions and conservative strategies for progressive conditions, to address suboptimal long-term outcomes.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42606315/",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-17T16:50:22.372Z",
-      "curatedScore": 85,
-      "curatedReason": "这份综述和专家观点提出，神经运动康复应采取基于机制的“策略性剂量”框架，而非传统的诊断驱动模式。对于非进展性疾病，你可能需要提高干预强度；而对于进展性疾病，则应采取更保守的策略，以期改善长期疗效。",
-      "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角。一项范围综述与合作观点",
-      "summaryZh": "这项范围综述和合作观点提出了神经运动康复中策略性剂量的综合性、基于机制的框架，建议对非进展性疾病采用高强度方法，对进展性疾病采用更保守、节约能量的策略，以应对长期疗效不佳的问题。",
-      "curatedReasonEn": "This review and expert viewpoint advocate for a mechanism-based 'strategic dosing' framework in neurologic motor rehabilitation, moving beyond traditional diagnosis-driven approaches. For non-progressive conditions, you might need to increase intervention intensity; for progressive conditions, a more conservative strategy should be adopted to improve long-term outcomes.",
-      "limitation": "文献缺乏标准化剂量参数的共识，且综述未能提供具体剂量方案，主要集中于概念框架。",
-      "limitationEn": "The literature lacks consensus on standardized dosing parameters, and the review does not provide specific dosing protocols, focusing primarily on conceptual frameworks.",
-      "tags": [
-        "research",
-        "stroke",
-        "parkinson",
-        "brain-injury"
-      ],
-      "studyDesign": "综述",
-      "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1786985422372-1",
-      "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
-      "summary": "This systematic review examined the prognostic capacity of early neuroimaging and neurophysiological biomarkers for mobility outcomes up to 24 months post-stroke, to help guide rehabilitation planning.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42606361/",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-17T16:50:22.372Z",
-      "curatedScore": 80,
-      "curatedReason": "这份系统综述确认了早期神经影像学和神经生理学生物标志物在中风后24个月内对运动预后的预测价值。这意味着我们应将这些早期指标纳入评估，以更精准地识别高风险患者并优化其康复路径。",
-      "titleZh": "中风后运动预后早期神经影像和神经生理学生物标志物的系统综述",
-      "summaryZh": "这项系统综述旨在评估中风后14天内测量的早期神经影像学和神经生理学生物标志物，对24个月内运动结局的预测能力，以指导康复计划和目标设定。",
-      "curatedReasonEn": "This systematic review confirms the prognostic value of early neuroimaging and neurophysiological biomarkers for mobility outcomes up to 24 months post-stroke. We should integrate these early indicators into our assessments to more accurately identify high-risk patients and optimize their rehabilitation pathways.",
-      "limitation": "纳入研究的方法学存在偏倚风险，且生物标志物分析方法多样，限制了结果的综合性。",
-      "limitationEn": "The included studies had a risk of methodological bias, and the diverse biomarker analysis approaches limited the generalizability of results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1786985422372-3",
-      "title": "Survey on stroke rehabilitation in Europe (SUSTAIN-EU) to evaluate European stroke rehabilitation services.",
-      "summary": "The SUSTAIN-EU survey assessed the organization and delivery of post-stroke rehabilitation services across 30 European countries, revealing commonalities and disparities in service provision with an 81% response rate.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42605919/",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-17T16:50:22.372Z",
-      "curatedScore": 75,
-      "curatedReason": "这项覆盖30个欧洲国家的调查揭示了中风康复服务在组织和提供上的显著差异与共性。尽管不能直接指导临床操作，但你可以此为镜，审视和思考你所在地区康复服务的优化空间，尤其是在服务公平性和效率方面。",
-      "titleZh": "欧洲中风康复调查（SUSTAIN-EU）评估欧洲中风康复服务",
-      "summaryZh": "SUSTAIN-EU 调查评估了30个欧洲国家中风后康复服务的组织和提供情况，以81%的回复率揭示了服务提供上的共通之处和差异。",
-      "curatedReasonEn": "This survey across 30 European countries highlights significant commonalities and disparities in the organization and delivery of stroke rehabilitation services. While not directly guiding clinical practice, you can use this as a benchmark to assess and consider optimization opportunities for rehabilitation services in your region, particularly regarding equity and efficiency.",
-      "limitation": "这是一项描述性横断面调查研究，无法评估干预措施的因果关系或服务质量。",
-      "limitationEn": "This is a descriptive cross-sectional survey study and cannot assess causal relationships of interventions or service quality.",
-      "tags": [
-        "news",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of rehabilitation medicine"
     }
   ]
 }
