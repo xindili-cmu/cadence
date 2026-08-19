@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-19T03:16:12.127Z",
+    "lastUpdated": "2026-08-19T04:56:17.337Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -138,9 +138,9 @@
           "titleZh": "慢性脊髓损伤后经皮脊髓电刺激联合活动训练对心血管和自主神经反应的影响：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 6.75,
-      "themeZh": "卒中后运动康复的剂量与功能结果",
-      "themeEn": "Stroke motor rehabilitation dosage and functional outcomes"
+      "heat": 6.58,
+      "themeZh": "卒中后神经功能缺损的康复剂量与评估",
+      "themeEn": "Stroke Neurologic Deficit Rehab Dosage & Assessment"
     },
     {
       "id": "news-1786682651836-12",
@@ -197,9 +197,9 @@
           "titleZh": "健康老年人次最大运动后心率恢复与心率变异性恢复的时间性解离"
         }
       ],
-      "heat": 4.05,
-      "themeZh": "老年心肺疾病的运动干预与剂量反应",
-      "themeEn": "Exercise interventions for geriatric cardiopulmonary diseases"
+      "heat": 3.95,
+      "themeZh": "中老年人运动方式与剂量对慢性病的效应",
+      "themeEn": "Exercise Modality & Dose in Older Adults"
     },
     {
       "id": "news-1787089664273-21",
@@ -273,9 +273,9 @@
           "titleZh": "预测非帕金森病老年患者跌倒风险的新视角：磁共振帕金森指数"
         }
       ],
-      "heat": 4.05,
-      "themeZh": "老年人衰减、平衡与肌少症的干预",
-      "themeEn": "Geriatric decline, balance, and sarcopenia interventions"
+      "heat": 3.95,
+      "themeZh": "老年肌少症、跌倒与平衡干预研究",
+      "themeEn": "Geriatric Sarcopenia, Falls & Balance Intervention"
     },
     {
       "id": "news-1786999762266-10",
@@ -330,9 +330,9 @@
           "titleZh": "加拿大和英国肌骨物理治疗研究生教育中远程电子导师制度的经验"
         }
       ],
-      "heat": 2.7,
-      "themeZh": "儿童青少年慢性病的家庭与游戏化运动康复",
-      "themeEn": "Pediatric chronic disease home and gamified exercise rehab"
+      "heat": 2.63,
+      "themeZh": "儿童青少年慢性病运动康复方案与培训",
+      "themeEn": "Pediatric Chronic Disease Exercise Rehab & Training"
     },
     {
       "id": "news-1786877038341-0",
@@ -394,12 +394,34 @@
           "titleZh": "膝骨关节炎患者三种运动诱发疼痛评估方法的信度和结构效度"
         }
       ],
-      "heat": 2.39,
-      "themeZh": "膝关节与交叉韧带损伤的运动康复",
-      "themeEn": "Knee and cruciate ligament injury exercise rehabilitation"
+      "heat": 2.33,
+      "themeZh": "下肢生物力学异常与膝关节疼痛的康复干预",
+      "themeEn": "Lower Limb Biomechanics & Knee Pain Rehab"
     }
   ],
   "items": [
+    {
+      "id": "news-1787115375217-0",
+      "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
+      "summary": "A scoping review identified and synthesized direct observation methods used for assessing inpatient movement behavior at the ward level, aiming to enhance methodological clarity for evaluating physical activity interventions in hospital settings.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42612292/",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "firstSeen": "2026-08-19T04:56:15.217Z",
+      "curatedScore": 70,
+      "curatedReason": "评估住院患者运动行为，直接观察是常用手段，但这项综述明确指出目前尚无统一的标准化方案。设计院内活动干预研究时，你需要了解现有方法的广度，但务必记得自行验证所选工具在你特定环境下的可靠性和有效性。",
+      "titleZh": "直接观察法评估住院患者运动行为的范围综述",
+      "summaryZh": "一项范围综述识别并综合了在病房层面评估住院患者运动行为的直接观察方法，旨在提升住院环境物理活动干预评估的方法学清晰度。",
+      "curatedReasonEn": "For assessing inpatient movement, direct observation is common, but this review confirms a lack of standardized, unified methods. When designing ward-level activity interventions, you need to understand the range of existing approaches, but be sure to validate your chosen tool's reliability and validity within your specific clinical setting.",
+      "limitation": "本综述仅关注观察方法，未能评估这些方法的测量学质量或提供标准化的协议。",
+      "limitationEn": "This review focused solely on observation methods and did not assess the psychometric quality of these methods or provide standardized protocols.",
+      "tags": [
+        "research"
+      ],
+      "studyDesign": "综述",
+      "journal": "Physiotherapy"
+    },
     {
       "id": "news-1786985422372-2",
       "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
@@ -2094,29 +2116,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762266-15",
-      "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
-      "summary": "A single-center retrospective cohort study of children with congenital heart disease (N=75) in the PCICU found inspiratory strength training (IST) was feasible (96% completion) and safe, with positive physiological responses, suggesting its benefit for weaning from mechanical ventilation.",
-      "category": "cardiopulmonary",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360419v1?rss=1",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-17T20:49:22.266Z",
-      "curatedScore": 75,
-      "curatedReason": "这项回顾性队列研究表明，吸气肌力量训练（IST）在儿科心脏重症监护室（PCICU）中是可行且安全的，并能改善生理反应。这为你在儿科重症监护环境中应用IST提供了初步证据。",
-      "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究",
-      "summaryZh": "一项针对PCICU中患有先天性心脏病儿童（N=75）的单中心回顾性队列研究发现，吸气肌力量训练（IST）可行（96%完成率）且安全，并伴有积极的生理反应，提示其有助于机械通气脱机。",
-      "curatedReasonEn": "This retrospective cohort study indicates that inspiratory strength training (IST) is feasible and safe in the pediatric cardiac intensive care unit (PCICU) and improves physiological responses. This provides preliminary evidence for your application of IST in pediatric critical care settings.",
-      "limitation": "研究为回顾性队列设计，存在选择偏倚，且样本量相对有限。",
-      "limitationEn": "The study's retrospective cohort design is subject to selection bias, and the sample size is relatively limited.",
-      "tags": [
-        "research",
-        "cardiac",
-        "pediatric"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
