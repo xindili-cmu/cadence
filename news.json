@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-20T19:05:50.597Z",
+    "lastUpdated": "2026-08-20T21:52:15.396Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,15 +20,18 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610950/",
       "category": "neurological",
       "publishedAt": "2026-08-20T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 10,
       "sources": [
         "NeuroRehabilitation",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
+        "Clinical rehabilitation",
+        "BMC Geriatrics",
         "Physiotherapy theory and practice",
         "Disability and rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Clinical rehabilitation"
+        "Journal of NeuroEngineering and Rehabilitation",
+        "medRxiv"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -59,6 +62,24 @@
         },
         {
           "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
+          "titleZh": "超越诊断：神经运动康复中策略性剂量给定的综合视角——一项范围综述与协同观点"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
+          "titleZh": "早期神经影像学和神经生理生物标志物预测卒中后活动能力的系统综述"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Phase-specific relationships between cognitive function and life-space mobility in patients with ischemic stroke: implications for geriatric rehabilitation",
+          "titleZh": "缺血性卒中患者认知功能与生活空间移动能力之间的阶段性关系：对老年康复的启示"
+        },
+        {
+          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
           "titleZh": "慢性卒中患者运动功能恢复和社会支持与参与度相关结局的关联"
@@ -77,12 +98,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Feasibility and acceptability of the breakfast group intervention BISTRo for stroke survivors in acute rehabilitation.",
-          "titleZh": "卒中幸存者急性康复中早餐小组干预 BISTRo 的可行性与可接受性"
-        },
-        {
-          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Feasibility and acceptability of a randomized controlled trial of a patient-centred transition program for stroke survivors and their caregivers-P-NAVISTROKE study.",
           "titleZh": "卒中幸存者及其照护者的以患者为中心的过渡计划——P-NAVISTROKE 研究的随机对照试验可行性与可接受性"
@@ -94,57 +109,63 @@
           "titleZh": "探索卒中康复中以患者为中心的目标设定的准备度——一项定性研究"
         },
         {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
-          "titleZh": "超越诊断：神经运动康复中策略性剂量给定的综合视角——一项范围综述与协同观点"
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Multimodal synthesis of neural correlates of motor imagery after spinal cord injury: a systematic review",
+          "titleZh": "脊髓损伤后运动想象神经关联的多模态综合：一项系统综述"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Upper-Limb Paresis Severity Is Associated With Practice Dosage During Task-Oriented Training in Subacute Stroke-An Exploratory Secondary Analysis.",
-          "titleZh": "上肢麻痹严重程度与亚急性卒中任务导向训练的练习剂量相关：一项探索性二次分析"
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
+          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
         },
         {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
-          "titleZh": "卒中患者口部肌肉质量、舌肌力量和耐力在不同吞咽功能程度中的表现：一项初步研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
-          "titleZh": "早期神经影像学和神经生理生物标志物预测卒中后活动能力的系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
-          "titleZh": "卒中后分类步态模式亚组的特征及异常步态模式定义：一项范围综述"
+          "source": "medRxiv",
+          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
+          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管和自主神经反应：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 5.31,
-      "themeZh": "卒中后康复的多元干预：远程、机器人与传统疗法比较",
-      "themeEn": "Multimodal Stroke Rehabilitation: Telerehab, Robotics & Traditional"
+      "heat": 7.29,
+      "themeZh": "卒中康复的先进技术与策略疗效",
+      "themeEn": "Stroke Rehabilitation Technology and Strategies Effectiveness"
     },
     {
-      "id": "news-1787166154199-1",
-      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
+      "id": "news-1787089664272-7",
+      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
       "category": "orthopedic",
       "publishedAt": "2026-08-20T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
+        "Sports Medicine - Open",
         "Physiotherapy theory and practice",
         "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
-        "Physiotherapy",
         "Archives of physical medicine and rehabilitation",
-        "BMC Geriatrics"
+        "European Spine Journal",
+        "BMC Musculoskeletal Disorders"
       ],
-      "tag": "shoulder",
+      "tag": "spine",
       "kind": "theme",
       "members": [
+        {
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
+          "titleZh": "腰痛患者与健康个体腰骶筋膜的差异：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Beyond treatment: how care process factors shape physical therapist management of low back pain.",
+          "titleZh": "超越治疗：护理流程因素如何塑造物理治疗师对腰痛的管理"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+          "titleZh": "青年偏头痛患者的肌肉骨骼功能障碍：一项病例对照研究"
+        },
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
@@ -159,48 +180,10 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "\"It's really, really just exercise I put my faith in now\": Patients' perspectives on rotator cuff tendinopathy management: A qualitative study.",
-          "titleZh": "“我现在真的只相信运动疗法了”：肩袖肌腱病患者对治疗管理的看法：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-          "titleZh": "青年偏头痛患者的肌肉骨骼功能障碍：一项病例对照研究"
-        },
-        {
-          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Reliability and construct validity of three movement-evoked pain methods in individuals with knee osteoarthritis.",
           "titleZh": "膝骨关节炎患者三种运动诱发疼痛评估方法的信度和结构效度"
         },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "The relationship between the uric acid to prealbumin ratio and frailty, muscle strength, and malnutrition risk in older geriatric outpatients: a retrospective cross-sectional study",
-          "titleZh": "老年门诊患者尿酸与前白蛋白比值与衰弱、肌肉力量和营养不良风险的关系：一项回顾性横断面研究"
-        }
-      ],
-      "heat": 3.79,
-      "themeZh": "肩痛、膝关节炎与肌骨损伤评估的量表开发与相关因素",
-      "themeEn": "Shoulder Pain, OA & MSK Impairment Assessment"
-    },
-    {
-      "id": "news-1786916485797-8",
-      "title": "Association of the GAP score and roussouly-based algorithm with long-term patient-reported outcomes following adult spinal deformity surgery: a systematic review and meta-analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10256-0",
-      "category": "manual-modality",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "European Spine Journal",
-        "American journal of physical medicine & rehabilitation",
-        "medRxiv"
-      ],
-      "tag": null,
-      "kind": "theme",
-      "members": [
         {
           "source": "Eur Spine J",
           "journal": "European Spine Journal",
@@ -214,123 +197,396 @@
           "titleZh": "胸腰椎骨折中，手术入路或术前畸形哪个更能预测预后？一项微创与开放技术的比较研究"
         },
         {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "From Injury to Inclusion: Evidence From the International Spinal Cord Injury Survey (InSCI).",
-          "titleZh": "从损伤到融合：国际脊髓损伤调查（InSCI）的证据"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
-          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管和自主神经反应：MACHINE 试验的探索性研究"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
+          "titleZh": "3岁年龄分界对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后影响的探索性分析"
         }
       ],
-      "heat": 1.61,
-      "themeZh": "脊柱损伤与畸形：外科手术、电刺激与长期疗效",
-      "themeEn": "Spinal Injury & Deformity: Surgery, Stimulation Outcomes"
+      "heat": 4.38,
+      "themeZh": "骨科疼痛患者的评估量表与发病机制研究",
+      "themeEn": "Orthopedic Pain Assessment and Pathogenesis"
     },
     {
-      "id": "news-1787166154197-0",
-      "title": "Beyond treatment: how care process factors shape physical therapist management of low back pain.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42614096/",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Physiotherapy theory and practice",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Musculoskeletal science & practice"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Beyond treatment: how care process factors shape physical therapist management of low back pain.",
-          "titleZh": "超越治疗：护理流程因素如何塑造物理治疗师对腰痛的管理"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "功能性与传统物理治疗对膀胱疼痛综合征女性患者症状、心理结局及生活质量的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Responsiveness, Smallest Detectable Change, and Minimal Important Change of the Turkish Pelvic Floor Distress Inventory-20 Following Pelvic Floor Muscle Training.",
-          "titleZh": "盆底肌训练后土耳其语版盆底功能障碍问卷-20 的响应性、最小可检测变化和最小重要变化"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
-          "titleZh": "系统性炎症作为慢性腰痛运动益处的中介：细化机制视角"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Development and Content Validation of an Exercise-Based Framework for the Management of Lumbar Radiculopathy.",
-          "titleZh": "腰椎神经根病变运动管理框架的开发与内容验证"
-        }
-      ],
-      "heat": 1.61,
-      "themeZh": "慢性腰痛及盆底疼痛的物理治疗与炎症机制",
-      "themeEn": "PT for Chronic Low Back & Pelvic Pain"
-    },
-    {
-      "id": "news-1786999762266-10",
-      "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1259?rss=1",
-      "category": "pediatric",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "id": "news-1786999762267-16",
+      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360286v1?rss=1",
+      "category": "neurological",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
       "sourceCount": 4,
       "sources": [
-        "British Journal of Sports Medicine",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Physiotherapy theory and practice",
-        "medRxiv"
+        "medRxiv",
+        "NeuroRehabilitation",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "BMC Geriatrics"
       ],
-      "tag": "cancer",
+      "tag": "stroke",
       "kind": "theme",
       "members": [
         {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
-          "titleZh": "居家体育锻炼干预对慢性病儿童和青少年的有效性与可行性：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-          "titleZh": "儿童血液肿瘤住院患者的治疗性运动方案：随机临床试验"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Role of exercise in improving bone health in young paediatric patients with a history of cancer (PhD Academy Award)",
-          "titleZh": "运动在改善有癌症史的儿童患者骨骼健康中的作用（博士学院奖）"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
-          "titleZh": "慢性阻塞性肺疾病患者的臂部运动训练：系统综述和 Meta 分析的伞形综述"
+          "source": "medRxiv",
+          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+          "titleZh": "不仅仅是手臂运动：指戴式加速计为测量卒中幸存者真实世界中上肢表现提供了比腕戴式更有效和敏感的替代方案"
         },
         {
           "source": "medRxiv",
-          "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
-          "titleZh": "儿童心脏重症监护中吸气肌力量训练的回顾性队列研究"
+          "title": "Relationship Between Physiological Mirror Activity and Corticomuscular Coherence During a Finger Dexterity Task Among Healthy Young and Older Adults",
+          "titleZh": "健康青年和老年人手指灵巧任务中生理性镜像活动与皮层肌肉相干性的关系"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Manifestations of Oral Muscle Mass, Tongue Strength, and Endurance in Patients with Stroke Across Varying Degrees of Swallowing Function: A Pilot Study.",
+          "titleZh": "卒中患者口部肌肉质量、舌肌力量和耐力在不同吞咽功能程度中的表现：一项初步研究"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Effects of Fingertip Vibrotactile Stimulation on Postural Control in Community-Dwelling Older Adults: A Comparison Across Age Groups",
+          "titleZh": "指尖振动触觉刺激对社区老年人姿势控制的影响：跨年龄组比较"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of tDCS combined with unstable resistance training on knee muscle strength and neuromuscular control in community-dwelling older adults: a randomized controlled trial",
+          "titleZh": "tDCS 结合不稳定抗阻训练对社区老年人膝关节肌力及神经肌肉控制的影响：一项随机对照试验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effects of high-definition transcranial direct current stimulation on muscle strength, proprioception, cutaneous sensitivity and their relationship with balance in older adults with a history of falls",
+          "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 1.52,
-      "themeZh": "儿科慢性病与肿瘤患儿的居家运动干预与骨骼健康",
-      "themeEn": "Pediatric Chronic Disease Exercise & Bone Health"
+      "heat": 2.92,
+      "themeZh": "神经肌肉功能障碍的穿戴式评估与刺激干预",
+      "themeEn": "Neuromuscular Dysfunction Wearable Assessment and Stimulation"
     }
   ],
   "items": [
+    {
+      "id": "news-1787089664272-5",
+      "title": "Effect of six weeks of ankle stretching exercises on ankle dorsiflexion range of motion and anterior knee pain in children with ankle pronation: a randomized controlled trial",
+      "summary": "A six-week ankle stretching exercise program significantly improved ankle dorsiflexion range of motion and reduced anterior knee pain in children with ankle pronation.",
+      "category": "orthopedic",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10344-8",
+      "publishedAt": "2026-08-15T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.272Z",
+      "curatedScore": 80,
+      "curatedReason": "踝关节背屈拉伸可能对儿童踝关节旋前引起的膝前痛有效，但需进一步研究明确其长期效果和机制。",
+      "titleZh": "六周踝关节拉伸运动对儿童踝关节旋前引起的踝关节背屈活动度和膝前痛的影响：一项随机对照试验",
+      "summaryZh": "一项随机对照试验显示，为期六周的踝关节拉伸运动显著改善了踝关节旋前儿童的踝关节背屈活动度，并减轻了膝前痛。",
+      "curatedReasonEn": "Ankle dorsiflexion stretching may be effective for anterior knee pain caused by ankle pronation in children, but further research is needed to clarify its long-term effects and mechanisms.",
+      "limitation": "研究随访期较短，且未评估踝关节拉伸对膝前痛的长期影响。",
+      "limitationEn": "The study had a short follow-up period and did not assess the long-term impact of ankle stretching on anterior knee pain.",
+      "tags": [
+        "research",
+        "foot-ankle",
+        "knee"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1787089664272-7",
+      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
+      "summary": "A systematic review and meta-analysis found significant differences in the thoracolumbar fascia characteristics between individuals with low back pain and healthy controls.",
+      "category": "orthopedic",
+      "source": "Sports Med - Open",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.272Z",
+      "curatedScore": 80,
+      "curatedReason": "腰骶筋膜在腰痛患者和健康个体间的确存在结构性差异，提示筋膜病理是慢性腰痛的重要机制之一。你应当考虑将筋膜作为评估和干预的潜在靶点。",
+      "titleZh": "腰痛患者与健康个体腰骶筋膜的差异：一项系统综述与荟萃分析",
+      "summaryZh": "一项系统综述和荟萃分析发现，腰痛患者与健康个体在腰骶筋膜特征上存在显著差异。",
+      "curatedReasonEn": "Structural differences in the thoracolumbar fascia between low back pain patients and healthy individuals are confirmed, suggesting fascial pathology as a significant mechanism in chronic low back pain. You should consider fascia as a potential target for assessment and intervention.",
+      "limitation": "纳入研究的方法学异质性较高，可能影响荟萃分析结果的统一性。",
+      "limitationEn": "The included studies exhibited high methodological heterogeneity, which may affect the uniformity of the meta-analysis results.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Sports Medicine - Open"
+    },
+    {
+      "id": "news-1787089664273-14",
+      "title": "The effect of SportsMetrics training program on functional performance, landing error, dynamic knee valgus and hamstrings/quadriceps strength in athletes: a systematic review and meta-analysis",
+      "summary": "A systematic review and meta-analysis confirmed the effectiveness of the SportsMetrics training program in improving functional performance, reducing landing errors, dynamic knee valgus, and enhancing hamstrings/quadriceps strength in athletes.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01983-4",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 80,
+      "curatedReason": "SportsMetrics 训练项目在改善运动员功能表现、减少着陆错误、动态膝外翻以及增强蕦绳肌/股四头肌力量方面确有效果。在运动损伤预防和表现提升中，应优先考虑这类综合性训练方案。",
+      "titleZh": "SportsMetrics 训练项目对运动员功能表现、着陆错误、动态膝外翻及平衡肌/股四头肌力量的影响：一项系统综述与荟萃分析",
+      "summaryZh": "一项系统综述和荟萃分析证实，SportsMetrics 训练项目能有效改善运动员的功能表现、减少着陆错误、动态膝外翻并增强平衡肌/股四头肌力量。",
+      "curatedReasonEn": "The SportsMetrics training program is confirmed to be effective in improving athletic functional performance, reducing landing errors, dynamic knee valgus, and enhancing hamstring/quadriceps strength. You should prioritize such comprehensive training programs in sports injury prevention and performance enhancement.",
+      "limitation": "部分纳入研究的方法学质量存在差异，可能影响荟萃分析结果的整体稳定性。",
+      "limitationEn": "The methodological quality of some included studies varied, potentially affecting the overall stability of the meta-analysis results.",
+      "tags": [
+        "research",
+        "acl",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787262733533-0",
+      "title": "Effects of tDCS combined with unstable resistance training on knee muscle strength and neuromuscular control in community-dwelling older adults: a randomized controlled trial",
+      "summary": "A randomized controlled trial found that transcranial direct current stimulation (tDCS) combined with unstable resistance training improved knee muscle strength, neuromuscular control, and balance in community-dwelling older adults.",
+      "category": "orthopedic",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01990-5",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-20T21:52:13.533Z",
+      "curatedScore": 75,
+      "curatedReason": "tDCS 结合不稳定抗阻训练可以改善老年人的膝关节肌力、神经肌肉控制和平衡，为临床提供了额外的干预选择。",
+      "titleZh": "tDCS 结合不稳定抗阻训练对社区老年人膝关节肌力及神经肌肉控制的影响：一项随机对照试验",
+      "summaryZh": "一项随机对照试验发现，经颅直流电刺激（tDCS）结合不稳定抗阻训练可以改善社区老年人的膝关节肌力、神经肌肉控制和平衡。",
+      "curatedReasonEn": "tDCS combined with unstable resistance training can improve knee muscle strength, neuromuscular control, and balance in older adults, offering an additional intervention option for clinicians.",
+      "limitation": "研究样本量相对较小，且受试者为社区居住老年人，结果外推性需谨慎。",
+      "limitationEn": "The study had a relatively small sample size, and participants were community-dwelling older adults, so the generalizability of the results requires caution.",
+      "tags": [
+        "research"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787089664273-12",
+      "title": "Phase-specific relationships between cognitive function and life-space mobility in patients with ischemic stroke: implications for geriatric rehabilitation",
+      "summary": "This study explored phase-specific relationships between cognitive function and life-space mobility in patients with ischemic stroke, highlighting their dynamic reciprocal interaction within the chronic illness trajectory framework.",
+      "category": "neurological",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-07926-5",
+      "publishedAt": "2026-08-15T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究揭示了缺血性卒中患者认知功能与生活空间移动能力在不同康复阶段的动态关联，提醒你在制定康复方案时，需要考虑认知功能在不同阶段对移动能力的影响。",
+      "titleZh": "缺血性卒中患者认知功能与生活空间移动能力之间的阶段性关系：对老年康复的启示",
+      "summaryZh": "这项研究探讨了缺血性卒中患者认知功能与生活空间移动能力之间的阶段性关系，强调了其在慢性疾病轨迹框架内的动态互惠作用。",
+      "curatedReasonEn": "This study reveals the dynamic relationship between cognitive function and life-space mobility in ischemic stroke patients across different rehabilitation phases, reminding you to consider the impact of cognitive function on mobility at various stages when developing rehabilitation plans.",
+      "limitation": "研究为观察性设计，难以建立确切的因果关系，且可能存在未测量混杂因素。",
+      "limitationEn": "The study's observational design makes it difficult to establish definitive causal relationships, and unmeasured confounding factors may exist.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1787089664273-10",
+      "title": "Multimodal synthesis of neural correlates of motor imagery after spinal cord injury: a systematic review",
+      "summary": "A systematic review synthesized multimodal neural correlates of motor imagery after spinal cord injury, revealing its potential as a window into retained motor-related neural processes.",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02083-7",
+      "publishedAt": "2026-08-13T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 75,
+      "curatedReason": "脊髓损伤后运动想象的神经关联已得到证据整合，这为设计基于运动想象的神经康复方案提供了神经生理学基础。你可以更深入理解其在康复中的潜力。",
+      "titleZh": "脊髓损伤后运动想象神经关联的多模态综合：一项系统综述",
+      "summaryZh": "一项系统综述综合了脊髓损伤后运动想象的神经关联，揭示了其作为保留运动相关神经过程窗口的潜力。",
+      "curatedReasonEn": "This systematic review integrates evidence on the neural correlates of motor imagery after spinal cord injury, helping you better understand its potential in rehabilitation and providing a neurophysiological basis for designing motor imagery-based neurorehabilitation programs.",
+      "limitation": "纳入研究的方法学存在异质性，可能限制结果的综合强度。",
+      "limitationEn": "Methodological heterogeneity among included studies may limit the strength of the synthesized results.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+      "id": "news-1787089664272-6",
+      "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
+      "summary": "A pilot randomized controlled trial investigated the efficacy of rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis, finding potential benefits in engagement and outcomes.",
+      "category": "pediatric",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01981-6",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.272Z",
+      "curatedScore": 75,
+      "curatedReason": "游戏化运动对青少年特发性脊柱侧凸保守治疗的依从性和效果可能有所提升，这个初步 RCT 提供了依据。你可以考虑将技术手段融入康复，以改善患者参与度和治疗效果。",
+      "titleZh": "康复游戏化运动整合到青少年特发性脊柱侧凸保守治疗：一项初步随机对照试验",
+      "summaryZh": "一项初步随机对照试验探讨了康复游戏化运动整合到青少年特发性脊柱侧凸保守治疗中的效果，发现了在依从性和结果方面的潜在益处。",
+      "curatedReasonEn": "Game-based exercise may improve adherence and outcomes in conservative treatment for adolescent idiopathic scoliosis, as suggested by this pilot RCT. You can consider integrating technology into rehabilitation to enhance patient engagement and treatment effectiveness.",
+      "limitation": "作为初步随机对照试验，样本量较小，长期效果和更大范围的适用性需进一步研究。",
+      "limitationEn": "As a pilot randomized controlled trial, the sample size is small, and long-term effects and broader applicability require further research.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1787262733536-13",
+      "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
+      "summary": "An exploratory analysis found that a multidisciplinary intensive outpatient rehabilitation program improved plasma neurofilaments and myokines in Parkinson's disease patients.",
+      "category": "practice",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02125-0",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-20T21:52:13.536Z",
+      "curatedScore": 75,
+      "curatedReason": "这项探索性分析提示多学科强化门诊康复项目能改善帕金森病患者的血浆神经丝和肌因子水平，这为理解康复机制提供了生物标志物证据，有助于你优化帕金森病康复方案。",
+      "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子影响的探索性分析",
+      "summaryZh": "一项探索性分析发现，多学科强化门诊康复项目改善了帕金森病患者的血浆神经丝和肌因子水平。",
+      "curatedReasonEn": "This exploratory analysis suggests that a multidisciplinary intensive outpatient rehabilitation program can improve plasma neurofilament and myokine levels in Parkinson's disease patients. This provides biomarker evidence for understanding rehabilitation mechanisms and helps you optimize Parkinson's disease rehabilitation programs.",
+      "limitation": "研究为探索性分析，样本量较小，且未设立对照组，难以确证干预的直接因果效应。",
+      "limitationEn": "The study is an exploratory analysis with a small sample size and no control group, making it difficult to confirm the direct causal effects of the intervention.",
+      "tags": [
+        "research",
+        "parkinson"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+      "id": "news-1787089664273-9",
+      "title": "Effects of high-definition transcranial direct current stimulation on muscle strength, proprioception, cutaneous sensitivity and their relationship with balance in older adults with a history of falls",
+      "summary": "High-definition transcranial direct current stimulation (HD-tDCS) improved muscle strength, proprioception, cutaneous sensitivity, and balance in older adults with a history of falls.",
+      "category": "neurological",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08154-7",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 70,
+      "curatedReason": "HD-tDCS 显示出改善有跌倒史老年人肌力、本体感觉和平衡的潜力。可将其视为一种非侵入性神经调节干预手段，但仍需更大型 RCT 验证其临床效用。",
+      "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响",
+      "summaryZh": "高清晰经颅直流电刺激（HD-tDCS）改善了有跌倒史老年人的肌力、本体感觉、皮肤敏感性及平衡能力。",
+      "curatedReasonEn": "HD-tDCS shows promise in improving muscle strength, proprioception, and balance in older adults with a history of falls. You can consider it a potential non-invasive neuromodulatory intervention, though larger RCTs are needed to confirm its clinical utility.",
+      "limitation": "本研究为单中心试验，且样本量有限，结果可能不具备广泛代表性。",
+      "limitationEn": "This study was a single-center trial with a limited sample size, so the results may not be broadly representative.",
+      "tags": [
+        "research",
+        "vestibular"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1787089664273-13",
+      "title": "Functional movement screen scores and injury prevalence among collegiate basketball players: a cross-sectional analysis",
+      "summary": "A cross-sectional study investigated the relationship between Functional Movement Screen (FMS) scores and injury prevalence among collegiate basketball players.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01789-4",
+      "publishedAt": "2026-08-15T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究提供了大学生篮球运动员功能性运动筛查（FMS）分数与损伤患病率的横断面关联证据，提示 FMS 可能是运动损伤风险筛查的工具之一，但在临床实践中仍需结合其他评估方法。",
+      "titleZh": "大学篮球运动员功能性运动筛查分数与损伤患病率：一项横断面分析",
+      "summaryZh": "一项横断面研究调查了大学篮球运动员功能性运动筛查（FMS）分数与损伤患病率之间的关系。",
+      "curatedReasonEn": "This study provides cross-sectional evidence linking Functional Movement Screen (FMS) scores with injury prevalence among collegiate basketball players, suggesting FMS as a potential tool for sports injury risk screening, though it should be combined with other assessment methods in clinical practice.",
+      "limitation": "研究设计为横断面，无法建立 FMS 分数与损伤风险之间的因果关系。",
+      "limitationEn": "The study's cross-sectional design prevents establishing a causal relationship between FMS scores and injury risk.",
+      "tags": [
+        "research",
+        "injury-prevention"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787089664273-18",
+      "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
+      "summary": "An exploratory analysis investigated the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff.",
+      "category": "pediatric",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10351-9",
+      "publishedAt": "2026-08-15T00:00:00.000Z",
+      "firstSeen": "2026-08-18T21:47:44.273Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究分析了 Salter 截骨术和股骨截骨术联合治疗儿童发育性髋关节发育不良的年龄分层影响，对你理解不同年龄段手术预后差异有参考价值，但直接康复干预信息较少。",
+      "titleZh": "3岁年龄分界对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后影响的探索性分析",
+      "summaryZh": "一项探索性分析研究了以3岁为分界点，年龄分层对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后的影响。",
+      "curatedReasonEn": "This study suggests that outcomes of combined Salter osteotomy and femoral osteotomy for pediatric developmental dysplasia of the hip may be influenced by age (with a 3-year cutoff). This offers you a perspective on surgical differences across age groups, but provides limited direct guidance for rehabilitation interventions.",
+      "limitation": "研究为回顾性分析，存在选择偏倚和信息偏倚的风险。",
+      "limitationEn": "The study is a retrospective analysis, carrying risks of selection and information bias.",
+      "tags": [
+        "research",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1787262733536-10",
+      "title": "AI-assisted exercise prescription in rheumatology: a comparative evaluation of three large language models for personalized APA prescription",
+      "summary": "A comparative evaluation of three large language models for personalized Adapted Physical Activity (APA) prescription in rheumatology showed promising results for AI-assisted exercise prescription.",
+      "category": "cardiopulmonary",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01995-0",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "firstSeen": "2026-08-20T21:52:13.536Z",
+      "curatedScore": 70,
+      "curatedReason": "大型语言模型在风湿病患者个性化 APA 处方中展现出潜力，提示 AI 辅助处方是未来趋势。但在实际应用前，你仍需关注其准确性和临床验证，不能盲目采纳。",
+      "titleZh": "风湿病学中 AI 辅助运动处方：三种大型语言模型个性化适应性体育活动处方的比较评估",
+      "summaryZh": "一项针对三种大型语言模型在风湿病患者个性化适应性体育活动（APA）处方中的比较评估显示，AI 辅助运动处方前景可观。",
+      "curatedReasonEn": "Large language models show promise in personalized APA prescription for rheumatology patients, suggesting AI-assisted prescribing is a future trend. However, before clinical application, you must still pay attention to its accuracy and clinical validation, and not adopt it blindly.",
+      "limitation": "研究主要基于模型生成，缺乏真实患者的临床试验验证其效果和安全性。",
+      "limitationEn": "The study is primarily based on model generation and lacks clinical trial validation of its effectiveness and safety in real patients.",
+      "tags": [
+        "research",
+        "digital-health",
+        "ai"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1787262733536-12",
+      "title": "Mepivacaine Provides Greater Short-Term Relief Than Dry Needling and Local Lidocaine for Myofascial Pain: Study",
+      "summary": "A study reported that mepivacaine provided greater short-term relief for myofascial pain compared to dry needling and local lidocaine injections.",
+      "category": "manual-modality",
+      "source": "Medical Dialogues",
+      "sourceUrl": "https://medicaldialogues.in/dentistry/news/mepivacaine-provides-greater-short-term-relief-than-dry-needling-and-local-lidocaine-for-myofascial-pain-study-176676",
+      "publishedAt": "2026-08-19T15:00:43.000Z",
+      "firstSeen": "2026-08-20T21:52:13.536Z",
+      "curatedScore": 70,
+      "curatedReason": "这项新闻报道的研究指出，布比卡因在短期疼痛缓解方面优于干针和利多卡因，为你提供了不同治疗手段效果的比较信息，但在实践中仍需综合考虑长期效果和患者偏好。",
+      "titleZh": "研究：布比卡因在肌筋膜疼痛短期缓解方面优于干针和局部利多卡因",
+      "summaryZh": "一项研究报告称，布比卡因在肌筋膜疼痛的短期缓解效果上优于干针疗法和局部利多卡因注射。",
+      "curatedReasonEn": "Mepivacaine reportedly provides greater short-term relief for myofascial pain compared to dry needling and local lidocaine injections. This offers you comparative information on treatment efficacy, but in clinical practice, you should still consider long-term effects and patient preferences.",
+      "limitation": "该报道源自第三方新闻平台，缺乏对原始研究设计和方法学细节的深入披露，信息可能不完整。",
+      "limitationEn": "This report originates from a third-party news platform, lacking in-depth disclosure of the original study's design and methodological details, which may lead to incomplete information.",
+      "tags": [
+        "news",
+        "dry-needling"
+      ],
+      "studyDesign": "观察研究"
+    },
+    {
+      "id": "news-1787262733536-11",
+      "title": "Latent profile analysis of health literacy in elderly patients after PCI",
+      "summary": "A latent profile analysis identified distinct health literacy profiles among elderly patients after percutaneous coronary intervention (PCI), highlighting heterogeneity in their understanding and engagement with health information.",
+      "category": "cardiopulmonary",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08103-4",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "firstSeen": "2026-08-20T21:52:13.536Z",
+      "curatedScore": 65,
+      "curatedReason": "这项研究通过潜在剖面分析揭示了 PCI 术后老年患者健康素养的不同模式，为你理解此类患者的异质性提供了视角，但与物理治疗直接相关的干预信息较少。",
+      "titleZh": "PCI 术后老年患者健康素养的潜在剖面分析",
+      "summaryZh": "一项潜在剖面分析识别出经皮冠状动脉介入治疗（PCI）术后老年患者不同的健康素养模式，凸显了他们在理解和参与健康信息方面的异质性。",
+      "curatedReasonEn": "Distinct health literacy profiles exist among elderly patients after PCI, as revealed by this latent profile analysis, highlighting their heterogeneity. This offers you a perspective on individual differences in this patient group, but direct physical therapy intervention information remains limited.",
+      "limitation": "研究为横断面设计，无法揭示健康素养模式随时间的变化及其对长期结局的影响。",
+      "limitationEn": "The study has a cross-sectional design, which limits its ability to reveal changes in health literacy patterns over time and their impact on long-term outcomes.",
+      "tags": [
+        "research"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
     {
       "id": "news-1787244984553-0",
       "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
@@ -1707,328 +1963,6 @@
       "studyDesign": "RCT",
       "journal": "Archives of physical medicine and rehabilitation",
       "tech": true
-    },
-    {
-      "id": "news-1786916485795-0",
-      "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
-      "summary": "A randomized controlled trial (n=28) found that functional physiotherapy (pain science education, cognition-targeted exercises) and conventional physiotherapy (TENS, bladder training) similarly improved symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42604487/",
-      "publishedAt": "2026-08-16T00:00:00.000Z",
-      "firstSeen": "2026-08-16T21:41:25.795Z",
-      "curatedScore": 75,
-      "curatedReason": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中的疗效相似，都对症状和生活质量有益。提示你应优先选择患者依从性高的干预方案。",
-      "titleZh": "功能性与传统物理治疗对膀胱疼痛综合征女性患者症状、心理结局及生活质量的影响：一项随机对照试验",
-      "summaryZh": "一项随机对照试验（n=28）发现，功能性物理治疗（疼痛科学教育、认知导向运动）与传统物理治疗（经皮神经电刺激、膀胱训练）在改善膀胱疼痛综合征女性患者的症状、心理结局及生活质量方面效果相似。",
-      "curatedReasonEn": "Functional and conventional physiotherapy show similar efficacy in women with Bladder Pain Syndrome, benefiting symptoms and quality of life. This suggests prioritizing interventions with higher patient adherence.",
-      "limitation": "本研究样本量较小（28名患者），且未明确报告随访时长和长期效应。",
-      "limitationEn": "This study had a small sample size (28 patients) and did not clearly report follow-up duration or long-term effects.",
-      "tags": [
-        "research",
-        "pelvic-floor"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1786856033300-0",
-      "title": "Experiences of telehealth e-mentoring within postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom.",
-      "summary": "A qualitative study explored experiences of telehealth e-mentoring in postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom, identifying perceived outcomes and challenges in developing advanced practice capabilities.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603471/",
-      "publishedAt": "2026-08-15T00:00:00.000Z",
-      "firstSeen": "2026-08-16T04:53:53.300Z",
-      "curatedScore": 75,
-      "curatedReason": "远程电子导师制度为物理治疗研究生教育提供了新策略，尤其在加拿大和英国的肌骨康复领域。这提示你可以将此模式纳入你的教学或专业发展中，以支持高级实践能力培养。",
-      "titleZh": "加拿大和英国肌骨物理治疗研究生教育中远程电子导师制度的经验",
-      "summaryZh": "一项定性研究探讨了加拿大和英国肌骨物理治疗研究生教育中远程电子导师制度的经验，识别了在发展高级实践能力方面的感知结果与挑战。",
-      "curatedReasonEn": "Telehealth e-mentoring offers a novel strategy for postgraduate physiotherapy education, especially in musculoskeletal rehabilitation in Canada and the UK. This suggests you could integrate this model into your teaching or professional development to foster advanced practice capabilities.",
-      "limitation": "本研究采用定性设计，依赖受访者的主观经验，结果不具有量化推断性。",
-      "limitationEn": "This study used a qualitative design, relying on subjective experiences of participants, and its findings are not quantitatively generalizable.",
-      "tags": [
-        "research",
-        "education",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Musculoskeletal science & practice",
-      "tech": true
-    },
-    {
-      "id": "news-1786682651836-4",
-      "title": "Feasibility and acceptability of the breakfast group intervention BISTRo for stroke survivors in acute rehabilitation.",
-      "summary": "A multisite mixed-methods feasibility study examined the feasibility and acceptability of the co-designed BISTRo breakfast group intervention for stroke survivors in acute rehabilitation.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42593360/",
-      "publishedAt": "2026-08-13T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 75,
-      "curatedReason": "早餐小组干预 BISTRo 在急性卒中康复中显示出可行性和可接受性。虽然只是可行性研究，但这提示你可以在急性期康复中探索整合社交和多学科功能的创新模式，以提升患者参与度。",
-      "titleZh": "卒中幸存者急性康复中早餐小组干预 BISTRo 的可行性与可接受性",
-      "summaryZh": "一项多中心混合方法可行性研究，旨在评估卒中幸存者急性康复中共同设计的 BISTRo 早餐小组干预的可行性和可接受性。",
-      "curatedReasonEn": "The breakfast group intervention BISTRo demonstrated feasibility and acceptability in acute stroke rehabilitation. While only a feasibility study, this suggests you can explore innovative models integrating social and multidisciplinary functions in acute rehabilitation to enhance patient engagement.",
-      "limitation": "本研究为可行性研究，仅关注干预的可行性和可接受性，未评估其临床有效性。",
-      "limitationEn": "This was a feasibility study, focusing only on the intervention's feasibility and acceptability, not its clinical effectiveness.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1786682651836-11",
-      "title": "Methodological characteristics of perturbation-based balance training in healthy older adults: A scoping review.",
-      "summary": "A scoping review systematically mapped and characterized the methodological features of mechanically induced perturbation-based balance training interventions in healthy older adults, aiming to inform fall prevention strategies.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42594763/",
-      "publishedAt": "2026-08-13T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 75,
-      "curatedReason": "设计健康老年人扰动平衡训练时，这份综述值得你参考。它系统梳理了现有研究的方法学特征，有助于你制定更具体、有效的跌倒预防方案。",
-      "titleZh": "基于扰动的平衡训练在健康老年人中的方法学特征：一项范围综述",
-      "summaryZh": "一项范围综述系统地梳理并描述了基于机械扰动的平衡训练在健康老年人中的方法学特征，旨在为跌倒预防策略提供信息。",
-      "curatedReasonEn": "This scoping review systematically mapped the methodological characteristics of perturbation-based balance training in healthy older adults. This provides you with a comprehensive methodological reference for designing fall prevention programs, helping optimize perturbation training parameters and implementation strategies.",
-      "limitation": "范围综述的性质决定了它主要进行文献梳理，不提供干预效果的量化汇总或因果推断。",
-      "limitationEn": "The nature of a scoping review means it primarily maps existing literature and does not provide quantitative synthesis of intervention effects or causal inferences.",
-      "tags": [
-        "research",
-        "fall-prevention"
-      ],
-      "studyDesign": "综述",
-      "journal": "Gait & posture"
-    },
-    {
-      "id": "news-1786682651835-1",
-      "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
-      "summary": "This commentary refines the mechanistic understanding of exercise benefits in chronic low back pain by exploring the role of systemic inflammation as a mediator.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586858/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.835Z",
-      "curatedScore": 70,
-      "curatedReason": "这项评论性文章从机制层面探讨了系统性炎症在运动对慢性腰痛益处中的中介作用。这提示你对慢性腰痛的运动处方应更深层次地理解其生理机制，而不止于生物力学。",
-      "titleZh": "系统性炎症作为慢性腰痛运动益处的中介：细化机制视角",
-      "summaryZh": "本评论文章通过探讨系统性炎症在慢性腰痛运动益处中的中介作用，细化了对运动益处的机制理解。",
-      "curatedReasonEn": "This commentary explores the mechanistic role of systemic inflammation as a mediator of exercise benefits in chronic low back pain. This suggests a deeper understanding of the physiological mechanisms, beyond just biomechanics, is needed for exercise prescriptions in chronic low back pain.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "述评",
-      "journal": "Musculoskeletal science & practice"
-    },
-    {
-      "id": "news-1786682651836-2",
-      "title": "\"It's really, really just exercise I put my faith in now\": Patients' perspectives on rotator cuff tendinopathy management: A qualitative study.",
-      "summary": "A qualitative study with 14 patients explored perspectives on rotator cuff tendinopathy management, revealing that patients prioritize clear symptom explanations, value clinicians who listen, and place high faith in exercise.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42585994/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "患者对肩袖肌腱病管理的观点强调了运动治疗的信念以及清晰的症状解释。这提示你在临床实践中，应重视与患者的沟通，并解释治疗方案以建立信任和依从性。",
-      "titleZh": "“我现在真的只相信运动疗法了”：肩袖肌腱病患者对治疗管理的看法：一项定性研究",
-      "summaryZh": "一项对14名患者进行的定性研究探讨了他们对肩袖肌腱病管理的看法，揭示患者优先考虑清晰的症状解释，重视倾听的临床医生，并高度信任运动疗法。",
-      "curatedReasonEn": "Patients' perspectives on rotator cuff tendinopathy management highlight their belief in exercise therapy and the importance of clear symptom explanations. This suggests you should prioritize communication with patients and explain treatment plans to build trust and adherence in clinical practice.",
-      "limitation": "本研究为定性研究，样本量较小（14名患者），发现不具有普遍推论性。",
-      "limitationEn": "This qualitative study had a small sample size (14 patients), and its findings are not broadly generalizable.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy"
-    },
-    {
-      "id": "news-1786682651836-3",
-      "title": "Development and Content Validation of an Exercise-Based Framework for the Management of Lumbar Radiculopathy.",
-      "summary": "This study developed and content-validated an exercise-based framework for the management of lumbar radiculopathy, integrating evidence-based exercise approaches and clinical expertise.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42578611/",
-      "publishedAt": "2026-08-11T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "针对腰椎神经根病变开发的运动框架，整合了多种循证运动方法和临床专业知识。这为你的腰椎神经根病变患者管理提供了一个结构化的思考路径，有助于优化治疗方案。",
-      "titleZh": "腰椎神经根病变运动管理框架的开发与内容验证",
-      "summaryZh": "本研究开发并内容验证了一个用于腰椎神经根病变管理的运动框架，整合了循证运动方法和临床专业知识。",
-      "curatedReasonEn": "An exercise-based framework developed for lumbar radiculopathy integrates various evidence-based exercise approaches and clinical expertise. This provides a structured thought process for managing your lumbar radiculopathy patients, helping optimize treatment plans.",
-      "limitation": "本研究为框架开发和内容验证，未提供临床疗效的直接证据。",
-      "limitationEn": "This study focused on framework development and content validation, and does not provide direct evidence of clinical efficacy.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1786682651836-5",
-      "title": "Upper-Limb Paresis Severity Is Associated With Practice Dosage During Task-Oriented Training in Subacute Stroke-An Exploratory Secondary Analysis.",
-      "summary": "An exploratory secondary analysis (n=33) found that upper-limb paresis severity is associated with the practice dosage achieved during task-oriented training in individuals with subacute stroke.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42592814/",
-      "publishedAt": "2026-08-13T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "这项探索性分析提示，上肢麻痹严重程度与卒中后任务导向训练的练习剂量相关。这表明你在为亚急性卒中患者制定训练计划时，应根据患者的麻痹程度调整期望的练习量。",
-      "titleZh": "上肢麻痹严重程度与亚急性卒中任务导向训练的练习剂量相关：一项探索性二次分析",
-      "summaryZh": "一项探索性二次分析（n=33）发现，上肢麻痹严重程度与亚急性卒中患者任务导向训练中达到的练习剂量相关。",
-      "curatedReasonEn": "This exploratory analysis suggests that upper-limb paresis severity is associated with practice dosage during task-oriented training post-stroke. This indicates you should adjust expected practice volumes based on the patient's paresis severity when planning training for subacute stroke patients.",
-      "limitation": "本研究为事后探索性分析，样本量较小（33名患者），且为单中心研究，结果需进一步验证。",
-      "limitationEn": "This was a post-hoc exploratory analysis with a small sample size (33 patients) and a single-center study, so the results require further validation.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1786682651836-9",
-      "title": "Impacts of ankle sprain on functional performance in under-20 soccer players: a cross-sectional study.",
-      "summary": "A cross-sectional study (n=75) compared functional and biomechanical parameters in under-20 soccer players with and without a history of lateral ankle sprain, finding that sprain history negatively impacts functional performance.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42580194/",
-      "publishedAt": "2026-08-11T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "这项横断面研究发现，踝关节扭伤史会对青少年足球运动员的功能表现产生负面影响。这意味着你在评估和康复年轻运动员时，应特别关注有踝关节扭伤史的个体，加强预防性训练。",
-      "titleZh": "踝关节扭伤对20岁以下足球运动员功能表现的影响：一项横断面研究",
-      "summaryZh": "一项横断面研究（n=75）比较了有无外侧踝关节扭伤史的20岁以下足球运动员的功能和生物力学参数，发现扭伤史对功能表现有负面影响。",
-      "curatedReasonEn": "This cross-sectional study found that a history of ankle sprain negatively impacts functional performance in under-20 soccer players. This implies that when assessing and rehabilitating young athletes, you should pay particular attention to individuals with a history of ankle sprains and enhance preventive training.",
-      "limitation": "本研究为横断面设计，无法建立因果关系，且所有受试者均为巴西男性青少年足球运动员，结果外推性有限。",
-      "limitationEn": "This cross-sectional study cannot establish causality, and all participants were male adolescent soccer players from Brazil, limiting generalizability.",
-      "tags": [
-        "research",
-        "foot-ankle"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1786682651836-10",
-      "title": "Current Manual Therapy Practices in Pediatric Neurological Physiotherapy: A Cross-Sectional Survey.",
-      "summary": "A cross-sectional survey (n=61) in Greece described current manual therapy practices among pediatric neurological physiotherapists, finding that 55.7% use it primarily as an adjunct intervention, most effective for joint mobility.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42581841/",
-      "publishedAt": "2026-08-12T00:00:00.000Z",
-      "firstSeen": "2026-08-14T04:44:11.836Z",
-      "curatedScore": 70,
-      "curatedReason": "希腊儿科神经物理治疗师使用手法治疗的现状调查显示，近六成从业者将其作为辅助干预。这提示你在儿童神经康复中，可以考虑将手法治疗作为提高关节活动度和疼痛管理的辅助手段，但需结合患者具体情况。",
-      "titleZh": "儿科神经物理治疗中手法治疗的当前实践：一项横断面调查",
-      "summaryZh": "一项在希腊进行的横断面调查（n=61）描述了儿科神经物理治疗师目前的手法治疗实践，发现55.7%的受访者主要将其作为辅助干预手段，对关节活动度最有效。",
-      "curatedReasonEn": "A survey on manual therapy use among pediatric neurological physiotherapists in Greece indicates that nearly 60% use it as an adjunctive intervention. This suggests that in pediatric neurological rehabilitation, you might consider manual therapy as an adjunct to improve joint mobility and pain management, while considering the patient's specific condition.",
-      "limitation": "本研究为横断面调查，依赖受访者的自我报告，存在回忆偏差和主观性。",
-      "limitationEn": "This cross-sectional survey relies on self-reported data from participants, which may be subject to recall bias and subjectivity.",
-      "tags": [
-        "research",
-        "dry-needling"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physical & occupational therapy in pediatrics"
-    },
-    {
-      "id": "news-1787089664272-3",
-      "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
-      "summary": "A systematic review and network meta-analysis of RCTs found that for middle-aged and older adults, combined aerobic and resistance training, with sufficient volume, was most effective for lowering systolic and diastolic blood pressure, outperforming other modalities.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42611172/",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.272Z",
-      "curatedScore": 85,
-      "curatedReason": "别再只推单一运动降压了，中老年人合并有氧和抗阻训练，且保证一定训练量（如每周 150 分钟中等强度），才是降低收缩压和舒张压的王道。",
-      "titleZh": "中老年人血压管理最佳运动模式与剂量：一项包含贝叶斯模型和剂量-反应网络荟萃分析的系统综述",
-      "summaryZh": "一项关于中老年人血压管理的系统综述和网络荟萃分析发现，结合有氧和抗阻训练，达到一定训练量时，降血压效果最佳，优于其他模式。",
-      "curatedReasonEn": "Stop recommending single exercise modes for blood pressure reduction. For middle-aged and older adults, combined aerobic and resistance training with sufficient volume (e.g., 150 minutes/week moderate intensity) is the gold standard for lowering both systolic and diastolic blood pressure.",
-      "limitation": "研究纳入的 RCT 异质性较高，可能影响荟萃分析结果的精度。",
-      "limitationEn": "The included RCTs exhibit high heterogeneity, potentially affecting the precision of the meta-analysis results.",
-      "tags": [
-        "research",
-        "geriatric"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Sports medicine (Auckland, N.Z.)"
-    },
-    {
-      "id": "news-1787089664272-4",
-      "title": "Comparative effectiveness of exercise-based prehabilitation before total knee arthroplasty: a systematic review and network meta-analysis of randomized controlled trials",
-      "summary": "A systematic review and network meta-analysis of RCTs comparing prehabilitation before total knee arthroplasty (TKA) found that multimodal exercise programs were more effective than single modalities, suggesting a comprehensive approach for better outcomes.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01959-4",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.272Z",
-      "curatedScore": 85,
-      "curatedReason": "全膝关节置换术 (TKA) 前的术前康复，别再纠结单项功能训练了，这项系统综述和网络荟萃分析提示，多模式联合方案（耐力、力量、平衡、功能训练）效果更佳。",
-      "titleZh": "全膝关节置换术前运动基康复的比较有效性：一项随机对照试验的系统综述和网络荟萃分析",
-      "summaryZh": "一项比较全膝关节置换术前运动基康复的系统综述和网络荟萃分析发现，多模式运动方案比单一模式更有效，提示应采取综合性方法以获得更好的结果。",
-      "curatedReasonEn": "For prehabilitation before total knee arthroplasty (TKA), move beyond single-modality training. This systematic review and network meta-analysis suggests that multimodal, combined programs (endurance, strength, balance, functional training) yield superior outcomes.",
-      "limitation": "纳入的研究在运动方案、持续时间和强度上存在异质性，限制了直接比较。",
-      "limitationEn": "Heterogeneity in exercise protocols, duration, and intensity across included studies limits direct comparisons.",
-      "tags": [
-        "research",
-        "orthopedic"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1787089664273-17",
-      "title": "Effects of combined balance and plyometric training on athletic performance: a systematic review",
-      "summary": "A systematic review found that combined balance and plyometric training significantly improves athletic performance, highlighting its effectiveness in enhancing explosive power, agility, and dynamic stability for athletes.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01889-1",
-      "publishedAt": "2026-08-11T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 85,
-      "curatedReason": "这项系统综述表明，结合平衡与增强式训练可以显著提高运动员的运动表现。这为 PT 提供了有力证据，支持在运动专项训练中纳入结合这两种训练模式的方案，以提升爆发力、敏捷性和稳定性。",
-      "titleZh": "结合平衡与增强式训练对运动表现的影响：一项系统综述",
-      "summaryZh": "一项系统综述发现，结合平衡与增强式训练可显著提高运动表现，强调其在增强爆发力、敏捷性和动态稳定性方面的有效性。",
-      "curatedReasonEn": "This systematic review demonstrates that combined balance and plyometric training significantly enhances athletic performance. This provides strong evidence for PTs to incorporate both training modalities into sport-specific programs to improve explosive power, agility, and stability.",
-      "limitation": "纳入研究的训练方案和评估方法存在异质性，可能影响结果的精确度。",
-      "limitationEn": "Heterogeneity in training protocols and assessment methods across included studies may affect the precision of the results.",
-      "tags": [
-        "research",
-        "sports"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1787089664273-23",
-      "title": "Effects of different aerobic exercise intensities on exercise capacity, quality of life and mortality in individuals with coronary artery disease: systematic review and network meta-analysis",
-      "summary": "A systematic review and network meta-analysis found that moderate-intensity aerobic exercise may be the most effective for improving exercise capacity, quality of life, and mortality in individuals with coronary artery disease (CAD).",
-      "category": "cardiopulmonary",
-      "source": "Sport Sci Health",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s11332-026-01894-4",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 85,
-      "curatedReason": "对于冠心病 (CAD) 患者，这项高质量系统综述提示，在改善运动能力、生活质量和降低死亡率方面，中等强度有氧运动效果最佳。制定心脏康复计划时，你现在可以更明确地推荐中等强度。",
-      "titleZh": "不同有氧运动强度对冠心病患者运动能力、生活质量和死亡率的影响：一项系统综述和网络荟萃分析",
-      "summaryZh": "一项系统综述和网络荟萃分析发现，中等强度的有氧运动可能最有效地改善冠心病 (CAD) 患者的运动能力、生活质量和死亡率。",
-      "curatedReasonEn": "For patients with coronary artery disease (CAD), this high-quality systematic review suggests moderate-intensity aerobic exercise is likely optimal for improving exercise capacity, quality of life, and mortality. When designing cardiac rehab, you now have strong evidence to prioritize moderate intensity.",
-      "limitation": "纳入研究的训练强度定义可能存在差异，对网络荟萃分析结果的精确性产生影响。",
-      "limitationEn": "Variations in the definition of exercise intensity across included studies might impact the precision of the network meta-analysis results.",
-      "tags": [
-        "research",
-        "cardiopulmonary"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Sport Sciences for Health"
     }
   ]
 }
