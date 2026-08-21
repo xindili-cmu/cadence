@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-21T10:52:31.844Z",
+    "lastUpdated": "2026-08-21T16:57:19.651Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -117,6 +117,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+          "titleZh": "亚急性卒中患者 300 米社区步行测试测量学特性研究，融入环境步行需求"
+        },
+        {
+          "source": "PubMed",
           "journal": "NeuroRehabilitation",
           "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
           "titleZh": "卒中后分型步态模式亚组特征与异常步态定义：一项范围综述"
@@ -139,9 +145,9 @@
           "titleZh": "卒中患者口部肌肉质量、舌肌力量和耐力在不同吞咽功能程度中的表现：一项初步研究"
         }
       ],
-      "heat": 9.4,
-      "themeZh": "卒中康复新干预手段与服务模式有效性研究",
-      "themeEn": "Stroke Rehabilitation Interventions and Service Models Efficacy"
+      "heat": 8.61,
+      "themeZh": "卒中康复的先进技术与服务模式",
+      "themeEn": "Advanced Stroke Rehab Technologies & Models"
     },
     {
       "id": "news-1787288276212-1",
@@ -149,12 +155,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
       "category": "neurological",
       "publishedAt": "2026-08-20T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Journal of NeuroEngineering and Rehabilitation",
-        "medRxiv"
+        "European Spine Journal",
+        "BMC Musculoskeletal Disorders"
       ],
       "tag": "spinal-cord",
       "kind": "theme",
@@ -178,14 +185,27 @@
           "titleZh": "脊髓损伤后运动想象神经关联的多模态综合：一项系统综述"
         },
         {
-          "source": "medRxiv",
-          "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
-          "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管和自主神经反应：MACHINE 试验的探索性研究"
+          "source": "Eur Spine J",
+          "journal": "European Spine Journal",
+          "title": "Association of the GAP score and roussouly-based algorithm with long-term patient-reported outcomes following adult spinal deformity surgery: a systematic review and meta-analysis",
+          "titleZh": "GAP评分和Roussouly分类算法与成人脊柱畸形手术后长期患者报告结局的关联：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "Eur Spine J",
+          "journal": "European Spine Journal",
+          "title": "Does surgical approach or preoperative deformity better predict outcomes in thoracolumbar fractures? A comparative study of minimally invasive versus open techniques",
+          "titleZh": "胸腰椎骨折中，手术入路或术前畸形哪个更能预测预后？一项微创与开放技术的比较研究"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
+          "titleZh": "3岁年龄分界对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后影响的探索性分析"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "脊髓损伤后运动功能恢复与心血管自主神经反应",
-      "themeEn": "SCI Motor Recovery and Cardiovascular Autonomic Responses"
+      "heat": 2.77,
+      "themeZh": "脊髓损伤与脊柱畸形术后功能恢复预测",
+      "themeEn": "Predicting SCI & Spinal Deformity Recovery"
     },
     {
       "id": "news-1787089664272-7",
@@ -246,9 +266,9 @@
           "titleZh": "盆底肌训练后土耳其版盆底功能障碍问卷-20（PFDI-20）的响应性、最小可检测变化和最小重要变化"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "慢性疼痛的多维度机制、评估与物理治疗",
-      "themeEn": "Chronic Pain Mechanisms, Assessment, and Physical Therapy"
+      "heat": 2.21,
+      "themeZh": "慢性疼痛的多维度机制与物理治疗",
+      "themeEn": "Multidimensional Mechanisms & PT for Chronic Pain"
     },
     {
       "id": "news-1787085829895-1",
@@ -290,9 +310,9 @@
           "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "老年人平衡能力与肌力神经调控及训练",
-      "themeEn": "Neuromodulation and Training for Older Adults' Balance and Strength"
+      "heat": 2.21,
+      "themeZh": "老年人平衡与运动控制干预策略",
+      "themeEn": "Balance & Motor Control Interventions for Older Adults"
     },
     {
       "id": "news-1786682651836-12",
@@ -348,12 +368,35 @@
           "titleZh": "儿科心脏重症监护中吸气肌力量训练：一项回顾性队列研究"
         }
       ],
-      "heat": 1.81,
-      "themeZh": "不同人群运动处方与干预效果的最佳实践",
-      "themeEn": "Optimal Exercise Prescriptions and Interventions for Diverse Populations"
+      "heat": 1.66,
+      "themeZh": "老年与慢性病人群运动干预与处方",
+      "themeEn": "Exercise Interventions for Older & Chronic Disease"
     }
   ],
   "items": [
+    {
+      "id": "news-1787331437384-0",
+      "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+      "summary": "A study evaluated the measurement properties of a 300-m Community-Based Walking Test (CBWT) in 26 individuals with subacute stroke, finding strong test-retest reliability (ICC 2,1) in both forward and reverse directions.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42627141/",
+      "publishedAt": "2026-08-21T00:00:00.000Z",
+      "firstSeen": "2026-08-21T16:57:17.384Z",
+      "curatedScore": 75,
+      "curatedReason": "这个 300 米社区步行测试的测量学特性很扎实，可以作为亚急性卒中患者评估步态耐力的一个补充工具，尤其是在模拟真实环境挑战方面有优势。",
+      "titleZh": "亚急性卒中患者 300 米社区步行测试测量学特性研究，融入环境步行需求",
+      "summaryZh": "一项研究评估了 26 名亚急性卒中患者的 300 米社区步行测试（CBWT）的测量学特性，结果显示其在正向和反向均具有很强的重测信度（ICC 2,1）。",
+      "curatedReasonEn": "The robust psychometric properties of this 300-m Community-Based Walking Test make it a valuable supplementary tool for assessing gait endurance in subacute stroke patients, particularly for its ability to simulate real-world environmental walking demands.",
+      "limitation": "研究样本量较小（26人），可能影响结果的外推性。",
+      "limitationEn": "The study's small sample size (26 individuals) may limit the generalizability of its findings.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1787309549617-1",
       "title": "Efficacy of Transcranial Direct Current Stimulation in Acute Ischemic Stroke: A Systematic Review and Meta-analysis of Stimulation Montages and Timing.",
@@ -2061,28 +2104,6 @@
       ],
       "studyDesign": "述评",
       "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786727744421-2",
-      "title": "Cardiovascular and autonomic responses to transcutaneous spinal cord stimulation combined with activity-based therapy after chronic spinal cord injury: An exploratory study from the MACHINE trial",
-      "summary": "An exploratory case series from the MACHINE trial (n=8) described cardiovascular and autonomic responses to body weight-supported treadmill training combined with active or sham transcutaneous spinal cord stimulation in individuals with chronic, motor-complete spinal cord injury.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.11.26359978v1?rss=1",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "firstSeen": "2026-08-14T17:15:44.421Z",
-      "curatedScore": 70,
-      "curatedReason": "这项探索性研究报告了脊髓损伤患者经皮脊髓电刺激结合活动性训练后的心血管和自主神经反应。结果提示该组合疗法可能对慢性脊髓损伤患者的心血管功能有潜在益处，值得进一步关注。",
-      "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管和自主神经反应：MACHINE 试验的探索性研究",
-      "summaryZh": "MACHINE 试验的一项探索性病例系列研究（n=8）描述了慢性完全运动性脊髓损伤患者在接受体重支持下跑步机训练结合主动或假性经皮脊髓电刺激后的心血管和自主神经反应。",
-      "curatedReasonEn": "This exploratory study reports cardiovascular and autonomic responses in spinal cord injury patients after transcutaneous spinal cord stimulation combined with activity-based therapy. The results suggest potential cardiovascular benefits for individuals with chronic spinal cord injury from this combined therapy, warranting further attention.",
-      "limitation": "本研究为探索性病例系列，样本量极小 (n=8)，且缺乏明确的对照组分析，限制了结论的通用性和因果推断。",
-      "limitationEn": "This exploratory case series had an extremely small sample size (n=8) and lacked clear control group analysis, limiting the generalizability and causal inference of its conclusions.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
