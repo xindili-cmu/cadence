@@ -5625,6 +5625,75 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1787288276212-1",
+      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+      "summary": "A clinical prediction rule was developed using the National Spinal Cord Injury Statistical Centre dataset (2607 patients) to predict independent walking one year after traumatic SCI, identifying grade-specific predictors.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-21T04:57:56.212Z",
+      "curatedScore": 80,
+      "curatedReason": "这个基于大样本数据集开发的临床预测规则，能根据 ASIA 损伤分级为创伤性脊髓损伤患者提供一年后独立步行的差异化预后，对于制定康复计划和管理患者期望很有价值。",
+      "titleZh": "创伤性脊髓损伤后独立行走的等级特异性临床预测规则",
+      "summaryZh": "一项研究利用全国脊髓损伤统计中心数据集（2607 名患者）开发了一个临床预测规则，旨在预测创伤性脊髓损伤患者一年后的独立行走能力，并识别了与损伤等级相关的预测因子。",
+      "curatedReasonEn": "This clinical prediction rule, developed using a large dataset, provides differentiated prognosis for independent walking one year after traumatic spinal cord injury based on ASIA Impairment Scale grades, valuable for rehabilitation planning and managing patient expectations.",
+      "limitation": "预测变量的选择和机器学习模型建立的细节需进一步公开，以评估其稳健性和可解释性。",
+      "limitationEn": "Further details on the selection of predictive variables and the establishment of machine learning models are needed to assess robustness and interpretability.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1787288276211-0",
+      "title": "Analysis of Home-Based Rehabilitation Robotics: Lessons Learned from Nationwide Direct-to-Consumer Deployment.",
+      "summary": "An analysis discusses the lessons learned from nationwide direct-to-consumer deployment of home-based rehabilitation robotics for stroke survivors, highlighting potential workforce multipliers for neurorehabilitation.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624792/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-21T04:57:56.211Z",
+      "curatedScore": 75,
+      "curatedReason": "这篇分析总结了美国居家康复机器人部署的经验教训，对评估新技术在卒中康复中的潜力、挑战和扩大规模至关重要。",
+      "titleZh": "居家康复机器人分析：全国性消费者直达部署的经验教训",
+      "summaryZh": "一项分析讨论了美国卒中幸存者居家康复机器人在全国范围内直接面向消费者部署的经验教训，强调了其在神经康复中作为劳动力乘数的潜力。",
+      "curatedReasonEn": "This analysis summarizes lessons learned from home-based rehabilitation robotics deployment in the US, crucial for evaluating the potential, challenges, and scalability of new technologies in stroke rehabilitation.",
+      "tags": [
+        "news",
+        "stroke",
+        "telehealth"
+      ],
+      "journal": "Neurorehabilitation and neural repair",
+      "tech": true
+    },
+    {
+      "id": "news-1787288276213-2",
+      "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
+      "summary": "A meta-epidemiological review identified and compared study-disclosed conflicts of interest with externally discovered ones in manual therapy trials for low back pain published between 2000 and 2025.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42623775/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-21T04:57:56.213Z",
+      "curatedScore": 70,
+      "curatedReason": "这项系统综述揭示了手动疗法试验中利益冲突披露的潜在不足，提醒我们在评估相关研究证据时需对透明度保持警惕。",
+      "titleZh": "腰痛手动疗法试验中的利益冲突披露是否透明？一项荟萃流行病学综述",
+      "summaryZh": "一项荟萃流行病学综述旨在评估 2000 年至 2025 年间发表的腰痛手动疗法试验中利益冲突的披露情况，并与外部搜索结果进行比较。",
+      "curatedReasonEn": "This systematic review highlights potential shortcomings in conflict of interest disclosures within manual therapy trials, urging vigilance regarding transparency when evaluating related research evidence.",
+      "limitation": "研究范围仅限于 2000 年至 2025 年间发表的针对非特异性腰痛的手动疗法试验。",
+      "limitationEn": "The study is limited to manual therapy trials for nonspecific low back pain published between 2000 and 2025.",
+      "tags": [
+        "research",
+        "manipulation",
+        "spine"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Musculoskeletal science & practice"
     }
   ]
 }
