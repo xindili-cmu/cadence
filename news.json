@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-21T04:58:58.917Z",
+    "lastUpdated": "2026-08-21T07:12:20.524Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -133,9 +133,9 @@
           "titleZh": "卒中患者口部肌肉质量、舌肌力量和耐力在不同吞咽功能程度中的表现：一项初步研究"
         }
       ],
-      "heat": 7.24,
-      "themeZh": "多种康复手段对卒中后功能恢复的疗效评估",
-      "themeEn": "Stroke rehabilitation effectiveness: diverse methods & settings"
+      "heat": 7.01,
+      "themeZh": "卒中后康复策略的有效性与评估",
+      "themeEn": "Stroke Rehabilitation Strategies Effectiveness and Evaluation"
     },
     {
       "id": "news-1787288276212-1",
@@ -177,9 +177,9 @@
           "titleZh": "慢性脊髓损伤后经皮脊髓电刺激结合活动性疗法的心血管和自主神经反应：MACHINE 试验的探索性研究"
         }
       ],
-      "heat": 2.63,
-      "themeZh": "脊髓损伤后运动功能恢复与神经重塑机制",
-      "themeEn": "SCI motor recovery & neural plasticity"
+      "heat": 2.55,
+      "themeZh": "脊髓损伤后运动功能恢复与并发症",
+      "themeEn": "SCI Motor Recovery and Complications"
     },
     {
       "id": "news-1787166154199-1",
@@ -228,9 +228,9 @@
           "titleZh": "青年偏头痛患者的肌肉骨骼功能障碍：一项病例对照研究"
         }
       ],
-      "heat": 2.63,
-      "themeZh": "肩关节与膝关节疼痛的评估、干预及患者感知",
-      "themeEn": "Shoulder & knee pain assessment and management"
+      "heat": 2.55,
+      "themeZh": "肩部与膝关节疼痛的评估和康复",
+      "themeEn": "Shoulder and Knee Pain Assessment/Rehab"
     },
     {
       "id": "news-1787085829895-1",
@@ -272,62 +272,92 @@
           "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 2.63,
-      "themeZh": "老年人平衡能力与肌力干预的神经生理机制",
-      "themeEn": "Neuromodulation for older adults' balance and strength"
+      "heat": 2.55,
+      "themeZh": "老年人平衡与肌力神经调控干预",
+      "themeEn": "Neuromodulation for Elderly Balance & Strength"
     },
     {
-      "id": "news-1787089664272-7",
-      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "sourceCount": 3,
+      "id": "news-1786682651836-12",
+      "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586403/",
+      "category": "geriatric",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "sourceCount": 6,
       "sources": [
-        "Sports Medicine - Open",
-        "Musculoskeletal science & practice",
-        "Physiotherapy theory and practice"
+        "Archives of physical medicine and rehabilitation",
+        "Sports medicine (Auckland, N.Z.)",
+        "British Journal of Sports Medicine",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Physiotherapy theory and practice",
+        "medRxiv"
       ],
-      "tag": "spine",
+      "tag": "dementia",
       "kind": "theme",
       "members": [
         {
-          "source": "Sports Med - Open",
-          "journal": "Sports Medicine - Open",
-          "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-          "titleZh": "腰痛患者与健康个体腰骶筋膜的差异：一项系统综述与荟萃分析"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+          "titleZh": "运动干预对阿尔茨海默病老年人的影响：系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
-          "titleZh": "腰痛手动疗法试验中的利益冲突披露是否透明？一项荟萃流行病学综述"
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
+          "titleZh": "中老年人血压管理中最佳运动方式和剂量：一项基于贝叶斯模型和剂量反应网络 Meta 分析的系统综述"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Joint non-linear dose-response associations of device-measured physical activity and cardiorespiratory fitness with cardiovascular disease: a cohort and Mendelian randomisation study",
+          "titleZh": "设备测量体力活动和心肺适能与心血管疾病的联合非线性剂量-反应关联：一项队列和孟德尔随机化研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "AI-assisted exercise prescription in rheumatology: a comparative evaluation of three large language models for personalized APA prescription",
+          "titleZh": "风湿病学中 AI 辅助运动处方：三种大型语言模型个性化适应性体育活动处方的比较评估"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
-          "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
+          "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
+          "titleZh": "慢性阻塞性肺疾病患者的臂部运动训练：系统综述和 Meta 分析的伞形综述"
         },
         {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Beyond treatment: how care process factors shape physical therapist management of low back pain.",
-          "titleZh": "超越治疗：护理流程因素如何塑造物理治疗师对腰痛的管理"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
-          "titleZh": "全身炎症作为运动在慢性腰痛中益处的介质：优化机制视角"
+          "source": "medRxiv",
+          "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
+          "titleZh": "儿科心脏重症监护中吸气肌力量训练：一项回顾性队列研究"
         }
       ],
-      "heat": 1.97,
-      "themeZh": "慢性腰背痛的病理生理机制与物理治疗策略",
-      "themeEn": "Low back pain pathophysiology & PT management"
+      "heat": 1.91,
+      "themeZh": "老年慢性病与儿科心血管疾病的运动处方",
+      "themeEn": "Exercise Prescriptions for Chronic & Pediatric Conditions"
     }
   ],
   "items": [
+    {
+      "id": "news-1786999762266-15",
+      "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
+      "summary": "A retrospective cohort study found inspiratory strength training to be feasible and safe in children with congenital heart disease in a pediatric cardiac intensive care unit.",
+      "category": "cardiopulmonary",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360419v1?rss=1",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "firstSeen": "2026-08-17T20:49:22.266Z",
+      "curatedScore": 75,
+      "curatedReason": "这项回顾性研究表明，对于心脏重症监护病房的儿童，吸气肌力量训练是可行且安全的。虽然证据等级不高，但它为未来更大规模的儿科心肺康复研究提供了重要铺垫。",
+      "titleZh": "儿科心脏重症监护中吸气肌力量训练：一项回顾性队列研究",
+      "summaryZh": "一项回顾性队列研究评估了吸气肌力量训练在儿科心脏重症监护室中先天性心脏病儿童的可行性、安全性和生理反应，发现该训练可行且安全。",
+      "curatedReasonEn": "This retrospective study indicates that inspiratory strength training is feasible and safe for children in cardiac critical care. While the evidence level is not high, it lays important groundwork for future larger-scale pediatric cardiopulmonary rehabilitation research.",
+      "limitation": "这是一项单中心回顾性队列研究，缺乏对照组，且主要关注可行性和安全性。",
+      "limitationEn": "This was a single-center retrospective cohort study lacking a control group and primarily focused on feasibility and safety.",
+      "tags": [
+        "research",
+        "congenital-heart-disease"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1787288276212-1",
       "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
@@ -2034,28 +2064,6 @@
         "women-health"
       ],
       "studyDesign": "观察研究",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1786999762265-1",
-      "title": "Unlocking the potential of light-intensity physical activity for public health: a call to action for research",
-      "summary": "This commentary advocates for increased research and recognition of light-intensity physical activity (LPA) in public health guidelines, noting its ubiquity in daily life and potential health benefits, despite historical oversight in research.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1193?rss=1",
-      "publishedAt": "2026-08-17T05:45:50.000Z",
-      "firstSeen": "2026-08-17T20:49:22.265Z",
-      "curatedScore": 70,
-      "curatedReason": "低强度体力活动（LPA）的益处可能被我们长期低估了。这份述评提醒我们，不该只盯着中高强度活动，LPA 也能带来健康改善，特别是对那些难以坚持高强度运动的患者。在日常宣教中，LPA 应该是你提供给患者的重要“入门级”选项。",
-      "titleZh": "挖掘低强度体力活动对公共卫生的潜力：一项研究呼吁",
-      "summaryZh": "这篇述评呼吁加强对低强度体力活动 (LPA) 的研究和重视，将其纳入公共卫生指南，指出 LPA 在日常生活中普遍存在且具潜在健康益处，尽管其在研究中长期被忽视。",
-      "curatedReasonEn": "Light-intensity physical activity (LPA) benefits are likely underestimated. This commentary reminds us that we shouldn't solely focus on moderate-to-vigorous activity; LPA can also improve health, especially for patients struggling with higher intensities. LPA should be a key 'entry-level' option you offer patients in daily practice.",
-      "tags": [
-        "research",
-        "guidelines",
-        "prevention"
-      ],
-      "studyDesign": "述评",
       "journal": "British Journal of Sports Medicine"
     }
   ]
