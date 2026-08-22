@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-22T10:44:33.316Z",
+    "lastUpdated": "2026-08-22T13:04:56.059Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,15 +15,15 @@
   },
   "hotTopics": [
     {
-      "id": "news-1787368275537-3",
-      "title": "Clinical and neurophysiological determinants of response to contralesional low-frequency repetitive transcranial magnetic stimulation after stroke: A systematic review and meta-analysis",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360649v1?rss=1",
+      "id": "news-1787058794834-1",
+      "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42608732/",
       "category": "neurological",
       "publishedAt": "2026-08-21T00:00:00.000Z",
       "sourceCount": 11,
       "sources": [
-        "medRxiv",
         "American journal of physical medicine & rehabilitation",
+        "medRxiv",
         "NeuroRehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
@@ -37,6 +37,12 @@
       "tag": "stroke",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+          "titleZh": "体针、电针和耳针在卒中康复中的疗效比较：随机对照试验的系统综述和荟萃分析"
+        },
         {
           "source": "medRxiv",
           "title": "Clinical and neurophysiological determinants of response to contralesional low-frequency repetitive transcranial magnetic stimulation after stroke: A systematic review and meta-analysis",
@@ -139,9 +145,8 @@
           "titleZh": "住院患者运动行为直接观察方法：范围综述"
         }
       ],
-      "heat": 6.66,
-      "themeZh": "卒中康复的神经调控与远程/机器人辅助治疗",
-      "themeEn": "Neuromodulation and Telerehab for Stroke Recovery"
+      "heat": 6.44,
+      "themeEn": "Neuromodulation, robotics, telerehab in stroke, MS rehabilitation"
     },
     {
       "id": "news-1786999762267-16",
@@ -181,9 +186,8 @@
           "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子影响的探索性分析"
         }
       ],
-      "heat": 1.82,
-      "themeZh": "神经系统疾病运动功能量化与多学科干预",
-      "themeEn": "Quantifying Motor Function, Multidisciplinary Neuro Rehab"
+      "heat": 1.76,
+      "themeEn": "Biomarkers, motor control in Parkinson’s and stroke"
     },
     {
       "id": "news-1787089664272-7",
@@ -238,9 +242,8 @@
           "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.71,
-      "themeZh": "慢性疼痛的结构、炎症与物理治疗",
-      "themeEn": "Chronic Pain: Structure, Inflammation, PT"
+      "heat": 1.66,
+      "themeEn": "Mechanism, treatment for chronic low back and pelvic pain"
     },
     {
       "id": "news-1787085829895-1",
@@ -282,9 +285,9 @@
           "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 1.71,
-      "themeZh": "老年人平衡控制的神经调节与本体感觉干预",
-      "themeEn": "Neuromodulation, Proprioception for Older Adults Balance"
+      "heat": 1.66,
+      "themeZh": "老年人平衡能力与肌力改善的神经调控与运动训练干预",
+      "themeEn": "Neuromodulation, exercise for balance in older adults"
     },
     {
       "id": "news-1787166154199-1",
@@ -334,12 +337,35 @@
           "titleZh": "“我现在真的只相信运动了”：肩袖肌腱病患者对治疗管理的看法：一项定性研究"
         }
       ],
-      "heat": 1.51,
-      "themeZh": "肩关节疾病评估、疼痛机制与康复策略",
-      "themeEn": "Shoulder Dysfunction: Assessment, Pain, Rehab"
+      "heat": 1.46,
+      "themeZh": "肩关节疾病的评估工具开发与康复干预",
+      "themeEn": "Shoulder disorders assessment and rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1787058794834-1",
+      "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "summary": "A systematic review and meta-analysis of 21 RCTs found that acupuncture significantly improved motor function in stroke rehabilitation (SMD=6.48; 95% CI=4.72-8.24; P<0.001) compared to controls, with electroacupuncture showing the greatest efficacy.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42608732/",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "firstSeen": "2026-08-18T13:13:14.834Z",
+      "curatedScore": 85,
+      "curatedReason": "针灸，尤其是电针，在卒中康复中确实能显著改善运动功能，效果强于对照组（SMD=6.48）。你可以考虑将其作为主要康复方案的有效辅助手段，特别是对于那些运动功能恢复停滞的患者。",
+      "titleZh": "体针、电针和耳针在卒中康复中的疗效比较：随机对照试验的系统综述和荟萃分析",
+      "summaryZh": "一项对 21 项 RCT 的系统综述和荟萃分析显示，与对照组相比，针灸能显著改善卒中后的运动功能（SMD=6.48; 95% CI=4.72-8.24; P<0.001），其中电针效果最佳。",
+      "curatedReasonEn": "Acupuncture, particularly electroacupuncture, demonstrably improves motor function in stroke rehabilitation, outperforming controls (SMD=6.48). You should consider integrating it as an effective adjunct to primary rehabilitation protocols, especially for patients with stalled motor recovery.",
+      "limitation": "原始研究存在方法学异质性，可能影响结果的综合解释。",
+      "limitationEn": "Methodological heterogeneity among original studies may affect the comprehensive interpretation of the results.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
     {
       "id": "news-1787079714580-2",
       "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
@@ -2050,25 +2076,6 @@
       "curatedReasonEn": "The Australian Health Practitioner Regulation Agency (AHPRA) is seeking applications for national committee members of the Chinese Medicine Board of Australia. This is a routine regulatory activity and not directly relevant to physical therapists' daily practice. You may monitor such announcements if interested in multi-professional regulatory affairs.",
       "tags": [
         "policy",
-        "regulation"
-      ]
-    },
-    {
-      "id": "news-1786830184779-7",
-      "title": "Australian Health Practitioner Regulation Agency - Ahpra appoints new head of its Aboriginal and Torres Strait Islander Health Strategy Unit",
-      "summary": "The Australian Health Practitioner Regulation Agency (AHPRA) has announced the appointment of a new head for its Aboriginal and Torres Strait Islander Health Strategy Unit.",
-      "category": "practice",
-      "source": "AHPRA",
-      "sourceUrl": "https://www.ahpra.gov.au/News/2026-08-14-New-head-of-HSU",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "firstSeen": "2026-08-15T21:43:04.779Z",
-      "curatedScore": 65,
-      "curatedReason": "澳大利亚健康从业者监管机构 (AHPRA) 任命了其原住民和托雷斯海峡岛民健康战略部门的新负责人。这项人事任命虽是机构动态，但其战略方向可能影响未来澳大利亚原住民社区的物理治疗服务可及性和文化适宜性，值得澳洲执业者关注。",
-      "titleZh": "澳大利亚健康从业者监管机构：任命原住民和托雷斯海峡岛民健康战略部门新负责人",
-      "summaryZh": "澳大利亚健康从业者监管机构（AHPRA）宣布任命其原住民和托雷斯海峡岛民健康战略部门的新负责人。",
-      "curatedReasonEn": "The Australian Health Practitioner Regulation Agency (AHPRA) has appointed a new head for its Aboriginal and Torres Strait Islander Health Strategy Unit. While an internal appointment, the strategic direction of this unit may influence the accessibility and cultural appropriateness of physical therapy services for Aboriginal communities in Australia, warranting attention from practitioners there.",
-      "tags": [
-        "news",
         "regulation"
       ]
     }
