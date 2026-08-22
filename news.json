@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-22T08:52:27.062Z",
+    "lastUpdated": "2026-08-22T10:44:33.316Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -47,12 +47,6 @@
           "journal": "American journal of physical medicine & rehabilitation",
           "title": "Efficacy of Transcranial Direct Current Stimulation in Acute Ischemic Stroke: A Systematic Review and Meta-analysis of Stimulation Montages and Timing.",
           "titleZh": "经颅直流电刺激在急性缺血性卒中中的疗效：刺激模式与时机的系统综述和 Meta 分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
-          "titleZh": "体针、电针和耳针在卒中康复中的比较疗效：随机对照试验的系统综述和 Meta 分析"
         },
         {
           "source": "PubMed",
@@ -145,9 +139,9 @@
           "titleZh": "住院患者运动行为直接观察方法：范围综述"
         }
       ],
-      "heat": 6.84,
-      "themeZh": "卒中后神经康复的策略与方法综述",
-      "themeEn": "Stroke Neurorehabilitation Strategies and Methods Review"
+      "heat": 6.66,
+      "themeZh": "卒中康复的神经调控与远程/机器人辅助治疗",
+      "themeEn": "Neuromodulation and Telerehab for Stroke Recovery"
     },
     {
       "id": "news-1786999762267-16",
@@ -187,9 +181,9 @@
           "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子影响的探索性分析"
         }
       ],
-      "heat": 1.87,
-      "themeZh": "帕金森及卒中患者上肢功能和平衡评估与干预",
-      "themeEn": "PD, Stroke Upper Limb, Balance Assessment"
+      "heat": 1.82,
+      "themeZh": "神经系统疾病运动功能量化与多学科干预",
+      "themeEn": "Quantifying Motor Function, Multidisciplinary Neuro Rehab"
     },
     {
       "id": "news-1787089664272-7",
@@ -244,9 +238,9 @@
           "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.76,
-      "themeZh": "下背痛及盆底功能障碍的评估与物理治疗",
-      "themeEn": "Low Back and Pelvic Pain PT"
+      "heat": 1.71,
+      "themeZh": "慢性疼痛的结构、炎症与物理治疗",
+      "themeEn": "Chronic Pain: Structure, Inflammation, PT"
     },
     {
       "id": "news-1787085829895-1",
@@ -288,9 +282,9 @@
           "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 1.76,
-      "themeZh": "老年人平衡和力量的神经肌肉干预",
-      "themeEn": "Neuromuscular Interventions for Older Adult Balance"
+      "heat": 1.71,
+      "themeZh": "老年人平衡控制的神经调节与本体感觉干预",
+      "themeEn": "Neuromodulation, Proprioception for Older Adults Balance"
     },
     {
       "id": "news-1787166154199-1",
@@ -340,12 +334,35 @@
           "titleZh": "“我现在真的只相信运动了”：肩袖肌腱病患者对治疗管理的看法：一项定性研究"
         }
       ],
-      "heat": 1.56,
-      "themeZh": "肩关节和膝关节疼痛的功能评估与管理",
-      "themeEn": "Shoulder and Knee Pain Assessment, Management"
+      "heat": 1.51,
+      "themeZh": "肩关节疾病评估、疼痛机制与康复策略",
+      "themeEn": "Shoulder Dysfunction: Assessment, Pain, Rehab"
     }
   ],
   "items": [
+    {
+      "id": "news-1787079714580-2",
+      "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
+      "summary": "An umbrella review synthesized findings on arm exercise training for patients with chronic obstructive pulmonary disease (COPD), confirming its role in pulmonary rehabilitation, although the specific level of evidence requires careful consideration of the included studies.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610692/",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "firstSeen": "2026-08-18T19:01:54.580Z",
+      "curatedScore": 80,
+      "curatedReason": "这项伞形综述强化了上肢运动训练作为 COPD 肺康复重要组成部分的证据，特别是其对改善呼吸困难、肌肉耐力及生活质量的益处。将其纳入你的康复方案是符合证据的。",
+      "titleZh": "慢性阻塞性肺疾病患者的上肢运动训练：系统综述和荟萃分析的伞形综述",
+      "summaryZh": "一项伞形综述综合了关于慢性阻塞性肺疾病（COPD）患者上肢运动训练的发现，证实了其在肺康复中的作用，尽管具体的证据水平需要仔细考量纳入研究。",
+      "curatedReasonEn": "This umbrella review strengthens the evidence for arm exercise training as a vital component of pulmonary rehabilitation for COPD, particularly its benefits for dyspnea, muscle endurance, and quality of life. Incorporating it into your rehabilitation protocols is evidence-based.",
+      "limitation": "该综述的局限性在于其基于现有系统综述和荟萃分析，可能未能捕获最新发表的原始研究，且评估的效应量和患者异质性仍需关注。",
+      "limitationEn": "The limitation of this umbrella review is that it relies on existing systematic reviews and meta-analyses, potentially missing the most recently published primary studies, and the evaluated effect sizes and patient heterogeneity still warrant attention.",
+      "tags": [
+        "research",
+        "pulmonary-rehab"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1786705918572-0",
       "title": "When algorithms don't care: physiotherapy and the post-professional turn.",
@@ -2054,29 +2071,6 @@
         "news",
         "regulation"
       ]
-    },
-    {
-      "id": "news-1787058794834-1",
-      "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
-      "summary": "A systematic review of 21 RCTs found acupuncture significantly improved motor function in stroke survivors (SMD=6.48; 95% CI=4.72-8.24; P<0.001), with electroacupuncture showing the greatest benefit.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42608732/",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T13:13:14.834Z",
-      "curatedScore": 85,
-      "curatedReason": "卒中后运动功能障碍，针灸确有疗效，尤其电针获益最大。将电针纳入你的康复方案，作为常规治疗的有效补充，以期在运动功能改善上实现1+1>2。",
-      "titleZh": "体针、电针和耳针在卒中康复中的比较疗效：随机对照试验的系统综述和 Meta 分析",
-      "summaryZh": "一项对 21 项随机对照试验的系统综述发现，针灸显著改善了卒中幸存者的运动功能（SMD=6.48；95% CI=4.72-8.24；P<0.001），其中电针效果最佳。",
-      "curatedReasonEn": "For post-stroke motor dysfunction, acupuncture is effective, with electroacupuncture showing the greatest benefit. Incorporate electroacupuncture into your rehabilitation protocols as an effective adjunct to conventional treatment, aiming for synergistic improvements in motor function.",
-      "limitation": "纳入研究的异质性可能影响结果的综合解释。",
-      "limitationEn": "Heterogeneity among included studies may affect the comprehensive interpretation of results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "American journal of physical medicine & rehabilitation"
     }
   ]
 }
