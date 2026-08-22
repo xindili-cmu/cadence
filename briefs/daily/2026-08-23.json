@@ -1,0 +1,136 @@
+{
+ "date": "2026-08-23",
+ "generatedAt": "2026-08-22T21:43:27.064Z",
+ "windowHours": 50,
+ "windowStart": "2026-08-21T21:48:30.633Z",
+ "windowEnd": "2026-08-22T21:43:25.314Z",
+ "lead": {
+  "titleZh": "CMS 确定 SNF 和 IRF 支付适度增长：关注康复服务经济动态",
+  "titleEn": "CMS Finalizes Modest Payment Increases for SNFs and IRFs",
+  "paragraphZh": "今日我们有 4 篇文章，涵盖 4 个专业方向。最值得关注的是 CMS 对 SNF 和 IRF 支付增长的最终决定，其 curatedScore 达到 90 分。此外，有 2 项系统综述和荟萃分析，分别关注卒中后对侧低频重复经颅磁刺激和战绳训练对运动表现的影响。",
+  "paragraphEn": "Today's 4 articles span 4 specialties. The most notable item, with a curatedScore of 90, is CMS's final decision on payment increases for SNFs and IRFs. We also have 2 systematic reviews and meta-analyses, examining contralesional low-frequency rTMS after stroke and the effects of battle rope training on athletic performance, respectively."
+ },
+ "stats": {
+  "events": 4,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 4,
+  "topScore": 90
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1787434997375-15",
+     "title": "Impact of modified subvastus approach versus limited medial parapatellar approach on early recovery after minimally invasive total knee arthroplasty: a retrospective comparative study",
+     "summary": "This retrospective comparative study investigated the impact of a modified subvastus approach versus a limited medial parapatellar approach on early recovery after minimally invasive total knee arthroplasty.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10379-x",
+     "publishedAt": "2026-08-22T00:00:00.000Z",
+     "firstSeen": "2026-08-22T21:43:17.375Z",
+     "curatedScore": 70,
+     "curatedReason": "在微创全膝关节置换术（TKA）后，选择不同的手术入路对早期恢复可能存在影响。这项回顾性研究提示，改良的股内侧肌下入路或许与更快的早期恢复相关。虽然只是观察性数据，但它为你在与外科医生协作时，讨论 TKA 术式选择和制定术后康复计划提供了初步参考。",
+     "titleZh": "改良股内侧肌下入路与有限内侧髌旁入路对微创全膝关节置换术早期恢复的影响：一项回顾性比较研究",
+     "summaryZh": "这项回顾性比较研究调查了改良股内侧肌下入路与有限内侧髌旁入路对微创全膝关节置换术早期恢复的影响。",
+     "curatedReasonEn": "Different surgical approaches in minimally invasive total knee arthroplasty (TKA) might impact early recovery. This retrospective study suggests that a modified subvastus approach could be associated with faster early recovery. While observational, this provides an initial reference for you when collaborating with surgeons, discussing TKA surgical options, and planning postoperative rehabilitation.",
+     "limitation": "回顾性研究设计可能存在选择偏倚和混杂因素。",
+     "limitationEn": "The retrospective study design may have selection bias and confounding factors.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Musculoskeletal Disorders"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1787368275537-3",
+     "title": "Clinical and neurophysiological determinants of response to contralesional low-frequency repetitive transcranial magnetic stimulation after stroke: A systematic review and meta-analysis",
+     "summary": "This systematic review and meta-analysis of RCTs (up to July 2026) found that contralesional low-frequency repetitive transcranial magnetic stimulation (LF-rTMS) effectively improves post-stroke upper-limb function, with treatment effects modulated by baseline motor impairment and corticospinal tract integrity.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.20.26360649v1?rss=1",
+     "publishedAt": "2026-08-21T00:00:00.000Z",
+     "firstSeen": "2026-08-22T03:11:15.537Z",
+     "curatedScore": 85,
+     "curatedReason": "对侧低频重复经颅磁刺激（LF-rTMS）确实能改善卒中后上肢功能，这篇系统综述再次确认了这一点。但请注意，它的疗效受到患者基线运动障碍严重程度和皮质脊髓束完整性的影响，这意味着在筛选患者和调整方案时，你需要把这些因素考虑进去。",
+     "titleZh": "卒中后对侧低频重复经颅磁刺激反应的临床和神经生理学决定因素：一项系统综述和荟萃分析",
+     "summaryZh": "这项针对 RCT 的系统综述和荟萃分析（截至 2026 年 7 月）发现，对侧低频重复经颅磁刺激（LF-rTMS）可有效改善卒中后上肢功能，其治疗效果受基线运动障碍和皮质脊髓束完整性的影响。",
+     "curatedReasonEn": "Contralesional low-frequency repetitive transcranial magnetic stimulation (LF-rTMS) does improve post-stroke upper-limb function, and this systematic review reinforces that. However, be mindful that its efficacy is modulated by baseline motor impairment severity and corticospinal tract integrity, so factor these into your patient screening and treatment planning.",
+     "limitation": "尽管是系统综述和荟萃分析，但纳入的原始研究在刺激参数和康复方案上仍可能存在异质性，可能影响结果的普遍性。",
+     "limitationEn": "Although a systematic review and meta-analysis, heterogeneity in stimulation parameters and rehabilitation protocols among included original studies may affect the generalizability of the results.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1787434997375-16",
+     "title": "Effects of battle rope training on sporting performance: a systematic review and meta-analysis",
+     "summary": "A systematic review and meta-analysis evaluated the effects of battle rope training on sporting performance, including upper-limb and lower-limb explosive power, grip strength, upper-limb muscular endurance, and core endurance, following PRISMA 2020 guidelines.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01970-9",
+     "publishedAt": "2026-08-15T00:00:00.000Z",
+     "firstSeen": "2026-08-22T21:43:17.375Z",
+     "curatedScore": 85,
+     "curatedReason": "如果你正在为运动员或高水平训练者寻找提升表现的有效方法，战绳训练是一个值得考虑的选择。这项系统综述和荟萃分析确认了战绳训练能显著提高上肢和下肢爆发力、握力、上肢肌肉耐力以及核心耐力。你可以放心地将战绳训练整合到你的训练方案中。",
+     "titleZh": "战绳训练对运动表现的影响：一项系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析根据 PRISMA 2020 指南，评估了战绳训练对运动表现的影响，包括上肢和下肢爆发力、握力、上肢肌肉耐力和核心耐力。",
+     "curatedReasonEn": "If you are looking for effective ways to enhance performance for athletes or high-level trainees, battle rope training (BRT) is a viable option. This systematic review and meta-analysis confirms that BRT significantly improves upper and lower-limb explosive power, grip strength, upper-limb muscular endurance, and core endurance. You can confidently integrate BRT into your training programs.",
+     "limitation": "荟萃分析可能存在研究间异质性，影响结果的统一性。",
+     "limitationEn": "Heterogeneity between studies in the meta-analysis may affect the uniformity of the results.",
+     "tags": [
+      "research",
+      "performance-training",
+      "strength-conditioning"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1787434997375-18",
+     "title": "Modest Payment Increases Finalized by CMS for SNFs and IRFs",
+     "summary": "CMS finalized modest payment increases for skilled nursing facilities (SNFs) and inpatient rehabilitation facilities (IRFs) for fiscal year 2027, with new rules expected to increase the burden on facilities for delivering, coordinating, and documenting patient care.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/08/18/modest-payment-increases-finalized-by-cms-for-snfs-and-irfs",
+     "publishedAt": "2026-08-18T00:00:00.000Z",
+     "firstSeen": "2026-08-22T21:43:17.375Z",
+     "curatedScore": 90,
+     "curatedReason": "CMS 最终确定了 2027 财年专业护理机构（SNF）和住院康复机构（IRF）的适度支付增长。虽然增长幅度不大，但新规则增加了设施在患者护理交付、协调和文件记录方面的负担，这直接影响你在这些机构中的执业实践和工作流程。",
+     "titleZh": "CMS 最终确定 SNF 和 IRF 的适度支付增长",
+     "summaryZh": "CMS 最终确定了 2027 财年专业护理机构（SNF）和住院康复机构（IRF）的适度支付增长，预计新规则将增加设施在患者护理交付、协调和文件记录方面的负担。",
+     "curatedReasonEn": "CMS has finalized modest payment increases for skilled nursing facilities (SNFs) and inpatient rehabilitation facilities (IRFs) for FY 2027. While the increases are small, the new rules impose increased burdens on facilities for patient care delivery, coordination, and documentation, directly impacting your practice and workflow in these settings.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "regulation"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
