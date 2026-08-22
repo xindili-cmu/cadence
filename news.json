@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-22T07:04:29.431Z",
+    "lastUpdated": "2026-08-22T08:52:27.062Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -24,8 +24,8 @@
       "sources": [
         "medRxiv",
         "American journal of physical medicine & rehabilitation",
-        "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
+        "Archives of physical medicine and rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of rehabilitation medicine",
         "Physiotherapy theory and practice",
@@ -56,6 +56,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
+          "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角——范围综述与合作观点"
+        },
+        {
+          "source": "PubMed",
           "journal": "American journal of physical medicine & rehabilitation",
           "title": "Effectiveness of a Personalized Robot-Assisted Trunk and Lower Limb Rehabilitation in Patients with Chronic Stroke: A Randomized Controlled Trial.",
           "titleZh": "个性化机器人辅助躯干和下肢康复对慢性卒中患者的疗效：一项随机对照试验"
@@ -71,12 +77,6 @@
           "journal": "NeuroRehabilitation",
           "title": "Effectiveness of Telerehabilitation Versus Conventional Rehabilitation on Motor Function and Activities of Daily Living After Stroke: A Systematic Review of Randomized Controlled Trials.",
           "titleZh": "卒中后远程康复与传统康复对运动功能和日常生活活动能力影响的有效性：一项随机对照试验的系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
-          "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角——范围综述与合作观点"
         },
         {
           "source": "PubMed",
@@ -145,9 +145,9 @@
           "titleZh": "住院患者运动行为直接观察方法：范围综述"
         }
       ],
-      "heat": 7.02,
-      "themeZh": "卒中后康复的神经调控与远程医疗策略",
-      "themeEn": "Post-stroke Neuro-modulation and Telerehabilitation"
+      "heat": 6.84,
+      "themeZh": "卒中后神经康复的策略与方法综述",
+      "themeEn": "Stroke Neurorehabilitation Strategies and Methods Review"
     },
     {
       "id": "news-1786999762267-16",
@@ -187,9 +187,9 @@
           "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子影响的探索性分析"
         }
       ],
-      "heat": 1.92,
-      "themeZh": "神经退行性疾病上肢功能、平衡与躯干控制",
-      "themeEn": "Upper Limb, Balance, Trunk Control in Neurodegeneration"
+      "heat": 1.87,
+      "themeZh": "帕金森及卒中患者上肢功能和平衡评估与干预",
+      "themeEn": "PD, Stroke Upper Limb, Balance Assessment"
     },
     {
       "id": "news-1787089664272-7",
@@ -244,9 +244,9 @@
           "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.81,
-      "themeZh": "慢性疼痛（腰背痛、盆底痛、偏头痛）的机制与干预",
-      "themeEn": "Chronic Pain: Mechanisms and Interventions"
+      "heat": 1.76,
+      "themeZh": "下背痛及盆底功能障碍的评估与物理治疗",
+      "themeEn": "Low Back and Pelvic Pain PT"
     },
     {
       "id": "news-1787085829895-1",
@@ -288,9 +288,9 @@
           "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 1.81,
-      "themeZh": "老年人平衡与肌肉力量的神经调节干预",
-      "themeEn": "Neuromodulation for Balance and Strength in Elderly"
+      "heat": 1.76,
+      "themeZh": "老年人平衡和力量的神经肌肉干预",
+      "themeEn": "Neuromuscular Interventions for Older Adult Balance"
     },
     {
       "id": "news-1787166154199-1",
@@ -340,12 +340,33 @@
           "titleZh": "“我现在真的只相信运动了”：肩袖肌腱病患者对治疗管理的看法：一项定性研究"
         }
       ],
-      "heat": 1.6,
-      "themeZh": "肩关节疼痛与膝骨关节炎的评估与管理",
-      "themeEn": "Shoulder Pain and Knee OA Management"
+      "heat": 1.56,
+      "themeZh": "肩关节和膝关节疼痛的功能评估与管理",
+      "themeEn": "Shoulder and Knee Pain Assessment, Management"
     }
   ],
   "items": [
+    {
+      "id": "news-1786705918572-0",
+      "title": "When algorithms don't care: physiotherapy and the post-professional turn.",
+      "summary": "This paper argues that physiotherapy is entering a post-professional era, characterized by the progressive marginalization of practitioners due to late-stage capitalism, the unbundling of professional claims, and digitally mediated technological disruption.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42596863/",
+      "publishedAt": "2026-08-14T00:00:00.000Z",
+      "firstSeen": "2026-08-14T11:11:58.572Z",
+      "curatedScore": 75,
+      "curatedReason": "物理治疗的“后专业时代”可能已经到来，数字化解构和资本逻辑正在稀释专业自主性。你需要警惕这个趋势，并思考如何在这种结构性变迁中，重新定义和巩固物理治疗的专业价值，而不是被动边缘化。",
+      "titleZh": "当算法不关心：物理治疗与后专业转型",
+      "summaryZh": "本文认为，物理治疗正进入一个后专业时代，其特点是由于晚期资本主义、专业主张的解绑以及数字技术颠覆，物理治疗师在协调和提供护理方面的边缘化日益加剧。",
+      "curatedReasonEn": "The 'post-professional era' for physiotherapy may be here. Digital unbundling and capitalist logic are diluting professional autonomy. You need to be aware of this trend and consider how to redefine and consolidate physiotherapy's professional value amidst these structural changes, rather than being passively marginalized.",
+      "tags": [
+        "news",
+        "telehealth",
+        "workforce"
+      ],
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1787079714579-1",
       "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
@@ -2056,29 +2077,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "American journal of physical medicine & rehabilitation"
-    },
-    {
-      "id": "news-1787079714580-2",
-      "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
-      "summary": "An umbrella review synthesized findings on arm exercise training for COPD patients, screening six databases to identify systematic reviews and meta-analyses to establish evidence levels for its effectiveness.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610692/",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T19:01:54.580Z",
-      "curatedScore": 80,
-      "curatedReason": "这项伞形综述总结了臂部运动训练在 COPD 患者中的证据。臂部训练是肺康复的重要组成部分，它强调了在制定 COPD 康复计划时，应将臂部训练作为常规手段纳入，以管理肺外表现。",
-      "titleZh": "慢性阻塞性肺疾病患者的臂部运动训练：系统综述和 Meta 分析的伞形综述",
-      "summaryZh": "一项伞形综述综合了关于 COPD 患者臂部运动训练的研究结果，通过筛选六个数据库，旨在确立其有效性的证据水平。",
-      "curatedReasonEn": "This umbrella review synthesizes the evidence for arm exercise training in COPD patients. Arm training is a crucial component of pulmonary rehabilitation, emphasizing its routine inclusion in COPD rehab programs to manage extrapulmonary manifestations.",
-      "limitation": "伞形综述的质量依赖于其纳入的系统综述和 Meta 分析的质量，可能存在证据等级的局限。",
-      "limitationEn": "The quality of an umbrella review depends on the quality of its included systematic reviews and meta-analyses, which may introduce limitations in the level of evidence.",
-      "tags": [
-        "research",
-        "copd"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Physiotherapy theory and practice"
     }
   ]
 }
