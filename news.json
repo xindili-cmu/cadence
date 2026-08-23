@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-23T08:53:08.586Z",
+    "lastUpdated": "2026-08-23T10:45:05.998Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,15 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610950/",
       "category": "neurological",
       "publishedAt": "2026-08-22T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 10,
       "sources": [
         "NeuroRehabilitation",
         "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "medRxiv",
         "Disability and rehabilitation",
+        "Clinical rehabilitation",
+        "BMC Geriatrics",
         "Physiotherapy theory and practice",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of rehabilitation medicine"
@@ -95,6 +97,24 @@
         },
         {
           "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
+          "titleZh": "卒中后移动能力预后早期神经影像学与神经生理学生物标志物的系统综述"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Phase-specific relationships between cognitive function and life-space mobility in patients with ischemic stroke: implications for geriatric rehabilitation",
+          "titleZh": "缺血性卒中患者认知功能与生活空间移动能力之间的阶段性关系：对老年康复的启示"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+          "titleZh": "亚急性卒中患者 300 米社区步行测试测量学特性研究，融入环境步行需求"
+        },
+        {
+          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
           "titleZh": "慢性卒中患者运动恢复和社会支持与参与度相关结局的关联"
@@ -118,77 +138,9 @@
           "titleZh": "卒中后患者健身与活动度锻炼（FAME）项目实施二十年评估：基于 RE-AIM 框架的多数据源研究"
         }
       ],
-      "heat": 4.98,
-      "themeZh": "卒中与多发性硬化症康复：远程、物理与神经调控干预",
-      "themeEn": "Stroke, MS Rehabilitation: Telerehab, PT, Neuromodulation"
-    },
-    {
-      "id": "news-1786999762267-16",
-      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360286v1?rss=1",
-      "category": "neurological",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "medRxiv",
-        "Clinical rehabilitation",
-        "BMC Geriatrics",
-        "Physiotherapy theory and practice",
-        "NeuroRehabilitation",
-        "Physiotherapy"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "medRxiv",
-          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-          "titleZh": "不只是手臂运动：指戴式加速度计在测量卒中幸存者真实世界肢体表现方面是腕戴式加速度计的有效且敏感的替代品"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
-          "titleZh": "卒中后人体上肢异常肌肉协同模式的早期出现"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Relationship Between Physiological Mirror Activity and Corticomuscular Coherence During a Finger Dexterity Task Among Healthy Young and Older Adults",
-          "titleZh": "健康年轻与老年人手指灵巧任务中生理镜像活动与皮层肌肉协同性的关系"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "A systematic review of early neuroimaging and neurophysiological biomarkers for post-stroke mobility prognostication.",
-          "titleZh": "卒中后移动能力预后早期神经影像学与神经生理学生物标志物的系统综述"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Phase-specific relationships between cognitive function and life-space mobility in patients with ischemic stroke: implications for geriatric rehabilitation",
-          "titleZh": "缺血性卒中患者认知功能与生活空间移动能力之间的阶段性关系：对老年康复的启示"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
-          "titleZh": "亚急性卒中患者 300 米社区步行测试测量学特性研究，融入环境步行需求"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
-          "titleZh": "卒中后分型步态模式亚组特征与异常步态定义：一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
-          "titleZh": "住院患者运动行为直接观察方法：范围综述"
-        }
-      ],
-      "heat": 3.73,
-      "themeZh": "卒中后肢体功能与日常活动评估的生物标志物和工具",
-      "themeEn": "Stroke Motor Function Assessment Biomarkers & Tools"
+      "heat": 6.05,
+      "themeZh": "神经系统疾病康复中的先进技术与方法比较",
+      "themeEn": "Advanced Neurological Rehab Technologies and Methods"
     },
     {
       "id": "news-1787089664272-4",
@@ -250,9 +202,9 @@
           "titleZh": "踝关节扭伤对 20 岁以下足球运动员功能表现的影响：一项横断面研究"
         }
       ],
-      "heat": 3.11,
-      "themeZh": "膝关节与踝关节重建术后及疼痛的康复策略",
-      "themeEn": "Rehabilitation for Knee, Ankle Post-Op & Pain"
+      "heat": 3.03,
+      "themeZh": "运动疗法对骨科损伤和术后恢复的干预效果",
+      "themeEn": "Exercise Therapy for Orthopedic Injuries and Post-Surgery"
     },
     {
       "id": "news-1787085829895-1",
@@ -294,69 +246,223 @@
           "titleZh": "tDCS 结合不稳定抗阻训练对社区老年人膝关节肌力及神经肌肉控制的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.76,
-      "themeZh": "老年人平衡与神经肌肉控制的物理及神经调控干预",
-      "themeEn": "Older Adults Balance, Neuromuscular Control Interventions"
+      "heat": 1.71,
+      "themeZh": "老年人平衡与肌肉控制训练的新策略",
+      "themeEn": "New Strategies for Geriatric Balance and Muscle Control"
     },
     {
-      "id": "news-1787089664272-7",
-      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "sourceCount": 4,
+      "id": "news-1786999762266-10",
+      "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/16/1259?rss=1",
+      "category": "pediatric",
+      "publishedAt": "2026-08-18T00:00:00.000Z",
+      "sourceCount": 8,
       "sources": [
-        "Sports Medicine - Open",
-        "Musculoskeletal science & practice",
+        "British Journal of Sports Medicine",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Sport Sciences for Health",
+        "Sports medicine (Auckland, N.Z.)",
+        "Archives of physical medicine and rehabilitation",
         "Physiotherapy theory and practice",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "European Journal of Applied Physiology"
       ],
-      "tag": "spine",
+      "tag": "pediatric",
       "kind": "theme",
       "members": [
         {
-          "source": "Sports Med - Open",
-          "journal": "Sports Medicine - Open",
-          "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-          "titleZh": "腰痛患者与健康个体腰骶筋膜的差异：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
-          "titleZh": "腰痛手动疗法试验中的利益冲突披露是否透明？一项荟萃流行病学综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-          "titleZh": "年轻成人偏头痛与肌肉骨骼障碍的相关性：一项病例对照研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
-          "titleZh": "全身炎症作为运动在慢性腰痛中益处的介质：优化机制视角"
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Effectiveness and feasibility of home-based physical exercise interventions for children and adolescents with chronic diseases: a systematic review and meta-analysis",
+          "titleZh": "居家体育锻炼干预对患慢性病儿童和青少年的有效性和可行性：一项系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Responsiveness, Smallest Detectable Change, and Minimal Important Change of the Turkish Pelvic Floor Distress Inventory-20 Following Pelvic Floor Muscle Training.",
-          "titleZh": "盆底肌训练后土耳其版盆底功能障碍问卷-20（PFDI-20）的响应性、最小可检测变化和最小重要变化"
+          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
+          "titleZh": "住院期间儿科肿瘤血液病患者的治疗性运动方案：随机临床试验"
+        },
+        {
+          "source": "Sport Sci Health",
+          "journal": "Sport Sciences for Health",
+          "title": "Effects of different aerobic exercise intensities on exercise capacity, quality of life and mortality in individuals with coronary artery disease: systematic review and network meta-analysis",
+          "titleZh": "不同有氧运动强度对冠状动脉疾病患者运动能力、生活质量和死亡率的影响：系统综述和网络 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
+          "titleZh": "中老年人血压管理中最佳运动方式和剂量：一项基于贝叶斯模型和剂量反应网络 Meta 分析的系统综述"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Joint non-linear dose-response associations of device-measured physical activity and cardiorespiratory fitness with cardiovascular disease: a cohort and Mendelian randomisation study",
+          "titleZh": "设备测量体力活动和心肺适能与心血管疾病的联合非线性剂量-反应关联：一项队列和孟德尔随机化研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
+          "titleZh": "运动干预对阿尔茨海默病老年人的影响：系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
-          "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
+          "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
+          "titleZh": "慢性阻塞性肺疾病患者的上肢运动训练：系统综述和荟萃分析的伞形综述"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Optimal 24-hour movement behaviour compositions across trimesters and risk of hypertensive disorders of pregnancy: the Pregnancy 24/7 cohort study",
+          "titleZh": "妊娠期 24 小时最佳运动行为构成与妊娠期高血压疾病风险：妊娠 24/7 队列研究"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Evaluating movement breaks as a public health strategy to mitigate the harms of prolonged sitting: a large-scale pragmatic intervention",
+          "titleZh": "评估运动休息作为缓解长时间久坐危害的公共卫生策略：一项大规模实用干预研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of battle rope training on sporting performance: a systematic review and meta-analysis",
+          "titleZh": "战绳训练对运动表现的影响：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "Eur J Appl Physiol",
+          "journal": "European Journal of Applied Physiology",
+          "title": "Visually identified breakpoints in muscle oxygen saturation are not equivalent to ventilatory thresholds in national-level triathletes",
+          "titleZh": "国家级铁人三项运动员肌肉氧饱和度的目视识别拐点与通气阈值不等同"
         }
       ],
-      "heat": 1.24,
-      "themeZh": "腰背、骨盆疼痛的筋膜、炎症和物理治疗",
-      "themeEn": "LBP, Pelvic Pain: Fascia, Inflammation, PT"
+      "heat": 1.21,
+      "themeZh": "特殊人群慢性病管理中的运动干预",
+      "themeEn": "Exercise Interventions for Chronic Diseases in Special Populations"
+    },
+    {
+      "id": "news-1787288276212-1",
+      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
+      "category": "neurological",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "NeuroRehabilitation",
+        "Physiotherapy"
+      ],
+      "tag": "spinal-cord",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+          "titleZh": "创伤性脊髓损伤后独立行走的等级特异性临床预测规则"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+          "titleZh": "行走-转身时空步态参数与脑瘫儿童功能移动能力的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
+          "titleZh": "卒中后分型步态模式亚组特征与异常步态定义：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
+          "titleZh": "住院患者运动行为直接观察方法：范围综述"
+        }
+      ],
+      "heat": 1.21,
+      "themeZh": "神经损伤后步态异常的评估与预测",
+      "themeEn": "Gait Abnormality Assessment Post-Neurological Injury"
     }
   ],
   "items": [
+    {
+      "id": "news-1787288276212-1",
+      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+      "summary": "A clinical prediction rule was developed using the National Spinal Cord Injury Statistical Centre dataset (2607 patients) to predict independent walking one year after traumatic SCI, identifying grade-specific predictors.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-21T04:57:56.212Z",
+      "curatedScore": 80,
+      "curatedReason": "这个基于大样本数据集开发的临床预测规则，能根据 ASIA 损伤分级为创伤性脊髓损伤患者提供一年后独立步行的差异化预后，对于制定康复计划和管理患者期望很有价值。",
+      "titleZh": "创伤性脊髓损伤后独立行走的等级特异性临床预测规则",
+      "summaryZh": "一项研究利用全国脊髓损伤统计中心数据集（2607 名患者）开发了一个临床预测规则，旨在预测创伤性脊髓损伤患者一年后的独立行走能力，并识别了与损伤等级相关的预测因子。",
+      "curatedReasonEn": "This clinical prediction rule, developed using a large dataset, provides differentiated prognosis for independent walking one year after traumatic spinal cord injury based on ASIA Impairment Scale grades, valuable for rehabilitation planning and managing patient expectations.",
+      "limitation": "预测变量的选择和机器学习模型建立的细节需进一步公开，以评估其稳健性和可解释性。",
+      "limitationEn": "Further details on the selection of predictive variables and the establishment of machine learning models are needed to assess robustness and interpretability.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00887-7/fulltext?rss=yes",
+          "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury"
+        }
+      ]
+    },
+    {
+      "id": "news-1787481903849-20",
+      "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+      "summary": "Spatiotemporal gait parameters during a 5-meter walk-and-turn task, alongside lower extremity muscle strength and limitations of motion, are associated with functional mobility and Gross Motor Function Classification System (GMFCS) level in ambulatory children with cerebral palsy at GMFCS Levels I and II.",
+      "category": "pediatric",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00886-5/fulltext?rss=yes",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-23T10:45:03.849Z",
+      "curatedScore": 70,
+      "curatedReason": "在评估 GMFCS I 和 II 级脑瘫患儿时，除了常规步态分析，别忘了 5 米折返走任务中的时空步态参数。这些参数与患儿的活动能力和 GMFCS 分级有明确关联，提示你应更全面地考虑评估维度，尤其要关注肌肉力量和关节活动度。",
+      "titleZh": "行走-转身时空步态参数与脑瘫儿童功能移动能力的关联",
+      "summaryZh": "一项研究发现，在 GMFCS I 和 II 级的行走能力脑瘫儿童中，5 米行走-转身任务中的时空步态参数、下肢肌力和运动受限与功能移动能力及 GMFCS 等级相关。",
+      "curatedReasonEn": "When assessing GMFCS I and II children with CP, go beyond standard gait analysis. Spatiotemporal gait parameters during a 5-meter walk-and-turn task, alongside lower extremity muscle strength and ROM, are linked to their functional mobility and GMFCS level. This suggests we should consider these broader assessment dimensions.",
+      "limitation": "研究仅关注 GMFCS I 和 II 级儿童，结果不适用于更重症的脑瘫患者。",
+      "limitationEn": "The study focused only on GMFCS Levels I and II children, so the results may not be applicable to more severely affected CP patients.",
+      "tags": [
+        "research",
+        "gait-analysis",
+        "cerebral-palsy"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787481903849-21",
+      "title": "Protective Techniques and Postural Strategies for Individuals With Blindness or Low Vision: A Guide for Clinicians and Patients",
+      "summary": "A guide for clinicians and patients outlines protective techniques and postural strategies for individuals with blindness or low vision, focusing on preventing injuries to the head, face, or upper body, which are not fully addressed by mobility aids.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00813-0/fulltext?rss=yes",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-23T10:45:03.849Z",
+      "curatedScore": 70,
+      "curatedReason": "这份临床指南为盲人或低视力个体提供了保护性技术和姿势策略，尤其强调了头部和上半身损伤的预防。在处理这类患者时，你应将这些策略整合到你的步态和平衡训练中，以降低跌倒及碰撞风险。",
+      "titleZh": "盲人或低视力个体保护技术和姿势策略：临床医师与患者指南",
+      "summaryZh": "一份为临床医师和患者提供的指南，概述了盲人或低视力个体的保护性技术和姿势策略，旨在预防头部、面部或上半身损伤，因为这些损伤通常无法通过助行器完全避免。",
+      "curatedReasonEn": "This clinical guide offers protective techniques and postural strategies for individuals with blindness or low vision, with a particular emphasis on preventing head and upper-body injuries. When treating these patients, you should integrate these strategies into your gait and balance training to reduce the risk of falls and collisions.",
+      "tags": [
+        "guideline",
+        "balance-training",
+        "fall-prevention"
+      ],
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
     {
       "id": "news-1786999762264-0",
       "title": "Switzerland: the European crossroad of sports eligibility decision-making in athletes with cardiovascular conditions",
@@ -1330,29 +1436,6 @@
       "studyDesign": "观察研究"
     },
     {
-      "id": "news-1787288276212-1",
-      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
-      "summary": "A clinical prediction rule was developed using the National Spinal Cord Injury Statistical Centre dataset (2607 patients) to predict independent walking one year after traumatic SCI, identifying grade-specific predictors.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "firstSeen": "2026-08-21T04:57:56.212Z",
-      "curatedScore": 80,
-      "curatedReason": "这个基于大样本数据集开发的临床预测规则，能根据 ASIA 损伤分级为创伤性脊髓损伤患者提供一年后独立步行的差异化预后，对于制定康复计划和管理患者期望很有价值。",
-      "titleZh": "创伤性脊髓损伤后独立行走的等级特异性临床预测规则",
-      "summaryZh": "一项研究利用全国脊髓损伤统计中心数据集（2607 名患者）开发了一个临床预测规则，旨在预测创伤性脊髓损伤患者一年后的独立行走能力，并识别了与损伤等级相关的预测因子。",
-      "curatedReasonEn": "This clinical prediction rule, developed using a large dataset, provides differentiated prognosis for independent walking one year after traumatic spinal cord injury based on ASIA Impairment Scale grades, valuable for rehabilitation planning and managing patient expectations.",
-      "limitation": "预测变量的选择和机器学习模型建立的细节需进一步公开，以评估其稳健性和可解释性。",
-      "limitationEn": "Further details on the selection of predictive variables and the establishment of machine learning models are needed to assess robustness and interpretability.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
       "id": "news-1787288276211-0",
       "title": "Analysis of Home-Based Rehabilitation Robotics: Lessons Learned from Nationwide Direct-to-Consumer Deployment.",
       "summary": "An analysis discusses the lessons learned from nationwide direct-to-consumer deployment of home-based rehabilitation robotics for stroke survivors, highlighting potential workforce multipliers for neurorehabilitation.",
@@ -2039,53 +2122,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787089664273-10",
-      "title": "Multimodal synthesis of neural correlates of motor imagery after spinal cord injury: a systematic review",
-      "summary": "A systematic review synthesized multimodal neural correlates of motor imagery after spinal cord injury, revealing its potential as a window into retained motor-related neural processes.",
-      "category": "neurological",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02083-7",
-      "publishedAt": "2026-08-13T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 75,
-      "curatedReason": "脊髓损伤后运动想象的神经关联已得到证据整合，这为设计基于运动想象的神经康复方案提供了神经生理学基础。你可以更深入理解其在康复中的潜力。",
-      "titleZh": "脊髓损伤后运动想象神经关联的多模态综合：一项系统综述",
-      "summaryZh": "一项系统综述综合了脊髓损伤后运动想象的神经关联，揭示了其作为保留运动相关神经过程窗口的潜力。",
-      "curatedReasonEn": "This systematic review integrates evidence on the neural correlates of motor imagery after spinal cord injury, helping you better understand its potential in rehabilitation and providing a neurophysiological basis for designing motor imagery-based neurorehabilitation programs.",
-      "limitation": "纳入研究的方法学存在异质性，可能限制结果的综合强度。",
-      "limitationEn": "Methodological heterogeneity among included studies may limit the strength of the synthesized results.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Journal of NeuroEngineering and Rehabilitation"
-    },
-    {
-      "id": "news-1787089664272-6",
-      "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
-      "summary": "A pilot randomized controlled trial investigated the efficacy of rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis, finding potential benefits in engagement and outcomes.",
-      "category": "pediatric",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01981-6",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.272Z",
-      "curatedScore": 75,
-      "curatedReason": "游戏化运动对青少年特发性脊柱侧凸保守治疗的依从性和效果可能有所提升，这个初步 RCT 提供了依据。你可以考虑将技术手段融入康复，以改善患者参与度和治疗效果。",
-      "titleZh": "康复游戏化运动整合到青少年特发性脊柱侧凸保守治疗：一项初步随机对照试验",
-      "summaryZh": "一项初步随机对照试验探讨了康复游戏化运动整合到青少年特发性脊柱侧凸保守治疗中的效果，发现了在依从性和结果方面的潜在益处。",
-      "curatedReasonEn": "Game-based exercise may improve adherence and outcomes in conservative treatment for adolescent idiopathic scoliosis, as suggested by this pilot RCT. You can consider integrating technology into rehabilitation to enhance patient engagement and treatment effectiveness.",
-      "limitation": "作为初步随机对照试验，样本量较小，长期效果和更大范围的适用性需进一步研究。",
-      "limitationEn": "As a pilot randomized controlled trial, the sample size is small, and long-term effects and broader applicability require further research.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation",
-      "tech": true
     }
   ]
 }
