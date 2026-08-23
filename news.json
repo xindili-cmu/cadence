@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-23T02:02:55.397Z",
+    "lastUpdated": "2026-08-23T03:26:51.915Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,22 +15,18 @@
   },
   "hotTopics": [
     {
-      "id": "news-1787079714578-0",
-      "title": "Effectiveness of Telerehabilitation Versus Conventional Rehabilitation on Motor Function and Activities of Daily Living After Stroke: A Systematic Review of Randomized Controlled Trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610950/",
+      "id": "news-1787058794834-1",
+      "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42608732/",
       "category": "neurological",
-      "publishedAt": "2026-08-21T00:00:00.000Z",
-      "sourceCount": 12,
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "sourceCount": 8,
       "sources": [
-        "NeuroRehabilitation",
-        "Archives of physical medicine and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "medRxiv",
-        "Clinical rehabilitation",
-        "BMC Geriatrics",
-        "Physiotherapy theory and practice",
-        "Physiotherapy",
+        "NeuroRehabilitation",
         "Disability and rehabilitation",
+        "Physiotherapy theory and practice",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of rehabilitation medicine",
         "Topics in stroke rehabilitation"
@@ -40,15 +36,26 @@
       "members": [
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Effectiveness of Telerehabilitation Versus Conventional Rehabilitation on Motor Function and Activities of Daily Living After Stroke: A Systematic Review of Randomized Controlled Trials.",
-          "titleZh": "远程康复与传统康复对卒中后运动功能和日常生活活动影响的有效性：一项随机对照试验的系统综述"
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
+          "titleZh": "体针、电针和耳针在卒中康复中的疗效比较：随机对照试验的系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Effectiveness of In-Clinic Rehabilitation vs. Home-Based Telerehabilitation for Adults with MS in the Deep South: The TEAMS Cluster Randomized Trial.",
-          "titleZh": "多发性硬化（MS）成人患者的院内康复 vs.居家远程康复：TEAMS簇随机试验"
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Efficacy of Transcranial Direct Current Stimulation in Acute Ischemic Stroke: A Systematic Review and Meta-analysis of Stimulation Montages and Timing.",
+          "titleZh": "经颅直流电刺激在急性缺血性卒中中的疗效：刺激模式与时机的系统综述和 Meta 分析"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Clinical and neurophysiological determinants of response to contralesional low-frequency repetitive transcranial magnetic stimulation after stroke: A systematic review and meta-analysis",
+          "titleZh": "卒中后对侧低频重复经颅磁刺激反应的临床和神经生理学决定因素：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
+          "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角——范围综述与合作观点"
         },
         {
           "source": "PubMed",
@@ -58,26 +65,89 @@
         },
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Comparative Efficacy of Body Acupuncture, Electroacupuncture, and Auricular Acupuncture in Stroke Rehabilitation: A Systematic Review and Meta-Analysis of Randomized Controlled Trials.",
-          "titleZh": "体针、电针和耳针在卒中康复中的疗效比较：随机对照试验的系统综述和荟萃分析"
+          "journal": "Disability and rehabilitation",
+          "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
+          "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Feasibility and acceptability of a randomized controlled trial of a patient-centred transition program for stroke survivors and their caregivers-P-NAVISTROKE study.",
+          "titleZh": "以患者为中心的卒中幸存者及其照护者过渡期项目（P-NAVISTROKE）随机对照试验的可行性与可接受性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Exploring readiness to patient-centered goal-setting in stroke Rehabilitation-A qualitative study.",
+          "titleZh": "探索卒中康复中以患者为中心的目标设定准备度：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
+          "titleZh": "慢性卒中患者运动恢复和社会支持与参与度相关结局的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Intensive, Multi-Technology Rehabilitation Programme for Chronic Stroke Survivors: Outcomes of a Phase I Single-Arm Repeated-Measures Study.",
+          "titleZh": "慢性卒中幸存者的强化多技术康复方案：一项 I 期单臂重复测量研究的结果"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Survey on stroke rehabilitation in Europe (SUSTAIN-EU) to evaluate European stroke rehabilitation services.",
+          "titleZh": "欧洲卒中康复调查 (SUSTAIN-EU) 评估欧洲卒中康复服务"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Twenty years of the fitness and mobility exercise (FAME) program for people post-stroke: a multi-data source evaluation of implementation using the RE-AIM framework.",
+          "titleZh": "卒中后患者健身与活动度锻炼（FAME）项目实施二十年评估：基于 RE-AIM 框架的多数据源研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Post-stroke smoking and mental health burden: sex-specific analysis of NHIS 2019-2023.",
+          "titleZh": "卒中后吸烟与精神健康负担：NHIS 2019-2023 的性别特异性分析"
+        }
+      ],
+      "heat": 5.38,
+      "themeZh": "脑卒中后运动康复中的神经调控与机器人辅助疗法",
+      "themeEn": "Neuromodulation and Robot-Assisted Therapy in Post-Stroke Motor Rehabilitation"
+    },
+    {
+      "id": "news-1786999762267-16",
+      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360286v1?rss=1",
+      "category": "neurological",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "medRxiv",
+        "Clinical rehabilitation",
+        "BMC Geriatrics",
+        "Physiotherapy theory and practice",
+        "NeuroRehabilitation",
+        "Physiotherapy"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "medRxiv",
+          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+          "titleZh": "不只是手臂运动：指戴式加速度计在测量卒中幸存者真实世界肢体表现方面是腕戴式加速度计的有效且敏感的替代品"
         },
         {
           "source": "medRxiv",
-          "title": "Clinical and neurophysiological determinants of response to contralesional low-frequency repetitive transcranial magnetic stimulation after stroke: A systematic review and meta-analysis",
-          "titleZh": "卒中后对侧低频重复经颅磁刺激反应的临床和神经生理学决定因素：一项系统综述和荟萃分析"
+          "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
+          "titleZh": "卒中后人体上肢异常肌肉协同模式的早期出现"
         },
         {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Efficacy of Transcranial Direct Current Stimulation in Acute Ischemic Stroke: A Systematic Review and Meta-analysis of Stimulation Montages and Timing.",
-          "titleZh": "经颅直流电刺激在急性缺血性卒中中的疗效：刺激模式与时机的系统综述和 Meta 分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond the Diagnosis: An Integrated Perspective on Strategic Dosing in Neurologic Motor Rehabilitation. A Scoping Review and Collaborative Viewpoint.",
-          "titleZh": "超越诊断：神经运动康复中策略性剂量的综合视角——范围综述与合作观点"
+          "source": "medRxiv",
+          "title": "Relationship Between Physiological Mirror Activity and Corticomuscular Coherence During a Finger Dexterity Task Among Healthy Young and Older Adults",
+          "titleZh": "健康年轻与老年人手指灵巧任务中生理镜像活动与皮层肌肉协同性的关系"
         },
         {
           "source": "PubMed",
@@ -108,47 +178,11 @@
           "journal": "Physiotherapy",
           "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
           "titleZh": "住院患者运动行为直接观察方法：范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Twenty years of the fitness and mobility exercise (FAME) program for people post-stroke: a multi-data source evaluation of implementation using the RE-AIM framework.",
-          "titleZh": "卒中后患者健身与活动度锻炼（FAME）项目实施二十年评估：基于 RE-AIM 框架的多数据源研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Intensive, Multi-Technology Rehabilitation Programme for Chronic Stroke Survivors: Outcomes of a Phase I Single-Arm Repeated-Measures Study.",
-          "titleZh": "慢性卒中幸存者的强化多技术康复方案：一项 I 期单臂重复测量研究的结果"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "Survey on stroke rehabilitation in Europe (SUSTAIN-EU) to evaluate European stroke rehabilitation services.",
-          "titleZh": "欧洲卒中康复调查 (SUSTAIN-EU) 评估欧洲卒中康复服务"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Feasibility and acceptability of a randomized controlled trial of a patient-centred transition program for stroke survivors and their caregivers-P-NAVISTROKE study.",
-          "titleZh": "以患者为中心的卒中幸存者及其照护者过渡期项目（P-NAVISTROKE）随机对照试验的可行性与可接受性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Exploring readiness to patient-centered goal-setting in stroke Rehabilitation-A qualitative study.",
-          "titleZh": "探索卒中康复中以患者为中心的目标设定准备度：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Post-stroke smoking and mental health burden: sex-specific analysis of NHIS 2019-2023.",
-          "titleZh": "卒中后吸烟与精神健康负担：NHIS 2019-2023 的性别特异性分析"
         }
       ],
-      "heat": 5.83,
-      "themeZh": "卒中与多发性硬化康复的新兴疗法与有效性",
-      "themeEn": "Emerging Therapies for Stroke and MS Rehabilitation"
+      "heat": 4.04,
+      "themeZh": "脑卒中后肢体运动功能与步态的评估与预后",
+      "themeEn": "Post-Stroke Limb Function and Gait Assessment and Prognosis"
     },
     {
       "id": "news-1787089664272-4",
@@ -156,12 +190,13 @@
       "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01959-4",
       "category": "orthopedic",
       "publishedAt": "2026-08-22T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "BMC Sports Science, Medicine and Rehabilitation",
         "BMC Musculoskeletal Disorders",
         "Physiotherapy theory and practice",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -197,15 +232,21 @@
           "titleZh": "六周踝关节拉伸运动对儿童踝关节旋前引起的踝关节背屈活动度和膝前痛的影响：一项随机对照试验"
         },
         {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
-          "titleZh": "3岁年龄分界对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后影响的探索性分析"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "The effect of SportsMetrics training program on functional performance, landing error, dynamic knee valgus and hamstrings/quadriceps strength in athletes: a systematic review and meta-analysis",
+          "titleZh": "SportsMetrics 训练项目对运动员功能表现、着陆错误、动态膝外翻及平衡肌/股四头肌力量的影响：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Impacts of ankle sprain on functional performance in under-20 soccer players: a cross-sectional study.",
+          "titleZh": "踝关节扭伤对 20 岁以下足球运动员功能表现的影响：一项横断面研究"
         }
       ],
-      "heat": 2.75,
-      "themeZh": "膝关节和下肢骨科术后康复策略与效果",
-      "themeEn": "Post-Op Knee and Lower Limb Rehab Strategies"
+      "heat": 3.36,
+      "themeZh": "膝关节置换与重建术前术后康复与运动干预",
+      "themeEn": "Pre- and Post-Operative Rehabilitation and Exercise Intervention for Knee Arthroplasty and Reconstruction"
     },
     {
       "id": "news-1787085829895-1",
@@ -216,9 +257,9 @@
       "sourceCount": 4,
       "sources": [
         "medRxiv",
-        "BMC Geriatrics",
         "Gait & posture",
-        "BMC Sports Science, Medicine and Rehabilitation"
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "BMC Geriatrics"
       ],
       "tag": "fall-prevention",
       "kind": "theme",
@@ -227,12 +268,6 @@
           "source": "medRxiv",
           "title": "Effects of Fingertip Vibrotactile Stimulation on Postural Control in Community-Dwelling Older Adults: A Comparison Across Age Groups",
           "titleZh": "指尖振动触觉刺激对社区老年人姿势控制的影响：不同年龄组间的比较"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Effects of high-definition transcranial direct current stimulation on muscle strength, proprioception, cutaneous sensitivity and their relationship with balance in older adults with a history of falls",
-          "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         },
         {
           "source": "PubMed",
@@ -245,53 +280,17 @@
           "journal": "BMC Sports Science, Medicine and Rehabilitation",
           "title": "Effects of tDCS combined with unstable resistance training on knee muscle strength and neuromuscular control in community-dwelling older adults: a randomized controlled trial",
           "titleZh": "tDCS 结合不稳定抗阻训练对社区老年人膝关节肌力及神经肌肉控制的影响：一项随机对照试验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effects of high-definition transcranial direct current stimulation on muscle strength, proprioception, cutaneous sensitivity and their relationship with balance in older adults with a history of falls",
+          "titleZh": "高清晰经颅直流电刺激对有跌倒史老年人肌力、本体感觉、皮肤敏感性及其与平衡关系的影响"
         }
       ],
-      "heat": 1.94,
-      "themeZh": "老年人平衡与肌肉功能的多模式神经调控",
-      "themeEn": "Multimodal Neuromodulation for Geriatric Balance and Muscle"
-    },
-    {
-      "id": "news-1786999762267-16",
-      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360286v1?rss=1",
-      "category": "neurological",
-      "publishedAt": "2026-08-21T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "medRxiv",
-        "NeuroRehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "medRxiv",
-          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-          "titleZh": "不只是手臂运动：指戴式加速度计在测量卒中幸存者真实世界肢体表现方面是腕戴式加速度计的有效且敏感的替代品"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Relationship Between Physiological Mirror Activity and Corticomuscular Coherence During a Finger Dexterity Task Among Healthy Young and Older Adults",
-          "titleZh": "健康年轻与老年人手指灵巧任务中生理镜像活动与皮层肌肉协同性的关系"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
-          "titleZh": "帕金森病患者的视觉反馈训练：对平衡和躯干控制的影响——一项前瞻性队列研究"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
-          "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子影响的探索性分析"
-        }
-      ],
-      "heat": 1.46,
-      "themeZh": "帕金森病与卒中患者上肢及躯干功能评估和康复",
-      "themeEn": "Upper Limb and Trunk Function in PD and Stroke"
+      "heat": 1.9,
+      "themeZh": "老年人平衡控制与肌力改善的神经刺激与训练",
+      "themeEn": "Neuromodulation and Training for Balance Control and Muscle Strength in Older Adults"
     },
     {
       "id": "news-1787089664272-7",
@@ -346,12 +345,81 @@
           "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 1.37,
-      "themeZh": "慢性疼痛与肌肉骨骼疾病的炎症机制与物理治疗",
-      "themeEn": "Inflammation and Physical Therapy for Chronic Pain"
+      "heat": 1.35,
+      "themeZh": "下背痛与盆腔疼痛的物理治疗与炎症机制",
+      "themeEn": "Physical Therapy and Inflammatory Mechanisms for Low Back and Pelvic Pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1787455549867-0",
+      "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
+      "summary": "This qualitative study explored how occupational therapists in Bangkok, Thailand, integrate robotic hand exoskeleton therapy into routine stroke rehabilitation, identifying five themes including client readiness and motivation for robotic use.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42632038/",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "firstSeen": "2026-08-23T03:25:49.867Z",
+      "curatedScore": 75,
+      "curatedReason": "将机器人手部外骨骼疗法引入卒中康复，需要重点关注患者的准备度和动机，这直接影响治疗成效。本研究揭示了泰国OT在此方面的实践经验，值得我们思考如何在不同文化背景下有效筛选和准备患者。",
+      "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究",
+      "summaryZh": "这项定性研究探讨了泰国曼谷的职业治疗师如何将机器人手部外骨骼疗法整合到常规卒中康复实践中，归纳出五个主题，包括患者使用机器人的准备度和动机。",
+      "curatedReasonEn": "Integrating robotic hand exoskeleton therapy into stroke rehab demands careful consideration of client readiness and motivation, as this directly impacts treatment outcomes. This study from Thailand highlights practical considerations from OTs, prompting us to reflect on effective patient selection and preparation across diverse cultural contexts.",
+      "limitation": "研究样本量小，且仅在泰国曼谷两家机构进行，结果外推性有限。",
+      "limitationEn": "The study has a small sample size and was conducted in only two occupational therapy services in Bangkok, Thailand, limiting generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1787244984553-0",
+      "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
+      "summary": "This cross-sectional study of 40 chronic stroke survivors and 41 healthy controls examined associations of motor recovery and perceived social support with participation-related outcomes, including life satisfaction and health-related quality of life.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42622494/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-20T16:56:24.553Z",
+      "curatedScore": 75,
+      "curatedReason": "这项观察性研究提示，卒中患者的运动恢复和社会支持水平共同影响其参与度相关结局。在制定干预计划时，除了关注运动功能，别忘了评估和提升患者的社会支持。",
+      "titleZh": "慢性卒中患者运动恢复和社会支持与参与度相关结局的关联",
+      "summaryZh": "这项对 40 名慢性卒中幸存者和 41 名健康对照的横断面研究，检验了运动恢复和感知社会支持与参与度相关结局（包括生活满意度和健康相关生活质量）之间的关联。",
+      "curatedReasonEn": "This observational study suggests that both motor recovery and perceived social support influence participation-related outcomes in stroke patients. When designing intervention plans, remember to assess and enhance patients' social support in addition to motor function.",
+      "limitation": "本研究为横断面设计，无法建立因果关系，且样本量相对较小。",
+      "limitationEn": "This study is a cross-sectional design, which precludes establishing causality, and has a relatively small sample size.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
+    {
+      "id": "news-1787455549869-2",
+      "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
+      "summary": "This cross-sectional study of 39 early subacute stroke patients (within 6 months) performing reaching movements revealed the early emergence of abnormal muscle synergies in the upper extremity, similar to patterns seen in chronic stroke.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360812v1?rss=1",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "firstSeen": "2026-08-23T03:25:49.869Z",
+      "curatedScore": 70,
+      "curatedReason": "本研究提供了关于卒中后异常肌肉协同模式早期出现的证据。这提示你，对早期卒中患者的评估应关注这些模式，以期可能进行早期干预。",
+      "titleZh": "卒中后人体上肢异常肌肉协同模式的早期出现",
+      "summaryZh": "这项对 39 名早期亚急性卒中患者（6 个月内）进行伸手动作的横断面研究显示，上肢异常肌肉协同模式在卒中后早期即出现，与慢性卒中中观察到的模式相似。",
+      "curatedReasonEn": "This study provides evidence on the early emergence of abnormal muscle synergies post-stroke. This suggests that your assessment of early stroke patients should focus on these patterns, potentially allowing for earlier intervention.",
+      "limitation": "本研究为横断面设计，无法追踪异常协同模式随时间演变的过程，且结果尚未经过同行评审。",
+      "limitationEn": "This study is cross-sectional, unable to track the evolution of abnormal synergy patterns over time, and the results have not yet undergone peer review.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1787223120432-0",
       "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
@@ -2018,77 +2086,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787089664273-13",
-      "title": "Functional movement screen scores and injury prevalence among collegiate basketball players: a cross-sectional analysis",
-      "summary": "A cross-sectional study investigated the relationship between Functional Movement Screen (FMS) scores and injury prevalence among collegiate basketball players.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01789-4",
-      "publishedAt": "2026-08-15T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究提供了大学生篮球运动员功能性运动筛查（FMS）分数与损伤患病率的横断面关联证据，提示 FMS 可能是运动损伤风险筛查的工具之一，但在临床实践中仍需结合其他评估方法。",
-      "titleZh": "大学篮球运动员功能性运动筛查分数与损伤患病率：一项横断面分析",
-      "summaryZh": "一项横断面研究调查了大学篮球运动员功能性运动筛查（FMS）分数与损伤患病率之间的关系。",
-      "curatedReasonEn": "This study provides cross-sectional evidence linking Functional Movement Screen (FMS) scores with injury prevalence among collegiate basketball players, suggesting FMS as a potential tool for sports injury risk screening, though it should be combined with other assessment methods in clinical practice.",
-      "limitation": "研究设计为横断面，无法建立 FMS 分数与损伤风险之间的因果关系。",
-      "limitationEn": "The study's cross-sectional design prevents establishing a causal relationship between FMS scores and injury risk.",
-      "tags": [
-        "research",
-        "injury-prevention"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1787089664273-18",
-      "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff",
-      "summary": "An exploratory analysis investigated the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff.",
-      "category": "pediatric",
-      "source": "BMC Musculoskelet Disord",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10351-9",
-      "publishedAt": "2026-08-15T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究分析了 Salter 截骨术和股骨截骨术联合治疗儿童发育性髋关节发育不良的年龄分层影响，对你理解不同年龄段手术预后差异有参考价值，但直接康复干预信息较少。",
-      "titleZh": "3岁年龄分界对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后影响的探索性分析",
-      "summaryZh": "一项探索性分析研究了以3岁为分界点，年龄分层对联合 Salter 截骨术和股骨截骨术治疗儿童发育性髋关节发育不良预后的影响。",
-      "curatedReasonEn": "This study suggests that outcomes of combined Salter osteotomy and femoral osteotomy for pediatric developmental dysplasia of the hip may be influenced by age (with a 3-year cutoff). This offers you a perspective on surgical differences across age groups, but provides limited direct guidance for rehabilitation interventions.",
-      "limitation": "研究为回顾性分析，存在选择偏倚和信息偏倚的风险。",
-      "limitationEn": "The study is a retrospective analysis, carrying risks of selection and information bias.",
-      "tags": [
-        "research",
-        "hip"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Musculoskeletal Disorders"
-    },
-    {
-      "id": "news-1787262733536-10",
-      "title": "AI-assisted exercise prescription in rheumatology: a comparative evaluation of three large language models for personalized APA prescription",
-      "summary": "A comparative evaluation of three large language models for personalized Adapted Physical Activity (APA) prescription in rheumatology showed promising results for AI-assisted exercise prescription.",
-      "category": "cardiopulmonary",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01995-0",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "firstSeen": "2026-08-20T21:52:13.536Z",
-      "curatedScore": 70,
-      "curatedReason": "大型语言模型在风湿病患者个性化 APA 处方中展现出潜力，提示 AI 辅助处方是未来趋势。但在实际应用前，你仍需关注其准确性和临床验证，不能盲目采纳。",
-      "titleZh": "风湿病学中 AI 辅助运动处方：三种大型语言模型个性化适应性体育活动处方的比较评估",
-      "summaryZh": "一项针对三种大型语言模型在风湿病患者个性化适应性体育活动（APA）处方中的比较评估显示，AI 辅助运动处方前景可观。",
-      "curatedReasonEn": "Large language models show promise in personalized APA prescription for rheumatology patients, suggesting AI-assisted prescribing is a future trend. However, before clinical application, you must still pay attention to its accuracy and clinical validation, and not adopt it blindly.",
-      "limitation": "研究主要基于模型生成，缺乏真实患者的临床试验验证其效果和安全性。",
-      "limitationEn": "The study is primarily based on model generation and lacks clinical trial validation of its effectiveness and safety in real patients.",
-      "tags": [
-        "research",
-        "digital-health",
-        "ai"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation",
-      "tech": true
     }
   ]
 }
