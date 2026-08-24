@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-24T07:32:54.931Z",
+    "lastUpdated": "2026-08-24T09:08:22.384Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -99,9 +99,9 @@
           "titleZh": "卒中后吸烟与精神健康负担：2019-2023 年 NHIS 数据的性别特异性分析。"
         }
       ],
-      "heat": 3.14,
-      "themeZh": "卒中后康复的多元干预：电、磁、针灸与远程康复",
-      "themeEn": "Multimodal Stroke Rehabilitation: Stimulation, Acupuncture, Telerehab"
+      "heat": 3.07,
+      "themeZh": "卒中康复的神经调控、远程与物理治疗方法",
+      "themeEn": "Stroke Rehabilitation: Neuromodulation, Telerehab & PT"
     },
     {
       "id": "news-1786877038341-0",
@@ -109,11 +109,10 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
       "category": "orthopedic",
       "publishedAt": "2026-08-22T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of rehabilitation medicine",
-        "BMC Sports Science, Medicine and Rehabilitation",
         "BMC Musculoskeletal Disorders",
         "Physiotherapy theory and practice"
       ],
@@ -133,12 +132,6 @@
           "titleZh": "使用剪切波弹性成像评估肌内效贴对严重超依赖性肢体水肿患者的影响：一项随机临床试验"
         },
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Comparative effectiveness of exercise-based prehabilitation before total knee arthroplasty: a systematic review and network meta-analysis of randomized controlled trials",
-          "titleZh": "全膝关节置换术前基于运动的康复训练的比较有效性：随机对照试验的系统综述和网络 Meta 分析"
-        },
-        {
           "source": "BMC Musculoskelet Disord",
           "journal": "BMC Musculoskeletal Disorders",
           "title": "Impact of modified subvastus approach versus limited medial parapatellar approach on early recovery after minimally invasive total knee arthroplasty: a retrospective comparative study",
@@ -151,9 +144,9 @@
           "titleZh": "PCL 重建术后整合水疗的康复案例报告"
         }
       ],
-      "heat": 2.24,
-      "themeZh": "骨科康复中的运动、手法与辅具：膝关节与水疗",
-      "themeEn": "Orthopedic Rehab: Exercise, Manual Therapy, Taping"
+      "heat": 1.75,
+      "themeZh": "骨科康复中的足部矫正、肌内效贴与关节置换技术",
+      "themeEn": "Orthopedic Rehab: Foot, Taping, Arthroplasty"
     },
     {
       "id": "news-1786682651836-12",
@@ -228,9 +221,9 @@
           "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究。"
         }
       ],
-      "heat": 1.57,
-      "themeZh": "全生命周期运动干预：慢病管理、心血管与肿瘤康复",
-      "themeEn": "Lifespan Exercise Interventions: Chronic Disease to Cancer"
+      "heat": 1.53,
+      "themeZh": "不同人群运动干预对慢性病和心血管健康影响",
+      "themeEn": "Exercise for Chronic Disease & CV Health"
     },
     {
       "id": "news-1787085829895-1",
@@ -271,12 +264,35 @@
           "titleZh": "健康老年人扰动基础平衡训练的方法学特征：一项范围综述"
         }
       ],
-      "heat": 1.35,
-      "themeZh": "老年人跌倒风险与平衡控制：震动、刺激与训练",
-      "themeEn": "Elderly Fall Risk: Vibration, Stimulation, Balance Training"
+      "heat": 1.31,
+      "themeZh": "老年人跌倒风险与平衡控制的刺激和训练",
+      "themeEn": "Geriatric Fall Risk & Balance Training"
     }
   ],
   "items": [
+    {
+      "id": "news-1787348901009-0",
+      "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
+      "summary": "A prospective cohort study (n=21) showed that a 4-week program combining visual feedback training with conventional physiotherapy improved balance, mobility, and functional independence in Parkinson's disease patients (Hoehn and Yahr stages 1-3).",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42627526/",
+      "publishedAt": "2026-08-21T00:00:00.000Z",
+      "firstSeen": "2026-08-21T21:48:21.009Z",
+      "curatedScore": 75,
+      "curatedReason": "对于帕金森病患者，视觉反馈训练与传统物理治疗结合，在改善平衡和躯干控制方面显示出良好前景。你可以考虑将其作为现有治疗方案的补充。",
+      "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究",
+      "summaryZh": "一项前瞻性队列研究（n=21）显示，为期四周的视觉反馈训练与传统物理治疗相结合的方案，改善了帕金森病（Hoehn-Yahr 1-3期）患者的平衡、活动能力和功能独立性。",
+      "curatedReasonEn": "Visual feedback training combined with conventional physiotherapy shows promise in improving balance and trunk control for Parkinson's disease patients. Consider this as a valuable adjunct to existing treatment protocols.",
+      "limitation": "本研究为前瞻性队列研究，样本量小（n=21），且缺乏对照组，无法排除安慰剂效应或其他混杂因素影响。",
+      "limitationEn": "This was a prospective cohort study with a small sample size (n=21) and lacked a control group, preventing the exclusion of placebo effects or other confounding factors.",
+      "tags": [
+        "research",
+        "parkinson"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
     {
       "id": "news-1787309549617-1",
       "title": "Efficacy of Transcranial Direct Current Stimulation in Acute Ischemic Stroke: A Systematic Review and Meta-analysis of Stimulation Montages and Timing.",
@@ -1957,29 +1973,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1787089664272-4",
-      "title": "Comparative effectiveness of exercise-based prehabilitation before total knee arthroplasty: a systematic review and network meta-analysis of randomized controlled trials",
-      "summary": "This systematic review and network meta-analysis of RCTs compared the effectiveness of different exercise modalities for prehabilitation before total knee arthroplasty (TKA), finding high-intensity resistance training and aerobic exercise to be potentially more effective than conventional interventions.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01959-4",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.272Z",
-      "curatedScore": 85,
-      "curatedReason": "面对全膝关节置换术（TKA）术前康复，你的策略应更倾向于高强度抗阻训练或有氧运动。这项系统综述和网络 Meta 分析显示，它们可能比传统干预更有效，为你的运动处方提供了更强的支持。",
-      "titleZh": "全膝关节置换术前基于运动的康复训练的比较有效性：随机对照试验的系统综述和网络 Meta 分析",
-      "summaryZh": "这项针对 RCT 的系统综述和网络 Meta 分析比较了全膝关节置换术（TKA）前不同运动模式康复训练的有效性，发现高强度抗阻训练和有氧运动可能比传统干预更有效。",
-      "curatedReasonEn": "For TKA prehabilitation, your strategy should lean towards high-intensity resistance training or aerobic exercise. This systematic review and network meta-analysis suggests they may be more effective than conventional interventions, offering stronger support for your exercise prescriptions.",
-      "limitation": "研究可能存在纳入研究异质性问题，且不同运动模式的剂量和方案细节可能影响结果解释。",
-      "limitationEn": "The study may suffer from heterogeneity among included studies, and differences in dose and protocol details of various exercise modalities could affect interpretation of results.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
     }
   ]
 }
