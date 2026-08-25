@@ -1,0 +1,279 @@
+{
+ "date": "2026-08-24",
+ "generatedAt": "2026-08-23T21:43:47.980Z",
+ "windowHours": 26,
+ "windowStart": "2026-08-22T21:43:25.314Z",
+ "windowEnd": "2026-08-23T21:43:46.359Z",
+ "lead": {
+  "titleZh": "举重运动员赛前减量策略：系统综述提供80分证据",
+  "titleEn": "Weightlifting Tapering Strategies: System Review Provides 80-Point Evidence",
+  "paragraphZh": "今日日报共10条，跨足6个专科，其中运动康复领域有3条。最值得关注的是一项系统综述，评分为80分，聚焦举重运动员赛前减量策略。此外，神经康复和老年康复领域各有1项观察研究，得分均为75分。",
+  "paragraphEn": "Today's daily report comprises 10 entries across 6 specialties, with 3 in sports rehabilitation. The most noteworthy is a systematic review, scored at 80 points, focusing on tapering strategies for weightlifters. Additionally, there's an observational study in neurorehabilitation and another in geriatric rehabilitation, both scoring 75 points."
+ },
+ "stats": {
+  "events": 10,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 9,
+  "topScore": 80
+ },
+ "sections": [
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1787455549867-0",
+     "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
+     "summary": "This qualitative study explored how occupational therapists in Bangkok, Thailand, integrate robotic hand exoskeleton therapy into routine stroke rehabilitation, identifying five themes including client readiness and motivation for robotic use.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42632038/",
+     "publishedAt": "2026-08-22T00:00:00.000Z",
+     "firstSeen": "2026-08-23T03:25:49.867Z",
+     "curatedScore": 75,
+     "curatedReason": "将机器人手部外骨骼疗法引入卒中康复，需要重点关注患者的准备度和动机，这直接影响治疗成效。本研究揭示了泰国OT在此方面的实践经验，值得我们思考如何在不同文化背景下有效筛选和准备患者。",
+     "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究",
+     "summaryZh": "这项定性研究探讨了泰国曼谷的职业治疗师如何将机器人手部外骨骼疗法整合到常规卒中康复实践中，归纳出五个主题，包括患者使用机器人的准备度和动机。",
+     "curatedReasonEn": "Integrating robotic hand exoskeleton therapy into stroke rehab demands careful consideration of client readiness and motivation, as this directly impacts treatment outcomes. This study from Thailand highlights practical considerations from OTs, prompting us to reflect on effective patient selection and preparation across diverse cultural contexts.",
+     "limitation": "研究样本量小，且仅在泰国曼谷两家机构进行，结果外推性有限。",
+     "limitationEn": "The study has a small sample size and was conducted in only two occupational therapy services in Bangkok, Thailand, limiting generalizability.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1787481903849-21",
+     "title": "Protective Techniques and Postural Strategies for Individuals With Blindness or Low Vision: A Guide for Clinicians and Patients",
+     "summary": "A guide for clinicians and patients outlines protective techniques and postural strategies for individuals with blindness or low vision, focusing on preventing injuries to the head, face, or upper body, which are not fully addressed by mobility aids.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00813-0/fulltext?rss=yes",
+     "publishedAt": "2026-08-20T00:00:00.000Z",
+     "firstSeen": "2026-08-23T10:45:03.849Z",
+     "curatedScore": 70,
+     "curatedReason": "这份临床指南为盲人或低视力个体提供了保护性技术和姿势策略，尤其强调了头部和上半身损伤的预防。在处理这类患者时，你应将这些策略整合到你的步态和平衡训练中，以降低跌倒及碰撞风险。",
+     "titleZh": "盲人或低视力个体保护技术和姿势策略：临床医师与患者指南",
+     "summaryZh": "一份为临床医师和患者提供的指南，概述了盲人或低视力个体的保护性技术和姿势策略，旨在预防头部、面部或上半身损伤，因为这些损伤通常无法通过助行器完全避免。",
+     "curatedReasonEn": "This clinical guide offers protective techniques and postural strategies for individuals with blindness or low vision, with a particular emphasis on preventing head and upper-body injuries. When treating these patients, you should integrate these strategies into your gait and balance training to reduce the risk of falls and collisions.",
+     "tags": [
+      "guideline",
+      "balance-training",
+      "fall-prevention"
+     ],
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1787455549869-2",
+     "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
+     "summary": "This cross-sectional study of 39 early subacute stroke patients (within 6 months) performing reaching movements revealed the early emergence of abnormal muscle synergies in the upper extremity, similar to patterns seen in chronic stroke.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360812v1?rss=1",
+     "publishedAt": "2026-08-22T00:00:00.000Z",
+     "firstSeen": "2026-08-23T03:25:49.869Z",
+     "curatedScore": 70,
+     "curatedReason": "本研究提供了关于卒中后异常肌肉协同模式早期出现的证据。这提示你，对早期卒中患者的评估应关注这些模式，以期可能进行早期干预。",
+     "titleZh": "卒中后人体上肢异常肌肉协同模式的早期出现",
+     "summaryZh": "这项对 39 名早期亚急性卒中患者（6 个月内）进行伸手动作的横断面研究显示，上肢异常肌肉协同模式在卒中后早期即出现，与慢性卒中中观察到的模式相似。",
+     "curatedReasonEn": "This study provides evidence on the early emergence of abnormal muscle synergies post-stroke. This suggests that your assessment of early stroke patients should focus on these patterns, potentially allowing for earlier intervention.",
+     "limitation": "本研究为横断面设计，无法追踪异常协同模式随时间演变的过程，且结果尚未经过同行评审。",
+     "limitationEn": "This study is cross-sectional, unable to track the evolution of abnormal synergy patterns over time, and the results have not yet undergone peer review.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1787521424058-25",
+     "title": "Tapering and Peaking in the Weight Lifting Sports: A Systematic Review of Athletes’ Self-Reported Strategies",
+     "summary": "A systematic review compiles self-reported strategies used by athletes for tapering and peaking in weightlifting sports, highlighting common practices.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02500-w",
+     "publishedAt": "2026-08-18T00:00:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.058Z",
+     "curatedScore": 80,
+     "curatedReason": "这项系统综述总结了举重运动员在赛前减量和巅峰期的策略。你可以参考这些常见的自我报告实践，为你的举重运动员提供更个性化、更有效的赛前训练调整指导，帮助他们达到最佳竞技状态。",
+     "titleZh": "举重运动员赛前减量和巅峰期策略的系统综述",
+     "summaryZh": "一项系统综述收集了举重运动员在赛前减量和巅峰期策略方面的自我报告数据，强调了常见做法。",
+     "curatedReasonEn": "This systematic review compiles self-reported strategies for tapering and peaking in weightlifting sports. You can use these common practices to offer more personalized and effective pre-competition training adjustments for your weightlifters, helping them achieve peak performance.",
+     "limitation": "证据来源于运动员的自我报告策略，可能存在回忆偏差和主观性，并非基于客观生理测量。",
+     "limitationEn": "Evidence is based on athletes' self-reported strategies, which may be subject to recall bias and subjectivity, and not based on objective physiological measurements.",
+     "tags": [
+      "research",
+      "performance-training"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine"
+    },
+    {
+     "id": "news-1787521424057-22",
+     "title": "Exploring Factors to Explain Interindividual Responses to Running Economy in Advanced Footwear Technology Shoes: A Randomised Crossover Laboratory Trial with an Explanatory Predictor Analysis",
+     "summary": "A randomized crossover laboratory trial investigates factors explaining interindividual responses to running economy in advanced footwear technology shoes, with an explanatory predictor analysis.",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01091-0",
+     "publishedAt": "2026-08-17T00:00:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.057Z",
+     "curatedScore": 75,
+     "curatedReason": "这项 RCT 揭示了高性能跑鞋对跑步经济性的个体反应差异。在为运动员提供跑鞋建议时，请记住这种差异，不要盲目推荐，而应结合个体评估和反馈。",
+     "titleZh": "高性能跑鞋对跑步经济性的个体反应差异及其解释因素：一项随机交叉实验室试验",
+     "summaryZh": "一项随机交叉实验室试验，通过解释性预测因子分析，探索了高性能跑鞋在提高跑步经济性方面个体反应差异的因素。",
+     "curatedReasonEn": "This RCT highlights individual differences in running economy responses to advanced footwear. When advising athletes on shoes, remember this variability; avoid blanket recommendations and instead integrate individual assessments and feedback.",
+     "limitation": "研究样本量相对较小，且是在实验室环境下进行，其结果在实际跑动场景中的普适性有待验证。",
+     "limitationEn": "The study's sample size is relatively small, and it was conducted in a laboratory setting, so the generalizability of its findings to real-world running scenarios needs further validation.",
+     "tags": [
+      "research",
+      "running"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Sports Medicine - Open"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1787481903849-20",
+     "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+     "summary": "Spatiotemporal gait parameters during a 5-meter walk-and-turn task, alongside lower extremity muscle strength and limitations of motion, are associated with functional mobility and Gross Motor Function Classification System (GMFCS) level in ambulatory children with cerebral palsy at GMFCS Levels I and II.",
+     "category": "pediatric",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00886-5/fulltext?rss=yes",
+     "publishedAt": "2026-08-20T00:00:00.000Z",
+     "firstSeen": "2026-08-23T10:45:03.849Z",
+     "curatedScore": 70,
+     "curatedReason": "在评估 GMFCS I 和 II 级脑瘫患儿时，除了常规步态分析，别忘了 5 米折返走任务中的时空步态参数。这些参数与患儿的活动能力和 GMFCS 分级有明确关联，提示你应更全面地考虑评估维度，尤其要关注肌肉力量和关节活动度。",
+     "titleZh": "行走-转身时空步态参数与脑瘫儿童功能移动能力的关联",
+     "summaryZh": "一项研究发现，在 GMFCS I 和 II 级的行走能力脑瘫儿童中，5 米行走-转身任务中的时空步态参数、下肢肌力和运动受限与功能移动能力及 GMFCS 等级相关。",
+     "curatedReasonEn": "When assessing GMFCS I and II children with CP, go beyond standard gait analysis. Spatiotemporal gait parameters during a 5-meter walk-and-turn task, alongside lower extremity muscle strength and ROM, are linked to their functional mobility and GMFCS level. This suggests we should consider these broader assessment dimensions.",
+     "limitation": "研究仅关注 GMFCS I 和 II 级儿童，结果不适用于更重症的脑瘫患者。",
+     "limitationEn": "The study focused only on GMFCS Levels I and II children, so the results may not be applicable to more severely affected CP patients.",
+     "tags": [
+      "research",
+      "gait-analysis",
+      "cerebral-palsy"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1787521424058-26",
+     "title": "Assessing concerns about falling: a comparison of telephone-based and face-to-face FES-I interviews in older adults",
+     "summary": "A study comparing telephone-based and face-to-face interviews for assessing concerns about falling (FES-I) in older adults found comparable results, supporting remote assessment methods.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08166-3",
+     "publishedAt": "2026-08-22T00:00:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.058Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究发现，电话访谈和面对面访谈在评估老年人跌倒担忧（FES-I）方面效果相当。这意味着你在远程医疗中可以放心地使用电话访谈，这为老年患者的跌倒风险评估提供了便利且有效的途径。",
+     "titleZh": "电话与面对面访谈评估老年人跌倒担忧的比较研究",
+     "summaryZh": "一项比较电话和面对面访谈评估老年人跌倒担忧（FES-I）的研究发现结果具有可比性，支持远程评估方法。",
+     "curatedReasonEn": "This study found that telephone and face-to-face interviews are comparable for assessing concerns about falling (FES-I) in older adults. This means you can confidently use telephone interviews in telehealth, providing a convenient and effective way to assess fall risk for elderly patients.",
+     "limitation": "研究未明确提供参与者的基线特征和具体评估工具的信效度数据，可能影响结果的泛化性。",
+     "limitationEn": "The study does not explicitly provide baseline characteristics of participants or specific reliability and validity data for the assessment tools, which may affect the generalizability of the results.",
+     "tags": [
+      "research",
+      "telehealth",
+      "跌倒预防"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1787521424058-28",
+     "title": "Opioids Do Not Relieve Persistent  Breathlessness among COPD patients,  suggests study",
+     "summary": "A study suggests that opioids do not relieve persistent breathlessness among COPD patients, highlighting the need for alternative interventions.",
+     "category": "cardiopulmonary",
+     "source": "Medical Dialogues",
+     "sourceUrl": "https://medicaldialogues.in/pulmonology/news/opioids-do-not-relieve-persistent-breathlessness-among-copd-patients-suggests-study-176961",
+     "publishedAt": "2026-08-21T15:00:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.058Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究表明，阿片类药物并不能有效缓解COPD患者的持续性呼吸困难。这提醒你在处理COPD患者呼吸困难时，需要优先考虑非药物干预措施，并将阿片类药物作为辅助或末线选择。",
+     "titleZh": "研究提示阿片类药物无法缓解 COPD 患者持续性呼吸困难",
+     "summaryZh": "一项研究表明，阿片类药物无法缓解COPD患者的持续性呼吸困难，强调了替代干预措施的必要性。",
+     "curatedReasonEn": "This study suggests that opioids do not effectively relieve persistent breathlessness in COPD patients. This reminds you to prioritize non-pharmacological interventions when managing breathlessness in COPD patients and consider opioids as an adjunct or last-line option.",
+     "limitation": "新闻报道未提供原始研究的具体设计和数据，因此无法评估其证据强度和细节。",
+     "limitationEn": "The news report does not provide specific study design and data from the original research, so its evidence strength and details cannot be assessed.",
+     "tags": [
+      "news",
+      "COPD"
+     ]
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1787521424058-32",
+     "title": "Neurology | American Board of Physical Therapy Education Residency and Fellowship",
+     "summary": "The American Board of Physical Therapy Residency and Fellowship Education (ABPTRFE) has released a Description of Residency Practice (DRP) for Neurology, aiming to standardize curriculum and streamline accreditation for residency programs.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://abptrfe.apta.org/for-programs/clinical-programs/neurology",
+     "publishedAt": "2026-08-20T17:50:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.058Z",
+     "curatedScore": 65,
+     "curatedReason": "APTA 旗下 ABPTRFE 发布了神经学专业住院医师实践描述 (DRP)，旨在统一神经康复住院医师的培训标准。如果你所在的机构有神经康复住院医师项目，这可以作为课程设计和认证的参考。",
+     "titleZh": "美国物理治疗教育委员会发布神经学住院医师实践描述",
+     "summaryZh": "美国物理治疗住院医师与专科培训教育委员会（ABPTRFE）发布了神经学住院医师实践描述（DRP），旨在规范课程并简化住院医师项目的认证流程。",
+     "curatedReasonEn": "ABPTRFE under APTA has released the Description of Residency Practice (DRP) for neurology, aiming to standardize training for neurological rehabilitation residents. If your institution has a neurological rehabilitation residency program, this can serve as a reference for curriculum design and accreditation.",
+     "tags": [
+      "policy",
+      "education"
+     ]
+    },
+    {
+     "id": "news-1787521424058-33",
+     "title": "Clean Claims To-Do List for Rehab Therapy Billing Teams",
+     "summary": "WebPT has published a \"Clean Claims To-Do List\" to guide rehab therapy billing teams in managing and monitoring daily tasks to ensure accurate and error-free claims.",
+     "category": "practice",
+     "source": "WebPT",
+     "sourceUrl": "https://www.webpt.com/downloads/clean-claims-to-do-list-for-rehab-therapy-billing-teams",
+     "publishedAt": "2026-08-19T00:00:00.000Z",
+     "firstSeen": "2026-08-23T21:43:44.058Z",
+     "curatedScore": 65,
+     "curatedReason": "WebPT 的这份“清洁索赔待办事项清单”对于康复治疗计费团队来说非常实用。你可以借鉴这份清单来规范你的诊所流程，以确保计费准确无误，从而减少拒付并提高运营效率。",
+     "titleZh": "康复治疗计费团队的“清洁索赔待办事项清单”",
+     "summaryZh": "WebPT 发布了一份“清洁索赔待办事项清单”，旨在指导康复治疗计费团队管理和监控日常任务，以确保索赔准确无误。",
+     "curatedReasonEn": "WebPT's 'Clean Claims To-Do List' is highly practical for rehabilitation therapy billing teams. You can use this list to standardize your clinic's processes, ensuring accurate billing to reduce denials and improve operational efficiency.",
+     "tags": [
+      "news",
+      "reimbursement"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
