@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-25T10:54:36.977Z",
+    "lastUpdated": "2026-08-25T13:16:31.835Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -109,9 +109,9 @@
           "titleZh": "卒中后人体上肢异常肌肉协同模式的早期出现"
         }
       ],
-      "heat": 4.23,
+      "heat": 4.09,
       "themeZh": "卒中后多模式康复干预及疗效评估方法",
-      "themeEn": "Post-stroke multi-modal rehabilitation and outcome measures"
+      "themeEn": "Post-stroke multi-modal rehabilitation and outcomes"
     },
     {
       "id": "news-1787655274828-0",
@@ -147,9 +147,9 @@
           "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
         }
       ],
-      "heat": 2.56,
-      "themeZh": "帕金森病康复的神经生理学与生物标志物",
-      "themeEn": "Parkinson's rehabilitation: neurophysiology and biomarkers"
+      "heat": 2.48,
+      "themeZh": "帕金森病多学科康复对神经影像及生物标志物影响",
+      "themeEn": "PD multidisciplinary rehab impact on biomarkers"
     },
     {
       "id": "news-1787089664272-7",
@@ -210,9 +210,9 @@
           "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "腰背痛与盆底功能障碍的病理生理及干预",
-      "themeEn": "Low back pain, pelvic dysfunction, and intervention"
+      "heat": 2.34,
+      "themeZh": "下腰痛与盆底功能障碍的生物学及诊疗因素",
+      "themeEn": "LBP and pelvic floor dysfunction factors"
     },
     {
       "id": "news-1787521424058-25",
@@ -267,63 +267,33 @@
           "titleZh": "联邦学习在精英足球训练负荷监测中应用于隐私保护协作健康风险分类的验证研究"
         }
       ],
-      "heat": 2.42,
-      "themeZh": "精英运动员运动表现的训练策略与监测",
-      "themeEn": "Elite athletes: training strategies and monitoring"
-    },
-    {
-      "id": "news-1787079714580-2",
-      "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610692/",
-      "category": "cardiopulmonary",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Physiotherapy theory and practice",
-        "medRxiv",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "The Lancet"
-      ],
-      "tag": "COPD",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Arm exercise training in chronic obstructive pulmonary disease: an umbrella review of systematic reviews and meta-analyses.",
-          "titleZh": "慢性阻塞性肺疾病患者手臂运动训练：系统综述和荟萃分析的伞形综述"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
-          "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-          "titleZh": "住院血液肿瘤患儿的治疗性运动方案：随机临床试验"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
-          "titleZh": "游戏化运动与保守治疗结合改善青少年特发性脊柱侧弯：一项初步随机对照试验"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Articles] Liver resection after atezolizumab and bevacizumab versus maintenance therapy for locally advanced hepatocellular carcinoma (TALENTOP): a multicentre, open-label, randomised, phase 3 trial",
-          "titleZh": "TALENTOP：阿替利珠单抗联合贝伐珠单抗后肝切除术与维持治疗用于局部晚期肝细胞癌的3期随机试验"
-        }
-      ],
-      "heat": 1.51,
-      "themeZh": "心肺疾病及癌症患儿的康复运动方案",
-      "themeEn": "Exercise protocols for cardiopulmonary and pediatric oncology"
+      "heat": 2.34,
+      "themeZh": "精英运动员表现、训练负荷与恢复策略分析",
+      "themeEn": "Elite athlete performance, training and recovery"
     }
   ],
   "items": [
+    {
+      "id": "news-1787663789464-16",
+      "title": "[Viewpoint] Risk of transmission of amyloid β pathology via transfused blood products",
+      "summary": "This viewpoint discusses concerns about the potential transmission of amyloid β pathology, relevant to Alzheimer's disease, via transfused blood products, drawing parallels with iatrogenic Creutzfeldt–Jakob disease and past medical procedures.",
+      "category": "neurological",
+      "source": "The Lancet",
+      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00767-1/fulltext?rss=yes",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "firstSeen": "2026-08-25T13:16:29.464Z",
+      "curatedScore": 75,
+      "curatedReason": "这篇观点文章探讨了阿尔茨海默病中淀粉样蛋白 β 病理通过输血传播的潜在风险。虽然属于神经科范畴，但它提出了对既往医源性传播（如生长激素治疗）的关注，以及未来对血制品筛选的潜在影响，为你关注的神经退行性疾病风险管理提供了新视角。",
+      "titleZh": "观点：输血制品传播淀粉样蛋白 β 病理的风险",
+      "summaryZh": "这篇观点文章讨论了通过输血制品传播与阿尔茨海默病相关的淀粉样蛋白 β 病理的潜在风险，并将其与医源性克雅氏病及过往医疗操作进行了比较。",
+      "curatedReasonEn": "This viewpoint discusses the potential risk of amyloid β pathology transmission via transfused blood products in Alzheimer's disease. While neurological, it highlights concerns regarding past iatrogenic transmissions (e.g., growth hormone therapy) and potential future implications for blood product screening, offering a new perspective on neurodegenerative disease risk management.",
+      "tags": [
+        "research",
+        "brain-injury"
+      ],
+      "studyDesign": "述评",
+      "journal": "The Lancet"
+    },
     {
       "id": "news-1787655274828-0",
       "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
@@ -2010,26 +1980,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1787434997375-18",
-      "title": "Modest Payment Increases Finalized by CMS for SNFs and IRFs",
-      "summary": "CMS finalized modest payment increases for skilled nursing facilities (SNFs) and inpatient rehabilitation facilities (IRFs) for fiscal year 2027, with new rules expected to increase the burden on facilities for delivering, coordinating, and documenting patient care.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/08/18/modest-payment-increases-finalized-by-cms-for-snfs-and-irfs",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-22T21:43:17.375Z",
-      "curatedScore": 90,
-      "curatedReason": "CMS 最终确定了 2027 财年专业护理机构（SNF）和住院康复机构（IRF）的适度支付增长。虽然增长幅度不大，但新规则增加了设施在患者护理交付、协调和文件记录方面的负担，这直接影响你在这些机构中的执业实践和工作流程。",
-      "titleZh": "CMS 最终确定 SNF 和 IRF 的适度支付增长",
-      "summaryZh": "CMS 最终确定了 2027 财年专业护理机构（SNF）和住院康复机构（IRF）的适度支付增长，预计新规则将增加设施在患者护理交付、协调和文件记录方面的负担。",
-      "curatedReasonEn": "CMS has finalized modest payment increases for skilled nursing facilities (SNFs) and inpatient rehabilitation facilities (IRFs) for FY 2027. While the increases are small, the new rules impose increased burdens on facilities for patient care delivery, coordination, and documentation, directly impacting your practice and workflow in these settings.",
-      "tags": [
-        "policy",
-        "reimbursement",
-        "regulation"
-      ]
     }
   ]
 }
