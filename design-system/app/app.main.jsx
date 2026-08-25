@@ -1002,7 +1002,7 @@ function AboutView({ onView, mobile }) {
       <footer style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: mobile ? 28 : 40, display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 32, flexWrap: 'wrap' }}>
           <div style={{ maxWidth: 340 }}>
-            <window.Logo variant="lockup" height={22} />
+            <window.Logo variant="lockup" height={22} withZh={zh} />
             <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', letterSpacing: '0.02em', color: 'var(--text-tertiary)' }}>{tt('与证据保持同步', 'Keeping pace with the evidence')}</p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -1015,7 +1015,7 @@ function AboutView({ onView, mobile }) {
           <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
         </p>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', paddingTop: 4, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.04em', color: 'var(--text-tertiary)' }}>
-          <span>© 2026 Cadence 步频</span>
+          <span>{tt('© 2026 Cadence 步频', '© 2026 Cadence')}</span>
           <span>incadencept.com</span>
         </div>
       </footer>

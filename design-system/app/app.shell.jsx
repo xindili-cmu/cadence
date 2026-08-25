@@ -51,10 +51,10 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
             full-height hairline divider on its right edge, aligned with NavRail.
             Mobile: plain inline lockup (no rail, so no column/divider). */}
         {mobile ? (
-          <Logo variant="lockup" height={20} />
+          <Logo variant="lockup" height={20} withZh={zh} />
         ) : (
           <div style={{ width: 'var(--rail-left)', flex: 'none', alignSelf: 'stretch', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 4, borderRight: '1px solid var(--border-subtle)' }}>
-            <Logo variant="lockup" height={22} />
+            <Logo variant="lockup" height={22} withZh={zh} />
             {/* Brand tagline — lives under the wordmark (English in both langs). */}
             <span style={{ fontFamily: 'var(--font-display)', fontSize: 9.5, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Keeping pace with the evidence</span>
           </div>

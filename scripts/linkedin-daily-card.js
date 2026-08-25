@@ -14,13 +14,13 @@
  *   scrubs 75–84 / clay 65–74) · N scored items, each a skewed "signal bar"
  *   whose HEIGHT encodes the score and whose COLOR encodes the tier — echoing
  *   the brand equalizer mark — beside a colored specialty keyword + Plex Sans
- *   title · footer lockup (Cadence 步频 · incadencept.com). Hairline-led,
+ *   title · footer lockup (Cadence · incadencept.com). Hairline-led,
  *   no gradients, no repeated "SIGNAL" labels, no boxed chips.
  *
  * Fonts are the repo's vendor woff2 converted to TTF in vendor/fonts-ttf/
- * (satori can't read woff2); 步频 uses cadence-bupin.ttf — a 4-glyph subset of
- * Noto Serif CJK SC. NOTE: only those glyphs exist offline, so the card body
- * is English; full Chinese (lead.titleZh) is intentionally not rendered here.
+ * (satori can't read woff2). Latin-only: this is an EN-market surface, so no
+ * CJK renders here (2026-08-25 name split — EN surfaces = Cadence, zh = 步频;
+ * cadence-bupin.ttf, the old 4-glyph 步频 subset, is no longer loaded).
  *
  * Usage:
  *   node scripts/linkedin-daily-card.js                 # latest edition
@@ -54,7 +54,7 @@ const C = {
   hair:   '#E4DFD1',
   blue:   '#3D74B8',
 };
-const SANS = 'IBM Plex Sans', SERIF = 'Spectral', MONO = 'IBM Plex Mono', CJK = 'Noto Serif CJK SC';
+const SANS = 'IBM Plex Sans', SERIF = 'Spectral', MONO = 'IBM Plex Mono';
 
 // Decode HTML entities that leak in from source titles (&#xa0;, &amp;, &#39;, …)
 // so the card never renders raw entity codes. NBSP becomes a normal space.
@@ -282,7 +282,6 @@ function card(ed, items) {
         row({ alignItems: 'baseline' },
           txt({ fontFamily: SANS, fontWeight: 600, fontSize: 25, color: C.ink900 }, 'Ca'),
           txt({ fontFamily: SANS, fontWeight: 600, fontSize: 25, color: C.blue }, 'dence'),
-          txt({ fontFamily: CJK, fontWeight: 400, fontSize: 19, color: C.ink500, marginLeft: 12 }, '步频'),
         ),
       ),
       txt({ fontFamily: MONO, fontWeight: 400, fontSize: 14, letterSpacing: 0.6, color: C.ink500 }, SITE),
@@ -316,8 +315,6 @@ async function main() {
     // Spectral vendor ttf ships 500 only; map 600 to it (no faux-bold in satori).
     { name: SERIF, weight: 500, style: 'normal', data: ff('spectral-latin-500-normal.ttf') },
     { name: SERIF, weight: 600, style: 'normal', data: ff('spectral-latin-500-normal.ttf') },
-    // 步频 — 4-glyph subset of Noto Serif CJK SC.
-    { name: CJK,   weight: 400, style: 'normal', data: ff('cadence-bupin.ttf') },
   ];
   const svg = await satori(card(ed, items), { width: W, height: H, fonts });
   const png = new Resvg(svg, { fitTo: { mode: 'width', value: W } }).render().asPng();

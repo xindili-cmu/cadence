@@ -83,7 +83,7 @@ window.CD_DICT = {
     'daily.loading': 'Loading edition…',
     'daily.empty': 'No editions yet — the first one is generated after the next morning crawl (05:30 Beijing).',
     'daily.autoNote': 'Updated daily · AI-screened',
-    'daily.shift': 'morning', 'daily.shareFoot': 'Full text & references → WeChat 「Cadence步频」 · same name on Xiaohongshu',
+    'daily.shift': 'morning', 'daily.shareFoot': 'Full text & references → incadencept.com',
     'daily.latestIssue': 'Latest edition',
     yesterdaySignal: "Yesterday's signal", todaysSignal: "Today's Signal", categoryPulse: 'Today by specialty',
     weeklyTop: "This week's signals", weeklyTopSub: 'Top 5 by signal · last 7 days',

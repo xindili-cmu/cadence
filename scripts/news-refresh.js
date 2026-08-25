@@ -1980,7 +1980,7 @@ async function main() {
     const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
-  <title>Cadence 步频 — PT Research Signal</title>
+  <title>Cadence — PT Research Signal</title>
   <link>${SITE_URL}/</link>
   <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 50 sources.</description>
   <language>en</language>

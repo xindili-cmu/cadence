@@ -35,7 +35,8 @@
 ## 3. 定位 (Positioning)
 
 - **品类:** 康复(rehab / PT)高分文献策展。
-- **渠道:** 公众号「Cadence 步频」/ 小红书同名 / LinkedIn + 自有网站(含信号分滑块筛选 `?min=`)。
+- **渠道(2026-08-25 更新):** 主攻 LinkedIn(Cadence PT 主页)+ 自有网站(含信号分滑块筛选 `?min=`);公众号「Cadence 步频」/ 小红书暂停更新——账号与名称保留,不改名、不注销。
+- **品牌名分治(2026-08-25 决策):** EN 面一律 `Cadence`(LinkedIn 卡片/EN 邮件/站点 meta/RSS 已去「步频」);「步频」保留为中文刊名,中文面(公众号标题格式、ZH 界面、双关文案)继续用。两名并存是按受众分治,不是待统一的债;若重启中文渠道,沿用原名。
 - **策展引擎:** 生产环境用 `gemini-2.5-flash` 打分(repo `LLM_PROVIDER=gemini`,仅 `GEMINI_API_KEY` 配齐),评分字段 `curatedScore`。
 - **SEO:** GSC 域名已验证、sitemap 已提交;Googlebot 能完整渲染 React,**无需 SSR**。
 
