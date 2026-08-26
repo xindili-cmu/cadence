@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-25T22:51:01.398Z",
+    "lastUpdated": "2026-08-26T02:04:26.708Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -41,6 +41,11 @@
           "titleZh": "卒中后肢体沉重感的神经知觉机制：一项范围综述"
         },
         {
+          "source": "medRxiv",
+          "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
+          "titleZh": "卒中后人类上肢异常肌肉协同模式的早期出现"
+        },
+        {
           "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
           "title": "Application of non-invasive electroencephalogram-based brain-computer interfaces in post-stroke hand function rehabilitation.",
@@ -66,6 +71,11 @@
           "source": "Medical Dialogues",
           "title": "Extended-Window Thrombolysis Improves Stroke Outcomes with increased bleeding risk: JAMA",
           "titleZh": "延长时间窗溶栓改善卒中结局，但出血风险增加：JAMA。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Screening sham mirror-therapy materials using fNIRS: protocol for an acute within-participant randomised crossover mechanistic study",
+          "titleZh": "使用fNIRS筛选假性镜像疗法材料：一项急性自身对照随机交叉机制研究的方案"
         },
         {
           "source": "PubMed",
@@ -116,9 +126,9 @@
           "titleZh": "卒中后吸烟与精神健康负担：2019-2023 年 NHIS 数据的性别特异性分析。"
         }
       ],
-      "heat": 5.75,
-      "themeZh": "卒中后神经调控与肢体功能康复",
-      "themeEn": "Stroke Neuro-modulation and Limb Function Rehabilitation"
+      "heat": 5.49,
+      "themeZh": "卒中后上肢功能障碍的神经调控与可穿戴量化",
+      "themeEn": "Neuromodulation and wearable quantification for post-stroke upper limb dysfunction"
     },
     {
       "id": "news-1787089664272-4",
@@ -182,9 +192,67 @@
           "titleZh": "使用剪切波弹性成像评估肌内效贴对严重超依赖性肢体水肿患者的影响：一项随机临床试验"
         }
       ],
-      "heat": 5.03,
-      "themeZh": "膝关节置换术前运动干预与术后康复",
-      "themeEn": "Prehab Exercise for TKA and Post-op Recovery"
+      "heat": 4.8,
+      "themeZh": "全膝关节置换术的运动康复与疼痛管理",
+      "themeEn": "Exercise rehabilitation and pain management for total knee arthroplasty"
+    },
+    {
+      "id": "news-1787331437384-0",
+      "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42627141/",
+      "category": "neurological",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Physiotherapy theory and practice",
+        "NeuroRehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "medRxiv",
+        "BMC Geriatrics",
+        "Physiotherapy"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+          "titleZh": "结合环境步行需求的 300 米社区步行测试在亚急性卒中患者中的测量特性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
+          "titleZh": "卒中后步态模式亚组的分类特征及异常步态模式的定义：一项范围综述"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+          "titleZh": "脑瘫I、II级患儿步态时空参数与功能移动性的关联"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Understanding how demographic characteristics impact the level of physical activity children with neuromotor impairments experience while using a robot-assisted walker",
+          "titleZh": "了解人口学特征如何影响神经运动障碍儿童使用机器人辅助步行器的体力活动水平"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "The association between intrinsic capacity and quality of life in community-dwelling older adults: a cross-sectional study",
+          "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
+          "titleZh": "评估住院患者活动行为的直接观察方法：一项范围综述"
+        }
+      ],
+      "heat": 4.12,
+      "themeZh": "脑卒中与脑瘫步态模式及社区行走能力研究",
+      "themeEn": "Gait patterns and community walking in stroke and cerebral palsy"
     },
     {
       "id": "news-1787694684116-2",
@@ -227,19 +295,18 @@
           "titleZh": "多学科强化门诊康复对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
         }
       ],
-      "heat": 2.88,
-      "themeZh": "帕金森病中的生物反馈与多学科康复",
-      "themeEn": "Biofeedback and Multidisciplinary Rehab in Parkinson's"
+      "heat": 2.75,
+      "themeZh": "帕金森病多学科强化康复与神经影像学",
+      "themeEn": "Multidisciplinary intensive rehabilitation and neuroimaging in Parkinson's disease"
     },
     {
-      "id": "news-1786682651836-12",
-      "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42586403/",
+      "id": "news-1787089664272-3",
+      "title": "The Optimal Exercise Modality and Dose for Blood Pressure Management in Middle-Aged and Older Adults: A Systematic Review with Bayesian Model-Based, and Dose-Response Network Meta-Analysis of RCTs.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42611172/",
       "category": "geriatric",
       "publishedAt": "2026-08-25T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 3,
       "sources": [
-        "Archives of physical medicine and rehabilitation",
         "Sports medicine (Auckland, N.Z.)",
         "Physiotherapy theory and practice",
         "medRxiv"
@@ -247,12 +314,6 @@
       "tag": "COPD",
       "kind": "theme",
       "members": [
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Exercise Interventions for Older Adults with Alzheimer's Disease: A Systematic Review and Meta-Analysis.",
-          "titleZh": "运动干预对阿尔茨海默病老年患者的影响：系统综述和荟萃分析"
-        },
         {
           "source": "PubMed",
           "journal": "Sports medicine (Auckland, N.Z.)",
@@ -276,75 +337,126 @@
           "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究。"
         }
       ],
-      "heat": 2.88,
-      "themeZh": "老年人群运动疗法对心肺与血压管理",
-      "themeEn": "Exercise for Older Adults Cardiopulmonary BP"
-    },
-    {
-      "id": "news-1787089664272-7",
-      "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01064-3",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-24T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Sports Medicine - Open",
-        "Musculoskeletal science & practice",
-        "Physiotherapy theory and practice",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "Sports Med - Open",
-          "journal": "Sports Medicine - Open",
-          "title": "Differences in the Thoracolumbar Fascia Between Low Back Pain Patients and Healthy Individuals: A Systematic Review with Meta-Analysis",
-          "titleZh": "腰痛患者与健康个体腰骶筋膜的差异：一项系统综述与Meta分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Systemic inflammation as a mediator of exercise benefits in chronic low back pain: Refining the mechanistic lens.",
-          "titleZh": "系统性炎症作为运动干预慢性下腰痛益处的介质：机制视角的深化"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-          "titleZh": "年轻偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "A qualitative inquiry into the environmental barriers and facilitators to non-specific low back pain clinical practice guideline adherence among Canadian physiotherapists.",
-          "titleZh": "加拿大物理治疗师非特异性腰痛临床实践指南依从性的环境障碍与促进因素：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
-          "titleZh": "手法治疗腰痛试验中的利益冲突是否透明？一项荟萃流行病学综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Responsiveness, Smallest Detectable Change, and Minimal Important Change of the Turkish Pelvic Floor Distress Inventory-20 Following Pelvic Floor Muscle Training.",
-          "titleZh": "盆底肌训练后土耳其版盆底困扰问卷-20 的响应性、最小可检测变化和最小重要变化"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Effects of functional versus conventional Physiotherapy-Based pain management on symptoms, psychological outcomes, and quality of life in women with Bladder Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "功能性与传统物理治疗在膀胱疼痛综合征女性患者中对症状、心理结局和生活质量的影响：一项随机对照试验"
-        }
-      ],
-      "heat": 2.03,
-      "themeZh": "腰痛的筋膜、炎症与骨盆底肌训练",
-      "themeEn": "Low Back Pain Fascia Inflammation Pelvic Floor"
+      "heat": 2.06,
+      "themeZh": "中老年心肺疾病的运动训练与康复模式",
+      "themeEn": "Exercise training and rehabilitation modalities for cardiopulmonary diseases in older adults"
     }
   ],
   "items": [
+    {
+      "id": "news-1787481903849-20",
+      "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+      "summary": "This study found that spatiotemporal gait parameters during a 5-meter walk-and-turn task, along with lower extremity strength and range of motion, are associated with functional mobility and GMFCS levels in ambulatory children with cerebral palsy.",
+      "category": "pediatric",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00886-5/fulltext?rss=yes",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-23T10:45:03.849Z",
+      "curatedScore": 70,
+      "curatedReason": "步态参数、下肢肌力和活动度与脑瘫儿童的功能活动能力直接相关，评估时不可忽视这些指标。",
+      "titleZh": "脑瘫I、II级患儿步态时空参数与功能移动性的关联",
+      "summaryZh": "这项研究发现，在5米步行-转弯任务中评估的步态时空参数，以及下肢肌力和活动度受限，与I、II级脑瘫患儿的功能移动性及粗大运动功能分级系统（GMFCS）水平相关。",
+      "curatedReasonEn": "Spatiotemporal gait parameters, lower extremity strength, and range of motion are directly associated with functional mobility in children with cerebral palsy; these metrics should not be overlooked during assessments.",
+      "limitation": "本研究为横断面设计，无法建立因果关系，且可能存在未报告的混杂因素。",
+      "limitationEn": "This cross-sectional study cannot establish causality and may have unreported confounding factors.",
+      "tags": [
+        "research",
+        "gait",
+        "assessment"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787481903849-21",
+      "title": "Protective Techniques and Postural Strategies for Individuals With Blindness or Low Vision: A Guide for Clinicians and Patients",
+      "summary": "This guide outlines protective techniques and postural strategies for individuals with blindness or low vision, aiming to mitigate the higher risk of collisions, falls, and upper-body injuries they face.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00813-0/fulltext?rss=yes",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-23T10:45:03.849Z",
+      "curatedScore": 70,
+      "curatedReason": "为视障人士提供专门的防护技术和姿势指导，能显著降低他们发生碰撞、跌倒及上身受伤的风险。",
+      "titleZh": "盲人或低视力患者的防护技术与姿势策略：临床医生与患者指南",
+      "summaryZh": "本指南为盲人或低视力患者提供了防护技术和姿势策略，以降低他们在日常活动中面临的碰撞、跌倒及头/上身受伤的高风险。",
+      "curatedReasonEn": "Providing specialized protective techniques and postural guidance for individuals with blindness or low vision can significantly reduce their risk of collisions, falls, and upper-body injuries.",
+      "tags": [
+        "guideline",
+        "fall-prevention",
+        "vision-impairment"
+      ],
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787709804683-18",
+      "title": "Screening sham mirror-therapy materials using fNIRS: protocol for an acute within-participant randomised crossover mechanistic study",
+      "summary": "This protocol describes a randomized crossover fNIRS screening study designed to identify the most \"neutral\" sham mirror-therapy material condition by comparing its neural signature to true mirror visual feedback in healthy adults.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.23.26361088v1?rss=1",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "firstSeen": "2026-08-26T02:03:24.683Z",
+      "curatedScore": 70,
+      "curatedReason": "RCT 设计提示，通过 fNIRS 比较不同“假性”镜像疗法材料的神经信号，有助于在临床试验中选择更精确的安慰剂对照。",
+      "titleZh": "使用fNIRS筛选假性镜像疗法材料：一项急性自身对照随机交叉机制研究的方案",
+      "summaryZh": "本研究方案描述了一项急性、自身对照、随机交叉的fNIRS筛选研究，旨在通过比较健康成年人在真实镜像视觉反馈和三种预设假性材料条件下的神经信号，识别出“最中性”的假性镜像疗法材料。",
+      "curatedReasonEn": "The RCT design suggests that comparing neural signals from different \"sham\" mirror therapy materials using fNIRS can aid in selecting more precise placebo controls in clinical trials.",
+      "limitation": "本研究为初步的机制探索协议，旨在筛选安慰剂材料，而非评估疗法疗效。",
+      "limitationEn": "This study is a preliminary mechanistic exploration protocol, aiming to screen placebo materials rather than evaluate therapeutic efficacy.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "RCT"
+    },
+    {
+      "id": "news-1787709804683-19",
+      "title": "Understanding how demographic characteristics impact the level of physical activity children with neuromotor impairments experience while using a robot-assisted walker",
+      "summary": "This prospective study aims to examine how robot-assisted walkers' physical parameters and user characteristics moderate the exercise intensity achieved by individuals with pediatric-onset neuromotor disorders causing mobility impairments.",
+      "category": "pediatric",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.21.26361070v1?rss=1",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "firstSeen": "2026-08-26T02:03:24.683Z",
+      "curatedScore": 70,
+      "curatedReason": "理解人口学特征如何影响机器人辅助步行对儿童的运动强度，有助于你为患有神经运动障碍的儿童患者更精准地定制康复方案和优化机器人辅助设备的使用。",
+      "titleZh": "了解人口学特征如何影响神经运动障碍儿童使用机器人辅助步行器的体力活动水平",
+      "summaryZh": "这项前瞻性研究旨在探讨机器人辅助步行器的物理参数和用户特征如何调节患有儿童期神经运动障碍导致行动不便的个体所达到的运动强度。",
+      "curatedReasonEn": "Understanding how demographic characteristics impact the level of physical activity children experience with robot-assisted walkers can help you more precisely tailor rehabilitation programs and optimize the use of robotic assistive devices for pediatric patients with neuromotor impairments.",
+      "limitation": "本研究为前瞻性单次干预，可能无法反映长期使用效果，且样本量较小。",
+      "limitationEn": "This is a prospective, single-session intervention study, which may not reflect long-term effects and has a small sample size.",
+      "tags": [
+        "research",
+        "assistive-technology",
+        "gait-training"
+      ],
+      "studyDesign": "观察研究",
+      "tech": true
+    },
+    {
+      "id": "news-1787455549869-2",
+      "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
+      "summary": "This cross-sectional study investigated the early emergence and characteristics of abnormal muscle synergies in the upper extremity of 39 individuals with hemiparesis in the early subacute period (<6 months) after stroke.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360812v1?rss=1",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "firstSeen": "2026-08-23T03:25:49.869Z",
+      "curatedScore": 70,
+      "curatedReason": "卒中后早期 (<6个月) 即可观察到异常的肩胛带肌协同模式，提示应尽早开始针对这些模式的干预。",
+      "titleZh": "卒中后人类上肢异常肌肉协同模式的早期出现",
+      "summaryZh": "这项横断面研究调查了39名卒中后早期亚急性期（<6个月）偏瘫患者上肢异常肌肉协同模式的早期出现及其特征。",
+      "curatedReasonEn": "Abnormal upper extremity muscle synergies emerge early after stroke (<6 months), suggesting that interventions targeting these patterns should be initiated as soon as possible.",
+      "limitation": "本研究为横断面设计，无法确定异常协同模式与长期功能预后之间的因果关系。",
+      "limitationEn": "This cross-sectional study cannot determine the causal relationship between abnormal synergy patterns and long-term functional outcomes.",
+      "tags": [
+        "research",
+        "stroke",
+        "brain-injury"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1787288276212-1",
       "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
@@ -1946,122 +2058,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Sports Medicine - Open"
-    },
-    {
-      "id": "news-1787521424058-26",
-      "title": "Assessing concerns about falling: a comparison of telephone-based and face-to-face FES-I interviews in older adults",
-      "summary": "A study comparing telephone-based and face-to-face interviews for assessing concerns about falling (FES-I) in older adults found comparable results, supporting remote assessment methods.",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08166-3",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "firstSeen": "2026-08-23T21:43:44.058Z",
-      "curatedScore": 75,
-      "curatedReason": "这项研究发现，电话访谈和面对面访谈在评估老年人跌倒担忧（FES-I）方面效果相当。这意味着你在远程医疗中可以放心地使用电话访谈，这为老年患者的跌倒风险评估提供了便利且有效的途径。",
-      "titleZh": "电话与面对面访谈评估老年人跌倒担忧的比较研究",
-      "summaryZh": "一项比较电话和面对面访谈评估老年人跌倒担忧（FES-I）的研究发现结果具有可比性，支持远程评估方法。",
-      "curatedReasonEn": "This study found that telephone and face-to-face interviews are comparable for assessing concerns about falling (FES-I) in older adults. This means you can confidently use telephone interviews in telehealth, providing a convenient and effective way to assess fall risk for elderly patients.",
-      "limitation": "研究未明确提供参与者的基线特征和具体评估工具的信效度数据，可能影响结果的泛化性。",
-      "limitationEn": "The study does not explicitly provide baseline characteristics of participants or specific reliability and validity data for the assessment tools, which may affect the generalizability of the results.",
-      "tags": [
-        "research",
-        "telehealth",
-        "跌倒预防"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787089664273-9",
-      "title": "Effects of high-definition transcranial direct current stimulation on muscle strength, proprioception, cutaneous sensitivity and their relationship with balance in older adults with a history of falls",
-      "summary": "This study investigates the effects of high-definition transcranial direct current stimulation (HD-tDCS) on muscle strength, proprioception, cutaneous sensitivity, and balance in older adults with a history of falls.",
-      "category": "neurological",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08154-7",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.273Z",
-      "curatedScore": 70,
-      "curatedReason": "这项观察研究表明，高清经颅直流电刺激（HD-tDCS）可能对有跌倒史老年人的肌肉力量、本体感觉、皮肤敏感度及平衡产生积极影响。你可以将其视为一种潜在的辅助干预手段，但目前尚不足以作为常规推荐，仍需更高级别的证据支持。",
-      "titleZh": "高清经颅直流电刺激对有跌倒史老年人肌肉力量、本体感觉、皮肤敏感度及其与平衡关系的影响",
-      "summaryZh": "本研究旨在调查高清经颅直流电刺激（HD-tDCS）对有跌倒史老年人的肌肉力量、本体感觉、皮肤敏感度及其与平衡能力之间关系的影响。",
-      "curatedReasonEn": "This observational study indicates that High-Definition Transcranial Direct Current Stimulation (HD-tDCS) may positively affect muscle strength, proprioception, cutaneous sensitivity, and balance in older adults with a history of falls. You can consider it a potential adjunctive intervention, but it's not yet ready for routine recommendation; higher-level evidence is needed.",
-      "limitation": "研究设计未明确说明，且结论来自对多项生理指标的探索性分析，需要更明确的对照试验验证。",
-      "limitationEn": "The study design is not clearly specified, and conclusions are derived from an exploratory analysis of multiple physiological parameters, requiring more definitive controlled trials for validation.",
-      "tags": [
-        "research",
-        "vestibular",
-        "electro"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787003231993-7",
-      "title": "Unstable-surface squats are associated with lower postural stability indices but not interlimb sway asymmetry in healthy young adults",
-      "summary": "Unstable-surface squats are associated with lower postural stability indices but not interlimb sway asymmetry in healthy young adults, according to a recent study.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01991-4",
-      "publishedAt": "2026-08-17T00:00:00.000Z",
-      "firstSeen": "2026-08-17T21:47:11.993Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究表明，不稳平面深蹲与较低的姿势稳定性指数相关，但在健康年轻人中未发现肢间晃动不对称。这意味着在训练中引入不稳平面可能有效挑战姿势控制，但对不对称性的影响仍需进一步研究。",
-      "titleZh": "不稳平面深蹲与健康年轻人姿势稳定性下降相关，但与肢间晃动不对称无关",
-      "summaryZh": "一项最新研究显示，不稳平面深蹲与健康年轻人的姿势稳定性指数下降有关，但与肢间晃动不对称性无关。",
-      "curatedReasonEn": "This study indicates that unstable-surface squats are associated with lower postural stability indices but not interlimb sway asymmetry in healthy young adults. This suggests that introducing unstable surfaces in training may effectively challenge postural control, but its impact on asymmetry requires further investigation.",
-      "limitation": "研究仅评估了急性反应，长期训练效果和机制需要更多纵向研究。",
-      "limitationEn": "The study only assessed acute responses, and the long-term training effects and mechanisms require more longitudinal research.",
-      "tags": [
-        "research",
-        "balance",
-        "performance-training"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1787176141766-4",
-      "title": "The relationship between the uric acid to prealbumin ratio and frailty, muscle strength, and malnutrition risk in older geriatric outpatients: a retrospective cross-sectional study",
-      "summary": "A retrospective cross-sectional study finds a relationship between the uric acid to prealbumin ratio and frailty, muscle strength, and malnutrition risk in older geriatric outpatients.",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08025-1",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-19T21:49:01.766Z",
-      "curatedScore": 70,
-      "curatedReason": "这项回顾性观察研究提示，尿酸与前白蛋白比值可能与老年门诊患者的衰弱、肌肉力量和营养不良风险相关。你可以考虑在临床筛查中关注这一比值，作为早期识别高风险老年患者的潜在生物标志物。",
-      "titleZh": "尿酸与前白蛋白比值与老年门诊患者衰弱、肌肉力量和营养不良风险的关系：一项回顾性横断面研究",
-      "summaryZh": "一项回顾性横断面研究发现，尿酸与前白蛋白比值与老年门诊患者的衰弱、肌肉力量和营养不良风险之间存在关联。",
-      "curatedReasonEn": "This retrospective observational study suggests that the uric acid to prealbumin ratio may be linked to frailty, muscle strength, and malnutrition risk in older geriatric outpatients. You could consider monitoring this ratio in clinical screening as a potential biomarker for early identification of high-risk elderly patients.",
-      "limitation": "这是一项回顾性横断面研究，无法建立因果关系，且结果可能受限于特定门诊人群。",
-      "limitationEn": "This is a retrospective cross-sectional study, so it cannot establish causality, and the results may be limited to a specific outpatient population.",
-      "tags": [
-        "research",
-        "衰弱"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787521424058-28",
-      "title": "Opioids Do Not Relieve Persistent  Breathlessness among COPD patients,  suggests study",
-      "summary": "A study suggests that opioids do not relieve persistent breathlessness among COPD patients, highlighting the need for alternative interventions.",
-      "category": "cardiopulmonary",
-      "source": "Medical Dialogues",
-      "sourceUrl": "https://medicaldialogues.in/pulmonology/news/opioids-do-not-relieve-persistent-breathlessness-among-copd-patients-suggests-study-176961",
-      "publishedAt": "2026-08-21T15:00:00.000Z",
-      "firstSeen": "2026-08-23T21:43:44.058Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究表明，阿片类药物并不能有效缓解COPD患者的持续性呼吸困难。这提醒你在处理COPD患者呼吸困难时，需要优先考虑非药物干预措施，并将阿片类药物作为辅助或末线选择。",
-      "titleZh": "研究提示阿片类药物无法缓解 COPD 患者持续性呼吸困难",
-      "summaryZh": "一项研究表明，阿片类药物无法缓解COPD患者的持续性呼吸困难，强调了替代干预措施的必要性。",
-      "curatedReasonEn": "This study suggests that opioids do not effectively relieve persistent breathlessness in COPD patients. This reminds you to prioritize non-pharmacological interventions when managing breathlessness in COPD patients and consider opioids as an adjunct or last-line option.",
-      "limitation": "新闻报道未提供原始研究的具体设计和数据，因此无法评估其证据强度和细节。",
-      "limitationEn": "The news report does not provide specific study design and data from the original research, so its evidence strength and details cannot be assessed.",
-      "tags": [
-        "news",
-        "COPD"
-      ]
     }
   ]
 }
