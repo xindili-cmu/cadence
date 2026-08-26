@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-26T09:06:13.811Z",
+    "lastUpdated": "2026-08-26T10:54:53.950Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,17 +19,17 @@
       "title": "Carrying an unseen weight: the neuro-perceptual landscape of limb heaviness after stroke- a scoping review.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640081/",
       "category": "neurological",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
       "sourceCount": 8,
       "sources": [
         "Topics in stroke rehabilitation",
         "medRxiv",
         "American journal of physical medicine & rehabilitation",
-        "Medical Dialogues",
-        "Disability and rehabilitation",
-        "Physiotherapy theory and practice",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Clinical rehabilitation"
+        "Archives of Physical Medicine and Rehabilitation",
+        "Physiotherapy theory and practice",
+        "Clinical rehabilitation",
+        "Disability and rehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -44,12 +44,6 @@
           "source": "medRxiv",
           "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
           "titleZh": "卒中后人类上肢异常肌肉协同模式的早期出现"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Application of non-invasive electroencephalogram-based brain-computer interfaces in post-stroke hand function rehabilitation.",
-          "titleZh": "非侵入性 EEG 脑机接口在卒中后手功能康复中的应用"
         },
         {
           "source": "medRxiv",
@@ -68,9 +62,16 @@
           "titleZh": "经颅直流电刺激在急性缺血性卒中中的疗效：刺激模式和时机的系统综述和荟萃分析"
         },
         {
-          "source": "Medical Dialogues",
-          "title": "Extended-Window Thrombolysis Improves Stroke Outcomes with increased bleeding risk: JAMA",
-          "titleZh": "延长时间窗溶栓改善卒中结局，但出血风险增加：JAMA。"
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Functional Electrical Stimulation and Stroke Rehabilitation Research: The Critical Role of Sham Control Groups.",
+          "titleZh": "功能性电刺激与卒中康复研究：安慰剂对照组的关键作用"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Application of non-invasive electroencephalogram-based brain-computer interfaces in post-stroke hand function rehabilitation.",
+          "titleZh": "非侵入性 EEG 脑机接口在卒中后手功能康复中的应用"
         },
         {
           "source": "medRxiv",
@@ -78,28 +79,16 @@
           "titleZh": "使用fNIRS筛选假性镜像疗法材料：一项急性自身对照随机交叉机制研究的方案"
         },
         {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
-          "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究"
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Prestroke Rehabilitation Reserve and Mobility and Self-Care Outcomes After Incident Stroke Across Four International Aging Cohorts",
+          "titleZh": "四项国际老年队列研究显示卒中前康复储备与卒中后移动和自我照护结局的关系"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
           "titleZh": "慢性卒中患者运动恢复和感知社会支持与参与相关结局的关联"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
-          "titleZh": "以个体独特目标为中心的工作关系是支持性自我管理的核心：一项针对卒中幸存者的定性研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Feasibility and acceptability of a randomized controlled trial of a patient-centred transition program for stroke survivors and their caregivers-P-NAVISTROKE study.",
-          "titleZh": "P-NAVISTROKE 研究：卒中幸存者及其照护者患者中心化过渡项目随机对照试验的可行性与接受度"
         },
         {
           "source": "PubMed",
@@ -118,11 +107,35 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Outcome measures used in studies of vestibular rehabilitation after stroke: a scoping review.",
           "titleZh": "卒中后前庭康复研究中使用的结局测量：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
+          "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
+          "titleZh": "以个体独特目标为中心的工作关系是支持性自我管理的核心：一项针对卒中幸存者的定性研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Feasibility and acceptability of a randomized controlled trial of a patient-centred transition program for stroke survivors and their caregivers-P-NAVISTROKE study.",
+          "titleZh": "P-NAVISTROKE 研究：卒中幸存者及其照护者患者中心化过渡项目随机对照试验的可行性与接受度"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Post-stroke smoking and mental health burden: sex-specific analysis of NHIS 2019-2023.",
+          "titleZh": "卒中后吸烟与精神健康负担：2019-2023 年 NHIS 数据的性别特异性分析。"
         }
       ],
-      "heat": 4.96,
-      "themeZh": "卒中后肢体功能障碍的神经机制与康复技术",
-      "themeEn": "Stroke limb dysfunction mechanisms and rehabilitation"
+      "heat": 6.83,
+      "themeZh": "卒中后上肢功能障碍的神经机制与康复干预",
+      "themeEn": "Stroke Upper-Limb Dysfunction & Rehabilitation"
     },
     {
       "id": "news-1787089664272-4",
@@ -186,67 +199,9 @@
           "titleZh": "使用剪切波弹性成像评估肌内效贴对严重超依赖性肢体水肿患者的影响：一项随机临床试验"
         }
       ],
-      "heat": 4.34,
-      "themeZh": "骨科康复中的运动疗法与治疗方法比较",
-      "themeEn": "Orthopedic rehab exercise and therapy comparison"
-    },
-    {
-      "id": "news-1787331437384-0",
-      "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42627141/",
-      "category": "neurological",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "Physiotherapy theory and practice",
-        "NeuroRehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "medRxiv",
-        "BMC Geriatrics",
-        "Physiotherapy"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
-          "titleZh": "结合环境步行需求的 300 米社区步行测试在亚急性卒中患者中的测量特性"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
-          "titleZh": "卒中后步态模式亚组的分类特征及异常步态模式的定义：一项范围综述"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
-          "titleZh": "脑瘫I、II级患儿步态时空参数与功能移动性的关联"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Understanding how demographic characteristics impact the level of physical activity children with neuromotor impairments experience while using a robot-assisted walker",
-          "titleZh": "了解人口学特征如何影响神经运动障碍儿童使用机器人辅助步行器的体力活动水平"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "The association between intrinsic capacity and quality of life in community-dwelling older adults: a cross-sectional study",
-          "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
-          "titleZh": "评估住院患者活动行为的直接观察方法：一项范围综述"
-        }
-      ],
-      "heat": 3.72,
-      "themeZh": "神经损伤和老年人步态及运动能力评估",
-      "themeEn": "Neurological impairment gait and mobility assessment"
+      "heat": 4.23,
+      "themeZh": "骨科术后及膝关节疼痛的物理治疗与康复",
+      "themeEn": "Post-Orthopedic Surgery & Knee Pain PT"
     },
     {
       "id": "news-1787694684116-2",
@@ -254,12 +209,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640577/",
       "category": "neurological",
       "publishedAt": "2026-08-25T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 6,
       "sources": [
         "Clinical rehabilitation",
         "NeuroRehabilitation",
         "Neurorehabilitation and neural repair",
-        "Journal of NeuroEngineering and Rehabilitation"
+        "medRxiv",
+        "Gait & posture",
+        "BMC Sports Science, Medicine and Rehabilitation"
       ],
       "tag": "parkinson",
       "kind": "theme",
@@ -283,15 +240,25 @@
           "titleZh": "帕金森病患者白质弥散各向异性与住院多学科康复效果的关系：一项弥散张量成像分析"
         },
         {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
-          "titleZh": "多学科强化门诊康复对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
+          "source": "medRxiv",
+          "title": "Effects of Fingertip Vibrotactile Stimulation on Postural Control in Community-Dwelling Older Adults: A Comparison Across Age Groups",
+          "titleZh": "指尖振动刺激对社区老年人姿势控制的影响：不同年龄组的比较"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Methodological characteristics of perturbation-based balance training in healthy older adults: A scoping review.",
+          "titleZh": "健康老年人扰动基础平衡训练的方法学特征：一项范围综述"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of tDCS combined with unstable resistance training on knee muscle strength and neuromuscular control in community-dwelling older adults: a randomized controlled trial",
+          "titleZh": "tDCS联合不稳定抗阻训练对社区老年人膝关节肌力和神经肌肉控制的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.48,
-      "themeZh": "帕金森病康复中的生物反馈与多学科干预",
-      "themeEn": "Parkinson's biofeedback and multidisciplinary rehab"
+      "heat": 3.62,
+      "themeEn": "Bio/Neurofeedback for Parkinson's & Older Adults' Balance"
     },
     {
       "id": "news-1787089664272-3",
@@ -299,11 +266,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42611172/",
       "category": "geriatric",
       "publishedAt": "2026-08-25T00:00:00.000Z",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "sources": [
         "Sports medicine (Auckland, N.Z.)",
         "Physiotherapy theory and practice",
-        "medRxiv"
+        "medRxiv",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
       "tag": "COPD",
       "kind": "theme",
@@ -329,14 +297,108 @@
           "source": "medRxiv",
           "title": "Inspiratory Strength Training in Pediatric Cardiac Critical Care: A Retrospective Cohort Study",
           "titleZh": "吸气肌力量训练在儿科心脏重症监护中的应用：一项回顾性队列研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
+          "titleZh": "住院血液肿瘤患儿的治疗性运动方案：随机临床试验"
         }
       ],
-      "heat": 1.86,
-      "themeZh": "心肺康复的运动干预策略与疗效",
-      "themeEn": "Cardiopulmonary rehab exercise interventions and efficacy"
+      "heat": 2.42,
+      "themeZh": "心肺疾病及老年患者的运动康复策略",
+      "themeEn": "Exercise Rehab for Cardiopulmonary & Older Patients"
+    },
+    {
+      "id": "news-1787720395200-0",
+      "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42641170/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Disability and rehabilitation",
+        "Musculoskeletal science & practice",
+        "BMC Geriatrics",
+        "Physiotherapy"
+      ],
+      "tag": null,
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
+          "titleZh": "初级物理治疗中电子健康（eHealth）的使用：一项混合方法研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Experiences of telehealth e-mentoring within postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom.",
+          "titleZh": "远程电子导师制在加拿大和英国骨骼肌肉物理治疗研究生教育中的经验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "The association between intrinsic capacity and quality of life in community-dwelling older adults: a cross-sectional study",
+          "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Direct observation methods for assessing inpatient movement behaviour in hospitals: A scoping review.",
+          "titleZh": "评估住院患者活动行为的直接观察方法：一项范围综述"
+        }
+      ],
+      "heat": 2.42,
+      "themeEn": "eHealth in PT Education & Patient Assessment"
     }
   ],
   "items": [
+    {
+      "id": "news-1787741691629-17",
+      "title": "Prestroke Rehabilitation Reserve and Mobility and Self-Care Outcomes After Incident Stroke Across Four International Aging Cohorts",
+      "summary": "This study examined the association between lower multidimensional prestroke rehabilitation reserve and adverse mobility/self-care status after incident stroke across four international aging cohorts.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00889-0/fulltext?rss=yes",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
+      "firstSeen": "2026-08-26T10:54:51.629Z",
+      "curatedScore": 80,
+      "curatedReason": "这项观察性研究提示，卒中前的康复储备（prestroke rehabilitation reserve）较低可能与卒中后较差的移动和自我照护能力相关。这进一步强化了卒中前识别和改善患者康复储备的重要性，为你早期干预和预后管理提供了新视角。",
+      "titleZh": "四项国际老年队列研究显示卒中前康复储备与卒中后移动和自我照护结局的关系",
+      "summaryZh": "一项多国老年队列研究旨在探究多维度卒中前康复储备较低是否与卒中后的不良移动和自我照护状态相关联。",
+      "curatedReasonEn": "This observational study suggests that lower prestroke rehabilitation reserve may be associated with worse mobility and self-care outcomes after incident stroke. This reinforces the importance of identifying and improving patients' rehabilitation reserve before stroke, offering a new perspective for early intervention and prognostic management.",
+      "limitation": "这是一项观察性研究，不能确立因果关系。",
+      "limitationEn": "This is an observational study and cannot establish causality.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1787741691627-0",
+      "title": "Functional Electrical Stimulation and Stroke Rehabilitation Research: The Critical Role of Sham Control Groups.",
+      "summary": "This perspective piece emphasizes the critical need for robust sham control groups in functional electrical stimulation (FES) research for stroke rehabilitation to ensure valid conclusions.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42642785/",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
+      "firstSeen": "2026-08-26T10:54:51.627Z",
+      "curatedScore": 75,
+      "curatedReason": "本述评强调在功能性电刺激（FES）卒中康复研究中，严格的安慰剂对照组设计至关重要，以确保结果的有效性。在评估新的FES干预方案时，你需要审慎考察其对照组的设置，确保其能有效隔离非特异性效应。",
+      "titleZh": "功能性电刺激与卒中康复研究：安慰剂对照组的关键作用",
+      "summaryZh": "这篇述评强调，在卒中康复的功能性电刺激（FES）研究中，设计严格的安慰剂对照组对于确保研究结论的有效性至关重要。",
+      "curatedReasonEn": "This commentary highlights the critical role of rigorous sham control groups in functional electrical stimulation (FES) stroke rehabilitation research to ensure result validity. When evaluating new FES interventions, scrutinize the design of their control groups to ensure non-specific effects are effectively isolated.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
     {
       "id": "news-1787720395200-0",
       "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
@@ -2004,54 +2066,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "Sports Medicine"
-    },
-    {
-      "id": "news-1787089664272-6",
-      "title": "Rehabilitative game-based exercise integrated into conservative treatment for adolescent idiopathic scoliosis: a pilot randomized controlled trial",
-      "summary": "A pilot randomized controlled trial explores the integration of rehabilitative game-based exercise into conservative treatment for adolescent idiopathic scoliosis (AIS), aiming to increase patient engagement.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01981-6",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T21:47:44.272Z",
-      "curatedScore": 75,
-      "curatedReason": "这项初步的 RCT 提示，游戏化运动可能提升青少年特发性脊柱侧弯（AIS）患者的依从性。尽管是小样本，你可以在临床中考虑将游戏元素融入治疗方案，以提高年轻患者的参与度和积极性。",
-      "titleZh": "游戏化运动与保守治疗结合改善青少年特发性脊柱侧弯：一项初步随机对照试验",
-      "summaryZh": "一项初步随机对照试验探讨了将游戏化康复运动整合到青少年特发性脊柱侧弯（AIS）保守治疗中的潜力，旨在提高患者依从性。",
-      "curatedReasonEn": "This pilot RCT suggests that game-based exercise may improve adherence in adolescent idiopathic scoliosis (AIS) patients. Even with a small sample, consider incorporating game elements into your treatment plans to boost engagement and motivation in younger patients.",
-      "limitation": "这是一项初步随机对照试验，未提供具体依从性或疗效数据，且样本量有限。",
-      "limitationEn": "This is a pilot randomized controlled trial without specific adherence or efficacy data, and with a limited sample size.",
-      "tags": [
-        "research",
-        "spine",
-        "pediatric"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1787262733536-13",
-      "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
-      "summary": "An exploratory analysis investigates the effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson's disease, exploring underlying biological mechanisms.",
-      "category": "neurological",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02125-0",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "firstSeen": "2026-08-20T21:52:13.536Z",
-      "curatedScore": 75,
-      "curatedReason": "这项探索性分析提示，针对帕金森病患者的多学科强化门诊康复可能通过调节血浆神经丝和肌因子来产生生物学效应。这为运动在神经退行性疾病中的作用提供了新的生物标志物研究方向，但尚不能直接指导临床方案调整。",
-      "titleZh": "多学科强化门诊康复对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析",
-      "summaryZh": "一项探索性分析研究了帕金森病患者多学科强化门诊康复计划对血浆神经丝和肌因子的影响，旨在阐明其潜在的生物学机制。",
-      "curatedReasonEn": "This exploratory analysis suggests that a multidisciplinary intensive outpatient rehabilitation program for Parkinson's disease might exert biological effects by modulating plasma neurofilaments and myokines. This opens new biomarker research avenues for exercise in neurodegenerative diseases but does not yet directly inform clinical protocol adjustments.",
-      "limitation": "这是一项探索性分析，其结果需要更大型的随机对照试验来验证。",
-      "limitationEn": "This is an exploratory analysis, and its results require validation in larger randomized controlled trials.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of NeuroEngineering and Rehabilitation"
     }
   ]
 }
