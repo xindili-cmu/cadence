@@ -1,0 +1,305 @@
+{
+ "date": "2026-08-27",
+ "generatedAt": "2026-08-27T00:57:28.392Z",
+ "windowHours": 26,
+ "windowStart": "2026-08-25T22:56:26.721Z",
+ "windowEnd": "2026-08-27T00:56:26.721Z",
+ "lead": {
+  "titleZh": "Medicare新收费标准解读，关注卒中后痉挛治疗进展",
+  "titleEn": "Medicare Fee Schedule Update and Stroke Spasticity Treatment Advances",
+  "paragraphZh": "今日要闻聚焦行业与神经康复两大领域：最高分条目（90分）分析了2027年Medicare拟议收费标准对物理治疗师的潜在影响。另有关于卒中后上肢痉挛的系统综述（85分）和RCT（80分），提示了局部肌肉振动疗法及激光/冲击波疗法的应用前景。",
+  "paragraphEn": "Today's news highlights the industry and neurorehabilitation sectors. The top-scoring item (90 points) analyzes the implications of the proposed 2027 Medicare fee schedule for physical therapists. Additionally, a systematic review (85 points) and an RCT (80 points) on upper limb spasticity post-stroke suggest potential applications for focal muscle vibration therapy and laser/shockwave therapy."
+ },
+ "stats": {
+  "events": 12,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 90
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1787792175933-17",
+     "title": "Acute effects of squat and core exercises using elastic bands on post-activation performance enhancement in tennis players: control, randomized, crossover trials",
+     "summary": "This randomized, crossover trial investigated the acute effects of squat and core exercises using elastic bands on post-activation performance enhancement (PAPE) in tennis players, finding beneficial outcomes.",
+     "category": "orthopedic",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02008-w",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-27T00:56:15.933Z",
+     "curatedScore": 75,
+     "curatedReason": "本研究提示，对于网球运动员，使用弹力带的深蹲和核心训练可以提高赛后激活表现。这意味着你可以在缺乏重阻力器械时，考虑将弹力带训练作为一种有效的赛前热身或训练方案。",
+     "titleZh": "弹力带深蹲和核心训练对网球运动员赛后激活表现的急性影响：随机交叉对照试验",
+     "summaryZh": "这项随机交叉对照试验研究了使用弹力带进行深蹲和核心练习对网球运动员赛后激活表现（PAPE）的急性影响，发现有益结果。",
+     "curatedReasonEn": "This study suggests that squat and core exercises using elastic bands can enhance post-activation performance in tennis players. This implies you can consider elastic band training as an effective pre-match warm-up or training alternative when heavy resistance equipment is unavailable.",
+     "limitation": "研究未明确提供具体的样本量和效果量数据，可能影响结果的精确解读。",
+     "limitationEn": "The study did not explicitly provide specific sample size and effect size data, which may affect the precise interpretation of the results.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1787759899919-0",
+     "title": "Physical therapists as first-contact providers for musculoskeletal disorders: comparing beliefs across chiropractors, nurse practitioners, Physical therapists, and physician assistants.",
+     "summary": "A cross-sectional survey compared beliefs among chiropractors, nurse practitioners, physical therapists, and physician assistants regarding their capabilities, education, and scope of practice for first-contact care of musculoskeletal disorders.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42644384/",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T15:58:19.919Z",
+     "curatedScore": 75,
+     "curatedReason": "理解其他初级接触提供者（FCPs）对物理治疗师（PTs）在肌肉骨骼疾病（MSKDs）一线治疗中能力的看法，有助于识别并克服将 PTs 整合到 FCP 角色中的障碍。",
+     "titleZh": "物理治疗师作为肌肉骨骼疾病初级接触提供者：比较脊椎按摩师、执业护士、物理治疗师和医师助理的信念",
+     "summaryZh": "一项横断面调查比较了脊椎按摩师、执业护士、物理治疗师和医师助理对各自在肌肉骨骼疾病初级接触护理中的能力、教育准备和执业范围的看法。",
+     "curatedReasonEn": "Understanding other first-contact providers' (FCPs) beliefs about physical therapists' (PTs) capabilities in MSKD first-contact care helps identify and overcome barriers to integrating PTs into FCP roles.",
+     "limitation": "本研究为横断面调查，仅反映了特定时间点的信念差异，无法评估因果关系或态度的长期变化。",
+     "limitationEn": "This cross-sectional survey reflects beliefs at a specific point, thus cannot assess causality or long-term attitude changes.",
+     "tags": [
+      "research",
+      "workforce"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "The Journal of manual & manipulative therapy"
+    },
+    {
+     "id": "news-1787720395200-0",
+     "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
+     "summary": "A mixed-methods study with 121 Danish primary care physiotherapists found common use of basic eHealth tools like email and telephone, while more advanced technologies were rarely adopted, identifying perceived barriers and facilitators.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42641170/",
+     "publishedAt": "2026-08-25T00:00:00.000Z",
+     "firstSeen": "2026-08-26T04:59:55.200Z",
+     "curatedScore": 75,
+     "curatedReason": "丹麦初级物理治疗师普遍使用电子邮件和电话等基础eHealth工具，但对更复杂的工具接受度不高。这提示，在推动eHealth工具应用时，我们应更关注用户体验和实际障碍，而非一味推广技术。",
+     "titleZh": "初级物理治疗中电子健康（eHealth）的使用：一项混合方法研究",
+     "summaryZh": "一项对 121 名丹麦初级物理治疗师进行的混合方法研究发现，邮件和电话等基础电子健康工具被普遍使用，但更先进的技术应用较少，研究识别了其应用障碍和促进因素。",
+     "curatedReasonEn": "Danish primary care physiotherapists commonly use basic eHealth tools like email and telephone, yet advanced technologies see limited adoption. This suggests that future eHealth implementation strategies should focus on user experience and identified barriers, rather than just technology promotion.",
+     "limitation": "研究对象仅限丹麦初级物理治疗师，且为混合方法，样本量相对较小，结果外推性有限。",
+     "limitationEn": "The study included only Danish primary care physiotherapists with a mixed-methods design and a relatively small sample size, limiting generalizability.",
+     "tags": [
+      "research",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1787750866353-16",
+     "title": "Focal Muscle Vibration for Upper Limb Spasticity After Stroke: A Systematic Review and Meta-Analysis",
+     "summary": "A systematic review and meta-analysis found that focal muscle vibration (FMV) is effective in reducing post-stroke upper limb spasticity, with effects potentially moderated by frequency, amplitude, and target joint.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00888-9/fulltext?rss=yes",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T13:27:46.353Z",
+     "curatedScore": 85,
+     "curatedReason": "局部肌肉振动（FMV）对卒中后上肢痉挛有效，尤其在特定频率和振幅下。在你的神经康复实践中，可以考虑将 FMV 作为减轻痉挛的辅助手段，尤其是在物理治疗或职业治疗前，以改善功能。",
+     "titleZh": "卒中后上肢痉挛的局部肌肉振动：系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析发现，局部肌肉振动（FMV）能有效减轻卒中后上肢痉挛，其效果可能受振动频率、振幅和目标关节的影响。",
+     "curatedReasonEn": "Focal muscle vibration (FMV) is effective for post-stroke upper limb spasticity, particularly at specific frequencies and amplitudes. Consider incorporating FMV as an adjunct to reduce spasticity in your neurological rehabilitation practice, especially prior to physical or occupational therapy, to improve function.",
+     "limitation": "原始研究存在异质性，可能限制了合并效应量的普遍性，且未明确报告最优振动参数的详细临床操作指南。",
+     "limitationEn": "The included studies exhibited heterogeneity, potentially limiting the generalizability of pooled effect sizes, and specific clinical guidelines for optimal vibration parameters were not explicitly reported.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1787759899920-1",
+     "title": "Comparison of high-intensity laser therapy and extracorporeal shock wave therapy for the treatment of plantar flexor spasticity in post-stroke patients.",
+     "summary": "A randomized controlled trial with 42 stroke patients compared high-intensity laser therapy (HILT) and radial extracorporeal shock wave therapy (rESWT) as adjunctive treatments for plantar flexor spasticity, with both groups showing greater improvements than rehabilitation alone.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42644431/",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T15:58:19.920Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究提供了冲击波疗法和高强度激光疗法在卒中后足跖屈肌痉挛治疗中的比较证据。在临床实践中，可以根据患者具体情况和设备可及性，考虑将这两种疗法作为康复的辅助手段。",
+     "titleZh": "比较高强度激光疗法与体外冲击波疗法在卒中后足跖屈肌痉挛治疗中的效果",
+     "summaryZh": "一项对 42 名卒中患者进行的随机对照试验比较了高强度激光疗法和体外冲击波疗法作为足跖屈肌痉挛的辅助治疗，结果显示两者均优于单独康复治疗。",
+     "curatedReasonEn": "This study offers comparative evidence for shockwave and high-intensity laser therapies in post-stroke plantar flexor spasticity. In clinical practice, consider these modalities as adjuncts based on patient needs and equipment availability.",
+     "limitation": "研究样本量为 42 名患者，结果可能需要在大规模试验中进一步验证，且随访时间有限，无法评估长期效果。",
+     "limitationEn": "With a sample size of 42 patients, results may require validation in larger trials, and limited follow-up prevents long-term effect evaluation.",
+     "tags": [
+      "research",
+      "stroke",
+      "electro"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Topics in stroke rehabilitation"
+    },
+    {
+     "id": "news-1787741691629-17",
+     "title": "Prestroke Rehabilitation Reserve and Mobility and Self-Care Outcomes After Incident Stroke Across Four International Aging Cohorts",
+     "summary": "This study examined the association between lower multidimensional prestroke rehabilitation reserve and adverse mobility/self-care status after incident stroke across four international aging cohorts.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00889-0/fulltext?rss=yes",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T10:54:51.629Z",
+     "curatedScore": 80,
+     "curatedReason": "这项观察性研究提示，卒中前的康复储备（prestroke rehabilitation reserve）较低可能与卒中后较差的移动和自我照护能力相关。这进一步强化了卒中前识别和改善患者康复储备的重要性，为你早期干预和预后管理提供了新视角。",
+     "titleZh": "四项国际老年队列研究显示卒中前康复储备与卒中后移动和自我照护结局的关系",
+     "summaryZh": "一项多国老年队列研究旨在探究多维度卒中前康复储备较低是否与卒中后的不良移动和自我照护状态相关联。",
+     "curatedReasonEn": "This observational study suggests that lower prestroke rehabilitation reserve may be associated with worse mobility and self-care outcomes after incident stroke. This reinforces the importance of identifying and improving patients' rehabilitation reserve before stroke, offering a new perspective for early intervention and prognostic management.",
+     "limitation": "这是一项观察性研究，不能确立因果关系。",
+     "limitationEn": "This is an observational study and cannot establish causality.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1787741691627-0",
+     "title": "Functional Electrical Stimulation and Stroke Rehabilitation Research: The Critical Role of Sham Control Groups.",
+     "summary": "This perspective piece emphasizes the critical need for robust sham control groups in functional electrical stimulation (FES) research for stroke rehabilitation to ensure valid conclusions.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42642785/",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T10:54:51.627Z",
+     "curatedScore": 75,
+     "curatedReason": "本述评强调在功能性电刺激（FES）卒中康复研究中，严格的安慰剂对照组设计至关重要，以确保结果的有效性。在评估新的FES干预方案时，你需要审慎考察其对照组的设置，确保其能有效隔离非特异性效应。",
+     "titleZh": "功能性电刺激与卒中康复研究：安慰剂对照组的关键作用",
+     "summaryZh": "这篇述评强调，在卒中康复的功能性电刺激（FES）研究中，设计严格的安慰剂对照组对于确保研究结论的有效性至关重要。",
+     "curatedReasonEn": "This commentary highlights the critical role of rigorous sham control groups in functional electrical stimulation (FES) stroke rehabilitation research to ensure result validity. When evaluating new FES interventions, scrutinize the design of their control groups to ensure non-specific effects are effectively isolated.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "述评",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+     "id": "news-1787767690900-17",
+     "title": "Predicting gait patterns from actionable impairments in Duchenne muscular dystrophy: A Machine Learning and Explainable Artificial Intelligence study",
+     "summary": "A machine learning study used actionable impairments to classify gait patterns in children with Duchenne muscular dystrophy (DMD), aiming to improve clinical decision-making by explaining how these impairments contribute to distinct gait patterns.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361175v1?rss=1",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T18:08:10.900Z",
+     "curatedScore": 70,
+     "curatedReason": "对于DMD患儿，这项机器学习研究提示我们可以更早地识别出与特定步态模式相关的“可干预性缺陷”。虽然仍是观察性研究，但它可能为优化康复方案提供新的思路，指导你重点关注哪些步态特征。",
+     "titleZh": "通过杜氏肌营养不良症（DMD）的可干预缺陷预测步态模式：一项机器学习与可解释人工智能研究",
+     "summaryZh": "一项机器学习研究利用可干预缺陷对杜氏肌营养不良症（DMD）儿童的步态模式进行分类，旨在通过解释这些缺陷如何导致不同步态模式来改进临床决策。",
+     "curatedReasonEn": "Predicting gait patterns in children with Duchenne muscular dystrophy (DMD) using machine learning can aid clinical decision-making. This model helps you identify gait changes associated with actionable impairments earlier, optimizing rehabilitation plans.",
+     "limitation": "本研究为回顾性研究，可能存在数据收集偏倚，且模型结果的临床实用性和对患者结局的影响尚需前瞻性验证。",
+     "limitationEn": "This retrospective study may be subject to data collection bias, and the clinical utility and impact of the model's predictions on patient outcomes require prospective validation.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    },
+    {
+     "id": "news-1787767690900-18",
+     "title": "A multimodal protocol for assessing real-world monitoring of lower-limb prosthesis use",
+     "summary": "A multimodal protocol is described for assessing real-world lower-limb prosthesis use, integrating wearable and ambient sensing to capture functional performance, physiological effort, and lived experience beyond traditional outcome measures.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.21.26360982v1?rss=1",
+     "publishedAt": "2026-08-26T00:00:00.000Z",
+     "firstSeen": "2026-08-26T18:08:10.900Z",
+     "curatedScore": 70,
+     "curatedReason": "该多模态协议的提出，意味着我们现在有工具能更全面地评估截肢者在真实世界中假肢的使用情况，而非仅限于实验室或自我报告。你应当开始思考如何将可穿戴和环境传感技术整合到日常评估中，以获得更真实的患者功能表现和生理负荷数据。",
+     "titleZh": "一种评估下肢假肢真实世界使用情况的多模态监测协议",
+     "summaryZh": "本协议描述了一种评估下肢假肢真实世界使用情况的多模态方法，整合了可穿戴和环境传感技术，以超越传统评估手段，捕捉功能表现、生理负荷和生活体验。",
+     "curatedReasonEn": "The introduction of this multimodal protocol means we now have tools to more comprehensively assess real-world prosthesis use in amputees, beyond just lab settings or self-reports. You should start considering how to integrate wearable and ambient sensing technologies into your routine assessments to capture more authentic patient functional performance and physiological effort data.",
+     "limitation": "本研究为协议描述，尚未报告实际数据和结果，因此其在真实临床实践中的有效性和可行性尚待验证。",
+     "limitationEn": "This study describes a protocol and has not yet reported actual data and results, so its effectiveness and feasibility in real clinical practice remain to be validated.",
+     "tags": [
+      "research",
+      "brain-injury"
+     ],
+     "studyDesign": "综述",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1787709804683-19",
+     "title": "Understanding how demographic characteristics impact the level of physical activity children with neuromotor impairments experience while using a robot-assisted walker",
+     "summary": "This prospective study aims to examine how robot-assisted walkers' physical parameters and user characteristics moderate the exercise intensity achieved by individuals with pediatric-onset neuromotor disorders causing mobility impairments.",
+     "category": "pediatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.21.26361070v1?rss=1",
+     "publishedAt": "2026-08-25T00:00:00.000Z",
+     "firstSeen": "2026-08-26T02:03:24.683Z",
+     "curatedScore": 70,
+     "curatedReason": "理解人口学特征如何影响机器人辅助步行对儿童的运动强度，有助于你为患有神经运动障碍的儿童患者更精准地定制康复方案和优化机器人辅助设备的使用。",
+     "titleZh": "了解人口学特征如何影响神经运动障碍儿童使用机器人辅助步行器的体力活动水平",
+     "summaryZh": "这项前瞻性研究旨在探讨机器人辅助步行器的物理参数和用户特征如何调节患有儿童期神经运动障碍导致行动不便的个体所达到的运动强度。",
+     "curatedReasonEn": "Understanding how demographic characteristics impact the level of physical activity children experience with robot-assisted walkers can help you more precisely tailor rehabilitation programs and optimize the use of robotic assistive devices for pediatric patients with neuromotor impairments.",
+     "limitation": "本研究为前瞻性单次干预，可能无法反映长期使用效果，且样本量较小。",
+     "limitationEn": "This is a prospective, single-session intervention study, which may not reflect long-term effects and has a small sample size.",
+     "tags": [
+      "research",
+      "assistive-technology",
+      "gait-training"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1787792175934-20",
+     "title": "Advancing Payment: What the Proposed 2027 Medicare Fee Schedule Means for PTs",
+     "summary": "APTA has released an analysis of the proposed 2027 Medicare Physician Fee Schedule, highlighting key provisions affecting physical therapists' payment and practice, with a call for member comments by Sept. 14.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/apta-and-you/news-publications/podcasts/2026/advancing-payment-what-the-proposed-2027-medicare-fee-schedule-means-for-pts",
+     "publishedAt": "2026-08-25T04:00:00.000Z",
+     "firstSeen": "2026-08-27T00:56:15.934Z",
+     "curatedScore": 90,
+     "curatedReason": "APTA发布了关于2027年Medicare医师收费标准拟议规则的分析，直接关系到你在美国的报销和执业模式。务必利用9月14日前的窗口期，向CMS提交你的反馈意见，影响最终政策制定。",
+     "titleZh": "推进支付：2027年Medicare收费标准拟议对物理治疗师的意义",
+     "summaryZh": "APTA发布了对2027年Medicare医师收费标准拟议规则的分析，强调了影响物理治疗师支付和执业的关键条款，并呼吁会员在9月14日前提交意见。",
+     "curatedReasonEn": "APTA has released an analysis on the proposed 2027 Medicare Physician Fee Schedule, directly impacting your reimbursement and practice model in the U.S. Ensure you submit your feedback to CMS before the September 14 deadline to influence final policy-making.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "regulation"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "Screening sham mirror-therapy materials using fNIRS: protocol for an acute within-participant randomised crossover mechanistic study",
+   "titleZh": "使用fNIRS筛选假性镜像疗法材料：一项急性自身对照随机交叉机制研究的方案",
+   "source": "medRxiv",
+   "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.23.26361088v1?rss=1",
+   "publishedAt": "2026-08-25T00:00:00.000Z",
+   "journal": null
+  }
+ ]
+}
