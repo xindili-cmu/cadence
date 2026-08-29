@@ -21,6 +21,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 const { callAnthropic, callGemini, LLM_PROVIDER } = require('./news-refresh.js');
 
@@ -136,8 +137,13 @@ function parseLeadJson(raw) {
 const LEAD_FRESH_DAYS = 30;
 function leadPool(sections, refMs) {
   const all = sections.flatMap(s => s.items);
-  const fresh = all.filter(i => !i.publishedAt || (refMs - Date.parse(i.publishedAt)) <= LEAD_FRESH_DAYS * 86400000);
-  return fresh.length ? fresh : all;
+  // Intel (news/policy) never headlines — its score is internal triage, not
+  // SIGNAL (lane split 2026-08-29, scripts/lane.js). An evidence-empty day
+  // falls back to the full pool so an edition always gets a lead.
+  const evidence = all.filter(isEvidence);
+  const pool = evidence.length ? evidence : all;
+  const fresh = pool.filter(i => !i.publishedAt || (refMs - Date.parse(i.publishedAt)) <= LEAD_FRESH_DAYS * 86400000);
+  return fresh.length ? fresh : pool;
 }
 
 async function generateLead(dateStr, sections, stats, refMs = Date.now()) {

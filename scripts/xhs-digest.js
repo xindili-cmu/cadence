@@ -27,6 +27,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 
 // CADENCE_ROOT override lets the script run from outside the repo (e.g. a
@@ -100,6 +101,9 @@ function loadPool() {
 }
 
 function pickStories(pool, dateStr) {
+  // Evidence lane only (lane split 2026-08-29, scripts/lane.js) — the digest
+  // sells 高分文献, and intel (news/policy) scores are not SIGNAL.
+  pool = pool.filter(isEvidence);
   const onDay = (d) => pool.filter((i) => (i.publishedAt || '').slice(0, 10) === d);
   let picked = onDay(dateStr);
   let spansTwoDays = false;

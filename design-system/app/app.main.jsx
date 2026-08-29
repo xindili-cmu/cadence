@@ -833,8 +833,8 @@ function AboutView({ onView, mobile }) {
             {tt('评分方法与局限', 'How scoring works — and its limits')}
           </div>
           <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
-            {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。评估结果落在三个档位：85+ 强信号 · 75–84 值得关注 · 65–74 参考——档位是结论，数字只是档内的粗略位置，并非百分制精度。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。',
-              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out.')}
+            {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。评估结果落在三个档位：85+ 强信号 · 75–84 值得关注 · 65–74 参考——档位是结论，数字只是档内的粗略位置，并非百分制精度。SIGNAL 只评研究与指南：行业新闻与政策类不打分，单列在「行业动态」栏。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。',
+              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. SIGNAL rates research and guidelines only: industry news and policy items are not scored and sit in their own “Industry & policy” strip. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out.')}
           </p>
           <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('两点局限请知悉：评分基于摘要而非全文，研究细节与局限以原文为准；分数不是研究质量认证，也不构成临床建议——请结合你的临床判断与患者的具体情况使用。',
@@ -1505,15 +1505,20 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   // can't be "read this one". Fallback chain never leaves the lead empty.
   const edMs = Date.parse(edition.date + 'T23:59:59Z') || Date.now();
   const isFresh = (s) => !s.publishedAt || (edMs - Date.parse(s.publishedAt)) <= 30 * 86400000;
-  const leadRaw = ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign) && isFresh(s))
-    || ranked.find((s) => isFresh(s))
-    || ranked.find((s) => !window.cdIsNonEvidence(s.studyDesign))
+  // + lane guard (2026-08-29): intel (news/policy) can never headline or hold a
+  // scored tier-2 slot — its score is internal triage, not SIGNAL. The 8-11
+  // freshness patch caught one stale policy lead; lane closes the class.
+  const isEv = (s) => s.lane !== 'intel';
+  const leadRaw = ranked.find((s) => isEv(s) && !window.cdIsNonEvidence(s.studyDesign) && isFresh(s))
+    || ranked.find((s) => isEv(s) && isFresh(s))
+    || ranked.find((s) => isEv(s) && !window.cdIsNonEvidence(s.studyDesign))
+    || ranked.find(isEv)
     || ranked[0] || null;
   const leadStory = leadRaw ? L(leadRaw) : null;
   const rest = ranked.filter((s) => s !== leadRaw);
-  const tier2 = rest.filter((s) => s.score >= 75).map(L);
-  const tier3 = rest.filter((s) => s.score < 75).map(L);
-  const top3 = (leadRaw ? [leadRaw, ...rest] : rest).slice(0, 3).map(L);
+  const tier2 = rest.filter((s) => isEv(s) && s.score >= 75).map(L);
+  const tier3 = rest.filter((s) => !isEv(s) || s.score < 75).map(L);
+  const top3 = (leadRaw ? [leadRaw, ...rest] : rest).filter(isEv).slice(0, 3).map(L);
   const [mm, dd] = edition.date.slice(5).split('-');
   const dShort = `${+mm}.${+dd}`;
 
@@ -1529,7 +1534,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
   const kicker = { fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, letterSpacing: '0.09em', textTransform: 'uppercase' };
   const srcLine = (s) => (
     <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginTop: 8 }}>
-      {s.wallSource || s.source} · {t('signalScore')} {s.score} · <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
+      {s.wallSource || s.source}{s.lane === 'intel' ? '' : ` · ${t('signalScore')} ${s.score}`} · <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)' }}>{t('readOriginal')} ↗</a>
     </div>
   );
 
@@ -1588,7 +1593,8 @@ function DailyBriefView({ L, date, onDate, mobile }) {
             {tier3.map((s) => (
               <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer"
                 style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px', background: '#FFFFFF', border: '1px solid #ECE9DF', borderRadius: 10, textDecoration: 'none', color: 'inherit' }}>
-                <span style={{ flexShrink: 0, width: 28, fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</span>
+                <span style={{ flexShrink: 0, width: 28, fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 600, color: s.lane === 'intel' ? 'var(--text-tertiary)' : dailyScoreColor(s.score) }}
+                  title={s.lane === 'intel' ? (zh ? '行业动态，不打分' : 'Industry item — not scored') : undefined}>{s.lane === 'intel' ? '—' : s.score}</span>
                 <span title={dailyCatLabel(s.category)} style={{ flexShrink: 0, width: 7, height: 7, borderRadius: 2, background: dailyCardColor(s.category) }} />
                 <span style={{ flex: 1, minWidth: 0, fontSize: 14.5, lineHeight: 1.5, color: '#262A30', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{s.title}</span>
               </a>
@@ -1825,7 +1831,11 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
         {/* header row: category + score · close */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
           {s && <CategoryTag category={story.category} size="sm" />}
-          {s && <SignalScore score={story.score} size="sm" lang={window.CD_LANG} />}
+          {/* Intel (news/policy) shows a lane chip instead of a score — its
+              score is internal triage, not SIGNAL (lane split, 2026-08-29). */}
+          {s && (story.lane === 'intel'
+            ? <span title={t('intel.note')} style={{ padding: '2px 8px', borderRadius: 'var(--radius-pill)', fontFamily: 'var(--font-sans)', fontSize: 11.5, fontWeight: 500, background: 'var(--surface-page)', border: '1px dashed var(--ink-300)', color: 'var(--text-tertiary)', whiteSpace: 'nowrap', cursor: 'default' }}>{t('intel.chip')}</span>
+            : <SignalScore score={story.score} size="sm" lang={window.CD_LANG} />)}
           <span style={{ flex: 1 }} />
           <button type="button" onClick={onClose} aria-label="Close"
             style={{ display: 'inline-flex', padding: 6, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-tertiary)' }}>
@@ -2113,7 +2123,9 @@ function FeedApp() {
     if (xcut) { if (!s[xcut.flag]) return false; }
     else if (category !== 'all' && s.category !== category) return false;
     // Signal-score floor (opt-in, ?min=80) — only items at/above the threshold.
-    if (minScore && s.score < minScore) return false;
+    // Intel (news/policy) is exempt: its score is internal triage, not SIGNAL,
+    // so a signal floor has nothing to say about it (lane split, 2026-08-29).
+    if (minScore && s.lane !== 'intel' && s.score < minScore) return false;
     // Search across both languages regardless of display language.
     if (q && !(`${s.title} ${s.titleZh || ''} ${s.titleEn || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
     return true;
@@ -2162,12 +2174,26 @@ function FeedApp() {
     ((b.id || '').localeCompare(a.id || ''));
   const activeSort = sortBy === 'recent' ? byRecent : bySignal;
 
+  // Lane split (2026-08-29): the score sort only ever compares evidence.
+  // Intel (news/policy, see cdLaneOf) renders in its own "Industry & policy"
+  // strip after each group's research, sorted by recency — mixing lanes let a
+  // 90-scored regulator story outrank every RCT on the Curated first screen.
+  // Exception: when the reader explicitly opens the News or Policy type tab,
+  // the whole view IS intel — no strip, plain recency list.
+  const intelView = ctype === 'news' || ctype === 'policy';
+  const laneMain = (s) => intelView || s.lane !== 'intel';
+  const mainListSort = intelView ? byRecent : activeSort;
+
   // Curated / All grouping = by day (today / yesterday / older).
   const dayBuckets = ['today', 'yesterday', 'older'];
   const groupedByDay = dayBuckets
-    .map((d) => ({ key: d, label: DAY_LABELS[d],
-      items: stories.filter((s) => s.day === d).sort(activeSort) }))
-    .filter((g) => g.items.length);
+    .map((d) => {
+      const dayStories = stories.filter((s) => s.day === d);
+      return { key: d, label: DAY_LABELS[d],
+        items: dayStories.filter(laneMain).sort(mainListSort),
+        intel: intelView ? [] : dayStories.filter((s) => s.lane === 'intel').sort(byRecent) };
+    })
+    .filter((g) => g.items.length || g.intel.length);
 
   // All view spans weeks of archive — today/yesterday/older would dump nearly
   // everything into one "older" heap. Group by calendar date instead (aihot
@@ -2197,7 +2223,8 @@ function FeedApp() {
         label: k === '0000-00-00'
           ? t('unknownDate')
           : new Date(k + 'T12:00:00Z').toLocaleDateString(locale, { weekday: 'long', month: 'short', day: 'numeric' }),
-        items: items.sort(activeSort),
+        items: items.filter(laneMain).sort(mainListSort),
+        intel: intelView ? [] : items.filter((s) => s.lane === 'intel').sort(byRecent),
       }));
   })();
 
@@ -2209,16 +2236,18 @@ function FeedApp() {
 
   // Lead story = first item of the first group under the active sort, Curated
   // only (highest signal, or most recently ingested when sorted by recent).
-  const leadId = (!compact && !isDaily && grouped.length && grouped[0].items.length)
+  // Never an intel item — "lead" is a signal claim (lane split, 2026-08-29).
+  const leadId = (!compact && !isDaily && !intelView && grouped.length && grouped[0].items.length)
     ? [...grouped[0].items].sort(activeSort)[0].id : null;
 
   // Rail day: Daily-brief view pins yesterday; other views prefer today but
   // fall back to yesterday when today is still empty (e.g. before the 15:00
   // Beijing crawl) so the rail never renders a hollow box. Computed here so
   // desktop DigestRail and MobileSignalCard share one source of truth.
-  const todayRail = window.CD_STORIES.filter((s) => s.day === 'today');
+  // Rail = "signal" surface → evidence lane only (intel has no signal to rank).
+  const todayRail = window.CD_STORIES.filter((s) => s.day === 'today' && s.lane !== 'intel');
   const railDay = (isDaily || !todayRail.length) ? 'yesterday' : 'today';
-  const railStories = (railDay === 'today' ? todayRail : window.CD_STORIES.filter((s) => s.day === 'yesterday')).map(L);
+  const railStories = (railDay === 'today' ? todayRail : window.CD_STORIES.filter((s) => s.day === 'yesterday' && s.lane !== 'intel')).map(L);
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--surface-page)' }}>
@@ -2370,37 +2399,58 @@ function FeedApp() {
             </div>
           )}
 
-          {!isSources && !isFeedback && !isDaily && !isAbout && visibleGroups.map((g) => (
+          {!isSources && !isFeedback && !isDaily && !isAbout && visibleGroups.map((g) => {
+            const nAll = g.items.length + (g.intel || []).length;
+            // Shared card renderer — main list and intel strip render the same
+            // card; `lane` makes NewsCard swap the SIGNAL badge for an Intel chip.
+            const renderStory = (raw) => {
+              // Render localized copy (title/summary/why per active language).
+              const s = L(raw);
+              return (
+                <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
+                  {/* source = wallSource: journal-attributed name (PubMed-pipeline items
+                      show their journal, e.g. IJSPT, not the pipeline); raw source as fallback */}
+                  <NewsCard
+                    variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
+                    mobile={stacked} lane={s.lane}
+                    category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
+                    journalMeta={s.journalMeta} studyDesign={s.studyDesign} tech={s.tech} surfaced={s.surfaced}
+                    title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
+                    permalink={cdItemUrl(s.id)}
+                    selected={selected === s.id}
+                    onClick={() => setSelected(selected === s.id ? null : s.id)} />
+                  {!compact && <RelatedRow related={s.related} />}
+                </div>
+              );
+            };
+            return (
             <section key={g.key} style={{ marginBottom: 26 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 14px' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>{g.label}</span>
                 <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{g.items.length} {t(g.items.length === 1 ? 'storyOne' : 'storyMany')}</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>{nAll} {t(nAll === 1 ? 'storyOne' : 'storyMany')}</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                {g.items.map((raw) => {
-                  // Render localized copy (title/summary/why per active language).
-                  const s = L(raw);
-                  return (
-                    <div key={s.id} id={`gs-card-${s.id}`} style={{ scrollMarginTop: 'calc(var(--header-height) + 16px)' }}>
-                      {/* source = wallSource: journal-attributed name (PubMed-pipeline items
-                          show their journal, e.g. IJSPT, not the pipeline); raw source as fallback */}
-                      <NewsCard
-                        variant={s.id === leadId ? 'lead' : (compact ? 'compact' : 'default')}
-                        mobile={stacked}
-                        category={s.category} score={s.score} source={s.wallSource || s.source} sourceUrl={s.sourceUrl} time={s.time} date={s.date}
-                        journalMeta={s.journalMeta} studyDesign={s.studyDesign} tech={s.tech} surfaced={s.surfaced}
-                        title={s.title} summary={s.summary} whyItMatters={s.why} limitation={s.limitation}
-                        permalink={cdItemUrl(s.id)}
-                        selected={selected === s.id}
-                        onClick={() => setSelected(selected === s.id ? null : s.id)} />
-                      {!compact && <RelatedRow related={s.related} />}
-                    </div>
-                  );
-                })}
+                {g.items.map(renderStory)}
               </div>
+              {/* Industry & policy strip — intel lane, recency order, no scores
+                  (lane split, 2026-08-29). Hidden when the type tab already
+                  narrows the view to news/policy. */}
+              {(g.intel || []).length > 0 && (
+                <div style={{ marginTop: 16 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '0 0 12px' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{t('intel.section')}</span>
+                    <span title={t('intel.note')} style={{ cursor: 'default', fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>ⓘ</span>
+                    <span style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                    {g.intel.map(renderStory)}
+                  </div>
+                </div>
+              )}
             </section>
-          ))}
+            );
+          })}
 
           {/* Load more — only in All view when there are more date-groups to show */}
           {!isSources && !isFeedback && !isDaily && !isAbout && hasMoreDays && !archiveLoading && (

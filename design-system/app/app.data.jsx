@@ -47,8 +47,9 @@ window.CD_DICT = {
     'fb.error': 'Could not send — please try again.', 'fb.again': 'Send another',
     searchPlaceholder: 'Search studies, journals, topics…',
     'sort.by': 'Sort', 'sort.signal': 'Signal score', 'sort.recent': 'Most recent',
-    signalScore: 'Signal score', 'signalScore.help': 'SIGNAL — an AI-rated evidence-strength tier, weighing study design, sample size, effect size and journal impact. Scored from the title and abstract, not the full text. 85+ strong signal · 75–84 worth knowing · 65–74 for reference. It measures evidential strength, not news heat — and it is not a clinical recommendation.',
+    signalScore: 'Signal score', 'signalScore.help': 'SIGNAL — an AI-rated evidence-strength tier, weighing study design, sample size, effect size and journal impact. Scored from the title and abstract, not the full text. 85+ strong signal · 75–84 worth knowing · 65–74 for reference. It measures evidential strength, not news heat — and it is not a clinical recommendation. Industry news and policy items are not scored: they sit in their own strip below the research.',
     ifTip: 'Journal impact factor',
+    'intel.section': 'Industry & policy', 'intel.note': 'Not scored — SIGNAL rates research evidence only', 'intel.chip': 'Intel',
     hotNow: 'Active themes', hotSub: 'Research themes several recent papers converge on', themeHeat: 'Theme', nOutlets: 'journals',
     alsoCovered: 'Also covered by',
     whyMatters: 'Why it matters', readOriginal: 'Read original',
@@ -143,8 +144,9 @@ window.CD_DICT = {
     'fb.error': '发送失败——请再试一次。', 'fb.again': '再发一条',
     searchPlaceholder: '搜索文献、期刊、主题…',
     'sort.by': '排序', 'sort.signal': '信号分', 'sort.recent': '最新收录',
-    signalScore: '信号分', 'signalScore.help': 'SIGNAL 是 AI 评估的证据强度档位，综合研究设计、样本量、效应量与期刊影响力。基于标题与摘要评出，未读全文。85+ 强信号 · 75–84 值得关注 · 65–74 参考。衡量的是证据强度，不是新闻热度，也不构成临床建议。',
+    signalScore: '信号分', 'signalScore.help': 'SIGNAL 是 AI 评估的证据强度档位，综合研究设计、样本量、效应量与期刊影响力。基于标题与摘要评出，未读全文。85+ 强信号 · 75–84 值得关注 · 65–74 参考。衡量的是证据强度，不是新闻热度，也不构成临床建议。行业新闻与政策类不打分，单列在研究之后的「行业动态」栏。',
     ifTip: '期刊影响因子',
+    'intel.section': '行业动态', 'intel.note': '不打分——SIGNAL 只评研究证据', 'intel.chip': '行业',
     hotNow: '活跃主题', hotSub: '近期多篇论文聚焦的研究主题', themeHeat: '主题热度', nOutlets: '刊',
     alsoCovered: '同题报道',
     whyMatters: '为什么重要', readOriginal: '阅读原文',
@@ -385,6 +387,19 @@ window.CD_STUDY_EN = {
 window.cdIsNonEvidence = (studyDesign) =>
   /述评|社论|评论|研究方案|editorial|commentary|viewpoint|perspective|protocol/i.test(studyDesign || '');
 
+// Lane split (2026-08-29 audit): SIGNAL rates evidence only — About promises
+// "evidential strength, not news heat", yet news/policy items competed in the
+// same score sort (an AHPRA enforcement story scored 90 and outranked every
+// RCT; two CMS payment stories held the 90 tier). tags[0] is the pipeline's
+// content-type tag: news/policy → 'intel', everything else → 'evidence'.
+// Intel items KEEP their internal score (pipeline triage + keep/drop), but the
+// UI never ranks them against research and never shows the number.
+// Mirrored in scripts/lane.js for the brief/selection layer — keep in sync.
+window.cdLaneOf = (tags) => {
+  const t0 = (tags || [])[0];
+  return (t0 === 'news' || t0 === 'policy') ? 'intel' : 'evidence';
+};
+
 function cdTransformItem(item) {
   const _title = cdCleanTitle(item.title, item) || cdTitleFallback(item);
   return {
@@ -415,6 +430,7 @@ function cdTransformItem(item) {
     whyEn:       item.curatedReasonEn,
     limitationEn: item.limitationEn,
     tags:        item.tags || [],
+    lane:        window.cdLaneOf(item.tags), // 'evidence' | 'intel' — see cdLaneOf
     tech:        !!item.tech, // 康复科技 overlay flag (cross-cutting, see XCUTS)
     related:     item.related || [],  // other outlets covering the same story (关联讨论)
   };

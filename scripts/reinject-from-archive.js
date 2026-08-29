@@ -83,6 +83,9 @@ for (const it of archive) {
 }
 
 // Report.
+// lane 决策（L4 门禁）：此处两个分数排序是日志排版 + feed 合成（feed 本就
+// 双 lane 共存），不是打分顶位；回灌 intel 条目是合法操作，不过滤。
+const { laneOf } = require('./lane'); // eslint-disable-line no-unused-vars — 见上
 const tally = {};
 for (const p of picks) tally[(p.tags || [])[0]] = (tally[(p.tags || [])[0]] || 0) + 1;
 console.log(`\n${DRY_RUN ? 'DRY RUN — no write' : 'WRITE MODE'}`);

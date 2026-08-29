@@ -40,6 +40,9 @@ const NEWS_PATH = path.join(ROOT, 'news.json');
 const { loadCache } = require('./embed-items');
 
 // Mirrors news-refresh.js (kept local so this module is standalone).
+// lane 决策（L4 门禁）：这里的分数排序是主题内成员排位，不是读者可见的
+// 打分顶位；且 theme leg 本就 research-only（story/theme 语义），intel 无涉。
+const { laneOf } = require('./lane'); // eslint-disable-line no-unused-vars — 见上
 const byCuratedScore = (a, b) => (b.curatedScore || 0) - (a.curatedScore || 0);
 const GENERIC_TAGS = new Set(['research', 'news', 'guideline', 'policy', 'rehabilitation',
   'physical-therapy', 'pt', 'rehab', 'therapy', 'clinical']);

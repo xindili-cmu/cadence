@@ -34,6 +34,7 @@
  *   OUT       output png (default linkedin/<date>/daily-signal.png)
  */
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -295,7 +296,10 @@ function pickEdition(arg) {
   if (!files.length) throw new Error('no daily editions in ' + DAILY_DIR);
   return path.join(DAILY_DIR, files[files.length - 1]);
 }
+// Evidence lane only — the card's big Spectral score is a SIGNAL claim, and
+// intel (news/policy) has no SIGNAL (lane split 2026-08-29, scripts/lane.js).
 const topItems = (ed, n) => (ed.sections || []).flatMap(s => s.items || [])
+  .filter(isEvidence)
   .slice().sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, n);
 
 async function main() {

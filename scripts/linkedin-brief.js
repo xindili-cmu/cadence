@@ -31,6 +31,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 
 const DRY_RUN = process.env.DRY_RUN === 'true';
@@ -104,7 +105,10 @@ function capKey(i) {
   return CAP_ALIAS[raw] || raw;
 }
 function topItems(ed, n) {
+  // Evidence lane only — intel (news/policy) scores are internal triage and
+  // never compete for the scored top-N (lane split 2026-08-29, scripts/lane.js).
   const sorted = (ed.sections || []).flatMap(s => s.items || [])
+    .filter(isEvidence)
     .slice().sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0));
   const tally = new Map();
   const out = [];

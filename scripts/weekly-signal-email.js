@@ -35,6 +35,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -254,8 +255,11 @@ async function createDraftBroadcast({ subject, html }) {
     }
     return out;
   };
+  // "Strongest signals" = evidence lane only (research first, then guidelines
+  // etc.) — intel (news/policy) never fills a scored slot: its score is
+  // internal triage, not SIGNAL (lane split 2026-08-29, scripts/lane.js).
   const research = inWeek.filter((i) => (i.tags || [])[0] === 'research').sort(bySignal);
-  const rest = inWeek.filter((i) => (i.tags || [])[0] !== 'research').sort(bySignal);
+  const rest = inWeek.filter((i) => (i.tags || [])[0] !== 'research' && isEvidence(i)).sort(bySignal);
   const seenTitles = new Set();
   const picks = pickTop(research, TOP_N, seenTitles);
   if (picks.length < 3) picks.push(...pickTop(rest, TOP_N - picks.length, seenTitles));

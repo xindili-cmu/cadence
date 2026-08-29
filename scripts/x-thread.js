@@ -33,6 +33,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 
 const DRY_RUN = process.env.DRY_RUN === 'true';
@@ -127,7 +128,10 @@ function pickEdition(arg) {
 
 function topItems(edition, n) {
   const all = (edition.sections || []).flatMap(s => s.items || []);
+  // Evidence lane only — intel scores are internal triage, not SIGNAL
+  // (lane split 2026-08-29, scripts/lane.js).
   return all
+    .filter(isEvidence)
     .slice()
     .sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0))
     .slice(0, n);

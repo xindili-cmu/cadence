@@ -538,6 +538,73 @@ async function run() {
       '判别力：去掉同步行后该脚本就落进 offenders（不是恒真断言）');
   }
 
+  // ── L 段：lane split —— SIGNAL 只评证据，news/policy 永不进打分顶位 ──────────
+  // 事故（2026-08-28 审计）：rubric 90+ 档含「重大监管/报销变化」，AHPRA 执法新闻
+  // 与两条 CMS 付费新闻拿 90，压过全库所有 RCT；About 页却承诺「量证据强度，
+  // 不量新闻热度」。修复 = evidence/intel 双 lane（scripts/lane.js + cdLaneOf）。
+  {
+    console.log('\nL. lane split（intel 不进打分顶位）');
+    const { laneOf, isIntel, INTEL_SCORE_CAP } = require('./lane');
+
+    // K1 单元：分类本身。odd tags[0]（专科词开头的 11 条历史条目）落 evidence。
+    ok(laneOf({ tags: ['news'] }) === 'intel' && laneOf({ tags: ['policy'] }) === 'intel',
+      'L1: news/policy → intel');
+    ok(laneOf({ tags: ['research'] }) === 'evidence' && laneOf({ tags: ['guideline'] }) === 'evidence',
+      'L1: research/guideline → evidence');
+    ok(laneOf({ tags: [] }) === 'evidence' && laneOf({}) === 'evidence' && laneOf({ tags: ['sports'] }) === 'evidence',
+      'L1: 无 tags / 非类型 tags[0] → evidence（历史兼容）');
+
+    // K2 前后端镜像：app.data.jsx 的 cdLaneOf 必须与 scripts/lane.js 判同一对类型。
+    // 静态扫描（J 段手法）——两边真源都点名 news 与 policy，谁单方面改了就转红。
+    const appData = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'app.data.jsx'), 'utf8');
+    const cdLaneSrc = (appData.match(/cdLaneOf\s*=[\s\S]{0,300}/) || [''])[0];
+    ok(/['"]news['"]/.test(cdLaneSrc) && /['"]policy['"]/.test(cdLaneSrc),
+      'L2: 前端 cdLaneOf 与 scripts/lane.js 判定同一对类型（news+policy）');
+
+    // K3 bundle 同步：intel 徽章改在 NewsCard 真源里，bundle 是生成物——
+    // 「改了源忘了 build-bundle」正是第 7 条硬约束的静默故障形态。
+    const cardSrc = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'components', 'feed', 'NewsCard.jsx'), 'utf8');
+    const bundle = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'components.bundle.jsx'), 'utf8');
+    ok(/intelChip/.test(cardSrc) && /intelChip/.test(bundle),
+      'L3: NewsCard 的 intel 徽章已进 components.bundle（build-bundle 没漏跑）');
+
+    // K4 选稿层強制分类：任何按 curatedScore 降序排的脚本都必须 require('./lane')。
+    // 与 wiring 同一哲学——不是「必须过滤」（有的排序是合法的全池排序），而是
+    // 逼新选稿脚本的作者在出生那一刻回答「intel 进不进我的顶位」。
+    const scoreSortRe = /curatedScore(\s*\|\|\s*0)?\s*\)?\s*-\s*\(?\s*a\.curatedScore/;
+    const offenders = [];
+    let scanned = 0;
+    for (const f of fs.readdirSync(__dirname).filter((x) => x.endsWith('.js') && !x.endsWith('.test.js'))) {
+      const src = fs.readFileSync(path.join(__dirname, f), 'utf8');
+      if (!scoreSortRe.test(src)) continue;
+      scanned++;
+      if (!/require\(['"]\.\/lane['"]\)/.test(src)) offenders.push(f);
+    }
+    ok(scanned >= 5, `L4: 确实扫到了按分排序的脚本（${scanned} 个，否则这条空转）`);
+    ok(offenders.length === 0,
+      'L4: 按 curatedScore 排序的脚本都引了 ./lane' + (offenders.length ? ` —— 漏：${offenders.join(', ')}` : ''));
+    // 判别力：把 linkedin-brief 的 require 拿掉，它必须落进 offenders。
+    const probeLB = fs.readFileSync(path.join(__dirname, 'linkedin-brief.js'), 'utf8');
+    ok(scoreSortRe.test(probeLB)
+      && !/require\(['"]\.\/lane['"]\)/.test(probeLB.replace(/.*require\(['"]\.\/lane['"]\).*/g, '')),
+      'L4 判别力：去掉 require 后 linkedin-brief 即违规（非恒真）');
+
+    // K5（产物，挂 SKIP_ARTIFACT_ASSERTS）：news-refresh 的确定性封顶在生产里生效。
+    // 只管修复上线后的新条目（firstSeen ≥ CAP_SINCE）——历史分数是 pinned 的，
+    // 展示层已不再读它们，不回写（数据文件归 cron）。
+    const CAP_SINCE = '2026-08-30';
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else {
+      const feed = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8'));
+      const fresh = (feed.items || []).filter((i) => (i.firstSeen || '') >= CAP_SINCE && isIntel(i));
+      const over = fresh.filter((i) => i.curatedScore > INTEL_SCORE_CAP);
+      ok(over.length === 0,
+        `L5: ${CAP_SINCE} 起新入库的 intel 条目分数 ≤${INTEL_SCORE_CAP}（本次 ${fresh.length} 条在辖）`
+        + (over.length ? ` —— 违规：${over.map((i) => `${i.curatedScore} ${(i.title || '').slice(0, 40)}`).join(' | ')}` : ''));
+    }
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

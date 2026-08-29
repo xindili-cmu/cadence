@@ -562,6 +562,9 @@ function NewsCard({
   tech = false, // cross-cutting 康复科技 overlay (AI/VR/robotics/telerehab…)
   surfaced, // "新收录"/"New" chip — firstSeen date string when surfaced ≫ published, else ''
   permalink, // canonical on-site URL (/?item=<id>) — copy-link button + crawlable <a>
+  lane = 'evidence', // 'evidence' | 'intel' — intel (news/policy) hides the SIGNAL
+                     // badge and shows a lane chip: its score is internal triage,
+                     // not an evidence rating (lane split, 2026-08-29)
   onClick, onOpen, style, ...rest
 }) {
   const [hover, setHover] = useState(false);
@@ -596,6 +599,18 @@ function NewsCard({
   // the meta-row time is gone (2026-07-08 adversarial-review fix). The `time`
   // prop is still accepted for compatibility but no longer rendered.
   const timeEl = null;
+
+  // Intel lane chip — replaces the SIGNAL badge for news/policy items. Dashed
+  // border + tertiary ink: deliberately quieter than any scored badge.
+  const isIntel = lane === 'intel';
+  const intelChip = isIntel && (
+    <span title={t('intel.note', 'Not scored — SIGNAL rates research evidence only')} style={{
+      padding: isCompact ? '2px 7px' : '3px 9px', borderRadius: 'var(--radius-pill)',
+      fontFamily: 'var(--font-sans)', fontSize: isCompact ? 11 : 12, fontWeight: 500,
+      background: 'var(--surface-page)', border: '1px dashed var(--ink-300)',
+      color: 'var(--text-tertiary)', whiteSpace: 'nowrap', cursor: 'default',
+    }}>{t('intel.chip', 'Intel')}</span>
+  );
 
   // Evidence-tier chip (RCT / Systematic review / Editorial …). ZH pipeline
   // labels render as-is in ZH mode; EN mode maps via window.CD_STUDY_EN.
@@ -779,7 +794,7 @@ function NewsCard({
       <article {...articleProps}>
         {selectedSpine}
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
-          {typeof score === 'number' && <SignalScore score={score} variant="badge" />}
+          {isIntel ? intelChip : (typeof score === 'number' && <SignalScore score={score} variant="badge" />)}
           <CategoryTag category={category} size="md" useShort />
           {designChip}
           {techChip}
@@ -801,7 +816,7 @@ function NewsCard({
       <article {...articleProps}>
         {selectedSpine}
         <div style={{ display: 'flex', gap: 22 }}>
-          {typeof score === 'number' && (
+          {!isIntel && typeof score === 'number' && (
             <div style={{ flex: 'none', width: 116, paddingTop: 2, borderRight: '1px solid var(--border-subtle)', paddingRight: 20 }}>
               <SignalScore score={score} variant="block" />
             </div>
@@ -829,7 +844,7 @@ function NewsCard({
     <article {...articleProps}>
       {selectedSpine}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
-        {typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />}
+        {isIntel ? intelChip : (typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />)}
         <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort />
         {designChip}
         {techChip}

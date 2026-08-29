@@ -40,6 +40,7 @@ const { embedMissing } = require('./embed-items');
 const { computeHotTopicsEmbed } = require('./hot-topics-embed');
 // 已知固定错译的确定性校正（如 hamstring 的 胕绳肌→腘绳肌）。在模型 JSON 落库前跑。
 const { fixItem } = require('./term-fixes');
+const { isIntel, INTEL_SCORE_CAP } = require('./lane');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
@@ -1021,15 +1022,16 @@ tags 规则：
 - 之后：有 sub-tag axis 的分类（orthopedic / neurological / manual-modality / practice）优先放上面列出的 sub-tag slug（可多选）；其他分类 tags 自由但保持 kebab-case 英文。
 
 评分标准（信号质量为核心）：
-- 90+ = 临床实践改变级别：高水平证据更新（大样本 RCT / 系统综述推翻或确立干预）、重大监管 / 报销变化
+- 90+ = 临床实践改变级别：高水平证据更新（大样本 RCT / 系统综述推翻或确立干预、重要临床实践指南）
 - 80-89 = 重要进展，值得临床医师 deep dive
 - 70-79 = 扎实但非实践改变级的研究 / 新闻
 - 60-69 = 一般动态
 - <60 = 噪音（会议预告、产品软文、患者向科普、内容农场转载）
+- **news / policy 类另一把尺（上限 79，绝不给 80+）**：80+ 档位只属于研究证据与指南。news/policy 的分数仅用于管线内部取舍，读者不会看到——站点把它们放在不打分的「行业动态」栏。按"对 PT 执业的实际影响"评：全国性报销 / 监管规则落地 = 75-79 顶格；行业大新闻 = 70-74；一般动态 = 60-69；没有事件照旧 <60。例：CMS 年度费率最终规则 = 79；某监管机构处罚个案 = 60-65。（2026-08-29 起：此前"重大监管/报销变化"曾与高水平证据同占 90+ 档，导致执法新闻 90 分压过所有 RCT——范畴错误，勿恢复。）
 - **陈旧内容检查**：核对 url 路径和正文里的年份/试验线索。博客或聚合站转载多年前的旧研究（即使 publishedDate 显示很新）一律 <60；研究本身年代久但新闻点是"新指南/新政策引用了它"则按新闻点正常评分。blogspot / 内容农场域名默认重扣。
 - **变化事件检查（先问这一条，再给分）**：上面每一档描述的都是*变化的量级*，所以打分前先回答"这一条里到底发生了什么变化"。答不上来的一律 <60，**不管话题多重要**：常青参考页 / 索引页 / 目录页（"X - General Information"、"关于我们"、"如何申请注册"、费率总表入口）、机构导航页、注册报名页、征稿启事、产品页。**判据是"有没有发生一件事"，不是"这个话题重不重要"** —— CMS 收费标准页、医保报销规则总表、监管机构的执业须知页，话题权重全是最高的，但它们常年挂在那里、内容没变，对读者的信息增量是零。
   - 反例（真实事故，2026-08-14 上过首条）：CMS《Fee Schedules - General Information》—— 一个常年存在的费率索引入口，被打 85 分，与同月真正的《CY2027 医师收费标准拟议规则》同分。正确分数 <60。
-  - 对照：同一份收费标准，**"CY2027 拟议规则发布 / 费率下调 X%/ 生效日期"是事件**，按 90+ 或 80-89 正常给分；**"这里是所有收费标准的清单"不是事件**。
+  - 对照：同一份收费标准，**"CY2027 拟议规则发布 / 费率下调 X%/ 生效日期"是事件**，按 news/policy 尺正常给分（75-79 顶格）；**"这里是所有收费标准的清单"不是事件**。
   - 只要落进这一档，curatedReason 不要再写"这是你理解 X 的基础"、"对你的报销策略至关重要"这类话 —— 那正是在替一个没有新闻点的页面编造新闻价值。
 
 编辑标准：
@@ -1783,6 +1785,10 @@ async function main() {
     // 康复科技 cross-cutting overlay — items keep their clinical category and
     // additionally carry tech:true (filter pill / card chip / pulse row).
     if (isTech(item)) item.tech = true;
+    // Intel lane score cap (2026-08-29, see scripts/lane.js): news/policy
+    // scores are internal triage — deterministically capped below the 80+
+    // tiers so a prompt regression can never put an intel item back on top.
+    if (isIntel(item) && item.curatedScore > INTEL_SCORE_CAP) item.curatedScore = INTEL_SCORE_CAP;
     return item;
   }).filter(Boolean)
     .filter(i => {

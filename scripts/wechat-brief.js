@@ -20,6 +20,7 @@
  */
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 // callLLM routes to whichever provider news-refresh is configured for
 // (deepseek default · gemini · anthropic), so the 公众号 article uses the SAME
@@ -85,6 +86,9 @@ async function main() {
   // 仍有次高分的其他源可补位（预切会把补位候选一起切掉）。
   const recent = (data.items || [])
     .filter(i => new Date(i.publishedAt).getTime() >= cutoff)
+    // Evidence lane only — intel (news/policy) scores are internal triage,
+    // not SIGNAL (lane split 2026-08-29, scripts/lane.js).
+    .filter(isEvidence)
     .sort((a, b) => b.curatedScore - a.curatedScore);
 
   if (!recent.length) { console.log('  近 24h 无新条目，今日不发刊。'); return; }

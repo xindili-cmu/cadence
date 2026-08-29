@@ -36,6 +36,7 @@
 'use strict';
 
 const fs = require('fs');
+const { isEvidence } = require('./lane');
 const path = require('path');
 const crypto = require('crypto');
 
@@ -704,7 +705,9 @@ function render(ctx) {
   // 5) 本周最高信号
   L.push(`## 本周最高信号 Top 5`);
   L.push(``);
-  const top = [...curItems].sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, 5);
+  // 最高信号只从 evidence lane 取——intel(news/policy)分数是内部取舍用,
+  // 不是 SIGNAL(lane split 2026-08-29, scripts/lane.js)。
+  const top = [...curItems].filter(isEvidence).sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, 5);
   if (top.length) {
     for (const it of top) {
       const j = journalById.get(it.id);
