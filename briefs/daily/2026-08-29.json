@@ -1,0 +1,300 @@
+{
+ "date": "2026-08-29",
+ "generatedAt": "2026-08-29T03:13:58.820Z",
+ "windowHours": 50,
+ "windowStart": "2026-08-28T05:33:41.451Z",
+ "windowEnd": "2026-08-29T03:13:56.524Z",
+ "lead": {
+  "titleZh": "APTA 预警 2027 Medicare 拟议规则对远程治疗监测的影响",
+  "titleEn": "APTA warns on 2027 Medicare proposed rule's impact on Remote Therapeutic Monitoring",
+  "paragraphZh": "今日日报共 11 条，覆盖 5 个专科方向。最值得关注的是 APTA 对 2027 年 Medicare 拟议规则中远程治疗监测（RTM）条款的关切，其 curatedScore 高达 90 分，提示从业者需警惕未来政策变化。另有多个高质量 RCT，如骨科和肌骨方向的物理治疗师主导急诊科诊疗模式，以及神经康复领域水上太极结合 VR 训练干预帕金森病等，均提供了重要临床证据。",
+  "paragraphEn": "Today's digest includes 11 entries spanning 5 specialty areas. Most notable is APTA's concern regarding the 2027 Medicare proposed rule on Remote Therapeutic Monitoring (RTM), with a curatedScore of 90, signaling a need for practitioners to monitor upcoming policy changes. Additionally, several high-quality RCTs are presented, including a physiotherapist-led emergency department care model in musculoskeletal and aquatic Tai Chi combined with VR training for Parkinson's disease in neurorehabilitation, offering significant clinical evidence."
+ },
+ "stats": {
+  "events": 11,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 90
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1787943068276-1",
+     "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
+     "summary": "The RESHAP-ED pragmatic RCT evaluated physiotherapist-led care for musculoskeletal conditions in five Australian emergency departments, demonstrating improved effectiveness, safety, and cost-effectiveness compared to usual care.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.276Z",
+     "curatedScore": 85,
+     "curatedReason": "这项在澳大利亚急诊科进行的 RCT 明确显示，物理治疗师主导的医疗模式可有效缩短患者在急诊科的等待时间，并降低医疗费用。在你的执业实践中，这进一步支持了 PT 在急诊分流中的重要作用。",
+     "titleZh": "物理治疗师主导的急诊科肌肉骨骼疾病诊疗模式（RESHAP-ED）：一项随机对照试验及经济学评价",
+     "summaryZh": "RESHAP-ED 是一项开放标签、实用性随机试验，在澳大利亚新南威尔士州的五个急诊科招募了肌肉骨骼疾病患者。该研究比较了物理治疗师主导的诊疗模式与常规护理的有效性、安全性及成本效益，结果显示物理治疗师主导的模式表现更优。",
+     "curatedReasonEn": "This RCT from Australian emergency departments clearly shows that physiotherapist-led care effectively reduces ED length of stay and healthcare costs. In practice, this further supports the crucial role of PTs in emergency department triage.",
+     "limitation": "研究在澳大利亚新南威尔士州的五个急诊科进行，结果的外推性可能受限于特定医疗系统和地区。",
+     "limitationEn": "The study was conducted in five emergency departments in New South Wales, Australia, so the generalizability of the findings may be limited by the specific healthcare system and region.",
+     "tags": [
+      "research",
+      "workforce",
+      "reimbursement"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Lancet (London, England)"
+    },
+    {
+     "id": "news-1787943068274-0",
+     "title": "Effects of short-term compression in people with knee osteoarthritis: A sham-controlled randomised trial.",
+     "summary": "A three-arm sham-controlled RCT (n=90) found that short-term elastic bandage compression did not significantly improve pain or physical function in knee osteoarthritis patients compared to sham compression or no bandaging at Day 6, 12 or 24 weeks post-intervention.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42661329/",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.274Z",
+     "curatedScore": 75,
+     "curatedReason": "本项 RCT 发现膝关节骨性关节炎患者短期使用弹性绷带进行压迫，在疼痛和功能改善方面不优于安慰性压迫或无压迫。在实践中，它提示你无需将压迫疗法作为 OA 的常规干预手段。",
+     "titleZh": "短期压迫疗法对膝骨关节炎患者的效果：一项假对照随机试验",
+     "summaryZh": "一项三臂假对照随机对照试验（n=90）发现，在为期 6 天的干预后，短期弹性绷带压迫疗法在膝关节骨性关节炎患者的疼痛强度和身体功能方面，未显示出优于安慰性压迫或无压带的显著改善，且效果在 12 和 24 周后亦未显现。",
+     "curatedReasonEn": "This RCT found that short-term knee compression with elastic bandages did not offer superior pain or function improvement compared to sham compression or no bandaging in knee OA patients. It suggests that compression therapy is not a primary intervention for OA.",
+     "limitation": "本研究的随访期较长（24 周），但短期（6 天）干预的效果未能持续。",
+     "limitationEn": "Although the follow-up period was long (24 weeks), the short-term (6-day) intervention effects did not persist.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Clinical rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1787971857401-2",
+     "title": "Minimal Detectable Change in Gait Biomechanics Post-Stroke: Disentangling the Effects of Walking Speed and Stroke-Related Variability",
+     "summary": "This study quantified intra-class correlation coefficients (ICC) and minimal detectable change (MDC) in gait biomechanics for N=15 post-stroke individuals and N=13 neurotypical controls walking at matched speeds, isolating the impact of gait speed and stroke-related impairments on gait-analysis reliability.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.25.26361347v1?rss=1",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-29T02:50:57.401Z",
+     "curatedScore": 75,
+     "curatedReason": "本研究量化了卒中后步态生物力学测量的最小可检测变化（MDC），并区分了步行速度和卒中相关变异性的影响。这些 MDC 值是解读卒中患者步态分析结果、评估干预效果的重要参考。",
+     "titleZh": "卒中后步态生物力学测量的最小可检测变化：区分步行速度与卒中相关变异性的影响",
+     "summaryZh": "这项研究量化了 N=15 名卒中后个体和 N=13 名神经典型对照在匹配速度下步行时的步态生物力学内部相关系数（ICC）和最小可检测变化（MDC），以分离步行速度和卒中相关损伤对步态分析可靠性的影响。",
+     "curatedReasonEn": "This study quantified the minimal detectable change (MDC) in gait biomechanics post-stroke, distinguishing the effects of walking speed and stroke-related variability. These MDC values are crucial for interpreting gait analysis results and evaluating intervention efficacy in stroke patients.",
+     "limitation": "研究样本量较小（卒中组 N=15，对照组 N=13），且仅在跑步机上进行，可能限制结果的外推性。",
+     "limitationEn": "The study had a small sample size (N=15 post-stroke, N=13 controls) and was conducted only on a treadmill, which may limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1787943068277-24",
+     "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial",
+     "summary": "This RCT compared the effects of aquatic Tai Chi (ATC) and Computer Assisted Rehabilitation Environment (CAREN)-based virtual reality (VR) gait training on rehabilitation outcomes in individuals with Parkinson's disease.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00890-7/fulltext?rss=yes",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.277Z",
+     "curatedScore": 75,
+     "curatedReason": "帕金森病患者的康复方案有了新数据：这项 RCT 对比了水上太极和 CAREN 虚拟现实步态训练的效果。当你考虑引入高科技干预时，这两种方法都显示出潜力，但具体选择应结合患者偏好和设备可及性。",
+     "titleZh": "水上太极和计算机辅助康复环境（CAREN）虚拟现实训练对帕金森病患者康复的影响：一项随机对照试验",
+     "summaryZh": "这项随机对照试验旨在比较水上太极（ATC）和基于计算机辅助康复环境（CAREN）的虚拟现实（VR）步态训练在帕金森病（PD）患者康复中的效果，并评估其随时间变化的差异。",
+     "curatedReasonEn": "New data for Parkinson's disease rehabilitation: This RCT compared aquatic Tai Chi and CAREN-based VR gait training. Both show promise as high-tech interventions, but your choice should align with patient preference and equipment accessibility.",
+     "limitation": "摘要未明确提及样本量和具体的结局指标数据，这限制了对研究结果强度的判断。",
+     "limitationEn": "The abstract does not clearly state the sample size or specific outcome data, limiting the assessment of the study's strength.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of Physical Medicine and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1787943068277-26",
+     "title": "Revisional augmentation of residual neuromusculature and training facilitate embodiment and control of a bionic knee prosthesis",
+     "summary": "This interventional study with two individuals with above-knee amputation showed that surgical revision to restore agonist-antagonist muscle relationships, combined with bionic knee prosthesis training, improved embodiment, control, and sensorimotor integration.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.24.26343866v1?rss=1",
+     "publishedAt": "2026-08-27T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.277Z",
+     "curatedScore": 75,
+     "curatedReason": "对于大腿截肢患者，这项针对 2 人的研究提示，通过手术重建拮抗肌群关系并结合仿生膝假肢训练，可显著提升躯体感知、控制力及感觉运动整合。虽然样本量小，但这为未来仿生假肢和神经接口的整合提供了明确方向。",
+     "titleZh": "残留神经肌肉的翻修增强和训练促进了仿生膝关节假体的具身化和控制",
+     "summaryZh": "这项对两名膝上截肢者的介入性研究表明，通过手术翻修重建残余肌肉的激动-拮抗关系，并结合仿生膝关节假体训练，显著改善了假体的具身化、控制和感觉运动整合。",
+     "curatedReasonEn": "For above-knee amputees, this 2-person study suggests that surgical revision to restore agonist-antagonist muscle relationships, combined with bionic knee prosthesis training, can significantly improve embodiment, control, and sensorimotor integration. Though a small sample, it points to a clear direction for integrating bionic prosthetics and neural interfaces.",
+     "limitation": "本研究仅涉及两名膝上截肢者，样本量极小，且为初步的介入性研究，结果的普适性需要更多大规模研究验证。",
+     "limitationEn": "This study involved only two above-knee amputees, representing an extremely small sample size and a preliminary interventional study, so the generalizability of the results requires validation by larger-scale research.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1787973234293-3",
+     "title": "Remote Therapeutic Monitoring at a Turning Point",
+     "summary": "Proposed changes in the 2027 Medicare Physician Fee Schedule could significantly limit physical therapy practices' ability to provide Remote Therapeutic Monitoring (RTM) through contracted clinical support models in the US.",
+     "category": "sports",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/08/28/remote-therapeutic-monitoring-at-a-turning-point",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-29T03:13:54.293Z",
+     "curatedScore": 90,
+     "curatedReason": "美国医疗保险和医疗补助服务中心（CMS）2027 年医师收费标准拟议规则中远程治疗监测（RTM）的潜在变化，可能大幅限制物理治疗师通过合同支持模式提供 RTM 的能力，密切关注最终规则。",
+     "titleZh": "远程治疗监测（RTM）面临转折点：APTA 关注 2027 年 Medicare 拟议规则",
+     "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）2027 年医师收费标准拟议规则中远程治疗监测（RTM）的潜在变化，可能大幅限制物理治疗师通过合同支持模式提供 RTM 的能力。",
+     "curatedReasonEn": "The proposed changes to Remote Therapeutic Monitoring (RTM) in the 2027 Medicare Physician Fee Schedule could significantly restrict physical therapists' ability to provide RTM through contracted clinical support models. Closely monitor the final rule.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "telehealth"
+     ]
+    },
+    {
+     "id": "news-1787971857401-1",
+     "title": "Methods for assessing core muscle co-activation in the lumbar region: a narrative review.",
+     "summary": "This narrative review critically appraises current methods for assessing lumbar core muscle co-activation, categorizing approaches into surface electromyography and co-contraction index calculation, focusing on their theoretical basis, technical characteristics, interpretive value, limitations, and practical applicability.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42663635/",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-29T02:50:57.401Z",
+     "curatedScore": 70,
+     "curatedReason": "评估腰部核心肌群协同激活时，需要警惕表面肌电图和协同收缩指数的局限性。这篇综述提醒我们，现有方法在理论基础、技术特点和临床解读上仍存在诸多挑战，别轻易下定论。",
+     "titleZh": "评估腰部核心肌群协同激活的方法：一项叙述性综述",
+     "summaryZh": "这篇叙述性综述批判性地评估了当前评估腰部核心肌群协同激活的方法，将其分为表面肌电图和协同收缩指数计算等类别，并重点分析了其理论基础、技术特点、解释价值、局限性和实践适用性。",
+     "curatedReasonEn": "When assessing lumbar core muscle co-activation, be wary of the limitations of surface EMG and co-contraction indices. This review highlights that current methods still face numerous challenges in theoretical basis, technical characteristics, and clinical interpretation; do not draw firm conclusions easily.",
+     "limitation": "本篇为叙述性综述，可能未进行全面的系统性文献检索和质量评估，存在潜在偏倚。",
+     "limitationEn": "This is a narrative review, which may not have performed a comprehensive systematic literature search and quality appraisal, leading to potential biases.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "综述",
+     "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
+    },
+    {
+     "id": "news-1787943068276-3",
+     "title": "Selective differences in eccentric inter-limb mechanics during single-leg vertical jump six months after anterior cruciate ligament reconstruction.",
+     "summary": "A prospective observational study (n=44) investigated eccentric inter-limb mechanics during single-leg vertical jumps six months post-ACLR, identifying selective differences in peak eccentric force, impulse, and velocity compared to controls.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42659755/",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.276Z",
+     "curatedScore": 70,
+     "curatedReason": "这项观察性研究揭示了 ACLR 术后 6 个月单腿跳跃中患肢与健肢的离心力学差异，这进一步强调了双侧不对称对重返运动的潜在风险。将其作为你评估 ACLR 患者重返运动准备情况时的参考依据。",
+     "titleZh": "前交叉韧带重建术后六个月单腿垂直跳跃中患健肢离心力学的选择性差异",
+     "summaryZh": "一项前瞻性观察研究（n=44）调查了前交叉韧带重建术后六个月单腿垂直跳跃时的患健肢离心力学特征，发现患肢在峰值离心力、离心冲量和离心速度上存在选择性差异。",
+     "curatedReasonEn": "This observational study reveals eccentric inter-limb mechanical differences during single-leg jumps 6 months post-ACLR, highlighting potential risks from bilateral asymmetry for return to sport. Use this as a reference when assessing ACLR patients' readiness for return to sport.",
+     "limitation": "研究仅限于男性参与者，且仅在 ACLR 术后 6 个月进行了一次评估，可能无法反映长期变化和更广泛人群的特点。",
+     "limitationEn": "The study was limited to male participants and only assessed at 6 months post-ACLR, which may not reflect long-term changes or broader population characteristics.",
+     "tags": [
+      "research",
+      "knee",
+      "acl-reconstruction"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1787943068276-4",
+     "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
+     "summary": "A scoping review mapped the literature on clinical decision-making in pediatric physiotherapy (ages 0-18), identifying frameworks and factors influencing therapists' decisions across 22 studies.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42661438/",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.276Z",
+     "curatedScore": 70,
+     "curatedReason": "儿科物理治疗的临床决策复杂性高，这篇综述总结了 22 项研究，勾勒出影响儿科治疗师决策的框架和关键因素。在评估和干预 0-18 岁患者时，需特别关注发育差异性和以家庭为中心的护理。",
+     "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述",
+     "summaryZh": "一项范围界定性综述绘制了儿科物理治疗（0-18岁）中临床决策的文献图谱，识别了研究中使用的框架以及影响治疗师决策的因素，共纳入 22 项研究。",
+     "curatedReasonEn": "Pediatric clinical decision-making is complex. This scoping review, synthesizing 22 studies, outlines frameworks and key factors influencing therapists' decisions for ages 0-18. When assessing and intervening with this population, prioritize developmental variability and family-centered care.",
+     "limitation": "作为范围界定性综述，它主要描绘了文献现状，并未对证据质量进行严格评估或提供综合结论。",
+     "limitationEn": "As a scoping review, it primarily maps the literature and does not rigorously assess evidence quality or provide synthesized conclusions.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "综述",
+     "journal": "Physical & occupational therapy in pediatrics"
+    },
+    {
+     "id": "news-1787943068277-25",
+     "title": "RObotic WAlking for children who CAnnot WAlk (RoWaCaWa): Impacts on Physical Function and Physical Activity from a 12-week robotic walking intervention",
+     "summary": "A single-arm mixed-methods interventional study examined the impact of 12 weeks of robotic walking on physical function and inactivity sequelae in children with pediatric-onset neuromotor impairments, using outcomes like Goal Attainment Scale and physical activity measures.",
+     "category": "pediatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.24.26361255v1?rss=1",
+     "publishedAt": "2026-08-27T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.277Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对不能行走的儿童的机器人步态训练研究，提示了 12 周干预对身体功能和活动水平的改善。对于患有神经运动障碍的儿童，这进一步支持了机器人辅助训练在改善步态、实现康复目标中的应用潜力。",
+     "titleZh": "RObotic WAlking for children who CAnnot WAlk (RoWaCaWa)：12 周机器人步态干预对身体功能和身体活动的影响",
+     "summaryZh": "一项单臂混合方法干预性研究，旨在探讨 12 周机器人步态训练对患有儿科神经运动障碍、无法行走的儿童的身体功能和不活动后遗症的影响，并采用目标达成量表和身体活动测量等指标进行评估。",
+     "curatedReasonEn": "This robotic walking study for children who cannot walk suggests improvements in physical function and activity levels after a 12-week intervention. For children with neuromotor impairments, this further supports the potential of robot-assisted training in improving gait and achieving rehabilitation goals.",
+     "limitation": "本研究为单臂混合方法干预性研究，缺乏对照组，因此无法确定观察到的改善是否直接归因于机器人步态训练。",
+     "limitationEn": "This was a single-arm mixed-methods interventional study without a control group, so the observed improvements cannot be definitively attributed to robotic walking intervention.",
+     "tags": [
+      "research",
+      "spinal-cord",
+      "brain-injury"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1787943068277-29",
+     "title": "How Clinics Can Support Their Billing Teams in the Era of Payer Complexity",
+     "summary": "This WebPT blog post discusses strategies for clinics to support their billing teams amidst increasing payer complexity, aiming to optimize reimbursement processes and operational efficiency.",
+     "category": "practice",
+     "source": "WebPT",
+     "sourceUrl": "https://www.webpt.com/blog/how-clinics-can-support-their-billing-teams-in-the-era-of-payer-complexity",
+     "publishedAt": "2026-08-28T00:00:00.000Z",
+     "firstSeen": "2026-08-28T18:51:08.277Z",
+     "curatedScore": 65,
+     "curatedReason": "在支付方规则日益复杂的当下，WebPT 这篇博文提醒我们，诊所必须有效支持其账单团队。你需要审视诊所的报销流程，并考虑如何通过优化管理来提高运营效率，以确保收入最大化。",
+     "titleZh": "诊所如何在支付方日益复杂的时代支持其账单团队",
+     "summaryZh": "WebPT 的这篇博客文章探讨了在支付方复杂性不断增加的背景下，诊所应如何支持其账单团队，旨在优化报销流程和提高运营效率。",
+     "curatedReasonEn": "With increasing payer complexity, this WebPT blog post underscores the necessity for clinics to effectively support their billing teams. You should review your clinic's reimbursement processes and consider optimizing management to enhance operational efficiency and maximize revenue.",
+     "limitation": "这是一篇博客文章，内容基于行业经验和观点，而非严谨的研究证据或官方政策变动，因此其建议可能不具备普适性和权威性。",
+     "limitationEn": "This is a blog post based on industry experience and opinions, not rigorous research evidence or official policy changes, so its recommendations may not be universally applicable or authoritative.",
+     "tags": [
+      "news",
+      "reimbursement"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

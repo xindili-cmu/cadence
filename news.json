@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-29T02:50:59.577Z",
+    "lastUpdated": "2026-08-29T03:13:56.351Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,15 +20,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
       "category": "orthopedic",
       "publishedAt": "2026-08-28T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 6,
       "sources": [
         "Lancet (London, England)",
+        "Physical & occupational therapy in pediatrics",
         "Physiotherapy theory and practice",
         "The Journal of manual & manipulative therapy",
         "Physical therapy",
-        "Disability and rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Physical & occupational therapy in pediatrics"
+        "Disability and rehabilitation"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -38,6 +37,12 @@
           "journal": "Lancet (London, England)",
           "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
           "titleZh": "物理治疗师主导的急诊科肌肉骨骼疾病诊疗模式（RESHAP-ED）：一项随机对照试验及经济学评价"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
+          "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         },
         {
           "source": "PubMed",
@@ -62,23 +67,11 @@
           "journal": "Disability and rehabilitation",
           "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
           "titleZh": "初级物理治疗中电子健康（eHealth）的使用：一项混合方法研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-          "titleZh": "住院血液肿瘤患儿的治疗性运动方案：随机临床试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
-          "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         }
       ],
-      "heat": 4.75,
-      "themeZh": "物理治疗在急诊与初级护理中的角色与实践",
-      "themeEn": "PT's Role in Acute and Primary Care"
+      "heat": 4.05,
+      "themeZh": "骨科物理治疗实践与eHealth应用",
+      "themeEn": "Physiotherapy Practice, eHealth, Decision-Making"
     },
     {
       "id": "news-1787694684116-2",
@@ -128,9 +121,9 @@
           "titleZh": "水上太极和计算机辅助康复环境（CAREN）虚拟现实训练对帕金森病患者康复的影响：一项随机对照试验"
         }
       ],
-      "heat": 3.39,
-      "themeZh": "帕金森病康复：生物反馈与多学科综合干预",
-      "themeEn": "Parkinson's Rehabilitation: Biofeedback and Multidisciplinary Interventions"
+      "heat": 3.37,
+      "themeZh": "帕金森病多模式康复与生物反馈疗效",
+      "themeEn": "Multimodal Rehabilitation in Parkinson's Disease"
     },
     {
       "id": "news-1787288276212-1",
@@ -194,74 +187,9 @@
           "titleZh": "通过杜氏肌营养不良症（DMD）的可干预缺陷预测步态模式：一项机器学习与可解释人工智能研究"
         }
       ],
-      "heat": 3.39,
-      "themeZh": "神经损伤后步态功能评估与康复策略",
-      "themeEn": "Gait Assessment and Rehabilitation Post Neurological Injury"
-    },
-    {
-      "id": "news-1787166154199-1",
-      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
-      "category": "orthopedic",
-      "publishedAt": "2026-08-27T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "Physiotherapy theory and practice",
-        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
-        "American journal of physical medicine & rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Geriatrics",
-        "Musculoskeletal science & practice"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Development and psychometric validation of the shoulder problems assessment scale.",
-          "titleZh": "肩部问题评估量表 (SPAS) 的开发与心理测量学验证"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
-          "title": "Relief increases select shoulder muscle activity, following subacromial injection in subacromial pain syndrome.",
-          "titleZh": "亚肩峰疼痛综合征患者亚肩峰注射缓解疼痛后，特定肩部肌肉活动度增加"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Neuralgic Amyotrophy Following Rotator Cuff Repair: A Patient's Experience.",
-          "titleZh": "肩袖修复术后臂丛神经炎：一例患者的经验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-          "titleZh": "年轻偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Atlantoaxial Instability in older adults: an underrecognized condition beyond rheumatoid arthritis – a retrospective study",
-          "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
-          "titleZh": "腰痛手法治疗试验中利益冲突披露的透明度：一项荟萃流行病学综述"
-        }
-      ],
-      "heat": 2.88,
-      "themeZh": "肩颈与脊柱相关疼痛的评估与干预",
-      "themeEn": "Assessment and Management of Shoulder-Spine Pain"
+      "heat": 3.37,
+      "themeZh": "神经损伤后步态功能评估与机器人辅助训练",
+      "themeEn": "Gait Assessment and Robotic Training Post-Neurological Injury"
     },
     {
       "id": "news-1786877038341-0",
@@ -304,12 +232,158 @@
           "titleZh": "改良股内侧肌下入路与有限髌旁内侧入路对微创全膝关节置换术后早期恢复的影响：一项回顾性比较研究。"
         }
       ],
-      "heat": 2.71,
-      "themeZh": "膝关节疼痛与ACL重建的康复策略",
-      "themeEn": "Knee Pain and ACL Reconstruction Rehabilitation"
+      "heat": 2.7,
+      "themeZh": "下肢关节伤痛康复：力学与介入效果",
+      "themeEn": "Lower Limb Injury Rehabilitation & Biomechanics"
+    },
+    {
+      "id": "news-1787166154199-1",
+      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-27T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Physiotherapy theory and practice",
+        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Geriatrics",
+        "Musculoskeletal science & practice"
+      ],
+      "tag": "shoulder",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+          "titleZh": "肩部问题评估量表 (SPAS) 的开发与心理测量学验证"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
+          "title": "Relief increases select shoulder muscle activity, following subacromial injection in subacromial pain syndrome.",
+          "titleZh": "亚肩峰疼痛综合征患者亚肩峰注射缓解疼痛后，特定肩部肌肉活动度增加"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+          "titleZh": "年轻偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Atlantoaxial Instability in older adults: an underrecognized condition beyond rheumatoid arthritis – a retrospective study",
+          "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Have conflicts of interest in manual therapy trials for low back pain been transparent? A meta-epidemiological review.",
+          "titleZh": "腰痛手法治疗试验中利益冲突披露的透明度：一项荟萃流行病学综述"
+        }
+      ],
+      "heat": 2.39,
+      "themeZh": "躯干与上肢疼痛综合征的评估与治疗",
+      "themeEn": "Assessment and Treatment of Trunk and Upper Limb Pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1787973234293-3",
+      "title": "Remote Therapeutic Monitoring at a Turning Point",
+      "summary": "Proposed changes in the 2027 Medicare Physician Fee Schedule could significantly limit physical therapy practices' ability to provide Remote Therapeutic Monitoring (RTM) through contracted clinical support models in the US.",
+      "category": "sports",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/article/2026/08/28/remote-therapeutic-monitoring-at-a-turning-point",
+      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "firstSeen": "2026-08-29T03:13:54.293Z",
+      "curatedScore": 90,
+      "curatedReason": "美国医疗保险和医疗补助服务中心（CMS）2027 年医师收费标准拟议规则中远程治疗监测（RTM）的潜在变化，可能大幅限制物理治疗师通过合同支持模式提供 RTM 的能力，密切关注最终规则。",
+      "titleZh": "远程治疗监测（RTM）面临转折点：APTA 关注 2027 年 Medicare 拟议规则",
+      "summaryZh": "美国医疗保险和医疗补助服务中心（CMS）2027 年医师收费标准拟议规则中远程治疗监测（RTM）的潜在变化，可能大幅限制物理治疗师通过合同支持模式提供 RTM 的能力。",
+      "curatedReasonEn": "The proposed changes to Remote Therapeutic Monitoring (RTM) in the 2027 Medicare Physician Fee Schedule could significantly restrict physical therapists' ability to provide RTM through contracted clinical support models. Closely monitor the final rule.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "telehealth"
+      ]
+    },
+    {
+      "id": "news-1787608304690-24",
+      "title": "Vancomycin-Soaked Quadriceps Grafts Linked to Early Resorption in ACLR: study",
+      "summary": "A recent study found a potential link between vancomycin-soaked quadriceps autografts and early graft resorption following anterior cruciate ligament reconstruction (ACLR).",
+      "category": "sports",
+      "source": "Medical Dialogues",
+      "sourceUrl": "https://medicaldialogues.in/orthopaedics/news/vancomycin-soaked-quadriceps-grafts-linked-to-early-resorption-in-aclr-study-177711",
+      "publishedAt": "2026-08-24T15:15:20.000Z",
+      "firstSeen": "2026-08-24T21:51:44.690Z",
+      "curatedScore": 75,
+      "curatedReason": "关注使用万古霉素浸泡的股四头肌移植物在 ACLR 中的应用，初步证据提示可能增加早期移植物吸收风险。这提醒你在选择移植物和预防感染策略时需权衡利弊。",
+      "titleZh": "研究发现：万古霉素浸泡的股四头肌移植物与 ACL 重建术后早期吸收相关",
+      "summaryZh": "一项最新研究发现，万古霉素浸泡的股四头肌自体移植物可能与前交叉韧带重建术后的早期移植物吸收有关。",
+      "curatedReasonEn": "Pay attention to the use of vancomycin-soaked quadriceps grafts in ACLR, as preliminary evidence suggests an increased risk of early graft resorption. This highlights the need to weigh benefits and risks when choosing graft types and infection prevention strategies.",
+      "limitation": "本研究的详细设计和样本量未披露，可能为观察性研究，结论仍需高级别证据进一步证实。",
+      "limitationEn": "The detailed study design and sample size were not disclosed, suggesting it may be an observational study, and the conclusions require further confirmation by higher-level evidence.",
+      "tags": [
+        "news",
+        "knee"
+      ]
+    },
+    {
+      "id": "news-1787608304690-25",
+      "title": "Federated learning for privacy-preserving collaborative health risk classification using wearable sensor data: validation study with elite football training load monitoring",
+      "summary": "A validation study demonstrated that federated learning can facilitate privacy-preserving collaborative health risk classification using wearable sensor data, with applications in elite football training load monitoring.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02020-0",
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "firstSeen": "2026-08-24T21:51:44.690Z",
+      "curatedScore": 70,
+      "curatedReason": "联邦学习模式有望通过共享匿名可穿戴传感器数据，实现更准确的健康风险预测，但其在临床实践中的效果和转化仍需更多研究验证。",
+      "titleZh": "利用可穿戴传感器数据进行隐私保护协作健康风险分类的联邦学习：精英足球训练负荷监测验证研究",
+      "summaryZh": "一项验证性研究表明，联邦学习能够利用可穿戴传感器数据，在保护隐私的前提下实现协作式健康风险分类，并可应用于精英足球运动员的训练负荷监测。",
+      "curatedReasonEn": "Federated learning shows promise in improving health risk prediction by sharing anonymized wearable sensor data, but its clinical effectiveness and translation require further validation.",
+      "limitation": "本研究为验证性研究，主要评估了联邦学习模式的可行性，尚未在真实临床环境中大规模验证其健康风险预测的准确性和临床益处。",
+      "limitationEn": "This validation study primarily assessed the feasibility of federated learning; its accuracy in health risk prediction and clinical benefits have not been extensively validated in real-world clinical settings.",
+      "tags": [
+        "research",
+        "wearable-tech"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1787608304689-23",
+      "title": "Repeated sprint performance and fatigue responses across different movement patterns in amateur soccer players",
+      "summary": "This study investigated repeated sprint performance and fatigue responses across different movement patterns in amateur soccer players, providing insights for optimized training.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02017-9",
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "firstSeen": "2026-08-24T21:51:44.689Z",
+      "curatedScore": 70,
+      "curatedReason": "了解不同运动模式下重复冲刺表现和疲劳反应的差异，可优化足球运动员的训练计划和疲劳管理策略，提升运动表现。",
+      "titleZh": "业余足球运动员不同运动模式下的重复冲刺表现与疲劳反应",
+      "summaryZh": "本研究调查了业余足球运动员在不同运动模式下的重复冲刺表现和疲劳反应，为优化训练提供了见解。",
+      "curatedReasonEn": "Understanding the differences in repeated sprint performance and fatigue responses across various movement patterns can optimize training programs and fatigue management strategies for soccer players, improving athletic performance.",
+      "limitation": "该研究针对业余足球运动员，结果在其他运动类型或专业运动员中的普适性尚需进一步验证。",
+      "limitationEn": "This study focused on amateur soccer players; the generalizability of its findings to other sports or professional athletes requires further validation.",
+      "tags": [
+        "research",
+        "football"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
     {
       "id": "news-1787166154197-0",
       "title": "Beyond treatment: how care process factors shape physical therapist management of low back pain.",
@@ -1937,95 +2011,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1786999762267-16",
-      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
-      "summary": "Finger-worn accelerometers provided a valid and sensitive alternative to wrist-worn accelerometers for measuring real-world upper-limb performance in 20 stroke survivors with mild-to-moderate impairment, offering a more comprehensive assessment.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.13.26360286v1?rss=1",
-      "publishedAt": "2026-08-19T00:00:00.000Z",
-      "firstSeen": "2026-08-17T20:49:22.267Z",
-      "curatedScore": 80,
-      "curatedReason": "指戴式加速计作为腕戴式设备的替代方案，在卒中患者上肢功能评估中展现出有效性和敏感性。这提示你，未来在远程监测或日常活动评估中，指戴设备可能提供更精细的运动数据，从而优化康复策略。",
-      "titleZh": "不止是手臂运动：指戴式加速计在测量卒中幸存者真实世界中上肢表现方面提供了一种有效且敏感的腕戴式加速计替代方案",
-      "summaryZh": "指戴式加速计在测量 20 名轻中度上肢损伤卒中幸存者的真实世界中上肢表现方面，提供了一种有效且敏感的腕戴式加速计替代方案，提供了更全面的评估。",
-      "curatedReasonEn": "Finger-worn accelerometers show validity and sensitivity as an alternative to wrist-worn devices for assessing upper-limb function in stroke survivors. This suggests that in future remote monitoring or daily activity assessments, finger-worn devices might provide finer motor data, optimizing rehabilitation strategies.",
-      "limitation": "研究设计为横断面观察性，不能建立因果关系，且样本量较小（20名卒中幸存者），限制了结果的普遍性。",
-      "limitationEn": "The study's cross-sectional observational design cannot establish causality, and the small sample size (20 stroke survivors) limits the generalizability of the results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1786705918572-0",
-      "title": "When algorithms don't care: physiotherapy and the post-professional turn.",
-      "summary": "This paper argues that physiotherapy, like other health professions, is entering a post-professional era driven by the commodification of health, unbundling of professional claims, and digitally mediated technological disruption, potentially marginalizing practitioners.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42596863/",
-      "publishedAt": "2026-08-14T00:00:00.000Z",
-      "firstSeen": "2026-08-14T11:11:58.572Z",
-      "curatedScore": 75,
-      "curatedReason": "这篇文章触及了物理治疗专业在算法和数字化时代可能面临的“后专业化”挑战。它提醒你，在技术重塑医疗服务模式的背景下，需要重新思考 PT 的核心价值和执业模式，以应对潜在的边缘化风险。",
-      "titleZh": "当算法无情：物理治疗与后专业化转向",
-      "summaryZh": "本文认为，物理治疗与更广泛的医疗专业一样，正进入一个“后专业化”时代，其驱动力是健康商品化、专业主张的解绑以及数字化技术颠覆，这可能导致从业者被边缘化。",
-      "curatedReasonEn": "This article addresses the potential 'post-professional' challenges facing physical therapy in the age of algorithms and digitalization. It reminds you to reconsider PT's core values and practice models in the context of technology reshaping healthcare delivery, to mitigate the risk of marginalization.",
-      "tags": [
-        "news",
-        "workforce"
-      ],
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1787079714579-1",
-      "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-      "summary": "A randomized clinical trial with 30 pediatric oncohematological patients (8-17 years) found that a therapeutic exercise program during hospitalization positively impacted muscle strength and fatigue compared to minimal physiotherapy.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610644/",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T19:01:54.579Z",
-      "curatedScore": 75,
-      "curatedReason": "这项 RCT 表明，住院期间早期治疗性运动对肿瘤患儿的肌肉力量和疲劳有积极影响。这支持你在儿童肿瘤患者的住院康复中，更积极地推行运动干预，可能有助于改善生活质量和功能。",
-      "titleZh": "住院血液肿瘤患儿的治疗性运动方案：随机临床试验",
-      "summaryZh": "一项针对 30 名 8-17 岁住院血液肿瘤患儿的随机临床试验发现，住院期间的治疗性运动方案对肌肉力量和疲劳有积极影响，优于最小活动物理治疗对照组。",
-      "curatedReasonEn": "This RCT indicates that early therapeutic exercise during hospitalization has positive effects on muscle strength and fatigue in pediatric oncology patients. This supports a more proactive approach to exercise interventions in the inpatient rehabilitation of pediatric oncology patients, potentially improving quality of life and function.",
-      "limitation": "研究样本量相对较小（30 名参与者），可能限制结果的普适性。",
-      "limitationEn": "The study's relatively small sample size (30 participants) may limit the generalizability of the findings.",
-      "tags": [
-        "research",
-        "oncology",
-        "motor-deficits"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1787058794832-0",
-      "title": "Neuralgic Amyotrophy Following Rotator Cuff Repair: A Patient's Experience.",
-      "summary": "This case report describes a 64-year-old male who developed severe neuralgic amyotrophy 8 days after rotator cuff repair, achieving substantial functional recovery over one year with prolonged, progressive physical therapy.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42608746/",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-18T13:13:14.832Z",
-      "curatedScore": 65,
-      "curatedReason": "肩袖修复术后出现臂丛神经炎相对罕见但会严重影响功能。本病例报告提示即便出现此类并发症，长期强化物理治疗仍能带来显著的功能恢复。遇到类似情况，维持患者治疗依从性至关重要。",
-      "titleZh": "肩袖修复术后臂丛神经炎：一例患者的经验",
-      "summaryZh": "本病例报告描述了一名 64 岁男性在肩袖修复术后 8 天出现严重臂丛神经炎，通过长期渐进式物理治疗，在一年内实现了显著的功能恢复。",
-      "curatedReasonEn": "Neuralgic amyotrophy after rotator cuff repair is rare but can severely impact function. This case report suggests that even with such complications, prolonged intensive physical therapy can lead to significant functional recovery. Maintaining patient adherence is crucial in similar situations.",
-      "limitation": "作为单例病例报告，本研究的发现不具有普遍性，无法推断至其他患者群体。",
-      "limitationEn": "As a single case report, the findings of this study are not generalizable and cannot be extrapolated to other patient populations.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "American journal of physical medicine & rehabilitation"
     }
   ]
 }
