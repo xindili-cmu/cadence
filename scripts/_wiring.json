@@ -26,6 +26,7 @@
     "fix-scrape-dates.js": "历史数据修复:抓取腿伪造日期(8-11 APTA 倒灌;幂等,联网跑能多修 47 条页面 meta)",
     "fix-nonarticle-rows.js": "历史数据修复:非文章行(8-15 审计;常青索引页/报名页/征稿页 + 时钟盖章簇。幂等,离线,DRY_RUN=true 可先看)",
     "fix-title-artifacts.js": "历史数据修复:标题残渣(幂等,可重复跑)",
+    "fix-correspondence-rows.js": "历史数据修复:读者来信/更正/勘误行(8-29 审计,7 行;幂等,离线,DRY_RUN=true 可先看)",
     "linkedin-banner.js": "LinkedIn 主页封面图(1128×191 @2x),一次性品牌物料;品牌变更后手动重跑,人工上传",
     "reinject-from-archive.js": "从 archive 回灌条目到 feed",
     "rescore-consistency.js": "抽样重打分,量分数抖动(诊断,烧 LLM 额度)",

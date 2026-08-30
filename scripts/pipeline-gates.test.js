@@ -605,6 +605,64 @@ async function run() {
     }
   }
 
+  // ── M 段：correspondence gate —— 读者来信/更正/勘误不是研究 ─────────────────
+  // 事故（2026-08-29 审计）：PTJ 读者来信（标题=整段引文+DOI）打 65 分上线，
+  // 还进了 08-28 LinkedIn top-3 第三位；语料另有 Correction:×3、Comment on、
+  // Letter to the editor 共 7 行。JOURNAL_FRONT_MATTER 抓不住它们：那套是
+  // 方括号 section 标签 + SOFT 否决，而「关于康复论文的信」永远带康复词，
+  // SOFT 一定被救回。标题形态才是可靠信号 → isCorrespondenceItem 硬丢。
+  {
+    console.log('\nM. correspondence gate（letters/corrections 不当研究发布）');
+    const { isCorrespondenceItem, isRehabRelevant } = require('./news-refresh');
+
+    // 线上真实漏网样本（M1 全部命中）。第一条就是 08-28 还在 feed 里的 PTJ 信。
+    const LIVE_LETTER = 'On "Early mobilization in patients with aneurysmal subarachnoid hemorrhage: a prospective observational study." Hernandez S, Tipping C, Deane AM, et al. Phys Ther. 2026;106(4):pzag031. https://doi.org/10.1093/ptj/pzag031.';
+    const leaked = [
+      LIVE_LETTER,
+      'Comment on “swedish massage versus hip strengthening exercises for pain and function in older adults”',
+      'Correction: ACTIVATE: physical activity assessment, prescription and promotion in clinical practice',
+      'Letter to the editor: Pain Catastrophization and Fear of Movement Are Potential Moderators',
+    ];
+    for (const t of leaked) {
+      ok(isCorrespondenceItem({ title: t }), `M1: 命中 —— ${t.slice(0, 46)}…`);
+    }
+
+    // M2 防误伤：真实研究标题里的形近开头必须放行。
+    const legit = [
+      'Correction of thoracic kyphosis with bracing in adolescent idiopathic scoliosis: a cohort study',
+      'Response to exercise in patients with heart failure: a systematic review',
+      'Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.',
+      'Commentary matters: how editorials shape physiotherapy practice',
+    ];
+    for (const t of legit) {
+      ok(!isCorrespondenceItem({ title: t }), `M2: 放行 —— ${t.slice(0, 46)}…`);
+    }
+
+    // M3 判别力（成对）：旧链为什么放走了它——relevance gate 对这条信无能为力
+    // （信讲的就是康复论文，必然带康复词），新 gate 接住。两半都真才说明修复
+    // 落在了正确的层。
+    ok(isRehabRelevant({ title: LIVE_LETTER, summary: '' }) && isJunkItem({ title: LIVE_LETTER }),
+      'M3: 旧链（relevance）放行 ∧ 新链（isJunkItem→correspondence）接住');
+
+    // M4 方括号 front matter 仍是 SOFT：康复相关的 [Editorial] 是合法内容，
+    // 不得被 correspondence 硬杀（那是 studyDesign/非证据顶位守卫的辖区）。
+    ok(!isCorrespondenceItem({ title: '[Editorial] Rehabilitation after critical illness: time to deliver' }),
+      'M4: 方括号 tag 不硬杀（SOFT 语义保留）');
+
+    // M5（产物，挂 SKIP_ARTIFACT_ASSERTS）：gate 上线后新入库零 correspondence。
+    // 存量由 fix-correspondence-rows.js（Cindy 本地跑）+ carry 自愈清掉，不辖。
+    const GATE_SINCE = '2026-08-30';
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else {
+      const feed2 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8'));
+      const bad = (feed2.items || []).filter((i) => (i.firstSeen || '') >= GATE_SINCE && isCorrespondenceItem(i));
+      ok(bad.length === 0,
+        `M5: ${GATE_SINCE} 起新入库零 correspondence`
+        + (bad.length ? ` —— 违规：${bad.map((i) => (i.title || '').slice(0, 40)).join(' | ')}` : ''));
+    }
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

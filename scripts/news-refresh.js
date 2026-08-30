@@ -477,10 +477,45 @@ const SUMMARY_BOILERPLATE = [
 // at this point is dropped rather than published.
 const isTruncatedTitle = (t) => /(\.\.\.|…)\s*$/.test(String(t || '').trim());
 
+// Journal correspondence & errata — letters, comments-on, corrections,
+// author replies. PubMed hands these over as if they were articles; the scorer
+// then rates them like research (a PTJ letter titled with its FULL CITATION +
+// DOI shipped at 65 and ranked #3 in the 08-28 LinkedIn top-3; 7 more
+// Correction:/Comment on/Letter rows in the archive — 2026-08-29 audit).
+// JOURNAL_FRONT_MATTER can't catch these: it keys on bracketed section tags,
+// and a letter ABOUT a rehab paper always carries rehab words, so the SOFT
+// veto rescues it. Shape-of-title is the reliable signal, so this is a HARD
+// drop. Precision over recall: every pattern is anchored to an opener form
+// that real study titles don't use — "Correction:" (colon) drops while
+// "Correction of thoracic kyphosis…" survives; "Response to:" drops while
+// "Response to exercise in heart failure" survives.
+const CORRESPONDENCE_SHAPES = [
+  /^On ["“]/i,                          // PTJ letter format: On "cited paper…"
+  /^Comment(ary)? on ["“:]/i,           // Comment on "swedish massage…" (archive)
+  /^Letter to the editor\b/i, /^Letter:/i,
+  /^(Author |Publisher )?Correction[s]?( to)?:/i, // Correction: ACTIVATE… (×3 archive)
+  /^Erratum\b/i, /^Corrigendum\b/i,
+  /^Author('s)? (response|reply)\b/i, /^In reply\b/i, /^Reply to\b/i,
+  /^Response to ["“:]/i, /^Re: /,
+  /^Expression of concern\b/i,
+  /^Invited commentary\b/i,
+];
+// A headline with an embedded citation link is never a clean article title —
+// it's a letter's verbatim reference (the PTJ case) or scrape residue.
+const TITLE_HAS_DOI = /https?:\/\/\S+|\bdoi\.org\/|\bdoi:\s*10\./i;
+function isCorrespondenceItem(item) {
+  const t = String(item.title || '').trim();
+  if (!t) return false;
+  if (CORRESPONDENCE_SHAPES.some((re) => re.test(t))) return true;
+  return TITLE_HAS_DOI.test(t);
+}
+
 function isJunkItem(item) {
   // Blank headline — unrenderable. Fresh items can't reach here (the pipeline's
   // _fallbackTitle covers them), but a few archived rows carry title:"".
   if (!String(item.title || '').trim()) return true;
+  // Letters / corrections / errata — see isCorrespondenceItem above.
+  if (isCorrespondenceItem(item)) return true;
   if (isTruncatedTitle(item.title) || isTruncatedTitle(item.titleZh)) return true;
   const tKey = _nameKey(item.title);
   if (ROSTER_NAME_KEYS.has(tKey)) return true;
@@ -1850,7 +1885,10 @@ async function main() {
       .filter(i => i.source)
       // Apply the relevance gate to carried-over items too, so off-topic
       // content curated before this gate existed ages out on the next run.
-      .filter(isRehabRelevant);
+      .filter(isRehabRelevant)
+      // Same self-healing for correspondence shapes (letters/corrections):
+      // rows curated before the 2026-08-29 gate drop out on the next cron.
+      .filter((i) => !isCorrespondenceItem(i));
   } catch {}
 
   // Cluster-aware merge: a re-found story unions its related-source list
@@ -2035,4 +2073,4 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
