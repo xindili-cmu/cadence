@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-30T00:27:29.856Z",
+    "lastUpdated": "2026-08-30T08:23:37.236Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -76,9 +76,68 @@
           "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
         }
       ],
-      "heat": 4.92,
-      "themeZh": "骨科疼痛与运动损伤：评估方法、风险因素及康复干预",
-      "themeEn": "Orthopedic pain: assessment, risk factors, rehabilitation"
+      "heat": 4.38,
+      "themeZh": "骨科疼痛：从腰背痛到膝骨关节炎的机制与干预",
+      "themeEn": "Orthopedic Pain: Mechanisms and Interventions"
+    },
+    {
+      "id": "news-1787655274828-0",
+      "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42638517/",
+      "category": "neurological",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Neurorehabilitation and neural repair",
+        "Journal of NeuroEngineering and Rehabilitation",
+        "Clinical rehabilitation",
+        "NeuroRehabilitation",
+        "Archives of physical medicine and rehabilitation",
+        "The Lancet"
+      ],
+      "tag": "parkinson",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
+          "titleZh": "帕金森病患者白质弥散各向异性与多学科住院康复效果：一项弥散张量成像分析"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
+          "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
+          "titleZh": "帕金森病中的生物反馈：一项系统综述与Meta分析。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
+          "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
+          "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验"
+        },
+        {
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
+          "titleZh": "重新思考全球痴呆预防的风险因素"
+        }
+      ],
+      "heat": 3.76,
+      "themeZh": "帕金森病康复：多学科与生物反馈干预",
+      "themeEn": "Parkinson's Rehabilitation: Multidisciplinary and Biofeedback"
     },
     {
       "id": "news-1787943068276-1",
@@ -86,11 +145,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
       "category": "orthopedic",
       "publishedAt": "2026-08-29T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Lancet (London, England)",
         "Physical therapy",
         "Disability and rehabilitation",
+        "Musculoskeletal science & practice",
         "Physiotherapy theory and practice",
         "The Journal of manual & manipulative therapy"
       ],
@@ -123,6 +183,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
+          "titleZh": "重构患者期望为肌肉骨骼康复中的治疗靶点"
+        },
+        {
+          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "A qualitative inquiry into the environmental barriers and facilitators to non-specific low back pain clinical practice guideline adherence among Canadian physiotherapists.",
           "titleZh": "加拿大物理治疗师依从非特异性腰痛临床实践指南的环境障碍与促成因素定性研究"
@@ -134,8 +200,9 @@
           "titleZh": "物理治疗师作为肌肉骨骼疾病初级接触提供者：比较脊椎按摩师、执业护士、物理治疗师和医师助理的信念"
         }
       ],
-      "heat": 3.51,
-      "themeEn": "PT service models innovation and adherence"
+      "heat": 3.76,
+      "themeZh": "物理治疗服务模式：从急诊到社区的优化",
+      "themeEn": "Physical Therapy Service Delivery Optimization"
     },
     {
       "id": "news-1787288276212-1",
@@ -206,107 +273,112 @@
           "titleZh": "脑瘫I、II级患儿步态时空参数与功能移动性的关联"
         }
       ],
-      "heat": 2.98,
-      "themeEn": "Predicting and quantifying post-stroke and SCI gait"
+      "heat": 2.66,
+      "themeZh": "神经损伤后步态特征与机器人康复",
+      "themeEn": "Gait Features & Robotic Neurorehabilitation"
     },
     {
-      "id": "news-1787824783326-5",
-      "title": "Prestroke Rehabilitation Reserve and Mobility and Self-Care Outcomes After Incident Stroke Across Four International Aging Cohorts.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42648694/",
-      "category": "neurological",
+      "id": "news-1788046091415-18",
+      "title": "Improvement in functional movement, landing mechanics, and dynamic balance following TRX training in physically active athletes after ACL reconstruction: a randomized controlled trial",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10415-w",
+      "category": "orthopedic",
       "publishedAt": "2026-08-29T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 3,
       "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "The Lancet"
+        "BMC Musculoskeletal Disorders",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "BMC Sports Science, Medicine and Rehabilitation"
       ],
-      "tag": "stroke",
+      "tag": "knee",
       "kind": "theme",
       "members": [
         {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Prestroke Rehabilitation Reserve and Mobility and Self-Care Outcomes After Incident Stroke Across Four International Aging Cohorts.",
-          "titleZh": "卒中前康复储备与卒中后移动和自理能力结局在四个国际老年队列中的关系"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Improvement in functional movement, landing mechanics, and dynamic balance following TRX training in physically active athletes after ACL reconstruction: a randomized controlled trial",
+          "titleZh": "TRX训练对ACL重建术后活跃运动员功能性运动、着陆力学和动态平衡的改善：一项随机对照试验"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
-          "titleZh": "慢性卒中患者运动恢复和感知社会支持与参与相关结局的关联"
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Selective differences in eccentric inter-limb mechanics during single-leg vertical jump six months after anterior cruciate ligament reconstruction.",
+          "titleZh": "前交叉韧带重建术后六个月单腿垂直跳跃中患健肢离心力学的选择性差异"
         },
         {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
-          "titleZh": "以个体独特目标为中心的工作关系是支持性自我管理的核心：一项针对卒中幸存者的定性研究。"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Acute effects of squat and core exercises using elastic bands on post-activation performance enhancement in tennis players: control, randomized, crossover trials",
+          "titleZh": "弹力带深蹲和核心训练对网球运动员赛后激活表现的急性影响：随机交叉对照试验"
         },
         {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
-          "titleZh": "重新思考全球痴呆预防的风险因素"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "The effect of static and dynamic core exercises on serve and spike speed in young volleyball players: a randomized controlled trial",
+          "titleZh": "静态和动态核心练习对年轻排球运动员发球和扣球速度的影响：一项随机对照试验"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Federated learning for privacy-preserving collaborative health risk classification using wearable sensor data: validation study with elite football training load monitoring",
+          "titleZh": "利用可穿戴传感器数据进行隐私保护协作健康风险分类的联邦学习：精英足球训练负荷监测验证研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Repeated sprint performance and fatigue responses across different movement patterns in amateur soccer players",
+          "titleZh": "业余足球运动员不同运动模式下的重复冲刺表现与疲劳反应"
         }
       ],
-      "heat": 2.81,
-      "themeEn": "Stroke rehab: social support, goals, cognition"
-    },
-    {
-      "id": "news-1787655274828-0",
-      "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42638517/",
-      "category": "neurological",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Neurorehabilitation and neural repair",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Clinical rehabilitation",
-        "NeuroRehabilitation",
-        "Archives of physical medicine and rehabilitation"
-      ],
-      "tag": "parkinson",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
-          "titleZh": "帕金森病患者白质弥散各向异性与多学科住院康复效果：一项弥散张量成像分析"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
-          "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
-          "titleZh": "帕金森病中的生物反馈：一项系统综述与Meta分析。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
-          "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
-          "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验"
-        }
-      ],
-      "heat": 2.48,
-      "themeZh": "帕金森病多学科康复：生物反馈、虚拟现实与神经影像",
-      "themeEn": "Parkinson's multidisciplinary rehab: biofeedback, VR, imaging"
+      "heat": 1.88,
+      "themeZh": "ACL重建后功能恢复及运动员核心训练",
+      "themeEn": "ACL Rehab & Athlete Core Training"
     }
   ],
   "items": [
+    {
+      "id": "news-1788078215009-0",
+      "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
+      "summary": "This professional practice article argues that patient expectations (PEs) are not merely prognostic indicators but modifiable, multidimensional therapeutic targets that extend beyond treatment and recovery to influence outcomes in musculoskeletal care.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42667740/",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "firstSeen": "2026-08-30T08:23:35.009Z",
+      "curatedScore": 75,
+      "curatedReason": "这篇专业实践文章提醒你，患者期望不只是预后因素，更是可主动干预的治疗靶点。在骨科 / 肌肉骨骼康复中，你需要更重视其对治疗效果的影响。",
+      "titleZh": "重构患者期望为肌肉骨骼康复中的治疗靶点",
+      "summaryZh": "这篇专业实践文章指出，患者期望（PEs）不仅是预后指标，更是可被调整、多维度的治疗靶点，其影响超越治疗和康复本身，在肌肉骨骼护理中能塑性治疗效果。",
+      "curatedReasonEn": "This professional practice article reminds you that patient expectations are not just prognostic factors but modifiable therapeutic targets. In orthopedic/musculoskeletal rehabilitation, you need to pay more attention to their impact on treatment outcomes.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "述评",
+      "journal": "Musculoskeletal science & practice"
+    },
+    {
+      "id": "news-1787694684116-3",
+      "title": "Towards global standards in stroke rehabilitation and recovery: An international evaluation of practice alignment.",
+      "summary": "A mixed-methods study evaluated how Centres of Clinical Excellence criteria align with routine clinical practice in 15 international stroke rehabilitation centers from 10 countries, exploring contextual factors influencing practices across diverse health systems.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640560/",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "firstSeen": "2026-08-25T21:51:24.116Z",
+      "curatedScore": 70,
+      "curatedReason": "这项国际性混合方法研究揭示了全球卒中康复中心在实践中与卓越临床标准的一致性，为你了解不同卫生系统下的实践差异提供了参考。",
+      "titleZh": "迈向全球卒中康复和恢复标准：一项实践一致性的国际评估",
+      "summaryZh": "一项混合方法研究评估了来自 10 个国家 15 个国际卒中康复中心在日常临床实践中与卓越临床标准的一致性，并探讨了影响不同卫生系统实践的背景因素。",
+      "curatedReasonEn": "This international mixed-methods study reveals the alignment of stroke rehabilitation centers with clinical excellence criteria, offering insights into practice variations across diverse health systems.",
+      "limitation": "研究设计为混合方法，可能存在选择偏倚，且无法建立因果关系。",
+      "limitationEn": "The mixed-methods study design may introduce selection bias and cannot establish causality.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
     {
       "id": "news-1787677206688-0",
       "title": "Carrying an unseen weight: the neuro-perceptual landscape of limb heaviness after stroke- a scoping review.",
@@ -1527,31 +1599,6 @@
       ]
     },
     {
-      "id": "news-1786856033300-0",
-      "title": "Experiences of telehealth e-mentoring within postgraduate musculoskeletal physical therapy education in Canada and the United Kingdom.",
-      "summary": "A qualitative study explored the experiences of postgraduate physiotherapy mentees and mentors engaged in e-mentoring in Canada, comparing findings with the UK, to understand learning processes, outcomes, and challenges in musculoskeletal physical therapy education.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603471/",
-      "publishedAt": "2026-08-15T00:00:00.000Z",
-      "firstSeen": "2026-08-16T04:53:53.300Z",
-      "curatedScore": 75,
-      "curatedReason": "远程电子导师制正在被北美和英国的 PT 硕士项目探索。了解其在不同文化背景下的应用经验，有助于你评估这种模式在你的教育或继续教育项目中的潜力。",
-      "titleZh": "加拿大和英国研究生肌肉骨骼物理治疗教育中远程电子导师制的经验",
-      "summaryZh": "一项定性研究探讨了加拿大研究生物理治疗学员和导师参与电子导师制的经验，并与英国的情况进行比较，旨在了解肌肉骨骼物理治疗教育中学习过程、感知结果和挑战。",
-      "curatedReasonEn": "Telehealth e-mentoring is being explored in North American and UK PT master's programs. Understanding its cross-cultural application experiences can help you evaluate this model's potential for your own educational or continuing education initiatives.",
-      "limitation": "本研究采用定性设计，未提供量化效果数据，且仅限于加拿大和英国的少数参与者经验。",
-      "limitationEn": "This study employed a qualitative design, providing no quantitative effectiveness data, and is limited to experiences of a few participants in Canada and the UK.",
-      "tags": [
-        "research",
-        "education",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Musculoskeletal science & practice",
-      "tech": true
-    },
-    {
       "id": "news-1787767690900-17",
       "title": "Predicting gait patterns from actionable impairments in Duchenne muscular dystrophy: A Machine Learning and Explainable Artificial Intelligence study",
       "summary": "A machine learning study used actionable impairments to classify gait patterns in children with Duchenne muscular dystrophy (DMD), aiming to improve clinical decision-making by explaining how these impairments contribute to distinct gait patterns.",
@@ -2008,29 +2055,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physical therapy"
-    },
-    {
-      "id": "news-1787694684116-1",
-      "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
-      "summary": "A qualitative study with 21 stroke survivors in England found that person-centred working relationships focused on unique individual goals are central to supported self-management during community stroke rehabilitation.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640880/",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "firstSeen": "2026-08-25T21:51:24.116Z",
-      "curatedScore": 70,
-      "curatedReason": "这项定性研究强调了以患者为中心的工作关系（治疗联盟）在卒中幸存者自我管理中的核心作用。这提示你在社区卒中康复中，应优先建立基于个体独特目标的良好治疗关系。",
-      "titleZh": "以个体独特目标为中心的工作关系是支持性自我管理的核心：一项针对卒中幸存者的定性研究。",
-      "summaryZh": "一项针对21名英国卒中幸存者的定性研究发现，以患者为中心的工作关系（治疗联盟）是社区卒中康复中支持性自我管理的核心。",
-      "curatedReasonEn": "This qualitative study highlights the core role of person-centred working relationships (therapeutic alliance) in stroke survivors' self-management. This suggests that in community stroke rehabilitation, you should prioritize establishing strong therapeutic relationships based on individual goals.",
-      "limitation": "作为定性研究，其结果的普遍性有限，主要反映了21名英国卒中幸存者的个体经验。",
-      "limitationEn": "As a qualitative study, its generalizability is limited, reflecting the individual experiences of 21 stroke survivors in England.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
     }
   ]
 }
