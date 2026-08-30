@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 /**
- * weekly-signal-email.js — 「每周最强信号」订阅邮件（草稿）
+ * weekly-signal-email.js — 「每周最强信号」订阅邮件（自动发送）
  *
  * Builds the reader-facing weekly digest email (top SIGNAL papers of the last
- * completed Beijing week, Mon–Sun) and creates a DRAFT broadcast in Resend.
- * It NEVER sends — per PRINCIPLES.md（发布永远由人）, Cindy reviews the draft
- * in the Resend dashboard (https://resend.com/broadcasts) and clicks Send.
+ * completed Beijing week, Mon–Sun), creates the broadcast in Resend and SENDS
+ * it. Auto-send since 2026-08-30 (Cindy's call, recorded in PRINCIPLES.md as a
+ * deliberate exception to 发布永远由人): the draft-and-wait design shipped 0 of
+ * the EN editions in 8 weeks — the only broken link was the human click.
+ * DRAFT_ONLY=true restores draft-and-wait (e.g. for a redesign week).
  *
  * Always writes a local preview to briefs/email/YYYY-MM-DD.html (committed by
  * the workflow) so the email can be eyeballed without opening Resend.
@@ -219,11 +221,28 @@ async function createDraftBroadcast({ subject, html }) {
       subject,
       html,
       name: subject,
-      // send intentionally omitted (defaults false): draft only — Cindy sends
-      // from the Resend dashboard after review（发布永远由人）.
     }),
   });
   if (!res.ok) throw new Error(`resend broadcasts ${res.status}: ${await res.text()}`);
+  return res.json();
+}
+
+// Auto-send (2026-08-30, Cindy's call — a deliberate exception to 发布永远由人):
+// the stop-loss review found the cron drafted every week on time and the ONLY
+// broken link was the human click — 0 of the EN editions were ever sent, ZH
+// stopped after issue #1, while the subscribe card promised "one email a week".
+// This email is a fully deterministic digest of already-curated content (no
+// fresh LLM prose), so the human gate wasn't blocking slop, only delivery;
+// one-click unsubscribe is the reader-side escape hatch. Social posts (WeChat/
+// XHS/LinkedIn) keep the human gate — that principle is unchanged.
+// Escape hatch: DRAFT_ONLY=true restores the old draft-and-wait behavior.
+async function sendBroadcast(id) {
+  const res = await fetch(`https://api.resend.com/broadcasts/${id}/send`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({}),
+  });
+  if (!res.ok) throw new Error(`resend broadcasts/send ${res.status}: ${await res.text()}`);
   return res.json();
 }
 
@@ -287,6 +306,11 @@ async function createDraftBroadcast({ subject, html }) {
     return;
   }
   const r = await createDraftBroadcast({ subject, html });
-  console.log(`✓ Resend draft broadcast created: ${r.id}`);
-  console.log('  → Review & send: https://resend.com/broadcasts （发布永远由人）');
+  console.log(`✓ Resend broadcast created: ${r.id}`);
+  if (process.env.DRAFT_ONLY === 'true') {
+    console.log('  → DRAFT_ONLY=true — left as draft: https://resend.com/broadcasts');
+    return;
+  }
+  await sendBroadcast(r.id);
+  console.log('  ✓ sent (auto-send, 2026-08-30 decision — see sendBroadcast note; one-click unsub in every mail)');
 })().catch((e) => { console.error('✗ weekly-signal-email failed:', e.message); process.exit(1); });

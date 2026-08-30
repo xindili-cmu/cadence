@@ -682,6 +682,19 @@ async function run() {
       'N3: 周报邮件两版链接都显式带 lang（zh 订阅者不落 EN 页）');
   }
 
+  // ── O 段：周报邮件自动发送（2026-08-30 止损复盘决策）──────────────────────
+  // 事故：draft-and-wait 设计下 EN 周报 8 周 0 期发出——cron 半边全绿,人肉半边
+  // 静默断掉,没有任何东西报警。自动发送是 Cindy 对「发布永远由人」的显式豁免
+  // (PRINCIPLES.md 已记录)。这里守住"别被无声改回 draft-only":那正是复发形态。
+  {
+    console.log('\nO. 周报邮件 auto-send（draft-and-wait 不得无声回归）');
+    const mailSrc = fs.readFileSync(path.join(__dirname, 'weekly-signal-email.js'), 'utf8');
+    ok(/await sendBroadcast\(/.test(mailSrc) && /DRAFT_ONLY/.test(mailSrc),
+      'O1: 发送调用在主路径上,逃生口是显式 DRAFT_ONLY 而非默认');
+    ok(!/send intentionally omitted/.test(mailSrc),
+      'O1 判别力：旧 draft-only 注释形态已不存在（整段还原即转红）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 
