@@ -663,6 +663,25 @@ async function run() {
     }
   }
 
+  // ── N 段：permalink 默认语言 = en（2026-08-29 翻转）───────────────────────
+  // 事故：sitemap 的 1028 条裸 permalink,爬虫抓到的 title/og 全是中文——EN SEO
+  // 是三个止损锚点之一,却被自家 worker 默认语言压着。翻转后,任何一侧"顺手改回
+  // zh 默认"或"显式 lang 被删掉"都是静默回归,三条静态扫描各守一侧。
+  {
+    console.log('\nN. permalink 默认语言（EN-first 分发一致性）');
+    const workerSrc = fs.readFileSync(path.join(__dirname, '..', 'worker.js'), 'utf8');
+    ok(/get\('lang'\)\s*===\s*'zh'\s*\?\s*'zh'\s*:\s*'en'/.test(workerSrc),
+      'N1: worker 裸链接默认 en（zh 需显式 ?lang=zh）');
+    ok(!/get\('lang'\)\s*===\s*'en'\s*\?\s*'en'\s*:\s*'zh'/.test(workerSrc),
+      'N1 判别力：旧的 zh 默认形态已不存在（改回去即转红）');
+    const cardSrc2 = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'components', 'feed', 'NewsCard.jsx'), 'utf8');
+    ok(/set\('lang',\s*window\.CD_LANG\s*===\s*'zh'\s*\?\s*'zh'\s*:\s*'en'\)/.test(cardSrc2),
+      'N2: copy-link 两种语言都显式带 lang（zh 读者的分享卡不因默认翻转变英文）');
+    const emailSrc = fs.readFileSync(path.join(__dirname, 'weekly-signal-email.js'), 'utf8');
+    ok(/lang=\$\{EN \? 'en' : 'zh'\}/.test(emailSrc),
+      'N3: 周报邮件两版链接都显式带 lang（zh 订阅者不落 EN 页）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

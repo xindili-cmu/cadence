@@ -10,8 +10,13 @@
 // Failure posture: any error falls through to the untouched asset response —
 // the site can never be taken down by this shim.
 
-// Locale-aware copy: links shared from the EN edition carry &lang=en and get
-// English og fields (US market); default stays zh-first (core audience).
+// Locale-aware copy: links carry an explicit &lang= from the copy-link button
+// (both editions). The BARE URL — what Google crawls from the 1000+ sitemap
+// permalinks, and what x-default hreflang points at — defaults to EN since
+// 2026-08-29: the growth channel is EN SEO + LinkedIn (2026-08-25 decision),
+// and the zh default was hobbling it (crawlers indexed Chinese titles for
+// every permalink). zh readers keep zh cards via &lang=zh on copied links;
+// CN channels are paused, so no new bare links circulate in WeChat.
 const CJK_RE = /[一-鿿]/;
 function storyMeta(story, lang) {
   const en = lang === 'en';
@@ -106,7 +111,7 @@ export default {
 
       const id = url.searchParams.get('item');
       const daily = url.searchParams.get('daily');
-      const lang = url.searchParams.get('lang') === 'en' ? 'en' : 'zh';
+      const lang = url.searchParams.get('lang') === 'zh' ? 'zh' : 'en'; // default en — see header note (2026-08-29)
       const brand = lang === 'en' ? 'Cadence' : 'Cadence 步频';
 
       if (!id && !daily) {

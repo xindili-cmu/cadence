@@ -221,7 +221,11 @@ export function NewsCard({
           onClick={(e) => {
             e.preventDefault(); e.stopPropagation();
             const u = new URL(permalink, location.origin);
-            if (typeof window !== 'undefined' && window.CD_LANG === 'en') u.searchParams.set('lang', 'en');
+            // Explicit lang for BOTH editions (2026-08-29): the server default
+            // flipped zh→en, so a zh reader's copied link must say lang=zh or
+            // its WeChat/anywhere share card comes back English. Explicit on
+            // both sides = correct regardless of any future default change.
+            if (typeof window !== 'undefined') u.searchParams.set('lang', window.CD_LANG === 'zh' ? 'zh' : 'en');
             cdCopyText(u.href);
             setCopied(true);
             setTimeout(() => setCopied(false), 1600);

@@ -152,7 +152,9 @@ const COPY = EN ? {
 function buildHtml({ picks, range }) {
   const rows = picks.map((i, idx) => {
     // en links carry &lang=en so the story page opens in English.
-    const url = `${SITE_URL}/?item=${encodeURIComponent(i.id)}${EN ? '&lang=en' : ''}`;
+    // Explicit lang both ways (2026-08-29): server default flipped zh→en, so
+    // the zh edition's links must carry lang=zh or subscribers land on EN pages.
+    const url = `${SITE_URL}/?item=${encodeURIComponent(i.id)}&lang=${EN ? 'en' : 'zh'}`;
     const title = EN ? (i.titleEn || i.title) : (i.titleZh || i.title);
     const src = [i.journal || i.source, (i.publishedAt || '').slice(0, 10)].filter(Boolean).join(' · ');
     const reason = EN ? (i.curatedReasonEn || i.summary || '') : (i.curatedReason || i.summary || '');
