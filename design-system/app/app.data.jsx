@@ -42,7 +42,7 @@ window.CD_DICT = {
     'fb.kindLabel': 'What kind of note is this?',
     'fb.kind.bug': "Something's broken", 'fb.kind.feature': 'Idea or request', 'fb.kind.content': 'Content quality', 'fb.kind.other': 'Just saying hi',
     'fb.contentLabel': 'The details', 'fb.contentPlaceholder': 'What happened, or what you would change…',
-    'fb.contactLabel': 'Where to reach you', 'fb.optional': 'optional', 'fb.contactPlaceholder': 'Email or WeChat — only if you want a reply',
+    'fb.contactLabel': 'Where to reach you', 'fb.optional': 'optional', 'fb.contactPlaceholder': 'Email — only if you want a reply',
     'fb.send': 'Send it', 'fb.sending': 'Sending…', 'fb.sent': 'Signal received — thank you. I read every single one.',
     'fb.error': 'Could not send — please try again.', 'fb.again': 'Send another',
     searchPlaceholder: 'Search studies, journals, topics…',

@@ -504,12 +504,24 @@ function SubscribeCard({ onAbout, mobile, compact }) {
       )}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 14, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-tertiary)' }}>{t('sub.channels')}</span>
-        <button type="button" onClick={onAbout} style={chLink}>
-          <Icon name="message-circle" size={13} /> {t('sub.wechat')}
-        </button>
-        <a href="https://xhslink.com/m/8LpaT1OLeDw" target="_blank" rel="noopener noreferrer" style={chLink}>
-          <Icon name="book-open" size={13} /> {t('sub.xhs')}
-        </a>
+        {/* Channel badges are per-audience (2026-08-30): the EN face points at
+            LinkedIn — WeChat/RedNote are CN channels (paused 08-25) a US reader
+            can't use, and showing them contradicted the EN=Cadence brand split.
+            The ZH face keeps them: accounts are retained, not deleted. */}
+        {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? (
+          <>
+            <button type="button" onClick={onAbout} style={chLink}>
+              <Icon name="message-circle" size={13} /> {t('sub.wechat')}
+            </button>
+            <a href="https://xhslink.com/m/8LpaT1OLeDw" target="_blank" rel="noopener noreferrer" style={chLink}>
+              <Icon name="book-open" size={13} /> {t('sub.xhs')}
+            </a>
+          </>
+        ) : (
+          <a href="https://www.linkedin.com/company/132034233/" target="_blank" rel="noopener noreferrer" style={chLink}>
+            <Icon name="linkedin" size={13} /> LinkedIn
+          </a>
+        )}
         <a href="/rss.xml" target="_blank" rel="noopener noreferrer" style={chLink}>
           <Icon name="rss" size={13} /> RSS
         </a>
@@ -834,7 +846,7 @@ function AboutView({ onView, mobile }) {
           </div>
           <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。评估结果落在三个档位：85+ 强信号 · 75–84 值得关注 · 65–74 参考——档位是结论，数字只是档内的粗略位置，并非百分制精度。SIGNAL 只评研究与指南：行业新闻与政策类不打分，单列在「行业动态」栏。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。',
-              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. SIGNAL rates research and guidelines only: industry news and policy items are not scored and sit in their own “Industry & policy” strip. The site feed updates automatically; the daily posts we publish (WeChat / RedNote / LinkedIn) are human-checked before going out.')}
+              'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. SIGNAL rates research and guidelines only: industry news and policy items are not scored and sit in their own “Industry & policy” strip. The site feed updates automatically; the daily posts we publish (LinkedIn) are human-checked before going out.')}
           </p>
           <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('两点局限请知悉：评分基于摘要而非全文，研究细节与局限以原文为准；分数不是研究质量认证，也不构成临床建议——请结合你的临床判断与患者的具体情况使用。',
@@ -970,13 +982,22 @@ function AboutView({ onView, mobile }) {
           <SubscribeCard compact />
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: mobile ? 20 : 32 }}>
-          {[
-            { img: 'design-system/assets/social/xhs-qr.png', plat: zh ? '小红书' : 'RedNote', handle: 'in_cadence', href: 'https://xhslink.com/m/8LpaT1OLeDw', tip: zh ? '点击或扫码访问主页' : 'Tap or scan to open the profile' },
-            { img: 'design-system/assets/social/wechat-qr.png', plat: zh ? '微信公众号' : 'WeChat', handle: 'Cadence 步频', tip: zh ? '微信扫码关注' : 'Scan in WeChat to follow' },
-          ].map((q) => {
-            const img = (
+          {/* Per-audience channels (2026-08-30): ZH keeps the WeChat/XHS QR
+              codes (accounts retained); EN gets LinkedIn — the only channel a
+              US reader can actually use, per the 08-25 EN=Cadence split. */}
+          {(zh ? [
+            { img: 'design-system/assets/social/xhs-qr.png', plat: '小红书', handle: 'in_cadence', href: 'https://xhslink.com/m/8LpaT1OLeDw', tip: '点击或扫码访问主页' },
+            { img: 'design-system/assets/social/wechat-qr.png', plat: '微信公众号', handle: 'Cadence 步频', tip: '微信扫码关注' },
+          ] : [
+            { icon: 'linkedin', plat: 'LinkedIn', handle: 'Cadence PT', href: 'https://www.linkedin.com/company/132034233/', tip: 'Daily evidence briefs, Mon–Fri' },
+          ]).map((q) => {
+            const img = q.img ? (
               <img src={q.img} alt={`${q.plat} QR`} width={148} height={148}
                 style={{ width: 148, height: 148, borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', background: '#fff', padding: 8, boxShadow: 'var(--shadow-xs)' }} />
+            ) : (
+              <div style={{ width: 148, height: 148, borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-subtle)', background: '#fff', boxShadow: 'var(--shadow-xs)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Icon name={q.icon} size={56} strokeWidth={1.5} style={{ color: 'var(--blue-600)' }} />
+              </div>
             );
             return (
               <div key={q.plat} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, flex: '1 1 160px', maxWidth: 210 }}>
