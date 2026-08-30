@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-30T18:06:02.746Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-08-30T21:14:22.065Z",
+    "totalItems": 70,
     "categories": [
       "orthopedic",
       "neurological",
@@ -76,9 +76,9 @@
           "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
         }
       ],
-      "heat": 3.81,
-      "themeZh": "骨科疼痛：从评估到康复干预",
-      "themeEn": "Orthopedic Pain: Assessment to Intervention"
+      "heat": 3.64,
+      "themeZh": "骨科疼痛疾病的评估与康复干预",
+      "themeEn": "Orthopedic Pain Conditions Assessment and Intervention"
     },
     {
       "id": "news-1787655274828-0",
@@ -135,9 +135,9 @@
           "titleZh": "重新思考全球痴呆预防的风险因素"
         }
       ],
-      "heat": 3.27,
-      "themeZh": "帕金森病康复：多学科与生物反馈干预",
-      "themeEn": "Parkinson's Rehabilitation: Multidisciplinary and Biofeedback"
+      "heat": 3.12,
+      "themeZh": "帕金森病多学科康复与生物标志物研究",
+      "themeEn": "Parkinson's Disease Multidisciplinary Rehab & Biomarkers"
     },
     {
       "id": "news-1787943068276-1",
@@ -200,9 +200,75 @@
           "titleZh": "重构患者期望为肌肉骨骼康复中的治疗靶点"
         }
       ],
-      "heat": 3.27,
-      "themeZh": "物理治疗的实践模式与服务交付",
-      "themeEn": "Physical Therapy Practice & Service Delivery"
+      "heat": 3.12,
+      "themeZh": "物理治疗服务模式及实践指南依从性",
+      "themeEn": "Physical Therapy Service Models and Adherence"
+    },
+    {
+      "id": "news-1787288276212-1",
+      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
+      "category": "neurological",
+      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
+        "medRxiv",
+        "Physiotherapy theory and practice",
+        "NeuroRehabilitation",
+        "Archives of Physical Medicine and Rehabilitation"
+      ],
+      "tag": "spinal-cord",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
+          "titleZh": "创伤性脊髓损伤后独立步行的分级临床预测规则"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Minimal Detectable Change in Gait Biomechanics Post-Stroke: Disentangling the Effects of Walking Speed and Stroke-Related Variability",
+          "titleZh": "卒中后步态生物力学测量的最小可检测变化：区分步行速度与卒中相关变异性的影响"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
+          "titleZh": "纳入环境步行需求的 300 米社区步行测试在亚急性卒中患者中的测量学特性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Characteristics of Classified Gait Pattern Subgroups and Definitions of Abnormal Gait Patterns Following Stroke: A Scoping Review.",
+          "titleZh": "卒中后分类步态模式亚组特征及异常步态模式定义：范围综述"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Predicting gait patterns from actionable impairments in Duchenne muscular dystrophy: A Machine Learning and Explainable Artificial Intelligence study",
+          "titleZh": "通过杜氏肌营养不良症（DMD）的可干预缺陷预测步态模式：一项机器学习与可解释人工智能研究"
+        },
+        {
+          "source": "medRxiv",
+          "title": "RObotic WAlking for children who CAnnot WAlk (RoWaCaWa): Impacts on Physical Function and Physical Activity from a 12-week robotic walking intervention",
+          "titleZh": "RObotic WAlking for children who CAnnot WAlk (RoWaCaWa)：12 周机器人步态干预对身体功能和身体活动的影响"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Understanding how demographic characteristics impact the level of physical activity children with neuromotor impairments experience while using a robot-assisted walker",
+          "titleZh": "了解人口学特征如何影响神经运动障碍儿童使用机器人辅助步行器的体力活动水平"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Associations of Walk-and-Turn Spatiotemporal Gait Parameters With Functional Mobility in Children With Cerebral Palsy at GMFCS Levels I and II",
+          "titleZh": "脑瘫I、II级患儿步态时空参数与功能移动性的关联"
+        }
+      ],
+      "heat": 1.84,
+      "themeZh": "神经损伤后步态模式分析与康复预测",
+      "themeEn": "Gait Analysis and Prognosis Post-Neurological Injury"
     },
     {
       "id": "news-1788046091415-18",
@@ -256,76 +322,12 @@
           "titleZh": "业余足球运动员不同运动模式下的重复冲刺表现与疲劳反应"
         }
       ],
-      "heat": 1.63,
-      "themeZh": "运动表现与损伤预防：核心及ACL重建",
-      "themeEn": "Sports Performance & Injury Prevention"
-    },
-    {
-      "id": "news-1787079714579-1",
-      "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42610644/",
-      "category": "pediatric",
-      "publishedAt": "2026-08-29T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "The Lancet",
-        "Physical & occupational therapy in pediatrics"
-      ],
-      "tag": "early-intervention",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Therapeutic Exercise Protocol During Hospitalization in Pediatric Oncohematological Patients: Randomized Clinical Trial.",
-          "titleZh": "住院期间儿童血液肿瘤患者的治疗性运动方案：随机临床试验"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Viewpoint] Systematic reviews and the needs of the adolescent transgender health care field",
-          "titleZh": "系统综述与青少年跨性别健康护理领域的需求"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
-          "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
-        }
-      ],
-      "heat": 1.63,
-      "themeZh": "儿科物理治疗：住院运动与临床决策",
-      "themeEn": "Pediatric PT: Exercise & Decision Making"
+      "heat": 1.56,
+      "themeZh": "ACL重建后功能训练与运动员表现",
+      "themeEn": "ACL Rehab Training and Athlete Performance"
     }
   ],
   "items": [
-    {
-      "id": "news-1786877038341-0",
-      "title": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
-      "summary": "A two-phase case-control study and single-blind RCT compared the short-term effectiveness of manual therapy with augmented low-dye taping (MT + ALDT) and neuromuscular training with ALDT (NMT + ALDT) against routine physiotherapy care for pronation-related anterior knee pain.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
-      "publishedAt": "2026-08-16T00:00:00.000Z",
-      "firstSeen": "2026-08-16T10:43:58.341Z",
-      "curatedScore": 85,
-      "curatedReason": "对于足部旋前引起的前膝疼痛，这个 RCT 显示，不论是手法治疗还是神经肌肉训练，只要结合低染料贴扎（ALDT），在短期内都优于常规物理治疗。因此，遇到这类患者，你可以考虑将 MT+ALDT 或 NMT+ALDT 作为更有效的短期干预方案。",
-      "titleZh": "足部靶向康复治疗旋前相关前膝疼痛：一项两阶段病例对照研究和单盲随机对照试验，比较手法治疗与神经肌肉训练各自辅助低染料贴扎的效果",
-      "summaryZh": "一项两阶段病例对照研究和单盲随机对照试验，比较了手法治疗辅助低染料贴扎（MT + ALDT）与神经肌肉训练辅助低染料贴扎（NMT + ALDT）在治疗足部旋前相关前膝疼痛方面的短期疗效，并与常规物理治疗护理进行对比。",
-      "curatedReasonEn": "For pronation-related anterior knee pain, this RCT indicates that both manual therapy and neuromuscular training, when augmented with low-dye taping (ALDT), are superior to routine physiotherapy care in the short term. For these patients, consider MT+ALDT or NMT+ALDT as more effective short-term intervention options.",
-      "limitation": "研究只评估了短期效果，对长期疗效和复发情况的评估有限。",
-      "limitationEn": "The study only assessed short-term effectiveness, limiting conclusions on long-term outcomes and recurrence rates.",
-      "tags": [
-        "research",
-        "foot-ankle",
-        "knee",
-        "manual-manipulation",
-        "taping"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
     {
       "id": "news-1787694684114-0",
       "title": "Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.",
@@ -626,27 +628,6 @@
       "journal": "BMC Sports Science, Medicine and Rehabilitation"
     },
     {
-      "id": "news-1788046091415-21",
-      "title": "Lung Impedance-Guided Therapy Shows Promise in HFpEF, Suggests Study",
-      "summary": "A small trial suggests that outpatient lung impedance-guided therapy may be beneficial for patients with heart failure with preserved ejection fraction (HFpEF), offering a potential new approach for management outside the hospital.",
-      "category": "cardiopulmonary",
-      "source": "Medical Dialogues",
-      "sourceUrl": "https://medicaldialogues.in/cardiology-ctvs/news/lung-impedance-guided-therapy-shows-promise-in-hfpef-suggests-study-177790",
-      "publishedAt": "2026-08-24T03:30:05.000Z",
-      "firstSeen": "2026-08-29T23:28:11.415Z",
-      "curatedScore": 65,
-      "curatedReason": "这项初步研究提示，肺阻抗引导疗法可能为HFpEF患者提供院外管理的新途径。虽然结果尚需大型研究验证，但这为你未来探索心力衰竭患者的康复监测和干预手段提供了潜在方向。",
-      "titleZh": "研究表明肺阻抗引导疗法有望改善射血分数保留型心力衰竭患者预后",
-      "summaryZh": "一项小型试验表明，门诊肺阻抗引导疗法可能对射血分数保留型心力衰竭（HFpEF）患者有益，为院外管理提供了一种潜在新方法。",
-      "curatedReasonEn": "This preliminary study suggests that lung impedance-guided therapy may offer a new avenue for out-of-hospital management in HFpEF patients. While results require larger study validation, this provides a potential direction for you to explore rehabilitation monitoring and intervention strategies for heart failure patients.",
-      "limitation": "这是一项小规模的初步试验，其临床意义和普适性需通过更大规模的随机对照试验来确认。",
-      "limitationEn": "This is a small-scale preliminary trial, and its clinical significance and generalizability need to be confirmed through larger randomized controlled trials.",
-      "tags": [
-        "news",
-        "heart-failure"
-      ]
-    },
-    {
       "id": "news-1788037205658-12",
       "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
       "summary": "This correspondence outlines five priorities to strengthen future global dementia-prevention agendas, building on the 2024 Lancet Commission's identification of 14 modifiable risk factors that could prevent or delay nearly half of dementia cases.",
@@ -831,27 +812,6 @@
         "policy",
         "reimbursement",
         "telehealth"
-      ]
-    },
-    {
-      "id": "news-1787608304690-24",
-      "title": "Vancomycin-Soaked Quadriceps Grafts Linked to Early Resorption in ACLR: study",
-      "summary": "A recent study found a potential link between vancomycin-soaked quadriceps autografts and early graft resorption following anterior cruciate ligament reconstruction (ACLR).",
-      "category": "sports",
-      "source": "Medical Dialogues",
-      "sourceUrl": "https://medicaldialogues.in/orthopaedics/news/vancomycin-soaked-quadriceps-grafts-linked-to-early-resorption-in-aclr-study-177711",
-      "publishedAt": "2026-08-24T15:15:20.000Z",
-      "firstSeen": "2026-08-24T21:51:44.690Z",
-      "curatedScore": 75,
-      "curatedReason": "关注使用万古霉素浸泡的股四头肌移植物在 ACLR 中的应用，初步证据提示可能增加早期移植物吸收风险。这提醒你在选择移植物和预防感染策略时需权衡利弊。",
-      "titleZh": "研究发现：万古霉素浸泡的股四头肌移植物与 ACL 重建术后早期吸收相关",
-      "summaryZh": "一项最新研究发现，万古霉素浸泡的股四头肌自体移植物可能与前交叉韧带重建术后的早期移植物吸收有关。",
-      "curatedReasonEn": "Pay attention to the use of vancomycin-soaked quadriceps grafts in ACLR, as preliminary evidence suggests an increased risk of early graft resorption. This highlights the need to weigh benefits and risks when choosing graft types and infection prevention strategies.",
-      "limitation": "本研究的详细设计和样本量未披露，可能为观察性研究，结论仍需高级别证据进一步证实。",
-      "limitationEn": "The detailed study design and sample size were not disclosed, suggesting it may be an observational study, and the conclusions require further confirmation by higher-level evidence.",
-      "tags": [
-        "news",
-        "knee"
       ]
     },
     {
@@ -1242,25 +1202,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1787895157994-23",
-      "title": "Rare Elbow Reconstruction Using Synthetic Ligament Restores Joint Stability After Severe Road Accident Injury",
-      "summary": "Doctors successfully performed a rare and complex elbow reconstruction on a 53-year-old woman using a high-strength synthetic polyester ligament after a severe road accident, restoring stability and enabling early joint movement.",
-      "category": "sports",
-      "source": "Medical Dialogues",
-      "sourceUrl": "https://mhealth.medicaldialogues.in/article/health/rare-elbow-reconstruction-using-synthetic-ligament-restores-joint-stability-after-severe-road-accident-injury-178011",
-      "publishedAt": "2026-08-26T08:15:47.000Z",
-      "firstSeen": "2026-08-28T05:32:37.994Z",
-      "curatedScore": 65,
-      "curatedReason": "这则新闻报道了一例通过合成韧带成功重建肘关节稳定性的病例。尽管是个案，但提示了在严重创伤中合成韧带作为替代方案的可能性，为未来类似复杂损伤的治疗提供了思路。",
-      "titleZh": "罕见肘关节重建术：利用合成韧带在严重交通事故损伤后恢复关节稳定性",
-      "summaryZh": "Max Smart Super Speciality Hospital的医生们成功为一名53岁女性实施了罕见复杂的肘关节重建手术，利用高强度人工聚酯韧带恢复了关节稳定性，并使其在术后24小时内即可进行受控活动。",
-      "curatedReasonEn": "This news reports a case of successful elbow joint reconstruction using a synthetic ligament. Although anecdotal, it suggests the potential of synthetic ligaments as an alternative in severe trauma, offering insights for future treatment of similar complex injuries.",
-      "tags": [
-        "news",
-        "hand-wrist"
-      ]
     },
     {
       "id": "news-1787862963915-0",
