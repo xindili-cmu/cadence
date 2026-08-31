@@ -96,7 +96,7 @@ function rewriteHead(assetResp, { pageTitle, title, desc, canonical, lang }) {
   // EN shares shouldn't carry a Chinese-branded image alt (the og:image itself
   // is the shared site card for both editions).
   if (lang === 'en') {
-    rw.on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence — keeping pace with the evidence'); } });
+    rw.on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence Evidence — keeping pace with the evidence'); } });
   }
   return rw.transform(assetResp);
 }
@@ -112,14 +112,17 @@ export default {
       const id = url.searchParams.get('item');
       const daily = url.searchParams.get('daily');
       const lang = url.searchParams.get('lang') === 'zh' ? 'zh' : 'en'; // default en — see header note (2026-08-29)
-      const brand = lang === 'en' ? 'Cadence' : 'Cadence 步频';
+      // EN full name is "Cadence Evidence" (2026-08-30 naming decision —
+      // see PRINCIPLES.md 品牌名分治): "Cadence"-alone SERPs are owned by
+      // EDA/clinics; the two-word phrase is the ownable, searchable brand.
+      const brand = lang === 'en' ? 'Cadence Evidence' : 'Cadence 步频';
 
       if (!id && !daily) {
         // Plain EN homepage (?lang=en, no permalink): the only zh leak in its
         // share card is the image alt — fix just that, touch nothing else.
         if (lang !== 'en') return assetResp;
         return new HTMLRewriter()
-          .on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence — keeping pace with the evidence'); } })
+          .on('meta[property="og:image:alt"]', { element(el) { el.setAttribute('content', 'Cadence Evidence — keeping pace with the evidence'); } })
           .transform(assetResp);
       }
 

@@ -102,7 +102,9 @@ PASS（exit 0）才继续；报错（exit 1）就停下修——它专抓发布�
 > 配置：`SITE_URL` 默认 `https://incadencept.com`；开了账号后设 `X_HANDLE=@xxx` 会自动在 CTA 加关注引导。
 > 试运行建议：先发中文版覆盖海外华人，跑一两周看数据，再决定要不要同步英文版 / 上 Chrome 半自动。
 
-## LinkedIn — 半自动（英文，Cadence PT 公司页）
+## LinkedIn — 半自动（英文，Cadence Evidence 公司页）
+
+> 页名 2026-08-30 由「Cadence PT」改为「Cadence Evidence」（与 NJ 诊所 cadencePT 撞名 + EN 全称定名，见 PRINCIPLES.md）。**页 id `132034233` 不随改名变**，下述流程不受影响。
 
 面向英文康复研究读者。内容不另写，由日报 `briefs/daily/YYYY-MM-DD.json` 自动转帖。
 
@@ -115,9 +117,9 @@ node scripts/linkedin-daily-card.js # → linkedin/日期/daily-signal.png（108
 
 正文 = `post-en.txt`；第一条评论 = `sources-en.txt`（把链接挡在正文外，LinkedIn 不能预置评论，永远发完后手动贴）。
 
-**⚠️ 必须以 Cadence PT 公司页身份发，不是 Xindi Li 个人号。** LinkedIn 有个坑：一旦帖子带了附件（图片），就**不允许**把作者从个人号切到公司页——「Post as」下拉会显示 🛑「Remove the attachment to post from another account」，Cadence PT 变灰不可选。所以别在个人 feed 里编好再切，要**直接从公司页的编辑器开帖**：
+**⚠️ 必须以 Cadence Evidence 公司页身份发，不是 Xindi Li 个人号。** LinkedIn 有个坑：一旦帖子带了附件（图片），就**不允许**把作者从个人号切到公司页——「Post as」下拉会显示 🛑「Remove the attachment to post from another account」，公司页变灰不可选。所以别在个人 feed 里编好再切，要**直接从公司页的编辑器开帖**：
 
-1. 打开 `linkedin.com/company/132034233/admin/`（Cadence PT 页 id = `132034233`）→ 点「Create」→「Start a post」，作者默认就是 Cadence PT，无需切换。
+1. 打开 `linkedin.com/company/132034233/admin/`（页 id = `132034233`）→ 点「Create」→「Start a post」，作者默认就是公司页，无需切换。
 2. **正文整段注入**：公司页编辑器是 Quill（`div.ql-editor`，注意页面有多个隐藏实例，取可见那个），`document.execCommand('insertText', false, body)` 一次性灌入即可——空行、5 个数字 emoji、破折号、👇 都正常（个人 feed 那套 ProseMirror 逐行注入的坑在这里不需要）。
 3. **附图**：点照片图标 → 弹出 Editor 面板 → 隐藏 `input[type=file]` 挂载后 `find` 到 ref 用 file_upload 传 `linkedin/日期/daily-signal.png`（别点 input，会开原生选择框）→ 点「Next」回编辑器。
 4. 停在「Post」按钮前，截图交 Cindy → **Cindy 本人点发布**（不可逆动作不交自动化，与 XHS/公众号/X 一致）。
@@ -139,13 +141,12 @@ X 试运行期复用日报，同口径 5×/周（零额外内容成本）。
 
 ## 周报邮件（每周最强信号 · 订阅制）
 
-**管线**：`weekly-brief.yml`（周一 07:30 北京）在生成内部周报后，跑 `scripts/weekly-signal-email.js` —— 取上一个完整北京周（周一–周日）SIGNAL 最高的 5 篇 research（按标准化标题去重，防同一研究两条 PubMed 记录），生成品牌样式 HTML 邮件，在 Resend 创建**草稿** broadcast。永不自动发送。
+**管线**：`weekly-brief.yml`（周一 07:30 北京）在生成内部周报后，跑 `scripts/weekly-signal-email.js` —— 取上一个完整北京周（周一–周日）SIGNAL 最高的 5 篇 research（按标准化标题去重，防同一研究两条 PubMed 记录），生成品牌样式 HTML 邮件，在 Resend 创建并**自动发送** broadcast（2026-08-30 止损复盘决策，「发布永远由人」的显式豁免——8 周里人肉点发这半边静默断掉，EN 版 0 期发出；详见 PRINCIPLES.md，逃生口 `DRAFT_ONLY=true`，断言 pipeline-gates O 段）。
 
 **每周流程（周一）：**
 
-1. 打开 resend.com/broadcasts，找到当周草稿（也可先看仓库 `briefs/email/日期.html` 预览）。
-2. 校对内容（AI 稿，人来收尾）→ 点 **Send**。**Cindy 本人点发**，与其他平台一致。
-3. 新订阅邮箱来自 Formspree 通知（`kind: subscribe`）→ `RESEND_API_KEY=re_xxx RESEND_SEGMENT_ID=xxx node scripts/add-subscriber.js 邮箱1 邮箱2`。
+1. 自动发出后，在 resend.com/broadcasts 复核（仓库 `briefs/email/日期.html` 有预览）；发现问题走更正邮件或下期修正。
+2. 新订阅邮箱来自 Formspree 通知（`kind: subscribe`）→ `RESEND_API_KEY=re_xxx RESEND_SEGMENT_ID=xxx node scripts/add-subscriber.js 邮箱1 邮箱2`。
 
 **一次性配置（未完成前 cron 只产预览文件、不建草稿）：**
 

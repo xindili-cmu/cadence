@@ -50,7 +50,7 @@ const RESEND_SEGMENT_ID = EN
   ? (process.env.RESEND_SEGMENT_ID_EN || '')
   : (process.env.RESEND_SEGMENT_ID || '');
 const MAIL_FROM = process.env.MAIL_FROM || (EN
-  ? 'Cadence <weekly@incadencept.com>'
+  ? 'Cadence Evidence <weekly@incadencept.com>'
   : 'Cadence 步频 <weekly@incadencept.com>');
 const SITE_URL = (process.env.SITE_URL || 'https://incadencept.com').replace(/\/$/, '');
 
@@ -129,7 +129,7 @@ function tierLabel(score) {
 // structurally, only in words.
 const COPY = EN ? {
   htmlLang: 'en',
-  masthead: 'Cadence',
+  masthead: 'Cadence Evidence',
   edition: 'Weekly Signal',
   intro: (n) => `The ${n} highest-SIGNAL papers from last week's rehab literature. Each comes with one line on why it matters — click a title for the full summary and source.`,
   readMore: 'Read more →',
@@ -137,7 +137,9 @@ const COPY = EN ? {
   disclaimer: 'SIGNAL scores are AI-generated from titles and abstracts; not clinical advice.',
   unsubPrefix: 'Don’t want these emails? ',
   unsub: 'Unsubscribe',
-  subject: (range) => `Cadence Weekly Signal | ${range} top-scored rehab research`,
+  // Brand lives in the from-name ("Cadence Evidence <weekly@…>") — repeating it
+  // in the subject would eat the ~60-char preview budget (2026-08-30 rename).
+  subject: (range) => `Weekly Signal | ${range} top-scored rehab research`,
 } : {
   htmlLang: 'zh-CN',
   masthead: 'Cadence 步频',

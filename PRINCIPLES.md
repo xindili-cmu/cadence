@@ -35,8 +35,9 @@
 ## 3. 定位 (Positioning)
 
 - **品类:** 康复(rehab / PT)高分文献策展。
-- **渠道(2026-08-25 更新):** 主攻 LinkedIn(Cadence PT 主页)+ 自有网站(含信号分滑块筛选 `?min=`);公众号「Cadence 步频」/ 小红书暂停更新——账号与名称保留,不改名、不注销。
-- **品牌名分治(2026-08-25 决策):** EN 面一律 `Cadence`(LinkedIn 卡片/EN 邮件/站点 meta/RSS 已去「步频」);「步频」保留为中文刊名,中文面(公众号标题格式、ZH 界面、双关文案)继续用。两名并存是按受众分治,不是待统一的债;若重启中文渠道,沿用原名。
+- **渠道(2026-08-25 更新):** 主攻 LinkedIn(Cadence Evidence 主页,页 id `132034233` 不随改名变)+ 自有网站(含信号分滑块筛选 `?min=`);公众号「Cadence 步频」/ 小红书暂停更新——账号与名称保留,不改名、不注销。
+- **品牌名分治(2026-08-25 决策):** EN 面用 `Cadence` 品牌词;「步频」保留为中文刊名,中文面(公众号标题格式、ZH 界面、双关文案)继续用。两名并存是按受众分治,不是待统一的债;若重启中文渠道,沿用原名。
+- **EN 对外全称 = `Cadence Evidence`(2026-08-30 定名):** 裸「Cadence」/「cadence pt」的 Google SERP 与 LinkedIn 命名空间已被实体诊所(IL/NJ/PA/温哥华等)和 EDA 巨头占满,实测「Cadence Evidence」零品牌占用,且 evidence 是 PT 群体的身份词(EBP)。站点 title/og/JSON-LD/RSS 频道名/EN 周报 masthead 与发件人/X thread 头已统一为全称,一致性由 `pipeline-gates.test.js` Q 段互锁;LinkedIn 页名同步改(Cindy 手动)。UI 内的大字 wordmark 可仍单写 Cadence(杂志刊头惯例)。「Cadence Journal Club」已验零占用,预留为未来子栏目名。
 - **策展引擎:** 生产环境用 `gemini-2.5-flash` 打分(repo `LLM_PROVIDER=gemini`,仅 `GEMINI_API_KEY` 配齐),评分字段 `curatedScore`。
 - **SEO:** GSC 域名已验证、sitemap 已提交;Googlebot 能完整渲染 React,**无需 SSR**。
 

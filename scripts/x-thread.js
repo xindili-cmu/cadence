@@ -149,7 +149,7 @@ function buildHook(ed, zh) {
     const title = fitTo(ed.lead?.titleZh || '', MAX_WEIGHT - fixed);
     return `${head}\n\n${title}\n\n${meta}`;
   }
-  const head = `🏃 Cadence · Daily Rehab Research Brief ${date}`;
+  const head = `🏃 Cadence Evidence · Daily Rehab Research ${date}`;
   const meta = `${st.events ?? '?'} updates today across ${st.specialties ?? '?'} specialties. Top picks ↓ 🧵`;
   const fixed = xLen(head) + xLen('\n\n') + xLen('\n\n') + xLen(meta);
   const title = fitTo(ed.lead?.titleEn || '', MAX_WEIGHT - fixed);
