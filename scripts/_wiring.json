@@ -22,6 +22,7 @@
     "check-journal-metrics.js": "核对 journals.json 的 JCR 影响因子,补 IF 时手动跑",
     "coverage-watch.js": "稀疏专科覆盖量监控(离线),看新增期刊闸门有没有效果",
     "fetch-favicons.js": "抓取来源站 favicon 自托管,新增来源后手动跑",
+    "gsc-oauth-setup.js": "一次性:换 GSC OAuth refresh token → repo secret GSC_OAUTH_JSON(weekly-brief 的搜索表现段消费)。必须 Cindy 本地跑(要开 localhost 回调 + 浏览器登录),CI 里只消费 secret 不跑它;凭证过期或换账号时重跑",
     "fix-source-attribution.js": "历史数据修复:来源归属",
     "fix-scrape-dates.js": "历史数据修复:抓取腿伪造日期(8-11 APTA 倒灌;幂等,联网跑能多修 47 条页面 meta)",
     "fix-nonarticle-rows.js": "历史数据修复:非文章行(8-15 审计;常青索引页/报名页/征稿页 + 时钟盖章簇。幂等,离线,DRY_RUN=true 可先看)",

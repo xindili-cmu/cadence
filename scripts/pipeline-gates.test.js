@@ -759,6 +759,25 @@ async function run() {
       'Q6: X thread 头 EN 用全称、zh 用步频刊名');
   }
 
+  // ── R 段：GSC 认证走 OAuth（SA key 被组织策略永久堵死）────────────────────
+  // 2026-08-31：配 GSC_SA_KEY 时发现 Google "Secure by default" 组织策略
+  // (iam.disableServiceAccountKeyCreation) 禁止创建服务账号密钥——CMU 账号和
+  // 个人 Gmail 都被堵，不是选择而是硬约束。OAuth refresh token 不需要 SA key。
+  // 守两侧：OAuth 分支还在（被"简化"掉就退回不可用状态），且它优先于 SA。
+  {
+    console.log('\nR. GSC 认证路径（OAuth 优先，SA key 已被组织策略堵死）');
+    const wb = fs.readFileSync(path.join(__dirname, 'weekly-brief.js'), 'utf8');
+    ok(/GSC_OAUTH_JSON/.test(wb) && /grant_type:\s*'refresh_token'/.test(wb),
+      'R1: weekly-brief 有 OAuth refresh-token 认证路径');
+    // 顺序：oauthRaw 必须在 saRaw 之前被判定（三元式左臂），否则 SA 会先跑并失败。
+    ok(/oauthRaw\s*\n?\s*\?\s*await gscTokenOAuth/.test(wb),
+      'R2: OAuth 优先于 legacy SA key（SA 只在无 OAuth 时兜底）');
+    ok(fs.existsSync(path.join(__dirname, 'gsc-oauth-setup.js')),
+      'R3: 换 token 的一次性脚本在（凭证过期时人要能重跑）');
+    const wiring = JSON.parse(fs.readFileSync(path.join(__dirname, '_wiring.json'), 'utf8'));
+    ok(!!wiring.oneoff['gsc-oauth-setup.js'], 'R3: 且已登记为 oneoff（本地跑，不进 CI）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

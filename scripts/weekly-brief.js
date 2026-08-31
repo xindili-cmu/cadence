@@ -7,10 +7,11 @@
  * side of that idea — built entirely from repo data (news.json + archive/),
  * so it needs no external credentials to run.
  *
- * Optional GSC section: if a GSC_SA_KEY secret (a Google service-account
- * JSON) is present, the brief also pulls Search Console clicks/impressions/
- * queries/pages for incadencept.com. Without it, that section prints a
- * "未配置" note and the rest of the brief still ships.
+ * Optional GSC section: with a `GSC_OAUTH_JSON` secret (OAuth refresh token —
+ * make one with `node scripts/gsc-oauth-setup.js`) or the legacy `GSC_SA_KEY`
+ * (service-account JSON), the brief also pulls Search Console clicks/
+ * impressions/queries/pages for incadencept.com. Without either, that section
+ * prints a "未配置" note and the rest of the brief still ships.
  *
  * Output: briefs/weekly/YYYY-Www.md  (+ briefs/weekly/index.json manifest)
  *
@@ -389,11 +390,39 @@ function categoryBaseline(items, end, axis, cats, { weeks = 8, minWeeks = 4 } = 
 }
 
 // ----------------------------------------------------------------------------
-// Optional: Google Search Console (zero-dependency service-account JWT)
+// Optional: Google Search Console (zero-dependency, two auth paths)
+//
+// Preferred: OAuth refresh token (GSC_OAUTH_JSON) — 2026-08-31. The original
+// service-account path is blocked for this account: Google's "Secure by
+// default" org policy (iam.disableServiceAccountKeyCreation) refuses to mint
+// SA keys, on the CMU account AND the personal Gmail. A refresh token needs no
+// SA key, so it sidesteps the policy entirely.
+// Legacy: GSC_SA_KEY (service-account JSON) still works where key creation is
+// allowed — kept so this doesn't become a one-way door.
+// Both are read-only (webmasters.readonly) and expire into a 401, never a
+// silent empty result — a broken credential shows up as `_GSC 查询失败_` in
+// the brief, not as a zero week that reads like a traffic collapse.
 // ----------------------------------------------------------------------------
 
 function b64url(buf) {
   return Buffer.from(buf).toString('base64').replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+// OAuth installed-app flow: exchange a long-lived refresh token for a 1h access
+// token. Refresh tokens for apps in "Testing" publish status expire after 7
+// days — scripts/gsc-oauth-setup.js tells Cindy to publish the app first.
+async function gscTokenOAuth(o) {
+  const res = await fetch('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      client_id: o.client_id,
+      client_secret: o.client_secret,
+      refresh_token: o.refresh_token,
+      grant_type: 'refresh_token',
+    }),
+  });
+  if (!res.ok) throw new Error(`oauth token ${res.status}: ${await res.text()}`);
+  return (await res.json()).access_token;
 }
 async function gscToken(sa) {
   const now = Math.floor(Date.now() / 1000);
@@ -429,11 +458,15 @@ async function gscQuery(token, site, body) {
   return res.json();
 }
 async function getGSC(win) {
-  if (!process.env.GSC_SA_KEY) return { skipped: true };
+  // OAuth first (the path that works under the SA-key org policy), SA as legacy.
+  const oauthRaw = process.env.GSC_OAUTH_JSON;
+  const saRaw = process.env.GSC_SA_KEY;
+  if (!oauthRaw && !saRaw) return { skipped: true };
   const site = process.env.GSC_SITE_URL || 'sc-domain:incadencept.com';
   try {
-    const sa = JSON.parse(process.env.GSC_SA_KEY);
-    const token = await gscToken(sa);
+    const token = oauthRaw
+      ? await gscTokenOAuth(JSON.parse(oauthRaw))
+      : await gscToken(JSON.parse(saRaw));
     // Anchor to the REVIEWED week (win.coveredEnd), not generation time, so a
     // back-filled run (`weekly-brief.js 2026-06-15`) reports that week's search
     // data — not the week around the run date. Shift back GSC_LAG_DAYS so both
@@ -730,7 +763,7 @@ function render(ctx) {
   L.push(`## 搜索表现（GSC · incadencept.com）`);
   L.push(``);
   if (gsc.skipped) {
-    L.push(`_未配置：添加仓库 secret \`GSC_SA_KEY\`（Google service-account JSON）后自动填充本节。_`);
+    L.push(`_未配置：跑 \`node scripts/gsc-oauth-setup.js\` 拿到 JSON，存为仓库 secret \`GSC_OAUTH_JSON\` 后自动填充本节。_`);
   } else if (gsc.error) {
     L.push(`_GSC 查询失败：${gsc.error}_`);
   } else {
