@@ -2011,7 +2011,12 @@ async function main() {
   try {
     const xmlEsc = (s) => (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const rssDate = (iso) => iso ? new Date(iso).toUTCString() : new Date().toUTCString();
-    const top = [...merged].sort((a, b) => b.curatedScore - a.curatedScore).slice(0, 20);
+    // Evidence lane only (lane split 2026-08-29). RSS is a scored top-position
+    // surface the split originally missed: sorted by curatedScore, the feed's
+    // first three items on 2026-08-30 were three pinned-90 Medicare policy
+    // stories — under a channel literally titled "PT Research Signal", while
+    // About promises "industry news and policy items are not scored".
+    const top = merged.filter((i) => !isIntel(i)).sort((a, b) => b.curatedScore - a.curatedScore).slice(0, 20);
     const items = top.map(i => `  <item>
     <title>${xmlEsc(i.title)}</title>
     <link>${SITE_URL}/?item=${xmlEsc(encodeURIComponent(i.id))}</link>
@@ -2024,9 +2029,9 @@ async function main() {
     const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
-  <title>Cadence — PT Research Signal</title>
+  <title>Cadence Evidence — PT Research Signal</title>
   <link>${SITE_URL}/</link>
-  <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 50 sources.</description>
+  <description>Daily curated physical therapy &amp; rehab research for clinicians. AI-scored signal from 56 sources.</description>
   <language>en</language>
   <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
   <ttl>360</ttl>${SITE_URL ? `\n  <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml"/>` : ''}
@@ -2047,10 +2052,10 @@ ${items}
   } catch (e) { console.error('   ⚠️  sitemap.xml 生成失败:', e.message); }
 
   // NOTE: the homepage <head> keeps brand-level static og:title/description on
-  // purpose — the index.html canonical title should be stable ("Cadence — daily
-  // PT evidence"), not rewritten to the top article each run. Per-article
-  // permalinks are /?item=<id> (client-rendered title/canonical/JSON-LD);
-  // static og tags for those URLs would need edge-side injection — not done yet.
+  // purpose — the index.html canonical title should be stable (brand-level,
+  // "Cadence Evidence — …"), not rewritten to the top article each run.
+  // Per-article/daily permalink <head> is injected edge-side by worker.js
+  // (title/description/og/canonical); the client adds JSON-LD on top.
 
   return { newItems: final.length, totalItems: merged.length,
     headlines: merged.slice(0, 5).map(i => `[${i.curatedScore}] ${i.title}`) };

@@ -116,6 +116,23 @@ export function NewsCard({
     }}>{designLabel}</span>
   );
 
+  // Preprint chip — medRxiv/bioRxiv items carry no peer review, and a feed
+  // that sorts by "evidential strength" must say so ON THE CARD, not only on
+  // the Sources wall (2026-08-30 audit: 9/74 items were unlabeled medRxiv
+  // preprints scored in the same tiers as peer-reviewed work). Dashed border
+  // on purpose: same "not a settled rating" visual language as the intel chip.
+  const isPreprint = /\b(?:medrxiv|biorxiv|ssrn|research\s+square|preprints?)\b/i.test(String(source || ''));
+  const preprintChip = isPreprint && (
+    <span
+      title={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '预印本——尚未同行评审' : 'Preprint — not yet peer-reviewed'}
+      style={{
+        padding: isCompact ? '2px 7px' : '3px 9px', borderRadius: 'var(--radius-pill)',
+        fontFamily: 'var(--font-sans)', fontSize: isCompact ? 11 : 12, fontWeight: 500,
+        background: 'var(--surface-page)', border: '1px dashed var(--ink-300)',
+        color: 'var(--text-secondary)', whiteSpace: 'nowrap', cursor: 'default',
+      }}>{(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '预印本' : 'Preprint'}</span>
+  );
+
   // Title → on-site story detail (2026-07-08 adversarial-review fix). It used
   // to jump straight to the external journal, so the site's own permalinks had
   // zero internal links and every title click was a bounce. Plain left-click
@@ -289,6 +306,7 @@ export function NewsCard({
           {isIntel ? intelChip : (typeof score === 'number' && <SignalScore score={score} variant="badge" />)}
           <CategoryTag category={category} size="md" useShort />
           {designChip}
+          {preprintChip}
           {techChip}
           <span style={{ flex: 1 }} />
           {timeEl}
@@ -317,6 +335,7 @@ export function NewsCard({
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11, flexWrap: 'wrap' }}>
               <CategoryTag category={category} size="md" useShort={false} />
               {designChip}
+          {preprintChip}
               {techChip}
               <span style={{ flex: 1 }} />
               {timeEl}
@@ -339,6 +358,7 @@ export function NewsCard({
         {isIntel ? intelChip : (typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />)}
         <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort />
         {designChip}
+          {preprintChip}
         {techChip}
         <span style={{ flex: 1 }} />
         {timeEl}

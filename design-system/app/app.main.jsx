@@ -196,12 +196,19 @@ function HotTopicsStrip({ topics, onPick, mobile = false }) {
 // Other outlets reporting the same story — folded under the main card instead
 // of appearing as duplicate cards. Hover a name to see that outlet's headline.
 
-function RelatedRow({ related }) {
-  if (!related || !related.length) return null;
+function RelatedRow({ related, self }) {
+  // Drop self-references: the dedup leg can record the story's own journal as
+  // "also covered by" (PubMed leg + journal-RSS leg of the same paper), which
+  // rendered "ALSO COVERED BY Archives of PM&R" under an Archives of PM&R card
+  // — 4 cards on the 2026-08-30 audit. `self` = the story's own outlet names
+  // (journal / source / wallSource); compare case-insensitively.
+  const own = new Set((self || []).filter(Boolean).map((x) => String(x).trim().toLowerCase()));
+  const shown = (related || []).filter((r) => r && r.source && !own.has(String(r.source).trim().toLowerCase()));
+  if (!shown.length) return null;
   return (
     <div style={{ margin: '6px 6px 0', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'baseline', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)' }}>
       <span style={{ letterSpacing: '0.05em', textTransform: 'uppercase', fontSize: 10 }}>{window.CD_T('alsoCovered')}</span>
-      {related.map((r) => (
+      {shown.map((r) => (
         <a key={r.source + r.sourceUrl} href={r.sourceUrl} target="_blank" rel="noopener noreferrer" title={r.title}
           onClick={(e) => e.stopPropagation()}
           style={{ color: 'var(--text-secondary)', textDecoration: 'none', borderBottom: '1px dotted var(--border-subtle)' }}>{r.source}</a>
@@ -682,14 +689,18 @@ function SectionHead({ eyebrow, headline, mobile }) {
 function AboutView({ onView, mobile }) {
   const t = window.CD_T;
   const zh = window.CD_LANG === 'zh';
-  const srcCount = (window.CD_SOURCES || []).length || 40;
+  const srcCount = (window.CD_SOURCES || []).length || 56; // fallback = sources.json length as of 2026-08-30 (shown only if sources.json failed to load)
   const tt = (a, b) => (zh ? a : b);
 
   const para = { margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.85, color: 'var(--text-secondary)' };
   const secTitle = { margin: '0 0 18px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)' };
   const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const stats = [
-    { v: '50', l: tt('证据来源', 'Sources') },
+    // Source count is data-driven (CD_SOURCES = sources.json): the hardcoded
+    // "50" drifted to 56 real sources by 2026-08-30 while five different
+    // numbers circulated across About/meta/Sources. Copy that can't be
+    // computed (index.html meta, i18n strings) is pinned by pipeline-gates P.
+    { v: String(srcCount), l: tt('证据来源', 'Sources') },
     { v: '8', l: tt('临床专科', 'Specialties') },
     { v: tt('3 档', '3 tiers'), l: tt('SIGNAL 信号档', 'SIGNAL rating') },
     { v: tt('每日', 'Daily'), l: tt('更新', 'Updated') },
@@ -705,7 +716,7 @@ function AboutView({ onView, mobile }) {
               <img src={'design-system/assets/favicons/' + s.favicon} alt="" width="22" height="22" style={{ borderRadius: 4 }} />
             </span>
           ))}
-          <span style={{ display: 'inline-flex', alignItems: 'center', height: 40, padding: '0 12px', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>+ {tt('30 余种', '30 more')}</span>
+          <span style={{ display: 'inline-flex', alignItems: 'center', height: 40, padding: '0 12px', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)', color: 'var(--text-tertiary)', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>+ {tt(`${Math.max(srcCount - 6, 0)} 种`, `${Math.max(srcCount - 6, 0)} more`)}</span>
         </div>
       );
     }
@@ -784,8 +795,8 @@ function AboutView({ onView, mobile }) {
                 {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
-                {tt('每天，步频从全球 50 个顶级信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。',
-                  'Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from 50 top sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.')}
+                {tt(`每天，步频从全球 ${srcCount} 个信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。`,
+                  `Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from ${srcCount} sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.`)}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('每天 5 分钟，把全球最新的临床证据，变成你推开诊室大门、面对患者时最硬核的知识武装。',
@@ -925,7 +936,7 @@ function AboutView({ onView, mobile }) {
                 </div>
               ))}
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: '12px 14px', border: '1px dashed var(--border-default)', borderRadius: 'var(--radius-md)' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--text-secondary)' }}>+ 40+</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', fontWeight: 600, color: 'var(--text-secondary)' }}>+ {Math.max(srcCount - ((window.ABOUT && window.ABOUT.sources) || []).length, 0)}</span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-tertiary)' }}>{tt('更多来源', 'more')}</span>
               </div>
             </div>
@@ -1580,7 +1591,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
               {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
               <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
             </a>
-            <RelatedRow related={leadStory.related} />
+            <RelatedRow related={leadStory.related} self={[leadStory.journal, leadStory.source, leadStory.wallSource]} />
           </article>
         </section>
       )}
@@ -1801,7 +1812,7 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
     const prevTitle = document.title;
     // Suffix follows the edition (worker.js does the same for crawlers):
     // EN readers shouldn't get a Chinese-branded tab title.
-    document.title = `${s.title} — ${window.CD_LANG === 'en' ? 'Cadence' : 'Cadence 步频'}`;
+    document.title = `${s.title} — ${window.CD_LANG === 'en' ? 'Cadence Evidence' : 'Cadence 步频'}`;
     const link = document.createElement('link');
     link.rel = 'canonical';
     link.href = location.origin + cdItemUrl(story.id);
@@ -1885,6 +1896,15 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
             </h2>
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginBottom: 16, fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)' }}>
               <span style={{ fontWeight: 500 }}>{story.wallSource || story.source}</span>
+              {/* Preprint flag — mirrors the NewsCard chip (2026-08-30 audit):
+                  the detail view is the share-link landing, it must not imply
+                  peer review that hasn't happened. */}
+              {/\b(?:medrxiv|biorxiv|ssrn|research\s+square|preprints?)\b/i.test(String(story.source || story.journal || '')) && (
+                <span title={window.CD_LANG === 'zh' ? '预印本——尚未同行评审' : 'Preprint — not yet peer-reviewed'}
+                  style={{ padding: '1px 7px', borderRadius: 'var(--radius-pill)', fontFamily: 'var(--font-sans)', fontSize: 11.5, fontWeight: 500, background: 'var(--surface-page)', border: '1px dashed var(--ink-300)', color: 'var(--text-secondary)', whiteSpace: 'nowrap', cursor: 'default' }}>
+                  {window.CD_LANG === 'zh' ? '预印本' : 'Preprint'}
+                </span>
+              )}
               {story.journalMeta && story.journalMeta.if != null && (
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, fontWeight: 600, padding: '1px 6px', borderRadius: 'var(--radius-xs)', background: 'var(--green-50)', border: '1px solid var(--green-100)', color: 'var(--green-700)' }}>
                   IF {story.journalMeta.if}
@@ -2440,7 +2460,7 @@ function FeedApp() {
                     permalink={cdItemUrl(s.id)}
                     selected={selected === s.id}
                     onClick={() => setSelected(selected === s.id ? null : s.id)} />
-                  {!compact && <RelatedRow related={s.related} />}
+                  {!compact && <RelatedRow related={s.related} self={[s.journal, s.source, s.wallSource]} />}
                 </div>
               );
             };

@@ -695,6 +695,70 @@ async function run() {
       'O1 判别力：旧 draft-only 注释形态已不存在（整段还原即转红）');
   }
 
+  // ── P 段：2026-08-30 对抗式审查的三个显示层修复（静默回退高危）──────────
+  // ①信源数口径：7-04 统一成 50 后又漂到 56（sources.json 实际条数），About/
+  //   meta/RSS 五种口径并存。能算的已改为读 CD_SOURCES；写死的文案在这里与
+  //   sources.json 对账——sources.json 变了这里就转红，逼着改文案。
+  // ②「本周信号榜」只收 evidence：该榜生于 6-14、只在安静日渲染，8-29 lane
+  //   split 改造漏了它——8-30 审查时两条 pinned-90 Medicare policy 顶着
+  //   SIGNAL 徽章霸榜。安静日专属 = 回退后可以躲很多天，必须断言。
+  // ③RSS top-20 只收 evidence：RSS 按分排序，是 lane split 漏掉的打分顶位
+  //   （8-30 实况：前三条全是 90 分 policy，频道名还叫 PT Research Signal）。
+  {
+    console.log('\nP. 显示层一致性（2026-08-30 审查修复不得回退）');
+    const srcTruth = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'sources.json'), 'utf8')).length;
+    const NUM_RE = /(\d{1,3})\s*(?:个专业信源|个信源|(?:specialty\s+)?sources\b)/gi;
+    for (const rel of ['index.html', 'design-system/app/app.data.jsx', 'scripts/news-refresh.js']) {
+      const src = fs.readFileSync(path.join(__dirname, '..', ...rel.split('/')), 'utf8');
+      const nums = [...src.matchAll(NUM_RE)].map((m) => Number(m[1]));
+      ok(nums.length > 0 && nums.every((n) => n === srcTruth),
+        `P1: ${rel} 里的信源数（${[...new Set(nums)].join(',') || '无'}）与 sources.json 实数（${srcTruth}）一致`);
+    }
+    const shellSrc = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'app.shell.jsx'), 'utf8');
+    ok(/if \(!s\.publishedAt \|\| s\.lane === 'intel'\) return false;/.test(shellSrc),
+      'P2: 本周信号榜过滤 intel lane（quiet-day 榜不再被 policy 高分霸榜）');
+    const refreshSrc = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    ok(/const top = merged\.filter\(\(i\) => !isIntel\(i\)\)\.sort/.test(refreshSrc),
+      'P3: RSS top-20 只取 evidence lane（按分排序的顶位不给 news/policy）');
+  }
+
+  // ── Q 段：EN 品牌全称一致（2026-08-30 定名 Cadence Evidence）──────────────
+  // 背景：Google/LinkedIn 上「cadence + 临床词」命名空间全被实体诊所占据，EN 面
+  // 全称定为可独占的两词短语（PRINCIPLES.md 品牌名分治）。品牌串散在 worker
+  // （边缘 head 改写）、app.main（客户端 title）、index.html（静态 head）、RSS
+  // 频道名、周报 masthead/发件人、X thread 头——正是「改一处漏五处」的静默漂移
+  // 形态。这里不写死 EN 品牌值，只断言各处与 worker 基准相等；zh 刊名
+  // 'Cadence 步频' 反过来写死当锚点——它是 8-25 分治决策的不变量，EN 改名不得
+  // 波及，谁动它就该转红引人来看。regex 若因重构匹配不到会 fail 而非恒真。
+  {
+    console.log('\nQ. EN 品牌全称一致（worker/app/index/RSS/email/X 互锁）');
+    const wSrc = fs.readFileSync(path.join(__dirname, '..', 'worker.js'), 'utf8');
+    const mSrc = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'app.main.jsx'), 'utf8');
+    const iSrc = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+    const rSrc = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    const eSrc = fs.readFileSync(path.join(__dirname, 'weekly-signal-email.js'), 'utf8');
+    const xSrc = fs.readFileSync(path.join(__dirname, 'x-thread.js'), 'utf8');
+    const ZH_BRAND = 'Cadence 步频';
+    // EN 品牌以「zh 臂 = 步频刊名」的三元式定位（app.main 里 i18n 三元式遍地，
+    // 锚 zh 臂才不会抓错行）。
+    const ternEn = (src) => (src.match(new RegExp(`'en'\\s*\\?\\s*'([^']+)'\\s*:\\s*'${ZH_BRAND}'`)) || [])[1];
+    const BRAND = ternEn(wSrc);
+    ok(!!BRAND && BRAND !== 'Cadence', `Q1: worker 的 EN 品牌是全称（'${BRAND}'，非裸 Cadence——裸词 SERP 归诊所）`);
+    ok(ternEn(mSrc) === BRAND, `Q2: app.main 客户端 title 后缀与 worker 一致（${ternEn(mSrc)}）`);
+    const siteName = (iSrc.match(/og:site_name" content="([^"]+)"/) || [])[1];
+    ok(siteName === BRAND, `Q3: index.html og:site_name 与 worker 一致（${siteName}）`);
+    ok(new RegExp(`<title>${BRAND} — `).test(iSrc), 'Q3: index.html <title> 以品牌全称开头');
+    ok(new RegExp(`<title>${BRAND} — PT Research Signal</title>`).test(rSrc), 'Q4: RSS 频道名带品牌全称');
+    const mastheads = [...eSrc.matchAll(/masthead: '([^']+)'/g)].map((m) => m[1]);
+    ok(mastheads.includes(BRAND) && mastheads.includes(ZH_BRAND),
+      `Q5: 周报 masthead EN/zh 两版各归其名（${mastheads.join(' / ')}）`);
+    const froms = [...eSrc.matchAll(/'([^'<]+) <weekly@incadencept\.com>'/g)].map((m) => m[1]);
+    ok(froms.includes(BRAND) && froms.includes(ZH_BRAND),
+      `Q5: 周报发件人名 EN/zh 两版各归其名（${froms.join(' / ')}）`);
+    ok(new RegExp(`🏃 ${BRAND} · `).test(xSrc) && new RegExp(`🏃 ${ZH_BRAND} · `).test(xSrc),
+      'Q6: X thread 头 EN 用全称、zh 用步频刊名');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

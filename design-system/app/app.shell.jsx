@@ -24,16 +24,28 @@ function useCdMobile() {
 function AppHeader({ query, onQuery, lang, onLang, mobile }) {
   const t = window.CD_T;
   const zh = lang === 'zh';
-  // Today's date — fixed to Beijing (matches the 05:30 crawl rhythm), so every
-  // viewer sees the same editorial "today" regardless of device timezone.
-  // zh: 2026年6月16日 周一 · en: Mon, Jun 16, 2026
-  const _now = new Date();
-  const _bjYMD = _now.toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' }); // YYYY-MM-DD
-  const [_by, _bm, _bd] = _bjYMD.split('-').map(Number);
-  const _bjDow = new Date(Date.UTC(_by, _bm - 1, _bd)).getUTCDay(); // weekday of the Beijing date
+  // Masthead date — anchored to the NEWEST ITEM DAY in the loaded feed (Beijing
+  // calendar, same as the data's day stamps), not the wall clock. The old
+  // Beijing-wall-clock version disagreed with every module below it for hours
+  // each day: 2026-08-30 audit caught a US Sunday-evening reader seeing
+  // "Today's rehab signal · Mon, Aug 31" over cards and an AI briefing that
+  // both said Aug 30. When the shown day isn't the viewer's local today, the
+  // label drops the "Today's" claim instead of lying about it.
+  // zh: 2026年8月30日 周日 · en: Sun, Aug 30, 2026
+  let _ymd = null; // newest Beijing YYYY-MM-DD across the feed
+  for (const s of (window.CD_STORIES || [])) {
+    const ts = s.firstSeen || s.publishedAt;
+    if (!ts) continue;
+    const d = new Date(ts).toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
+    if (!_ymd || d > _ymd) _ymd = d;
+  }
+  if (!_ymd) _ymd = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' }); // pre-data fallback
+  const [_by, _bm, _bd] = _ymd.split('-').map(Number);
+  const _bjDow = new Date(Date.UTC(_by, _bm - 1, _bd)).getUTCDay(); // weekday of that date
+  const isViewerToday = _ymd === new Date().toLocaleDateString('en-CA'); // viewer's local calendar
   const dateStr = zh
     ? `${_by}年${_bm}月${_bd}日 ${'周日周一周二周三周四周五周六'.slice(_bjDow * 2, _bjDow * 2 + 2)}`
-    : _now.toLocaleDateString('en-US', { timeZone: 'Asia/Shanghai', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+    : new Date(Date.UTC(_by, _bm - 1, _bd)).toLocaleDateString('en-US', { timeZone: 'UTC', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
   return (
     <header style={{
       position: 'sticky', top: 0, zIndex: 20, height: 'var(--header-height)',
@@ -64,7 +76,7 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
             FeedToolbar still renders). Hidden on mobile (no room next to search). */}
         {!mobile && (
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
-            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? '今日康复信号' : "Today's rehab signal"}</span>
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? (isViewerToday ? '今日康复信号' : '最新康复信号') : (isViewerToday ? "Today's rehab signal" : 'Latest rehab signal')}</span>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>{dateStr}</span>
           </div>
         )}
@@ -278,10 +290,16 @@ function DigestRail({ stories, dayKey = 'today', onPick, children }) {
   const quietDay = stories.length <= 2;
   const shownIds = new Set(top.map((s) => s.id));
   const nowMs = Date.now();
+  // Evidence lane only (lane split 2026-08-29). This board predates the split
+  // (born 6-14) and was missed by the retrofit: on the 2026-08-30 quiet-day
+  // audit two pinned-90 Medicare policy items led it, SIGNAL badges and all —
+  // exactly the "policy outranks every RCT" failure the split exists to stop.
+  // It only renders on quiet days, so a regression here stays invisible for
+  // days; keep the guard in sync with window.cdLaneOf.
   const weekly = quietDay
     ? (window.CD_STORIES || [])
         .filter((s) => {
-          if (!s.publishedAt) return false;
+          if (!s.publishedAt || s.lane === 'intel') return false;
           const age = nowMs - new Date(s.publishedAt).getTime();
           return age >= 0 && age <= 7 * 864e5 && !shownIds.has(s.id);
         })
