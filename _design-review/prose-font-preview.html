@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>正文字体对比 — 阅读性文字去 AI 感</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:#FAFAF6; --white:#fff;
+    --ink-900:#1E1C17; --ink-700:#45413A; --ink-600:#5E5A4F; --ink-500:#7A7568; --ink-300:#C4BEAF; --ink-200:#E4DFD1;
+    --blue-50:#F2F7FC; --blue-100:#E2EDF8; --blue-300:#93B8DE; --blue-500:#4A82BE; --blue-600:#3D74B8; --blue-700:#2C5A96; --blue-800:#224674;
+    --font-display:'Spectral','Songti SC',Georgia,serif;
+    --font-plex:'IBM Plex Sans','PingFang SC',sans-serif;
+    --font-mono:'IBM Plex Mono',Menlo,monospace;
+    --font-source:'Source Sans 3','PingFang SC',sans-serif;
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--paper); color:var(--ink-900); font-family:var(--font-plex); padding:28px 24px 60px; }
+  h1 { font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:6px; }
+  .note { font-size:13px; color:var(--ink-600); line-height:1.6; max-width:860px; margin-bottom:26px; }
+  .row { display:flex; gap:22px; align-items:flex-start; overflow-x:auto; padding-bottom:10px; }
+  .panel { flex:0 0 430px; }
+  .panel-tag { display:inline-block; font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; padding:3px 9px; border-radius:3px; margin-bottom:12px; }
+  .tag-now { background:var(--ink-200); color:var(--ink-600); }
+  .tag-a { background:var(--blue-600); color:#fff; }
+  .tag-b { background:var(--blue-100); color:var(--blue-800); }
+  .panel-sub { font-size:12px; color:var(--ink-500); margin:-6px 0 12px; line-height:1.5; }
+
+  /* prose font per panel — 唯一变量 */
+  .p-now { --prose:var(--font-plex); --prose-scale:1; }
+  .p-a   { --prose:var(--font-display); --prose-scale:1.06; } /* Spectral 视觉偏小，补 ~6% */
+  .p-b   { --prose:var(--font-source); --prose-scale:1.03; }
+  .prose { font-family:var(--prose); }
+
+  .card { background:var(--white); border:1px solid var(--ink-200); border-radius:12px; padding:20px 22px; box-shadow:0 1px 2px rgba(30,28,23,.04); margin-bottom:14px; }
+  .metarow { display:flex; align-items:center; gap:9px; margin-bottom:11px; flex-wrap:wrap; }
+  .sig { display:inline-flex; align-items:baseline; gap:6px; background:var(--blue-50); border:1px solid var(--blue-100); border-left:3px solid var(--blue-600); border-radius:3px; padding:3px 8px; }
+  .sig .lbl { font-family:var(--font-mono); font-size:9px; font-weight:600; letter-spacing:.1em; color:var(--blue-500); }
+  .sig .num { font-family:var(--font-mono); font-size:15px; font-weight:600; color:var(--blue-800); }
+  .chip { font-size:12px; font-weight:500; padding:3px 9px; border-radius:999px; background:var(--paper); border:1px solid var(--ink-200); color:var(--ink-600); white-space:nowrap; }
+  .chip.cat { background:var(--blue-50); border-color:var(--blue-100); color:var(--blue-800); }
+  h3.story { font-family:var(--font-display); font-size:19px; font-weight:600; line-height:1.3; letter-spacing:-0.01em; margin-bottom:8px; }
+  .summary { font-size:calc(15px * var(--prose-scale)); line-height:1.55; color:var(--ink-600); }
+  .why { position:relative; display:flex; gap:10px; margin-top:14px; padding:12px 14px; background:var(--blue-50); border:1px solid var(--blue-100); border-left:3px solid var(--blue-600); border-radius:8px; }
+  .why-head { display:flex; align-items:baseline; gap:8px; margin-bottom:4px; }
+  .why-head b { font-family:var(--font-plex); font-size:12px; font-weight:700; color:var(--blue-800); }
+  .why-head span { font-family:var(--font-mono); font-size:8.5px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--blue-500); }
+  .why-body { font-size:calc(13.5px * var(--prose-scale)); line-height:1.62; color:var(--ink-700); }
+  .steth { flex:none; margin-top:2px; color:var(--blue-600); font-size:14px; }
+  .foot { display:flex; align-items:center; gap:8px; margin-top:14px; font-family:var(--font-plex); }
+  .foot .src { font-size:13px; font-weight:500; color:var(--ink-600); }
+  .foot .if { font-family:var(--font-mono); font-size:10.5px; font-weight:600; padding:1px 6px; border-radius:3px; background:var(--blue-50); border:1px solid var(--blue-100); color:var(--blue-700); }
+  .foot .dt { font-family:var(--font-mono); font-size:11.5px; color:var(--ink-500); }
+
+  .brief { background:var(--ink-900); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
+  .brief-head { display:flex; align-items:center; gap:7px; margin-bottom:9px; font-family:var(--font-mono); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-300); }
+  .brief p { font-size:calc(13.5px * var(--prose-scale)); line-height:1.65; color:var(--paper); }
+
+  .sub { background:var(--white); border:1px solid var(--ink-200); border-left:3px solid var(--blue-600); border-radius:12px; padding:18px 20px; }
+  .sub-title { font-family:var(--font-display); font-size:16px; font-weight:600; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
+  .sub-title .dot { color:var(--blue-600); font-size:13px; }
+  .sub-body { font-size:calc(13.5px * var(--prose-scale)); line-height:1.6; color:var(--ink-600); margin-bottom:12px; }
+  .sub-form { display:flex; gap:10px; }
+  .sub-form input { flex:1; font-family:var(--font-plex); font-size:13px; padding:8px 12px; border:1px solid var(--ink-300); border-radius:8px; background:#fff; color:var(--ink-500); }
+  .sub-form button { font-family:var(--font-plex); font-size:13px; font-weight:600; padding:8px 16px; border:none; border-radius:8px; background:var(--ink-200); color:var(--ink-500); }
+  .sub-privacy { font-size:calc(11px * var(--prose-scale)); line-height:1.55; color:var(--ink-500); margin-top:10px; }
+
+  .zh { margin-top:14px; border-top:1px dashed var(--ink-200); padding-top:10px; }
+  .zh .cap { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-500); margin-bottom:5px; }
+  .zh p { font-size:calc(14px * var(--prose-scale)); line-height:1.7; color:var(--ink-700); }
+  .p-a .zh p { font-family:'Songti SC','Noto Serif SC',serif; }
+</style>
+</head>
+<body>
+  <h1>阅读性正文 · 字体对比</h1>
+  <p class="note">只动「读的字」（摘要 / Why it matters / AI briefing / 订阅文案），标题 Spectral、按钮/chip/mono 数据一律不变。三栏内容完全相同，唯一变量是正文字体。建议放大浏览器窗口横向对比。</p>
+
+  <div class="row">
+    <!-- ═══ 现状 ═══ -->
+    <div class="panel p-now">
+      <span class="panel-tag tag-now">现状 · IBM Plex Sans</span>
+      <p class="panel-sub">工程感 grotesque，Inter/Plex 一族 —— 即「AI 感」来源。</p>
+      <div class="card">
+        <div class="metarow">
+          <span class="sig"><span class="lbl">SIGNAL</span><span class="num">75</span></span>
+          <span class="chip cat">⚲ Ortho</span><span class="chip">Observational</span>
+        </div>
+        <h3 class="story">Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.</h3>
+        <p class="summary prose">A secondary analysis of a cluster randomized hybrid implementation trial identified organizational and contextual characteristics associated with implementation outcomes.</p>
+        <div class="why">
+          <span class="steth">⚕</span>
+          <div>
+            <div class="why-head"><b>Why it matters</b><span>Cadence take</span></div>
+            <div class="why-body prose">Successful implementation of group physical therapy for knee osteoarthritis within the VHA hinges on specific organizational and contextual factors, as this study observes. For departments looking to adopt similar group models, prioritize insights from these 19 VHA outpatient PT departments regarding staffing, leadership support, and process optimization.</div>
+          </div>
+        </div>
+        <div class="foot"><span class="src">PTJ</span><span class="if">IF 3.3 · Q1 · '25</span><span class="dt">Aug 25</span></div>
+      </div>
+      <div class="brief">
+        <div class="brief-head">✦ AI briefing</div>
+        <p class="prose">2 items today across 2 specialties. Highest signal today: “A domain-specific approach to characterizing balance confidence post-stroke” (SIGNAL 75 · Aug 30).</p>
+      </div>
+      <div class="sub">
+        <div class="sub-title"><span class="dot">◉</span>Don't lose the pace</div>
+        <p class="sub-body prose">One email a week — the strongest signals from the last seven days, each with why it matters. No noise, unsubscribe anytime.</p>
+        <div class="sub-form"><input value="you@example.com" readonly><button>Subscribe</button></div>
+        <p class="sub-privacy prose">Your email is used only for this weekly digest — nothing else. First issue arrives with the next edition; one-click unsubscribe at the bottom of every email.</p>
+        <div class="zh"><div class="cap">中文版正文 · 不变（黑体）</div><p class="prose">每周一封邮件：上周信号分最高的文献精选，每篇附「为什么重要」。不打扰，随时一键退订。</p></div>
+      </div>
+    </div>
+
+    <!-- ═══ 方案 A ═══ -->
+    <div class="panel p-a">
+      <span class="panel-tag tag-a">方案 A · Spectral 衬线（推荐）</span>
+      <p class="panel-sub">正文与标题同族，报刊感；零新增字体文件。中文正文回落宋体，与中文标题（已是宋体）一致。</p>
+      <div class="card">
+        <div class="metarow">
+          <span class="sig"><span class="lbl">SIGNAL</span><span class="num">75</span></span>
+          <span class="chip cat">⚲ Ortho</span><span class="chip">Observational</span>
+        </div>
+        <h3 class="story">Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.</h3>
+        <p class="summary prose">A secondary analysis of a cluster randomized hybrid implementation trial identified organizational and contextual characteristics associated with implementation outcomes.</p>
+        <div class="why">
+          <span class="steth">⚕</span>
+          <div>
+            <div class="why-head"><b>Why it matters</b><span>Cadence take</span></div>
+            <div class="why-body prose">Successful implementation of group physical therapy for knee osteoarthritis within the VHA hinges on specific organizational and contextual factors, as this study observes. For departments looking to adopt similar group models, prioritize insights from these 19 VHA outpatient PT departments regarding staffing, leadership support, and process optimization.</div>
+          </div>
+        </div>
+        <div class="foot"><span class="src">PTJ</span><span class="if">IF 3.3 · Q1 · '25</span><span class="dt">Aug 25</span></div>
+      </div>
+      <div class="brief">
+        <div class="brief-head">✦ AI briefing</div>
+        <p class="prose">2 items today across 2 specialties. Highest signal today: “A domain-specific approach to characterizing balance confidence post-stroke” (SIGNAL 75 · Aug 30).</p>
+      </div>
+      <div class="sub">
+        <div class="sub-title"><span class="dot">◉</span>Don't lose the pace</div>
+        <p class="sub-body prose">One email a week — the strongest signals from the last seven days, each with why it matters. No noise, unsubscribe anytime.</p>
+        <div class="sub-form"><input value="you@example.com" readonly><button>Subscribe</button></div>
+        <p class="sub-privacy prose">Your email is used only for this weekly digest — nothing else. First issue arrives with the next edition; one-click unsubscribe at the bottom of every email.</p>
+        <div class="zh"><div class="cap">中文版正文 · 随之变宋体</div><p class="prose">每周一封邮件：上周信号分最高的文献精选，每篇附「为什么重要」。不打扰，随时一键退订。</p></div>
+      </div>
+    </div>
+
+    <!-- ═══ 方案 B ═══ -->
+    <div class="panel p-b">
+      <span class="panel-tag tag-b">方案 B · Source Sans 3（人文 sans）</span>
+      <p class="panel-sub">比 Plex 暖、笔形有书写感，但仍是 sans；需 vendor 新 woff2。中文不变（黑体）。</p>
+      <div class="card">
+        <div class="metarow">
+          <span class="sig"><span class="lbl">SIGNAL</span><span class="num">75</span></span>
+          <span class="chip cat">⚲ Ortho</span><span class="chip">Observational</span>
+        </div>
+        <h3 class="story">Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.</h3>
+        <p class="summary prose">A secondary analysis of a cluster randomized hybrid implementation trial identified organizational and contextual characteristics associated with implementation outcomes.</p>
+        <div class="why">
+          <span class="steth">⚕</span>
+          <div>
+            <div class="why-head"><b>Why it matters</b><span>Cadence take</span></div>
+            <div class="why-body prose">Successful implementation of group physical therapy for knee osteoarthritis within the VHA hinges on specific organizational and contextual factors, as this study observes. For departments looking to adopt similar group models, prioritize insights from these 19 VHA outpatient PT departments regarding staffing, leadership support, and process optimization.</div>
+          </div>
+        </div>
+        <div class="foot"><span class="src">PTJ</span><span class="if">IF 3.3 · Q1 · '25</span><span class="dt">Aug 25</span></div>
+      </div>
+      <div class="brief">
+        <div class="brief-head">✦ AI briefing</div>
+        <p class="prose">2 items today across 2 specialties. Highest signal today: “A domain-specific approach to characterizing balance confidence post-stroke” (SIGNAL 75 · Aug 30).</p>
+      </div>
+      <div class="sub">
+        <div class="sub-title"><span class="dot">◉</span>Don't lose the pace</div>
+        <p class="sub-body prose">One email a week — the strongest signals from the last seven days, each with why it matters. No noise, unsubscribe anytime.</p>
+        <div class="sub-form"><input value="you@example.com" readonly><button>Subscribe</button></div>
+        <p class="sub-privacy prose">Your email is used only for this weekly digest — nothing else. First issue arrives with the next edition; one-click unsubscribe at the bottom of every email.</p>
+        <div class="zh"><div class="cap">中文版正文 · 不变（黑体）</div><p class="prose">每周一封邮件：上周信号分最高的文献精选，每篇附「为什么重要」。不打扰，随时一键退订。</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

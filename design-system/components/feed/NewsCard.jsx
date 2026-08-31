@@ -167,9 +167,9 @@ export function NewsCard({
   const summaryEl = summary && (
     <p style={{
       margin: isCompact ? '6px 0 0' : '8px 0 0',
-      fontFamily: 'var(--font-sans)',
-      fontSize: isCompact ? 13 : 'var(--text-base)',
-      lineHeight: 1.5, color: 'var(--text-secondary)',
+      fontFamily: 'var(--font-prose)',
+      fontSize: isCompact ? 14 : 16,
+      lineHeight: 1.55, color: 'var(--text-secondary)',
       ...(selected ? {} : { display: '-webkit-box', WebkitLineClamp: isLead ? 4 : 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }),
     }}>{summary}</p>
   );
@@ -193,7 +193,7 @@ export function NewsCard({
             {(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? 'Why it matters' : 'Cadence take'}
           </span>
         </div>
-        <div style={{ fontFamily: 'var(--font-sans)', fontSize: isLead ? 14.5 : 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{whyItMatters}</div>
+        <div style={{ fontFamily: 'var(--font-prose)', fontSize: isLead ? 15.5 : 14.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{whyItMatters}</div>
       </div>
     </aside>
   );

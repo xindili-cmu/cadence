@@ -458,10 +458,10 @@ function SubscribeCard({ onAbout, mobile, compact }) {
           <span style={{ fontFamily: 'var(--font-display)', fontSize: 14.5, fontWeight: 600, color: 'var(--text-primary)' }}>{t('sub.title')}</span>
         </div>
         {status === 'sent' ? (
-          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
+          <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
         ) : (
           <>
-            <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
+            <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-prose)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
             <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               <Input size="sm" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder={t('sub.placeholder')} aria-label="Email" maxLength={200} />
@@ -474,7 +474,7 @@ function SubscribeCard({ onAbout, mobile, compact }) {
             )}
             {/* Privacy note — collecting clinician emails needs plain use/opt-out
                 wording (2026-07-15 adversarial review). */}
-            <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 11, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
+            <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-prose)', fontSize: 11.5, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
           </>
         )}
       </section>
@@ -489,10 +489,10 @@ function SubscribeCard({ onAbout, mobile, compact }) {
         <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 600, color: 'var(--text-primary)' }}>{t('sub.title')}</span>
       </div>
       {status === 'sent' ? (
-        <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
+        <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-prose)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--green-700)' }}>{t('sub.sent')}</p>
       ) : (
         <>
-          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
+          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-prose)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{t('sub.body')}</p>
           <form onSubmit={submit} style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
             <div style={{ flex: '1 1 200px', minWidth: 180 }}>
               <Input size="sm" type="email" value={email} onChange={(e) => setEmail(e.target.value)}
@@ -506,7 +506,7 @@ function SubscribeCard({ onAbout, mobile, compact }) {
             <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 12.5, color: 'var(--signal-down)' }}>{t('sub.error')}</p>
           )}
           {/* Privacy note — plain use/opt-out wording (2026-07-15 adversarial review). */}
-          <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 11.5, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
+          <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-prose)', fontSize: 12, lineHeight: 1.55, color: 'var(--text-tertiary)' }}>{t('sub.privacy')}</p>
         </>
       )}
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 14, paddingTop: 12, borderTop: '1px solid var(--border-subtle)' }}>
@@ -692,7 +692,7 @@ function AboutView({ onView, mobile }) {
   const srcCount = (window.CD_SOURCES || []).length || 56; // fallback = sources.json length as of 2026-08-30 (shown only if sources.json failed to load)
   const tt = (a, b) => (zh ? a : b);
 
-  const para = { margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.85, color: 'var(--text-secondary)' };
+  const para = { margin: '0 0 16px', fontFamily: 'var(--font-prose)', fontSize: 'var(--text-md)', lineHeight: 1.85, color: 'var(--text-secondary)' };
   const secTitle = { margin: '0 0 18px', fontFamily: 'var(--font-display)', fontSize: 'var(--text-2xl)', fontWeight: 600, color: 'var(--text-primary)' };
   const h2 = { margin: '0 0 22px', display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em' };
   const stats = [
@@ -750,7 +750,7 @@ function AboutView({ onView, mobile }) {
           <Icon name="stethoscope" size={18} style={{ color: 'var(--blue-600)', marginTop: 2 }} />
           <div>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: 4 }}>{tt('为什么重要', 'Why it matters')}</div>
-            <div style={{ fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--text-primary)', maxWidth: 340 }}>{tt('优先采用渐进式负荷训练，而非被动疗法。', 'Prioritise progressive loading over passive modalities.')}</div>
+            <div style={{ fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.5, color: 'var(--text-primary)', maxWidth: 340 }}>{tt('优先采用渐进式负荷训练，而非被动疗法。', 'Prioritise progressive loading over passive modalities.')}</div>
           </div>
         </div>
       </div>
@@ -787,18 +787,18 @@ function AboutView({ onView, mobile }) {
                 : <span>Close the knowledge gap.<br />Keep pace with <span style={{ color: 'var(--blue-600)' }}>global evidence.</span></span>}
             </h1>
             <div style={{ margin: '28px 0 0', maxWidth: 680, display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+              <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: mobile ? 17 : 19, lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('今天，国际上的康复医学正在以周为单位快速进化。然而在国内，我们教材上的理论、临床上的手段，很多还停留在 10 年、甚至 20 年前的框架里。我们不是不想追最新的技术，而是隔着信息差的壁垒，根本不知道外面已经进化到了哪里。',
                   'Worldwide, rehabilitation medicine now evolves by the week. Yet much of the textbook theory and clinical practice we rely on is still framed by ideas from 10 or even 20 years ago. It isn’t that we don’t want the latest; the information gap leaves us unsure how far the field has already moved.')}
               </p>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 'var(--text-lg)' : 'var(--text-xl)', lineHeight: 1.5, color: 'var(--text-primary)' }}>
                 {tt('知识的断代，最终由患者的疗效买单。', 'A knowledge gap is ultimately paid for in patient outcomes.')}
               </p>
-              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+              <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: mobile ? 17 : 19, lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt(`每天，步频从全球 ${srcCount} 个信源中，高频筛选最新的康复研究与临床技术。我们用 AI 为每项发现打出 SIGNAL 评分，并归入八大专科。`,
                   `Every day, Cadence high-frequency-screens the newest rehab research and clinical techniques from ${srcCount} sources worldwide, scores each finding with an AI SIGNAL rating, and files it into eight specialties.`)}
               </p>
-              <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: mobile ? 'var(--text-md)' : 'var(--text-lg)', lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
+              <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: mobile ? 17 : 19, lineHeight: 'var(--leading-relaxed)', color: 'var(--text-secondary)' }}>
                 {tt('每天 5 分钟，把全球最新的临床证据，变成你推开诊室大门、面对患者时最硬核的知识武装。',
                   'Five minutes a day turns the world’s newest clinical evidence into the knowledge you carry through the clinic door, in front of your patient.')}
               </p>
@@ -842,7 +842,7 @@ function AboutView({ onView, mobile }) {
               <div>
                 <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, fontSize: 'var(--text-3xl)', color: 'var(--blue-300)', letterSpacing: '-0.02em', lineHeight: 1 }}>{s.idx}</span>
                 <h3 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontSize: 'var(--text-xl)', fontWeight: 600, color: 'var(--text-primary)' }}>{tt(s.zh, s.en)}</h3>
-                <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.7, color: 'var(--text-secondary)' }}>{tt(s.bodyZh, s.bodyEn)}</p>
+                <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.7, color: 'var(--text-secondary)' }}>{tt(s.bodyZh, s.bodyEn)}</p>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', minHeight: 110 }}>{stepDemo(s.demo)}</div>
             </div>
@@ -855,11 +855,11 @@ function AboutView({ onView, mobile }) {
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--blue-600)', marginBottom: 10 }}>
             {tt('评分方法与局限', 'How scoring works — and its limits')}
           </div>
-          <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+          <p style={{ margin: '0 0 10px', fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('SIGNAL 由 AI 阅读文献标题与摘要后，按固定维度评出：研究设计、样本量、效应量、期刊影响力。评估结果落在三个档位：85+ 强信号 · 75–84 值得关注 · 65–74 参考——档位是结论，数字只是档内的粗略位置，并非百分制精度。SIGNAL 只评研究与指南：行业新闻与政策类不打分，单列在「行业动态」栏。网站信息流为自动更新；每日对外推送（公众号 / 小红书 / LinkedIn）发布前由人工把关。',
               'SIGNAL is scored by AI from each paper’s title and abstract against fixed dimensions — study design, sample size, effect size, journal impact. Ratings land in three tiers: 85+ strong signal · 75–84 worth knowing · 65–74 for reference — the tier is the conclusion; the number is a rough position within it, not percent-scale precision. SIGNAL rates research and guidelines only: industry news and policy items are not scored and sit in their own “Industry & policy” strip. The site feed updates automatically; the daily posts we publish (LinkedIn) are human-checked before going out.')}
           </p>
-          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+          <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('两点局限请知悉：评分基于摘要而非全文，研究细节与局限以原文为准；分数不是研究质量认证，也不构成临床建议——请结合你的临床判断与患者的具体情况使用。',
               'Two limits to know: scoring reads the abstract, not the full text — details and limitations defer to the original paper; and a score is neither a quality certification nor a clinical recommendation — pair it with your own judgment and your patient’s context.')}
           </p>
@@ -871,7 +871,7 @@ function AboutView({ onView, mobile }) {
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', fontWeight: 600, letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--text-tertiary)', marginBottom: 10 }}>
             {tt('隐私', 'Privacy')}
           </div>
-          <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.75, color: 'var(--text-secondary)' }}>
+          <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.75, color: 'var(--text-secondary)' }}>
             {tt('订阅邮箱仅用于发送周报，经表单服务 Formspree 提交、由 Resend 发送，不用于其他用途、不出售或共享给广告方；退订即停。反馈内容仅用于改进 Cadence。联系：hello@incadencept.com',
               'Subscriber emails are used only to send the weekly digest — submitted via Formspree, delivered via Resend, never sold or shared with advertisers; unsubscribing stops everything. Feedback is used only to improve Cadence. Contact: hello@incadencept.com')}
           </p>
@@ -895,7 +895,7 @@ function AboutView({ onView, mobile }) {
                   </span>
                 </div>
                 <div style={{ margin: '16px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--text-primary)' }}>{zh ? (c.labelZh || c.label) : c.label}</div>
-                <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--text-secondary)' }}>{tt(sc.zh, sc.en)}</p>
+                <p style={{ margin: '8px 0 0', fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.5, color: 'var(--text-secondary)' }}>{tt(sc.zh, sc.en)}</p>
               </div>
             );
           })}
@@ -912,7 +912,7 @@ function AboutView({ onView, mobile }) {
                   <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-lg)', color: 'var(--cat-tech-ink)' }}>✦ {zh ? (x.labelZh || x.label) : x.label}</span>
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: 'var(--tracking-caps)', textTransform: 'uppercase', color: 'var(--cat-tech)' }}>{tt('横切维度', 'Cross-cutting overlay')}</span>
                 </div>
-                <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', lineHeight: 1.5, color: 'var(--cat-tech-ink)' }}>{tt(sc.zh, sc.en)}</p>
+                <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.5, color: 'var(--cat-tech-ink)' }}>{tt(sc.zh, sc.en)}</p>
               </div>
             </div>
           );
@@ -947,7 +947,7 @@ function AboutView({ onView, mobile }) {
               {window.ABOUT.principles.map((p, i) => (
                 <div key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                   <Icon name="check" size={18} strokeWidth={2.25} style={{ color: 'var(--blue-600)', marginTop: 2, flex: 'none' }} />
-                  <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-base)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{tt(p.zh, p.en)}</p>
+                  <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 'var(--text-md)', lineHeight: 1.6, color: 'var(--text-secondary)' }}>{tt(p.zh, p.en)}</p>
                 </div>
               ))}
             </div>
@@ -1043,7 +1043,7 @@ function AboutView({ onView, mobile }) {
             <button type="button" onClick={() => onView('curated')} style={{ alignSelf: 'flex-start', background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>{tt('今日摘要', 'Today’s digest')}</button>
           </div>
         </div>
-        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 'var(--text-xs)', lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+        <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
           <span style={{ fontWeight: 500, color: 'var(--text-secondary)' }}>{t('about.disclaimer.title')}. </span>{t('about.disclaimer.body')}
         </p>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', paddingTop: 4, fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', letterSpacing: '0.04em', color: 'var(--text-tertiary)' }}>
@@ -1263,11 +1263,11 @@ function DailyTake({ why, limitation, zh }) {
   return (
     <div style={{ marginTop: 24, background: '#F7F9FC', border: '1px solid #E8EDF4', borderRadius: 13, padding: '20px 22px' }}>
       <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A5894', marginBottom: 11 }}>{zh ? '临床底线 · Take' : 'Clinical Take'}</div>
-      <p style={{ margin: 0, fontSize: 15.5, lineHeight: 1.8, color: '#2B3138' }}>{why}</p>
+      <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 15.5, lineHeight: 1.8, color: '#2B3138' }}>{why}</p>
       {limitation && (
         <React.Fragment>
           <div style={{ height: 1, background: '#E3E9F1', margin: '16px 0' }} />
-          <p style={{ margin: 0, fontSize: 14, lineHeight: 1.7, color: '#6A7078' }}>
+          <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.7, color: '#6A7078' }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', color: '#9AA0A8', marginRight: 8 }}>{zh ? '局限' : 'LIMIT'}</span>{limitation}
           </p>
         </React.Fragment>
@@ -1587,8 +1587,8 @@ function DailyBriefView({ L, date, onDate, mobile }) {
           <article style={{ background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 18, padding: 'clamp(24px,4.2vw,40px)', boxShadow: '0 1px 2px rgba(27,30,35,0.03), 0 18px 40px -28px rgba(27,30,35,0.22)' }}>
             <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
               <DailyMeta s={leadStory} zh={zh} highlight />
-              <h3 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
-              {leadStory.summary && <p style={{ margin: '16px 0 0', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
+              <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
+              {leadStory.summary && <p style={{ margin: '16px 0 0', fontFamily: 'var(--font-prose)', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
               <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
             </a>
             <RelatedRow related={leadStory.related} self={[leadStory.journal, leadStory.source, leadStory.wallSource]} />
@@ -1607,8 +1607,8 @@ function DailyBriefView({ L, date, onDate, mobile }) {
               <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ position: 'relative', display: 'block', textDecoration: 'none', color: 'inherit', background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 14, padding: '24px 24px 24px 26px', overflow: 'hidden' }}>
                 <span style={{ position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: dailyCardColor(s.category) }} />
                 <DailyMeta s={s} zh={zh} />
-                <h4 style={{ margin: 0, fontWeight: 600, fontSize: 'clamp(17px,2.4vw,20px)', lineHeight: 1.4, letterSpacing: '-0.005em', color: 'var(--text-primary)' }}>{s.title}</h4>
-                {s.summary && <p style={{ margin: '11px 0 0', fontSize: 15, lineHeight: 1.74, color: '#5A6068' }}>{s.summary}</p>}
+                <h4 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(17px,2.4vw,20px)', lineHeight: 1.4, letterSpacing: '-0.005em', color: 'var(--text-primary)' }}>{s.title}</h4>
+                {s.summary && <p style={{ margin: '11px 0 0', fontFamily: 'var(--font-prose)', fontSize: 15, lineHeight: 1.74, color: '#5A6068' }}>{s.summary}</p>}
               </a>
             ))}
           </div>
@@ -1628,7 +1628,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
                 <span style={{ flexShrink: 0, width: 28, fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 600, color: s.lane === 'intel' ? 'var(--text-tertiary)' : dailyScoreColor(s.score) }}
                   title={s.lane === 'intel' ? (zh ? '行业动态，不打分' : 'Industry item — not scored') : undefined}>{s.lane === 'intel' ? '—' : s.score}</span>
                 <span title={dailyCatLabel(s.category)} style={{ flexShrink: 0, width: 7, height: 7, borderRadius: 2, background: dailyCardColor(s.category) }} />
-                <span style={{ flex: 1, minWidth: 0, fontSize: 14.5, lineHeight: 1.5, color: '#262A30', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{s.title}</span>
+                <span style={{ flex: 1, minWidth: 0, fontFamily: 'var(--font-display)', fontSize: 14.5, lineHeight: 1.5, color: '#262A30', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{s.title}</span>
               </a>
             ))}
           </div>
@@ -1916,7 +1916,7 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)' }}>{story.date}</span>
             </div>
             {s.summary && (
-              <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-sans)', fontSize: 15, lineHeight: 1.65, color: 'var(--text-secondary)' }}>{s.summary}</p>
+              <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-prose)', fontSize: 16, lineHeight: 1.65, color: 'var(--text-secondary)' }}>{s.summary}</p>
             )}
             {s.why && (
               <aside style={{
@@ -1927,12 +1927,12 @@ function StoryDetailOverlay({ id, L, onClose, mobile }) {
                 <span style={{ flex: 'none', marginTop: 1, color: 'var(--blue-600)' }}><Icon name="stethoscope" size={16} strokeWidth={2} /></span>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12, fontWeight: 700, color: 'var(--blue-800)', marginBottom: 4 }}>{t('whyMatters')}</div>
-                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{s.why}</div>
+                  <div style={{ fontFamily: 'var(--font-prose)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--ink-700)' }}>{s.why}</div>
                 </div>
               </aside>
             )}
             {s.limitation && (
-              <p style={{ margin: '0 0 18px', fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
+              <p style={{ margin: '0 0 18px', fontFamily: 'var(--font-prose)', fontSize: 13, lineHeight: 1.6, color: 'var(--text-tertiary)' }}>
                 <strong style={{ fontWeight: 600, color: 'var(--text-secondary)' }}>{t('item.limitTitle')}:</strong> {s.limitation}
               </p>
             )}
@@ -2430,7 +2430,7 @@ function FeedApp() {
           {view === 'curated' && !isSources && !isFeedback && !isDaily && !isAbout && category !== 'all' && !q && ctype === 'all' && !minScore && stories.length > 0 && stories.length < 3 && (
             <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', margin: '0 0 14px', padding: '12px 14px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)' }}>
               <Icon name="info" size={15} style={{ color: 'var(--text-tertiary)', flex: 'none', marginTop: 2 }} />
-              <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12.5, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+              <div style={{ fontFamily: 'var(--font-prose)', fontSize: 13, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
                 {t('sparse.note')}{' '}
                 <button type="button" onClick={() => setView('all')}
                   style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 600, color: 'var(--green-700)', textDecoration: 'underline', textUnderlineOffset: 2 }}>

@@ -12,6 +12,11 @@
      ordinary titles (e.g. 日 in 日历年, 康复), an unintended bold. The masthead
      requests 'Noto Serif SC' explicitly, so it still works. CJK display falls to Songti SC. */
   --font-display: 'Spectral', 'Songti SC', Georgia, 'Times New Roman', serif;
+  /* Reading prose (story summaries, takes, briefing, subscribe/About copy) —
+     serif on purpose (2026-08-31): Plex-for-prose read as generic "AI product".
+     Same stack as display, so CJK prose falls to Songti and matches zh titles.
+     Sized ~1px up from the old sans values — Spectral runs visually small. */
+  --font-prose: 'Spectral', 'Songti SC', Georgia, 'Times New Roman', serif;
   --font-sans: 'IBM Plex Sans', 'Noto Sans SC', 'PingFang SC', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 

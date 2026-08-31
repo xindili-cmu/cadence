@@ -314,7 +314,7 @@ function DigestRail({ stories, dayKey = 'today', onPick, children }) {
           <Icon name="sparkles" size={15} style={{ color: 'var(--blue-300)' }} />
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--ink-300)' }}>{pulseZh ? 'AI 速读' : 'AI briefing'}</span>
         </div>
-        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: 13.5, lineHeight: 1.65, color: 'var(--text-on-inverse)' }}>{brief}</p>
+        <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-on-inverse)' }}>{brief}</p>
       </div>
       <div style={{ background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', padding: 18, boxShadow: 'var(--shadow-xs)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
@@ -387,7 +387,7 @@ function DigestRail({ stories, dayKey = 'today', onPick, children }) {
           </span>
         </div>
         {whyOpen && (
-          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-sans)', fontSize: 12, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+          <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-prose)', fontSize: 12.5, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
             {window.CD_T('whyCatsBody')}
           </p>
         )}
