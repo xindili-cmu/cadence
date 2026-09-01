@@ -18,9 +18,12 @@ const ok = (cond, msg) => { assert.ok(cond, msg); console.log('  ✓', msg); pas
 // summary / summaryZh 是 repairMissingFields（2026-07-28）的必填字段，缺了会被
 // 丢弃 —— C 段要断言「返回 1 条」，所以 fixture 必须是一条完整的 curated item。
 // summary 必须无 CJK，否则 repairChineseSummaries 会触发真实网络调用。
+// curatedReasonEn 同理（2026-08-31）：缺失/混 CJK 会被 isReasonIncomplete 判为
+// 待修——必填清单与重写过滤都已含 take 字段（pipeline-gates S 段）。
 const makeDirty = () => ({
   curatedScore: 85,
   curatedReason: `这项${WRONG}系统综述给出重返运动标准`,   // 旧白名单字段（基线）
+  curatedReasonEn: 'Systematic review sets return-to-sport criteria worth adopting.',
   summary: 'Systematic review sets return-to-sport criteria after proximal avulsion.',
   summaryZh: `该${WRONG}系统综述给出了近端撕脱伤后的重返运动标准`,
   titleZh: `近端${WRONG}撕脱伤康复`,                       // 旧白名单字段（基线）

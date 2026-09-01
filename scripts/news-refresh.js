@@ -1118,7 +1118,7 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   if (!text) return [];
   let curated = await repairEnglishReasons(parseCuratedArray(text));
   curated = await repairChineseSummaries(curated);
-  curated = await repairBoilerplateReasons(curated); // 反模板腔（对抗性审查 #8）
+  curated = await repairBoilerplateReasons(curated, llm); // 反模板腔（对抗性审查 #8）
   // 放最后：repairChineseSummaries 会把中文 summary 挪进 summaryZh 再重写英文版，
   // 先跑缺字段兜底会把那一步的中间态误判成缺失。
   curated = await repairMissingFields(curated, items, llm);
@@ -1203,17 +1203,24 @@ async function repairChineseSummaries(curated) {
 // news / policy 的 30-90 天 carry 窗口，增量门又不会重新策展，缺口一旦形成就是
 // 终身的（07-24 CMS ASM FAQ、07-26 BJSM 博客、07-24 APTA 新闻三条挂了 4 天）。
 // 这里在落库前补一次；补不回来的丢弃，而不是把抓取残渣当正文发出去。
-const MISSING_REQUIRED = ['summary', 'titleZh', 'summaryZh'];
+// curatedReason/curatedReasonEn joined 2026-08-31: gemini omitted curatedReasonEn
+// on one item (news-1788216947366-2) and it sailed through — lint-daily flags
+// missing En but repairs nothing, and the EN face fell back to the 中文 take.
+// The take is the product's signature device; an item that still lacks one after
+// the refill pass is unshippable, same as a missing summary.
+const MISSING_REQUIRED = ['summary', 'titleZh', 'summaryZh', 'curatedReason', 'curatedReasonEn'];
 const _blank = (v) => !String(v || '').trim();
 
 const MISSING_FIELDS_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的编辑。下面每条缺了部分字段，请基于给出的 title 和 text 补齐 missing 里列出的字段：
 - summary：1-2 句中性英文（English only，绝不能写中文），front-load 结论方向。只写 text 里明确出现的数字并照抄原值，text 里没有就省略数字，绝不臆测。
 - titleZh：title 的中文翻译，专业紧凑、不逐字直译；缩写（ACL、COPD、RCT 等）保留英文。
 - summaryZh：summary 的中文版，1-2 句，同样保留数字，像中文期刊导读，不要翻译腔。
+- curatedReason：中文 why-it-matters，1-2 句，second-person 直接给临床 take（这条改变什么 / 别做什么），禁复述研究做了什么，禁"帮助你了解…"式空效用句。
+- curatedReasonEn：curatedReason 的英文版——同一条意见、同样口吻规则（second-person、直接下判断），English only，不是逐字翻译。
 
 注意 text 可能是网页抓取残渣（导航菜单、markdown 标题、栏目名、CTA）——忽略这些噪声，只根据真正的内容写。如果 text 里实在读不出任何实质内容，把该字段留成空字符串，不要编。
 
-请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"summary":"...","titleZh":"...","summaryZh":"..."}]`;
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"summary":"...","titleZh":"...","summaryZh":"...","curatedReason":"...","curatedReasonEn":"..."}]`;
 
 async function repairMissingFields(curated, items, llm = callLLM) {
   const srcByIndex = new Map((items || []).map(i => [i.index, i]));
@@ -1328,10 +1335,14 @@ async function labelHotTopics(topics) {
   return topics;
 }
 
-async function repairBoilerplateReasons(curated) {
-  const bad = curated.filter(isReasonSlop);
+async function repairBoilerplateReasons(curated, llm = callLLM) {
+  // slop = 文案质量；incomplete = 双语覆盖（En 缺失/混中文）。两类都走同一次
+  // 重写——REASON_SLOP_SYSTEM 本来就从 summary 重新产出中英两个字段。
+  // llm 可注入（同 repairMissingFields）：term-fixes C 段的「无网络」保证曾靠
+  // 夹具恰好不触发本函数，2026-08-31 加宽过滤后被戳穿——注入点补齐。
+  const bad = curated.filter((c) => isReasonSlop(c) || isReasonIncomplete(c));
   if (!bad.length) return curated;
-  console.log(`   🛠  ${bad.length} why-it-matters read as boilerplate — rewriting as takes`);
+  console.log(`   🛠  ${bad.length} why-it-matters boilerplate/incomplete — rewriting as takes`);
   for (let off = 0; off < bad.length; off += 10) {
     const batch = bad.slice(off, off + 10);
     const user = `重写以下 ${batch.length} 条：\n\n` + JSON.stringify(
@@ -1339,7 +1350,7 @@ async function repairBoilerplateReasons(curated) {
         index: i, summary: c.summary || '', studyDesign: c.studyDesign || '',
         curatedScore: c.curatedScore, curatedReason: c.curatedReason || '', curatedReasonEn: c.curatedReasonEn || '',
       })), null, 2);
-    const text = await callLLM(REASON_SLOP_SYSTEM, user);
+    const text = await llm(REASON_SLOP_SYSTEM, user);
     const fixed = parseCuratedArray(text || '');
     fixed.forEach(f => {
       const c = batch[f.index];
@@ -1350,8 +1361,8 @@ async function repairBoilerplateReasons(curated) {
       if (f.curatedReasonEn && !CJK_RE.test(f.curatedReasonEn) && !REASON_SLOP_EN.test(f.curatedReasonEn)) c.curatedReasonEn = f.curatedReasonEn;
     });
   }
-  const still = curated.filter(isReasonSlop).length;
-  if (still) console.log(`   ⚠️  ${still} reasons still boilerplate after rewrite (kept as-is)`);
+  const still = curated.filter((c) => isReasonSlop(c) || isReasonIncomplete(c)).length;
+  if (still) console.log(`   ⚠️  ${still} reasons still boilerplate/incomplete after rewrite (kept as-is)`);
   return curated;
 }
 
@@ -2078,4 +2089,17 @@ function isReasonSlop(c) {
     (c.curatedReason && REASON_SLOP_ZH.test(c.curatedReason));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isJunkUrl, isJunkItem, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+// isReasonIncomplete — the take exists in Chinese but is unshippable on the EN
+// face: curatedReasonEn blank, or contaminated with CJK (2026-08-31: gemini
+// omitted one item's En and the 中文 take rendered on the EN card). Kept SEPARATE
+// from isReasonSlop on purpose — slop judges writing quality, this judges
+// bilingual coverage, and the slop gate's negative fixtures (zh-only good takes)
+// must stay non-slop. Consumed by repairBoilerplateReasons (cron + backfill)
+// and pipeline-gates S 段.
+function isReasonIncomplete(c) {
+  const zh = String((c && c.curatedReason) || '').trim();
+  const en = String((c && c.curatedReasonEn) || '').trim();
+  return !!zh && (!en || CJK_RE.test(en));
+}
+
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

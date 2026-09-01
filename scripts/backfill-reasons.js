@@ -18,7 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { repairBoilerplateReasons, isReasonSlop } = require('./news-refresh');
+const { repairBoilerplateReasons, isReasonSlop, isReasonIncomplete } = require('./news-refresh');
 
 const ROOT = path.join(__dirname, '..');
 const NEWS_PATH = path.join(ROOT, 'news.json');
@@ -30,8 +30,9 @@ const DO_ARCHIVE = process.argv.includes('--archive');
 // Detection reuses the exported source-of-truth from news-refresh.js, so the
 // --dry count and the changed-item report can never drift from what the rewrite
 // actually targets (2026-07-15 adversarial review — a duplicated regex here had
-// gone stale).
-const isSlop = isReasonSlop;
+// gone stale). isReasonIncomplete joined 2026-08-31 (missing/CJK-contaminated
+// curatedReasonEn — same rewrite pass regenerates both languages).
+const isSlop = (c) => isReasonSlop(c) || isReasonIncomplete(c);
 
 async function processFile(file) {
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));

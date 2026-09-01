@@ -17,6 +17,7 @@ const {
   isJunkItem,
   isJunkUrl,
   isReasonSlop,
+  isReasonIncomplete,
   dateFromUrlPath,
   dateFromArticlePage,
   dateFromPubmedId,
@@ -117,9 +118,10 @@ async function run() {
       { index: 1, title: 'ASM FAQ', text: '# ASM\n\nPayment\n\n- General - Eligibility' },
     ];
     // stub 只补得回第 0 条；第 1 条（原始抓取残渣）返回空串 = 读不出内容。
+    // 2026-08-31 起必填清单含 curatedReason/-En（S 段），夹具同步补 En。
     const stub = async () => JSON.stringify([
-      { index: 0, summary: 'Early mobilisation improved 90-day mRS.', titleZh: '卒中后早期活动', summaryZh: '早期活动改善 90 天 mRS。' },
-      { index: 1, summary: '', titleZh: '', summaryZh: '' },
+      { index: 0, summary: 'Early mobilisation improved 90-day mRS.', titleZh: '卒中后早期活动', summaryZh: '早期活动改善 90 天 mRS。', curatedReasonEn: 'Early mobilisation is safe to adopt.' },
+      { index: 1, summary: '', titleZh: '', summaryZh: '', curatedReason: '', curatedReasonEn: '' },
     ]);
     const curated = [
       { index: 0, curatedScore: 80, curatedReason: '早期活动可以放心做' },
@@ -128,10 +130,11 @@ async function run() {
     const out = await repairMissingFields(curated, items, stub);
     ok(out.length === 1 && out[0].index === 0, '补得回的留下、补不回的丢弃（2 → 1）');
     ok(out[0].summaryZh === '早期活动改善 90 天 mRS。', '重填写进了 summaryZh');
+    ok(out[0].curatedReasonEn === 'Early mobilisation is safe to adopt.', '缺失的 curatedReasonEn 也被重填（2026-08-31 起必填）');
 
     // 全齐的输入必须原样返回，且一次 LLM 都不调用（省钱 + 幂等）。
     let called = 0;
-    const complete = [{ index: 0, summary: 'x', titleZh: '中', summaryZh: '中文' }];
+    const complete = [{ index: 0, summary: 'x', titleZh: '中', summaryZh: '中文', curatedReason: '中文 take', curatedReasonEn: 'English take' }];
     const same = await repairMissingFields(complete, items, async () => { called++; return '[]'; });
     ok(same.length === 1 && called === 0, '字段齐全时直接返回，不调用 LLM');
   }
@@ -776,6 +779,50 @@ async function run() {
       'R3: 换 token 的一次性脚本在（凭证过期时人要能重跑）');
     const wiring = JSON.parse(fs.readFileSync(path.join(__dirname, '_wiring.json'), 'utf8'));
     ok(!!wiring.oneoff['gsc-oauth-setup.js'], 'R3: 且已登记为 oneoff（本地跑，不进 CI）');
+  }
+
+  // 一条中文 take 裸奔到 EN 面（2026-08-31，news-1788216947366-2）：gemini 漏产
+  // curatedReasonEn → repairMissingFields 的必填清单没含 take 字段 → lint-daily
+  // 只报不修 → 前端按 06-11「缺双语回落原文」约定照渲染——四层全绿地漏。
+  // 修复：必填清单纳入两个 take 字段 + isReasonIncomplete 进重写/backfill +
+  // 前端 EN 面 CJK 兜底。此段守这三处接线不被回退。
+  {
+    console.log('\nS. take 双语覆盖：curatedReasonEn 缺失/混中文 = 待修，EN 面不得渲染中文 take');
+    ok(isReasonIncomplete({ curatedReason: '中文 take', curatedReasonEn: '' }), 'S1: En 空串 = incomplete');
+    ok(isReasonIncomplete({ curatedReason: '中文 take' }), 'S1: En 字段缺失 = incomplete（8-31 线上就是这形态）');
+    ok(isReasonIncomplete({ curatedReason: '中文 take', curatedReasonEn: 'take with 中文 residue' }), 'S1: En 混 CJK = incomplete');
+    ok(!isReasonIncomplete({ curatedReason: '中文 take', curatedReasonEn: 'A clean English take.' }), 'S1: 双语齐全不误伤');
+    ok(!isReasonIncomplete({}), 'S1: 整条 take 缺失归 repairMissingFields 管，不属此谓词');
+    // 语义分离：slop 判文案质量、incomplete 判双语覆盖。I6 的纯中文好 take 负例
+    // 必须保持非 slop——否则等于偷改了 slop 闸的含义。
+    const GOOD_ZH_ONLY = { curatedReason: '腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。' };
+    ok(!isReasonSlop(GOOD_ZH_ONLY) && isReasonIncomplete(GOOD_ZH_ONLY), 'S2: 两谓词各管各的（好文案仍可 incomplete）');
+    // 接线断言（防「谓词写好了没接上」——本仓库的头号故障类）：
+    const nr = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    ok(/const MISSING_REQUIRED = \[[^\]]*'curatedReason'\s*,\s*'curatedReasonEn'[^\]]*\]/.test(nr),
+      'S3: MISSING_REQUIRED 含 curatedReason + curatedReasonEn');
+    ok(nr.includes('isReasonSlop(c) || isReasonIncomplete(c)'), 'S3: repairBoilerplateReasons 的过滤含 incomplete');
+    ok(fs.readFileSync(path.join(__dirname, 'backfill-reasons.js'), 'utf8').includes('isReasonIncomplete'),
+      'S3: backfill-reasons 用同一谓词（存量清洗路径）');
+    const am = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'app.main.jsx'), 'utf8');
+    ok(am.includes("why: s.whyEn || (/[一-鿿]/.test(s.why || '') ? '' : s.why)"), 'S4: L() EN 面 why 有 CJK 兜底（display insurance）');
+    ok(am.includes("limitation: s.limitationEn || (/[一-鿿]/.test(s.limitation || '') ? '' : s.limitation)"), 'S4: limitation 同');
+    // S5（产物，挂 SKIP_ARTIFACT_ASSERTS）：作用域=修复上线后新入库，存量缺口
+    // 由 backfill-reasons 清，不卡 cron（gate H 2026-08-12 的教训：断言作用域
+    // 必须等于修复作用域）。
+    const S_SHIPPED = '2026-09-01';
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else if (!fs.existsSync(path.join(__dirname, '..', 'news.json'))) {
+      console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
+    } else {
+      const sItems = (JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8')).items || [])
+        .filter((i) => (i.firstSeen || '').slice(0, 10) >= S_SHIPPED);
+      const inc = sItems.filter(isReasonIncomplete);
+      ok(inc.length === 0,
+        `S5: ${S_SHIPPED} 起入库的条目 take 双语齐全`
+        + (inc.length ? ` —— ${inc.map((i) => i.id).slice(0, 3).join(', ')}` : ''));
+    }
   }
 
   console.log(`\n✅ all ${passed} assertions passed`);

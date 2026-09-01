@@ -2131,7 +2131,11 @@ function FeedApp() {
     ? { ...s, title: s.titleZh || s.title, summary: s.summaryZh || s.summary }
     // titleEn covers non-English-source items (e.g. 中文 source): their `title`
     // is the original (Chinese), so en mode needs an explicit English title.
-    : { ...s, title: s.titleEn || s.title, summary: /[一-鿿]/.test(s.summary || '') ? '' : s.summary, why: s.whyEn || s.why, limitation: s.limitationEn || s.limitation }), [zh]);
+    // CJK-guard extended to why/limitation (2026-08-31): gemini omitted one
+    // curatedReasonEn and the zh take rendered on the EN face. Same policy as
+    // the 07-04 summary guard — on the EN face a hidden take beats a 中文 take.
+    // (The pipeline now refills missing En takes; this is display insurance.)
+    : { ...s, title: s.titleEn || s.title, summary: /[一-鿿]/.test(s.summary || '') ? '' : s.summary, why: s.whyEn || (/[一-鿿]/.test(s.why || '') ? '' : s.why), limitation: s.limitationEn || (/[一-鿿]/.test(s.limitation || '') ? '' : s.limitation) }), [zh]);
 
   const DAY_LABELS = cdDayLabels();
 
