@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-08-31T22:55:49.319Z",
-    "totalItems": 71,
+    "lastUpdated": "2026-09-01T00:42:40.326Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -82,9 +82,9 @@
           "titleZh": "腰痛手法治疗试验中利益冲突披露的透明度：一项荟萃流行病学综述"
         }
       ],
-      "heat": 5.74,
-      "themeZh": "骨关节炎、肌筋膜疼痛等骨科疾病的病理生理与康复",
-      "themeEn": "Musculoskeletal Pathophysiology and Rehabilitation"
+      "heat": 5.6,
+      "themeZh": "骨关节疼痛的生物力学机制与多部位康复",
+      "themeEn": "Biomechanical Factors and Rehabilitation in Musculoskeletal Pain"
     },
     {
       "id": "news-1787824783326-5",
@@ -92,13 +92,15 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42648694/",
       "category": "neurological",
       "publishedAt": "2026-08-31T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 7,
       "sources": [
         "Archives of physical medicine and rehabilitation",
-        "Physiotherapy theory and practice",
-        "medRxiv",
         "Clinical rehabilitation",
-        "Topics in stroke rehabilitation"
+        "Topics in stroke rehabilitation",
+        "Neurorehabilitation and neural repair",
+        "Disability and rehabilitation",
+        "medRxiv",
+        "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -111,17 +113,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
-          "titleZh": "慢性卒中患者运动恢复和感知社会支持与参与相关结局的关联"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
-          "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
-        },
-        {
-          "source": "PubMed",
           "journal": "Clinical rehabilitation",
           "title": "Towards global standards in stroke rehabilitation and recovery: An international evaluation of practice alignment.",
           "titleZh": "迈向全球卒中康复和恢复标准：一项实践一致性的国际评估"
@@ -131,6 +122,23 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Outcome measures used in studies of vestibular rehabilitation after stroke: a scoping review.",
           "titleZh": "中风后前庭康复研究中使用的结局测量指标：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Minimal Important Changes in Accelerometer-Measured Physical Activity and Sedentary Time in Older Patients With Subacute Stroke: A Multicenter Study.",
+          "titleZh": "亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变：一项多中心研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Co-design of a physical activity maintenance intervention for adults with stroke.",
+          "titleZh": "卒中成人身体活动维持干预的共同设计。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
+          "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
         },
         {
           "source": "PubMed",
@@ -148,11 +156,17 @@
           "journal": "Physiotherapy theory and practice",
           "title": "Measurement properties of a 300-m community-based walking test incorporating environmental walking demands in individuals with subacute stroke.",
           "titleZh": "纳入环境步行需求的 300 米社区步行测试在亚急性卒中患者中的测量学特性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Eight Functional outcomes, two dimensions: a cross-sectional analysis of scale dependence in spatiotemporal gait determinants after subacute stroke.",
+          "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。"
         }
       ],
-      "heat": 3.59,
-      "themeZh": "卒中后康复：影响因素、疗效评估与国际标准",
-      "themeEn": "Post-Stroke Rehabilitation: Factors, Outcomes, Standards"
+      "heat": 4.9,
+      "themeZh": "卒中后康复策略、运动依从性及全球实践对齐",
+      "themeEn": "Stroke Rehab Strategies, Adherence, and Global Practice"
     },
     {
       "id": "news-1787943068276-1",
@@ -160,14 +174,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
       "category": "orthopedic",
       "publishedAt": "2026-08-30T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
         "Lancet (London, England)",
         "Physical therapy",
         "Disability and rehabilitation",
         "Physiotherapy theory and practice",
         "The Journal of manual & manipulative therapy",
-        "Musculoskeletal science & practice"
+        "Musculoskeletal science & practice",
+        "The Lancet",
+        "Physical & occupational therapy in pediatrics"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -219,25 +235,37 @@
           "journal": "Musculoskeletal science & practice",
           "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
           "titleZh": "重构患者期望为肌肉骨骼康复中的治疗靶点"
+        },
+        {
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Viewpoint] Systematic reviews and the needs of the adolescent transgender health care field",
+          "titleZh": "系统综述与青少年跨性别健康护理领域的需求"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
+          "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         }
       ],
-      "heat": 3.05,
-      "themeZh": "物理治疗在急诊和门诊服务中的实践与优化",
-      "themeEn": "Optimizing PT Practice in Emergency and Outpatient Care"
+      "heat": 3.96,
+      "themeZh": "物理治疗的基层医疗可及性与服务模式创新",
+      "themeEn": "PT Accessibility and Innovative Care Models"
     },
     {
       "id": "news-1787655274828-0",
       "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42638517/",
       "category": "neurological",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
         "Neurorehabilitation and neural repair",
         "Journal of NeuroEngineering and Rehabilitation",
-        "Clinical rehabilitation",
         "NeuroRehabilitation",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of physical medicine and rehabilitation",
+        "The Lancet"
       ],
       "tag": "parkinson",
       "kind": "theme",
@@ -256,12 +284,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
-          "titleZh": "帕金森病中的生物反馈：一项系统综述与Meta分析。"
-        },
-        {
-          "source": "PubMed",
           "journal": "NeuroRehabilitation",
           "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
           "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
@@ -271,14 +293,253 @@
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
           "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Fatigue in Neurological Rehabilitation: Why Brain Diversity and Population Diversity Matter.",
+          "titleZh": "神经康复中的疲劳：为什么大脑多样性和人群多样性至关重要。"
+        },
+        {
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
+          "titleZh": "重新思考全球痴呆预防的风险因素"
         }
       ],
-      "heat": 1.27,
-      "themeZh": "多学科康复与生物/视觉反馈在帕金森病中的应用",
-      "themeEn": "Multidisciplinary Rehabilitation and Biofeedback for PD"
+      "heat": 3.5,
+      "themeZh": "帕金森病多学科康复与新兴疗法",
+      "themeEn": "Parkinson's Multidisciplinary Rehab and Novel Therapies"
+    },
+    {
+      "id": "news-1787166154199-1",
+      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
+      "category": "orthopedic",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "sourceCount": 3,
+      "sources": [
+        "Physiotherapy theory and practice",
+        "Disability and rehabilitation",
+        "BMC Geriatrics"
+      ],
+      "tag": "shoulder",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+          "titleZh": "肩部问题评估量表（SPAS）的开发与心理测量学验证"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Feasibility, content and construct validity of the Patient Specific Functional Scale for chronic stroke survivors.",
+          "titleZh": "慢性卒中幸存者患者特异性功能量表的可行性、内容效度和结构效度。"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Assessing concerns about falling: a comparison of telephone-based and face-to-face FES-I interviews in older adults",
+          "titleZh": "老年人跌倒顾虑评估：电话与面谈FES-I访谈的比较"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "The association between intrinsic capacity and quality of life in community-dwelling older adults: a cross-sectional study",
+          "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究"
+        }
+      ],
+      "heat": 2.1,
+      "themeZh": "老年患者功能与跌倒风险评估工具的开发与验证",
+      "themeEn": "Functional Assessment and Fall Risk Tools"
     }
   ],
   "items": [
+    {
+      "id": "news-1788223358268-8",
+      "title": "The effectiveness of instrument-assisted soft tissue mobilization on pain and function in patients with musculoskeletal disorders: a systematic review and meta-analysis - BMC Musculoskeletal Disorders",
+      "summary": "A systematic review and meta-analysis of 14 RCTs (n=550) found that instrument-assisted soft tissue mobilization (IASTM) significantly improved pain (SMD -0.74; 95% CI -1.04 to -0.44) and function (SMD -0.66; 95% CI -0.99 to -0.34) in musculoskeletal disorders in the short term, with moderate effect sizes.",
+      "category": "manual-modality",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-025-08492-4",
+      "publishedAt": "2025-03-14T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 79,
+      "curatedReason": "IASTM 对肌肉骨骼疾病的疼痛和功能确有短期改善，效果中等。这项纳入了14项RCTs、共550名患者的系统综述和荟萃分析，证实了 IASTM 可作为有效的辅助手段，但它并非解决所有问题的银弹，长期疗效尚无定论。",
+      "titleZh": "器械辅助软组织松动术对肌肉骨骼疾病患者疼痛和功能的有效性：一项系统综述和荟萃分析。",
+      "summaryZh": "一项对 14 项随机对照试验（n=550）的系统综述和荟萃分析发现，器械辅助软组织松动术（IASTM）在短期内显著改善了肌肉骨骼疾病患者的疼痛（SMD -0.74；95% CI -1.04 至 -0.44）和功能（SMD -0.66；95% CI -0.99 至 -0.34），效应量中等。",
+      "curatedReasonEn": "IASTM does offer short-term, moderate improvements in pain and function for musculoskeletal disorders. This systematic review and meta-analysis of 14 RCTs (n=550) confirms IASTM's role as an effective adjunct, but it's not a panacea, and its long-term efficacy remains undetermined.",
+      "limitation": "研究的异质性较高，且大多数纳入研究缺乏长期随访数据。",
+      "limitationEn": "The study exhibits high heterogeneity, and most included studies lack long-term follow-up data.",
+      "tags": [
+        "research",
+        "iastm"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1788223358266-0",
+      "title": "Minimal Important Changes in Accelerometer-Measured Physical Activity and Sedentary Time in Older Patients With Subacute Stroke: A Multicenter Study.",
+      "summary": "A multicenter observational study involving 299 subacute stroke patients estimated the minimal important change (MIC) for accelerometer-measured sedentary behavior, light-intensity physical activity, and moderate-to-vigorous intensity physical activity, ranging from 11.4 to 34.2 minutes, based on improvements in FIM scores.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42671931/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.266Z",
+      "curatedScore": 75,
+      "curatedReason": "这项多中心研究首次给出了亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变（MIC），为临床评估康复效果和设定目标提供了量化依据。",
+      "titleZh": "亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变：一项多中心研究。",
+      "summaryZh": "一项涵盖 299 名亚急性卒中患者的多中心观察性研究估计了加速计测量的久坐行为、轻度身体活动和中高强度身体活动的最小重要改变（MIC），范围为 11.4 至 34.2 分钟，为康复效果评估提供了量化参考。",
+      "curatedReasonEn": "This multicenter study provides the first estimates of minimal important change (MIC) for accelerometer-measured physical activity and sedentary time in older patients with subacute stroke, offering quantitative benchmarks for assessing rehabilitation effectiveness and setting treatment goals.",
+      "limitation": "研究为观察性设计，依赖自我报告的锚点进行MIC估计。",
+      "limitationEn": "The study's observational design relies on self-reported anchors for MIC estimation.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair"
+    },
+    {
+      "id": "news-1788223358268-3",
+      "title": "Feasibility, content and construct validity of the Patient Specific Functional Scale for chronic stroke survivors.",
+      "summary": "A cross-sectional study with 66 chronic stroke survivors (median 81 years old, 76 months post-onset) confirmed the feasibility, content validity, and construct validity of the Patient Specific Functional Scale (PSFS) using COSMIN standards, with high completion rates and good correlation to other functional measures.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42671035/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 75,
+      "curatedReason": "本研究证实了患者特异性功能量表（PSFS）对慢性卒中幸存者的可行性、内容效度和结构效度，为你评估该群体功能受限的个体化目标提供了一个可靠工具。它解决了在慢性卒中语境下 PSFS 应用的痛点。",
+      "titleZh": "慢性卒中幸存者患者特异性功能量表的可行性、内容效度和结构效度。",
+      "summaryZh": "一项针对 66 名慢性卒中幸存者（中位年龄 81 岁，发病后 76 个月）的横断面研究，依据 COSMIN 标准证实了患者特异性功能量表（PSFS）的可行性、内容效度和结构效度，表现出高完成率和与其他功能测量工具的良好相关性。",
+      "curatedReasonEn": "This study validates the feasibility, content, and construct validity of the Patient Specific Functional Scale (PSFS) for chronic stroke survivors, providing a reliable tool for assessing individualized functional goals in this population. It addresses a key gap in PSFS application within chronic stroke contexts.",
+      "limitation": "研究人群年龄偏大，样本量相对有限，可能影响结果的普遍性。",
+      "limitationEn": "The study population was older, and the sample size was relatively limited, which may affect the generalizability of the findings.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1788223358267-1",
+      "title": "Navigating recovery after flap repair for pressure injury in spinal cord injury/disorder: lived experience and clinician perspectives on complications, resilience, and care models.",
+      "summary": "A qualitative study explored the lived experiences of 8 individuals with SCI/D experiencing post-flap complications and 10 multidisciplinary clinicians, revealing themes of shifting realities, motivation through community, and the need for comprehensive, integrated care models in pressure injury recovery.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42671079/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.267Z",
+      "curatedScore": 70,
+      "curatedReason": "对于SCI/D患者压疮皮瓣修复术后恢复，我们仍需更全面的整合照护模式。这项研究从8位患者和10位临床医生的经验中发现，除了生理挑战，患者面临的心理和社会现实转变、社群支持的激励作用同样不可忽视。",
+      "titleZh": "脊髓损伤/疾病患者压疮皮瓣修复术后恢复的探究：并发症、韧性和护理模式的患者与临床医生视角。",
+      "summaryZh": "一项定性研究探讨了 8 名经历皮瓣修复并发症的脊髓损伤患者和 10 名多学科临床医生的经验，揭示了压疮恢复中现实转变、社区驱动的动力以及对全面综合护理模式的需求。",
+      "curatedReasonEn": "For SCI/D patients recovering from pressure injury flap repair, a more comprehensive, integrated care model is still needed. This study, drawing from the experiences of 8 patients and 10 clinicians, highlights that beyond physiological challenges, the psychological and social shifts patients face, and the motivating role of community support, are equally critical.",
+      "limitation": "本研究为定性研究，样本量较小，结果外推性受限。",
+      "limitationEn": "As a qualitative study with a small sample size, the generalizability of its findings is limited.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1788223358268-2",
+      "title": "Co-design of a physical activity maintenance intervention for adults with stroke.",
+      "summary": "A mixed-methods co-design study, involving 38 stakeholders in focus groups and 11 in workshops, developed a physical activity maintenance program for stroke survivors, identifying themes like shifting realities of PA post-stroke and motivation through community.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42671056/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究通过共同设计方法，为卒中患者在社区康复后维持身体活动提供了干预方案的框架。它强调了将患者、照护者和临床医生纳入设计的重要性，未来有望转化为更符合实际需求的临床工具。",
+      "titleZh": "卒中成人身体活动维持干预的共同设计。",
+      "summaryZh": "一项混合方法共同设计研究，通过焦点小组（38 名参与者）和工作坊（11 名参与者）为卒中幸存者开发了身体活动维持计划，识别了卒中后身体活动的现实转变和社区驱动的动力等主题。",
+      "curatedReasonEn": "This co-design study provides a framework for physical activity maintenance interventions in stroke survivors post-community rehabilitation, highlighting the importance of involving patients, caregivers, and clinicians. This could lead to more clinically relevant tools in the future.",
+      "limitation": "本研究为方案设计阶段，尚未进行干预实施与效果评估。",
+      "limitationEn": "This study is in the intervention design phase; implementation and effectiveness evaluation are pending.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1788223358268-4",
+      "title": "Fatigue in Neurological Rehabilitation: Why Brain Diversity and Population Diversity Matter.",
+      "summary": "A commentary discusses the limitations in neurological fatigue research, noting that 95%-100% of studies rely on questionnaires and peripheral biomarkers, with fewer than 15% using functional neuroimaging, and highlights a lack of population diversity in cohorts.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42670829/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇述评批判性地指出了神经康复领域对疲劳研究中“大脑多样性”和“人群多样性”的不足，提醒你关注评估工具的局限性及研究对象地域和族裔的代表性，以更好地理解和干预疲劳。",
+      "titleZh": "神经康复中的疲劳：为什么大脑多样性和人群多样性至关重要。",
+      "summaryZh": "一篇述评探讨了神经疲劳研究的局限性，指出 95%-100% 的研究依赖问卷和外周生物标志物，功能神经影像学应用不足 15%，并强调了研究人群多样性的缺失。",
+      "curatedReasonEn": "This commentary critically highlights deficiencies in \"brain diversity\" and \"population diversity\" in neurological rehabilitation fatigue research, urging you to consider the limitations of assessment tools and the representativeness of study populations for better understanding and intervention of fatigue.",
+      "tags": [
+        "research",
+        "ms",
+        "parkinson",
+        "stroke",
+        "brain-injury"
+      ],
+      "studyDesign": "述评",
+      "journal": "Neurorehabilitation and neural repair"
+    },
+    {
+      "id": "news-1788223358268-5",
+      "title": "Eight Functional outcomes, two dimensions: a cross-sectional analysis of scale dependence in spatiotemporal gait determinants after subacute stroke.",
+      "summary": "A cross-sectional study of 244 subacute stroke patients found that eight routinely used gait outcomes primarily represent two dimensions. Spatiotemporal gait parameters were analyzed to determine how determinants differ between these outcomes, suggesting some outcomes reflect similar constructs despite scale differences.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42670196/",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 70,
+      "curatedReason": "本研究揭示了亚急性卒中患者八种常用功能结局量表（如 BBS、步速、TUG）在评估步态时存在重叠和维度差异，这提示你在选择和解释步态结局指标时，要考虑量表间的关联性，避免重复评估。",
+      "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。",
+      "summaryZh": "一项对 244 名亚急性卒中患者的横断面研究发现，八种常用的步态结局指标主要代表两个维度。分析了时空步态参数以确定不同结局指标的决定因素差异，表明尽管量表不同，部分结局反映了相似的结构。",
+      "curatedReasonEn": "This study reveals overlaps and dimensional differences among eight commonly used functional outcome measures (e.g., BBS, gait velocity, TUG) for gait assessment in subacute stroke. This suggests that you should consider the interrelations between scales when selecting and interpreting gait outcome measures to avoid redundant assessments.",
+      "limitation": "本研究为横断面设计，无法评估结局量表随时间的动态变化。",
+      "limitationEn": "This study has a cross-sectional design and cannot assess dynamic changes in outcome measures over time.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1788223358268-7",
+      "title": "Implementing an exercise intervention for sarcopenia in oldest-old nursing home residents: protocol for a pragmatic cluster-randomized controlled trial (SCOPE Study)",
+      "summary": "This article presents the protocol for the SCOPE Study, a pragmatic cluster-randomized controlled trial designed to implement an exercise intervention for sarcopenia in the oldest-old nursing home residents, aiming to provide evidence for effective strategies.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08002-8",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T00:42:38.268Z",
+      "curatedScore": 65,
+      "curatedReason": "这项研究方案描述了一个针对最老年住院养老院居民的肌少症干预措施，未来有望为这群高危人群的运动处方提供实证依据。目前阶段，它提示你关注肌少症在养老院的干预潜力。",
+      "titleZh": "针对最老年养老院居民肌少症运动干预的实施方案：一项实用性整群随机对照试验（SCOPE 研究）方案。",
+      "summaryZh": "本文介绍了 SCOPE 研究方案，这是一项旨在针对最老年养老院居民实施肌少症运动干预的实用性整群随机对照试验，旨在为有效策略提供证据。",
+      "curatedReasonEn": "This study protocol describes an exercise intervention for sarcopenia in the oldest-old nursing home residents, which could provide evidence for exercise prescriptions in this high-risk population. At this stage, it highlights the potential for sarcopenia interventions in nursing homes.",
+      "tags": [
+        "news",
+        "exercise",
+        "nursing-home"
+      ],
+      "journal": "BMC Geriatrics"
+    },
     {
       "id": "news-1788216947366-1",
       "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
@@ -1828,96 +2089,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1787455549867-0",
-      "title": "How occupational therapists integrate robotic therapy into routine practice: a qualitative study.",
-      "summary": "A qualitative study explored how seven occupational therapists in Bangkok integrated robotic hand exoskeleton therapy into stroke rehabilitation, identifying themes such as client readiness, motivation, and individualized therapy, alongside challenges and facilitators.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42632038/",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "firstSeen": "2026-08-23T03:25:49.867Z",
-      "curatedScore": 75,
-      "curatedReason": "本研究揭示了职业治疗师将机器人手部外骨骼疗法整合到卒中康复实践中的经验。了解其他治疗师如何处理患者准备、依从性和个体化方案，有助于你更有效地采纳新技术。",
-      "titleZh": "职业治疗师如何将机器人疗法整合到常规实践中：一项定性研究",
-      "summaryZh": "一项定性研究探讨了曼谷七名职业治疗师如何将机器人手部外骨骼疗法整合到卒中康复中，研究发现的关键主题包括患者准备、动机、个体化治疗，以及实施中的挑战与促进因素。",
-      "curatedReasonEn": "This study reveals how occupational therapists integrate robotic hand exoskeleton therapy into stroke rehabilitation. Understanding how other therapists manage client readiness, adherence, and individualized programs can help you adopt new technologies more effectively.",
-      "limitation": "本研究是定性研究，样本量小且集中在特定地区，结果外推性有限。",
-      "limitationEn": "As a qualitative study with a small sample from a specific region, the generalizability of these findings is limited.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1787244984553-0",
-      "title": "Associations of motor recovery and perceived social support with participation-related outcomes in chronic stroke.",
-      "summary": "A single-session assessment of 40 community-dwelling individuals with chronic stroke and 41 healthy controls found that motor recovery and perceived social support were associated with participation-related outcomes such as life satisfaction and health-related quality of life.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42622494/",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "firstSeen": "2026-08-20T16:56:24.553Z",
-      "curatedScore": 75,
-      "curatedReason": "本研究强调了运动恢复和感知社会支持对慢性卒中患者参与相关结局的重要性。在制定康复计划时，除了关注身体功能，也应考虑患者的社会支持系统，以提升生活满意度和生活质量。",
-      "titleZh": "慢性卒中患者运动恢复和感知社会支持与参与相关结局的关联",
-      "summaryZh": "对 40 名社区慢性卒中患者和 41 名健康对照者进行单次评估发现，运动恢复和感知社会支持与生活满意度和健康相关生活质量等参与相关结局存在关联。",
-      "curatedReasonEn": "This study highlights the importance of motor recovery and perceived social support for participation-related outcomes in chronic stroke patients. When developing rehabilitation plans, consider patients' social support systems alongside physical function to improve life satisfaction and quality of life.",
-      "limitation": "本研究为横断面设计，无法确立因果关系；且其样本量相对较小。",
-      "limitationEn": "This cross-sectional study cannot establish causality and has a relatively small sample size.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1787434997375-18",
-      "title": "Modest Payment Increases Finalized by CMS for SNFs and IRFs",
-      "summary": "CMS finalized modest payment increases for Skilled Nursing Facilities (SNFs) and Inpatient Rehabilitation Facilities (IRFs) for fiscal year 2027, while introducing earlier deadlines for care initiation and interdisciplinary team meetings for IRFs, and requiring all-payer Minimum Data Set submissions for SNFs starting October 1.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/08/18/modest-payment-increases-finalized-by-cms-for-snfs-and-irfs",
-      "publishedAt": "2026-08-18T00:00:00.000Z",
-      "firstSeen": "2026-08-22T21:43:17.375Z",
-      "curatedScore": 90,
-      "curatedReason": "CMS（美国医疗保险和医疗补助服务中心）公布了2027财年SNF（专业护理机构）和IRF（住院康复机构）的最终支付规则，支付增幅温和，但引入了更严格的照护启动和团队会议截止日期，并要求SNF收集所有支付方的MDS数据。这会显著增加机构的行政负担，你需密切关注并调整工作流程以符合新规，特别是关于记录和跨学科协作的要求。",
-      "titleZh": "CMS 最终确定 SNF 和 IRF 适度支付增长。",
-      "summaryZh": "CMS最终确定了2027财年SNF和IRF的适度支付增长，同时为IRF设定了更早的照护启动和跨学科团队会议截止日期，并要求SNF从10月1日起提交所有支付方的最低数据集（MDS）。",
-      "curatedReasonEn": "CMS has finalized its FY 2027 payment rules for SNFs and IRFs, with modest payment increases but stricter deadlines for care initiation and interdisciplinary team meetings, and requiring SNFs to collect all-payer MDS submissions. This will significantly increase administrative burden for facilities, and you need to monitor closely and adjust workflows to comply with new regulations, especially regarding documentation and interdisciplinary collaboration.",
-      "tags": [
-        "policy",
-        "reimbursement",
-        "regulation"
-      ]
-    },
-    {
-      "id": "news-1787694684116-2",
-      "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
-      "summary": "A systematic review with meta-analysis of randomized trials found that adding biofeedback to practice effectively improves lower limb activity in people with Parkinson's disease compared to practice alone.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640577/",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "firstSeen": "2026-08-25T21:51:24.116Z",
-      "curatedScore": 85,
-      "curatedReason": "这项高质量系统综述明确指出，生物反馈对改善帕金森病患者的下肢活动能力是有效的。你应该考虑在常规训练中加入生物反馈，以期提升患者的平衡和步态表现。",
-      "titleZh": "帕金森病中的生物反馈：一项系统综述与Meta分析。",
-      "summaryZh": "一项针对帕金森病患者的随机试验系统综述与Meta分析显示，在训练中加入生物反馈能有效改善下肢活动能力，优于单独训练。",
-      "curatedReasonEn": "This high-quality systematic review clearly indicates that biofeedback effectively improves lower limb activity in people with Parkinson's disease. You should consider incorporating biofeedback into routine practice to enhance your patients' balance and gait performance.",
-      "limitation": "具体生物反馈类型、训练强度和持续时间的异质性可能影响结果的解读和临床应用。",
-      "limitationEn": "Heterogeneity in specific biofeedback types, training intensity, and duration may affect the interpretation and clinical application of results.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Clinical rehabilitation"
     }
   ]
 }
