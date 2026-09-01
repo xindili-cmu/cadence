@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-01T05:26:32.976Z",
+    "lastUpdated": "2026-09-01T11:48:14.495Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,36 +15,42 @@
   },
   "hotTopics": [
     {
-      "id": "news-1787166154199-1",
-      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
+      "id": "news-1787223120432-0",
+      "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42619362/",
       "category": "orthopedic",
       "publishedAt": "2026-08-31T00:00:00.000Z",
       "sourceCount": 8,
       "sources": [
         "Physiotherapy theory and practice",
         "BMC Geriatrics",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Clinical rehabilitation",
         "medRxiv",
         "BMC Musculoskeletal Disorders",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "Musculoskeletal science & practice"
       ],
-      "tag": "shoulder",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
-          "title": "Development and psychometric validation of the shoulder problems assessment scale.",
-          "titleZh": "肩部问题评估量表（SPAS）的开发与心理测量学验证"
+          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+          "titleZh": "青年偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
         },
         {
           "source": "BMC Geriatrics",
           "journal": "BMC Geriatrics",
           "title": "Atlantoaxial Instability in older adults: an underrecognized condition beyond rheumatoid arthritis – a retrospective study",
           "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
         },
         {
           "source": "PubMed",
@@ -65,12 +71,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
-        },
-        {
-          "source": "PubMed",
           "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
           "title": "Methods for assessing core muscle co-activation in the lumbar region: a narrative review.",
           "titleZh": "评估腰部核心肌群协同激活的方法：一项叙述性综述"
@@ -82,9 +82,9 @@
           "titleZh": "腰痛手法治疗试验中利益冲突披露的透明度：一项荟萃流行病学综述"
         }
       ],
-      "heat": 5.23,
-      "themeZh": "骨科物理治疗中常见肌肉骨骼疾病的评估与干预",
-      "themeEn": "Assessment and Intervention for Common Musculoskeletal Conditions"
+      "heat": 4.77,
+      "themeZh": "骨骼肌肉疾病与疼痛的康复管理与影响因素",
+      "themeEn": "Musculoskeletal Pain & Impairment Rehabilitation"
     },
     {
       "id": "news-1787824783326-5",
@@ -96,11 +96,11 @@
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Clinical rehabilitation",
-        "Topics in stroke rehabilitation",
-        "medRxiv",
-        "Physiotherapy theory and practice",
         "Neurorehabilitation and neural repair",
-        "Disability and rehabilitation"
+        "Disability and rehabilitation",
+        "medRxiv",
+        "Topics in stroke rehabilitation",
+        "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -119,9 +119,20 @@
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Outcome measures used in studies of vestibular rehabilitation after stroke: a scoping review.",
-          "titleZh": "中风后前庭康复研究中使用的结局测量指标：一项范围综述"
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Minimal Important Changes in Accelerometer-Measured Physical Activity and Sedentary Time in Older Patients With Subacute Stroke: A Multicenter Study.",
+          "titleZh": "亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变：一项多中心研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Co-design of a physical activity maintenance intervention for adults with stroke.",
+          "titleZh": "卒中成人身体活动维持干预的共同设计。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
+          "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
         },
         {
           "source": "PubMed",
@@ -145,28 +156,11 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Eight Functional outcomes, two dimensions: a cross-sectional analysis of scale dependence in spatiotemporal gait determinants after subacute stroke.",
           "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Minimal Important Changes in Accelerometer-Measured Physical Activity and Sedentary Time in Older Patients With Subacute Stroke: A Multicenter Study.",
-          "titleZh": "亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变：一项多中心研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Co-design of a physical activity maintenance intervention for adults with stroke.",
-          "titleZh": "卒中成人身体活动维持干预的共同设计。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
-          "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
         }
       ],
-      "heat": 4.58,
-      "themeZh": "卒中后平衡、步态和功能恢复的量化与评估",
-      "themeEn": "Quantifying Post-Stroke Balance, Gait and Functional Recovery"
+      "heat": 4.17,
+      "themeZh": "卒中后活动、自理与平衡恢复的国际实践",
+      "themeEn": "Stroke Mobility, Self-care, Balance Recovery"
     },
     {
       "id": "news-1787694684116-2",
@@ -229,9 +223,9 @@
           "titleZh": "重新思考全球痴呆预防的风险因素"
         }
       ],
-      "heat": 3.92,
-      "themeZh": "帕金森病康复：多学科干预与技术辅助治疗",
-      "themeEn": "Multidisciplinary and Technology-Assisted Rehabilitation for Parkinson's Disease"
+      "heat": 3.58,
+      "themeZh": "帕金森病康复中的生物反馈与多学科干预",
+      "themeEn": "PD Rehabilitation: Biofeedback & Multidisciplinary Intervention"
     },
     {
       "id": "news-1787943068276-1",
@@ -314,25 +308,31 @@
           "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         }
       ],
-      "heat": 3.7,
-      "themeZh": "物理治疗实践模式与服务交付的优化",
-      "themeEn": "Optimizing Physical Therapy Practice and Service Delivery"
+      "heat": 3.37,
+      "themeZh": "物理治疗师在肌肉骨骼疾病初级护理中的作用",
+      "themeEn": "PTs in MSK Primary Care"
     },
     {
-      "id": "news-1788223358268-3",
-      "title": "Feasibility, content and construct validity of the Patient Specific Functional Scale for chronic stroke survivors.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42671035/",
-      "category": "neurological",
+      "id": "news-1787166154199-1",
+      "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42613729/",
+      "category": "orthopedic",
       "publishedAt": "2026-08-31T00:00:00.000Z",
       "sourceCount": 3,
       "sources": [
+        "Physiotherapy theory and practice",
         "Disability and rehabilitation",
-        "BMC Geriatrics",
-        "medRxiv"
+        "BMC Geriatrics"
       ],
-      "tag": "stroke",
+      "tag": "shoulder",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Development and psychometric validation of the shoulder problems assessment scale.",
+          "titleZh": "肩部问题评估量表（SPAS）的开发与心理测量学验证"
+        },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
@@ -350,25 +350,37 @@
           "journal": "BMC Geriatrics",
           "title": "The association between intrinsic capacity and quality of life in community-dwelling older adults: a cross-sectional study",
           "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Strengthening Cardiac Rehabilitation: Key Strategies for Enhancing Accessibility and Outcomes",
-          "titleZh": "加强心脏康复：提高可及性和成果的关键策略"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
-          "titleZh": "以个体为中心的工作关系是卒中幸存者支持性自我管理的核心：一项定性研究"
         }
       ],
-      "heat": 1.96,
-      "themeZh": "以患者为中心的功能评估与老年康复",
-      "themeEn": "Patient-Centered Functional Assessment and Geriatric Rehabilitation"
+      "heat": 1.79,
+      "themeZh": "老年人跌倒恐惧与功能能力评估",
+      "themeEn": "Assessing Falls Concern and Function in Elderly"
     }
   ],
   "items": [
+    {
+      "id": "news-1787223120432-0",
+      "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+      "summary": "A case-control study involving 140 university students found associations between migraine and musculoskeletal impairments, including core and cervical muscle endurance, and craniovertebral angle.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42619362/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-20T10:52:00.432Z",
+      "curatedScore": 75,
+      "curatedReason": "这项病例对照研究提示，偏头痛大学生可能存在核心肌耐力、颈肌耐力和颅椎角异常。临床上评估偏头痛患者时，别只关注头痛，也考虑这些潜在的肌肉骨骼因素。",
+      "titleZh": "青年偏头痛患者的肌肉骨骼障碍：一项病例对照研究",
+      "summaryZh": "一项对 140 名大学生进行的病例对照研究发现，偏头痛与核心肌耐力、颈肌耐力和颅椎角等肌肉骨骼障碍存在关联。",
+      "curatedReasonEn": "This case-control study suggests that university students with migraine may have impairments in core muscle endurance, cervical muscle endurance, and craniovertebral angle. When evaluating migraine patients, consider these potential musculoskeletal factors beyond just the headache.",
+      "limitation": "本研究为病例对照设计，无法确立因果关系，且受试者仅限于大学生人群，外推性有限。",
+      "limitationEn": "This case-control study cannot establish causality, and its findings are limited to university students, restricting generalizability.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1787694684116-2",
       "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
@@ -2073,29 +2085,6 @@
       ],
       "studyDesign": "观察研究",
       "tech": true
-    },
-    {
-      "id": "news-1787455549869-2",
-      "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
-      "summary": "This cross-sectional study investigated the early emergence and characteristics of abnormal muscle synergies in the upper extremity of 39 individuals with hemiparesis in the early subacute period (<6 months) after stroke.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360812v1?rss=1",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "firstSeen": "2026-08-23T03:25:49.869Z",
-      "curatedScore": 70,
-      "curatedReason": "卒中后早期 (<6个月) 即可观察到异常的肩胛带肌协同模式，提示应尽早开始针对这些模式的干预。",
-      "titleZh": "卒中后人类上肢异常肌肉协同模式的早期出现",
-      "summaryZh": "这项横断面研究调查了39名卒中后早期亚急性期（<6个月）偏瘫患者上肢异常肌肉协同模式的早期出现及其特征。",
-      "curatedReasonEn": "Abnormal upper extremity muscle synergies emerge early after stroke (<6 months), suggesting that interventions targeting these patterns should be initiated as soon as possible.",
-      "limitation": "本研究为横断面设计，无法确定异常协同模式与长期功能预后之间的因果关系。",
-      "limitationEn": "This cross-sectional study cannot determine the causal relationship between abnormal synergy patterns and long-term functional outcomes.",
-      "tags": [
-        "research",
-        "stroke",
-        "brain-injury"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
