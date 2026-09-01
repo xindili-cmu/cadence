@@ -202,4 +202,10 @@ function main() {
   console.log(`  paste post-en.txt as the post, sources-en.txt as the first comment.`);
 }
 
-main();
+// topItems 是帖子正文与信号卡（linkedin-daily-card.js require 本模块）唯一的
+// 选稿真源。2026-09-01 之前卡片有一份没带单刊上限的本地副本，同分并列多的日子
+// 卡片第 5 行会和正文第 5 条不一致（正文跳过单刊第 3 条，卡片不跳）。
+// 本模块顶层只有 fs/path/lane，require 无副作用。
+module.exports = { topItems };
+
+if (require.main === module) main();

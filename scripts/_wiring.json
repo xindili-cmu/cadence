@@ -12,8 +12,8 @@
 
   "external": {
     "_note": "消费者在仓库外——检查看不见,所以必须写下来。value = 谁在驱动它。",
-    "linkedin-brief.js": "Cowork 定时任务 linkedin-daily-post(周一–周五 14:00 PT)→ 生成 post-zh/en.txt",
-    "linkedin-daily-card.js": "同上 → 生成 daily-signal.png",
+    "linkedin-brief.js": "2026-09-01 起主消费者是 refresh.yml(每日 full run 生成 post-zh/en.txt 随 cron 提交);Cowork 定时任务 linkedin-daily-post(周一–周五 14:00 PT)从 origin 取产物,本地重跑仅作校验",
+    "linkedin-daily-card.js": "同上 → daily-signal.png。进 cron 的原因:Chrome 扩展 file_upload 08-28 起客户端层坏,卡片只能由页面从 raw.githubusercontent 拉取,故必须先在 origin 上",
     "wechat-clip.sh": "Cindy 手动跑,公众号粘贴用(浏览器自动化被微信挡住)。见 PUBLISHING.md"
   },
 

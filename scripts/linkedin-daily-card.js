@@ -34,7 +34,6 @@
  *   OUT       output png (default linkedin/<date>/daily-signal.png)
  */
 const fs = require('fs');
-const { isEvidence } = require('./lane');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -296,11 +295,10 @@ function pickEdition(arg) {
   if (!files.length) throw new Error('no daily editions in ' + DAILY_DIR);
   return path.join(DAILY_DIR, files[files.length - 1]);
 }
-// Evidence lane only — the card's big Spectral score is a SIGNAL claim, and
-// intel (news/policy) has no SIGNAL (lane split 2026-08-29, scripts/lane.js).
-const topItems = (ed, n) => (ed.sections || []).flatMap(s => s.items || [])
-  .filter(isEvidence)
-  .slice().sort((a, b) => (b.curatedScore || 0) - (a.curatedScore || 0)).slice(0, n);
+// 选稿从 linkedin-brief.js 引入 —— 卡片五行必须和帖子正文五条完全一致。
+// brief 的 topItems 带 evidence-lane 过滤 + 单刊上限（≤2，2026-07-10 决策）；
+// 这里以前是一份没带上限的本地副本，2026-09-01 同分并列时第 5 条分叉过。
+const { topItems } = require('./linkedin-brief');
 
 async function main() {
   const file = pickEdition(process.argv[2]);
