@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-01T00:42:40.326Z",
+    "lastUpdated": "2026-09-01T11:48:14.495Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,25 +15,43 @@
   },
   "hotTopics": [
     {
-      "id": "news-1787943068274-0",
-      "title": "Effects of short-term compression in people with knee osteoarthritis: A sham-controlled randomised trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42661329/",
+      "id": "news-1787223120432-0",
+      "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42619362/",
       "category": "orthopedic",
       "publishedAt": "2026-08-31T00:00:00.000Z",
       "sourceCount": 8,
       "sources": [
+        "Physiotherapy theory and practice",
+        "BMC Geriatrics",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Clinical rehabilitation",
         "medRxiv",
         "BMC Musculoskeletal Disorders",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Physiotherapy theory and practice",
-        "BMC Geriatrics",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "Musculoskeletal science & practice"
       ],
-      "tag": "knee",
+      "tag": "spine",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+          "titleZh": "青年偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Atlantoaxial Instability in older adults: an underrecognized condition beyond rheumatoid arthritis – a retrospective study",
+          "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
+        },
         {
           "source": "PubMed",
           "journal": "Clinical rehabilitation",
@@ -53,24 +71,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effect of Global Postural Re-Education in Individuals With Text Neck Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-          "titleZh": "年轻偏头痛患者的肌肉骨骼障碍：一项病例对照研究"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Atlantoaxial Instability in older adults: an underrecognized condition beyond rheumatoid arthritis – a retrospective study",
-          "titleZh": "老年人寰枢关节不稳：一个在类风湿关节炎之外未被充分认识的状况——一项回顾性研究"
-        },
-        {
-          "source": "PubMed",
           "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
           "title": "Methods for assessing core muscle co-activation in the lumbar region: a narrative review.",
           "titleZh": "评估腰部核心肌群协同激活的方法：一项叙述性综述"
@@ -82,9 +82,9 @@
           "titleZh": "腰痛手法治疗试验中利益冲突披露的透明度：一项荟萃流行病学综述"
         }
       ],
-      "heat": 5.6,
-      "themeZh": "骨关节疼痛的生物力学机制与多部位康复",
-      "themeEn": "Biomechanical Factors and Rehabilitation in Musculoskeletal Pain"
+      "heat": 4.77,
+      "themeZh": "骨骼肌肉疾病与疼痛的康复管理与影响因素",
+      "themeEn": "Musculoskeletal Pain & Impairment Rehabilitation"
     },
     {
       "id": "news-1787824783326-5",
@@ -96,10 +96,10 @@
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "Clinical rehabilitation",
-        "Topics in stroke rehabilitation",
         "Neurorehabilitation and neural repair",
         "Disability and rehabilitation",
         "medRxiv",
+        "Topics in stroke rehabilitation",
         "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
@@ -116,12 +116,6 @@
           "journal": "Clinical rehabilitation",
           "title": "Towards global standards in stroke rehabilitation and recovery: An international evaluation of practice alignment.",
           "titleZh": "迈向全球卒中康复和恢复标准：一项实践一致性的国际评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Outcome measures used in studies of vestibular rehabilitation after stroke: a scoping review.",
-          "titleZh": "中风后前庭康复研究中使用的结局测量指标：一项范围综述"
         },
         {
           "source": "PubMed",
@@ -164,9 +158,74 @@
           "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。"
         }
       ],
-      "heat": 4.9,
-      "themeZh": "卒中后康复策略、运动依从性及全球实践对齐",
-      "themeEn": "Stroke Rehab Strategies, Adherence, and Global Practice"
+      "heat": 4.17,
+      "themeZh": "卒中后活动、自理与平衡恢复的国际实践",
+      "themeEn": "Stroke Mobility, Self-care, Balance Recovery"
+    },
+    {
+      "id": "news-1787694684116-2",
+      "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640577/",
+      "category": "neurological",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Clinical rehabilitation",
+        "NeuroRehabilitation",
+        "Neurorehabilitation and neural repair",
+        "Journal of NeuroEngineering and Rehabilitation",
+        "Archives of physical medicine and rehabilitation",
+        "The Lancet"
+      ],
+      "tag": "parkinson",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
+          "titleZh": "生物反馈在帕金森病中的应用：一项含 meta 分析的系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
+          "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
+          "titleZh": "帕金森病患者白质弥散各向异性与多学科住院康复效果：一项弥散张量成像分析"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
+          "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
+          "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Fatigue in Neurological Rehabilitation: Why Brain Diversity and Population Diversity Matter.",
+          "titleZh": "神经康复中的疲劳：为什么大脑多样性和人群多样性至关重要。"
+        },
+        {
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
+          "titleZh": "重新思考全球痴呆预防的风险因素"
+        }
+      ],
+      "heat": 3.58,
+      "themeZh": "帕金森病康复中的生物反馈与多学科干预",
+      "themeEn": "PD Rehabilitation: Biofeedback & Multidisciplinary Intervention"
     },
     {
       "id": "news-1787943068276-1",
@@ -249,67 +308,9 @@
           "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         }
       ],
-      "heat": 3.96,
-      "themeZh": "物理治疗的基层医疗可及性与服务模式创新",
-      "themeEn": "PT Accessibility and Innovative Care Models"
-    },
-    {
-      "id": "news-1787655274828-0",
-      "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42638517/",
-      "category": "neurological",
-      "publishedAt": "2026-08-31T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Neurorehabilitation and neural repair",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "NeuroRehabilitation",
-        "Archives of physical medicine and rehabilitation",
-        "The Lancet"
-      ],
-      "tag": "parkinson",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "White Matter Diffusion Anisotropy and the Effects of Inpatient Multidisciplinary Rehabilitation in Parkinson's Disease: A Diffusion Tensor Imaging Analysis.",
-          "titleZh": "帕金森病患者白质弥散各向异性与多学科住院康复效果：一项弥散张量成像分析"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Effect of a multidisciplinary intensive outpatient rehabilitation program on plasma neurofilaments and myokines in Parkinson’s disease: an exploratory analysis",
-          "titleZh": "多学科强化门诊康复项目对帕金森病患者血浆神经丝和肌因子的影响：一项探索性分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Beyond Conventional Therapy in Parkinson's Disease Patients: The Impact of Visual Feedback Training on Balance and Trunk Control - A Prospective Cohort Study.",
-          "titleZh": "帕金森病患者超越传统疗法：视觉反馈训练对平衡和躯干控制的影响——一项前瞻性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
-          "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Fatigue in Neurological Rehabilitation: Why Brain Diversity and Population Diversity Matter.",
-          "titleZh": "神经康复中的疲劳：为什么大脑多样性和人群多样性至关重要。"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
-          "titleZh": "重新思考全球痴呆预防的风险因素"
-        }
-      ],
-      "heat": 3.5,
-      "themeZh": "帕金森病多学科康复与新兴疗法",
-      "themeEn": "Parkinson's Multidisciplinary Rehab and Novel Therapies"
+      "heat": 3.37,
+      "themeZh": "物理治疗师在肌肉骨骼疾病初级护理中的作用",
+      "themeEn": "PTs in MSK Primary Care"
     },
     {
       "id": "news-1787166154199-1",
@@ -351,15 +352,86 @@
           "titleZh": "社区老年人内在能力与生活质量的关联：一项横断面研究"
         }
       ],
-      "heat": 2.1,
-      "themeZh": "老年患者功能与跌倒风险评估工具的开发与验证",
-      "themeEn": "Functional Assessment and Fall Risk Tools"
+      "heat": 1.79,
+      "themeZh": "老年人跌倒恐惧与功能能力评估",
+      "themeEn": "Assessing Falls Concern and Function in Elderly"
     }
   ],
   "items": [
     {
+      "id": "news-1787223120432-0",
+      "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
+      "summary": "A case-control study involving 140 university students found associations between migraine and musculoskeletal impairments, including core and cervical muscle endurance, and craniovertebral angle.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42619362/",
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "firstSeen": "2026-08-20T10:52:00.432Z",
+      "curatedScore": 75,
+      "curatedReason": "这项病例对照研究提示，偏头痛大学生可能存在核心肌耐力、颈肌耐力和颅椎角异常。临床上评估偏头痛患者时，别只关注头痛，也考虑这些潜在的肌肉骨骼因素。",
+      "titleZh": "青年偏头痛患者的肌肉骨骼障碍：一项病例对照研究",
+      "summaryZh": "一项对 140 名大学生进行的病例对照研究发现，偏头痛与核心肌耐力、颈肌耐力和颅椎角等肌肉骨骼障碍存在关联。",
+      "curatedReasonEn": "This case-control study suggests that university students with migraine may have impairments in core muscle endurance, cervical muscle endurance, and craniovertebral angle. When evaluating migraine patients, consider these potential musculoskeletal factors beyond just the headache.",
+      "limitation": "本研究为病例对照设计，无法确立因果关系，且受试者仅限于大学生人群，外推性有限。",
+      "limitationEn": "This case-control study cannot establish causality, and its findings are limited to university students, restricting generalizability.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
+    {
+      "id": "news-1787694684116-2",
+      "title": "Biofeedback in Parkinson's disease: A systematic review with meta-analysis.",
+      "summary": "A systematic review with meta-analysis found that biofeedback added to practice significantly improves lower limb activity in individuals with Parkinson's disease compared to practice alone.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640577/",
+      "publishedAt": "2026-08-25T00:00:00.000Z",
+      "firstSeen": "2026-08-25T21:51:24.116Z",
+      "curatedScore": 85,
+      "curatedReason": "这项荟萃分析证实，与单纯练习相比，结合生物反馈能显著改善帕金森病患者的下肢活动。因此，您在为这类患者制定治疗方案时，应该考虑纳入生物反馈技术以提升功能效果。",
+      "titleZh": "生物反馈在帕金森病中的应用：一项含 meta 分析的系统综述",
+      "summaryZh": "一项包含 meta 分析的系统综述发现，在帕金森病患者中，联合实践的生物反馈比单独实践能显著改善下肢活动能力。",
+      "curatedReasonEn": "Biofeedback combined with practice shows significant benefits for improving lower limb activity in Parkinson's disease patients compared to practice alone, as supported by this meta-analysis. Clinicians should consider integrating biofeedback modalities into treatment plans for this population to enhance functional outcomes.",
+      "limitation": "The meta-analysis includes randomized trials, but variations in biofeedback protocols and outcome measures across studies may introduce heterogeneity.",
+      "limitationEn": "The meta-analysis includes randomized trials, but variations in biofeedback protocols and outcome measures across studies may introduce heterogeneity.",
+      "tags": [
+        "research",
+        "neurological",
+        "parkinson"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1788240257714-2",
+      "title": "REINA: A Recognize-Then-Infer Wearable-to-App AI Framework for Breast Cancer Rehabilitation",
+      "summary": "The REINA AI framework uses wearable IMU data for remote monitoring of motor function in breast cancer rehabilitation, recognizing activities and inferring EMG signals for neuromuscular assessment.",
+      "category": "orthopedic",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.29.26361725v1?rss=1",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T05:24:17.714Z",
+      "curatedScore": 68,
+      "curatedReason": "REINA这个利用可穿戴设备的AI框架，通过推断神经肌肉活动来远程监测乳腺癌康复患者的运动功能，这听起来很吸引人。但作为临床实践，在广泛应用前，我们必须进一步验证其临床实用性及其在不同患者群体中的有效性。",
+      "titleZh": "REINA：一种用于乳腺癌康复的识别-推断可穿戴设备到应用程序 AI 框架",
+      "summaryZh": "REINA AI 框架利用可穿戴 IMU 数据对乳腺癌康复中的运动功能进行远程监测，识别活动并推断肌电信号以进行神经肌肉评估。",
+      "curatedReasonEn": "REINA, a novel AI framework utilizing wearables, shows promise for remote monitoring of motor function in breast cancer rehabilitation by inferring neuromuscular activity. While this is an interesting technological advancement, its clinical utility and validation in diverse patient populations require further investigation before widespread adoption.",
+      "limitation": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+      "limitationEn": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+      "tags": [
+        "research",
+        "orthopedic",
+        "pelvic-floor"
+      ],
+      "studyDesign": "综述",
+      "tech": true
+    },
+    {
       "id": "news-1788223358268-8",
-      "title": "The effectiveness of instrument-assisted soft tissue mobilization on pain and function in patients with musculoskeletal disorders: a systematic review and meta-analysis - BMC Musculoskeletal Disorders",
+      "title": "The effectiveness of instrument-assisted soft tissue mobilization on pain and function in patients with musculoskeletal disorders: a systematic review and meta-analysis",
       "summary": "A systematic review and meta-analysis of 14 RCTs (n=550) found that instrument-assisted soft tissue mobilization (IASTM) significantly improved pain (SMD -0.74; 95% CI -1.04 to -0.44) and function (SMD -0.66; 95% CI -0.99 to -0.34) in musculoskeletal disorders in the short term, with moderate effect sizes.",
       "category": "manual-modality",
       "source": "BMC Musculoskelet Disord",
@@ -2013,82 +2085,6 @@
       ],
       "studyDesign": "观察研究",
       "tech": true
-    },
-    {
-      "id": "news-1787455549869-2",
-      "title": "Early Emergence of Abnormal Muscle Synergies in the Human Upper Extremity Following Stroke",
-      "summary": "This cross-sectional study investigated the early emergence and characteristics of abnormal muscle synergies in the upper extremity of 39 individuals with hemiparesis in the early subacute period (<6 months) after stroke.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.19.26360812v1?rss=1",
-      "publishedAt": "2026-08-22T00:00:00.000Z",
-      "firstSeen": "2026-08-23T03:25:49.869Z",
-      "curatedScore": 70,
-      "curatedReason": "卒中后早期 (<6个月) 即可观察到异常的肩胛带肌协同模式，提示应尽早开始针对这些模式的干预。",
-      "titleZh": "卒中后人类上肢异常肌肉协同模式的早期出现",
-      "summaryZh": "这项横断面研究调查了39名卒中后早期亚急性期（<6个月）偏瘫患者上肢异常肌肉协同模式的早期出现及其特征。",
-      "curatedReasonEn": "Abnormal upper extremity muscle synergies emerge early after stroke (<6 months), suggesting that interventions targeting these patterns should be initiated as soon as possible.",
-      "limitation": "本研究为横断面设计，无法确定异常协同模式与长期功能预后之间的因果关系。",
-      "limitationEn": "This cross-sectional study cannot determine the causal relationship between abnormal synergy patterns and long-term functional outcomes.",
-      "tags": [
-        "research",
-        "stroke",
-        "brain-injury"
-      ],
-      "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1787288276212-1",
-      "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury.",
-      "summary": "A clinical prediction rule was developed using the National Spinal Cord Injury Statistical Centre dataset (2607 patients) to predict independent walking one year after traumatic spinal cord injury, with differentiated prognoses for individual ASIA Impairment Scale grades.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42624188/",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "firstSeen": "2026-08-21T04:57:56.212Z",
-      "curatedScore": 80,
-      "curatedReason": "这项针对创伤性脊髓损伤患者的临床预测规则，能基于 AIS 分级提供一年后独立步行的差异化预后。在早期评估和制定康复目标时，你可以利用这个工具，与患者及其家属进行更精确的沟通。",
-      "titleZh": "创伤性脊髓损伤后独立步行的分级临床预测规则",
-      "summaryZh": "一项基于国家脊髓损伤统计中心数据集（2607 名患者）的研究，开发了创伤性脊髓损伤后一年内独立步行的临床预测规则，为不同 ASIA 损伤分级患者提供差异化预后。",
-      "curatedReasonEn": "This clinical prediction rule for traumatic spinal cord injury provides differentiated prognoses for independent walking one year post-injury, based on AIS grades. You can use this tool for more precise communication with patients and families during early assessment and goal setting.",
-      "limitation": "此预测规则是基于大型数据集构建的，但其在不同人群和临床环境中的外部验证仍需进一步研究。",
-      "limitationEn": "While built on a large dataset, the external validation of this prediction rule across diverse populations and clinical settings warrants further investigation.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00887-7/fulltext?rss=yes",
-          "title": "A grade-specific clinical prediction rule for independent walking after traumatic spinal cord injury"
-        }
-      ]
-    },
-    {
-      "id": "news-1787223120432-0",
-      "title": "Musculoskeletal impairments associated with migraine in young adults: a case-control study.",
-      "summary": "A case-control study of 140 university students found associations between migraine and reduced core and cervical muscle endurance, as well as craniovertebral angle, even after adjusting for age, sex, and BMI.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42619362/",
-      "publishedAt": "2026-08-20T00:00:00.000Z",
-      "firstSeen": "2026-08-20T10:52:00.432Z",
-      "curatedScore": 75,
-      "curatedReason": "本研究提示年轻偏头痛患者的颈部和核心肌群耐力可能与疾病相关。在评估偏头痛患者时，你应将这些肌肉骨骼因素纳入考量。",
-      "titleZh": "年轻偏头痛患者的肌肉骨骼障碍：一项病例对照研究",
-      "summaryZh": "一项对 140 名大学生的病例对照研究发现，偏头痛与核心肌群和颈部肌群耐力下降以及颅椎角异常相关，即使在调整了年龄、性别和体重指数后，这些关联依然存在。",
-      "curatedReasonEn": "This study suggests that cervical and core muscle endurance may be associated with migraine in young adults. Consider these musculoskeletal factors when assessing patients with migraine.",
-      "limitation": "本研究为病例对照设计，无法建立因果关系。",
-      "limitationEn": "This case-control study cannot establish causality.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
     }
   ]
 }

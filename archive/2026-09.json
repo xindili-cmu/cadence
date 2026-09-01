@@ -182,6 +182,30 @@
         "nursing-home"
       ],
       "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1788240257714-2",
+      "title": "REINA: A Recognize-Then-Infer Wearable-to-App AI Framework for Breast Cancer Rehabilitation",
+      "summary": "The REINA AI framework uses wearable IMU data for remote monitoring of motor function in breast cancer rehabilitation, recognizing activities and inferring EMG signals for neuromuscular assessment.",
+      "category": "orthopedic",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.29.26361725v1?rss=1",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-01T05:24:17.714Z",
+      "curatedScore": 68,
+      "curatedReason": "REINA这个利用可穿戴设备的AI框架，通过推断神经肌肉活动来远程监测乳腺癌康复患者的运动功能，这听起来很吸引人。但作为临床实践，在广泛应用前，我们必须进一步验证其临床实用性及其在不同患者群体中的有效性。",
+      "titleZh": "REINA：一种用于乳腺癌康复的识别-推断可穿戴设备到应用程序 AI 框架",
+      "summaryZh": "REINA AI 框架利用可穿戴 IMU 数据对乳腺癌康复中的运动功能进行远程监测，识别活动并推断肌电信号以进行神经肌肉评估。",
+      "curatedReasonEn": "REINA, a novel AI framework utilizing wearables, shows promise for remote monitoring of motor function in breast cancer rehabilitation by inferring neuromuscular activity. While this is an interesting technological advancement, its clinical utility and validation in diverse patient populations require further investigation before widespread adoption.",
+      "limitation": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+      "limitationEn": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+      "tags": [
+        "research",
+        "orthopedic",
+        "pelvic-floor"
+      ],
+      "studyDesign": "综述",
+      "tech": true
     }
   ]
 }
