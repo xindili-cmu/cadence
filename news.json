@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-02T04:45:30.780Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-09-02T11:29:04.262Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -86,9 +86,9 @@
           "titleZh": "业余足球运动员不同运动模式下的重复冲刺表现与疲劳反应"
         }
       ],
-      "heat": 3.96,
-      "themeZh": "膝关节和ACL损伤的运动康复策略",
-      "themeEn": "Knee and ACL Injury Rehab Strategies"
+      "heat": 3.59,
+      "themeZh": "膝关节及ACL重建后运动康复与力学分析",
+      "themeEn": "Knee OA & ACL Rehab Mechanics"
     },
     {
       "id": "news-1788281123741-1",
@@ -145,9 +145,9 @@
           "titleZh": "姿势再教育对“低头族”颈痛综合征患者疗效的随机对照试验"
         }
       ],
-      "heat": 3.96,
-      "themeZh": "下腰痛和颈部疼痛的肌骨康复评估与干预",
-      "themeEn": "Low Back and Neck Pain Rehab"
+      "heat": 3.59,
+      "themeZh": "慢性腰痛及脊柱相关疼痛的运动疗法",
+      "themeEn": "Exercise for Chronic Spine Pain"
     },
     {
       "id": "news-1787677206688-0",
@@ -233,9 +233,9 @@
           "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
         }
       ],
-      "heat": 3.27,
-      "themeZh": "卒中后步态与平衡障碍的量化评估",
-      "themeEn": "Post-Stroke Gait and Balance Assessment"
+      "heat": 2.97,
+      "themeZh": "卒中后平衡与步态功能量化与评估",
+      "themeEn": "Post-Stroke Balance & Gait Metrics"
     },
     {
       "id": "news-1787694684116-2",
@@ -298,9 +298,9 @@
           "titleZh": "重新思考全球痴呆预防的风险因素"
         }
       ],
-      "heat": 2.8,
-      "themeZh": "帕金森病多模态康复与生物反馈疗法",
-      "themeEn": "PD Multimodal Rehab and Biofeedback"
+      "heat": 2.54,
+      "themeZh": "帕金森病康复中的多学科与辅助技术",
+      "themeEn": "Parkinson's Multidisciplinary & Tech Rehab"
     },
     {
       "id": "news-1787943068276-1",
@@ -383,12 +383,35 @@
           "titleZh": "儿科物理治疗中的临床决策：一项范围界定性综述"
         }
       ],
-      "heat": 2.64,
-      "themeZh": "物理治疗服务模式与实施",
-      "themeEn": "Physical Therapy Service Delivery"
+      "heat": 2.4,
+      "themeZh": "物理治疗服务模式与临床实践考量",
+      "themeEn": "Physical Therapy Service Models"
     }
   ],
   "items": [
+    {
+      "id": "news-1788348541815-0",
+      "title": "Living with stroke-related visual impairment: a qualitative exploration of lived experience, self-management, and support needs.",
+      "summary": "A qualitative study explored the lived experiences of 16 community-dwelling adults in Scotland with stroke-related visual impairment (SRVI), identifying daily impact, self-management strategies, and unmet support needs.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42682247/",
+      "publishedAt": "2026-09-02T00:00:00.000Z",
+      "firstSeen": "2026-09-02T11:29:01.815Z",
+      "curatedScore": 75,
+      "curatedReason": "对于卒中后视力障碍（SRVI）患者，他们的真实生活挑战、自我管理策略和未满足的需求是临床中常被忽视的。这项针对16名苏格兰社区居民的定性研究，揭示了SRVI对功能、心理和社交的全面影响，提示我们在制定康复计划时，需要更细致地关注这些方面。",
+      "titleZh": "卒中相关视力障碍患者的生活：一项对生活经验、自我管理和支持需求的定性探索",
+      "summaryZh": "一项定性研究对苏格兰 16 名社区居住的卒中相关视力障碍（SRVI）患者进行了访谈，以了解其日常生活影响、自我管理策略及未满足的支持需求。",
+      "curatedReasonEn": "For patients with stroke-related visual impairment (SRVI), their real-life challenges, self-management strategies, and unmet needs are often overlooked in clinical practice. This qualitative study of 16 community-dwelling adults in Scotland reveals the comprehensive functional, psychological, and social impacts of SRVI, suggesting we need to pay closer attention to these aspects when developing rehabilitation plans.",
+      "limitation": "本研究为定性观察，样本量较小（16 例），且受访者来自苏格兰一个区域，结果外推性有限。",
+      "limitationEn": "This qualitative observational study has a small sample size (16 participants) and was conducted in a specific region of Scotland, limiting generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
     {
       "id": "news-1788324328677-1",
       "title": "Effects of Lokomat-based robotic-assisted gait training and physical therapy on gait quality in children with cerebral palsy: A severity-stratified analysis.",
