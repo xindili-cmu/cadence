@@ -1,0 +1,292 @@
+{
+ "date": "2026-09-05",
+ "generatedAt": "2026-09-04T23:07:54.122Z",
+ "windowHours": 50,
+ "windowStart": "2026-09-03T23:23:28.639Z",
+ "windowEnd": "2026-09-04T23:07:52.229Z",
+ "lead": {
+  "titleZh": "数字疗法结合CBT与运动管理慢性髌股疼痛：一项多中心RCT",
+  "titleEn": "Digital Therapeutic with CBT and Exercise for Chronic Patellofemoral Pain: A Multicenter RCT",
+  "paragraphZh": "今日共11条更新，覆盖骨科与肌骨、神经康复、运动康复3个领域。其中有两条curatedScore达到85分，最高分条目是一项关于数字疗法结合运动与认知行为疗法减轻慢性髌股疼痛的RCT，以及一项评估卒中后外部反馈对运动学习与功能恢复影响的系统综述，均值得临床重点关注。",
+  "paragraphEn": "Today's update includes 11 items across 3 specialties: Orthopedics & Musculoskeletal, Neurological Rehabilitation, and Sports Rehabilitation. Two items scored 85 on the curatedScore, with the highest-rated being an RCT on digital therapy combining exercise and CBT for chronic patellofemoral pain, and a systematic review on extrinsic feedback effects on motor learning and functional recovery post-stroke. Both warrant significant clinical attention."
+ },
+ "stats": {
+  "events": 11,
+  "specialties": 3,
+  "multiSource": 0,
+  "sources": 3,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1788497020519-0",
+     "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial.",
+     "summary": "An 8-week smartphone-based multidisciplinary digital therapeutic combining exercise and cognitive-behavioural therapy significantly reduced usual knee pain in 216 participants with chronic patellofemoral pain compared to education and exercise instruction.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692805/",
+     "publishedAt": "2026-09-03T00:00:00.000Z",
+     "firstSeen": "2026-09-04T04:43:40.519Z",
+     "curatedScore": 85,
+     "curatedReason": "针对慢性髌股疼痛，数字疗法结合运动与 CBT 表现出显著优于单纯教育的短期疗效。在临床实践中，可以考虑将这类数字化方案作为传统治疗的有效补充，以提升患者依从性和疗效。",
+     "titleZh": "数字疗法结合运动与认知行为疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验",
+     "summaryZh": "一项为期 8 周的多中心随机对照试验显示，针对 216 名慢性髌股疼痛患者，结合运动与认知行为疗法的智能手机数字疗法在减轻膝关节疼痛方面显著优于单纯的教育和运动指导。",
+     "curatedReasonEn": "For chronic patellofemoral pain, digital therapeutics combining exercise and CBT show significantly better short-term efficacy than education alone. Consider these digital solutions as an effective complement to traditional therapy to improve patient adherence and outcomes.",
+     "limitation": "研究仅评估了 8 周的短期效果，长期疗效和依从性仍需更多证据。",
+     "limitationEn": "The study only assessed short-term effects over 8 weeks; long-term efficacy and adherence require further evidence.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "British journal of sports medicine",
+     "tech": true
+    },
+    {
+     "id": "news-1788539308293-0",
+     "title": "Calcific Patellar Tendinopathy. A Case Report Integrating Diagnostic Ultrasound Throughout a Multi-Modal Treatment Approach.",
+     "summary": "A case report describes the successful integration of diagnostic ultrasound and dry needling within a multi-modal treatment approach for a 46-year-old active female with calcific patellar tendinopathy.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694045/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T16:28:28.293Z",
+     "curatedScore": 70,
+     "curatedReason": "本病例报告展示了诊断性超声和干针如何结合多模式治疗，成功管理伴钙化性髌腱病的复杂病例，为您在类似情况下提供治疗思路。",
+     "titleZh": "钙化性髌腱病：诊断性超声与多模式治疗方法整合的病例报告",
+     "summaryZh": "本病例报告描述了一名 46 岁活动女性的钙化性髌腱病，通过整合诊断性超声和干针等多种治疗手段，成功实现了评估和管理。",
+     "curatedReasonEn": "This case report demonstrates how diagnostic ultrasound and dry needling can be integrated into a multi-modal approach to successfully manage complex cases of calcific patellar tendinopathy, offering you a treatment framework for similar scenarios.",
+     "limitation": "本研究为单病例报告，结论的外推性受限。",
+     "limitationEn": "This is a single case report, limiting the generalizability of its findings.",
+     "tags": [
+      "research",
+      "knee",
+      "dry-needling"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "International journal of sports physical therapy"
+    },
+    {
+     "id": "news-1788497020521-3",
+     "title": "What Matters Most: A Multi-Stakeholder Study of Outcome Domains in Lower-Limb Prosthesis Use",
+     "summary": "This mixed-methods study aimed to develop a stakeholder-informed framework of outcome domains relevant to everyday lower-limb prosthesis use, integrating findings from existing PROMs, interviews with 12 prosthesis users, 4 clinicians, and 2 industrial partners.",
+     "category": "orthopedic",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.31.26361544v1?rss=1",
+     "publishedAt": "2026-09-03T00:00:00.000Z",
+     "firstSeen": "2026-09-04T04:43:40.521Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究通过多方利益相关者视角，识别了下肢假肢使用中最重要的结局领域。它提醒你在评估假肢使用效果时，除了物理功能，还需整合心理社会和装置相关因素，以提供更全面的康复方案。",
+     "titleZh": "最重要的是什么：一项下肢假肢使用结局域的多方利益相关者研究",
+     "summaryZh": "这项混合方法研究旨在开发一个由利益相关者参与制定的框架，涵盖与下肢假肢日常使用相关的关键结局领域，整合了现有患者报告结局测量（PROM）、12 名假肢使用者、4 名临床医生和 2 名行业合作伙伴的访谈结果。",
+     "curatedReasonEn": "This multi-stakeholder study identifies the most important outcome domains in lower-limb prosthesis use. It reminds you to integrate psychosocial and device-related factors, in addition to physical function, when evaluating prosthesis outcomes, to provide more comprehensive rehabilitation plans.",
+     "limitation": "研究主要依赖定性分析和利益相关者评级，其结果在不同文化背景和医疗系统中的普适性有待进一步验证。",
+     "limitationEn": "The study primarily relies on qualitative analysis and stakeholder ratings, and the generalizability of its findings across different cultural backgrounds and healthcare systems needs further validation.",
+     "tags": [
+      "research",
+      "amputation",
+      "patient-reported-outcomes"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1788563262716-1",
+     "title": "Paired comparison of extrinsic feedback effects on motor learning and functional recovery after stroke: a secondary analysis of randomized controlled trials.",
+     "summary": "A secondary analysis of randomized controlled trials (updated through November 2025) compared the effects of extrinsic feedback on motor learning versus functional recovery after stroke, calculating standardized mean differences using random-effects meta-analysis and accounting for within-study dependence.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42695524/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T23:07:42.716Z",
+     "curatedScore": 85,
+     "curatedReason": "这项更新的荟萃分析提示，卒中后的外部反馈对运动学习和功能恢复效果不一。临床应用时，要根据具体的康复目标来调整反馈策略，而不是一概而论。",
+     "titleZh": "卒中后外部反馈对运动学习与功能恢复效果的配对比较：随机对照试验的二次分析",
+     "summaryZh": "一项基于随机对照试验的二次分析（更新至2025年11月）比较了卒中后外部反馈对运动学习与功能恢复的不同效果，使用随机效应荟萃分析计算标准化均差并考虑了研究内依赖性。",
+     "curatedReasonEn": "This updated meta-analysis suggests that extrinsic feedback after stroke has varied effects on motor learning and functional recovery. In clinical practice, adjust feedback strategies according to specific rehabilitation goals, rather than applying them uniformly.",
+     "limitation": "研究是基于已有随机对照试验的二次分析，可能受限于原始研究的设计和数据报告质量，且不同效应之间的相关性假设可能影响结果。",
+     "limitationEn": "The study is a secondary analysis of existing randomized controlled trials, potentially limited by the design and data reporting quality of the original studies, and assumed correlations between different effects might influence the results.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1788497020520-1",
+     "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis.",
+     "summary": "A meta-analysis of RCTs evaluated gait speed changes in motor lower extremity stroke rehabilitation across various interventions, compared to conventional care or sham controls, at different time points post-stroke.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692101/",
+     "publishedAt": "2026-09-03T00:00:00.000Z",
+     "firstSeen": "2026-09-04T04:43:40.520Z",
+     "curatedScore": 80,
+     "curatedReason": "这项荟萃分析量化了卒中后下肢运动康复干预对步速的改善效果。它为不同时间点和不同干预措施下的步速变化提供了坚实的证据基础，是指导临床路径和设定康复目标的重要参考。",
+     "titleZh": "不同干预措施和卒中后时间点下，卒中康复下肢运动随机对照试验中步速变化：一项荟萃分析",
+     "summaryZh": "这项荟萃分析根据 PRISMA 指南，系统性地评估了截至 2024 年发表的英文 RCT，以考察卒中后下肢运动康复干预在不同时间点对步速的影响，并与常规护理或安慰剂对照进行比较。",
+     "curatedReasonEn": "This meta-analysis quantifies the impact of lower extremity motor rehabilitation interventions on gait speed post-stroke. It provides a solid evidence base for gait speed changes across various interventions and time points, serving as a crucial reference for guiding clinical pathways and setting rehabilitation goals.",
+     "limitation": "原始研究可能存在的异质性以及出版偏倚可能影响结果的普遍性。",
+     "limitationEn": "Potential heterogeneity and publication bias in the original studies may affect the generalizability of the results.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+     "id": "news-1788521309069-2",
+     "title": "Adapted cardiac rehabilitation for individuals after stroke and transient ischaemic attack: A scoping review.",
+     "summary": "A scoping review of 19 studies (1951 participants) found that adapted cardiac rehabilitation-based interventions for individuals after stroke or TIA are safe, feasible, and acceptable, primarily for those with minimal disability.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42693516/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T11:28:29.069Z",
+     "curatedScore": 75,
+     "curatedReason": "卒中和短暂性脑缺血发作（TIA）后的心血管风险很高，该综述提示基于心脏康复的干预对这部分人群是安全、可行且可接受的。考虑将心肺康复的原则整合到神经康复方案中，这能更好地管理患者的整体健康。",
+     "titleZh": "卒中和短暂性脑缺血发作患者的适应性心脏康复：一项范围审查。",
+     "summaryZh": "一项对19项研究（1951名参与者）进行的范围审查发现，针对卒中或短暂性脑缺血发作（TIA）患者的适应性心脏康复干预是安全、可行和可接受的，主要适用于残疾程度较轻的患者。",
+     "curatedReasonEn": "Cardiovascular risk is high after stroke and transient ischemic attack (TIA). This scoping review suggests that cardiac rehabilitation-based interventions are safe, feasible, and acceptable for this population. Consider integrating cardiopulmonary rehabilitation principles into neurorehabilitation protocols to better manage patients' overall health.",
+     "limitation": "大多数纳入研究的参与者为轻度或无卒中相关残疾，结果对外推至重度卒中患者的适用性有限。",
+     "limitationEn": "Most included studies involved participants with minimal or no stroke-associated disability, limiting generalizability to those with severe stroke.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述",
+     "journal": "Clinical rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1788563262717-2",
+     "title": "Effects of ketogenic diet on obesity indices, lipid profile, and glycemic control parameters in athletes: a GRADE-assessed systematic review and meta-analysis of randomized controlled trials",
+     "summary": "A GRADE-assessed systematic review and meta-analysis of randomized controlled trials evaluated the effects of ketogenic diet on obesity indices, lipid profile, and glycemic control parameters in athletes, addressing inconsistencies in previous findings.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-01988-z",
+     "publishedAt": "2026-08-29T00:00:00.000Z",
+     "firstSeen": "2026-09-04T23:07:42.717Z",
+     "curatedScore": 75,
+     "curatedReason": "对于运动员，生酮饮食对体重指标、血脂和血糖控制参数的效果仍需谨慎看待。在推荐前，务必权衡其潜在益处与代谢风险。",
+     "titleZh": "生酮饮食对运动员肥胖指标、血脂和血糖控制参数的影响：一项GRADE评估的随机对照试验系统综述和荟萃分析",
+     "summaryZh": "一项经过GRADE评估的随机对照试验系统综述和荟萃分析，评估了生酮饮食对运动员肥胖指标、血脂和血糖控制参数的影响，旨在解决此前研究结果的不一致性。",
+     "curatedReasonEn": "For athletes, the effects of ketogenic diet on obesity indices, lipid profile, and glycemic control parameters still require careful consideration. Before recommendation, it is essential to weigh its potential benefits against metabolic risks.",
+     "limitation": "系统综述可能存在纳入研究异质性高、样本量相对较小、随访时间不一等局限性，影响结论的普适性。",
+     "limitationEn": "Systematic reviews may have limitations such as high heterogeneity among included studies, relatively small sample sizes, and varying follow-up durations, which can affect the generalizability of the conclusions.",
+     "tags": [
+      "research",
+      "diet-nutrition"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1788539308295-2",
+     "title": "Return to Golf Rehabilitation Progression after Anterior Cruciate Ligament Reconstruction Using an Evidence-Based Foundation.",
+     "summary": "This clinical commentary synthesizes golf-biomechanics and ACLR-rehabilitation evidence to present an evidence-informed, criteria-based return-to-golf progression from putting through unrestricted course play.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694050/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T16:28:28.295Z",
+     "curatedScore": 75,
+     "curatedReason": "这份临床述评首次系统地为 ACLR 术后高尔夫球手提供了基于证据的重返运动方案。它填补了现有通用指南的空白，为您管理这类特定运动员提供了从推杆到无限制下场的详细分期指导。",
+     "titleZh": "前交叉韧带重建术后基于证据的重返高尔夫康复进展",
+     "summaryZh": "本临床述评综合了高尔夫生物力学和前交叉韧带重建术后康复证据，提出了一项基于证据、以标准为导向的重返高尔夫康复方案，涵盖从推杆到无限制下场的全过程。",
+     "curatedReasonEn": "This clinical commentary is the first to systematically provide an evidence-based return-to-sport protocol for golfers after ACLR. It fills a gap in existing general guidelines, offering you detailed, staged guidance from putting to unrestricted course play for managing this specific athlete population.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "综述",
+     "journal": "International journal of sports physical therapy"
+    },
+    {
+     "id": "news-1788539308295-3",
+     "title": "Adductor-Related Athletic Groin Pain: A Clinical Commentary.",
+     "summary": "This clinical commentary synthesizes current evidence regarding anatomy, risk factors, pathomechanics, imaging, prevention, rehabilitation, and return-to-sport decision-making for adductor-related athletic groin pain (ARAGP).",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694044/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T16:28:28.295Z",
+     "curatedScore": 75,
+     "curatedReason": "处理内收肌相关运动性腹股沟疼痛 (ARAGP) 复杂且棘手，这份综述系统地梳理了从解剖、风险因素到康复和重返运动决策的最新证据。你可以此为框架，优化你的评估和干预策略。",
+     "titleZh": "内收肌相关运动性腹股沟疼痛：一项临床述评",
+     "summaryZh": "本临床述评综合了内收肌相关运动性腹股沟疼痛（ARAGP）在解剖、风险因素、病理生物力学、影像学考量、预防策略、康复原则和重返运动决策方面的现有证据。",
+     "curatedReasonEn": "Adductor-related athletic groin pain (ARAGP) is complex to manage. This review systematically synthesizes the latest evidence from anatomy and risk factors to rehabilitation and return-to-sport decisions. Use it as a framework to refine your assessment and intervention strategies.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "综述",
+     "journal": "International journal of sports physical therapy"
+    },
+    {
+     "id": "news-1788539308295-1",
+     "title": "Utilization of the Functional Lower Extremity Evaluation (FLEE) in Return-to-Sport Rehabilitation Protocol Following Hip Arthroscopy in Collegiate Athletes: A Case Series.",
+     "summary": "A case series investigated the utility of the Functional Lower Extremity Evaluation (FLEE) in guiding return-to-sport rehabilitation protocols for collegiate athletes after hip arthroscopy.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694058/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T16:28:28.295Z",
+     "curatedScore": 70,
+     "curatedReason": "FLEE 作为下肢功能评估工具，其在髋关节镜术后大学生运动员重返运动方案中的应用是重要实践探索。您可以参考其组件来更精细地评估患者的肢体对称性和功能恢复。",
+     "titleZh": "髋关节镜术后大学生运动员重返运动康复方案中功能性下肢评估（FLEE）的应用：病例系列研究",
+     "summaryZh": "本病例系列研究探讨了功能性下肢评估（FLEE）在指导髋关节镜术后大学生运动员重返运动康复方案中的效用，并评估了利用 FLEE 组件进行下肢对称性评估的可行性。",
+     "curatedReasonEn": "The application of FLEE as a lower extremity functional assessment tool in return-to-sport protocols for collegiate athletes post-hip arthroscopy is an important practical exploration. You can refer to its components for more refined assessment of limb symmetry and functional recovery in your patients.",
+     "limitation": "本研究为病例系列，证据等级较低，无法得出因果结论。",
+     "limitationEn": "This is a case series, offering a lower level of evidence and preventing causal conclusions.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "International journal of sports physical therapy"
+    },
+    {
+     "id": "news-1788521309069-3",
+     "title": "Patients' Mental Barriers in Rehabilitation after ACL Reconstruction: A Qualitative Interview Study.",
+     "summary": "A qualitative interview study with nine patients explored the psychological barriers during rehabilitation after ACL reconstruction (ACLR) and the role of physical therapists in enhancing psychological readiness for return to sport.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694019/",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-04T11:28:29.069Z",
+     "curatedScore": 70,
+     "curatedReason": "ACL 重建术后患者的康复不仅是身体挑战，心理障碍也同等重要。你需要关注患者的心理准备状态，在康复过程中积极与其互动，帮助他们识别并克服心理障碍，这对重返运动至关重要。",
+     "titleZh": "ACL 重建术后康复患者的心理障碍：一项定性访谈研究。",
+     "summaryZh": "一项对9名患者进行的定性访谈研究探讨了 ACL 重建术后康复期间的心理障碍，以及物理治疗师在增强患者重返运动心理准备方面的作用。",
+     "curatedReasonEn": "Rehabilitation after ACL reconstruction is not only a physical challenge but also a psychological one. You need to focus on patients' psychological readiness, actively interact with them during rehabilitation, and help them identify and overcome mental barriers, which is crucial for return to sport.",
+     "limitation": "这是一项定性研究，样本量小，结果的普遍性有限，主要反映了特定文化背景下的患者体验。",
+     "limitationEn": "This is a qualitative study with a small sample size, limiting generalizability and primarily reflecting patient experiences within specific cultural contexts.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "International journal of sports physical therapy"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
