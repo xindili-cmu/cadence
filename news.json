@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-05T04:39:33.870Z",
+    "lastUpdated": "2026-09-05T10:45:14.210Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,16 +20,15 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640081/",
       "category": "neurological",
       "publishedAt": "2026-09-04T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
         "Topics in stroke rehabilitation",
         "Disability and rehabilitation",
-        "Gait & posture",
         "Neurorehabilitation and neural repair",
-        "The Lancet",
         "Clinical rehabilitation",
+        "medRxiv",
         "BMC Geriatrics",
-        "medRxiv"
+        "Gait & posture"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -48,39 +47,32 @@
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "A domain-specific approach to characterizing balance confidence post-stroke.",
-          "titleZh": "卒中后平衡信心的领域特定特征：一项研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "Reduced trailing limb angle is associated with near-falls during walking in stroke survivors.",
-          "titleZh": "卒中幸存者步行时后肢摆动角减小与近乎跌倒相关"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Eight Functional outcomes, two dimensions: a cross-sectional analysis of scale dependence in spatiotemporal gait determinants after subacute stroke.",
-          "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。"
-        },
-        {
-          "source": "PubMed",
           "journal": "Neurorehabilitation and neural repair",
           "title": "Fatigue in Neurological Rehabilitation: Why Brain Diversity and Population Diversity Matter.",
           "titleZh": "神经康复中的疲劳：为什么大脑多样性和人群多样性至关重要。"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
-          "titleZh": "重新思考全球痴呆预防的风险因素"
         },
         {
           "source": "PubMed",
           "journal": "Clinical rehabilitation",
           "title": "Towards global standards in stroke rehabilitation and recovery: An international evaluation of practice alignment.",
           "titleZh": "迈向全球卒中康复和恢复标准：一项实践一致性的国际评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Adapted cardiac rehabilitation for individuals after stroke and transient ischaemic attack: A scoping review.",
+          "titleZh": "卒中和短暂性脑缺血发作患者的适应性心脏康复：一项范围审查。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Strengthening Cardiac Rehabilitation: Key Strategies for Enhancing Accessibility and Outcomes",
+          "titleZh": "加强心脏康复：提高可及性和成果的关键策略"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Exploring animal-assisted therapy in stroke rehabilitation: a systematic review of emerging evidence.",
+          "titleZh": "卒中康复中动物辅助疗法：系统综述"
         },
         {
           "source": "PubMed",
@@ -108,23 +100,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Adapted cardiac rehabilitation for individuals after stroke and transient ischaemic attack: A scoping review.",
-          "titleZh": "卒中和短暂性脑缺血发作患者的适应性心脏康复：一项范围审查。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Strengthening Cardiac Rehabilitation: Key Strategies for Enhancing Accessibility and Outcomes",
-          "titleZh": "加强心脏康复：提高可及性和成果的关键策略"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Exploring animal-assisted therapy in stroke rehabilitation: a systematic review of emerging evidence.",
-          "titleZh": "卒中康复中动物辅助疗法：系统综述"
-        },
-        {
-          "source": "PubMed",
           "journal": "Neurorehabilitation and neural repair",
           "title": "Minimal Important Changes in Accelerometer-Measured Physical Activity and Sedentary Time in Older Patients With Subacute Stroke: A Multicenter Study.",
           "titleZh": "亚急性卒中老年患者加速计测量的身体活动和久坐时间变化的最小重要改变：一项多中心研究。"
@@ -139,96 +114,29 @@
           "source": "medRxiv",
           "title": "Patient factors influencing participation in aerobic exercise during inpatient and outpatient rehabilitation post stroke: a prospective cohort study",
           "titleZh": "卒中后住院和门诊康复期间影响患者参与有氧运动的因素：一项前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "A domain-specific approach to characterizing balance confidence post-stroke.",
+          "titleZh": "卒中后平衡信心的领域特定特征：一项研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Reduced trailing limb angle is associated with near-falls during walking in stroke survivors.",
+          "titleZh": "卒中幸存者步行时后肢摆动角减小与近乎跌倒相关"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Eight Functional outcomes, two dimensions: a cross-sectional analysis of scale dependence in spatiotemporal gait determinants after subacute stroke.",
+          "titleZh": "八种功能结局，两个维度：亚急性卒中后时空步态决定因素的量表依赖性横断面分析。"
         }
       ],
-      "heat": 5.29,
-      "themeZh": "卒中后躯体感知、平衡与步态障碍的神经生理学机制",
-      "themeEn": "Post-stroke sensory, balance, gait impairments"
-    },
-    {
-      "id": "news-1787943068276-1",
-      "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
-      "category": "orthopedic",
-      "publishedAt": "2026-09-03T00:00:00.000Z",
-      "sourceCount": 9,
-      "sources": [
-        "Lancet (London, England)",
-        "Physical therapy",
-        "Journal of rehabilitation medicine",
-        "Disability and rehabilitation",
-        "Physical & occupational therapy in pediatrics",
-        "The Journal of manual & manipulative therapy",
-        "Physiotherapy theory and practice",
-        "Musculoskeletal science & practice",
-        "medRxiv"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Lancet (London, England)",
-          "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
-          "titleZh": "急诊科肌肉骨骼疾病的物理治疗师主导护理（RESHAP-ED）：一项随机对照试验及经济学评价"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.",
-          "titleZh": "门诊护理环境中与小组物理治疗项目实施结果相关的特征"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Impact of Social Determinants of Health on Physical Therapy Utilization in Home Health and Outpatient Settings: A Retrospective Cohort Study.",
-          "titleZh": "社会健康决定因素对居家和门诊物理治疗利用率的影响：一项回顾性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "Home-based digital exercise versus hospital physiotherapy for plantar fasciitis: a propensity-score-matched retrospective cohort study with dual-perspective cost-utility evaluation.",
-          "titleZh": "居家数字运动与医院物理治疗治疗足底筋膜炎的对比：一项匹配回顾性队列研究及成本效益评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
-          "titleZh": "初级物理治疗中的远程医疗应用：一项混合方法研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Ideal Versus Actual School-Based Physiotherapy Practice in Israel: A National Survey.",
-          "titleZh": "以色列校本物理治疗的理想与实际实践：一项全国性调查"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Physical therapists as first-contact providers for musculoskeletal disorders: comparing beliefs across chiropractors, nurse practitioners, Physical therapists, and physician assistants.",
-          "titleZh": "物理治疗师作为肌肉骨骼疾病首诊提供者：比较脊医、执业护士、物理治疗师和医师助理的信念"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Clinical sensory tests in professional practice: a web-based survey on awareness and challenges among Italian physicians and physiotherapists.",
-          "titleZh": "意大利医师和物理治疗师对临床感觉测试的认知与挑战：一项网络调查"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
-          "titleZh": "重构患者期望为肌肉骨骼康复中的治疗靶点"
-        },
-        {
-          "source": "medRxiv",
-          "title": "What Matters Most: A Multi-Stakeholder Study of Outcome Domains in Lower-Limb Prosthesis Use",
-          "titleZh": "最重要的是什么：一项下肢假肢使用结局域的多方利益相关者研究"
-        }
-      ],
-      "heat": 4.21,
-      "themeZh": "骨骼肌肉疾病物理治疗的交付模式与实施",
-      "themeEn": "MSK PT delivery models and implementation"
+      "heat": 4.24,
+      "themeZh": "卒中后躯体感知异常、疲劳与心脏康复",
+      "themeEn": "Post-stroke Perception, Fatigue, Cardiac Rehab"
     },
     {
       "id": "news-1788539308295-2",
@@ -236,13 +144,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42694050/",
       "category": "sports",
       "publishedAt": "2026-09-04T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "International journal of sports physical therapy",
         "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
         "BMC Musculoskeletal Disorders",
+        "medRxiv",
         "Brazilian journal of physical therapy",
-        "medRxiv"
+        "Physical therapy"
       ],
       "tag": null,
       "kind": "theme",
@@ -273,18 +182,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Patient-reported knee osteoarthritis problems and rehabilitation goals: A qualitative study.",
-          "titleZh": "膝关节骨关节炎患者报告的问题和康复目标：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Patients' Mental Barriers in Rehabilitation after ACL Reconstruction: A Qualitative Interview Study.",
-          "titleZh": "ACL 重建术后康复患者的心理障碍：一项定性访谈研究。"
-        },
-        {
-          "source": "PubMed",
           "journal": "International journal of sports physical therapy",
           "title": "Adductor-Related Athletic Groin Pain: A Clinical Commentary.",
           "titleZh": "内收肌相关运动性腹股沟疼痛：一项临床述评"
@@ -299,11 +196,35 @@
           "source": "medRxiv",
           "title": "Mechanical elements related to the development of patellofemoral pain syndrome, pain intensity, and functional disability: A cross-sectional study",
           "titleZh": "与髌股疼痛综合征发展、疼痛强度和功能障碍相关的力学因素：一项横断面研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Patient-reported knee osteoarthritis problems and rehabilitation goals: A qualitative study.",
+          "titleZh": "膝关节骨关节炎患者报告的问题和康复目标：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Patients' Mental Barriers in Rehabilitation after ACL Reconstruction: A Qualitative Interview Study.",
+          "titleZh": "ACL 重建术后康复患者的心理障碍：一项定性访谈研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Characteristics of Outpatient Care Settings Associated with Implementation Outcomes for a Group Physical Therapy Program.",
+          "titleZh": "门诊护理环境中与小组物理治疗项目实施结果相关的特征"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Impact of Social Determinants of Health on Physical Therapy Utilization in Home Health and Outpatient Settings: A Retrospective Cohort Study.",
+          "titleZh": "社会健康决定因素对居家和门诊物理治疗利用率的影响：一项回顾性队列研究"
         }
       ],
-      "heat": 3.31,
-      "themeZh": "ACL 重建和髋关节镜术后运动员重返运动康复",
-      "themeEn": "Return-to-sport post-ACL and hip arthroscopy"
+      "heat": 3.63,
+      "themeZh": "ACL重建后运动回归与运动损伤康复",
+      "themeEn": "ACL Return-to-Sport & Injury Rehab"
     },
     {
       "id": "news-1788563262716-1",
@@ -311,9 +232,10 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42695524/",
       "category": "neurological",
       "publishedAt": "2026-09-04T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "Disability and rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Topics in stroke rehabilitation",
         "medRxiv"
@@ -328,10 +250,10 @@
           "titleZh": "卒中后外部反馈对运动学习与功能恢复效果的配对比较：随机对照试验的二次分析"
         },
         {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis.",
-          "titleZh": "不同干预措施和卒中后时间点下，卒中康复下肢运动随机对照试验中步速变化：一项荟萃分析"
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis",
+          "titleZh": "卒中康复下肢运动随机对照试验中步速变化：按干预措施和卒中后时间分类的荟萃分析"
         },
         {
           "source": "PubMed",
@@ -352,14 +274,91 @@
           "titleZh": "非侵入性脑电图脑机接口在中风后手功能康复中的应用"
         },
         {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Feasibility and Safety Evaluation of Hybrid Assistive Limb-Based Neurorehabilitation for Patients with Central Motor Dysfunction: A Single-Center Study",
+          "titleZh": "混合辅助肢体神经康复对中枢运动功能障碍患者的可行性与安全性评估：一项单中心研究"
+        },
+        {
           "source": "medRxiv",
           "title": "A single-session randomised crossover fNIRS study comparing three upper-limb mirror therapy task paradigms in healthy adults: a study protocol",
           "titleZh": "一项单次随机交叉 fNIRS 研究方案，比较健康成人三种上肢镜像疗法任务范式"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+          "titleZh": "不只是手臂运动：指戴式加速度计为卒中幸存者上肢真实世界表现测量提供了一种有效且敏感的替代方案"
         }
       ],
-      "heat": 2.64,
-      "themeZh": "卒中后运动功能恢复的先进康复干预",
-      "themeEn": "Advanced post-stroke motor rehabilitation interventions"
+      "heat": 3.03,
+      "themeZh": "卒中后运动功能恢复与新型康复技术应用",
+      "themeEn": "Stroke Motor Recovery & Novel Rehab Tech"
+    },
+    {
+      "id": "news-1787943068276-1",
+      "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42660158/",
+      "category": "orthopedic",
+      "publishedAt": "2026-09-03T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Lancet (London, England)",
+        "Physical & occupational therapy in pediatrics",
+        "The Journal of manual & manipulative therapy",
+        "Physiotherapy theory and practice",
+        "Journal of rehabilitation medicine",
+        "Disability and rehabilitation"
+      ],
+      "tag": null,
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Lancet (London, England)",
+          "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
+          "titleZh": "急诊科肌肉骨骼疾病的物理治疗师主导护理（RESHAP-ED）：一项随机对照试验及经济学评价"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
+          "titleZh": "儿科物理治疗临床决策：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Ideal Versus Actual School-Based Physiotherapy Practice in Israel: A National Survey.",
+          "titleZh": "以色列校本物理治疗的理想与实际实践：一项全国性调查"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Physical therapists as first-contact providers for musculoskeletal disorders: comparing beliefs across chiropractors, nurse practitioners, Physical therapists, and physician assistants.",
+          "titleZh": "物理治疗师作为肌肉骨骼疾病首诊提供者：比较脊医、执业护士、物理治疗师和医师助理的信念"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Clinical sensory tests in professional practice: a web-based survey on awareness and challenges among Italian physicians and physiotherapists.",
+          "titleZh": "意大利医师和物理治疗师对临床感觉测试的认知与挑战：一项网络调查"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Home-based digital exercise versus hospital physiotherapy for plantar fasciitis: a propensity-score-matched retrospective cohort study with dual-perspective cost-utility evaluation.",
+          "titleZh": "居家数字运动与医院物理治疗治疗足底筋膜炎的对比：一项匹配回顾性队列研究及成本效益评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "The use of eHealth in primary physiotherapy care: a mixed-method study.",
+          "titleZh": "初级物理治疗中的远程医疗应用：一项混合方法研究"
+        }
+      ],
+      "heat": 2.57,
+      "themeZh": "物理治疗师在肌肉骨骼疾病诊疗中的作用",
+      "themeEn": "PT Role in MSK Conditions"
     },
     {
       "id": "news-1788497020519-0",
@@ -414,12 +413,143 @@
           "titleZh": "基于 FITT 原则的运动疗法对非特异性慢性腰痛疗效的系统综述与荟萃分析"
         }
       ],
-      "heat": 2.34,
-      "themeZh": "慢性膝关节和腰痛的运动与辅助治疗",
-      "themeEn": "Exercise and adjunctive therapies for chronic pain"
+      "heat": 2.14,
+      "themeZh": "慢性膝痛与腰痛的运动和物理治疗",
+      "themeEn": "Exercise & PT for Chronic Pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1788605075362-11",
+      "title": "[Articles] Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
+      "summary": "A multicenter, randomized controlled clinical trial in Germany found liposuction to be superior to conservative therapy in reducing leg pain and improving quality of life for patients with lipoedema, despite being associated with a higher rate of serious adverse events.",
+      "category": "orthopedic",
+      "source": "The Lancet",
+      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00910-4/fulltext?rss=yes",
+      "publishedAt": "2026-09-05T00:00:00.000Z",
+      "firstSeen": "2026-09-05T10:44:35.362Z",
+      "curatedScore": 85,
+      "curatedReason": "对脂肪水肿患者，抽脂术在减轻腿部疼痛和改善生活质量方面优于保守治疗，但需注意其潜在的严重不良事件风险。在临床实践中，为患者提供此治疗方案时应权衡利弊。",
+      "titleZh": "德国一项多中心随机对照临床试验：抽脂术对比保守疗法治疗脂肪水肿患者",
+      "summaryZh": "一项德国多中心随机对照临床试验显示，抽脂术在减轻脂肪水肿患者的腿部疼痛和改善生活质量方面优于保守治疗，但其严重不良事件发生率也更高。",
+      "curatedReasonEn": "For patients with lipoedema, liposuction is superior to conservative therapy in reducing leg pain and improving quality of life, but carries a higher risk of serious adverse events. Clinicians should weigh these benefits against the risks when offering this treatment option.",
+      "limitation": "该研究关注的主要是短期效果和自我报告的疼痛/生活质量指标，长期效果和更客观的肢体功能改善仍需进一步研究。",
+      "limitationEn": "The study primarily focused on short-term outcomes and self-reported pain/quality of life, with long-term effects and objective limb function improvements requiring further investigation.",
+      "tags": [
+        "research",
+        "pelvic-floor"
+      ],
+      "studyDesign": "RCT",
+      "journal": "The Lancet"
+    },
+    {
+      "id": "news-1788605075363-15",
+      "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis",
+      "summary": "A meta-analysis examined gait speed changes in randomized controlled trials of motor lower extremity stroke rehabilitation across various interventions, compared to conventional care or sham controls, at different time points post-stroke.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00893-2/fulltext?rss=yes",
+      "publishedAt": "2026-09-03T00:00:00.000Z",
+      "firstSeen": "2026-09-04T04:43:40.520Z",
+      "curatedScore": 80,
+      "curatedReason": "这份高质量的系统综述明确了卒中后下肢康复中，哪些干预措施能在不同时间点改善步速，以及改善程度。制定治疗方案时，你应该优先选择那些在患者当前阶段有明确循证支持且效果量可观的干预，而非寄希望于“常规护理”能带来显著步速提升。",
+      "titleZh": "卒中康复下肢运动随机对照试验中步速变化：按干预措施和卒中后时间分类的荟萃分析",
+      "summaryZh": "一项荟萃分析评估了在卒中后下肢运动康复的随机对照试验中，不同干预措施与常规护理或假对照相比，在不同时间点对步速改变的影响。",
+      "curatedReasonEn": "This high-quality systematic review clarifies which lower extremity rehabilitation interventions improve gait speed at different post-stroke time points, and by how much. When designing treatment plans, you should prioritize interventions with clear evidence and substantial effect sizes for the patient's current stage, rather than hoping 'conventional care' alone will significantly improve gait speed.",
+      "limitation": "不同研究之间可能存在干预方案、评估工具和患者特征的异质性，可能影响结果的总体解释。",
+      "limitationEn": "Heterogeneity in intervention protocols, assessment tools, and patient characteristics across studies might affect the overall interpretation of results.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "related": [
+        {
+          "source": "PubMed",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692101/",
+          "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis."
+        }
+      ]
+    },
+    {
+      "id": "news-1788605075363-14",
+      "title": "Manual Lymph Drainage in Lower Extremity Lymphedema Management: An Essential Component or An Optional Extra? A Single-Blind, Randomized Non-Inferiority Trial",
+      "summary": "A single-blind, randomized non-inferiority trial investigated whether compression bandaging alone is non-inferior to combined manual lymphatic drainage in reducing limb volume, tissue stiffness, and skin/subcutaneous thickness in stage 2–3 lower extremity lymphedema during the intensive phase of treatment.",
+      "category": "manual-modality",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00895-6/fulltext?rss=yes",
+      "publishedAt": "2026-09-05T00:00:00.000Z",
+      "firstSeen": "2026-09-05T10:44:35.363Z",
+      "curatedScore": 75,
+      "curatedReason": "这项非劣效性试验提示，在下肢淋巴水肿的强化治疗阶段，单纯加压包扎在减少肢体容积和改善组织硬度方面，可能不劣于联合手工淋巴引流。这意味着你可能需要重新评估是否所有患者都需要常规进行手工淋巴引流。",
+      "titleZh": "下肢淋巴水肿管理中的手工淋巴引流：必要组成部分还是可选附加项？一项单盲随机非劣效性试验",
+      "summaryZh": "一项单盲随机非劣效性试验旨在确定在 2-3 期下肢淋巴水肿强化治疗阶段，单纯加压包扎在减少肢体容积、组织硬度和皮肤/皮下厚度方面，是否不劣于联合手工淋巴引流。",
+      "curatedReasonEn": "This non-inferiority trial suggests that, during the intensive phase of lower extremity lymphedema treatment, compression bandaging alone may be non-inferior to combined manual lymphatic drainage for reducing limb volume and improving tissue stiffness. You may need to re-evaluate whether all patients routinely require manual lymphatic drainage.",
+      "limitation": "研究仅关注了强化治疗阶段的短期效果，长期维持阶段的干预效果和患者依从性未被评估。",
+      "limitationEn": "The study only focused on short-term outcomes during the intensive treatment phase; long-term effects in the maintenance phase and patient adherence were not assessed.",
+      "tags": [
+        "research",
+        "taping"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1788605075363-17",
+      "title": "More Than Just Arm Movement: Finger-Worn Accelerometers Provide a Valid and Sensitive Alternative to Wrist-Worn Accelerometers for Measuring Real-World Upper-Limb Performance in Stroke Survivors",
+      "summary": "A study investigated the clinical validity of finger-worn accelerometers as a comprehensive and sensitive alternative to wrist-worn accelerometers for measuring real-world upper-limb motor performance in stroke survivors.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00891-9/fulltext?rss=yes",
+      "publishedAt": "2026-08-31T00:00:00.000Z",
+      "firstSeen": "2026-09-05T10:44:35.363Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究表明，指戴式加速度计在测量卒中幸存者上肢真实世界表现方面，是腕戴式加速度计的有效且敏感替代方案。如果你正在寻找更精确或更少干扰的穿戴式设备来评估患者的上肢功能，指戴式设备值得你考虑。",
+      "titleZh": "不只是手臂运动：指戴式加速度计为卒中幸存者上肢真实世界表现测量提供了一种有效且敏感的替代方案",
+      "summaryZh": "一项研究探讨了指戴式加速度计在测量卒中幸存者真实世界上肢运动表现方面的临床有效性，发现它作为腕戴式加速度计的替代方案，既全面又敏感。",
+      "curatedReasonEn": "This study indicates that finger-worn accelerometers are a valid and sensitive alternative to wrist-worn accelerometers for measuring real-world upper-limb performance in stroke survivors. If you are seeking a more precise or less intrusive wearable device to assess patients' upper-limb function, finger-worn devices are worth considering.",
+      "limitation": "研究关注的是设备的临床验证性，但未直接评估不同设备在指导康复干预或改善患者结局方面的差异。",
+      "limitationEn": "The study focused on the clinical validity of the devices but did not directly assess differences in guiding rehabilitation interventions or improving patient outcomes between them.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1788605075363-16",
+      "title": "Feasibility and Safety Evaluation of Hybrid Assistive Limb-Based Neurorehabilitation for Patients with Central Motor Dysfunction: A Single-Center Study",
+      "summary": "A single-center study evaluated the feasibility and safety of Hybrid Assistive Limb-based neurorehabilitation for patients with central motor dysfunction, including stroke, traumatic brain, and spinal-cord injuries, aiming to enhance daily living independence.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00894-4/fulltext?rss=yes",
+      "publishedAt": "2026-09-01T00:00:00.000Z",
+      "firstSeen": "2026-09-03T11:25:21.371Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究提供了混合辅助肢体 (Hybrid Assistive Limb, HAL) 在中枢运动功能障碍患者神经康复中可行性和安全性的初步证据。如果你的诊所正在考虑引入此类高科技辅助设备，这项研究可以作为你评估其潜力的一个起点，但请注意其单中心和初步的性质。",
+      "titleZh": "混合辅助肢体神经康复对中枢运动功能障碍患者的可行性与安全性评估：一项单中心研究",
+      "summaryZh": "一项单中心研究评估了基于混合辅助肢体 (HAL) 的神经康复在中枢运动功能障碍（包括卒中、创伤性脑和脊髓损伤）患者中的可行性和安全性，旨在提高日常生活自理能力。",
+      "curatedReasonEn": "This study offers preliminary evidence on the feasibility and safety of Hybrid Assistive Limb (HAL) neurorehabilitation for patients with central motor dysfunction. If your clinic is considering integrating such high-tech assistive devices, this study can serve as a starting point for evaluating its potential, while noting its single-center and preliminary nature.",
+      "limitation": "这是一项单中心研究，样本量较小，且缺乏对照组，无法确证 HAL 的实际疗效和与其他干预的比较优势。",
+      "limitationEn": "This is a single-center study with a small sample size and lacks a control group, preventing conclusive determination of HAL's efficacy and comparative advantages over other interventions.",
+      "tags": [
+        "research",
+        "stroke",
+        "spinal-cord",
+        "brain-injury"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "related": [
+        {
+          "source": "PubMed",
+          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42685813/",
+          "title": "Feasibility and Safety Evaluation of Hybrid Assistive Limb-Based Neurorehabilitation for Patients with Central Motor Dysfunction: A Single-Center Study."
+        }
+      ]
+    },
     {
       "id": "news-1788583171032-0",
       "title": "Navigating expectation-evidence tensions in musculoskeletal physiotherapy.",
@@ -827,29 +957,6 @@
       "tech": true
     },
     {
-      "id": "news-1788497020520-1",
-      "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis.",
-      "summary": "A meta-analysis of RCTs evaluated gait speed changes in motor lower extremity stroke rehabilitation across various interventions, compared to conventional care or sham controls, at different time points post-stroke.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692101/",
-      "publishedAt": "2026-09-03T00:00:00.000Z",
-      "firstSeen": "2026-09-04T04:43:40.520Z",
-      "curatedScore": 80,
-      "curatedReason": "这项荟萃分析量化了卒中后下肢运动康复干预对步速的改善效果。它为不同时间点和不同干预措施下的步速变化提供了坚实的证据基础，是指导临床路径和设定康复目标的重要参考。",
-      "titleZh": "不同干预措施和卒中后时间点下，卒中康复下肢运动随机对照试验中步速变化：一项荟萃分析",
-      "summaryZh": "这项荟萃分析根据 PRISMA 指南，系统性地评估了截至 2024 年发表的英文 RCT，以考察卒中后下肢运动康复干预在不同时间点对步速的影响，并与常规护理或安慰剂对照进行比较。",
-      "curatedReasonEn": "This meta-analysis quantifies the impact of lower extremity motor rehabilitation interventions on gait speed post-stroke. It provides a solid evidence base for gait speed changes across various interventions and time points, serving as a crucial reference for guiding clinical pathways and setting rehabilitation goals.",
-      "limitation": "原始研究可能存在的异质性以及出版偏倚可能影响结果的普遍性。",
-      "limitationEn": "Potential heterogeneity and publication bias in the original studies may affect the generalizability of the results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
       "id": "news-1788497020521-3",
       "title": "What Matters Most: A Multi-Stakeholder Study of Outcome Domains in Lower-Limb Prosthesis Use",
       "summary": "This mixed-methods study aimed to develop a stakeholder-informed framework of outcome domains relevant to everyday lower-limb prosthesis use, integrating findings from existing PROMs, interviews with 12 prosthesis users, 4 clinicians, and 2 industrial partners.",
@@ -1011,28 +1118,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Brazilian journal of physical therapy"
-    },
-    {
-      "id": "news-1788434721371-1",
-      "title": "Feasibility and Safety Evaluation of Hybrid Assistive Limb-Based Neurorehabilitation for Patients with Central Motor Dysfunction: A Single-Center Study.",
-      "summary": "A single-center, non-randomized study with 229 patients with central motor dysfunction evaluated the feasibility and safety of Hybrid Assistive Limb (HAL)-assisted neurorehabilitation across inpatient and outpatient settings.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42685813/",
-      "publishedAt": "2026-09-03T00:00:00.000Z",
-      "firstSeen": "2026-09-03T11:25:21.371Z",
-      "curatedScore": 70,
-      "curatedReason": "Hybrid Assistive Limb (HAL) 机器人辅助神经康复在 229 名中枢性运动功能障碍患者中显示出良好的可行性和安全性。尽管是单中心非随机研究，但其大规模真实世界数据提示了这类设备在临床实践中的应用潜力。",
-      "titleZh": "Hybrid Assistive Limb 辅助神经康复在中枢性运动功能障碍患者中的可行性与安全性评估：一项单中心研究",
-      "summaryZh": "一项单中心、非随机研究评估了 229 名中枢性运动功能障碍患者在住院和门诊环境下，使用 Hybrid Assistive Limb (HAL) 辅助神经康复的可行性和安全性。",
-      "curatedReasonEn": "Hybrid Assistive Limb (HAL) robot-assisted neurorehabilitation demonstrated good feasibility and safety in 229 patients with central motor dysfunction. Despite being a single-center, non-randomized study, its large real-world dataset suggests the potential for such devices in clinical practice.",
-      "limitation": "本研究为单中心非随机、单臂研究，缺乏对照组，无法评估 HAL 辅助康复的实际疗效，且存在选择偏倚。",
-      "limitationEn": "This was a single-center, non-randomized, single-arm study lacking a control group, thus unable to evaluate the actual efficacy of HAL-assisted rehabilitation, and subject to selection bias.",
-      "tags": [
-        "research"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation"
     },
     {
       "id": "news-1787759899920-1",
@@ -2062,81 +2147,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1788037205658-12",
-      "title": "[Correspondence] Rethinking risk factors for global dementia prevention",
-      "summary": "This correspondence outlines five priorities to strengthen future global dementia-prevention agendas, building on the 2024 Lancet Commission's identification of 14 modifiable risk factors that could prevent or delay nearly half of dementia cases.",
-      "category": "neurological",
-      "source": "The Lancet",
-      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01440-6/fulltext?rss=yes",
-      "publishedAt": "2026-08-29T00:00:00.000Z",
-      "firstSeen": "2026-08-29T21:00:05.658Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇通讯重申了《柳叶刀》2024 年痴呆委员会报告的广泛影响，并提出了在全球范围内强化痴呆预防议程的五项优先事项。在实践中，您应继续关注这些可干预风险因素，尤其是在资源受限的地区，这有助于您优化预防策略和患者教育。",
-      "titleZh": "重新思考全球痴呆预防的风险因素",
-      "summaryZh": "这篇通讯基于2024年《柳叶刀》痴呆委员会报告，提出了加强未来全球痴呆预防议程的五项优先事项，该报告识别了14个可干预风险因素，可预防或延缓近半数痴呆病例。",
-      "curatedReasonEn": "This correspondence reiterates the broad impact of The Lancet 2024 Commission on dementia and outlines five priorities for strengthening the global dementia prevention agenda. In practice, you should continue to focus on these modifiable risk factors, especially in resource-limited settings, to optimize your prevention strategies and patient education.",
-      "tags": [
-        "research",
-        "stroke",
-        "parkinson"
-      ],
-      "studyDesign": "述评",
-      "journal": "The Lancet"
-    },
-    {
-      "id": "news-1788037205658-16",
-      "title": "[Viewpoint] Systematic reviews and the needs of the adolescent transgender health care field",
-      "summary": "This viewpoint discusses the increasing number and influence of systematic reviews on gender-affirming medical treatment for adolescents, highlighting their role in shaping healthcare policies and practices amidst growing controversy.",
-      "category": "practice",
-      "source": "The Lancet",
-      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00788-9/fulltext?rss=yes",
-      "publishedAt": "2026-08-29T00:00:00.000Z",
-      "firstSeen": "2026-08-29T21:00:05.658Z",
-      "curatedScore": 70,
-      "curatedReason": "系统综述在青少年跨性别健康护理领域的重要性日益增加，反映出对循证实践的需求。这提示您在面对相关患者时，应关注最新的综述证据，并理解其对实践和政策的影响。",
-      "titleZh": "系统综述与青少年跨性别健康护理领域的需求",
-      "summaryZh": "这篇观点文章讨论了关于青少年性别肯定医疗治疗的系统综述数量和影响日益增加，强调了它们在日益增长的争议中塑造医疗政策和实践的作用。",
-      "curatedReasonEn": "The increasing importance of systematic reviews in adolescent transgender health care reflects the demand for evidence-based practice. This suggests that when encountering such patients, you should pay attention to the latest review evidence and understand its impact on practice and policy.",
-      "tags": [
-        "research",
-        "sexual-health",
-        "ethics"
-      ],
-      "studyDesign": "述评",
-      "journal": "The Lancet"
-    },
-    {
-      "id": "news-1788001884119-1",
-      "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial.",
-      "summary": "A single-blind RCT with 50 Parkinson's disease patients (Hoehn-Yahr stage 2-3) compared 12 weeks of aquatic Tai Chi (n=26) versus Computer Assisted Rehabilitation Environment-based virtual reality training (n=24). Both interventions led to improvements in UPDRS-III, BBS, TUG, and 6-minute walk test.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42665222/",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
-      "firstSeen": "2026-08-28T18:51:08.277Z",
-      "curatedScore": 85,
-      "curatedReason": "对于 Hoehn-Yahr 2-3 期的帕金森病患者，不必纠结在水上太极和 VR 步态训练之间，因为这项 RCT 显示两者都能有效改善平衡、步态和运动症状。选择哪种方案，更多取决于患者偏好和诊所设备。",
-      "titleZh": "水上太极和计算机辅助康复环境虚拟现实训练对帕金森病患者康复效果的随机对照试验",
-      "summaryZh": "一项针对50名Hoehn-Yahr 2-3期帕金森病患者的单盲RCT显示，为期12周的水上太极（n=26）与基于计算机辅助康复环境的虚拟现实训练（n=24）均能改善UPDRS-III、BBS、TUG和6分钟步行测试表现。",
-      "curatedReasonEn": "For Parkinson's patients in Hoehn-Yahr stages 2-3, don't overthink the choice between aquatic Tai Chi and VR gait training. This RCT indicates both are effective in improving balance, gait, and motor symptoms. Your decision should primarily be based on patient preference and clinic resources.",
-      "limitation": "研究未明确报告具体的VR训练内容和参数，可能影响结果的可重复性。",
-      "limitationEn": "The study did not explicitly report the specific VR training content and parameters, which might affect the reproducibility of the results.",
-      "tags": [
-        "research",
-        "parkinson"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "tech": true,
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00890-7/fulltext?rss=yes",
-          "title": "Effects of Aquatic Tai Chi and Computer Assisted Rehabilitation Environment-Based Virtual Reality Training on Rehabilitation in Patients with Parkinson Disease: A Randomized Controlled Trial"
-        }
-      ]
     }
   ]
 }
