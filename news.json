@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-06T15:41:15.031Z",
+    "lastUpdated": "2026-09-06T18:25:09.544Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -102,9 +102,9 @@
           "titleZh": "儿科物理治疗临床决策：一项范围综述"
         }
       ],
-      "heat": 7.18,
-      "themeZh": "门诊、居家与急诊场景下物理治疗服务的可及性与实践",
-      "themeEn": "PT service accessibility and practice in varied settings"
+      "heat": 6.9,
+      "themeZh": "骨骼肌肉疾病康复中物理治疗服务模式优化与可及性",
+      "themeEn": "Optimizing PT Service Models and Accessibility"
     },
     {
       "id": "news-1788497020519-0",
@@ -204,9 +204,9 @@
           "titleZh": "与髌股疼痛综合征发展、疼痛强度和功能障碍相关的力学因素：一项横断面研究"
         }
       ],
-      "heat": 6.38,
-      "themeZh": "膝关节疼痛与ACL损伤的运动康复新策略及机制研究",
-      "themeEn": "Novel exercise rehabilitation for knee pain and ACL injury"
+      "heat": 6.13,
+      "themeZh": "膝关节疼痛与ACL重建的个体化运动与数字疗法",
+      "themeEn": "Personalized Exercise and Digital Therapy for Knee"
     },
     {
       "id": "news-1788563262716-1",
@@ -294,9 +294,9 @@
           "titleZh": "脊髓损伤/疾病患者压疮皮瓣修复术后恢复的探究：并发症、韧性和护理模式的患者与临床医生视角。"
         }
       ],
-      "heat": 5.58,
-      "themeZh": "卒中后功能障碍康复干预的类型、效果与机制分析",
-      "themeEn": "Stroke rehabilitation interventions: types, effects, mechanisms"
+      "heat": 5.37,
+      "themeZh": "卒中后偏瘫步态、上肢痉挛及康复策略的多样化干预",
+      "themeEn": "Diverse Stroke Rehabilitation Interventions"
     },
     {
       "id": "news-1788692784960-5",
@@ -352,9 +352,9 @@
           "titleZh": "全身姿势再教育对文本颈综合征患者的影响：一项随机对照试验。"
         }
       ],
-      "heat": 4.79,
-      "themeZh": "腰背痛与体态异常的运动和手法治疗研究",
-      "themeEn": "Exercise and manual therapy for back pain"
+      "heat": 4.6,
+      "themeZh": "手法治疗、运动与体态对脊柱及本体感觉的影响",
+      "themeEn": "Manual Therapy, Exercise, Posture & Proprioception"
     },
     {
       "id": "news-1788692784960-3",
@@ -396,12 +396,40 @@
           "titleZh": "一项单次随机交叉 fNIRS 研究方案，比较健康成人三种上肢镜像疗法任务范式"
         }
       ],
-      "heat": 3.19,
-      "themeZh": "机器人与虚拟现实在脑损伤步态和上肢康复中的应用",
-      "themeEn": "Robotics and VR for brain injury rehabilitation"
+      "heat": 3.07,
+      "themeZh": "脑卒中和脑瘫步态与上肢康复的机器人及虚拟现实",
+      "themeEn": "Robotics and VR for Gait and Upper Limb"
     }
   ],
   "items": [
+    {
+      "id": "news-1788078215009-0",
+      "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
+      "summary": "Patient expectations (PEs) are often underappreciated but profoundly impactful in musculoskeletal pain management. This professional practice article argues that PEs are modifiable therapeutic targets, extending beyond treatment and recovery to encompass relational, contextual, lifestyle, spiritual, and cultural dimensions.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42667740/",
+      "publishedAt": "2026-08-29T00:00:00.000Z",
+      "firstSeen": "2026-08-30T08:23:35.009Z",
+      "curatedScore": 75,
+      "curatedReason": "患者预期（PEs）在肌肉骨骼疼痛管理中不只是预后因素，更是可被干预的治疗靶点。重新审视 PEs 的多维度作用，能助你更有效地管理患者。",
+      "titleZh": "将患者预期重塑为肌肉骨骼护理中的治疗靶点",
+      "summaryZh": "患者预期（PEs）在肌肉骨骼疼痛管理中常被低估，但影响深远。这篇专业实践文章指出，PEs 不仅是预后因素，更是可被干预的治疗靶点，其影响范围超越治疗和康复，延伸至关系、情境、生活方式、精神和文化层面。",
+      "curatedReasonEn": "Patient expectations (PEs) in musculoskeletal pain management are not merely prognostic but modifiable therapeutic targets. Reconsidering the multidimensional role of PEs can help you manage patients more effectively.",
+      "limitation": "这是一篇专业实践文章，非原创研究，主要基于专家意见和现有文献综述。",
+      "limitationEn": "This is a professional practice article, not original research, primarily based on expert opinion and existing literature review.",
+      "tags": [
+        "research",
+        "spine",
+        "knee",
+        "shoulder",
+        "hip",
+        "foot-ankle",
+        "hand-wrist"
+      ],
+      "studyDesign": "述评",
+      "journal": "Musculoskeletal science & practice"
+    },
     {
       "id": "news-1788046091413-0",
       "title": "Impact of Social Determinants of Health on Physical Therapy Utilization in Home Health and Outpatient Settings: A Retrospective Cohort Study.",
@@ -2112,29 +2140,6 @@
       ],
       "journal": "Archives of Physical Medicine and Rehabilitation",
       "tech": true
-    },
-    {
-      "id": "news-1787694684116-1",
-      "title": "Person-centred working relationships that focus on the unique goals of the individual are the heart of supported self-management: a qualitative study with stroke survivors.",
-      "summary": "A qualitative study of 21 stroke survivors in England found that person-centered working relationships are at the heart of supported self-management during community stroke rehabilitation, focusing on individual goals and the \"long and winding journey of self-management.\"",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42640880/",
-      "publishedAt": "2026-08-25T00:00:00.000Z",
-      "firstSeen": "2026-08-25T21:51:24.116Z",
-      "curatedScore": 70,
-      "curatedReason": "这项定性研究强调，卒中康复中支持性自我管理的核心是个性化工作关系。它提醒你，在与卒中幸存者建立康复联盟时，要专注于他们的独特目标，并将其作为长期自我管理的关键。",
-      "titleZh": "以个体为中心的工作关系是卒中幸存者支持性自我管理的核心：一项定性研究",
-      "summaryZh": "一项针对英国21名卒中幸存者的定性研究发现，以个体为中心的工作关系是社区卒中康复中支持性自我管理的核心，强调聚焦个体独特目标是长期自我管理的关键。",
-      "curatedReasonEn": "This qualitative study highlights that person-centered working relationships are crucial for supported self-management in stroke rehabilitation. It reminds you to focus on unique individual goals when building therapeutic alliances with stroke survivors, framing it as key to long-term self-management.",
-      "limitation": "本研究为定性研究，样本量较小（21名卒中幸存者），结果的普遍性受限。",
-      "limitationEn": "This is a qualitative study with a small sample size (21 stroke survivors), limiting the generalizability of its findings.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
     }
   ]
 }
