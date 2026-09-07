@@ -321,29 +321,49 @@ function median(ns) {
  *   - `gapFactor`: current silence must exceed the source's own worst historical
  *     gap by this much.
  *
- *  Calibration — `minDays` 8→6 and `gapFactor` 2→1.5 on 2026-09-06, from a
- *  day-by-day replay over 07-15…09-06 against the three known leg outages, with
- *  the candidate set already narrowed to the 9 piped sources:
+ *  Calibration stays ×2 / ≥8 days. It was briefly moved to ×1.5 / ≥6 on
+ *  2026-09-06 and moved back the same day; that round trip is the most useful
+ *  thing recorded here, so it is recorded in full.
  *
- *      config          first report per real outage              false alarms
- *      ×2   ≥8  (old)  Archives 08-06 · Lancet ✗ · BJSM 09-10   none
- *      ×1.5 ≥8         Archives 08-03 · Lancet ✗ · BJSM 09-04   BJSM 2 days
- *      ×1.5 ≥6  (now)  Archives 08-03 · Lancet 08-09 · BJSM 09-04  BJSM 2 days
- *      ×1.75 ≥8        Archives 08-04 · Lancet ✗ · BJSM 09-07   BJSM 1 day
+ *  The tightening was justified by a day-by-day replay over 07-15…09-06 which
+ *  showed ×2/≥8 catching only 1 of 3 apparent leg outages while ×1.5/≥6 caught
+ *  3 of 3, for two noisy days. What that replay never established is whether the
+ *  three were outages at all. Checking the feeds by hand from a laptop settled
+ *  one of them and it went the other way:
  *
- *  3-of-3 instead of 1-of-3, for two noisy days in eight weeks. The two come
- *  from BJSM's own 11-day quiet spell in early August (07-29→08-09), which is
- *  plausibly a partial outage too — it is counted as noise here to keep the
- *  comparison conservative. The old ×2 setting is why BJSM's 08-17 death was
- *  still unreported on 09-06: 20 days quiet against a 22-day bar, two days short,
- *  while that same week's brief spent four tips on the downstream symptom
- *  (运动/心肺/老年/行业 all "反常") without naming the cause.
+ *      BJSM  `bjsm.bmj.com/rss/current.xml` → HTTP 200, 16 items, and every one
+ *            stamped 2026-08-16T22:45:50-07:00. The feed is healthy; it simply
+ *            has not turned over since the August issue. LOOKBACK_DAYS = 7 on
+ *            the RSS leg (news-refresh.js:69) then drops all 16 as too old —
+ *            correctly. So BJSM's "20 days silent" is the pipeline working, and
+ *            ×1.5/≥6 turns it into a false alarm that ×2/≥8 correctly ignored.
  *
- *  Do NOT retune from a single snapshot. The first attempt at this on 2026-09-06
- *  read today's ratios only, concluded "1.0x and 3.5x are cleanly separated", and
- *  was wrong: the replay shows Archives of PM&R reaching 7.25x mid-outage — a
- *  number that looks like a healthy source's noise ceiling until you notice
- *  Archives was dead for those 30 days. Replay, don't snapshot.
+ *      Archives of PM&R / The Lancet → both feeds fresh (newest 2026-09-05), and
+ *            both ingesting normally now. Whether their 30-day and 36-day holes
+ *            in July were real ingest failures or the same frozen-feed situation
+ *            CANNOT be recovered: nothing recorded what the fetch saw at the
+ *            time. Two unknowns, zero confirmed outages.
+ *
+ *  So the tightening rested on a premise that does not hold, and is reverted.
+ *
+ *  The deeper reason this measure is weak, worth reading before retuning it:
+ *  an issue-based journal TOC feed plus a 7-day lookback means a monthly
+ *  publisher legitimately produces nothing for ~3 weeks out of every 4, and no
+ *  threshold over "days since last ingest" can tell that apart from a broken
+ *  leg. The measurement that would separate them is the feed's OWN newest
+ *  pubDate versus today — exactly what the laptop curl above supplied, and
+ *  exactly what the pipeline throws away (fetchRssFeeds logs the status code and
+ *  entry count to the console and keeps neither). Until that is recorded at
+ *  fetch time, this function is a weak proxy and should stay conservatively
+ *  calibrated rather than be tuned into confident-sounding noise.
+ *
+ *  Two method lessons from the same afternoon:
+ *   - Replay, don't snapshot. The first cut read today's ratios only, concluded
+ *     "1.0x and 3.5x are cleanly separated", and was wrong: the replay shows
+ *     Archives of PM&R at 7.25x during its own quiet spell.
+ *   - Then: verify the labels before fitting to them. The replay was rigorous
+ *     about parameters and silently assumed its four "known outages" were
+ *     outages. One curl per feed would have checked that first, and did.
  *
  *  Measured record, 2026-09-06 (four RSS-leg outages found by hand-auditing the
  *  corpus, none of which any check reported except the first):
@@ -362,7 +382,7 @@ function median(ns) {
  *  regression and must never turn a cron red (gate H, 2026-08-12: four workflows
  *  down 48h). This function only writes a sentence into a document a human reads.
  */
-function silentSources(items, end, axis, roster, { lookbackDays = 90, minDays = 6, gapFactor = 1.5, minQuiet = 10 } = {}) {
+function silentSources(items, end, axis, roster, { lookbackDays = 90, minDays = 8, gapFactor = 2, minQuiet = 10 } = {}) {
   const byS = new Map();
   for (const it of bucket(items, end - lookbackDays * DAY, end, axis)) {
     const t = axisMs(it, axis);
@@ -876,8 +896,15 @@ function render(ctx) {
   for (const s of silent.slice(0, 3)) {
     const repeats = Math.max(0, Math.floor((s.quiet - s.threshold) / 7));
     const nth = repeats ? `**连续第 ${repeats + 1} 周报告** —— ` : '';
+    // 处方不再断定原因。2026-09-06：本条旧文案断言「抓取可能已失效」并叫人去核对
+    // feed（原句见 G2g 断言，此处不复写以免注释把那条断言的否定半边失效），而
+    // 当天手查 BJSM 的 feed 是 HTTP 200、16 条、全部戳着 08-16 —— feed 健康，只是
+    // 当期没换刊，7 天窗口如实丢掉了它们。零入库有两个成因，本函数分不开：
+    // 「上游 feed 自己没翻页」（无需处理，甚至可能是正常节律）与「feed 有新内容而
+    // 我们没收进来」（真 bug）。所以给出的是分辨两者的动作，不是结论。
     tips.push(
-      `**管线**：${nth}来源 **${s.source}** 已静默 ${s.quiet} 天，而它近 ${s.lookbackDays} 天在 ${s.days} 个日子有产出、最长间隔仅 ${s.maxGap} 天 —— 抓取可能已失效，核对该源 feed。`
+      `**管线**：${nth}来源 **${s.source}** 已静默 ${s.quiet} 天，而它近 ${s.lookbackDays} 天在 ${s.days} 个日子有产出、最长间隔仅 ${s.maxGap} 天`
+      + ` —— 取一次该源 feed 看它自己最新的 pubDate：若也是 ${s.quiet} 天前，是上游没换刊（RSS 腿只收 7 天内，属正常丢弃）；若有新日期，才是我们没收进来。`
     );
   }
 

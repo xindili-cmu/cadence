@@ -263,12 +263,20 @@ async function run() {
     // 另一条是刚刚吃掉两天日报的 gate H 事故，活着的故障压过安静的故障。首次出现和
     // 第四次出现今天读起来一模一样，这就是跳过的成本为零的原因。
     const reg = silentSources(regular, END, 'firstSeen', new Set(['规律源']))[0];
-    ok(reg && reg.threshold === reg.maxGap * 1.5,
-      'G2e: 行里带 threshold = 自身最长间隔 ×1.5（供提示推重复周数，避免 gapFactor 在两处各写一遍——见 2026-07-01 档位改一半的教训）');
-    // 标定锚点（card-headline.test.js C 段手法）：把回测选出的两个值钉在这里，改了
-    // 就得回去重跑逐日回放。旧的 ×2/≥8 组合 3 个真故障只报 1 个，其中 BJSM 差 2 天。
-    ok(reg.maxGap === 3 && reg.threshold === 4.5 && reg.quiet === 20,
-      'G2f 标定锚点：×1.5 / ≥6 天（旧 ×2 / ≥8 天下 Lancet 全程漏报、BJSM 要等到 09-10）');
+    ok(reg && reg.threshold === reg.maxGap * 2,
+      'G2e: 行里带 threshold = 自身最长间隔 ×2（供提示推重复周数，避免 gapFactor 在两处各写一遍——见 2026-07-01 档位改一半的教训）');
+    // 标定锚点（card-headline.test.js C 段手法）。2026-09-06 曾收紧到 ×1.5/≥6 天，
+    // 同日退回：那次收紧的依据是逐日回放「3 个真故障抓到 3 个」，但手查 feed 发现
+    // BJSM 根本不是故障——HTTP 200、16 条、全戳 08-16，feed 健康只是没换刊，7 天
+    // 窗口如实丢弃。另两个（Archives / Lancet）当时没记录，无法回溯，是未知不是已知。
+    // 依据塌了就退回。要再动这两个数，先读 silentSources 上方那段，尤其「先验标签，
+    // 再拟合参数」那条。
+    ok(reg.maxGap === 3 && reg.threshold === 6 && reg.quiet === 20,
+      'G2f 标定锚点：×2 / ≥8 天（曾试 ×1.5/≥6，因把「上游没换刊」误判成故障而退回）');
+    ok(!/gapFactor = 1\.5|minDays = 6/.test(wbSrc),
+      'G2f 判别力：×1.5/≥6 的写法已不在（要改回去得先补上「feed 自己最新 pubDate」这个测量）');
+    ok(/最新的 pubDate/.test(wbSrc) && !/抓取可能已失效，核对该源 feed/.test(wbSrc),
+      'G2g: 提示给分辨动作而非断定原因（零入库有「上游没换刊」与「我们没收进来」两个成因，本函数分不开）');
     ok(/Math\.floor\(\(s\.quiet - s\.threshold\) \/ 7\)/.test(wbSrc) && /连续第 \$\{repeats \+ 1\} 周报告/.test(wbSrc),
       'G2e: 静默提示带「连续第 N 周报告」（由 quiet/threshold 推导，不落状态文件）');
 
