@@ -230,6 +230,48 @@ async function run() {
     ok(!names.includes('批量源'), '静默探针：天然批量的低频源不响（产出日太少，无节奏可比）');
     ok(!names.includes('已下线源'), '静默探针：已从 sources.json 摘除的源不响（下线是决定，不是故障）');
 
+    // G2b（2026-09-06）：候选集 = 有自己抓取腿的源，不是整个 roster。
+    //
+    // 事故：BJSM 的 RSS 腿 08-17 断供，21 天无人知晓；同一次手工审计还翻出三段
+    // 同类故障，全都没有任何检查报出来 ——
+    //     Archives of PM&R  07-24→08-23（30 天，自愈）  唯一报出来的一次（W33）
+    //     The Lancet        07-20→08-25（36 天，自愈）  漏（minDays）
+    //     JOSPT             07-16→ 至今                漏（minDays）
+    //     BJSM              08-17→ 至今                静默 20 天 vs 阈值 22，差 2 天
+    //
+    // 为什么阈值必须这么松：当时这条规则扫全部 56 个 roster 条目，其中 47 个**没有
+    // 腿** —— 它们的 source 只是 PubMed 行上的刊名标签，「静默」= 本周 PubMed 没返回
+    // 该刊，无处可查、无物可修；而规则给出的处方是「核对该源 feed」，那个 feed 根本
+    // 不存在。这类不可行动的告警一多，gapFactor 只能往松了调，真故障就跟着漏过去。
+    // 收敛到 9 个有腿的源之后，噪音在**结构上**不再进入候选集，阈值才有意义。
+    const attribution = Array.from({ length: 21 }, (_, i) => at(20 + i * 3, { source: '刊名归属源' }));
+    ok(!silentSources([...regular, ...attribution], END, 'firstSeen', new Set(['规律源', '批量源']))
+        .some((s) => s.source === '刊名归属源'),
+      '静默探针：没有抓取腿的刊名归属源不响（它的静默是 PubMed 产出波动，「核对 feed」无 feed 可核对）');
+
+    // 上面那条只证明「不在候选集里就不响」。真正会被改回去的是**调用点**，所以静态
+    // 锁住候选集的来源与推导方式（J 段手法）。
+    const wbSrc = fs.readFileSync(path.join(__dirname, 'weekly-brief.js'), 'utf8');
+    ok(/pipedSources[\s\S]{0,200}?s\.eutils[\s\S]{0,80}?s\.rss[\s\S]{0,80}?s\.scrape/.test(wbSrc),
+      'G2c: pipedSources 由 eutils/rss/scrape 三种腿推导（漏掉任一种，那类源就会静默地退出监控）');
+    ok(/silentSources\(allItems, win\.coveredEnd, axis, pipedSources\)/.test(wbSrc),
+      'G2d: 静默探针的候选集是 pipedSources');
+    ok(!/silentSources\([^)]*enabledSources/.test(wbSrc),
+      'G2d 判别力：旧的 enabledSources 调用形态已不存在（换回去=重现 56 个候选的噪音）');
+
+    // G2e：重复计数。W33 那期带着措辞完全正确的 Archives 提示，仍然被跳过 —— 同期
+    // 另一条是刚刚吃掉两天日报的 gate H 事故，活着的故障压过安静的故障。首次出现和
+    // 第四次出现今天读起来一模一样，这就是跳过的成本为零的原因。
+    const reg = silentSources(regular, END, 'firstSeen', new Set(['规律源']))[0];
+    ok(reg && reg.threshold === reg.maxGap * 1.5,
+      'G2e: 行里带 threshold = 自身最长间隔 ×1.5（供提示推重复周数，避免 gapFactor 在两处各写一遍——见 2026-07-01 档位改一半的教训）');
+    // 标定锚点（card-headline.test.js C 段手法）：把回测选出的两个值钉在这里，改了
+    // 就得回去重跑逐日回放。旧的 ×2/≥8 组合 3 个真故障只报 1 个，其中 BJSM 差 2 天。
+    ok(reg.maxGap === 3 && reg.threshold === 4.5 && reg.quiet === 20,
+      'G2f 标定锚点：×1.5 / ≥6 天（旧 ×2 / ≥8 天下 Lancet 全程漏报、BJSM 要等到 09-10）');
+    ok(/Math\.floor\(\(s\.quiet - s\.threshold\) \/ 7\)/.test(wbSrc) && /连续第 \$\{repeats \+ 1\} 周报告/.test(wbSrc),
+      'G2e: 静默提示带「连续第 N 周报告」（由 quiet/threshold 推导，不落状态文件）');
+
     // G3. 2026-07-26 的 Springer 错标（W30 实数）：Sports Medicine 66/127 = 52%，
     //     上周 23/101 = 23%。旧规则看到同一个数字，处方却是「可补充其他来源平衡」——
     //     信号对、诊断错。占比阶跃能把它指出来。

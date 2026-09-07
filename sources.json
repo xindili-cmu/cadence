@@ -12,9 +12,7 @@
       "orthopedic",
       "sports"
     ],
-    "rss": [
-      "https://www.jospt.org/action/showFeed?type=etoc&feed=rss&jc=jospt"
-    ]
+    "note": "2026-09-06 摘掉 rss 腿：最后一条入库 2026-07-16，静默 53 天。这条腿全期只进 13 篇、最高分 80、零强信号；而同一批期刊内容从 PubMed [ta] 进得更好（腿死后 PubMed 又送来 4 篇，含两条 85）。腿是冗余且已坏，entry 保留——journalName 仍供 PubMed 行做刊名归属与 IF 徽章。要恢复先确认 Atypon showFeed 端点是否还在。"
   },
   {
     "name": "PTJ",
@@ -161,9 +159,7 @@
     "cats": [
       "practice"
     ],
-    "scrape": [
-      "https://australian.physio/inmotion"
-    ]
+    "note": "2026-09-06 摘掉 scrape 腿：配置以来三个月，ledger 里已登记 61 条链接、入库 0 篇。原因不是抓取失败——文章页根本没有机器可读日期（无 citation_date / article:published_time / <time datetime>），发布日只以正文文字出现（形如 'By Melissa Mitchell 01 Sep, 2026'），于是 2026-08-15「禁止时钟兜底」规则把每一条都判为不可定日期而丢弃。这是规则在正常工作，不是 bug。要恢复得给日期提取加一个正文 byline 解析器，而那正是 gate H 守的代码，不划算。entry 保留仅为 roster 完整性；若要让「56 个信源」这个数字诚实，得删整条 entry，并同步改 index.html / app.data.jsx / news-refresh.js 里共 10 处写死的 56（gate P 会拦），且 app.data.jsx 进 app.min.js，需 Cindy 本地重建。"
   },
   {
     "name": "AHPRA",

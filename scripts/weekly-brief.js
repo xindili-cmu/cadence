@@ -195,10 +195,19 @@ function loadCorpus() {
   const srcCfg = readJSON(path.join(ROOT, 'sources.json'));
   const srcArr = Array.isArray(srcCfg) ? srcCfg : (srcCfg && (srcCfg.sources || Object.values(srcCfg).find(Array.isArray))) || [];
   const enabledSources = new Set(srcArr.map((s) => s && s.name).filter(Boolean));
+  // Piped subset: entries we actually fetch ourselves. The rest are journal-name
+  // labels stamped on PubMed rows — they cannot "break", so a silence alarm on
+  // them is unactionable by construction (see silentSources' `roster` gate).
+  const pipedSources = new Set(
+    srcArr
+      .filter((s) => s && (s.eutils || (s.rss && s.rss.length) || (s.scrape && s.scrape.length)))
+      .map((s) => s.name)
+  );
 
   return {
     items: [...byId.values()],
     enabledSources,
+    pipedSources,
     meta: news.meta || {},
     categories: (news.meta && news.meta.categories) || Object.keys(CATEGORY_LABELS),
     journalById,
@@ -291,18 +300,69 @@ function median(ns) {
  *  alarm fatigue it was written to remove).
  *
  *  Three gates, each killing one false-positive class:
- *   - `enabled`: the source is still in sources.json. Modern Healthcare had 23
- *     items then went silent for 39 days — because it was deliberately dropped
- *     (STRATEGY-US §7 keeps it for a future intel lane only). A removal is not
- *     a breakage.
+ *   - `roster`: the source is still in sources.json AND still has a fetch leg of
+ *     its own (rss / scrape / eutils) — see pipedSources in loadCorpus. Two
+ *     separate false-positive classes die here:
+ *       · Removal is not breakage. Modern Healthcare had 23 items then went
+ *         silent 39 days because it was deliberately dropped (STRATEGY-US §7
+ *         keeps it for a future intel lane only).
+ *       · **Attribution is not a pipe.** 47 of the 56 roster entries have no leg;
+ *         their `source` is stamped on PubMed rows by journal name, so their
+ *         silence means "PubMed returned none of that journal this week" —
+ *         nothing to check, nothing to fix. Yet this rule's prescription is
+ *         "核对该源 feed", which for them names a feed that does not exist.
+ *         2026-09-06: dropping them takes the candidate set 56 → 9, which is
+ *         also what lets gapFactor stay tight enough to be worth anything.
  *   - `minDays`: enough distinct producing days for "its max gap" to mean
  *     anything. JOSPT's 13 items arrived on 3 days — batchy by nature, nothing
- *     to calibrate against.
- *   - `gapFactor`: current silence must exceed twice the source's own worst
- *     historical gap. Archives of PM&R (33 items / 21 days / max gap 6) going
- *     17 days quiet clears this; BJSM at 11 days against a 6-day max does not.
+ *     to calibrate against. (JOSPT lost its leg on 2026-09-06 and no longer
+ *     reaches this gate at all; kept as the illustration because it is why the
+ *     gate exists.)
+ *   - `gapFactor`: current silence must exceed the source's own worst historical
+ *     gap by this much.
+ *
+ *  Calibration — `minDays` 8→6 and `gapFactor` 2→1.5 on 2026-09-06, from a
+ *  day-by-day replay over 07-15…09-06 against the three known leg outages, with
+ *  the candidate set already narrowed to the 9 piped sources:
+ *
+ *      config          first report per real outage              false alarms
+ *      ×2   ≥8  (old)  Archives 08-06 · Lancet ✗ · BJSM 09-10   none
+ *      ×1.5 ≥8         Archives 08-03 · Lancet ✗ · BJSM 09-04   BJSM 2 days
+ *      ×1.5 ≥6  (now)  Archives 08-03 · Lancet 08-09 · BJSM 09-04  BJSM 2 days
+ *      ×1.75 ≥8        Archives 08-04 · Lancet ✗ · BJSM 09-07   BJSM 1 day
+ *
+ *  3-of-3 instead of 1-of-3, for two noisy days in eight weeks. The two come
+ *  from BJSM's own 11-day quiet spell in early August (07-29→08-09), which is
+ *  plausibly a partial outage too — it is counted as noise here to keep the
+ *  comparison conservative. The old ×2 setting is why BJSM's 08-17 death was
+ *  still unreported on 09-06: 20 days quiet against a 22-day bar, two days short,
+ *  while that same week's brief spent four tips on the downstream symptom
+ *  (运动/心肺/老年/行业 all "反常") without naming the cause.
+ *
+ *  Do NOT retune from a single snapshot. The first attempt at this on 2026-09-06
+ *  read today's ratios only, concluded "1.0x and 3.5x are cleanly separated", and
+ *  was wrong: the replay shows Archives of PM&R reaching 7.25x mid-outage — a
+ *  number that looks like a healthy source's noise ceiling until you notice
+ *  Archives was dead for those 30 days. Replay, don't snapshot.
+ *
+ *  Measured record, 2026-09-06 (four RSS-leg outages found by hand-auditing the
+ *  corpus, none of which any check reported except the first):
+ *     Archives of PM&R  07-24→08-23 (30d, self-healed)  — FIRED 08-06, W33 brief
+ *     The Lancet        07-20→08-25 (36d, self-healed)  — missed (minDays)
+ *     JOSPT             07-16→ still dead               — missed (minDays)
+ *     BJSM              08-17→ still dead               — quiet 20d vs 11d max
+ *                                                          gap ×2 = 22 → 2 days
+ *                                                          short of firing
+ *  So the detector works; its calibration is ~2 weeks behind the event, and the
+ *  one time it did fire nobody acted (W33's other tip was the gate-H outage that
+ *  had just cost two days of 日报 — a live incident outranks a quiet one). That
+ *  is why the tip now carries a repeat count: see `repeats` at the call site.
+ *
+ *  Deliberately NOT tightened past this. A silent upstream feed is not a code
+ *  regression and must never turn a cron red (gate H, 2026-08-12: four workflows
+ *  down 48h). This function only writes a sentence into a document a human reads.
  */
-function silentSources(items, end, axis, enabled, { lookbackDays = 90, minDays = 8, gapFactor = 2, minQuiet = 10 } = {}) {
+function silentSources(items, end, axis, roster, { lookbackDays = 90, minDays = 6, gapFactor = 1.5, minQuiet = 10 } = {}) {
   const byS = new Map();
   for (const it of bucket(items, end - lookbackDays * DAY, end, axis)) {
     const t = axisMs(it, axis);
@@ -312,13 +372,17 @@ function silentSources(items, end, axis, enabled, { lookbackDays = 90, minDays =
   }
   const out = [];
   for (const [source, daySet] of byS) {
-    if (enabled && enabled.size && !enabled.has(source)) continue;
+    if (roster && roster.size && !roster.has(source)) continue;
     const days = [...daySet].sort((a, b) => a - b);
     if (days.length < minDays) continue;
     let maxGap = 0;
     for (let i = 1; i < days.length; i++) maxGap = Math.max(maxGap, Math.round((days[i] - days[i - 1]) / DAY));
     const quiet = Math.round((end - days[days.length - 1]) / DAY);
-    if (quiet >= minQuiet && quiet > maxGap * gapFactor) out.push({ source, quiet, maxGap, days: days.length, lookbackDays });
+    // `threshold` travels with the row so the tip can say "第 N 周报告" without
+    // re-hardcoding gapFactor at the call site — the 2026-07-01 tier change is
+    // the standing lesson on thresholds duplicated across files.
+    const threshold = maxGap * gapFactor;
+    if (quiet >= minQuiet && quiet > threshold) out.push({ source, quiet, maxGap, threshold, days: days.length, lookbackDays });
   }
   return out.sort((a, b) => b.quiet - a.quiet);
 }
@@ -572,7 +636,7 @@ function catLabel(c) {
 }
 
 function render(ctx) {
-  const { win, iso, cur, prev, curItems, allItems, enabledSources, categories, journalById, gsc, axis, curCov, prevCov, incomplete } = ctx;
+  const { win, iso, cur, prev, curItems, allItems, pipedSources, categories, journalById, gsc, axis, curCov, prevCov, incomplete } = ctx;
   const L = [];
   const range = `${fmtMD(win.coveredStart)}–${fmtMD(win.coveredEnd - DAY)}`;
   const tag = `${iso.year}-W${String(iso.week).padStart(2, '0')}`;
@@ -609,7 +673,7 @@ function render(ctx) {
   const daily = probeOk ? dailyCounts(curItems, win.coveredStart, win.coveredEnd, axis) : [];
   const prevDaily = probeOk ? dailyCounts(allItems, win.prevStart, win.prevEnd, axis) : [];
   const zeroDays = daily.filter((d) => d.n === 0);
-  const silent = probeOk ? silentSources(allItems, win.coveredEnd, axis, enabledSources) : [];
+  const silent = probeOk ? silentSources(allItems, win.coveredEnd, axis, pipedSources) : [];
   const shifts = sourceShifts(cur.source, prev.source, cur.total, prev.total);
   // Rate, not count: the strong-signal COUNT rides on weekly volume, which is
   // spiky (W31 112 → W32 58 on three burst days). The share is what actually
@@ -802,10 +866,20 @@ function render(ctx) {
     tips.push(
       `**管线**：本周有 ${zeroDays.length} 天零入库（${zeroDays.map((d) => fmtMD(d.day)).join('、')}）—— 查这几天 news-refresh 的 Actions run 是否失败。`
     );
-  for (const s of silent.slice(0, 3))
+  // Repeat count, derived — no state file. A source stays over threshold once it
+  // crosses, so the number of past weekly cycles that would ALSO have reported it
+  // is floor((quiet - threshold) / 7). Why it earns its clause: W33 carried this
+  // exact tip for Archives of PM&R, correctly worded, and it was skipped — that
+  // week's other tip was the gate-H outage that had just cost two days of 日报,
+  // and a live incident outranks a quiet one. A first sighting and a fourth read
+  // identically today, which is what makes skipping cheap. "连续第 4 周" does not.
+  for (const s of silent.slice(0, 3)) {
+    const repeats = Math.max(0, Math.floor((s.quiet - s.threshold) / 7));
+    const nth = repeats ? `**连续第 ${repeats + 1} 周报告** —— ` : '';
     tips.push(
-      `**管线**：来源 **${s.source}** 已静默 ${s.quiet} 天，而它近 ${s.lookbackDays} 天在 ${s.days} 个日子有产出、最长间隔仅 ${s.maxGap} 天 —— 抓取可能已失效，核对该源 feed。`
+      `**管线**：${nth}来源 **${s.source}** 已静默 ${s.quiet} 天，而它近 ${s.lookbackDays} 天在 ${s.days} 个日子有产出、最长间隔仅 ${s.maxGap} 天 —— 抓取可能已失效，核对该源 feed。`
     );
+  }
 
   // — 来源结构：跳变先怀疑标注，再怀疑抓取量。
   for (const sh of shifts.slice(0, 2)) {
@@ -870,7 +944,7 @@ async function main() {
     prev,
     curItems,
     allItems: corpus.items,
-    enabledSources: corpus.enabledSources,
+    pipedSources: corpus.pipedSources,
     categories: corpus.categories,
     journalById: corpus.journalById,
     gsc,

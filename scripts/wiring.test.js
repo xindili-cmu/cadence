@@ -49,9 +49,17 @@ function run() {
     : '';
   const pkgText = fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8');
   const scriptFiles = fs.readdirSync(__dirname).filter((f) => /\.(js|sh)$/.test(f));
-  const srcText = scriptFiles
-    .map((f) => fs.readFileSync(path.join(__dirname, f), 'utf8'))
-    .join('\n');
+  // Per-file, NOT one concatenated blob: a file must not be able to certify
+  // itself. 2026-09-06 — source-health.js was written, wired to nothing, and this
+  // check stayed green, because its own usage docblock carried the line
+  //     require('./source-health').sourceHealth({ ... })
+  // and the blob made that indistinguishable from a real consumer. That is the
+  // failure mode the header calls this check's most dangerous one, arriving
+  // through the require pattern rather than the `scripts/x.js` pattern it was
+  // written to guard. Self-reference is now excluded (see isWired).
+  const srcByFile = new Map(
+    scriptFiles.map((f) => [f, fs.readFileSync(path.join(__dirname, f), 'utf8')])
+  );
 
   // package.json 的别名**不算**已接线。`npm run x` 只说明「怎么跑」，不说明
   // 「谁会跑」——而这整类故障的定义就是没有任何东西真的跑它。lint-daily 那次正是
@@ -61,7 +69,8 @@ function run() {
     const bare = file.replace(/\.(js|sh)$/, '');
     const esc = bare.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return new RegExp(`scripts/${esc}\\.(js|sh)`).test(wfText)
-        || new RegExp(`require\\(['"]\\./${esc}(\\.js)?['"]`).test(srcText);
+        || [...srcByFile].some(([other, text]) =>
+             other !== file && new RegExp(`require\\(['"]\\./${esc}(\\.js)?['"]`).test(text));
   };
   void pkgText; // 见上：故意不参与 isWired 判定
 
