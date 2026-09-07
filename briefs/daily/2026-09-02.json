@@ -1,0 +1,183 @@
+{
+ "date": "2026-09-02",
+ "generatedAt": "2026-09-01T23:27:41.667Z",
+ "windowHours": 26,
+ "windowStart": "2026-09-01T00:42:50.811Z",
+ "windowEnd": "2026-09-01T23:27:38.830Z",
+ "lead": {
+  "titleZh": "膝骨关节炎和慢性腰痛：个体化阻力训练与运动疗法的最新剂量-反应系统综述",
+  "titleEn": "Knee OA & Chronic LBP: Latest Dose-Response Systematic Reviews on Resistance & Exercise Therapy",
+  "paragraphZh": "今日日报共包含 6 篇文章，覆盖 4 个专业领域。骨科与肌骨方向的 2 篇系统综述得分最高，均为 85 分，分别聚焦膝骨关节炎的个体化阻力训练和非特异性慢性腰痛的运动疗法，值得临床 PT 优先关注。此外，还有一篇神经康复领域的系统综述探讨卒中康复中的动物辅助疗法，得分为 75 分。",
+  "paragraphEn": "Today's digest features 6 articles across 4 specialties. Two systematic reviews in orthopedics and musculoskeletal health, both scoring 85, warrant primary attention for PTs, addressing individualized resistance training for knee osteoarthritis and exercise therapy for non-specific chronic low back pain. Additionally, a systematic review on animal-assisted therapy in stroke rehabilitation scored 75."
+ },
+ "stats": {
+  "events": 6,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 4,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1788281123739-0",
+     "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
+     "summary": "A systematic review and dose-response meta-analysis of RCTs found dose-response relationships between isotonic lower extremity resistance exercise volume and outcomes of pain, function, and strength in people with knee osteoarthritis (OA), and compared different intensities and delivery methods.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42676087/",
+     "publishedAt": "2026-09-01T00:00:00.000Z",
+     "firstSeen": "2026-09-01T16:45:23.739Z",
+     "curatedScore": 85,
+     "curatedReason": "膝骨关节炎患者的下肢等张阻力训练，其容量与疼痛、功能和力量改善之间存在明确的剂量-反应关系。你可以根据这篇高质量系统综述的发现，更精准地调整患者的康复方案，包括训练强度和交付方式。",
+     "titleZh": "针对膝骨关节炎的个体化阻力训练：一项关于强度和容量效应的剂量-反应荟萃分析系统综述",
+     "summaryZh": "一项对随机对照试验进行的系统综述和剂量-反应荟萃分析，旨在评估膝骨关节炎患者等张下肢阻力训练的容量与疼痛、功能和力量改善之间的剂量-反应关系，并比较不同强度和实施方式的效果。",
+     "curatedReasonEn": "For knee OA patients, isotonic lower extremity resistance exercise volume shows clear dose-response relationships with improvements in pain, function, and strength. Leverage this high-quality systematic review to fine-tune your rehabilitation protocols, including training intensity and delivery methods, for better patient outcomes.",
+     "limitation": "该综述未明确报告膝骨关节炎阻力训练的最佳长期剂量。",
+     "limitationEn": "The review did not explicitly report on the optimal long-term dosage for resistance training in knee osteoarthritis.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+     "id": "news-1788281123741-1",
+     "title": "The Efficacy of Exercise Therapy for Nonspecific Chronic Low Back Pain According to the FITT Principle: A Systematic Review With Meta-analyses.",
+     "summary": "A systematic review with meta-analyses evaluated the efficacy of exercise therapy interventions, differing in frequency, intensity, type, and time (FITT), on disability in individuals with nonspecific chronic low back pain (LBP).",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42676082/",
+     "publishedAt": "2026-09-01T00:00:00.000Z",
+     "firstSeen": "2026-09-01T16:45:23.741Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述及其荟萃分析，基于 FITT 原则，精细评估了不同运动疗法对非特异性慢性腰痛患者残疾的疗效。这为你调整慢性腰痛患者的运动处方提供了具体的证据指导，让你能更精准地优化干预参数。",
+     "titleZh": "基于 FITT 原则的运动疗法对非特异性慢性腰痛疗效的系统综述与荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析评估了根据 FITT（频率、强度、类型、时间）原则调整的运动疗法，对非特异性慢性腰痛患者残疾的影响。",
+     "curatedReasonEn": "The efficacy of exercise therapy interventions, specifically their FITT parameters (frequency, intensity, type, and time), for disability in nonspecific chronic low back pain patients has been systematically evaluated. This review offers concrete evidence to help you optimize exercise prescription parameters and more precisely manage these patients.",
+     "limitation": "研究纳入的异质性可能影响了 FITT 各组成部分特定推荐的精确性。",
+     "limitationEn": "The heterogeneity among included studies may impact the precision of specific recommendations for each FITT component.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+     "id": "news-1788240257714-2",
+     "title": "REINA: A Recognize-Then-Infer Wearable-to-App AI Framework for Breast Cancer Rehabilitation",
+     "summary": "The REINA AI framework uses wearable IMU data for remote monitoring of motor function in breast cancer rehabilitation, recognizing activities and inferring EMG signals for neuromuscular assessment.",
+     "category": "orthopedic",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.08.29.26361725v1?rss=1",
+     "publishedAt": "2026-08-31T00:00:00.000Z",
+     "firstSeen": "2026-09-01T05:24:17.714Z",
+     "curatedScore": 68,
+     "curatedReason": "REINA这个利用可穿戴设备的AI框架，通过推断神经肌肉活动来远程监测乳腺癌康复患者的运动功能，这听起来很吸引人。但作为临床实践，在广泛应用前，我们必须进一步验证其临床实用性及其在不同患者群体中的有效性。",
+     "titleZh": "REINA：一种用于乳腺癌康复的识别-推断可穿戴设备到应用程序 AI 框架",
+     "summaryZh": "REINA AI 框架利用可穿戴 IMU 数据对乳腺癌康复中的运动功能进行远程监测，识别活动并推断肌电信号以进行神经肌肉评估。",
+     "curatedReasonEn": "REINA, a novel AI framework utilizing wearables, shows promise for remote monitoring of motor function in breast cancer rehabilitation by inferring neuromuscular activity. While this is an interesting technological advancement, its clinical utility and validation in diverse patient populations require further investigation before widespread adoption.",
+     "limitation": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+     "limitationEn": "The framework focuses on upper-limb impairments in breast cancer survivors and requires further validation for broader clinical application.",
+     "tags": [
+      "research",
+      "orthopedic",
+      "pelvic-floor"
+     ],
+     "studyDesign": "综述",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1788305250074-0",
+     "title": "Exploring animal-assisted therapy in stroke rehabilitation: a systematic review of emerging evidence.",
+     "summary": "A systematic review of 12 studies on animal-assisted therapy (AAT) in adult stroke rehabilitation found emerging evidence primarily for psychosocial and emotional benefits, with limited data on motor or cognitive outcomes due to varied study designs and small sample sizes.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42678814/",
+     "publishedAt": "2026-09-01T00:00:00.000Z",
+     "firstSeen": "2026-09-01T23:27:30.074Z",
+     "curatedScore": 75,
+     "curatedReason": "动物辅助疗法在卒中康复中的证据仍然有限且异质性高，尚不能支持作为常规干预。目前主要提示在心理社会和情感层面有潜在益处，但在运动或认知功能上尚无定论。继续以研究和辅助手段视角关注，别急于写入常规康复方案。",
+     "titleZh": "卒中康复中动物辅助疗法：系统综述",
+     "summaryZh": "一项对12项研究的系统综述显示，动物辅助疗法在成人卒中康复中主要在新兴的心理社会和情感益处方面有初步证据，但由于研究设计多样和样本量小，在运动或认知结局方面数据有限。",
+     "curatedReasonEn": "Evidence for animal-assisted therapy (AAT) in stroke rehabilitation remains limited and highly heterogeneous, not yet supporting its routine integration. Current findings primarily suggest potential benefits in psychosocial and emotional domains, with no definitive conclusions on motor or cognitive functions. Continue to view AAT as an area of research and an adjunctive approach, rather than integrating it into standard rehabilitation protocols.",
+     "limitation": "纳入研究数量少（12项），且设计多样、样本量小，限制了证据的综合性和外推性。",
+     "limitationEn": "The small number of included studies (12), coupled with diverse designs and small sample sizes, limits the generalizability and synthesis of the evidence.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1788305250076-5",
+     "title": "Association of the time from injury to surgery with postoperative acute cardiovascular or cerebrovascular events in older patients with hip fracture: a retrospective cohort study",
+     "summary": "A retrospective cohort study explored the association between the time from injury to surgery and the risk of postoperative acute cardiovascular or cerebrovascular events in older patients with hip fracture.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08044-y",
+     "publishedAt": "2026-08-25T00:00:00.000Z",
+     "firstSeen": "2026-09-01T23:27:30.076Z",
+     "curatedScore": 65,
+     "curatedReason": "对于髋部骨折的老年患者，受伤到手术的等待时间，可能影响他们术后发生急性心脑血管事件的风险。作为康复治疗师，这意味着你需要更积极地与多学科团队协作，推动患者在允许的情况下尽快手术，这间接支持了术前优化干预的必要性。",
+     "titleZh": "髋部骨折老年患者受伤至手术时间与术后急性心血管或脑血管事件的关联：一项回顾性队列研究",
+     "summaryZh": "一项回顾性队列研究探讨了髋部骨折老年患者从受伤到手术的时间与术后急性心血管或脑血管事件风险之间的关联。",
+     "curatedReasonEn": "For older patients with hip fracture, the time from injury to surgery might influence their risk of postoperative acute cardiovascular or cerebrovascular events. As therapists, this implies a need for more proactive collaboration with the multidisciplinary team to advocate for prompt surgery when medically appropriate, indirectly supporting the necessity of pre-operative optimization.",
+     "limitation": "回顾性队列研究可能存在混杂因素和信息偏差，且因果关系难以确定。",
+     "limitationEn": "Retrospective cohort studies may be subject to confounding factors and information bias, and causal relationships are difficult to establish.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1788305250076-4",
+     "title": "APTA Analysis Reveals Greater Long-Term Payment Gains in Medicare Proposal",
+     "summary": "APTA's analysis suggests that the latest Medicare payment proposal could lead to greater long-term payment gains for physical therapists.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/09/01/apta-analysis-reveals-greater-long-term-payment-gains-in-medicare-proposal",
+     "publishedAt": "2026-09-01T00:00:00.000Z",
+     "firstSeen": "2026-09-01T23:27:30.076Z",
+     "curatedScore": 79,
+     "curatedReason": "APTA 的分析显示 Medicare 最新提案可能带来物理治疗师长期支付的增长。这直接影响您未来的报销收入，务必关注后续的具体政策细节和影响。",
+     "titleZh": "APTA 分析揭示 Medicare 提案中长期支付增长潜力",
+     "summaryZh": "APTA 的分析显示，Medicare 最新提案可能为物理治疗师带来更大的长期支付增长。",
+     "curatedReasonEn": "APTA's analysis indicates that the latest Medicare proposal may lead to long-term payment increases for physical therapists. This directly impacts your future reimbursement revenue, so pay close attention to subsequent policy details and their implications.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "us"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
