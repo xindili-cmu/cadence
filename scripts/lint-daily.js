@@ -91,10 +91,20 @@ function writeMetaLine(line) {
 // Bare English "review" is deliberately omitted (it matches "systematic
 // review"); the Chinese 综述 uses a negative lookbehind so it doesn't fire on
 // "系统综述".
+//
+// 2026-09-06: that lookbehind was `(?<![系])综述` and had never worked. 系统综述
+// is 系-统-综-述, so the character immediately before 综述 is 统, not 系 — the
+// guard only excluded 「系综述」, which nobody writes. It stayed invisible because
+// most days some item carries studyDesign 综述 and absorbs the match. On
+// 2026-09-07 three items were 系统综述, none was 综述, and the lead correctly said
+// 「2 篇系统综述」— so the check failed the edition for a word the edition used
+// correctly. Found via the "Lint daily edition (non-blocking)" annotation on
+// run #826, which exits 1 into a step nothing reads.
+// Multi-character lookbehind, so the guard now names the whole prefix.
 const TYPE_KEYWORDS = {
   'RCT':      [/\bRCT\b/i, /randomi[sz]ed/i, /随机/],
   '系统综述': [/systematic\s+review/i, /meta[\s-]?analysis/i, /系统综述/, /系统评价/, /荟萃/],
-  '综述':     [/narrative\s+review/i, /scoping\s+review/i, /literature\s+review/i, /integrative\s+review/i, /(?<![系])综述/],
+  '综述':     [/narrative\s+review/i, /scoping\s+review/i, /literature\s+review/i, /integrative\s+review/i, /(?<!系统)综述/],
   '述评':     [/\beditorial\b/i, /\bcommentary\b/i, /\bperspective\b/i, /\bviewpoint\b/i, /述评/],
   '观察研究': [/\bcohort\b/i, /cross[\s-]?sectional/i, /case[\s-]?control/i, /retrospective/i, /prospective/i, /队列/, /观察研究/, /回顾性/, /前瞻性/],
 };
@@ -184,4 +194,8 @@ function main() {
   console.log(`✓ lint-daily ${date}: ${items.length} items, ${sections.length} sections, ${warns.length} warning(s) — all checks pass`);
 }
 
-main();
+if (require.main === module) main();
+
+// 导出仅供断言用（pipeline-gates I 段之后的 TYPE_KEYWORDS 段）。CLI 行为不变：
+// require.main 守卫保证直接跑时照旧执行 main()。
+module.exports = { TYPE_KEYWORDS };

@@ -583,6 +583,30 @@ async function run() {
       '判别力：去掉同步行后该脚本就落进 offenders（不是恒真断言）');
   }
 
+  // ── L0 段：lint-daily 的 综述 守卫（2026-09-06）─────────────────────────────
+  // 事故：`(?<![系])综述` 想排除「系统综述」，但 系-统-综-述 里紧挨 综述 的是「统」，
+  // 所以守卫只排除了「系综述」——没人这么写，等于从未生效。平时被掩盖：只要当期有
+  // 任一条 studyDesign = 综述 就吸收掉这次命中。2026-09-07 三条 系统综述、零条 综述，
+  // lead 正确地写了「2 篇系统综述」，于是 lint 把一期正确的日报判红。
+  // 这一段是 lint-daily 的 TYPE_KEYWORDS 第一次被断言覆盖。
+  {
+    console.log('\nL0. lint-daily 的 综述 守卫（不得再对「系统综述」误报）');
+    const { TYPE_KEYWORDS } = require('./lint-daily');
+    const zh = TYPE_KEYWORDS['综述'].find((re) => /综述/.test(re.source));
+    const hits = (re, s) => re.test(s);
+    ok(zh && !hits(zh, '系统综述') && !hits(zh, '今天共有 11 条新文献，其中 2 篇系统综述（最高分 85 分）值得关注。'),
+      'L0-1: 「系统综述」不再命中 综述（2026-09-07 那句 lead 原文）');
+    ok(hits(zh, '一篇叙述性综述') && hits(zh, '综述'),
+      'L0-2: 裸 综述 / 叙述性综述 仍然命中（守卫没有把规则整条废掉）');
+    ok(/\(\?<!系统\)综述/.test(zh.source),
+      'L0-3: 回顾断言写全前缀「系统」（改回单字符类即重现该 bug）');
+    const legacy = /(?<![系])综述/;
+    ok(legacy.test('系统综述') && !zh.test('系统综述'),
+      'L0-4 判别力：旧写法对「系统综述」误报 ∧ 新写法沉默');
+    ok(TYPE_KEYWORDS['系统综述'].some((re) => re.test('系统综述')),
+      'L0-5: 系统综述 档位本身照旧命中（两档没有互相吃掉）');
+  }
+
   // ── L 段：lane split —— SIGNAL 只评证据，news/policy 永不进打分顶位 ──────────
   // 事故（2026-08-28 审计）：rubric 90+ 档含「重大监管/报销变化」，AHPRA 执法新闻
   // 与两条 CMS 付费新闻拿 90，压过全库所有 RCT；About 页却承诺「量证据强度，
