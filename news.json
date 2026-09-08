@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-08T16:43:48.216Z",
-    "totalItems": 72,
+    "lastUpdated": "2026-09-08T21:16:15.434Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -20,14 +20,17 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.02.26362113v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-09-08T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 9,
       "sources": [
         "medRxiv",
         "Disability and rehabilitation",
         "Topics in stroke rehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
         "Gait & posture",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Archives of physical medicine and rehabilitation",
+        "Brazilian journal of physical therapy",
+        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -77,31 +80,7 @@
           "journal": "Gait & posture",
           "title": "Effects of Lokomat-based robotic-assisted gait training and physical therapy on gait quality in children with cerebral palsy: A severity-stratified analysis.",
           "titleZh": "Lokomat 机器人辅助步态训练和物理治疗对脑瘫儿童步态质量的影响：一项按严重程度分层的分析"
-        }
-      ],
-      "heat": 4.71,
-      "themeZh": "卒中后运动技能学习、平衡与步态康复",
-      "themeEn": "Stroke Motor Learning, Balance, Gait Rehab"
-    },
-    {
-      "id": "news-1787824783326-4",
-      "title": "Focal Muscle Vibration for Upper Limb Spasticity After Stroke: A Systematic Review and Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42648695/",
-      "category": "neurological",
-      "publishedAt": "2026-09-07T00:00:00.000Z",
-      "sourceCount": 7,
-      "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Topics in stroke rehabilitation",
-        "Brazilian journal of physical therapy",
-        "medRxiv",
-        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
+        },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -144,9 +123,9 @@
           "titleZh": "上肢康复对多发性硬化症患者疲劳影响的系统综述"
         }
       ],
-      "heat": 3.89,
-      "themeZh": "中枢损伤后肢体痉挛与功能障碍康复技术",
-      "themeEn": "Rehab for CNS Injury Spasticity, Dysfunction"
+      "heat": 6.62,
+      "themeZh": "卒中后运动技能学习、平衡与步态康复的干预与评估",
+      "themeEn": "Stroke motor skill, balance, gait rehabilitation"
     },
     {
       "id": "news-1787943068276-1",
@@ -210,13 +189,13 @@
           "titleZh": "意大利医生和物理治疗师对临床感觉测试的认知与挑战：一项网络调查"
         }
       ],
-      "heat": 2.75,
-      "themeZh": "物理治疗在肌肉骨骼疾病诊疗中的应用与实践",
-      "themeEn": "PT in MSK Care: Practice & Access"
+      "heat": 2.57,
+      "themeZh": "物理治疗师在骨科、急诊与社区肌肉骨骼疾病中的角色",
+      "themeEn": "PT roles in musculoskeletal care"
     },
     {
       "id": "news-1788605075362-11",
-      "title": "[Articles] Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
+      "title": "Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
       "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00910-4/fulltext?rss=yes",
       "category": "orthopedic",
       "publishedAt": "2026-09-07T00:00:00.000Z",
@@ -233,7 +212,7 @@
         {
           "source": "The Lancet",
           "journal": "The Lancet",
-          "title": "[Articles] Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
+          "title": "Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
           "titleZh": "德国一项多中心随机对照临床试验：抽脂术对比保守疗法治疗脂肪水肿患者"
         },
         {
@@ -255,9 +234,73 @@
           "titleZh": "探索脊髓损伤伴肥胖退伍军人限时进食体验的定性研究"
         }
       ],
-      "heat": 2.22,
-      "themeZh": "淋巴水肿与肥胖的保守治疗及生活方式干预",
-      "themeEn": "Lymphedema, Obesity: Conservative & Lifestyle Rx"
+      "heat": 2.08,
+      "themeZh": "淋巴水肿与肥胖的饮食和物理治疗干预效果",
+      "themeEn": "Diet, PT for lymphedema and obesity"
+    },
+    {
+      "id": "news-1788281123739-0",
+      "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42676087/",
+      "category": "orthopedic",
+      "publishedAt": "2026-09-06T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "The Journal of orthopaedic and sports physical therapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Clinical rehabilitation",
+        "British journal of sports medicine",
+        "International journal of sports physical therapy"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
+          "titleZh": "膝骨关节炎阻力训练的个体化方案：强度与训练量效应的剂量反应荟萃分析系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effects of a Cycling-Based Aerobic Exercise Program Versus a Resistance and Neuromuscular Exercise Program on Exercise-Induced Hypoalgesia in Knee Osteoarthritis: A Study Protocol for a Randomized Clinical Trial.",
+          "titleZh": "循环有氧运动与抗阻及神经肌肉运动方案对膝骨关节炎运动诱导镇痛影响的随机临床试验方案"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Effects of short-term compression in people with knee osteoarthritis: A sham-controlled randomised trial.",
+          "titleZh": "膝骨关节炎患者短期加压治疗效果：一项假对照随机试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial.",
+          "titleZh": "数字疗法结合运动与认知行为疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effects of Transcranial Direct Current Stimulation and Individualized Physical Therapy on Pain and Function in Individuals With Chronic Knee Pain: A Pilot Study.",
+          "titleZh": "经颅直流电刺激联合个体化物理治疗对慢性膝关节疼痛患者疼痛和功能的影响：一项试点研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Adductor-Related Athletic Groin Pain: A Clinical Commentary.",
+          "titleZh": "内收肌相关运动性腹股沟疼痛：一项临床述评"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Calcific Patellar Tendinopathy. A Case Report Integrating Diagnostic Ultrasound Throughout a Multi-Modal Treatment Approach.",
+          "titleZh": "钙化性髌腱病：诊断性超声与多模式治疗方法整合的病例报告"
+        }
+      ],
+      "heat": 1.84,
+      "themeZh": "膝关节与髌股疼痛：运动、数字疗法及神经刺激",
+      "themeEn": "Knee, patellofemoral pain treatment"
     },
     {
       "id": "news-1788281123741-1",
@@ -306,12 +349,80 @@
           "titleZh": "特定手法治疗对健康个体及肌肉骨骼疾病患者的生物学效应：一项系统综述与荟萃分析"
         }
       ],
-      "heat": 1.96,
+      "heat": 1.84,
       "themeZh": "慢性腰痛的运动疗法、本体感觉与手法治疗",
-      "themeEn": "CLBP Exercise, Proprioception, Manual Therapy"
+      "themeEn": "Exercise, manual therapy for chronic LBP"
     }
   ],
   "items": [
+    {
+      "id": "news-1788281123739-0",
+      "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
+      "summary": "A dose-response meta-analysis of 20 RCTs (n=791) found that isotonic resistance training may reduce pain (MD, -3.52 at 6000 repetitions), improve function (MD, -16.66 at 2600 repetitions), and increase muscle strength (standardized MD, 0.12 at 1600 repetitions) in knee OA patients, with moderate intensity yielding the greatest estimated benefits.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42676087/",
+      "publishedAt": "2026-09-01T00:00:00.000Z",
+      "firstSeen": "2026-09-01T16:45:23.739Z",
+      "curatedScore": 85,
+      "curatedReason": "针对膝骨关节炎的阻力训练，这份剂量反应荟萃分析给出了具体参数：中等强度、6000 次重复总量的训练对疼痛缓解最有效；2600 次重复总量对功能改善最佳；1600 次对力量增益最大。这些数字为你优化门诊康复方案提供了细化证据。",
+      "titleZh": "膝骨关节炎阻力训练的个体化方案：强度与训练量效应的剂量反应荟萃分析系统综述",
+      "summaryZh": "一项包含 20 项随机对照试验（791 名患者）的剂量反应荟萃分析显示，等张阻力训练可改善膝骨关节炎患者的疼痛（6000 次重复时平均差异为 -3.52）、功能（2600 次重复时平均差异为 -16.66）和肌肉力量（1600 次重复时标准化平均差异为 0.12）。中等强度训练与特定训练量可带来最大益处。",
+      "curatedReasonEn": "For knee OA resistance training, this dose-response meta-analysis offers specific parameters: moderate intensity with 6000 total repetitions is most effective for pain relief; 2600 total repetitions for functional improvement; and 1600 total repetitions for strength gains. These numbers provide detailed evidence to optimize your outpatient rehab protocols.",
+      "limitation": "证据确定性为低至极低，且中心化康复效果优于家庭康复，提示结果外推性需谨慎。",
+      "limitationEn": "The certainty of evidence is low to very low, and center-based programs showed more pronounced effects than home-based ones, suggesting caution in generalizing these findings.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+      "id": "news-1788902156381-11",
+      "title": "CMS Cracks Down on Massive $3.4 Billion Medical Equipment Supplier Fraud Scheme",
+      "summary": "CMS announced a crackdown on a massive $3.4 billion medical equipment supplier fraud scheme, indicating increased scrutiny and enforcement actions against fraudulent activities within the healthcare system.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-cracks-down-massive-3-4-billion-medical-equipment-supplier-fraud-scheme",
+      "publishedAt": "2026-09-08T12:00:00.000Z",
+      "firstSeen": "2026-09-08T21:15:56.381Z",
+      "curatedScore": 79,
+      "curatedReason": "CMS 正在大力打击医疗设备供应商的欺诈行为，涉案金额高达 34 亿美元。作为康复领域专业人士，你应审查所有合作的医疗设备供应商资质，确保其合规性，规避潜在的法律风险与报销纠纷。",
+      "titleZh": "CMS 打击 34 亿美元医疗设备供应商大规模欺诈计划",
+      "summaryZh": "CMS 宣布将严厉打击一起涉案金额高达 34 亿美元的医疗设备供应商大规模欺诈计划，这表明医疗系统内部欺诈行为将面临更严格的审查和执法行动。",
+      "curatedReasonEn": "CMS is vigorously cracking down on medical equipment supplier fraud, with cases totaling $3.4 billion. As a rehabilitation professional, you should scrutinize the credentials of all medical equipment suppliers you collaborate with to ensure compliance and mitigate potential legal risks and reimbursement disputes.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1788902156381-10",
+      "title": "Novel Telerehabilitation Interventions for Stress Urinary Incontinence : A Systematic Review of Randomised Controlled Trials",
+      "summary": "A systematic review of randomized controlled trials suggests that telerehabilitation-delivered pelvic floor muscle training (PFMT) is effective for women with stress urinary incontinence (SUI), showing benefits in clinical outcomes, adherence, satisfaction, and healthcare accessibility.",
+      "category": "orthopedic",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00897-X/fulltext?rss=yes",
+      "publishedAt": "2026-09-08T00:00:00.000Z",
+      "firstSeen": "2026-09-08T21:15:56.381Z",
+      "curatedScore": 75,
+      "curatedReason": "针对压力性尿失禁的远程盆底肌训练，这项系统综述肯定了其临床有效性。鉴于远程医疗的便捷性，这意味着你可以更广泛地将盆底康复服务扩展到那些不便来院的患者。",
+      "titleZh": "压力性尿失禁的新型远程康复干预：随机对照试验系统综述",
+      "summaryZh": "一项随机对照试验系统综述表明，远程康复提供的盆底肌训练（PFMT）对患有压力性尿失禁（SUI）的女性有效，在临床结局、依从性、满意度和医疗可及性方面均显示出益处。",
+      "curatedReasonEn": "This systematic review affirms the clinical effectiveness of telerehabilitation for pelvic floor muscle training in stress urinary incontinence. Given the convenience of telehealth, this finding suggests you can more broadly extend pelvic rehabilitation services to patients who have difficulty accessing in-person care.",
+      "limitation": "研究未明确提供系统综述的具体纳入研究设计和证据等级，无法判断其证据强度。",
+      "limitationEn": "The study does not explicitly provide the specific study designs included in the systematic review or the GRADE of evidence, making it difficult to assess the strength of the evidence.",
+      "tags": [
+        "research",
+        "pelvic-floor",
+        "telehealth"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1788281123741-1",
       "title": "The Efficacy of Exercise Therapy for Nonspecific Chronic Low Back Pain According to the FITT Principle: A Systematic Review With Meta-analyses.",
@@ -995,7 +1106,7 @@
     },
     {
       "id": "news-1788605075362-11",
-      "title": "[Articles] Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
+      "title": "Liposuction versus conservative therapy for patients with lipoedema in Germany: a multicentre, randomised controlled clinical trial",
       "summary": "A multicenter, randomized controlled clinical trial in Germany found liposuction to be superior to conservative therapy in reducing leg pain and improving quality of life for patients with lipoedema, despite being associated with a higher rate of serious adverse events.",
       "category": "orthopedic",
       "source": "The Lancet",
