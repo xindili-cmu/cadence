@@ -54,7 +54,12 @@ const DRY_RUN = process.env.DRY_RUN === 'true';
 // 'full' = Exa + PubMed + RSS (daily sweep). 'direct' = PubMed + RSS only —
 // free to run, so it polls every 2h AIHOT-style; exits before the LLM call
 // when nothing new arrived, so quiet runs cost zero.
+// 'inject' = no legs at all; only the items in INJECT_ITEMS (a JSON file of
+// [{title,url,source,text?,category?}]) go through the normal gates + curation.
+// For a paper the legs can't reach (journal not in MEDLINE, RSS window already
+// passed — 2026-09-08, Meas Phys Educ Exerc Sci). Local-only; needs the LLM key.
 const REFRESH_MODE = (process.env.REFRESH_MODE || 'full').toLowerCase();
+const INJECT_ITEMS = process.env.INJECT_ITEMS || '';
 
 const NEWS_PATH = path.join(__dirname, '..', 'news.json');
 
@@ -436,6 +441,7 @@ const ROSTER_NAME_KEYS = new Set(
 // empty — so the IF/JCR badge, hotTopics' 刊数 and the per-journal selection cap
 // (which counts BY JOURNAL) could only see the PubMed leg. 35/71 live rows had
 // no journal on 2026-07-28, i.e. the cap silently did not apply to them.
+const VALID_CATS = new Set(['orthopedic', 'neurological', 'sports', 'pediatric', 'geriatric', 'cardiopulmonary', 'manual-modality', 'practice']);
 const ROSTER_JOURNAL_BY_NAME = new Map(
   SOURCES.filter(s => s.kind === 'journal' && s.journalName).map(s => [s.name, s.journalName])
 );
@@ -857,6 +863,10 @@ async function dateFromArticlePage(url) {
       // "last updated" widget. Ordered before it for the same reason.
       || (html.match(/<meta[^>]+name=["']citation_(?:publication_)?date["'][^>]+content=["']([^"']+)["']/i) || [])[1]
       || (html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']citation_(?:publication_)?date["']/i) || [])[1]
+      // Dublin Core — Taylor & Francis pages carry only <meta name="dc.Date">
+      // (2026-09-08, tandfonline). Case-insensitive via the /i flag.
+      || (html.match(/<meta[^>]+name=["']dc\.date["'][^>]+content=["']([^"']+)["']/i) || [])[1]
+      || (html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']dc\.date["']/i) || [])[1]
       || (html.match(/<time[^>]+datetime=["']([^"']+)["']/i) || [])[1];
     // citation_date is often "2026/07/14" — Date() reads that, but not "2026/7".
     if (raw && /^\d{4}\/\d{1,2}$/.test(raw.trim())) raw = raw.trim() + '/01';
@@ -1682,7 +1692,7 @@ async function main() {
   const llmKeyByProvider = { gemini: GEMINI_API_KEY, deepseek: DEEPSEEK_API_KEY, anthropic: ANTHROPIC_API_KEY };
   const llmKeyName = { gemini: 'GEMINI_API_KEY', deepseek: 'DEEPSEEK_API_KEY', anthropic: 'ANTHROPIC_API_KEY' }[LLM_PROVIDER] || 'ANTHROPIC_API_KEY';
   const llmKey = llmKeyByProvider[LLM_PROVIDER] || ANTHROPIC_API_KEY;
-  const needExa = REFRESH_MODE !== 'direct';
+  const needExa = REFRESH_MODE === 'full';
   if ((needExa && !EXA_API_KEY) || !llmKey) { console.error(`❌ Missing API keys (${needExa ? 'EXA_API_KEY + ' : ''}${llmKeyName})`); process.exit(1); }
   console.log(`  LLM provider: ${LLM_PROVIDER} · mode: ${REFRESH_MODE}`);
 
@@ -1699,14 +1709,42 @@ async function main() {
     }
   }
 
-  console.log(`\n📚 PubMed E-utilities`);
-  raw.push(...await fetchPubMed());
+  if (REFRESH_MODE !== 'inject') {
+    console.log(`\n📚 PubMed E-utilities`);
+    raw.push(...await fetchPubMed());
 
-  console.log(`\n📰 RSS feeds`);
-  raw.push(...await fetchRssFeeds());
+    console.log(`\n📰 RSS feeds`);
+    raw.push(...await fetchRssFeeds());
 
-  console.log(`\n🕸️ Listing-page scrapes`);
-  raw.push(...await fetchScrapes());
+    console.log(`\n🕸️ Listing-page scrapes`);
+    raw.push(...await fetchScrapes());
+  }
+
+  if (INJECT_ITEMS) {
+    // Hand-fed items. Same invariants as every leg: publishedAt is read from the
+    // article page itself (dateUnverified → verifyExaDates), never from the
+    // clock or the JSON; source must be a roster name (else purged next run);
+    // journal is filled from the roster like an RSS item.
+    console.log(`\n💉 Injected items from ${INJECT_ITEMS}`);
+    const list = JSON.parse(fs.readFileSync(INJECT_ITEMS, 'utf8'));
+    for (const it of list) {
+      if (!it.title || !it.url || !it.source) { console.log(`   ⏭️  skipped (needs title/url/source): ${JSON.stringify(it).slice(0, 80)}`); continue; }
+      if (!ROSTER_JOURNAL_BY_NAME.has(it.source) && !SOURCES.some(s => s.name === it.source)) { console.log(`   ⏭️  skipped (source not in roster): ${it.source}`); continue; }
+      // Page date wins (verifyExaDates). `publishedDate` in the file is the
+      // publisher feed's own dc:date, used only if the page can't be read
+      // (T&F sits behind a bot wall) — logged so a clock-stamp can't hide here.
+      let pub = dateFromUrlPath(it.url) || await dateFromArticlePage(it.url);
+      if (!pub && it.publishedDate && !isNaN(new Date(it.publishedDate))) {
+        pub = new Date(it.publishedDate).toISOString();
+        console.log(`   ⚠️  page date unreadable, using file publishedDate ${pub.slice(0, 10)} for ${it.url}`);
+      }
+      if (!pub) { console.log(`   ⏭️  skipped (undatable): ${it.url}`); continue; }
+      raw.push({ title: it.title, url: it.url, text: (it.text || '').slice(0, 800), highlights: '',
+        publishedDate: pub, score: 0.5, source: it.source,
+        category: VALID_CATS.has(it.category) ? it.category : null });
+      console.log(`   + ${it.title.slice(0, 70)} (${pub.slice(0, 10)})`);
+    }
+  }
 
   console.log(`\n📊 Raw: ${raw.length}`);
   // URL-shaped junk (job boards, login/cart pages) goes before curation — it can
@@ -1770,7 +1808,6 @@ async function main() {
     return m;
   })();
 
-  const VALID_CATS = new Set(['orthopedic', 'neurological', 'sports', 'pediatric', 'geriatric', 'cardiopulmonary', 'manual-modality', 'practice']);
   const final = curated.map(c => {
     const o = unique[c.index];
     if (!o) return null;
