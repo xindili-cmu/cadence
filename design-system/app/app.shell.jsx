@@ -6,6 +6,29 @@ const { Logo, Button, Input, Icon, CategoryTag, SignalScore, CATEGORIES, catShor
 // Single breakpoint (≤768px = mobile) shared by the whole app. matchMedia
 // listener so a tablet rotation / window resize re-lays-out live.
 const CD_MOBILE_MQ = '(max-width: 768px)';
+// Tablet tier (2026-09-08 design audit): between the phone breakpoint and the
+// width the three-column desktop layout actually needs (232 rail + 300 rail +
+// gaps/padding = 628px before the feed gets a pixel), an iPad in portrait
+// (768–1024px) rendered the desktop shell with a ~190px reading column: header
+// date under the search box, sort buttons under the right rail, theme labels
+// truncated. In this band the right DigestRail + header date block hide and
+// the feed gets the width; NavRail stays.
+const CD_TABLET_MQ = '(min-width: 769px) and (max-width: 1099px)';
+function useCdMediaQuery(mq) {
+  const [on, setOn] = React.useState(() => window.matchMedia(mq).matches);
+  React.useEffect(() => {
+    const m = window.matchMedia(mq);
+    const onChange = (e) => setOn(e.matches);
+    if (m.addEventListener) m.addEventListener('change', onChange);
+    else m.addListener(onChange); // Safari <14
+    return () => {
+      if (m.removeEventListener) m.removeEventListener('change', onChange);
+      else m.removeListener(onChange);
+    };
+  }, [mq]);
+  return on;
+}
+function useCdTablet() { return useCdMediaQuery(CD_TABLET_MQ); }
 function useCdMobile() {
   const [mobile, setMobile] = React.useState(() => window.matchMedia(CD_MOBILE_MQ).matches);
   React.useEffect(() => {
@@ -21,7 +44,7 @@ function useCdMobile() {
   return mobile;
 }
 
-function AppHeader({ query, onQuery, lang, onLang, mobile }) {
+function AppHeader({ query, onQuery, lang, onLang, mobile, tablet = false }) {
   const t = window.CD_T;
   const zh = lang === 'zh';
   // Masthead date — anchored to the NEWEST ITEM DAY in the loaded feed (Beijing
@@ -74,7 +97,7 @@ function AppHeader({ query, onQuery, lang, onLang, mobile }) {
         {/* Context title + today's date — sits just past the logo divider, in
             the content area. Brand-level line (not the page heading, which the
             FeedToolbar still renders). Hidden on mobile (no room next to search). */}
-        {!mobile && (
+        {!mobile && !tablet && (
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0 }}>
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 17, lineHeight: 1.15, color: 'var(--text-primary)', whiteSpace: 'nowrap' }}>{zh ? (isViewerToday ? '今日康复信号' : '最新康复信号') : (isViewerToday ? "Today's rehab signal" : 'Latest rehab signal')}</span>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11.5, color: 'var(--text-tertiary)', whiteSpace: 'nowrap', marginTop: 2 }}>{dateStr}</span>
@@ -127,7 +150,7 @@ function SpecBtn({ id, label, dot, idx, active, onClick, count }) {
       {typeof count === 'number' && (
         <span
           title={(typeof window !== 'undefined' && window.CD_LANG === 'zh') ? '当前信息流收录数（不含更早的历史归档）' : 'Stories in the current feed (archive not counted)'}
-          style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, flex: 'none', color: active ? 'var(--green-600)' : 'var(--ink-300)', fontVariantNumeric: 'tabular-nums' }}>{count}</span>
+          style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, flex: 'none', color: active ? 'var(--green-600)' : 'var(--text-tertiary)', fontVariantNumeric: 'tabular-nums' }}>{count}</span>
       )}
     </button>
   );
@@ -574,4 +597,4 @@ function MobileSignalCard({ stories, dayKey = 'today', onPick }) {
   );
 }
 
-Object.assign(window, { AppHeader, NavRail, DigestRail, MobileTabBar, MobileSignalCard, useCdMobile });
+Object.assign(window, { AppHeader, NavRail, DigestRail, MobileTabBar, MobileSignalCard, useCdMobile, useCdTablet });

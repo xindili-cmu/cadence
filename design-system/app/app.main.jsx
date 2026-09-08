@@ -14,20 +14,24 @@ const cdDayLabels = () => {
   };
 };
 
-function FeedToolbar({ view, count, sortBy = 'signal', onSort }) {
+function FeedToolbar({ view, count, sortBy = 'signal', onSort, mobile = false }) {
   const t = window.CD_T;
   const id = ['curated', 'all', 'daily', 'sources', 'about', 'feedback'].includes(view) ? view : 'curated';
+  // mobile (2026-09-08 design audit): title block and sort toggle sat side by
+  // side, so on a 390px phone the sort buttons squeezed the title into a
+  // ~120px column — "All stories" broke onto two lines at 32px and the
+  // subtitle wrapped six deep. Stack them instead.
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12, marginBottom: 16 }}>
+    <div style={{ display: 'flex', flexDirection: mobile ? 'column' : 'row', alignItems: mobile ? 'stretch' : 'flex-end', gap: mobile ? 10 : 12, marginBottom: 16 }}>
       <div>
         <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'var(--text-3xl)', letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>{t('nav.' + id)}</h1>
         {id !== 'daily' && (
           <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-sans)', fontSize: 13.5, color: 'var(--text-tertiary)' }}>{t('sub.' + id)}</p>
         )}
       </div>
-      <span style={{ flex: 1 }} />
+      {!mobile && <span style={{ flex: 1 }} />}
       {(id === 'curated' || id === 'all') && (
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2 }}>
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2, alignSelf: mobile ? 'flex-start' : undefined }}>
           {/* Real sort toggle: Signal score ⇄ Most recent. (Was a dead button
               styled like a control but wired to nothing — 2026-07-16 review.)
               The SIGNAL explainer 'i' lives only on the score slider below now,
@@ -1156,9 +1160,10 @@ function SourcesGrid({ stories }) {
             </button>
           ))}
         </div>
-        {/* Result count */}
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginLeft: 'auto' }}>
-          {filteredWall.length}
+        {/* Result count — labelled: on phones the pills wrap and a bare "56"
+            floated alone on its own line (2026-09-08 design audit). */}
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-tertiary)', marginLeft: 'auto', whiteSpace: 'nowrap' }}>
+          {filteredWall.length} {window.CD_LANG === 'zh' ? '个信源' : (filteredWall.length === 1 ? 'source' : 'sources')}
         </span>
       </div>
 
@@ -1990,6 +1995,9 @@ function FeedApp() {
   // ≤768px: NavRail → bottom tab bar, DigestRail → collapsible feed-top card,
   // category tabs wrap → horizontal scroll (Cindy 2026-06-11).
   const isMobile = window.useCdMobile();
+  // 769–1099px (iPad portrait, small windows): desktop nav rail, but no right
+  // rail — see CD_TABLET_MQ in app.shell.jsx (2026-09-08 design audit).
+  const isTablet = window.useCdTablet();
   // Narrow COLUMN (not viewport) — routes HotTopics + lead card to their
   // stacked variants; see useNarrowColumn above.
   const [mainRef, narrowCol] = useNarrowColumn();
@@ -2343,19 +2351,19 @@ function FeedApp() {
           query (daily/sources/about/feedback) used to write ?q= into the hash
           and change nothing on screen — a silent no-op (2026-07-15 adversarial
           review #3). Jump to All stories so results always appear. */}
-      <AppHeader query={query} onQuery={(v) => { setQuery(v); if (v && view !== 'curated' && view !== 'all') setView('all'); }} lang={lang} onLang={toggleLang} mobile={isMobile} />
+      <AppHeader query={query} onQuery={(v) => { setQuery(v); if (v && view !== 'curated' && view !== 'all') setView('all'); }} lang={lang} onLang={toggleLang} mobile={isMobile} tablet={isTablet} />
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
         {!isMobile && <NavRail view={view} onView={setView} category={category} countPool={catCountPool}
           onCategory={(c) => { setCategory(c); if (view !== 'curated' && view !== 'all') setView('curated'); }} />}
 
         <main ref={mainRef} style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
           {/* Daily view has its own masthead — no page toolbar (Cindy 2026-06-13) */}
-          {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} sortBy={sortBy} onSort={setSortBy} />}
+          {!isDaily && !isAbout && <FeedToolbar view={view} count={isSources || isFeedback ? null : stories.length} sortBy={sortBy} onSort={setSortBy} mobile={isMobile} />}
 
           {/* Mobile: Today's Signal folded into the feed top — Curated & Daily
               only, and only when unfiltered, mirroring the desktop rail's role
               as ambient context rather than a search result. */}
-          {isMobile && !isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
+          {(isMobile || isTablet) && !isSources && view === 'curated' && !q && category === 'all' && ctype === 'all' && (
             <MobileSignalCard stories={railStories} dayKey={railDay} onPick={scrollToStory} />
           )}
 
@@ -2578,7 +2586,7 @@ function FeedApp() {
           )}
         </main>
 
-        {!isSources && !isFeedback && !isAbout && !isMobile && (isDaily
+        {!isSources && !isFeedback && !isAbout && !isMobile && !isTablet && (isDaily
           ? <DailyArchiveRail current={dailyDate} onPick={setDailyDate} />
           : (
             <DigestRail stories={railStories} dayKey={railDay} onPick={scrollToStory}>

@@ -359,7 +359,12 @@ export function NewsCard({
   return (
     <article {...articleProps}>
       {selectedSpine}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11 }}>
+      {/* flexWrap (2026-09-08 design audit): every chip is nowrap, so a card
+          carrying SIGNAL + specialty + design + Preprint + Tech ran 468px wide
+          on a 390px phone — the browser zoomed the WHOLE page out to fit it
+          (17% smaller type, bottom tab bar pushed off-screen). The lead
+          variants already wrapped; this row didn't. */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: isCompact ? 8 : 11, flexWrap: 'wrap', rowGap: 6 }}>
         {isIntel ? intelChip : (typeof score === 'number' && <SignalScore score={score} variant={isCompact ? 'chip' : 'badge'} />)}
         <CategoryTag category={category} size={isCompact ? 'sm' : 'md'} useShort />
         {designChip}
