@@ -2369,12 +2369,16 @@ function FeedApp() {
                   shorter at every width (ZH 366px: 207px → 106px). */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                 {isMobile && <SpecialtySelect value={category} onChange={setCategory} />}
+                {/* flex-basis 160 (not 0): with basis 0 the tabs absorbed ALL the
+                    squeeze and shrank to ~40px beside the select + slider on a phone
+                    ("A" clipped, 2026-09-08). A real basis makes the slider wrap to
+                    row 2 first, so the tabs keep a scrollable strip. */}
                 <TypeTabs value={ctype} onChange={setCtype} pool={typeCountPool}
                   className={isMobile ? 'cd-hscroll' : undefined}
-                  style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2, flex: 1, minWidth: 0 } : undefined} />
+                  style={isMobile ? { flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: 2, flex: '1 1 160px', minWidth: 0 } : undefined} />
                 {/* Signal-score filter — drag the slider to set a minimum score.
                     Far left (≤60) = all; drag right raises the floor (data spans 60–85). */}
-                <span style={{ flex: 'none', width: 1, alignSelf: 'stretch', minHeight: 20, background: 'var(--border-subtle)', margin: '0 2px' }} />
+                {!isMobile && <span style={{ flex: 'none', width: 1, alignSelf: 'stretch', minHeight: 20, background: 'var(--border-subtle)', margin: '0 2px' }} />}
                 <div style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}
                   title={zh ? '拖动设置信号分下限' : 'Drag to set a minimum Signal score'}>
                   <input type="range" min={60} max={85} step={5} value={minScore || 60}

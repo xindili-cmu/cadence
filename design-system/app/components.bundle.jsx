@@ -741,6 +741,10 @@ function NewsCard({
         </span>
       )}
       <span style={{ flex: 1 }} />
+      {/* Actions travel as ONE unit: with each action a separate flex child,
+          a narrow card wrapped "Read original" alone onto row 2 while "Copy
+          link" stayed on the meta row (mobile, 2026-09-08). */}
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 12, flexWrap: 'nowrap', marginLeft: 'auto' }}>
       {permalink && (
         // Real <a href> (not a button) so crawlers discover the per-item URL
         // from the feed itself; click is intercepted to copy instead of
@@ -761,7 +765,7 @@ function NewsCard({
           }}
           title={t('copyLink', 'Copy link')}
           style={{
-            display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none',
+            display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none', whiteSpace: 'nowrap',
             fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, cursor: 'pointer',
             color: copied ? 'var(--green-700)' : (hover ? 'var(--text-secondary)' : 'var(--text-tertiary)'),
             transition: 'var(--transition-colors)',
@@ -774,13 +778,14 @@ function NewsCard({
         type="button"
         onClick={(e) => { e.stopPropagation(); onOpen ? onOpen() : window.open(sourceUrl, '_blank'); }}
         style={{
-          display: 'inline-flex', alignItems: 'center', gap: 5, background: 'transparent', border: 'none',
-          fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+          display: 'inline-flex', alignItems: 'center', gap: 5, background: 'transparent', border: 'none', padding: 0,
+          fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 600, cursor: 'pointer', whiteSpace: 'nowrap',
           color: hover ? 'var(--green-700)' : 'var(--text-tertiary)', transition: 'var(--transition-colors)',
         }}
       >
         {t('readOriginal', 'Read original')} <Icon name="arrow-up-right" size={15} strokeWidth={2} />
       </button>
+      </span>
     </div>
   );
 
