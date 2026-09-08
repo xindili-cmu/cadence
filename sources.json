@@ -770,6 +770,10 @@
     "cats": [
       "practice",
       "sports"
-    ]
+    ],
+    "rss": [
+      "https://www.tandfonline.com/feed/rss/hmpe20"
+    ],
+    "note": "2026-09-08 加 rss 腿：该刊不进 MEDLINE（见 journals.json _note），PubMed [ta] 闸门几乎零进量，此前 entry 只供刊名归属。feed 为 RSS 1.0/RDF：dc:date 有、description 为空，parseFeed 已兼容（title/link/dc:date）。"
   }
 ]
