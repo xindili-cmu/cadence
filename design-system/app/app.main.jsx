@@ -1234,25 +1234,25 @@ const dailyScoreColor = (s) => (s >= 85 ? '#2A5894' : s >= 75 ? '#1B1E23' : '#90
 
 // Meta line on every daily card: ● specialty / 信号分 score / SOURCE.
 // `highlight` = the lead card's emphasised variant (brand-blue specialty, larger).
-function DailyMeta({ s, zh, highlight }) {
+function DailyMeta({ s, zh, highlight, mobile }) {
   const sep = highlight ? '#CFCBBE' : '#D8D4C8';
   const catC = highlight ? '#3D74B8' : '#5A6068';
   const dotC = highlight ? '#3D74B8' : dailyCardColor(s.category);
+  const gap = highlight ? (mobile ? 8 : 11) : 9;
+  // Each "/ item" is ONE nowrap unit: separators used to be their own flex
+  // children, so a wrap on a phone left a slash dangling at the line end and
+  // another opening the next line ("Signal 85 /" ↵ "Systematic review", 9-08).
+  const Sep = () => <span style={{ color: sep, marginRight: gap }}>/</span>;
   return (
-    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: highlight ? 11 : 9, fontFamily: 'var(--font-mono)', fontSize: highlight ? 13 : 12, letterSpacing: highlight ? '0.02em' : '0', color: highlight ? '#6A7078' : '#8A8F98', marginBottom: highlight ? 18 : 12 }}>
+    <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', rowGap: 6, columnGap: gap, fontFamily: 'var(--font-mono)', fontSize: highlight ? (mobile ? 12 : 13) : 12, letterSpacing: highlight ? '0.02em' : '0', color: highlight ? '#6A7078' : '#8A8F98', marginBottom: highlight ? (mobile ? 14 : 18) : 12 }}>
       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, color: catC, whiteSpace: 'nowrap' }}>
         <span style={{ width: 7, height: 7, borderRadius: 2, background: dotC }} />{dailyCatLabel(s.category)}
       </span>
-      <span style={{ color: sep }}>/</span>
-      <span style={{ whiteSpace: 'nowrap' }}>{zh ? '信号分' : 'Signal'} <b style={{ fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</b></span>
+      <span style={{ whiteSpace: 'nowrap' }}><Sep />{zh ? '信号分' : 'Signal'} <b style={{ fontWeight: 600, color: dailyScoreColor(s.score) }}>{s.score}</b></span>
       {highlight && s.studyDesign && (
-        <React.Fragment>
-          <span style={{ color: sep }}>/</span>
-          <span style={{ whiteSpace: 'nowrap' }}>{zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign)}</span>
-        </React.Fragment>
+        <span style={{ whiteSpace: 'nowrap' }}><Sep />{zh ? s.studyDesign : (DAILY_STUDY_EN[s.studyDesign] || s.studyDesign)}</span>
       )}
-      <span style={{ color: sep }}>/</span>
-      <span style={{ textTransform: 'uppercase', letterSpacing: highlight ? '0.08em' : '0.06em', whiteSpace: 'nowrap' }}>{s.wallSource || s.source}</span>
+      <span style={{ whiteSpace: 'nowrap' }}><Sep /><span style={{ textTransform: 'uppercase', letterSpacing: highlight ? '0.08em' : '0.06em' }}>{s.wallSource || s.source}</span></span>
     </div>
   );
 }
@@ -1299,7 +1299,7 @@ function DailySectionHead({ title, engKicker, count, mono, mb = 14, zh }) {
 // this alias keeps the daily brief's existing call sites unchanged.
 const DAILY_STUDY_EN = window.CD_STUDY_EN || { '系统综述': 'Systematic review', '观察研究': 'Observational', '综述': 'Review', '述评': 'Editorial', 'RCT': 'RCT' };
 
-function DailyMasthead({ edition, zh }) {
+function DailyMasthead({ edition, zh, mobile }) {
   const t = window.CD_T; // 少了这行 → 快讯 chip 一渲染就 ReferenceError，整页白屏（2026-08-14）
   const d = new Date(edition.date + 'T12:00:00Z');
   const dateStr = `${d.getUTCFullYear()}.${String(d.getUTCMonth() + 1).padStart(2, '0')}.${String(d.getUTCDate()).padStart(2, '0')}`;
@@ -1310,16 +1310,19 @@ function DailyMasthead({ edition, zh }) {
     .filter((x) => x.n > 0)
     .sort((a, b) => (ORDER[a.cat] ?? 99) - (ORDER[b.cat] ?? 99)); // fixed display order 骨科/神经/手法/心肺 (not a data change)
   return (
-    <header style={{ position: 'relative', background: '#16314F', borderRadius: 18, padding: 'clamp(30px,5vw,48px)', marginBottom: 'clamp(40px,6vw,60px)', overflow: 'hidden' }}>
-      <svg width="170" height="148" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -20, bottom: -30, opacity: 0.12, pointerEvents: 'none' }}>
+    // Mobile (9-08): masthead ate ~1/4 of the first screen — tighter padding,
+    // smaller title, halved vertical rhythm, decorative bars dropped (they ran
+    // into the count line at phone widths).
+    <header style={{ position: 'relative', background: '#16314F', borderRadius: mobile ? 14 : 18, padding: mobile ? '20px 20px 18px' : 'clamp(30px,5vw,48px)', marginBottom: mobile ? 28 : 'clamp(40px,6vw,60px)', overflow: 'hidden' }}>
+      {!mobile && <svg width="170" height="148" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -20, bottom: -30, opacity: 0.12, pointerEvents: 'none' }}>
         <g transform="skewX(-22.490)" fill="#FFFFFF">
           <rect x="664.6" y="410" width="40.5" height="92" /><rect x="745.6" y="343" width="42.5" height="159" /><rect x="832.5" y="277" width="42.6" height="225" /><rect x="930.0" y="121" width="46.7" height="474" /><rect x="1035.4" y="344" width="46.9" height="158" /><rect x="1128.9" y="415" width="39.9" height="87" />
         </g>
-      </svg>
+      </svg>}
       <div style={{ position: 'relative' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: 18 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
-        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: 'clamp(34px,6vw,56px)', lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
-        <div style={{ marginTop: 24, paddingTop: 20, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: 13.5, color: '#AFC4DC' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: mobile ? 10 : 18 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
+        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: mobile ? 28 : 'clamp(34px,6vw,56px)', lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
+        <div style={{ marginTop: mobile ? 14 : 24, paddingTop: mobile ? 12 : 20, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: mobile ? '8px 16px' : '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: mobile ? 12 : 13.5, color: '#AFC4DC' }}>
           {/* "本期/this edition", not "今日/today" — the edition is a relay
               window minus already-published dedup, so its count legitimately
               differs from the rail's calendar-day count (23 vs 19 confusion,
@@ -1572,23 +1575,25 @@ function DailyBriefView({ L, date, onDate, mobile }) {
 
   return (
     <div>
-      <DailyMasthead edition={edition} zh={zh} />
+      <DailyMasthead edition={edition} zh={zh} mobile={mobile} />
 
       {/* Tier 1 — the one story worth 5 minutes, with its clinical take */}
       {leadStory && (
-        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
+        <section style={{ marginBottom: mobile ? 36 : 'clamp(48px,7vw,72px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: mobile ? 12 : 18 }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#3D74B8', display: 'flex', alignItems: 'center', gap: 8, whiteSpace: 'nowrap' }}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3D74B8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
               {zh ? '只有 5 分钟？读这条' : 'Only 5 minutes? Read this'}
             </span>
             <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
           </div>
-          <article style={{ background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: 18, padding: 'clamp(24px,4.2vw,40px)', boxShadow: '0 1px 2px rgba(27,30,35,0.03), 0 18px 40px -28px rgba(27,30,35,0.22)' }}>
+          <article style={{ background: '#FFFFFF', border: '1px solid #E6E3D9', borderRadius: mobile ? 14 : 18, padding: mobile ? '18px 18px 20px' : 'clamp(24px,4.2vw,40px)', boxShadow: '0 1px 2px rgba(27,30,35,0.03), 0 18px 40px -28px rgba(27,30,35,0.22)' }}>
             <a href={leadStory.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
-              <DailyMeta s={leadStory} zh={zh} highlight />
-              <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 'clamp(22px,3.4vw,30px)', lineHeight: 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
-              {leadStory.summary && <p style={{ margin: '16px 0 0', fontFamily: 'var(--font-prose)', fontSize: 16.5, lineHeight: 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
+              <DailyMeta s={leadStory} zh={zh} highlight mobile={mobile} />
+              {/* Mobile (9-08): 22px+ title ran 5 lines and the lead filled the
+                  whole first screen — 19px / 1.32 keeps it a headline, not a wall. */}
+              <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: mobile ? 19 : 'clamp(22px,3.4vw,30px)', lineHeight: mobile ? 1.32 : 1.28, letterSpacing: '-0.01em', color: 'var(--text-primary)' }}>{leadStory.title}</h3>
+              {leadStory.summary && <p style={{ margin: mobile ? '12px 0 0' : '16px 0 0', fontFamily: 'var(--font-prose)', fontSize: mobile ? 15 : 16.5, lineHeight: mobile ? 1.65 : 1.78, color: '#43474E' }}>{leadStory.summary}</p>}
               <DailyTake why={leadStory.why} limitation={leadStory.limitation} zh={zh} />
             </a>
             <RelatedRow related={leadStory.related} self={[leadStory.journal, leadStory.source, leadStory.wallSource]} />
@@ -1665,8 +1670,8 @@ function DailyBriefView({ L, date, onDate, mobile }) {
           workflow surface — EN readers were being pointed at WeChat/XHS they
           can't open. The EN daily now ends with the SubscribeCard instead. */}
       {zh && top3.length > 0 && (
-        <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
+        <section style={{ marginBottom: mobile ? 36 : 'clamp(48px,7vw,72px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: mobile ? 12 : 18 }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#9AA0A8' }}>{zh ? '交接班卡' : 'Handoff card'}</span>
             <span style={{ flex: 1, height: 1, background: '#E6E3D9' }} />
           </div>
