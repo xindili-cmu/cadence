@@ -238,13 +238,25 @@ async function createDraftBroadcast({ subject, html }) {
 // one-click unsubscribe is the reader-side escape hatch. Social posts (WeChat/
 // XHS/LinkedIn) keep the human gate — that principle is unchanged.
 // Escape hatch: DRAFT_ONLY=true restores the old draft-and-wait behavior.
+// Empty audience is a STATE, not a failure. Resend refuses to send a broadcast
+// to a segment with zero contacts (422 validation_error "The audience you are
+// sending has no contacts"). The EN segment has been empty since it was created,
+// so from the 2026-08-30 auto-send switch onward every weekly run went red on
+// this exact response — #11 (8-30) and #12 (9-06) — which also skipped the
+// commit step and silently lost the ZH issue's artifacts and the weekly brief
+// (2026-09-08 audit, read off the Actions logs). Leave the draft in place and
+// report it; the first subscriber turns it into a real send with no code change.
 async function sendBroadcast(id) {
   const res = await fetch(`https://api.resend.com/broadcasts/${id}/send`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({}),
   });
-  if (!res.ok) throw new Error(`resend broadcasts/send ${res.status}: ${await res.text()}`);
+  if (!res.ok) {
+    const body = await res.text();
+    if (res.status === 422 && /no contacts/i.test(body)) return { skipped: 'empty-audience' };
+    throw new Error(`resend broadcasts/send ${res.status}: ${body}`);
+  }
   return res.json();
 }
 
@@ -313,6 +325,10 @@ async function sendBroadcast(id) {
     console.log('  → DRAFT_ONLY=true — left as draft: https://resend.com/broadcasts');
     return;
   }
-  await sendBroadcast(r.id);
+  const sent = await sendBroadcast(r.id);
+  if (sent && sent.skipped === 'empty-audience') {
+    console.log(`  ⊘ ${EN ? 'EN' : 'ZH'} segment has 0 contacts — left as draft (nothing to send yet): https://resend.com/broadcasts`);
+    return;
+  }
   console.log('  ✓ sent (auto-send, 2026-08-30 decision — see sendBroadcast note; one-click unsub in every mail)');
 })().catch((e) => { console.error('✗ weekly-signal-email failed:', e.message); process.exit(1); });

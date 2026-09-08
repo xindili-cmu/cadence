@@ -773,6 +773,12 @@ async function run() {
       'O1: 发送调用在主路径上,逃生口是显式 DRAFT_ONLY 而非默认');
     ok(!/send intentionally omitted/.test(mailSrc),
       'O1 判别力：旧 draft-only 注释形态已不存在（整段还原即转红）');
+    // O2（2026-09-08，从 Actions 日志读出）：EN segment 0 联系人 → Resend 422
+    // "no contacts" → 脚本 exit 1 → 整个 job 红 → 提交步被跳过，ZH 已发出的那期
+    // 和周报文件一起蒸发（#11 8-30、#12 9-06 两次一模一样）。空受众是状态不是故障。
+    ok(/res\.status === 422 && \/no contacts\/i\.test\(body\)/.test(mailSrc) && /skipped: 'empty-audience'/.test(mailSrc),
+      'O2: 空受众的 422 走 skip（留草稿、exit 0），不再把周报 job 打红');
+    ok(/sent\.skipped === 'empty-audience'/.test(mailSrc), 'O2 接线：主路径消费 skip 信号');
   }
 
   // ── P 段：2026-08-30 对抗式审查的三个显示层修复（静默回退高危）──────────
