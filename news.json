@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-08T15:10:00.569Z",
+    "lastUpdated": "2026-09-08T15:12:27.488Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,6 +15,29 @@
   },
   "hotTopics": [],
   "items": [
+    {
+      "id": "news-1788880347379-0",
+      "title": "Reliability, Validity, and Preliminary Diagnostic Exploration of a Novel Dynamic Balance Test Tool",
+      "summary": "A novel X-Balance Test showed acceptable test–retest reliability (ICC 0.820–0.989) and moderate validity against the SEBT (r 0.495–0.770), but insufficient diagnostic accuracy for lower extremity injury risk (overall accuracy 61.76%, sensitivity 35.29%, specificity 88%).",
+      "category": "sports",
+      "source": "Meas Phys Educ Exerc Sci",
+      "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2707615",
+      "publishedAt": "2026-07-30T07:28:11.000Z",
+      "firstSeen": "2026-09-08T15:12:27.379Z",
+      "curatedScore": 68,
+      "curatedReason": "新工具的测量学表现不足以支撑临床应用——诊断准确性只有 61.76%，敏感性 35.29% 意味着大部分真有损伤风险的运动员会被漏掉。重测信度尚可，但以 SEBT 为参照的效度中等，现阶段没有理由用它替代现有的动态平衡评估。",
+      "titleZh": "新型动态平衡测试工具的测量学表现与损伤风险诊断探索",
+      "summaryZh": "新型 X-Balance Test 的重测信度尚可（ICC 0.820–0.989），与 SEBT 的效度中等（r 0.495–0.770），但对下肢损伤风险的诊断准确性不足（总体准确率 61.76%，敏感性 35.29%，特异性 88%）。",
+      "curatedReasonEn": "This tool isn't ready for clinical use—61.76% overall accuracy and 35.29% sensitivity means it misses most athletes who are actually at risk. Test-retest reliability is acceptable, but validity against the SEBT is only moderate. No reason to swap out your current dynamic balance assessment for this yet.",
+      "limitation": "诊断探索以 SEBT 为参照而非实际损伤结局，且为单一样本探索性分析，外推性有限。",
+      "limitationEn": "Diagnostic exploration used the SEBT as reference rather than actual injury outcomes, in a single exploratory sample, limiting generalizability.",
+      "tags": [
+        "research",
+        "sports"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Measurement in Physical Education and Exercise Science"
+    },
     {
       "id": "news-1788866920103-0",
       "title": "Determining the optimal volume of reactive balance training after stroke: a pilot randomized controlled trial",
@@ -1727,29 +1750,6 @@
       "tags": [
         "research",
         "knee"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "The Journal of orthopaedic and sports physical therapy"
-    },
-    {
-      "id": "news-1788281123741-1",
-      "title": "The Efficacy of Exercise Therapy for Nonspecific Chronic Low Back Pain According to the FITT Principle: A Systematic Review With Meta-analyses.",
-      "summary": "A systematic review with meta-analyses evaluated the efficacy of exercise therapy interventions, differing in frequency, intensity, type, and time (FITT), on disability in individuals with nonspecific chronic low back pain (LBP).",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42676082/",
-      "publishedAt": "2026-09-01T00:00:00.000Z",
-      "firstSeen": "2026-09-01T16:45:23.741Z",
-      "curatedScore": 85,
-      "curatedReason": "这项系统综述及其荟萃分析，基于 FITT 原则，精细评估了不同运动疗法对非特异性慢性腰痛患者残疾的疗效。这为你调整慢性腰痛患者的运动处方提供了具体的证据指导，让你能更精准地优化干预参数。",
-      "titleZh": "基于 FITT 原则的运动疗法对非特异性慢性腰痛疗效的系统综述与荟萃分析",
-      "summaryZh": "一项系统综述和荟萃分析评估了根据 FITT（频率、强度、类型、时间）原则调整的运动疗法，对非特异性慢性腰痛患者残疾的影响。",
-      "curatedReasonEn": "The efficacy of exercise therapy interventions, specifically their FITT parameters (frequency, intensity, type, and time), for disability in nonspecific chronic low back pain patients has been systematically evaluated. This review offers concrete evidence to help you optimize exercise prescription parameters and more precisely manage these patients.",
-      "limitation": "研究纳入的异质性可能影响了 FITT 各组成部分特定推荐的精确性。",
-      "limitationEn": "The heterogeneity among included studies may impact the precision of specific recommendations for each FITT component.",
-      "tags": [
-        "research",
-        "spine"
       ],
       "studyDesign": "系统综述",
       "journal": "The Journal of orthopaedic and sports physical therapy"
