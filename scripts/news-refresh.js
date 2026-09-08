@@ -79,6 +79,17 @@ const LOOKBACK_DAYS = 7; // PT news cadence is slower than climate-tech; revisit
 // with prior runs costs nothing.
 const PUBMED_LOOKBACK_DAYS = 14;
 const CURATE_TOP_N = 40; // Exa + PubMed + RSS all feed one batch now
+// How much of each item's body text reaches the curator. Was 800 chars from
+// day one (an Exa default that PubMed / RSS then copied). 2026-09-08 audit,
+// 120 PubMed abstracts from the last 30 days: journal+abstract median 1,983
+// chars, 117/120 over 800; in structured abstracts the Results section started
+// past char 800 in 57/84 (68%) and Conclusions in 79/84 (94%) — so the scorer
+// that claims to weigh "effect size" never saw a result for two papers in
+// three, and takes came out in the future tense ("this review will
+// elucidate…") for completed reviews. 4000 covers essentially every abstract;
+// 40 items × 4000 chars ≈ 40K tokens per batch, inside every provider's window.
+// pipeline-gates.test.js U 段 pins this so it can't drift back down.
+const RAW_TEXT_MAX = 4000;
 
 // ── PT Category Queries ─────────────────────────────────────────────────────
 // Slugs are the canonical short form used by the UI components in
@@ -177,7 +188,7 @@ async function searchExa(query, numResults = 5) {
       startPublishedDate: startDate.toISOString().split('T')[0],
       useAutoprompt: true,
       contents: {
-        text: { maxCharacters: 800 },
+        text: { maxCharacters: RAW_TEXT_MAX },
         highlights: { numSentences: 2 }
       }
     })
@@ -516,12 +527,35 @@ function isCorrespondenceItem(item) {
   return TITLE_HAS_DOI.test(t);
 }
 
+// Journal front matter that arrives AS IF it were an article — masthead,
+// editorial board, table of contents. 2026-09-07: Archives of PM&R's RSS
+// handed over "Masthead", "Ed Board page" and "Table of Contents" as three
+// items; the curator scored them 40 and wrote takes saying they contain no
+// clinical content — and all three went live (3 of the 7 stories in the 09-08
+// daily edition). Whole-title shapes, anchored at both ends: no real paper
+// title consists solely of these words. JOURNAL_FRONT_MATTER (above) can't
+// catch them — it keys on bracketed section tags.
+const FRONT_MATTER_TITLE = /^(masthead|editorial board( page)?|ed(itorial)?\.? board( page)?|table of contents|contents|issue information|front matter|author index|subject index|acknowledg(e)?ments?( to reviewers)?|reviewer acknowledg(e)?ments?|calendar( of events)?|announcements?|instructions? (to|for) authors|information for (readers|authors)|forthcoming (papers|articles)|in this issue|highlights (from|of) this issue|cover( image)?|advertisement)\s*[.:]?\s*$/i;
+
+// Deterministic score floor. The curation prompt ends with "只保留 curatedScore
+// >= 65 的条目", but a prompt line is a request, not a gate: on 2026-09-07 the
+// model returned the three rows above at 40 and every one of them shipped. 65 is
+// the bottom of the lowest display tier (65–74 "for reference" — SignalScore.jsx),
+// so anything under it has no tier to render in. Applied to fresh AND carried
+// rows (self-healing on the next cron). Intel rows are capped at INTEL_SCORE_CAP
+// and floored here like everything else — the rubric's news band is 60–79 and the
+// prompt's own keep-rule already excludes 60–64.
+const SCORE_FLOOR = 65;
+const isBelowFloor = (item) => !(Number(item && item.curatedScore) >= SCORE_FLOOR);
+
 function isJunkItem(item) {
   // Blank headline — unrenderable. Fresh items can't reach here (the pipeline's
   // _fallbackTitle covers them), but a few archived rows carry title:"".
   if (!String(item.title || '').trim()) return true;
   // Letters / corrections / errata — see isCorrespondenceItem above.
   if (isCorrespondenceItem(item)) return true;
+  // Masthead / editorial board / table of contents — see FRONT_MATTER_TITLE.
+  if (FRONT_MATTER_TITLE.test(String(item.title || '').trim())) return true;
   if (isTruncatedTitle(item.title) || isTruncatedTitle(item.titleZh)) return true;
   const tKey = _nameKey(item.title);
   if (ROSTER_NAME_KEYS.has(tKey)) return true;
@@ -595,6 +629,12 @@ function normalizeTitle(title, meta = {}) {
   if (/^[“"「『]/.test(t) && /[”"」』][.。!?]?\s*$/.test(t)) {
     t = t.replace(/^[“"「『]+\s*/, '').replace(/\s*[”"」』]+(?=[.。!?]?\s*$)/, '');
   }
+  // The Lancet's RSS prefixes every headline with its section tag. "[Articles]"
+  // is the research-article section — pure chrome, strip it (30 archive rows,
+  // 2026-09-08 audit). Other tags ([Comment], [Correspondence], [World Report]…)
+  // are left in place on purpose: the relevance gate's JOURNAL_FRONT_MATTER keys
+  // on them.
+  t = t.replace(/^\[\s*articles?\s*\]\s*/i, '');
   // Strip scraped link-text prefixes ("Read more about X" / "Read more: X").
   // Newsroom listing pages (e.g. cms.gov) use the anchor text as the headline,
   // so the prefix leaks into title AND from there into briefings/social copy
@@ -729,7 +769,7 @@ async function fetchPubMed() {
         if (!publishedDate) { console.log(`   ⏭️  PubMed ${pmid}: no entrez date — skipped`); continue; }
         out.push({
           title, url: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
-          text: `${journal ? journal + '. ' : ''}${abstract}`.slice(0, 800),
+          text: `${journal ? journal + '. ' : ''}${abstract}`.slice(0, RAW_TEXT_MAX),
           highlights: '', publishedDate, score: 0.5,
           source: 'PubMed', category: q.category,
           // Actual journal name — the frontend matches it against journals.json
@@ -766,7 +806,7 @@ function parseFeed(xml, sourceName) {
     if (isNaN(d)) { console.log(`   ⏭️  ${sourceName}: unparseable date — skipped "${title.slice(0, 50)}"`); continue; }
     items.push({
       title, url: link.trim(),
-      text: stripTags(xmlTag(b, 'description') || xmlTag(b, 'summary') || xmlTag(b, 'content')).slice(0, 800),
+      text: stripTags(xmlTag(b, 'description') || xmlTag(b, 'summary') || xmlTag(b, 'content')).slice(0, RAW_TEXT_MAX),
       highlights: '', publishedDate: d.toISOString(),
       score: 0.5, source: sourceName, category: null
     });
@@ -1041,7 +1081,7 @@ async function curateWithClaude(rawItems, llm = callLLM) {
   const items = rawItems.slice(0, CURATE_TOP_N).map((item, i) => ({
     index: i,
     title: item.title,
-    text: item.text?.substring(0, 800), // 入库已存 800；曾砍到 400 把 Methods 段样本量切掉，逼模型臆测 n（2026-06-25）
+    text: item.text?.substring(0, RAW_TEXT_MAX), // 曾砍到 400 把 Methods 段样本量切掉，逼模型臆测 n（2026-06-25）；800 则砍掉 2/3 论文的 Results（2026-09-08，见 RAW_TEXT_MAX）
     category: item.category,
     source: item.source,
     url: item.url?.substring(0, 120),
@@ -1739,7 +1779,7 @@ async function main() {
         console.log(`   ⚠️  page date unreadable, using file publishedDate ${pub.slice(0, 10)} for ${it.url}`);
       }
       if (!pub) { console.log(`   ⏭️  skipped (undatable): ${it.url}`); continue; }
-      raw.push({ title: it.title, url: it.url, text: (it.text || '').slice(0, 800), highlights: '',
+      raw.push({ title: it.title, url: it.url, text: (it.text || '').slice(0, RAW_TEXT_MAX), highlights: '',
         publishedDate: pub, score: 0.5, source: it.source,
         category: VALID_CATS.has(it.category) ? it.category : null });
       console.log(`   + ${it.title.slice(0, 70)} (${pub.slice(0, 10)})`);
@@ -1884,6 +1924,11 @@ async function main() {
       console.log(`   ⏭️  junk dropped: ${(i.title || '').slice(0, 70)}`);
       return false;
     })
+    .filter(i => {
+      if (!isBelowFloor(i)) return true;
+      console.log(`   ⏭️  below floor (${i.curatedScore} < ${SCORE_FLOOR}): ${(i.title || '').slice(0, 70)}`);
+      return false;
+    })
     .sort((a, b) => b.curatedScore - a.curatedScore);
 
   // Merge with existing — EVERY item carries on firstSeen (when WE caught it).
@@ -1936,7 +1981,12 @@ async function main() {
       .filter(isRehabRelevant)
       // Same self-healing for correspondence shapes (letters/corrections):
       // rows curated before the 2026-08-29 gate drop out on the next cron.
-      .filter((i) => !isCorrespondenceItem(i));
+      .filter((i) => !isCorrespondenceItem(i))
+      // 2026-09-08: the whole junk gate + the score floor self-heal the carry
+      // path too — three Archives of PM&R front-matter rows at 40 were being
+      // carried as "news" for a 30-day window.
+      .filter((i) => !isJunkItem(i))
+      .filter((i) => !isBelowFloor(i));
   } catch {}
 
   // Cluster-aware merge: a re-found story unions its related-source list
@@ -2139,4 +2189,4 @@ function isReasonIncomplete(c) {
   return !!zh && (!en || CJK_RE.test(en));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

@@ -8,8 +8,11 @@
 name: XHS Daily Digest
 
 on:
-  schedule:
-    - cron: '40 22 * * *'
+  # Schedule paused 2026-09-08: 小红书停更自 2026-08-25（PRINCIPLES.md 渠道段），
+  # cron 却仍每天渲染 ~10 张 PNG 并提交（xhs/ 已 875 个文件）。账号与脚本都保留；
+  # 重启渠道时把下面两行恢复即可。workflow_dispatch 照旧可手动出图。
+  # schedule:
+  #   - cron: '40 22 * * *'
   workflow_dispatch:
     inputs:
       date:

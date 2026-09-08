@@ -28,3 +28,41 @@ prototype-daily-rounds.html
 og-card.html
 design-input-r2/
 design-system/assets/*.JPG
+
+# ── 2026-09-08 审查：内部文档曾整体随部署公开 ────────────────────────────────
+# PRINCIPLES.md / DECISIONS-pending.md / STRATEGY-US.md / CLAUDE.md /
+# briefs/weekly/*.md / _design-review/*.md 都能在 incadencept.com/<path> 直接读到——
+# 上一段只点名了 PUBLISHING.md / README.md，其余全漏。改为按类排除。
+# 站点真正需要的只有：index.html 404.html _headers favicon.svg og-card.png robots.txt
+# rss.xml sitemap.xml news.json journals.json sources.json archive/ briefs/daily/
+# design-system/ vendor/（app 的 fetch 目标见 app.data.jsx / app.main.jsx / worker.js）。
+# pipeline-gates.test.js T 段守这份清单：新增内部产物目录要同时加到这里。
+*.md
+briefs/*.md
+briefs/*.html
+briefs/*.txt
+briefs/*.png
+briefs/email/
+briefs/weekly/
+briefs/_local-backup-*/
+briefs/score-audit-*
+briefs/wechat-*
+_design-review/
+handoff/
+linkedin/
+linkedin-card-redesign/
+x/
+xhs/
+inject/
+.cadence-backup/
+embeddings.json
+.cache-*.json
+*.tmp
+.fuse_hidden*
+.write-test-*
+.writetest*
+linkedin-cover.html
+linkedin-cover.png
+linkedin-weekly-signal.png
+render-daily-card.js
+b9354305fa782f55d9937bc0c8bb5ba6.png

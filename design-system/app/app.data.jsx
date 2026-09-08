@@ -17,6 +17,7 @@ window.CD_DICT = {
     // Short labels for the mobile bottom tab bar (≤8 chars so the tabs fit at 320px)
     'navS.curated': 'Curated', 'navS.all': 'All', 'navS.daily': 'Daily', 'navS.sources': 'Sources', 'navS.about': 'About', 'navS.feedback': 'Feedback',
     'sub.curated': 'Curated by evidential strength · daily', 'sub.all': 'Every story Cadence has curated — live feed plus full archive',
+    'all.searchRanked': 'Search results · ranked by signal',
     'sub.daily': 'One edition every morning — lead, sections, archive',
     'sub.sources': 'Outlets Cadence monitors', 'sub.about': 'Who Cadence is for, how it works, and why it exists', 'sub.feedback': 'Help shape where Cadence goes next',
     // About page — brand statement, how-it-works, founder story, transparency, disclaimer, contact
@@ -114,6 +115,7 @@ window.CD_DICT = {
     'nav.curated': '精选', 'nav.all': '全部', 'nav.daily': '每日简报', 'nav.sources': '信源', 'nav.about': '关于', 'nav.feedback': '反馈',
     'navS.curated': '精选', 'navS.all': '全部', 'navS.daily': '简报', 'navS.sources': '信源', 'navS.about': '关于', 'navS.feedback': '反馈',
     'sub.curated': '按证据强度精选 · 每日更新', 'sub.all': '收录过的全部文章 · 实时流 + 历史归档',
+    'all.searchRanked': '搜索结果 · 按信号分排序',
     'sub.daily': '每日一期 · 导语 + 分版块 + 历史归档',
     'sub.sources': 'Cadence 监测的信源', 'sub.about': '步频写给谁、怎么运作、为什么存在', 'sub.feedback': '一起决定 Cadence 接下来怎么走',
     // 关于页 — 品牌声明、工作原理、创始人故事、信源透明、免责声明、联系

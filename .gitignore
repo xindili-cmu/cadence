@@ -7,3 +7,9 @@ design-input/
 *.zip
 design-input-r2/
 embeddings.json
+
+# 2026-09-08：本地工具目录与临时产物，永远不进（公开）仓库
+.claude/
+Claude outputs/
+*.tmp
+.fuse_hidden*

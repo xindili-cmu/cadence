@@ -151,7 +151,7 @@ function NavBtn({ item, active, onView, small }) {
   );
 }
 
-function NavRail({ view, onView, category, onCategory }) {
+function NavRail({ view, onView, category, onCategory, countPool = null }) {
   const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   const eyebrow = { fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.09em', textTransform: 'uppercase', color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 7px' };
   // 关于 / 反馈 are low-frequency meta links → sunk to the rail bottom, leaving
@@ -179,13 +179,15 @@ function NavRail({ view, onView, category, onCategory }) {
               as a permanent 0 and the number's range is ambiguous between the
               Curated and All views (2026-07-16 adversarial review). */}
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10.5, lineHeight: 1.45, color: 'var(--text-tertiary)', padding: '0 12px', margin: '0 0 9px' }}>
-            {zh ? '近期收录的篇数' : 'From the recent feed'}
+            {countPool ? (zh ? '当前搜索结果中的篇数' : 'In these search results') : (zh ? '近期收录的篇数' : 'From the recent feed')}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
             {/* Per-specialty live-feed counts, computed once per render from
                 the canonical pool. Cheap (≤ ~100 items) and always current. */}
             {(() => {
-              const pool = window.CD_STORIES || [];
+              // countPool = the reader's current result set while a search runs
+              // across the archive (2026-09-08 audit); otherwise the live feed.
+              const pool = countPool || window.CD_STORIES || [];
               const nOf = (c) => pool.filter((s) => s.category === c).length;
               const nFlag = (f) => pool.filter((s) => s[f]).length;
               return (

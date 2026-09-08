@@ -107,7 +107,13 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
         run: node scripts/weekly-signal-email.js ${{ github.event.inputs.date }}
 
+      # if: always() — 2026-09-08 审查：8-30、9-06 两次调度在 origin 上零提交，
+      # 仓库里分不清是「没跑」还是「某步失败」。上面两个发送步已是 always()，
+      # 但提交步不是：只要 brief 或 GSC 一步失败，已生成的 briefs/email 草稿就
+      # 一起蒸发，故障对仓库完全静默。现在无论前面成败都提交已产出的文件——
+      # 红的 run 至少留下痕迹（有邮件 HTML 没有周报 = brief 步挂了，反之亦然）。
       - name: Commit brief
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

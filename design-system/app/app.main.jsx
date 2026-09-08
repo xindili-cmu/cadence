@@ -100,10 +100,14 @@ function TypeTabs({ value = 'all', onChange = () => {}, pool = [], className, st
 
 // Mobile specialty picker — the left-rail specialty list has no home on small
 // screens, so it folds into a native <select> (8 specialties + tech overlay).
-function SpecialtySelect({ value = 'all', onChange = () => {} }) {
+function SpecialtySelect({ value = 'all', onChange = () => {}, countPool = null }) {
   const zh = (typeof window !== 'undefined' && window.CD_LANG === 'zh');
   const cats = window.CATEGORIES || [];
   const xcuts = window.XCUTS || [];
+  // countPool (optional) = the reader's current result set — passed while a
+  // search runs across the archive so the tallies describe the results, not
+  // the live feed (2026-09-08 audit: "ACL" → 36 hits, picker said Ortho 24).
+  const tallyPool = countPool || window.CD_STORIES || [];
   return (
     <select value={value} onChange={(e) => onChange(e.target.value)} aria-label={zh ? '专科' : 'Specialty'} style={{
       flex: 'none', maxWidth: '48%', fontFamily: 'var(--font-sans)', fontSize: 13, color: 'var(--text-secondary)',
@@ -113,11 +117,11 @@ function SpecialtySelect({ value = 'all', onChange = () => {} }) {
       <option value="all">{zh ? '全部专科' : 'All specialties'}</option>
       {/* Counts mirror the desktop NavRail — expectation-setting on mobile too. */}
       {cats.map((c, i) => {
-        const n = (window.CD_STORIES || []).filter((s) => s.category === c.id).length;
+        const n = tallyPool.filter((s) => s.category === c.id).length;
         return <option key={c.id} value={c.id}>{String(i + 1).padStart(2, '0')} {window.catShort(c)} · {n}</option>;
       })}
       {xcuts.map((x) => {
-        const n = (window.CD_STORIES || []).filter((s) => s[x.flag]).length;
+        const n = tallyPool.filter((s) => s[x.flag]).length;
         return <option key={x.id} value={x.id}>✦ {window.catShort(x)} · {n}</option>;
       })}
     </select>
@@ -1000,7 +1004,7 @@ function AboutView({ onView, mobile }) {
             { img: 'design-system/assets/social/xhs-qr.png', plat: '小红书', handle: 'in_cadence', href: 'https://xhslink.com/m/8LpaT1OLeDw', tip: '点击或扫码访问主页' },
             { img: 'design-system/assets/social/wechat-qr.png', plat: '微信公众号', handle: 'Cadence 步频', tip: '微信扫码关注' },
           ] : [
-            { icon: 'linkedin', plat: 'LinkedIn', handle: 'Cadence PT', href: 'https://www.linkedin.com/company/132034233/', tip: 'Daily evidence briefs, Mon–Fri' },
+            { icon: 'linkedin', plat: 'LinkedIn', handle: 'Cadence Evidence', href: 'https://www.linkedin.com/company/132034233/', tip: 'Daily evidence briefs, Mon–Fri' },
           ]).map((q) => {
             const img = q.img ? (
               <img src={q.img} alt={`${q.plat} QR`} width={148} height={148}
@@ -2100,6 +2104,11 @@ function FeedApp() {
   const ALL_PAGE_SIZE = 7;
   const [visibleDays, setVisibleDays] = React.useState(ALL_PAGE_SIZE);
   React.useEffect(() => { setVisibleDays(ALL_PAGE_SIZE); }, [category, query, ctype, minScore]);
+  // Ranked search results (All view + query + signal axis) page by item count,
+  // not by day — see groupedByDate.
+  const SEARCH_PAGE_SIZE = 40;
+  const [searchLimit, setSearchLimit] = React.useState(SEARCH_PAGE_SIZE);
+  React.useEffect(() => { setSearchLimit(SEARCH_PAGE_SIZE); }, [category, query, ctype, minScore, sortBy]);
 
   // Slider's SIGNAL-score explainer popover: close on outside-click / Escape.
   React.useEffect(() => {
@@ -2169,6 +2178,8 @@ function FeedApp() {
   // Everything EXCEPT the content-type axis — reused for TypeTabs counts so
   // each type's tally reflects the current specialty/search/score selection
   // (a type with 0 hits under the active filters is hidden, not shown empty).
+  // Search across both languages regardless of display language.
+  const searchHit = (s) => !q || `${s.title} ${s.titleZh || ''} ${s.titleEn || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q);
   const matchesExceptType = (s) => {
     if (xcut) { if (!s[xcut.flag]) return false; }
     else if (category !== 'all' && s.category !== category) return false;
@@ -2176,13 +2187,22 @@ function FeedApp() {
     // Intel (news/policy) is exempt: its score is internal triage, not SIGNAL,
     // so a signal floor has nothing to say about it (lane split, 2026-08-29).
     if (minScore && s.lane !== 'intel' && s.score < minScore) return false;
-    // Search across both languages regardless of display language.
-    if (q && !(`${s.title} ${s.titleZh || ''} ${s.titleEn || ''} ${s.source} ${s.wallSource || ''} ${s.summary || ''} ${s.summaryZh || ''}`.toLowerCase().includes(q))) return false;
+    if (!searchHit(s)) return false;
     return true;
   };
   const matchesFilter = (s) => {
     if (!matchesExceptType(s)) return false;
     // Content-type axis (research / news / guideline / policy) = tags[0].
+    if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
+    return true;
+  };
+  // Everything EXCEPT the specialty axis — feeds the specialty tallies while a
+  // search runs across the archive (All view), so the rail / mobile picker count
+  // the reader's actual results. Off-search they keep counting the live feed,
+  // which is what their "recent feed" label promises (2026-09-08 audit).
+  const matchesExceptCategory = (s) => {
+    if (minScore && s.lane !== 'intel' && s.score < minScore) return false;
+    if (!searchHit(s)) return false;
     if (ctype !== 'all' && (s.tags || [])[0] !== ctype) return false;
     return true;
   };
@@ -2194,6 +2214,8 @@ function FeedApp() {
   let stories = pool.filter(matchesFilter);
   // Pool for the type-tab counts: same view, all filters applied except type.
   const typeCountPool = pool.filter(matchesExceptType);
+  // Pool for the specialty tallies — only while searching the archive.
+  const catCountPool = (view === 'all' && q) ? pool.filter(matchesExceptCategory) : null;
 
   // Daily brief view renders pre-built editions (briefs/daily/*.json) via
   // DailyBriefView below — it short-circuits the feed like Sources/Feedback,
@@ -2253,6 +2275,22 @@ function FeedApp() {
   // (incl. backfilled older papers that carry a 新收录 chip), not publish date.
   const groupedByDate = (() => {
     if (view !== 'all') return [];
+    // A search across the archive is retrieval ("the best evidence on X"), not
+    // a timeline: under the signal axis, collapse the date buckets into ONE
+    // ranked list — evidence by SIGNAL, intel strip after — paged by
+    // searchLimit. Before this, "ACL" came back as 36 rows in date order with an
+    // unscored intel row on top and the only 85 behind "Load 7 more days"
+    // (2026-09-08 audit). The 'recent' axis keeps the calendar grouping.
+    if (q && sortBy !== 'recent') {
+      const ranked = stories.filter(laneMain).sort(mainListSort);
+      return [{
+        key: 'search',
+        label: t('all.searchRanked'),
+        items: ranked.slice(0, searchLimit),
+        rankedTotal: ranked.length,
+        intel: intelView ? [] : stories.filter((s) => s.lane === 'intel').sort(byRecent),
+      }].filter((g) => g.items.length || g.intel.length);
+    }
     const locale = window.CD_LANG === 'zh' ? 'zh-CN' : 'en-US';
     const dateOf = (s) => ((sortBy === 'recent' ? s.firstSeen : s.publishedAt) || '').slice(0, 10) || '0000-00-00';
     const map = new Map();
@@ -2307,7 +2345,7 @@ function FeedApp() {
           review #3). Jump to All stories so results always appear. */}
       <AppHeader query={query} onQuery={(v) => { setQuery(v); if (v && view !== 'curated' && view !== 'all') setView('all'); }} lang={lang} onLang={toggleLang} mobile={isMobile} />
       <div style={{ maxWidth: 'var(--content-max)', margin: '0 auto', display: 'flex', alignItems: 'flex-start', gap: isMobile ? 0 : 24, padding: isMobile ? '0 14px' : '0 24px' }}>
-        {!isMobile && <NavRail view={view} onView={setView} category={category}
+        {!isMobile && <NavRail view={view} onView={setView} category={category} countPool={catCountPool}
           onCategory={(c) => { setCategory(c); if (view !== 'curated' && view !== 'all') setView('curated'); }} />}
 
         <main ref={mainRef} style={{ flex: 1, minWidth: 0, maxWidth: isMobile ? 'none' : (isAbout ? 'none' : 'var(--feed-column)'), padding: isMobile ? '18px 0 calc(76px + env(safe-area-inset-bottom))' : '24px 0 64px' }}>
@@ -2373,7 +2411,7 @@ function FeedApp() {
                   bar width the layout is byte-identical to before; below that the bar is
                   shorter at every width (ZH 366px: 207px → 106px). */}
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                {isMobile && <SpecialtySelect value={category} onChange={setCategory} />}
+                {isMobile && <SpecialtySelect value={category} onChange={setCategory} countPool={catCountPool} />}
                 {/* flex-basis 160 (not 0): with basis 0 the tabs absorbed ALL the
                     squeeze and shrank to ~40px beside the select + slider on a phone
                     ("A" clipped, 2026-09-08). A real basis makes the slider wrap to
@@ -2514,6 +2552,19 @@ function FeedApp() {
                 {zh ? `再加载 ${ALL_PAGE_SIZE} 天` : `Load ${ALL_PAGE_SIZE} more days`}
                 <span style={{ marginLeft: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
                   ({grouped.length - visibleDays} {zh ? '天剩余' : 'remaining'})
+                </span>
+              </Button>
+            </div>
+          )}
+
+          {/* Show more — ranked search results page by item count (see groupedByDate) */}
+          {!isSources && !isFeedback && !isDaily && !isAbout && !archiveLoading && view === 'all' && grouped.length === 1 && grouped[0].key === 'search' && (grouped[0].rankedTotal || 0) > searchLimit && (
+            <div style={{ textAlign: 'center', padding: '8px 0 24px' }}>
+              <Button variant="secondary" size="sm"
+                onClick={() => setSearchLimit((v) => v + SEARCH_PAGE_SIZE)}>
+                {zh ? `再显示 ${SEARCH_PAGE_SIZE} 条` : `Show ${SEARCH_PAGE_SIZE} more`}
+                <span style={{ marginLeft: 6, fontFamily: 'var(--font-mono)', fontSize: 10.5, color: 'var(--text-tertiary)' }}>
+                  ({grouped[0].rankedTotal - searchLimit} {zh ? '条剩余' : 'remaining'})
                 </span>
               </Button>
             </div>

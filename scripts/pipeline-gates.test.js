@@ -16,6 +16,9 @@ const {
   repairMissingFields,
   isJunkItem,
   isJunkUrl,
+  isBelowFloor,
+  SCORE_FLOOR,
+  RAW_TEXT_MAX,
   isReasonSlop,
   isReasonIncomplete,
   dateFromUrlPath,
@@ -896,6 +899,71 @@ async function run() {
       ok(inc.length === 0,
         `S5: ${S_SHIPPED} 起入库的条目 take 双语齐全`
         + (inc.length ? ` —— ${inc.map((i) => i.id).slice(0, 3).join(', ')}` : ''));
+    }
+  }
+
+  // ── T 段：内部文档不得随部署公开（2026-09-08 审查）──────────────────────
+  // 事故：.assetsignore 只点名了 README.md / PUBLISHING.md，于是 PRINCIPLES.md /
+  // DECISIONS-pending.md / STRATEGY-US.md / CLAUDE.md / briefs/weekly/*.md /
+  // _design-review/*.md 全部在 incadencept.com/<path> 直接可读——含运营者姓名、
+  // 「订阅=0」的止损数据、匿名约束原文。规则改为按类排除；这里守两件事：
+  // ①内部产物的类都在清单里；②app 真要 fetch 的路径没有被顺手排掉（否则站点白屏）。
+  {
+    console.log('\nT. .assetsignore：内部文档按类排除，站点资产不误伤');
+    const ig = fs.readFileSync(path.join(__dirname, '..', '.assetsignore'), 'utf8')
+      .split('\n').map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
+    const MUST_IGNORE = ['*.md', 'briefs/email/', 'briefs/weekly/', '_design-review/', 'handoff/',
+      'linkedin/', 'linkedin-card-redesign/', 'x/', 'xhs/', 'inject/', '.cadence-backup/',
+      'embeddings.json', 'scripts/', '.github/', 'worker.js', 'wrangler.jsonc'];
+    for (const pat of MUST_IGNORE) ok(ig.includes(pat), `T1: .assetsignore 含 ${pat}`);
+    // app.data.jsx / app.main.jsx / worker.js / index.html 的 fetch 与资源路径——
+    // 任何一条被整目录排除，站点就静默白屏（Workers 404）。
+    const MUST_SERVE = ['news.json', 'journals.json', 'sources.json', 'archive/', 'briefs/daily/',
+      'briefs/', 'design-system/', 'vendor/', 'index.html', '404.html', 'rss.xml', 'sitemap.xml',
+      'robots.txt', 'favicon.svg', 'og-card.png', '*.json', '*.html', '*.js', '*.css', '*.svg', '*.png', '*.woff2'];
+    for (const pat of MUST_SERVE) ok(!ig.includes(pat), `T2: .assetsignore 不含 ${pat}（app 需要它）`);
+  }
+
+  // ── U 段：策展输入与确定性质量闸（2026-09-08 审查）─────────────────────
+  // ①摘要 800 字符截断：近 30 天 120 条 PubMed 摘要中位 1,983 字符，结构化摘要
+  //   Results 段起点 ≥800 的 57/84（68%）、Conclusions 79/84（94%）——打分「量效应量」
+  //   却看不到结果；线上一条 85 分 SR 的 take 写成将来时「will elucidate」。
+  // ②「只保留 >= 65」只在 prompt 里：9-07 三条 Archives PM&R 目录页/编委页/刊头
+  //   打 40 分照样上线，日报 7 条含 3 条。现在：标题形状进 isJunkItem，分数下限
+  //   进 isBelowFloor，两者同时接在新条目链与 carry 链上（carry 自愈存量）。
+  {
+    console.log('\nU. 策展输入上限 + 分数下限 + 目录页闸（不得回退到 800 / 仅 prompt）');
+    const nr = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    ok(typeof RAW_TEXT_MAX === 'number' && RAW_TEXT_MAX >= 3000, `U1: RAW_TEXT_MAX=${RAW_TEXT_MAX} ≥ 3000（覆盖结构化摘要的 Results/Conclusions）`);
+    ok(!/(slice|substring)\(0,\s*800\)/.test(nr) && !/maxCharacters:\s*800\b/.test(nr),
+      'U1 判别力：旧的 800 字面量已不在 news-refresh.js（回退即转红）');
+    for (const use of ['maxCharacters: RAW_TEXT_MAX', '${abstract}`.slice(0, RAW_TEXT_MAX)', "xmlTag(b, 'content')).slice(0, RAW_TEXT_MAX)", 'item.text?.substring(0, RAW_TEXT_MAX)'])
+      ok(nr.includes(use), `U1 接线：${use.slice(0, 40)}…`);
+    for (const t of ['Masthead', 'Ed Board page', 'Table of Contents', 'Editorial Board', 'Issue Information'])
+      ok(isJunkItem({ title: t, summary: 'x' }), `U2: 目录页/编委页/刊头标题「${t}」= junk`);
+    ok(!isJunkItem({ title: 'Contents of a physiotherapy curriculum: a national survey', summary: 'x' }), 'U2: 含 contents 的真标题不误伤');
+    ok(!isJunkItem({ title: 'Effects of ankle-foot orthosis-related conditions on muscle activity after stroke', summary: 'x' }), 'U2: 普通标题不误伤');
+    ok(SCORE_FLOOR === 65, 'U3: SCORE_FLOOR = 65（最低展示档的下沿，SignalScore.jsx）');
+    ok(isBelowFloor({ curatedScore: 40 }) && isBelowFloor({ curatedScore: 64 }) && isBelowFloor({}), 'U3: 40 / 64 / 无分 = below floor');
+    ok(!isBelowFloor({ curatedScore: 65 }) && !isBelowFloor({ curatedScore: 79 }), 'U3: 65 / 79 通过');
+    ok(nr.includes(`只保留 curatedScore >= ${SCORE_FLOOR} 的条目`), 'U3: prompt 的 keep-rule 与 SCORE_FLOOR 同值（两处口径互锁）');
+    ok(nr.includes('if (!isBelowFloor(i)) return true;'), 'U4 接线：新条目链有分数下限');
+    ok(nr.includes('.filter((i) => !isJunkItem(i))') && nr.includes('.filter((i) => !isBelowFloor(i))'), 'U4 接线：carry 链跑 junk 闸 + 分数下限（存量自愈）');
+    ok(!!JSON.parse(fs.readFileSync(path.join(__dirname, '_wiring.json'), 'utf8')).oneoff['fix-front-matter-rows.js'], 'U4: archive 清理脚本已登记 oneoff');
+    // U5（产物，挂 SKIP_ARTIFACT_ASSERTS）：作用域 = 闸上线后新入库（S5 同款拆法，
+    // 不拿存量卡 cron——gate H 2026-08-12 的教训）。
+    const U_SHIPPED = '2026-09-09';
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 news.json 产物断言');
+    } else if (!fs.existsSync(path.join(__dirname, '..', 'news.json'))) {
+      console.log('  ⊘ news.json 不存在（fresh clone），跳过产物断言');
+    } else {
+      const uItems = (JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'news.json'), 'utf8')).items || [])
+        .filter((i) => (i.firstSeen || '').slice(0, 10) >= U_SHIPPED);
+      const bad = uItems.filter((i) => isJunkItem(i) || isBelowFloor(i));
+      ok(bad.length === 0,
+        `U5: ${U_SHIPPED} 起入库的条目零目录页、零 <${SCORE_FLOOR}`
+        + (bad.length ? ` —— ${bad.map((i) => `${i.curatedScore}·${(i.title || '').slice(0, 30)}`).slice(0, 3).join(' | ')}` : ''));
     }
   }
 
