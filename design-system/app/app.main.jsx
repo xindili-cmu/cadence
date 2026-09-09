@@ -2220,6 +2220,39 @@ function FeedApp() {
     ? window.CD_STORIES.concat(archiveStories || [])
     : window.CD_STORIES;
   let stories = pool.filter(matchesFilter);
+
+  // ── Phase 0 usage telemetry (2026-09-09 decision) ─────────────────────────
+  // Before building an "ask the evidence" bot we count for one week whether
+  // anyone uses the search box at all (no search intent → no bot). Sends one
+  // beacon per settled query per tab session (1.5s debounce, so typing
+  // "shoulder" is one event, not eight) plus one pageview per tab session as
+  // the denominator. No cookies, no IP, nothing third-party — see worker.js
+  // handlePing for the key shape and scripts/search-log-report.js for reading.
+  // sendBeacon is fire-and-forget; failures are invisible to the reader by design.
+  const cdPing = (body) => {
+    try {
+      const json = JSON.stringify(body);
+      if (navigator.sendBeacon) navigator.sendBeacon('/api/ping', new Blob([json], { type: 'application/json' }));
+      else fetch('/api/ping', { method: 'POST', body: json, keepalive: true, headers: { 'content-type': 'application/json' } }).catch(() => {});
+    } catch { /* telemetry must never surface */ }
+  };
+  const searchHits = stories.length;
+  React.useEffect(() => {
+    if (!q || q.length < 2) return;
+    const t = setTimeout(() => {
+      const seen = window.__cdPinged || (window.__cdPinged = new Set());
+      if (seen.has(q)) return;
+      seen.add(q);
+      cdPing({ t: 's', q: q.slice(0, 120), lang, hits: searchHits, view });
+    }, 1500);
+    return () => clearTimeout(t);
+  }, [q]); // eslint-disable-line react-hooks/exhaustive-deps — fire on settled query only
+  React.useEffect(() => {
+    let first = true;
+    try { first = !sessionStorage.getItem('cd_pv'); if (first) sessionStorage.setItem('cd_pv', '1'); } catch { /* private mode: count it */ }
+    if (first) cdPing({ t: 'v', lang, m: isMobile ? 1 : 0 });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Pool for the type-tab counts: same view, all filters applied except type.
   const typeCountPool = pool.filter(matchesExceptType);
   // Pool for the specialty tallies — only while searching the archive.

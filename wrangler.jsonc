@@ -2,10 +2,11 @@
   // Cadence — static site served via Cloudflare Workers assets.
   // Exclusions live in .assetsignore (node_modules etc. must not upload).
   //
-  // worker.js runs ONLY for the root document (run_worker_first patterns):
+  // worker.js runs ONLY for the root document and /api/* (run_worker_first):
   // it rewrites <head> og/title metadata for /?item=<id> share links so
-  // crawlers see the story's own title/summary. All other paths are served
-  // straight from assets with zero worker invocations.
+  // crawlers see the story's own title/summary, and answers /api/ping (usage
+  // telemetry). All other paths are served straight from assets with zero
+  // worker invocations.
   "name": "cadence",
   "compatibility_date": "2026-06-01",
   "main": "worker.js",
@@ -14,6 +15,15 @@
     "binding": "ASSETS",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
-    "run_worker_first": ["/", "/index.html"]
-  }
+    // "/api/*": the worker's own endpoints (currently /api/ping, Phase 0 usage
+    // telemetry, 2026-09-09). Without this entry assets answer 404 first.
+    "run_worker_first": ["/", "/index.html", "/api/*"]
+  },
+  // Usage log for the search box (Phase 0 of the "ask the evidence" decision,
+  // 2026-09-09). One-time setup, Cindy's terminal:
+  //   npx wrangler kv namespace create SEARCH_LOG
+  // then paste the printed id below. Reader: node scripts/search-log-report.js
+  "kv_namespaces": [
+    { "binding": "SEARCH_LOG", "id": "2a8118ece448415aa0f21cc9ed9def7c" }
+  ]
 }

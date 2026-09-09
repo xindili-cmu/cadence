@@ -973,6 +973,36 @@ async function run() {
     }
   }
 
+  // ── V 段：搜索框使用遥测（2026-09-09 决策：先量一周，再决定建不建「问证据」bot）──
+  // 这是站点第一份埋点，专门回答一个问题：有没有人在用搜索框。它的失败模式恰好是
+  // 本文件开头那种——写好了、部署了、但一条数据都没进来，一周后复盘时才发现（KV 没绑、
+  // /api/* 没进 run_worker_first 被资产层 404、前端 beacon 没接）。三处接线各守一条，
+  // 外加 worker 写的 key 形状与报告脚本读的形状互锁（改了一边另一边静默读成 null）。
+  {
+    console.log('\nV. 搜索遥测：/api/ping 三处接线 + key 形状互锁');
+    const wr = fs.readFileSync(path.join(__dirname, '..', 'wrangler.jsonc'), 'utf8');
+    const wk = fs.readFileSync(path.join(__dirname, '..', 'worker.js'), 'utf8');
+    const app = fs.readFileSync(path.join(__dirname, '..', 'design-system', 'app', 'app.main.jsx'), 'utf8');
+    const rep = fs.readFileSync(path.join(__dirname, 'search-log-report.js'), 'utf8');
+    ok(/"run_worker_first":\s*\[[^\]]*"\/api\/\*"/.test(wr), 'V1: wrangler.jsonc run_worker_first 含 "/api/*"（否则资产层先 404）');
+    const kv = wr.match(/"binding":\s*"SEARCH_LOG",\s*"id":\s*"([^"]+)"/);
+    ok(!!kv, 'V1: wrangler.jsonc 有 SEARCH_LOG KV 绑定');
+    ok(!!kv && /^[0-9a-f]{32}$/.test(kv[1]),
+      `V1: SEARCH_LOG id 已填真值（现在是 "${kv ? kv[1] : '?'}"）—— 先 npx wrangler kv namespace create SEARCH_LOG 再粘 id`);
+    ok(wk.indexOf("'/api/ping'") > -1 && wk.indexOf("'/api/ping'") < wk.indexOf('env.ASSETS.fetch(request)'),
+      'V2: worker.js 在取资产之前分流 /api/ping');
+    ok(wk.includes("request.headers.get('origin') !== url.origin"), 'V2: /api/ping 只收同源 POST');
+    ok(wk.includes('expirationTtl'), 'V2: 事件 key 带过期（KV 不是无限日志）');
+    ok(app.includes("sendBeacon('/api/ping'") && app.includes("t: 's'") && app.includes("t: 'v'"),
+      'V3: app.main.jsx 发搜索(s)与页面访问(v)两种 beacon');
+    // 形状互锁：worker 写 s:day:uid:lang:hits:view:q（7 段）/ v:day:uid:lang:m（5 段）。
+    const sKey = wk.match(/key = `s:([^`]+)`/); const vKey = wk.match(/key = `v:([^`]+)`/);
+    ok(!!sKey && sKey[1].split(':').length === 6, 'V4: worker s-key 为 7 段');
+    ok(!!vKey && vKey[1].split(':').length === 4, 'V4: worker v-key 为 5 段');
+    ok(rep.includes("p[0] === 's' && p.length === 7") && rep.includes("p[0] === 'v' && p.length === 5"),
+      'V4: search-log-report.js 按同样段数解析（改 key 形状必须两边同改）');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

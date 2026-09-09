@@ -9,14 +9,13 @@
     "被 workflow / package.json / 其他脚本 require 的不用登记,检查自己看得见。",
     "backfill-* 和 try-* 前缀自动豁免(一次性数据修复/实验,约定已确立)。"
   ],
-
   "external": {
     "_note": "消费者在仓库外——检查看不见,所以必须写下来。value = 谁在驱动它。",
     "linkedin-brief.js": "2026-09-01 起主消费者是 refresh.yml(每日 full run 生成 post-zh/en.txt 随 cron 提交);Cowork 定时任务 linkedin-daily-post(周一–周五 14:00 PT)从 origin 取产物,本地重跑仅作校验",
     "linkedin-daily-card.js": "同上 → daily-signal.png。进 cron 的原因:Chrome 扩展 file_upload 08-28 起客户端层坏,卡片只能由页面从 raw.githubusercontent 拉取,故必须先在 origin 上",
-    "wechat-clip.sh": "Cindy 手动跑,公众号粘贴用(浏览器自动化被微信挡住)。见 PUBLISHING.md"
+    "wechat-clip.sh": "Cindy 手动跑,公众号粘贴用(浏览器自动化被微信挡住)。见 PUBLISHING.md",
+    "search-log-report.js": "Cindy 手动跑(周复盘)。读 SEARCH_LOG KV(worker.js /api/ping 写入)出搜索框使用报告——2026-09-09 决策:先量一周搜索意图,再决定要不要建「问证据」bot;止损见 DECISIONS-pending.md"
   },
-
   "oneoff": {
     "_note": "一次性 / 离线工具:人在需要时手动跑,不该有自动消费者。",
     "check-journal-metrics.js": "核对 journals.json 的 JCR 影响因子,补 IF 时手动跑",

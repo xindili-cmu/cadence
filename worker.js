@@ -101,8 +101,71 @@ function rewriteHead(assetResp, { pageTitle, title, desc, canonical, lang }) {
   return rw.transform(assetResp);
 }
 
+// ── /api/ping — Phase 0 usage telemetry (2026-09-09 decision) ────────────────
+// Question being answered: does anyone use the search box? The "ask the
+// evidence" bot only earns its LLM bill if search intent already exists on the
+// site, so before building it we count for one week (PRINCIPLES.md: 止损先于投入).
+// The site had zero analytics before this; this is deliberately the smallest
+// possible kind: no cookies, no IP, no third party. Two event kinds:
+//   s = a settled search (client debounces 1.5s, dedupes per session)
+//   v = a pageview (once per tab session) — the denominator for "% of visits"
+// Storage: Workers KV, binding SEARCH_LOG. Every event is ONE key with all its
+// data encoded IN THE KEY NAME (values are '1'), so a single
+// `wrangler kv key list` reads the whole log — no per-key gets, no race on a
+// shared counter. Key shape (':'-separated, query base64url so it can't collide):
+//   s:<YYYY-MM-DD>:<ts36><rand>:<lang>:<hits>:<view>:<b64url(q)>
+//   v:<YYYY-MM-DD>:<ts36><rand>:<lang>:<mobile 0|1>
+// Keys expire after 90 days. Reader: scripts/search-log-report.js.
+// Failure posture: same as the rest of this file — never affects the page.
+// Unbound SEARCH_LOG (e.g. preview without KV) → 204 and nothing stored.
+const PING_TTL = 90 * 24 * 3600;
+const PING_MAX_Q = 120;
+function b64url(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+async function handlePing(request, env, ctx, url) {
+  const no = new Response(null, { status: 204 });
+  try {
+    if (request.method !== 'POST') return new Response(null, { status: 405 });
+    // Same-origin only: browsers attach Origin on every POST (sendBeacon
+    // included). Anything else is junk — swallow it silently.
+    if (request.headers.get('origin') !== url.origin) return no;
+    if (!env.SEARCH_LOG) return no;
+    const raw = await request.text();
+    if (!raw || raw.length > 1024) return no;
+    const b = JSON.parse(raw);
+    const day = new Date().toISOString().slice(0, 10);
+    const uid = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+    const lang = b.lang === 'zh' ? 'zh' : 'en';
+    let key;
+    if (b.t === 'v') {
+      const mobile = b.m ? 1 : 0;
+      key = `v:${day}:${uid}:${lang}:${mobile}`;
+    } else {
+      const q = String(b.q || '').trim().slice(0, PING_MAX_Q);
+      if (!q) return no;
+      const hits = Number.isFinite(b.hits) ? Math.max(-1, Math.min(9999, Math.trunc(b.hits))) : -1;
+      const view = /^[a-z]{1,12}$/.test(b.view || '') ? b.view : 'x';
+      key = `s:${day}:${uid}:${lang}:${hits}:${view}:${b64url(q)}`;
+    }
+    const put = env.SEARCH_LOG.put(key, '1', { expirationTtl: PING_TTL });
+    if (ctx && ctx.waitUntil) ctx.waitUntil(put); else await put;
+    return no;
+  } catch (err) {
+    console.error('[cadence-worker] ping failed:', err && err.message);
+    return no;
+  }
+}
+
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
+    // API routes never touch assets. Listed in wrangler.jsonc run_worker_first
+    // ("/api/*") — without that entry the asset layer 404s before we run.
+    const u0 = new URL(request.url);
+    if (u0.pathname === '/api/ping') return handlePing(request, env, ctx, u0);
     const assetResp = await env.ASSETS.fetch(request);
     try {
       const url = new URL(request.url);
