@@ -1,0 +1,331 @@
+{
+ "date": "2026-09-09",
+ "generatedAt": "2026-09-08T23:30:37.914Z",
+ "windowHours": 26,
+ "windowStart": "2026-09-07T23:43:16.351Z",
+ "windowEnd": "2026-09-08T23:30:35.084Z",
+ "lead": {
+  "titleZh": "卒中与儿童神经发育障碍康复：双侧运动学习、不良事件报告同获最高分",
+  "titleEn": "Stroke and Pediatric Neurodevelopmental Disorder Rehabilitation: Bimanual Motor Learning and Adverse Event Reporting Share Top Score",
+  "paragraphZh": "今日日报共 12 份条目，涵盖 6 个专科方向，其中有 2 份条目以 85 分并列最高，分别是关于卒中后双侧运动技能学习的 RCT，以及儿童神经发育障碍体育活动干预中不良事件报告的系统综述，均值得临床 PT 优先关注。",
+  "paragraphEn": "Today's日报 presents 12 entries across 6 specialties. Two entries tied for the highest score at 85: an RCT on bimanual motor skill learning post-stroke, and a systematic review on adverse event reporting in physical activity interventions for neurodevelopmental disorders, both warranting priority for clinical PTs."
+ },
+ "stats": {
+  "events": 12,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 8,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1788902156381-10",
+     "title": "Novel Telerehabilitation Interventions for Stress Urinary Incontinence : A Systematic Review of Randomised Controlled Trials",
+     "summary": "A systematic review of randomized controlled trials suggests that telerehabilitation-delivered pelvic floor muscle training (PFMT) is effective for women with stress urinary incontinence (SUI), showing benefits in clinical outcomes, adherence, satisfaction, and healthcare accessibility.",
+     "category": "orthopedic",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00897-X/fulltext?rss=yes",
+     "publishedAt": "2026-09-08T00:00:00.000Z",
+     "firstSeen": "2026-09-08T21:15:56.381Z",
+     "curatedScore": 75,
+     "curatedReason": "针对压力性尿失禁的远程盆底肌训练，这项系统综述肯定了其临床有效性。鉴于远程医疗的便捷性，这意味着你可以更广泛地将盆底康复服务扩展到那些不便来院的患者。",
+     "titleZh": "压力性尿失禁的新型远程康复干预：随机对照试验系统综述",
+     "summaryZh": "一项随机对照试验系统综述表明，远程康复提供的盆底肌训练（PFMT）对患有压力性尿失禁（SUI）的女性有效，在临床结局、依从性、满意度和医疗可及性方面均显示出益处。",
+     "curatedReasonEn": "This systematic review affirms the clinical effectiveness of telerehabilitation for pelvic floor muscle training in stress urinary incontinence. Given the convenience of telehealth, this finding suggests you can more broadly extend pelvic rehabilitation services to patients who have difficulty accessing in-person care.",
+     "limitation": "研究未明确提供系统综述的具体纳入研究设计和证据等级，无法判断其证据强度。",
+     "limitationEn": "The study does not explicitly provide the specific study designs included in the systematic review or the GRADE of evidence, making it difficult to assess the strength of the evidence.",
+     "tags": [
+      "research",
+      "pelvic-floor",
+      "telehealth"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Archives of Physical Medicine and Rehabilitation",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1788885826037-2",
+     "title": "Proximal and Distal Bimanual Motor Skill Learning After Stroke: Impairments, Trajectories, and Clinical Contributors",
+     "summary": "A randomized trial with 97 (sub)acute stroke patients found impairments in bimanual motor skill learning, particularly in distal upper limb segments, compared to healthy individuals.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.02.26362113v1?rss=1",
+     "publishedAt": "2026-09-08T00:00:00.000Z",
+     "firstSeen": "2026-09-08T16:43:46.037Z",
+     "curatedScore": 85,
+     "curatedReason": "这项随机试验显示，卒中早期患者在双侧运动技能学习方面存在缺陷，且远端上肢受损更明显。这提示你在早期康复干预中应更侧重远端精细动作的双侧训练。",
+     "titleZh": "卒中后近端和远端双侧运动技能学习：损伤、轨迹和临床影响因素",
+     "summaryZh": "一项包含 97 名（亚）急性卒中患者的随机试验发现，卒中后双侧运动技能学习存在损伤，尤其在远端上肢节段更为明显。",
+     "curatedReasonEn": "This randomized trial reveals that early post-stroke patients exhibit deficits in bimanual motor skill learning, with more pronounced impairment in the distal upper limb. This suggests a need to prioritize bimanual training for distal fine motor skills in early rehabilitation.",
+     "limitation": "研究样本主要为急性和亚急性期卒中患者，结果外推到慢性期需谨慎。",
+     "limitationEn": "The study primarily involved acute and subacute stroke patients, so generalizing the results to the chronic phase should be done with caution.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1788910189942-9",
+     "title": "Personalized FES-cycling patterns via optimal control: from musculoskeletal simulation to experimental validation",
+     "summary": "This study introduces an optimal control framework for functional electrical stimulation (FES) cycling that produces personalized stimulation patterns directly transferable from simulation to experimental cycling, aiming to improve rehabilitation for neurological patients.",
+     "category": "neurological",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02136-x",
+     "publishedAt": "2026-09-04T00:00:00.000Z",
+     "firstSeen": "2026-09-08T23:29:49.942Z",
+     "curatedScore": 75,
+     "curatedReason": "本研究通过模拟和实验验证，提出了一种可个性化定制的 FES 循环模式，有望提高神经损伤患者的康复效果。它提示你关注 FES 技术在康复中的应用潜力，尤其是在优化患者个体化治疗方案方面。",
+     "titleZh": "通过最优控制实现个性化 FES 循环模式：从肌肉骨骼模拟到实验验证",
+     "summaryZh": "这项研究引入了一种功能性电刺激（FES）循环的最优控制框架，可直接将个性化刺激模式从模拟转移到实验循环，旨在改善神经系统患者的康复。",
+     "curatedReasonEn": "This study proposes a personalized FES-cycling pattern, validated through simulation and experiment, with the potential to improve rehabilitation outcomes for patients with neurological injuries. It prompts you to consider the potential of FES technology in rehabilitation, particularly in optimizing individualized treatment plans.",
+     "limitation": "研究细节（如样本量和具体疾病类型）在摘要中未明确提及，可能影响结论的普适性。",
+     "limitationEn": "Study details such as sample size and specific disease types are not explicitly mentioned in the abstract, which may affect the generalizability of the conclusions.",
+     "tags": [
+      "research",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+     "id": "news-1788885826037-1",
+     "title": "Addressing stroke family caregivers' mental health through person‑ and family‑centred rehabilitation.",
+     "summary": "This review summarizes literature on stroke family caregivers' experiences and support needs, proposing person- and family-centered care (PFCC) as a potential approach to address caregiver mental health challenges.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42708404/",
+     "publishedAt": "2026-09-08T00:00:00.000Z",
+     "firstSeen": "2026-09-08T16:43:46.037Z",
+     "curatedScore": 75,
+     "curatedReason": "这篇综述提醒你关注卒中患者家属的心理健康需求，并指出以患者和家庭为中心（PFCC）的康复模式是弥补现有支持不足的关键策略。",
+     "titleZh": "通过以患者和家庭为中心的康复解决卒中家庭照护者的心理健康问题",
+     "summaryZh": "本综述总结了卒中家庭照护者经历和支持需求的文献，并提出以患者和家庭为中心的照护（PFCC）是解决照护者心理健康挑战的潜在方法。",
+     "curatedReasonEn": "This review highlights the mental health needs of stroke family caregivers and identifies person- and family-centered care (PFCC) as a key strategy to address gaps in current support.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1788866920103-0",
+     "title": "Determining the optimal volume of reactive balance training after stroke: a pilot randomized controlled trial",
+     "summary": "A three-arm pilot randomized controlled trial (n=36) explored the feasibility of delivering 1, 3, or 6 sessions of reactive balance training over 2-3 weeks for people with sub-acute stroke, aiming to inform the design of a larger optimal volume trial.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.02.26362056v1?rss=1",
+     "publishedAt": "2026-09-07T00:00:00.000Z",
+     "firstSeen": "2026-09-08T11:28:40.103Z",
+     "curatedScore": 75,
+     "curatedReason": "这项探索性 RCT 提示，对于亚急性卒中患者，增加反应性平衡训练的干预量或可改善平衡功能。它为后续大样本研究设计提供了关键参考，但目前尚不足以改变临床方案。",
+     "titleZh": "确定卒中后反应性平衡训练的最佳剂量：一项试点随机对照试验",
+     "summaryZh": "一项三组试点随机对照试验（n=36）旨在探讨对亚急性卒中患者进行 1、3 或 6 次反应性平衡训练课程的可行性，为未来确定最佳训练剂量的更大规模试验提供设计依据。",
+     "curatedReasonEn": "This pilot RCT suggests that increasing the volume of reactive balance training may improve balance function in sub-acute stroke patients. While it provides critical data for future larger trials, it is not yet sufficient to alter current clinical protocols.",
+     "limitation": "这是一项初步的试点研究，样本量较小（n=36），随访周期相对有限，且主要目的是评估可行性而非确切疗效，外推性受限。",
+     "limitationEn": "This is a preliminary pilot study with a small sample size (n=36), relatively limited follow-up, and its primary goal was to assess feasibility rather than definitive efficacy, limiting generalizability.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT"
+    },
+    {
+     "id": "news-1788842997873-0",
+     "title": "Muscle work during manual wheelchair propulsion in people with a spinal cord injury: a model-based approach.",
+     "summary": "This study used a modeling approach to evaluate the individual muscle contributions, particularly the rotator cuff muscles, to mechanical work during wheelchair propulsion in individuals with a spinal cord injury.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42705093/",
+     "publishedAt": "2026-09-07T00:00:00.000Z",
+     "firstSeen": "2026-09-08T04:49:57.873Z",
+     "curatedScore": 75,
+     "curatedReason": "这项模型研究量化了脊髓损伤患者手动轮椅推进过程中，包括肩袖肌在内的个体肌肉贡献。这能帮你更精准地调整康复策略，预防肩部过度使用损伤。",
+     "titleZh": "脊髓损伤患者手动轮椅推进过程中的肌肉做功：一项基于模型的研究",
+     "summaryZh": "这项研究采用模型方法，评估了脊髓损伤患者手动轮椅推进过程中，特别是肩袖肌对机械做功的个体肌肉贡献。",
+     "curatedReasonEn": "This model-based study quantifies individual muscle contributions, including rotator cuff muscles, during manual wheelchair propulsion in SCI patients. Use these insights to fine-tune rehabilitation strategies and prevent shoulder overuse injuries.",
+     "limitation": "本研究采用建模方法，其结果的临床转化需通过活体生物力学和临床结果进一步验证。",
+     "limitationEn": "This study employed a modeling approach; its clinical translation requires further validation through in-vivo biomechanics and clinical outcomes.",
+     "tags": [
+      "research",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1788842997874-1",
+     "title": "If ACL injury is multifactorial, why is return-to-sport testing not? A determinant-alignment framework for ACL rehabilitation and return to sport.",
+     "summary": "This Masterclass proposes a determinant-alignment framework for late-stage rehabilitation and return-to-sport assessment after ACL reconstruction, advocating for a more comprehensive evaluation beyond physical capacity.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42705007/",
+     "publishedAt": "2026-09-07T00:00:00.000Z",
+     "firstSeen": "2026-09-08T04:49:57.874Z",
+     "curatedScore": 70,
+     "curatedReason": "ACL 损伤后的重返运动（RTS）评估，不仅要看体能，更要重视感知、神经认知和运动情境。这个框架提醒你别只盯着跳跃和力量，要让 RTS 方案更全面。",
+     "titleZh": "既然 ACL 损伤是多因素的，为什么重返运动测试却不是？一个 ACL 康复和重返运动的决定因素对齐框架",
+     "summaryZh": "这篇大师班文章提出一个决定因素对齐框架，用于 ACL 重建后的后期康复和重返运动评估，强调超越单一的体能评估，整合多维度的因素。",
+     "curatedReasonEn": "ACL return-to-sport (RTS) assessment needs to move beyond just physical capacity to integrate perceptual, neurocognitive, and contextual demands. This framework encourages you to broaden your RTS protocols beyond hop and strength tests for a more comprehensive approach.",
+     "tags": [
+      "news",
+      "rehabilitation",
+      "return-to-sport"
+     ],
+     "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    },
+    {
+     "id": "news-1788910189942-10",
+     "title": "Myofascial chain sequencing and performance adaptations in youth football players: an exploratory knowledge graph-supported analysis",
+     "summary": "This exploratory study investigated the effects of myofascial chain-focused training on countermovement jump performance and dynamic balance in forty licensed adolescent football players.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02066-0",
+     "publishedAt": "2026-09-08T00:00:00.000Z",
+     "firstSeen": "2026-09-08T23:29:49.942Z",
+     "curatedScore": 68,
+     "curatedReason": "对青少年足球运动员来说，肌筋膜链训练或许能改善他们的跳跃表现和动态平衡。但由于是观察性研究，且样本量只有 40 人，现在就推荐将其作为常规训练项目还为时过早。",
+     "titleZh": "青少年足球运动员肌筋膜链序列与表现适应：一项知识图谱支持的探索性分析",
+     "summaryZh": "这项探索性研究调查了肌筋膜链聚焦训练对 40 名注册青少年足球运动员反向跳跃表现和动态平衡的影响。",
+     "curatedReasonEn": "Myofascial chain training *might* improve jump performance and dynamic balance in adolescent football players. However, with only 40 participants in an observational study, it's premature to recommend this as a standard training component.",
+     "limitation": "这是一项针对特定青年足球运动员队列的探索性分析，样本量较小，且研究设计未明确说明为随机对照试验，结果外推需谨慎。",
+     "limitationEn": "This is an exploratory analysis on a small, specific cohort of youth football players, and the study design is not explicitly stated as an RCT, so caution is needed when generalizing the results.",
+     "tags": [
+      "research",
+      "football",
+      "performance-training"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1788910189942-11",
+     "title": "Invisible Harms, Visible Benefits? Adverse Event Reporting in Physical Activity Interventions for Neurodevelopmental Disorders: A Meta-analysis and Critical Appraisal",
+     "summary": "This meta-analysis and critical appraisal examines adverse event reporting in physical activity interventions for individuals with neurodevelopmental disorders, finding that current reporting practices are inadequate.",
+     "category": "pediatric",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01095-w",
+     "publishedAt": "2026-09-02T00:00:00.000Z",
+     "firstSeen": "2026-09-08T23:29:49.942Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述揭示了针对神经发育障碍的体育活动干预在不良事件报告方面存在重大缺陷。这提醒你，在将体育活动纳入治疗方案时，必须加强对潜在风险的监测和标准化报告，以确保患者安全。",
+     "titleZh": "无形之害，可见之益？神经发育障碍体育活动干预中的不良事件报告：一项 Meta 分析与批判性评估",
+     "summaryZh": "这项 Meta 分析和批判性评估审视了神经发育障碍患者体育活动干预中的不良事件报告，发现目前的报告实践不足。",
+     "curatedReasonEn": "This systematic review reveals significant deficiencies in adverse event reporting for physical activity interventions in neurodevelopmental disorders. This highlights the critical need to improve monitoring and standardize reporting of potential risks when incorporating physical activity into treatment plans, ensuring patient safety.",
+     "limitation": "尽管是系统综述，但其结论受到原始研究中不良事件报告质量不足的限制，可能未能全面捕捉所有潜在风险。",
+     "limitationEn": "Although a systematic review, its conclusions are limited by the inadequate quality of adverse event reporting in the original studies, which may not have captured all potential risks comprehensively.",
+     "tags": [
+      "research",
+      "early-intervention"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine - Open"
+    },
+    {
+     "id": "news-1788842997875-2",
+     "title": "Physiotherapy Educational Intervention for Occipital Positional Plagiocephaly Prevention: a Multicentre Randomised Controlled Trial",
+     "summary": "A multicentre randomized controlled trial found no statistically significant difference in positional occipital plagiocephaly prevalence at 3 months in infants whose mothers received prenatal physiotherapy educational intervention.",
+     "category": "pediatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.03.26362040v1?rss=1",
+     "publishedAt": "2026-09-07T00:00:00.000Z",
+     "firstSeen": "2026-09-08T04:49:57.875Z",
+     "curatedScore": 75,
+     "curatedReason": "针对胎儿期姿势性斜头畸形（POP）的孕期物理治疗教育干预，在本 RCT 中未能降低婴儿 3 个月时的 POP 发生率。这意味着单纯的产前教育对 POP 预防效果有限，需要重新思考干预策略。",
+     "titleZh": "物理治疗教育干预预防枕骨姿势性斜头畸形：一项多中心随机对照试验",
+     "summaryZh": "一项多中心随机对照试验显示，接受产前物理治疗教育干预的孕妇，其婴儿在 3 个月时姿势性枕骨斜头畸形（POP）的发生率与对照组无统计学显著差异。",
+     "curatedReasonEn": "Prenatal physiotherapy education interventions for positional occipital plagiocephaly (POP) did not reduce POP prevalence at 3 months in this RCT. This suggests that standalone prenatal education may have limited efficacy for POP prevention, prompting a re-evaluation of intervention strategies.",
+     "limitation": "研究未详细说明干预教育的具体内容和强度，可能影响结果的外推性。",
+     "limitationEn": "The study did not detail the specific content and intensity of the educational intervention, which may affect the generalizability of the results.",
+     "tags": [
+      "research",
+      "early-intervention",
+      "prevention"
+     ],
+     "studyDesign": "RCT"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1788910189942-12",
+     "title": "Integrated machine learning and clinical validation identify COL21A1 as a potential biomarker for sarcopenia",
+     "summary": "This study used integrated machine learning and clinical validation to identify COL21A1 as a potential biomarker for sarcopenia.",
+     "category": "geriatric",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10434-7",
+     "publishedAt": "2026-09-05T00:00:00.000Z",
+     "firstSeen": "2026-09-08T23:29:49.942Z",
+     "curatedScore": 70,
+     "curatedReason": "COL21A1 可能成为肌少症的一个新生物标志物，这为我们早期诊断和干预提供了新思路。当然，这只是一个初步发现，其作为诊断工具的临床实用性仍需更多独立验证和大型研究。",
+     "titleZh": "机器学习与临床验证相结合识别 COL21A1 作为肌少症的潜在生物标志物",
+     "summaryZh": "这项研究结合机器学习和临床验证，确定了 COL21A1 作为肌少症的潜在生物标志物。",
+     "curatedReasonEn": "COL21A1 shows promise as a potential new biomarker for sarcopenia, offering a fresh perspective on early diagnosis and intervention. Keep in mind, this is an initial finding; its clinical utility as a diagnostic tool still requires extensive independent validation and larger-scale studies.",
+     "limitation": "本研究的临床验证部分可能样本量有限，且生物标志物的发现到实际临床应用通常需要更广泛的多中心验证。",
+     "limitationEn": "The clinical validation portion of this study may have a limited sample size, and the transition from biomarker discovery to practical clinical application typically requires more extensive multi-center validation.",
+     "tags": [
+      "research",
+      "sarcopenia",
+      "biomarker"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Musculoskeletal Disorders",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1788902156381-11",
+     "title": "CMS Cracks Down on Massive $3.4 Billion Medical Equipment Supplier Fraud Scheme",
+     "summary": "CMS announced a crackdown on a massive $3.4 billion medical equipment supplier fraud scheme, indicating increased scrutiny and enforcement actions against fraudulent activities within the healthcare system.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-cracks-down-massive-3-4-billion-medical-equipment-supplier-fraud-scheme",
+     "publishedAt": "2026-09-08T12:00:00.000Z",
+     "firstSeen": "2026-09-08T21:15:56.381Z",
+     "curatedScore": 79,
+     "curatedReason": "CMS 正在大力打击医疗设备供应商的欺诈行为，涉案金额高达 34 亿美元。作为康复领域专业人士，你应审查所有合作的医疗设备供应商资质，确保其合规性，规避潜在的法律风险与报销纠纷。",
+     "titleZh": "CMS 打击 34 亿美元医疗设备供应商大规模欺诈计划",
+     "summaryZh": "CMS 宣布将严厉打击一起涉案金额高达 34 亿美元的医疗设备供应商大规模欺诈计划，这表明医疗系统内部欺诈行为将面临更严格的审查和执法行动。",
+     "curatedReasonEn": "CMS is vigorously cracking down on medical equipment supplier fraud, with cases totaling $3.4 billion. As a rehabilitation professional, you should scrutinize the credentials of all medical equipment suppliers you collaborate with to ensure compliance and mitigate potential legal risks and reimbursement disputes.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "regulation"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
