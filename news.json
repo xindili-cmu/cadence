@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-09T16:45:50.501Z",
-    "totalItems": 73,
+    "lastUpdated": "2026-09-09T21:00:54.485Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -104,9 +104,9 @@
           "titleZh": "卒中后疼痛及疼痛感知相关因素：一项范围综述"
         }
       ],
-      "heat": 3.89,
-      "themeZh": "卒中后肢体运动技能学习与平衡功能康复",
-      "themeEn": "Stroke motor skill learning, balance, and gait"
+      "heat": 3.65,
+      "themeZh": "卒中后运动功能与步态障碍的康复干预及影响因素",
+      "themeEn": "Stroke motor and gait rehabilitation"
     },
     {
       "id": "news-1788972347855-1",
@@ -141,8 +141,9 @@
           "titleZh": "全身姿势再教育对文本颈综合征患者的影响：一项随机对照试验。"
         }
       ],
-      "heat": 2.35,
-      "themeEn": "Community dizziness, plagiocephaly, and text neck"
+      "heat": 2.21,
+      "themeZh": "社区慢性眩晕与姿势异常的物理治疗",
+      "themeEn": "Vestibular and postural physiotherapy"
     },
     {
       "id": "news-1788910189942-9",
@@ -209,9 +210,9 @@
           "titleZh": "一项单次随机交叉 fNIRS 研究方案，比较健康成人三种上肢镜像疗法任务范式"
         }
       ],
-      "heat": 2.35,
-      "themeZh": "神经损伤患者上肢运动与本体感觉康复技术",
-      "themeEn": "Neuro-injury upper limb and proprioception rehab tech"
+      "heat": 2.21,
+      "themeZh": "神经损伤后上肢功能评估与辅助康复技术",
+      "themeEn": "Neurorehabilitation and assistive tech"
     },
     {
       "id": "news-1788910189942-11",
@@ -267,9 +268,9 @@
           "titleZh": "临床医生对手腕部护理中预测模型伦理考量的定性研究"
         }
       ],
-      "heat": 1.39,
-      "themeZh": "儿科物理治疗与骨科疼痛管理中的临床决策",
-      "themeEn": "Pediatric PT and orthopedic pain clinical decisions"
+      "heat": 1.31,
+      "themeZh": "物理治疗师在儿科与骨科疼痛管理中的临床决策",
+      "themeEn": "Physiotherapy clinical decision-making"
     },
     {
       "id": "news-1788281123739-0",
@@ -331,12 +332,61 @@
           "titleZh": "钙化性髌腱病：诊断性超声与多模式治疗方法整合的病例报告"
         }
       ],
-      "heat": 1.39,
-      "themeZh": "膝关节骨关节炎及慢性膝痛的运动与物理治疗",
-      "themeEn": "Exercise and PT for knee osteoarthritis"
+      "heat": 1.31,
+      "themeZh": "膝关节骨性关节炎及慢性疼痛的运动与数字疗法",
+      "themeEn": "Knee OA and pain exercise"
     }
   ],
   "items": [
+    {
+      "id": "news-1787759899920-1",
+      "title": "Comparison of high-intensity laser therapy and extracorporeal shock wave therapy for the treatment of plantar flexor spasticity in post-stroke patients.",
+      "summary": "A randomized controlled trial with 42 stroke patients found that high-intensity laser therapy (HILT) or radial extracorporeal shock wave therapy (rESWT) combined with rehabilitation significantly improved MAS scores at 3 weeks and 3 months (p=0.028 and p=0.001, respectively), but neither was superior to rehabilitation alone for functional outcomes like TUG and 10-MWT.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42644431/",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
+      "firstSeen": "2026-08-26T15:58:19.920Z",
+      "curatedScore": 80,
+      "curatedReason": "本研究提示，对于卒中后跖屈肌痉挛，高强度激光和体外冲击波联合康复治疗可能有助于降低痉挛评分，但它们在功能结局方面并未优于单纯康复治疗。审慎评估这些理疗手段的附加价值。",
+      "titleZh": "高强度激光疗法与体外冲击波疗法治疗卒中后跖屈肌痉挛的比较",
+      "summaryZh": "一项纳入 42 名卒中患者的随机对照试验发现，高强度激光疗法（HILT）或径向体外冲击波疗法（rESWT）结合康复治疗能显著改善改良 Ashworth 量表（MAS）评分（HILT P=0.028，rESWT P=0.001），但在功能结局方面并未优于单纯康复治疗。",
+      "curatedReasonEn": "This study suggests that high-intensity laser therapy and extracorporeal shock wave therapy, combined with rehabilitation, may reduce spasticity scores in post-stroke plantar flexor spasticity, but they did not demonstrate superiority over rehabilitation alone for functional outcomes. Prudently evaluate the additive value of these modalities.",
+      "limitation": "研究样本量较小，功能结局未见显著组间差异，提示附加效益可能有限。",
+      "limitationEn": "The study had a small sample size, and no significant inter-group differences were observed for functional outcomes, suggesting limited additional benefits.",
+      "tags": [
+        "research",
+        "stroke",
+        "electro",
+        "laser"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1787759899919-0",
+      "title": "Physical therapists as first-contact providers for musculoskeletal disorders: comparing beliefs across chiropractors, nurse practitioners, Physical therapists, and physician assistants.",
+      "summary": "A cross-sectional survey of 92 chiropractors, nurse practitioners, physical therapists, and physician assistants in the US found that PTs received the highest ratings for ability to care (μ=8.42, 8.94) and educational preparation (μ=9.03) for first-contact MSKD care. All FCP types generally supported each profession's ability but believed chiropractors and PTs should have a more limited scope of practice compared to NPs and PAs.",
+      "category": "practice",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42644384/",
+      "publishedAt": "2026-08-26T00:00:00.000Z",
+      "firstSeen": "2026-08-26T15:58:19.919Z",
+      "curatedScore": 75,
+      "curatedReason": "好消息是，其他一线执业者普遍认可物理治疗师在处理肌肉骨骼疾病方面的能力和教育水平，尤其是在初级接触层面。但要留意，他们也普遍认为脊医和物理治疗师的执业范围应比护士执业者和医师助理更受限制，这提示了跨专业合作中潜在的处方权争议。",
+      "titleZh": "作为肌肉骨骼疾病一线提供者的物理治疗师：比较脊椎按摩师、执业护士、物理治疗师和医师助理的信念",
+      "summaryZh": "一项对美国 92 名脊椎按摩师、执业护士、物理治疗师和医师助理进行的横断面调查发现，在肌肉骨骼疾病的一线护理能力和教育准备方面，物理治疗师获得最高评价。尽管所有一线提供者普遍支持各专业的执业能力，但多数认为脊椎按摩师和物理治疗师的执业范围应比执业护士和医师助理更受限制。",
+      "curatedReasonEn": "It's encouraging that other first-contact practitioners generally recognize PTs' competence and educational preparation for MSKD care, especially at the point of first contact. However, note that they also widely believe chiropractors and PTs should have a more limited scope of practice compared to NPs and PAs, signaling potential prescriptive authority disputes in interprofessional collaboration.",
+      "limitation": "该横断面调查的样本量较小（92名受访者），且是基于自我报告的信念，可能存在选择偏倚。",
+      "limitationEn": "This cross-sectional survey had a small sample size (92 respondents) and relied on self-reported beliefs, which may introduce selection bias.",
+      "tags": [
+        "research",
+        "workforce",
+        "education"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "The Journal of manual & manipulative therapy"
+    },
     {
       "id": "news-1788972347855-1",
       "title": "Evaluating the Effectiveness of an Integrated Treatment of Vestibular Rehabilitation and Cognitive Behavior Therapy for Chronic Dizziness in a Community-Based Population: A Randomized Controlled Trial.",
