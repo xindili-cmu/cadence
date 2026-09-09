@@ -169,6 +169,7 @@ jobs:
           [ -d archive ] && git add archive || true
           [ -d linkedin ] && git add linkedin || true
           [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
+          [ -f embeddings.json ] && git add embeddings.json || true
           if git diff --staged --quiet; then
             echo "No news.json changes to commit"
             exit 0
@@ -196,6 +197,7 @@ jobs:
             cp rss.xml /tmp/rss.xml 2>/dev/null || true
             cp sitemap.xml /tmp/sitemap.xml 2>/dev/null || true
             cp scrape-ledger.json /tmp/scrape-ledger.json 2>/dev/null || true
+            cp embeddings.json /tmp/embeddings.json 2>/dev/null || true
             cp -r briefs /tmp/briefs 2>/dev/null || true
             cp -r archive /tmp/archive 2>/dev/null || true
             cp -r linkedin /tmp/linkedin 2>/dev/null || true
@@ -205,6 +207,7 @@ jobs:
             cp /tmp/rss.xml rss.xml 2>/dev/null || true
             cp /tmp/sitemap.xml sitemap.xml 2>/dev/null || true
             cp /tmp/scrape-ledger.json scrape-ledger.json 2>/dev/null || true
+            cp /tmp/embeddings.json embeddings.json 2>/dev/null || true
             # `cp -r /tmp/briefs briefs` nests as briefs/briefs when the dir
             # already exists (it does — reset --hard restored it). Copy the
             # CONTENTS instead.
@@ -218,6 +221,7 @@ jobs:
             [ -d archive ] && git add archive || true
             [ -d linkedin ] && git add linkedin || true
             [ -f scrape-ledger.json ] && git add scrape-ledger.json || true
+            [ -f embeddings.json ] && git add embeddings.json || true
             if git diff --staged --quiet; then
               echo "Remote already has identical news.json"
               exit 0
