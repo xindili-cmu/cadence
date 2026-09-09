@@ -8,7 +8,7 @@ const { NewsCard, CategoryTabs, Button, Icon } = window;
 const cdDayLabels = () => {
   const zh = window.CD_LANG === 'zh';
   return {
-    today: zh ? '今日收录' : "Today's Research",
+    today: zh ? '今日收录' : "Today's research",
     yesterday: zh ? '昨日收录' : 'Added yesterday',
     older: zh ? '更早收录' : 'Added earlier',
   };
@@ -1277,7 +1277,7 @@ function DailyTake({ why, limitation, zh }) {
         <React.Fragment>
           <div style={{ height: 1, background: '#E3E9F1', margin: '16px 0' }} />
           <p style={{ margin: 0, fontFamily: 'var(--font-prose)', fontSize: 14, lineHeight: 1.7, color: '#6A7078' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', color: '#9AA0A8', marginRight: 8 }}>{zh ? '局限' : 'LIMIT'}</span>{limitation}
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', color: '#9AA0A8', marginRight: 8 }}>{zh ? '局限' : 'Limitation'}</span>{limitation}
           </p>
         </React.Fragment>
       )}
@@ -1627,7 +1627,7 @@ function DailyBriefView({ L, date, onDate, mobile }) {
           Collapses to a single column on mobile. */}
       {tier3.length > 0 && (
         <section style={{ marginBottom: 'clamp(48px,7vw,72px)' }}>
-          <DailySectionHead title={zh ? '了解即可' : 'Worth knowing'} count={tier3.length} mb={14} zh={zh} />
+          <DailySectionHead title={zh ? '本期其余' : 'Also in this edition'} count={tier3.length} mb={14} zh={zh} />
           <div style={{ display: 'grid', gridTemplateColumns: mobile ? '1fr' : '1fr 1fr', gap: 10 }}>
             {tier3.map((s) => (
               <a key={s.id || s.sourceUrl} href={s.sourceUrl} target="_blank" rel="noopener noreferrer"
