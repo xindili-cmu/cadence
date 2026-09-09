@@ -1319,19 +1319,19 @@ function DailyMasthead({ edition, zh, mobile }) {
     .filter((x) => x.n > 0)
     .sort((a, b) => (ORDER[a.cat] ?? 99) - (ORDER[b.cat] ?? 99)); // fixed display order 骨科/神经/手法/心肺 (not a data change)
   return (
-    // Mobile (9-08): masthead ate ~1/4 of the first screen — tighter padding,
-    // smaller title, halved vertical rhythm, decorative bars dropped (they ran
-    // into the count line at phone widths).
-    <header style={{ position: 'relative', background: '#16314F', borderRadius: mobile ? 14 : 18, padding: mobile ? '20px 20px 18px' : 'clamp(30px,5vw,48px)', marginBottom: mobile ? 28 : 'clamp(40px,6vw,60px)', overflow: 'hidden' }}>
-      {!mobile && <svg width="170" height="148" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -20, bottom: -30, opacity: 0.12, pointerEvents: 'none' }}>
+    // 9-08: masthead ate ~1/4 of the first screen on BOTH tiers — desktop
+    // 48px pad / 56px title / 60px gap → 26px / 36px / 36px; mobile tighter
+    // still and the decorative bars dropped (they ran into the count line).
+    <header style={{ position: 'relative', background: '#16314F', borderRadius: mobile ? 14 : 18, padding: mobile ? '20px 20px 18px' : '26px 30px 24px', marginBottom: mobile ? 28 : 36, overflow: 'hidden' }}>
+      {!mobile && <svg width="130" height="113" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -14, bottom: -24, opacity: 0.12, pointerEvents: 'none' }}>
         <g transform="skewX(-22.490)" fill="#FFFFFF">
           <rect x="664.6" y="410" width="40.5" height="92" /><rect x="745.6" y="343" width="42.5" height="159" /><rect x="832.5" y="277" width="42.6" height="225" /><rect x="930.0" y="121" width="46.7" height="474" /><rect x="1035.4" y="344" width="46.9" height="158" /><rect x="1128.9" y="415" width="39.9" height="87" />
         </g>
       </svg>}
       <div style={{ position: 'relative' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: mobile ? 10 : 18 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
-        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: mobile ? 28 : 'clamp(34px,6vw,56px)', lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
-        <div style={{ marginTop: mobile ? 14 : 24, paddingTop: mobile ? 12 : 20, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: mobile ? '8px 16px' : '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: mobile ? 12 : 13.5, color: '#AFC4DC' }}>
+        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: mobile ? 10 : 12 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
+        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: mobile ? 28 : 36, lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
+        <div style={{ marginTop: mobile ? 14 : 16, paddingTop: mobile ? 12 : 14, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: mobile ? '8px 16px' : '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: mobile ? 12 : 13, color: '#AFC4DC' }}>
           {/* "本期/this edition", not "今日/today" — the edition is a relay
               window minus already-published dedup, so its count legitimately
               differs from the rail's calendar-day count (23 vs 19 confusion,
