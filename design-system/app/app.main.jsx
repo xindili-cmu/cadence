@@ -1318,41 +1318,34 @@ function DailyMasthead({ edition, zh, mobile }) {
     .map((sec) => ({ cat: sec.category, label: dailyCatShort(sec.category), n: sec.items.length, color: dailyDotColor(sec.category) }))
     .filter((x) => x.n > 0)
     .sort((a, b) => (ORDER[a.cat] ?? 99) - (ORDER[b.cat] ?? 99)); // fixed display order 骨科/神经/手法/心肺 (not a data change)
+  const ink = 'var(--text-primary)';
   return (
-    // 9-08: masthead ate ~1/4 of the first screen on BOTH tiers — desktop
-    // 48px pad / 56px title / 60px gap → 26px / 36px / 36px; mobile tighter
-    // still and the decorative bars dropped (they ran into the count line).
-    <header style={{ position: 'relative', background: '#16314F', borderRadius: mobile ? 14 : 18, padding: mobile ? '20px 20px 18px' : '26px 30px 24px', marginBottom: mobile ? 28 : 36, overflow: 'hidden' }}>
-      {!mobile && <svg width="130" height="113" viewBox="446 107 580 508" aria-hidden="true" style={{ position: 'absolute', right: -14, bottom: -24, opacity: 0.12, pointerEvents: 'none' }}>
-        <g transform="skewX(-22.490)" fill="#FFFFFF">
-          <rect x="664.6" y="410" width="40.5" height="92" /><rect x="745.6" y="343" width="42.5" height="159" /><rect x="832.5" y="277" width="42.6" height="225" /><rect x="930.0" y="121" width="46.7" height="474" /><rect x="1035.4" y="344" width="46.9" height="158" /><rect x="1128.9" y="415" width="39.9" height="87" />
-        </g>
-      </svg>}
-      <div style={{ position: 'relative' }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.24em', textTransform: 'uppercase', color: '#8FB0D6', marginBottom: mobile ? 10 : 12 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
-        <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 900, fontSize: mobile ? 28 : 36, lineHeight: 1.04, letterSpacing: '0.01em', color: '#FFFFFF' }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
-        <div style={{ marginTop: mobile ? 14 : 16, paddingTop: mobile ? 12 : 14, borderTop: '1px solid rgba(255,255,255,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: mobile ? '8px 16px' : '14px 24px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: mobile ? 12 : 13, color: '#AFC4DC' }}>
-          {/* "本期/this edition", not "今日/today" — the edition is a relay
-              window minus already-published dedup, so its count legitimately
-              differs from the rail's calendar-day count (23 vs 19 confusion,
-              2026-07-08 adversarial-review fix #9). */}
-          <span style={{ whiteSpace: 'nowrap' }}>{dateStr}　{weekday}　· {zh ? '本期 ' : ''}<b style={{ color: '#fff', fontWeight: 600 }}>{edition.stats.events}</b>{zh ? ' 篇' : ' stories this edition'}</span>
-          <span style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px' }}>
-            {dots.map((x) => (
-              <span key={x.cat} style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
-                <span style={{ width: 8, height: 8, borderRadius: 2, background: x.color }} />{x.label} <b style={{ color: '#fff', fontWeight: 600 }}>{x.n}</b>
-              </span>
-            ))}
-            {/* 快讯 chip — without it the section dots sum to less than 本期 N 篇
-                (SECTION_CAP overflow lands in flashes; 8-11: 21 篇 vs dots 14,
-                readers do the arithmetic) */}
-            {(edition.flashes || []).length > 0 && (
-              <span style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
-                <span style={{ width: 8, height: 8, borderRadius: 2, background: '#8FB0D6', opacity: 0.55 }} />{t('daily.flashes')} <b style={{ color: '#fff', fontWeight: 600 }}>{edition.flashes.length}</b>
-              </span>
-            )}
+    // 9-08 (Cindy): the navy poster box read as a billboard dropped into a
+    // three-column app — ~1/4 of the first screen, colours from nowhere else
+    // on the page. Now a flat editorial masthead on the page ground: kicker,
+    // title, one meta line, hairline. Same content, no box, no decoration.
+    <header style={{ padding: mobile ? '4px 0 14px' : '8px 0 18px', marginBottom: mobile ? 24 : 32, borderBottom: '1px solid var(--border-subtle)' }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#3D74B8', marginBottom: mobile ? 6 : 8 }}>{zh ? '每日简报 · Daily Briefing' : 'Daily Briefing'}</div>
+      <h2 style={{ margin: 0, fontFamily: "'Noto Serif SC', var(--font-display)", fontWeight: 700, fontSize: mobile ? 26 : 32, lineHeight: 1.15, letterSpacing: '-0.005em', color: ink }}>{zh ? '今日康复信号' : "Today's Rehab Signal"}</h2>
+      <div style={{ marginTop: mobile ? 10 : 12, display: 'flex', alignItems: 'center', gap: mobile ? '6px 14px' : '8px 20px', flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: mobile ? 12 : 12.5, color: 'var(--text-tertiary)' }}>
+        {/* "本期/this edition", not "今日/today" — the edition is a relay
+            window minus already-published dedup, so its count legitimately
+            differs from the rail's calendar-day count (23 vs 19 confusion,
+            2026-07-08 adversarial-review fix #9). */}
+        <span style={{ whiteSpace: 'nowrap', color: 'var(--text-secondary)' }}>{dateStr} {weekday} · {zh ? '本期 ' : ''}<b style={{ color: ink, fontWeight: 600 }}>{edition.stats.events}</b>{zh ? ' 篇' : ' stories'}</span>
+        {dots.map((x) => (
+          <span key={x.cat} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
+            <span style={{ width: 7, height: 7, borderRadius: 2, background: x.color }} />{x.label} <b style={{ color: ink, fontWeight: 600 }}>{x.n}</b>
           </span>
-        </div>
+        ))}
+        {/* 快讯 chip — without it the section dots sum to less than 本期 N 篇
+            (SECTION_CAP overflow lands in flashes; 8-11: 21 篇 vs dots 14,
+            readers do the arithmetic) */}
+        {(edition.flashes || []).length > 0 && (
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap' }}>
+            <span style={{ width: 7, height: 7, borderRadius: 2, background: '#8FB0D6' }} />{t('daily.flashes')} <b style={{ color: ink, fontWeight: 600 }}>{edition.flashes.length}</b>
+          </span>
+        )}
       </div>
     </header>
   );
