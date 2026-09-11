@@ -1,0 +1,222 @@
+{
+ "date": "2026-09-12",
+ "generatedAt": "2026-09-11T23:25:20.054Z",
+ "windowHours": 50,
+ "windowStart": "2026-09-10T23:18:15.018Z",
+ "windowEnd": "2026-09-11T23:25:18.352Z",
+ "lead": {
+  "titleZh": "老年 TBI 认知康复成本效益；零星运动干预老年衰弱；线性疤痕干针改善柔顺性",
+  "titleEn": "Cost-effectiveness of non-pharmacologic TBI cognitive rehab in older adults; exercise snacking for frailty; dry needling for linear scar compliance",
+  "paragraphZh": "今日日报共 7 条，涵盖 6 个专科方向。有 3 篇最高分（75 分）条目值得关注，分别关注老年 TBI 认知干预的成本效益（观察研究）、零星运动干预老年衰弱的潜力（综述），以及干针治疗线性疤痕组织柔顺性（RCT）。",
+  "paragraphEn": "Today's report features 7 entries across 6 specialties. Three top-scored (75 points) entries warrant attention: one on the cost-utility of non-pharmacologic interventions for cognitive outcomes in older adults with TBI (observational study), another on exercise snacking as a strategy for frailty in older adults (review), and a third on dry needling for tissue compliance in linear scars (RCT)."
+ },
+ "stats": {
+  "events": 7,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 3,
+  "topScore": 75
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1789102254419-1",
+     "title": "Effectiveness of photobiomodulation therapy associated with multimodal therapeutic intervention program versus multimodal therapeutic intervention program in chronic non-specific neck pain: A randomized controlled trial.",
+     "summary": "This randomized controlled trial found that adding photobiomodulation therapy (PBMT) to a multimodal therapeutic intervention program (MTIP) did not yield further improvements in functional disability (NDI difference 4.06 post-intervention) or pain intensity (resting pain difference 0.54 post-intervention) compared to MTIP alone in individuals with chronic nonspecific neck pain.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42721829/",
+     "publishedAt": "2026-09-10T00:00:00.000Z",
+     "firstSeen": "2026-09-11T04:50:54.419Z",
+     "curatedScore": 65,
+     "curatedReason": "对于慢性非特异性颈痛，这项研究提示光生物调节疗法（PBMT）联合多模式治疗方案，并不能比单独的多模式治疗带来额外的好处，在临床决策中应注意其增益有限。",
+     "titleZh": "慢性非特异性颈痛中，光生物调节疗法联合多模式治疗方案与单独多模式治疗方案的疗效对比：一项随机对照试验",
+     "summaryZh": "一项随机对照试验显示，对于慢性非特异性颈痛患者，在多模式治疗方案（MTIP）中加入光生物调节疗法（PBMT），并未在功能残疾（NDI 治疗后差异 4.06）或疼痛强度（静息疼痛治疗后差异 0.54）方面比单独MTIP带来额外改善。",
+     "curatedReasonEn": "For chronic nonspecific neck pain, this study suggests that photobiomodulation therapy (PBMT) combined with a multimodal therapeutic intervention program does not offer additional benefits compared to the multimodal program alone. Clinicians should note its limited incremental gain in decision-making.",
+     "limitation": "研究排除了有神经压迫或放射痛的颈痛患者，且PBMT的剂量条件特定，可能限制了结果对更广泛人群和不同治疗方案的普适性。",
+     "limitationEn": "The study excluded patients with cervical radiculopathy or radiating pain, and the specific PBMT dosage conditions may limit the generalizability of the results to a broader population and different treatment protocols.",
+     "tags": [
+      "research",
+      "laser"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Brazilian journal of physical therapy"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1789169108498-3",
+     "title": "Cost-utility of non-pharmacologic interventions aimed at improving cognitive outcomes after traumatic brain injury in older adulthood from the Ontario public healthcare payer perspective",
+     "summary": "A cost-utility analysis in Ontario, Canada, comparing non-pharmacologic interventions for older adults (≥ 65 years) post-TBI, found that combination therapy (physical rehabilitation and cognitive training) yielded the highest QALYs (3.04 QALYs) and net monetary benefit (CAD$102,653), with an ICER of CAD$18,028 per QALY gained.",
+     "category": "neurological",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08177-0",
+     "publishedAt": "2026-09-11T00:00:00.000Z",
+     "firstSeen": "2026-09-11T23:25:08.498Z",
+     "curatedScore": 75,
+     "curatedReason": "这项成本效益分析明确指出，在加拿大安大略省的公共医疗体系下，针对老年创伤性脑损伤（TBI）患者，结合物理康复和认知训练的干预措施最具成本效益，显著提高了 QALYs 并降低了痴呆发生率。这意味着在资源有限的环境中，组合疗法应成为你优化 TBI 老年患者认知结局的首选策略。",
+     "titleZh": "从安大略省公共医疗支付方视角看，旨在改善老年创伤性脑损伤后认知结局的非药物干预措施的成本效益",
+     "summaryZh": "一项在加拿大安大略省进行的成本效益分析显示，针对老年（≥ 65 岁）TBI 患者的非药物干预中，结合物理康复和认知训练的组合疗法产生了最高的质量调整生命年（3.04 QALYs）和净货币收益（CAD$102,653），增量成本效益比为 CAD$18,028/QALY。",
+     "curatedReasonEn": "This cost-utility analysis clearly indicates that for older adults with traumatic brain injury (TBI) within Ontario, Canada's public healthcare system, combined physical rehabilitation and cognitive training is the most cost-effective intervention, significantly improving QALYs and reducing dementia incidence. This means that in resource-constrained settings, combination therapy should be your preferred strategy for optimizing cognitive outcomes in older TBI patients.",
+     "limitation": "该研究的成本效益分析结果特定于加拿大安大略省的公共医疗支付方视角，其经济参数和阈值可能不适用于其他医疗系统。",
+     "limitationEn": "The cost-utility analysis results are specific to the Ontario public healthcare payer perspective, and its economic parameters and thresholds may not be applicable to other healthcare systems.",
+     "tags": [
+      "research",
+      "brain-injury",
+      "reimbursement"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1789169108498-4",
+     "title": "Comparative changes in cardiovascular measures following speed, agility, and quickness training and small-sided games in youth football players: a randomized trial",
+     "summary": "A randomized trial compared the cardiovascular measures following speed, agility, and quickness (SAQ) training and small-sided games (SSGs) in youth football players, investigating their differential physical and football-specific demands.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02048-2",
+     "publishedAt": "2026-09-10T00:00:00.000Z",
+     "firstSeen": "2026-09-11T23:25:08.498Z",
+     "curatedScore": 65,
+     "curatedReason": "对于青少年足球运动员，这项研究证实 SAQ 训练和小型比赛（SSG）在心血管负荷上存在差异。这意味着在设计体能和康复计划时，应根据训练目标更精细地选择 SAQ 或 SSG，以实现特定的生理适应。",
+     "titleZh": "青少年足球运动员速度、敏捷性、快速性训练与小型比赛后心血管指标的比较性变化：一项随机试验",
+     "summaryZh": "一项随机试验比较了青少年足球运动员在速度、敏捷性、快速性（SAQ）训练和小型比赛（SSGs）后心血管指标的变化，旨在研究它们在身体和足球特定需求上的差异。",
+     "curatedReasonEn": "For youth football players, this RCT confirms distinct cardiovascular loads between SAQ training and small-sided games (SSG). When designing conditioning or rehab programs, you should meticulously choose between SAQ and SSG based on your specific training objectives to elicit desired physiological adaptations.",
+     "limitation": "摘要未提供具体的关键效应量或统计数据，仅提及比较性变化，限制了对其临床意义的解读。",
+     "limitationEn": "The abstract does not provide specific key effect sizes or statistical data, only mentioning comparative changes, which limits the interpretation of its clinical significance.",
+     "tags": [
+      "research",
+      "youth-sports"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1789169108497-1",
+     "title": "Centering First Nations parents' voices: a community-directed pediatric rehabilitation needs assessment in Northern Saskatchewan.",
+     "summary": "A community-based participatory action research study in Northern Saskatchewan found that First Nations parents face significant barriers in accessing pediatric rehabilitation services due to an inequitable healthcare system, recommending a shift towards strength-based, family-centered, culturally grounded, and community-led care.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42725466/",
+     "publishedAt": "2026-09-11T00:00:00.000Z",
+     "firstSeen": "2026-09-11T23:25:08.497Z",
+     "curatedScore": 70,
+     "curatedReason": "这项社区导向的研究揭示了加拿大原住民儿童康复服务中存在的严重系统性不平等，包括信息匮乏、服务延迟和资源不足。这要求我们重新审视现有评估框架，转向以家庭为中心、文化为基础的康复模式，避免沿用西方医学模式的偏见。",
+     "titleZh": "以原住民父母之声为中心：萨斯喀彻温省北部社区导向的儿童康复需求评估",
+     "summaryZh": "一项加拿大萨斯喀彻温省北部社区参与式行动研究发现，原住民父母因医疗系统不平等，在获取儿科康复服务方面面临重大障碍，建议转向以优势为基础、家庭为中心、文化为根基、社区主导的护理模式。",
+     "curatedReasonEn": "This community-directed study highlights severe systemic inequities in pediatric rehabilitation services for Indigenous children in Northern Saskatchewan, including lack of information, service delays, and insufficient resources. It mandates a critical re-evaluation of existing frameworks towards family-centered, culturally grounded rehabilitation, moving away from biases inherent in Western medical models.",
+     "limitation": "该研究基于定性访谈，未量化服务差距，且结果特异于加拿大北部原住民社区，推广性有限。",
+     "limitationEn": "This study is based on qualitative interviews, does not quantify service gaps, and its findings are specific to Northern Saskatchewan Indigenous communities, limiting generalizability.",
+     "tags": [
+      "research",
+      "reimbursement",
+      "regulation"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1789102254420-3",
+     "title": "The effects of robot assisted therapy on upper limb functions and gait parameters in cerebral palsy: A randomized controlled trial.",
+     "summary": "This randomized controlled trial found that adding upper extremity robotic-assisted training to conventional physiotherapy in children with cerebral palsy significantly improved various upper limb outcomes, including wrist flexion (mean change 10.37° vs 1.13°), forearm supination (median change 17.5° vs 2.0°), and Jebsen-Taylor Hand Function Test time (mean change -37.67 s vs -9.30 s), and positively influenced gait parameters like unaffected stance phase.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42721825/",
+     "publishedAt": "2026-09-10T00:00:00.000Z",
+     "firstSeen": "2026-09-11T04:50:54.420Z",
+     "curatedScore": 70,
+     "curatedReason": "这项RCT提示，对脑瘫患儿，在常规物理治疗中加入上肢机器人辅助训练，不仅能改善上肢功能，还能对步态参数产生积极影响。这意味着上肢机器人干预可能带来超越单一肢体训练的全身性益处，值得在临床中探索其潜力。",
+     "titleZh": "机器人辅助疗法对脑瘫患者上肢功能和步态参数的影响：一项随机对照试验",
+     "summaryZh": "一项随机对照试验发现，在脑瘫患儿的常规物理治疗中加入上肢机器人辅助训练，可显著改善多项上肢结局，包括腕关节屈曲（平均变化 10.37° 对 1.13°）、前臂旋后（中位变化 17.5° 对 2.0°）和 Jebsen-Taylor 手功能测试时间（平均变化 -37.67 秒 对 -9.30 秒），并对步态参数如非受累侧站立相产生积极影响。",
+     "curatedReasonEn": "This RCT suggests that adding upper extremity robot-assisted training to conventional physiotherapy for children with cerebral palsy can improve upper extremity function and positively influence gait parameters. This implies that upper extremity robotic intervention may offer systemic benefits beyond single-limb training, warranting exploration of its potential in clinical practice.",
+     "limitation": "研究样本量较小（31名），且干预时间（6周）和随访期较短，可能限制了结论的长期稳定性和外推性。",
+     "limitationEn": "The study had a small sample size (31 participants) and a short intervention (6 weeks) and follow-up period, which may limit the long-term stability and generalizability of the findings.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Brazilian journal of physical therapy",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1789169108498-5",
+     "title": "Exercise snacking as a novel strategy for prevention and intervention of frailty in older adults: a scoping review",
+     "summary": "A scoping review on \"exercise snacking\" as a novel strategy for preventing and intervening in frailty in older adults found promising potential, particularly given the unsuitability of conventional long-duration exercise for this population.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08215-x",
+     "publishedAt": "2026-09-09T00:00:00.000Z",
+     "firstSeen": "2026-09-11T23:25:08.498Z",
+     "curatedScore": 75,
+     "curatedReason": "这项范围综述表明，对老年人来说，将零星运动（exercise snacking）作为预防和干预衰弱的新策略是可行的。考虑到传统长时间运动对老年人的挑战，你应该开始探索如何将这种短时、高频的运动模式融入你的老年患者康复方案，以提高依从性和效果。",
+     "titleZh": "零星运动作为预防和干预老年人衰弱的新策略：一项范围综述",
+     "summaryZh": "一项关于“零星运动”作为预防和干预老年人衰弱新策略的范围综述发现其具有广阔潜力，尤其考虑到传统长时间运动对老年人往往不适用。",
+     "curatedReasonEn": "This scoping review suggests that 'exercise snacking' is a viable new strategy for frailty prevention and intervention in older adults. Given the challenges older adults face with traditional long-duration exercise, you should explore integrating these short, frequent bursts of activity into your geriatric rehabilitation programs to improve adherence and outcomes.",
+     "limitation": "该范围综述主要基于对中年和青年人的研究，专门针对老年衰弱的证据仍然缺乏，需要更多老年人群的直接研究。",
+     "limitationEn": "This scoping review is largely based on studies in middle-aged and young adults, with direct evidence specifically addressing frailty in older adults still lacking, necessitating more direct research in this population.",
+     "tags": [
+      "research",
+      "衰弱"
+     ],
+     "studyDesign": "综述",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1789126360649-2",
+     "title": "Scar dry needling for tissue compliance in individuals with linear scars: a randomized controlled trial.",
+     "summary": "This RCT (n=80) compared scar dry needling (DN) with minimal needling, finding that scar-DN was associated with short-term improvements in tissue compliance at some indentation depths, but no significant differences in local scar-related pain or health-related quality of life.",
+     "category": "manual-modality",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42723368/",
+     "publishedAt": "2026-09-11T00:00:00.000Z",
+     "firstSeen": "2026-09-11T11:32:40.649Z",
+     "curatedScore": 75,
+     "curatedReason": "干针在疤痕管理中的证据尚有限，但这项研究提示它能在短期内改善线性疤痕的组织柔顺性。虽然疼痛和生活质量未见显著改善，但组织力学变化本身值得我们继续关注其长期临床价值和适用边界。",
+     "titleZh": "线性疤痕个体干针治疗对组织柔顺性的影响：一项随机对照试验",
+     "summaryZh": "这项随机对照试验（n=80）比较了疤痕干针（DN）与微量针刺，发现疤痕干针在某些压痕深度上与短期组织柔顺性改善相关，但在局部疤痕相关疼痛或健康相关生活质量方面未见显著差异。",
+     "curatedReasonEn": "Evidence for dry needling in scar management is limited, but this study suggests it can improve tissue compliance in linear scars short-term. While no significant improvements in pain or quality of life were observed, the mechanical changes in tissue warrant continued attention to its long-term clinical value and application boundaries.",
+     "limitation": "研究未能发现干针在疤痕相关疼痛或健康相关生活质量方面的显著改善，且部分分析（如被动膝关节屈曲）样本量过小，限制了结论的外推性。",
+     "limitationEn": "The study did not find significant improvements in scar-related pain or health-related quality of life with dry needling, and some analyses (e.g., passive knee flexion) had very small sample sizes, limiting the generalizability of conclusions.",
+     "tags": [
+      "research",
+      "dry-needling"
+     ],
+     "studyDesign": "RCT",
+     "journal": "The Journal of manual & manipulative therapy"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
