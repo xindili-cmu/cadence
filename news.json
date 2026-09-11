@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-11T00:16:13.906Z",
+    "lastUpdated": "2026-09-11T04:50:56.502Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,14 +20,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42695524/",
       "category": "neurological",
       "publishedAt": "2026-09-10T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 8,
       "sources": [
         "Disability and rehabilitation",
         "medRxiv",
         "American journal of physical medicine & rehabilitation",
         "Topics in stroke rehabilitation",
+        "Archives of physical medicine and rehabilitation",
         "Gait & posture",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "Brazilian journal of physical therapy"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -62,6 +64,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis.",
+          "titleZh": "卒中康复下肢运动随机对照试验中步速变化：干预手段与卒中后时间的荟萃分析"
+        },
+        {
+          "source": "PubMed",
           "journal": "Gait & posture",
           "title": "Reduced trailing limb angle is associated with near-falls during walking in stroke survivors.",
           "titleZh": "中风幸存者行走时拖曳肢体角度减小与近乎跌倒相关"
@@ -77,11 +85,96 @@
           "journal": "Gait & posture",
           "title": "Effects of Lokomat-based robotic-assisted gait training and physical therapy on gait quality in children with cerebral palsy: A severity-stratified analysis.",
           "titleZh": "Lokomat 机器人辅助步态训练与物理治疗对脑瘫儿童步态质量的影响：按严重程度分层分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "The effects of robot assisted therapy on upper limb functions and gait parameters in cerebral palsy: A randomized controlled trial.",
+          "titleZh": "机器人辅助疗法对脑瘫患者上肢功能和步态参数的影响：一项随机对照试验"
         }
       ],
-      "heat": 4.23,
-      "themeZh": "卒中康复的运动学习、功能恢复与相关干预研究",
-      "themeEn": "Stroke rehabilitation: motor learning, recovery, interventions"
+      "heat": 5.27,
+      "themeZh": "卒中后运动功能与步态康复的干预策略与机制",
+      "themeEn": "Stroke Motor Function and Gait Rehabilitation"
+    },
+    {
+      "id": "news-1788497020519-0",
+      "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692805/",
+      "category": "orthopedic",
+      "publishedAt": "2026-09-10T00:00:00.000Z",
+      "sourceCount": 8,
+      "sources": [
+        "British journal of sports medicine",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "International journal of sports physical therapy",
+        "The Journal of orthopaedic and sports physical therapy",
+        "Sports Medicine",
+        "The Journal of manual & manipulative therapy",
+        "Bulletin of Faculty of Physical Therapy",
+        "Brazilian journal of physical therapy"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial.",
+          "titleZh": "结合运动与认知行为疗法的数字疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effects of Transcranial Direct Current Stimulation and Individualized Physical Therapy on Pain and Function in Individuals With Chronic Knee Pain: A Pilot Study.",
+          "titleZh": "经颅直流电刺激联合个体化物理治疗对慢性膝关节疼痛患者疼痛和功能的影响：一项初步研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Calcific Patellar Tendinopathy. A Case Report Integrating Diagnostic Ultrasound Throughout a Multi-Modal Treatment Approach.",
+          "titleZh": "钙化性髌腱病变：整合诊断性超声的多模式治疗方法病例报告"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
+          "titleZh": "膝骨关节炎阻力训练的个体化方案：强度与训练量效应的剂量反应荟萃分析系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "The Efficacy of Exercise Therapy for Nonspecific Chronic Low Back Pain According to the FITT Principle: A Systematic Review With Meta-analyses.",
+          "titleZh": "运动疗法对非特异性慢性腰痛疗效的 FITT 原则：系统综述与荟萃分析"
+        },
+        {
+          "source": "Sports Medicine",
+          "journal": "Sports Medicine",
+          "title": "Proprioception Training and Surrogate Outcomes: A Systematic Review of Definitions, Measures, and Effectiveness Claims",
+          "titleZh": "本体感觉训练与替代结局：定义、测量和有效性主张的系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Biological effects of technique-specific manual therapy in healthy individuals and people with musculoskeletal disorders: a systematic review with meta-analysis.",
+          "titleZh": "特定手法治疗对健康个体及肌肉骨骼疾病患者的生物学效应：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "Clinical outcomes and satisfaction among low back pain patients following orthopedic manual therapy: systematic review",
+          "titleZh": "骨科手法治疗对腰痛患者临床结局和满意度的系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Effectiveness of photobiomodulation therapy associated with multimodal therapeutic intervention program versus multimodal therapeutic intervention program in chronic non-specific neck pain: A randomized controlled trial.",
+          "titleZh": "慢性非特异性颈痛中，光生物调节疗法联合多模式治疗方案与单独多模式治疗方案的疗效对比：一项随机对照试验"
+        }
+      ],
+      "heat": 5.27,
+      "themeZh": "慢性膝痛与腰痛的运动疗法及神经调控研究",
+      "themeEn": "Chronic Knee and Back Pain Therapies"
     },
     {
       "id": "news-1788929595659-0",
@@ -123,30 +216,31 @@
           "titleZh": "社会决定因素对居家和门诊物理治疗利用率的影响：一项回顾性队列研究"
         }
       ],
-      "heat": 2.82,
-      "themeZh": "可穿戴技术与远程医疗在骨科康复中的应用与效益",
-      "themeEn": "Wearables and telerehab in orthopedic care"
+      "heat": 2.64,
+      "themeZh": "远程医疗与可穿戴技术在骨科康复中的应用",
+      "themeEn": "Telerehabilitation and Wearables in Orthopedic Rehab"
     },
     {
-      "id": "news-1789082246894-23",
-      "title": "Effects of Virtual Reality–Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00900-7/fulltext?rss=yes",
+      "id": "news-1789102254418-0",
+      "title": "Effects of Virtual Reality-Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42722182/",
       "category": "orthopedic",
       "publishedAt": "2026-09-10T00:00:00.000Z",
-      "sourceCount": 3,
+      "sourceCount": 4,
       "sources": [
-        "Archives of Physical Medicine and Rehabilitation",
+        "Archives of physical medicine and rehabilitation",
         "medRxiv",
-        "Brazilian journal of physical therapy"
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation"
       ],
       "tag": "shoulder",
       "kind": "theme",
       "members": [
         {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Effects of Virtual Reality–Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial",
-          "titleZh": "虚拟现实辅助任务导向训练对肩袖撕裂患者临床和心理社会结局的影响：一项随机对照单盲试验"
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Effects of Virtual Reality-Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial.",
+          "titleZh": "虚拟现实辅助任务导向训练对肩袖撕裂患者临床与心理社会结局的影响：一项随机对照单盲试验"
         },
         {
           "source": "medRxiv",
@@ -154,57 +248,21 @@
           "titleZh": "一项用于卒中后手臂失用评估的有效且可靠的虚拟现实工具"
         },
         {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Comparison of action observation therapy and virtual reality combined with conventional therapy for upper extremity rehabilitation in children with unilateral cerebral palsy.",
-          "titleZh": "行动观察疗法与虚拟现实结合常规疗法对单侧脑瘫儿童上肢康复效果的比较"
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Hand function, reaction speed, and competitive ranking in licensed and amateur male league of legends players: a cross-sectional study",
+          "titleZh": "男性英雄联盟职业和业余玩家的手功能、反应速度和竞技排名：一项横断面研究"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Clinicians’ ethical considerations regarding the use of prediction models in hand and wrist care: a qualitative study.",
+          "titleZh": "临床医生对手腕部护理中预测模型伦理考量的定性研究"
         }
       ],
-      "heat": 2.11,
-      "themeEn": "VR for upper limb rehab and assessment"
-    },
-    {
-      "id": "news-1789082246894-24",
-      "title": "Sarcopenia Assessment in Resource-Constrained Settings: Expert Agreement on Surrogate Measures",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.06.26361926v1?rss=1",
-      "category": "geriatric",
-      "publishedAt": "2026-09-10T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "medRxiv",
-        "BMC Musculoskeletal Disorders",
-        "BMC Geriatrics"
-      ],
-      "tag": "sarcopenia",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "medRxiv",
-          "title": "Sarcopenia Assessment in Resource-Constrained Settings: Expert Agreement on Surrogate Measures",
-          "titleZh": "资源受限环境下肌少症评估：专家对替代测量指标的共识"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Integrated machine learning and clinical validation identify COL21A1 as a potential biomarker for sarcopenia",
-          "titleZh": "机器学习与临床验证相结合识别 COL21A1 作为肌少症的潜在生物标志物"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "C-reactive protein-to-albumin ratio adds independent prognostic value to the clinical frailty scale in older emergency department patients: a multicenter cohort study",
-          "titleZh": "C 反应蛋白/白蛋白比率在老年急诊患者临床衰弱量表中的独立预后价值：一项多中心队列研究"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Implementing an exercise intervention for sarcopenia in oldest-old nursing home residents: protocol for a pragmatic cluster-randomized controlled trial (SCOPE Study)",
-          "titleZh": "针对最老年养老院居民肌少症运动干预的实施：一项实用型整群随机对照试验（SCOPE 研究）方案"
-        }
-      ],
-      "heat": 2.11,
-      "themeZh": "肌少症的评估指标、生物标志物与运动干预研究",
-      "themeEn": "Sarcopenia assessment, biomarkers, and exercise"
+      "heat": 2.64,
+      "themeZh": "虚拟现实技术在肢体功能评估与康复中的应用",
+      "themeEn": "Virtual Reality for Limb Function Rehab"
     },
     {
       "id": "news-1788434721369-0",
@@ -212,11 +270,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42685385/",
       "category": "orthopedic",
       "publishedAt": "2026-09-09T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "Brazilian journal of physical therapy",
         "International journal of sports physical therapy",
         "BMC Geriatrics",
+        "Musculoskeletal science & practice",
         "medRxiv"
       ],
       "tag": "knee",
@@ -247,17 +306,124 @@
           "titleZh": "大学生运动员髋关节镜术后重返运动康复方案中功能性下肢评估（FLEE）的应用：一项病例系列研究"
         },
         {
+          "source": "PubMed",
+          "journal": "Musculoskeletal science & practice",
+          "title": "Reframing patient expectations as therapeutic targets in musculoskeletal care.",
+          "titleZh": "将患者预期重塑为肌肉骨骼护理中的治疗靶点"
+        },
+        {
           "source": "medRxiv",
           "title": "Balancing Offloading and Comfort: The Effect of Forefoot Rocker Curvature on In-Shoe Plantar Pressure and Gait Kinematics",
           "titleZh": "平衡卸载与舒适度：前足摇杆曲率对鞋内足底压力和步态运动学的影响"
         }
       ],
-      "heat": 1.99,
-      "themeZh": "骨科患者康复目标、依从性与下肢功能评估",
-      "themeEn": "Orthopedic rehab goals, adherence, lower limb"
+      "heat": 2.33,
+      "themeZh": "髋膝关节损伤康复中的患者依从性与功能评估",
+      "themeEn": "Hip and Knee Injury Rehab Adherence"
     }
   ],
   "items": [
+    {
+      "id": "news-1788497020520-1",
+      "title": "Gait Speed Changes in Stroke Rehabilitation Motor Lower Extremity Randomized Controlled Trials by Intervention and Time Post-Stroke: A Meta-Analysis.",
+      "summary": "A meta-analysis of 106 RCTs found that motor lower extremity stroke rehabilitation interventions in the acute/subacute phases demonstrated significantly greater magnitude of improvement in gait speed compared to those in the chronic phase, with treadmill training, body weight-supported treadmill training, and exoskeletons showing significant benefits acutely.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42692101/",
+      "publishedAt": "2026-09-03T00:00:00.000Z",
+      "firstSeen": "2026-09-04T04:43:40.520Z",
+      "curatedScore": 80,
+      "curatedReason": "卒中后下肢运动康复，请务必在急性/亚急性期介入，因为对步速改善的效应量远大于慢性期。其中，跑步机训练、体位支持跑步机训练和外骨骼在急性期都有显著益处。",
+      "titleZh": "卒中康复下肢运动随机对照试验中步速变化：干预手段与卒中后时间的荟萃分析",
+      "summaryZh": "一项涵盖106项随机对照试验的荟萃分析发现，卒中后下肢运动康复干预在急性/亚急性期对步速改善的效应量显著大于慢性期，其中跑步机训练、体位支持跑步机训练和外骨骼在急性期显示出显著益处。",
+      "curatedReasonEn": "For post-stroke lower extremity motor rehabilitation, prioritize intervention in the acute/subacute phases, as the effect size for gait speed improvement is significantly greater than in the chronic phase. Treadmill training, body weight-supported treadmill training, and exoskeletons all show significant benefits acutely.",
+      "limitation": "尽管分析涵盖了大量RCT，但不同干预措施在研究方法、患者异质性及结果测量上的差异，可能影响了荟萃分析的总体解释力。",
+      "limitationEn": "Although the analysis included a large number of RCTs, variations in research methods, patient heterogeneity, and outcome measures across different interventions may affect the overall interpretability of the meta-analysis.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1789102254418-0",
+      "title": "Effects of Virtual Reality-Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial.",
+      "summary": "Adding virtual reality-assisted task-oriented training (VR-TOT) to conventional physiotherapy in individuals with partial rotator cuff tears significantly improved upper extremity function (DASH mean difference -3.93 points), pain, shoulder-related disability, kinesiophobia, and pain catastrophizing in the short term, though the DASH difference did not reach MCID.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42722182/",
+      "publishedAt": "2026-09-10T00:00:00.000Z",
+      "firstSeen": "2026-09-10T23:17:26.894Z",
+      "curatedScore": 75,
+      "curatedReason": "本研究提示，对于部分肩袖撕裂，常规物理治疗中加入虚拟现实辅助任务导向训练，可在短期内进一步改善上肢功能、疼痛和运动恐惧，但功能改善的效应量未达临床最小重要差异。",
+      "titleZh": "虚拟现实辅助任务导向训练对肩袖撕裂患者临床与心理社会结局的影响：一项随机对照单盲试验",
+      "summaryZh": "一项随机对照单盲试验显示，对于部分肩袖撕裂患者，在常规物理治疗中加入虚拟现实辅助任务导向训练，可显著改善上肢功能（DASH 平均差异 -3.93 点）、疼痛、肩关节相关残疾、运动恐惧和疼痛灾难化，但DASH的改善量未达到临床最小重要差异。",
+      "curatedReasonEn": "This study suggests that adding virtual reality-assisted task-oriented training to conventional physiotherapy for partial rotator cuff tears can further improve upper extremity function, pain, and kinesiophobia in the short term. However, the effect size for functional improvement did not reach the minimally clinically important difference.",
+      "limitation": "该研究的DASH功能改善虽具统计学意义，但未达到已发表的临床最小重要差异（MCID），且随访期较短。",
+      "limitationEn": "Although statistically significant, the improvement in DASH scores in this study did not reach the published Minimally Clinically Important Difference (MCID), and the follow-up period was short.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true,
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00900-7/fulltext?rss=yes",
+          "title": "Effects of Virtual Reality–Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial"
+        }
+      ]
+    },
+    {
+      "id": "news-1789102254420-3",
+      "title": "The effects of robot assisted therapy on upper limb functions and gait parameters in cerebral palsy: A randomized controlled trial.",
+      "summary": "This randomized controlled trial found that adding upper extremity robotic-assisted training to conventional physiotherapy in children with cerebral palsy significantly improved various upper limb outcomes, including wrist flexion (mean change 10.37° vs 1.13°), forearm supination (median change 17.5° vs 2.0°), and Jebsen-Taylor Hand Function Test time (mean change -37.67 s vs -9.30 s), and positively influenced gait parameters like unaffected stance phase.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42721825/",
+      "publishedAt": "2026-09-10T00:00:00.000Z",
+      "firstSeen": "2026-09-11T04:50:54.420Z",
+      "curatedScore": 70,
+      "curatedReason": "这项RCT提示，对脑瘫患儿，在常规物理治疗中加入上肢机器人辅助训练，不仅能改善上肢功能，还能对步态参数产生积极影响。这意味着上肢机器人干预可能带来超越单一肢体训练的全身性益处，值得在临床中探索其潜力。",
+      "titleZh": "机器人辅助疗法对脑瘫患者上肢功能和步态参数的影响：一项随机对照试验",
+      "summaryZh": "一项随机对照试验发现，在脑瘫患儿的常规物理治疗中加入上肢机器人辅助训练，可显著改善多项上肢结局，包括腕关节屈曲（平均变化 10.37° 对 1.13°）、前臂旋后（中位变化 17.5° 对 2.0°）和 Jebsen-Taylor 手功能测试时间（平均变化 -37.67 秒 对 -9.30 秒），并对步态参数如非受累侧站立相产生积极影响。",
+      "curatedReasonEn": "This RCT suggests that adding upper extremity robot-assisted training to conventional physiotherapy for children with cerebral palsy can improve upper extremity function and positively influence gait parameters. This implies that upper extremity robotic intervention may offer systemic benefits beyond single-limb training, warranting exploration of its potential in clinical practice.",
+      "limitation": "研究样本量较小（31名），且干预时间（6周）和随访期较短，可能限制了结论的长期稳定性和外推性。",
+      "limitationEn": "The study had a small sample size (31 participants) and a short intervention (6 weeks) and follow-up period, which may limit the long-term stability and generalizability of the findings.",
+      "tags": [
+        "research"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Brazilian journal of physical therapy",
+      "tech": true
+    },
+    {
+      "id": "news-1789102254419-1",
+      "title": "Effectiveness of photobiomodulation therapy associated with multimodal therapeutic intervention program versus multimodal therapeutic intervention program in chronic non-specific neck pain: A randomized controlled trial.",
+      "summary": "This randomized controlled trial found that adding photobiomodulation therapy (PBMT) to a multimodal therapeutic intervention program (MTIP) did not yield further improvements in functional disability (NDI difference 4.06 post-intervention) or pain intensity (resting pain difference 0.54 post-intervention) compared to MTIP alone in individuals with chronic nonspecific neck pain.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42721829/",
+      "publishedAt": "2026-09-10T00:00:00.000Z",
+      "firstSeen": "2026-09-11T04:50:54.419Z",
+      "curatedScore": 65,
+      "curatedReason": "对于慢性非特异性颈痛，这项研究提示光生物调节疗法（PBMT）联合多模式治疗方案，并不能比单独的多模式治疗带来额外的好处，在临床决策中应注意其增益有限。",
+      "titleZh": "慢性非特异性颈痛中，光生物调节疗法联合多模式治疗方案与单独多模式治疗方案的疗效对比：一项随机对照试验",
+      "summaryZh": "一项随机对照试验显示，对于慢性非特异性颈痛患者，在多模式治疗方案（MTIP）中加入光生物调节疗法（PBMT），并未在功能残疾（NDI 治疗后差异 4.06）或疼痛强度（静息疼痛治疗后差异 0.54）方面比单独MTIP带来额外改善。",
+      "curatedReasonEn": "For chronic nonspecific neck pain, this study suggests that photobiomodulation therapy (PBMT) combined with a multimodal therapeutic intervention program does not offer additional benefits compared to the multimodal program alone. Clinicians should note its limited incremental gain in decision-making.",
+      "limitation": "研究排除了有神经压迫或放射痛的颈痛患者，且PBMT的剂量条件特定，可能限制了结果对更广泛人群和不同治疗方案的普适性。",
+      "limitationEn": "The study excluded patients with cervical radiculopathy or radiating pain, and the specific PBMT dosage conditions may limit the generalizability of the results to a broader population and different treatment protocols.",
+      "tags": [
+        "research",
+        "laser"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Brazilian journal of physical therapy"
+    },
     {
       "id": "news-1787943068276-1",
       "title": "Physiotherapist-led care for musculoskeletal conditions in the emergency department (RESHAP-ED): a randomised controlled trial with economic evaluation.",
@@ -398,30 +564,6 @@
       ],
       "studyDesign": "综述",
       "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
-    },
-    {
-      "id": "news-1789082246894-23",
-      "title": "Effects of Virtual Reality–Assisted Task-Oriented Training on Clinical and Psychosocial Outcomes in Individuals with Rotator Cuff Tears: A Randomized Controlled Single-Blind Trial",
-      "summary": "This randomized controlled single-blind trial aimed to examine the effects of virtual reality–assisted task-oriented training (VR-TOT) added to conventional physiotherapy in individuals with rotator cuff tears (RCT).",
-      "category": "orthopedic",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00900-7/fulltext?rss=yes",
-      "publishedAt": "2026-09-10T00:00:00.000Z",
-      "firstSeen": "2026-09-10T23:17:26.894Z",
-      "curatedScore": 75,
-      "curatedReason": "这项初步的随机对照试验表明，在常规物理治疗中加入 VR 辅助任务导向训练，可能对肩袖撕裂患者的临床和心理社会结局有积极影响。你可以考虑将其作为一种新的辅助手段，但仍需等待更大规模、更长期的研究确认其长期疗效。",
-      "titleZh": "虚拟现实辅助任务导向训练对肩袖撕裂患者临床和心理社会结局的影响：一项随机对照单盲试验",
-      "summaryZh": "这项随机对照单盲试验旨在研究虚拟现实辅助任务导向训练 (VR-TOT) 联合常规物理治疗对肩袖撕裂患者临床和心理社会结局的影响。",
-      "curatedReasonEn": "This preliminary RCT suggests that adding VR-assisted task-oriented training to conventional physical therapy may positively impact clinical and psychosocial outcomes for rotator cuff tear patients. You might consider it as a novel adjunct, but larger, longer-term studies are needed to confirm its long-term efficacy.",
-      "limitation": "研究样本量、随访时间、以及患者对 VR 技术的适应性可能对结果的外推性造成局限，且是单盲试验。",
-      "limitationEn": "Limitations include sample size, follow-up duration, and patient adaptation to VR technology, which may limit generalizability. It was also a single-blind trial.",
-      "tags": [
-        "research",
-        "shoulder"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of Physical Medicine and Rehabilitation",
-      "tech": true
     },
     {
       "id": "news-1789082246894-24",
@@ -1939,75 +2081,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-      "tech": true
-    },
-    {
-      "id": "news-1788692784960-4",
-      "title": "Comparison of action observation therapy and virtual reality combined with conventional therapy for upper extremity rehabilitation in children with unilateral cerebral palsy.",
-      "summary": "This study randomized 45 children (aged 5-15 years) with unilateral cerebral palsy into three groups (AOT, XBOX Kinect, Conventional) to compare the effects of action observation therapy and virtual reality combined with conventional therapy on upper extremity function.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42700622/",
-      "publishedAt": "2026-09-06T00:00:00.000Z",
-      "firstSeen": "2026-09-06T11:06:24.960Z",
-      "curatedScore": 75,
-      "curatedReason": "对于单侧脑瘫儿童的上肢康复，行动观察疗法（AOT）和虚拟现实（VR）结合传统疗法，相较于单独传统疗法能带来额外获益。这意味着未来可以通过技术辅助干预，提升这些儿童的上肢功能和日常参与度。",
-      "titleZh": "行动观察疗法与虚拟现实结合常规疗法对单侧脑瘫儿童上肢康复效果的比较",
-      "summaryZh": "这项研究比较了行动观察疗法（AOT）和XBOX 360 Kinect™（XBOX）结合常规疗法，对45名单侧脑瘫儿童上肢结构功能、活动和功能参与水平的影响。",
-      "curatedReasonEn": "For upper extremity rehabilitation in children with unilateral cerebral palsy, action observation therapy (AOT) and virtual reality (VR) combined with conventional therapy offer additional benefits compared to conventional therapy alone. This implies that technology-assisted interventions can enhance upper limb function and daily participation in these children.",
-      "limitation": "本研究随访时间较短（3周），长期效果及不同干预措施间的具体优势需要更多研究确认。",
-      "limitationEn": "The follow-up period of this study is short (3 weeks), and long-term effects and specific advantages between different interventions require further research.",
-      "tags": [
-        "research",
-        "cerebral-palsy"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Brazilian journal of physical therapy",
-      "tech": true
-    },
-    {
-      "id": "news-1788692784959-1",
-      "title": "Effects of a Cycling-Based Aerobic Exercise Program Versus a Resistance and Neuromuscular Exercise Program on Exercise-Induced Hypoalgesia in Knee Osteoarthritis: A Study Protocol for a Randomized Clinical Trial.",
-      "summary": "This randomized clinical trial protocol outlines a study comparing a cycling-based aerobic exercise program versus a resistance and neuromuscular exercise program on exercise-induced hypoalgesia in 90 participants with knee osteoarthritis.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42700156/",
-      "publishedAt": "2026-09-06T00:00:00.000Z",
-      "firstSeen": "2026-09-06T11:06:24.959Z",
-      "curatedScore": 70,
-      "curatedReason": "对膝骨关节炎患者来说，明确不同运动模式在运动诱导镇痛（EIH）上的具体机制差异，能帮我们更精准地开具运动处方。这个 RCT 方案旨在比较循环有氧与抗阻及神经肌肉训练对 90 名患者 EIH 的影响，值得期待最终结果。",
-      "titleZh": "循环有氧运动与抗阻及神经肌肉运动方案对膝骨关节炎运动诱导镇痛影响的随机临床试验方案",
-      "summaryZh": "这项随机临床试验方案旨在比较循环有氧运动与抗阻及神经肌肉运动方案对90名膝骨关节炎患者运动诱导镇痛（EIH）效果的影响。",
-      "curatedReasonEn": "For knee OA patients, understanding how different exercise modalities impact exercise-induced hypoalgesia (EIH) mechanistically will allow for more precise exercise prescriptions. This RCT protocol, comparing cycling-based aerobic vs. resistance and neuromuscular training in 90 participants, is one to watch for its final outcomes.",
-      "limitation": "本研究仅为方案，尚未发布结果，其有效性和临床影响尚不明确。",
-      "limitationEn": "This is a study protocol, and results are not yet available, so its effectiveness and clinical impact remain to be determined.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1788621647533-2",
-      "title": "[Comment] Robotics in total knee replacement",
-      "summary": "This commentary explores whether improved outcomes in total knee replacement (TKR) can be solely attributed to robotic-assisted techniques, suggesting that alignment strategies and patient expectations significantly complicate the equation.",
-      "category": "orthopedic",
-      "source": "The Lancet",
-      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01710-1/fulltext?rss=yes",
-      "publishedAt": "2026-09-05T00:00:00.000Z",
-      "firstSeen": "2026-09-05T15:20:47.533Z",
-      "curatedScore": 65,
-      "curatedReason": "机器人辅助全膝关节置换术的评论文章。目前尚不明确机器人辅助技术是否能独立带来更好的结果，它受手术策略和患者个体差异影响。",
-      "titleZh": "评论：机器人辅助全膝关节置换术",
-      "summaryZh": "全膝关节置换术（TKR）的改善效果不能完全归因于选择机器人辅助或传统手术技术，因为TKR的对线策略（机械、功能、运动学和解剖学）以及患者期望的异质性使问题复杂化。",
-      "curatedReasonEn": "This commentary discusses robotic-assisted total knee replacement. It remains unclear whether robotic assistance alone leads to superior outcomes, as it is influenced by surgical strategy and patient heterogeneity.",
-      "tags": [
-        "述评",
-        "knee"
-      ],
-      "studyDesign": "述评",
-      "journal": "The Lancet",
       "tech": true
     }
   ]
