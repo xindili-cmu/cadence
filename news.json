@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-11T23:25:10.530Z",
+    "lastUpdated": "2026-09-12T00:22:46.720Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -101,9 +101,9 @@
           "titleZh": "钙化性髌腱病变：整合诊断性超声的多模式治疗方法病例报告"
         }
       ],
-      "heat": 5.7,
+      "heat": 5.63,
       "themeZh": "多种物理治疗干预对肌肉骨骼和淋巴疾病的疗效",
-      "themeEn": "Efficacy of Manual, Exercise, PBM Therapies"
+      "themeEn": "Efficacy of multimodal physical therapy interventions"
     },
     {
       "id": "news-1788910189942-11",
@@ -111,12 +111,13 @@
       "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01095-w",
       "category": "pediatric",
       "publishedAt": "2026-09-11T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Sports Medicine - Open",
         "medRxiv",
         "Musculoskeletal science & practice",
         "Physical & occupational therapy in pediatrics",
+        "Physiotherapy theory and practice",
         "Disability and rehabilitation"
       ],
       "tag": "early-intervention",
@@ -147,14 +148,20 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Clinical sensory tests in professional practice: a web-based survey on awareness and challenges among Italian physicians and physiotherapists.",
+          "titleZh": "意大利医师和物理治疗师对临床感觉测试的认知与挑战：一项网络调查"
+        },
+        {
+          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Centering First Nations parents' voices: a community-directed pediatric rehabilitation needs assessment in Northern Saskatchewan.",
           "titleZh": "以原住民父母之声为中心：萨斯喀彻温省北部社区导向的儿童康复需求评估"
         }
       ],
-      "heat": 3.57,
-      "themeZh": "儿科物理治疗：预防、教育及需求评估",
-      "themeEn": "Pediatric PT: Prevention, Education, Needs"
+      "heat": 4.22,
+      "themeZh": "儿科物理治疗实践与挑战：全球视角与本土需求",
+      "themeEn": "Pediatric PT practice and challenges"
     },
     {
       "id": "news-1788563262716-1",
@@ -162,15 +169,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42695524/",
       "category": "neurological",
       "publishedAt": "2026-09-10T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 6,
       "sources": [
         "Disability and rehabilitation",
         "medRxiv",
         "American journal of physical medicine & rehabilitation",
         "Topics in stroke rehabilitation",
         "Archives of physical medicine and rehabilitation",
-        "Gait & posture",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Gait & posture"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -214,17 +220,11 @@
           "journal": "Gait & posture",
           "title": "Reduced trailing limb angle is associated with near-falls during walking in stroke survivors.",
           "titleZh": "中风幸存者行走时拖曳肢体角度减小与近乎跌倒相关"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "The Impact of Upper Extremity Rehabilitation on Fatigue in Individuals With Multiple Sclerosis: A Systematic Review.",
-          "titleZh": "上肢康复对多发性硬化症患者疲劳影响的系统综述"
         }
       ],
-      "heat": 3.53,
-      "themeZh": "卒中后肢体运动学习与功能恢复机制",
-      "themeEn": "Post-Stroke Motor Learning & Recovery"
+      "heat": 2.98,
+      "themeZh": "卒中后运动功能恢复与步态改善机制研究",
+      "themeEn": "Stroke motor recovery and gait improvement"
     },
     {
       "id": "news-1789169108498-3",
@@ -279,9 +279,9 @@
           "titleZh": "通过以患者和家庭为中心的康复解决卒中家庭照护者的心理健康问题"
         }
       ],
-      "heat": 2.85,
-      "themeZh": "卒中与脑损伤后康复中的身心健康与疼痛管理",
-      "themeEn": "TBI, Stroke: Mental Health, Pain Management"
+      "heat": 2.81,
+      "themeZh": "卒中与脑损伤后共病及心理社会支持",
+      "themeEn": "Post-stroke and TBI comorbidities"
     },
     {
       "id": "news-1788692784960-3",
@@ -336,12 +336,59 @@
           "titleZh": "一项用于卒中后手臂失用评估的有效且可靠的虚拟现实工具"
         }
       ],
-      "heat": 2.52,
-      "themeZh": "机器人与虚拟现实辅助训练对神经功能障碍的影响",
-      "themeEn": "Robotic & VR Therapy for Neurological Disorders"
+      "heat": 2.49,
+      "themeZh": "机器人与虚拟现实技术在神经康复中的应用",
+      "themeEn": "Robotics and VR in neurorehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1788692784960-6",
+      "title": "Proprioception Training and Surrogate Outcomes: A Systematic Review of Definitions, Measures, and Effectiveness Claims.",
+      "summary": "A systematic review of 51 randomized controlled trials (n=2319) found that while multimodal regimens often improved surrogate outcomes (balance, pain, strength), direct psychophysical proprioceptive function was consistently enhanced only when training explicitly targeted the measured sensory construct. Improvements inferred from surrogate outcomes were more frequent and often larger than those in direct psychophysical measures.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42700344/",
+      "publishedAt": "2026-09-06T00:00:00.000Z",
+      "firstSeen": "2026-09-06T11:06:24.960Z",
+      "curatedScore": 75,
+      "curatedReason": "这项系统综述明确指出，要真正改善本体感觉，训练必须直接针对特定的感觉结构，而不是依赖平衡、力量或疼痛等替代指标。这促使你重新审视本体感觉训练方案，优先选择心理物理学结局验证过的干预。",
+      "titleZh": "本体感觉训练与替代结局：一项关于定义、测量和有效性声明的系统综述",
+      "summaryZh": "一项对 51 项随机对照试验（n=2319）的系统综述发现，尽管多模式方案通常能改善替代结局（平衡、疼痛、力量），但只有当训练明确针对所测量的感觉结构时，直接的心理物理学本体感觉功能才能得到持续增强。从替代结局推断的改善比直接心理物理学测量观察到的改善更频繁且幅度更大。",
+      "curatedReasonEn": "This systematic review clarifies that to truly improve proprioception, training must directly target specific sensory constructs, rather than relying on surrogate outcomes like balance, strength, or pain. This should prompt you to re-evaluate proprioceptive training protocols, prioritizing interventions validated by psychophysical outcomes.",
+      "limitation": "纳入的 RCT 在本体感觉的定义、测量方法和效果声明上存在异质性，可能影响结果的综合解释。",
+      "limitationEn": "The included RCTs exhibited heterogeneity in proprioception definitions, measurement approaches, and effectiveness claims, potentially affecting the synthesis and interpretation of results.",
+      "tags": [
+        "research",
+        "sports"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Sports medicine (Auckland, N.Z.)"
+    },
+    {
+      "id": "news-1788133148469-0",
+      "title": "Clinical sensory tests in professional practice: a web-based survey on awareness and challenges among Italian physicians and physiotherapists.",
+      "summary": "A cross-sectional web-based survey of 496 Italian physicians and physiotherapists (105 physicians, 391 physiotherapists) found that time constraints were the most common barrier to clinical sensory testing (85.7% of physicians, 77.2% of physiotherapists). Respondents generally perceived clinical sensory testing as low-cost and useful.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42669121/",
+      "publishedAt": "2026-08-30T00:00:00.000Z",
+      "firstSeen": "2026-08-30T23:39:08.469Z",
+      "curatedScore": 65,
+      "curatedReason": "这项意大利的调查揭示了物理治疗师和医师在临床感觉测试中使用和认知上的异同。作为 PT，你可能会发现，时间限制和对小纤维评估的重视，与意大利同行有共鸣。",
+      "titleZh": "意大利医师和物理治疗师对临床感觉测试的认知与挑战：一项网络调查",
+      "summaryZh": "一项针对 496 名意大利医师和物理治疗师（105 名医师，391 名物理治疗师）的横断面网络调查发现，时间限制是临床感觉测试最常见的障碍（85.7% 的医师，77.2% 的物理治疗师）。受访者普遍认为临床感觉测试成本低廉且实用。",
+      "curatedReasonEn": "This Italian survey highlights similarities and differences in the use and perception of clinical sensory testing between physiotherapists and physicians. As a PT, you may find common ground with Italian colleagues regarding time constraints and the importance placed on small-fiber assessment.",
+      "limitation": "本研究为横断面网络调查，结果基于自我报告，不能代表全国性估计，也无法反映客观知识、专业能力或实际使用情况。",
+      "limitationEn": "This cross-sectional web-based survey relies on self-reported perceptions and is not nationally representative, nor does it reflect objective knowledge, verified competence, or actual use.",
+      "tags": [
+        "research",
+        "practice",
+        "workforce"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1789169108498-3",
       "title": "Cost-utility of non-pharmacologic interventions aimed at improving cognitive outcomes after traumatic brain injury in older adulthood from the Ontario public healthcare payer perspective",
@@ -390,29 +437,6 @@
       "journal": "BMC Geriatrics"
     },
     {
-      "id": "news-1787943068276-3",
-      "title": "Selective differences in eccentric inter-limb mechanics during single-leg vertical jump six months after anterior cruciate ligament reconstruction.",
-      "summary": "A prospective observational study found a selective group × limb interaction for peak eccentric force (β = 0.354, 95% CI 0.049 to 0.658; p = 0.023) during single-leg countermovement jumps six months after ACL reconstruction, though this was sensitive to multiplicity adjustments.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42659755/",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
-      "firstSeen": "2026-08-28T18:51:08.276Z",
-      "curatedScore": 70,
-      "curatedReason": "ACL 重建术后 6 个月，单腿垂直跳的离心力学差异仍存，但仅限于峰值离心力，且受统计方法影响。这项观察性研究提示，在评估患者重返运动能力时，要警惕这些细微但可能存在的侧别不对称。",
-      "titleZh": "前交叉韧带重建术后 6 个月单腿垂直跳离心性肢体间力学的选择性差异",
-      "summaryZh": "一项前瞻性观察研究发现，ACL 重建术后 6 个月，单腿反向跳的峰值离心力存在选择性的组与肢体间交互作用（β = 0.354, 95% CI 0.049 to 0.658; p = 0.023），但这一发现对多重性校正敏感。",
-      "curatedReasonEn": "Six months post-ACLR, selective eccentric mechanical differences persist in single-leg vertical jumps, specifically in peak eccentric force, though this finding is sensitive to statistical adjustments. This observational study highlights the need to consider subtle inter-limb asymmetries when assessing return-to-sport readiness.",
-      "limitation": "研究样本量较小（22 例 ACLR），且主要发现对统计多重性校正敏感，提示结果解释需谨慎。",
-      "limitationEn": "The study had a small sample size (22 ACLR cases), and the primary finding was sensitive to multiplicity adjustments, suggesting caution in interpretation.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
       "id": "news-1789169108497-1",
       "title": "Centering First Nations parents' voices: a community-directed pediatric rehabilitation needs assessment in Northern Saskatchewan.",
       "summary": "A community-based participatory action research study in Northern Saskatchewan found that First Nations parents face significant barriers in accessing pediatric rehabilitation services due to an inequitable healthcare system, recommending a shift towards strength-based, family-centered, culturally grounded, and community-led care.",
@@ -435,30 +459,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1787943068276-4",
-      "title": "Clinical Decision Making in Pediatric Physiotherapy: A Scoping Review.",
-      "summary": "A scoping review of 22 studies on clinical decision-making (CDM) in pediatric physiotherapy found conceptual fragmentation, an evidence-practice gap, and that shared decision-making was endorsed but unevenly implemented, with limited child participation.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42661438/",
-      "publishedAt": "2026-08-28T00:00:00.000Z",
-      "firstSeen": "2026-08-28T18:51:08.276Z",
-      "curatedScore": 70,
-      "curatedReason": "这项范围综述指出了儿科物理治疗临床决策的复杂性和碎片化。它提醒我们，当前决策框架缺乏统一性，儿童参与度不足，且与患者结局脱节。在实践中，我们必须更重视整合多学科视角、让儿童参与决策，并寻求能改善实际结局的证据。",
-      "titleZh": "儿科物理治疗中的临床决策：一项范围综述",
-      "summaryZh": "一项关于儿科物理治疗临床决策（CDM）的 22 项研究范围综述发现，CDM 存在概念碎片化、证据与实践脱节，且共享决策得到认可但实施不均衡，儿童参与度有限。",
-      "curatedReasonEn": "This scoping review highlights the complexity and fragmentation of clinical decision-making in pediatric physiotherapy. It underscores the lack of unified frameworks, insufficient child participation, and a disconnect from patient outcomes. In practice, we must prioritize integrating multidisciplinary perspectives, involving children in decisions, and seeking evidence that demonstrably improves actual outcomes.",
-      "limitation": "该综述排除了非英文文献，可能遗漏了来自非高收入国家和不同文化背景的研究。",
-      "limitationEn": "This review excluded non-English literature, potentially omitting studies from non-high-income countries and diverse cultural contexts.",
-      "tags": [
-        "research",
-        "education",
-        "ethics"
-      ],
-      "studyDesign": "综述",
-      "journal": "Physical & occupational therapy in pediatrics"
     },
     {
       "id": "news-1789169108498-4",
