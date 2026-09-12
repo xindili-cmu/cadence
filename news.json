@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-12T18:29:55.800Z",
+    "lastUpdated": "2026-09-12T22:23:48.899Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -101,9 +101,9 @@
           "titleZh": "钙化性髌腱病变：整合诊断性超声的多模式治疗方法病例报告"
         }
       ],
-      "heat": 4.33,
-      "themeZh": "多种手法与理疗对肌肉骨骼及淋巴水肿的临床疗效",
-      "themeEn": "Manual Therapy & PBM for Musculoskeletal & Lymphedema"
+      "heat": 4.09,
+      "themeZh": "多种物理治疗干预对肌肉骨骼和淋巴水肿的疗效研究",
+      "themeEn": "Efficacy of multimodal physical therapy interventions"
     },
     {
       "id": "news-1788910189942-11",
@@ -163,9 +163,9 @@
           "titleZh": "治疗师视角下的地面前行下肢外骨骼在微步行脑瘫儿童物理治疗中的应用：一项定性研究"
         }
       ],
-      "heat": 2.71,
-      "themeZh": "机器人辅助和观察疗法对儿童神经发育障碍的康复",
-      "themeEn": "Robot-assisted Therapy for Pediatric Neurodevelopmental Disorders"
+      "heat": 2.56,
+      "themeZh": "机器人辅助和观察疗法对儿童神经发育障碍的功能康复",
+      "themeEn": "Pediatric robotic and action observation therapy"
     },
     {
       "id": "news-1788806785757-1",
@@ -233,9 +233,9 @@
           "titleZh": "上肢康复对多发性硬化症患者疲劳影响的系统综述"
         }
       ],
-      "heat": 2.68,
-      "themeZh": "卒中后步态、平衡、运动学习与功能恢复的干预",
-      "themeEn": "Stroke Gait, Balance, Motor Learning & Recovery Interventions"
+      "heat": 2.53,
+      "themeZh": "卒中后步态、平衡与上肢运动功能障碍的康复机制",
+      "themeEn": "Stroke gait, balance, and motor recovery"
     },
     {
       "id": "news-1788996239645-13",
@@ -289,9 +289,9 @@
           "titleZh": "杜氏肌营养不良症患者个性化心肺和力量训练的可行性与有效性：一项初步研究"
         }
       ],
-      "heat": 2.17,
-      "themeZh": "青少年运动员负荷速度、本体感觉与心肺运动表现",
-      "themeEn": "Youth Athletes Load-Velocity, Proprioception & Cardiorespiratory Performance"
+      "heat": 2.05,
+      "themeZh": "青少年运动员力量、速度与本体感觉训练效果及评估",
+      "themeEn": "Youth athlete strength, speed, proprioception training"
     },
     {
       "id": "news-1789169108498-3",
@@ -346,12 +346,35 @@
           "titleZh": "通过以患者和家庭为中心的康复解决卒中家庭照护者的心理健康问题"
         }
       ],
-      "heat": 2.17,
-      "themeZh": "卒中与脑损伤后身心康复及家庭照护",
-      "themeEn": "Post-stroke & TBI Mental & Physical Rehabilitation"
+      "heat": 2.05,
+      "themeZh": "卒中与脑损伤患者的康复服务、疼痛与心理健康管理",
+      "themeEn": "Post-stroke and TBI rehabilitation and mental health"
     }
   ],
   "items": [
+    {
+      "id": "news-1788821592901-0",
+      "title": "Sarcopenia, Nutritional Status, and the Association Between Rehabilitation Dose and Functional Efficiency After Inpatient Rehabilitation for First-Ever Ischemic Stroke.",
+      "summary": "A single-center retrospective cohort of 1,036 ischemic stroke patients found that a higher rehabilitation dose (per 30 min/day, β=0.17), better nutritional status (per 5-point Geriatric Nutritional Risk Index, β=0.05), and absence of sarcopenia (β=-0.22) were associated with higher functional efficiency after inpatient rehabilitation.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42704886/",
+      "publishedAt": "2026-09-07T00:00:00.000Z",
+      "firstSeen": "2026-09-07T22:53:12.901Z",
+      "curatedScore": 70,
+      "curatedReason": "这项回顾性队列研究强调，卒中患者的康复剂量、肌少症和营养状况都会影响其住院康复后的功能效率。临床上，在制定康复计划时，除了关注康复强度，也应把营养筛查和肌少症管理纳入进来，特别是对那些存在肌少症或营养不良风险的患者，可能需要调整康复方案。",
+      "titleZh": "首次缺血性卒中住院康复后肌少症、营养状况、康复剂量与功能效率之间的关联",
+      "summaryZh": "一项对 1,036 例首次缺血性卒中患者的单中心回顾性队列研究发现，更高的康复剂量（每增加 30 分钟/天，β=0.17）、更好的营养状况（老年营养风险指数每增加 5 分，β=0.05）以及无肌少症（β=-0.22）都与住院康复后的更高功能效率相关。",
+      "curatedReasonEn": "This retrospective cohort study highlights that rehabilitation dose, sarcopenia, and nutritional status all influence functional efficiency after inpatient stroke rehabilitation. Clinically, when planning rehabilitation, consider nutritional screening and sarcopenia management alongside rehabilitation intensity, especially for patients at risk of sarcopenia or malnutrition, who may require tailored rehabilitation protocols.",
+      "limitation": "这是一项单中心回顾性观察研究，存在选择偏倚风险，且其发现的关联性不能直接推断因果关系。",
+      "limitationEn": "This was a single-center retrospective observational study, subject to selection bias, and the associations found cannot directly infer causation.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
     {
       "id": "news-1788806785757-1",
       "title": "Effects of ankle-foot orthosis-related conditions on muscle activity, spasticity, and psychosocial outcomes after stroke: a systematic review and meta-analysis.",
@@ -2072,31 +2095,6 @@
         "return-to-sport"
       ],
       "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1788223358268-7",
-      "title": "Implementing an exercise intervention for sarcopenia in oldest-old nursing home residents: protocol for a pragmatic cluster-randomized controlled trial (SCOPE Study)",
-      "summary": "This article describes the protocol for a pragmatic cluster-randomized controlled trial (SCOPE Study) aiming to implement an exercise intervention for sarcopenia in the oldest-old nursing home residents.",
-      "category": "neurological",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08002-8",
-      "publishedAt": "2026-08-31T00:00:00.000Z",
-      "firstSeen": "2026-09-01T00:42:38.268Z",
-      "curatedScore": 65,
-      "curatedReason": "这是一个研究方案，而非已完成的试验结果。它为你展示了针对最老年卧床患者肌少症运动干预的设计思路，但尚无实际数据供你参考临床效果。",
-      "titleZh": "针对最老年养老院居民肌少症运动干预的实施：一项实用型整群随机对照试验（SCOPE 研究）方案",
-      "summaryZh": "本文介绍了一项实用型整群随机对照试验（SCOPE 研究）的方案，旨在为最老年养老院居民实施一项肌少症运动干预。",
-      "curatedReasonEn": "This is a study protocol, not completed trial results. It showcases the design of an exercise intervention for sarcopenia in the oldest-old nursing home residents, but there is no actual data yet to inform clinical efficacy.",
-      "limitation": "这是一项研究方案，尚未提供实际研究结果。",
-      "limitationEn": "This is a study protocol and does not provide actual research findings yet.",
-      "tags": [
-        "research",
-        "sarcopenia",
-        "nursing-home",
-        "exercise"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Geriatrics"
     }
   ]
 }
