@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-14T00:17:03.666Z",
+    "lastUpdated": "2026-09-14T05:07:18.755Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -115,9 +115,9 @@
           "titleZh": "线性疤痕个体干针治疗对组织柔顺性的影响：一项随机对照试验"
         }
       ],
-      "heat": 7.04,
-      "themeZh": "骨关节炎与慢性下腰痛的运动疗法剂量和效果",
-      "themeEn": "Exercise therapy for OA and chronic LBP"
+      "heat": 6.57,
+      "themeZh": "骨关节炎和慢性腰痛的运动干预策略",
+      "themeEn": "Exercise Interventions for OA and Chronic LBP"
     },
     {
       "id": "news-1788885826037-2",
@@ -125,10 +125,11 @@
       "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.02.26362113v1?rss=1",
       "category": "neurological",
       "publishedAt": "2026-09-13T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "sources": [
         "medRxiv",
         "Disability and rehabilitation",
+        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
         "American journal of physical medicine & rehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Gait & posture",
@@ -155,6 +156,17 @@
           "source": "medRxiv",
           "title": "Determining the optimal volume of reactive balance training after stroke: a pilot randomized controlled trial",
           "titleZh": "确定卒中后反应性平衡训练的最佳剂量：一项初步随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
+          "title": "Quantitative evaluation of shoulder motor compensation in stroke patients based on multimodal feature analysis.",
+          "titleZh": "基于多模态特征分析的中风患者肩关节运动补偿量化评估"
+        },
+        {
+          "source": "medRxiv",
+          "title": "A Valid and Reliable Virtual Reality Tool for Assessment of Arm Nonuse Post-Stroke",
+          "titleZh": "一种有效且可靠的虚拟现实工具，用于评估卒中后手臂非使用"
         },
         {
           "source": "medRxiv",
@@ -228,9 +240,9 @@
           "titleZh": "急性损伤或疾病住院康复患者（伴或不伴精神健康障碍）：服务利用、功能改善和疼痛"
         }
       ],
-      "heat": 6.34,
-      "themeZh": "卒中后运动技能学习、平衡及跌倒预防",
-      "themeEn": "Stroke motor learning, balance, fall prevention"
+      "heat": 6.57,
+      "themeZh": "卒中后上肢运动功能障碍评估与康复",
+      "themeEn": "Stroke Upper Limb Assessment and Rehabilitation"
     },
     {
       "id": "news-1788996239645-13",
@@ -291,9 +303,9 @@
           "titleZh": "本体感觉训练与替代结局：一项关于定义、测量和有效性声明的系统综述"
         }
       ],
-      "heat": 3.52,
-      "themeZh": "青少年运动员的力量、速度与体能训练",
-      "themeEn": "Youth athletes strength, speed, fitness training"
+      "heat": 3.28,
+      "themeZh": "青年运动员体能与表现评估训练",
+      "themeEn": "Youth Athlete Physical Performance Training"
     },
     {
       "id": "news-1788910189942-11",
@@ -342,9 +354,9 @@
           "titleZh": "以原住民父母之声为中心：萨斯喀彻温省北部社区导向的儿童康复需求评估"
         }
       ],
-      "heat": 1.76,
-      "themeZh": "儿科物理治疗：神经发育障碍与肌肉骨骼疼痛",
-      "themeEn": "Pediatric PT for neurodevelopmental, musculoskeletal pain"
+      "heat": 1.64,
+      "themeZh": "儿科物理治疗实践与教育干预",
+      "themeEn": "Pediatric Physiotherapy Practice and Education"
     },
     {
       "id": "news-1788692784960-3",
@@ -392,12 +404,35 @@
           "titleZh": "治疗师视角下的地面前行下肢外骨骼在微步行脑瘫儿童物理治疗中的应用：一项定性研究"
         }
       ],
-      "heat": 1.41,
-      "themeZh": "脑瘫与卒中患者的机器人辅助步态和上肢康复",
-      "themeEn": "Robot-assisted rehab for CP and stroke"
+      "heat": 1.31,
+      "themeZh": "脑瘫与卒中康复中的机器人与VR技术",
+      "themeEn": "Robotics and VR in Neurorehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1789362436759-0",
+      "title": "Quantitative evaluation of shoulder motor compensation in stroke patients based on multimodal feature analysis.",
+      "summary": "A study integrating markerless motion capture with surface electromyography (sEMG) to objectively assess shoulder motor compensation in 25 stroke patients found strong correlations between multimodal features (e.g., Maximum Joint Angle ρ = 0.932, Median Frequency ρ = 0.806) and traditional clinical scales.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42732707/",
+      "publishedAt": "2026-09-13T00:00:00.000Z",
+      "firstSeen": "2026-09-14T05:07:16.759Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究提出的无标记运动捕捉与表面肌电图结合的肩关节运动补偿量化评估方法，为中风患者上肢功能康复评估提供了客观、简化的补充工具。在临床实践中，它可以作为 Fugl-Meyer 评估等主观量表以外的有效参考。",
+      "titleZh": "基于多模态特征分析的中风患者肩关节运动补偿量化评估",
+      "summaryZh": "一项结合无标记运动捕捉和表面肌电图的研究，对 25 名中风患者的肩关节运动补偿进行了客观评估，发现多模态特征（如最大关节角度 ρ = 0.932，中位频率 ρ = 0.806）与传统临床量表之间存在强相关性。",
+      "curatedReasonEn": "This study's quantitative evaluation method for shoulder motor compensation, integrating markerless motion capture and sEMG, offers an objective and simplified complementary tool for assessing upper-limb function in stroke patients. In clinical practice, it can serve as a valuable reference alongside subjective scales like the Fugl-Meyer Assessment.",
+      "limitation": "本研究为小样本观察研究，且仅限肩关节外展任务，结果外推需谨慎。",
+      "limitationEn": "This is a small-sample observational study, limited to a single shoulder abduction task, so results should be interpreted with caution regarding generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
+    },
     {
       "id": "news-1788281123739-0",
       "title": "Tailoring Resistance Exercise for Knee Osteoarthritis: An Intervention Systematic Review With Dose-Response Meta-analysis of the Effects of Intensity and Volume.",
@@ -2122,29 +2157,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "Sports Medicine - Open"
-    },
-    {
-      "id": "news-1788910189942-9",
-      "title": "Personalized FES-cycling patterns via optimal control: from musculoskeletal simulation to experimental validation",
-      "summary": "This study introduces an optimal control framework for functional electrical stimulation (FES) cycling that produces personalized stimulation patterns directly transferable from simulation to experimental cycling, aiming to improve rehabilitation for neurological patients.",
-      "category": "neurological",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02136-x",
-      "publishedAt": "2026-09-04T00:00:00.000Z",
-      "firstSeen": "2026-09-08T23:29:49.942Z",
-      "curatedScore": 75,
-      "curatedReason": "本研究通过模拟和实验验证，提出了一种可个性化定制的 FES 循环模式，有望提高神经损伤患者的康复效果。它提示你关注 FES 技术在康复中的应用潜力，尤其是在优化患者个体化治疗方案方面。",
-      "titleZh": "通过最优控制实现个性化 FES 循环模式：从肌肉骨骼模拟到实验验证",
-      "summaryZh": "这项研究引入了一种功能性电刺激（FES）循环的最优控制框架，可直接将个性化刺激模式从模拟转移到实验循环，旨在改善神经系统患者的康复。",
-      "curatedReasonEn": "This study proposes a personalized FES-cycling pattern, validated through simulation and experiment, with the potential to improve rehabilitation outcomes for patients with neurological injuries. It prompts you to consider the potential of FES technology in rehabilitation, particularly in optimizing individualized treatment plans.",
-      "limitation": "研究细节（如样本量和具体疾病类型）在摘要中未明确提及，可能影响结论的普适性。",
-      "limitationEn": "Study details such as sample size and specific disease types are not explicitly mentioned in the abstract, which may affect the generalizability of the conclusions.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of NeuroEngineering and Rehabilitation"
     }
   ]
 }
