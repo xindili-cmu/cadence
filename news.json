@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-16T21:25:06.953Z",
+    "lastUpdated": "2026-09-16T23:43:10.768Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,18 +20,19 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42747341/",
       "category": "neurological",
       "publishedAt": "2026-09-16T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 11,
       "sources": [
         "Physical therapy",
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
         "Clinical rehabilitation",
         "Topics in stroke rehabilitation",
-        "Disability and rehabilitation",
         "American journal of physical medicine & rehabilitation",
         "medRxiv",
+        "Disability and rehabilitation",
         "Journal of NeuroEngineering and Rehabilitation",
-        "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
+        "Journal of Rehabilitation Medicine",
+        "BMC Geriatrics"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -68,37 +69,15 @@
         },
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Addressing stroke family caregivers' mental health through person‑ and family‑centred rehabilitation.",
-          "titleZh": "通过以个体和家庭为中心的康复解决卒中家庭照护者的心理健康问题"
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Sarcopenia, Nutritional Status, and the Association Between Rehabilitation Dose and Functional Efficiency After Inpatient Rehabilitation for First-Ever Ischemic Stroke.",
+          "titleZh": "首次缺血性卒中住院康复后，肌少症、营养状况与康复剂量和功能效率之间的关联"
         },
         {
           "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
           "title": "Physical dependence, self-efficacy, and resilience in stroke patients: a double-moderated mediation model of healthcare group and pre-stroke employment.",
           "titleZh": "卒中患者的躯体依赖、自我效能和复原力：医疗组别和卒中前就业的双重调节中介模型"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Adaptive Sports Introduction During Inpatient Rehabilitation: A Descriptive Study.",
-          "titleZh": "住院康复期间的适应性运动介绍：一项描述性研究。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Proximal and Distal Bimanual Motor Skill Learning After Stroke: Impairments, Trajectories, and Clinical Contributors",
-          "titleZh": "卒中后近端和远端双侧运动技能学习：损伤、轨迹和临床影响因素"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Load-dependent Motor Cortical Activation Assessed by fNIRS Is Partially Preserved After Stroke.",
-          "titleZh": "卒中后负荷依赖性运动皮层激活（通过 fNIRS 评估）部分保留"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Walking speed and propulsion asymmetry as distinct diagnostic biomarkers of gait impairment: Towards precision rehabilitation after stroke",
-          "titleZh": "步速和推进不对称作为步态障碍的独立诊断生物标志物：迈向卒中后精准康复。"
         },
         {
           "source": "medRxiv",
@@ -119,9 +98,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology",
-          "title": "Quantitative evaluation of shoulder motor compensation in stroke patients based on multimodal feature analysis.",
-          "titleZh": "基于多模态特征分析的中风患者肩关节运动补偿量化评估"
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Load-dependent Motor Cortical Activation Assessed by fNIRS Is Partially Preserved After Stroke.",
+          "titleZh": "卒中后负荷依赖性运动皮层激活（通过 fNIRS 评估）部分保留"
         },
         {
           "source": "medRxiv",
@@ -130,25 +109,38 @@
         },
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effect of Sequential Electroacupuncture Combined With Augmented Reality Gait Training on Walking Function and Neuromuscular Control in Subacute Stroke: A Randomized Controlled Trial.",
-          "titleZh": "顺序电针联合增强现实步态训练对亚急性卒中患者行走功能和神经肌肉控制的影响：一项随机对照试验。"
+          "journal": "Disability and rehabilitation",
+          "title": "The effect of multimodal sensory therapy in consciousness improvement in patients with acquired brain injury: a systematic review and meta-analysis.",
+          "titleZh": "多模式感觉疗法对获得性脑损伤患者意识改善的效应：系统综述和荟萃分析"
         },
         {
-          "source": "medRxiv",
-          "title": "Study Protocol for a Randomized Controlled Trial Comparing Swiss Ball Balance Training and Conventional Balance Training to Improve Trunk Control and Mobility in Individuals with Sub acute Stroke.",
-          "titleZh": "一项旨在改善恢复期卒中患者躯干控制和活动能力的瑞士球平衡训练与常规平衡训练比较的随机对照试验研究方案"
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Multisensory training with telerehabilitation for brain injured children with visual field defects",
+          "titleZh": "针对有视野缺损的脑损伤儿童的多感官训练结合远程康复"
+        },
+        {
+          "source": "J Rehabil Med",
+          "journal": "Journal of Rehabilitation Medicine",
+          "title": "Associations between interpreter dependency and rehabilitation outcomes and care processes following acquired brain injury: a Swedish registry-based cohort study\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+          "titleZh": "口译依赖与脑损伤康复结果及护理过程的关联：一项瑞典注册回顾性队列研究"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Cost-utility of non-pharmacologic interventions aimed at improving cognitive outcomes after traumatic brain injury in older adulthood from the Ontario public healthcare payer perspective",
+          "titleZh": "从安大略省公共医疗支付方角度看，旨在改善老年创伤性脑损伤认知结局的非药物干预措施的成本效益"
         },
         {
           "source": "PubMed",
           "journal": "Physical therapy",
-          "title": "Evaluating the Effectiveness of an Integrated Treatment of Vestibular Rehabilitation and Cognitive Behavior Therapy for Chronic Dizziness in a Community-Based Population: A Randomized Controlled Trial.",
-          "titleZh": "社区慢性头晕患者前庭康复与认知行为疗法整合治疗有效性的随机对照试验"
+          "title": "Long-Term Follow-Up to Study of Timing of Rehabilitation After Mild Traumatic Brain Injury.",
+          "titleZh": "轻度颅脑损伤后康复时机的长期随访研究"
         }
       ],
-      "heat": 7.34,
-      "themeZh": "卒中后康复：多维度干预改善功能与预防跌倒",
-      "themeEn": "Multidimensional Stroke Rehab for Function and Fall Prevention"
+      "heat": 7.81,
+      "themeZh": "卒中后康复策略对跌倒风险与功能恢复的影响",
+      "themeEn": "Stroke Rehabilitation for Falls and Function"
     },
     {
       "id": "news-1788692784960-5",
@@ -238,9 +230,9 @@
           "titleZh": "运动疗法作为单一干预措施能否有效减少非特异性慢性腰痛成人患者的运动恐惧症？一项带 Meta 回归的系统综述和 Meta 分析"
         }
       ],
-      "heat": 4.67,
-      "themeZh": "手动疗法与物理因子在疼痛与功能障碍中的应用",
-      "themeEn": "Manual Therapy and Physical Agents for Pain"
+      "heat": 4.52,
+      "themeZh": "特定手法与物理疗法在肌肉骨骼疾病中的应用",
+      "themeEn": "Manual Therapy, Modalities in MSK"
     },
     {
       "id": "news-1789544815517-0",
@@ -248,15 +240,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42743836/",
       "category": "orthopedic",
       "publishedAt": "2026-09-15T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 5,
       "sources": [
         "Brazilian journal of physical therapy",
         "International journal of sports physical therapy",
         "BMC Musculoskeletal Disorders",
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "medRxiv",
         "BMC Sports Science, Medicine and Rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -286,6 +276,12 @@
           "titleZh": "孤立性前交叉韧带重建与联合侧方关节外手术（LET 或 ALL 重建）：一项系统综述和荟萃分析"
         },
         {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Two-year follow-up of varus progression in young professional football players",
+          "titleZh": "青少年职业足球运动员膝内翻进展的两年随访研究"
+        },
+        {
           "source": "PubMed",
           "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
           "title": "If ACL injury is multifactorial, why is return-to-sport testing not? A determinant-alignment framework for ACL rehabilitation and return to sport.",
@@ -296,28 +292,11 @@
           "journal": "International journal of sports physical therapy",
           "title": "Utilization of the Functional Lower Extremity Evaluation (FLEE) in Return-to-Sport Rehabilitation Protocol Following Hip Arthroscopy in Collegiate Athletes: A Case Series.",
           "titleZh": "功能性下肢评估（FLEE）在大学运动员髋关节镜术后重返运动康复方案中的应用：病例系列研究。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Balancing Offloading and Comfort: The Effect of Forefoot Rocker Curvature on In-Shoe Plantar Pressure and Gait Kinematics",
-          "titleZh": "平衡减压与舒适：前足摇椅弧度对鞋内足底压力和步态运动学的影响"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Effects of different foot orthoses on muscular frequency spectrum during the swing phase of gait following ACL reconstruction: a cross-sectional, mixed-model within-subject study",
-          "titleZh": "ACL 重建术后步态摆动期不同足部矫形器对肌肉频率谱的影响：一项横断面、混合模型受试者内研究"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Effects of an actuated ankle exoskeleton on walking stability in healthy adults: a controlled laboratory study",
-          "titleZh": "动力踝关节外骨骼对健康成人步态稳定性的影响：一项对照实验室研究"
         }
       ],
-      "heat": 3.63,
-      "themeZh": "膝关节骨关节炎与ACL重建的康复策略",
-      "themeEn": "Knee OA and ACL Rehab Strategies"
+      "heat": 2.51,
+      "themeZh": "膝关节骨关节炎与ACL损伤康复挑战与策略",
+      "themeEn": "Knee OA and ACL Rehabilitation"
     },
     {
       "id": "news-1788692784958-0",
@@ -325,13 +304,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42700628/",
       "category": "orthopedic",
       "publishedAt": "2026-09-15T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         "Musculoskeletal science & practice",
-        "Physical & occupational therapy in pediatrics",
         "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "medRxiv"
+        "Physical & occupational therapy in pediatrics",
+        "Disability and rehabilitation"
       ],
       "tag": null,
       "kind": "theme",
@@ -344,95 +322,256 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Ideal Versus Actual School-Based Physiotherapy Practice in Israel: A National Survey.",
-          "titleZh": "以色列学校物理治疗的理想与现实实践：一项全国性调查"
-        },
-        {
-          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Australian Occupational Health Physiotherapy from 1970-1990: a qualitative study.",
           "titleZh": "1970-1990 年澳大利亚职业健康物理治疗：一项定性研究"
         },
         {
           "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Ideal Versus Actual School-Based Physiotherapy Practice in Israel: A National Survey.",
+          "titleZh": "以色列学校物理治疗的理想与现实实践：一项全国性调查"
+        },
+        {
+          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Centering First Nations parents' voices: a community-directed pediatric rehabilitation needs assessment in Northern Saskatchewan.",
           "titleZh": "以原住民父母之声为中心：萨斯喀彻温省北部一项社区导向的儿科康复需求评估"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Facility-based Pulmonary Rehabilitation Intervention Package (PRIP) for individuals with post-tuberculosis lung disease (PTLD) in Odisha, India: A quasi-experimental study protocol",
-          "titleZh": "印度奥里萨邦肺结核后肺病（PTLD）患者基于机构的肺康复干预包（PRIP）：一项准实验性研究方案"
         }
       ],
-      "heat": 2.59,
-      "themeZh": "物理治疗的实践与教育：跨文化与多元场景",
-      "themeEn": "Physiotherapy Practice and Education Across Cultures"
+      "heat": 2.01,
+      "themeZh": "不同文化与环境背景下的物理治疗实践",
+      "themeEn": "Physiotherapy Practice Across Contexts"
     },
     {
-      "id": "news-1789492064403-1",
-      "title": "The effect of multimodal sensory therapy in consciousness improvement in patients with acquired brain injury: a systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42741930/",
-      "category": "neurological",
-      "publishedAt": "2026-09-15T00:00:00.000Z",
-      "sourceCount": 3,
+      "id": "news-1789430201264-4",
+      "title": "Effects of a multicomponent exercise programme including high-intensity interval training in institutionalised older adults with probable sarcopenia: a multicentre randomised controlled trial",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08290-0",
+      "category": "geriatric",
+      "publishedAt": "2026-09-14T00:00:00.000Z",
+      "sourceCount": 5,
       "sources": [
-        "Disability and rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Physical therapy"
+        "BMC Geriatrics",
+        "medRxiv",
+        "Sport Sciences for Health",
+        "Sports Medicine",
+        "BMC Sports Science, Medicine and Rehabilitation"
       ],
-      "tag": "brain-injury",
+      "tag": "sarcopenia",
       "kind": "theme",
       "members": [
         {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The effect of multimodal sensory therapy in consciousness improvement in patients with acquired brain injury: a systematic review and meta-analysis.",
-          "titleZh": "多模式感觉疗法对获得性脑损伤患者意识改善的效应：系统综述和荟萃分析"
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effects of a multicomponent exercise programme including high-intensity interval training in institutionalised older adults with probable sarcopenia: a multicentre randomised controlled trial",
+          "titleZh": "针对养老机构内可能患肌少症老年人的多组分运动方案（含高强度间歇训练）效果：一项多中心随机对照试验"
         },
         {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Multisensory training with telerehabilitation for brain injured children with visual field defects",
-          "titleZh": "针对有视野缺损的脑损伤儿童的多感官训练结合远程康复"
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Exercise snacking as a novel strategy for prevention and intervention of frailty in older adults: a scoping review",
+          "titleZh": "碎片化运动作为老年人衰弱预防与干预的新策略：一项范围综述"
         },
         {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Long-Term Follow-Up to Study of Timing of Rehabilitation After Mild Traumatic Brain Injury.",
-          "titleZh": "轻度颅脑损伤后康复时机的长期随访研究"
+          "source": "medRxiv",
+          "title": "Sarcopenia Assessment in Resource-Constrained Settings: Expert Agreement on Surrogate Measures",
+          "titleZh": "资源受限环境下肌少症评估：替代指标的专家共识。"
+        },
+        {
+          "source": "Sport Sci Health",
+          "journal": "Sport Sciences for Health",
+          "title": "The effects of an enriched tennis program on the executive functions and motor skills of preschool children",
+          "titleZh": "丰富网球课程对学龄前儿童执行功能和运动技能的影响"
+        },
+        {
+          "source": "Sports Medicine",
+          "journal": "Sports Medicine",
+          "title": "Evidence-Based Insights for the Development and Talent Promotion of Young Athletes in a National Sports Context",
+          "titleZh": "在国家体育背景下，青年运动员发展与人才培养的循证见解"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of flywheel training on post-activation performance enhancement in male basketball players",
+          "titleZh": "飞轮训练对篮球运动员训练后表现增强的影响"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Artificial intelligence and wearable technology in athlete load management and injury prediction: a systematic literature review",
+          "titleZh": "人工智能和可穿戴技术在运动员负荷管理和伤病预测中的应用：一项系统文献综述"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Feasibility and efficacy of personalized cardiorespiratory and strength exercise in Duchenne muscular dystrophy: a pilot study",
+          "titleZh": "个性化心肺和力量训练在杜氏肌营养不良症中的可行性和有效性：一项初步研究"
         }
       ],
-      "heat": 1.56,
-      "themeZh": "脑损伤患者意识与感觉功能的多模式康复",
-      "themeEn": "Multimodal Rehab for Brain Injury Sensory Function"
+      "heat": 1.77,
+      "themeZh": "老年与年轻群体的运动训练与体能表现",
+      "themeEn": "Exercise Training for All Ages"
     }
   ],
   "items": [
     {
-      "id": "news-1788367295931-1",
-      "title": "Home-based digital exercise versus hospital physiotherapy for plantar fasciitis: a propensity-score-matched retrospective cohort study with dual-perspective cost-utility evaluation.",
-      "summary": "A propensity-score-matched retrospective cohort study in China found that a 12-week home-based digital exercise program was non-inferior to hospital physiotherapy for plantar fasciitis at 3 months (mean difference -0.63 points; 95% CI -0.92 to -0.35) and less costly from both payer and societal perspectives.",
+      "id": "news-1789602188853-6",
+      "title": "CMS Adds Medicare Options to Help People Manage Substance Use Disorder, Heart Failure, and Other Common Chronic Conditions",
+      "summary": "CMS is expanding its Advancing Chronic Care with Effective, Scalable Solutions (ACCESS) Model to include technology-supported care options for Medicare beneficiaries with heart failure, COPD, substance use disorders, nicotine dependence, and expanded support for chronic musculoskeletal pain, starting in spring 2027. The model ties payments to measurable improvements in patient health.",
       "category": "practice",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42683610/",
-      "publishedAt": "2026-09-02T00:00:00.000Z",
-      "firstSeen": "2026-09-02T16:41:35.931Z",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-adds-medicare-options-help-people-manage-substance-use-disorder-heart-failure-other-common",
+      "publishedAt": "2026-09-15T12:00:00.000Z",
+      "firstSeen": "2026-09-16T23:43:08.853Z",
       "curatedScore": 79,
-      "curatedReason": "远程数字运动方案在跖筋膜炎管理中已显示出与医院物理治疗非劣效，且成本更低。这提示数字疗法在特定骨科适应症上可成为传统门诊的有效补充，但目前证据尚待更高质量的 RCT 确认，不宜立即推动大规模报销。",
-      "titleZh": "跖筋膜炎的居家数字运动 vs 医院物理治疗：基于倾向评分匹配的回顾性队列研究及双视角成本-效用评估",
-      "summaryZh": "一项在中国进行的回顾性队列研究发现，为期 12 周的居家数字运动方案在 3 个月时对跖筋膜炎患者的疗效与医院物理治疗非劣效（平均差异 -0.63 分；95% CI -0.92 至 -0.35），且从支付方和社会视角看，成本均较低。",
-      "curatedReasonEn": "Home-based digital exercise programs have shown non-inferiority to hospital physiotherapy for plantar fasciitis, with lower costs. This suggests digital therapeutics can effectively supplement traditional outpatient care for specific orthopedic conditions. However, the current evidence requires confirmation from higher-quality RCTs before informing widespread reimbursement.",
-      "limitation": "这是一项回顾性观察研究，存在残余混杂和选择偏倚，且仅 6.3% 的患者符合匹配条件，外推性有限。",
-      "limitationEn": "This is a retrospective observational study with likely residual confounding and selection bias, and limited generalizability as only 6.3% of screened patients were eligible.",
+      "curatedReason": "从 2027 年春季开始，美国 CMS 将通过 ACCESS 模型扩展对心力衰竭、COPD、物质使用障碍及慢性肌肉骨骼疼痛患者的 Medicare 远程护理选项。这意味着你在这些领域为 Medicare 患者提供基于技术的居家康复服务将有新的报销途径，密切关注实施细则，这会影响你未来的服务模式和收入。",
+      "titleZh": "CMS 增加 Medicare 选项以帮助患者管理物质使用障碍、心力衰竭及其他常见慢性病",
+      "summaryZh": "CMS 将通过其“推进慢性病有效可扩展解决方案（ACCESS）”模型，扩展对 Medicare 受益人的技术支持护理选项，涵盖心力衰竭、COPD、物质使用障碍、尼古丁依赖以及慢性肌肉骨骼疼痛的扩展支持，预计于 2027 年春季启动。该模型将支付与患者健康的可衡量改善挂钩。",
+      "curatedReasonEn": "Starting in spring 2027, CMS will expand Medicare's technology-supported home care options for patients with heart failure, COPD, substance use disorder, and chronic musculoskeletal pain through the ACCESS Model. This implies new reimbursement avenues for you to provide technology-enabled home rehabilitation services to Medicare patients in these areas. Closely monitor implementation details, as this will impact your future service models and revenue.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "telehealth",
+        "US"
+      ]
+    },
+    {
+      "id": "news-1789602188851-0",
+      "title": "Associations between interpreter dependency and rehabilitation outcomes and care processes following acquired brain injury: a Swedish registry-based cohort study\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+      "summary": "A Swedish registry-based cohort study of 13,900 inpatients with acquired brain injury found that interpreter dependency was associated with lower functional independence, health-related quality of life, and self-perceived health scores at admission and discharge, though not with the degree of improvement.",
+      "category": "neurological",
+      "source": "J Rehabil Med",
+      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/45146",
+      "publishedAt": "2026-09-14T00:00:00.000Z",
+      "firstSeen": "2026-09-16T23:43:08.851Z",
+      "curatedScore": 75,
+      "curatedReason": "语言障碍是脑损伤康复中被忽视的关键因素。该研究表明，口译依赖型患者在功能独立性、生活质量和自我感知健康方面表现更差，提示在制定康复计划时，除了临床因素，还应考虑患者的语言支持需求。",
+      "titleZh": "口译依赖与脑损伤康复结果及护理过程的关联：一项瑞典注册回顾性队列研究",
+      "summaryZh": "一项对 13,900 名脑损伤住院患者进行的瑞典注册回顾性队列研究发现，口译依赖与入院及出院时较低的功能独立性、健康相关生活质量和自我感知健康评分相关，但与这些结果的改善程度无关。",
+      "curatedReasonEn": "Language barriers are a critical yet often overlooked factor in brain injury rehabilitation. This study indicates that interpreter-dependent patients experience poorer outcomes in functional independence, quality of life, and self-perceived health, suggesting that rehabilitation planning should integrate language support needs alongside clinical factors.",
+      "limitation": "这项回顾性队列研究可能存在未测量混杂因素（如脑损伤严重程度或早期护理差异）的影响。",
+      "limitationEn": "This retrospective cohort study may be influenced by unmeasured confounders, such as injury severity or disparities in earlier care.",
       "tags": [
         "research",
-        "foot-ankle",
-        "telehealth"
+        "brain-injury"
       ],
       "studyDesign": "观察研究",
-      "journal": "Journal of rehabilitation medicine"
+      "journal": "Journal of Rehabilitation Medicine"
+    },
+    {
+      "id": "news-1789169108498-3",
+      "title": "Cost-utility of non-pharmacologic interventions aimed at improving cognitive outcomes after traumatic brain injury in older adulthood from the Ontario public healthcare payer perspective",
+      "summary": "A cost-utility analysis in Ontario, Canada, found that combination therapy (physical rehabilitation and cognitive training) yielded the highest quality-adjusted life years (3.04 QALYs) and net monetary benefits (CAD$102,653) for improving cognitive outcomes in older adults (≥ 65 years) following traumatic brain injury, with an ICER of CAD$18,028 per QALY.",
+      "category": "neurological",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08177-0",
+      "publishedAt": "2026-09-11T00:00:00.000Z",
+      "firstSeen": "2026-09-11T23:25:08.498Z",
+      "curatedScore": 75,
+      "curatedReason": "对老年创伤性脑损伤（TBI）患者来说，物理康复联合认知训练是改善认知结局最具成本效益的非药物干预措施。这为你在向安大略省的支付方推介 TBI 老年患者的综合康复方案时，提供了强有力的经济学证据支持。",
+      "titleZh": "从安大略省公共医疗支付方角度看，旨在改善老年创伤性脑损伤认知结局的非药物干预措施的成本效益",
+      "summaryZh": "一项针对加拿大安大略省的成本效益分析发现，对于老年（≥ 65 岁）创伤性脑损伤患者，物理康复与认知训练的联合疗法在改善认知结局方面产生了最高的质量调整生命年（3.04 QALYs）和净货币收益（102,653 加元），增量成本效益比为 18,028 加元/QALY。",
+      "curatedReasonEn": "For older adults with traumatic brain injury (TBI), combined physical rehabilitation and cognitive training is the most cost-effective non-pharmacologic intervention to improve cognitive outcomes. This provides strong economic evidence to support your advocacy for integrated rehabilitation programs for older TBI patients when dealing with payers in Ontario.",
+      "limitation": "本研究为成本效益分析，其结果依赖于模型假设和输入参数，可能与现实世界数据存在偏差。",
+      "limitationEn": "This cost-utility analysis relies on model assumptions and input parameters, which may differ from real-world data.",
+      "tags": [
+        "research",
+        "brain-injury",
+        "reimbursement"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1789602188853-4",
+      "title": "The effects of an enriched tennis program on the executive functions and motor skills of preschool children",
+      "summary": "An 8-week enriched tennis program featuring open-skill activities significantly improved inhibitory control (p = .008, ηp2 = .184) and tennis-specific motor skills (forehand p = .001, ηp2 = .259; ball control p = .006, ηp2 = .200) in preschool children, compared to a control group with closed-skill activities.",
+      "category": "pediatric",
+      "source": "Sport Sci Health",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s11332-026-01846-y",
+      "publishedAt": "2026-09-11T00:00:00.000Z",
+      "firstSeen": "2026-09-16T23:43:08.853Z",
+      "curatedScore": 75,
+      "curatedReason": "这项 RCT 显示，为期 8 周的开放技能网球课程能有效改善学龄前儿童的抑制性控制和网球专项运动技能。这提示你在早期干预中，融入这类强调认知参与的动态开放技能活动，有助于提升儿童的运动与认知发展。",
+      "titleZh": "丰富网球课程对学龄前儿童执行功能和运动技能的影响",
+      "summaryZh": "一项为期 8 周的丰富网球课程（包含开放技能活动）显著改善了学龄前儿童的抑制性控制（p = .008, ηp2 = .184）和网球专项运动技能（正手 p = .001, ηp2 = .259；控球 p = .006, ηp2 = .200），相较于仅进行封闭技能活动的对照组。",
+      "curatedReasonEn": "This RCT demonstrates that an 8-week open-skill tennis program can effectively improve inhibitory control and tennis-specific motor skills in preschool children. This suggests that incorporating dynamic, open-skill activities that emphasize cognitive engagement into early interventions can enhance children's motor and cognitive development.",
+      "limitation": "研究样本量较小，且干预组和对照组在年龄上存在微小差异。",
+      "limitationEn": "The study has a small sample size, and there was a minor age difference between the intervention and control groups.",
+      "tags": [
+        "research",
+        "motor-development",
+        "executive-function"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Sport Sciences for Health"
+    },
+    {
+      "id": "news-1789169108498-5",
+      "title": "Exercise snacking as a novel strategy for prevention and intervention of frailty in older adults: a scoping review",
+      "summary": "A scoping review of 16 studies found that \"exercise snacking\" is a safe and promising strategy for frailty prevention and intervention in older adults, improving physical function (muscle strength, balance, mobility) and adherence, with most studies being (pilot) RCTs published since 2022.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08215-x",
+      "publishedAt": "2026-09-09T00:00:00.000Z",
+      "firstSeen": "2026-09-11T23:25:08.498Z",
+      "curatedScore": 75,
+      "curatedReason": "这项范围综述确认，碎片化运动（“运动零食”）是老年人衰弱预防和干预的安全有效策略，对提高身体功能、依从性有积极作用。这为你将碎片化运动纳入老年患者的个性化康复计划提供了高等级证据，尤其适用于传统长时间运动受限的患者。",
+      "titleZh": "碎片化运动作为老年人衰弱预防与干预的新策略：一项范围综述",
+      "summaryZh": "一项对 16 项研究进行的范围综述发现，碎片化运动（“运动零食”）是老年人衰弱预防和干预的一种安全且有前景的策略，能改善身体功能（肌肉力量、平衡、活动能力）和依从性，其中大多数研究为自 2022 年以来发表的（初步）随机对照试验。",
+      "curatedReasonEn": "This scoping review confirms that \"exercise snacking\" is a safe and effective strategy for frailty prevention and intervention in older adults, positively impacting physical function and adherence. This provides high-level evidence for integrating exercise snacking into individualized rehabilitation plans for older patients, especially those limited by traditional long-duration exercise.",
+      "limitation": "纳入研究的设计类型多样（多数为 RCTs），但仍需大规模多中心试验来验证个体化方案的有效性。",
+      "limitationEn": "Although most included studies are RCTs, large-scale multicenter trials are still needed to validate individualized exercise snacking regimens.",
+      "tags": [
+        "research",
+        "衰弱",
+        "跌倒预防"
+      ],
+      "studyDesign": "综述",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1789602188852-2",
+      "title": "Two-year follow-up of varus progression in young professional football players",
+      "summary": "A two-year follow-up study of 31 adolescent male professional academy football players found that varus progression (increase in mechanical femorotibial axis angle, MAA) was most pronounced in younger athletes and significantly associated with greater increases in height, low initial height, BMI, and less initial varus deformity.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02035-7",
+      "publishedAt": "2026-09-11T00:00:00.000Z",
+      "firstSeen": "2026-09-16T23:43:08.852Z",
+      "curatedScore": 70,
+      "curatedReason": "这项针对青少年足球运动员的两年随访研究提示，股胫机械轴角度（MAA）的增加在年轻运动员中更为显著，且与身高和体重增长相关。在制定青少年足球运动员预防方案时，应特别关注生长发育期，早期识别并管理膝内翻风险。",
+      "titleZh": "青少年职业足球运动员膝内翻进展的两年随访研究",
+      "summaryZh": "一项对 31 名青少年职业足球运动员的两年随访研究发现，膝内翻进展（股胫机械轴角度增加）在年龄较小的运动员中最为显著，并与身高、初始身高较低、BMI 和初始膝内翻畸形程度较轻的更大增幅显著相关。",
+      "curatedReasonEn": "This two-year follow-up study on young football players suggests that an increase in the mechanical femorotibial axis angle (MAA) is more pronounced in younger athletes and associated with growth in height and weight. When developing preventive strategies for youth football players, prioritize monitoring during growth spurts to identify and manage genu varum risk early.",
+      "limitation": "本研究为小样本观察性队列，且入组球员均为在观察期内出现膝内翻进展的特定队列，结果外推性有限。",
+      "limitationEn": "This study is a small observational cohort of players specifically showing varus progression, limiting generalizability.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1789341421926-3",
+      "title": "Evidence-Based Insights for the Development and Talent Promotion of Young Athletes in a National Sports Context",
+      "summary": "This perspective article explores the challenges and opportunities in integrating early talent promotion with sustainable athlete development frameworks, using the Swedish context as a case study. It argues for a nuanced, evidence-based approach that supports both elite performance and broader participation goals, emphasizing athlete well-being and intrinsic motivation.",
+      "category": "sports",
+      "source": "Sports Medicine",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02535-z",
+      "publishedAt": "2026-09-13T00:00:00.000Z",
+      "firstSeen": "2026-09-13T23:17:01.926Z",
+      "curatedScore": 65,
+      "curatedReason": "这份述评基于瑞典的经验，强调了在国家体育背景下，青年运动员的发展与人才培养需要平衡早期精英选拔和长期、包容性发展模式。它提醒你，在推动运动康复和表现训练时，要考量当地文化和组织背景，并兼顾运动员的福祉和广泛参与。",
+      "titleZh": "在国家体育背景下，青年运动员发展与人才培养的循证见解",
+      "summaryZh": "这篇述评文章以瑞典为例，探讨了在整合早期人才培养与可持续运动员发展框架方面的挑战与机遇。文章认为，应采取一种细致入微的循证方法，同时支持精英表现和更广泛的参与目标，并强调运动员的福祉和内在动机。",
+      "curatedReasonEn": "Drawing from the Swedish experience, this perspective emphasizes that youth athlete development and talent promotion within a national sports context require balancing early elite selection with long-term, inclusive development models. It reminds you to consider local cultural and organizational contexts and prioritize athlete well-being and broad participation when promoting sports rehabilitation and performance training.",
+      "tags": [
+        "research",
+        "youth-sport"
+      ],
+      "studyDesign": "述评",
+      "journal": "Sports Medicine"
     },
     {
       "id": "news-1789332987092-0",
@@ -2012,150 +2151,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Topics in stroke rehabilitation"
-    },
-    {
-      "id": "news-1789414764563-1",
-      "title": "Study Protocol for a Randomized Controlled Trial Comparing Swiss Ball Balance Training and Conventional Balance Training to Improve Trunk Control and Mobility in Individuals with Sub acute Stroke.",
-      "summary": "This protocol for a randomized controlled trial will compare Swiss ball balance training with conventional balance training in individuals with subacute stroke, assessing trunk control, balance, and mobility.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.11.26362878v1?rss=1",
-      "publishedAt": "2026-09-14T00:00:00.000Z",
-      "firstSeen": "2026-09-14T19:39:24.563Z",
-      "curatedScore": 65,
-      "curatedReason": "虽然 Swiss 球平衡训练对比常规训练在急性期卒中患者中的研究设计看似合理，但该 RCT 仍处于方案阶段，无需参考。",
-      "titleZh": "一项旨在改善恢复期卒中患者躯干控制和活动能力的瑞士球平衡训练与常规平衡训练比较的随机对照试验研究方案",
-      "titleEn": "Study Protocol for a Randomized Controlled Trial Comparing Swiss Ball Balance Training and Conventional Balance Training to Improve Trunk Control and Mobility in Individuals with Sub acute Stroke",
-      "summaryZh": "本研究方案将开展一项随机对照试验，比较瑞士球平衡训练与常规平衡训练对恢复期卒中患者躯干控制、平衡和活动能力的影响。",
-      "curatedReasonEn": "This study protocol outlines a randomized controlled trial comparing Swiss ball balance training to conventional balance training for subacute stroke survivors. While the concept is promising, the study is in its protocol phase, and results are not yet available. The inclusion of a specific geographical focus (Sub-Saharan Africa) adds context but doesn't change the generalizability of the findings at this stage.",
-      "limitation": "Study protocol stage, results not yet available.",
-      "limitationEn": "Study protocol stage, results not yet available.",
-      "tags": [
-        "research",
-        "neurological"
-      ],
-      "studyDesign": "RCT"
-    },
-    {
-      "id": "news-1789390992533-1",
-      "title": "Effect of Sequential Electroacupuncture Combined With Augmented Reality Gait Training on Walking Function and Neuromuscular Control in Subacute Stroke: A Randomized Controlled Trial.",
-      "summary": "A single-blind RCT of 40 subacute stroke patients found sequential electroacupuncture (EA) plus augmented reality (AR) gait training improved gait speed (primary outcome) and other functional measures significantly more than AR alone over 4 weeks.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42733152/",
-      "publishedAt": "2026-09-14T00:00:00.000Z",
-      "firstSeen": "2026-09-14T13:03:12.533Z",
-      "curatedScore": 85,
-      "curatedReason": "与单独使用增强现实（AR）步态训练相比，顺序电针联合 AR 步态训练在亚急性卒中患者中显著改善了步速（主要结局）、步长、步态对称性、运动功能和平衡。这一组合疗法为神经康复提供了一个有前景的策略。",
-      "titleZh": "顺序电针联合增强现实步态训练对亚急性卒中患者行走功能和神经肌肉控制的影响：一项随机对照试验。",
-      "titleEn": "Effect of Sequential Electroacupuncture Combined With Augmented Reality Gait Training on Walking Function and Neuromuscular Control in Subacute Stroke: A Randomized Controlled Trial.",
-      "summaryZh": "一项针对 40 名亚急性卒中患者的单盲 RCT 研究发现，连续 4 周的电针（EA）联合增强现实（AR）步态训练，相比单独 AR 训练，在提高步速（主要结局）、步长、步态对称性、FMA-LE、BBS 和 CCI 方面均有显著改善。",
-      "curatedReasonEn": "Sequential electroacupuncture combined with AR gait training significantly improved gait speed (primary outcome), stride length, gait symmetry, motor function, and balance in subacute stroke patients compared to AR training alone. This combination therapy offers a promising strategy for neurorehabilitation.",
-      "limitation": "The study had a relatively small sample size (n=40) and a follow-up duration of 4 weeks, which may limit the generalizability of the findings on long-term effects.",
-      "limitationEn": "The study had a relatively small sample size (n=40) and a follow-up duration of 4 weeks, which may limit the generalizability of the findings on long-term effects.",
-      "tags": [
-        "research",
-        "neurological",
-        "stroke",
-        "vestibular"
-      ],
-      "studyDesign": "RCT",
-      "journal": "American journal of physical medicine & rehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1789390992532-0",
-      "title": "Adaptive Sports Introduction During Inpatient Rehabilitation: A Descriptive Study.",
-      "summary": "A cross-sectional study surveyed 100 inpatients with new disabilities; 43% desired exposure to adaptive sports (AdS) during rehabilitation. Younger age, pre-admission sports participation, and current AdS exposure correlated with this desire.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42733160/",
-      "publishedAt": "2026-09-14T00:00:00.000Z",
-      "firstSeen": "2026-09-14T13:03:12.532Z",
-      "curatedScore": 70,
-      "curatedReason": "这项横断面研究表明，在住院康复期间引入适应性运动（AdS）能满足新近残疾患者的需求，尤其是年轻患者和曾参与体育活动的患者。多学科团队应考虑在康复早期提供 AdS 暴露机会。",
-      "titleZh": "住院康复期间的适应性运动介绍：一项描述性研究。",
-      "titleEn": "Adaptive Sports Introduction During Inpatient Rehabilitation: A Descriptive Study.",
-      "summaryZh": "一项针对 100 名新近残疾住院患者的横断面调查显示，43% 的患者希望在康复期间接触适应性运动（AdS）。年轻、有既往运动史以及目前接触 AdS 的患者更渴望体验。",
-      "curatedReasonEn": "This cross-sectional study indicates that introducing adaptive sports (AdS) during inpatient rehabilitation meets the needs of patients with new disabilities, particularly younger individuals and those with prior sports participation. Multidisciplinary teams should consider offering AdS exposure early in the rehabilitation phase.",
-      "limitation": "The study is cross-sectional and relies on self-reported data, which may not capture all nuances of patient interest or exposure.",
-      "limitationEn": "The study is cross-sectional and relies on self-reported data, which may not capture all nuances of patient interest or exposure.",
-      "tags": [
-        "research",
-        "neurological",
-        "stroke",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "American journal of physical medicine & rehabilitation"
-    },
-    {
-      "id": "news-1789362436759-0",
-      "title": "Quantitative evaluation of shoulder motor compensation in stroke patients based on multimodal feature analysis.",
-      "summary": "A study integrating markerless motion capture with surface electromyography (sEMG) to objectively assess shoulder motor compensation in 25 stroke patients found strong correlations between multimodal features (e.g., Maximum Joint Angle ρ = 0.932, Median Frequency ρ = 0.806) and traditional clinical scales.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42732707/",
-      "publishedAt": "2026-09-13T00:00:00.000Z",
-      "firstSeen": "2026-09-14T05:07:16.759Z",
-      "curatedScore": 75,
-      "curatedReason": "这项研究提出的无标记运动捕捉与表面肌电图结合的肩关节运动补偿量化评估方法，为中风患者上肢功能康复评估提供了客观、简化的补充工具。在临床实践中，它可以作为 Fugl-Meyer 评估等主观量表以外的有效参考。",
-      "titleZh": "基于多模态特征分析的中风患者肩关节运动补偿量化评估",
-      "summaryZh": "一项结合无标记运动捕捉和表面肌电图的研究，对 25 名中风患者的肩关节运动补偿进行了客观评估，发现多模态特征（如最大关节角度 ρ = 0.932，中位频率 ρ = 0.806）与传统临床量表之间存在强相关性。",
-      "curatedReasonEn": "This study's quantitative evaluation method for shoulder motor compensation, integrating markerless motion capture and sEMG, offers an objective and simplified complementary tool for assessing upper-limb function in stroke patients. In clinical practice, it can serve as a valuable reference alongside subjective scales like the Fugl-Meyer Assessment.",
-      "limitation": "本研究为小样本观察研究，且仅限肩关节外展任务，结果外推需谨慎。",
-      "limitationEn": "This is a small-sample observational study, limited to a single shoulder abduction task, so results should be interpreted with caution regarding generalizability.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of electromyography and kinesiology : official journal of the International Society of Electrophysiological Kinesiology"
-    },
-    {
-      "id": "news-1788885826037-2",
-      "title": "Proximal and Distal Bimanual Motor Skill Learning After Stroke: Impairments, Trajectories, and Clinical Contributors",
-      "summary": "A randomized trial with 97 (sub)acute stroke patients found improvements in accuracy and coordination on both distal and proximal bimanual tasks over three days, though less than healthy individuals. Most patients with mild-to-moderate impairment exhibited substantial residual bimanual motor learning capacity early after stroke, with baseline motor and attentional impairments predicting outcomes.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.02.26362113v1?rss=1",
-      "publishedAt": "2026-09-08T00:00:00.000Z",
-      "firstSeen": "2026-09-08T16:43:46.037Z",
-      "curatedScore": 85,
-      "curatedReason": "这项研究表明，大部分轻中度卒中患者在早期仍保留双侧运动学习能力，提示个体化双侧康复策略结合运动和认知需求可能有效。在设计早期干预时，关注患者的基线运动和注意力缺陷。",
-      "titleZh": "卒中后近端和远端双侧运动技能学习：损伤、轨迹和临床影响因素",
-      "summaryZh": "一项对97名（亚）急性卒中患者进行的随机试验发现，在三天内，患者在远端和近端双侧任务上的准确性和协调性均有改善，但不如健康对照组。大多数轻中度受损患者在卒中早期表现出显著的残余双侧运动学习能力，基线运动和注意力缺陷是预测因素。",
-      "curatedReasonEn": "This study suggests that most mild-to-moderate stroke patients retain substantial bimanual motor learning capacity early after stroke, indicating that individualized bimanual rehabilitation strategies integrating both motor and cognitive demands may be effective. Focus on baseline motor and attentional impairments when designing early interventions.",
-      "limitation": "这是一项在急性期和亚急性期卒中患者中进行的随机试验，研究结果可能不完全适用于慢性期患者，且报告为预印本，未经同行评审。",
-      "limitationEn": "This is a randomized trial conducted in acute and subacute stroke patients; findings may not be fully applicable to chronic patients, and it is a preprint, not yet peer-reviewed.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "RCT"
-    },
-    {
-      "id": "news-1788885826037-1",
-      "title": "Addressing stroke family caregivers' mental health through person‑ and family‑centred rehabilitation.",
-      "summary": "This narrative review summarizes literature on stroke family caregiver experiences and support needs, highlighting person- and family-centred care (PFCC) as a potential approach to address gaps in caregiver support and mental health. Caregivers are at increased risk of adverse mental health outcomes.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42708404/",
-      "publishedAt": "2026-09-08T00:00:00.000Z",
-      "firstSeen": "2026-09-08T16:43:46.037Z",
-      "curatedScore": 75,
-      "curatedReason": "本综述强调卒中康复应将照护者视为团队关键成员，并提供持续的教育、培训和支持。在制定康复计划时，考虑以个体和家庭为中心的照护模式。",
-      "titleZh": "通过以个体和家庭为中心的康复解决卒中家庭照护者的心理健康问题",
-      "summaryZh": "这篇叙述性综述总结了卒中家庭照护者的经验和支持需求文献，强调以个体和家庭为中心的照护（PFCC）作为解决照护者支持和心理健康方面差距的潜在方法。照护者面临不良心理健康结局的风险增加。",
-      "curatedReasonEn": "This review emphasizes that stroke rehabilitation should recognize caregivers as key team members and provide ongoing education, training, and support. Consider person- and family-centred care models when developing rehabilitation plans.",
-      "limitation": "这是一篇叙述性综述，可能存在选择偏倚，且未进行系统性证据综合。",
-      "limitationEn": "This is a narrative review, which may have selection bias and does not involve systematic evidence synthesis.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Disability and rehabilitation"
     }
   ]
 }
