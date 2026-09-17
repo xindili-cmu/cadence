@@ -1164,6 +1164,65 @@ async function run() {
     }
   }
 
+  // ── Y 段：vendor/fonts-ttf 的字重自洽（2026-09-17，daily-poster 字体前置）──────
+  // 排版产物的故障方向和数据不一样：字体文件错了，satori 照读、CI 全绿、PNG 照出，
+  // 只是所有字悄悄粗一档或斜了。把 500 复制一份改名成 `-400-` 是最顺手的错法，
+  // 而它对一切自动检查静默 —— 发出去才有人看出来，且已经不可撤回。
+  //
+  // 所以这里不信文件名，直接拆 sfnt：读 OS/2.usWeightClass 与 head.macStyle 的
+  // italic 位，和文件名里的 <weight>-<style> 对账。纯 Buffer 解析，不引依赖
+  // （沙箱装不了 fontTools，而这段必须在每个 workflow 里都能跑）。
+  {
+    console.log('\nY. vendor/fonts-ttf：文件名的字重/样式 = 字体内部的字重/样式');
+    const FDIR = path.join(__dirname, '..', 'vendor', 'fonts-ttf');
+    const WDIR = path.join(__dirname, '..', 'vendor', 'fonts');
+
+    // sfnt 表目录：offset 4 是表数量，12 起每 16 字节一条（tag/checksum/off/len）。
+    const sfnt = (buf) => {
+      const n = buf.readUInt16BE(4); const t = {};
+      for (let i = 0; i < n; i++) {
+        const o = 12 + i * 16;
+        t[buf.toString('ascii', o, o + 4).trim()] = { off: buf.readUInt32BE(o + 8) };
+      }
+      return {
+        // OS/2 的 usWeightClass 在表内偏移 4；head 的 macStyle 在偏移 44，bit1 = italic。
+        weight: t['OS/2'] ? buf.readUInt16BE(t['OS/2'].off + 4) : null,
+        italic: t.head ? !!(buf.readUInt16BE(t.head.off + 44) & 2) : null,
+      };
+    };
+
+    const ttfs = fs.readdirSync(FDIR).filter((f) => f.endsWith('.ttf'));
+    // 只对遵循 <family>-<subset>-<weight>-<style>.ttf 的文件对账；cadence-bupin.ttf
+    // 是 4 字子集，不走这个命名（见该目录 README）。
+    const named = ttfs.map((f) => [f, f.match(/-(\d{3})-(normal|italic)\.ttf$/)]).filter(([, m]) => m);
+    ok(named.length >= 6, `Y1: fonts-ttf 里有 ${named.length} 个按约定命名的 ttf`);
+
+    for (const [f, m] of named) {
+      const got = sfnt(fs.readFileSync(path.join(FDIR, f)));
+      const wantW = Number(m[1]); const wantI = m[2] === 'italic';
+      ok(got.weight === wantW && got.italic === wantI,
+        `Y2: ${f} 内部 = ${got.weight}/${got.italic ? 'italic' : 'normal'}`
+        + (got.weight !== wantW || got.italic !== wantI
+          ? ` —— 文件名说 ${wantW}/${m[2]}（改名冒充字重：读得出、不报错、字全粗一档）` : ''));
+    }
+
+    // Y3：每个 ttf 都能追到 ../fonts 里的 woff2 原件 —— 否则下次要重转时无源可依，
+    // 而 ttf 是二进制，看不出它是从哪来的、用什么参数转的。
+    const woff2 = new Set(fs.existsSync(WDIR) ? fs.readdirSync(WDIR) : []);
+    const orphan = named.map(([f]) => f).filter((f) => !woff2.has(f.replace(/\.ttf$/, '.woff2')));
+    ok(orphan.length === 0,
+      `Y3: 每个 ttf 在 ../fonts 都有同名 woff2 原件`
+      + (orphan.length ? ` —— 无源：${orphan.join(', ')}（重转时没有依据，见 fonts-ttf/README.md）` : ''));
+
+    // Y4：卡片脚本 ff('x.ttf') 点名的文件必须真的在。改名/删文件时这条先红，
+    // 而不是等 cron 里 satori 抛 ENOENT。
+    const cardSrc = fs.readFileSync(path.join(__dirname, 'linkedin-daily-card.js'), 'utf8');
+    const refs = [...new Set([...cardSrc.matchAll(/ff\('([^']+\.ttf)'\)/g)].map((m) => m[1]))];
+    ok(refs.length > 0, `Y4: linkedin-daily-card.js 点名了 ${refs.length} 个 ttf`);
+    const gone = refs.filter((f) => !ttfs.includes(f));
+    ok(gone.length === 0, `Y4: 点名的 ttf 都在磁盘上${gone.length ? ` —— 缺 ${gone.join(', ')}` : ''}`);
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 
