@@ -1003,6 +1003,167 @@ async function run() {
       'V4: search-log-report.js 按同样段数解析（改 key 形状必须两边同改）');
   }
 
+  // ── W 段：poster 刊名短名（2026-09-17，daily-poster 设计交付的前置条件）──────
+  // 交付文档把 journal 定成 nowrap 单行、schema maxLength=34。超了不报错，是把
+  // 幻灯片编号顶出 1080×1350 的画布 —— 「对 CI 静默、对读者响」，本仓库的老朋友。
+  // 语料实测：96 期 612 行里 57 个不同刊名，29 个超 34 字符（占 42% 的行）。
+  //
+  // 这段守的不是「有张表」，是**表不许是新发明的**。短名全部来自 sources.json 的
+  // { name, journalName } 与 journals.json 的 aliases —— 两张 Cindy 本来就在维护的
+  // 表。真正危险的修法有两个，W4 各钉一条：①在渲染端 slice(0,34)（截出
+  // "Journal of NeuroEngineering and Reha" 这种比溢出更难发现的东西）；②自己写一份
+  // 缩写表（第三份真值，必然与前两张漂移 —— CLAUDE.md 第 4 条那个三方矛盾的翻版）。
+  {
+    console.log('\nW. poster 刊名短名：只解析不发明，解析不出就炸');
+    const { shortJournal, normKey, JOURNAL_MAX } = require('./journal-short');
+    const js = fs.readFileSync(path.join(__dirname, 'journal-short.js'), 'utf8');
+
+    ok(JOURNAL_MAX === 34, `W1: JOURNAL_MAX = ${JOURNAL_MAX}（poster.day.schema.json 的 journal.maxLength）`);
+
+    // W2 口径互锁：journals.json 的 _comment 写明 alias 规则「小写、去括号注释、
+    // 去开头 the、& 视为 and」。四条各一例，任一条被改掉这里就红。
+    ok(normKey('Clinical biomechanics (Bristol, Avon)') === normKey('Clinical Biomechanics'),
+      'W2: 去括号注释 —— PubMed 的 "(Bristol, Avon)" 与 RSS 的裸名同键');
+    ok(normKey('The American journal of sports medicine') === normKey('American Journal of Sports Medicine'),
+      'W2: 去开头 the');
+    ok(normKey('Journal of Orthopaedic & Sports Physical Therapy') === normKey('Journal of orthopaedic and sports physical therapy'),
+      'W2: & 视为 and ∧ 大小写无关');
+
+    // W3：语料里真实出现过的四条，覆盖四条解析路径各一。
+    for (const [full, want, via] of [
+      ['Journal of NeuroEngineering and Rehabilitation', 'J NeuroEng Rehabil', 'roster'],
+      ['Journal of geriatric physical therapy (2001)', 'J Geriatr Phys Ther', 'journals.json'],
+      ['Pediatric physical therapy : the official publication of the Section on Pediatrics of the American Physical Therapy Association', 'Pediatr Phys Ther', 'journals.json'],
+      ['Disability and rehabilitation', 'Disability and rehabilitation', 'as-is'],
+    ]) {
+      const r = shortJournal(full);
+      ok(r.ok && r.short === want && r.via === via,
+        `W3: ${full.slice(0, 44)}… → ${r.short}（${r.via}，期望 ${want}/${via}）`);
+    }
+    // 语料里最长的一条（179 字符），靠 " : " 截断降到 22 —— 证明副标题那步真的在跑。
+    {
+      const r = shortJournal('European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society');
+      ok(r.ok && r.short === 'Eur Spine J', `W3: 179 字符的 Eur Spine J → ${r.short}`);
+    }
+
+    // W4 判别力：两种「看起来更省事」的修法必须不存在。
+    ok(!/\.slice\(0,\s*JOURNAL_MAX\)/.test(js) && !/\.slice\(0,\s*34\)/.test(js) && !/substring\(0,\s*34\)/.test(js),
+      'W4: journal-short.js 里没有截断 —— 截断比溢出更难发现（回退即转红）');
+    {
+      // 解析不出来时：ok=false ∧ short 原样返回。若有人改成「兜底截断」，这条立刻红。
+      const r = shortJournal('Zzz journal of entirely fictional rehabilitation science and practice quarterly');
+      ok(r.ok === false && r.via === 'unresolved' && r.short.length > JOURNAL_MAX,
+        'W4: 无法解析时 ok=false 且不截断（调用方必须炸，不许静默出短名）');
+    }
+    ok(!/journal-abbrev\.json|journal-short\.json|journal-map\.json/.test(js),
+      'W4: 没有第三张缩写表 —— 短名只来自 sources.json + journals.json（值会漂移，见 CLAUDE.md 第 4 条）');
+    ok(js.includes("'sources.json'") && js.includes("'journals.json'"),
+      'W4 接线：两张上游表都被读到');
+
+    // W5（产物，挂 SKIP_ARTIFACT_ASSERTS——同 F 段理由）：最新一期的每个刊名都能
+    // 解析。作用域取最新一期而不是全量：存量若有一条解不出，不该挡住无关的前端修复。
+    if (process.env.SKIP_ARTIFACT_ASSERTS) {
+      console.log('  ⊘ SKIP_ARTIFACT_ASSERTS=1 —— 跳过 briefs/daily 产物断言');
+    } else {
+      const dir = path.join(__dirname, '..', 'briefs', 'daily');
+      const eds = fs.existsSync(dir)
+        ? fs.readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort()
+        : [];
+      if (!eds.length) {
+        console.log('  ⊘ briefs/daily 为空（fresh clone），跳过产物断言');
+      } else {
+        const latest = JSON.parse(fs.readFileSync(path.join(dir, eds[eds.length - 1]), 'utf8'));
+        const bad = [];
+        for (const sec of latest.sections || []) {
+          for (const it of sec.items || []) {
+            const j = (it.journal || '').trim();
+            if (j && !shortJournal(j).ok) bad.push(`${j.length}字符·${j.slice(0, 40)}`);
+          }
+        }
+        ok(bad.length === 0,
+          `W5: 最新一期（${eds[eds.length - 1].replace('.json', '')}）每个刊名都解析到 ≤${JOURNAL_MAX}`
+          + (bad.length ? ` —— ${bad.slice(0, 3).join(' | ')}；跑 node scripts/journal-short.js 看全量` : ''));
+      }
+    }
+  }
+
+  // ── X 段：分类表 ↔ 色板 ↔ 渲染端（2026-09-17）─────────────────────────────
+  // categories.js 第 3 行自称「Slug authority for the whole system」。它现在有三个
+  // 下游各自抄了一份值：colors.css 的 --cat-* 与注释里的「N · Label」、
+  // linkedin-daily-card.js 里硬编码的 CAT 表、以及交付包生成的 pigments.json。
+  //
+  // 抄第二份就会漂 —— 已经漂了：colors.css 的注释停在 'Manual & Modalities'，而
+  // categories.js 早在 06-10 就是 'Manual Therapy & Modalities'。三个月没人发现，
+  // 因为注释对 CI 静默；而 daily-poster 交付包的 pigments.json 正是从这条注释
+  // 生成的，于是这个旧 label 原样传进了设计稿。CLAUDE.md 第 4 条（只写指针不写值，
+  // 别信文件头注释）的教科书案例。
+  //
+  // 这里不强求「只许有一份」—— 那是重构，风险不对等（categories.js 是 ESM，
+  // 卡片脚本是 CJS）。只钉住：副本里的**值**必须和上游一致，漂了就红。
+  {
+    console.log('\nX. 分类表 ↔ 色板 ↔ 渲染端：副本不许漂');
+    const DS = path.join(__dirname, '..', 'design-system');
+    const cssText = fs.readFileSync(path.join(DS, 'tokens', 'colors.css'), 'utf8');
+    const catsText = fs.readFileSync(path.join(DS, 'components', 'feed', 'categories.js'), 'utf8');
+    const cardText = fs.readFileSync(path.join(__dirname, 'linkedin-daily-card.js'), 'utf8');
+
+    // categories.js 是 ESM，不能 require —— 解析源码，和 wiring.test.js 解析
+    // build-bundle.js 的 FILES 同一套路（require 会执行它）。
+    const parseRows = (block) => [...block.matchAll(/\{\s*id:\s*'([^']+)'[\s\S]*?\}/g)].map((m) => {
+      const row = m[0];
+      const f = (k) => (row.match(new RegExp(`\\b${k}:\\s*'([^']*)'`)) || [])[1];
+      return { id: m[1], label: f('label'), short: f('short'), accent: f('accent') };
+    });
+    const CATS = parseRows(catsText.split('export const CATEGORIES')[1].split('];')[0]);
+    const XCUTS = parseRows(catsText.split('export const XCUTS')[1].split('];')[0]);
+    ok(CATS.length === 8 && XCUTS.length === 1,
+      `X1: categories.js = 8 个专科 + 1 个横切 overlay（现在 ${CATS.length} + ${XCUTS.length}）`);
+
+    // 顺序即索引：catIndex() 返回的是数组下标 +1，标签上的 01–08 和 poster 的
+    // 巨型水印数字都读它。重排 = 静默给每个分类换号，所以顺序本身要钉死。
+    ok(CATS.map((c) => c.id).join(',') === 'orthopedic,neurological,sports,pediatric,geriatric,cardiopulmonary,manual-modality,practice',
+      'X1: 8 个专科的 id 顺序未变（顺序 = catIndex = 标签/海报上的 01–08）');
+
+    const cssTokens = new Set([...cssText.matchAll(/(--cat-[a-z-]+)\s*:/g)].map((m) => m[1]));
+    for (const c of [...CATS, ...XCUTS]) {
+      const missing = ['', '-soft', '-ink'].filter((s) => !cssTokens.has(`--cat-${c.accent}${s}`));
+      ok(missing.length === 0,
+        `X2: ${c.id} 的 --cat-${c.accent}{,-soft,-ink} 都在 colors.css`
+        + (missing.length ? ` —— 缺 ${missing.map((s) => `--cat-${c.accent}${s}`).join(', ')}（缺了颜色静默回落，页面上看不出是 bug）` : ''));
+    }
+    // 反向：色板里没有对不上任何分类的孤儿 token（删分类忘了删色 → 表开始说谎）。
+    const accents = new Set([...CATS, ...XCUTS].map((c) => c.accent));
+    const orphans = [...cssTokens].filter((t) => !accents.has(t.replace(/^--cat-/, '').replace(/-(soft|ink|on-pigment)$/, '')));
+    ok(orphans.length === 0, `X2: colors.css 里没有孤儿 --cat-* token${orphans.length ? ` —— ${orphans.join(', ')}` : ''}`);
+
+    // X3：注释里的「N · Label」必须等于 categories.js 的序位与 label。就是这条
+    // 漂了三个月、又被交付包抄走的那一处。
+    const commented = new Map([...cssText.matchAll(/--cat-([a-z]+):\s*#[0-9A-Fa-f]{6};\s*\/\*\s*(\d+)\s*·\s*([^(*]+?)\s*[(*]/g)]
+      .map((m) => [m[1], { idx: m[2], label: m[3].trim() }]));
+    [...CATS, ...XCUTS].forEach((c, i) => {
+      const got = commented.get(c.accent);
+      ok(!!got && got.label === c.label && got.idx === String(i + 1),
+        `X3: colors.css 注释「${i + 1} · ${c.label}」与 categories.js 一致`
+        + (got && got.label !== c.label ? ` —— 注释写的是「${got.label}」` : '')
+        + (got && got.idx !== String(i + 1) ? ` —— 注释序号是 ${got.idx}` : ''));
+    });
+
+    // X4：卡片脚本硬编码的 solid 必须等于 colors.css 的 --cat-<accent>。
+    // 只钉颜色不钉 label —— 卡片上用的是更短的展示名（'Sports' / 'Practice'），
+    // 那是排版取舍，不是漂移；颜色对不上才是 bug（海报与网站同一分类两个颜色，
+    // 恰好摧毁整个设计的前提：靠颜色认出分类）。
+    const cssHex = Object.fromEntries([...cssText.matchAll(/--cat-([a-z]+):\s*(#[0-9A-Fa-f]{6});/g)].map((m) => [m[1], m[2].toUpperCase()]));
+    const cardRows = [...cardText.matchAll(/'?([a-z-]+)'?:\s*\{\s*label:\s*'[^']+',\s*solid:\s*'(#[0-9A-Fa-f]{6})'/g)];
+    ok(cardRows.length === CATS.length,
+      `X4: linkedin-daily-card.js 的 CAT 表覆盖全部 ${CATS.length} 个专科（现在 ${cardRows.length}）`);
+    const byId = Object.fromEntries([...CATS, ...XCUTS].map((c) => [c.id, c.accent]));
+    for (const [, id, hex] of cardRows) {
+      ok(cssHex[byId[id]] === hex.toUpperCase(),
+        `X4: 卡片 ${id} = ${hex} 与 --cat-${byId[id]} 一致`
+        + (cssHex[byId[id]] !== hex.toUpperCase() ? ` —— colors.css 是 ${cssHex[byId[id]]}（网站与海报会出现两个颜色）` : ''));
+    }
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

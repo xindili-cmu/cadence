@@ -2,6 +2,24 @@
 
 ---
 
+## ✅ daily-poster 交付包的调色板:线上色值不动(2026-09-17 当日拍板)
+
+> **问题.** design_handoff_daily_poster 附的 `colors.css` 与线上 `design-system/tokens/colors.css` 差 **32 处色值**,其中 9 个专科底色改了 7 个(神经 `#463E7C`→`#574B8C`、心肺 `#8C3B43`→`#94343D` 等)。这 32 个值**在仓库历史里一次都没出现过** —— 不是从当前版本微调,是一份独立重调的色板。要不要采用。
+>
+> **不是海报单方面的事:** 这套设计的前提是「读者靠底色认出专科」。海报换色而网站不换,同一个专科在两处是两个颜色,前提就没了;两处都换,则整站配色跟着动。所以只有「全换」和「全不换」两个真选项。
+>
+> **Cindy 决定:全不动。** 交付包的 `colors.css` 不进仓库 —— 它还顺带改了 10 个与海报无关的 token(`--signal-up` ΔE 7.9 最大;`--blue-800` 是 logo 六根柱子里最深那根),整份覆盖会静默动到品牌蓝与信号色。
+>
+> **代价经核算为零(对比度已验):** 拿交付包的 9 个 on-pigment tint 去配**线上**底色,8 个仍 ≥4.5:1(最低 Ortho 5.55、Pediatric 4.65)。唯一跌破的是 Rehab Tech(4.47:1)——而它是横切 overlay,交付文档自己写明「never sets a ground colour」,海报上永远不是底色,所以这条不成立为代价。
+>
+> **交付方要做的:** 按线上色值重出 `pigments.json`(9 个 pigment 换成线上值,onPigmentTint 原样保留)。已生成对照件供转交。
+>
+> **顺带修掉的漂移:** `colors.css` 注释里 `7 · Manual & Modalities` 与 `categories.js` 的 `Manual Therapy & Modalities` 从 06-10 起就不一致,交付包的 `pigments.json` 正是抄的这条注释,于是旧 label 原样进了设计稿。注释已对齐,并加了断言(pipeline-gates X 段)钉住 categories.js ↔ colors.css ↔ linkedin-daily-card.js 三者的顺序/文案/色值。
+>
+> **重启条件:** 设计方能给出「为什么这 7 个专科色必须改」的理由(对比度、色盲可分性、印刷偏色之类的可证伪依据),届时按「整站一起换」重议 —— 不接受只换海报。
+
+---
+
 ## ⏳ 「问证据」站内 bot(2026-09-09 拍板,Phase 0 观察中)
 
 > **问题.** 要不要在站上加一个基于 1,125 条已策展文献回答临床问题的 bot(DeepSeek,只从库内作答并给 `/?item=` 引用)。
