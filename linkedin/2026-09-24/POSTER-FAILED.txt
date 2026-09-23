@@ -1,0 +1,8 @@
+linkedin-poster-claims.js failed at 2026-09-23T23:50:54.977Z
+
+draft still breaks 2 rule(s) after retry:
+  - paper 1 claim is 104 chars (max 95) — overflows the fixed canvas
+  - paper 2 claim is 118 chars (max 95) — overflows the fixed canvas
+
+The carousel for 2026-09-24 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-09-24 && node scripts/linkedin-poster.js 2026-09-24
