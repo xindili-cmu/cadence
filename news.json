@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-09-23T18:28:41.660Z",
+    "lastUpdated": "2026-09-23T22:59:56.188Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,10 +20,11 @@
       "sourceUrl": "https://www.archivesofphysiotherapy.com/index.php/aop/article/view/3926",
       "category": "orthopedic",
       "publishedAt": "2026-09-23T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Archives of Physiotherapy",
         "Musculoskeletal science & practice",
+        "BMC Sports Science, Medicine and Rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "British Journal of Sports Medicine"
@@ -44,6 +45,12 @@
           "titleZh": "在肌肉骨骼疼痛患者等待初级保健物理治疗期间，增加简短的数字化 PainSMART-教育策略：一项随机对照试验。"
         },
         {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Development of a telerehabilitation-based exercise and monitoring program and its effectiveness compared with a brochure-based home exercise program in patients with lumbar disc herniation: a randomized controlled trial",
+          "titleZh": "远程康复运动监测计划与小册子居家锻炼计划对腰椎间盘突出症患者有效性的比较：一项随机对照试验"
+        },
+        {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
           "title": "Effects of Using High-Frequency TENS During an Exercise Therapy Program in Knee Osteoarthritis: A Randomized Sham-Controlled Trial.",
@@ -62,9 +69,9 @@
           "titleZh": "个体化游泳与教育项目对慢性下腰痛的有效性（EduSwim）：一项随机对照试验"
         }
       ],
-      "heat": 3.83,
-      "themeZh": "骨科疼痛管理中教育与物理疗法的效益评估",
-      "themeEn": "Education and Physiotherapy for Musculoskeletal Pain"
+      "heat": 4.3,
+      "themeZh": "骨科疼痛及功能障碍的多元康复干预",
+      "themeEn": "Diverse Rehabilitation Interventions for Orthopedic Conditions"
     },
     {
       "id": "news-1790149847919-0",
@@ -140,9 +147,9 @@
           "titleZh": "神经松动术结合本体感受神经肌肉促进技术对肩周炎患者的附加价值：随机对照试验。"
         }
       ],
-      "heat": 3.79,
-      "themeZh": "卒中后功能障碍的物理因子与先进疗法",
-      "themeEn": "Physical Agents & Advanced Therapies Post-Stroke"
+      "heat": 3.55,
+      "themeZh": "卒中后疼痛与功能障碍的物理治疗技术",
+      "themeEn": "Physical Therapy for Post-Stroke Pain"
     },
     {
       "id": "news-1789492064403-1",
@@ -234,9 +241,80 @@
           "titleZh": "比较瑞士球平衡训练与常规平衡训练对亚急性卒中患者躯干控制和活动能力改善效果的随机对照试验方案"
         }
       ],
-      "heat": 3.79,
-      "themeZh": "神经损伤患者社区康复与社会融合策略",
-      "themeEn": "Community Rehab and Social Integration Post-ABI"
+      "heat": 3.55,
+      "themeZh": "脑损伤患者社区康复与社会参与",
+      "themeEn": "Community Rehab and Social Participation Post-Brain Injury"
+    },
+    {
+      "id": "news-1790149847921-15",
+      "title": "Optimising exercise prescription for cancer-related fatigue, lean mass, physical function and muscle strength in women with breast cancer: a systematic review with dose-response network meta-analysis",
+      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/17/1339?rss=1",
+      "category": "sports",
+      "publishedAt": "2026-09-22T06:04:57.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "British Journal of Sports Medicine",
+        "Physical therapy",
+        "British journal of sports medicine",
+        "Sports Medicine - Open",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "European Journal of Applied Physiology"
+      ],
+      "tag": "cancer-rehabilitation",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Optimising exercise prescription for cancer-related fatigue, lean mass, physical function and muscle strength in women with breast cancer: a systematic review with dose-response network meta-analysis",
+          "titleZh": "优化乳腺癌女性癌症相关疲劳、瘦体重、体能和肌力锻炼处方：一项系统综述与剂量-反应网络 Meta 分析"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Effects of supervised exercise during pregnancy on gestational diabetes mellitus and other pregnancy outcomes: a systematic review and meta-analysis",
+          "titleZh": "妊娠期监督运动对妊娠糖尿病和其他妊娠结局的影响：一项系统综述和 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Physical Exercise Reduces Fall-Related Outcomes Among People With Stroke: A Systematic Review and Meta-Analysis.",
+          "titleZh": "物理运动可减少卒中患者跌倒相关事件：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
+          "titleZh": "单纯运动干预及基于运动的多领域生活方式干预对无痴呆老年人认知功能的影响：系统综述和荟萃分析"
+        },
+        {
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "The Effects of Exergames on Fundamental Movement Skills in Childhood: A Systematic Review and Meta-analysis",
+          "titleZh": "体感游戏对儿童基本运动技能的影响：系统综述和 Meta 分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Multimodal high-intensity interval training elicits greater improvements in aerobic capacity and sprint performance versus small-sided games and drill-based HIIT in adolescent basketball players: a randomized controlled trial",
+          "titleZh": "多模式高强度间歇训练在青少年篮球运动员中对有氧能力和冲刺表现的提升优于小场比赛和钻孔式HIIT：一项随机对照试验"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Real-time continuous assessment of fatigue from surface electromyography with deep learning for training load regulation in elite cyclists",
+          "titleZh": "利用深度学习从表面肌电信号实时连续评估疲劳，用于精英自行车运动员训练负荷调节"
+        },
+        {
+          "source": "Eur J Appl Physiol",
+          "journal": "European Journal of Applied Physiology",
+          "title": "Neurophysiological and neuromuscular responses associated with the repeated bout effect following eccentric exercise in healthy adults: a systematic review and meta-analysis",
+          "titleZh": "健康成人离心运动后重复训练效应相关的神经生理与神经肌肉反应：系统综述和 Meta 分析"
+        }
+      ],
+      "heat": 3.32,
+      "themeZh": "不同人群运动干预的效果与优化",
+      "themeEn": "Optimizing Exercise Interventions for Diverse Populations"
     },
     {
       "id": "news-1790149847921-10",
@@ -291,77 +369,35 @@
           "titleZh": "当证据在现实生活中失效时：重新思考运动损伤康复与预防"
         }
       ],
-      "heat": 2.36,
-      "themeZh": "高强度运动与骨关节健康、运动损伤风险",
-      "themeEn": "High-Impact Activity, Joint Health & Injury"
-    },
-    {
-      "id": "news-1790053728882-1",
-      "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42767813/",
-      "category": "geriatric",
-      "publishedAt": "2026-09-21T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "British journal of sports medicine",
-        "NeuroRehabilitation",
-        "BMC Geriatrics",
-        "Physical therapy",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
-      ],
-      "tag": "exercise",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "British journal of sports medicine",
-          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
-          "titleZh": "单纯运动干预及基于运动的多领域生活方式干预对无痴呆老年人认知功能的影响：系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Artificial Intelligence in Extended Reality and Digital Rehabilitation Technologies for Fall Prevention in Older Adults: A Rapid Review of the Evidence.",
-          "titleZh": "人工智能在扩展现实和数字康复技术中预防老年人跌倒的证据快速综述。"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "The impact of COVID-19 lockdown measures on cognition and physical function of older adults in long term care facilities: a systematic review",
-          "titleZh": "COVID-19 封锁措施对长期照护机构老年人认知和身体功能的影响：一项系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "REmotely monitored, Mobile health-supported Multidomain Rehabilitation with High Intensity Interval Training for COVID-19 (REMM-HIIT-CoV): Trial Design and Rationale.",
-          "titleZh": "REMM-HIIT-CoV：远程监测、移动健康支持结合高强度间歇训练治疗 COVID-19 的多领域康复试验设计与原理"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "A pilot randomized trial of a solution-focused, telehealth-supported transitional care program in older adults with heart failure",
-          "titleZh": "一项针对心力衰竭老年患者的以解决方案为中心、远程医疗支持的过渡期护理项目的初步随机试验"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Development of a telerehabilitation-based exercise and monitoring program and its effectiveness compared with a brochure-based home exercise program in patients with lumbar disc herniation: a randomized controlled trial",
-          "titleZh": "远程康复运动监测计划与小册子居家锻炼计划对腰椎间盘突出症患者有效性的比较：一项随机对照试验"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Precision rehabilitation, from foundational concepts to contemporary perspectives: a mixed-methods scoping review",
-          "titleZh": "精确康复：从基本概念到当代视角：一项混合方法范围综述"
-        }
-      ],
-      "heat": 2.3,
-      "themeZh": "老年人认知与功能维护的远程康复与AI应用",
-      "themeEn": "Telerehab & AI for Elderly Cognitive/Physical Function"
+      "heat": 2.22,
+      "themeZh": "高强度运动与骨关节健康及伤病",
+      "themeEn": "High-Impact Activity, Joint Health, and Injuries"
     }
   ],
   "items": [
+    {
+      "id": "news-1789582487621-1",
+      "title": "Physical Exercise Reduces Fall-Related Outcomes Among People With Stroke: A Systematic Review and Meta-Analysis.",
+      "summary": "A systematic review and meta-analysis of 18 studies (1536 participants) found that physical exercise significantly reduced the number of falls by 39% (IRR = 0.61, 95% CI = [0.47, 0.78]) among people with stroke. Balance training and programs integrating cognitive components were most effective, particularly for those in the chronic stage with mild to moderate disability.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42747341/",
+      "publishedAt": "2026-09-16T00:00:00.000Z",
+      "firstSeen": "2026-09-16T18:14:47.621Z",
+      "curatedScore": 85,
+      "curatedReason": "卒中患者的跌倒预防，运动干预是实打实的一线策略，别再犹豫了。特别是对于慢性期、轻中度残疾患者，平衡训练和认知结合的双任务训练效果最突出，能减少 39% 的跌倒。",
+      "titleZh": "物理运动可减少卒中患者跌倒相关事件：一项系统综述和荟萃分析",
+      "summaryZh": "一项涵盖 18 项研究（1536 名参与者）的系统综述和荟萃分析发现，物理运动显著减少了卒中患者的跌倒次数达 39% (IRR = 0.61, 95% CI = [0.47, 0.78])。其中，平衡训练以及结合认知成分的训练对慢性期轻中度残疾患者最为有效。",
+      "curatedReasonEn": "For stroke patients, exercise is a proven first-line strategy for fall prevention; don't hesitate. Balance training and dual-task exercises integrating cognitive components are particularly effective for those in the chronic stage with mild to moderate disability, reducing falls by 39%.",
+      "limitation": "研究未详细阐述各干预措施的具体剂量-反应关系及长期依从性数据。",
+      "limitationEn": "The review did not detail the dose-response relationship of various interventions or long-term adherence data.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Physical therapy"
+    },
     {
       "id": "news-1790188119704-0",
       "title": "Effects of Using High-Frequency TENS During an Exercise Therapy Program in Knee Osteoarthritis: A Randomized Sham-Controlled Trial.",
@@ -2090,29 +2126,6 @@
         "stroke"
       ],
       "studyDesign": "RCT"
-    },
-    {
-      "id": "news-1789859879275-0",
-      "title": "Effects of neuromuscular electrical stimulation combined with blood flow restriction training on lower-leg neuromuscular function in individuals with chronic ankle instability: a randomized controlled trial",
-      "summary": "This randomized controlled trial (N=60) found that neuromuscular electrical stimulation combined with blood flow restriction training, when added to an 8-week exercise program for chronic ankle instability, yielded higher FAAM-Sports scores than exercise alone and NMES alone, but not BFRT alone. The combined intervention also showed broader favorable changes in secondary outcomes, particularly peroneus longus activation and eversion strength, though not consistently across all outcomes.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02070-4",
-      "publishedAt": "2026-09-19T00:00:00.000Z",
-      "firstSeen": "2026-09-19T23:17:59.275Z",
-      "curatedScore": 75,
-      "curatedReason": "对于慢性踝关节不稳患者，在标准化运动方案中联合使用神经肌肉电刺激（NMES）和血流限制训练（BFRT），比单独运动或单一模式可能带来更广泛的短期益处，尤其是在腓骨长肌激活和外翻力量方面。但也要注意，这种联合干预并非在所有结果上都表现出一致优势。",
-      "titleZh": "神经肌肉电刺激联合血流限制训练对慢性踝关节不稳患者小腿神经肌肉功能的影响：一项随机对照试验",
-      "summaryZh": "这项随机对照试验（N=60）发现，对于慢性踝关节不稳患者，在8周运动方案中加入神经肌肉电刺激（NMES）联合血流限制训练（BFRT），能比单独运动或单独NMES带来更高的FAAM-Sports评分，但与单独BFRT无显著差异。联合干预在腓骨长肌激活和外翻力量等次要结局指标上也显示出更广泛的有利变化，但并非在所有结果上都保持一致。",
-      "curatedReasonEn": "For individuals with chronic ankle instability, combining neuromuscular electrical stimulation (NMES) and blood flow restriction training (BFRT) with a standardized exercise program may offer broader short-term benefits than exercise alone or isolated modalities, especially in peroneus longus activation and eversion strength. However, this combined intervention does not show consistent advantages across all outcomes.",
-      "limitation": "研究样本量较小（N=60），随访期短（8周），且是单中心研究，外推性有限。",
-      "limitationEn": "The study has a small sample size (N=60) and a short follow-up period (8 weeks), and is a single-center study, limiting generalizability.",
-      "tags": [
-        "research",
-        "foot-ankle"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
     }
   ]
 }
