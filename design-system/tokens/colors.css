@@ -73,37 +73,47 @@
      Solid / soft tint / ink-on-tint. Hues from designer round 1
      (Fulcrum kit — name-agnostic); ink values derived for contrast.
      ============================================================ */
+  /* on-pigment tints — from design_handoff_daily_poster (2026-09-22), kept on the LIVE grounds
+     per the 2026-09-17 palette decision; not the -soft chip tints (too pale for a pigment plate). */
   --cat-ortho:       #3C4C6E;  /* 1 · Orthopedic (slate indigo) */
   --cat-ortho-soft:  #E8EAF1;
   --cat-ortho-ink:   #2B3850;
+  --cat-ortho-on-pigment: #CCD0D9;  /* secondary text on the ortho pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-neuro:       #463E7C;  /* 2 · Neurological (deep violet) */
   --cat-neuro-soft:  #E9E6F1;
   --cat-neuro-ink:   #332D5C;
+  --cat-neuro-on-pigment: #DDD7EC;  /* secondary text on the neuro pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-sports:      #9B4A2C;  /* 3 · Sports & Athletic (burnt sienna) */
   --cat-sports-soft: #F5E6DD;
   --cat-sports-ink:  #75361F;
+  --cat-sports-on-pigment: #F2DED4;  /* secondary text on the sports pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-pediatric:      #876418;  /* 4 · Pediatric (ochre) */
   --cat-pediatric-soft: #F2EAD3;
   --cat-pediatric-ink:  #694E12;
+  --cat-pediatric-on-pigment: #F1EDE3;  /* secondary text on the pediatric pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-geriatric:      #2F5D52;  /* 5 · Geriatric (pine) */
   --cat-geriatric-soft: #DFEAE6;
   --cat-geriatric-ink:  #22463D;
+  --cat-geriatric-on-pigment: #C9D6D3;  /* secondary text on the geriatric pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-cardiopulm:      #8C3B43;  /* 6 · Cardiopulmonary (garnet) */
   --cat-cardiopulm-soft: #F4E2E3;
   --cat-cardiopulm-ink:  #6A2C32;
+  --cat-cardiopulm-on-pigment: #E3CACD;  /* secondary text on the cardiopulm pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-manual:      #545F2E;  /* 7 · Manual Therapy & Modalities (moss) */
   --cat-manual-soft: #EBEEDB;
   --cat-manual-ink:  #3E4621;
+  --cat-manual-on-pigment: #E2E7D0;  /* secondary text on the manual pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-practice:      #434952;  /* 8 · Practice & Profession (graphite) */
   --cat-practice-soft: #E8EAEC;
   --cat-practice-ink:  #31363D;
+  --cat-practice-on-pigment: #DDE0E4;  /* secondary text on the practice pigment (poster); ≥4.5:1 verified by linkedin-poster.js */
 
   --cat-tech:      #2A6F77;  /* 9 · Rehab Tech (teal) — cross-cutting overlay,
                                 not a 9th specialty: items keep their clinical

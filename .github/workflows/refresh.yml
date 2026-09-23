@@ -136,6 +136,27 @@ jobs:
           node scripts/linkedin-brief.js "$LATEST"
           node scripts/linkedin-daily-card.js "$LATEST"
 
+      # LinkedIn daily POSTER carousel (design_handoff_daily_poster, 2026-09-22):
+      # 5 slides × 1080×1350 + one PDF (LinkedIn only swipes a document post).
+      # Claim/context are authored copy — the LLM drafts them here, Cindy reviews
+      # them in the morning task before posting (poster.review.json = "draft").
+      # continue-on-error: a failed draft must not wedge the daily commit, but it
+      # is NOT silent — both scripts write linkedin/<date>/POSTER-FAILED.txt with
+      # the reason, which the morning task checks first.
+      - name: Draft + render LinkedIn poster carousel (full runs only)
+        if: ${{ github.event.schedule != '25 */2 * * *' && (github.event.inputs.mode || 'full') == 'full' }}
+        continue-on-error: true
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+        run: |
+          LATEST=$(ls briefs/daily | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' | sort | tail -1 | cut -d. -f1)
+          node scripts/linkedin-poster-claims.js "$LATEST"
+          node scripts/linkedin-poster.js "$LATEST"
+
       # Field-completeness check on the edition we just generated (missing
       # titleZh/summaryZh, half-filled limitation pairs). Non-blocking on
       # purpose: a bad lint should show red in the Actions UI, not wedge the
