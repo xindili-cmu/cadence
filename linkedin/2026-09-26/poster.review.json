@@ -1,0 +1,28 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-09-26T00:07:23.449Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Structured exercise interventions and survival outcomes in patients with cancer: systematic review and meta-analysis of randomised controlled trials",
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/18/1434?rss=1"
+    },
+    {
+      "slide": 2,
+      "title": "Optimal exercise dose in adults with chronic low back pain disorders: systematic review with dose-response network meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42785965/"
+    },
+    {
+      "slide": 3,
+      "title": "Combining three-dimensional ankle exercises with short-foot training improves proprioception and dynamic balance in female karatekas with flatfoot: A randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42784849/"
+    },
+    {
+      "slide": 4,
+      "title": "Opioid use following spinal cord injury: a qualitative study of the perspectives of healthcare providers and people with lived experience.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42782063/"
+    }
+  ]
+}
