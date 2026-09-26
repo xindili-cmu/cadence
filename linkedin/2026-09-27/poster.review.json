@@ -1,0 +1,13 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-09-26T23:43:34.980Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Cross-cultural adaptation and validation of the Short Form Stroke Impact Scale (SF-SIS) into Arabic among stroke survivors in Saudi Arabia.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42798213/"
+    }
+  ]
+}
