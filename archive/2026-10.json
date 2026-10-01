@@ -18,6 +18,57 @@
         "news",
         "advocacy"
       ]
+    },
+    {
+      "id": "news-1790845500886-1",
+      "title": "Shear wave elastography for assessing lower extremity muscle stiffness after anterior cruciate ligament reconstruction: A systematic review.",
+      "summary": "A systematic review of six studies (173 ACLR participants, 79 controls) found shear wave elastography (SWE) detects muscle-specific mechanical deficits after ACLR, with reduced passive vastus medialis shear modulus (g -1.10 to -1.21) and semitendinosus stiffness (g -1.29 to -1.64) after hamstring harvest.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815174/",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-10-01T09:05:00.886Z",
+      "curatedScore": 85,
+      "curatedReason": "SWE 能捕捉 ACLR 术后股内侧肌和半腱肌在被动状态下的剪切模量和僵硬度下降（g值在-1.10至-1.64之间），这提示即使患者力量达标，其着地僵硬和再损伤风险可能仍高于预期。考虑引入 SWE 作为传统力量测试的补充，以更客观地评估肌肉力学特性。",
+      "titleZh": "剪切波弹性成像评估前交叉韧带重建术后下肢肌肉僵硬度：一项系统综述",
+      "summaryZh": "一项包含 6 项研究（173 名 ACLR 参与者，79 名对照）的系统综述发现，剪切波弹性成像（SWE）能够检测 ACLR 术后肌肉特异性机械缺陷，表现为股内侧肌被动剪切模量（g -1.10 至 -1.21）和腘绳肌腱取后半腱肌僵硬度（g -1.29 至 -1.64）降低。",
+      "curatedReasonEn": "SWE reveals reduced passive shear modulus and stiffness in the vastus medialis and semitendinosus after ACLR (g values between -1.10 and -1.64), suggesting that even patients meeting strength benchmarks may still have higher than expected landing stiffness and re-injury risk. Consider integrating SWE to objectively assess muscle mechanics, complementing traditional strength testing.",
+      "limitation": "现有研究的质量从差到好不等，且尚未有标准化协议来采样临床相关区域或长期随访至重返赛场。",
+      "limitationEn": "Existing studies range from poor to good quality, and standardized protocols are still needed for sampling clinically relevant regions or following patients to return to sport.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Clinical biomechanics (Bristol, Avon)"
+    },
+    {
+      "id": "news-1790845500884-0",
+      "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
+      "summary": "A commentary suggests that repeated subgroup partitions in research on vagus nerve stimulation after stroke may hinder factor-specific inference.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815677/",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-10-01T09:05:00.884Z",
+      "curatedScore": 70,
+      "curatedReason": "关于卒中后迷走神经刺激（VNS）的研究，该述评指出，重复的亚组划分可能会导致对因子特异性推断的混淆。在评估 VNS 这类复杂干预时，警惕过度解读或泛化特定亚组结果。",
+      "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断",
+      "summaryZh": "一项述评指出，卒中后迷走神经刺激（VNS）研究中重复的亚组划分，可能会妨碍对特定因子推断的有效性。",
+      "curatedReasonEn": "This commentary highlights that repeated subgroup partitions in vagus nerve stimulation (VNS) research post-stroke can preclude factor-specific inference. Be cautious of over-interpreting or over-generalizing findings from specific subgroups when evaluating complex interventions like VNS.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
+          "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
+        }
+      ]
     }
   ]
 }
