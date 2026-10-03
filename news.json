@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-03T21:28:45.806Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-10-03T23:58:03.435Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -20,15 +20,17 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
       "category": "neurological",
       "publishedAt": "2026-10-02T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 9,
       "sources": [
         "Topics in stroke rehabilitation",
         "Neurorehabilitation and neural repair",
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
-        "Disability and rehabilitation",
         "medRxiv",
-        "PM & R : the journal of injury, function, and rehabilitation"
+        "Disability and rehabilitation",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "Gait & posture",
+        "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -64,6 +66,21 @@
           "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断"
         },
         {
+          "source": "medRxiv",
+          "title": "Target Precision Shapes Trunk Compensation After Stroke: Neuromechanical Consequences for Upper Limb Rehabilitation",
+          "titleZh": "目标精确度影响卒中后躯干代偿：对上肢康复的神经机械学影响。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Knowing when, what, and how to push: Examining the operationalization of task challenge in routine stroke rehabilitation practice using focused video analysis",
+          "titleZh": "知晓何时、何事、如何施加压力：通过视频分析检验卒中康复中任务挑战的实践操作"
+        },
+        {
+          "source": "medRxiv",
+          "title": "A Distal-Proximal Gradient of Hebbian Plasticity in the Human Arm",
+          "titleZh": "人手臂 Hebbian 可塑性的远近端梯度"
+        },
+        {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
@@ -97,23 +114,99 @@
           "journal": "Disability and rehabilitation",
           "title": "Rehabilitation after stroke for Aboriginal and Torres Strait Islander peoples and Indigenous peoples globally: a scoping review and critical content analysis.",
           "titleZh": "全球原住民卒中康复：一项范围审查和批判性内容分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
+          "titleZh": "神经典型青年人诱导时间与空间步态不对称自我评估的探索"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Beyond Walking Speed: Estimating and Classifying Post-Stroke Gait Propulsion From Standardized Clinical Measures",
+          "titleZh": "超越步行速度：从标准化临床测量评估和分类卒中后步态推进。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Prediction model for timing of independent walking on varied surface conditions in patients with early subacute stroke: A multicenter prospective study.",
+          "titleZh": "早期亚急性卒中患者在多种表面上独立行走时间的预测模型：一项多中心前瞻性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "The acceptability of and adherence to a high-dose walking booster program after stroke (HiWalk): a multi-method study of stroke survivors' experiences nested within a randomised controlled trial.",
+          "titleZh": "高剂量步行强化训练项目（HiWalk）在卒中患者中的可接受性和依从性：一项嵌套在随机对照试验中的多方法研究"
         }
       ],
-      "heat": 3.63,
-      "themeZh": "卒中后躯干与肢体神经功能障碍的多元干预",
-      "themeEn": "Multimodal Interventions for Post-Stroke Neurological Deficits"
+      "heat": 4.5,
+      "themeZh": "卒中后不同神经康复干预的疗效研究",
+      "themeEn": "Post-stroke Neurorehabilitation Interventions Efficacy"
     },
     {
-      "id": "news-1790757752148-20",
-      "title": "Prehabilitative Exercise Mitigates Immobilization-Induced Atrophy Through Muscle Reserve Rather Than Resistance to Disuse: The PRE-EX Randomized Controlled Trial",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.09.25.26363998v1?rss=1",
+      "id": "news-1790053728882-1",
+      "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42767813/",
+      "category": "geriatric",
+      "publishedAt": "2026-10-03T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "British journal of sports medicine",
+        "BMC Geriatrics",
+        "British Journal of Sports Medicine",
+        "medRxiv"
+      ],
+      "tag": "fall-prevention",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "British journal of sports medicine",
+          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
+          "titleZh": "单纯运动干预和基于运动的多领域生活方式干预对无痴呆老年人认知功能的促进作用：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
+          "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
+          "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Stakeholder-informed prioritisation of HealthTech innovation across chronic respiratory disease: the HERON study",
+          "titleZh": "慢性呼吸系统疾病 HealthTech 创新的利益相关者优先排序：HERON 研究。"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Assessing frailty in lung transplantation candidates",
+          "titleZh": "肺移植候选者的衰弱评估"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Functional Impairment, Pain, and Fatigue Among Long COVID Survivors in Bangladesh: A Multisite Cross-Sectional Study",
+          "titleZh": "孟加拉国长新冠幸存者的功能障碍、疼痛和疲劳：一项多中心横断面研究"
+        }
+      ],
+      "heat": 2.83,
+      "themeZh": "老年衰弱及多病共存对认知功能和主动老龄化的影响",
+      "themeEn": "Geriatric Frailty and Multimorbidity Impacts"
+    },
+    {
+      "id": "news-1790699605861-0",
+      "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42806498/",
       "category": "orthopedic",
       "publishedAt": "2026-10-02T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 5,
       "sources": [
-        "medRxiv",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "British Journal of Sports Medicine",
         "The Journal of manual & manipulative therapy",
         "BMC Musculoskeletal Disorders",
         "PM & R : the journal of injury, function, and rehabilitation",
@@ -123,21 +216,10 @@
       "kind": "theme",
       "members": [
         {
-          "source": "medRxiv",
-          "title": "Prehabilitative Exercise Mitigates Immobilization-Induced Atrophy Through Muscle Reserve Rather Than Resistance to Disuse: The PRE-EX Randomized Controlled Trial",
-          "titleZh": "术前康复运动通过肌肉储备而非抵抗失用减轻制动引起的萎缩：PRE-EX 随机对照试验"
-        },
-        {
           "source": "PubMed",
           "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
           "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
           "titleZh": "经皮电解疗法治疗肌肉骨骼疾病：系统综述与 Meta 分析"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis",
-          "titleZh": "在肌肉骨骼康复中，血流限制训练与传统训练相比是否提供额外益处？一项系统综述和 Meta 分析"
         },
         {
           "source": "PubMed",
@@ -170,75 +252,9 @@
           "titleZh": "单一超声引导下葡萄糖增生疗法联合治疗性运动治疗肩峰下-三角肌下滑囊炎：一项初步双盲随机对照试验"
         }
       ],
-      "heat": 3.63,
-      "themeZh": "肌肉骨骼疾病物理治疗中的辅助技术与康复方案",
-      "themeEn": "Adjunctive Therapies in Musculoskeletal Rehabilitation"
-    },
-    {
-      "id": "news-1791005255723-0",
-      "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42826438/",
-      "category": "neurological",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Gait & posture",
-        "medRxiv",
-        "Physiotherapy theory and practice",
-        "NeuroRehabilitation",
-        "Disability and rehabilitation"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
-          "titleZh": "神经典型青年人诱导时间与空间步态不对称自我评估的探索"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Beyond Walking Speed: Estimating and Classifying Post-Stroke Gait Propulsion From Standardized Clinical Measures",
-          "titleZh": "超越步行速度：从标准化临床测量评估和分类卒中后步态推进。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Prediction model for timing of independent walking on varied surface conditions in patients with early subacute stroke: A multicenter prospective study.",
-          "titleZh": "早期亚急性卒中患者在多种表面上独立行走时间的预测模型：一项多中心前瞻性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Trunk and Pelvic Control in the Acute Phase After Stroke: A Clinical Movement Analysis Case Study Using the Ottawa Sitting Scale.",
-          "titleZh": "卒中急性期躯干和骨盆控制：一项采用渥太华坐姿量表的临床运动分析病例研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The acceptability of and adherence to a high-dose walking booster program after stroke (HiWalk): a multi-method study of stroke survivors' experiences nested within a randomised controlled trial.",
-          "titleZh": "高剂量步行强化训练项目（HiWalk）在卒中患者中的可接受性和依从性：一项嵌套在随机对照试验中的多方法研究"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Target Precision Shapes Trunk Compensation After Stroke: Neuromechanical Consequences for Upper Limb Rehabilitation",
-          "titleZh": "目标精确度影响卒中后躯干代偿：对上肢康复的神经机械学影响。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "A Distal-Proximal Gradient of Hebbian Plasticity in the Human Arm",
-          "titleZh": "人手臂 Hebbian 可塑性的远近端梯度"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Knowing when, what, and how to push: Examining the operationalization of task challenge in routine stroke rehabilitation practice using focused video analysis",
-          "titleZh": "知晓何时、何事、如何施加压力：通过视频分析检验卒中康复中任务挑战的实践操作"
-        }
-      ],
-      "heat": 2.59,
-      "themeZh": "卒中患者步态与躯干控制障碍的评估与康复",
-      "themeEn": "Post-Stroke Gait and Trunk Control Rehabilitation"
+      "heat": 2.5,
+      "themeZh": "肌肉骨骼疾病的物理因子和注射治疗研究",
+      "themeEn": "Musculoskeletal Physical and Injection Therapies"
     },
     {
       "id": "news-1790845500886-1",
@@ -246,13 +262,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815174/",
       "category": "sports",
       "publishedAt": "2026-10-01T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
         "Clinical biomechanics (Bristol, Avon)",
         "Sports medicine (Auckland, N.Z.)",
         "Current reviews in musculoskeletal medicine",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "medRxiv",
         "Physiotherapy"
       ],
       "tag": "return-to-sport",
@@ -289,15 +306,20 @@
           "titleZh": "三维踝关节练习联合空足训练可改善扁平足女性跆拳道运动员的本体感觉和动态平衡：一项随机对照试验"
         },
         {
+          "source": "medRxiv",
+          "title": "Prehabilitative Exercise Mitigates Immobilization-Induced Atrophy Through Muscle Reserve Rather Than Resistance to Disuse: The PRE-EX Randomized Controlled Trial",
+          "titleZh": "术前康复运动通过肌肉储备而非抵抗失用减轻制动引起的萎缩：PRE-EX 随机对照试验"
+        },
+        {
           "source": "PubMed",
           "journal": "Physiotherapy",
           "title": "The enhanced rehabilitation programme for significant musculoskeletal injuries from the manchester arena bombing - A process evaluation study investigating patients' and physiotherapists' experiences.",
           "titleZh": "曼彻斯特竞技场爆炸案后严重肌肉骨骼损伤强化康复项目的过程评估：调查患者和物理治疗师的经验"
         }
       ],
-      "heat": 2.2,
-      "themeZh": "运动损伤康复：从解剖诊断到重返赛场",
-      "themeEn": "Sports Injury Rehab: From Diagnosis to Return"
+      "heat": 2.48,
+      "themeZh": "运动损伤康复：回归运动与预防策略",
+      "themeEn": "Sports Injury Rehab: Return to Play"
     },
     {
       "id": "news-1790323089912-0",
@@ -305,12 +327,11 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42785965/",
       "category": "orthopedic",
       "publishedAt": "2026-10-02T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 3,
       "sources": [
         "British journal of sports medicine",
         "medRxiv",
-        "The Journal of orthopaedic and sports physical therapy",
-        "Musculoskeletal science & practice"
+        "The Journal of orthopaedic and sports physical therapy"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -331,20 +352,107 @@
           "journal": "The Journal of orthopaedic and sports physical therapy",
           "title": "Is Reduced Spinal Range of Motion a Prognostic Factor for Pain Intensity, Disability, and Global Recovery in People With Specific or Nonspecific Spinal Pain? A Systematic Review.",
           "titleZh": "脊柱活动度降低是特异性或非特异性脊柱疼痛患者疼痛强度、残疾和整体恢复的预后因素吗？一项系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Musculoskeletal science & practice",
-          "title": "Predictors of response to spinal manipulative therapy, dry needling and exercise in patients with cervicogenic headache.",
-          "titleZh": "颈源性头痛患者对脊柱手法治疗、干针和运动反应的预测因子。"
         }
       ],
-      "heat": 2.07,
-      "themeZh": "慢性腰痛非药物疗法的剂量与预后因素",
-      "themeEn": "Chronic Low Back Pain Non-Drug Therapies"
+      "heat": 1.5,
+      "themeZh": "慢性腰痛的数字健康与运动剂量干预",
+      "themeEn": "Digital Health and Exercise for LBP"
     }
   ],
   "items": [
+    {
+      "id": "news-1791071869393-14",
+      "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
+      "summary": "A prospective cohort study of 3,243 rural older adults from China Health and Retirement Longitudinal Study found cognitive frailty (CF) to be reversible, with the intensity of recovery from reversible CF (RCF) to only non-dementia cognitive impairment (NDCI) being 0.429 (95% CI 0.359–0.512), highlighting early RCF as a key intervention window.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08426-2",
+      "publishedAt": "2026-10-03T00:00:00.000Z",
+      "firstSeen": "2026-10-03T23:57:49.393Z",
+      "curatedScore": 80,
+      "curatedReason": "这项大型队列研究首次明确了农村老年人认知衰弱的可逆性，并识别出早期RCF状态为关键干预窗口。这为你针对农村老年患者的早期筛查和可调节因素管理提供了坚实的证据基础，尤其是针对RCF状态的干预，能有效逆转认知衰弱并预防不良结局。",
+      "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究",
+      "summaryZh": "一项对3,243名中国农村老年人的前瞻性队列研究发现，认知衰弱（CF）是可逆的，可逆性CF（RCF）恢复到非痴呆认知障碍（NDCI）的强度为0.429（95% CI 0.359–0.512），强调早期RCF是关键干预窗口。",
+      "curatedReasonEn": "This large cohort study is the first to clearly establish the reversible nature of cognitive frailty in rural older adults and identifies the early RCF state as a critical intervention window. This provides a strong evidence base for your early screening and management of modifiable factors in rural older patients, particularly for RCF interventions, to effectively reverse cognitive frailty and prevent adverse outcomes.",
+      "limitation": "研究人群为中国农村老年人，结果可能不完全适用于其他地域和文化背景。",
+      "limitationEn": "The study population consists of rural older adults in China, and the results may not be fully generalizable to other geographical and cultural contexts.",
+      "tags": [
+        "research",
+        "frailty",
+        "cognitive-impairment",
+        "prevention"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1791071869392-12",
+      "title": "OTC analgesic use was associated with a higher rate of return to unrestricted play (aHR 1.",
+      "summary": "OTC analgesic use was associated with a higher rate of return to unrestricted play (aHR 1.25, 95% CI 1.11 to 1.39) and lower 3-day postinjury SCAT3 symptom severity (aHR=0.70, 95% CI 0.62 to 0.79) in NCAA and non-NCAA athletes post-concussion.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "https://bjsm.bmj.com/content/early/2026/09/29/bjsports-2025-110753",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "firstSeen": "2026-10-03T23:57:49.392Z",
+      "curatedScore": 75,
+      "curatedReason": "这项观察性研究提示，非处方止痛药（尤其是对乙酰氨基酚）与脑震荡症状的改善和更快的恢复相关。下次面对脑震荡患者时，可以将此纳入你的症状管理考量，但要留意观察性研究的局限性。",
+      "titleZh": "非处方止痛药改善脑震荡后症状和恢复：脑震荡评估、研究与教育（CARE）联盟的发现",
+      "summaryZh": "研究显示，非处方止痛药（OTC）使用与运动员脑震荡后恢复至无限制训练（aHR 1.25）和3天后SCAT3症状减轻（aHR=0.70）呈正相关。",
+      "curatedReasonEn": "This observational study suggests that OTC analgesics (especially acetaminophen) are associated with improved concussion symptoms and faster recovery. Consider this for symptom management in concussion patients, but be mindful of the limitations of observational research.",
+      "limitation": "研究为观察性队列研究，可能存在混杂因素，无法确立因果关系。",
+      "limitationEn": "This is an observational cohort study, which may have confounding factors and cannot establish causality.",
+      "tags": [
+        "research",
+        "news",
+        "concussion"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1791071869393-15",
+      "title": "APTA Magazine: October/November 2026",
+      "summary": "The October/November 2026 issue of APTA Magazine features articles on new payment models, a PT-led frailty pilot program, and updated guidance for total knee arthroplasty rehabilitation, focusing on functional gains and digital care.",
+      "category": "practice",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/apta-magazine/archive/2026/10/01/apta-magazine-octobernovember-2026",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-03T23:57:49.393Z",
+      "curatedScore": 75,
+      "curatedReason": "本期 APTA 杂志探讨了新的支付模式、PT 主导的衰弱试点项目以及全膝关节置换术康复指南的更新。这些内容将直接影响你的执业策略和临床实践，特别是在价值导向护理和 TKA 康复管理方面。",
+      "titleZh": "APTA 杂志：2026 年 10 月/11 月",
+      "summaryZh": "2026年10月/11月《APTA杂志》刊登了关于新型支付模式、PT主导的衰弱试点项目以及全膝关节置换术康复指南更新的文章，强调功能改善和数字化护理。",
+      "curatedReasonEn": "This issue of APTA Magazine discusses new payment models, a PT-led frailty pilot, and updated guidelines for total knee arthroplasty rehabilitation. This content will directly impact your practice strategies and clinical practice, particularly in value-based care and TKA rehab management.",
+      "tags": [
+        "news",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1791071869393-13",
+      "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
+      "summary": "An overview of eight systematic reviews identified a gap between the use of implementation frameworks and consistent reporting of implementation outcomes in multi-component interventions for active aging, with acceptability consistently reported but appropriateness and feasibility least frequently evaluated.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08325-6",
+      "publishedAt": "2026-10-03T00:00:00.000Z",
+      "firstSeen": "2026-10-03T23:57:49.393Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇综述的综述强调了在促进老年人积极老龄化的多组分干预中，实施框架应用与报告实施结果之间存在差距。这提示你在评估相关干预措施时，要更批判性地审视其实施的可行性、适宜性和可持续性数据。",
+      "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述",
+      "summaryZh": "八项系统综述的概述发现，在促进老年人积极老龄化的多组分干预中，实施框架的应用与实施结果的报告存在差距；可接受性常被报告，但适宜性和可行性评估最少。",
+      "curatedReasonEn": "This overview of reviews highlights a gap between the use of implementation frameworks and the reporting of implementation outcomes in multi-component interventions for active aging. This suggests a need to critically examine the feasibility, appropriateness, and sustainability data when evaluating such interventions.",
+      "limitation": "纳入的系统综述数量较少，且实施框架应用和结果报告存在异质性，可能限制结论的普遍性。",
+      "limitationEn": "The limited number of included systematic reviews and the heterogeneity in implementation framework application and outcome reporting may limit the generalizability of the conclusions.",
+      "tags": [
+        "research",
+        "active-aging",
+        "implementation-science"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC Geriatrics"
+    },
     {
       "id": "news-1790845500884-0",
       "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
@@ -371,6 +479,26 @@
           "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
           "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
         }
+      ]
+    },
+    {
+      "id": "news-1791071869393-16",
+      "title": "President's Note | Choosing What Matters",
+      "summary": "The APTA President's note discusses the profession's responsibility to prioritize and adapt to emerging research, technologies, and payment models to make a meaningful difference for patients and communities.",
+      "category": "practice",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/apta-magazine/archive/2026/10/01/presidents-note--choosing-what-matters",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-03T23:57:49.393Z",
+      "curatedScore": 65,
+      "curatedReason": "作为物理治疗师，我们需要主动适应新的研究、技术和支付模式，从而在患者和社区中发挥更大的作用。APTA 主席的这篇社论提醒我们，专业发展必须兼顾创新与实际效用，才能避免被时代淘汰。",
+      "titleZh": "主席寄语 | 选择重要的事",
+      "summaryZh": "APTA 主席的寄语强调，在面对新研究、新技术和新支付模式时，物理治疗专业需要审慎选择重点，以对患者和社区产生有意义的影响。",
+      "curatedReasonEn": "As physical therapists, we must proactively adapt to new research, technologies, and payment models to make a greater difference for patients and communities. The APTA President's note reminds us that professional development must balance innovation with practical utility to avoid being left behind.",
+      "tags": [
+        "news",
+        "practice",
+        "profession"
       ]
     },
     {
@@ -1938,103 +2066,6 @@
         "football"
       ],
       "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1790671312251-0",
-      "title": "Trunk and Pelvic Control in the Acute Phase After Stroke: A Clinical Movement Analysis Case Study Using the Ottawa Sitting Scale.",
-      "summary": "A single-case study found the Ottawa Sitting Scale (OSS) feasible for bedside assessment of trunk and pelvic control in a 77-year-old acute ischemic stroke patient, capturing early improvements in static sitting and reaching, while highlighting persistent limitations in scooting over six days.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42805788/",
-      "publishedAt": "2026-09-28T00:00:00.000Z",
-      "firstSeen": "2026-09-29T08:41:52.251Z",
-      "curatedScore": 70,
-      "curatedReason": "本案例研究表明，渥太华坐姿量表（OSS）可用于急性卒中患者床边躯干和骨盆控制的早期评估，识别静态坐姿和伸手任务的改善。这提示了临床中结合 OSS 早期进行详细运动分析的潜力，特别是对于躯干旋转和滑行等持续性功能障碍。",
-      "titleZh": "卒中急性期躯干和骨盆控制：一项采用渥太华坐姿量表的临床运动分析病例研究。",
-      "summaryZh": "一项单案例研究显示，渥太华坐姿量表（OSS）可用于一名 77 岁急性缺血性卒中患者的床边躯干和骨盆控制评估，并在六天内捕捉到静态坐姿和伸手任务的早期改善，同时揭示了滑行等动作的持续局限。",
-      "curatedReasonEn": "This case study demonstrates the Ottawa Sitting Scale (OSS) can be used for early bedside assessment of trunk and pelvic control in acute stroke patients, identifying improvements in static sitting and reaching tasks. This suggests its potential for early detailed movement analysis in clinical practice, especially for persistent dysfunctions like trunk rotation and scooting.",
-      "limitation": "这是一项单案例研究，无法推广其发现。",
-      "limitationEn": "This is a single-case study, limiting the generalizability of its findings.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1790149847921-4",
-      "title": "Predictors of response to spinal manipulative therapy, dry needling and exercise in patients with cervicogenic headache.",
-      "summary": "A secondary analysis of 142 cervicogenic headache patients receiving spinal manipulative therapy, dry needling, and exercise found male sex (OR: 3.906, 95% CI: 1.263, 12.195) and baseline headache intensity (OR: 1.708, 95% CI: 1.203, 2.424) were the strongest predictors of achieving a ≥50% improvement in headache intensity at 3 months.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42772015/",
-      "publishedAt": "2026-09-22T00:00:00.000Z",
-      "firstSeen": "2026-09-23T07:50:47.921Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究发现男性和基线头痛强度更高是颈源性头痛患者接受手法治疗、干针和运动后获得成功结局的独立预测因子。你可以将这些因素纳入患者评估，帮助识别可能从这些综合干预中获益更大的患者，从而优化治疗方案和患者预期管理。",
-      "titleZh": "颈源性头痛患者对脊柱手法治疗、干针和运动反应的预测因子。",
-      "summaryZh": "一项对 142 名接受脊柱手法治疗、干针和运动的颈源性头痛患者的二次分析发现，男性（OR: 3.906, 95% CI: 1.263, 12.195）和较高的基线头痛强度（OR: 1.708, 95% CI: 1.203, 2.424）是患者在 3 个月时头痛强度改善 ≥50% 的最强预测因子。",
-      "curatedReasonEn": "This study found male sex and higher baseline headache intensity to be independent predictors of successful outcomes for cervicogenic headache patients receiving spinal manipulative therapy, dry needling, and exercise. You can incorporate these factors into patient assessment to help identify individuals more likely to benefit from these combined interventions, thereby optimizing treatment plans and patient expectation management.",
-      "limitation": "这是一项对已完成 RCT 的二次分析，预测因子仅限于原始研究中收集的变量，且未评估个体干预的单独效应。",
-      "limitationEn": "This is a secondary analysis of a completed RCT, with predictors limited to variables collected in the original study, and it did not assess the individual effects of each intervention.",
-      "tags": [
-        "research",
-        "dry-needling",
-        "manipulation",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Musculoskeletal science & practice"
-    },
-    {
-      "id": "news-1790344611839-15",
-      "title": "Structured exercise interventions and survival outcomes in patients with cancer: systematic review and meta-analysis of randomised controlled trials",
-      "summary": "A systematic review and meta-analysis of 21 RCTs (n=3828 for OS) found structured exercise associated with significant improvements in overall survival (HR 0.77, 95% CI 0.65-0.92), disease-free survival (HR 0.83, 95% CI 0.72-0.95), all-cause mortality (RR 0.82, 95% CI 0.70-0.97), and cancer-specific mortality (RR 0.74, 95% CI 0.57-0.96). Evidence certainty was moderate for key outcomes.",
-      "category": "cardiopulmonary",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/18/1434?rss=1",
-      "publishedAt": "2026-09-25T06:18:26.000Z",
-      "firstSeen": "2026-09-25T13:56:51.839Z",
-      "curatedScore": 90,
-      "curatedReason": "这项高质量系统综述和荟萃分析有力地证实了结构化运动干预在癌症患者生存结局中的关键作用，能够显著降低总生存期、无病生存期、全因死亡率和癌症特异性死亡率。这坐实了运动疗法作为肿瘤治疗辅助手段的地位，在与肿瘤科医生讨论转诊时，这是您手里最硬的证据。",
-      "titleZh": "癌症患者的结构化运动干预与生存结局：随机对照试验的系统综述和荟萃分析",
-      "summaryZh": "一项对 21 项随机对照试验（RCTs，OS 队列 n=3828）的系统综述和荟萃分析发现，结构化运动与总生存期（HR 0.77, 95% CI 0.65-0.92）、无病生存期（HR 0.83, 95% CI 0.72-0.95）、全因死亡率（RR 0.82, 95% CI 0.70-0.97）和癌症特异性死亡率（RR 0.74, 95% CI 0.57-0.96）的显著改善相关。关键结局的证据确定性为中等。",
-      "curatedReasonEn": "This high-quality systematic review and meta-analysis solidifies the survival benefits of structured exercise for cancer patients: overall survival, disease-free survival, all-cause mortality, and cancer-specific mortality are all significantly reduced. This is the strongest evidence you can present when discussing referrals with oncologists.",
-      "limitation": "证据等级评估为中等，且亚组分析显示效果在依从性较高、有氧运动以及早期癌症患者中更为显著，可能存在异质性。",
-      "limitationEn": "The certainty of evidence was rated as moderate, and exploratory analyses suggested more pronounced benefits among participants with higher adherence, those who underwent aerobic exercise, and those with early-stage disease, indicating potential heterogeneity.",
-      "tags": [
-        "research",
-        "oncology",
-        "survival"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1790344611839-14",
-      "title": "Do blood flow restriction exercises offer additional benefits when compared to conventional exercises in musculoskeletal rehabilitation? A systematic review and meta-analysis",
-      "summary": "This systematic review and meta-analysis of 45 RCTs (n=1652) found low-certainty evidence that low-load exercise with blood flow restriction (LLE-BFR) was superior to low-load exercise (LLE) for muscle strength (SMD=0.82) and disability (SMD=0.63). Moderate-certainty evidence showed no clear difference between LLE-BFR and high-load exercise (HLE) for muscle strength (SMD=0.08). Pain reductions for LLE-BFR were small and not clinically meaningful.",
-      "category": "manual-modality",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/18/1421?rss=1",
-      "publishedAt": "2026-09-25T06:18:26.000Z",
-      "firstSeen": "2026-09-25T13:56:51.839Z",
-      "curatedScore": 85,
-      "curatedReason": "这项高质量系统综述明确指出，低负荷血流限制训练（LLE-BFR）在肌肉骨骼康复中优于单纯的低负荷训练（LLE），能显著提升肌力和改善功能。当你需要为肌力不足或负荷限制的患者提供训练时，LLE-BFR 应成为你的首选方案。但其与高负荷训练（HLE）的效果相似，且对疼痛的改善并不显著。",
-      "titleZh": "在肌肉骨骼康复中，血流限制训练与传统训练相比是否提供额外益处？一项系统综述和 Meta 分析",
-      "summaryZh": "这项对 45 项 RCT（n=1652）的系统综述和 Meta 分析发现，低确定性证据表明，低负荷血流限制训练（LLE-BFR）在肌力（SMD=0.82）和残疾（SMD=0.63）方面优于低负荷训练（LLE）。中等确定性证据显示，LLE-BFR 与高负荷训练（HLE）在肌力方面无明显差异（SMD=0.08）。LLE-BFR 带来的疼痛减轻幅度较小，不具临床意义。",
-      "curatedReasonEn": "This high-quality systematic review clearly indicates that low-load exercise with blood flow restriction (LLE-BFR) is superior to low-load exercise (LLE) alone for improving muscle strength and disability in musculoskeletal rehabilitation. LLE-BFR should be your preferred option when training patients with insufficient strength or load limitations. However, its effects are similar to high-load exercise (HLE), and its impact on pain reduction is not clinically meaningful.",
-      "limitation": "许多纳入试验存在“一些担忧”的偏倚风险，且关于不良事件的监测和报告不一致。",
-      "limitationEn": "Many included trials had 'some concerns' regarding risk of bias, and adverse event monitoring and reporting were inconsistent across trials.",
-      "tags": [
-        "research",
-        "orthopedic",
-        "knee",
-        "shoulder"
-      ],
-      "studyDesign": "系统综述",
       "journal": "British Journal of Sports Medicine"
     }
   ]

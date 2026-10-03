@@ -1,0 +1,28 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-03T23:59:18.983Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08426-2"
+    },
+    {
+      "slide": 2,
+      "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42826438/"
+    },
+    {
+      "slide": 3,
+      "title": "OTC analgesic use was associated with a higher rate of return to unrestricted play (aHR 1.",
+      "url": "https://bjsm.bmj.com/content/early/2026/09/29/bjsports-2025-110753"
+    },
+    {
+      "slide": 4,
+      "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08325-6"
+    }
+  ]
+}
