@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-04T19:42:36.061Z",
+    "lastUpdated": "2026-10-04T23:17:50.401Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -61,9 +61,9 @@
           "titleZh": "住院患者早期运动项目“Let's Move”的设计"
         }
       ],
-      "heat": 3.76,
-      "themeZh": "物理治疗康复在各类患者中的远程与早期应用",
-      "themeEn": "Telerehabilitation and Early Mobility in Diverse PT Settings"
+      "heat": 3.57,
+      "themeZh": "数字健康与早期活动康复：创新实践与患者体验",
+      "themeEn": "Digital Health, Early Mobility, and Patient Experience"
     },
     {
       "id": "news-1790920324010-2",
@@ -145,9 +145,9 @@
           "titleZh": "知晓何时、何事、如何施加压力：通过视频分析检验卒中康复中任务挑战的实践操作"
         }
       ],
-      "heat": 3.19,
-      "themeZh": "卒中后偏瘫肢体功能与平衡的神经康复",
-      "themeEn": "Post-Stroke Hemiplegia Motor Function and Balance Rehabilitation"
+      "heat": 3.03,
+      "themeZh": "卒中后肢体功能与平衡恢复的多模态干预策略",
+      "themeEn": "Post-stroke Motor Function and Balance Interventions"
     },
     {
       "id": "news-1790720640556-2",
@@ -202,9 +202,9 @@
           "titleZh": "轻度创伤性脑损伤后青少年心理健康风险：电子健康记录中诊断编码的检验"
         }
       ],
-      "heat": 3.01,
-      "themeZh": "脊髓与脑损伤患者的自我管理及心理健康",
-      "themeEn": "Self-Management and Mental Health Post-SCI and TBI"
+      "heat": 2.86,
+      "themeZh": "脊髓损伤与轻度脑外伤患者的性健康、自理与并发症",
+      "themeEn": "SCI, TBI: Sexual Health, Self-management, Complications"
     },
     {
       "id": "news-1790053728882-1",
@@ -265,9 +265,9 @@
           "titleZh": "负荷-速度曲线作为老年人肌肉质量指标和跌倒风险预测因子：一项多因素视角（博士学院奖）"
         }
       ],
-      "heat": 2.66,
-      "themeZh": "老年人认知功能维护与骨关节炎康复干预",
-      "themeEn": "Cognitive Function and OA Rehabilitation in Older Adults"
+      "heat": 2.53,
+      "themeZh": "老年人认知功能与身体活动干预及骨关节炎影响",
+      "themeEn": "Cognitive Function, Exercise, Osteoarthritis in Elderly"
     },
     {
       "id": "news-1790699605861-0",
@@ -336,12 +336,40 @@
           "titleZh": "单一超声引导下葡萄糖增生疗法联合治疗性运动治疗肩峰下-三角肌下滑囊炎：一项初步双盲随机对照试验"
         }
       ],
-      "heat": 2.63,
-      "themeZh": "物理疗法联合运动治疗骨骼肌肉疾病",
-      "themeEn": "Combined Physical and Exercise Therapy for MSDs"
+      "heat": 2.5,
+      "themeZh": "肌肉骨骼疾病的物理疗法：电刺激、干针与运动",
+      "themeEn": "Musculoskeletal Physical Therapies: Electrotherapy, Needling, Exercise"
     }
   ],
   "items": [
+    {
+      "id": "news-1790845500884-0",
+      "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
+      "summary": "A commentary suggests that repeated subgroup partitions in research on vagus nerve stimulation after stroke may hinder factor-specific inference.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815677/",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-10-01T09:05:00.884Z",
+      "curatedScore": 70,
+      "curatedReason": "关于卒中后迷走神经刺激（VNS）的研究，该述评指出，重复的亚组划分可能会导致对因子特异性推断的混淆。在评估 VNS 这类复杂干预时，警惕过度解读或泛化特定亚组结果。",
+      "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断",
+      "summaryZh": "一项述评指出，卒中后迷走神经刺激（VNS）研究中重复的亚组划分，可能会妨碍对特定因子推断的有效性。",
+      "curatedReasonEn": "This commentary highlights that repeated subgroup partitions in vagus nerve stimulation (VNS) research post-stroke can preclude factor-specific inference. Be cautious of over-interpreting or over-generalizing findings from specific subgroups when evaluating complex interventions like VNS.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
+          "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
+        }
+      ]
+    },
     {
       "id": "news-1790720640555-1",
       "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
@@ -389,34 +417,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1790845500884-0",
-      "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
-      "summary": "A commentary suggests that repeated subgroup partitions in research on vagus nerve stimulation after stroke may hinder factor-specific inference.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815677/",
-      "publishedAt": "2026-09-30T00:00:00.000Z",
-      "firstSeen": "2026-10-01T09:05:00.884Z",
-      "curatedScore": 70,
-      "curatedReason": "关于卒中后迷走神经刺激（VNS）的研究，该述评指出，重复的亚组划分可能会导致对因子特异性推断的混淆。在评估 VNS 这类复杂干预时，警惕过度解读或泛化特定亚组结果。",
-      "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断",
-      "summaryZh": "一项述评指出，卒中后迷走神经刺激（VNS）研究中重复的亚组划分，可能会妨碍对特定因子推断的有效性。",
-      "curatedReasonEn": "This commentary highlights that repeated subgroup partitions in vagus nerve stimulation (VNS) research post-stroke can preclude factor-specific inference. Be cautious of over-interpreting or over-generalizing findings from specific subgroups when evaluating complex interventions like VNS.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "述评",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
-          "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
-        }
-      ]
     },
     {
       "id": "news-1790699605861-0",
