@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-04T15:26:27.831Z",
+    "lastUpdated": "2026-10-04T19:42:36.061Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,23 +15,70 @@
   },
   "hotTopics": [
     {
+      "id": "news-1790945411130-0",
+      "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42823687/",
+      "category": "orthopedic",
+      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "BMC musculoskeletal disorders",
+        "The Journal of orthopaedic and sports physical therapy",
+        "medRxiv",
+        "Physical & occupational therapy in pediatrics",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+      ],
+      "tag": "pelvic-floor",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
+          "titleZh": "产后盆底功能障碍患者参与物理治疗远程康复的体验：一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Not Just Faster Horses: Telerehabilitation as a Necessary Evolution in Physical Therapy.",
+          "titleZh": "不只是更快的马：远程康复作为物理治疗的必要演进"
+        },
+        {
+          "source": "medRxiv",
+          "title": "The Effects of a Digital Exercise Therapy Application for Patients with Shoulder and Knee Pain During the COVID-19 Pandemic",
+          "titleZh": "COVID-19 疫情期间数字运动疗法应用对肩膝疼痛患者的影响"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical & occupational therapy in pediatrics",
+          "title": "Beliefs and Practices of Pediatric Physiotherapists in Türkiye Regarding Early Mobility and Crawling.",
+          "titleZh": "土耳其儿科物理治疗师关于早期运动和爬行的信念与实践"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Design of an Early Exercise Program for Hospitalized Patients: \"Let's Move\".",
+          "titleZh": "住院患者早期运动项目“Let's Move”的设计"
+        }
+      ],
+      "heat": 3.76,
+      "themeZh": "物理治疗康复在各类患者中的远程与早期应用",
+      "themeEn": "Telerehabilitation and Early Mobility in Diverse PT Settings"
+    },
+    {
       "id": "news-1790920324010-2",
       "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
       "category": "neurological",
       "publishedAt": "2026-10-03T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 6,
       "sources": [
         "Topics in stroke rehabilitation",
         "Archives of Physical Medicine and Rehabilitation",
         "Neurorehabilitation and neural repair",
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
-        "medRxiv",
-        "Gait & posture",
-        "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "PM & R : the journal of injury, function, and rehabilitation"
+        "medRxiv"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -96,80 +143,21 @@
           "source": "medRxiv",
           "title": "Knowing when, what, and how to push: Examining the operationalization of task challenge in routine stroke rehabilitation practice using focused video analysis",
           "titleZh": "知晓何时、何事、如何施加压力：通过视频分析检验卒中康复中任务挑战的实践操作"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Gait & posture",
-          "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
-          "titleZh": "神经典型青年人诱导时间与空间步态不对称自我评估的探索"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Beyond Walking Speed: Estimating and Classifying Post-Stroke Gait Propulsion From Standardized Clinical Measures",
-          "titleZh": "超越步行速度：从标准化临床测量评估和分类卒中后步态推进。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Prediction model for timing of independent walking on varied surface conditions in patients with early subacute stroke: A multicenter prospective study.",
-          "titleZh": "早期亚急性卒中患者在多种表面上独立行走时间的预测模型：一项多中心前瞻性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Trunk and Pelvic Control in the Acute Phase After Stroke: A Clinical Movement Analysis Case Study Using the Ottawa Sitting Scale.",
-          "titleZh": "卒中急性期躯干和骨盆控制：使用 Ottawa 坐位量表的临床运动分析病例研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The acceptability of and adherence to a high-dose walking booster program after stroke (HiWalk): a multi-method study of stroke survivors' experiences nested within a randomised controlled trial.",
-          "titleZh": "高剂量步行强化训练项目（HiWalk）在卒中患者中的可接受性和依从性：一项嵌套在随机对照试验中的多方法研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Methodological quality of systematic reviews on treatments in stroke rehabilitation: A cross-sectional study.",
-          "titleZh": "脑卒中康复治疗系统综述方法学质量：一项横断面研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Rehabilitation after stroke for Aboriginal and Torres Strait Islander peoples and Indigenous peoples globally: a scoping review and critical content analysis.",
-          "titleZh": "全球原住民卒中康复：一项范围审查和批判性内容分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Item-level analysis and network analysis of the functional independence measure cognitive items at discharge after acute stroke.",
-          "titleZh": "急性卒中出院后功能独立性评定认知项目的项目层面分析和网络分析。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Assessing spoken discourse in aphasia using multimodal artificial intelligence",
-          "titleZh": "利用多模态人工智能评估失语症言语"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Cross-cultural adaptation and validation of the Short Form Stroke Impact Scale (SF-SIS) into Arabic among stroke survivors in Saudi Arabia.",
-          "titleZh": "《卒中影响量表短表》（SF-SIS）阿拉伯语版在沙特阿拉伯卒中幸存者中的跨文化适应与验证"
         }
       ],
-      "heat": 5.66,
-      "themeZh": "卒中后躯体功能障碍的物理治疗与神经调控",
-      "themeEn": "Post-stroke Physical Therapy & Neuromodulation"
+      "heat": 3.19,
+      "themeZh": "卒中后偏瘫肢体功能与平衡的神经康复",
+      "themeEn": "Post-Stroke Hemiplegia Motor Function and Balance Rehabilitation"
     },
     {
-      "id": "news-1791102743492-0",
-      "title": "Development and validation of a Chinese self-management ability assessment scale for patients with spinal cord injury.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42828753/",
+      "id": "news-1790720640556-2",
+      "title": "A sex-positive approach to sexual rehabilitation after SCI: exploring women's sexual experiences using participatory action research.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42808193/",
       "category": "neurological",
       "publishedAt": "2026-10-04T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 4,
       "sources": [
         "Disability and rehabilitation",
-        "Journal of rehabilitation medicine",
         "NeuroRehabilitation",
         "British Journal of Sports Medicine",
         "Archives of Physical Medicine and Rehabilitation"
@@ -180,20 +168,20 @@
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Development and validation of a Chinese self-management ability assessment scale for patients with spinal cord injury.",
-          "titleZh": "中国脊髓损伤患者自我管理能力评估量表的开发与验证"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of rehabilitation medicine",
-          "title": "Age, resilience, social support, and health literacy as predictors of functional ability in people with spinal cord injury: a 6-month follow-up study.",
-          "titleZh": "年龄、心理韧性、社会支持和健康素养在脊髓损伤患者功能能力中的预测作用：一项6个月随访研究"
+          "title": "A sex-positive approach to sexual rehabilitation after SCI: exploring women's sexual experiences using participatory action research.",
+          "titleZh": "脊髓损伤女性性康复的“性积极”方法：采用参与式行动研究探索女性的性体验"
         },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Opioid use following spinal cord injury: a qualitative study of the perspectives of healthcare providers and people with lived experience.",
           "titleZh": "脊髓损伤后阿片类药物使用：一项关于医疗服务提供者和有生活经验者的视角的定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Development and validation of a Chinese self-management ability assessment scale for patients with spinal cord injury.",
+          "titleZh": "中国脊髓损伤患者自我管理能力评估量表的开发与验证"
         },
         {
           "source": "PubMed",
@@ -214,60 +202,72 @@
           "titleZh": "轻度创伤性脑损伤后青少年心理健康风险：电子健康记录中诊断编码的检验"
         }
       ],
-      "heat": 4,
-      "themeZh": "脊髓损伤与脑外伤患者功能恢复与心理健康管理",
-      "themeEn": "SCI & TBI Recovery & Mental Health"
+      "heat": 3.01,
+      "themeZh": "脊髓与脑损伤患者的自我管理及心理健康",
+      "themeEn": "Self-Management and Mental Health Post-SCI and TBI"
     },
     {
-      "id": "news-1790945411130-0",
-      "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42823687/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "id": "news-1790053728882-1",
+      "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42767813/",
+      "category": "geriatric",
+      "publishedAt": "2026-10-03T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
-        "BMC musculoskeletal disorders",
-        "The Journal of orthopaedic and sports physical therapy",
+        "British journal of sports medicine",
+        "BMC Geriatrics",
         "medRxiv",
-        "Physical & occupational therapy in pediatrics",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+        "Archives of Physical Medicine and Rehabilitation",
+        "Clinical rehabilitation"
       ],
-      "tag": "pelvic-floor",
+      "tag": "fall-prevention",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
-          "titleZh": "产后盆底功能障碍患者参与物理治疗远程康复的体验：一项定性研究"
+          "journal": "British journal of sports medicine",
+          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
+          "titleZh": "单纯运动干预和基于运动的多领域生活方式干预对无痴呆老年人认知功能的促进作用：一项系统综述和荟萃分析"
         },
         {
-          "source": "PubMed",
-          "journal": "The Journal of orthopaedic and sports physical therapy",
-          "title": "Not Just Faster Horses: Telerehabilitation as a Necessary Evolution in Physical Therapy.",
-          "titleZh": "不只是更快的马：远程康复作为物理治疗的必要演进"
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
+          "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
+          "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究"
         },
         {
           "source": "medRxiv",
-          "title": "The Effects of a Digital Exercise Therapy Application for Patients with Shoulder and Knee Pain During the COVID-19 Pandemic",
-          "titleZh": "COVID-19 疫情期间数字运动疗法应用对肩膝疼痛患者的影响"
+          "title": "Impact of Daily Physical Fatigue on Inter-Limb Load Asymmetry and Joint Loading Rates During Daily Living Tasks in Unilateral Knee Osteoarthritis",
+          "titleZh": "单侧膝骨关节炎患者日常身体疲劳对肢体间负荷不对称和关节负荷率的影响"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Physical Performance and Central Nervous System–Active Analgesics Independently Predict 8-Year Fall Risk in Adults with or at Risk for Knee Osteoarthritis",
+          "titleZh": "身体机能表现和中枢神经系统活性镇痛药独立预测膝骨关节炎成人 8 年跌倒风险"
         },
         {
           "source": "PubMed",
-          "journal": "Physical & occupational therapy in pediatrics",
-          "title": "Beliefs and Practices of Pediatric Physiotherapists in Türkiye Regarding Early Mobility and Crawling.",
-          "titleZh": "土耳其儿科物理治疗师关于早期运动和爬行的信念与实践"
+          "journal": "Clinical rehabilitation",
+          "title": "Barriers and facilitators of decision-making in home-based rehabilitation exercise among older adults following total knee arthroplasty: A qualitative study.",
+          "titleZh": "全膝关节置换术后老年患者居家康复锻炼决策中的障碍与促进因素：一项定性研究"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Design of an Early Exercise Program for Hospitalized Patients: \"Let's Move\".",
-          "titleZh": "住院患者早期运动项目“Let's Move”的设计"
+          "journal": "British journal of sports medicine",
+          "title": "The load-velocity profile as a muscle quality index and fall risk predictor in older adults: a multifactorial perspective (PhD Academy Award).",
+          "titleZh": "负荷-速度曲线作为老年人肌肉质量指标和跌倒风险预测因子：一项多因素视角（博士学院奖）"
         }
       ],
-      "heat": 4,
-      "themeZh": "物理治疗中的远程康复与早期主动运动干预",
-      "themeEn": "Telerehabilitation & Early Mobility in PT"
+      "heat": 2.66,
+      "themeZh": "老年人认知功能维护与骨关节炎康复干预",
+      "themeEn": "Cognitive Function and OA Rehabilitation in Older Adults"
     },
     {
       "id": "news-1790699605861-0",
@@ -336,67 +336,88 @@
           "titleZh": "单一超声引导下葡萄糖增生疗法联合治疗性运动治疗肩峰下-三角肌下滑囊炎：一项初步双盲随机对照试验"
         }
       ],
-      "heat": 2.8,
-      "themeZh": "肌肉骨骼疾病的物理治疗方法与干预效果",
-      "themeEn": "MSK Disorders Physical Therapy & Outcomes"
-    },
-    {
-      "id": "news-1790053728882-1",
-      "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42767813/",
-      "category": "geriatric",
-      "publishedAt": "2026-10-03T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "British journal of sports medicine",
-        "BMC Geriatrics",
-        "British Journal of Sports Medicine",
-        "medRxiv"
-      ],
-      "tag": "fall-prevention",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "British journal of sports medicine",
-          "title": "Exercise-only interventions and exercise-based multidomain lifestyle interventions to promote cognitive function in older adults without dementia: a systematic review and meta-analysis.",
-          "titleZh": "单纯运动干预和基于运动的多领域生活方式干预对无痴呆老年人认知功能的促进作用：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
-          "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
-          "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Stakeholder-informed prioritisation of HealthTech innovation across chronic respiratory disease: the HERON study",
-          "titleZh": "慢性呼吸系统疾病 HealthTech 创新的利益相关者优先排序：HERON 研究。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Assessing frailty in lung transplantation candidates",
-          "titleZh": "肺移植候选者的衰弱评估"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Functional Impairment, Pain, and Fatigue Among Long COVID Survivors in Bangladesh: A Multisite Cross-Sectional Study",
-          "titleZh": "孟加拉国长新冠幸存者的功能障碍、疼痛和疲劳：一项多中心横断面研究"
-        }
-      ],
-      "heat": 2.26,
-      "themeZh": "老年人认知功能与衰弱的多维度干预和评估",
-      "themeEn": "Cognition & Frailty in Older Adults"
+      "heat": 2.63,
+      "themeZh": "物理疗法联合运动治疗骨骼肌肉疾病",
+      "themeEn": "Combined Physical and Exercise Therapy for MSDs"
     }
   ],
   "items": [
+    {
+      "id": "news-1790720640555-1",
+      "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
+      "summary": "This study used an experience-based co-design approach with people with aphasia (n=13), significant others (n=8), and health professionals (n=10) to identify design principles for an mHealth application for self-management of post-stroke aphasia.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42808325/",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "firstSeen": "2026-09-29T22:24:00.555Z",
+      "curatedScore": 75,
+      "curatedReason": "本研究通过与患者、家属和专业人员共同设计，明确了卒中后失语症mHealth自管理应用的关键设计原则和未满足需求。这能指导你将技术整合到患者路径中，提升依从性。",
+      "titleZh": "卒中后失语症自我管理移动健康（mHealth）应用的设计原则与优先事项：基于经验共设计方法",
+      "summaryZh": "一项经验共设计研究与卒中后失语症患者（n=13）、家属（n=8）及健康专业人员（n=10）合作，确定了mHealth应用在失语症自我管理中的关键设计原则和优先级。",
+      "curatedReasonEn": "This study, co-designed with patients, families, and professionals, clarified key design principles and unmet needs for mHealth self-management applications in post-stroke aphasia. This can guide your integration of technology into patient pathways to improve adherence.",
+      "limitation": "本研究采用经验共设计方法，结果主要反映了参与者的定性经验和优先级，可能不完全代表所有卒中后失语症患者。",
+      "limitationEn": "This study used an experience-based co-design approach, and the results primarily reflect the qualitative experiences and priorities of the participants, which may not fully represent all stroke patients with aphasia.",
+      "tags": [
+        "research",
+        "stroke",
+        "telehealth"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1790720640556-2",
+      "title": "A sex-positive approach to sexual rehabilitation after SCI: exploring women's sexual experiences using participatory action research.",
+      "summary": "This participatory action research explored the sexual experiences of 15 Canadian women with spinal cord injury (SCI), identifying three main themes: relationship with the self, changes in the body, and intimacy with partners, from a sex-positive lens.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42808193/",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "firstSeen": "2026-09-29T22:24:00.556Z",
+      "curatedScore": 75,
+      "curatedReason": "对于女性SCI患者的性健康需求，这15位加拿大受访者的心声为我们打开了一扇窗。它提示我们，在康复咨询中，要关注她们与自我的关系、身体变化调适以及与伴侣的亲密连接，纳入一个更积极的视角。",
+      "titleZh": "脊髓损伤女性性康复的“性积极”方法：采用参与式行动研究探索女性的性体验",
+      "summaryZh": "这项参与式行动研究通过对15名加拿大脊髓损伤（SCI）女性的访谈，从“性积极”视角探索其性体验，识别出自我关系、身体变化和伴侣亲密关系三大主题。",
+      "curatedReasonEn": "This study is the first to explore the sexual experiences of women with spinal cord injury (SCI) through participatory action research, revealing key themes of self-confidence, body changes, and intimacy. This can help you more comprehensively understand and address the sexual health needs of women with SCI, leading to more inclusive rehabilitation counseling.",
+      "limitation": "本研究的参与者为15名加拿大女性，结果可能不完全适用于其他文化背景或不同地理区域的SCI女性。",
+      "limitationEn": "The study participants were 15 Canadian women, and the results may not be fully generalizable to women with SCI from other cultural backgrounds or geographical regions.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1790845500884-0",
+      "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
+      "summary": "A commentary suggests that repeated subgroup partitions in research on vagus nerve stimulation after stroke may hinder factor-specific inference.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815677/",
+      "publishedAt": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-10-01T09:05:00.884Z",
+      "curatedScore": 70,
+      "curatedReason": "关于卒中后迷走神经刺激（VNS）的研究，该述评指出，重复的亚组划分可能会导致对因子特异性推断的混淆。在评估 VNS 这类复杂干预时，警惕过度解读或泛化特定亚组结果。",
+      "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断",
+      "summaryZh": "一项述评指出，卒中后迷走神经刺激（VNS）研究中重复的亚组划分，可能会妨碍对特定因子推断的有效性。",
+      "curatedReasonEn": "This commentary highlights that repeated subgroup partitions in vagus nerve stimulation (VNS) research post-stroke can preclude factor-specific inference. Be cautious of over-interpreting or over-generalizing findings from specific subgroups when evaluating complex interventions like VNS.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
+          "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
+        }
+      ]
+    },
     {
       "id": "news-1790699605861-0",
       "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
@@ -700,34 +721,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1790845500884-0",
-      "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
-      "summary": "A commentary suggests that repeated subgroup partitions in research on vagus nerve stimulation after stroke may hinder factor-specific inference.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815677/",
-      "publishedAt": "2026-09-30T00:00:00.000Z",
-      "firstSeen": "2026-10-01T09:05:00.884Z",
-      "curatedScore": 70,
-      "curatedReason": "关于卒中后迷走神经刺激（VNS）的研究，该述评指出，重复的亚组划分可能会导致对因子特异性推断的混淆。在评估 VNS 这类复杂干预时，警惕过度解读或泛化特定亚组结果。",
-      "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断",
-      "summaryZh": "一项述评指出，卒中后迷走神经刺激（VNS）研究中重复的亚组划分，可能会妨碍对特定因子推断的有效性。",
-      "curatedReasonEn": "This commentary highlights that repeated subgroup partitions in vagus nerve stimulation (VNS) research post-stroke can preclude factor-specific inference. Be cautious of over-interpreting or over-generalizing findings from specific subgroups when evaluating complex interventions like VNS.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "述评",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00907-X/fulltext?rss=yes",
-          "title": "Response to the Letter to the Editor: \"Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke\""
-        }
-      ]
     },
     {
       "id": "news-1791071869393-16",
@@ -1729,31 +1722,6 @@
       "journal": "Disability and rehabilitation"
     },
     {
-      "id": "news-1789920932856-2",
-      "title": "Vestibular rehabilitation therapy in Turkey: insights into physical therapists' clinical practice.",
-      "summary": "A survey of 178 physical therapists in Turkey revealed significant gaps in vestibular rehabilitation therapy (VRT) knowledge and practice: 88.8% had no VRT experience, and over 60% were unfamiliar with various maneuvers (e.g., Epley, Semont) and advanced techniques (e.g., optokinetic stimulation, virtual reality).",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42763790/",
-      "publishedAt": "2026-09-20T00:00:00.000Z",
-      "firstSeen": "2026-09-20T16:15:32.856Z",
-      "curatedScore": 68,
-      "curatedReason": "土耳其物理治疗师在前庭康复治疗（VRT）方面的知识和实践存在显著空白，特别是在手法操作和先进技术应用方面，提示当地继续教育和本科课程急需强化 VRT 培训，以提升循证实践水平和患者可及性。",
-      "titleZh": "土耳其的前庭康复治疗：物理治疗师临床实践洞察",
-      "summaryZh": "一项针对土耳其 178 名物理治疗师的调查显示，他们在前庭康复治疗（VRT）的知识和实践方面存在显著空白：88.8% 的受访者没有 VRT 经验，超过 60% 的人对各种手法（如 Epley、Semont）和先进技术（如视动刺激、虚拟现实）不熟悉。",
-      "curatedReasonEn": "Turkish physical therapists exhibit significant gaps in vestibular rehabilitation therapy (VRT) knowledge and practice, particularly in manual maneuvers and advanced techniques. This highlights an urgent need to strengthen VRT training in local continuing education and undergraduate curricula to enhance evidence-based practice and patient access.",
-      "limitation": "本研究采用在线问卷调查，可能存在选择偏倚，且无法计算传统应答率，结果的普适性可能受限。",
-      "limitationEn": "This study used an online survey, which may introduce selection bias and prevent calculation of a conventional response rate, potentially limiting the generalizability of the findings.",
-      "tags": [
-        "research",
-        "vestibular",
-        "education"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice",
-      "tech": true
-    },
-    {
       "id": "news-1790440297514-0",
       "title": "Movement matters: the path to professional impact.",
       "summary": "This article highlights the extensive contributions of Dr. Christopher M. Powers, the 57th McMillan Lecturer, to physical therapy through his leadership in human movement science, research on lower-extremity biomechanics, and consistent advocacy for the profession.",
@@ -2084,29 +2052,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1790077793206-0",
-      "title": "Age, resilience, social support, and health literacy as predictors of functional ability in people with spinal cord injury: a 6-month follow-up study.",
-      "summary": "A 6-month follow-up study (N=367) on traumatic spinal cord injury patients found that younger age (β = -0.02; p = 0.028), higher resilience (β = 0.22; p < 0.001), and higher health literacy (β = 0.32; p = 0.001) were significant independent predictors of greater functional ability.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42768903/",
-      "publishedAt": "2026-09-22T00:00:00.000Z",
-      "firstSeen": "2026-09-22T11:49:53.206Z",
-      "curatedScore": 75,
-      "curatedReason": "这项为期6个月的随访研究强调，在脊髓损伤患者的早期康复中，年龄、心理韧性、社会支持和健康素养是功能恢复的重要预测因素。这提示你，除了身体训练，也要关注患者的心理和社会资源。",
-      "titleZh": "年龄、心理韧性、社会支持和健康素养在脊髓损伤患者功能能力中的预测作用：一项6个月随访研究",
-      "summaryZh": "一项针对367名创伤性脊髓损伤住院患者的6个月随访研究发现，较年轻的年龄（β = -0.02; p = 0.028）、较高的心理韧性（β = 0.22; p < 0.001）和较高的健康素养（β = 0.32; p = 0.001）是功能能力更强的独立预测因素。",
-      "curatedReasonEn": "This 6-month follow-up study highlights age, resilience, social support, and health literacy as crucial predictors of functional recovery in early rehabilitation for spinal cord injury patients. This suggests focusing on patients' psychological and social resources in addition to physical training.",
-      "limitation": "本研究为单中心随访研究，且功能改善幅度相对温和，结果需要进一步研究验证其临床意义。",
-      "limitationEn": "This was a single-center follow-up study, and the observed functional improvement was modest, requiring further research to determine its clinical significance.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of rehabilitation medicine"
     }
   ]
 }
