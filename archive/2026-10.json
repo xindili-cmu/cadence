@@ -839,6 +839,76 @@
       ],
       "studyDesign": "述评",
       "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1791158640840-12",
+      "title": "Toward personalized exergaming: a machine learning-based decision-support approach to cognitive-motor training for long-term care residents with cognitive impairments",
+      "summary": "A cross-sectional study with 100 long-term care residents developed a machine learning model to predict personalized exergaming recommendations, achieving a ROC-AUC of 0.79 in cross-validation.",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02174-5",
+      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "firstSeen": "2026-10-05T00:04:00.840Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究展示了机器学习在为认知障碍长期照护居民提供个性化认知运动训练（exergaming）推荐方面的潜力。虽然还在早期，但这一方法预示着未来你可能能更精准地为患者选择数字干预方案。",
+      "titleZh": "迈向个性化体感游戏：基于机器学习的决策支持方法，用于认知障碍长期照护居民的认知运动训练",
+      "summaryZh": "一项对 100 名长期照护居民进行的横断面研究开发了一个机器学习模型，旨在预测个性化体感游戏推荐，并在交叉验证中实现了 0.79 的 ROC-AUC。",
+      "curatedReasonEn": "This study demonstrates the potential of machine learning to personalize cognitive-motor training (exergaming) for long-term care residents with cognitive impairments. Although early, this approach suggests a future where you might more precisely select digital interventions for patients.",
+      "limitation": "研究为横断面设计，无法推断干预效果或因果关系，且模型在预测辅助需求方面的性能较低（AUC = 0.67–0.71）。",
+      "limitationEn": "The study's cross-sectional design prevents causal inference regarding intervention effects, and the model showed lower performance in predicting assistance needs (AUC = 0.67–0.71).",
+      "tags": [
+        "research",
+        "brain-injury",
+        "parkinson"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1791158640840-13",
+      "title": "Enhancing mountain safety through personalised exercise prescription: the MOVE project (PhD Academy Award)",
+      "summary": "The MOVE project developed a personalized digital decision-support system to enhance mountain hiking safety by integrating individual health characteristics with trail-specific demands.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "https://bjsm.bmj.com/content/early/2026/07/01/bjsports-2026-111995",
+      "publishedAt": "2026-07-01T00:00:00.000Z",
+      "firstSeen": "2026-10-05T00:04:00.840Z",
+      "curatedScore": 70,
+      "curatedReason": "这个博士项目开发的 MOVE 系统旨在通过个性化运动处方提高登山安全性，考虑到个体健康特征与路径需求。如果你关注运动康复和安全重返运动，这提示了未来数字工具在户外运动风险评估和预防中的潜力。",
+      "titleZh": "通过个性化运动处方提高登山安全性：MOVE 项目（博士学会奖）",
+      "summaryZh": "MOVE 项目开发了一套个性化数字决策支持系统，通过整合个体健康特征和路径具体要求，以提升登山安全性。",
+      "curatedReasonEn": "This PhD project developed the MOVE system to enhance mountain hiking safety through personalized exercise prescriptions, considering individual health characteristics and trail demands. If you focus on sports rehabilitation and safe return to sport, this highlights the future potential of digital tools in outdoor activity risk assessment and prevention.",
+      "tags": [
+        "news",
+        "exercise-prescription",
+        "injury-prevention"
+      ],
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1791158640840-14",
+      "title": "Sense of coherence and rehabilitation outcomes: a 3-year longitudinal study\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+      "summary": "A 3-year longitudinal cohort study (n=601) found that both baseline Sense of Coherence and changes in it were independently associated with rehabilitation outcomes, with stronger associations for overall health and mental functioning.",
+      "category": "cardiopulmonary",
+      "source": "J Rehabil Med",
+      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46229",
+      "publishedAt": "2026-09-29T00:00:00.000Z",
+      "firstSeen": "2026-10-05T00:04:00.840Z",
+      "curatedScore": 70,
+      "curatedReason": "这项为期三年的前瞻性研究指出，基线内聚感和其变化均与康复结局独立相关，尤其对整体健康和心理功能影响更强。这提示在康复干预中关注患者的内聚感可能改善他们的长期结果。",
+      "titleZh": "内聚感与康复结局：一项为期 3 年的纵向研究",
+      "summaryZh": "一项为期 3 年的纵向队列研究（n=601）发现，基线内聚感及其变化均与康复结局独立相关，其中与整体健康和心理功能的相关性更强。",
+      "curatedReasonEn": "This 3-year prospective study indicates that both baseline sense of coherence and its changes are independently associated with rehabilitation outcomes, particularly for overall health and mental functioning. This suggests that focusing on patients' sense of coherence in rehabilitation interventions may improve their long-term results.",
+      "limitation": "研究对象是挪威的专业康复患者，结果外推到其他人群或医疗体系时需谨慎。",
+      "limitationEn": "The study participants were patients undergoing specialized rehabilitation in Norway, so caution is needed when generalizing the findings to other populations or healthcare systems.",
+      "tags": [
+        "research",
+        "longitudinal-study",
+        "psychosocial"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of Rehabilitation Medicine"
     }
   ]
 }
