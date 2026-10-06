@@ -1093,6 +1093,54 @@
         "motor-development"
       ],
       "studyDesign": "观察研究"
+    },
+    {
+      "id": "news-1791251396826-16",
+      "title": "Identifying heterogeneous patterns of real-world upper limb use beyond motor severity: a cross-sectional sensor-based study in people with subacute stroke",
+      "summary": "A cross-sectional study of 101 subacute stroke patients used accelerometers and FMA-UL to identify six heterogeneous upper limb activity patterns, distinguishing between motor deficits, learned non-use, and UL inattention. Clinical variables like ARAT, MAL, and UL inattention were key differentiators.",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02171-8",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "firstSeen": "2026-10-06T01:49:56.826Z",
+      "curatedScore": 80,
+      "curatedReason": "这项研究利用传感器数据识别出卒中后上肢真实世界使用模式的六种亚型，远远超越了单纯的运动功能评分。这提醒你在临床评估时，不能只看 FMA-UL，还要结合 MAL、ARAT 和注意力评估，才能更精准地为亚急性期卒中患者制定个性化康复方案，尤其要警惕“习得性废用”和“上肢不注意”带来的影响。",
+      "titleZh": "亚急性卒中患者上肢真实世界使用模式的异质性识别：一项超越运动严重程度的基于传感器的横断面研究",
+      "summaryZh": "一项针对101名亚急性卒中患者的横断面研究，利用加速度计和 Fugl-Meyer 上肢评估（FMA-UL），识别出六种异质性上肢活动模式，区分了运动缺陷、习得性废用和上肢不注意。Action Research Arm Test (ARAT)、Motor Activity Log (MAL) 和上肢不注意是区分不同集群的关键临床变量。",
+      "curatedReasonEn": "This study used sensor data to identify six real-world upper limb use subtypes after stroke, going beyond motor severity scores. This highlights the need to combine FMA-UL with MAL, ARAT, and inattention assessments for precise, individualized rehabilitation in subacute stroke, particularly for learned non-use and UL inattention.",
+      "limitation": "这是一项横断面研究，无法追踪不同亚型随时间的演变，且样本量为101人，可能会限制亚型模式的普遍性。",
+      "limitationEn": "This is a cross-sectional study, unable to track subtype evolution over time, and the sample size of 101 participants may limit the generalizability of the identified patterns.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1791251396827-17",
+      "title": "Effects of cluster-set vs. traditional resistance exercise with equated total rest on muscular performance, perceived fatigue, and cardiovascular responses in resistance-trained women",
+      "summary": "A crossover RCT with 12 resistance-trained women found that cluster-set configurations (10-s and 30-s intra-set rest) significantly improved muscular endurance (18.4 ± 1.7 reps for CLS30 vs. 12.8 ± 1.2 for TRS) and reduced perceived fatigue compared to traditional sets, with equated total rest.",
+      "category": "sports",
+      "source": "Sport Sci Health",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s11332-026-01944-x",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "firstSeen": "2026-10-06T01:49:56.827Z",
+      "curatedScore": 75,
+      "curatedReason": "在总休息时间相同的前提下，集束组训练能显著提高抗阻训练女性的肌肉耐力表现并降低主观疲劳和心血管负荷工作比。这意味着你可以考虑在女性抗阻训练中引入集束组，尤其是在不希望增加总体休息时间，但又想优化表现和减少疲劳感时。",
+      "titleZh": "集束组与传统抗阻训练在总休息时间相等条件下对女性肌肉表现、疲劳感和心血管反应的影响",
+      "summaryZh": "一项对12名抗阻训练女性进行的交叉随机对照试验发现，在总休息时间相等的情况下，集束组训练（组间休息10秒和30秒）与传统组训练相比，显著提高了肌肉耐力（CLS30组为18.4 ± 1.7次，传统组为12.8 ± 1.2次）并降低了疲劳感。",
+      "curatedReasonEn": "With equated total rest, cluster-set configurations significantly improve muscular endurance and reduce perceived fatigue and cardiovascular load-to-work ratios in resistance-trained women. This suggests you can consider implementing cluster-sets in women's resistance training, especially when optimizing performance and reducing fatigue without increasing overall rest time.",
+      "limitation": "研究样本量仅为12名女性，且仅评估了急性效应，长期适应性尚不明确。",
+      "limitationEn": "The study involved only 12 women and assessed acute effects, so long-term adaptations are not yet clear.",
+      "tags": [
+        "research",
+        "strength-training",
+        "women-health"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Sport Sciences for Health"
     }
   ]
 }

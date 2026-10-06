@@ -1,0 +1,13 @@
+linkedin-poster-claims.js failed at 2026-10-06T01:50:16.010Z
+
+draft still breaks 7 rule(s) after retry:
+  - paper 1 context is 211 chars (max 210) — overflows the fixed canvas
+  - paper 2 claim is 102 chars (max 95) — overflows the fixed canvas
+  - paper 3 context is 228 chars (max 210) — overflows the fixed canvas
+  - paper 4 claim is 101 chars (max 95) — overflows the fixed canvas
+  - paper 4 context is 215 chars (max 210) — overflows the fixed canvas
+  - paper 5 context is 223 chars (max 210) — overflows the fixed canvas
+  - paper 2 claim reuses the raw title (92% of its words come from it) — rewrite it as a plain-language clinical claim
+
+The carousel for 2026-10-06 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-10-06 && node scripts/linkedin-poster.js 2026-10-06
