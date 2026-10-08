@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-08T01:08:26.415Z",
+    "lastUpdated": "2026-10-08T06:18:10.358Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,36 +15,29 @@
   },
   "hotTopics": [
     {
-      "id": "news-1791394093504-0",
-      "title": "Effect of iTBS and rTMS Combined with Robotic Rehabilitation on Ambulation and Lower Extremity Motor Function in Chronic SCI Patients.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42839316/",
+      "id": "news-1790920324010-2",
+      "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
       "category": "neurological",
       "publishedAt": "2026-10-07T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "NeuroRehabilitation",
+        "Topics in stroke rehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Neurorehabilitation and neural repair",
-        "PM & R : the journal of injury, function, and rehabilitation",
+        "NeuroRehabilitation",
+        "American journal of physical medicine & rehabilitation",
         "Journal of NeuroEngineering and Rehabilitation",
-        "medRxiv",
-        "Gait & posture"
+        "Egyptian Rheumatology and Rehabilitation"
       ],
-      "tag": "spinal-cord",
+      "tag": "stroke",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effect of iTBS and rTMS Combined with Robotic Rehabilitation on Ambulation and Lower Extremity Motor Function in Chronic SCI Patients.",
-          "titleZh": "iTBS 和 rTMS 联合机器人康复对慢性脊髓损伤患者步态和下肢运动功能的影响"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Effects of Somatosensory Interventions on Sensory, Motor, and Balance Functions in Individuals with Stroke: A Systematic Review and Meta-Analysis.",
-          "titleZh": "体感干预对卒中患者感觉、运动和平衡功能的影响：一项系统综述和 Meta 分析"
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
+          "titleZh": "镜面疗法对比功能性电刺激辅助循环训练在卒中后下肢康复中的应用：一项随机对照试验。"
         },
         {
           "source": "PubMed",
@@ -60,16 +53,55 @@
         },
         {
           "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Effects of Somatosensory Interventions on Sensory, Motor, and Balance Functions in Individuals with Stroke: A Systematic Review and Meta-Analysis.",
+          "titleZh": "体感干预对卒中患者感觉、运动和平衡功能的影响：一项系统综述和 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effect of iTBS and rTMS Combined with Robotic Rehabilitation on Ambulation and Lower Extremity Motor Function in Chronic SCI Patients.",
+          "titleZh": "iTBS 和 rTMS 联合机器人康复对慢性脊髓损伤患者步态和下肢运动功能的影响"
+        },
+        {
+          "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Repeated subgroup partitions preclude factor-specific inference for vagus nerve stimulation after stroke.",
           "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断"
         },
         {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Methodological quality of systematic reviews on treatments in stroke rehabilitation: A cross-sectional study.",
-          "titleZh": "脑卒中康复治疗系统综述方法学质量：一项横断面研究"
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Paired cerebrospinal fluid metabolomic changes across repeated anodal transcranial direct current stimulation in Parkinson’s disease: an exploratory within-subject study",
+          "titleZh": "帕金森病重复阳极经颅直流电刺激前后脑脊液代谢组学变化：一项探索性受试者内研究"
         },
+        {
+          "source": "Egypt Rheumatol Rehabil",
+          "journal": "Egyptian Rheumatology and Rehabilitation",
+          "title": "Cryoneurolysis as an effective spasticity treatment option",
+          "titleZh": "冷冻神经溶解术作为有效的痉挛治疗选择：一个病例系列报告"
+        }
+      ],
+      "heat": 4.52,
+      "themeZh": "卒中与SCI后肢体功能障碍的神经调控与康复",
+      "themeEn": "Neuromodulation and Rehab for Post-Stroke SCI Impairment"
+    },
+    {
+      "id": "news-1791251396826-16",
+      "title": "Identifying heterogeneous patterns of real-world upper limb use beyond motor severity: a cross-sectional sensor-based study in people with subacute stroke",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02171-8",
+      "category": "neurological",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Journal of NeuroEngineering and Rehabilitation",
+        "medRxiv",
+        "NeuroRehabilitation",
+        "Gait & posture"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
         {
           "source": "J NeuroEng Rehabil",
           "journal": "Journal of NeuroEngineering and Rehabilitation",
@@ -104,75 +136,9 @@
           "titleZh": "超越步行速度：从标准化临床测量评估和分类卒中后步态推进。"
         }
       ],
-      "heat": 5.56,
-      "themeZh": "神经系统疾病患者运动功能与平衡的康复干预",
-      "themeEn": "Rehabilitation Interventions for Neurological Motor and Balance Function"
-    },
-    {
-      "id": "news-1790699605861-0",
-      "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42806498/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-06T00:00:00.000Z",
-      "sourceCount": 7,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "The Journal of manual & manipulative therapy",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "BMC Musculoskeletal Disorders",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Egyptian Rheumatology and Rehabilitation"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-          "titleZh": "经皮电解治疗肌肉骨骼疾病：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Short term effectiveness of dry needling and instrument assisted soft tissue mobilization in knee osteoarthritis patients - a randomized controlled trial.",
-          "titleZh": "干针和器械辅助软组织松动术对膝骨关节炎患者的短期疗效——一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Dextrose prolotherapy for chronic symptomatic rotator cuff tendinopathy and subacromial bursitis: A systematic review and meta-analysis.",
-          "titleZh": "葡萄糖增生疗法治疗慢性症状性肩袖肌腱病变和肩峰下滑囊炎：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Single Ultrasound-Guided Dextrose Prolotherapy Plus Therapeutic Exercise for Subacromial-Subdeltoid Bursitis: A Pilot Double-Blind Randomized Controlled Trial",
-          "titleZh": "单一超声引导下葡萄糖增生疗法联合治疗性运动治疗肩峰下-三角肌下滑囊炎：一项初步双盲随机对照试验"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Applications of MyotonPRO in the upper limb: a scoping review of orthopaedic, traumatologic, rehabilitation, and sports medicine evidence",
-          "titleZh": "MyotonPRO 在上肢应用：骨科、创伤、康复和运动医学证据的范围综述"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Paired cerebrospinal fluid metabolomic changes across repeated anodal transcranial direct current stimulation in Parkinson’s disease: an exploratory within-subject study",
-          "titleZh": "帕金森病重复阳极经颅直流电刺激前后脑脊液代谢组学变化：一项探索性受试者内研究"
-        },
-        {
-          "source": "Egypt Rheumatol Rehabil",
-          "journal": "Egyptian Rheumatology and Rehabilitation",
-          "title": "Cryoneurolysis as an effective spasticity treatment option",
-          "titleZh": "冷冻神经溶解术作为有效的痉挛治疗选择：一个病例系列报告"
-        }
-      ],
-      "heat": 3.44,
-      "themeZh": "肌骨疾病的注射与物理治疗有效性研究",
-      "themeEn": "Injections and Physical Therapy for Musculoskeletal Disorders"
+      "heat": 2.58,
+      "themeZh": "卒中后躯干控制与步态生物力学评估",
+      "themeEn": "Post-Stroke Trunk Control and Gait Biomechanics"
     },
     {
       "id": "news-1791240335472-17",
@@ -238,17 +204,11 @@
           "journal": "Disability and rehabilitation",
           "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
           "titleZh": "卒中后失语症自我管理移动健康（mHealth）应用的设计原则与优先事项：基于经验共设计方法"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The acceptability of and adherence to a high-dose walking booster program after stroke (HiWalk): a multi-method study of stroke survivors' experiences nested within a randomised controlled trial.",
-          "titleZh": "高剂量步行强化训练项目（HiWalk）在卒中患者中的可接受性和依从性：一项嵌套在随机对照试验中的多方法研究"
         }
       ],
-      "heat": 2.09,
-      "themeZh": "老年人居家康复、认知衰弱与跌倒预防策略",
-      "themeEn": "Geriatric Home Rehab, Cognitive Frailty and Fall Prevention"
+      "heat": 1.94,
+      "themeZh": "老年人居家康复、跌倒预防与认知健康",
+      "themeEn": "Geriatric Home Rehab, Falls Prevention, and Cognition"
     },
     {
       "id": "news-1791414705415-0",
@@ -296,9 +256,9 @@
           "titleZh": "中度至重度创伤后康复需求研究中的方法学问题评述：来自挪威定量和定性研究的经验教训"
         }
       ],
-      "heat": 2.09,
-      "themeZh": "脊髓损伤与卒中后性功能康复和自我管理",
-      "themeEn": "SCI, Stroke Sexual Rehabilitation, Self-Management"
+      "heat": 1.94,
+      "themeZh": "SCI与卒中后个体化性康复及自我管理",
+      "themeEn": "SCI, Stroke Sexual Rehab, and Self-Management"
     },
     {
       "id": "news-1791251396827-17",
@@ -334,35 +294,126 @@
           "titleZh": "解读一项吸气肌训练初步试验中的\"遵从方案\"疗效信号"
         }
       ],
-      "heat": 2.09,
-      "themeZh": "不同阻力训练模式对运动表现与心血管反应的影响",
-      "themeEn": "Resistance Training Modes on Performance and CV Response"
+      "heat": 1.94,
+      "themeZh": "阻力训练的组集模式与休息间隔对运动表现影响",
+      "themeEn": "Resistance Training Set and Rest Intervals"
     }
   ],
   "items": [
     {
-      "id": "news-1790188119704-0",
-      "title": "Effects of Using High-Frequency TENS During an Exercise Therapy Program in Knee Osteoarthritis: A Randomized Sham-Controlled Trial.",
-      "summary": "This randomized, sham-controlled trial (n=96) found that adding high-frequency transcutaneous electrical nerve stimulation to an exercise therapy program did not provide additional benefits over sham stimulation for knee osteoarthritis pain or other secondary outcomes, with adjusted mean difference of 1.05 points (95% CI, -5.19 to 7.29) post-intervention.",
-      "category": "orthopedic",
+      "id": "news-1790920324010-2",
+      "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
+      "summary": "In subacute stroke, both mirror therapy and functional electrical stimulation-assisted cycling (FES-C) significantly improved lower extremity motor function (ΔFMA-LE scores: MD -2.60 for MT, MD -3.00 for FES-C, both p<0.05 vs control), with FES-C showing additional gains in Brunnstrom stage and SS-QOL.",
+      "category": "neurological",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42775508/",
-      "publishedAt": "2026-09-23T00:00:00.000Z",
-      "firstSeen": "2026-09-23T18:28:39.704Z",
-      "curatedScore": 75,
-      "curatedReason": "高频 TENS 对膝骨关节炎的运动疗法没有额外益处。在考虑将 TENS 作为辅助手段时，请评估其成本效益与实际增益，不应替代主动训练。",
-      "titleZh": "高频 TENS 联合运动疗法治疗膝骨关节炎：一项随机对照试验",
-      "summaryZh": "这项随机、假对照试验（n=96）发现，在膝骨关节炎患者的运动疗法中加入高频经皮电神经刺激，与假刺激相比，在减轻疼痛或其他次要结局方面未提供额外益处，干预后调整平均差异为 1.05 分（95% CI, -5.19 to 7.29）。",
-      "curatedReasonEn": "High-frequency TENS offers no additional benefits to exercise therapy for knee osteoarthritis. When considering TENS as an adjunct, evaluate its cost-effectiveness against actual gains; it should not replace active training.",
-      "limitation": "研究未正式评估盲法效果，随访期短，且缺乏单纯运动组对照。",
-      "limitationEn": "The study did not formally assess blinding efficacy, had a short follow-up, and lacked an exercise-only control group.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-02T05:52:04.010Z",
+      "curatedScore": 85,
+      "curatedReason": "对于亚急性卒中偏瘫患者的下肢康复，镜面疗法和功能性电刺激辅助循环训练都能有效改善运动功能。特别是当你受限于技术设备或预算时，镜面疗法是一个简单且易于实施的有效辅助干预。",
+      "titleZh": "镜面疗法对比功能性电刺激辅助循环训练在卒中后下肢康复中的应用：一项随机对照试验。",
+      "summaryZh": "在亚急性卒中患者中，镜面疗法和功能性电刺激辅助循环训练均显著改善下肢运动功能（ΔFMA-LE评分：MT组MD -2.60，FES-C组MD -3.00，均P<0.05 vs 对照组），其中FES-C在Brunnstrom分期和SS-QOL方面有额外获益。",
+      "curatedReasonEn": "For lower limb rehabilitation in subacute stroke hemiplegia, both mirror therapy and functional electrical stimulation-assisted cycling effectively improve motor function. Mirror therapy is a simple and accessible effective adjunct intervention, especially when you are limited by technological equipment or budget.",
+      "limitation": "本研究为单中心小样本随机对照试验，结果外推需谨慎。",
+      "limitationEn": "This is a single-center, small-sample randomized controlled trial, and the generalizability of results should be considered with caution.",
       "tags": [
         "research",
-        "knee",
+        "stroke",
         "electro"
       ],
       "studyDesign": "RCT",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1790920324008-0",
+      "title": "The enhanced rehabilitation programme for significant musculoskeletal injuries from the manchester arena bombing - A process evaluation study investigating patients' and physiotherapists' experiences.",
+      "summary": "A process evaluation of the Enhanced Rehabilitation Programme (ERP) for Manchester Arena bombing survivors, using the Normalisation Process Theory, found it valuable but identified challenges in sustaining progress and transitioning back to standard NHS care.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42822319/",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-02T05:52:04.008Z",
+      "curatedScore": 75,
+      "curatedReason": "曼彻斯特爆炸案后的强化康复项目（ERP）展示了结构化、多学科康复模式对创伤幸存者的潜力。但在将这类模式更广泛地整合到现有体系时，你仍需考虑资源限制和长期康复路径的持续性问题。",
+      "titleZh": "曼彻斯特竞技场爆炸案严重肌肉骨骼损伤强化康复项目：一项调查患者和物理治疗师体验的过程评估研究。",
+      "summaryZh": "一项针对曼彻斯特竞技场爆炸案幸存者的强化康复项目（ERP）的过程评估研究发现，该项目具有价值，但也指出了在维持康复进展和过渡回NHS常规护理方面的挑战。",
+      "curatedReasonEn": "The Enhanced Rehabilitation Programme (ERP) after the Manchester bombing demonstrates the potential of structured, multidisciplinary rehabilitation models for trauma survivors. However, when integrating such models more broadly into existing systems, you still need to consider resource limitations and the sustainability of long-term rehabilitation pathways.",
+      "limitation": "本研究是小样本定性研究，患者和物理治疗师的经验可能不完全代表更广泛人群。",
+      "limitationEn": "This is a small-sample qualitative study, and the experiences of patients and physiotherapists may not fully represent a broader population.",
+      "tags": [
+        "research",
+        "regulation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy"
+    },
+    {
+      "id": "news-1790945411132-2",
+      "title": "Not Just Faster Horses: Telerehabilitation as a Necessary Evolution in Physical Therapy.",
+      "summary": "This editorial argues that telerehabilitation is a necessary evolution in musculoskeletal physical therapy, extending the therapist's role through continuous monitoring, communication, education, and patient engagement, rather than merely replacing traditional care.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42823644/",
+      "publishedAt": "2026-10-02T00:00:00.000Z",
+      "firstSeen": "2026-10-02T12:50:11.132Z",
+      "curatedScore": 70,
+      "curatedReason": "远程康复不再仅仅是传统面对面治疗的替代方案，而是物理治疗未来交付模式的必要演进。它要求你不仅掌握技术，还要发展新的临床技能和适应性执业习惯，以保持治疗关系和患者为中心的护理。",
+      "titleZh": "不只是更快的马：远程康复作为物理治疗的必要演进。",
+      "summaryZh": "这篇述评指出，远程康复是肌肉骨骼物理治疗的必要演进，它通过持续监测、沟通、教育和患者参与来扩展物理治疗师的角色，而非仅仅替代传统护理。",
+      "curatedReasonEn": "Telerehabilitation is no longer merely an alternative to traditional in-person therapy but a necessary evolution in future physical therapy delivery models. It requires you not only to master technology but also to develop new clinical skills and adaptive practice habits to maintain therapeutic relationships and patient-centered care.",
+      "tags": [
+        "research",
+        "telehealth"
+      ],
+      "studyDesign": "述评",
+      "journal": "The Journal of orthopaedic and sports physical therapy",
+      "tech": true
+    },
+    {
+      "id": "news-1790920324009-1",
+      "title": "Rehabilitation after stroke for Aboriginal and Torres Strait Islander peoples and Indigenous peoples globally: a scoping review and critical content analysis.",
+      "summary": "A scoping review of 108 sources found that stroke rehabilitation for Indigenous peoples globally is significantly influenced by ongoing colonization and Western health paradigms, highlighting the need for culturally informed care.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42821326/",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-02T05:52:04.009Z",
+      "curatedScore": 70,
+      "curatedReason": "为原住民患者提供卒中康复服务时，你必须认识到其疗效正被殖民化历史和主导性的西方健康范式显著削弱。你需要将原住民的文化模型和知识体系整合到康复路径中，方能提供真正以人为本的适宜护理。",
+      "titleZh": "澳大利亚原住民、托雷斯海峡岛民及全球原住民卒中康复：一项范围审查和批判性内容分析。",
+      "summaryZh": "一项涵盖108份文献的范围审查发现，全球原住民的卒中康复受持续殖民化和西方健康范式显著影响，凸显了文化知情护理的必要性。",
+      "curatedReasonEn": "When rehabilitating Indigenous stroke patients, understand that ongoing colonization and Western health paradigms significantly undermine your efforts. Integrate Indigenous cultural models and knowledge systems into the rehabilitation pathway to deliver truly person-centered, appropriate care.",
+      "limitation": "本综述包含多种研究类型，且未能提供量化效应评估，其结论主要为定性描述。",
+      "limitationEn": "This review includes various study types and does not provide quantitative effect assessments, with its conclusions primarily being qualitative descriptions.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1790920324010-5",
+      "title": "Return to sports after lumbar disc herniation surgery: a survey of German surgeons and postoperative patient experiences.",
+      "summary": "A survey of German surgeons found high variability in recommendations for return to sport after lumbar disc herniation surgery, with most suggesting regular activity from 8 weeks. This contrasted with patient-reported return in 12.1 ± 11.7 weeks.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42821087/",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-02T05:52:04.010Z",
+      "curatedScore": 70,
+      "curatedReason": "腰椎间盘突出症术后重返运动的指导缺乏证据支持，导致外科医生建议差异大。患者实际重返运动的时间往往晚于外科医生建议，这表明你需要更细致地与患者沟通预期，并在术后康复中采用循证方法。",
+      "titleZh": "腰椎间盘突出症术后重返运动：德国外科医生调查与患者术后体验。",
+      "summaryZh": "一项针对德国外科医生的调查发现，腰椎间盘突出症术后重返运动的建议存在很大差异，多数建议在术后8周开始常规活动。这与患者报告的12.1 ± 11.7周的实际重返时间形成对比。",
+      "curatedReasonEn": "Guidance for return to sport after lumbar disc herniation surgery lacks evidence, leading to wide variability in surgeon recommendations. Patients often return to sport later than recommended, indicating that you need to communicate expectations more thoroughly with patients and adopt evidence-based approaches in postoperative rehabilitation.",
+      "limitation": "本研究是两个独立调查数据集的比较，存在设计和背景差异，可能无法直接对比。且患者数据为单中心队列。",
+      "limitationEn": "This study compares two independent survey datasets with differences in design and setting, which may not be directly comparable. Patient data is also from a single-center cohort.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
     },
     {
       "id": "news-1791421704412-13",
@@ -1964,100 +2015,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "The Journal of orthopaedic and sports physical therapy"
-    },
-    {
-      "id": "news-1790945411130-0",
-      "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
-      "summary": "A qualitative study (n=14) exploring patients' experiences with physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction found it a valuable complement to physical visits, improving accessibility and continuity, while highlighting the need for advanced communication and reliable technology.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42823687/",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "firstSeen": "2026-10-02T12:50:11.130Z",
-      "curatedScore": 75,
-      "curatedReason": "远程康复能提高产后盆底功能障碍患者的可及性和依从性。研究提示，混合模式（远程与当面结合）最能满足患者需求，但在数字化沟通能力和技术支持上，你仍需下功夫。",
-      "titleZh": "产后盆底功能障碍患者参与物理治疗远程康复的体验：一项定性研究",
-      "summaryZh": "一项定性研究（n=14）探讨了产后盆底功能障碍患者参与物理治疗远程康复的体验，发现远程康复是实体就诊的有效补充，提高了可及性和依从性，但也强调了先进沟通技巧和可靠技术的重要性。",
-      "curatedReasonEn": "Telerehabilitation improves accessibility and adherence for postpartum pelvic floor dysfunction. Findings suggest a hybrid care model (remote + in-person) best meets patient needs, but you must focus on digital communication skills and robust tech support.",
-      "limitation": "本研究为定性研究，样本量小，结果的外推性受限。",
-      "limitationEn": "This is a qualitative study with a small sample size, limiting the generalizability of its findings.",
-      "tags": [
-        "research",
-        "pelvic-floor",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC musculoskeletal disorders",
-      "tech": true
-    },
-    {
-      "id": "news-1790323089913-1",
-      "title": "Combining three-dimensional ankle exercises with short-foot training improves proprioception and dynamic balance in female karatekas with flatfoot: A randomized controlled trial.",
-      "summary": "A randomized controlled trial (n=34) found that combining three-dimensional ankle exercises with short-foot training significantly improved navicular drop, ankle proprioception (decreased 3° vs 1.59°), and dynamic balance (increased Y-Balance reach by 17.49% vs 7.82%) in female karate athletes with flatfoot compared to short-foot exercise alone.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42784849/",
-      "publishedAt": "2026-09-24T00:00:00.000Z",
-      "firstSeen": "2026-09-25T07:58:09.913Z",
-      "curatedScore": 75,
-      "curatedReason": "针对扁平足的空足训练（SFE）增加三维踝关节练习（3DAE）后，在足部姿势、本体感觉和动态平衡上效果显著优于单独 SFE。这为跆拳道运动员等特定人群提供了更优的训练方案，你可以考虑将 3DAE 整合到你的方案中。",
-      "titleZh": "三维踝关节练习联合空足训练可改善扁平足女性跆拳道运动员的本体感觉和动态平衡：一项随机对照试验",
-      "summaryZh": "一项随机对照试验（n=34）发现，在扁平足女性跆拳道运动员中，三维踝关节练习联合空足训练相比单独空足训练，显著改善了舟骨塌陷、踝关节本体感觉（下降 3° vs 1.59°）和动态平衡（Y 平衡测试得分提高 17.49% vs 7.82%）。",
-      "curatedReasonEn": "Adding 3D ankle exercises (3DAE) to short-foot exercises (SFE) for flatfoot significantly improved foot posture, proprioception, and dynamic balance compared to SFE alone. For athletes like female karatekas, consider integrating 3DAE into your training protocols.",
-      "limitation": "SF-3DAE 组接受的监督训练量更大，无法完全排除训练量增加带来的影响，且未评估对运动表现或受伤风险的转化。",
-      "limitationEn": "The SF-3DAE group received a greater volume of supervised exercise, which could not be fully separated from a general training-volume effect, and the study did not assess the translation of improvements to athletic performance or injury risk.",
-      "tags": [
-        "research",
-        "foot-ankle",
-        "sports-rehab"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1790945411133-20",
-      "title": "Single Ultrasound-Guided Dextrose Prolotherapy Plus Therapeutic Exercise for Subacromial-Subdeltoid Bursitis: A Pilot Double-Blind Randomized Controlled Trial",
-      "summary": "A pilot double-blind randomized controlled trial investigates the efficacy of single ultrasound-guided dextrose prolotherapy plus therapeutic exercise for subacromial-subdeltoid bursitis, a common cause of shoulder pain and disability.",
-      "category": "orthopedic",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00938-X/fulltext?rss=yes",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "firstSeen": "2026-10-02T12:50:11.133Z",
-      "curatedScore": 75,
-      "curatedReason": "这项 RCT 初步显示，单一超声引导下葡萄糖增生疗法联合治疗性运动可有效改善肩峰下-三角肌下滑囊炎。如果你的患者对常规治疗反应不佳，这可能是一个值得探索的新选择，但尚需大型研究来确证。",
-      "titleZh": "单一超声引导下葡萄糖增生疗法联合治疗性运动治疗肩峰下-三角肌下滑囊炎：一项初步双盲随机对照试验",
-      "summaryZh": "一项初步双盲随机对照试验旨在探讨单一超声引导下葡萄糖增生疗法联合治疗性运动对肩峰下-三角肌下滑囊炎（一种常见的肩痛和致残原因）的疗效。",
-      "curatedReasonEn": "This pilot RCT suggests that single ultrasound-guided dextrose prolotherapy combined with therapeutic exercise may be effective for subacromial-subdeltoid bursitis. If your patients are not responding to conventional treatments, this could be a new option to explore, but larger studies are needed for confirmation.",
-      "limitation": "本研究为小型预试验，样本量有限，结果的普适性需更多研究验证。",
-      "limitationEn": "This is a small pilot study with a limited sample size, and the generalizability of its findings requires further validation with larger studies.",
-      "tags": [
-        "research",
-        "shoulder",
-        "prolotherapy"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1790604629805-16",
-      "title": "Establishing Consensus for Prescription of Prosthetic Components for Transtibial Bone-Anchored Limbs: An International Delphi Method Study",
-      "summary": "An international Delphi method study aims to establish consensus and provide recommendations from experts on the prescription of prosthetic components for patients with transtibial bone-anchored limbs.",
-      "category": "orthopedic",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00932-9/fulltext?rss=yes",
-      "publishedAt": "2026-09-28T00:00:00.000Z",
-      "firstSeen": "2026-09-28T14:10:29.805Z",
-      "curatedScore": 75,
-      "curatedReason": "这项研究通过国际德尔菲法，旨在为胫骨骨锚式假肢组件的处方建立共识。这对于你理解和应用骨锚式假肢的处方标准具有指导意义，有助于规范临床实践。",
-      "titleZh": "为胫骨骨锚式假肢组件的处方建立共识：一项国际德尔菲法研究",
-      "summaryZh": "一项国际德尔菲法研究旨在就胫骨骨锚式假肢患者的假肢组件处方达成专家共识并提供建议。",
-      "curatedReasonEn": "This study aims to establish consensus for prescribing prosthetic components for transtibial bone-anchored limbs using an international Delphi method. This will guide your understanding and application of prescription standards for bone-anchored prostheses, helping standardize clinical practice.",
-      "tags": [
-        "research",
-        "prosthetics"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
     }
   ]
 }
