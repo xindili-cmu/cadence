@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-08T20:00:31.977Z",
+    "lastUpdated": "2026-10-09T00:28:46.114Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,17 +20,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
       "category": "neurological",
       "publishedAt": "2026-10-08T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 8,
       "sources": [
         "Topics in stroke rehabilitation",
         "Archives of physical medicine and rehabilitation",
         "Neurorehabilitation and neural repair",
         "NeuroRehabilitation",
         "American journal of physical medicine & rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "medRxiv",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "Disability and rehabilitation"
+        "Journal of rehabilitation medicine",
+        "Egyptian Rheumatology and Rehabilitation",
+        "Journal of NeuroEngineering and Rehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -72,21 +71,122 @@
           "titleZh": "重复的亚组划分妨碍了卒中后迷走神经刺激因子特异性推断"
         },
         {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Relaxation interventions in neurological rehabilitation: a scoping review.",
+          "titleZh": "神经康复中的放松干预：一项范围综述。"
+        },
+        {
+          "source": "Egypt Rheumatol Rehabil",
+          "journal": "Egyptian Rheumatology and Rehabilitation",
+          "title": "Cryoneurolysis as an effective spasticity treatment option",
+          "titleZh": "冷冻神经溶解术作为有效的痉挛治疗选择：一个病例系列报告"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Paired cerebrospinal fluid metabolomic changes across repeated anodal transcranial direct current stimulation in Parkinson’s disease: an exploratory within-subject study",
+          "titleZh": "帕金森病重复阳极经颅直流电刺激前后脑脊液代谢组学变化：一项探索性受试者内研究"
+        }
+      ],
+      "heat": 5.62,
+      "themeZh": "卒中与脊髓损伤后肢体功能与平衡干预研究",
+      "themeEn": "Post-stroke SCI Limb Function & Balance Interventions"
+    },
+    {
+      "id": "news-1791505723991-0",
+      "title": "Effects of thoracic kinesiological taping on pulmonary functions, respiratory muscle strength, and functional independence in patients with hemiplegia: a randomized controlled clinical trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847866/",
+      "category": "neurological",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Topics in stroke rehabilitation",
+        "Disability and rehabilitation",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "The Journal of manual & manipulative therapy"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Effects of thoracic kinesiological taping on pulmonary functions, respiratory muscle strength, and functional independence in patients with hemiplegia: a randomized controlled clinical trial.",
+          "titleZh": "胸部肌内效贴对偏瘫患者肺功能、呼吸肌力量和功能独立性的影响：一项随机对照临床试验。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Comparison of kinesio taping and myofascial release therapy in cervicogenic headache: a randomized controlled trial.",
+          "titleZh": "肌内效贴与筋膜松解疗法治疗颈源性头痛的比较：一项随机对照试验。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
+          "titleZh": "经皮电解治疗肌肉骨骼疾病：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "Dextrose prolotherapy for chronic symptomatic rotator cuff tendinopathy and subacromial bursitis: A systematic review and meta-analysis.",
+          "titleZh": "葡萄糖增生疗法治疗慢性症状性肩袖肌腱病和肩峰下滑囊炎：一项系统综述和荟萃分析。"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Single Ultrasound-Guided Dextrose Prolotherapy Plus Therapeutic Exercise for Subacromial-Subdeltoid Bursitis: A Pilot Double-Blind Randomized Controlled Trial",
+          "titleZh": "超声引导下右旋糖增生疗法结合治疗性运动治疗肩峰下三角肌滑囊炎：一项初步双盲随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Short term effectiveness of dry needling and instrument assisted soft tissue mobilization in knee osteoarthritis patients - a randomized controlled trial.",
+          "titleZh": "干针和器械辅助软组织松动术对膝骨关节炎患者的短期疗效——一项随机对照试验"
+        }
+      ],
+      "heat": 4.21,
+      "themeZh": "肌骨疼痛与功能障碍的物理与注射疗法",
+      "themeEn": "MSK Pain & Dysfunction PT & Injections"
+    },
+    {
+      "id": "news-1791251396826-16",
+      "title": "Identifying heterogeneous patterns of real-world upper limb use beyond motor severity: a cross-sectional sensor-based study in people with subacute stroke",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02171-8",
+      "category": "neurological",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "sourceCount": 6,
+      "sources": [
+        "Journal of NeuroEngineering and Rehabilitation",
+        "Clinical rehabilitation",
+        "Disability and rehabilitation",
+        "Topics in stroke rehabilitation",
+        "Archives of physical medicine and rehabilitation",
+        "PM & R : the journal of injury, function, and rehabilitation"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
           "source": "J NeuroEng Rehabil",
           "journal": "Journal of NeuroEngineering and Rehabilitation",
           "title": "Identifying heterogeneous patterns of real-world upper limb use beyond motor severity: a cross-sectional sensor-based study in people with subacute stroke",
           "titleZh": "亚急性卒中患者上肢真实世界使用模式的异质性识别：一项超越运动严重程度的基于传感器的横断面研究"
         },
         {
-          "source": "medRxiv",
-          "title": "Quantifying Static Postural Control Impairment after Stroke using Markerless Motion Capture",
-          "titleZh": "使用无标记运动捕捉技术量化卒中后静态姿势控制障碍"
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Engagement strategies to support sub-acute, post-stroke upper limb interventions: A co-design study.",
+          "titleZh": "亚急性卒中后上肢干预的依从性策略：一项协同设计研究。"
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Trunk and Pelvic Control in the Acute Phase After Stroke: A Clinical Movement Analysis Case Study Using the Ottawa Sitting Scale.",
-          "titleZh": "卒中急性期躯干和骨盆控制：使用 Ottawa 坐位量表的临床运动分析病例研究。"
+          "journal": "Disability and rehabilitation",
+          "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
+          "titleZh": "卒中后失语症自我管理移动健康（mHealth）应用的设计原则与优先事项：基于经验共设计方法"
         },
         {
           "source": "PubMed",
@@ -113,203 +213,45 @@
           "titleZh": "澳大利亚原住民、托雷斯海峡岛民及全球原住民卒中康复：一项范围审查和批判性内容分析。"
         }
       ],
-      "heat": 6.74,
-      "themeZh": "卒中后肢体功能与平衡的物理治疗干预",
-      "themeEn": "Post-stroke limb motor function and balance interventions"
+      "heat": 4.21,
+      "themeZh": "卒中康复的异质性模式、应用与早期干预",
+      "themeEn": "Stroke Rehab: Heterogeneity, mHealth, Early Intervention"
     },
     {
-      "id": "news-1791414705415-0",
-      "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42841435/",
-      "category": "neurological",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Disability and rehabilitation",
-        "Journal of Rehabilitation Medicine",
-        "NeuroRehabilitation",
-        "American journal of physical medicine & rehabilitation"
-      ],
-      "tag": "stroke",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
-          "titleZh": "LGBTQI+ 卒中幸存者及其伴侣的卒中后性康复经验：一项定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "A sex-positive approach to sexual rehabilitation after SCI: exploring women's sexual experiences using participatory action research.",
-          "titleZh": "脊髓损伤女性性康复的“性积极”方法：采用参与式行动研究探索女性的性体验"
-        },
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "A commentary on methodological issues in research on rehabilitation needs after moderate-to-severe traumatic injury: lessons learned from quantitative and qualitative studies in Norway",
-          "titleZh": "中度至重度创伤后康复需求研究中的方法学问题评述：来自挪威定量和定性研究的经验教训"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Association Between Admission Serum Albumin and Short-Term Functional Improvement During Inpatient Rehabilitation After Cervical Traumatic Spinal Cord Injury: A Retrospective Cohort Study.",
-          "titleZh": "颈椎创伤性脊髓损伤住院康复期间入院血清白蛋白与短期功能改善的关联：一项回顾性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Development and validation of a Chinese self-management ability assessment scale for patients with spinal cord injury.",
-          "titleZh": "中国脊髓损伤患者自我管理能力评估量表的开发与验证"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Diagnostic Performance of Ultrasonographic Median Nerve Cross-Sectional Area for Carpal Tunnel Syndrome in Wheelchair Users With Spinal Cord Injury.",
-          "titleZh": "超声正中神经横截面积诊断脊髓损伤轮椅使用者腕管综合征的诊断效能"
-        }
-      ],
-      "heat": 3,
-      "themeZh": "脊髓损伤与卒中康复中患者需求与评估研究",
-      "themeEn": "Patient needs and assessment in SCI and stroke rehab"
-    },
-    {
-      "id": "news-1790699605861-0",
-      "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42806498/",
+      "id": "news-1790945411130-0",
+      "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42823687/",
       "category": "orthopedic",
-      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "The Journal of manual & manipulative therapy",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Egyptian Rheumatology and Rehabilitation"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-          "titleZh": "经皮电解治疗肌肉骨骼疾病：一项系统综述与荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Dextrose prolotherapy for chronic symptomatic rotator cuff tendinopathy and subacromial bursitis: A systematic review and meta-analysis.",
-          "titleZh": "葡萄糖增生疗法治疗慢性症状性肩袖肌腱病和肩峰下滑囊炎：一项系统综述和荟萃分析。"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Single Ultrasound-Guided Dextrose Prolotherapy Plus Therapeutic Exercise for Subacromial-Subdeltoid Bursitis: A Pilot Double-Blind Randomized Controlled Trial",
-          "titleZh": "超声引导下右旋糖增生疗法结合治疗性运动治疗肩峰下三角肌滑囊炎：一项初步双盲随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Short term effectiveness of dry needling and instrument assisted soft tissue mobilization in knee osteoarthritis patients - a randomized controlled trial.",
-          "titleZh": "干针和器械辅助软组织松动术对膝骨关节炎患者的短期疗效——一项随机对照试验"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Paired cerebrospinal fluid metabolomic changes across repeated anodal transcranial direct current stimulation in Parkinson’s disease: an exploratory within-subject study",
-          "titleZh": "帕金森病重复阳极经颅直流电刺激前后脑脊液代谢组学变化：一项探索性受试者内研究"
-        },
-        {
-          "source": "Egypt Rheumatol Rehabil",
-          "journal": "Egyptian Rheumatology and Rehabilitation",
-          "title": "Cryoneurolysis as an effective spasticity treatment option",
-          "titleZh": "冷冻神经溶解术作为有效的痉挛治疗选择：一个病例系列报告"
-        }
-      ],
-      "heat": 2.25,
-      "themeZh": "肌肉骨骼疾病与痉挛的微创物理治疗",
-      "themeEn": "Minimally invasive physical therapy for MSK disorders and spasticity"
-    },
-    {
-      "id": "news-1791334408057-19",
-      "title": "Physiological determinants of endurance capacity in individuals with cerebral palsy: a narrative review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46260",
-      "category": "pediatric",
-      "publishedAt": "2026-10-07T01:34:59.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Journal of Rehabilitation Medicine",
-        "medRxiv",
-        "Measurement in Physical Education and Exercise Science"
-      ],
-      "tag": "cerebral-palsy",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Physiological determinants of endurance capacity in individuals with cerebral palsy: a narrative review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "脑瘫个体耐力能力的生理决定因素：一项叙述性综述"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Immediate effects of suspension walker support on locomotor behavior of pre-walking infants with Down syndrome",
-          "titleZh": "悬吊式助行器支撑对未习步唐氏综合征婴儿运动行为的即时影响"
-        },
-        {
-          "source": "Disabil Rehabil",
-          "journal": "Measurement in Physical Education and Exercise Science",
-          "title": "Validity and Reliability of Accelerometers to Evaluate Preschool-Aged Children’s Physical Activity and Sedentary Behavior During Free-Living Condition: A Systematic Review",
-          "titleZh": "加速度计评估学龄前儿童自由生活条件下身体活动和久坐行为的效度和信度：一项系统综述"
-        },
-        {
-          "source": "Disabil Rehabil",
-          "journal": "Measurement in Physical Education and Exercise Science",
-          "title": "Absolute Test-Retest Reliability of the Sit-And-Reach Tests in Healthy Individuals: A Systematic Review with Meta-Analysis",
-          "titleZh": "健康个体坐位体前屈测试的绝对重测可靠性：一项系统综述和荟萃分析"
-        }
-      ],
-      "heat": 1.63,
-      "themeZh": "儿童步态与身体活动能力的评估与影响因素",
-      "themeEn": "Pediatric gait and physical activity assessment and determinants"
-    },
-    {
-      "id": "news-1791240335472-17",
-      "title": "The effects of route previewing on adaptive gait and gaze behaviour under cognitive dual-task conditions in older adults",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.02.26364602v1?rss=1",
-      "category": "geriatric",
-      "publishedAt": "2026-10-05T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "medRxiv",
-        "BMC Geriatrics",
+        "BMC musculoskeletal disorders",
+        "The Journal of orthopaedic and sports physical therapy",
         "Clinical rehabilitation",
         "Disability and rehabilitation",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "Journal of NeuroEngineering and Rehabilitation"
       ],
-      "tag": "falls",
+      "tag": "pelvic-floor",
       "kind": "theme",
       "members": [
         {
-          "source": "medRxiv",
-          "title": "The effects of route previewing on adaptive gait and gaze behaviour under cognitive dual-task conditions in older adults",
-          "titleZh": "认知双任务条件下路线预演对老年人适应性步态和注视行为的影响"
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Patients' experiences of participating in physiotherapeutic telerehabilitation for postpartum pelvic floor dysfunction; a qualitative study.",
+          "titleZh": "产后盆底功能障碍患者参与物理治疗远程康复的体验：一项定性研究"
         },
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
-          "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究"
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
+          "titleZh": "“这是一个黑箱”：物理治疗师对传感器运动控制和技术在 ACL 损伤康复中应用的看法"
         },
         {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
-          "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述"
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Not Just Faster Horses: Telerehabilitation as a Necessary Evolution in Physical Therapy.",
+          "titleZh": "不只是更快的马：远程康复作为物理治疗的必要演进。"
         },
         {
           "source": "PubMed",
@@ -334,20 +276,196 @@
           "journal": "Journal of NeuroEngineering and Rehabilitation",
           "title": "Toward personalized exergaming: a machine learning-based decision-support approach to cognitive-motor training for long-term care residents with cognitive impairments",
           "titleZh": "迈向个性化体感游戏：基于机器学习的决策支持方法，用于认知障碍长期照护居民的认知运动训练"
+        }
+      ],
+      "heat": 4.21,
+      "themeZh": "物理治疗的远程康复与居家锻炼方案",
+      "themeEn": "Telerehabilitation & Home-based Exercise in PT"
+    },
+    {
+      "id": "news-1791414705415-0",
+      "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42841435/",
+      "category": "neurological",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Disability and rehabilitation",
+        "NeuroRehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "Journal of Rehabilitation Medicine",
+        "Archives of Physical Medicine and Rehabilitation"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
+          "titleZh": "LGBTQI+ 卒中幸存者及其伴侣的卒中后性康复经验：一项定性研究"
         },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Priorities and design principles for a mobile health (mHealth) application to support self-management of post-stroke aphasia: experience gathering and prioritisation within an experience-based co-design approach.",
-          "titleZh": "卒中后失语症自我管理移动健康（mHealth）应用的设计原则与优先事项：基于经验共设计方法"
+          "title": "A sex-positive approach to sexual rehabilitation after SCI: exploring women's sexual experiences using participatory action research.",
+          "titleZh": "脊髓损伤女性性康复的“性积极”方法：采用参与式行动研究探索女性的性体验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Association Between Admission Serum Albumin and Short-Term Functional Improvement During Inpatient Rehabilitation After Cervical Traumatic Spinal Cord Injury: A Retrospective Cohort Study.",
+          "titleZh": "颈椎创伤性脊髓损伤住院康复期间入院血清白蛋白与短期功能改善的关联：一项回顾性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Development and validation of a Chinese self-management ability assessment scale for patients with spinal cord injury.",
+          "titleZh": "中国脊髓损伤患者自我管理能力评估量表的开发与验证"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Diagnostic Performance of Ultrasonographic Median Nerve Cross-Sectional Area for Carpal Tunnel Syndrome in Wheelchair Users With Spinal Cord Injury.",
+          "titleZh": "超声正中神经横截面积诊断脊髓损伤轮椅使用者腕管综合征的诊断效能"
+        },
+        {
+          "source": "J Rehabil Med",
+          "journal": "Journal of Rehabilitation Medicine",
+          "title": "A commentary on methodological issues in research on rehabilitation needs after moderate-to-severe traumatic injury: lessons learned from quantitative and qualitative studies in Norway",
+          "titleZh": "中度至重度创伤后康复需求研究中的方法学问题评述：来自挪威定量和定性研究的经验教训"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Adolescent Mental Health Risk post-mild Traumatic Brain Injury: Examination of Diagnostic codes in Electronic Health Records",
+          "titleZh": "轻度创伤性脑损伤后青少年心理健康风险：电子健康记录中诊断编码的检验"
         }
       ],
-      "heat": 1.59,
-      "themeZh": "老年人居家康复、认知衰弱与防跌策略",
-      "themeEn": "Older adults' home rehab, cognitive frailty and falls prevention"
+      "heat": 3.51,
+      "themeZh": "脊髓损伤与卒中后性功能康复和自我管理",
+      "themeEn": "SCI & Stroke Sexual Rehab & Self-management"
     }
   ],
   "items": [
+    {
+      "id": "news-1791505723991-0",
+      "title": "Effects of thoracic kinesiological taping on pulmonary functions, respiratory muscle strength, and functional independence in patients with hemiplegia: a randomized controlled clinical trial.",
+      "summary": "A randomized controlled trial (n=30) found that thoracic kinesiology taping (KT) combined with conventional rehabilitation significantly improved pulmonary function (FVC, FEV1, PEF, MIP, all p<0.001) and functional independence (FIM, p=0.029) in chronic post-stroke hemiplegia patients compared to sham taping, with greater changes in the KT group.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847866/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T00:28:43.991Z",
+      "curatedScore": 85,
+      "curatedReason": "本 RCT 首次证明胸部肌内效贴与常规康复结合，能显著改善慢性卒中偏瘫患者的肺功能、吸气肌力量和功能独立性，提示其作为神经康复辅助手段的潜力。",
+      "titleZh": "胸部肌内效贴对偏瘫患者肺功能、呼吸肌力量和功能独立性的影响：一项随机对照临床试验。",
+      "summaryZh": "一项随机对照试验（n=30）发现，与假贴组相比，胸部肌内效贴结合常规康复治疗能显著改善慢性卒中偏瘫患者的肺功能（FVC、FEV1、PEF、MIP，p<0.001）和功能独立性（FIM，p=0.029）。",
+      "curatedReasonEn": "This RCT is the first to demonstrate that thoracic kinesiology taping, combined with conventional rehabilitation, significantly improves pulmonary function, inspiratory muscle strength, and functional independence in chronic post-stroke hemiplegia patients, suggesting its potential as an adjunct in neurorehabilitation.",
+      "limitation": "研究样本量较小（30例），随访时间较短（4周），且对MEP的改善效果不如对照组，长期效应和普适性仍需更多研究验证。",
+      "limitationEn": "The study has a relatively small sample size (30 patients) and short follow-up (4 weeks). The improvement in MEP was inferior to the control group, and long-term effects and generalizability require further validation.",
+      "tags": [
+        "research",
+        "stroke",
+        "taping"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1791505723992-5",
+      "title": "Comparison of kinesio taping and myofascial release therapy in cervicogenic headache: a randomized controlled trial.",
+      "summary": "A randomized controlled trial (n=81) found that both kinesio taping (KT) and myofascial release (MFR) combined with home exercise significantly improved pain, disability, quality of life, and headache frequency in cervicogenic headache patients over 4 weeks compared to home exercise alone. MFR showed more sustained improvements in disability and physical quality of life at one-month follow-up.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847565/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T00:28:43.992Z",
+      "curatedScore": 85,
+      "curatedReason": "这项 RCT 证据坐实了肌内效贴和筋膜松解术在结合居家锻炼时，对颈源性头痛的短期止痛和功能改善是有效的，并提示筋膜松解术在改善残疾和生活质量方面可能具有更持久的优势。",
+      "titleZh": "肌内效贴与筋膜松解疗法治疗颈源性头痛的比较：一项随机对照试验。",
+      "summaryZh": "一项随机对照试验（n=81）发现，与单纯居家锻炼相比，肌内效贴（KT）和筋膜松解（MFR）结合居家锻炼，在4周内显著改善了颈源性头痛患者的疼痛、残疾、生活质量和头痛频率。MFR在1个月随访时在残疾和身体生活质量方面显示出更持久的改善。",
+      "curatedReasonEn": "This RCT evidence confirms that kinesio taping and myofascial release, when combined with home exercise, are effective for short-term pain relief and functional improvement in cervicogenic headache. It also suggests that myofascial release may offer more sustained benefits in improving disability and quality of life.",
+      "limitation": "研究的随访期较短（仅1个月），无法评估长期疗效；且未具体说明两种干预与居家锻炼的交互作用。",
+      "limitationEn": "The study's follow-up period was short (only 1 month), preventing evaluation of long-term efficacy. It also did not specify the interaction between the two interventions and home exercise.",
+      "tags": [
+        "research",
+        "taping",
+        "iastm"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1791505723992-1",
+      "title": "Relaxation interventions in neurological rehabilitation: a scoping review.",
+      "summary": "A scoping review identified 63 sources on relaxation interventions in neurological rehabilitation, primarily in multiple sclerosis and stroke patients. Interventions are generally feasible and well-accepted, with outcomes mostly assessed at the body structure and function level, particularly psychological functioning, but noted a heterogeneous evidence landscape and key research gaps.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847760/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T00:28:43.992Z",
+      "curatedScore": 75,
+      "curatedReason": "在神经康复中，放松干预措施的可行性和接受度普遍较高，但其有效性证据仍分散且多关注心理功能。这份综述提示我们，在将其广泛应用于临床前，还需要更多高质量研究来明确这些干预措施在具体疾病和功能层面的确切疗效，而非仅限于心理层面。",
+      "titleZh": "神经康复中的放松干预：一项范围综述。",
+      "summaryZh": "一项范围综述纳入了63项关于神经康复中放松干预的研究，主要集中在多发性硬化症和卒中患者。研究发现这些干预措施通常可行且接受度高，结果主要评估身体结构和功能层面，尤其心理功能，但证据存在异质性且研究空白较多。",
+      "curatedReasonEn": "Relaxation interventions in neurorehabilitation are generally feasible and well-accepted, but evidence for their efficacy remains fragmented and largely focused on psychological outcomes. This review suggests that before widespread clinical adoption, more high-quality research is needed to define the precise therapeutic effects of these interventions across specific conditions and functional levels, beyond just psychological benefits.",
+      "limitation": "该综述揭示了现有证据的异质性，并指出在研究不常见神经疾病、采用定性设计和比较效果研究以及评估感知生理压力、活动和参与方面存在显著空白。",
+      "limitationEn": "The review highlights the heterogeneity of existing evidence and significant gaps in research for less prevalent neurological conditions, qualitative designs, comparative effectiveness studies, and assessments of perceived physiological stress, activities, and participation.",
+      "tags": [
+        "research",
+        "stroke",
+        "ms"
+      ],
+      "studyDesign": "综述",
+      "journal": "Journal of rehabilitation medicine"
+    },
+    {
+      "id": "news-1791005255723-0",
+      "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
+      "summary": "A study in 33 neurotypical young adults found that self-evaluation of temporal gait asymmetry (TGA) was more accurate than spatial gait asymmetry (SGA), with lower odds of correctness for SGA (OR = 0.09 for presence, 0.18 for direction). Directing attention to the swing phase facilitated more accurate TGA self-evaluation (OR = 0.13 for single limb stance vs. swing time).",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42826438/",
+      "publishedAt": "2026-10-02T00:00:00.000Z",
+      "firstSeen": "2026-10-03T05:27:35.723Z",
+      "curatedScore": 75,
+      "curatedReason": "这项初步研究揭示了健康年轻人对步态时间不对称的自我评估比空间不对称更准确，并且将注意力引导至摆动相能提高准确性。这些发现对未来卒中患者步态不对称的外部反馈干预设计具有指导意义。",
+      "titleZh": "神经正常年轻成人对诱发性步态时间与空间不对称的自我评估探索。",
+      "summaryZh": "一项对33名神经正常年轻成人进行的研究发现，对步态时间不对称（TGA）的自我评估比空间不对称（SGA）更准确，SGA的正确评估几率较低（存在不对称OR=0.09，方向OR=0.18）。将注意力引导至摆动相有助于更准确地自我评估TGA（单腿站立与摆动时间相比OR=0.13）。",
+      "curatedReasonEn": "This preliminary study reveals that healthy young adults are more accurate at self-evaluating temporal gait asymmetry than spatial asymmetry, and directing attention to the swing phase can improve accuracy. These findings are instructive for designing future extrinsic feedback interventions for gait asymmetry in stroke patients.",
+      "limitation": "研究仅在神经正常年轻成人中进行，结果在卒中患者中是否适用，以及这些自我评估准确性的生理机制尚待进一步研究。",
+      "limitationEn": "The study was conducted only in neurotypical young adults, and its applicability to stroke patients, as well as the physiological mechanisms behind these self-evaluation accuracies, require further investigation.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Gait & posture"
+    },
+    {
+      "id": "news-1791505723992-2",
+      "title": "Engagement strategies to support sub-acute, post-stroke upper limb interventions: A co-design study.",
+      "summary": "A four-stage integrated knowledge translation co-design study, involving 30 knowledge-users (stroke survivors, clinicians, and scientists), developed 10 clinician-delivered strategies to support stroke survivor engagement during sub-acute, face-to-face upper limb rehabilitation. Personalization, applied through timing and emphasis, was identified as the governing principle.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847552/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T00:28:43.992Z",
+      "curatedScore": 70,
+      "curatedReason": "这项协同设计研究为亚急性卒中上肢康复制定了以患者为中心的参与策略，强调个性化原则。虽然尚未经过临床实践检验，但它为PTs提供了如何提升患者依从性的新思路。",
+      "titleZh": "亚急性卒中后上肢干预的依从性策略：一项协同设计研究。",
+      "summaryZh": "一项四阶段整合知识转化协同设计研究，涉及30名知识使用者（卒中幸存者、临床医生和科学家），制定了10项由临床医生提供的策略，以支持亚急性、面对面卒中上肢康复期间患者的依从性。研究确定了通过时机和强调实现的个性化是指导原则。",
+      "curatedReasonEn": "This co-design study developed patient-centered engagement strategies for sub-acute post-stroke upper limb rehabilitation, emphasizing personalization. While not yet clinically tested, it offers new ideas for PTs on how to enhance patient adherence.",
+      "limitation": "本研究的策略是协同设计的产物，其在临床实践中的可行性仍有待测试。",
+      "limitationEn": "The strategies in this study were developed through co-design, and their feasibility in clinical practice remains to be tested.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
     {
       "id": "news-1790945411133-5",
       "title": "Rehabilitation of Athletes With Hamstring Strain Injury: SONAFE-Brazil Clinical Practice Guideline.",
@@ -1969,122 +2087,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1790671312251-0",
-      "title": "Trunk and Pelvic Control in the Acute Phase After Stroke: A Clinical Movement Analysis Case Study Using the Ottawa Sitting Scale.",
-      "summary": "A single-case study in a 77-year-old man with acute ischemic stroke found the Ottawa Sitting Scale (OSS) feasible for bedside assessment, providing a structured description of trunk and pelvic control and capturing early changes within the first week.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42805788/",
-      "publishedAt": "2026-09-28T00:00:00.000Z",
-      "firstSeen": "2026-09-29T08:41:52.251Z",
-      "curatedScore": 70,
-      "curatedReason": "这个病例研究展示了 Ottawa Sitting Scale (OSS) 在急性期卒中患者床旁评估躯干和骨盆控制的可行性，并能捕捉早期变化。对在急性期评估患者体位控制的临床医生，提供了一个可考虑的工具和思路。",
-      "titleZh": "卒中急性期躯干和骨盆控制：使用 Ottawa 坐位量表的临床运动分析病例研究。",
-      "summaryZh": "一项对 77 岁急性缺血性卒中患者的单病例研究发现，Ottawa 坐位量表 (OSS) 可行于床旁评估，能结构化描述躯干和骨盆控制，并在一周内捕捉到早期变化。",
-      "curatedReasonEn": "This case study demonstrates the feasibility of the Ottawa Sitting Scale (OSS) for bedside assessment of trunk and pelvic control in acute stroke patients, capturing early changes. It offers a viable tool and approach for clinicians evaluating postural control in the acute phase.",
-      "limitation": "单病例研究，结果外推性有限。",
-      "limitationEn": "Single-case study, limiting generalizability of results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1791071869393-14",
-      "title": "Transitions and predictive factors of cognitive frailty states in rural older adults: a prospective cohort study",
-      "summary": "A prospective cohort study of 3,243 rural older adults from China Health and Retirement Longitudinal Study found cognitive frailty (CF) to be reversible, with the intensity of recovery from reversible CF (RCF) to only non-dementia cognitive impairment (NDCI) being 0.429 (95% CI 0.359–0.512), highlighting early RCF as a key intervention window.",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08426-2",
-      "publishedAt": "2026-10-03T00:00:00.000Z",
-      "firstSeen": "2026-10-03T23:57:49.393Z",
-      "curatedScore": 80,
-      "curatedReason": "这项大型队列研究首次明确了农村老年人认知衰弱的可逆性，并识别出早期RCF状态为关键干预窗口。这为你针对农村老年患者的早期筛查和可调节因素管理提供了坚实的证据基础，尤其是针对RCF状态的干预，能有效逆转认知衰弱并预防不良结局。",
-      "titleZh": "农村老年人认知衰弱状态的转变及预测因素：一项前瞻性队列研究",
-      "summaryZh": "一项对3,243名中国农村老年人的前瞻性队列研究发现，认知衰弱（CF）是可逆的，可逆性CF（RCF）恢复到非痴呆认知障碍（NDCI）的强度为0.429（95% CI 0.359–0.512），强调早期RCF是关键干预窗口。",
-      "curatedReasonEn": "This large cohort study is the first to clearly establish the reversible nature of cognitive frailty in rural older adults and identifies the early RCF state as a critical intervention window. This provides a strong evidence base for your early screening and management of modifiable factors in rural older patients, particularly for RCF interventions, to effectively reverse cognitive frailty and prevent adverse outcomes.",
-      "limitation": "研究人群为中国农村老年人，结果可能不完全适用于其他地域和文化背景。",
-      "limitationEn": "The study population consists of rural older adults in China, and the results may not be fully generalizable to other geographical and cultural contexts.",
-      "tags": [
-        "research",
-        "frailty",
-        "cognitive-impairment",
-        "prevention"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1791071869392-12",
-      "title": "OTC analgesic use was associated with a higher rate of return to unrestricted play (aHR 1.",
-      "summary": "OTC analgesic use was associated with a higher rate of return to unrestricted play (aHR 1.25, 95% CI 1.11 to 1.39) and lower 3-day postinjury SCAT3 symptom severity (aHR=0.70, 95% CI 0.62 to 0.79) in NCAA and non-NCAA athletes post-concussion.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "https://bjsm.bmj.com/content/early/2026/09/29/bjsports-2025-110753",
-      "publishedAt": "2026-09-29T00:00:00.000Z",
-      "firstSeen": "2026-10-03T23:57:49.392Z",
-      "curatedScore": 75,
-      "curatedReason": "这项观察性研究提示，非处方止痛药（尤其是对乙酰氨基酚）与脑震荡症状的改善和更快的恢复相关。下次面对脑震荡患者时，可以将此纳入你的症状管理考量，但要留意观察性研究的局限性。",
-      "titleZh": "非处方止痛药改善脑震荡后症状和恢复：脑震荡评估、研究与教育（CARE）联盟的发现",
-      "summaryZh": "研究显示，非处方止痛药（OTC）使用与运动员脑震荡后恢复至无限制训练（aHR 1.25）和3天后SCAT3症状减轻（aHR=0.70）呈正相关。",
-      "curatedReasonEn": "This observational study suggests that OTC analgesics (especially acetaminophen) are associated with improved concussion symptoms and faster recovery. Consider this for symptom management in concussion patients, but be mindful of the limitations of observational research.",
-      "limitation": "研究为观察性队列研究，可能存在混杂因素，无法确立因果关系。",
-      "limitationEn": "This is an observational cohort study, which may have confounding factors and cannot establish causality.",
-      "tags": [
-        "research",
-        "news",
-        "concussion"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1791071869393-15",
-      "title": "APTA Magazine: October/November 2026",
-      "summary": "The October/November 2026 issue of APTA Magazine features articles on new payment models, a PT-led frailty pilot program, and updated guidance for total knee arthroplasty rehabilitation, focusing on functional gains and digital care.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/apta-magazine/archive/2026/10/01/apta-magazine-octobernovember-2026",
-      "publishedAt": "2026-10-01T00:00:00.000Z",
-      "firstSeen": "2026-10-03T23:57:49.393Z",
-      "curatedScore": 75,
-      "curatedReason": "本期 APTA 杂志探讨了新的支付模式、PT 主导的衰弱试点项目以及全膝关节置换术康复指南的更新。这些内容将直接影响你的执业策略和临床实践，特别是在价值导向护理和 TKA 康复管理方面。",
-      "titleZh": "APTA 杂志：2026 年 10 月/11 月",
-      "summaryZh": "2026年10月/11月《APTA杂志》刊登了关于新型支付模式、PT主导的衰弱试点项目以及全膝关节置换术康复指南更新的文章，强调功能改善和数字化护理。",
-      "curatedReasonEn": "This issue of APTA Magazine discusses new payment models, a PT-led frailty pilot, and updated guidelines for total knee arthroplasty rehabilitation. This content will directly impact your practice strategies and clinical practice, particularly in value-based care and TKA rehab management.",
-      "tags": [
-        "news",
-        "reimbursement",
-        "regulation"
-      ]
-    },
-    {
-      "id": "news-1791071869393-13",
-      "title": "How to ensure the implementability of multi-component interventions to improve active ageing in older people? An overview of the evidence of systematic reviews",
-      "summary": "An overview of eight systematic reviews identified a gap between the use of implementation frameworks and consistent reporting of implementation outcomes in multi-component interventions for active aging, with acceptability consistently reported but appropriateness and feasibility least frequently evaluated.",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08325-6",
-      "publishedAt": "2026-10-03T00:00:00.000Z",
-      "firstSeen": "2026-10-03T23:57:49.393Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述的综述强调了在促进老年人积极老龄化的多组分干预中，实施框架应用与报告实施结果之间存在差距。这提示你在评估相关干预措施时，要更批判性地审视其实施的可行性、适宜性和可持续性数据。",
-      "titleZh": "如何确保改善老年人积极老龄化的多组分干预措施的可实施性？系统综述证据概述",
-      "summaryZh": "八项系统综述的概述发现，在促进老年人积极老龄化的多组分干预中，实施框架的应用与实施结果的报告存在差距；可接受性常被报告，但适宜性和可行性评估最少。",
-      "curatedReasonEn": "This overview of reviews highlights a gap between the use of implementation frameworks and the reporting of implementation outcomes in multi-component interventions for active aging. This suggests a need to critically examine the feasibility, appropriateness, and sustainability data when evaluating such interventions.",
-      "limitation": "纳入的系统综述数量较少，且实施框架应用和结果报告存在异质性，可能限制结论的普遍性。",
-      "limitationEn": "The limited number of included systematic reviews and the heterogeneity in implementation framework application and outcome reporting may limit the generalizability of the conclusions.",
-      "tags": [
-        "research",
-        "active-aging",
-        "implementation-science"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Geriatrics"
     }
   ]
 }
