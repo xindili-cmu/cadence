@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-10T01:07:26.602Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Association Between Early Postoperative Limb Symmetry Index Scores and 2-Year Patient-Reported Outcomes After Quadriceps Tendon Autograft ACL Reconstruction.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42852663/"
+    },
+    {
+      "slide": 2,
+      "title": "Efficacy and evidence certainty of traditional Chinese exercises for musculoskeletal disorders: an umbrella review of meta-analyses",
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/19/1510?rss=1"
+    },
+    {
+      "slide": 3,
+      "title": "Effectiveness of office-based vergence/accommodative therapy with movement for accommodative dysfunction in concussion-related convergence insufficiency: a secondary analysis of the CONCUSS randomised clinical trial",
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/19/1475?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Can Psychological Readiness Predict Successful Return to Sports After Patellar Stabilization Surgery in Adolescent Patients? A Retrospective Cohort Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42852817/"
+    },
+    {
+      "slide": 5,
+      "title": "From information to action; co-designing pain neuroscience education for adolescents with low back pain: Focus group insights.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42853195/"
+    }
+  ]
+}
