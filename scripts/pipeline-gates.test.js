@@ -1232,6 +1232,9 @@ async function run() {
     const src = { title: 'Elevance pays CMS $342M; Eight weeks of training', text: 'We enrolled 135,881 patients; 1,200 completed. Improvement was 35% (p<.05).' };
     const clean = { summaryZh: '支付 3.42亿美元，8 周训练，13.5 万例患者，1200 人完成，改善 35%，p<0.05' };
     ok(!sc.hasViolation(sc.checkCuratedItem(clean, src)), 'Z1: 量级换算 / 数字词 / 千分位 / 末位取整 / .05 都算有出处');
+    ok(!sc.hasViolation(sc.checkCuratedItem({ summary: '71 adults and 34 patients' }, { text: 'Seventy-one adults were enrolled. Thirty four patients completed.' })),
+      'Z1: 复合数字词（句首拼写 Seventy-one / Thirty four）算有出处——首个生产 run 因此误丢 2 条');
+    ok(sc.checkCuratedItem({ summary: '35 patients' }, { text: 'Thirty-four patients' }).numbers.length === 1, 'Z1: 复合数字词不放宽成「近似」——35 ≠ thirty-four');
 
     // Z2 单元：真编造被抓（审计里的真实形态：自引评分、背景知识数字）
     const v = sc.checkCuratedItem({ curatedReason: '鉴于这是高质量系统综述（评分 85），每周 150 分钟即可' }, src);

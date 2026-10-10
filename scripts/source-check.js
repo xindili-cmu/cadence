@@ -68,8 +68,16 @@ function numbersIn(text) {
 /** 原文的数字集合：numbersIn + 英文数字词。只用在原文侧——输出侧写数字词不算「数字」。 */
 function sourceNumbers(text) {
   const set = new Set(numbersIn(text));
-  for (const w of String(text || '').toLowerCase().match(/[a-z]+/g) || []) {
+  const lower = String(text || '').toLowerCase();
+  for (const w of lower.match(/[a-z]+/g) || []) {
     if (WORD_NUMS[w] != null) set.add(canon(WORD_NUMS[w]));
+  }
+  // 复合数字词：期刊惯例句首数字拼写——"Thirty-four patients…" / "Seventy one…"。
+  // 只认单词时会拆成 30 和 4，34 被判「原文没有」→ 2026-10-10 首个生产 run 误丢 2 条 RCT。
+  const TENS = 'twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety';
+  const UNITS = 'one|two|three|four|five|six|seven|eight|nine';
+  for (const m of lower.matchAll(new RegExp(`\\b(${TENS})[-\\s]+(${UNITS})\\b`, 'g'))) {
+    set.add(canon(WORD_NUMS[m[1]] + WORD_NUMS[m[2]]));
   }
   return set;
 }
