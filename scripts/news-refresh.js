@@ -42,6 +42,7 @@ const { computeHotTopicsEmbed } = require('./hot-topics-embed');
 const { fixItem } = require('./term-fixes');
 const { isIntel, INTEL_SCORE_CAP } = require('./lane');
 const { checkCuratedItem, hasViolation, describeViolations, CHECKED_FIELDS } = require('./source-check');
+const sourceArchive = require('./source-archive');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
@@ -1078,6 +1079,9 @@ async function fetchScrapes() {
 // ── Claude Curation ─────────────────────────────────────────────────────────
 
 // llm 默认走真实 callLLM；测试可注入 stub 覆盖落库前的 fixItem 接线（无网络）。
+let LAST_CURATION = null;
+const lastCuration = () => LAST_CURATION;
+
 async function curateWithClaude(rawItems, llm = callLLM) {
   const items = rawItems.slice(0, CURATE_TOP_N).map((item, i) => ({
     index: i,
@@ -1136,9 +1140,9 @@ tags 规则：
   - 反例（禁止这种写法）："如果你在使用或考虑为患者推荐腰骶矫形器，这篇综述能为你提供基于证据的考量，帮助你决策。"
   - 正例："腰骶矫形器的证据还是撑不起常规处方——效应量小、异质性高。继续当短期辅助用，别替代主动训练。"
   - 正例："5 年随访坐实了运动疗法对退行性半月板撕裂的非劣效。下次跟骨科讨论转诊，这是你手里最硬的一张牌。"
-- 数字优先于形容词（样本量、效应量、报销金额、生效日期）。不用 emoji。
+- 数字优先于形容词（样本量、效应量、报销金额、生效日期）——**但只用所给 text / title 里出现的数字**，不从背景知识补（指南推荐量、患病率、常识性剂量都不行）；所有字段的数字都会被代码逐个对照原文，对不上的条目会被丢弃。不用 emoji。
 - limitation（一句话局限，单独字段）：**凡 studyDesign 有值（research 类）必填**——给读者一句"适用边界"，从研究设计层面说，不是硬挑刺：单一结局指标、特定人群、外推性、随访长度、单中心 vs 多中心、行业资助、替代终点、异质性等，挑最该让读者留神的一条。**即便是高质量大样本 RCT 也有边界（至少是人群 / 结局 / 外推性），照样写一句，不要留空。** 但只能基于研究设计本身能读出的信息——绝不编造数字或不存在的缺陷；只有当标题 / 摘要里真的读不出任何设计信息时才留 ""。news / guideline / policy / 述评 类一律留 ""。limitationEn 为其英文版；limitation 为 "" 时 limitationEn 也留 ""。
-- 行动建议护栏：临床动作指令（该做 / 别做 / 改用 / 推荐某处置）只在证据等级足够时给——studyDesign 为 RCT 或 系统综述、且 curatedScore≥80；弱证据（观察 / 综述 / 述评 / 个案 / news）只点相关性与适用边界，不下动作指令。
+- 行动建议护栏：临床动作指令（该做 / 别做 / 改用 / 推荐某处置）只在证据等级足够时给——studyDesign 为 RCT 或 系统综述、且 curatedScore≥80；弱证据（观察 / 综述 / 述评 / 个案 / news）只点相关性与适用边界，不下动作指令。这条护栏是你的内部判断依据——**正文任何字段都不得提分数 / 评分 / curatedScore**（"鉴于评分 85"、"得分 75 分"这类写法读者看得见，禁止）。
 - 措辞强度匹配证据强度：大样本 RCT / 长随访 / 系统综述可下肯定判断（"坐实"、"非劣效成立"）；单个小样本 / 观察研究 / 短随访不得用"证明、确证、坐实、必然"等定论措辞，改写成"提示 / 可能 / 倾向于"。不夸大：单个小样本不写成实践改变。
 - 监管 / 报销类新闻必须分清适用市场（US / China / Australia），不要把单一市场政策写成普适。
 
@@ -1165,6 +1169,8 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
 
   const userPrompt = `请策展以下 ${items.length} 条新闻：\n\n${JSON.stringify(items, null, 2)}`;
 
+  // 本次策展的输入与闸判定，供 main() 存进私有 KV（source-archive.js）。只记录，不影响结果。
+  LAST_CURATION = { items, fidelity: [], final: [] };
   const text = await llm(systemPrompt, userPrompt);
   if (!text) return [];
   let curated = await repairEnglishReasons(parseCuratedArray(text));
@@ -1174,8 +1180,10 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   // 先跑缺字段兜底会把那一步的中间态误判成缺失。
   curated = await repairMissingFields(curated, items, llm);
   // 放在所有 LLM 改写之后：上面每一步 repair 都会重写文本，都可能引入原文没有的数字。
-  curated = await enforceSourceFidelity(curated, items, llm);
-  return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
+  curated = await enforceSourceFidelity(curated, items, llm, LAST_CURATION.fidelity);
+  const out = curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
+  LAST_CURATION.final = out;
+  return out;
 }
 
 // 语言兜底：curatedReason 必须是中文，但模型偶尔会无视提示词、把英文 take
@@ -1329,7 +1337,7 @@ const FIDELITY_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的事�
 
 const STUDY_DESIGNS = new Set(['RCT', '系统综述', '观察研究', '综述', '述评']);
 
-async function enforceSourceFidelity(curated, items, llm = callLLM) {
+async function enforceSourceFidelity(curated, items, llm = callLLM, events = []) {
   const srcByIndex = new Map((items || []).map(i => [i.index, i]));
   const check = c => checkCuratedItem(c, srcByIndex.get(c.index) || {});
   const bad = curated.filter(c => hasViolation(check(c)));
@@ -1337,6 +1345,13 @@ async function enforceSourceFidelity(curated, items, llm = callLLM) {
   console.log(`   🔎 ${bad.length} item(s) say things the source doesn't — rewriting once with the violations`);
 
   const REWRITABLE = [...CHECKED_FIELDS, 'studyDesign'];
+  const snap = c => Object.fromEntries(REWRITABLE.filter(f => !_blank(c[f])).map(f => [f, c[f]]));
+  const evByIndex = new Map();
+  for (const c of bad) {
+    const ev = { index: c.index, violations: describeViolations(check(c)), before: snap(c), after: null, outcome: null };
+    evByIndex.set(c.index, ev);
+    events.push(ev);
+  }
   for (let off = 0; off < bad.length; off += 10) {
     const batch = bad.slice(off, off + 10);
     const user = `改写以下 ${batch.length} 条：\n\n` + JSON.stringify(batch.map((c, i) => {
@@ -1366,6 +1381,8 @@ async function enforceSourceFidelity(curated, items, llm = callLLM) {
   for (const c of curated) {
     const v = check(c);
     const title = (srcByIndex.get(c.index)?.title || '').slice(0, 60);
+    const ev = evByIndex.get(c.index);
+    if (ev) { ev.after = snap(c); ev.outcome = v.numbers.length ? 'dropped' : v.design ? 'downgraded' : 'fixed'; }
     if (v.numbers.length) {
       console.log(`   ⏭️  unsupported numbers dropped: ${v.numbers.map(x => `${x.field}:${x.n}`).join(' ')} — ${title}`);
       continue;
@@ -1897,6 +1914,13 @@ async function main() {
   const curated = await curateWithClaude(unique);
   console.log(`   Curated: ${curated.length} items`);
 
+  // 原文 + 闸判定 → 私有 KV（审计旁路：失败只打日志，不中断刷新）
+  {
+    const res = await sourceArchive.putRecord(
+      sourceArchive.buildRecord(lastCuration(), { mode: process.env.REFRESH_MODE || null, provider: LLM_PROVIDER }));
+    console.log(res.ok ? `   🗄  source archive: ${res.key}` : `   ⚠️  source archive NOT written — ${res.reason}`);
+  }
+
   // Archive-aware identity. The append-only archive (archive/YYYY-MM.json) keeps
   // each URL's ORIGINAL firstSeen / curatedScore / id from when we first caught
   // it. A research paper that briefly left the feed and got re-found here must
@@ -2262,4 +2286,4 @@ function isReasonIncomplete(c) {
   return !!zh && (!en || CJK_RE.test(en));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, enforceSourceFidelity, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, enforceSourceFidelity, lastCuration, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

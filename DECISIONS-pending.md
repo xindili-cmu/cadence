@@ -14,6 +14,10 @@
 >
 > **验证方法:** 首个 cron 跑完后看 refresh 日志里 `🔎` / `⏭️ unsupported numbers dropped` / `⬇️ studyDesign` 三类行的条数。丢条数若持续 > 每日 3 条,先看是不是误报形态(再加容差),而不是放宽规则。
 >
+> **同日追加.** ① prompt 两处诱因已改:「行动建议护栏」引用 curatedScore → 模型在正文自引评分,现明令正文不得提分数;「数字优先于形容词」→ 限定只用 text/title 里的数字。效果只能看下次 cron 的 `🔎` 行数。② **原文存档 → 私有 Cloudflare KV**(Cindy 选定;公开仓库会等于转载出版社摘要/新闻正文且撤不回)。每次策展写一条 `run/<时间>`:模型看到的原文 + 闸判定(before/after/outcome)+ 最终输出,TTL 180 天。namespace 不绑 worker = 无公开路由;本地缓存 `.cache-source-archive/` gitignore + assetsignore 双挡。审计:`node scripts/source-archive-pull.js --since <日期> [--md]`。断言 Z6–Z9。
+>
+> **KV 启用要 Cindy 做(配置缺失时 cron 照跑,只在日志打 `⚠️ source archive NOT written`):** `npx wrangler kv namespace create CURATION_SOURCES` 拿 id → Cloudflare 建一个只有 *Workers KV Storage: Edit* 权限的 API token → GitHub repo 加 Variable `CURATION_KV_NS`、Secret `CURATION_KV_TOKEN`(`CLOUDFLARE_ACCOUNT_ID` 复用 deploy 的)。**不要**把这个 namespace 加进 wrangler.jsonc。
+>
 > **已知缺口:** `linkedin-poster-claims.js` 的数字校验把 curatedReasonEn / limitationEn 当「原文」—— 策展层编出来的数字到海报层是「有出处」的。本闸修的就是这个上游;海报层本身未改。
 
 ---

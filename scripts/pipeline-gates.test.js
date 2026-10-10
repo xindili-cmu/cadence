@@ -1281,6 +1281,55 @@ async function run() {
     ok(out.length === 1 && out[0].studyDesign === '综述', 'Z5: 原文没写 systematic/meta → 系统综述 降为 综述');
     out = await curateWithClaude(rawNoRandom, stub({ ...good, studyDesign: 'RCT' }, () => JSON.stringify([{ index: 0, studyDesign: 'RCT-ish' }])));
     ok(out.length === 1 && !('studyDesign' in out[0]), 'Z5: 重写给出非法标签值不被采纳');
+
+    // ── 策展原文存档 → 私有 KV（scripts/source-archive.js，2026-10-09）──
+    const sa = require('./source-archive');
+    const { lastCuration } = require('./news-refresh');
+
+    // Z6 集成：curateWithClaude 记下了模型看到的原文和闸判定（上一个 Z5 调用的状态）
+    await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: good.summaryZh }])));
+    const st = lastCuration();
+    ok(st && st.items[0].text === raw[0].text, 'Z6: lastCuration 记下了送进 prompt 的原文 text');
+    ok(st.fidelity.length === 1 && st.fidelity[0].outcome === 'fixed'
+      && st.fidelity[0].before.summaryZh.includes('120') && st.fidelity[0].after.summaryZh.includes('48'),
+      'Z6: 闸判定带 before/after/outcome（审计时能看到改了什么）');
+    const rec = sa.buildRecord(st, { mode: 'full', provider: 'stub' }, new Date('2026-10-09T21:34:05.123Z'));
+    ok(rec.items[0].text === raw[0].text && rec.final.length === 1 && rec.fidelity.length === 1, 'Z6: buildRecord 含原文 / 最终输出 / 闸判定');
+
+    // Z7 单元：写入请求形态；未配置时不发请求、不抛
+    let call = null;
+    const fakeFetch = async (url, init) => { call = { url, init }; return { ok: true, text: async () => '' }; };
+    const env = { CLOUDFLARE_ACCOUNT_ID: 'acct', CURATION_KV_NS: 'ns1', CURATION_KV_TOKEN: 'tok' };
+    let r = await sa.putRecord(rec, env, fakeFetch, new Date('2026-10-09T21:34:05.123Z'));
+    ok(r.ok && r.key === 'run/2026-10-09T21-34-05Z', 'Z7: key = run/<ISO 秒>（字典序 = 时间序）');
+    ok(call.url.includes('/accounts/acct/storage/kv/namespaces/ns1/values/') && call.url.includes(`expiration_ttl=${180 * 86400}`)
+      && call.init.method === 'PUT' && call.init.headers.Authorization === 'Bearer tok', 'Z7: PUT 到对的 namespace，带 TTL 与 token');
+    call = null;
+    r = await sa.putRecord(rec, { CLOUDFLARE_ACCOUNT_ID: 'acct' }, fakeFetch);
+    ok(!r.ok && call === null && /CURATION_KV_NS/.test(r.reason), 'Z7: 缺配置 → 不发请求，返回原因（main 会打 ⚠️）');
+    r = await sa.putRecord(rec, env, async () => { throw new Error('ECONNRESET'); });
+    ok(!r.ok && /ECONNRESET/.test(r.reason), 'Z7: 网络失败不抛（存档是旁路，不能拖垮刷新）');
+
+    // Z8 接线：「写好了但没接上」是这个仓库的头号故障类——静态钉住两端
+    const nr = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    const iCurate = nr.indexOf('const curated = await curateWithClaude(unique)');
+    const iPut = nr.indexOf('sourceArchive.putRecord(');
+    ok(iCurate > 0 && iPut > iCurate && iPut - iCurate < 800, 'Z8: main() 在策展之后紧接着写存档');
+    const wf = fs.readFileSync(path.join(__dirname, '..', '.github', 'workflows', 'refresh.yml'), 'utf8');
+    const step = wf.slice(wf.indexOf('- name: Run PT news refresh'), wf.indexOf('run: node scripts/news-refresh.js'));
+    ok(['CLOUDFLARE_ACCOUNT_ID', 'CURATION_KV_NS', 'CURATION_KV_TOKEN'].every((k) => new RegExp(`^\\s+${k}:\\s*\\$\\{\\{`, 'm').test(step)),  // 只认未注释的行（子串匹配曾被 #注释 骗过）
+      'Z8: refresh.yml 的 news-refresh 步骤传了三个 KV 变量');
+
+    // Z9 隐私：存档里是出版社摘要 / 新闻正文全文，必须没有公开路径
+    const wr = fs.readFileSync(path.join(__dirname, '..', 'wrangler.jsonc'), 'utf8');
+    const wk = fs.readFileSync(path.join(__dirname, '..', 'worker.js'), 'utf8');
+    ok(!/CURATION/i.test(wr) && !/CURATION/i.test(wk), 'Z9: 存档 namespace 不绑定 worker（无公开路由）');
+    const gi = fs.readFileSync(path.join(__dirname, '..', '.gitignore'), 'utf8');
+    const ai = fs.readFileSync(path.join(__dirname, '..', '.assetsignore'), 'utf8');
+    ok(/^\.cache-source-archive\/$/m.test(gi) && /^\.cache-source-archive\/$/m.test(ai), 'Z9: 本地全文缓存 .gitignore + .assetsignore 双挡');
+    const pull = require('./source-archive-pull');
+    const a = pull.auditRecords([rec, { ...rec, runAt: '2026-10-10T01:00:00Z', final: [{ ...rec.final[0], summaryZh: '纳入 999 例' }] }]);
+    ok(a.runs === 2 && a.outcomes.fixed === 2 && a.leaks.length === 1, 'Z9: auditRecords 统计判定，并用真实原文抓出入库泄漏');
   }
 
   console.log(`\n✅ all ${passed} assertions passed`);

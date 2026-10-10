@@ -91,6 +91,11 @@ jobs:
           # Embedding-based hot topics (Voyage). If the Secret is absent,
           # news-refresh.js silently falls back to the legacy tag-based heuristic.
           VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+          # 策展原文存档 → 私有 Cloudflare KV（scripts/source-archive.js）。namespace
+          # 不绑定 worker，无公开路由。缺任一项 → 跳过并在日志打 ⚠️，不中断刷新。
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CURATION_KV_NS: ${{ vars.CURATION_KV_NS }}
+          CURATION_KV_TOKEN: ${{ secrets.CURATION_KV_TOKEN }}
           # 2-hourly cron → free direct legs; daily 21:30 UTC cron and manual
           # dispatch (unless overridden) → full sweep.
           REFRESH_MODE: ${{ github.event.schedule == '25 */2 * * *' && 'direct' || github.event.inputs.mode || 'full' }}

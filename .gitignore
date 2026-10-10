@@ -12,3 +12,6 @@ design-input-r2/
 Claude outputs/
 *.tmp
 .fuse_hidden*
+
+# 2026-10-09：策展原文存档的本地缓存（全文，含出版社摘要 / 新闻正文）——永不进公开仓库
+.cache-source-archive/
