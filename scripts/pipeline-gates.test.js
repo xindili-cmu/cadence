@@ -1227,6 +1227,15 @@ async function run() {
   {
     const sc = require('./source-check');
     const { curateWithClaude } = require('./news-refresh');
+    // 闸的运行日志收进 LOG 而不打到 stdout：这些测试跑在每个 cron 的 npm test 步骤里，
+    // 假数据的 🔎/⏭️ 行曾和生产行混在一起，grep 生产日志时读错（2026-10-10）。
+    // 收起来还顺手把日志格式变成断言——那几行是人 grep 的接口，改格式要红。
+    let LOG = [];
+    const cwc = async (r, llm) => {
+      const orig = console.log; LOG = [];
+      console.log = (...a) => LOG.push(a.join(' '));
+      try { return await curateWithClaude(r, llm); } finally { console.log = orig; }
+    };
 
     // Z1 单元：合法转述不误伤（离线审计里真实出现过的三类误报）
     const src = { title: 'Elevance pays CMS $342M; Eight weeks of training', text: 'We enrolled 135,881 patients; 1,200 completed. Improvement was 35% (p<.05).' };
@@ -1258,31 +1267,34 @@ async function run() {
     const stub = (main, onFix) => async (sys, user) => isFix(sys) ? onFix(user) : JSON.stringify([main]);
 
     let fixCalls = 0;
-    let out = await curateWithClaude(raw, stub(good, () => { fixCalls++; return '[]'; }));
+    let out = await cwc(raw, stub(good, () => { fixCalls++; return '[]'; }));
     ok(out.length === 1 && fixCalls === 0, 'Z4: 干净条目原样通过，不触发重写调用');
 
     let seenUser = '';
-    out = await curateWithClaude(raw, stub(fabricated, (u) => { seenUser = u; return JSON.stringify([{ index: 0, summaryZh: good.summaryZh }]); }));
+    out = await cwc(raw, stub(fabricated, (u) => { seenUser = u; return JSON.stringify([{ index: 0, summaryZh: good.summaryZh }]); }));
     ok(seenUser.includes('数字 \\"120\\" 原文中没有'), 'Z4: 重写调用收到了具体违规（哪个数字不在原文）');
     ok(out.length === 1 && out[0].summaryZh.includes('48') && !out[0].summaryZh.includes('120'), 'Z4: 重写修好 → 保留修好的版本');
 
-    out = await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: fabricated.summaryZh }])));
+    out = await cwc(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: fabricated.summaryZh }])));
     ok(out.length === 0, 'Z4: 重写后仍有编造数字 → 丢弃');
+    ok(LOG.some(l => /🔎 1 item\(s\) say things the source doesn't/.test(l)) && LOG.some(l => /⏭️  unsupported numbers dropped: summaryZh:120 — Hip/.test(l)),
+      'Z4: 日志契约——🔎 与 ⏭️ unsupported numbers dropped 行（含字段:数字 — 标题）');
 
-    out = await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: '' }])));
+    out = await cwc(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: '' }])));
     ok(out.length === 0, 'Z4: 重写把必填字段清空不算修好（空字段不能冒充通过）→ 丢弃');
 
-    out = await curateWithClaude(raw, stub(fabricated, () => { throw new Error('503'); }));
+    out = await cwc(raw, stub(fabricated, () => { throw new Error('503'); }));
     ok(out.length === 0, 'Z4: 重写调用失败 → fail-closed 丢弃，不放行');
 
     // Z5 集成：标签降级而不丢
     const rawNoRandom = [{ ...raw[0], title: 'Hip strengthening for knee OA: a pilot study', text: 'Twelve weeks of hip work in 48 patients.' }];
     const sameDesign = (d) => stub({ ...good, studyDesign: d }, () => JSON.stringify([{ index: 0, studyDesign: d }]));
-    out = await curateWithClaude(rawNoRandom, sameDesign('RCT'));
+    out = await cwc(rawNoRandom, sameDesign('RCT'));
     ok(out.length === 1 && !('studyDesign' in out[0]), 'Z5: 原文没写随机 → RCT 标签被去掉，条目保留');
-    out = await curateWithClaude(rawNoRandom, sameDesign('系统综述'));
+    out = await cwc(rawNoRandom, sameDesign('系统综述'));
     ok(out.length === 1 && out[0].studyDesign === '综述', 'Z5: 原文没写 systematic/meta → 系统综述 降为 综述');
-    out = await curateWithClaude(rawNoRandom, stub({ ...good, studyDesign: 'RCT' }, () => JSON.stringify([{ index: 0, studyDesign: 'RCT-ish' }])));
+    ok(LOG.some(l => /⬇️  studyDesign 系统综述 → 综述 \(source never states it\)/.test(l)), 'Z5: 日志契约——⬇️ studyDesign 行');
+    out = await cwc(rawNoRandom, stub({ ...good, studyDesign: 'RCT' }, () => JSON.stringify([{ index: 0, studyDesign: 'RCT-ish' }])));
     ok(out.length === 1 && !('studyDesign' in out[0]), 'Z5: 重写给出非法标签值不被采纳');
 
     // ── 策展原文存档 → 私有 KV（scripts/source-archive.js，2026-10-09）──
@@ -1290,7 +1302,7 @@ async function run() {
     const { lastCuration } = require('./news-refresh');
 
     // Z6 集成：curateWithClaude 记下了模型看到的原文和闸判定（上一个 Z5 调用的状态）
-    await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: good.summaryZh }])));
+    await cwc(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: good.summaryZh }])));
     const st = lastCuration();
     ok(st && st.items[0].text === raw[0].text, 'Z6: lastCuration 记下了送进 prompt 的原文 text');
     ok(st.fidelity.length === 1 && st.fidelity[0].outcome === 'fixed'
