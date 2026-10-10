@@ -2,6 +2,22 @@
 
 ---
 
+## ⏳ 策展原文一致性闸(2026-10-09 上线代码,处置策略待 Cindy 确认)
+
+> **问题.** 策展 prompt 写着「绝不编造数字」,但只是请求,没有代码核对。编出来的样本量 / 百分比会安静上线,再被公众号、LinkedIn 原样转述。
+>
+> **做了什么.** `scripts/source-check.js` + `news-refresh.js` 的 `enforceSourceFidelity`(在所有 LLM repair 之后、`fixItem` 之前)。「原文」= 模型当时看到的 title + text + source + 日期。① summaryZh/summary/curatedReason(En)/limitation(En) 里每个数字必须在原文出现(容许量级换算、英文数字词、带量级的末位取整);② 只查强证据标签 RCT / 系统综述 是否有原文字样。违规 → 带具体违规清单重写一次 → 仍违规:**数字 = 丢条**(含重写调用失败,fail-closed);**系统综述 → 综述;RCT → 去掉标签**。断言:pipeline-gates Z 段(已做变异验证:拆掉接线 Z4 转红)。
+>
+> **离线审计(上限,不是实测).** 6–9 月存档 1,258 条,原文未落盘,只能用 title + 英文 summary 近似 → 数字触发 48 条(3.8%,其中多数可能在真实摘要里有出处)、设计触发 15 条。抽查到的真问题:reason 里自引评分(「评分 85」「得分75分」)、背景知识数字(「每周 150 分钟」)、scoping / integrative review 标成系统综述、研究方案(N-of-1 protocol)和成本效益分析标成 RCT。
+>
+> **待 Cindy 确认的取舍:** (a) 数字违规丢条而不是降级 —— 宁缺毋假;(b) 标签降级后**分数不动**(rubric 的 90+ 与 RCT/系统综述挂钩,降级条目的分数可能偏高;未做自动封顶,因为没有依据定封顶值);(c) reason 里依赖 RCT 标签下的行动建议,降级后不会被改写。
+>
+> **验证方法:** 首个 cron 跑完后看 refresh 日志里 `🔎` / `⏭️ unsupported numbers dropped` / `⬇️ studyDesign` 三类行的条数。丢条数若持续 > 每日 3 条,先看是不是误报形态(再加容差),而不是放宽规则。
+>
+> **已知缺口:** `linkedin-poster-claims.js` 的数字校验把 curatedReasonEn / limitationEn 当「原文」—— 策展层编出来的数字到海报层是「有出处」的。本闸修的就是这个上游;海报层本身未改。
+
+---
+
 ## ✅ daily-poster 交付包的调色板:线上色值不动(2026-09-17 当日拍板)
 
 > **问题.** design_handoff_daily_poster 附的 `colors.css` 与线上 `design-system/tokens/colors.css` 差 **32 处色值**,其中 9 个专科底色改了 7 个(神经 `#463E7C`→`#574B8C`、心肺 `#8C3B43`→`#94343D` 等)。这 32 个值**在仓库历史里一次都没出现过** —— 不是从当前版本微调,是一份独立重调的色板。要不要采用。

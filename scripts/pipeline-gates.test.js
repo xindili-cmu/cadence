@@ -1223,6 +1223,66 @@ async function run() {
     ok(gone.length === 0, `Y4: 点名的 ttf 都在磁盘上${gone.length ? ` —— 缺 ${gone.join(', ')}` : ''}`);
   }
 
+  console.log('\nZ. 原文一致性闸：策展文字里的数字 / 强证据标签必须有原文出处（2026-10-09）');
+  {
+    const sc = require('./source-check');
+    const { curateWithClaude } = require('./news-refresh');
+
+    // Z1 单元：合法转述不误伤（离线审计里真实出现过的三类误报）
+    const src = { title: 'Elevance pays CMS $342M; Eight weeks of training', text: 'We enrolled 135,881 patients; 1,200 completed. Improvement was 35% (p<.05).' };
+    const clean = { summaryZh: '支付 3.42亿美元，8 周训练，13.5 万例患者，1200 人完成，改善 35%，p<0.05' };
+    ok(!sc.hasViolation(sc.checkCuratedItem(clean, src)), 'Z1: 量级换算 / 数字词 / 千分位 / 末位取整 / .05 都算有出处');
+
+    // Z2 单元：真编造被抓（审计里的真实形态：自引评分、背景知识数字）
+    const v = sc.checkCuratedItem({ curatedReason: '鉴于这是高质量系统综述（评分 85），每周 150 分钟即可' }, src);
+    ok(v.numbers.map(x => x.n).join(',') === '85,150', 'Z2: 自引评分 85 与背景知识 150 被标出');
+    ok(sc.checkCuratedItem({ summaryZh: '20 万例' }, src).numbers.length === 1, 'Z2: 超出取整容差的量级数（20 万 vs 135,881）被标出');
+
+    // Z3 单元：强证据标签要原文写明；弱标签不查
+    ok(sc.checkCuratedItem({ studyDesign: 'RCT' }, { title: 'A pilot study compared dry needling' }).design === 'RCT', 'Z3: 原文没写 randomized → RCT 被标出');
+    ok(sc.checkCuratedItem({ studyDesign: '系统综述' }, { title: 'Mucoid degeneration of the ACL: a scoping review' }).design === '系统综述', 'Z3: scoping review 标成 系统综述 被标出');
+    ok(!sc.checkCuratedItem({ studyDesign: 'RCT' }, { title: 'A randomised controlled trial of X' }).design, 'Z3: randomised（英式拼写）放行');
+    ok(!sc.checkCuratedItem({ studyDesign: '观察研究' }, { title: 'Whatever' }).design, 'Z3: 弱标签不查');
+
+    // Z4 集成：接线到 curateWithClaude（注入 llm stub，无网络）。
+    // 前提：fixture 不得触发其它 repair（英文 summary / 中文 reason / 无模板腔 / 必填齐），
+    // 否则它们会去调真实 callLLM。
+    const raw = [{ title: 'Hip strengthening for knee OA: a randomized controlled trial', text: 'We randomized 48 patients to hip strengthening or usual care for 12 weeks.', category: 'orthopedic', source: 'JOSPT', url: 'https://e.com/a', publishedDate: '2026-10-01' }];
+    const base = { index: 0, curatedScore: 80, tags: ['research', 'knee'], studyDesign: 'RCT', titleZh: '髋部力量训练治疗膝骨关节炎', summary: 'Hip strengthening improved knee OA pain in an RCT of 48 patients.', curatedReasonEn: 'Add hip work to your knee OA plans; the effect held at 12 weeks.', limitation: '单中心，随访仅 12 周。', limitationEn: 'Single centre; 12-week follow-up only.' };
+    const good = { ...base, summaryZh: '一项纳入 48 例患者的 RCT 显示髋部力量训练改善膝骨关节炎疼痛。', curatedReason: '把髋部训练加进你的膝 OA 方案，12 周效果稳定。' };
+    const fabricated = { ...good, summaryZh: '一项纳入 120 例患者的 RCT 显示髋部力量训练改善膝骨关节炎疼痛。' };
+    const isFix = (sys) => sys.includes('事实核查编辑');
+    const stub = (main, onFix) => async (sys, user) => isFix(sys) ? onFix(user) : JSON.stringify([main]);
+
+    let fixCalls = 0;
+    let out = await curateWithClaude(raw, stub(good, () => { fixCalls++; return '[]'; }));
+    ok(out.length === 1 && fixCalls === 0, 'Z4: 干净条目原样通过，不触发重写调用');
+
+    let seenUser = '';
+    out = await curateWithClaude(raw, stub(fabricated, (u) => { seenUser = u; return JSON.stringify([{ index: 0, summaryZh: good.summaryZh }]); }));
+    ok(seenUser.includes('数字 \\"120\\" 原文中没有'), 'Z4: 重写调用收到了具体违规（哪个数字不在原文）');
+    ok(out.length === 1 && out[0].summaryZh.includes('48') && !out[0].summaryZh.includes('120'), 'Z4: 重写修好 → 保留修好的版本');
+
+    out = await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: fabricated.summaryZh }])));
+    ok(out.length === 0, 'Z4: 重写后仍有编造数字 → 丢弃');
+
+    out = await curateWithClaude(raw, stub(fabricated, () => JSON.stringify([{ index: 0, summaryZh: '' }])));
+    ok(out.length === 0, 'Z4: 重写把必填字段清空不算修好（空字段不能冒充通过）→ 丢弃');
+
+    out = await curateWithClaude(raw, stub(fabricated, () => { throw new Error('503'); }));
+    ok(out.length === 0, 'Z4: 重写调用失败 → fail-closed 丢弃，不放行');
+
+    // Z5 集成：标签降级而不丢
+    const rawNoRandom = [{ ...raw[0], title: 'Hip strengthening for knee OA: a pilot study', text: 'Twelve weeks of hip work in 48 patients.' }];
+    const sameDesign = (d) => stub({ ...good, studyDesign: d }, () => JSON.stringify([{ index: 0, studyDesign: d }]));
+    out = await curateWithClaude(rawNoRandom, sameDesign('RCT'));
+    ok(out.length === 1 && !('studyDesign' in out[0]), 'Z5: 原文没写随机 → RCT 标签被去掉，条目保留');
+    out = await curateWithClaude(rawNoRandom, sameDesign('系统综述'));
+    ok(out.length === 1 && out[0].studyDesign === '综述', 'Z5: 原文没写 systematic/meta → 系统综述 降为 综述');
+    out = await curateWithClaude(rawNoRandom, stub({ ...good, studyDesign: 'RCT' }, () => JSON.stringify([{ index: 0, studyDesign: 'RCT-ish' }])));
+    ok(out.length === 1 && !('studyDesign' in out[0]), 'Z5: 重写给出非法标签值不被采纳');
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 

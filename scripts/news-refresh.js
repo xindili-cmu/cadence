@@ -41,6 +41,7 @@ const { computeHotTopicsEmbed } = require('./hot-topics-embed');
 // 已知固定错译的确定性校正（如 hamstring 的 胕绳肌→腘绳肌）。在模型 JSON 落库前跑。
 const { fixItem } = require('./term-fixes');
 const { isIntel, INTEL_SCORE_CAP } = require('./lane');
+const { checkCuratedItem, hasViolation, describeViolations, CHECKED_FIELDS } = require('./source-check');
 
 const EXA_API_KEY = process.env.EXA_API_KEY;
 const LLM_PROVIDER = (process.env.LLM_PROVIDER || 'deepseek').toLowerCase();
@@ -1172,6 +1173,8 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   // 放最后：repairChineseSummaries 会把中文 summary 挪进 summaryZh 再重写英文版，
   // 先跑缺字段兜底会把那一步的中间态误判成缺失。
   curated = await repairMissingFields(curated, items, llm);
+  // 放在所有 LLM 改写之后：上面每一步 repair 都会重写文本，都可能引入原文没有的数字。
+  curated = await enforceSourceFidelity(curated, items, llm);
   return curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
 }
 
@@ -1305,6 +1308,76 @@ async function repairMissingFields(curated, items, llm = callLLM) {
       `      · ${MISSING_REQUIRED.filter(f => _blank(c[f])).join('/')} — ${(srcByIndex.get(c.index)?.title || '').slice(0, 60)}`));
   }
   return curated.filter(c => !MISSING_REQUIRED.some(f => _blank(c[f])));
+}
+
+// 原文一致性闸（2026-10-09，规则见 scripts/source-check.js）：prompt 只能「请」模型
+// 别编数字，这里用代码核对。违规条目带着违规清单重写一次（错误即观察——
+// 把具体哪个数字不在原文里告诉模型，而不是笼统地再提醒一遍）；仍违规则：
+//   - 数字：丢弃该条。编造的样本量 / 百分比上线后会被公众号、LinkedIn 原样转述，
+//     丢一条的代价远小于发一条假数字。重写调用失败也走这条（fail-closed）。
+//   - 研究设计：降级而不丢——系统综述 → 综述（原文没说 systematic/meta 的综述，
+//     按 prompt 自己的定义就是综述）；RCT → 去掉标签（不知道该是什么，就不声称）。
+// 离线审计（9 月前存档 1258 条，用 title+英文 summary 近似原文，故为上限）：
+// 数字约 3.8% 触发、设计 15 条触发；见 DECISIONS-pending.md 2026-10-09 条。
+const FIDELITY_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的事实核查编辑。下面每条策展文字里有原文不支持的内容，violations 逐条列出了问题。请只基于给出的 title 和 text 改写出问题的字段：
+- 原文里没有的数字一律删掉，或换成原文里确实出现的数字；不要从背景知识补数字（指南推荐量、患病率、你给它的评分等都不行）。
+- 不要在正文里提到评分 / 分数。
+- studyDesign 只能取原文支持的值："RCT"（原文写明随机）/ "系统综述"（原文写明 systematic review 或 meta-analysis）/ "观察研究" / "综述"（含 scoping / integrative / narrative review）/ "述评"。
+- 其余不出问题的意思、语气、语言保持不变：curatedReason/summaryZh/limitation 中文，curatedReasonEn/summary/limitationEn 英文。
+
+请只返回 JSON 数组（不要 markdown 代码块），只含需要改的字段：[{"index":0,"summaryZh":"…","curatedReason":"…","studyDesign":"…"}]`;
+
+const STUDY_DESIGNS = new Set(['RCT', '系统综述', '观察研究', '综述', '述评']);
+
+async function enforceSourceFidelity(curated, items, llm = callLLM) {
+  const srcByIndex = new Map((items || []).map(i => [i.index, i]));
+  const check = c => checkCuratedItem(c, srcByIndex.get(c.index) || {});
+  const bad = curated.filter(c => hasViolation(check(c)));
+  if (!bad.length) return curated;
+  console.log(`   🔎 ${bad.length} item(s) say things the source doesn't — rewriting once with the violations`);
+
+  const REWRITABLE = [...CHECKED_FIELDS, 'studyDesign'];
+  for (let off = 0; off < bad.length; off += 10) {
+    const batch = bad.slice(off, off + 10);
+    const user = `改写以下 ${batch.length} 条：\n\n` + JSON.stringify(batch.map((c, i) => {
+      const src = srcByIndex.get(c.index) || {};
+      const current = {};
+      for (const f of REWRITABLE) if (!_blank(c[f])) current[f] = c[f];
+      return { index: i, title: src.title || '', text: src.text || '', current, violations: describeViolations(check(c)) };
+    }), null, 2);
+    let fixes = [];
+    try { fixes = parseCuratedArray((await llm(FIDELITY_SYSTEM, user)) || ''); }
+    catch (e) { console.log(`   ⚠️  fidelity rewrite call failed (${e.message}) — flagged items fall through to the fallback`); }
+    for (const f of fixes) {
+      const c = batch[f.index];
+      if (!c) continue;
+      // 只收 REWRITABLE 里的字段。必填字段不许改成空（空字段没有数字，会被当成「通过」）；
+      // limitation 允许清空（schema 本就允许 ""，删掉一句编出来的局限是正当修法）。
+      // studyDesign 只收五个合法值。
+      for (const k of REWRITABLE) {
+        if (!(k in f)) continue;
+        if (k === 'studyDesign') { if (STUDY_DESIGNS.has(f[k])) c[k] = f[k]; continue; }
+        if (!_blank(f[k]) || k === 'limitation' || k === 'limitationEn') c[k] = f[k] || '';
+      }
+    }
+  }
+
+  const kept = [];
+  for (const c of curated) {
+    const v = check(c);
+    const title = (srcByIndex.get(c.index)?.title || '').slice(0, 60);
+    if (v.numbers.length) {
+      console.log(`   ⏭️  unsupported numbers dropped: ${v.numbers.map(x => `${x.field}:${x.n}`).join(' ')} — ${title}`);
+      continue;
+    }
+    if (v.design) {
+      const to = v.design === '系统综述' ? '综述' : null;
+      console.log(`   ⬇️  studyDesign ${v.design} → ${to || '(removed)'} (source never states it) — ${title}`);
+      if (to) c.studyDesign = to; else delete c.studyDesign;
+    }
+    kept.push(c);
+  }
+  return kept;
 }
 
 // 模板腔兜底（2026-07-08 对抗性审查 #8）：why-it-matters 的价值在判断，但模型
@@ -2189,4 +2262,4 @@ function isReasonIncomplete(c) {
   return !!zh && (!en || CJK_RE.test(en));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, enforceSourceFidelity, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
