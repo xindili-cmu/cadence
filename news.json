@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-10T18:42:32.128Z",
+    "lastUpdated": "2026-10-10T23:39:20.955Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -88,8 +88,8 @@
           "titleZh": "巴西非传染性疾病人群物理治疗利用率及其社会人口学和临床相关因素：一项横断面、基于人群的研究"
         }
       ],
-      "heat": 6.11,
-      "themeZh": "卒中后肢体功能与跌倒风险评估",
+      "heat": 5.69,
+      "themeZh": "卒中后肢体功能与跌倒风险的量化评估",
       "themeEn": "Post-stroke limb function and fall risk assessment"
     },
     {
@@ -97,15 +97,16 @@
       "title": "Effects of thoracic kinesiological taping on pulmonary functions, respiratory muscle strength, and functional independence in patients with hemiplegia: a randomized controlled clinical trial.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847866/",
       "category": "neurological",
-      "publishedAt": "2026-10-10T00:00:00.000Z",
-      "sourceCount": 6,
+      "publishedAt": "2026-10-09T11:09:29.000Z",
+      "sourceCount": 7,
       "sources": [
         "Topics in stroke rehabilitation",
         "Disability and rehabilitation",
         "Journal of rehabilitation medicine",
-        "Archives of physical medicine and rehabilitation",
-        "American journal of physical medicine & rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation"
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "British Journal of Sports Medicine",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "The Journal of manual & manipulative therapy"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -130,6 +131,58 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
+          "titleZh": "经皮电解治疗肌骨疾病的系统综述和荟萃分析"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Efficacy and evidence certainty of traditional Chinese exercises for musculoskeletal disorders: an umbrella review of meta-analyses",
+          "titleZh": "传统中国练习对肌肉骨骼疾病的疗效和证据确定性：一项荟萃分析的概述性综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "Dextrose prolotherapy for chronic symptomatic rotator cuff tendinopathy and subacromial bursitis: A systematic review and meta-analysis.",
+          "titleZh": "右旋糖增生疗法治疗慢性症状性肩袖肌腱病和肩峰下滑囊炎：一项系统综述和 Meta 分析。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Short term effectiveness of dry needling and instrument assisted soft tissue mobilization in knee osteoarthritis patients - a randomized controlled trial.",
+          "titleZh": "干针和器械辅助软组织松动对膝关节骨关节炎患者的短期疗效：一项随机对照试验"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Hydrodilatation for adhesive capsulitis: a systematic review exploring efficacy and optimal technique",
+          "titleZh": "粘连性关节囊炎的关节腔充盈扩张术：一项探讨疗效和最佳技术的系统综述"
+        }
+      ],
+      "heat": 4.13,
+      "themeZh": "肌骨疾病的物理治疗和替代疗法效果",
+      "themeEn": "Physical and alternative therapies for MSK disorders"
+    },
+    {
+      "id": "news-1790920324010-2",
+      "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42820841/",
+      "category": "neurological",
+      "publishedAt": "2026-10-10T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Topics in stroke rehabilitation",
+        "Archives of physical medicine and rehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "Journal of NeuroEngineering and Rehabilitation"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
           "title": "Mirror therapy versus functional electrical stimulation cycling in post-stroke lower limb rehabilitation: a randomized controlled trial.",
           "titleZh": "镜像疗法与功能性电刺激循环在卒中下肢康复中的比较：一项随机对照试验"
@@ -151,11 +204,17 @@
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial",
           "titleZh": "烧伤后肘管综合征高强度激光疗法与体外冲击波疗法对电生理和功能反应的比较：一项随机对照试验。"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "Paired cerebrospinal fluid metabolomic changes across repeated anodal transcranial direct current stimulation in Parkinson’s disease: an exploratory within-subject study",
+          "titleZh": "帕金森病重复阳极经颅直流电刺激后脑脊液代谢组学配对变化：一项探索性受试者内研究"
         }
       ],
-      "heat": 4.58,
-      "themeZh": "神经康复中多种物理治疗技术的效果评估",
-      "themeEn": "Efficacy of diverse neurorehabilitation physical therapies"
+      "heat": 3.55,
+      "themeZh": "神经康复中脑刺激与机器人疗法",
+      "themeEn": "Brain stimulation and robotics in neurorehabilitation"
     },
     {
       "id": "news-1790845500886-1",
@@ -163,13 +222,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42815174/",
       "category": "sports",
       "publishedAt": "2026-10-09T11:09:29.000Z",
-      "sourceCount": 7,
+      "sourceCount": 6,
       "sources": [
         "Clinical biomechanics (Bristol, Avon)",
         "The American journal of sports medicine",
         "Sports Medicine - Open",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
-        "Physiotherapy",
         "BMC musculoskeletal disorders",
         "British Journal of Sports Medicine"
       ],
@@ -208,12 +266,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "The enhanced rehabilitation programme for significant musculoskeletal injuries from the manchester arena bombing - A process evaluation study investigating patients' and physiotherapists' experiences.",
-          "titleZh": "曼彻斯特体育场爆炸重大肌肉骨骼损伤的增强康复计划——一项调查患者和物理治疗师体验的过程评估研究"
-        },
-        {
-          "source": "PubMed",
           "journal": "BMC musculoskeletal disorders",
           "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
           "titleZh": "“这是一个黑匣子”：物理治疗师对感觉运动控制及在此背景下利用技术改善前交叉韧带损伤后康复的看法"
@@ -225,37 +277,50 @@
           "titleZh": "使用人工智能进行运动损伤预测（IPredict-AI）（博士学院奖）"
         }
       ],
-      "heat": 4.44,
-      "themeZh": "肌肉骨骼损伤后运动复健的心理社会因素",
-      "themeEn": "Psychosocial factors in musculoskeletal injury return-to-sport"
+      "heat": 3.54,
+      "themeZh": "ACL重建后运动员回归运动的心理与生理评估",
+      "themeEn": "ACL return to sport: psychological and physical"
     },
     {
-      "id": "news-1791489612492-0",
-      "title": "Reframing hands-on musculoskeletal assessment as a measurement instrument rather than a technique debate: a theoretical framework applying COSMIN to HODA-A.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42845272/",
-      "category": "orthopedic",
+      "id": "news-1791005255723-0",
+      "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42826438/",
+      "category": "neurological",
       "publishedAt": "2026-10-09T11:09:29.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
-        "Physiotherapy theory and practice",
+        "Gait & posture",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "British Journal of Sports Medicine",
         "medRxiv",
         "Measurement in Physical Education and Exercise Science",
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "British Journal of Sports Medicine"
+        "Journal of Rehabilitation Medicine"
       ],
-      "tag": "spine",
+      "tag": "stroke",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Reframing hands-on musculoskeletal assessment as a measurement instrument rather than a technique debate: a theoretical framework applying COSMIN to HODA-A.",
-          "titleZh": "将肌肉骨骼手法评估重新定义为测量工具而非技术争议：应用 COSMIN 到 HODA-A 的理论框架。"
+          "journal": "Gait & posture",
+          "title": "An exploration of self-evaluation of induced temporal and spatial gait asymmetry in neurotypical young adults.",
+          "titleZh": "神经正常年轻成人对诱发的时间和空间步态不对称的自我评估探索。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Sex- and age-specific normative values for lower-limb field tests in elite TeamGym gymnasts.",
+          "titleZh": "精英 TeamGym 体操运动员下肢场地测试的性别和年龄特异性常模值"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Test-retest reliability of the SCAT6 tandem gait and cognitive components among professional hockey players",
+          "titleZh": "职业冰球运动员SCAT6双足并列步态和认知成分的重测信度"
         },
         {
           "source": "medRxiv",
-          "title": "Identifying Indicators of Advanced Levels of Clinical Competence in Musculoskeletal Physiotherapy: A Francophone Delphi Study",
-          "titleZh": "识别肌肉骨骼物理治疗高级临床能力的指标：一项法语德尔菲研究"
+          "title": "Do Classical Speed-Accuracy Trade-Off Models Generalize to Lower Limb Movements?",
+          "titleZh": "经典的速度-准确性权衡模型能否泛化到下肢运动？"
         },
         {
           "source": "Disabil Rehabil",
@@ -270,82 +335,65 @@
           "titleZh": "健康个体坐姿体前屈测试的绝对重测信度：一项系统性回顾与荟萃分析"
         },
         {
-          "source": "PubMed",
-          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-          "title": "Sex- and age-specific normative values for lower-limb field tests in elite TeamGym gymnasts.",
-          "titleZh": "精英 TeamGym 体操运动员下肢场地测试的性别和年龄特异性常模值"
+          "source": "J Rehabil Med",
+          "journal": "Journal of Rehabilitation Medicine",
+          "title": "Physiological determinants of endurance capacity in individuals with cerebral palsy: a narrative review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+          "titleZh": "脑瘫患者耐力能力的生理决定因素：一项叙述性综述"
         },
         {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Test-retest reliability of the SCAT6 tandem gait and cognitive components among professional hockey players",
-          "titleZh": "职业冰球运动员SCAT6双足并列步态和认知成分的重测信度"
+          "source": "medRxiv",
+          "title": "Immediate effects of suspension walker support on locomotor behavior of pre-walking infants with Down syndrome",
+          "titleZh": "悬吊式助行器支持对唐氏综合征学步前婴儿运动行为的即时效应"
         }
       ],
-      "heat": 3.17,
-      "themeZh": "肌肉骨骼物理治疗评估方法的信效度",
-      "themeEn": "Reliability and validity of musculoskeletal assessment"
-    },
-    {
-      "id": "news-1790699605861-0",
-      "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42806498/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-09T11:09:29.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "British Journal of Sports Medicine",
-        "PM & R : the journal of injury, function, and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "The Journal of manual & manipulative therapy"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Percutaneous Electrolysis for the Management of Musculoskeletal Disorders. A Systematic Review With Meta-Analysis.",
-          "titleZh": "经皮电解治疗肌骨疾病的系统综述和荟萃分析"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Efficacy and evidence certainty of traditional Chinese exercises for musculoskeletal disorders: an umbrella review of meta-analyses",
-          "titleZh": "传统中国练习对肌肉骨骼疾病的疗效和证据确定性：一项荟萃分析的概述性综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Dextrose prolotherapy for chronic symptomatic rotator cuff tendinopathy and subacromial bursitis: A systematic review and meta-analysis.",
-          "titleZh": "右旋糖增生疗法治疗慢性症状性肩袖肌腱病和肩峰下滑囊炎：一项系统综述和 Meta 分析。"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Optimal Dextrose Concentration for Prolotherapy in TendinopathyA Systematic Review and Network Meta-Analysis of Randomized Controlled Trials",
-          "titleZh": "肌腱病增生疗法最佳葡萄糖浓度：随机对照试验的系统综述和网络荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of manual & manipulative therapy",
-          "title": "Short term effectiveness of dry needling and instrument assisted soft tissue mobilization in knee osteoarthritis patients - a randomized controlled trial.",
-          "titleZh": "干针和器械辅助软组织松动对膝关节骨关节炎患者的短期疗效：一项随机对照试验"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Hydrodilatation for adhesive capsulitis: a systematic review exploring efficacy and optimal technique",
-          "titleZh": "粘连性关节囊炎的关节腔充盈扩张术：一项探讨疗效和最佳技术的系统综述"
-        }
-      ],
-      "heat": 3.17,
-      "themeZh": "肌肉骨骼疾患物理治疗的注射与手法疗法",
-      "themeEn": "Injection and manual therapies for musculoskeletal disorders"
+      "heat": 3.54,
+      "themeZh": "下肢功能与步态分析的测量学研究",
+      "themeEn": "Lower limb function and gait measurement"
     }
   ],
   "items": [
+    {
+      "id": "news-1791675559103-14",
+      "title": "Response from Authors to the Letter to the Editor: Interpreting Per-Protocol Efficacy Signals in a Pilot Trial of Inspiratory Muscle Training",
+      "summary": "This response clarifies methodological points regarding a pilot trial on inspiratory muscle training, particularly on the interpretation of per-protocol efficacy signals.",
+      "category": "cardiopulmonary",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00936-6/fulltext?rss=yes",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "firstSeen": "2026-10-10T23:39:19.103Z",
+      "curatedScore": 65,
+      "curatedReason": "别被这类作者回复带偏了。虽然作者重申 per-protocol 分析对小样本 IMT 试验有其价值，尤其是在评估干预的“真实”效果时，但这毕竟是一个试点研究的回应，我们不能从中得出任何关于 IMT 实际疗效的新结论。",
+      "titleZh": "作者对编辑信的回应：如何解读吸气肌训练试点试验中的per-protocol疗效信号",
+      "summaryZh": "这篇作者回复澄清了一项吸气肌训练（IMT）试点试验的方法学观点，特别是关于 per-protocol 疗效信号的解读。",
+      "curatedReasonEn": "Don't get sidetracked by author responses like this. While the authors re-affirm the value of per-protocol analysis for small-sample IMT trials, especially in assessing the 'true' intervention effect, this is merely a response to a pilot study. We cannot draw any new conclusions about the actual efficacy of IMT from this.",
+      "tags": [
+        "news"
+      ],
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1791537366679-22",
+      "title": "Do Classical Speed-Accuracy Trade-Off Models Generalize to Lower Limb Movements?",
+      "summary": "This preregistered study aims to investigate whether classical speed-accuracy trade-off models generalize to lower limb stepping movements, hypothesizing deviations from Fitts-type scaling under varying instructional emphasis and postural demands in 24 healthy young adults.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.07.26364578v1?rss=1",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T09:16:06.679Z",
+      "curatedScore": 65,
+      "curatedReason": "这项预注册研究关注 Fitts 定律在下肢运动中的泛化能力，其结果可能改变我们对平衡和步态训练中速度-准确性权衡的理解，进而优化训练方案。",
+      "titleZh": "经典的速度-准确性权衡模型能否泛化到下肢运动？",
+      "summaryZh": "这项预注册研究旨在探讨经典的速度-准确性权衡模型能否泛化到下肢踏步运动，假设在不同教学侧重和姿势需求下，24 名健康年轻人会出现与 Fitts 型缩放的偏差。",
+      "curatedReasonEn": "This preregistered study investigates the generalizability of Fitts' law to lower limb movements. Its findings could alter our understanding of speed-accuracy trade-offs in balance and gait training, optimizing intervention protocols.",
+      "limitation": "这是一项预注册研究，尚未发布最终结果，具体结论待定。",
+      "limitationEn": "This is a preregistered study, and the final results are not yet published, so specific conclusions remain to be seen.",
+      "tags": [
+        "research",
+        "gait",
+        "balance"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1790945411133-5",
       "title": "Rehabilitation of Athletes With Hamstring Strain Injury: SONAFE-Brazil Clinical Practice Guideline.",
@@ -2060,53 +2108,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1791102743493-2",
-      "title": "Design of an Early Exercise Program for Hospitalized Patients: \"Let's Move\".",
-      "summary": "The \"Let's Move\" program, an implementation-oriented early exercise program, was developed and piloted in a tertiary hospital to support mobility in hospitalized patients. Among 26 participants, 76.5% were adherent, no adverse events occurred, and 96.2% achieved individualized goals, demonstrating feasibility and safety.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42828516/",
-      "publishedAt": "2026-10-04T00:00:00.000Z",
-      "firstSeen": "2026-10-04T08:32:23.493Z",
-      "curatedScore": 70,
-      "curatedReason": "“Let's Move”项目展示了在住院患者中实施早期运动计划的可行性和安全性，对预防医院相关去适应症有积极作用。这为你设计和推广临床早动方案提供了实践依据和工作流程参考，但需要更大规模的研究来验证其有效性和可扩展性。",
-      "titleZh": "住院患者早期运动计划“Let's Move”的设计",
-      "summaryZh": "“Let's Move”是一个以实施为导向的早期运动计划，旨在支持住院患者的活动能力，并在一家三级医院进行开发和试点。在 26 名参与者中，76.5% 的人依从性良好，未发生不良事件，96.2% 的人达到了个性化目标，显示了其可行性和安全性。",
-      "curatedReasonEn": "The \"Let's Move\" program demonstrates the feasibility and safety of implementing an early exercise program in hospitalized patients, showing positive effects on preventing hospital-associated deconditioning. This provides practical evidence and workflow references for you to design and promote early mobilization protocols in clinical settings, though larger studies are needed to confirm its effectiveness and scalability.",
-      "limitation": "这是一项试点研究，样本量小（26 名参与者），且主要评估可行性和安全性，而非大规模临床疗效。",
-      "limitationEn": "This is a pilot study with a small sample size (26 participants), primarily assessing feasibility and safety rather than large-scale clinical efficacy.",
-      "tags": [
-        "research",
-        "early-mobility",
-        "hospital-rehabilitation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
-      "id": "news-1791537366679-18",
-      "title": "Optimal Dextrose Concentration for Prolotherapy in TendinopathyA Systematic Review and Network Meta-Analysis of Randomized Controlled Trials",
-      "summary": "This systematic review and network meta-analysis aims to compare the effectiveness of different dextrose concentrations in prolotherapy for reducing pain in patients with tendinopathy.",
-      "category": "orthopedic",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00950-0/fulltext?rss=yes",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-09T09:16:06.679Z",
-      "curatedScore": 70,
-      "curatedReason": "针对肌腱病疼痛，增生疗法中不同葡萄糖浓度的效果差异是我们需要明确的。尽管摘要未提供具体结果，但这项系统综述最终会为你揭示哪种浓度更有效，这是优化临床治疗方案的关键。",
-      "titleZh": "肌腱病增生疗法最佳葡萄糖浓度：随机对照试验的系统综述和网络荟萃分析",
-      "summaryZh": "这项系统综述和网络荟萃分析旨在比较不同葡萄糖浓度增生疗法在肌腱病患者中减轻疼痛的有效性。",
-      "curatedReasonEn": "For tendinopathy pain, understanding the efficacy differences of various dextrose concentrations in prolotherapy is crucial. Although the abstract doesn't provide specific results, this systematic review will ultimately clarify which concentrations are more effective, which is key to optimizing your clinical treatment protocols.",
-      "limitation": "摘要中未报告具体结果和效应量，无法评估其临床实践指导意义。",
-      "limitationEn": "Specific results and effect sizes are not reported in the abstract, preventing evaluation of its clinical practice implications.",
-      "tags": [
-        "research",
-        "tendinopathy"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
     }
   ]
 }
