@@ -1,0 +1,6 @@
+linkedin-poster-claims.js failed at 2026-10-11T00:19:50.171Z
+
+Expected double-quoted property name in JSON at position 348 (line 8 column 5)
+
+The carousel for 2026-10-11 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-10-11 && node scripts/linkedin-poster.js 2026-10-11

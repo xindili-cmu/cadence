@@ -1,0 +1,182 @@
+{
+ "date": "2026-10-11",
+ "generatedAt": "2026-10-11T00:18:46.224Z",
+ "windowHours": 50,
+ "windowStart": "2026-10-10T01:05:18.947Z",
+ "windowEnd": "2026-10-11T00:18:44.378Z",
+ "lead": {
+  "titleZh": "卒中急性后期攻击行为：观察研究揭示预警信号与康复规划价值",
+  "titleEn": "Post-stroke aggression: Observational study reveals warning signs and rehabilitation planning value",
+  "paragraphZh": "今日我们共关注了 6 项事件，涵盖 5 个专业方向。最值得临床 PT 花时间关注的是来自神经康复领域的一项观察研究，它以 75 分的 curatedScore 提示了卒中急性后期首次攻击行为作为康复规划信号的价值。此外，骨科与肌骨领域的成人脊柱侧弯支具治疗的综述，以及手法与理疗领域烧伤后肘管综合征的 RCT 都有 70 分，值得留意。",
+  "paragraphEn": "Today, we've covered 6 events across 5 specialties. The most impactful for clinicians is an observational study in neurorehabilitation, scoring 75, highlighting the value of first aggression as a planning signal in post-acute stroke rehabilitation. Additionally, a 70-score review on bracing for adult scoliosis in orthopedics and musculoskeletal, and an RCT on high-intensity laser vs. ESWT for post-burn cubital tunnel syndrome in manual therapy and physical agents, warrant attention."
+ },
+ "stats": {
+  "events": 6,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 4,
+  "topScore": 75
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1791677915899-16",
+     "title": "Bracing in adult scoliosis: a scoping review of clinical outcomes",
+     "summary": "A scoping review of 13 studies found that bracing in adults with scoliosis may be associated with improvements in pain and physical function and may contribute to curve stabilization, but the evidence is limited and heterogeneous.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10516-6",
+     "publishedAt": "2026-10-07T00:00:00.000Z",
+     "firstSeen": "2026-10-11T00:18:35.899Z",
+     "curatedScore": 70,
+     "curatedReason": "这项范围综述提示支具对成人脊柱侧弯的疼痛、身体功能和曲度稳定可能有益。在缺乏高质量证据的情况下，可将其作为辅助治疗手段，但切勿视为替代主动康复方案。",
+     "titleZh": "成人脊柱侧弯支具治疗的临床结局：范围综述",
+     "summaryZh": "一项涵盖13项研究的范围综述发现，成人脊柱侧弯支具治疗可能与疼痛和身体功能改善以及曲度稳定有关，但现有证据有限且异质。",
+     "curatedReasonEn": "This scoping review suggests that bracing may offer benefits for pain, physical function, and curve stabilization in adults with scoliosis. In the absence of high-quality evidence, consider it an adjunctive treatment, but not a replacement for active rehabilitation programs.",
+     "limitation": "纳入的13项研究样本量小、研究设计异质性高且方法学局限，主要为病例报告和观察性研究，限制了证据强度和结论的普遍性。",
+     "limitationEn": "The 13 included studies have small sample sizes, high heterogeneity in study designs, and methodological limitations, primarily being case reports and observational studies, which restrict the strength of evidence and generalizability of conclusions.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "综述",
+     "journal": "BMC Musculoskeletal Disorders"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1791636210005-3",
+     "title": "First aggression as a planning signal in post-acute stroke rehabilitation: Service benchmarks, goal setting, and a 60-day precaution window from a comprehensive observational cohort.",
+     "summary": "A retrospective observational cohort study (N=1683) found that the first electronic health record-documented aggression after stroke signals longer length of stay (+17.9 days) and lower functional independence measure (mFIM) efficiency/effectiveness, warranting a 60-day precaution window for rehabilitation planning.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42855834/",
+     "publishedAt": "2026-10-10T00:00:00.000Z",
+     "firstSeen": "2026-10-10T12:43:30.005Z",
+     "curatedScore": 75,
+     "curatedReason": "卒中后首次出现攻击性行为是重要的康复规划信号。患者住院时间平均延长 17.9 天，功能独立性评分（mFIM）效率和有效性更低，需要设定更现实的康复目标和出院时间。首次事件后 60 天内是重要的预警窗口。",
+     "titleZh": "首次攻击行为作为卒中急性后期康复的规划信号：来自一项综合观察队列的服务基准、目标设定和 60 天预警期。",
+     "summaryZh": "一项回顾性观察队列研究（N=1683）发现，卒中后首次电子健康记录记录的攻击行为是一个规划信号：其发生率（2.83/1000 患者日）提示 30 天和 60 天风险分别为 8.1% 和 15.6%，与非攻击性患者相比，住院时间平均延长 17.9 天，功能独立性评分（mFIM）效率和有效性更低，提示需要设定更现实的康复目标和出院时间。",
+     "curatedReasonEn": "The first aggressive behavior after stroke is a critical signal for rehabilitation planning. These patients face an average 17.9-day longer LOS and lower mFIM efficiency and effectiveness, necessitating realistic goal setting and discharge updates. A 60-day precaution window is justified after the first event.",
+     "limitation": "本研究为单中心回顾性观察队列研究，存在潜在偏倚，且数据来自日本的一个农村县，可能影响结果的普遍性。",
+     "limitationEn": "This was a single-center retrospective observational cohort study with potential for bias, and data from a rural prefecture in Japan may limit generalizability.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "PM & R : the journal of injury, function, and rehabilitation"
+    },
+    {
+     "id": "news-1791598182068-18",
+     "title": "Correction",
+     "summary": "A correction notice for a systematic review on vagus nerve stimulation in stroke rehabilitation corrects a data entry error in Table 3, adjusting a sample size from 184 to 192.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00903-2/fulltext?rss=yes",
+     "publishedAt": "2026-10-08T00:00:00.000Z",
+     "firstSeen": "2026-10-10T02:09:42.068Z",
+     "curatedScore": 65,
+     "curatedReason": "这项关于迷走神经刺激治疗中风康复的系统评价，仅修正了表格3中的一项样本量录入错误（184改为192），对结论无影响。",
+     "titleZh": "勘误",
+     "summaryZh": "针对一篇关于迷走神经刺激促进中风康复的系统评价，此勘误通知指出了其中表 3 的数据录入错误，将某亚组的样本量从 184 修正为 192。",
+     "curatedReasonEn": "This correction notice identifies a data entry error in Table 3 of a systematic review on vagus nerve stimulation for stroke rehabilitation, changing the sample size for a specific subgroup from n=184 to n=192.",
+     "tags": [
+      "news",
+      "neurological"
+     ],
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1791675559103-14",
+     "title": "Response from Authors to the Letter to the Editor: Interpreting Per-Protocol Efficacy Signals in a Pilot Trial of Inspiratory Muscle Training",
+     "summary": "This response clarifies methodological points regarding a pilot trial on inspiratory muscle training, particularly on the interpretation of per-protocol efficacy signals.",
+     "category": "cardiopulmonary",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00936-6/fulltext?rss=yes",
+     "publishedAt": "2026-10-06T00:00:00.000Z",
+     "firstSeen": "2026-10-10T23:39:19.103Z",
+     "curatedScore": 65,
+     "curatedReason": "别被这类作者回复带偏了。虽然作者重申 per-protocol 分析对小样本 IMT 试验有其价值，尤其是在评估干预的“真实”效果时，但这毕竟是一个试点研究的回应，我们不能从中得出任何关于 IMT 实际疗效的新结论。",
+     "titleZh": "作者对编辑信的回应：如何解读吸气肌训练试点试验中的per-protocol疗效信号",
+     "summaryZh": "这篇作者回复澄清了一项吸气肌训练（IMT）试点试验的方法学观点，特别是关于 per-protocol 疗效信号的解读。",
+     "curatedReasonEn": "Don't get sidetracked by author responses like this. While the authors re-affirm the value of per-protocol analysis for small-sample IMT trials, especially in assessing the 'true' intervention effect, this is merely a response to a pilot study. We cannot draw any new conclusions about the actual efficacy of IMT from this.",
+     "tags": [
+      "news"
+     ],
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1791636210005-20",
+     "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial",
+     "summary": "A randomized controlled trial aims to compare the additional effects of high-intensity laser therapy (HILT) and extracorporeal shock wave therapy (ESWT), when combined with ulnar nerve gliding exercises, on electrophysiological and functional outcomes in patients with post-burn cubital tunnel syndrome.",
+     "category": "manual-modality",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00948-2/fulltext?rss=yes",
+     "publishedAt": "2026-10-10T00:00:00.000Z",
+     "firstSeen": "2026-10-10T12:43:30.005Z",
+     "curatedScore": 70,
+     "curatedReason": "对于烧伤后肘管综合征，选择高强度激光疗法 (HILT) 还是体外冲击波疗法 (ESWT) 作为尺神经滑动练习的附加手段？本研究将直接告诉你哪种组合更能改善患者的电生理和功能结局。",
+     "titleZh": "烧伤后肘管综合征高强度激光疗法与体外冲击波疗法对电生理和功能反应的比较：一项随机对照试验。",
+     "summaryZh": "一项随机对照试验旨在比较高强度激光疗法（HILT）与体外冲击波疗法（ESWT）结合尺神经滑动练习，对烧伤后肘管综合征患者电生理和功能结局的附加效果。",
+     "curatedReasonEn": "For post-burn cubital tunnel syndrome, should you add high-intensity laser therapy (HILT) or extracorporeal shock wave therapy (ESWT) to ulnar nerve gliding exercises? This RCT will directly inform you which combination leads to better electrophysiological and functional outcomes.",
+     "limitation": "这项研究的摘要中没有提供关键的样本量、具体干预参数或主要结局指标，限制了对研究设计和潜在结果的初步评估。",
+     "limitationEn": "The abstract for this study does not provide key sample size, specific intervention parameters, or primary outcome measures, limiting initial assessment of the study design and potential results.",
+     "tags": [
+      "research",
+      "electro",
+      "laser"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1791677915900-23",
+     "title": "Will CMS publish additional guidance on Round 2028 Durable Medical Equipment, Prosthetics, Orthotics, and Supplies (DMEPOS) Competitive Bidding Program (CBP) licensure requirements? | DCBPS Durable Medical Equipment, Prosthetics, Orthotics and Supplies (DMEPOS) Competitive Bidding Program",
+     "summary": "CMS will publish additional guidance on Round 2028 Durable Medical Equipment, Prosthetics, Orthotics, and Supplies (DMEPOS) Competitive Bidding Program (CBP) licensure requirements, creating a centralized resource on the CBIC website before the bidder registration window opens.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://dmeposcompetitivebid.cms.gov/node/792",
+     "publishedAt": "2026-10-07T12:00:00.000Z",
+     "firstSeen": "2026-10-11T00:18:35.900Z",
+     "curatedScore": 70,
+     "curatedReason": "CMS 正在为 2028 年耐用医疗设备、假肢、矫形器和用品 (DMEPOS) 竞价采购计划制定集中化执照要求资源。如果你是相关供应商，这直接影响你的合规性，务必关注 CBIC 网站以获取最新指南。",
+     "titleZh": "CMS 将发布 2028 年 DMEPOS 竞价采购计划执照要求的额外指南",
+     "summaryZh": "CMS 将发布关于 2028 年耐用医疗设备、假肢、矫形器和用品 (DMEPOS) 竞价采购计划执照要求的额外指南，并在竞标者注册窗口开放前，在 CBIC 网站上建立一个集中化的资源。",
+     "curatedReasonEn": "CMS is developing a centralized licensure requirements resource for the 2028 Durable Medical Equipment, Prosthetics, Orthotics, and Supplies (DMEPOS) Competitive Bidding Program. If you are a relevant supplier, this directly impacts your compliance, so be sure to monitor the CBIC website for the latest guidance.",
+     "tags": [
+      "news",
+      "regulation",
+      "reimbursement"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
