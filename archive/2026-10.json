@@ -2873,6 +2873,61 @@
       ],
       "studyDesign": "系统综述",
       "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1791785805082-5",
+      "title": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study.",
+      "summary": "A longitudinal study of traumatic spinal cord injury patients indicated that lower and declining social integration were associated with increased all-cause and cause-specific mortality, though causality could not be established due to study limitations.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42860197/",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-11T06:03:52.340Z",
+      "curatedScore": 70,
+      "curatedReason": "脊髓损伤后，社交越孤立、越退步，死亡风险越高，但这只是相关性，别当因果关系去治。",
+      "titleZh": "创伤性脊髓损伤后随时间变化的社会融合与全因及特定原因死亡率：一项纵向 SCIMS 研究",
+      "titleEn": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study.",
+      "summaryZh": "一项针对创伤性脊髓损伤患者的纵向研究表明，社会融合度降低和下降与全因及特定原因死亡率增加相关，但研究局限性（如幸存者选择、遗漏死因和残余混杂）限制了因果关系的确定。",
+      "curatedReasonEn": "This longitudinal study suggests that lower and declining social integration are associated with increased mortality after traumatic spinal cord injury. However, it notes that these findings do not establish a causal link and are limited by survivor selection and residual confounding.",
+      "limitation": "The study cannot establish causality, and limitations include survivor selection, missing causes of death, and residual confounding.",
+      "limitationEn": "The study cannot establish causality, and limitations include survivor selection, missing causes of death, and residual confounding.",
+      "tags": [
+        "research",
+        "neurological",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00947-0/fulltext?rss=yes",
+          "title": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study"
+        }
+      ]
+    },
+    {
+      "id": "news-1791785805083-32",
+      "title": "Extracting meaningful features from time series analysis of plasma analytes in clinical research",
+      "summary": "This preprint investigates the use of time series analysis of plasma enzyme levels to assay sarcolemma fragility and skeletal muscle damage, proposing it offers greater diagnostic value than absolute biomarker concentrations.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365091v1?rss=1",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-12T06:16:45.083Z",
+      "curatedScore": 65,
+      "curatedReason": "这项预印本研究认为，通过分析血浆酶水平的时间序列，比测量绝对生物标志物浓度更能评估肌细胞膜脆性和骨骼肌损伤。",
+      "titleZh": "从血浆分析物时间序列分析中提取有意义的特征用于临床研究",
+      "titleEn": "Extracting meaningful features from time series analysis of plasma analytes in clinical research",
+      "summaryZh": "这篇预印本研究了使用血浆酶水平的时间序列分析来检测肌细胞膜的脆弱性和骨骼肌损伤，并提出这种方法可能比绝对生物标志物浓度具有更高的诊断价值。",
+      "curatedReasonEn": "This preprint explores using time series analysis of plasma analytes to assess sarcolemma fragility and skeletal muscle damage, suggesting this approach may provide more diagnostic value than absolute biomarker levels.",
+      "limitation": "This is a preprint and has not yet been peer-reviewed. The study focused on specific patient populations and did not observe an extended post-injury rising phase of enzyme levels.",
+      "limitationEn": "This is a preprint and has not yet been peer-reviewed. The study focused on specific patient populations and did not observe an extended post-injury rising phase of enzyme levels.",
+      "tags": [
+        "research",
+        "neurological"
+      ],
+      "studyDesign": "观察研究"
     }
   ]
 }
