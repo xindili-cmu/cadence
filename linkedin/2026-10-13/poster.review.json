@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-13T02:41:32.506Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effectiveness of conservative interventions on pain and disability in degenerative cervical spine disease: a systematic review and meta-analysis of randomized controlled trials",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10515-7"
+    },
+    {
+      "slide": 2,
+      "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/20/1551?rss=1"
+    },
+    {
+      "slide": 3,
+      "title": "Graft type is not associated with revision ACL reconstruction in football players: a nationwide cohort analysis of subsequent ACL reconstructions",
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/20/1561?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Transcutaneous Vagus Nerve Stimulation Improves Motor Function of Upper Extremity in Adults with Chronic Ischemic Stroke: A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42862139/"
+    },
+    {
+      "slide": 5,
+      "title": "How does pre-stroke physical activity influence physical activity one year after minor stroke, and what role does cognitive impairment play?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42860645/"
+    }
+  ]
+}

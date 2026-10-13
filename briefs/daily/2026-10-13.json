@@ -1,0 +1,534 @@
+{
+ "date": "2026-10-13",
+ "generatedAt": "2026-10-13T02:41:12.541Z",
+ "windowHours": 26,
+ "windowStart": "2026-10-12T00:42:40.525Z",
+ "windowEnd": "2026-10-13T02:41:10.699Z",
+ "lead": {
+  "titleZh": "数字疗法和保守干预在慢性髌股疼痛与退行性颈椎病中的效果",
+  "titleEn": "Digital Therapeutics and Conservative Interventions for Chronic Patellofemoral Pain and Degenerative Cervical Disease",
+  "paragraphZh": "今日共有 24 篇文章，覆盖 5 个专业领域。骨科与肌骨方向有两篇最高分（80分）文章，一篇RCT关注数字疗法对慢性髌股疼痛的干预效果，另一篇系统综述则侧重保守干预在退行性颈椎病中的应用。此外，神经康复领域也有一篇75分的RCT，提示经皮迷走神经刺激对慢性缺血性卒中上肢运动功能的改善作用。",
+  "paragraphEn": "Today's digest includes 24 articles across 5 specialties. Orthopedic and musculoskeletal topics feature two top-scoring (80 points) articles: an RCT on digital therapeutics for chronic patellofemoral pain and a systematic review on conservative interventions for degenerative cervical spine disease. Additionally, a 75-point RCT in neurorehabilitation suggests that transcutaneous vagus nerve stimulation improves upper extremity motor function in chronic ischemic stroke."
+ },
+ "stats": {
+  "events": 24,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 6,
+  "topScore": 80
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1791859262417-28",
+     "title": "Effectiveness of conservative interventions on pain and disability in degenerative cervical spine disease: a systematic review and meta-analysis of randomized controlled trials",
+     "summary": "A systematic review and meta-analysis of 18 RCTs (2,378 participants) found conservative interventions were associated with significant reductions in pain (SMD = -0.67; 95% CI, -0.97 to -0.37; I² = 87.20%) and disability (SMD = -0.60; 95% CI, -0.97 to -0.24; I² = 91.56%) in degenerative cervical spine disease, with acupuncture and exercise-based interventions showing benefit, but manual therapy showing no significant pooled benefit. The certainty of evidence was low.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10515-7",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-13T02:41:02.417Z",
+     "curatedScore": 80,
+     "curatedReason": "保守治疗对退行性颈椎病有帮助，可以缓解疼痛和改善功能，尤其是针灸和运动。但请注意，手法治疗没有显著的汇总效益，而且总体证据确定性很低。向患者解释时，要如实说明证据的局限性，别夸大疗效。",
+     "titleZh": "保守干预对退行性颈椎病疼痛和功能障碍的有效性：一项随机对照试验的系统综述和Meta分析",
+     "summaryZh": "一项纳入18项随机对照试验（2378名参与者）的系统综述和Meta分析发现，保守干预与退行性颈椎病患者的疼痛（SMD = -0.67; 95% CI, -0.97 to -0.37; I² = 87.20%）和功能障碍（SMD = -0.60; 95% CI, -0.97 to -0.24; I² = 91.56%）显著减轻相关。其中针灸和运动干预显示益处，但手法治疗的 pooled 益处不显著。证据确定性较低。",
+     "curatedReasonEn": "Conservative interventions help with degenerative cervical spine disease, alleviating pain and improving function, especially acupuncture and exercise. However, note that manual therapy showed no significant pooled benefit, and overall evidence certainty is low. When explaining to patients, be truthful about the evidence limitations and don't overstate efficacy.",
+     "limitation": "研究纳入的RCT数量有限，保守治疗干预措施异质性高，且证据确定性低（low certainty of evidence），限制了结论的强度和特异性。",
+     "limitationEn": "The limited number of included RCTs, high heterogeneity of conservative interventions, and low certainty of evidence limit the strength and specificity of the conclusions.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+     "id": "news-1791846292839-25",
+     "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
+     "summary": "A multicenter randomized controlled trial found that a smartphone-based multidisciplinary intervention combining personalized exercise and cognitive-behavioral therapy significantly improved pain, function, quality of life, and psychological well-being in patients with chronic patellofemoral pain. This digital therapeutic offers a scalable and cost-efficient delivery of care aligned with clinical guidelines.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1551?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 80,
+     "curatedReason": "这款数字疗法结合了运动和认知行为疗法，在缓解慢性髌股疼痛方面效果显著。这提示你，数字化、多学科的干预方案是解决患者依从性和心理社会因素的有效途径，值得在临床实践中关注并考虑采纳。",
+     "titleZh": "数字疗法结合运动和认知行为疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验",
+     "summaryZh": "一项多中心随机对照试验发现，结合个性化运动和认知行为疗法的智能手机数字多学科干预显著改善了慢性髌股疼痛患者的疼痛、功能、生活质量和心理健康。这种数字疗法提供了一种符合临床指南的可扩展且经济高效的护理模式。",
+     "curatedReasonEn": "This digital therapeutic, combining exercise and cognitive-behavioral therapy, significantly reduces chronic patellofemoral pain. This suggests that digitized, multidisciplinary interventions effectively address patient adherence and psychosocial factors, making it a valuable approach to monitor and potentially integrate into your clinical practice.",
+     "limitation": "研究未明确长期随访结果，且患者对数字平台的依从性数据未充分披露。",
+     "limitationEn": "The study did not explicitly state long-term follow-up results, and patient adherence data to the digital platform were not fully disclosed.",
+     "tags": [
+      "research",
+      "knee",
+      "telehealth"
+     ],
+     "studyDesign": "RCT",
+     "journal": "British Journal of Sports Medicine",
+     "tech": true
+    },
+    {
+     "id": "news-1791846292839-26",
+     "title": "Graft type is not associated with revision ACL reconstruction in football players: a nationwide cohort analysis of subsequent ACL reconstructions",
+     "summary": "A nationwide cohort analysis of more than 10 000 football players who underwent ACL reconstruction found that graft choice (hamstring, patellar tendon, or quadriceps tendon autograft) was not associated with the risk of revision ACL reconstruction among players who returned to competition, in either women or men.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1561?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 75,
+     "curatedReason": "这项全国性队列研究表明，在重返赛场的足球运动员中，ACL重建的移植物类型（腘绳肌腱、髌腱或股四头肌腱自体移植物）与再次ACL重建的风险无关。这意味着你在选择移植物时，可以更多地考虑患者特征和手术偏好，而不是过分担忧再损伤风险。",
+     "titleZh": "移植物类型与足球运动员的翻修性前交叉韧带重建无关：一项全国性队列分析",
+     "summaryZh": "一项对超过 10 000 名接受前交叉韧带（ACL）重建的足球运动员的全国性队列分析发现，对于重返赛场的运动员，移植物类型（腘绳肌腱、髌腱或股四头肌腱自体移植物）与再次ACL重建的风险无关，无论是男性还是女性。",
+     "curatedReasonEn": "This nationwide cohort study indicates that graft type (hamstring, patellar tendon, or quadriceps tendon autograft) is not associated with the risk of revision ACL reconstruction in football players who return to competition. This means you can prioritize patient characteristics and surgeon preference when selecting grafts, rather than overemphasizing reinjury risk.",
+     "limitation": "研究关注的是“再次ACL重建”而非“再次ACL损伤”，可能低估了实际的再损伤率。",
+     "limitationEn": "The study focused on \"revision ACL reconstruction\" rather than \"subsequent ACL injury,\" which might underestimate the actual reinjury rate.",
+     "tags": [
+      "research",
+      "knee",
+      "sports"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791846292839-24",
+     "title": "Maternal and fetal cardiovascular response to moderate-to-vigorous intensity exercise in singleton and twin pregnancies",
+     "summary": "This study investigated maternal and fetal cardiovascular responses to a submaximal graded cycling exercise test up to vigorous intensity in singleton and twin pregnancies. It found that the exercise was well tolerated by both mothers and fetuses, with few differences in responses between twin and singleton gestations.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1544?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究提供了高质量证据，表明中等到剧烈强度运动对单胎和双胎妊娠的母胎心血管反应相似且耐受良好。这为你向双胎妊娠患者提供运动建议提供了更坚实的依据。",
+     "titleZh": "单胎和双胎妊娠中中度至剧烈强度运动对母胎心血管反应的影响",
+     "summaryZh": "本研究调查了中度至剧烈强度分级自行车运动对单胎和双胎妊娠母胎心血管反应的影响。结果显示，母亲和胎儿对运动的耐受性良好，双胎和单胎妊娠的反应差异很小。",
+     "curatedReasonEn": "This study provides high-quality evidence that moderate-to-vigorous intensity exercise elicits similar and well-tolerated maternal and fetal cardiovascular responses in both singleton and twin pregnancies. This gives you a more robust basis for advising pregnant patients with twins on exercise.",
+     "limitation": "这是一项对急性运动反应的评估，未涉及长期运动干预的效果和安全性。",
+     "limitationEn": "This study assessed acute exercise responses and did not evaluate the long-term effects or safety of exercise interventions.",
+     "tags": [
+      "research",
+      "women-health",
+      "pregnancy"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791846292840-31",
+     "title": "Endometriosis and elite sports: a blind spot in research",
+     "summary": "This commentary highlights that endometriosis, a chronic inflammatory disease affecting over 10% of women of reproductive age, remains a significant blind spot in sports research. Its symptoms, including severe dysmenorrhea, chronic pelvic pain, and fatigue, can profoundly impact elite female athletes' daily functioning, training capacity, recovery, and performance.",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1593?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.840Z",
+     "curatedScore": 65,
+     "curatedReason": "子宫内膜异位症在运动研究中仍是一个“盲点”，其症状可能严重影响女性运动员的训练能力、恢复和表现。这提示你在评估和治疗女性运动员时，需警惕并关注此类慢性疾病的影响，并倡导更多相关研究。",
+     "titleZh": "子宫内膜异位症与精英运动：研究中的一个盲点",
+     "summaryZh": "这篇述评指出，子宫内膜异位症作为一种影响全球超过10%育龄女性的慢性炎症性疾病，在运动研究中仍是一个显著的盲点。其症状（包括严重痛经、慢性盆腔疼痛和疲劳）可能对精英女性运动员的日常功能、训练能力、恢复和表现产生深远影响。",
+     "curatedReasonEn": "Endometriosis remains a \"blind spot\" in sports research, yet its symptoms can severely impact female athletes' training capacity, recovery, and performance. This suggests you should be vigilant and attentive to the effects of such chronic conditions when evaluating and treating female athletes, and advocate for more related research.",
+     "limitation": "这是一篇述评，旨在强调研究空白，未提供具体的研究数据。",
+     "limitationEn": "This is a commentary highlighting a research gap, not providing specific research data.",
+     "tags": [
+      "research",
+      "pelvic-floor",
+      "women-health"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1791846292839-2",
+     "title": "Transcutaneous Vagus Nerve Stimulation Improves Motor Function of Upper Extremity in Adults with Chronic Ischemic Stroke: A Randomized Controlled Trial.",
+     "summary": "A randomized controlled trial found that transcutaneous auricular vagal nerve stimulation (taVNS) combined with upper limb exercises led to significant improvements in Fugl-Meyer Assessment for Upper Extremity (FMA-UE: MD = 3.95, 95% CI 0.21-7.69) and shoulder/elbow muscle strength in chronic ischemic stroke patients compared to sham taVNS.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42862139/",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 75,
+     "curatedReason": "经皮耳迷走神经刺激（taVNS）可能改善慢性缺血性卒中患者的上肢运动功能和肌肉力量。但在推广此技术前，应注意其FMA-UE评分的临床最小重要差异（MCID）边界效应。",
+     "titleZh": "经皮迷走神经刺激改善慢性缺血性卒中成人上肢运动功能：一项随机对照试验",
+     "summaryZh": "一项随机对照试验发现，与安慰剂组相比，经皮耳迷走神经刺激（taVNS）结合上肢运动能显著改善慢性缺血性卒中患者的上肢Fugl-Meyer评估（FMA-UE: MD = 3.95, 95% CI 0.21-7.69）和肩肘肌肉力量。",
+     "curatedReasonEn": "Transcutaneous auricular vagal nerve stimulation (taVNS) may improve upper-limb motor function and muscle strength in patients with chronic ischemic stroke. Before widely adopting this technique, be mindful of the marginal effect size compared to the minimal clinically important difference (MCID) for FMA-UE scores.",
+     "limitation": "FMA-UE的95%置信区间低于报告的临床最小重要差异，提示临床意义可能有限。",
+     "limitationEn": "The 95% CI for FMA-UE was below the reported minimal clinically important difference, suggesting potentially limited clinical relevance.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "NeuroRehabilitation"
+    },
+    {
+     "id": "news-1791819845276-1",
+     "title": "How does pre-stroke physical activity influence physical activity one year after minor stroke, and what role does cognitive impairment play?",
+     "summary": "A secondary analysis of 100 minor stroke patients found that low pre-stroke physical activity was associated with higher odds of low physical activity 12 months post-stroke (OR=5.81, 95% CI: 1.61-24.0, p=0.010), suggesting its utility in identifying at-risk patients.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42860645/",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-12T15:44:05.276Z",
+     "curatedScore": 75,
+     "curatedReason": "卒中前活动量低的患者，卒中后 12 个月内持续不活跃的风险高（OR=5.81）。您在评估轻度卒中患者时，应将卒中前活动水平作为预测指标，用于识别高风险患者并尽早规划个性化康复干预。",
+     "titleZh": "卒中前体力活动如何影响轻度卒中后一年体力活动，以及认知障碍扮演的角色？",
+     "summaryZh": "对 100 名轻度卒中患者的二次分析发现，卒中前体力活动量低与卒中后 12 个月体力活动量低相关性较高（OR=5.81, 95% CI: 1.61-24.0, p=0.010），这表明其有助于识别高风险患者。",
+     "curatedReasonEn": "Patients with low pre-stroke physical activity have higher odds (OR=5.81) of persistent inactivity 12 months post-stroke. When assessing patients with minor stroke, use pre-stroke activity levels as a predictor to identify high-risk individuals and initiate personalized rehabilitation early.",
+     "limitation": "本研究为回顾性队列分析，样本量较小（n=100），且认知障碍的调节作用尚无定论。",
+     "limitationEn": "This is a retrospective cohort analysis with a small sample size (n=100), and the modifying role of cognitive impairment remains inconclusive.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Topics in stroke rehabilitation"
+    },
+    {
+     "id": "news-1791846292839-3",
+     "title": "Bothersome and activity-limiting pain in community-dwelling older adults with versus without stroke: a cross-sectional analysis of the National Health and Aging Trends study (2011-2024).",
+     "summary": "A cross-sectional analysis of 12,797 older adults (2011-2024 NHATS data) found that those with a history of stroke had a higher prevalence of bothersome pain (60.77% vs. 54.66%) and activity-limiting pain (62.83% vs. 52.00%). Stroke was independently associated with both outcomes (OR 1.30, 95% CI 1.02-1.66 for bothersome pain; OR 1.20, 95% CI 1.04-1.38 for activity-limiting pain) after adjustment.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42861672/",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 70,
+     "curatedReason": "有卒中史的老年社区居民报告困扰性疼痛和活动受限性疼痛的比例显著高于无卒中史者，且这种关联独立于其他因素。这提醒你对卒中患者的疼痛评估和管理应作为康复的重要组成部分。",
+     "titleZh": "伴或不伴卒中史的社区居住老年人中困扰性与活动受限性疼痛：对国家健康与老龄化趋势研究（2011-2024）的横断面分析",
+     "summaryZh": "一项对12,797名老年人（2011-2024年NHATS数据）的横断面分析显示，有卒中史者报告困扰性疼痛（60.77% vs 54.66%）和活动受限性疼痛（62.83% vs 52.00%）的患病率更高。在调整其他因素后，卒中与这两种疼痛结局独立相关（困扰性疼痛OR 1.30, 95% CI 1.02-1.66；活动受限性疼痛OR 1.20, 95% CI 1.04-1.38）。",
+     "curatedReasonEn": "Community-dwelling older adults with a history of stroke report significantly higher rates of bothersome and activity-limiting pain, independent of other factors. This highlights the importance of comprehensive pain assessment and management as a crucial component of stroke rehabilitation.",
+     "limitation": "这是一项横断面研究，无法确立卒中与疼痛之间的因果关系。",
+     "limitationEn": "This is a cross-sectional study, which cannot establish a causal relationship between stroke and pain.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice"
+    },
+    {
+     "id": "news-1791846292838-1",
+     "title": "Pilot and feasibility studies in stroke rehabilitation: reporting quality, progression to trials, and barriers: a scoping review.",
+     "summary": "A scoping review of 28 pilot and feasibility studies in stroke rehabilitation found that reporting quality averaged 6.1 out of 11 points, and only 12% (3 out of 26) progressed to a definitive randomized controlled trial. Lack of funding was the primary barrier for not proceeding to an RCT.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42862734/",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-12T23:04:52.838Z",
+     "curatedScore": 65,
+     "curatedReason": "卒中康复领域先导性和可行性研究的报告质量普遍不足，且仅有少数研究能最终进展为随机对照试验。这提示你在评估新干预措施时，对早期研究的结论应保持高度审慎。",
+     "titleZh": "卒中康复领域的先导性和可行性研究：报告质量、进展到试验情况及障碍：一项范围综述",
+     "summaryZh": "一项对28项卒中康复先导性和可行性研究的范围综述发现，这些研究的报告质量平均为11分中的6.1分，且仅有12%（26项中的3项）最终进展为随机对照试验。缺乏资金是未能进一步开展RCT的主要原因。",
+     "curatedReasonEn": "Reporting quality of pilot and feasibility studies in stroke rehabilitation is generally suboptimal, with only a small fraction progressing to definitive RCTs. This indicates you should maintain high caution when evaluating conclusions from early-stage studies on new interventions.",
+     "limitation": "这是一项范围综述，评估的是研究报告质量而非干预效果。",
+     "limitationEn": "This is a scoping review, evaluating reporting quality rather than intervention effectiveness.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述",
+     "journal": "Topics in stroke rehabilitation"
+    },
+    {
+     "id": "news-1791785805083-32",
+     "title": "Extracting meaningful features from time series analysis of plasma analytes in clinical research",
+     "summary": "This preprint investigates the use of time series analysis of plasma enzyme levels to assay sarcolemma fragility and skeletal muscle damage, proposing it offers greater diagnostic value than absolute biomarker concentrations.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.08.26365091v1?rss=1",
+     "publishedAt": "2026-10-11T00:00:00.000Z",
+     "firstSeen": "2026-10-12T06:16:45.083Z",
+     "curatedScore": 65,
+     "curatedReason": "这项预印本研究认为，通过分析血浆酶水平的时间序列，比测量绝对生物标志物浓度更能评估肌细胞膜脆性和骨骼肌损伤。",
+     "titleZh": "从血浆分析物时间序列分析中提取有意义的特征用于临床研究",
+     "titleEn": "Extracting meaningful features from time series analysis of plasma analytes in clinical research",
+     "summaryZh": "这篇预印本研究了使用血浆酶水平的时间序列分析来检测肌细胞膜的脆弱性和骨骼肌损伤，并提出这种方法可能比绝对生物标志物浓度具有更高的诊断价值。",
+     "curatedReasonEn": "This preprint explores using time series analysis of plasma analytes to assess sarcolemma fragility and skeletal muscle damage, suggesting this approach may provide more diagnostic value than absolute biomarker levels.",
+     "limitation": "This is a preprint and has not yet been peer-reviewed. The study focused on specific patient populations and did not observe an extended post-injury rising phase of enzyme levels.",
+     "limitationEn": "This is a preprint and has not yet been peer-reviewed. The study focused on specific patient populations and did not observe an extended post-injury rising phase of enzyme levels.",
+     "tags": [
+      "research",
+      "neurological"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1791846292839-27",
+     "title": "Return to sport after primary anterior cruciate ligament reconstruction in athletes with a preinjury Tegner Activity Scale >=7: a longitudinal, nationwide, registry-based cohort study",
+     "summary": "A longitudinal, nationwide, registry-based cohort study of 511 female and male athletes with a pre-injury Tegner Activity Scale ≥7 found that 62% achieved return to sport (Tegner Activity Scale ≥7) within 24 months after primary ACL reconstruction, with an average duration of 12.3 months. However, only 51% returned to their pre-injury level.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1570?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对高水平运动员的全国性研究提供了ACL重建术后重返运动（RTS）的详细随访数据。尽管大多数运动员能在24个月内重返原高水平运动，但仍有近半数未能完全恢复到受伤前状态。这提示你管理患者期望并进行更精细的RTS评估至关重要。",
+     "titleZh": "Tegner活动量表评分≥7的运动员初次前交叉韧带重建术后重返运动：一项基于全国注册的纵向队列研究",
+     "summaryZh": "一项针对511名术前Tegner活动量表评分≥7的男性和女性运动员进行的全国性、基于注册的纵向队列研究发现，62%的运动员在初次ACL重建术后24个月内重返运动（Tegner活动量表≥7），平均持续时间为12.3个月。然而，只有51%的参与者完全恢复到受伤前水平。",
+     "curatedReasonEn": "This nationwide study on high-level athletes provides detailed follow-up data on return to sport (RTS) after ACL reconstruction. While most athletes returned to their pre-injury level within 24 months, nearly half did not fully recover. This underscores the importance of managing patient expectations and conducting more refined RTS assessments.",
+     "limitation": "研究依赖于患者自报的Tegner活动量表评分，可能存在回忆偏差和主观性。",
+     "limitationEn": "The study relied on patient-reported Tegner Activity Scale scores, which may introduce recall bias and subjectivity.",
+     "tags": [
+      "research",
+      "knee",
+      "sports"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791846292839-28",
+     "title": "Examining the pregnancy and postpartum experiences of Para athletes in elite sport: a qualitative description study",
+     "summary": "A qualitative descriptive study explored the pregnancy and postpartum experiences of elite Para athletes, revealing pervasive disability-specific knowledge gaps among coaches, healthcare providers, and sport organizations. Para athletes navigated equipment adaptations, health monitoring, and training modifications with insufficient support due to a lack of disability-informed expertise.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1581?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.839Z",
+     "curatedScore": 70,
+     "curatedReason": "这项定性研究揭示了残疾运动员在妊娠和产后阶段面临的独特挑战，包括教练和医疗服务提供者的知识空白以及政策支持的不足。这提示你，为残疾运动员提供支持需要更专业、更个体化的指导和资源。",
+     "titleZh": "精英运动中残疾运动员的妊娠和产后经历：一项定性描述研究",
+     "summaryZh": "一项定性描述研究探讨了精英残疾运动员的妊娠和产后经历，揭示了教练、医疗服务提供者和体育组织中普遍存在的残疾特异性知识空白。残疾运动员在缺乏残疾知情专业知识的情况下，在器械调整、健康监测和训练修改方面获得了不足的支持。",
+     "curatedReasonEn": "This qualitative study highlights the unique challenges faced by Para athletes during pregnancy and postpartum, including knowledge gaps among coaches and healthcare providers, and inadequate policy support. This suggests that supporting Para athletes requires more specialized and individualized guidance and resources.",
+     "limitation": "定性研究结果的普遍性可能受限，且样本量较小。",
+     "limitationEn": "The generalizability of qualitative study findings may be limited, and the sample size was small.",
+     "tags": [
+      "research",
+      "women-health",
+      "pregnancy",
+      "disability"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791859262416-19",
+     "title": "Clarifying 'youth: why conceptual and ethical clarity matters in sport",
+     "summary": "This editorial discusses conceptual and ethical issues arising from the variable operational labels used to define 'youth' athletes across research, policy, and practice domains in sport.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1531?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-13T02:41:02.416Z",
+     "curatedScore": 65,
+     "curatedReason": "这篇评论文章指出，体育运动中“青年”的定义不明确，这会带来概念和伦理问题。这提醒您在解读针对青少年运动员的研究和指南时，需注意术语的一致性，以确保临床实践的准确性。",
+     "titleZh": "澄清“青年”：为什么概念和伦理清晰度在体育运动中至关重要",
+     "summaryZh": "这篇社论讨论了在体育运动中，研究、政策和实践领域对“青年”运动员的定义术语不一致所产生的概念和伦理问题。",
+     "curatedReasonEn": "This commentary highlights the conceptual and ethical issues arising from the inconsistent definition of 'youth' in sport. This reminds you to pay attention to terminology consistency when interpreting research and guidelines on youth athletes to ensure accuracy in clinical practice.",
+     "tags": [
+      "述评",
+      "education"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791859262416-20",
+     "title": "Championing choice: the Womens Tennis Association Fertility Protection Programme for professional women tennis players",
+     "summary": "This commentary highlights the distinct barriers women face in high-performance sport regarding fertility, emphasizing the Women's Tennis Association Fertility Protection Programme as a crucial consideration for professional female tennis players.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1533?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-13T02:41:02.416Z",
+     "curatedScore": 65,
+     "curatedReason": "这篇评论文章强调了职业女网球运动员在生育后面临的独特障碍，以及WTA生育保护计划的重要性。这提示您在服务女性运动员时，应更全面地考虑其生育健康和职业发展之间的平衡，并熟悉相关支持政策。",
+     "titleZh": "倡导选择：女子网球协会职业女网球运动员生育保护计划",
+     "summaryZh": "这篇评论强调了女性在竞技体育中面临的独特生育障碍，并强调了女子网球协会生育保护计划对于职业女网球运动员的重要性。",
+     "curatedReasonEn": "This commentary emphasizes the unique barriers professional female tennis players face regarding fertility and the importance of the WTA Fertility Protection Programme. This suggests that when treating female athletes, you should comprehensively consider the balance between their reproductive health and career development, and be familiar with relevant support policies.",
+     "tags": [
+      "述评",
+      "women-health"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791859262417-21",
+     "title": "Time to act: why menopause should be a priority in sports and exercise medicine",
+     "summary": "This commentary advocates for prioritizing menopause in sports and exercise medicine, highlighting its definition, symptoms, and potential impact on physical performance and health in women.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1537?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-13T02:41:02.417Z",
+     "curatedScore": 65,
+     "curatedReason": "如果你还在用“大妈”或“更年期综合征”来笼统概括中年女性的运动表现下降，那就太落伍了。这篇评论文章强调，是时候把更年期对女性运动和健康的具体影响提上运动医学的议事日程，我们需要更精细地调整干预策略。",
+     "titleZh": "是时候行动了：为什么更年期应成为运动医学界的优先事项",
+     "summaryZh": "这篇评论文章呼吁运动医学界优先关注更年期，强调其定义、症状以及对女性身体表现和健康的潜在影响。",
+     "curatedReasonEn": "If you're still broadly attributing decreased athletic performance in middle-aged women to 'aging' or 'menopause syndrome,' you're behind the times. This commentary emphasizes that it's time to prioritize the specific impact of menopause on women's athletic performance and health in sports medicine. We need to refine our intervention strategies accordingly.",
+     "tags": [
+      "述评",
+      "women-health"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1791859262417-22",
+     "title": "'Written in English: has English as the lingua franca of mental health research in sport and parasport become a barrier to creating culturally and contextually situated mental health care?",
+     "summary": "This commentary argues that English as the lingua franca of mental health research in sport and parasport may act as a barrier to culturally and contextually situated mental healthcare, advocating for greater linguistic inclusivity.",
+     "category": "sports",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1539?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-13T02:41:02.417Z",
+     "curatedScore": 65,
+     "curatedReason": "这篇评论文章指出，英语作为运动与残疾人运动心理健康研究的通用语言，可能阻碍了文化和情境化护理的发展。这提示您在获取和应用研究证据时，要警惕语言霸权可能造成的文化偏见和信息不平衡，探索多元语言资源，以更好地服务不同文化背景的患者。",
+     "titleZh": "“用英文写就”：英文作为运动与残疾人运动心理健康研究的通用语言是否已成为创建文化和情境化心理健康护理的障碍？",
+     "summaryZh": "这篇评论文章认为，英语作为运动和残疾人运动心理健康研究的通用语言，可能阻碍了文化和情境化心理健康护理的发展，并呼吁提高语言包容性。",
+     "curatedReasonEn": "This commentary suggests that English as the lingua franca in sport and parasport mental health research may hinder the development of culturally and contextually situated care. This reminds you to be aware of potential cultural biases and information imbalances caused by linguistic dominance when accessing and applying research evidence, and to explore multilingual resources to better serve patients from diverse cultural backgrounds.",
+     "tags": [
+      "述评",
+      "education"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1791859262417-32",
+     "title": "Rhythm-centred music interventions for motor coordination and rehabilitation: a scoping review of mechanisms, design principles, and technology-assisted assessment\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+     "summary": "A scoping review of 63 studies identified rhythm-centered music interventions for motor coordination and rehabilitation, summarizing their mechanisms, design principles, and technology-assisted assessment approaches (e.g., sensors, motion capture). Coordination-related tasks were common targets, with rhythm being the most frequently used musical element.",
+     "category": "pediatric",
+     "source": "J Rehabil Med",
+     "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46015",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-13T02:41:02.417Z",
+     "curatedScore": 70,
+     "curatedReason": "这项范围审查总结了以节奏为中心的音乐干预在运动协调和康复中的机制、设计原则和技术辅助评估方法。这提示您在设计和实施音乐疗法时，应关注节奏元素，并可结合传感器等技术辅助评估，以提升干预的精准性和有效性。",
+     "titleZh": "以节奏为中心的音乐干预在运动协调和康复中的应用：机制、设计原则和技术辅助评估的范围审查",
+     "summaryZh": "一项对63项研究的范围审查发现，以节奏为中心的音乐干预可用于运动协调和康复，并总结了其机制、设计原则和技术辅助评估方法（例如传感器、动作捕捉）。协调相关任务是常见目标，节奏是最常用的音乐元素。",
+     "curatedReasonEn": "This scoping review summarizes mechanisms, design principles, and technology-assisted assessment approaches for rhythm-centered music interventions in motor coordination and rehabilitation. This suggests that when designing and implementing music therapy, you should focus on rhythmic elements and consider incorporating technology-assisted assessments, such as sensors, to enhance the precision and effectiveness of interventions.",
+     "limitation": "本研究为范围审查，仅提供描述性证据模式，而非治疗效果的明确估计，且研究异质性高，限制了具体临床建议的得出。",
+     "limitationEn": "This is a scoping review, providing only descriptive evidence patterns rather than definitive estimates of therapeutic efficacy, and high study heterogeneity limits the derivation of specific clinical recommendations.",
+     "tags": [
+      "research",
+      "technology"
+     ],
+     "studyDesign": "综述",
+     "journal": "Journal of Rehabilitation Medicine",
+     "tech": true
+    },
+    {
+     "id": "news-1791846292840-29",
+     "title": "Georges Gymnastics Program: scaling an inclusive, school-based gymnastics service for children with intellectual disability through an Olympic training centre partnership",
+     "summary": "In Australia, approximately 1 in 20 children under 15 live with intellectual disability, facing higher risks of lifestyle-related health problems and barriers to sport participation.",
+     "category": "pediatric",
+     "source": "BJSM",
+     "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1588?rss=1",
+     "publishedAt": "2026-10-12T21:08:58.000Z",
+     "firstSeen": "2026-10-12T23:04:52.840Z",
+     "curatedScore": 65,
+     "curatedReason": "Georges体操项目与奥运训练中心的合作，为智力障碍儿童提供了包容性的学校体操服务，展示了将专业运动资源应用于特殊儿童康复的有效模式。这提示你可以探索类似的跨界合作，以扩大康复服务的可及性和质量。",
+     "titleZh": "Georges体操项目：通过与奥运训练中心合作，扩大为智力障碍儿童提供的包容性校本体操服务",
+     "summaryZh": "Georges体操项目通过与奥运训练中心合作，成功地为智力障碍儿童提供了包容性的校本体操服务，旨在改善其身体活动和独立性。",
+     "curatedReasonEn": "The Georges Gymnastics Program's partnership with an Olympic training center offers inclusive school-based gymnastics for children with intellectual disabilities, showcasing an effective model for applying elite sports resources to special needs rehabilitation. This suggests you could explore similar cross-sector collaborations to expand the accessibility and quality of rehabilitation services.",
+     "limitation": "这是一项描述项目开展的文章，而非对项目效果进行严格评估的研究。",
+     "limitationEn": "This article describes a program implementation, not a rigorous evaluation of its effects.",
+     "tags": [
+      "news",
+      "pediatric",
+      "disability"
+     ],
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1791819845277-21",
+     "title": "Technical and clinical feasibility of a pulmonary telerehabilitation model for people with COPD",
+     "summary": "This study aims to evaluate the technical and clinical feasibility of a pulmonary telerehabilitation model for COPD patients, including data transmission from connected devices and a home-based PR program, and explore clinical outcomes.",
+     "category": "cardiopulmonary",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00945-7/fulltext?rss=yes",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-12T15:44:05.277Z",
+     "curatedScore": 70,
+     "curatedReason": "这项观察性研究提示，将互联设备数据传输与居家肺康复（PR）相结合的远程康复模式，在 COPD 患者中具有技术和临床可行性。远程医疗是大势所趋，这一模式可能为患者提供更便捷的康复途径。",
+     "titleZh": "COPD 患者肺部远程康复模型的技术和临床可行性。",
+     "summaryZh": "本研究旨在评估 COPD 患者肺部远程康复模型的技术和临床可行性，包括连接设备的数据传输和居家肺部康复计划，并探索临床结局。",
+     "curatedReasonEn": "This observational study suggests that a pulmonary telerehabilitation model, combining connected device data transmission with home-based PR, is technically and clinically feasible for COPD patients. As telehealth expands, this model could offer a more accessible rehabilitation pathway for your patients.",
+     "limitation": "本研究主要关注技术和临床可行性，对具体临床结局的评估为探索性。",
+     "limitationEn": "This study primarily focuses on technical and clinical feasibility, with an exploratory assessment of specific clinical outcomes.",
+     "tags": [
+      "research",
+      "telehealth",
+      "copd"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation",
+     "tech": true
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "Implementation gap: a 3-year reality check in body composition monitoring in sport",
+   "titleZh": "实施差距：运动中身体成分监测的3年现实检验",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1541?rss=1",
+   "publishedAt": "2026-10-12T21:08:58.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "'Avoid vigorous exercise until further notice: recovery after cholesteatoma surgery",
+   "titleZh": "“在进一步通知前避免剧烈运动”：胆脂瘤手术后的恢复",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1591?rss=1",
+   "publishedAt": "2026-10-12T21:08:58.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Influence of shoulder strength on throwing velocity in handball (PhD Academy Award)",
+   "titleZh": "肩部力量对手球投掷速度的影响（博士学术奖）",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1595?rss=1",
+   "publishedAt": "2026-10-12T21:08:58.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Sex differences in performance fatigability: evidence from a maximal intermittent protocol using a flywheel device (PhD Academy Award)",
+   "titleZh": "表现疲劳的性别差异：来自使用飞轮设备的最大间歇协议的证据（博士学术奖）",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1597?rss=1",
+   "publishedAt": "2026-10-12T21:08:58.000Z",
+   "journal": "British Journal of Sports Medicine"
+  },
+  {
+   "title": "Development of an upper and lower limb athlete pain assessment framework (PhD Academy Award)",
+   "titleZh": "上下肢运动员疼痛评估框架的开发（博士学术奖）",
+   "source": "BJSM",
+   "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1600?rss=1",
+   "publishedAt": "2026-10-12T21:08:58.000Z",
+   "journal": "British Journal of Sports Medicine"
+  }
+ ]
+}

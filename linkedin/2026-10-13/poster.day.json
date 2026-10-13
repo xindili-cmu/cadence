@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-13",
+  "lead": {
+    "categoryId": "orthopedic",
+    "claim": "For degenerative cervical spine disease, consider acupuncture and exercise over manual therapy.",
+    "context": "Why this matters: A systematic review and meta-analysis of randomized controlled trials investigated various conservative interventions for pain and disability in degenerative cervical spine disease.",
+    "journal": "BMC Musculoskeletal Disorders",
+    "signal": 80,
+    "url": "https://link.springer.com/article/10.1186/s12891-026-10515-7"
+  },
+  "supporting": [
+    {
+      "categoryId": "orthopedic",
+      "claim": "A digital tool combining exercise and CBT may reduce chronic patellofemoral pain.",
+      "context": "Why this matters: A multicenter randomized controlled trial examined a smartphone-based intervention for chronic patellofemoral pain.",
+      "journal": "British Journal of Sports Medicine",
+      "tech": true,
+      "signal": 80,
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/20/1551?rss=1"
+    },
+    {
+      "categoryId": "orthopedic",
+      "claim": "Graft type does not affect revision ACL reconstruction risk in football players.",
+      "context": "Why this matters: A nationwide cohort analysis investigated if different graft types were associated with revision ACL reconstruction in football players.",
+      "journal": "British Journal of Sports Medicine",
+      "signal": 75,
+      "url": "http://bjsm.bmj.com/cgi/content/short/60/20/1561?rss=1"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "TA VNS with exercise may improve upper limb function in chronic ischemic stroke patients.",
+      "context": "Why this matters: A randomized controlled trial evaluated transcutaneous auricular vagal nerve stimulation combined with upper limb exercises in chronic ischemic stroke.",
+      "journal": "NeuroRehabilitation",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42862139/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Low pre-stroke physical activity may predict persistent inactivity after minor stroke.",
+      "context": "Why this matters: A secondary analysis explored the link between pre-stroke physical activity and activity levels one year after minor stroke.",
+      "journal": "Topics in stroke rehabilitation",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42860645/"
+    }
+  ]
+}
