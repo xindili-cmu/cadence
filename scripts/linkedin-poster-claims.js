@@ -113,7 +113,7 @@ function resolveJournal(it) {
 
 const SYSTEM = `You write the copy for a daily LinkedIn poster that summarises physical-therapy / rehabilitation research for practising clinicians.
 For each paper you get its raw title, summary and curator note. Write:
-- "claim": ONE sentence (max 90 characters) a clinician can act on or would stop scrolling for. Plain language, lead with the clinical point, not the jargon. It must NOT restate the title. It may be a question if the paper asks one and does not answer it.
+- "claim": ONE sentence (paper 1: AT MOST 80 characters; papers 2-5: AT MOST 90 characters; spaces count, hard limit, count them, shorter is better) a clinician can act on or would stop scrolling for. Plain language, lead with the clinical point, not the jargon. It must NOT restate the title. It may be a question if the paper asks one and does not answer it.
 - "context": ONE sentence (max 200 characters), italic "why this matters": what the study actually looked at.
 HARD RULES:
 1. Use ONLY facts stated in the provided text. Never add numbers, sample sizes, effect sizes, percentages, durations or study designs that are not written there. When unsure, leave the detail out.
@@ -195,16 +195,20 @@ async function main() {
 
     const { callLLM, LLM_PROVIDER } = require('./news-refresh.js');
     let feedback = '', copies = null, day = null, errs = [];
-    for (let attempt = 1; attempt <= 2; attempt++) {
+    const MAX_ATTEMPTS = 4;
+    const locked = items.map(() => null);
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
       const raw = await callLLM(SYSTEM, userPrompt(items, feedback), { json: true });
       if (!raw) throw new Error(`LLM (${LLM_PROVIDER}) returned nothing`);
       const got = parseJson(raw);
-      copies = items.map((_, k) => got.find((p) => p.i === k + 1) || got[k] || {});
+      const fresh = items.map((_, k) => got.find((p) => p.i === k + 1) || got[k] || {});
+      copies = items.map((_, k) => locked[k] || fresh[k]);
       day = buildDay(ed.date, items, copies);
       errs = allErrors(day, items, copies, TAX);
+      items.forEach((_, k) => { if (!locked[k] && !errs.some((e) => e.startsWith(`paper ${k + 1} `))) locked[k] = copies[k]; });
       if (!errs.length) break;
       console.warn(`  attempt ${attempt}: ${errs.length} rule violation(s)\n    - ${errs.join('\n    - ')}`);
-      feedback = errs.map((e) => `- ${e}`).join('\n');
+      feedback = errs.map((e) => `- ${e}`).join('\n') + '\nShorten every over-long claim well below its limit. Cut words, do not just trim a few letters.';
     }
     if (errs.length) throw new Error(`draft still breaks ${errs.length} rule(s) after retry:\n  - ${errs.join('\n  - ')}`);
 

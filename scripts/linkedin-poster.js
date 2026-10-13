@@ -149,7 +149,9 @@ const FIELD_FONT = {
 };
 
 // ── data contract (poster.day.schema.json) ──────────────────────────────────
-const LIMITS = { claim: 95, context: 210, journal: 34 };
+// claim: lead (slide 01) max 95; supporting (slides 02-05) max 105
+const LIMITS = { claim: 95, supportingClaim: 105, context: 210, journal: 34 };
+const maxFor = (k, where) => (k === 'claim' && where !== 'lead' ? LIMITS.supportingClaim : LIMITS[k]);
 function validateDay(day, TAX) {
   const errs = [];
   if (!day || typeof day !== 'object') return ['day is not an object'];
@@ -164,7 +166,7 @@ function validateDay(day, TAX) {
     for (const k of ['claim', 'context', 'journal']) {
       const v = p[k];
       if (typeof v !== 'string' || !v.trim()) errs.push(`${where}.${k} is empty`);
-      else if (v.length > LIMITS[k]) errs.push(`${where}.${k} is ${v.length} chars (max ${LIMITS[k]}) — overflows the fixed canvas`);
+      else if (v.length > maxFor(k, where)) errs.push(`${where}.${k} is ${v.length} chars (max ${maxFor(k, where)}) — overflows the fixed canvas`);
       if (typeof v === 'string' && v.includes('·')) errs.push(`${where}.${k} contains a middot (·) — banned by the handoff content rules`);
       if (typeof v === 'string') {
         const miss = missingGlyphs(v, FIELD_FONT[k]);
