@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-14T01:17:43.462Z",
+    "lastUpdated": "2026-10-14T07:47:38.832Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,7 +20,7 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
       "category": "manual-modality",
       "publishedAt": "2026-10-13T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "PM & R : the journal of injury, function, and rehabilitation",
@@ -30,7 +30,8 @@
         "NeuroRehabilitation",
         "Disability and rehabilitation",
         "medRxiv",
-        "BMC Musculoskeletal Disorders"
+        "BMC Musculoskeletal Disorders",
+        "Journal of rehabilitation medicine"
       ],
       "tag": "electro",
       "kind": "theme",
@@ -87,11 +88,17 @@
           "journal": "BMC Musculoskeletal Disorders",
           "title": "Effectiveness of conservative interventions on pain and disability in degenerative cervical spine disease: a systematic review and meta-analysis of randomized controlled trials",
           "titleZh": "保守干预对退行性颈椎病疼痛和功能障碍的有效性：一项随机对照试验的系统综述和Meta分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of rehabilitation medicine",
+          "title": "Relaxation interventions in neurological rehabilitation: a scoping review.",
+          "titleZh": "神经康复中放松干预的范围界定综述"
         }
       ],
-      "heat": 6.25,
-      "themeZh": "多种物理治疗对躯体功能与神经损伤的效应",
-      "themeEn": "Multimodal Physical Therapies for Injury & Function"
+      "heat": 6.32,
+      "themeZh": "多种物理因子疗法对肌腱和神经损伤的疗效",
+      "themeEn": "Physical Modalities for Tendon and Nerve Injuries"
     },
     {
       "id": "news-1791940661347-1",
@@ -154,27 +161,39 @@
           "titleZh": "持续性盆腔疼痛的物理治疗管理。"
         }
       ],
-      "heat": 4.16,
-      "themeZh": "骨科慢性疼痛患者的运动与认知行为疗法",
-      "themeEn": "Exercise and CBT for Chronic Orthopedic Pain"
+      "heat": 3.79,
+      "themeZh": "慢性骨科疼痛的居家自我管理与数字康复",
+      "themeEn": "Self-management and Digital Rehab for Chronic Orthopedic Pain"
     },
     {
-      "id": "news-1791940661348-4",
-      "title": "Continuity of care interventions for people with stroke and their caregivers: a scoping review of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42865266/",
+      "id": "news-1791964056898-0",
+      "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864890/",
       "category": "neurological",
       "publishedAt": "2026-10-13T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
-        "Disability and rehabilitation",
+        "NeuroRehabilitation",
         "Topics in stroke rehabilitation",
+        "Disability and rehabilitation",
         "PM & R : the journal of injury, function, and rehabilitation",
-        "Clinical rehabilitation",
         "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+          "titleZh": "卒中后生活质量的早期变化及相关因素：一项前瞻性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "How does pre-stroke physical activity influence physical activity one year after minor stroke, and what role does cognitive impairment play?",
+          "titleZh": "卒中前体力活动如何影响轻度卒中后一年体力活动，以及认知障碍扮演的角色？"
+        },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
@@ -190,18 +209,6 @@
         {
           "source": "PubMed",
           "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Methodological quality of systematic reviews on treatments in stroke rehabilitation: A cross-sectional study.",
-          "titleZh": "卒中康复治疗系统评价的方法学质量：一项横断面研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Pilot and feasibility studies in stroke rehabilitation: reporting quality, progression to trials, and barriers: a scoping review.",
-          "titleZh": "卒中康复领域的先导性和可行性研究：报告质量、进展到试验情况及障碍：一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
           "title": "First aggression as a planning signal in post-acute stroke rehabilitation: Service benchmarks, goal setting, and a 60-day precaution window from a comprehensive observational cohort.",
           "titleZh": "攻击行为作为急性后卒中康复的规划信号：基于综合观察队列的服务基准、目标设定和 60 天预防窗口"
         },
@@ -213,15 +220,15 @@
         },
         {
           "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Engagement strategies to support sub-acute, post-stroke upper limb interventions: A co-design study.",
-          "titleZh": "促进亚急性期卒中上肢干预的参与策略：一项共同设计研究"
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Pilot and feasibility studies in stroke rehabilitation: reporting quality, progression to trials, and barriers: a scoping review.",
+          "titleZh": "卒中康复领域的先导性和可行性研究：报告质量、进展到试验情况及障碍：一项范围综述"
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "How does pre-stroke physical activity influence physical activity one year after minor stroke, and what role does cognitive impairment play?",
-          "titleZh": "卒中前体力活动如何影响轻度卒中后一年体力活动，以及认知障碍扮演的角色？"
+          "journal": "Disability and rehabilitation",
+          "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
+          "titleZh": "LGBTQI+ 卒中幸存者及其伴侣的卒中后性康复体验：一项定性研究"
         },
         {
           "source": "PubMed",
@@ -230,25 +237,31 @@
           "titleZh": "伴或不伴卒中史的社区居住老年人中困扰性与活动受限性疼痛：对国家健康与老龄化趋势研究（2011-2024）的横断面分析"
         }
       ],
-      "heat": 3.47,
-      "themeZh": "卒中康复中连续性护理与早期干预",
-      "themeEn": "Stroke Rehabilitation: Continuity & Early Intervention"
+      "heat": 3.16,
+      "themeZh": "卒中早期照护的社会经济因素与康复质量",
+      "themeEn": "Early Stroke Care and Rehabilitation Quality"
     },
     {
-      "id": "news-1791940661348-12",
-      "title": "Technical and clinical feasibility of a pulmonary telerehabilitation model for people with COPD.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42863686/",
+      "id": "news-1791363059704-3",
+      "title": "Recent highlights in pulmonary rehabilitation research.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42838838/",
       "category": "cardiopulmonary",
       "publishedAt": "2026-10-13T00:00:00.000Z",
       "sourceCount": 3,
       "sources": [
+        "Journal of physiotherapy",
         "Archives of physical medicine and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "American journal of physical medicine & rehabilitation"
+        "Archives of Physical Medicine and Rehabilitation"
       ],
       "tag": "copd",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Recent highlights in pulmonary rehabilitation research.",
+          "titleZh": "肺康复研究的最新进展"
+        },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -260,70 +273,216 @@
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "Effect of Integrated Respiratory and Functional Training on Weaning from Mechanical Ventilation, Respiratory and Peripheral Muscle Strength, Functional Ability, and Pain After Emergency Abdominal Surgery: A Randomized Controlled Trial",
           "titleZh": "综合呼吸与功能训练对急腹症术后脱离机械通气、呼吸和外周肌力、功能能力及疼痛的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effect of Short-Rest Interval versus Traditional Multiple-Set Resistance Training Combined with Endurance Training in Patients with Cardiovascular Disease: A Randomized Clinical Trial.",
-          "titleZh": "短间歇阻力训练与传统多组阻力训练结合耐力训练对心血管疾病患者的影响：一项随机临床试验"
         }
       ],
-      "heat": 2.08,
-      "themeZh": "心肺疾病患者的远程与综合康复训练",
-      "themeEn": "Telerehabilitation and Integrated Training for Cardiopulmonary Disease"
+      "heat": 1.9,
+      "themeZh": "肺康复在呼吸疾病与术后恢复中的应用",
+      "themeEn": "Pulmonary Rehab for Respiratory and Post-Surgery"
     },
     {
-      "id": "news-1791565595964-2",
-      "title": "Association Between Early Postoperative Limb Symmetry Index Scores and 2-Year Patient-Reported Outcomes After Quadriceps Tendon Autograft ACL Reconstruction.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42852663/",
-      "category": "sports",
+      "id": "news-1791489612492-0",
+      "title": "Reframing hands-on musculoskeletal assessment as a measurement instrument rather than a technique debate: a theoretical framework applying COSMIN to HODA-A.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42845272/",
+      "category": "orthopedic",
       "publishedAt": "2026-10-12T21:08:58.000Z",
       "sourceCount": 3,
       "sources": [
-        "The American journal of sports medicine",
+        "Physiotherapy theory and practice",
         "British Journal of Sports Medicine",
-        "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
       ],
-      "tag": "sports",
+      "tag": "shoulder",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "The American journal of sports medicine",
-          "title": "Association Between Early Postoperative Limb Symmetry Index Scores and 2-Year Patient-Reported Outcomes After Quadriceps Tendon Autograft ACL Reconstruction.",
-          "titleZh": "股四头肌肌腱自体移植ACL重建术后早期肢体对称指数与2年患者报告结局的关联"
+          "journal": "Physiotherapy theory and practice",
+          "title": "Reframing hands-on musculoskeletal assessment as a measurement instrument rather than a technique debate: a theoretical framework applying COSMIN to HODA-A.",
+          "titleZh": "将手法肌肉骨骼评估重新定义为测量工具而非技术辩论：一个应用 COSMIN 于 HODA-A 的理论框架。"
         },
         {
           "source": "BJSM",
           "journal": "British Journal of Sports Medicine",
-          "title": "Graft type is not associated with revision ACL reconstruction in football players: a nationwide cohort analysis of subsequent ACL reconstructions",
-          "titleZh": "移植物类型与足球运动员的翻修性前交叉韧带重建无关：一项全国性队列分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The American journal of sports medicine",
-          "title": "Can Psychological Readiness Predict Successful Return to Sports After Patellar Stabilization Surgery in Adolescent Patients? A Retrospective Cohort Study.",
-          "titleZh": "心理准备度能否预测青少年髌骨稳定手术后成功重返运动？一项回顾性队列研究"
+          "title": "Influence of shoulder strength on throwing velocity in handball (PhD Academy Award)",
+          "titleZh": "肩部力量对手球投掷速度的影响（博士学术奖）"
         },
         {
           "source": "BJSM",
           "journal": "British Journal of Sports Medicine",
-          "title": "Return to sport after primary anterior cruciate ligament reconstruction in athletes with a preinjury Tegner Activity Scale >=7: a longitudinal, nationwide, registry-based cohort study",
-          "titleZh": "Tegner活动量表评分≥7的运动员初次前交叉韧带重建术后重返运动：一项基于全国注册的纵向队列研究"
+          "title": "Development of an upper and lower limb athlete pain assessment framework (PhD Academy Award)",
+          "titleZh": "上下肢运动员疼痛评估框架的开发（博士学术奖）"
         },
         {
           "source": "PubMed",
-          "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
-          "title": "Return to sports after lumbar disc herniation surgery: a survey of German surgeons and postoperative patient experiences.",
-          "titleZh": "腰椎间盘突出手术后重返运动：德国外科医生和术后患者经验的调查"
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Sex- and age-specific normative values for lower-limb field tests in elite TeamGym gymnasts.",
+          "titleZh": "精英 TeamGym 体操运动员下肢场地测试的性别和年龄特异性常模值"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Sex differences in performance fatigability: evidence from a maximal intermittent protocol using a flywheel device (PhD Academy Award)",
+          "titleZh": "表现疲劳的性别差异：来自使用飞轮设备的最大间歇协议的证据（博士学术奖）"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Maternal and fetal cardiovascular response to moderate-to-vigorous intensity exercise in singleton and twin pregnancies",
+          "titleZh": "单胎和双胎妊娠中中度至剧烈强度运动对母胎心血管反应的影响"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Examining the pregnancy and postpartum experiences of Para athletes in elite sport: a qualitative description study",
+          "titleZh": "精英运动中残疾运动员的妊娠和产后经历：一项定性描述研究"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Endometriosis and elite sports: a blind spot in research",
+          "titleZh": "子宫内膜异位症与精英运动：研究中的一个盲点"
         }
       ],
-      "heat": 2,
-      "themeZh": "ACL重建与腰椎间盘突出术后回归运动评估",
-      "themeEn": "Return to Sport Post-ACL & Lumbar Disc Surgery"
+      "heat": 1.82,
+      "themeZh": "运动员肢体力量、疲劳与疼痛评估的性别差异",
+      "themeEn": "Athlete Limb Strength, Fatigue, Pain Assessment"
     }
   ],
   "items": [
+    {
+      "id": "news-1791964056898-0",
+      "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+      "summary": "A prospective study of 111 first-ever stroke patients found that physical and psychosocial HRQoL showed divergent recovery trajectories over 3 months. Functional ambulation (β = 0.483, p < 0.001) was associated with physical HRQoL, while depressive symptom severity (β = -0.692, p < 0.001) was associated with mental HRQoL.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864890/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T07:47:36.898Z",
+      "curatedScore": 75,
+      "curatedReason": "卒中后早期康复中，身体功能（如步态）和抑郁症状对患者生活质量的改善轨迹有不同影响。制定康复计划时，除了关注身体机能，也务必及早识别并干预抑郁情绪，因为它显著影响患者心理层面的生活质量。",
+      "titleZh": "卒中后生活质量的早期变化及相关因素：一项前瞻性研究",
+      "summaryZh": "一项针对111名首次卒中患者的前瞻性研究发现，卒中后3个月内身体和心理社会层面的生活质量恢复轨迹存在差异。功能性步态（β = 0.483, p < 0.001）与身体生活质量改善相关，而抑郁症状严重程度（β = -0.692, p < 0.001）与心理生活质量改善相关。",
+      "curatedReasonEn": "In early post-stroke rehabilitation, physical function (e.g., ambulation) and depressive symptoms impact quality of life (HRQoL) improvement differently. When planning rehabilitation, prioritize early identification and intervention for depression, as it significantly affects mental HRQoL, in addition to physical function.",
+      "limitation": "本研究随访期仅为3个月，可能无法捕捉长期HRQoL的变化，且样本量较小（n=111）。",
+      "limitationEn": "The study's follow-up period was only 3 months, which may not capture long-term HRQoL changes, and the sample size was relatively small (n=111).",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1791505723992-1",
+      "title": "Relaxation interventions in neurological rehabilitation: a scoping review.",
+      "summary": "A scoping review of 63 sources mapped relaxation interventions in neurological rehabilitation, primarily in multiple sclerosis and stroke. Interventions were feasible and well-accepted, with outcomes mainly assessed for psychological functioning at the body structure/function level, highlighting gaps in less prevalent conditions and activity/participation outcomes.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847760/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-09T00:28:43.992Z",
+      "curatedScore": 75,
+      "curatedReason": "放松干预在神经康复中应用广泛，但在多发性硬化和卒中之外的其他疾病、以及生理应激、活动和参与等结局方面，证据仍有较大空白。评估放松干预时，请注意其主要效果仍集中在心理功能层面。",
+      "titleZh": "神经康复中放松干预的范围界定综述",
+      "summaryZh": "一项涵盖63篇文献的范围界定综述梳理了神经康复中的放松干预，主要集中于多发性硬化和卒中患者。干预措施可行且接受度高，但主要在身体结构和功能层面评估心理功能结局，提示在不常见疾病和活动/参与结局方面存在研究空白。",
+      "curatedReasonEn": "While relaxation interventions are widely used in neurological rehabilitation, significant evidence gaps remain for conditions beyond MS and stroke, as well as for outcomes beyond psychological functioning, such as physiological stress, activity, and participation. When evaluating relaxation interventions, note that their primary effects are still concentrated on psychological function.",
+      "limitation": "本综述识别出证据异质性高、缺乏比较有效性研究和定性设计等局限。",
+      "limitationEn": "This review identified limitations including high evidence heterogeneity, lack of comparative effectiveness studies, and qualitative designs.",
+      "tags": [
+        "research",
+        "stroke",
+        "ms"
+      ],
+      "studyDesign": "综述",
+      "journal": "Journal of rehabilitation medicine"
+    },
+    {
+      "id": "news-1791414705415-0",
+      "title": "Experiences of sexual rehabilitation post-stroke among LGBTQI+ stroke survivors and their partners: a qualitative study.",
+      "summary": "A qualitative study explored sexual rehabilitation experiences among LGBTQI+ stroke survivors (n=18) and partners (n=5). Three themes emerged: sexuality addressed post-stroke, negative interactions with health professionals, and sexuality absent in rehabilitation, highlighting gaps in inclusive, effective interventions.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42841435/",
+      "publishedAt": "2026-10-07T00:00:00.000Z",
+      "firstSeen": "2026-10-07T23:11:45.415Z",
+      "curatedScore": 75,
+      "curatedReason": "针对 LGBTQI+ 卒中幸存者的性康复需求长期被忽视，且医疗专业人员的沟通方式和知识储备不足是主要障碍。作为物理治疗师，请在患者评估和沟通中保持包容性和非预设性，并考虑接受相关培训。",
+      "titleZh": "LGBTQI+ 卒中幸存者及其伴侣的卒中后性康复体验：一项定性研究",
+      "summaryZh": "一项定性研究探讨了LGBTQI+卒中幸存者（n=18）及其伴侣（n=5）的卒中后性康复体验。研究发现三个主要主题：卒中后性需求被提及、与医疗专业人员的负面互动，以及康复中性话题的缺失，凸显了包容性有效干预的空白。",
+      "curatedReasonEn": "The sexual rehabilitation needs of LGBTQI+ stroke survivors have been largely neglected, with healthcare professionals' communication styles and knowledge gaps identified as major barriers. As a physical therapist, ensure inclusive and non-presumptive communication during patient assessment and consider pursuing relevant training.",
+      "limitation": "本研究为定性研究，样本量较小（18名卒中幸存者和5名伴侣），结果外推性有限。",
+      "limitationEn": "This is a qualitative study with a small sample size (18 stroke survivors and 5 partners), limiting generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1790874260552-1",
+      "title": "Barriers and facilitators of decision-making in home-based rehabilitation exercise among older adults following total knee arthroplasty: A qualitative study.",
+      "summary": "A qualitative study with 21 older adults after total knee arthroplasty identified barriers and facilitators to home-based exercise decision-making. Barriers included intuitive avoidance responses (pain, fear, preference for comfort) and external support constraints, while facilitators involved rational adherence (perceived threat, willpower, negotiation).",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42816950/",
+      "publishedAt": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-10-01T17:04:20.552Z",
+      "curatedScore": 75,
+      "curatedReason": "TKA 术后老年患者的居家康复依从性受多重因素影响。了解患者的疼痛规避、恐惧以及对舒适的偏好，并结合个体化目标设定、正面文化引导和协商策略，将有助于提升居家康复效果。",
+      "titleZh": "老年全膝关节置换术后居家康复锻炼决策的障碍与促进因素：一项定性研究",
+      "summaryZh": "一项针对21名老年全膝关节置换术后患者的定性研究，探讨了居家康复锻炼决策的障碍和促进因素。障碍包括本能的回避反应（疼痛、恐惧、偏爱即时舒适）和外部支持限制，而促进因素涉及理性依从（不良预后威胁感知、意志力、协商策略）。",
+      "curatedReasonEn": "Adherence to home-based rehabilitation after TKA in older adults is influenced by multiple factors. Understanding patients' pain avoidance, fear, and preference for comfort, coupled with individualized goal setting, positive cultural framing, and negotiation strategies, will help improve the effectiveness of home rehabilitation.",
+      "limitation": "本研究为定性研究，样本量较小（n=21），且在三级医院招募，结果外推性受限。",
+      "limitationEn": "This is a qualitative study with a small sample size (n=21), recruited from tertiary hospitals, limiting generalizability.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1791363059704-3",
+      "title": "Recent highlights in pulmonary rehabilitation research.",
+      "summary": "A narrative review synthesizing PR research from 2021-2026 highlights expanded scope beyond stable COPD to various chronic respiratory diseases, growth in alternative delivery models, increasing evidence for economic benefits, and persistent challenges in access and long-term maintenance.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42838838/",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "firstSeen": "2026-10-07T08:50:59.704Z",
+      "curatedScore": 75,
+      "curatedReason": "肺康复的范围已显著拓宽，不再局限于稳定期 COPD，多种慢性呼吸系统疾病患者均可从中获益。若中心化康复不可行，可考虑提供循证的替代模式。同时，维持康复效果和经济效益的证据也在不断增加。",
+      "titleZh": "肺康复研究的最新进展",
+      "summaryZh": "一篇叙述性综述总结了2021-2026年肺康复研究的最新进展，强调了其适用范围已从稳定期COPD扩展到多种慢性呼吸系统疾病，替代模式日益增多，经济效益证据不断累积，但普及率低和长期效果维持仍是挑战。",
+      "curatedReasonEn": "Pulmonary rehabilitation (PR) has significantly broadened its scope beyond stable COPD, benefiting patients with various chronic respiratory diseases. If center-based PR is not feasible, consider offering evidence-based alternative models. Evidence supporting sustained benefits and economic advantages of PR is also growing.",
+      "tags": [
+        "research",
+        "copd"
+      ],
+      "studyDesign": "综述",
+      "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1791598182068-18",
+      "title": "Correction",
+      "summary": "A correction was issued for a systematic review and meta-analysis due to a data entry error in Table 3. The sample size for the 30 Hz subgroup under the FMA-UE outcome was incorrectly reported as n=184, and the correct sample size is n=192.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00903-2/fulltext?rss=yes",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-10T02:09:42.068Z",
+      "curatedScore": 65,
+      "curatedReason": "这份勘误通知了此前一项关于迷走神经刺激对卒中康复影响的系统综述中，某亚组样本量数据有误。在引用该综述时，请核对修正后的数据，避免引用错误。",
+      "titleZh": "勘误",
+      "summaryZh": "《物理医学与康复档案》更正了此前发表的一篇关于迷走神经刺激对卒中康复影响的系统综述和Meta分析中的数据录入错误，其中FMA-UE结局下30 Hz亚组的样本量由n=184更正为n=192。",
+      "curatedReasonEn": "This erratum corrects a sample size error in a previous systematic review on vagus nerve stimulation for stroke rehabilitation. When citing that review, please verify the corrected data to avoid miscitation.",
+      "tags": [
+        "news",
+        "stroke"
+      ],
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
     {
       "id": "news-1791940661347-1",
       "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
@@ -1936,156 +2095,6 @@
           "title": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study"
         }
       ]
-    },
-    {
-      "id": "news-1791505723992-2",
-      "title": "Engagement strategies to support sub-acute, post-stroke upper limb interventions: A co-design study.",
-      "summary": "A co-design study generated clinician-delivered strategies to enhance stroke survivor engagement in sub-acute upper limb rehabilitation, focusing on personalization via timing and emphasis, with clinical feasibility awaiting further testing.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42847552/",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-09T00:28:43.992Z",
-      "curatedScore": 70,
-      "curatedReason": "上肢康复，在何时、如何强调上下肢功能恢复的个性化，能提高中风患者的依从性，具体能不能落地，还得试试。",
-      "titleZh": "促进亚急性期卒中上肢干预的参与策略：一项共同设计研究",
-      "titleEn": "Engagement strategies to support sub-acute, post-stroke upper limb interventions: A co-design study.",
-      "summaryZh": "一项共同设计研究开发了由临床医生实施的策略，以促进卒中幸存者参与亚急性期上肢康复，强调通过时机和强调程度实现个性化，但临床可行性有待测试。",
-      "curatedReasonEn": "This co-design study developed clinician-delivered strategies to support stroke survivor engagement in sub-acute upper limb rehabilitation, emphasizing personalization through timing and emphasis, though clinical feasibility needs testing.",
-      "limitation": "The feasibility of these strategies in clinical practice remains to be tested.",
-      "limitationEn": "The feasibility of these strategies in clinical practice remains to be tested.",
-      "tags": [
-        "research",
-        "neurological",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1791467006640-3",
-      "title": "Diagnostic Performance of Ultrasonographic Median Nerve Cross-Sectional Area for Carpal Tunnel Syndrome in Wheelchair Users With Spinal Cord Injury.",
-      "summary": "Ultrasonographic median nerve cross-sectional area demonstrated moderate diagnostic accuracy for carpal tunnel syndrome in wheelchair users with spinal cord injury, with lower cutoffs enhancing sensitivity and higher cutoffs improving specificity.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42844666/",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-08T13:43:26.640Z",
-      "curatedScore": 70,
-      "curatedReason": "对轮椅使用者中的脊髓损伤患者，超声测正中神经截面积对腕管综合征的诊断准确度一般，但结合敏感度和特异度的要求，可以调整界值。",
-      "titleZh": "超声检查尺神经横截面积对脊髓损伤轮椅使用者的腕管综合征的诊断效能",
-      "titleEn": "Diagnostic Performance of Ultrasonographic Median Nerve Cross-Sectional Area for Carpal Tunnel Syndrome in Wheelchair Users With Spinal Cord Injury.",
-      "summaryZh": "超声检查尺神经横截面积对于诊断脊髓损伤轮椅使用者的腕管综合征具有中度诊断准确性，较低的截断值可提高敏感性，较高的截断值可提高特异性。",
-      "curatedReasonEn": "This diagnostic accuracy study found that ultrasonographic median nerve cross-sectional area has moderate accuracy for diagnosing carpal tunnel syndrome in wheelchair users with spinal cord injury, suggesting lower cutoffs favor sensitivity and higher cutoffs favor specificity.",
-      "limitation": "The study included a relatively small sample size (67 participants) and was conducted at a single tertiary hospital.",
-      "limitationEn": "The study included a relatively small sample size (67 participants) and was conducted at a single tertiary hospital.",
-      "tags": [
-        "research",
-        "neurological",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "American journal of physical medicine & rehabilitation"
-    },
-    {
-      "id": "news-1790969069935-2",
-      "title": "Methodological quality of systematic reviews on treatments in stroke rehabilitation: A cross-sectional study.",
-      "summary": "A cross-sectional study assessing systematic reviews on stroke rehabilitation treatments found that 92.9% were of critically low methodological quality, highlighting significant deficiencies in review conduct and reporting.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42825393/",
-      "publishedAt": "2026-10-02T00:00:00.000Z",
-      "firstSeen": "2026-10-02T19:24:29.935Z",
-      "curatedScore": 70,
-      "curatedReason": "你正在评估的中风康复系统评价，有高达 92.9% 的方法学质量堪忧，这说明你依赖的文献证据本身可能就很不可靠，需要谨慎解读。",
-      "titleZh": "卒中康复治疗系统评价的方法学质量：一项横断面研究",
-      "titleEn": "Methodological quality of systematic reviews on treatments in stroke rehabilitation: A cross-sectional study.",
-      "summaryZh": "一项针对卒中康复治疗系统评价的研究发现，92.9% 的评价方法学质量极低，表明在评价的执行和报告方面存在显著缺陷。",
-      "curatedReasonEn": "You should be cautious interpreting stroke rehabilitation systematic reviews, as up to 92.9% demonstrate critically low methodological quality, implying the evidence base you rely on may be fundamentally unsound.",
-      "limitation": "A large majority (92.9%) of the reviewed systematic reviews were of critically low methodological quality.",
-      "limitationEn": "A large majority (92.9%) of the reviewed systematic reviews were of critically low methodological quality.",
-      "tags": [
-        "research",
-        "neurological",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "PM & R : the journal of injury, function, and rehabilitation"
-    },
-    {
-      "id": "news-1791467006640-5",
-      "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
-      "summary": "Physiotherapists experienced in ACL rehabilitation are interested in using technology for sensorimotor assessment and training, but implementation is limited by uncertainty about clinical value and the need for clear benefits and integration into clinical reasoning.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42844609/",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-08T13:43:26.640Z",
-      "curatedScore": 70,
-      "curatedReason": "ACL 康复治疗师对技术辅助评估和训练感兴趣，但因临床价值不明和整合性差，实际应用受限，别盲目引入。",
-      "titleZh": "关于运动传感器控制以及在此背景下利用技术改善前交叉韧带损伤后康复的物理治疗师的观点",
-      "titleEn": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
-      "summaryZh": "经验丰富的 ACL 康复物理治疗师对利用技术进行运动传感器评估和训练感兴趣，但由于临床价值的不确定性以及对清晰益处和融入临床推理的需求，其实施受到限制。",
-      "curatedReasonEn": "Physiotherapists view technology as potentially supportive for sensorimotor assessment and rehabilitation after ACL injury, but its clinical value and integration depend on demonstrating clear benefits, aligning with clinical reasoning, and adapting to new rehabilitation structures.",
-      "limitation": "Physiotherapists expressed uncertainty regarding the specific clinical value of sensorimotor outcomes and the integration of emerging technologies.",
-      "limitationEn": "Physiotherapists expressed uncertainty regarding the specific clinical value of sensorimotor outcomes and the integration of emerging technologies.",
-      "tags": [
-        "research",
-        "sports",
-        "knee"
-      ],
-      "studyDesign": "综述",
-      "journal": "BMC musculoskeletal disorders",
-      "tech": true
-    },
-    {
-      "id": "news-1790920324010-5",
-      "title": "Return to sports after lumbar disc herniation surgery: a survey of German surgeons and postoperative patient experiences.",
-      "summary": "A survey of German surgeons showed varied recommendations for return to sport post-lumbar disc surgery, and patient-reported return-to-sport timelines appeared longer than surgeon recommendations, underscoring the need for evidence-based guidelines.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42821087/",
-      "publishedAt": "2026-10-01T00:00:00.000Z",
-      "firstSeen": "2026-10-02T05:52:04.010Z",
-      "curatedScore": 70,
-      "curatedReason": "腰椎间盘术后重返运动的建议不统一，患者恢复时间普遍长于医生建议，亟需基于证据的指南。",
-      "titleZh": "腰椎间盘突出手术后重返运动：德国外科医生和术后患者经验的调查",
-      "titleEn": "Return to sports after lumbar disc herniation surgery: a survey of German surgeons and postoperative patient experiences.",
-      "summaryZh": "对德国外科医生的一项调查显示，腰椎间盘突出手术后重返运动的建议存在显著差异，患者报告的重返运动时间似乎晚于建议，这凸显了循证指南的必要性。",
-      "curatedReasonEn": "This survey of German surgeons revealed considerable variability in recommendations for return to sport after lumbar disc surgery, with patients' reported resumption of sports occurring later than recommended, highlighting the need for evidence-based guidelines.",
-      "limitation": "The study's two datasets (surgeon recommendations and patient experiences) were from different designs and settings, limiting direct comparison.",
-      "limitationEn": "The study's two datasets (surgeon recommendations and patient experiences) were from different designs and settings, limiting direct comparison.",
-      "tags": [
-        "research",
-        "sports",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
-    },
-    {
-      "id": "news-1791394093506-4",
-      "title": "Effect of Short-Rest Interval versus Traditional Multiple-Set Resistance Training Combined with Endurance Training in Patients with Cardiovascular Disease: A Randomized Clinical Trial.",
-      "summary": "An RCT comparing short-rest interval (3/7) and traditional multiple-set (3x9) resistance training in cardiac rehabilitation found both effective for improving VO2peak, strength, and lean mass, with 3/7 RT showing greater improvement in isokinetic quadriceps strength.",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42839337/",
-      "publishedAt": "2026-10-07T00:00:00.000Z",
-      "firstSeen": "2026-10-07T17:28:13.506Z",
-      "curatedScore": 70,
-      "curatedReason": "心脏康复中，短间歇（3/7）和传统多组（3x9）抗阻训练均可改善 VO2peak、力量和瘦体重，前者在股四头肌等速力量上优势更明显。",
-      "titleZh": "短间歇阻力训练与传统多组阻力训练结合耐力训练对心血管疾病患者的影响：一项随机临床试验",
-      "titleEn": "Effect of Short-Rest Interval versus Traditional Multiple-Set Resistance Training Combined with Endurance Training in Patients with Cardiovascular Disease: A Randomized Clinical Trial.",
-      "summaryZh": "一项随机临床试验比较了心脏康复项目中短间歇（3/7）阻力训练与传统多组（3×9）阻力训练结合耐力训练的效果，两者均改善了摄氧量峰值、力量和瘦体重，其中短间歇组在等速股四头肌力量上改善更显著。",
-      "curatedReasonEn": "This RCT found that both short-rest interval (3/7) and traditional multiple-set (3x9) resistance training, when combined with endurance training in cardiac rehabilitation, improved VO2peak, strength, and lean mass, with short-rest intervals showing a greater improvement in isokinetic quadriceps strength.",
-      "limitation": "While both protocols were effective, superiority was not consistently observed across all strength measures, and patient preference should be considered.",
-      "limitationEn": "While both protocols were effective, superiority was not consistently observed across all strength measures, and patient preference should be considered.",
-      "tags": [
-        "research",
-        "cardiopulmonary"
-      ],
-      "studyDesign": "RCT",
-      "journal": "American journal of physical medicine & rehabilitation"
     }
   ]
 }
