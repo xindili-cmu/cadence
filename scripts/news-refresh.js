@@ -1179,6 +1179,7 @@ news / guideline / policy 条目不填 studyDesign（省略该字段）。
   // 放最后：repairChineseSummaries 会把中文 summary 挪进 summaryZh 再重写英文版，
   // 先跑缺字段兜底会把那一步的中间态误判成缺失。
   curated = await repairMissingFields(curated, items, llm);
+  curated = await repairChineseLimitations(curated, llm);
   // 放在所有 LLM 改写之后：上面每一步 repair 都会重写文本，都可能引入原文没有的数字。
   curated = await enforceSourceFidelity(curated, items, llm, LAST_CURATION.fidelity);
   const out = curated.map(fixItem); // 落库前确定性校正已知错译（递归，绕开标识符字段）
@@ -1316,6 +1317,39 @@ async function repairMissingFields(curated, items, llm = callLLM) {
       `      · ${MISSING_REQUIRED.filter(f => _blank(c[f])).join('/')} — ${(srcByIndex.get(c.index)?.title || '').slice(0, 60)}`));
   }
   return curated.filter(c => !MISSING_REQUIRED.some(f => _blank(c[f])));
+}
+
+// limitation 语言兜底（2026-10-10）：curatedReason / summary 早有语言兜底，limitation
+// 没有——模型偶尔把同一句英文同时填进 limitation 与 limitationEn。审计时 feed 里
+// 59 条有局限的 15 条中文字段是英文（10-09 一轮就 10 条），网站中文模式显示
+// 「局限：<英文>」。这里检测无 CJK 的 limitation，保住英文版，再批量译成中文。
+// 译不出来的保持原样（与 repairEnglishReasons 一致：英文总比丢掉局限好）。
+const LIMITATION_ZH_SYSTEM = `你是 Cadence（步频）物理治疗新闻站的中文编辑。下面每条的 limitation（研究局限）本应是中文，却写成了英文。请把每条译成一句中文：
+- 意思与英文版一致，不增不减；不加原文没有的数字或缺陷。
+- 专业、简洁，像中文期刊导读里的「局限」一句；缩写（RCT、ACL 等）保留英文，数字照抄。
+
+请只返回 JSON 数组（不要 markdown 代码块）：[{"index":0,"limitation":"中文"}]`;
+
+async function repairChineseLimitations(curated, llm = callLLM) {
+  const bad = curated.filter(c => !_blank(c.limitation) && !CJK_RE.test(c.limitation));
+  if (!bad.length) return curated;
+  console.log(`   🛠  ${bad.length} limitation came back in English — rewriting in Chinese`);
+  for (const c of bad) if (_blank(c.limitationEn)) c.limitationEn = c.limitation; // 英文版别丢
+  for (let off = 0; off < bad.length; off += 10) {
+    const batch = bad.slice(off, off + 10);
+    const user = `翻译以下 ${batch.length} 条：\n\n` + JSON.stringify(
+      batch.map((c, i) => ({ index: i, limitationEn: c.limitationEn })), null, 2);
+    let fixed = [];
+    try { fixed = parseCuratedArray((await llm(LIMITATION_ZH_SYSTEM, user)) || ''); }
+    catch (e) { console.log(`   ⚠️  limitation repair call failed (${e.message})`); }
+    for (const f of fixed) {
+      const c = batch[f.index];
+      if (c && f.limitation && CJK_RE.test(f.limitation)) c.limitation = f.limitation;
+    }
+  }
+  const still = curated.filter(c => !_blank(c.limitation) && !CJK_RE.test(c.limitation)).length;
+  if (still) console.log(`   ⚠️  ${still} limitation still English after repair (kept as-is)`);
+  return curated;
 }
 
 // 原文一致性闸（2026-10-09，规则见 scripts/source-check.js）：prompt 只能「请」模型
@@ -1473,6 +1507,26 @@ async function labelHotTopics(topics) {
     console.warn(`   ⚠️  theme labeling failed (${e.message}) — rep titles will show instead`);
   }
   return topics;
+}
+
+// 写库前的双语 take 闸（2026-10-14 事故）：repairBoilerplateReasons 修不好时
+// 「kept as-is」，于是 EN take 混中文的条目（AHPRA，…professional资格.）被写进
+// news.json 并提交；下一次 cron 的 npm test S5 在 news-refresh **之前**就红，
+// 能治好它的那次 run 永远轮不到 —— 10-13 起 PT News Refresh 连挂 3 次。
+// 同 K 段记录的 gate H 自锁：产物断言只能守「写入方保证的不变量」。所以写入方在这里
+// 保证它：再修一次（新条目 + carry 条目都过），仍不完整就丢，宁缺不错（同 Z4 fail-closed）。
+// 作用域 = S5 的作用域（S 段注释：断言作用域必须等于修复作用域），由 AB4 互锁。
+const REASON_EN_REQUIRED_SINCE = '2026-09-01';
+async function enforceBilingualTakes(items, llm = callLLM) {
+  const inScope = (i) => (i.firstSeen || '').slice(0, 10) >= REASON_EN_REQUIRED_SINCE;
+  const bad = items.filter((i) => inScope(i) && isReasonIncomplete(i));
+  if (!bad.length) return items;
+  console.log(`   🛠  ${bad.length} take(s) incomplete in EN before write — repairing`);
+  try { await repairBoilerplateReasons(bad, llm); } // 原地改写 bad 里的同一批对象
+  catch (e) { console.log(`   ⚠️  bilingual take repair failed (${e.message})`); }
+  const drop = new Set(bad.filter(isReasonIncomplete));
+  for (const i of drop) console.log(`   ⏭️  take still incomplete — dropped: ${(i.title || '').slice(0, 60)}`);
+  return drop.size ? items.filter((i) => !drop.has(i)) : items;
 }
 
 async function repairBoilerplateReasons(curated, llm = callLLM) {
@@ -2088,7 +2142,10 @@ async function main() {
 
   // Cluster-aware merge: a re-found story unions its related-source list
   // instead of being silently dropped, so heat can build across days.
-  const merged = clusterItems([...final, ...existing], byCuratedScore).slice(0, MAX_ITEMS);
+  let merged = clusterItems([...final, ...existing], byCuratedScore).slice(0, MAX_ITEMS);
+  // 写库前的双语 take 闸（2026-10-14）：见 enforceBilingualTakes。必须在 hotTopics /
+  // archive / 写 news.json 之前，丢掉的条目才不会出现在任何产物里。
+  merged = await enforceBilingualTakes(merged);
   // Hot topics: prefer semantic clustering over Voyage embeddings; fall back to
   // the legacy tag+source heuristic if VOYAGE_API_KEY is missing or the API
   // errors, so a refresh never breaks on the embedding path.
@@ -2286,4 +2343,4 @@ function isReasonIncomplete(c) {
   return !!zh && (!en || CJK_RE.test(en));
 }
 
-module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, repairMissingFields, enforceSourceFidelity, lastCuration, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };
+module.exports = { main, curateWithClaude, callAnthropic, callGemini, callDeepSeek, callLLM, LLM_PROVIDER, computeHotTopics, isTech, isRehabRelevant, repairBoilerplateReasons, enforceBilingualTakes, REASON_EN_REQUIRED_SINCE, repairMissingFields, repairChineseLimitations, enforceSourceFidelity, lastCuration, isReasonSlop, isReasonIncomplete, isJunkUrl, isJunkItem, isBelowFloor, SCORE_FLOOR, RAW_TEXT_MAX, isCorrespondenceItem, isTruncatedTitle, matchSource, normalizeTitle, ROSTER_JOURNAL_BY_NAME, dateFromUrlPath, dateFromArticlePage, dateFromPubmedId, pmidFromUrl, verifyExaDates, searchExa, SCRAPE_MAX_AGE_DAYS, SCRAPE_BURST_MAX };

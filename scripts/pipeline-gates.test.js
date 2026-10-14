@@ -1347,6 +1347,76 @@ async function run() {
     ok(a.runs === 2 && a.outcomes.fixed === 2 && a.leaks.length === 1, 'Z9: auditRecords 统计判定，并用真实原文抓出入库泄漏');
   }
 
+  console.log('\nAA. limitation 语言兜底：中文字段不得是英文（2026-10-10 审计：feed 15/59 条）');
+  {
+    const { curateWithClaude, repairChineseLimitations } = require('./news-refresh');
+    const quiet = async (fn) => { const o = console.log; console.log = () => {}; try { return await fn(); } finally { console.log = o; } };
+    const EN = 'Single-centre trial with a 6-week follow-up.';
+
+    // AA1 单元：审计里的真实形态——同一句英文填进两个字段
+    let items = [{ limitation: EN, limitationEn: EN }, { limitation: '单中心，随访 6 周。', limitationEn: EN }, { limitation: '', limitationEn: '' }];
+    let calls = 0;
+    await quiet(() => repairChineseLimitations(items, async (sys, user) => { calls++; return JSON.stringify([{ index: 0, limitation: '单中心试验，随访仅 6 周。' }]); }));
+    ok(items[0].limitation === '单中心试验，随访仅 6 周。' && items[0].limitationEn === EN, 'AA1: 英文 limitation 译成中文，limitationEn 保留英文');
+    ok(items[1].limitation === '单中心，随访 6 周。' && items[2].limitation === '' && calls === 1, 'AA1: 已是中文 / 空的不动，只发一次调用');
+
+    // AA2 单元：limitationEn 为空时先保住英文；修不好（返回英文 / 调用失败）保持原样不丢
+    items = [{ limitation: EN, limitationEn: '' }];
+    await quiet(() => repairChineseLimitations(items, async () => JSON.stringify([{ index: 0, limitation: 'still English' }])));
+    ok(items[0].limitationEn === EN && items[0].limitation === EN, 'AA2: 空 limitationEn 先被补上英文；返回非中文不采纳');
+    items = [{ limitation: EN, limitationEn: EN }];
+    await quiet(() => repairChineseLimitations(items, async () => { throw new Error('503'); }));
+    ok(items[0].limitation === EN, 'AA2: 调用失败不抛、不清空（英文总比丢掉局限好）');
+
+    // AA3 集成：接进了 curateWithClaude（「写好了但没接上」守卫）
+    const raw = [{ title: 'Hip strengthening for knee OA: a randomized controlled trial', text: 'We randomized 48 patients for 6 weeks. Single-centre trial.', category: 'orthopedic', source: 'JOSPT', url: 'https://e.com/b', publishedDate: '2026-10-01' }];
+    const main = { index: 0, curatedScore: 80, tags: ['research', 'knee'], studyDesign: 'RCT', titleZh: '髋部力量训练治疗膝骨关节炎', summary: 'Hip strengthening helped knee OA in an RCT of 48 patients.', summaryZh: '一项纳入 48 例患者的 RCT 显示髋部训练有效。', curatedReason: '把髋部训练加进你的膝 OA 方案。', curatedReasonEn: 'Add hip work to your knee OA plans.', limitation: EN, limitationEn: EN };
+    const out = await quiet(() => curateWithClaude(raw, async (sys) => sys.includes('limitation（研究局限）本应是中文')
+      ? JSON.stringify([{ index: 0, limitation: '单中心试验，随访仅 6 周。' }]) : JSON.stringify([main])));
+    ok(out.length === 1 && out[0].limitation === '单中心试验，随访仅 6 周。' && out[0].limitationEn === EN, 'AA3: curateWithClaude 输出的 limitation 是中文');
+  }
+
+  console.log('\nAB. 写库前双语 take 闸：EN take 不完整的条目修不好就不进 news.json（2026-10-14 S5 自锁）');
+  {
+    const { enforceBilingualTakes, REASON_EN_REQUIRED_SINCE, isReasonIncomplete } = require('./news-refresh');
+    const quiet = async (fn) => { const o = console.log; console.log = () => {}; try { return await fn(); } finally { console.log = o; } };
+    const mk = (id, en, seen = '2026-10-08T01:08:24.413Z') => ({ id, title: id, firstSeen: seen, summary: 's', curatedScore: 75,
+      curatedReason: '澳大利亚的同行请注意注册更新。', curatedReasonEn: en });
+    const LEAK = 'Renew promptly to avoid impacting your professional资格.'; // 10-13 线上原文形态
+
+    // AB1 单元：修得好 → 留下且已修；修不好 → 丢；作用域外 / 本来完整 → 不动
+    let items = [mk('fixable', LEAK), mk('hopeless', ''), mk('old', LEAK, '2026-08-20T00:00:00Z'), mk('fine', 'Renew now.')];
+    let calls = 0, sent = 0;
+    const out = await quiet(() => enforceBilingualTakes(items, async (sys, user) => {
+      calls++; sent = (user.match(/"index"/g) || []).length;
+      return JSON.stringify([{ index: 0, curatedReason: '澳大利亚的同行请尽快完成注册更新。', curatedReasonEn: 'Renew your Ahpra registration before the deadline.' }]);
+    }));
+    ok(out.map((i) => i.id).join(',') === 'fixable,old,fine', 'AB1: 修好的留下、修不好的丢掉、作用域外与完整的不动');
+    ok(!isReasonIncomplete(out[0]) && out[0].curatedReasonEn === 'Renew your Ahpra registration before the deadline.', 'AB1: 留下的那条 EN take 已是干净英文');
+    ok(calls === 1 && sent === 2, 'AB1: 只把作用域内的 2 条不完整条目送去重写，一次调用');
+
+    // AB2 fail-closed：重写调用抛错不拖垮刷新，不完整的照样丢
+    items = [mk('a', LEAK), mk('b', 'Fine.')];
+    const out2 = await quiet(() => enforceBilingualTakes(items, async () => { throw new Error('503'); }));
+    ok(out2.length === 1 && out2[0].id === 'b', 'AB2: 调用失败 → 不抛，不完整条目丢弃（宁缺不错）');
+
+    // AB3 全干净时不调用 LLM、原数组原样返回
+    items = [mk('c', 'Fine.')];
+    let called = false;
+    const out3 = await enforceBilingualTakes(items, async () => { called = true; return '[]'; });
+    ok(out3 === items && !called, 'AB3: 全部完整 → 不调用 LLM，原样返回');
+
+    // AB4 接线：main() 在 hotTopics 与写 news.json 之前过闸（「写好了没接上」守卫）
+    const src = fs.readFileSync(path.join(__dirname, 'news-refresh.js'), 'utf8');
+    const iGate = src.indexOf('merged = await enforceBilingualTakes(merged)');
+    const iHot = src.indexOf('computeHotTopicsEmbed(merged');
+    const iWrite = src.indexOf('fs.writeFileSync(NEWS_PATH');
+    ok(iGate > 0 && iGate < iHot && iGate < iWrite, 'AB4 接线：main() 在 hotTopics / 写 news.json 之前调用 enforceBilingualTakes(merged)');
+    // AB5 作用域互锁：闸的作用域 = S5 断言的作用域（不等就会重现「断言比修复宽」的自锁）
+    const s5 = (fs.readFileSync(__filename, 'utf8').match(/const S_SHIPPED = '([\d-]+)'/) || [])[1];
+    ok(s5 && s5 === REASON_EN_REQUIRED_SINCE, `AB5: 闸作用域（${REASON_EN_REQUIRED_SINCE}）= S5 作用域（${s5}）`);
+  }
+
   console.log(`\n✅ all ${passed} assertions passed`);
 }
 
