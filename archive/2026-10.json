@@ -4226,6 +4226,99 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physiotherapy theory and practice"
+    },
+    {
+      "id": "news-1792174241961-0",
+      "title": "Long-Term Clinical Outcomes and Factors Associated With Response in Older Adults With Massive Irreparable Rotator Cuff Tears: A Four-Year Prospective Cohort Study.",
+      "summary": "A four-year prospective cohort study with 92 older adults with atraumatic massive irreparable rotator cuff tears (MIRCTs) found that most patients (95-100%) achieved minimal clinically important differences (MCID) with nonoperative treatment, persisting until 4 years. Longer symptom duration (β = -1.3; 95% CI = -1.7 to -0.8) and smoking (β = -8.8; 95% CI = -13.2 to -4.4) were associated with worse shoulder function.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42886022/",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "firstSeen": "2026-10-16T18:10:41.961Z",
+      "curatedScore": 85,
+      "curatedReason": "对于老年、无法修复的巨大肩袖撕裂（MIRCTs）患者，非手术治疗是有效的长期方案，95-100%的患者在四年内能达到MCID。别再犹豫将非手术治疗作为此类患者的一线选择，但要提醒患者，症状持续时间长和吸烟可能导致更差的功能预后。",
+      "titleZh": "老年不可修复巨大肩袖撕裂患者的长期临床结局及影响因素：一项四年前瞻性队列研究",
+      "summaryZh": "一项对92名老年非创伤性不可修复巨大肩袖撕裂（MIRCTs）患者进行的四年前瞻性队列研究发现，大多数患者（95-100%）通过非手术治疗达到了临床最小重要差异（MCID），效果持续至四年。症状持续时间越长（β = -1.3; 95% CI = -1.7至-0.8）和吸烟（β = -8.8; 95% CI = -13.2至-4.4）与较差的肩关节功能相关。",
+      "curatedReasonEn": "For older adults with massive irreparable rotator cuff tears (MIRCTs), nonoperative treatment is an effective long-term option, with 95-100% of patients achieving MCID over four years. Don't hesitate to consider nonoperative management as a first-line option for these patients, but be aware that longer symptom duration and smoking may be associated with worse functional outcomes.",
+      "limitation": "本研究为单中心前瞻性队列研究，且大部分患者（76/92）在3个月内表现出临床改善，可能存在选择偏倚，结果外推性受限。",
+      "limitationEn": "This was a single-center prospective cohort study, and the majority of patients (76/92) showed clinical improvement within 3 months, which may introduce selection bias and limit generalizability.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physical therapy"
+    },
+    {
+      "id": "news-1792174241962-1",
+      "title": "Do treatment parameters of dry needling influence its effect on pain? A systematic review and meta-analysis.",
+      "summary": "A systematic review and meta-analysis of 23 studies (out of 5,220 identified) found no consistent evidence that dry needling parameters (number of sessions, trigger points, local twitch responses) influenced its effectiveness for neck pain. Meta-regressions did not identify these parameters as moderators (QM = 0.26, p = 0.968 to QM = 3.17, p = 0.205).",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42885938/",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "firstSeen": "2026-10-16T18:10:41.962Z",
+      "curatedScore": 75,
+      "curatedReason": "干针治疗颈痛时，目前没有证据表明治疗参数（如疗程次数、激痛点数量、局部抽搐反应）会影响疗效。所以，你暂时不需要纠结于这些具体剂量参数，重点仍应放在干针的整体临床效果和患者的个体反应上。",
+      "titleZh": "干针治疗参数是否影响其止痛效果？一项系统综述与荟萃分析",
+      "summaryZh": "一项包含23项研究（从5,220项中筛选）的系统综述和荟萃分析发现，没有一致证据表明干针治疗参数（疗程次数、触发点数量、局部抽搐反应）会影响其对颈痛的疗效。荟萃回归分析也未发现这些参数是疗效的调节因素（QM = 0.26, p = 0.968 至 QM = 3.17, p = 0.205）。",
+      "curatedReasonEn": "There is currently no evidence that dry needling parameters (e.g., number of sessions, number of trigger points, local twitch responses) influence its effectiveness for neck pain. Therefore, you do not need to overthink these specific dosage parameters for now; continue to focus on the overall clinical effect of dry needling and individual patient responses.",
+      "limitation": "研究纳入的大部分文献报告不完整且存在高偏倚风险，荟萃分析存在显著异质性，导致无法得出可靠的剂量-反应关系。",
+      "limitationEn": "Most included literature had incomplete reporting and high risk of bias, and the meta-analysis showed substantial heterogeneity, preventing identification of a reliable dose-response relationship.",
+      "tags": [
+        "research",
+        "dry-needling"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "The Journal of manual & manipulative therapy"
+    },
+    {
+      "id": "news-1792174241962-4",
+      "title": "A Machine Learning Model With Temporal Validation for Predicting Walking Ability in Nontraumatic Spinal Cord Injury.",
+      "summary": "A machine learning model using Gradient Boosting Decision Tree (GBDT) was developed to predict walking ability in 148 nontraumatic spinal cord injury patients. It achieved an AUC of 0.91 (95% CI: 0.77-1.00) on internal testing and 0.81 accuracy (95% CI: 0.68-0.92) on temporal external validation (n=37). Key predictors included lower limb muscle strength and age.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42885901/",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "firstSeen": "2026-10-16T18:10:41.962Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究初步开发了一个机器学习模型，用于预测非创伤性脊髓损伤患者的步行能力。虽然模型在内部和外部验证中表现良好，但目前仍处于探索阶段，你在临床上不应将其作为现成的工具。它提示了未来精准康复评估的潜力，但仍需等待更大规模、多中心研究的验证。",
+      "titleZh": "基于时间验证的机器学习模型预测非创伤性脊髓损伤患者的步行能力",
+      "summaryZh": "一个使用梯度提升决策树（GBDT）的机器学习模型被开发用于预测148名非创伤性脊髓损伤患者的步行能力。该模型在内部测试中实现了0.91的AUC（95% CI: 0.77-1.00），在时间外部验证（n=37）中实现了0.81的准确率（95% CI: 0.68-0.92）。关键预测因素包括下肢肌力和年龄。",
+      "curatedReasonEn": "This study preliminarily developed a machine learning model to predict walking ability in patients with nontraumatic spinal cord injury. While the model showed promising performance in internal and external validation, it is still exploratory, and you should not use it as a ready-to-use clinical tool. It suggests the potential for future precise rehabilitation assessment but requires validation in larger, multicenter studies.",
+      "limitation": "本模型在单中心、相对较小的患者群体（148例开发，37例外部验证）中开发和验证，结果外推性受限。",
+      "limitationEn": "The model was developed and validated in a single center with a relatively small patient cohort (148 for development, 37 for external validation), limiting generalizability.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair",
+      "tech": true
+    },
+    {
+      "id": "news-1792174241962-6",
+      "title": "Psychometric Evaluation of the Parental Education in Physiotherapy Scale: A Brief Measure of Family-Centered Educational Practices in Pediatric Physiotherapy.",
+      "summary": "The Parental Education in Physiotherapy (PEP) scale, an 8-item, 3-factor measure (Collaboration, Capacity-Building, and Reflection), demonstrated excellent psychometric properties (CFI = 1.000, RMSEA = 0.011, SRMR = 0.031) among 310 Spanish pediatric physical therapists for assessing family-centered educational practices.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42886049/",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "firstSeen": "2026-10-16T18:10:41.962Z",
+      "curatedScore": 70,
+      "curatedReason": "这份8项的“物理治疗中的家长教育量表”（PEP）在西班牙儿科物理治疗师中验证了其评估家庭中心教育实践的优异心理测量学特性。你可以用这个量表来定期评估和指导自己在与6岁以下儿童家庭合作、赋能和反思方面的表现，从而系统性地提升家庭中心化护理质量。",
+      "titleZh": "物理治疗中家长教育量表的心理测量学评估：一项关于儿科物理治疗中家庭中心化教育实践的简短测量工具",
+      "summaryZh": "“物理治疗中的家长教育量表”（PEP）是一项包含8个条目、3个维度（协作、能力建设和反思）的测量工具，在310名西班牙儿科物理治疗师中表现出优秀的心理测量学特性（CFI = 1.000, RMSEA = 0.011, SRMR = 0.031），用于评估以家庭为中心的教育实践。",
+      "curatedReasonEn": "The 8-item Parental Education in Physiotherapy (PEP) scale has demonstrated excellent psychometric properties among Spanish pediatric physical therapists for assessing family-centered educational practices. You can use this scale to regularly evaluate and guide your performance in collaborating with, building capacity in, and reflecting with families of children under 6 years of age, thereby systematically improving the quality of family-centered care.",
+      "limitation": "本研究为工具性横断面研究，数据来源于西班牙的物理治疗师，可能存在文化和实践背景的局限性。",
+      "limitationEn": "This instrumental cross-sectional study collected data from physical therapists in Spain, which may introduce cultural and practice context limitations.",
+      "tags": [
+        "research",
+        "education"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
     }
   ]
 }
