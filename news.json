@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-17T18:34:47.113Z",
+    "lastUpdated": "2026-10-17T22:26:38.451Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,13 +20,14 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
       "category": "manual-modality",
       "publishedAt": "2026-10-16T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
         "American journal of physical medicine & rehabilitation",
         "Topics in stroke rehabilitation",
         "Disability and rehabilitation",
+        "medRxiv",
         "The Journal of manual & manipulative therapy"
       ],
       "tag": "electro",
@@ -69,15 +70,20 @@
           "titleZh": "肌内效贴布与肌筋膜松解术治疗颈源性头痛的比较：一项随机对照试验。"
         },
         {
+          "source": "medRxiv",
+          "title": "Efficacy of physiotherapy in reducing pain in subjects with temporomandibular disorders: a systematic review with network meta-analysis",
+          "titleZh": "物理治疗在减轻颞下颌关节紊乱病患者疼痛方面的疗效：一项系统综述与网络 Meta 分析"
+        },
+        {
           "source": "PubMed",
           "journal": "The Journal of manual & manipulative therapy",
           "title": "Do treatment parameters of dry needling influence its effect on pain? A systematic review and meta-analysis.",
           "titleZh": "干针治疗参数是否影响其止痛效果？一项系统综述与荟萃分析"
         }
       ],
-      "heat": 3.24,
-      "themeZh": "多种物理治疗干预对神经和肌肉骨骼疾病的疗效",
-      "themeEn": "Diverse Physical Therapy Interventions for Neurological, Musculoskeletal"
+      "heat": 3.58,
+      "themeZh": "电刺激、冲击波与激光疗法对神经与肌骨的效应",
+      "themeEn": "Electrical, Shockwave, Laser Therapy Effects"
     },
     {
       "id": "news-1792019913652-4",
@@ -145,39 +151,33 @@
           "titleZh": "刻不容缓：为何更年期应成为运动与康复医学的优先事项。"
         }
       ],
-      "heat": 2.7,
-      "themeZh": "运动训练对健康和疾病人群体能代谢的影响",
-      "themeEn": "Exercise Training Impact on Physical Performance Metabolism"
+      "heat": 2.56,
+      "themeZh": "运动训练对心血管代谢与体能表现的性别与年龄差异",
+      "themeEn": "Exercise Training, Metabolism, Sex Differences"
     },
     {
-      "id": "news-1791846292839-25",
-      "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1551?rss=1",
+      "id": "news-1791940661347-1",
+      "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864195/",
       "category": "orthopedic",
       "publishedAt": "2026-10-15T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "British Journal of Sports Medicine",
-        "BMC musculoskeletal disorders",
+        "Journal of physiotherapy",
         "Journal of Rehabilitation Medicine",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "The South African journal of physiotherapy",
-        "Journal of physiotherapy"
+        "British Journal of Sports Medicine",
+        "BMC musculoskeletal disorders"
       ],
-      "tag": "knee",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
-          "titleZh": "结合运动和认知行为疗法的数字疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验。"
-        },
-        {
           "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
-          "titleZh": "数字教育和运动疗法对 15,197 名髋膝骨关节炎患者身体活动轨迹的长期影响：一项纵向注册研究"
+          "journal": "Journal of physiotherapy",
+          "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
+          "titleZh": "光生物调节疗法作为运动控制训练的辅助手段，对慢性非特异性下腰痛患者的疗效可忽略不计：一项随机试验"
         },
         {
           "source": "J Rehabil Med",
@@ -202,23 +202,35 @@
           "journal": "Journal of physiotherapy",
           "title": "Physiotherapy management of persistent pelvic pain.",
           "titleZh": "持续性盆腔疼痛的物理治疗管理。"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
+          "titleZh": "结合运动和认知行为疗法的数字疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
+          "titleZh": "数字教育和运动疗法对 15,197 名髋膝骨关节炎患者身体活动轨迹的长期影响：一项纵向注册研究"
         }
       ],
-      "heat": 2.29,
-      "themeZh": "数字疗法和远程康复对骨科疼痛的干预",
-      "themeEn": "Digital, Telerehab Interventions for Orthopedic Pain"
+      "heat": 2.17,
+      "themeZh": "多种疗法居家运动方案对慢性疼痛的依从性与效果",
+      "themeEn": "Home Exercise for Chronic Pain Management"
     },
     {
-      "id": "news-1791940661348-4",
-      "title": "Continuity of care interventions for people with stroke and their caregivers: a scoping review of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42865266/",
+      "id": "news-1791964056898-0",
+      "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864890/",
       "category": "neurological",
       "publishedAt": "2026-10-15T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
+        "NeuroRehabilitation",
         "Disability and rehabilitation",
         "Topics in stroke rehabilitation",
-        "Clinical rehabilitation",
         "PM & R : the journal of injury, function, and rehabilitation",
         "Physiotherapy theory and practice",
         "medRxiv"
@@ -226,6 +238,18 @@
       "tag": "stroke",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+          "titleZh": "卒中后生活质量的早期变化及相关因素：一项前瞻性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Appraisals of life transition events and associations with quality of life at 3- and 12-months post-discharge following spinal cord injury.",
+          "titleZh": "脊髓损伤患者出院后 3 个月和 12 个月生命转折事件评价与生活质量的关联"
+        },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
@@ -237,12 +261,6 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Financial burden, non-medical drivers of health, and early caregiving role formation after stroke: a scoping review.",
           "titleZh": "卒中后早期照护角色形成中的财务负担、非医疗健康驱动因素：一项范围综述。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Development of Enhanced Reviews of Psychological Changes After Stroke (ENRICH): A complex Intervention to Monitor and Support Self-Management of Post-Stroke Psychological Changes Within a Matched Care Model.",
-          "titleZh": "卒中后心理变化增强型评估 (ENRICH) 的开发：一项监测和支持卒中后心理变化自我管理的分级护理复杂干预"
         },
         {
           "source": "PubMed",
@@ -280,9 +298,9 @@
           "titleZh": "一种量化卒中后肘关节和腕关节屈肌高阻力的规范扭矩曲线法：概念验证研究"
         }
       ],
-      "heat": 2.29,
-      "themeZh": "卒中患者及其照护者的心理支持和康复管理",
-      "themeEn": "Psychological Support, Rehabilitation Management for Stroke"
+      "heat": 2.17,
+      "themeZh": "卒中与脊髓损伤患者的生活质量及照护连续性",
+      "themeEn": "Post-Stroke SCI Quality of Life"
     },
     {
       "id": "news-1791363059704-2",
@@ -325,12 +343,82 @@
           "titleZh": "以节律为中心的音乐干预在运动协调和康复中的应用：机制、设计原则和技术辅助评估的范围综述"
         }
       ],
-      "heat": 2.16,
-      "themeZh": "儿童发育性运动障碍和神经发育迟缓的康复实践",
-      "themeEn": "Pediatric Neurodevelopmental Disorders Rehabilitation Practices"
+      "heat": 2.05,
+      "themeZh": "儿童发育性协调障碍的物理治疗与家庭参与",
+      "themeEn": "Pediatric DCD PT & Family Engagement"
     }
   ],
   "items": [
+    {
+      "id": "news-1791940661347-1",
+      "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
+      "summary": "A randomized controlled trial of 148 participants found that adding photobiomodulation therapy (PBMT) to motor control exercise (MCE) provided negligible additional improvements in pain intensity (MD -0.4 points, 95% CI -1.2 to 0.4) and disability (MD -0.7 points, 95% CI -2.4 to 0.9) compared to sham PBMT plus MCE for chronic non-specific low back pain over 12 months.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864195/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T01:17:41.347Z",
+      "curatedScore": 85,
+      "curatedReason": "这项纳入 148 名受试者的 RCT 表明，对慢性非特异性下腰痛患者，光生物调节疗法 (PBMT) 对运动控制训练 (MCE) 的额外益处可忽略不计。别再用 PBMT 作为常规辅助，证据不支持。",
+      "titleZh": "光生物调节疗法作为运动控制训练的辅助手段，对慢性非特异性下腰痛患者的疗效可忽略不计：一项随机试验",
+      "summaryZh": "一项纳入 148 名参与者的随机对照试验发现，对于慢性非特异性下腰痛患者，在运动控制训练中加入光生物调节疗法 (PBMT)，与假 PBMT 加 MCE 相比，在疼痛强度（MD -0.4 分，95% CI -1.2 至 0.4）和残疾（MD -0.7 分，95% CI -2.4 至 0.9）方面提供的额外改善可忽略不计，且在 12 个月的随访期内无显著差异。",
+      "curatedReasonEn": "This RCT with 148 participants shows that photobiomodulation therapy (PBMT) offers negligible additional benefits to motor control exercise (MCE) for chronic non-specific low back pain. Reconsider PBMT as a routine adjunct; the evidence doesn't support it.",
+      "limitation": "该研究关注慢性非特异性腰痛人群，结果对其他类型或急性腰痛的外推性有限。",
+      "limitationEn": "The study focused on chronic non-specific low back pain, limiting generalizability to other types or acute low back pain.",
+      "tags": [
+        "research",
+        "spine",
+        "laser"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1791940661348-26",
+      "title": "Efficacy of physiotherapy in reducing pain in subjects with temporomandibular disorders: a systematic review with network meta-analysis",
+      "summary": "A systematic review and network meta-analysis of 25 RCTs (1,540 participants) found that manual therapy and therapeutic exercise are effective in reducing pain in temporomandibular disorders. Multimodal treatments, particularly combining dry needling and manual therapy, appeared to be the most effective approach.",
+      "category": "manual-modality",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.11.26365246v1?rss=1",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T01:17:41.348Z",
+      "curatedScore": 80,
+      "curatedReason": "这项对颞下颌关节紊乱病 (TMD) 的 NMA 证实，手法治疗和治疗性运动是有效的止痛策略，应作为一线干预。多模式治疗（特别是干针与手法治疗结合）看起来最有效，值得你在临床实践中优先考虑。",
+      "titleZh": "物理治疗在减轻颞下颌关节紊乱病患者疼痛方面的疗效：一项系统综述与网络 Meta 分析",
+      "summaryZh": "一项包含 25 项随机临床试验（共 1540 人）的系统综述和网络 Meta 分析发现，手法治疗和治疗性运动在减轻颞下颌关节紊乱病患者的疼痛方面是有效的。多模式治疗，特别是干针与手法治疗的结合，似乎是最有效的方法。",
+      "curatedReasonEn": "This NMA on temporomandibular disorders (TMD) confirms that manual therapy and therapeutic exercise are effective pain-reducing strategies and should be first-line interventions. Multimodal treatments, especially the combination of dry needling and manual therapy, appear most effective and should be prioritized in your clinical practice.",
+      "limitation": "纳入研究的异质性和方法学质量差异可能影响网络 Meta 分析的确定性。",
+      "limitationEn": "Variability in heterogeneity and methodological quality of included studies may affect the certainty of the network meta-analysis.",
+      "tags": [
+        "research",
+        "dry-needling",
+        "manipulation"
+      ],
+      "studyDesign": "系统综述"
+    },
+    {
+      "id": "news-1791964056898-0",
+      "title": "Early Changes in Post-Stroke Quality of Life and Associated Factors: A Prospective Study.",
+      "summary": "A prospective study of patients found that physical quality of life improved progressively over 3 months, while mental quality of life improved only in the first month. Ambulation and depressive symptoms were independently associated with changes in physical and mental quality of life, respectively.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864890/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T07:47:36.898Z",
+      "curatedScore": 75,
+      "curatedReason": "这项前瞻性研究指出，卒中后前 3 个月内，躯体和心理生活质量恢复轨迹不同。规划早期康复时，必须同时关注步态能力和抑郁症状，别只盯着躯体功能。",
+      "titleZh": "卒中后生活质量的早期变化及相关因素：一项前瞻性研究",
+      "summaryZh": "一项对患者的前瞻性研究发现，卒中后前 3 个月内，躯体生活质量持续改善，而心理生活质量仅在第一个月有所改善。步态能力与躯体生活质量变化独立相关，而抑郁症状与心理生活质量变化独立相关。",
+      "curatedReasonEn": "This prospective study highlights divergent recovery trajectories for physical and psychosocial quality of life in the first 3 months post-stroke. When planning early rehabilitation, you must address both ambulation and depressive symptoms, not just physical function.",
+      "limitation": "研究样本量相对较小，且仅限于首次卒中患者，可能影响结果的普遍性。",
+      "limitationEn": "The relatively small sample size and restriction to first-ever stroke patients may limit the generalizability of the findings.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
     {
       "id": "news-1792019913652-4",
       "title": "Effects of Exercise Training on the Metabolic Cost of Walking in Health and Disease: A Systematic Review and Meta-analysis.",
@@ -1992,82 +2080,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1792019913652-3",
-      "title": "Development of Enhanced Reviews of Psychological Changes After Stroke (ENRICH): A complex Intervention to Monitor and Support Self-Management of Post-Stroke Psychological Changes Within a Matched Care Model.",
-      "summary": "The Enhanced Reviews of Psychological Changes After Stroke (ENRICH) program is a brief, complex intervention designed to monitor and support self-management of post-stroke psychological changes within the UK matched care model. Developed via a literature review, interviews, Delphi survey, and workshops, it supports stroke survivors with mild to moderate cognitive changes, low mood, anxiety, and fatigue through personalized psychoeducation and three brief reviews.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873962/",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "firstSeen": "2026-10-14T23:18:33.652Z",
-      "curatedScore": 70,
-      "curatedReason": "ENRICH 干预方案为卒中后心理变化的监测和支持提供了一个结构化的自我管理模型。虽然该方案仍在可行性测试阶段，但其设计思路值得你了解和借鉴，尤其是它强调分级护理和早期干预轻中度心理问题的策略，这可能有助于你更系统地整合心理支持到康复流程中。",
-      "titleZh": "卒中后心理变化增强型评估 (ENRICH) 的开发：一项监测和支持卒中后心理变化自我管理的分级护理复杂干预",
-      "summaryZh": "卒中后心理变化增强型评估 (ENRICH) 项目是一项复杂的短期干预措施，旨在英国分级护理模式下监测和支持卒中后心理变化的自我管理。该方案通过文献回顾、访谈、德尔菲调查和研讨会开发，通过个性化心理教育和三次简短评估，为有轻中度认知改变、情绪低落、焦虑和疲劳的卒中幸存者提供支持。",
-      "curatedReasonEn": "The ENRICH intervention offers a structured self-management model for monitoring and supporting post-stroke psychological changes. While still in feasibility testing, its design insights are valuable, particularly its emphasis on stepped care and early intervention for mild-to-moderate psychological issues, which can help you integrate psychological support more systematically into your rehabilitation process.",
-      "limitation": "本研究仅报告了干预方案的设计和开发过程，尚未进行临床有效性测试，因此无法评估实际疗效。",
-      "limitationEn": "This study only reported the design and development of the intervention, with no clinical effectiveness testing yet, thus actual efficacy cannot be assessed.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1791785805082-5",
-      "title": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study.",
-      "summary": "A longitudinal observational study (n=16,783) using the SCI Model Systems database found that lower time-updated social integration (hazard ratio [HR] 1.09 per 10-point decrease) and within-person decline (HR 1.077 per 10-point decrease) were associated with higher subsequent all-cause mortality after traumatic spinal cord injury. Associations were seen for natural (HR 1.08) and external mortality (HR 1.11).",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42860197/",
-      "publishedAt": "2026-10-11T00:00:00.000Z",
-      "firstSeen": "2026-10-11T06:03:52.340Z",
-      "curatedScore": 70,
-      "curatedReason": "这项大型队列研究揭示了脊髓损伤患者较低的社会融合水平和随时间推移的下降与更高的死亡风险相关。这提醒你在康复规划中不能仅关注躯体功能，还需重视患者的社会融合度，并考虑社会支持干预作为长期管理策略的一部分。",
-      "titleZh": "时间变化的社会融合与创伤性脊髓损伤后长期全因和特定原因死亡率：一项纵向 SCIMS 研究",
-      "summaryZh": "一项使用脊髓损伤模型系统数据库的纵向观察性研究（n=16,783）发现，创伤性脊髓损伤后，较低的时间更新社会融合度（每下降 10 分，风险比 [HR] 1.09）和个人内部下降（每下降 10 分，HR 1.077）与后续较高的全因死亡率相关。自然原因（HR 1.08）和外部原因（HR 1.11）死亡率也观察到相关性。",
-      "curatedReasonEn": "This large cohort study reveals that lower and declining social integration in spinal cord injury patients are associated with a higher mortality risk. This emphasizes the need for you to consider social integration, not just physical function, in rehabilitation planning, and to incorporate social support interventions as part of long-term management strategies.",
-      "limitation": "研究设计为观察性队列研究，无法确定因果关系，且存在幸存者选择偏差和部分死亡原因缺失。",
-      "limitationEn": "As an observational cohort study, it cannot establish causality, and survivor selection bias and missing causes of death limit interpretation.",
-      "tags": [
-        "research",
-        "spinal-cord"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00947-0/fulltext?rss=yes",
-          "title": "Time-Varying Social Integration and Long-Term All-Cause and Cause-Specific Mortality After Traumatic Spinal Cord Injury: A Longitudinal SCIMS Study"
-        }
-      ]
-    },
-    {
-      "id": "news-1792019913652-6",
-      "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
-      "summary": "This review describes the current state of ACL reconstruction, highlighting a shift in graft utilization (quadriceps tendon autograft increased to ~20% by 2023) and supporting lateral extra-articular tenodesis for selected high-risk knees. It emphasizes a move from fixed timelines to criteria-based return-to-play (RTP), with psychological readiness independently associated with RTP and second ACL injury, and calls for validation of RTP criteria against reinjury endpoints.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873380/",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "firstSeen": "2026-10-14T23:18:33.652Z",
-      "curatedScore": 70,
-      "curatedReason": "关于 ACL 重建的综述强调了移植物选择、侧方加固、康复和重返运动（RTP）策略的最新进展。你会发现，RTP 决策已从固定时间转向基于标准的评估，并且心理准备度与再次损伤风险独立相关。这意味着在患者管理中，需要更个性化地选择移植物，并全面评估功能和心理因素，不能仅依赖时间。",
-      "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复和重返运动",
-      "summaryZh": "这篇综述描述了前交叉韧带重建的现状，强调移植物使用（股四头肌腱自体移植物在 2023 年增至约 20%）的转变，并支持为特定高危膝关节进行侧方关节外腱固定术。它强调重返运动 (RTP) 已从固定时间转向基于标准的评估，心理准备度与 RTP 和第二次 ACL 损伤独立相关，并呼吁针对再损伤终点验证 RTP 标准。",
-      "curatedReasonEn": "This review on ACL reconstruction highlights the latest advancements in graft selection, lateral augmentation, rehabilitation, and return-to-play (RTP) strategies. You will find that RTP decisions have shifted from fixed timelines to criteria-based assessments, and psychological readiness is independently associated with reinjury risk. This means your patient management should involve more personalized graft selection and a comprehensive assessment of both functional and psychological factors, moving beyond time-based criteria.",
-      "limitation": "这是一篇叙述性综述，可能存在选择性偏倚，并未对证据质量进行系统性评估和综合。",
-      "limitationEn": "This is a narrative review, which may be subject to selection bias and does not systematically appraise and synthesize evidence quality.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "综述",
-      "journal": "Current reviews in musculoskeletal medicine"
     }
   ]
 }
