@@ -1,0 +1,204 @@
+{
+ "date": "2026-10-18",
+ "generatedAt": "2026-10-17T23:21:08.304Z",
+ "windowHours": 50,
+ "windowStart": "2026-10-16T23:46:46.957Z",
+ "windowEnd": "2026-10-17T23:20:06.819Z",
+ "lead": {
+  "titleZh": "肌少症衰弱运动处方网络荟萃分析",
+  "titleEn": "Network Meta-analysis on Exercise Prescription for Sarcopenia and Frailty",
+  "paragraphZh": "今日头条来自老年康复领域，一项网络荟萃分析（score 80）聚焦肌少症和衰弱体能的运动处方。老年康复领域还有一项观察研究（score 70）探讨了髋部骨折后跨学科护理与跌倒的关联，以及一项阻力训练对衰弱老年人影响的观察研究（score 70）。",
+  "paragraphEn": "Today's lead story comes from the field of geriatric rehabilitation, with a network meta-analysis (score 80) focusing on exercise prescriptions for sarcopenia and frailty. The geriatric rehabilitation section also includes an observational study (score 70) examining the association between interdisciplinary care and falls after hip fracture, and another observational study (score 70) on the impact of resistance training on frail older adults."
+ },
+ "stats": {
+  "events": 7,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 80
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1792279081078-24",
+     "title": "Effect of lumbar strengthening exercises on kinesiophobia in people with chronic low back pain: a systematic review",
+     "summary": "A systematic review of 3 RCTs found inconsistent evidence regarding the effectiveness of lumbar strengthening exercises in reducing kinesiophobia in individuals with chronic low back pain. While one trial reported significant reductions with isokinetic trunk strengthening compared to core stabilization and conventional exercise, two found no significant differences. The overall certainty of evidence was graded as very low.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10554-0",
+     "publishedAt": "2026-10-16T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 65,
+     "curatedReason": "这项系统综述强调，目前关于腰部强化训练能否有效降低慢性腰痛患者的运动恐惧症的证据非常有限且质量较低。在常规临床实践中，你不应过度依赖单一的腰部强化训练来解决运动恐惧症，而应结合多模式干预。",
+     "titleZh": "腰部强化训练对慢性腰痛患者运动恐惧症的影响：一项系统综述",
+     "summaryZh": "一项对 3 项随机对照试验的系统综述发现，关于腰部强化训练能否有效减少慢性腰痛患者运动恐惧症的证据不一致。尽管一项试验报告等速躯干强化训练相较于核心稳定和常规运动能显著降低运动恐惧症，但另两项试验未发现显著差异。总体证据确定性被评定为非常低。",
+     "curatedReasonEn": "This systematic review highlights that current evidence on whether lumbar strengthening exercises effectively reduce kinesiophobia in chronic low back pain patients is very limited and of low quality. In routine clinical practice, you should not over-rely on solitary lumbar strengthening to address kinesiophobia, but rather integrate multimodal interventions.",
+     "limitation": "本系统综述仅纳入了 3 项研究，证据确定性非常低，且研究间干预措施和对照组差异较大，限制了结论的通用性。",
+     "limitationEn": "This systematic review included only 3 studies, with very low certainty of evidence and considerable heterogeneity in interventions and control groups, limiting the generalizability of the conclusions.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Musculoskeletal Disorders"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1792239378922-27",
+     "title": "A Foundational Balance Training Exercise Program for People with Blindness or Low Vision",
+     "summary": "This review discusses the foundational balance training needs for individuals with blindness or low vision, emphasizing the increased reliance on somatosensory and vestibular systems due to reduced visual input.",
+     "category": "neurological",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00946-9/fulltext?rss=yes",
+     "publishedAt": "2026-10-17T00:00:00.000Z",
+     "firstSeen": "2026-10-17T12:16:18.922Z",
+     "curatedScore": 70,
+     "curatedReason": "这项综述强调了视觉障碍患者平衡训练的重要性，并指出了目前对这类人群平衡训练项目的不足。它提示你在设计视障患者康复方案时，应特别关注体感和前庭系统的代偿性训练，以提升他们的安全移动能力。",
+     "titleZh": "盲人或低视力人群的基础平衡训练方案",
+     "summaryZh": "这篇综述探讨了盲人或低视力人群的基础平衡训练需求，强调由于视觉输入减少，他们对体感和前庭系统的依赖性增加。",
+     "curatedReasonEn": "This review highlights the importance of balance training for individuals with visual impairments and the current inadequacy of such programs. It suggests that when designing rehabilitation plans for visually impaired patients, you should specifically focus on compensatory training of the somatosensory and vestibular systems to improve their safe mobility.",
+     "tags": [
+      "research",
+      "vestibular"
+     ],
+     "studyDesign": "综述",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1792279081078-26",
+     "title": "Intermittent theta burst stimulation on the cerebellar Hemisphere to imprOve Post-stroke cognitivE impairment (HOPE): a multicentre randomised controlled double-blind trial",
+     "summary": "The HOPE trial is a multicentre, randomized, double-blind, sham-controlled study designed to investigate the safety and efficacy of intermittent theta burst stimulation (iTBS) on the contralesional cerebellar hemisphere to improve cognitive function in 70 adults with cognitive impairment within 14 days after a first-ever unilateral supratentorial ischaemic stroke. Participants will receive 7 consecutive days of stimulation and be followed for 180 days, with the primary efficacy outcome being Montreal Cognitive Assessment score change at day 90±7.",
+     "category": "neurological",
+     "source": "BJSM",
+     "sourceUrl": "https://svn.bmj.com/content/early/2026/10/16/svn-2026-005263",
+     "publishedAt": "2026-10-16T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 65,
+     "curatedReason": "HOPE 试验旨在探索小脑间歇性 θ 爆发刺激（iTBS）对早期卒中后认知障碍（PSCI）的安全性与疗效。如果结果积极，它可能为卒中康复提供一种新的认知神经调控策略，但目前仍是协议阶段，期待最终结果。",
+     "titleZh": "小脑半球间歇性 θ 爆发刺激改善卒中后认知障碍（HOPE）的安全性与疗效：一项多中心随机对照双盲试验",
+     "summaryZh": "HOPE 试验是一项多中心、随机、双盲、假对照研究，旨在评估对侧小脑半球间歇性 θ 爆发刺激（iTBS）对 70 名首次单侧幕上缺血性卒中后 14 天内出现认知障碍成人认知功能的安全性与有效性。参与者将接受连续 7 天的刺激，并随访 180 天，主要疗效指标为第 90±7 天蒙特利尔认知评估评分的变化。",
+     "curatedReasonEn": "The HOPE trial aims to explore the safety and efficacy of cerebellar intermittent theta burst stimulation (iTBS) for early post-stroke cognitive impairment (PSCI). If positive, it could offer a new cognitive neuromodulation strategy for stroke rehabilitation, but it is currently in the protocol stage, awaiting final results.",
+     "limitation": "本研究目前仅是试验方案，尚未产出临床数据，因此无法评估其有效性和安全性。",
+     "limitationEn": "This study is currently only a trial protocol, with no clinical data yet, so its effectiveness and safety cannot be evaluated.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1792279081078-32",
+     "title": "Modality-specific, deficit-targeted exercise prescriptions for physical function in sarcopenia and frailty: a network meta-analysis",
+     "summary": "A network meta-analysis of 61 RCTs (3,706 participants) on sarcopenia and frailty found that multicomponent training with resistance training offered the most comprehensive benefits for functional mobility (low certainty). Elastic band resistance training was most effective for handgrip strength (MD 1.95 kg; 95% CI, 1.13 to 2.76; moderate certainty), and machine-based resistance training showed intermediate effectiveness for knee extension strength (MD 2.96 kg; 95% CI, 1.59 to 4.34; low certainty).",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08352-3",
+     "publishedAt": "2026-10-16T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 80,
+     "curatedReason": "这项网络荟萃分析支持对肌少症和衰弱老年人采用“特定模式、靶向缺陷”的运动处方。你可以优先考虑多组分训练，特别是包含阻力训练的方案来改善功能性活动能力，并利用弹力带和器械阻力训练来针对性地提升握力和膝关节伸展力量。",
+     "titleZh": "针对肌少症和衰弱体能的特定模式、靶向缺陷运动处方：一项网络荟萃分析",
+     "summaryZh": "一项对 61 项随机对照试验（3,706 名参与者）的肌少症和衰弱网络荟萃分析发现，包含阻力训练的多组分训练对功能性活动能力提供了最全面的益处（证据确定性低）。弹力带阻力训练对握力最有效（MD 1.95 公斤；95% CI，1.13 至 2.76；证据确定性中等），而器械阻力训练对膝关节伸展力量显示出中等有效性（MD 2.96 公斤；95% CI，1.59 至 4.34；证据确定性低）。",
+     "curatedReasonEn": "This network meta-analysis supports a “modality-specific, deficit-targeted” exercise prescription for older adults with sarcopenia and frailty. You can prioritize multi-component training, especially resistance training, to improve functional mobility, and use elastic band and machine-based resistance training to specifically enhance handgrip and knee extension strength.",
+     "limitation": "本网络荟萃分析中，多组分训练对功能性活动能力的证据确定性较低，且一些阻力训练的证据确定性也为低或中等，可能影响结论的强度。",
+     "limitationEn": "In this network meta-analysis, the certainty of evidence for multicomponent training on functional mobility was low, and for some resistance training, it was also low or moderate, which may affect the strength of the conclusions.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Geriatrics"
+    },
+    {
+     "id": "news-1792279081078-31",
+     "title": "Geriatric interdisciplinary intermediate care after hip fracture: associations with immobility and recurrent falls",
+     "summary": "A retrospective observational cohort study of 205 hip fracture patients found that those receiving Geriatric Interdisciplinary Intermediate Care (GIMC) had lower observed immobility (17.0% vs. 32.7%) and fewer recurrent falls (1.1% vs. 5.2%) at one-year follow-up compared to usual care. GIMC patients were also more likely to be ambulatory (82.0% vs. 67.3%).",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08508-1",
+     "publishedAt": "2026-10-14T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 70,
+     "curatedReason": "这项回顾性研究表明，老年综合跨学科中间护理（GIMC）可能与髋部骨折老年患者的较低不动性和较少复发性跌倒相关。这强调了多学科协作和家庭康复在老年患者术后管理中的价值，鼓励你在实践中积极推动和参与此类综合护理模式。",
+     "titleZh": "髋部骨折后老年综合跨学科中间护理：与不动性和复发性跌倒的关联",
+     "summaryZh": "一项针对 205 名髋部骨折患者的回顾性观察队列研究发现，与常规护理相比，接受老年综合跨学科中间护理（GIMC）的患者在一年随访时观察到的不动性较低（17.0% vs. 32.7%），复发性跌倒也较少（1.1% vs. 5.2%）。GIMC 患者也更有可能恢复行走能力（82.0% vs. 67.3%）。",
+     "curatedReasonEn": "This retrospective study suggests that Geriatric Interdisciplinary Intermediate Care (GIMC) may be associated with lower immobility and fewer recurrent falls in older adults after hip fracture. This highlights the value of multidisciplinary collaboration and home-based rehabilitation in post-operative management of elderly patients, encouraging you to actively promote and participate in such integrated care models.",
+     "limitation": "本研究为回顾性观察队列研究，可能存在混杂因素和选择偏倚，导致无法建立明确的因果关系，且结果的普遍性可能受限于单中心数据。",
+     "limitationEn": "This retrospective observational cohort study may be subject to confounding factors and selection bias, preventing the establishment of clear causal relationships, and the generalizability of results may be limited by single-center data.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    },
+    {
+     "id": "news-1792279081078-33",
+     "title": "Effects of resistance training intensity and a dietary protein intervention on psychosocial outcomes, executive function, and quality of life in frail community-dwelling older adults",
+     "summary": "A secondary analysis of the TEAMS RCT (n=295 frail older adults) found that 12 weeks of supervised resistance training to volitional muscular failure reduced depressive symptoms (β = −0.167), improved executive function (TMT-A β = −4.71 s; TMT-B β = −12.11 s; SCWT log β = −0.091; LF β = +2.46 words), and enhanced quality of life (β = +1.26). Training intensity did not consistently influence these changes. A dietary protein intervention led to a greater reduction in fear of falling (log β = −0.257) but no consistent additional benefits for other outcomes.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08487-3",
+     "publishedAt": "2026-10-16T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究表明，对衰弱社区老年人进行 12 周监督阻力训练，可改善抑郁症状、执行功能和生活质量，且训练强度似乎不是主要影响因素。虽然蛋白质干预对跌倒恐惧有额外益处，但整体效果不一致。这意味着你在为这类患者制定康复计划时，应优先考虑坚持阻力训练本身，并可考虑将蛋白质补充作为辅助。",
+     "titleZh": "阻力训练强度和膳食蛋白质干预对衰弱社区老年人心理社会结局、执行功能和生活质量的影响",
+     "summaryZh": "TEAMS 随机对照试验（n=295 名衰弱老年人）的二次分析发现，12 周监督下的力竭阻力训练可减轻抑郁症状（β = −0.167），改善执行功能（TMT-A β = −4.71 秒；TMT-B β = −12.11 秒；SCWT log β = −0.091；LF β = +2.46 词），并提高生活质量（β = +1.26）。训练强度并未持续影响这些变化。膳食蛋白质干预导致跌倒恐惧症更大幅度下降（log β = −0.257），但对其他结局没有持续的额外益处。",
+     "curatedReasonEn": "This study indicates that 12 weeks of supervised resistance training for frail community-dwelling older adults can improve depressive symptoms, executive function, and quality of life, with training intensity not appearing to be a major influencing factor. While protein intervention showed additional benefits for fear of falling, the overall effect was inconsistent. This means when designing rehabilitation plans for such patients, you should prioritize adherence to resistance training itself, and consider protein supplementation as an adjunct.",
+     "limitation": "本研究是随机对照试验的二次分析，并非主要结局，且训练强度和蛋白质干预的额外益处并不一致，需要前瞻性研究验证。",
+     "limitationEn": "This study is a secondary analysis of an RCT, not the primary outcome, and the additional benefits of training intensity and protein intervention were inconsistent, requiring prospective validation.",
+     "tags": [
+      "research",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1792279081078-37",
+     "title": "Australian Health Practitioner Regulation Agency - Principles for the use of outcome-based approaches to accreditation",
+     "summary": "The Australian Health Practitioner Regulation Agency (AHPRA) Accreditation Committee published its \"Principles for the use of outcome-based approaches to accreditation\" on October 16, 2026. These principles aim to guide accreditation authorities in adopting outcome-based approaches to health practitioner education, fostering flexibility and innovation, and supporting education delivery in underserved locations to address workforce challenges in Australia.",
+     "category": "practice",
+     "source": "AHPRA",
+     "sourceUrl": "https://www.ahpra.gov.au/News/2026-10-16-Principles-for-the-use-of-outcome-based-approaches-to-accreditation",
+     "publishedAt": "2026-10-16T00:00:00.000Z",
+     "firstSeen": "2026-10-17T23:18:01.078Z",
+     "curatedScore": 75,
+     "curatedReason": "澳大利亚健康从业者监管机构 (AHPRA) 发布了“基于结果的认证方法原则”，这标志着澳大利亚医疗专业教育认证的重大转变。这些原则旨在促进灵活和创新的教育模式，尤其支持在农村和偏远地区提供教育，这将直接影响 PT 教育和劳动力供应，对执业范围和远程医疗政策也可能产生间接影响。",
+     "titleZh": "澳大利亚健康从业者监管机构——基于结果的认证方法使用原则",
+     "summaryZh": "澳大利亚健康从业者监管机构 (AHPRA) 认证委员会于 2026 年 10 月 16 日发布了“基于结果的认证方法使用原则”。这些原则旨在指导认证机构在健康从业者教育中采用基于结果的方法，促进灵活性和创新，并支持在澳大利亚医疗服务不足地区提供教育，以解决劳动力挑战。",
+     "curatedReasonEn": "The Australian Health Practitioner Regulation Agency (AHPRA) has published \"Principles for the use of outcome-based approaches to accreditation,\" marking a significant shift in health professional education accreditation in Australia. These principles aim to promote flexible and innovative educational models, particularly supporting education delivery in rural and remote areas, which will directly impact PT education and workforce supply, with potential indirect effects on scope of practice and telehealth policies.",
+     "tags": [
+      "policy",
+      "regulation",
+      "education",
+      "workforce"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
