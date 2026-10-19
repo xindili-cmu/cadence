@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-19T20:00:57.965Z",
+    "lastUpdated": "2026-10-19T23:48:06.797Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -27,9 +27,9 @@
         "BMC Musculoskeletal Disorders",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
         "The South African journal of physiotherapy",
-        "Physiotherapy theory and practice",
         "Journal of Rehabilitation Medicine",
-        "British Journal of Sports Medicine"
+        "British Journal of Sports Medicine",
+        "BMC musculoskeletal disorders"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -66,12 +66,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "From information to action; co-designing pain neuroscience education for adolescents with low back pain: Focus group insights.",
-          "titleZh": "从信息到行动：与青少年共同设计腰痛神经科学教育方案的焦点小组洞察"
-        },
-        {
-          "source": "PubMed",
           "journal": "Journal of physiotherapy",
           "title": "Physiotherapy management of persistent pelvic pain.",
           "titleZh": "持续性盆腔疼痛的物理治疗管理"
@@ -87,11 +81,17 @@
           "journal": "British Journal of Sports Medicine",
           "title": "Digital therapeutic combining exercise and cognitive-behavioural therapy reduces pain in patients with chronic patellofemoral pain: a multicentre randomised controlled trial",
           "titleZh": "结合运动和认知行为疗法的数字疗法可减轻慢性髌股疼痛患者的疼痛：一项多中心随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
+          "titleZh": "数字教育与运动疗法后髋膝骨关节炎患者身体活动轨迹：一项对 15,197 人的长期注册研究"
         }
       ],
-      "heat": 4.24,
-      "themeZh": "慢性非特异性下腰痛的多种康复干预",
-      "themeEn": "Rehab interventions for chronic non-specific LBP"
+      "heat": 4.01,
+      "themeZh": "慢性非特异性下背痛的物理治疗与自我管理策略",
+      "themeEn": "Physiotherapy and Self-Management for Chronic Low Back Pain"
     },
     {
       "id": "news-1792174241961-0",
@@ -99,11 +99,12 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42886022/",
       "category": "orthopedic",
       "publishedAt": "2026-10-18T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
         "Physical therapy",
         "International journal of sports physical therapy",
         "British Journal of Sports Medicine",
+        "BMC Sports Science, Medicine and Rehabilitation",
         "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
         "Sports Medicine"
       ],
@@ -127,6 +128,12 @@
           "journal": "British Journal of Sports Medicine",
           "title": "Influence of shoulder strength on throwing velocity in handball (PhD Academy Award)",
           "titleZh": "肩部力量对手球投掷速度的影响（博士学院奖）"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "The role of core stability training in improving balance and poomsae technique quality in taekwondo poomsae athletes with neuromuscular control deficits with trunk involvement: a randomized controlled trial",
+          "titleZh": "核心稳定性训练在改善躯干受累神经肌肉控制障碍跆拳道品势运动员平衡和品势技术质量中的作用：一项随机对照试验"
         },
         {
           "source": "PubMed",
@@ -159,52 +166,9 @@
           "titleZh": "精英残疾运动员怀孕和产后经历的考察：一项定性描述研究"
         }
       ],
-      "heat": 2.65,
-      "themeZh": "上肢和下肢运动表现的肌力与疲劳评估",
-      "themeEn": "Upper and lower limb strength and fatigue"
-    },
-    {
-      "id": "news-1792194392565-38",
-      "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08393-8",
-      "category": "geriatric",
-      "publishedAt": "2026-10-19T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "BMC Geriatrics",
-        "medRxiv",
-        "Disability and rehabilitation"
-      ],
-      "tag": "fall-prevention",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
-          "titleZh": "运动、营养和联合干预对老年人肌肉功能和身体表现证据的可信度与强度：一项随机对照试验荟萃分析的伞形综述"
-        },
-        {
-          "source": "BMC Geriatrics",
-          "journal": "BMC Geriatrics",
-          "title": "Modality-specific, deficit-targeted exercise prescriptions for physical function in sarcopenia and frailty: a network meta-analysis",
-          "titleZh": "针对肌少症和衰弱体能的特定模式、靶向缺陷运动处方：一项网络荟萃分析"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Restoring Physical Resilience: Consistent Functional and Sarcopenia Gains Across Two Vivifrail Cohorts",
-          "titleZh": "恢复身体韧性：两项 Vivifrail 队列中功能和肌少症的持续改善"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Fall prevention interventions among older adults in low-and middle-income countries (LMICs): an integrative review.",
-          "titleZh": "低收入和中等收入国家老年人跌倒预防干预措施：一项综合性综述"
-        }
-      ],
-      "heat": 2.25,
-      "themeZh": "老年肌少症和衰弱的运动与营养干预",
-      "themeEn": "Exercise and nutrition for sarcopenia and frailty"
+      "heat": 3.01,
+      "themeZh": "肩部与核心肌力对运动表现及损伤康复的影响",
+      "themeEn": "Shoulder and Core Strength in Sports Performance"
     },
     {
       "id": "news-1791565595964-2",
@@ -212,10 +176,11 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42852663/",
       "category": "sports",
       "publishedAt": "2026-10-18T00:00:00.000Z",
-      "sourceCount": 4,
+      "sourceCount": 5,
       "sources": [
         "The American journal of sports medicine",
         "British Journal of Sports Medicine",
+        "Current reviews in musculoskeletal medicine",
         "International journal of sports physical therapy",
         "BMC musculoskeletal disorders"
       ],
@@ -233,6 +198,12 @@
           "journal": "British Journal of Sports Medicine",
           "title": "Graft type is not associated with revision ACL reconstruction in football players: a nationwide cohort analysis of subsequent ACL reconstructions",
           "titleZh": "移植物类型与足球运动员的翻修 ACL 重建无关：一项全国性后续 ACL 重建队列分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Current reviews in musculoskeletal medicine",
+          "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
+          "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返运动"
         },
         {
           "source": "PubMed",
@@ -271,9 +242,46 @@
           "titleZh": "非接触性 ACL 损伤的感觉运动和分子机制：一种整合性假说"
         }
       ],
-      "heat": 2.12,
-      "themeZh": "ACL重建术后运动员重返运动的评估与挑战",
-      "themeEn": "ACL reconstruction return to sport assessment"
+      "heat": 2.51,
+      "themeZh": "ACL重建后功能恢复、再损伤风险与重返运动",
+      "themeEn": "ACL Reconstruction: Function, Reinjury Risk, Return to Sport"
+    },
+    {
+      "id": "news-1792194392565-38",
+      "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08393-8",
+      "category": "geriatric",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "sourceCount": 3,
+      "sources": [
+        "BMC Geriatrics",
+        "medRxiv",
+        "Disability and rehabilitation"
+      ],
+      "tag": "fall-prevention",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
+          "titleZh": "运动、营养和联合干预对老年人肌肉功能和身体表现证据的可信度与强度：一项随机对照试验荟萃分析的伞形综述"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Restoring Physical Resilience: Consistent Functional and Sarcopenia Gains Across Two Vivifrail Cohorts",
+          "titleZh": "恢复身体韧性：两项 Vivifrail 队列中功能和肌少症的持续改善"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Fall prevention interventions among older adults in low-and middle-income countries (LMICs): an integrative review.",
+          "titleZh": "低收入和中等收入国家老年人跌倒预防干预措施：一项综合性综述"
+        }
+      ],
+      "heat": 2.13,
+      "themeZh": "老年人肌肉功能、身体表现及跌倒预防的干预",
+      "themeEn": "Interventions for Older Adults' Muscle Function and Falls"
     },
     {
       "id": "news-1791723937021-5",
@@ -349,12 +357,105 @@
           "titleZh": "保守干预对退行性颈椎病疼痛和功能障碍的有效性：一项随机对照试验的系统综述和荟萃分析"
         }
       ],
-      "heat": 2.12,
-      "themeZh": "神经肌肉和疼痛恢复的电物理疗法",
-      "themeEn": "Electrophysical therapy for neuromuscular and pain"
+      "heat": 2.01,
+      "themeZh": "神经损伤后运动功能恢复的电刺激与手法治疗",
+      "themeEn": "Neuromuscular Electrical Stimulation and Manual Therapy"
     }
   ],
   "items": [
+    {
+      "id": "news-1792064576022-0",
+      "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
+      "summary": "A longitudinal registry study of 15,197 individuals with knee or hip OA found that a digital education and exercise therapy program increased the proportion of participants meeting recommended physical activity levels from 51.4% at enrolment to 58.5% at one year, with comparable improvements in patient-reported outcomes across all PA trajectories.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42875770/",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "firstSeen": "2026-10-15T11:42:56.022Z",
+      "curatedScore": 75,
+      "curatedReason": "这项大型注册研究证实，针对髋膝骨关节炎患者的数字教育和运动疗法项目，能有效提高近六成患者的身体活动水平。特别注意 BMI 较高和功能较差的患者，他们可能需要更个性化的干预策略。",
+      "titleZh": "数字教育与运动疗法后髋膝骨关节炎患者身体活动轨迹：一项对 15,197 人的长期注册研究",
+      "summaryZh": "一项针对 15,197 名髋膝骨关节炎患者的长期注册研究显示，数字教育和运动疗法项目使达到推荐身体活动水平的患者比例从基线的 51.4% 增至一年时的 58.5%。所有身体活动轨迹的患者在患者报告结局方面均有可比的临床改善。",
+      "curatedReasonEn": "This large registry study confirms that digital education and exercise therapy programs can effectively increase physical activity in nearly 60% of patients with knee or hip osteoarthritis. Pay special attention to patients with higher BMI and poorer function, who may benefit from more targeted interventions.",
+      "limitation": "本研究为观察性注册研究，无法建立干预与身体活动轨迹之间的因果关系。",
+      "limitationEn": "This was an observational registry study, and thus cannot establish causality between the intervention and physical activity trajectories.",
+      "tags": [
+        "research",
+        "knee",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1792019913652-3",
+      "title": "Development of Enhanced Reviews of Psychological Changes After Stroke (ENRICH): A complex Intervention to Monitor and Support Self-Management of Post-Stroke Psychological Changes Within a Matched Care Model.",
+      "summary": "The Enhanced Reviews of Psychological Changes After Stroke (ENRICH) program is a complex intervention designed to monitor and support self-management of post-stroke psychological changes, including mild to moderate cognitive changes, low mood, anxiety, and fatigue, within a UK matched care model.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873962/",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "firstSeen": "2026-10-14T23:18:33.652Z",
+      "curatedScore": 70,
+      "curatedReason": "ENRICH 项目为卒中后心理变化的自我管理提供了一种结构化的支持方案，它通过分层护理模式，将轻中度患者纳入支持范围，同时将重度患者转诊，这在提升 UK 卒中社区护理的心理健康支持方面迈出了重要一步。",
+      "titleZh": "卒中后心理变化增强型评估（ENRICH）的开发：一项在分层护理模型中监测和支持卒中后心理变化自我管理的复杂干预",
+      "summaryZh": "卒中后心理变化增强型评估（ENRICH）项目是一项复杂干预，旨在英国分层护理模型中监测和支持卒中后心理变化的自我管理，包括轻中度认知改变、情绪低落、焦虑和疲劳。",
+      "curatedReasonEn": "The ENRICH program offers a structured support solution for self-managing post-stroke psychological changes. By integrating a matched care model, it includes those with mild to moderate changes while referring severe cases, marking a significant step in enhancing mental health support in UK stroke community care.",
+      "limitation": "本研究仅报告了 ENRICH 项目的设计和开发过程，尚未进行临床有效性测试。",
+      "limitationEn": "This study only reports the design and development of the ENRICH program, with clinical effectiveness testing planned for the future.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "述评",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1792019913652-6",
+      "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
+      "summary": "This review describes the current state of ACL reconstruction (ACLR), noting shifts in graft utilization towards quadriceps tendon autograft, support for lateral extra-articular tenodesis in high-risk knees, and a move from fixed timelines to criteria-based clearance for return-to-play, integrating functional and psychological readiness.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873380/",
+      "publishedAt": "2026-10-14T00:00:00.000Z",
+      "firstSeen": "2026-10-14T23:18:33.652Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇综述总结了 ACLR 领域在移植物选择、侧方加固、康复和重返运动实践方面的最新进展。移植物选择应个性化，侧方加固限于高风险病例，而重返运动标准强调功能和心理准备，而非单纯时间线，这提示你应更全面地评估患者。",
+      "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返运动",
+      "summaryZh": "该综述阐述了前交叉韧带重建（ACLR）的现状，指出移植物选择转向股四头肌腱自体移植物，高风险膝关节支持外侧关节外腱固定术，以及重返运动从固定时间线转向基于功能和心理准备的评估标准。",
+      "curatedReasonEn": "This review summarizes current advancements in ACLR, covering graft selection, lateral augmentation, rehabilitation, and return-to-play. Graft selection should be individualized, lateral augmentation reserved for high-risk cases, and return-to-play criteria should emphasize function and psychological readiness over fixed timelines, prompting you to conduct more comprehensive patient assessments.",
+      "limitation": "本综述为叙述性综述，可能存在选择偏倚，且未提供系统评价或荟萃分析的证据等级。",
+      "limitationEn": "This is a narrative review, which may be subject to selection bias and does not provide evidence grading typical of systematic reviews or meta-analyses.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "综述",
+      "journal": "Current reviews in musculoskeletal medicine"
+    },
+    {
+      "id": "news-1792453684979-19",
+      "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
+      "summary": "Researchers developed and validated a 10-item Communication Characteristics module and a five-level Communication Profile variable for autistic adults using a community-based participatory research approach. The module demonstrated high feasibility and strong construct validity, providing a valid tool for characterizing communication diversity in research, clinical, and service settings.",
+      "category": "pediatric",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.15.26365687v1?rss=1",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "firstSeen": "2026-10-19T23:48:04.979Z",
+      "curatedScore": 70,
+      "curatedReason": "我们现在有了一个经验证的10项沟通特征模块和五级沟通概况变量，用于评估自闭症成年人的沟通多样性。这有助于我们更精准地理解和描述自闭症成年人在不同情境下的沟通方式，而非仅仅停留在诊断层面。",
+      "titleZh": "自闭症成年人沟通特征模块的开发及沟通概况变量的创建",
+      "summaryZh": "研究人员采用社区参与式研究方法，开发并验证了一个包含 10 个项目的自闭症成年人沟通特征模块和一个五级沟通概况变量。该模块在可行性和结构效度方面表现出色，为研究、临床和服务环境中表征沟通多样性提供了有效工具。",
+      "curatedReasonEn": "We now have a validated 10-item Communication Characteristics module and a five-level Communication Profile variable for assessing communication diversity in autistic adults. This tool will help us more precisely understand and describe the communication styles of autistic adults across various settings, moving beyond a sole diagnostic focus.",
+      "limitation": "本研究基于自闭症成年人的自我报告数据，可能存在报告偏倚。",
+      "limitationEn": "This study is based on self-reported data from autistic adults, which may introduce reporting bias.",
+      "tags": [
+        "research",
+        "autism",
+        "assessment"
+      ],
+      "studyDesign": "观察研究"
+    },
     {
       "id": "news-1791940661347-1",
       "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
@@ -614,29 +715,6 @@
         "stroke"
       ],
       "studyDesign": "综述",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1791240335472-1",
-      "title": "\"It's not for me\": community-based fall prevention exercise programs for those aging into disability.",
-      "summary": "A qualitative study with 11 adults aged 50+ with mobility/sensory impairments revealed multidimensional barriers to community-based fall prevention exercise programs, including physical, sensory, logistical, financial factors, and stigma. Participants often felt these programs were not for them due to a perception of weakness, highlighting a need for inclusive, flexible, and identity-affirming program co-design.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42831317/",
-      "publishedAt": "2026-10-05T00:00:00.000Z",
-      "firstSeen": "2026-10-05T22:45:35.472Z",
-      "curatedScore": 75,
-      "curatedReason": "本研究揭示了伴有残疾的老年人参与社区跌倒预防运动项目的多维度障碍，包括耻辱感、项目与自身需求不符以及残疾性质的变化。您在推广跌倒预防项目时，应考虑重新品牌定位，并采取协同设计，以提高对这类人群的包容性和参与度。",
-      "titleZh": "“这不适合我”：针对步入残疾老年人的社区跌倒预防运动项目。",
-      "summaryZh": "一项针对 11 名 50 岁以上伴有行动或感官障碍的成年人的定性研究揭示了他们参与社区跌倒预防运动项目的多维度障碍，包括身体、感官、物流、经济因素及耻辱感。参与者常因“为弱者设计”的观念而认为这些项目不适合自己，凸显了协同设计包容、灵活且身份认同的项目之必要性。",
-      "curatedReasonEn": "This study identifies multidimensional barriers for older adults with disabilities in community-based fall prevention programs, including stigma, program misalignment, and changing disability. When promoting fall prevention programs, consider rebranding and co-design approaches to improve inclusivity and participation for this population.",
-      "limitation": "这是一项定性研究，样本量较小（11 人），结果的普遍性可能有限。",
-      "limitationEn": "This is a qualitative study with a small sample size (11 participants), so the generalizability of the findings may be limited.",
-      "tags": [
-        "research",
-        "fall-prevention"
-      ],
-      "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
     },
     {
@@ -2018,84 +2096,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "BMC Musculoskeletal Disorders"
-    },
-    {
-      "id": "news-1792107995967-36",
-      "title": "Effects of Exercise Training on the Metabolic Cost of Walking in Health and Disease: A Systematic Review and Meta-analysis",
-      "summary": "A systematic review and meta-analysis of 27 studies (1,177 participants) found that chronic physical exercise training improved the metabolic cost of walking (Cw) (g = 0.40, p = 0.001) across healthy adults and individuals with neurological conditions. Improvements were significant in healthy individuals (g = 0.49, p = 0.001) but smaller in stroke patients (g = 0.24, p = 0.065). Population moderated the effects of training on Cw (p = 0.043), with higher BMI associated with smaller effects.",
-      "category": "neurological",
-      "source": "Sports Medicine",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02553-x",
-      "publishedAt": "2026-10-14T00:00:00.000Z",
-      "firstSeen": "2026-10-14T23:18:33.652Z",
-      "curatedScore": 80,
-      "curatedReason": "这项荟萃分析提供了确凿证据，表明长期体育锻炼可以改善健康成人的步行代谢成本，但在卒中患者中的效果较小。这强化了运动训练作为步行经济性改善策略的价值，但提醒我们对神经系统疾病患者需要更细致的预期管理。",
-      "titleZh": "运动训练对健康和疾病状态下步行代谢成本的影响：一项系统综述和荟萃分析",
-      "summaryZh": "一项包含 27 项研究（1,177 名参与者）的系统综述和荟萃分析发现，长期体育锻炼可改善健康成人及神经系统疾病患者的步行代谢成本 (Cw) (g = 0.40, p = 0.001)。健康个体改善显著 (g = 0.49, p = 0.001)，而卒中患者改善较小 (g = 0.24, p = 0.065)。人群因素调节了训练对 Cw 的影响 (p = 0.043)，BMI 较高者效果较小。",
-      "curatedReasonEn": "This meta-analysis provides solid evidence that chronic physical exercise training improves the metabolic cost of walking in healthy adults, with smaller effects observed in stroke patients. This reinforces the value of exercise training as a strategy for improving walking economy but reminds us to manage expectations more nuancedly for patients with neurological conditions.",
-      "limitation": "本系统综述和荟萃分析中，卒中、多发性硬化和帕金森病患者的数据相对较少，且研究间存在中度异质性，可能影响在神经系统疾病人群中的结论强度。",
-      "limitationEn": "In this systematic review and meta-analysis, data for patients with stroke, multiple sclerosis, and Parkinson's disease were relatively sparse, and moderate heterogeneity existed between studies, potentially affecting the strength of conclusions in neurological populations.",
-      "tags": [
-        "research",
-        "stroke",
-        "parkinson",
-        "ms"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Sports Medicine",
-      "related": [
-        {
-          "source": "PubMed",
-          "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873454/",
-          "title": "Effects of Exercise Training on the Metabolic Cost of Walking in Health and Disease: A Systematic Review and Meta-analysis."
-        }
-      ]
-    },
-    {
-      "id": "news-1792279081078-32",
-      "title": "Modality-specific, deficit-targeted exercise prescriptions for physical function in sarcopenia and frailty: a network meta-analysis",
-      "summary": "A network meta-analysis of 61 RCTs (3,706 participants) on sarcopenia and frailty found that multicomponent training with resistance training offered the most comprehensive benefits for functional mobility (low certainty). Elastic band resistance training was most effective for handgrip strength (MD 1.95 kg; 95% CI, 1.13 to 2.76; moderate certainty), and machine-based resistance training showed intermediate effectiveness for knee extension strength (MD 2.96 kg; 95% CI, 1.59 to 4.34; low certainty).",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08352-3",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "firstSeen": "2026-10-17T23:18:01.078Z",
-      "curatedScore": 80,
-      "curatedReason": "这项网络荟萃分析支持对肌少症和衰弱老年人采用“特定模式、靶向缺陷”的运动处方。你可以优先考虑多组分训练，特别是包含阻力训练的方案来改善功能性活动能力，并利用弹力带和器械阻力训练来针对性地提升握力和膝关节伸展力量。",
-      "titleZh": "针对肌少症和衰弱体能的特定模式、靶向缺陷运动处方：一项网络荟萃分析",
-      "summaryZh": "一项对 61 项随机对照试验（3,706 名参与者）的肌少症和衰弱网络荟萃分析发现，包含阻力训练的多组分训练对功能性活动能力提供了最全面的益处（证据确定性低）。弹力带阻力训练对握力最有效（MD 1.95 公斤；95% CI，1.13 至 2.76；证据确定性中等），而器械阻力训练对膝关节伸展力量显示出中等有效性（MD 2.96 公斤；95% CI，1.59 至 4.34；证据确定性低）。",
-      "curatedReasonEn": "This network meta-analysis supports a “modality-specific, deficit-targeted” exercise prescription for older adults with sarcopenia and frailty. You can prioritize multi-component training, especially resistance training, to improve functional mobility, and use elastic band and machine-based resistance training to specifically enhance handgrip and knee extension strength.",
-      "limitation": "本网络荟萃分析中，多组分训练对功能性活动能力的证据确定性较低，且一些阻力训练的证据确定性也为低或中等，可能影响结论的强度。",
-      "limitationEn": "In this network meta-analysis, the certainty of evidence for multicomponent training on functional mobility was low, and for some resistance training, it was also low or moderate, which may affect the strength of the conclusions.",
-      "tags": [
-        "research",
-        "fall-prevention"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1791565595963-0",
-      "title": "From information to action; co-designing pain neuroscience education for adolescents with low back pain: Focus group insights.",
-      "summary": "A co-design study with 15 adolescents (15-19 years old) with low back pain found that effective pain neuroscience education (PNE) material should be back-specific, practical, trustworthy, and presented in an engaging format adapted to young people's preferences. These insights guided the development of the \"Back To Move\" prototype.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42853195/",
-      "publishedAt": "2026-10-09T00:00:00.000Z",
-      "firstSeen": "2026-10-09T17:06:35.963Z",
-      "curatedScore": 75,
-      "curatedReason": "这项共同设计研究强调，针对青少年的腰痛神经科学教育（PNE）材料，需要具备相关性、实用性、可信性，并以吸引他们的方式呈现，以便提升参与度和支持效果。",
-      "titleZh": "从信息到行动：与青少年共同设计腰痛神经科学教育方案的焦点小组洞察",
-      "summaryZh": "一项与 15 名患有腰痛的青少年（15-19 岁）进行的共同设计研究发现，有效的腰痛神经科学教育（PNE）材料应具备背部特异性、实用性、可信性，并以适应青少年偏好的吸引人形式呈现。这些洞察指导了“Back To Move”原型方案的开发。",
-      "curatedReasonEn": "This co-design study emphasizes that pain neuroscience education (PNE) materials for adolescents with low back pain need to be relevant, practical, trustworthy, and presented in an engaging format to enhance engagement and support.",
-      "limitation": "本研究的局限性在于其探索性、定性研究设计，以及样本量较小，可能影响结果的普遍性。",
-      "limitationEn": "The limitation of this study lies in its exploratory, qualitative design and small sample size, which may affect the generalizability of the findings.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
     }
   ]
 }
