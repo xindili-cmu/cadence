@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-21T00:08:54.236Z",
+    "lastUpdated": "2026-10-21T00:49:08.182Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,18 +20,19 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42852663/",
       "category": "sports",
       "publishedAt": "2026-10-20T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 9,
       "sources": [
         "The American journal of sports medicine",
         "Sports Medicine",
         "Current reviews in musculoskeletal medicine",
-        "International journal of sports physical therapy",
-        "BMC musculoskeletal disorders",
-        "medRxiv",
         "Journal of Rehabilitation Medicine",
-        "BMC Musculoskeletal Disorders"
+        "BMC Musculoskeletal Disorders",
+        "medRxiv",
+        "BMC musculoskeletal disorders",
+        "Clinical rehabilitation",
+        "International journal of sports physical therapy"
       ],
-      "tag": "acl",
+      "tag": "sports",
       "kind": "theme",
       "members": [
         {
@@ -54,20 +55,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
-          "titleZh": "影响物理治疗师依从 ACLR 康复临床实践指南和重返运动标准的障碍与促进因素：一项澳大利亚定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
-          "titleZh": "“这是一个黑箱”：物理治疗师对感觉运动控制及技术在 ACL 损伤康复中应用的看法"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
-          "titleZh": "可穿戴分布式超声检测膝关节损伤后神经肌肉协调差异的可行性研究"
+          "journal": "The American journal of sports medicine",
+          "title": "Can Psychological Readiness Predict Successful Return to Sports After Patellar Stabilization Surgery in Adolescent Patients? A Retrospective Cohort Study.",
+          "titleZh": "心理准备程度能否预测青少年髌骨稳定手术后的成功重返运动？一项回顾性队列研究"
         },
         {
           "source": "J Rehabil Med",
@@ -80,11 +70,34 @@
           "journal": "BMC Musculoskeletal Disorders",
           "title": "The effect of adding virtual reality-based rehabilitation to conventional physiotherapy on pain, function and static balance control in patients with total knee arthroplasty during the acute rehabilitation phase: a randomized controlled trial",
           "titleZh": "全膝关节置换术急性康复期在常规物理治疗中加入虚拟现实康复对疼痛、功能和静态平衡控制的影响：一项随机对照试验"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+          "titleZh": "可穿戴分布式超声检测膝关节损伤后神经肌肉协调差异的可行性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
+          "titleZh": "“这是一个黑箱”：物理治疗师对感觉运动控制及技术在 ACL 损伤康复中应用的看法"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+          "titleZh": "奥地利转诊制度下物理治疗师对直接准入的看法——一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
+          "titleZh": "影响物理治疗师依从 ACLR 康复临床实践指南和重返运动标准的障碍与促进因素：一项澳大利亚定性研究"
         }
       ],
-      "heat": 5.65,
-      "themeZh": "ACL重建术后运动表现与康复指导",
-      "themeEn": "ACL Reconstruction Performance and Rehabilitation Guidance"
+      "heat": 6.29,
+      "themeZh": "运动康复中 ACL 重建与运动恢复",
+      "themeEn": "ACL Reconstruction and Return to Sport Rehabilitation"
     },
     {
       "id": "news-1791964056898-0",
@@ -97,8 +110,8 @@
         "NeuroRehabilitation",
         "Clinical rehabilitation",
         "Disability and rehabilitation",
-        "PM & R : the journal of injury, function, and rehabilitation",
         "Topics in stroke rehabilitation",
+        "PM & R : the journal of injury, function, and rehabilitation",
         "Physiotherapy theory and practice",
         "Neurorehabilitation and neural repair",
         "Archives of Physical Medicine and Rehabilitation"
@@ -123,6 +136,12 @@
           "journal": "Disability and rehabilitation",
           "title": "Continuity of care interventions for people with stroke and their caregivers: a scoping review of randomized controlled trials.",
           "titleZh": "卒中患者及其照护者的照护连续性干预：一项随机对照试验的范围综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Financial burden, non-medical drivers of health, and early caregiving role formation after stroke: a scoping review.",
+          "titleZh": "卒中后经济负担、健康非医疗驱动因素与早期照护者角色形成：一项范围综述"
         },
         {
           "source": "PubMed",
@@ -162,12 +181,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Sexual harassment experienced by nurses in a spinal Cord injury rehabilitation center.",
-          "titleZh": "脊髓损伤康复中心护士经历的性骚扰"
-        },
-        {
-          "source": "PubMed",
           "journal": "Neurorehabilitation and neural repair",
           "title": "A Machine Learning Model With Temporal Validation for Predicting Walking Ability in Nontraumatic Spinal Cord Injury.",
           "titleZh": "用于预测非创伤性脊髓损伤患者行走能力的机器学习模型及其时间验证"
@@ -177,11 +190,17 @@
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "How Sensory and Motor Components Shape the Neurological Level of Injury",
           "titleZh": "感觉和运动成分如何影响损伤的神经学水平"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Sexual harassment experienced by nurses in a spinal Cord injury rehabilitation center.",
+          "titleZh": "脊髓损伤康复中心护士经历的性骚扰"
         }
       ],
-      "heat": 5.65,
-      "themeZh": "卒中后生活质量与心理照护研究",
-      "themeEn": "Post-Stroke Quality of Life and Psychological Care"
+      "heat": 5.59,
+      "themeZh": "卒中后心理变化与连续性照护干预",
+      "themeEn": "Post-Stroke Psychological Changes and Continuity of Care"
     },
     {
       "id": "news-1792532610308-0",
@@ -228,6 +247,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Physiotherapy management of persistent pelvic pain.",
+          "titleZh": "持久性盆腔疼痛的物理治疗管理"
+        },
+        {
+          "source": "PubMed",
           "journal": "Topics in stroke rehabilitation",
           "title": "Effects of thoracic kinesiological taping on pulmonary functions, respiratory muscle strength, and functional independence in patients with hemiplegia: a randomized controlled clinical trial.",
           "titleZh": "胸部肌内效贴对偏瘫患者肺功能、呼吸肌力量和功能独立性的影响：一项随机对照临床试验"
@@ -250,9 +275,9 @@
           "titleZh": "干针治疗参数是否影响其对疼痛的作用？一项系统性综述与荟萃分析"
         }
       ],
-      "heat": 4.94,
-      "themeZh": "慢性腰痛的物理疗法与运动干预",
-      "themeEn": "Chronic Low Back Pain Therapy and Exercise"
+      "heat": 4.89,
+      "themeZh": "慢性腰痛物理治疗与运动干预",
+      "themeEn": "Chronic Low Back Pain Physiotherapy and Exercise"
     },
     {
       "id": "news-1792019913651-0",
@@ -315,9 +340,9 @@
           "titleZh": "脊髓损伤患者日常电刺激预防压疮复发的过程评估：SCI PREVOLT 试验"
         }
       ],
-      "heat": 4.23,
-      "themeZh": "卒中后上肢运动功能神经调控疗法",
-      "themeEn": "Post-Stroke Upper Limb Neuromodulation Therapy"
+      "heat": 4.19,
+      "themeZh": "卒中后上肢运动功能恢复的神经调控",
+      "themeEn": "Neuromodulation for Upper Extremity Stroke Recovery"
     },
     {
       "id": "news-1792194392565-38",
@@ -390,12 +415,146 @@
           "titleZh": "运动训练对健康和疾病人群步行代谢成本影响的系统综述和荟萃分析"
         }
       ],
-      "heat": 2.82,
-      "themeZh": "老年人衰弱与运动干预的循证实践",
-      "themeEn": "Geriatric Frailty and Exercise Intervention Evidence"
+      "heat": 2.8,
+      "themeZh": "老年人肌肉功能与体能的干预研究",
+      "themeEn": "Older Adults Muscle Function and Physical Performance Interventions"
     }
   ],
   "items": [
+    {
+      "id": "news-1791489612492-0",
+      "title": "Reframing hands-on musculoskeletal assessment as a measurement instrument rather than a technique debate: a theoretical framework applying COSMIN to HODA-A.",
+      "summary": "A theoretical framework (HODA-A) is proposed to conceptualize hands-on musculoskeletal assessment as a measurement process, emphasizing the need for rigorous validation comparable to other outcome measures.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42845272/",
+      "publishedAt": "2026-10-08T00:00:00.000Z",
+      "firstSeen": "2026-10-08T20:00:12.492Z",
+      "curatedScore": 85,
+      "curatedReason": "这篇理论文章提出了 HODA-A 框架，要求对徒手评估的测量过程进行严格验证，这有助于我们今后研究和教学如何衡量手法评估。",
+      "titleZh": "将手法肌肉骨骼评估重新定义为测量工具而非技术争论：应用 COSMIN 到 HODA-A 的理论框架",
+      "summaryZh": "提出一个理论框架（HODA-A），将手法肌肉骨骼评估概念化为一种测量过程，强调需要像其他结局测量工具一样进行严格验证。",
+      "curatedReasonEn": "This theoretical paper proposes a new framework (HODA-A) for conceptualizing hands-on musculoskeletal assessment, urging its scientific scrutiny. While not presenting new clinical data, it offers a valuable conceptual shift for researchers and educators in refining how we measure and understand manual assessment.",
+      "limitation": "本研究为理论框架，需实证验证。",
+      "limitationEn": "This is a theoretical framework and requires empirical validation.",
+      "tags": [
+        "research",
+        "manual-modality"
+      ],
+      "studyDesign": "述评",
+      "journal": "Physiotherapy theory and practice"
+    },
+    {
+      "id": "news-1791565595964-1",
+      "title": "Can Psychological Readiness Predict Successful Return to Sports After Patellar Stabilization Surgery in Adolescent Patients? A Retrospective Cohort Study.",
+      "summary": "In adolescent patients undergoing patellar stabilization surgery, an ACL-RSI score ≥59.2 is a significant predictor of successful return to sports, independent of injury characteristics.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42852817/",
+      "publishedAt": "2026-10-09T00:00:00.000Z",
+      "firstSeen": "2026-10-09T17:06:35.964Z",
+      "curatedScore": 80,
+      "curatedReason": "青少年在接受髌骨稳定手术后，ACL-RSI 评分 ≥59.2 预测其重返运动的成功率，这比损伤本身更重要，请务必在指导时考虑心理准备。",
+      "titleZh": "心理准备程度能否预测青少年髌骨稳定手术后的成功重返运动？一项回顾性队列研究",
+      "summaryZh": "在接受髌骨稳定手术的青少年患者中，ACL-RSI评分≥59.2是成功重返运动的重要预测因素，独立于伤病特征。",
+      "curatedReasonEn": "This study provides strong evidence that psychological readiness, measured by the ACL-RSI scale, is a significant predictor of successful return to sports after patellar stabilization surgery in adolescents, even more so than injury characteristics. This finding is crucial for clinicians guiding young athletes back to sport.",
+      "limitation": "回顾性队列设计且数据来自单一机构。",
+      "limitationEn": "Retrospective cohort design and single-institution data.",
+      "tags": [
+        "research",
+        "sports"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "The American journal of sports medicine"
+    },
+    {
+      "id": "news-1791723937020-0",
+      "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+      "summary": "Physiotherapists in Austria perceive readiness for direct access but identify gaps in confidence, legal framework, and training needs, suggesting targeted education and support are crucial for implementation.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858051/",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-11T13:05:37.020Z",
+      "curatedScore": 75,
+      "curatedReason": "奥地利物理治疗师已准备好直接执业，但法律和培训方面的顾虑会阻碍其落地。你需要关注这些明确指出的障碍，而不是认为障碍不存在。",
+      "titleZh": "奥地利转诊制度下物理治疗师对直接准入的看法——一项定性研究",
+      "summaryZh": "奥地利物理治疗师认为自己已为直接准入做好准备，但缺乏信心、法律框架和培训方面的不足。这表明有针对性的教育和支持对于实施至关重要。",
+      "curatedReasonEn": "Austrian PTs are ready for direct access, but legal concerns and training gaps are significant barriers. Pay attention to these identified obstacles, rather than assuming they are already resolved.",
+      "limitation": "样本量小且为定性数据，可能限制其普遍适用性。",
+      "limitationEn": "Qualitative data from a small sample size may limit generalizability.",
+      "tags": [
+        "research",
+        "regulation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1791940661345-0",
+      "title": "Physiotherapy management of persistent pelvic pain.",
+      "summary": "This review likely consolidates current evidence on physiotherapy management for persistent pelvic pain.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864197/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T01:17:41.345Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇综述巩固了持续性盆腔痛的物理治疗管理证据，建议密切关注其对临床实践的具体推荐。",
+      "titleZh": "持久性盆腔疼痛的物理治疗管理",
+      "summaryZh": "该综述可能汇集了持久性盆腔疼痛的物理治疗管理现状证据。鉴于盆腔疼痛疾病的普遍性，这对管理复杂患者群体的临床医生来说是一个坚实的更新，但其实际影响取决于所提供建议的力度。",
+      "curatedReasonEn": "This review likely consolidates current evidence on physiotherapy management for persistent pelvic pain. Given the prevalence of pelvic pain conditions, this is a solid update for clinicians managing this complex patient population, though its practical impact depends on the strength of the recommendations provided.",
+      "tags": [
+        "research",
+        "pelvic-floor"
+      ],
+      "studyDesign": "综述",
+      "journal": "Journal of physiotherapy"
+    },
+    {
+      "id": "news-1791940661348-5",
+      "title": "Financial burden, non-medical drivers of health, and early caregiving role formation after stroke: a scoping review.",
+      "summary": "Caregiver assessments for stroke recovery inconsistently capture financial toxicity and non-medical drivers of health, indicating a need for more comprehensive instruments integrating these domains with caregiver role formation.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42865022/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T01:17:41.348Z",
+      "curatedScore": 70,
+      "curatedReason": "卒中后照护者评估未能全面纳入财务负担和非医疗健康驱动因素，需要开发更全面的工具来应对这些问题。",
+      "titleZh": "卒中后经济负担、健康非医疗驱动因素与早期照护者角色形成：一项范围综述",
+      "summaryZh": "卒中后照护者评估不一致地捕捉财务毒性和健康非医疗驱动因素，表明需要更全面的工具将这些领域与照护者角色形成相结合。",
+      "curatedReasonEn": "This scoping review highlights significant gaps in how caregiver assessments capture financial toxicity and non-medical drivers of health post-stroke. It provides a clear call to action for developing more comprehensive assessment tools to better support stroke survivors and their families during recovery.",
+      "limitation": "范围审查的局限性与检索策略及纳入研究类型有关。",
+      "limitationEn": "Scoping review limitations related to search strategy and included study types.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "综述",
+      "journal": "Topics in stroke rehabilitation"
+    },
+    {
+      "id": "news-1791363059704-2",
+      "title": "Appraisal of Clinical Practice Guideline: physical therapy management of children with developmental coordination disorder.",
+      "summary": "An appraisal of the clinical practice guideline for the physiotherapy management of children with developmental coordination disorder.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42838840/",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "firstSeen": "2026-10-07T08:50:59.704Z",
+      "curatedScore": 70,
+      "curatedReason": "这篇对儿童发育协调障碍物理治疗临床实践指南的评估，能帮你确保你遵循了儿科物理治疗中的循证建议。",
+      "titleZh": "临床实践指南的评价：发育协调障碍儿童的物理治疗管理",
+      "summaryZh": "对发育协调障碍儿童物理治疗管理的临床实践指南的评价。",
+      "curatedReasonEn": "This appraisal of a clinical practice guideline for developmental coordination disorder in children is important for ensuring that practitioners are following evidence-based recommendations in pediatric physical therapy.",
+      "tags": [
+        "research",
+        "pediatric"
+      ],
+      "studyDesign": "述评",
+      "journal": "Journal of physiotherapy"
+    },
     {
       "id": "news-1792194392565-38",
       "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
@@ -511,29 +670,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1791320661429-0",
-      "title": "The experiences of physiotherapists regarding self-management practices for patients with non-specific chronic low back pain, South Africa: A qualitative study.",
-      "summary": "A qualitative study in South Africa explored physiotherapists' experiences with self-management for chronic low back pain, identifying themes related to patient beliefs, treatment elements, social factors, and interprofessional teamwork, emphasizing a biopsychosocial approach.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42835637/",
-      "publishedAt": "2026-10-06T00:00:00.000Z",
-      "firstSeen": "2026-10-06T21:04:21.429Z",
-      "curatedScore": 70,
-      "curatedReason": "这项定性研究揭示了南非物理治疗师在慢性腰痛自我管理方面的挑战。由于缺乏定量证据，其临床实践的直接指导意义有限，仅供了解区域性问题背景。",
-      "titleZh": "南非物理治疗师对非特异性慢性腰痛患者自我管理实践的经验：一项定性研究。",
-      "summaryZh": "一项在南非进行的定性研究，探讨了物理治疗师在慢性腰痛患者自我管理方面的经验，确定了与患者信念、治疗要素、社会因素和跨专业团队合作相关的几个主题，并强调了生物心理社会模型。",
-      "curatedReasonEn": "This qualitative study explores physiotherapists' perspectives on self-management for chronic low back pain in South Africa. While the findings highlight the importance of a biopsychosocial approach, the study design limits its direct impact on clinical practice without further quantitative evidence. Consider this for background understanding of regional challenges.",
-      "limitation": "定性研究设计限制了其普遍性和对临床方案的直接影响。",
-      "limitationEn": "Qualitative design limits generalizability and direct impact on clinical protocols.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "The South African journal of physiotherapy"
     },
     {
       "id": "news-1792532610308-0",
@@ -2052,116 +2188,6 @@
       ],
       "studyDesign": "述评",
       "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1792239378922-27",
-      "title": "A Foundational Balance Training Exercise Program for People with Blindness or Low Vision",
-      "summary": "This commentary discusses a foundational balance training exercise program for individuals with blindness or low vision. It emphasizes that with reduced vision, there is an increased reliance on somatosensory and vestibular systems, and highlights the challenges these individuals face with balance and safe mobility.",
-      "category": "neurological",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00946-9/fulltext?rss=yes",
-      "publishedAt": "2026-10-17T00:00:00.000Z",
-      "firstSeen": "2026-10-17T12:16:18.922Z",
-      "curatedScore": 70,
-      "curatedReason": "该述评提出了一项针对盲人或低视力人群的基础平衡训练方案。您在为这类患者设计康复计划时，可以参考其中强调的对躯体感觉和前庭系统的代偿性依赖，以弥补视觉输入的缺失，从而改善其平衡和安全移动能力。",
-      "titleZh": "针对盲人或低视力人群的基础平衡训练运动方案",
-      "summaryZh": "这篇评论文章讨论了针对盲人或低视力个体的一项基础平衡训练运动方案。文章强调，随着视力下降，个体对躯体感觉和前庭系统的依赖性增加，并突出了这些个体在平衡和安全移动方面面临的挑战。",
-      "curatedReasonEn": "This commentary proposes a foundational balance training program for people with blindness or low vision. When designing rehabilitation plans for these patients, you can refer to its emphasis on compensatory reliance on somatosensory and vestibular systems to compensate for the lack of visual input, thereby improving their balance and safe mobility.",
-      "tags": [
-        "news",
-        "vestibular",
-        "visual-impairment"
-      ],
-      "studyDesign": "述评",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1791859262416-19",
-      "title": "Clarifying 'youth: why conceptual and ethical clarity matters in sport",
-      "summary": "This editorial highlights the conceptual and ethical issues arising from the variability in operational labels used to define 'youth' athletes across research, policy, and practice. It argues that these labels carry embedded assumptions about capacities, rights, risks, and responsibilities, calling for greater clarity.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1531?rss=1",
-      "publishedAt": "2026-10-12T21:08:58.000Z",
-      "firstSeen": "2026-10-13T02:41:02.416Z",
-      "curatedScore": 65,
-      "curatedReason": "这篇社论呼吁在运动领域对“青年”的定义进行概念和伦理上的澄清，因为当前术语的模糊性会影响对青年运动员的能力、权利、风险和责任的理解。您在涉及青少年运动员的评估和干预时，需要更细致地考量其发展阶段和特定需求。",
-      "titleZh": "澄清“青年”定义：为什么概念和伦理清晰度在体育运动中至关重要",
-      "summaryZh": "这篇社论强调了在研究、政策和实践中，用于定义“青年”运动员的术语差异所带来的概念和伦理问题。它认为这些标签包含了关于能力、权利、风险和责任的隐含假设，呼吁更清晰的定义。",
-      "curatedReasonEn": "This editorial calls for conceptual and ethical clarity in defining 'youth' in sports, as vague terminology impacts understanding of young athletes' capabilities, rights, risks, and responsibilities. When assessing and intervening with adolescent athletes, you need to consider their developmental stage and specific needs more meticulously.",
-      "tags": [
-        "news",
-        "youth-athlete",
-        "ethics"
-      ],
-      "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1791859262416-20",
-      "title": "Championing choice: the Womens Tennis Association Fertility Protection Programme for professional women tennis players",
-      "summary": "The Women's Tennis Association (WTA) has launched a Fertility Protection Programme for professional women tennis players. This initiative addresses unique barriers female athletes face, such as the overlap of peak performance and prime fertility, financial strain, childcare access, and lack of maternity policies, which can lead to delayed childbearing and sport-specific fertility risks.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1533?rss=1",
-      "publishedAt": "2026-10-12T21:08:58.000Z",
-      "firstSeen": "2026-10-13T02:41:02.416Z",
-      "curatedScore": 65,
-      "curatedReason": "女子网球协会（WTA）推出的生育保护计划，旨在解决职业女运动员在巅峰竞技与生育之间的冲突。这提醒您，在与女运动员讨论职业发展和健康管理时，应将生育规划纳入考虑，并了解相关支持政策。",
-      "titleZh": "倡导选择：女子网球协会针对职业女网球运动员的生育保护计划",
-      "summaryZh": "女子网球协会（WTA）已为职业女网球运动员启动了生育保护计划。该计划旨在解决女运动员面临的独特障碍，例如巅峰表现与最佳生育期的重叠、经济压力、托儿服务、以及产假政策的缺乏，这些因素可能导致推迟生育和运动特有的生育风险。",
-      "curatedReasonEn": "The Women's Tennis Association (WTA)'s Fertility Protection Programme aims to address the conflict between peak performance and fertility for professional female athletes. This reminds you to consider fertility planning when discussing career development and health management with female athletes, and to be aware of relevant support policies.",
-      "tags": [
-        "news",
-        "female-athlete",
-        "fertility"
-      ],
-      "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1791859262417-22",
-      "title": "'Written in English: has English as the lingua franca of mental health research in sport and parasport become a barrier to creating culturally and contextually situated mental health care?",
-      "summary": "This commentary argues that English as the lingua franca in mental health research in sport and parasport, despite its facilitating communication, may hinder the creation of culturally and contextually situated mental healthcare. It calls for greater linguistic inclusivity in this field.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1539?rss=1",
-      "publishedAt": "2026-10-12T21:08:58.000Z",
-      "firstSeen": "2026-10-13T02:41:02.417Z",
-      "curatedScore": 65,
-      "curatedReason": "尽管英语在全球运动和残疾人运动心理健康研究中占据主导地位，但这可能成为创建具有文化和语境适应性的心理健康护理的障碍。您在评估和提供心理健康支持时，应认识到语言和文化背景的重要性，并寻求多元化的资源和方法。",
-      "titleZh": "“用英语撰写”：英语作为运动和残疾人运动心理健康研究的通用语是否已成为创建文化和语境化心理健康护理的障碍？",
-      "summaryZh": "这篇评论文章指出，尽管英语在运动和残疾人运动心理健康研究中作为通用语促进了交流，但也可能阻碍创建具有文化和语境适应性的心理健康护理。文章呼吁在该领域提高语言包容性。",
-      "curatedReasonEn": "While English dominates global mental health research in sport and parasport, this may hinder the creation of culturally and contextually adapted mental healthcare. When assessing and providing mental health support, you should recognize the importance of language and cultural background, seeking diverse resources and approaches.",
-      "tags": [
-        "news",
-        "mental-health",
-        "cultural-competence"
-      ],
-      "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
-    },
-    {
-      "id": "news-1791859262417-23",
-      "title": "Implementation gap: a 3-year reality check in body composition monitoring in sport",
-      "summary": "This editorial highlights an ongoing implementation gap in body composition monitoring in sport, nearly three years after the International Olympic Committee's (IOC) Consensus Statement on Relative Energy Deficiency in Sport (REDs). It calls for greater collective commitment to translate evidence-informed recommendations into everyday practice to safeguard athlete health.",
-      "category": "sports",
-      "source": "BJSM",
-      "sourceUrl": "http://bjsm.bmj.com/cgi/content/short/60/20/1541?rss=1",
-      "publishedAt": "2026-10-12T21:08:58.000Z",
-      "firstSeen": "2026-10-13T02:41:02.417Z",
-      "curatedScore": 65,
-      "curatedReason": "国际奥委会关于运动中相对能量缺乏（REDs）的共识声明发布近三年后，在运动中身体成分监测的实践中仍存在实施差距。这意味着您在为运动员提供身体成分评估和管理时，仍需积极推动循证建议的落地，以更好地保护运动员健康。",
-      "titleZh": "实施差距：运动中身体成分监测的 3 年现实检验",
-      "summaryZh": "这篇社论指出，国际奥委会（IOC）关于运动中相对能量缺乏（REDs）的共识声明发布近三年后，在运动中身体成分监测的实践中仍存在实施差距。文章呼吁更广泛地共同致力于将循证建议转化为日常实践，以保护运动员健康。",
-      "curatedReasonEn": "Nearly three years after the International Olympic Committee's (IOC) Consensus Statement on Relative Energy Deficiency in Sport (REDs), an implementation gap persists in body composition monitoring in practice. This means that when providing body composition assessment and management for athletes, you still need to actively promote the adoption of evidence-informed recommendations to better protect athlete health.",
-      "tags": [
-        "news",
-        "athlete-health",
-        "reds"
-      ],
-      "studyDesign": "述评",
-      "journal": "British Journal of Sports Medicine"
     }
   ]
 }
