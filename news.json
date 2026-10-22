@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-22T12:05:01.415Z",
+    "lastUpdated": "2026-10-22T17:19:22.631Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,7 +20,7 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42852663/",
       "category": "sports",
       "publishedAt": "2026-10-21T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 9,
       "sources": [
         "The American journal of sports medicine",
         "Sports Medicine",
@@ -28,7 +28,6 @@
         "BMC Sports Science, Medicine and Rehabilitation",
         "Journal of Rehabilitation Medicine",
         "BMC Musculoskeletal Disorders",
-        "medRxiv",
         "Clinical rehabilitation",
         "International journal of sports physical therapy",
         "BMC musculoskeletal disorders"
@@ -79,11 +78,6 @@
           "titleZh": "全膝关节置换术急性康复期在常规物理治疗中加入虚拟现实康复对疼痛、功能和静态平衡控制的影响：一项随机对照试验"
         },
         {
-          "source": "medRxiv",
-          "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
-          "titleZh": "可穿戴分布式超声检测膝关节损伤后神经肌肉协调差异的可行性研究"
-        },
-        {
           "source": "PubMed",
           "journal": "Clinical rehabilitation",
           "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
@@ -114,8 +108,8 @@
           "titleZh": "老年髋部骨折术后再次骨折预测模型的开发与验证：一项回顾性队列研究"
         }
       ],
-      "heat": 5.94,
-      "themeEn": "ACL reconstruction, patellar stabilization, and ankle rehabilitation"
+      "heat": 4.96,
+      "themeEn": "Post-surgical rehab & return-to-sport"
     },
     {
       "id": "news-1791940661347-1",
@@ -185,8 +179,9 @@
           "titleZh": "持久性盆腔疼痛的物理治疗管理"
         }
       ],
-      "heat": 2.94,
-      "themeEn": "Chronic low back pain physical therapy"
+      "heat": 2.73,
+      "themeZh": "慢性腰痛的非药物物理治疗干预：机制与效果",
+      "themeEn": "Non-pharmacological therapies for chronic low back pain"
     },
     {
       "id": "news-1791940661348-4",
@@ -247,9 +242,49 @@
           "titleZh": "卒中康复中初步和可行性研究：报告质量、向试验的进展及障碍：一项范围综述"
         }
       ],
-      "heat": 2.38,
-      "themeZh": "卒中患者及其照护者的持续照护与康复需求",
-      "themeEn": "Stroke patient and caregiver continuous care"
+      "heat": 2.2,
+      "themeZh": "卒中患者及其照护者的康复需求、体验与服务",
+      "themeEn": "Stroke patient & caregiver rehab needs"
+    },
+    {
+      "id": "news-1792532610309-20",
+      "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.18.26365835v1?rss=1",
+      "category": "orthopedic",
+      "publishedAt": "2026-10-22T06:59:01.000Z",
+      "sourceCount": 2,
+      "sources": [
+        "medRxiv",
+        "Measurement in Physical Education and Exercise Science"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "medRxiv",
+          "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+          "titleZh": "可穿戴分布式超声检测膝关节损伤后神经肌肉协调差异的可行性研究"
+        },
+        {
+          "source": "Meas Phys Educ Exerc Sci",
+          "journal": "Measurement in Physical Education and Exercise Science",
+          "title": "Do Subsamples Provide Reproducibility Estimates Comparable to the Full Sample in Trial-Based Ultrasound Muscle Measurements?",
+          "titleZh": "子样本在基于试验的超声肌肉测量中能否提供与全样本相当的可重复性估计？"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
+          "titleZh": "自闭症成人沟通特征模块的开发及沟通档案变量的创建"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Preliminary Validation of a Multidimensional Stimulability Testing Rating Scale for Patients with Voice Disorders",
+          "titleZh": "声音障碍患者多维度刺激性测试评定量表的初步验证"
+        }
+      ],
+      "heat": 1.72,
+      "themeZh": "可穿戴超声和测量工具在神经肌肉评估中的应用",
+      "themeEn": "Wearable ultrasound for neuromuscular assessment"
     },
     {
       "id": "news-1791565595963-0",
@@ -282,75 +317,36 @@
           "source": "medRxiv",
           "title": "Upright Participation for Learners with Physical Disabilities: A Pilot Randomized Crossover Effectiveness-Implementation Trial of Robot-assisted Walking in Schools",
           "titleZh": "肢体残疾学生在校直立参与：机器人辅助步行在学校的试点随机交叉效应-实施试验"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
-          "titleZh": "自闭症成人沟通特征模块的开发及沟通档案变量的创建"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Preliminary Validation of a Multidimensional Stimulability Testing Rating Scale for Patients with Voice Disorders",
-          "titleZh": "声音障碍患者多维度刺激性测试评定量表的初步验证"
         }
       ],
-      "heat": 1.78,
-      "themeZh": "儿童青少年物理治疗中的家长教育与创新干预",
-      "themeEn": "Pediatric PT: parent education, innovative interventions"
-    },
-    {
-      "id": "news-1792019913651-0",
-      "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873553/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-20T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "NeuroRehabilitation",
-        "American journal of physical medicine & rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation",
-        "Disability and rehabilitation"
-      ],
-      "tag": null,
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
-          "titleZh": "感觉电刺激与交替肌电图引导电刺激对慢性卒中患者上肢功能恢复的疗效比较：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effects of Single-Session High-Definition Transcranial Alternating Current Stimulation (HD-tACS) Combined with Robot-Assisted Hand Exercises on Corticospinal Excitability in Chronic Stroke.",
-          "titleZh": "单次高清晰度经颅交流电刺激 (HD-tACS) 结合机器人辅助手部训练对慢性卒中皮质脊髓兴奋性的影响"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Transcutaneous Vagus Nerve Stimulation Improves Motor Function of Upper Extremity in Adults with Chronic Ischemic Stroke: A Randomized Controlled Trial.",
-          "titleZh": "经皮迷走神经刺激改善慢性缺血性卒中成人上肢运动功能：一项随机对照试验"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "Promoting arm movement practice with a novel wheelchair armrest early after stroke: a randomized controlled trial",
-          "titleZh": "卒中早期使用新型轮椅扶手促进手臂运动实践：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
-          "titleZh": "脊髓损伤患者日常电刺激预防压疮复发的过程评估：SCI PREVOLT 试验"
-        }
-      ],
-      "heat": 1.68,
-      "themeZh": "卒中后上肢功能恢复的电刺激与机器人辅助技术",
-      "themeEn": "Stroke upper limb electrical stimulation, robotics"
+      "heat": 1.65,
+      "themeZh": "儿童青少年物理治疗中的家庭参与和教育",
+      "themeEn": "Family-centered education in pediatric PT"
     }
   ],
   "items": [
+    {
+      "id": "news-1792689560469-16",
+      "title": "Do Subsamples Provide Reproducibility Estimates Comparable to the Full Sample in Trial-Based Ultrasound Muscle Measurements?",
+      "summary": "This study explores whether subsamples provide reproducibility estimates comparable to the full sample in trial-based ultrasound muscle measurements.",
+      "category": "manual-modality",
+      "source": "Meas Phys Educ Exerc Sci",
+      "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2753130?af=R",
+      "publishedAt": "2026-10-22T06:59:01.000Z",
+      "firstSeen": "2026-10-22T17:19:20.469Z",
+      "curatedScore": 70,
+      "curatedReason": "这份观察研究的意义在于，它提出在进行超声肌肉测量可重复性研究时，不必每次都收集全样本数据，小样本可能已足够。这可以帮我们节省研究时间和资源，但对临床超声测量操作本身并无直接影响。",
+      "titleZh": "子样本在基于试验的超声肌肉测量中能否提供与全样本相当的可重复性估计？",
+      "summaryZh": "本研究探讨了在基于试验的超声肌肉测量中，子样本是否能提供与全样本相当的可重复性估计。",
+      "curatedReasonEn": "This observational study suggests that when evaluating the reproducibility of ultrasound muscle measurements, you might not always need full sample data; subsamples could be sufficient. This could save research time and resources, though it doesn't directly change how we perform clinical ultrasound measurements.",
+      "tags": [
+        "research",
+        "measurement",
+        "ultrasound"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Measurement in Physical Education and Exercise Science"
+    },
     {
       "id": "news-1792064576022-0",
       "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
@@ -487,30 +483,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
-      "id": "news-1791467006640-5",
-      "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
-      "summary": "A qualitative study with 22 physiotherapists found interest in technology for sensorimotor assessment and rehabilitation after ACL injury, but implementation was limited by uncertainty regarding the clinical value of sensorimotor outcomes, highlighting the need for clearer evidence of clinical benefits and integration with clinical reasoning.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42844609/",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-08T13:43:26.640Z",
-      "curatedScore": 70,
-      "curatedReason": "这项定性研究揭示了物理治疗师在 ACL 损伤康复中对传感器运动控制技术的需求和顾虑。它证实了你作为临床医生对客观评估运动质量和技术融入临床工作流程的普遍渴望，也反映了技术临床价值不确定性带来的挑战。",
-      "titleZh": "“这是一个黑箱”：物理治疗师对传感器运动控制的看法及技术在 ACL 损伤康复中应用",
-      "summaryZh": "一项对 22 名物理治疗师的定性研究发现，他们对 ACL 损伤后传感器运动控制的评估和康复技术感兴趣，但由于传感器运动控制结果的临床价值存在不确定性，其应用受到限制，这凸显了技术需要更明确的临床益处和与临床推理的整合。",
-      "curatedReasonEn": "This qualitative study reveals physical therapists' needs and concerns regarding sensorimotor control technology in ACL injury rehabilitation. It confirms your common desire as a clinician for objective assessment of movement quality and technology integration into clinical workflows, and also reflects the challenges posed by uncertainty regarding the clinical value of technology.",
-      "limitation": "定性研究结果的普遍性可能有限，且受访者自我报告的偏倚无法完全排除。",
-      "limitationEn": "The generalizability of qualitative research findings may be limited, and self-report bias from participants cannot be fully excluded.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC musculoskeletal disorders",
-      "tech": true
     },
     {
       "id": "news-1792440055837-3",
