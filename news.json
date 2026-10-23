@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-23T00:46:01.682Z",
+    "lastUpdated": "2026-10-23T07:42:00.278Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -83,8 +83,8 @@
         }
       ],
       "heat": 7,
-      "themeZh": "神经调控技术结合运动疗法促进中风后功能恢复",
-      "themeEn": "Neuromodulation combined with exercise for stroke recovery"
+      "themeZh": "多种物理因子疗法对神经损伤和卒中后功能恢复的效应",
+      "themeEn": "Neuromodulation and electrostimulation for post-stroke and nerve injury"
     },
     {
       "id": "news-1791940661347-1",
@@ -158,9 +158,9 @@
           "titleZh": "物理治疗师实施的检查测试对非特异性颈痛成人诊断准确性和鉴别有效性：一项系统综述"
         }
       ],
-      "heat": 4.2,
-      "themeZh": "物理疗法对慢性下腰痛的综合干预",
-      "themeEn": "Multimodal physical therapy for chronic low back pain"
+      "heat": 3.8,
+      "themeZh": "非特异性慢性腰痛的综合康复治疗与干预",
+      "themeEn": "Multimodal interventions for chronic non-specific low back pain"
     },
     {
       "id": "news-1792541269904-17",
@@ -210,9 +210,9 @@
           "titleZh": "影响物理治疗师依从 ACLR 康复临床实践指南和重返运动标准的障碍与促进因素：一项澳大利亚定性研究"
         }
       ],
-      "heat": 2.47,
-      "themeZh": "下肢运动损伤（ACL、踝关节）的康复策略",
-      "themeEn": "Rehabilitation strategies for lower extremity injuries"
+      "heat": 2.24,
+      "themeZh": "骨科运动损伤康复：策略、依从性与直接诊疗",
+      "themeEn": "Orthopedic sports injury rehabilitation: strategies and adherence"
     },
     {
       "id": "news-1792532610309-20",
@@ -262,9 +262,9 @@
           "titleZh": "肢体残疾学生在校直立参与：机器人辅助步行在学校的试点随机交叉效应-实施试验"
         }
       ],
-      "heat": 2.32,
-      "themeZh": "康复技术与评估工具的测量学验证",
-      "themeEn": "Measurement properties of rehabilitation technologies"
+      "heat": 2.1,
+      "themeZh": "康复领域测量工具与可穿戴超声技术的评估与应用",
+      "themeEn": "Assessment tools and wearable ultrasound in rehabilitation"
     },
     {
       "id": "news-1792194392565-38",
@@ -330,12 +330,34 @@
           "titleZh": "老年髋部骨折术后再次骨折预测模型的开发与验证：一项回顾性队列研究"
         }
       ],
-      "heat": 2.1,
-      "themeZh": "老年人肌肉功能、体能及跌倒预防干预",
-      "themeEn": "Geriatric muscle function, performance, and fall prevention"
+      "heat": 1.9,
+      "themeEn": "Exercise and nutrition for older adults' muscle function"
     }
   ],
   "items": [
+    {
+      "id": "news-1792741318136-0",
+      "title": "Validation and prognostic value of the five-repetition sit-to-stand test in patients with severe exacerbation of COPD.",
+      "summary": "In patients with severe COPD exacerbation, the five-repetition sit-to-stand (5STS) test correlated negatively with quadriceps force (r = -0.487) and 6-minute walk test (r = -0.415). A cut-off of ≥13 seconds predicted higher readmission risk within six months with an AUC of 0.720 (95% CI: 0.588-0.853).",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42906271/",
+      "publishedAt": "2026-10-22T00:00:00.000Z",
+      "firstSeen": "2026-10-23T07:41:58.136Z",
+      "curatedScore": 75,
+      "curatedReason": "5 次坐站测试（5STS）能用于评估慢阻肺急性加重住院患者的肌力和运动耐量，并对 6 个月内再入院风险有可接受的预测价值。这项测试对临床决策有补充信息。",
+      "titleZh": "5 次坐站测试在慢阻肺急性加重患者中的验证和预后价值",
+      "summaryZh": "这项前瞻性观察研究纳入 58 例慢阻肺急性加重住院患者，发现 5 次坐站测试（5STS）与股四头肌力量 (r = -0.487) 和 6 分钟步行测试 (r = -0.415) 呈显著负相关。5STS 评分 ≥13 秒可预测患者 6 个月内再入院风险更高（AUC 0.720）。",
+      "curatedReasonEn": "The five-repetition sit-to-stand (5STS) test can assess muscle strength and exercise tolerance in hospitalized patients with severe COPD exacerbation and offers acceptable prognostic value for 6-month readmission risk. This provides supplementary information for clinical decision-making.",
+      "limitation": "研究样本量较小，且为单中心观察性研究，结果外推性有限。",
+      "limitationEn": "The study has a small sample size and is a single-center observational study, limiting the generalizability of the findings.",
+      "tags": [
+        "research",
+        "COPD"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Brazilian journal of physical therapy"
+    },
     {
       "id": "news-1791565595963-0",
       "title": "From information to action; co-designing pain neuroscience education for adolescents with low back pain: Focus group insights.",
@@ -359,30 +381,6 @@
       ],
       "studyDesign": "综述",
       "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1791467006640-5",
-      "title": "\"It's a black box\": Physiotherapists' perspectives on sensorimotor control and the use of technology in this context to improve rehabilitation following ACL injury.",
-      "summary": "Physiotherapists in ACL rehabilitation expressed interest in sensorimotor technologies but highlighted uncertainty regarding clinical value and practical integration, calling for research on outcome relevance and improved implementation strategies.",
-      "category": "sports",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42844609/",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "firstSeen": "2026-10-08T13:43:26.640Z",
-      "curatedScore": 70,
-      "curatedReason": "此项定性研究揭示了物理治疗师在 ACL 康复中对运动传感器技术应用的态度。治疗师们看到了技术在客观评估和院外训练的潜力，但对其临床价值和实际应用仍存疑虑。这提示我们需要进一步研究，明确传感器数据与功能恢复、再损伤风险的关联，并优化技术与临床工作流程的整合。",
-      "titleZh": "“这是一个黑箱”：物理治疗师对传感器运动控制及相关技术在 ACL 损伤康复中应用的视角",
-      "summaryZh": "在 ACL 康复中，物理治疗师对利用传感器运动技术评估和训练持开放态度，但对其临床价值和实际整合存在不确定性，呼吁明确传感器运动结局的相关性并优化应用。",
-      "curatedReasonEn": "This qualitative study reveals physiotherapists' perspectives on using sensorimotor technology in ACL rehabilitation. Therapists see potential for objective assessment and out-of-clinic training but express uncertainty about the clinical value and practical implementation, suggesting a need for further research on sensorimotor outcome relevance and better integration with clinical workflows.",
-      "limitation": "研究为定性设计，基于物理治疗师的观点，未直接评估技术在患者康复中的效果。",
-      "limitationEn": "The study has a qualitative design based on physiotherapists' perspectives and does not directly evaluate the effectiveness of technology in patient rehabilitation.",
-      "tags": [
-        "research",
-        "sports"
-      ],
-      "studyDesign": "综述",
-      "journal": "BMC musculoskeletal disorders",
-      "tech": true
     },
     {
       "id": "news-1792716299530-17",
