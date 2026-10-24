@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-24T23:28:23.930Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effectiveness of Wobble Board and Swiss Ball exercises on balance, mobility and functional independence in patients with diabetic peripheral neuropathy",
+      "url": "https://link.springer.com/article/10.1186/s43161-026-00382-7"
+    },
+    {
+      "slide": 2,
+      "title": "Divergent functional responses to hyperoxic versus hypoxic high-intensity interval training: a randomized exploratory active-comparator study",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02115-8"
+    },
+    {
+      "slide": 3,
+      "title": "Implementation, feasibility and optimization of a web- and mobile-supported semi-automated shoulder rehabilitation system (WMSSR): a prospective consecutive interventional cohort study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42919177/"
+    },
+    {
+      "slide": 4,
+      "title": "Feasibility and safety of immersive virtual reality training device (ReMind) in post-stroke rehabilitation",
+      "url": "https://link.springer.com/article/10.1186/s43161-026-00384-5"
+    },
+    {
+      "slide": 5,
+      "title": "Acceptability, Safety and Feasibility of a Sedentary Behaviour Intervention (REACH-SCI) in Individuals with Spinal Cord Injury: A Mixed-Methods Study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.21.26365989v1?rss=1"
+    }
+  ]
+}

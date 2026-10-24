@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-24T22:34:33.168Z",
+    "lastUpdated": "2026-10-24T23:28:10.269Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,12 +20,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873553/",
       "category": "orthopedic",
       "publishedAt": "2026-10-23T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
         "NeuroRehabilitation",
         "American journal of physical medicine & rehabilitation",
         "British Journal of Sports Medicine",
         "medRxiv",
+        "Bulletin of Faculty of Physical Therapy",
         "Archives of physical medicine and rehabilitation",
         "Physiotherapy theory and practice"
       ],
@@ -56,6 +57,12 @@
           "titleZh": "基于网络BCI康复的单病例设计：卒中患者的个体学习轨迹和运动想象时机的影响"
         },
         {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "Feasibility and safety of immersive virtual reality training device (ReMind) in post-stroke rehabilitation",
+          "titleZh": "沉浸式虚拟现实训练设备（ReMind）在卒中后康复中的可行性与安全性"
+        },
+        {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Effect of bimodal signal biofeedback on the supraglottic swallowing maneuver in patients with post-stroke dysphagia: A randomised controlled trial.",
@@ -68,9 +75,66 @@
           "titleZh": "卒中后高剂量步态强化训练计划的实施：一项多方法研究，探讨治疗师在随机试验中的信念和经验"
         }
       ],
-      "heat": 3.06,
-      "themeZh": "卒中后手部与认知功能康复的神经调控与辅助技术",
-      "themeEn": "Neuromodulation and Assistive Tech for Post-Stroke Recovery"
+      "heat": 3.53,
+      "themeZh": "卒中后认知、运动及吞咽功能康复的刺激与训练",
+      "themeEn": "Stroke rehabilitation: cognition, motor, dysphagia interventions"
+    },
+    {
+      "id": "news-1792797268165-0",
+      "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42913286/",
+      "category": "orthopedic",
+      "publishedAt": "2026-10-24T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "Current reviews in musculoskeletal medicine",
+        "International journal of sports physical therapy",
+        "BMC Sports Science, Medicine and Rehabilitation"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
+          "titleZh": "ACL 重建术后单腿着陆运动控制中短足运动与足趾卷曲运动的比较：一项探索性随机对照试验。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Current reviews in musculoskeletal medicine",
+          "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
+          "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返赛场"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
+          "titleZh": "影响物理治疗师依从前交叉韧带重建临床实践指南和重返运动标准的障碍与促进因素：一项奥地利定性研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Divergent functional responses to hyperoxic versus hypoxic high-intensity interval training: a randomized exploratory active-comparator study",
+          "titleZh": "高氧与低氧高强度间歇训练的不同功能反应：一项随机探索性主动对照研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of integrating blood flow restriction (BFR) into sport-specific on-field training on athletic performance and physiological adaptations in team-sport athletes: a systematic review and meta-analysis",
+          "titleZh": "将血流限制 (BFR) 整合到运动专项场上训练对团队运动运动员运动表现和生理适应的影响：系统综述和荟萃分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "A multimodal non-fatiguing recovery strategy improves neuromuscular restoration and attenuates inflammatory and oxidative stress responses following a standardized football match: a randomized crossover study",
+          "titleZh": "多模式非疲劳性恢复策略改善标准化足球比赛后的神经肌肉恢复并减轻炎症和氧化应激反应：一项随机交叉研究"
+        }
+      ],
+      "heat": 2.85,
+      "themeZh": "ACL重建术后运动康复、体能训练及重返赛场",
+      "themeEn": "ACL rehab, sports performance, return-to-play"
     },
     {
       "id": "news-1791940661348-4",
@@ -142,18 +206,81 @@
           "titleZh": "一项基于时间验证的机器学习模型，用于预测非创伤性脊髓损伤患者的步行能力"
         }
       ],
-      "heat": 2.89,
-      "themeZh": "神经康复患者与照护者对护理与支持的需求及体验",
-      "themeEn": "Neurorehab Patient and Caregiver Support Needs"
+      "heat": 2.85,
+      "themeZh": "脑卒中和脊髓损伤患者及家属的护理与支持需求",
+      "themeEn": "Care needs for stroke, SCI patients, caregivers"
     },
     {
-      "id": "news-1792532610308-0",
-      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
+      "id": "news-1791723937020-0",
+      "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858051/",
       "category": "orthopedic",
-      "publishedAt": "2026-10-22T00:00:00.000Z",
-      "sourceCount": 6,
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "sourceCount": 5,
       "sources": [
+        "Clinical rehabilitation",
+        "Physiotherapy theory and practice",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "medRxiv",
+        "Measurement in Physical Education and Exercise Science"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+          "titleZh": "奥地利转诊体系下物理治疗师对直接接诊的看法——一项定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Trends in Australia's physiotherapy workforce: changes and future implications.",
+          "titleZh": "澳大利亚物理治疗师劳动力趋势：变化与未来影响"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
+          "titleZh": "不确定性下校准临床推理：一项关于肌肉骨骼执业中专家物理治疗师的定性研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Psychometric Evaluation of the Parental Education in Physiotherapy Scale: A Brief Measure of Family-Centered Educational Practices in Pediatric Physiotherapy.",
+          "titleZh": "亲子物理治疗教育量表心理测量学评估：儿科物理治疗中以家庭为中心的教育实践简明测量工具"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
+          "titleZh": "自闭症成人沟通特征模块的开发及沟通档案变量的创建"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+          "titleZh": "分布式可穿戴超声在检测膝关节损伤后神经肌肉协调性差异的可行性研究"
+        },
+        {
+          "source": "Disabil Rehabil",
+          "journal": "Measurement in Physical Education and Exercise Science",
+          "title": "Do Subsamples Provide Reproducibility Estimates Comparable to the Full Sample in Trial-Based Ultrasound Muscle Measurements?",
+          "titleZh": "子样本在基于试验的超声肌肉测量中能否提供与全样本相当的可重复性估计？"
+        }
+      ],
+      "heat": 2.52,
+      "themeZh": "物理治疗师的实践、教育与可穿戴技术应用",
+      "themeEn": "Physiotherapist practice, education, wearable technology application"
+    },
+    {
+      "id": "news-1791723937021-5",
+      "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
+      "category": "manual-modality",
+      "publishedAt": "2026-10-22T00:00:00.000Z",
+      "sourceCount": 7,
+      "sources": [
+        "Archives of physical medicine and rehabilitation",
         "Disability and rehabilitation",
         "Journal of physiotherapy",
         "medRxiv",
@@ -161,9 +288,15 @@
         "BMC Musculoskeletal Disorders",
         "The Journal of manual & manipulative therapy"
       ],
-      "tag": "spine",
+      "tag": "laser",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+          "titleZh": "高强度激光疗法与体外冲击波疗法治疗烧伤后肘管综合征的电生理和功能反应：一项随机对照试验"
+        },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
@@ -218,102 +351,218 @@
           "titleZh": "物理治疗师实施的检查测试对非特异性颈痛成人诊断准确性和鉴别有效性：一项系统综述"
         }
       ],
-      "heat": 2.17,
-      "themeZh": "慢性非特异性腰痛的物理治疗与康复方法",
-      "themeEn": "Physical Therapy for Chronic Low Back Pain"
-    },
-    {
-      "id": "news-1792174241961-0",
-      "title": "Long-Term Clinical Outcomes and Factors Associated With Response in Older Adults With Massive Irreparable Rotator Cuff Tears: A Four-Year Prospective Cohort Study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42886022/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Physical therapy",
-        "International journal of sports physical therapy",
-        "BMC Musculoskeletal Disorders",
-        "BMC musculoskeletal disorders"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "Long-Term Clinical Outcomes and Factors Associated With Response in Older Adults With Massive Irreparable Rotator Cuff Tears: A Four-Year Prospective Cohort Study.",
-          "titleZh": "老年不可修复性巨大肩袖撕裂患者非手术治疗的长期临床结局及相关因素：一项四年前瞻性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Force Plate Based Assessment of Maximal and Rapid Isometric Shoulder Strength During the Return-to-Sport Process After Pectoralis Major Repair in a World-Class Female Wrestler: A Case Report.",
-          "titleZh": "世界级女子摔跤运动员胸大肌修复术后重返运动过程中基于测力台的最大和快速等长肩关节力量评估：一例病例报告"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Hybrid versus in-clinic rehabilitation for non-traumatic shoulder pain within a standardized digital care pathway: a prospective longitudinal observational study",
-          "titleZh": "标准化数字护理路径中混合式康复与诊所内康复治疗非创伤性肩痛的对比：一项前瞻性纵向观察性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "BMC musculoskeletal disorders",
-          "title": "Implementation, feasibility and optimization of a web- and mobile-supported semi-automated shoulder rehabilitation system (WMSSR): a prospective consecutive interventional cohort study.",
-          "titleZh": "网络和移动支持型半自动化肩部康复系统 (WMSSR) 的实施、可行性及优化：一项前瞻性队列干预研究"
-        }
-      ],
-      "heat": 2.04,
-      "themeZh": "肩关节损伤康复的长期疗效与数字辅助方案",
-      "themeEn": "Long-term Outcomes and Digital Shoulder Rehab"
-    },
-    {
-      "id": "news-1792797268165-0",
-      "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42913286/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Current reviews in musculoskeletal medicine",
-        "International journal of sports physical therapy"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-          "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-          "titleZh": "ACL 重建术后单腿着陆运动控制中短足运动与足趾卷曲运动的比较：一项探索性随机对照试验。"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Does prehabilitation with exercise improve clinical outcomes of arthroscopic modified Broström procedure in patients with chronic lateral ankle instability: a prospective cohort study",
-          "titleZh": "运动康复预训练能否改善慢性外踝不稳患者关节镜改良 Broström 手术的临床结局：一项前瞻性队列研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Current reviews in musculoskeletal medicine",
-          "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
-          "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返赛场"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
-          "titleZh": "影响物理治疗师依从前交叉韧带重建临床实践指南和重返运动标准的障碍与促进因素：一项奥地利定性研究"
-        }
-      ],
-      "heat": 2.04,
-      "themeZh": "ACL重建后足踝运动控制与重返运动策略",
-      "themeEn": "ACL Rehab: Foot, Ankle, Return-to-Sport"
+      "heat": 2.49,
+      "themeZh": "慢性腰痛的冲击波、激光和运动疗法",
+      "themeEn": "Chronic low back pain therapies"
     }
   ],
   "items": [
+    {
+      "id": "news-1791723937021-5",
+      "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+      "summary": "In patients with post-burn cubital tunnel syndrome, high-intensity laser therapy (HILT) combined with ulnar nerve gliding exercises (UNGE) yielded significantly greater improvements in nerve conduction velocity, CMAP amplitudes, and DASH scores compared to extracorporeal shock wave therapy (ESWT) + UNGE or UNGE alone, with benefits maintained at 12-week follow-up.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-10T12:43:30.005Z",
+      "curatedScore": 85,
+      "curatedReason": "高强度激光疗法（HILT）在治疗烧伤后肘管综合征中的电生理和功能结局均优于体外冲击波疗法（ESWT），且效果持续到 12 周。若你的患者群体中有烧伤后 CuTS 病例，这提示你 HILT 可能是更优选择。",
+      "titleZh": "高强度激光疗法与体外冲击波疗法治疗烧伤后肘管综合征的电生理和功能反应：一项随机对照试验",
+      "summaryZh": "一项针对烧伤后肘管综合征患者的随机对照试验显示，结合尺神经滑动练习的高强度激光疗法（HILT）在神经传导速度、复合肌肉动作电位幅度和 DASH 评分上均显著优于体外冲击波疗法（ESWT）和单独尺神经滑动练习，且效果在 12 周随访期内持续存在。",
+      "curatedReasonEn": "High-intensity laser therapy (HILT) showed superior electrophysiological and functional outcomes compared to extracorporeal shock wave therapy (ESWT) in post-burn cubital tunnel syndrome (CuTS), with benefits maintained at 12-week follow-up. If you treat patients with post-burn CuTS, this suggests HILT may be a superior option.",
+      "limitation": "本研究随访期仅为 12 周，长期疗效需更多研究验证。",
+      "limitationEn": "The study's follow-up period was only 12 weeks, and long-term efficacy requires further research.",
+      "tags": [
+        "research",
+        "hand-wrist",
+        "laser"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1792884487843-16",
+      "title": "Effectiveness of Wobble Board and Swiss Ball exercises on balance, mobility and functional independence in patients with diabetic peripheral neuropathy",
+      "summary": "A study with 200 DPN patients (45-70 years) found both Wobble Board and Swiss Ball exercises, combined with conventional therapy, significantly improved Berg Balance Scale, Timed Up and Go, and Functional Independence Measure scores (all p < 0.001) after 8 weeks. The Swiss Ball group demonstrated statistically greater improvements across all outcomes.",
+      "category": "neurological",
+      "source": "Bull Fac Phys Ther",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43161-026-00382-7",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.843Z",
+      "curatedScore": 75,
+      "curatedReason": "瑞士球和晃动板锻炼联合常规疗法都能改善糖尿病周围神经病变患者的平衡、活动能力和功能独立性，但瑞士球组的改善更为显著。在为 DPN 患者选择不稳定表面训练时，可以优先考虑瑞士球。",
+      "titleZh": "晃动板和瑞士球锻炼对糖尿病周围神经病变患者平衡、活动能力和功能独立性的影响",
+      "summaryZh": "一项针对 200 名 DPN 患者（45-70 岁）的研究发现，晃动板和瑞士球锻炼（均结合常规疗法）在 8 周后均显著改善了 Berg 平衡量表、计时起立行走测试和功能独立性测量评分（均 p < 0.001）。其中，瑞士球组在所有结局指标上均表现出统计学上更大的改善。",
+      "curatedReasonEn": "Both Swiss Ball and Wobble Board exercises combined with conventional therapy improved balance, mobility, and functional independence in patients with diabetic peripheral neuropathy (DPN), but the Swiss Ball group showed statistically greater improvements. When choosing unstable surface training for DPN patients, you might prioritize the Swiss Ball.",
+      "limitation": "该研究结果主要基于统计学显著性，未评估临床最小重要差异 (MCID)，且所有患者均接受了常规疗法，无法单独评估晃动板或瑞士球的独立效应。",
+      "limitationEn": "The study's findings are primarily based on statistical significance without evaluating Minimum Clinically Important Differences (MCID); all patients received conventional therapy, preventing independent assessment of Wobble Board or Swiss Ball effects.",
+      "tags": [
+        "research"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Bulletin of Faculty of Physical Therapy"
+    },
+    {
+      "id": "news-1792541269905-22",
+      "title": "Low balance confidence in relation to strength training, walking, sitting, and physical function among women aged 75–105 years: a cross-sectional study within the Women’s Health Initiative Strong and Healthy (WHISH) Intervention Cohort",
+      "summary": "A cross-sectional study of 8,916 women aged 75–105 years in the WHISH cohort found that strength training ≥2 h/week (PR=0.76, 95% CI: 0.71–0.81) and walking ≥4.25 h/week (PR=0.41, 95% CI: 0.37–0.45) were associated with a lower prevalence of low balance confidence (<67% on ABC Scale). Conversely, sitting ≥8 h/day was associated with a higher prevalence (PR=1.24, 95% CI: 1.17–1.32).",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08510-7",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "firstSeen": "2026-10-21T00:07:49.905Z",
+      "curatedScore": 75,
+      "curatedReason": "这项针对 75 岁及以上老年女性的横断面研究显示，更多的力量训练和步行、更少的久坐时间与更高的平衡信心强烈相关。这为你的老年患者跌倒预防方案提供了重要佐证：积极生活方式，特别是力量训练和步行，是改善平衡信心的关键。",
+      "titleZh": "75-105 岁女性平衡信心不足与力量训练、步行、久坐和身体功能的关系：WHISH 干预队列的横断面研究",
+      "summaryZh": "WHISH 队列中一项针对 8,916 名 75-105 岁女性的横断面研究发现，每周力量训练 ≥2 小时 (PR=0.76) 和每周步行 ≥4.25 小时 (PR=0.41) 与较低的平衡信心不足（ABC 量表评分 <67%）患病率相关。相反，每天久坐 ≥8 小时则与较高的平衡信心不足患病率相关 (PR=1.24)。",
+      "curatedReasonEn": "This cross-sectional study in women aged ≥75 years demonstrated strong associations between more strength training and walking, less sitting time, and higher balance confidence. This provides crucial support for your fall prevention programs in older adults: an active lifestyle, particularly strength training and walking, is key to improving balance confidence.",
+      "limitation": "本研究为横断面设计，无法确立因果关系，需纵向研究进一步验证时序性。",
+      "limitationEn": "This study's cross-sectional design prevents establishing causality; longitudinal studies are needed to confirm temporality.",
+      "tags": [
+        "research",
+        "falls-prevention",
+        "sarcopenia"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1792884487844-21",
+      "title": "Divergent functional responses to hyperoxic versus hypoxic high-intensity interval training: a randomized exploratory active-comparator study",
+      "summary": "An exploratory randomized study with 23 active men found divergent functional responses to hyperoxic (FiO₂=0.60, n=13) versus hypoxic (FiO₂=0.16, n=10) Tabata-format HIIT over 3 weeks. Hyperoxia was associated with larger baseline-adjusted improvements in V̇O₂max (from 37.77 to 41.46 mL·kg⁻¹·min⁻¹) and ventilatory thresholds, and lower post-exercise peak lactate, compared to hypoxia.",
+      "category": "cardiopulmonary",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02115-8",
+      "publishedAt": "2026-10-24T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.844Z",
+      "curatedScore": 75,
+      "curatedReason": "这项探索性随机对照研究表明，在高氧环境下进行 Tabata 格式高强度间歇训练（HIIT）能带来更广泛的有氧功能改善和更低的运动后乳酸峰值，而低氧环境下的改善较小。在你的运动康复或表现训练中，可以考虑氧气分压对训练效果的影响，但需留意该研究的探索性性质和样本量。",
+      "titleZh": "高氧与低氧高强度间歇训练的不同功能反应：一项随机探索性主动对照研究",
+      "summaryZh": "一项针对 23 名活跃男性的探索性随机研究发现，为期 3 周的高氧（FiO₂=0.60，n=13）与低氧（FiO₂=0.16，n=10）Tabata 格式高强度间歇训练产生了不同的功能反应。与低氧组相比，高氧组与 V̇O₂max（从 37.77 升至 41.46 mL·kg⁻¹·min⁻¹）和通气阈值的更大基线调整后改善，以及更低的运动后乳酸峰值相关。",
+      "curatedReasonEn": "This exploratory randomized controlled study suggests that Tabata-format high-intensity interval training (HIIT) in hyperoxia leads to broader aerobic functional improvements and lower post-exercise peak lactate, while hypoxia yielded smaller gains. In your sports rehabilitation or performance training, consider the influence of inspired oxygen fraction on training outcomes, but be mindful of the study's exploratory nature and sample size.",
+      "limitation": "本研究为探索性质，样本量小（23 名男性），且缺乏常氧对照组，限制了结论的普遍性和确定性。",
+      "limitationEn": "This exploratory study had a small sample size (23 men) and lacked a normoxic comparator, limiting generalizability and conclusiveness.",
+      "tags": [
+        "research",
+        "high-intensity-interval-training",
+        "exercise-physiology"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1792884487843-15",
+      "title": "Feasibility and safety of immersive virtual reality training device (ReMind) in post-stroke rehabilitation",
+      "summary": "A study with 31 stroke patients found the ReMind immersive VR system feasible and safe for upper-extremity rehabilitation in a single 60-minute session. Participants reported positive experiences (93.6% rated overall experience as \"very good\" or \"good\") and no significant changes in vital signs or simulator sickness symptoms, with 87.1% interested in daily use.",
+      "category": "neurological",
+      "source": "Bull Fac Phys Ther",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43161-026-00384-5",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.843Z",
+      "curatedScore": 70,
+      "curatedReason": "这款沉浸式虚拟现实训练设备（ReMind）在卒中后上肢康复中被证实可行且安全，且患者反馈良好。虽然这是一个初步的可行性研究，但它为未来在远程或家庭康复中整合 VR 技术提供了初步依据。",
+      "titleZh": "沉浸式虚拟现实训练设备（ReMind）在卒中后康复中的可行性与安全性",
+      "summaryZh": "一项针对 31 名卒中患者的研究发现，ReMind 沉浸式虚拟现实系统在单次 60 分钟的上肢康复训练中是可行且安全的。参与者普遍反馈良好（93.6% 认为整体体验“非常好”或“好”），生命体征和模拟器不适症状无显著变化，87.1% 的人表示有兴趣日常使用。",
+      "curatedReasonEn": "This immersive virtual reality training device (ReMind) was found feasible and safe for post-stroke upper limb rehabilitation, with positive patient feedback. While a preliminary feasibility study, it provides initial grounds for integrating VR technology in future telerehabilitation or home-based rehabilitation.",
+      "limitation": "本研究为单次会话的可行性与安全性评估，未评估长期临床疗效，且样本量较小（31 例）。",
+      "limitationEn": "This study evaluated feasibility and safety for a single session and did not assess long-term clinical efficacy; the sample size was small (31 patients).",
+      "tags": [
+        "research",
+        "stroke",
+        "telehealth"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Bulletin of Faculty of Physical Therapy",
+      "tech": true
+    },
+    {
+      "id": "news-1792456283986-26",
+      "title": "What’s Behind the Label? Rethinking Exercise Prescription for Tendinopathy - BJSM blog - social media's leading SEM voice",
+      "summary": "This BJSM blog post argues that clinicians should document the actual load, effort, range, speed, and external activities in tendinopathy exercise prescriptions, rather than relying solely on labels like \"eccentric\" or \"heavy slow resistance.\" This approach, termed the Tendon Mechanical Dose Framework, helps explain patient adaptation and guide dose adjustments.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "https://blogs.bmj.com/bjsm/2026/10/19/whats-behind-the-label-rethinking-exercise-prescription-for-tendinopathy/",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "firstSeen": "2026-10-20T00:31:23.986Z",
+      "curatedScore": 70,
+      "curatedReason": "给肌腱病患者开运动处方，别再只写“离心”或“慢速重阻”这类空泛标签了。这篇述评提醒你，必须记录实际的负荷、努力程度、运动范围、速度和患者同时进行的活动。这样才能真正了解治疗效果，并做出精准的剂量调整。",
+      "titleZh": "标签背后是什么？重新思考肌腱病的运动处方",
+      "summaryZh": "这篇 BJSM 博客文章指出，临床医生在肌腱病运动处方中应记录实际的负荷、努力程度、运动范围、速度和外部活动，而非仅仅依赖“离心”或“慢速重阻”等标签。这种“肌腱机械剂量框架”的方法有助于解释患者的适应性，并指导剂量调整。",
+      "curatedReasonEn": "This blog emphasizes the importance of \"load\" over \"labels\" in tendinopathy exercise prescription. In clinical practice, you should document the actual load, range, speed, and concurrent activities completed by the patient, rather than just terms like \"eccentric, isometric, or heavy slow resistance.\" This helps you more precisely evaluate treatment effects and adjust protocols.",
+      "tags": [
+        "news",
+        "tendinopathy",
+        "exercise-prescription"
+      ],
+      "studyDesign": "述评",
+      "journal": "British Journal of Sports Medicine"
+    },
+    {
+      "id": "news-1792884487844-18",
+      "title": "Outdoor cycling competence and balance control in older adults – cross-sectional analysis of the BiPerAge trial",
+      "summary": "A cross-sectional analysis of 116 community-dwelling adults aged ≥65 years found weak associations between outdoor cycling competence and dynamic balance control. Specifically, longer Four Square Step Test (FSST) time (B = 1.28 [95% CI 0.39, 2.17], p = 0.005) and greater mediolateral trunk sway during unperturbed cycling (B = 2.68 [0.60, 4.77], p = 0.012) were independently associated with more errors on a standardized outdoor cycling course.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08491-7",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.844Z",
+      "curatedScore": 70,
+      "curatedReason": "评估 65 岁以上老年人的户外骑行能力时，请注意，这项观察研究发现，较长的四方步测验（FSST）时间和非受扰骑行时较大的躯干内外侧摇摆，与更多骑行错误独立相关。把 FSST 时间（每增加 1 秒，错误数平均增加 1.28 个）和骑行中躯干摇摆（每增加 1 度，错误数平均增加 2.68 个）纳入你的评估范围。",
+      "titleZh": "老年人户外骑行能力与平衡控制——BiPerAge 试验的横断面分析",
+      "summaryZh": "一项针对 116 名 65 岁以上社区居住老年人的横断面分析发现，户外骑行能力与动态平衡控制之间存在微弱关联。具体而言，较长的“四方步测验”（FSST）时间 (B = 1.28 [95% CI 0.39, 2.17], p = 0.005) 和非受扰骑行时较大的躯干内外侧摇摆 (B = 2.68 [0.60, 4.77], p = 0.012) 与标准化户外骑行课程中的错误次数独立相关。",
+      "curatedReasonEn": "When assessing outdoor cycling competence in adults aged 65 and older, this observational study suggests you should pay attention to Four Square Step Test (FSST) time and mediolateral trunk sway during unperturbed cycling. Longer FSST time (B = 1.28) and greater trunk sway (B = 2.68) were independently associated with more cycling errors.",
+      "limitation": "本研究为探索性横断面分析，无法建立因果关系，且关联性相对较弱。",
+      "limitationEn": "This was an exploratory cross-sectional analysis, precluding causal inference, and the associations found were relatively weak.",
+      "tags": [
+        "research",
+        "falls-prevention"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1792884487844-20",
+      "title": "The effect of a medication review on the quality of life of community dwelling frail adults with polypharmacy: a scoping review",
+      "summary": "A scoping review of nine studies found little or no significant effect of medication review interventions on the quality of life (QOL) of community-dwelling frail adults with polypharmacy. The review highlights significant methodological heterogeneity, small sample sizes, and short intervention durations across studies, suggesting a need for more standardized, long-term research.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08399-2",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.844Z",
+      "curatedScore": 65,
+      "curatedReason": "这项范围综述表明，药物审查对社区衰弱多重用药老年人的生活质量（QOL）影响甚微或不显著，且研究方法学异质性高。虽然药物管理对老年人至关重要，但在 QOL 结局上，你暂时无需将药物审查视为强有力的直接干预。",
+      "titleZh": "药物审查对社区衰弱多重用药老年人生活质量的影响：一项范围综述",
+      "summaryZh": "一项范围综述纳入了九项研究，发现药物审查干预对社区衰弱多重用药老年人的生活质量（QOL）影响甚微或不显著。该综述强调了研究方法学的高度异质性、小样本量和短干预持续时间，表明需要更标准化和长期性的研究。",
+      "curatedReasonEn": "This scoping review suggests that medication reviews have little or no significant effect on the quality of life (QOL) of community-dwelling frail older adults with polypharmacy, and studies exhibit high methodological heterogeneity. While medication management is crucial for older adults, you should not currently consider medication review a strong direct intervention for QOL outcomes.",
+      "limitation": "纳入研究方法学异质性高、样本量小且干预持续时间短，限制了结果的普遍性和临床适用性。",
+      "limitationEn": "Included studies exhibited high methodological heterogeneity, small sample sizes, and short intervention durations, limiting generalizability and clinical applicability.",
+      "tags": [
+        "research",
+        "frailty"
+      ],
+      "studyDesign": "综述",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1792884487844-24",
+      "title": "Australian Health Practitioner Regulation Agency - Two new National Board Chairs appointed",
+      "summary": "The Ministerial Council for the National Registration and Accreditation Scheme has appointed new Chairs for the Nursing and Midwifery Board of Australia (Dr. Paula Medway) and the Chiropractic Board of Australia (Dr. Michael Shobbrook AM). Additionally, eight members were appointed or re-appointed to various National Boards.",
+      "category": "practice",
+      "source": "AHPRA",
+      "sourceUrl": "https://www.ahpra.gov.au/News/2026-10-23-Two-new-Board-chairs",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-24T23:28:07.844Z",
+      "curatedScore": 65,
+      "curatedReason": "澳大利亚国家注册和认证计划宣布任命护理与助产委员会以及脊骨神经医学委员会的新主席。这些任命是澳大利亚卫生专业监管体系的常规动态，对你的日常执业没有直接影响，但反映了专业领导层的变化。",
+      "titleZh": "澳大利亚健康从业者监管机构：任命两位新的国家委员会主席",
+      "summaryZh": "国家注册和认证计划的部长级理事会任命了澳大利亚护理与助产委员会的新主席 Paula Medway 博士和脊骨神经医学委员会的新主席 Michael Shobbrook AM 博士。此外，还有八名成员被任命或再次任命到不同的国家委员会。",
+      "curatedReasonEn": "The Australian National Registration and Accreditation Scheme has announced new Chairs for the Nursing and Midwifery and Chiropractic Boards. These are routine changes in Australia's health professional regulatory system, without direct impact on your daily practice, but reflect shifts in professional leadership.",
+      "tags": [
+        "news",
+        "regulation"
+      ]
+    },
     {
       "id": "news-1792590968344-0",
       "title": "Delivering a high-dose walking booster program after stroke: a multimethod study of therapists' beliefs and experiences nested within a randomized trial.",
@@ -1839,197 +2088,6 @@
       ],
       "studyDesign": "综述",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1791940661348-12",
-      "title": "Technical and clinical feasibility of a pulmonary telerehabilitation model for people with COPD.",
-      "summary": "A two-phase feasibility study (N=20 per phase) found that a home-based pulmonary telerehabilitation (HBPR) program for COPD patients was technically and clinically feasible. Device data transmission showed ≥99% clinical agreement, 95% of participants completed the 8-week program with high satisfaction (CSQ-8 median 30), and endurance time increased (median 171.00 seconds, 95% CI 17.00 to 725.00).",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42863686/",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-12T15:44:05.277Z",
-      "curatedScore": 75,
-      "curatedReason": "这项初步的二期可行性研究显示，远程肺康复（HBPR）在 COPD 患者中技术和临床上均可行，且患者满意度高。你可以考虑将此模式作为未来患者管理的备选项，但还需等待大规模 RCT 证实其临床疗效。",
-      "titleZh": "慢性阻塞性肺病患者肺部远程康复模型的技术与临床可行性研究",
-      "summaryZh": "一项两阶段可行性研究（每阶段 20 名受试者）发现，针对慢阻肺患者的居家肺部远程康复（HBPR）项目在技术和临床上均可行。设备数据传输临床一致性达 99% 以上，95% 的受试者完成了 8 周项目，满意度高（CSQ-8 中位数 30），且耐力时间有所增加（中位数 171.00 秒，95% CI 17.00 至 725.00）。",
-      "curatedReasonEn": "This preliminary Phase 2 feasibility study indicates that telerehabilitation for COPD patients (HBPR) is technically and clinically feasible, with high patient satisfaction. You can consider this model for future patient management, but large-scale RCTs are needed to confirm its clinical efficacy.",
-      "limitation": "这项单中心的可行性研究样本量较小，且缺乏对照组，无法确证临床疗效。",
-      "limitationEn": "This single-center feasibility study had a small sample size and lacked a control group, preventing definitive conclusions on clinical efficacy.",
-      "tags": [
-        "research",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1792627564768-19",
-      "title": "Does prehabilitation with exercise improve clinical outcomes of arthroscopic modified Broström procedure in patients with chronic lateral ankle instability: a prospective cohort study",
-      "summary": "A prospective cohort study (N=276) found that a 4-week exercise-based prehabilitation program before arthroscopic modified Broström procedure for chronic lateral ankle instability was associated with significantly higher total FAOS scores at 2 years (92.4 vs. 80.0), better functional recovery, and faster return to sports compared to standard care, with benefits maintained at 24 months.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02186-7",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-22T00:06:04.768Z",
-      "curatedScore": 75,
-      "curatedReason": "这项前瞻性队列研究提示，对于慢性外踝不稳行 Broström 手术的患者，术前康复能带来更好的患者报告结局和更快的运动回归。虽然不是随机对照研究，但你可以在临床中将其作为优化术后恢复的辅助策略，同时继续关注相关 RCT 证据。",
-      "titleZh": "运动康复预训练能否改善慢性外踝不稳患者关节镜改良 Broström 手术的临床结局：一项前瞻性队列研究",
-      "summaryZh": "一项前瞻性队列研究（N=276）发现，针对慢性外踝不稳患者在关节镜改良 Broström 手术前进行为期 4 周的运动预康复计划，与标准护理相比，两年时总 FAOS 评分显著更高（92.4 对 80.0），功能恢复更佳，并能更快重返运动，且益处在 24 个月时仍保持。",
-      "curatedReasonEn": "This prospective cohort study suggests that prehabilitation improves patient-reported outcomes and accelerates return to sport for patients undergoing the Broström procedure for chronic lateral ankle instability. While not an RCT, you can consider this as an adjunct strategy to optimize postoperative recovery, while staying informed on future RCT evidence.",
-      "limitation": "这是一项前瞻性队列研究，非随机化设计可能存在选择偏倚。",
-      "limitationEn": "This was a prospective cohort study, and its non-randomized design may introduce selection bias.",
-      "tags": [
-        "research",
-        "foot-ankle"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1791594305192-31",
-      "title": "Here are the Speech Language Therapy Coding Changes Going Into Effect on January 1, 2027",
-      "summary": "The CPT Editorial Panel is replacing speech-language therapy code 92507 with ten new, more specific codes effective January 1, 2027. These new codes are structured to cover fluency disorders, speech sound production disorders, language comprehension and expression disorders, combined speech sound production and language disorders, and voice/upper airway dysfunction/resonance disorders.",
-      "category": "practice",
-      "source": "WebPT",
-      "sourceUrl": "https://www.webpt.com/blog/here-are-the-speech-language-therapy-coding-changes-going-into-effect-on-january-1-2027",
-      "publishedAt": "2026-10-06T00:00:00.000Z",
-      "firstSeen": "2026-10-10T01:05:05.192Z",
-      "curatedScore": 75,
-      "curatedReason": "这项新闻介绍了言语治疗的 CPT 编码在 2027 年 1 月 1 日的修订。这些变化主要影响言语治疗师，物理治疗师只需了解即可，与你的直接执业影响不大。",
-      "titleZh": "言语治疗编码变更将于 2027 年 1 月 1 日生效",
-      "summaryZh": "CPT 编辑委员会决定自 2027 年 1 月 1 日起，用十个新的、更具体的编码取代言语治疗编码 92507。这些新编码旨在涵盖流利性障碍、言语发音障碍、语言理解和表达障碍、言语发音与语言综合障碍以及发音/上呼吸道功能障碍/共鸣障碍。",
-      "curatedReasonEn": "This news covers the CPT coding revisions for speech-language therapy effective January 1, 2027. These changes primarily affect speech-language pathologists; physical therapists should be aware but are not directly impacted in their practice.",
-      "tags": [
-        "news",
-        "reimbursement"
-      ]
-    },
-    {
-      "id": "news-1792627564768-22",
-      "title": "PTJ Author Interview: Severe Spinal Stenosis and Exercise-Based Rehabilitation",
-      "summary": "An APTA podcast interview with Bahar Shahidi, PT, DPT, PhD, discusses her recent study showing that exercise-based rehabilitation yields similar improvements in patients with mild, moderate, or severe radiographic spinal stenosis. The discussion covers how imaging influences clinical decision-making and the specific benefits of exercise in this population.",
-      "category": "manual-modality",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/apta-and-you/news-publications/podcasts/2026/ptj-author-interview-severe-spinal-stenosis-and-exercise-based-rehabilitation",
-      "publishedAt": "2026-10-20T04:00:00.000Z",
-      "firstSeen": "2026-10-22T00:06:04.768Z",
-      "curatedScore": 70,
-      "curatedReason": "这项访谈强调，放射学影像显示的腰椎管狭窄严重程度并不影响患者对运动康复的反应。这意味着你不应该仅根据影像结果就排除运动疗法，即使是重度狭窄的患者也应优先考虑非手术康复。",
-      "titleZh": "PTJ 作者访谈：重度脊柱管狭窄与运动康复",
-      "summaryZh": "APTA 播客访谈了物理治疗博士 Bahar Shahidi，讨论了她最近的研究，该研究发现运动康复在影像学显示轻度、中度或重度脊柱管狭窄的患者中能带来同等幅度的改善。访谈内容包括影像学如何影响临床决策以及运动康复在此类人群中的特定益处。",
-      "curatedReasonEn": "This interview highlights that radiographic severity of lumbar spinal stenosis does not impact responsiveness to exercise-based rehabilitation. This means you should not rule out exercise therapy based solely on imaging results; even patients with severe stenosis should be prioritized for non-surgical rehabilitation.",
-      "tags": [
-        "news",
-        "spine"
-      ]
-    },
-    {
-      "id": "news-1792194392565-35",
-      "title": "Recovery strategies, training volume, and performance in Japanese recreational marathon runners: a cross-sectional study",
-      "summary": "A cross-sectional questionnaire survey (N=5,204) of Japanese recreational marathon runners found bathing (86.5%), stretching (85.0%), hot spring use (66.7%), and massage (47.0%) were the most common recovery strategies. Active recovery, contrast baths, and acupuncture/moxibustion showed modest associations with shorter personal best marathon times and higher monthly training volume.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02184-9",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "firstSeen": "2026-10-16T23:46:32.565Z",
-      "curatedScore": 65,
-      "curatedReason": "别轻易推荐跑者做主动恢复、冷热交替浴或针灸来提高成绩，这项针对 5,204 名日本跑者的横断面调查只发现它们与更短的马拉松最好成绩和更高的月训练量有微弱关联。不过，你可以了解患者最常用的恢复策略是洗浴（86.5%）、拉伸（85.0%）、温泉（66.7%）和按摩（47.0%）。",
-      "titleZh": "日本休闲马拉松跑者的恢复策略、训练量与表现：一项横断面研究",
-      "summaryZh": "一项针对日本休闲马拉松跑者进行的横断面问卷调查（N=5,204）发现，洗浴（86.5%）、拉伸（85.0%）、温泉（66.7%）和按摩（47.0%）是最常见的恢复策略。主动恢复、冷热交替浴以及针灸/艾灸与更短的个人最好马拉松成绩和更高的月训练量存在适度关联。",
-      "curatedReasonEn": "Do not readily recommend active recovery, contrast baths, or acupuncture to runners for performance enhancement; this cross-sectional survey of 5,204 Japanese runners only found modest associations with shorter marathon personal best times and higher monthly training volume. However, you should note that patients most commonly use bathing (86.5%), stretching (85.0%), hot springs (66.7%), and massage (47.0%) as recovery strategies.",
-      "limitation": "这是一项横断面描述性研究，无法建立因果关系，且回复率较低（3.0%）可能限制了结果的代表性。",
-      "limitationEn": "This was a cross-sectional descriptive study, unable to establish causality, and a low response rate (3.0%) may limit the representativeness of the findings.",
-      "tags": [
-        "research",
-        "recovery"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1792627564769-23",
-      "title": "Value-Based Care: APTA Resources to Help You Prepare",
-      "summary": "APTA has compiled and updated resources to help physical therapists understand and prepare for the shift towards value-based care models, which are becoming more prominent in healthcare payment and delivery. These resources address how different payment models work, necessary practice capabilities, and how to evaluate agreements.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/10/21/value-based-care-apta-resources-to-help-you-prepare",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-22T00:06:04.769Z",
-      "curatedScore": 65,
-      "curatedReason": "APTA 发布了系列资源以帮助物理治疗师应对日益增长的价值医疗模式。这提示你需要了解并开始准备应对这种支付和交付模式的变化，以确保你的实践能有效展示 PT 服务的价值。",
-      "titleZh": "价值医疗：APTA 资源助您做好准备",
-      "summaryZh": "APTA 汇编并更新了资源，旨在帮助物理治疗师理解并为向价值医疗模式的转变做好准备，该模式在医疗支付和交付中日益突出。这些资源涵盖了不同支付模式的运作方式、实践所需能力以及如何评估协议等问题。",
-      "curatedReasonEn": "APTA has released resources to help physical therapists navigate the growing value-based care model. This indicates you need to understand and prepare for changes in this payment and delivery model to ensure your practice can effectively demonstrate the value of PT services.",
-      "tags": [
-        "news",
-        "reimbursement"
-      ]
-    },
-    {
-      "id": "news-1792627564769-25",
-      "title": "Keeping Pace in a Changing Healthcare Landscape",
-      "summary": "This article discusses the need for rehab therapy practices to adapt to a changing healthcare landscape, addressing patient demands for convenience, provider struggles with documentation, billing team needs for efficient claims management, and owners' need for operational insights. It emphasizes a new approach to meet the expectations of patients, payers, and providers amidst increasing competition and tighter economics.",
-      "category": "practice",
-      "source": "WebPT",
-      "sourceUrl": "https://www.webpt.com/blog/keeping-pace-in-a-changing-healthcare-landscape",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-22T00:06:04.769Z",
-      "curatedScore": 65,
-      "curatedReason": "这篇行业评论文章指出，康复治疗实践需要适应不断变化的患者期望、提供者需求和支付方要求。这提醒你在规划实践运营时，需关注市场竞争、患者便利性、提供者文档负担和账单管理效率，以保持竞争力。",
-      "titleZh": "在不断变化的医疗格局中保持领先",
-      "summaryZh": "本文探讨了康复治疗实践需适应不断变化的医疗格局，以应对患者对便利性的需求、提供者在文档方面的困境、计费团队对高效索赔管理的需求以及所有者对运营洞察的需求。文章强调了一种新方法，以在日益激烈的竞争和更紧张的经济环境下满足患者、支付方和提供者的期望。",
-      "curatedReasonEn": "This industry commentary highlights that rehab therapy practices need to adapt to evolving patient expectations, provider needs, and payer demands. This reminds you that when planning practice operations, you need to focus on market competition, patient convenience, provider documentation burden, and billing management efficiency to stay competitive.",
-      "tags": [
-        "news",
-        "practice"
-      ]
-    },
-    {
-      "id": "news-1792625326810-17",
-      "title": "Upright Participation for Learners with Physical Disabilities: A Pilot Randomized Crossover Effectiveness-Implementation Trial of Robot-assisted Walking in Schools",
-      "summary": "A pilot randomized crossover trial (n=8) found robot-assisted walking in schools feasible, with device use ranging 48-96 minutes/week. It showed potential effectiveness for children with physical disabilities, with a mean COPM change of 3.56 (SD 1.07) for intervention vs 2.11 (SD 2.41) for control (dz=0.74).",
-      "category": "pediatric",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.16.26365549v1?rss=1",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-21T23:28:46.810Z",
-      "curatedScore": 70,
-      "curatedReason": "机器人辅助步行在学校环境中实施的可行性得到了初步验证，且对提高有肢体残疾儿童的参与度有积极潜力。你可以期待未来更明确的随机对照试验结果。",
-      "titleZh": "肢体残疾学生在校直立参与：机器人辅助步行在学校的试点随机交叉效应-实施试验",
-      "summaryZh": "一项试点随机交叉试验（n=8）评估了在学校实施机器人辅助步行的可行性与潜在效果。结果显示，设备周使用时间为48-96分钟，对肢体残疾儿童的参与度有积极潜力（COPM平均变化：干预组3.56，对照组2.11；dz=0.74）。",
-      "curatedReasonEn": "This pilot study provides preliminary evidence for the feasibility of robot-assisted walking in schools and its potential to increase participation for children with physical disabilities. Expect definitive RCT results in the future.",
-      "limitation": "本研究为小样本（8名儿童）试点随机交叉试验，主要评估实施策略和程序，而非最终疗效。",
-      "limitationEn": "This was a small-sample (8 children) pilot randomized crossover trial primarily evaluating implementation strategies and procedures, not definitive efficacy.",
-      "tags": [
-        "research",
-        "pediatric",
-        "robotics",
-        "assistive-technology"
-      ],
-      "studyDesign": "RCT",
-      "tech": true
-    },
-    {
-      "id": "news-1792625326810-18",
-      "title": "CMS News: Trump Administration Announces $32 Million to Recruit Rural Doctors, Train Healthcare Workers and Expand Emergency Mental Healthcare Across Mississippi",
-      "summary": "The Trump administration announced a $32 million allocation for Mississippi to recruit rural doctors, train healthcare workers, and expand emergency mental healthcare services.",
-      "category": "practice",
-      "source": "CMS",
-      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-news-trump-administration-announces-32-million-recruit-rural-doctors-train-healthcare-workers",
-      "publishedAt": "2026-10-21T12:00:00.000Z",
-      "firstSeen": "2026-10-21T23:28:46.810Z",
-      "curatedScore": 65,
-      "curatedReason": "特朗普政府宣布为密西西比州拨款，用于农村医生招聘、医疗工作者培训和紧急精神卫生保健。这可能间接影响该地区物理治疗师的职业环境，因为医疗人力资源的整体提升会带来系统性变化。",
-      "titleZh": "CMS新闻：特朗普政府宣布拨款3200万美元用于密西西比州农村医生招聘、医疗工作者培训和紧急精神卫生保健",
-      "summaryZh": "特朗普政府宣布将向密西西比州拨款，以支持农村医生招聘、医疗工作者培训和扩大紧急精神卫生保健服务。",
-      "curatedReasonEn": "The Trump administration announced $32 million for Mississippi to recruit rural doctors, train healthcare workers, and expand emergency mental healthcare. This may indirectly affect the professional landscape for physical therapists in the region due to overall healthcare workforce improvements.",
-      "tags": [
-        "news",
-        "workforce",
-        "rural-health"
-      ]
     }
   ]
 }
