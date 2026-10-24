@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-24T11:16:04.335Z",
+    "lastUpdated": "2026-10-24T16:04:28.301Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,17 +19,15 @@
       "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873553/",
       "category": "orthopedic",
-      "publishedAt": "2026-10-24T00:00:00.000Z",
-      "sourceCount": 8,
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "sourceCount": 6,
       "sources": [
         "NeuroRehabilitation",
+        "American journal of physical medicine & rehabilitation",
         "British Journal of Sports Medicine",
         "medRxiv",
         "Archives of physical medicine and rehabilitation",
-        "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "Topics in stroke rehabilitation",
-        "The Lancet"
+        "Physiotherapy theory and practice"
       ],
       "tag": null,
       "kind": "theme",
@@ -39,6 +37,12 @@
           "journal": "NeuroRehabilitation",
           "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
           "titleZh": "感觉电刺激与交替肌电引导电刺激对慢性卒中患者手功能恢复的疗效比较：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effects of Single-Session High-Definition Transcranial Alternating Current Stimulation (HD-tACS) Combined with Robot-Assisted Hand Exercises on Corticospinal Excitability in Chronic Stroke.",
+          "titleZh": "单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习对慢性卒中皮质脊髓兴奋性的影响"
         },
         {
           "source": "BJSM",
@@ -62,7 +66,28 @@
           "journal": "Physiotherapy theory and practice",
           "title": "Delivering a high-dose walking booster program after stroke: a multimethod study of therapists' beliefs and experiences nested within a randomized trial.",
           "titleZh": "卒中后高剂量步行强化训练的实施：一项多方法研究，探讨治疗师在随机试验中的信念和经验"
-        },
+        }
+      ],
+      "heat": 3.36,
+      "themeZh": "卒中后功能障碍康复的电生理与机器人干预",
+      "themeEn": "Electrophysiological & Robotic Interventions for Post-Stroke Recovery"
+    },
+    {
+      "id": "news-1791940661348-4",
+      "title": "Continuity of care interventions for people with stroke and their caregivers: a scoping review of randomized controlled trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42865266/",
+      "category": "neurological",
+      "publishedAt": "2026-10-24T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Disability and rehabilitation",
+        "PM & R : the journal of injury, function, and rehabilitation",
+        "medRxiv",
+        "Neurorehabilitation and neural repair"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
@@ -71,15 +96,9 @@
         },
         {
           "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Financial burden, non-medical drivers of health, and early caregiving role formation after stroke: a scoping review.",
-          "titleZh": "卒中后经济负担、健康非医疗驱动因素与早期照护者角色形成：一项范围综述"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "[Correspondence] Beyond imaging thresholds in large-core stroke thrombectomy",
-          "titleZh": "大核心卒中取栓的影像学阈值之外"
+          "journal": "PM & R : the journal of injury, function, and rehabilitation",
+          "title": "How do neurorehabilitation patients perceive their fundamental care needs? Findings from a qualitative study.",
+          "titleZh": "神经康复患者如何看待其基本护理需求？一项定性研究的结果"
         },
         {
           "source": "PubMed",
@@ -88,33 +107,80 @@
           "titleZh": "医疗专业人员和失语症患者对新型数字沟通辅助工具使用影响因素的描述"
         },
         {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Significant others' perspectives on formal supports at 3- and 12-months post-discharge from specialist rehabilitation units following acquired brain injury and spinal cord injury.",
+          "titleZh": "脑损伤和脊髓损伤患者出院后 3 个月和 12 个月时重要他人的正式支持体验：定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Appraisals of life transition events and associations with quality of life at 3- and 12-months post-discharge following spinal cord injury.",
+          "titleZh": "脊髓损伤患者出院后 3 和 12 个月生活转折事件评价与生活质量的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Sexual harassment experienced by nurses in a spinal cord injury rehabilitation center.",
+          "titleZh": "脊髓损伤康复中心护士遭受患者性骚扰的经历"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
+          "titleZh": "脊髓损伤患者日常电刺激预防复发性压疮的过程评估：SCI PREVOLT 试验"
+        },
+        {
           "source": "medRxiv",
-          "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
-          "titleZh": "自闭症成人沟通特征模块的开发及沟通档案变量的创建"
+          "title": "Acceptability, Safety and Feasibility of a Sedentary Behaviour Intervention (REACH-SCI) in Individuals with Spinal Cord Injury: A Mixed-Methods Study",
+          "titleZh": "脊髓损伤患者久坐行为干预（REACH-SCI）的可接受性、安全性及可行性：一项混合方法研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "A Machine Learning Model With Temporal Validation for Predicting Walking Ability in Nontraumatic Spinal Cord Injury.",
+          "titleZh": "一项基于时间验证的机器学习模型，用于预测非创伤性脊髓损伤患者的步行能力"
         }
       ],
-      "heat": 6.8,
-      "themeZh": "卒中后功能障碍的康复干预与照护连续性",
-      "themeEn": "Post-stroke functional recovery and continuity of care"
+      "heat": 3.17,
+      "themeZh": "神经康复患者与照护者护理需求的质性研究",
+      "themeEn": "Care Needs in Neurorehabilitation: Patient & Caregiver Perspectives"
     },
     {
-      "id": "news-1792322548910-0",
-      "title": "Effects of treadmill exercise with and without vertical traction on gait, pain, disability, trunk proprioception, and depression in patients with chronic mechanical low back pain: A randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42892150/",
+      "id": "news-1792532610308-0",
+      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
       "category": "orthopedic",
       "publishedAt": "2026-10-22T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "Gait & posture",
-        "BMC Musculoskeletal Disorders",
+        "Disability and rehabilitation",
         "Journal of physiotherapy",
         "medRxiv",
-        "Journal of Rehabilitation Medicine",
+        "Gait & posture",
+        "BMC Musculoskeletal Disorders",
         "The Journal of manual & manipulative therapy"
       ],
       "tag": "spine",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+          "titleZh": "体外冲击波疗法对慢性下腰痛疼痛强度和功能障碍的影响：系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
+          "titleZh": "慢性非特异性腰痛患者：光生物调节疗法作为运动控制训练辅助手段效果甚微：一项随机试验"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Effectiveness of Kalevala Manual Therapy, Health Coaching, and Physiotherapy for Chronic Low Back Pain: A Randomized Controlled Trial (The INTEGRA Trial)",
+          "titleZh": "Kalevala 手法治疗、健康指导和物理治疗对慢性腰痛的有效性：一项随机对照试验（INTEGRA 试验）"
+        },
         {
           "source": "PubMed",
           "journal": "Gait & posture",
@@ -135,29 +201,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Photobiomodulation therapy has a negligible effect as an adjunct to motor control exercise in people with chronic non-specific low back pain: a randomised trial.",
-          "titleZh": "慢性非特异性腰痛患者：光生物调节疗法作为运动控制训练辅助手段效果甚微：一项随机试验"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Effectiveness of Kalevala Manual Therapy, Health Coaching, and Physiotherapy for Chronic Low Back Pain: A Randomized Controlled Trial (The INTEGRA Trial)",
-          "titleZh": "Kalevala 手法治疗、健康指导和物理治疗对慢性腰痛的有效性：一项随机对照试验（INTEGRA 试验）"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Journal of physiotherapy",
-          "title": "Physiotherapy management of persistent pelvic pain.",
-          "titleZh": "持久性盆腔疼痛的物理治疗管理"
-        },
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Six-month supervised telerehabilitation combining pilates-based therapeutic exercise and self-myofascial release in adults with fibromyalgia: a randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "结合了普拉提式治疗性运动和自我筋膜松解的为期六个月的监督远程康复对成人纤维肌痛症的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
           "journal": "The Journal of manual & manipulative therapy",
           "title": "Do treatment parameters of dry needling influence its effect on pain? A systematic review and meta-analysis.",
           "titleZh": "干针治疗参数是否影响其对疼痛的疗效？一项系统综述和荟萃分析"
@@ -169,9 +212,9 @@
           "titleZh": "物理治疗师实施的检查测试对非特异性颈痛成人诊断准确性和鉴别有效性：一项系统综述"
         }
       ],
-      "heat": 2.55,
-      "themeZh": "慢性腰痛和盆腔疼痛的物理治疗与干预",
-      "themeEn": "Physiotherapy for chronic low back and pelvic pain"
+      "heat": 2.38,
+      "themeZh": "慢性腰痛的非药物康复治疗效果评估",
+      "themeEn": "Non-Pharmacological Rehabilitation for Chronic Low Back Pain"
     },
     {
       "id": "news-1792174241961-0",
@@ -214,9 +257,9 @@
           "titleZh": "网络和移动支持型半自动化肩部康复系统 (WMSSR) 的实施、可行性及优化：一项前瞻性队列干预研究"
         }
       ],
-      "heat": 2.4,
-      "themeZh": "肩袖撕裂与肩部疼痛的康复评估及管理",
-      "themeEn": "Rotator cuff tears and shoulder pain rehabilitation"
+      "heat": 2.24,
+      "themeZh": "肩关节损伤康复的长期疗效与数字化方案",
+      "themeEn": "Long-Term Outcomes and Digital Solutions for Shoulder Rehab"
     },
     {
       "id": "news-1792797268165-0",
@@ -229,7 +272,7 @@
         "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
         "BMC Sports Science, Medicine and Rehabilitation",
         "Current reviews in musculoskeletal medicine",
-        "Journal of Rehabilitation Medicine"
+        "International journal of sports physical therapy"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -253,69 +296,184 @@
           "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返赛场"
         },
         {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Clinical and functional outcomes of aquatic plyometrics in adolescent patellofemoral pain syndrome: a dual-arm randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "青少年髌股疼痛综合征患者水生增强式训练的临床和功能结局：一项双臂随机对照试验"
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
+          "titleZh": "影响物理治疗师依从前交叉韧带重建临床实践指南和重返运动标准的障碍与促进因素：一项奥地利定性研究"
         }
       ],
-      "heat": 2.4,
-      "themeZh": "ACL重建与踝关节不稳的康复训练对比",
-      "themeEn": "ACL reconstruction and ankle instability rehabilitation"
-    },
-    {
-      "id": "news-1792456283986-30",
-      "title": "Effectiveness of physical, psychological, and alternative interventions for post-COVID-19 condition: a systematic review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46279",
-      "category": "cardiopulmonary",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Journal of Rehabilitation Medicine",
-        "Archives of physical medicine and rehabilitation",
-        "Brazilian journal of physical therapy",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "COPD",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Effectiveness of physical, psychological, and alternative interventions for post-COVID-19 condition: a systematic review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "针对新冠后遗症的物理、心理和替代干预措施的有效性：一项系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Technical and clinical feasibility of a pulmonary telerehabilitation model for people with COPD.",
-          "titleZh": "慢性阻塞性肺病患者肺部远程康复模型的技术与临床可行性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Efficacy of whole-body vibration training in the management of patients with COPD: a systematic review and meta-analysis.",
-          "titleZh": "全身振动训练在 COPD 患者管理中的疗效：一项系统综述和荟萃分析。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Validation and prognostic value of the five-repetition sit-to-stand test in patients with severe exacerbation of COPD.",
-          "titleZh": "5 次坐站测试在慢阻肺急性加重患者中的验证和预后价值"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Dizziness, Lower Limb Weakness, and Falls in COPD: A Prospective Longitudinal Pilot Study Using Monthly Home Diaries.",
-          "titleZh": "COPD 患者的眩晕、下肢无力和跌倒：一项使用每月家庭日记的前瞻性纵向试点研究。"
-        }
-      ],
-      "heat": 2.4,
-      "themeZh": "COVID-19与COPD患者的康复干预与评估",
-      "themeEn": "Rehabilitation for post-COVID-19 and COPD"
+      "heat": 2.24,
+      "themeZh": "ACL重建后足踝功能锻炼与康复策略",
+      "themeEn": "Foot & Ankle Rehabilitation Post-ACL Reconstruction"
     }
   ],
   "items": [
+    {
+      "id": "news-1792532610308-0",
+      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+      "summary": "A systematic review and meta-analysis of 9 RCTs found that extracorporeal shockwave therapy (ESWT), particularly radial ESWT (rESWT), significantly reduced pain in chronic low back pain (SMD = -0.72; 95% CI -1.30 to -0.14), but functional disability improvements (MD = -6.12) did not reach the minimal clinically important difference.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-20T21:43:30.308Z",
+      "curatedScore": 85,
+      "curatedReason": "本系统综述提示，尽管体外冲击波疗法（ESWT）能短期缓解慢性下腰痛的疼痛，但对功能障碍的改善未达临床最小重要差异（MCID）。在功能改善不明显的情况下，不应将ESWT作为常规干预。对于非响应性患者，可考虑作为辅助治疗，但其作用有限。",
+      "titleZh": "体外冲击波疗法对慢性下腰痛疼痛强度和功能障碍的影响：系统综述和荟萃分析",
+      "summaryZh": "一项包含 9 项随机对照试验的系统综述和荟萃分析显示，体外冲击波疗法（ESWT），特别是径向 ESWT (rESWT)，可显著减轻慢性下腰痛的疼痛（SMD = -0.72；95% CI -1.30 至 -0.14），但功能障碍的改善（MD = -6.12）未达到最小临床重要差异。",
+      "curatedReasonEn": "This systematic review suggests that while ESWT may reduce pain in chronic low back pain in the short term, functional improvements do not meet the minimal clinically important difference (MCID). Given the limited functional benefit, ESWT should not be considered a routine intervention. It may serve as an adjunct for non-responsive patients, but its role remains limited.",
+      "limitation": "该综述纳入的研究大多只评估了即刻干预后的结果，随访时间短，且研究间存在显著异质性（I² = 76%），可能影响证据强度。",
+      "limitationEn": "Most included studies assessed only immediate post-intervention outcomes, with short follow-up and substantial heterogeneity (I² = 76%) across studies, potentially limiting the strength of evidence.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1792532610309-1",
+      "title": "Physical activity guidelines' impact on cognition in multiple sclerosis: a systematic review and meta-analysis of randomized clinical trials.",
+      "summary": "A systematic review and meta-analysis of 12 RCTs (n=462) found that meeting physical activity guidelines for multiple sclerosis (PAG-MS) significantly improved processing speed (SMD = 0.29), visuospatial memory (SMD = 0.47), and verbal memory (SMD = 0.75) in individuals with MS.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899457/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-20T21:43:30.309Z",
+      "curatedScore": 85,
+      "curatedReason": "对于 MS 患者，达到身体活动指南（PAG-MS）的推荐量，是改善他们处理速度、视觉空间记忆和言语记忆的明确有效途径。你的临床实践中，应将推动患者达到这些指南放在优先位置，将其作为认知干预的核心组成部分。",
+      "titleZh": "身体活动指南对多发性硬化症患者认知功能的影响：随机临床试验的系统综述和荟萃分析",
+      "summaryZh": "一项包含 12 项随机对照试验（n=462）的系统综述和荟萃分析发现，达到多发性硬化症（MS）患者的身体活动指南（PAG-MS）可显著改善 MS 患者的加工速度（SMD = 0.29）、视觉空间记忆（SMD = 0.47）和言语记忆（SMD = 0.75）。",
+      "curatedReasonEn": "For your MS patients, meeting the Physical Activity Guidelines (PAG-MS) is a clearly effective strategy to improve their processing speed, visuospatial memory, and verbal memory. Prioritize promoting adherence to these guidelines in your clinical practice; it's a core component of cognitive intervention.",
+      "limitation": "该研究结果基于有限数量的试验且存在较高的偏倚风险，因此需要更多高质量的随机对照试验来进一步确证。",
+      "limitationEn": "The findings are based on a limited number of trials with a high risk of bias, necessitating more high-quality RCTs for further confirmation.",
+      "tags": [
+        "research",
+        "ms"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1792532610309-2",
+      "title": "Significant others' perspectives on formal supports at 3- and 12-months post-discharge from specialist rehabilitation units following acquired brain injury and spinal cord injury.",
+      "summary": "A qualitative study explored significant others' perspectives on formal supports in the first year post-discharge following acquired brain injury and spinal cord injury. Four themes emerged, highlighting challenges in navigating complex pathways, the importance of communication, prioritizing individualized support, and significant others becoming a safety net due to gaps in formal support.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899455/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-20T21:43:30.309Z",
+      "curatedScore": 70,
+      "curatedReason": "这项定性研究揭示了脑损伤和脊髓损伤患者家属在出院后第一年对正式支持服务的看法，特别是在沟通和弥补服务空白方面的困难。在制定康复计划和出院指导时，你应更主动地将重要家属纳入决策过程，并提供清晰、主动的指导以帮助他们导航支持系统。",
+      "titleZh": "脑损伤和脊髓损伤患者出院后 3 个月和 12 个月时重要他人的正式支持体验：定性研究",
+      "summaryZh": "一项定性研究探讨了脑损伤和脊髓损伤患者出院后第一年重要他人在正式支持方面的经验和障碍。研究揭示了四项主题，强调了重要他人面对复杂路径、沟通重要性、个性化支持优先以及由于正式支持不足而成为安全网的体验。",
+      "curatedReasonEn": "This qualitative study highlights the challenges faced by family members of individuals with acquired brain injury (ABI) and spinal cord injury (SCI) in accessing formal supports during the first year post-discharge, especially regarding communication and bridging service gaps. When developing rehabilitation plans and discharge guidance, you should proactively involve significant others in decision-making and provide clear, proactive guidance to help them navigate support systems.",
+      "limitation": "本研究为定性研究，样本量相对较小（3个月随访 n=24，12个月随访 n=19），其发现的普遍性可能受限。",
+      "limitationEn": "This qualitative study has a relatively small sample size (n=24 at 3 months, n=19 at 12 months), which may limit the generalizability of its findings.",
+      "tags": [
+        "research",
+        "brain-injury",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1792532610309-3",
+      "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
+      "summary": "A mixed-methods process evaluation (RE-AIM framework) of a daily electrical stimulation (ES) intervention for pressure ulcer prevention in individuals with spinal cord injury (n=70 participants, 13 healthcare professionals) identified facilitators (recruitment via rehabilitation, PU prevention motivation) and barriers (limited evidence, usability, reimbursement issues, time constraints, need for assistance) to implementation in home and rehabilitation settings.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899442/",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-20T21:43:30.309Z",
+      "curatedScore": 70,
+      "curatedReason": "这项过程评估显示，尽管电刺激（ES）在预防脊髓损伤（SCI）患者压疮方面有潜力，但在家庭和康复环境中实施仍面临多重障碍，包括证据有限、可用性问题和报销机制缺失。在推广ES作为预防手段时，你应关注改善其用户友好性，并争取明确的角色分工和强有力的支持，以克服这些实施挑战。",
+      "titleZh": "脊髓损伤患者日常电刺激预防复发性压疮的过程评估：SCI PREVOLT 试验",
+      "summaryZh": "一项针对脊髓损伤患者（n=70，13 名医护人员）日常电刺激（ES）预防压疮干预的混合方法过程评估（RE-AIM 框架）确定了在家庭和康复环境中实施的促进因素（通过康复机构招募、压疮预防动机）和障碍（有限证据、可用性、报销问题、时间限制、需要协助）。",
+      "curatedReasonEn": "This process evaluation reveals that despite the potential of electrical stimulation (ES) for pressure ulcer (PU) prevention in individuals with spinal cord injury (SCI), implementation in home and rehabilitation settings faces multiple barriers, including limited evidence, usability issues, and lack of reimbursement. When promoting ES for PU prevention, you should focus on improving its user-friendliness and advocate for clear role definitions and strong support to overcome these implementation challenges.",
+      "limitation": "本研究为过程评估，主要侧重于干预的实施情况，而非其临床疗效。",
+      "limitationEn": "This study is a process evaluation, primarily focusing on intervention implementation rather than its clinical efficacy.",
+      "tags": [
+        "research",
+        "spinal-cord"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Disability and rehabilitation"
+    },
+    {
+      "id": "news-1792194392564-2",
+      "title": "Effects of Single-Session High-Definition Transcranial Alternating Current Stimulation (HD-tACS) Combined with Robot-Assisted Hand Exercises on Corticospinal Excitability in Chronic Stroke.",
+      "summary": "A preliminary randomized crossover study (12 healthy adults, 7 chronic stroke patients) investigated single-session high-definition transcranial alternating current stimulation (HD-tACS) combined with robot-assisted hand exercises. HD-tACS significantly increased flexor digitorum superficialis (FDS) MEP amplitudes by 15.3% in healthy individuals and by ~22.3% in stroke patients (not statistically significant, but significant when normalized as percentage change), suggesting enhanced corticospinal excitability.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42886513/",
+      "publishedAt": "2026-10-16T00:00:00.000Z",
+      "firstSeen": "2026-10-16T23:46:32.564Z",
+      "curatedScore": 70,
+      "curatedReason": "这项初步研究提示，单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习，可能增强健康个体和慢性卒中患者的皮质脊髓兴奋性。虽然结果令人鼓舞，但目前证据仅为单次会话小样本研究，不应作为常规临床实践改变，需要等待更大规模的研究确认其长期疗效。",
+      "titleZh": "单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习对慢性卒中皮质脊髓兴奋性的影响",
+      "summaryZh": "一项初步的随机交叉研究（12 名健康成人，7 名慢性卒中患者）调查了单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习的效果。HD-tACS 使健康个体指浅屈肌（FDS）MEP 振幅显著增加 15.3%，慢性卒中患者增加约 22.3%（未达统计学显著，但归一化百分比变化后显著），提示皮质脊髓兴奋性增强。",
+      "curatedReasonEn": "This preliminary study suggests that a single session of high-definition transcranial alternating current stimulation (HD-tACS) combined with robot-assisted hand exercises may enhance corticospinal excitability in both healthy individuals and chronic stroke patients. While encouraging, this evidence is from a small, single-session study and should not yet alter routine clinical practice. Confirmation from larger, long-term studies is needed.",
+      "limitation": "本研究为初步的小样本研究（12 名健康成人，7 名慢性卒中患者），且只评估了单次干预的效果，无法得出长期疗效或常规应用的结论。",
+      "limitationEn": "This is a preliminary study with a small sample size (12 healthy adults, 7 chronic stroke patients) and assessed only the effect of a single intervention, precluding conclusions on long-term efficacy or routine application.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "American journal of physical medicine & rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1792064576023-1",
+      "title": "How do neurorehabilitation patients perceive their fundamental care needs? Findings from a qualitative study.",
+      "summary": "A qualitative study explored neurorehabilitation patients' (stroke, MS, Parkinson's, neurosurgical oncology) perceptions of fundamental care needs within the Fundamentals of Care (FoC) framework. Patients valued physical care (hygiene, mobility) for dignity, psychosocial care (communication, emotional support) for agency, and relational care (empathy, continuity) for safety, highlighting care as interconnected and beyond task-based models.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42876390/",
+      "publishedAt": "2026-10-15T00:00:00.000Z",
+      "firstSeen": "2026-10-15T11:42:56.023Z",
+      "curatedScore": 70,
+      "curatedReason": "这项定性研究强调了神经康复患者对基本护理需求的感知超越了单纯的身体任务，更侧重于尊严、情感支持和关系性存在。在制定护理计划时，你应将基本护理视为一个多维度且互相关联的过程，并提升健康助理在提供以舒适和关系为中心的护理中的作用。",
+      "titleZh": "神经康复患者如何看待其基本护理需求？一项定性研究的结果",
+      "summaryZh": "一项定性研究探讨了神经康复患者（卒中、多发性硬化症、帕金森病、神经外科肿瘤）在基本护理（FoC）框架内对其基本护理需求的感知。患者重视身体护理（卫生、活动性）以维护尊严，重视心理社会护理（沟通、情感支持）以获得自主权，重视关系性护理（同理心、连续性）以保障安全，强调护理是多维度且超越任务型模式的。",
+      "curatedReasonEn": "This qualitative study highlights that neurorehabilitation patients' perceptions of fundamental care needs extend beyond mere physical tasks, emphasizing dignity, emotional support, and relational presence. When developing care plans, you should view fundamental care as a multidimensional and interconnected process, and elevate the role of healthcare assistants in providing comfort-focused and relational care.",
+      "limitation": "该研究为定性研究，通过二次分析来自意大利一家康复医院的数据，其发现可能具有地域性和文化特异性。",
+      "limitationEn": "This qualitative study is based on secondary analysis of data from a rehabilitation hospital in Italy, so its findings may be geographically and culturally specific.",
+      "tags": [
+        "research",
+        "stroke",
+        "ms",
+        "parkinson"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "PM & R : the journal of injury, function, and rehabilitation"
+    },
+    {
+      "id": "news-1792857866037-19",
+      "title": "Acceptability, Safety and Feasibility of a Sedentary Behaviour Intervention (REACH-SCI) in Individuals with Spinal Cord Injury: A Mixed-Methods Study",
+      "summary": "A mixed-methods pre-post feasibility study (n=18 wheelchair-users with paraplegia) evaluated an 8-week sedentary behavior intervention (REACH-SCI) combining a wearable tracker, education, goal setting, motivational support, peer support, and activity tools. The intervention was found acceptable, safe, and feasible, with high engagement (except peer support) and preliminary efficacy in improving sedentary behavior, physical activity, cardiovascular disease biomarkers, and psychosocial outcomes.",
+      "category": "neurological",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.21.26365989v1?rss=1",
+      "publishedAt": "2026-10-24T00:00:00.000Z",
+      "firstSeen": "2026-10-24T16:04:26.037Z",
+      "curatedScore": 70,
+      "curatedReason": "这项混合方法研究显示，旨在减少脊髓损伤患者久坐行为的REACH-SCI干预措施是可接受、安全且可行的，并且初步显示出改善久坐行为、身体活动和心血管生物标志物的效果。在等待确定性试验结果的同时，你可以考虑将这类多组件干预措施作为促进脊髓损伤患者身体活动的潜在策略。",
+      "titleZh": "脊髓损伤患者久坐行为干预（REACH-SCI）的可接受性、安全性及可行性：一项混合方法研究",
+      "summaryZh": "一项针对 18 名截瘫轮椅使用者的混合方法前瞻性可行性研究评估了为期 8 周的久坐行为干预（REACH-SCI），该干预结合了可穿戴追踪器、教育、目标设定、动机支持、同伴支持和活动工具。研究发现该干预措施可接受、安全且可行，参与度高（同伴支持除外），并初步显示在改善久坐行为、身体活动、心血管疾病生物标志物和心理社会结局方面的疗效。",
+      "curatedReasonEn": "This mixed-methods study indicates that the REACH-SCI intervention, designed to reduce sedentary behavior in individuals with spinal cord injury, is acceptable, safe, and feasible, with preliminary efficacy in improving sedentary behavior, physical activity, and cardiovascular biomarkers. While awaiting definitive trial results, you might consider such multi-component interventions as a potential strategy to promote physical activity in SCI patients.",
+      "limitation": "本研究为前瞻性可行性研究，样本量较小（n=18），且缺乏对照组，因此其初步疗效结果应谨慎解读，不宜直接推广为临床实践。",
+      "limitationEn": "This pre-post feasibility study has a small sample size (n=18) and lacks a control group, so its preliminary efficacy results should be interpreted cautiously and not directly generalized to clinical practice.",
+      "tags": [
+        "research",
+        "spinal-cord",
+        "physical-activity"
+      ],
+      "studyDesign": "观察研究",
+      "tech": true
+    },
     {
       "id": "news-1792339155437-0",
       "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
@@ -1496,30 +1654,6 @@
       "journal": "Journal of physiotherapy"
     },
     {
-      "id": "news-1791723937021-5",
-      "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
-      "summary": "In 75 patients with post-burn cubital tunnel syndrome, both HILT+UNGE and ESWT+UNGE improved nerve conduction and upper-limb function more than UNGE alone. HILT resulted in significantly greater improvements than ESWT across all electrophysiological outcomes and DASH scores, with benefits maintained at 12-week follow-up.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
-      "publishedAt": "2026-10-11T00:00:00.000Z",
-      "firstSeen": "2026-10-10T12:43:30.005Z",
-      "curatedScore": 85,
-      "curatedReason": "这项随机对照试验表明，对于烧伤后肘管综合征，结合高强度激光疗法（HILT）或体外冲击波疗法（ESWT）的尺神经滑动练习比单独滑动练习更有效，且 HILT 在神经电生理和功能结局上优于 ESWT。你可以考虑将 HILT 作为烧伤后 CuTS 患者的有效治疗选择，尤其是在电生理改善方面。",
-      "titleZh": "烧伤后肘管综合征：高强度激光疗法与体外冲击波疗法对电生理和功能反应的随机对照试验",
-      "summaryZh": "一项针对 75 名烧伤后肘管综合征患者的随机对照试验显示，高强度激光疗法（HILT）加尺神经滑动练习（UNGE）和体外冲击波疗法（ESWT）加 UNGE 均比单独 UNGE 更能改善神经传导和上肢功能。HILT 在所有电生理指标和 DASH 评分上均优于 ESWT，且效果在 12 周随访时保持。",
-      "curatedReasonEn": "This randomized controlled trial indicates that, for post-burn cubital tunnel syndrome, ulnar nerve gliding exercises combined with either high-intensity laser therapy (HILT) or extracorporeal shock wave therapy (ESWT) are more effective than gliding exercises alone, with HILT being superior to ESWT in electrophysiological and functional outcomes. You may consider HILT as an effective treatment option for post-burn CuTS patients, especially for electrophysiological improvements.",
-      "limitation": "随访期相对较短（12 周），长期效果尚需更多研究确认。",
-      "limitationEn": "The follow-up period is relatively short (12 weeks), and long-term effects require further confirmation.",
-      "tags": [
-        "research",
-        "laser",
-        "electro"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Archives of physical medicine and rehabilitation"
-    },
-    {
       "id": "news-1792440055837-3",
       "title": "Fall prevention interventions among older adults in low-and middle-income countries (LMICs): an integrative review.",
       "summary": "An integrative review of 14 studies from seven low- and middle-income countries found that multifactorial interventions, exercise-based programs, and home safety modifications may reduce fall incidence, fall risk, and fear of falling among older adults, although evidence on contextual adaptation and scalability remains limited.",
@@ -1888,143 +2022,6 @@
         "mobility"
       ],
       "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1791723937020-0",
-      "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
-      "summary": "Physiotherapists in Austria perceive readiness for direct access but identify gaps in confidence, legal framework, and training needs, suggesting targeted education and support are crucial for implementation.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858051/",
-      "publishedAt": "2026-10-11T00:00:00.000Z",
-      "firstSeen": "2026-10-11T13:05:37.020Z",
-      "curatedScore": 75,
-      "curatedReason": "奥地利物理治疗师已准备好直接执业，但法律和培训方面的顾虑会阻碍其落地。你需要关注这些明确指出的障碍，而不是认为障碍不存在。",
-      "titleZh": "奥地利转诊制度下物理治疗师对直接准入的看法——一项定性研究",
-      "summaryZh": "奥地利物理治疗师认为自己已为直接准入做好准备，但缺乏信心、法律框架和培训方面的不足。这表明有针对性的教育和支持对于实施至关重要。",
-      "curatedReasonEn": "Austrian PTs are ready for direct access, but legal concerns and training gaps are significant barriers. Pay attention to these identified obstacles, rather than assuming they are already resolved.",
-      "limitation": "样本量小且为定性数据，可能限制其普遍适用性。",
-      "limitationEn": "Qualitative data from a small sample size may limit generalizability.",
-      "tags": [
-        "research",
-        "regulation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Clinical rehabilitation"
-    },
-    {
-      "id": "news-1791940661345-0",
-      "title": "Physiotherapy management of persistent pelvic pain.",
-      "summary": "This review likely consolidates current evidence on physiotherapy management for persistent pelvic pain.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864197/",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-14T01:17:41.345Z",
-      "curatedScore": 70,
-      "curatedReason": "这篇综述巩固了持续性盆腔痛的物理治疗管理证据，建议密切关注其对临床实践的具体推荐。",
-      "titleZh": "持久性盆腔疼痛的物理治疗管理",
-      "summaryZh": "该综述可能汇集了持久性盆腔疼痛的物理治疗管理现状证据。鉴于盆腔疼痛疾病的普遍性，这对管理复杂患者群体的临床医生来说是一个坚实的更新，但其实际影响取决于所提供建议的力度。",
-      "curatedReasonEn": "This review likely consolidates current evidence on physiotherapy management for persistent pelvic pain. Given the prevalence of pelvic pain conditions, this is a solid update for clinicians managing this complex patient population, though its practical impact depends on the strength of the recommendations provided.",
-      "tags": [
-        "research",
-        "pelvic-floor"
-      ],
-      "studyDesign": "综述",
-      "journal": "Journal of physiotherapy"
-    },
-    {
-      "id": "news-1791940661348-5",
-      "title": "Financial burden, non-medical drivers of health, and early caregiving role formation after stroke: a scoping review.",
-      "summary": "Caregiver assessments for stroke recovery inconsistently capture financial toxicity and non-medical drivers of health, indicating a need for more comprehensive instruments integrating these domains with caregiver role formation.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42865022/",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-14T01:17:41.348Z",
-      "curatedScore": 70,
-      "curatedReason": "卒中后照护者评估未能全面纳入财务负担和非医疗健康驱动因素，需要开发更全面的工具来应对这些问题。",
-      "titleZh": "卒中后经济负担、健康非医疗驱动因素与早期照护者角色形成：一项范围综述",
-      "summaryZh": "卒中后照护者评估不一致地捕捉财务毒性和健康非医疗驱动因素，表明需要更全面的工具将这些领域与照护者角色形成相结合。",
-      "curatedReasonEn": "This scoping review highlights significant gaps in how caregiver assessments capture financial toxicity and non-medical drivers of health post-stroke. It provides a clear call to action for developing more comprehensive assessment tools to better support stroke survivors and their families during recovery.",
-      "limitation": "范围审查的局限性与检索策略及纳入研究类型有关。",
-      "limitationEn": "Scoping review limitations related to search strategy and included study types.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Topics in stroke rehabilitation"
-    },
-    {
-      "id": "news-1792194392565-38",
-      "title": "Credibility and strength of evidence for exercise, nutritional, and combined interventions on muscle function and physical performance in older adults: an umbrella review of meta-analyses of randomized controlled trials",
-      "summary": "An umbrella review of meta-analyses found the strongest evidence for exercise interventions in older adults, especially for fall prevention. Nutrition-only interventions may modestly benefit muscle mass in specific populations, and combined interventions show some promise for strength and function.",
-      "category": "geriatric",
-      "source": "BMC Geriatrics",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08393-8",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-16T23:46:32.565Z",
-      "curatedScore": 85,
-      "curatedReason": "这项伞形综述建议，在老年人干预中，以预防跌倒为目标的运动疗法证据最为充分。营养干预可能仅在特定人群中对肌肉量有适度益处，联合干预在力量和功能方面显示出一定潜力，但运动仍是核心。",
-      "titleZh": "运动、营养和联合干预对老年人肌肉功能和身体机能的证据可信度和强度：一项随机对照试验荟萃分析的伞形综述",
-      "summaryZh": "一项荟萃分析的伞形综述发现，老年人中最有力的证据支持运动干预，特别是用于跌倒预防。单独的营养干预可能对特定人群的肌肉质量有适度益处，联合干预在改善力量和功能方面显示出一些前景。",
-      "curatedReasonEn": "This umbrella review of meta-analyses suggests that exercise-based interventions, particularly for fall prevention, have the most consistently supported evidence in older adults. While nutrition may benefit muscle mass in specific groups, and combined interventions show some promise, exercise remains a cornerstone.",
-      "limitation": "大量综述重叠、临床异质性以及原始综述质量参差不齐，限制了结论的确定性。",
-      "limitationEn": "Significant review overlap, clinical heterogeneity, and variable quality of source reviews limit the certainty of conclusions.",
-      "tags": [
-        "research",
-        "geriatric"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Geriatrics"
-    },
-    {
-      "id": "news-1792541269904-17",
-      "title": "Clinical and functional outcomes of aquatic plyometrics in adolescent patellofemoral pain syndrome: a dual-arm randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-      "summary": "A dual-arm RCT found aquatic plyometric exercises significantly improved pain, quadriceps and hamstring torque, functional disability, and quality of life in adolescents with patellofemoral pain syndrome compared to conventional exercises.",
-      "category": "orthopedic",
-      "source": "J Rehabil Med",
-      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46495",
-      "publishedAt": "2026-10-19T00:00:00.000Z",
-      "firstSeen": "2026-10-21T00:07:49.904Z",
-      "curatedScore": 80,
-      "curatedReason": "这项RCT证实，与传统锻炼相比，水中增强式训练能显著改善青少年髌骨股骨疼痛综合征患者的疼痛、股四头肌和腘绳肌力量、功能障碍及生活质量。应考虑将其纳入临床实践。",
-      "titleZh": "青少年髌股疼痛综合征患者水生增强式训练的临床和功能结局：一项双臂随机对照试验",
-      "summaryZh": "一项双臂随机对照试验显示，与常规练习相比，水生增强式练习能显著改善青少年髌股疼痛综合征患者的疼痛、股四头肌和腘绳肌扭矩、功能障碍和生活质量。",
-      "curatedReasonEn": "This RCT provides strong evidence that aquatic plyometrics are superior to conventional exercises for improving pain, strength, function, and quality of life in adolescents with patellofemoral pain syndrome. Clinicians should consider incorporating this intervention.",
-      "limitation": "本研究在沙特阿拉伯进行；其结果推广至其他人群需谨慎考虑。",
-      "limitationEn": "Study conducted in Saudi Arabia; generalizability to other populations needs consideration.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Journal of Rehabilitation Medicine"
-    },
-    {
-      "id": "news-1792023109423-19",
-      "title": "Six-month supervised telerehabilitation combining pilates-based therapeutic exercise and self-myofascial release in adults with fibromyalgia: a randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-      "summary": "A 6-month supervised telerehabilitation program combining Pilates-based exercise and self-myofascial release significantly improved fibromyalgia impact, sleep quality, depressive symptoms, and perceived stress compared to usual care in adults with fibromyalgia.",
-      "category": "orthopedic",
-      "source": "J Rehabil Med",
-      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46786",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-15T00:11:49.423Z",
-      "curatedScore": 80,
-      "curatedReason": "这项高质量RCT表明，为期6个月的结合了普拉提和自我筋膜松解的监督式远程康复计划，在改善纤维肌痛患者的疾病影响、睡眠质量和心理健康方面，显著优于常规护理。这是远程医疗干预的有力循证选择。",
-      "titleZh": "结合了普拉提式治疗性运动和自我筋膜松解的为期六个月的监督远程康复对成人纤维肌痛症的影响：一项随机对照试验",
-      "summaryZh": "一项为期六个月的监督式多组分远程康复计划，结合了普拉提式练习和自我筋膜松解，与常规护理相比，显著改善了纤维肌痛症患者的纤维肌痛症影响、睡眠质量、抑郁症状和感知压力。",
-      "curatedReasonEn": "This high-quality RCT demonstrates that a 6-month supervised telerehabilitation program combining Pilates and self-myofascial release significantly improves fibromyalgia impact, sleep quality, and psychological outcomes compared to usual care. This offers a strong evidence-based option for telehealth delivery.",
-      "limitation": "本研究在希腊进行；未评估超出6个月的长期效果。",
-      "limitationEn": "Study conducted in Greece; long-term effects beyond 6 months were not assessed.",
-      "tags": [
-        "research",
-        "neurological"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Journal of Rehabilitation Medicine",
-      "tech": true
     }
   ]
 }
