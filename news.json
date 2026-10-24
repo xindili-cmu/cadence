@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-24T16:04:28.301Z",
+    "lastUpdated": "2026-10-24T18:51:12.597Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,23 +15,29 @@
   },
   "hotTopics": [
     {
-      "id": "news-1792019913651-0",
-      "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42873553/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "id": "news-1791723937021-5",
+      "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
+      "category": "manual-modality",
+      "publishedAt": "2026-10-24T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
+        "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
         "American journal of physical medicine & rehabilitation",
         "British Journal of Sports Medicine",
         "medRxiv",
-        "Archives of physical medicine and rehabilitation",
-        "Physiotherapy theory and practice"
+        "The Lancet"
       ],
-      "tag": null,
+      "tag": "electro",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+          "titleZh": "烧伤后肘管综合征：高强度激光疗法与体外冲击波疗法对电生理和功能反应的随机对照试验"
+        },
         {
           "source": "PubMed",
           "journal": "NeuroRehabilitation",
@@ -62,15 +68,15 @@
           "titleZh": "双模式信号生物反馈对卒中后吞咽困难患者声门上吞咽动作的影响：一项随机对照试验"
         },
         {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Delivering a high-dose walking booster program after stroke: a multimethod study of therapists' beliefs and experiences nested within a randomized trial.",
-          "titleZh": "卒中后高剂量步行强化训练的实施：一项多方法研究，探讨治疗师在随机试验中的信念和经验"
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Correspondence] Beyond imaging thresholds in large-core stroke thrombectomy",
+          "titleZh": "大核心卒中取栓的影像学阈值之外"
         }
       ],
-      "heat": 3.36,
-      "themeZh": "卒中后功能障碍康复的电生理与机器人干预",
-      "themeEn": "Electrophysiological & Robotic Interventions for Post-Stroke Recovery"
+      "heat": 4.57,
+      "themeZh": "中风后神经功能障碍的多种物理治疗与康复技术",
+      "themeEn": "Multimodal PT for Post-Stroke Neurological Dysfunction"
     },
     {
       "id": "news-1791940661348-4",
@@ -142,9 +148,9 @@
           "titleZh": "一项基于时间验证的机器学习模型，用于预测非创伤性脊髓损伤患者的步行能力"
         }
       ],
-      "heat": 3.17,
-      "themeZh": "神经康复患者与照护者护理需求的质性研究",
-      "themeEn": "Care Needs in Neurorehabilitation: Patient & Caregiver Perspectives"
+      "heat": 3.05,
+      "themeZh": "卒中和脑脊髓损伤患者康复中的社会心理支持与服务",
+      "themeEn": "Psychosocial Support in ABI and SCI Rehabilitation"
     },
     {
       "id": "news-1792532610308-0",
@@ -201,6 +207,12 @@
         },
         {
           "source": "PubMed",
+          "journal": "Journal of physiotherapy",
+          "title": "Physiotherapy management of persistent pelvic pain.",
+          "titleZh": "持续性盆腔疼痛的物理治疗管理"
+        },
+        {
+          "source": "PubMed",
           "journal": "The Journal of manual & manipulative therapy",
           "title": "Do treatment parameters of dry needling influence its effect on pain? A systematic review and meta-analysis.",
           "titleZh": "干针治疗参数是否影响其对疼痛的疗效？一项系统综述和荟萃分析"
@@ -212,9 +224,9 @@
           "titleZh": "物理治疗师实施的检查测试对非特异性颈痛成人诊断准确性和鉴别有效性：一项系统综述"
         }
       ],
-      "heat": 2.38,
-      "themeZh": "慢性腰痛的非药物康复治疗效果评估",
-      "themeEn": "Non-Pharmacological Rehabilitation for Chronic Low Back Pain"
+      "heat": 2.28,
+      "themeZh": "慢性腰背痛的冲击波、运动和手法治疗",
+      "themeEn": "Shockwave, Exercise, Manual Therapy for LBP"
     },
     {
       "id": "news-1792174241961-0",
@@ -257,57 +269,131 @@
           "titleZh": "网络和移动支持型半自动化肩部康复系统 (WMSSR) 的实施、可行性及优化：一项前瞻性队列干预研究"
         }
       ],
-      "heat": 2.24,
-      "themeZh": "肩关节损伤康复的长期疗效与数字化方案",
-      "themeEn": "Long-Term Outcomes and Digital Solutions for Shoulder Rehab"
+      "heat": 2.15,
+      "themeZh": "肩袖撕裂与肩部疼痛的康复治疗与评估",
+      "themeEn": "Rehabilitation for Rotator Cuff Tears and Shoulder Pain"
     },
     {
-      "id": "news-1792797268165-0",
-      "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42913286/",
+      "id": "news-1791723937020-0",
+      "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858051/",
       "category": "orthopedic",
       "publishedAt": "2026-10-23T00:00:00.000Z",
       "sourceCount": 4,
       "sources": [
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Current reviews in musculoskeletal medicine",
-        "International journal of sports physical therapy"
+        "Clinical rehabilitation",
+        "Physiotherapy theory and practice",
+        "International journal of sports physical therapy",
+        "BMC musculoskeletal disorders"
       ],
       "tag": "knee",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-          "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-          "titleZh": "ACL 重建术后单腿着陆运动控制中短足运动与足趾卷曲运动的比较：一项探索性随机对照试验。"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Does prehabilitation with exercise improve clinical outcomes of arthroscopic modified Broström procedure in patients with chronic lateral ankle instability: a prospective cohort study",
-          "titleZh": "运动康复预训练能否改善慢性外踝不稳患者关节镜改良 Broström 手术的临床结局：一项前瞻性队列研究"
+          "journal": "Clinical rehabilitation",
+          "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+          "titleZh": "奥地利转诊体系下物理治疗师对直接接诊的看法——一项定性研究"
         },
         {
           "source": "PubMed",
-          "journal": "Current reviews in musculoskeletal medicine",
-          "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
-          "titleZh": "前交叉韧带重建的现状：移植物选择、侧方加固、康复与重返赛场"
+          "journal": "Physiotherapy theory and practice",
+          "title": "Trends in Australia's physiotherapy workforce: changes and future implications.",
+          "titleZh": "澳大利亚物理治疗师劳动力趋势：变化与未来影响"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
+          "titleZh": "不确定性下校准临床推理：一项关于肌肉骨骼执业中专家物理治疗师的定性研究。"
         },
         {
           "source": "PubMed",
           "journal": "International journal of sports physical therapy",
           "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
           "titleZh": "影响物理治疗师依从前交叉韧带重建临床实践指南和重返运动标准的障碍与促进因素：一项奥地利定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Trajectories of physical activity following digital education and exercise therapy-a longitudinal registry study among 15,197 persons with knee or hip osteoarthritis.",
+          "titleZh": "数字教育和运动疗法对膝髋骨关节炎患者身体活动轨迹的影响：一项 15,197 人的纵向登记研究"
         }
       ],
-      "heat": 2.24,
-      "themeZh": "ACL重建后足踝功能锻炼与康复策略",
-      "themeEn": "Foot & Ankle Rehabilitation Post-ACL Reconstruction"
+      "heat": 2.15,
+      "themeZh": "物理治疗师的临床实践、专业发展与职业挑战",
+      "themeEn": "Physiotherapy Practice, Professional Development, Challenges"
     }
   ],
   "items": [
+    {
+      "id": "news-1791723937021-5",
+      "title": "Post burn Cubital Tunnel Syndrome Electrophysiological and Functional Responses to High intensity Laser Therapy versus Extracorporeal Shock Wave Therapy: A Randomized Controlled Trial.",
+      "summary": "A randomized controlled trial (N=75) found that high-intensity laser therapy (HILT) combined with ulnar nerve gliding exercises (UNGE) yielded superior electrophysiological and functional outcomes compared to extracorporeal shock wave therapy (ESWT)+UNGE or UNGE alone in patients with post-burn cubital tunnel syndrome, with benefits maintained at 12 weeks.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858917/",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-10T12:43:30.005Z",
+      "curatedScore": 85,
+      "curatedReason": "高强度激光治疗 (HILT) 在改善烧伤后肘管综合征的神经传导和功能方面，显著优于体外冲击波 (ESWT) 和单独的尺神经滑动锻炼 (UNGE)，且效果在 12 周随访时仍保持。考虑将 HILT 作为该类患者的更优选择。",
+      "titleZh": "烧伤后肘管综合征：高强度激光疗法与体外冲击波疗法对电生理和功能反应的随机对照试验",
+      "summaryZh": "一项随机对照试验（N=75）发现，在烧伤后肘管综合征患者中，高强度激光疗法（HILT）联合尺神经滑动锻炼（UNGE）在电生理和功能结局方面优于体外冲击波疗法（ESWT）联合 UNGE 或单独 UNGE，且疗效在 12 周随访中持续。",
+      "curatedReasonEn": "High-intensity laser therapy (HILT) significantly outperforms extracorporeal shock wave therapy (ESWT) and ulnar nerve gliding exercises (UNGE) alone in improving nerve conduction and function for post-burn cubital tunnel syndrome, with benefits maintained at 12-week follow-up. Consider HILT as a superior option for these patients.",
+      "limitation": "研究未报告烧伤严重程度和瘢痕程度对干预效果的影响，可能限制结果的普适性。",
+      "limitationEn": "The study did not report the impact of burn severity and scarring on intervention outcomes, potentially limiting generalizability.",
+      "tags": [
+        "research",
+        "electro"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Archives of physical medicine and rehabilitation"
+    },
+    {
+      "id": "news-1791723937020-0",
+      "title": "Physiotherapists' perspectives on direct access in a referral-based system in Austria - A qualitative study.",
+      "summary": "A qualitative study of 10 Austrian physiotherapists found perceived readiness for direct access but identified gaps in confidence for red-flag screening and challenges with legal uncertainty and hierarchical physician relationships.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42858051/",
+      "publishedAt": "2026-10-11T00:00:00.000Z",
+      "firstSeen": "2026-10-11T13:05:37.020Z",
+      "curatedScore": 75,
+      "curatedReason": "即使在转诊制体系中，物理治疗师仍普遍存在非正式的直接接诊，但对红旗征象筛查的信心不足。在推动直接接诊时，关注专业培训和跨专业协作至关重要。",
+      "titleZh": "奥地利转诊体系下物理治疗师对直接接诊的看法——一项定性研究",
+      "summaryZh": "一项针对奥地利 10 名物理治疗师的定性研究发现，受访者认为已为直接接诊做好准备，但同时指出在红旗征象筛查方面缺乏信心，并面临法律不确定性和与医师层级关系等挑战。",
+      "curatedReasonEn": "Even within a referral-based system, informal direct access by physiotherapists is common, though confidence in red-flag screening remains low. Emphasize professional training and interprofessional collaboration when advocating for direct access.",
+      "limitation": "本研究为定性研究，样本量小且局限于奥地利蒂罗尔地区的骨骼肌肉物理治疗师，结果外推性受限。",
+      "limitationEn": "This qualitative study has a small sample size and is limited to musculoskeletal physiotherapists in Tyrol, Austria, thus limiting generalizability.",
+      "tags": [
+        "research",
+        "workforce",
+        "regulation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical rehabilitation"
+    },
+    {
+      "id": "news-1791940661345-0",
+      "title": "Physiotherapy management of persistent pelvic pain.",
+      "summary": "This review article outlines physiotherapy management strategies for persistent pelvic pain, covering various evidence-based interventions.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42864197/",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "firstSeen": "2026-10-14T01:17:41.345Z",
+      "curatedScore": 70,
+      "curatedReason": "处理慢性盆腔痛，你大概率需要一个多模式的方法。这篇综述清晰梳理了目前常用的证据支持疗法，你可以此作为临床实践的起点。",
+      "titleZh": "持续性盆腔疼痛的物理治疗管理",
+      "summaryZh": "本综述文章概述了持续性盆腔疼痛的物理治疗管理策略，涵盖了多种循证干预措施。",
+      "curatedReasonEn": "Persistent pelvic pain usually requires a multimodal approach. This review clearly outlines current evidence-based interventions, offering a solid starting point for your clinical practice.",
+      "tags": [
+        "research",
+        "pelvic-floor"
+      ],
+      "studyDesign": "综述",
+      "journal": "Journal of physiotherapy"
+    },
     {
       "id": "news-1792532610308-0",
       "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
@@ -1953,75 +2039,6 @@
         "reimbursement",
         "regulation"
       ]
-    },
-    {
-      "id": "news-1792590968344-0",
-      "title": "Delivering a high-dose walking booster program after stroke: a multimethod study of therapists' beliefs and experiences nested within a randomized trial.",
-      "summary": "This multimethod study explored intervention therapists' beliefs and experiences delivering a high-dose walking booster program (HiWalk) within a Phase II trial (n=6 therapists) for stroke survivors (>6 months post-stroke). Therapists largely believed high-dose training was important (98.5/100) but were less confident about patients completing 3 hours/day (74.8/100). Training, team support, and resources facilitated delivery, while beliefs about stroke survivor capability and resource limitations were barriers.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42902503/",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-21T13:56:08.344Z",
-      "curatedScore": 75,
-      "curatedReason": "高剂量步行训练的依从性在卒中康复中至关重要。本研究揭示，治疗师需要更强的信心和更多资源来确保患者达到高训练量，这是未来临床方案设计和实施的考量点。",
-      "titleZh": "卒中后高剂量步行强化训练的实施：一项多方法研究，探讨治疗师在随机试验中的信念和经验",
-      "summaryZh": "这项多方法研究探索了在二期临床试验背景下（n=6 名治疗师），干预治疗师在为卒中幸存者（卒中后超过 6 个月）提供高剂量步行强化训练（HiWalk）时的信念和经验。治疗师普遍认为高剂量训练很重要（98.5/100），但对患者每天完成 3 小时训练的信心较低（74.8/100）。培训、团队支持和资源是促进因素，而对患者能力的信念和资源限制是障碍。",
-      "curatedReasonEn": "Adherence to high-dose walking training is crucial in stroke rehabilitation. This study reveals therapists need stronger confidence and more resources to ensure patients achieve high training volumes, which are key considerations for future clinical program design and implementation.",
-      "limitation": "本研究是在一个小型二期临床试验（n=6 名治疗师）背景下进行的，结果的普适性受限。",
-      "limitationEn": "This study was conducted within the context of a small Phase II clinical trial (n=6 therapists), limiting the generalizability of the findings.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1792590968345-1",
-      "title": "Early postoperative functional exercise adherence and its association with 3-month hip functional recovery among older adults after femoral neck fracture surgery: a prospective observational study.",
-      "summary": "This prospective observational study (n=230 older adults) found that early postoperative functional exercise adherence before discharge was moderate (mean score 49.9 ± 6.9) among older adults after femoral neck fracture surgery. Higher adherence was associated with better 3-month hip functional recovery (Harris Hip Score, B = 0.842, p < 0.001). Kinesiophobia, rehabilitation self-efficacy, social support, and pain intensity were key associated factors.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42902229/",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "firstSeen": "2026-10-21T13:56:08.345Z",
-      "curatedScore": 75,
-      "curatedReason": "股骨颈骨折术后早期功能锻炼依从性影响患者 3 个月时的髋关节功能，表明早期康复环节是远期预后的关键。您需要关注患者的恐惧症、自我效能和疼痛管理，并在出院前制定明确的康复计划。",
-      "titleZh": "老年股骨颈骨折术后早期功能锻炼依从性及其与 3 个月髋关节功能恢复的关联：一项前瞻性观察研究",
-      "summaryZh": "这项前瞻性观察研究（n=230 名老年人）发现，老年股骨颈骨折术后出院前的早期功能锻炼依从性处于中等水平（平均分 49.9 ± 6.9）。较高的依从性与 3 个月时更好的髋关节功能恢复相关（Harris 髋关节评分，B = 0.842，p < 0.001）。运动恐惧症、康复自我效能、社会支持和疼痛强度是关键的相关因素。",
-      "curatedReasonEn": "Early functional exercise adherence after femoral neck fracture surgery impacts 3-month hip function, highlighting the criticality of early rehabilitation for long-term prognosis. Focus on managing kinesiophobia, enhancing self-efficacy, and pain, alongside clear pre-discharge rehabilitation plans.",
-      "limitation": "本研究为前瞻性观察研究，尽管发现依从性与功能恢复相关，但无法确立因果关系。",
-      "limitationEn": "This was a prospective observational study, and while it found an association between adherence and functional recovery, it cannot establish causality.",
-      "tags": [
-        "research",
-        "hip"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC musculoskeletal disorders"
-    },
-    {
-      "id": "news-1792239378922-27",
-      "title": "A Foundational Balance Training Exercise Program for People with Blindness or Low Vision",
-      "summary": "A foundational balance training exercise program is presented for individuals with blindness or low vision, addressing the increased challenges they face with balance and safe mobility due to reduced visual input.",
-      "category": "geriatric",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00946-9/fulltext?rss=yes",
-      "publishedAt": "2026-10-17T00:00:00.000Z",
-      "firstSeen": "2026-10-17T12:16:18.922Z",
-      "curatedScore": 70,
-      "curatedReason": "对于视力障碍患者，平衡训练是刚需，因为他们跌倒风险更高。这个基础训练方案是可直接上手的，建议你用于改善患者的平衡能力和移动安全性。",
-      "titleZh": "视力障碍人群的基础平衡训练方案",
-      "summaryZh": "一项针对盲人或低视力人群的基础平衡训练方案被提出，旨在解决他们因视力受损在平衡和安全移动方面面临的挑战。",
-      "curatedReasonEn": "Balance training is non-negotiable for individuals with visual impairment given their heightened fall risk. This foundational program is ready for immediate implementation to improve your patients' balance and mobility safety.",
-      "limitation": "本条目未提及具体研究设计，其通用性可能受限于未说明的实施环境和样本特征。",
-      "limitationEn": "This entry does not specify a research design, and its generalizability may be limited by unstated implementation settings and sample characteristics.",
-      "tags": [
-        "news",
-        "fall-prevention",
-        "mobility"
-      ],
-      "journal": "Archives of Physical Medicine and Rehabilitation"
     }
   ]
 }
