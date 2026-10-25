@@ -6299,6 +6299,122 @@
         "telehealth"
       ],
       "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1792970653958-19",
+      "title": "Effects of different types of exercise in patients with stroke: a network meta-analysis",
+      "summary": "A network meta-analysis of 52 RCTs (n=2,329) on stroke rehabilitation found whole-body vibration most beneficial for balance (BBS: MD 9.86, 95% CrI 4.78-14.92) with moderate certainty evidence. Aerobic, aerobic+strength, coordinative, and strength training improved walking endurance, but evidence for gait performance, functional mobility, ADL, and lower-extremity motor recovery was less robust or limited.",
+      "category": "neurological",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02150-5",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-25T23:24:13.958Z",
+      "curatedScore": 80,
+      "curatedReason": "卒中后不同运动干预的效果因康复目标而异。在平衡方面，全身振动训练（WBV）的证据强度最高（MD 9.86, 95% CrI 4.78-14.92），可考虑作为核心干预。步行耐力可采用有氧、有氧+力量、协调或力量训练。",
+      "titleZh": "不同类型运动对卒中患者的影响：一项网络 Meta 分析",
+      "summaryZh": "一项对 52 项 RCT（n=2,329）进行的网络 Meta 分析发现，全身振动训练对卒中康复中的平衡改善效果最显著（BBS：MD 9.86, 95% CrI 4.78-14.92），且证据确定性为中等。有氧运动、有氧加力量训练、协调训练和力量训练均能改善步行耐力，但对步态表现、功能活动度、日常生活活动和下肢运动恢复的证据较弱或有限。",
+      "curatedReasonEn": "The effects of different exercise interventions after stroke vary by rehabilitation goal. For balance, whole-body vibration (WBV) shows the strongest evidence (MD 9.86, 95% CrI 4.78-14.92) and can be considered a core intervention. For walking endurance, aerobic, aerobic+strength, coordinative, or strength training can be used.",
+      "limitation": "大多数比较证据的确定性较低（25项低确定性，14项极低确定性），且对日常活动和下肢运动恢复的证据有限。",
+      "limitationEn": "Most comparative evidence was of low certainty (25 low, 14 very low certainty), and evidence for activities of daily living and lower-extremity motor recovery remained limited.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1792970653958-20",
+      "title": "Identification and validation of an interpretable machine learning model for predicting peak ACL force during side-cutting maneuvers",
+      "summary": "An interpretable machine learning model (XGBoost) demonstrated high accuracy (R² = 0.929, RMSE = 0.051) in predicting peak anterior cruciate ligament (ACL) force during side-cutting maneuvers in 204 male football and basketball athletes. Key predictive features included knee flexion angle, hamstring-to-quadriceps activation ratio, and hip flexion angle.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02140-7",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-25T23:24:13.958Z",
+      "curatedScore": 75,
+      "curatedReason": "对于足球和篮球这类需要侧向切入的运动，ACL 损伤风险评估至关重要。这项观察性研究提示，膝屈曲角、腘绳肌/股四头肌激活比、髋屈曲角这些生物力学参数，可能通过机器学习模型高精度预测 ACL 峰值负荷。虽是观察研究，但它为你在评估运动员 ACL 损伤风险时提供了新的关注点。",
+      "titleZh": "识别和验证用于预测侧向切入动作期间 ACL 峰值力量的可解释机器学习模型",
+      "summaryZh": "一项研究开发了可解释的机器学习模型（XGBoost），在 204 名男性足球和篮球运动员的侧向切入动作中，以高精度（R² = 0.929, RMSE = 0.051）预测了前交叉韧带（ACL）的峰值力量。关键预测特征包括膝屈曲角、腘绳肌/股四头肌激活比和髋屈曲角。",
+      "curatedReasonEn": "For sports involving side-cutting maneuvers like football and basketball, ACL injury risk assessment is crucial. This observational study suggests that biomechanical parameters such as knee flexion angle, hamstring-to-quadriceps activation ratio, and hip flexion angle may highly accurately predict peak ACL forces via machine learning. While observational, it offers new focal points for your ACL injury risk assessments in athletes.",
+      "limitation": "该模型是在男性足球和篮球运动员中开发的，其对其他性别、运动类型或人群的泛化能力尚不明确。",
+      "limitationEn": "The model was developed in male football and basketball athletes, and its generalizability to other genders, sports, or populations is unclear.",
+      "tags": [
+        "research",
+        "knee",
+        "sports"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1792970653958-21",
+      "title": "A Narrative Review of Anterior Cruciate Ligament Reconstruction Graft Choice and Its Influence on Return to Sport",
+      "summary": "A narrative review on ACL reconstruction graft choice and return to sport (RTS) indicates that autografts are associated with higher RTS and lower revision rates than allografts in young, active patients. No single autograft (bone-patellar tendon-bone, hamstring tendon, quadriceps tendon) has established superiority, requiring individualized selection.",
+      "category": "sports",
+      "source": "Curr Rev Musculoskelet Med",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s12178-026-10061-8",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "firstSeen": "2026-10-25T23:24:13.958Z",
+      "curatedScore": 75,
+      "curatedReason": "ACL 重建术后重返运动时，自体移植物优于同种异体移植物，年轻、活跃患者尤其如此。当前没有证据表明某一种自体移植物（髌腱、腘绳肌腱、股四头肌腱）绝对优于其他。你需要根据患者年龄、运动类型和活动水平进行个体化选择。",
+      "titleZh": "前交叉韧带重建移植物选择及其对重返运动影响的叙述性综述",
+      "summaryZh": "一篇关于 ACL 重建移植物选择及重返运动的叙述性综述指出，在年轻、活跃患者中，自体移植物与同种异体移植物相比，具有更高的重返运动率和更低的翻修率。目前没有证据表明某一种自体移植物（骨-髌腱-骨、腘绳肌腱、股四头肌腱）具有绝对优势，需要个体化选择。",
+      "curatedReasonEn": "For return to sport after ACL reconstruction, autografts are superior to allografts, especially in young, active patients. There is currently no evidence to suggest that one autograft (patellar tendon, hamstring tendon, or quadriceps tendon) is definitively superior to others. You should individualize graft selection based on patient age, sport type, and activity level.",
+      "limitation": "本综述是一篇叙述性综述，可能存在选择偏倚，且未进行系统性证据质量评估。",
+      "limitationEn": "This is a narrative review, which may be subject to selection bias and did not conduct a systematic assessment of evidence quality.",
+      "tags": [
+        "research",
+        "knee",
+        "sports"
+      ],
+      "studyDesign": "综述",
+      "journal": "Current Reviews in Musculoskeletal Medicine"
+    },
+    {
+      "id": "news-1792970653958-17",
+      "title": "Pelvic Floor Knowledge, Toileting Behaviors, and Lower Urinary Tract Symptoms in Women with Multiple Sclerosis",
+      "summary": "A cross-sectional study found women with multiple sclerosis had higher Urogenital Distress Inventory-6 scores (LUTS), lower pelvic floor health knowledge, and more negative toileting behaviors compared to demographically matched women without MS. Premature voiding and straining were significant predictors of LUTS severity.",
+      "category": "orthopedic",
+      "source": "Int Urogynecol J",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06946-4",
+      "publishedAt": "2026-10-19T00:00:00.000Z",
+      "firstSeen": "2026-10-25T23:24:13.958Z",
+      "curatedScore": 65,
+      "curatedReason": "多发性硬化症（MS）女性患者的下尿路症状（LUTS）发生率更高，且如厕行为（如过早排尿、排便时用力）更消极。作为物理治疗师，你需要关注这些 LUTS 症状和行为模式，将它们纳入 MS 患者的康复评估与管理。",
+      "titleZh": "多发性硬化症女性患者的盆底知识、排便行为和下尿路症状",
+      "summaryZh": "一项横断面研究发现，与年龄匹配的非 MS 女性相比，多发性硬化症女性患者的泌尿生殖道症状评估（LUTS）得分更高，盆底健康知识水平较低，且排便行为更消极。过早排尿和排便时用力是 LUTS 严重程度的重要预测因素。",
+      "curatedReasonEn": "Women with Multiple Sclerosis (MS) experience higher rates of lower urinary tract symptoms (LUTS) and exhibit more negative toileting behaviors (e.g., premature voiding, straining). As a physical therapist, you need to pay attention to these LUTS and behavioral patterns, incorporating them into MS patient rehabilitation assessment and management.",
+      "limitation": "本研究为横断面设计，无法建立因果关系，且可能存在回忆偏倚。",
+      "limitationEn": "This study is a cross-sectional design, making it unable to establish causality and potentially subject to recall bias.",
+      "tags": [
+        "research",
+        "ms",
+        "pelvic-floor"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International Urogynecology Journal"
+    },
+    {
+      "id": "news-1792970653959-27",
+      "title": "Australian Health Practitioner Regulation Agency - Man fined after treating patients, making TV appearance while suspended",
+      "summary": "A New South Wales man was convicted and fined A$6,000 for falsely holding himself out as a registered podiatrist while his registration was suspended, after treating patients and appearing on TV. The Australian Health Practitioner Regulation Agency (AHPRA) urged media and the public to check its national register for practitioner status.",
+      "category": "practice",
+      "source": "AHPRA",
+      "sourceUrl": "https://www.ahpra.gov.au/News/2026-10-20-Fine-for-seeing-patients-while-suspended",
+      "publishedAt": "2026-10-20T00:00:00.000Z",
+      "firstSeen": "2026-10-25T23:24:13.959Z",
+      "curatedScore": 65,
+      "curatedReason": "澳大利亚一名吊销执照的足病医生因冒充注册医疗从业者而被判罚款 6000 澳元。这起事件再次提醒你，务必通过 AHPRA 的国家注册系统核实任何声称是注册从业者的人员资质，以维护职业声誉和公众信任。",
+      "titleZh": "澳大利亚健康从业者监管局：男子在被停职期间治疗患者并上电视节目后被罚款",
+      "summaryZh": "一名新南威尔士州男子因在注册被吊销期间冒充注册足病医生，治疗患者并出现在电视节目中，被判有罪并罚款 6000 澳元。澳大利亚健康从业者监管局（AHPRA）呼吁媒体和公众通过其国家注册系统核实从业人员的资质。",
+      "curatedReasonEn": "An Australian podiatrist whose registration was suspended was fined A$6,000 for falsely presenting himself as a registered health practitioner. This incident serves as a reminder for you to always verify the credentials of anyone claiming to be a registered practitioner through the AHPRA national register, to uphold professional integrity and public trust.",
+      "tags": [
+        "policy",
+        "regulation",
+        "ethics"
+      ]
     }
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-25T23:24:27.133Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42921866/"
+    },
+    {
+      "slide": 2,
+      "title": "Effects of different types of exercise in patients with stroke: a network meta-analysis",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02150-5"
+    },
+    {
+      "slide": 3,
+      "title": "Measurement properties of observational gait analysis tools in neurological disorders: a COSMIN meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42925108/"
+    },
+    {
+      "slide": 4,
+      "title": "Balance confidence, balance, and gait capacity in chronic stroke: baseline and change correlations.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42925857/"
+    },
+    {
+      "slide": 5,
+      "title": "Identification and validation of an interpretable machine learning model for predicting peak ACL force during side-cutting maneuvers",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02140-7"
+    }
+  ]
+}
