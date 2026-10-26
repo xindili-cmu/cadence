@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-26T15:17:20.756Z",
+    "lastUpdated": "2026-10-26T21:05:32.795Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,51 +15,58 @@
   },
   "hotTopics": [
     {
-      "id": "news-1792928754481-3",
-      "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42921866/",
+      "id": "news-1792532610309-1",
+      "title": "Physical activity guidelines' impact on cognition in multiple sclerosis: a systematic review and meta-analysis of randomized clinical trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899457/",
       "category": "neurological",
       "publishedAt": "2026-10-25T00:00:00.000Z",
-      "sourceCount": 5,
+      "sourceCount": 6,
       "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "NeuroRehabilitation",
         "Disability and rehabilitation",
-        "Archives of physical medicine and rehabilitation",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Sports medicine (Auckland, N.Z.)",
+        "Clinical biomechanics (Bristol, Avon)",
+        "Bulletin of Faculty of Physical Therapy",
         "Physiotherapy theory and practice"
       ],
-      "tag": "stroke",
+      "tag": "ms",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
-          "titleZh": "神经肌肉电刺激（NMES）对卒中后患者下肢活动能力和日常生活活动的影响：一项系统综述和荟萃分析。"
+          "journal": "Disability and rehabilitation",
+          "title": "Physical activity guidelines' impact on cognition in multiple sclerosis: a systematic review and meta-analysis of randomized clinical trials.",
+          "titleZh": "身体活动指南对多发性硬化症患者认知功能的影响：随机临床试验的系统综述和荟萃分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of different types of exercise in patients with stroke: a network meta-analysis",
+          "titleZh": "不同类型运动对卒中患者的影响：一项网络 Meta 分析"
         },
         {
           "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
-          "titleZh": "感觉电刺激与交替肌电引导电刺激对慢性卒中患者手功能恢复的疗效比较：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effects of Single-Session High-Definition Transcranial Alternating Current Stimulation (HD-tACS) Combined with Robot-Assisted Hand Exercises on Corticospinal Excitability in Chronic Stroke.",
-          "titleZh": "单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习对慢性卒中皮质脊髓兴奋性的影响"
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "Effects of Exercise Training on the Metabolic Cost of Walking in Health and Disease: A Systematic Review and Meta-analysis.",
+          "titleZh": "运动训练对健康和疾病人群步行代谢成本影响的系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
-          "titleZh": "脊髓损伤患者日常电刺激预防复发性压疮的过程评估：SCI PREVOLT 试验"
+          "title": "Measurement properties of observational gait analysis tools in neurological disorders: a COSMIN meta-analysis.",
+          "titleZh": "神经系统疾病患者观察性步态分析工具的测量特性：COSMIN 荟萃分析。"
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Effect of bimodal signal biofeedback on the supraglottic swallowing maneuver in patients with post-stroke dysphagia: A randomised controlled trial.",
-          "titleZh": "双模式信号生物反馈对卒中后吞咽困难患者声门上吞咽动作的影响：一项随机对照试验"
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "Balance confidence, balance, and gait capacity in chronic stroke: baseline and change correlations.",
+          "titleZh": "慢性卒中患者的平衡信心、平衡能力和步态能力：基线及变化相关性。"
+        },
+        {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "Effectiveness of Wobble Board and Swiss Ball exercises on balance, mobility and functional independence in patients with diabetic peripheral neuropathy",
+          "titleZh": "晃动板和瑞士球锻炼对糖尿病周围神经病变患者平衡、活动能力和功能独立性的影响"
         },
         {
           "source": "PubMed",
@@ -68,9 +75,66 @@
           "titleZh": "卒中后高剂量步态强化训练计划的实施：一项多方法研究，探讨治疗师在随机试验中的信念和经验"
         }
       ],
-      "heat": 2.84,
-      "themeZh": "卒中与脊髓损伤后电刺激及生物反馈康复效果",
-      "themeEn": "Electrical Stimulation and Biofeedback for Neurological Recovery"
+      "heat": 3.13,
+      "themeZh": "神经系统疾病患者平衡与步态训练和评估",
+      "themeEn": "Balance and Gait Training in Neurological Disorders"
+    },
+    {
+      "id": "news-1792884487844-21",
+      "title": "Divergent functional responses to hyperoxic versus hypoxic high-intensity interval training: a randomized exploratory active-comparator study",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02115-8",
+      "category": "cardiopulmonary",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "Journal of Rehabilitation Medicine",
+        "Brazilian journal of physical therapy"
+      ],
+      "tag": "high-intensity-interval-training",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Divergent functional responses to hyperoxic versus hypoxic high-intensity interval training: a randomized exploratory active-comparator study",
+          "titleZh": "高氧与低氧高强度间歇训练的不同功能反应：一项随机探索性主动对照研究"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Effects of integrating blood flow restriction (BFR) into sport-specific on-field training on athletic performance and physiological adaptations in team-sport athletes: a systematic review and meta-analysis",
+          "titleZh": "将血流限制 (BFR) 整合到运动专项场上训练对团队运动运动员运动表现和生理适应的影响：系统综述和荟萃分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "A multimodal non-fatiguing recovery strategy improves neuromuscular restoration and attenuates inflammatory and oxidative stress responses following a standardized football match: a randomized crossover study",
+          "titleZh": "多模式非疲劳性恢复策略改善标准化足球比赛后的神经肌肉恢复并减轻炎症和氧化应激反应：一项随机交叉研究"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Criterion validity of the Watt-max Test and Test Assessors' judgement of V..O2max achievement in Individuals with Heart Disease",
+          "titleZh": "Watt-max测试和评估者对心血管疾病患者V̇O2max达成判断的效标效度"
+        },
+        {
+          "source": "J Rehabil Med",
+          "journal": "Journal of Rehabilitation Medicine",
+          "title": "Effectiveness of physical, psychological, and alternative interventions for post-COVID-19 condition: a systematic review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+          "titleZh": "针对新冠后遗症的物理、心理和替代干预措施的有效性：一项系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Efficacy of whole-body vibration training in the management of patients with COPD: a systematic review and meta-analysis.",
+          "titleZh": "全身振动训练在慢阻肺患者管理中的疗效：一项系统综述和 Meta 分析"
+        }
+      ],
+      "heat": 2.95,
+      "themeZh": "心肺康复及运动表现的训练策略与效应",
+      "themeEn": "Cardiopulmonary Rehab and Exercise Performance Strategies"
     },
     {
       "id": "news-1793001306947-1",
@@ -148,54 +212,60 @@
           "titleZh": "脊髓损伤患者久坐行为干预（REACH-SCI）的可接受性、安全性及可行性：一项混合方法研究"
         }
       ],
-      "heat": 2.84,
-      "themeZh": "脑损伤与卒中康复中数字与虚拟现实技术的应用",
-      "themeEn": "Digital and VR in Brain Injury Rehab"
+      "heat": 2.61,
+      "themeZh": "脑损伤康复中先进技术应用与患者感知",
+      "themeEn": "Advanced Tech and Patient Perception in Brain Injury Rehab"
     },
     {
-      "id": "news-1792928754481-1",
-      "title": "Measurement properties of observational gait analysis tools in neurological disorders: a COSMIN meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42925108/",
+      "id": "news-1792928754481-3",
+      "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42921866/",
       "category": "neurological",
       "publishedAt": "2026-10-25T00:00:00.000Z",
       "sourceCount": 4,
       "sources": [
+        "American journal of physical medicine & rehabilitation",
+        "NeuroRehabilitation",
         "Disability and rehabilitation",
-        "Clinical biomechanics (Bristol, Avon)",
-        "Physiotherapy theory and practice",
-        "Bulletin of Faculty of Physical Therapy"
+        "Archives of physical medicine and rehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
+          "titleZh": "神经肌肉电刺激（NMES）对卒中后患者下肢活动能力和日常生活活动的影响：一项系统综述和荟萃分析。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Efficacy of Sensory Electrical Stimulation Versus Alternating Electromyography-Guided Electrical Stimulation on Functional Recovery of the Hand in Chronic Stroke: A Randomized Controlled Trial.",
+          "titleZh": "感觉电刺激与交替肌电引导电刺激对慢性卒中患者手功能恢复的疗效比较：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effects of Single-Session High-Definition Transcranial Alternating Current Stimulation (HD-tACS) Combined with Robot-Assisted Hand Exercises on Corticospinal Excitability in Chronic Stroke.",
+          "titleZh": "单次高清晰度经颅交流电刺激（HD-tACS）结合机器人辅助手部练习对慢性卒中皮质脊髓兴奋性的影响"
+        },
+        {
+          "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Measurement properties of observational gait analysis tools in neurological disorders: a COSMIN meta-analysis.",
-          "titleZh": "神经系统疾病患者观察性步态分析工具的测量特性：COSMIN 荟萃分析。"
+          "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
+          "titleZh": "脊髓损伤患者日常电刺激预防复发性压疮的过程评估：SCI PREVOLT 试验"
         },
         {
           "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "Balance confidence, balance, and gait capacity in chronic stroke: baseline and change correlations.",
-          "titleZh": "慢性卒中患者的平衡信心、平衡能力和步态能力：基线及变化相关性。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Construct validity and intrasession intra-rater reliability of the stair and step tests in individuals with multiple sclerosis.",
-          "titleZh": "多发性硬化症患者的爬楼梯和台阶测试的结构效度及会内评价者内信度。"
-        },
-        {
-          "source": "Bull Fac Phys Ther",
-          "journal": "Bulletin of Faculty of Physical Therapy",
-          "title": "Effectiveness of Wobble Board and Swiss Ball exercises on balance, mobility and functional independence in patients with diabetic peripheral neuropathy",
-          "titleZh": "晃动板和瑞士球锻炼对糖尿病周围神经病变患者平衡、活动能力和功能独立性的影响"
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "Effect of bimodal signal biofeedback on the supraglottic swallowing maneuver in patients with post-stroke dysphagia: A randomised controlled trial.",
+          "titleZh": "双模式信号生物反馈对卒中后吞咽困难患者声门上吞咽动作的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.27,
-      "themeZh": "神经系统疾病患者平衡与步态功能评估及训练",
-      "themeEn": "Balance and Gait Assessment in Neurological Disorders"
+      "heat": 2.09,
+      "themeZh": "卒中与脊髓损伤康复中的电刺激疗法",
+      "themeEn": "Electrical Stimulation for Stroke and SCI Rehabilitation"
     },
     {
       "id": "news-1792928754481-4",
@@ -243,71 +313,56 @@
           "titleZh": "亲子物理治疗教育量表心理测量学评估：儿科物理治疗中以家庭为中心的教育实践简明测量工具"
         }
       ],
-      "heat": 2.27,
-      "themeZh": "儿童神经发育障碍的步态训练与家庭康复",
-      "themeEn": "Pediatric Locomotor Training and Family-Centered Rehab"
-    },
-    {
-      "id": "news-1792797268165-0",
-      "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42913286/",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Current Reviews in Musculoskeletal Medicine",
-        "Current reviews in musculoskeletal medicine",
-        "International journal of sports physical therapy",
-        "Journal of Rehabilitation Medicine"
-      ],
-      "tag": "knee",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
-          "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
-          "titleZh": "ACL 重建术后单腿着陆运动控制中短足运动与足趾卷曲运动的比较：一项探索性随机对照试验。"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Does prehabilitation with exercise improve clinical outcomes of arthroscopic modified Broström procedure in patients with chronic lateral ankle instability: a prospective cohort study",
-          "titleZh": "运动术前康复是否改善慢性外侧踝关节不稳患者关节镜下改良 Broström 手术的临床结局：一项前瞻性队列研究"
-        },
-        {
-          "source": "Curr Rev Musculoskelet Med",
-          "journal": "Current Reviews in Musculoskeletal Medicine",
-          "title": "A Narrative Review of Anterior Cruciate Ligament Reconstruction Graft Choice and Its Influence on Return to Sport",
-          "titleZh": "前交叉韧带重建移植物选择及其对重返运动影响的叙述性综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Current reviews in musculoskeletal medicine",
-          "title": "The Current State of Anterior Cruciate Ligament Reconstruction: Graft Selection, Lateral Augmentation, Rehabilitation, and Return-to-Play.",
-          "titleZh": "前交叉韧带重建的现状：移植物选择、外侧加强、康复和重返赛场"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
-          "titleZh": "影响物理治疗师依从前交叉韧带重建临床实践指南和重返运动标准的障碍与促进因素：一项奥地利定性研究"
-        },
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Clinical and functional outcomes of aquatic plyometrics in adolescent patellofemoral pain syndrome: a dual-arm randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "青少年髌股疼痛综合征患者水上增强式训练的临床和功能结局：一项双臂随机对照试验"
-        }
-      ],
-      "heat": 1.7,
-      "themeZh": "前交叉韧带重建术后康复与重返运动",
-      "themeEn": "ACL Reconstruction Rehabilitation and Return to Sport"
+      "heat": 2.09,
+      "themeZh": "儿科物理治疗中的步行训练与家庭参与",
+      "themeEn": "Pediatric PT: Locomotor Training and Family Engagement"
     }
   ],
   "items": [
+    {
+      "id": "news-1792797268166-1",
+      "title": "Discussing pain increases at the point of exercise prescription: a clinical commentary for persistent musculoskeletal conditions.",
+      "summary": "A clinical commentary suggests that clinicians should discuss potential pain increases at the point of exercise prescription for persistent musculoskeletal conditions, rather than after symptoms occur, to improve patient preparation and adherence, as no universal adjustment rule exists.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42912467/",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-23T23:14:28.166Z",
+      "curatedScore": 75,
+      "curatedReason": "这篇临床评论提醒你，在为慢性肌肉骨骼疼痛患者开具运动处方时，务必提前讨论症状可能加重的问题。由于目前尚无统一的疼痛管理规则，与患者建立共识性沟通比提供通用算法更重要，这能提高患者依从性并促使他们及时寻求建议。",
+      "titleZh": "在运动处方阶段讨论疼痛增加：针对持续性肌肉骨骼疾病的临床评论",
+      "summaryZh": "一篇临床评论建议，对于持续性肌肉骨骼疾病，临床医生应在开具运动处方时讨论潜在的疼痛增加，而非症状发生之后，以改善患者的准备和依从性，因为目前尚无通用的调整规则。",
+      "curatedReasonEn": "This clinical commentary highlights the crucial need to proactively discuss potential symptom aggravation when prescribing exercise for chronic musculoskeletal pain. Given the lack of a universal pain management rule, establishing a consensual dialogue with patients is more vital than providing generic algorithms, which can improve adherence and timely help-seeking.",
+      "tags": [
+        "news",
+        "pain-management"
+      ],
+      "journal": "Physiotherapy theory and practice"
+    },
+    {
+      "id": "news-1793048730788-16",
+      "title": "Criterion validity of the Watt-max Test and Test Assessors' judgement of V..O2max achievement in Individuals with Heart Disease",
+      "summary": "This study examined the criterion validity of the Watt-max Test and assessors' judgment for V̇O2max achievement in individuals with heart disease, supporting its use in cardiac rehabilitation for assessing aerobic capacity.",
+      "category": "cardiopulmonary",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00981-0/fulltext?rss=yes",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "firstSeen": "2026-10-26T21:05:30.788Z",
+      "curatedScore": 70,
+      "curatedReason": "如果你正在为心脏病患者评估最大摄氧量（V̇O2max），可以考虑使用Watt-max测试和评估者的判断。这项观察研究支持了它们的效度，为心脏康复中的有氧能力评估提供了一个更可靠的工具。",
+      "titleZh": "Watt-max测试和评估者对心血管疾病患者V̇O2max达成判断的效标效度",
+      "summaryZh": "本研究评估了Watt-max测试和评估者对心血管疾病患者最大摄氧量（V̇O2max）达成判断的效标效度，支持其在心脏康复中评估有氧能力的应用。",
+      "curatedReasonEn": "If you're assessing V̇O2max in individuals with heart disease, consider incorporating the Watt-max Test and assessor judgment. This observational study supports their criterion validity, offering a more reliable tool for aerobic capacity assessment in cardiac rehabilitation.",
+      "limitation": "研究对象仅限于心血管疾病患者，结果对外推至其他人群可能有限。",
+      "limitationEn": "The study population was limited to individuals with heart disease, which may limit generalizability to other populations.",
+      "tags": [
+        "research",
+        "exercise-testing",
+        "cardiac-rehabilitation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
     {
       "id": "news-1792797268167-2",
       "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
@@ -930,30 +985,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1791940661348-12",
-      "title": "Technical and clinical feasibility of a pulmonary telerehabilitation model for people with COPD.",
-      "summary": "A two-phase feasibility study found that connected devices accurately monitored patients (≥99% clinical agreement) during pulmonary telerehabilitation, and an 8-week home-based program was feasible with high patient satisfaction and usability. Endurance time increased by a median of 171 seconds (95% CI 17-725).",
-      "category": "cardiopulmonary",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42863686/",
-      "publishedAt": "2026-10-13T00:00:00.000Z",
-      "firstSeen": "2026-10-12T15:44:05.277Z",
-      "curatedScore": 75,
-      "curatedReason": "这项可行性研究表明，家庭肺康复计划结合数字监测设备在技术和临床上都可行，且患者接受度高。虽然不是改变实践的证据，但它为未来大规模 RCT 铺平了道路，提示远程康复的潜力。",
-      "titleZh": "COPD 患者肺康复远程医疗模式的技术和临床可行性研究",
-      "summaryZh": "一项两阶段可行性研究发现，互联设备能准确监测肺康复远程医疗患者（临床一致性≥99%），且为期 8 周的居家项目可行性高，患者满意度和依从性良好。耐力时间中位数增加了 171 秒（95% CI 17-725）。",
-      "curatedReasonEn": "This feasibility study suggests that home-based pulmonary rehabilitation with digital monitoring is both technically and clinically feasible, with high patient acceptance. While not practice-changing evidence, it paves the way for future large-scale RCTs, indicating the potential of telerehabilitation.",
-      "limitation": "这是一项前瞻性可行性研究，样本量小，且未设对照组，因此不能得出临床疗效的确定性结论。",
-      "limitationEn": "This was a prospective feasibility study with a small sample size and no control group, preventing definitive conclusions on clinical efficacy.",
-      "tags": [
-        "research",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "tech": true
     },
     {
       "id": "news-1792625326810-17",
@@ -2029,30 +2060,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
-    },
-    {
-      "id": "news-1792797268167-4",
-      "title": "Construct validity and intrasession intra-rater reliability of the stair and step tests in individuals with multiple sclerosis.",
-      "summary": "In 100 MS patients, both the Stair Test (ICC 0.997) and Step Test (ICC 0.955) showed excellent test-retest reliability and strong construct validity with other mobility scales. These tests offer a practical, fast, and low-fatigue solution for monitoring mobility in MS.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42912572/",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "firstSeen": "2026-10-23T23:14:28.167Z",
-      "curatedScore": 80,
-      "curatedReason": "针对多发性硬化症（MS）患者，Stair Test 和 Step Test 表现出优异的信度、测量精度和结构效度。这些测试快速、低疲劳，可以作为你临床实践中监测 MS 患者移动能力的实用工具。",
-      "titleZh": "多发性硬化症患者的爬楼梯和台阶测试的结构效度及会内评价者内信度。",
-      "summaryZh": "在 100 名多发性硬化症患者中，爬楼梯测试（ICC 0.997）和台阶测试（ICC 0.955）均显示出优异的重测信度，并与其他移动量表具有强结构效度。这些测试为监测多发性硬化症患者的移动能力提供了实用、快速且不易疲劳的解决方案。",
-      "curatedReasonEn": "For individuals with Multiple Sclerosis (MS), the Stair Test and Step Test demonstrate excellent reliability, measurement precision, and construct validity. These tests are quick and low-fatigue, making them practical tools for you to monitor mobility in MS patients in clinical practice.",
-      "limitation": "研究样本量为 100 名 MS 患者，结果的广泛适用性可能需要更大规模的多中心研究进一步验证。",
-      "limitationEn": "The study involved a sample size of 100 MS patients, and the broad applicability of results may require further validation in larger, multicenter studies.",
-      "tags": [
-        "research",
-        "ms",
-        "neurological-rehabilitation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
     }
   ]
 }
