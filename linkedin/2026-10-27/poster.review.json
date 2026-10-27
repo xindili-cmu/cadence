@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-27T00:39:43.075Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "A mobile-based multimodal monitoring system with clinician feedback for home rehabilitation after stroke: a randomized clinical trial",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02197-y"
+    },
+    {
+      "slide": 2,
+      "title": "Pelvic Floor Yoga for Women with Overactive Bladder-Wet: A Subgroup Analysis of a Multisite Randomized Trial",
+      "url": "https://link.springer.com/article/10.1007/s00192-026-06929-5"
+    },
+    {
+      "slide": 3,
+      "title": "Impact of age and frailty on the effect of a multimodal individualized long-term intervention after stroke: the last-long trial | Journal of Rehabilitation Medicine",
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46250"
+    },
+    {
+      "slide": 4,
+      "title": "Anatomical Variations and Morphometry of the Pudendal Nerve: A Systematic Review and Meta-Analysis",
+      "url": "https://link.springer.com/article/10.1007/s00192-026-06954-4"
+    },
+    {
+      "slide": 5,
+      "title": "From simulation to stimulation: a predictive synergy-based control strategy for functional electrical stimulation cycling in a person with spinal cord injury",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02024-4"
+    }
+  ]
+}
