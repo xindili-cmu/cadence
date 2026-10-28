@@ -1,0 +1,6 @@
+linkedin-poster-claims.js failed at 2026-10-28T00:41:17.405Z
+
+Unexpected non-whitespace character after JSON at position 290 (line 5 column 4)
+
+The carousel for 2026-10-28 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-10-28 && node scripts/linkedin-poster.js 2026-10-28
