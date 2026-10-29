@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-29T01:09:54.425Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10677-4"
+    },
+    {
+      "slide": 2,
+      "title": "A pragmatic, decentralized trial of the home-based, autonomous InTandem® neurorehabilitation system: analyses of engagement, safety, and effectiveness from the OrcHESTRAS trial",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02164-7"
+    },
+    {
+      "slide": 3,
+      "title": "Effects of 12-week massage on pain, muscle co-contraction, and knee loading in medial knee osteoarthritis: a randomized clinical trial",
+      "url": "https://link.springer.com/article/10.1007/s40520-026-03555-5"
+    },
+    {
+      "slide": 4,
+      "title": "Individual variability and predictors of responsiveness in physical outcomes following multicomponent physical training in older adults",
+      "url": "https://link.springer.com/article/10.1007/s00421-026-06475-4"
+    },
+    {
+      "slide": 5,
+      "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42945760/"
+    }
+  ]
+}
