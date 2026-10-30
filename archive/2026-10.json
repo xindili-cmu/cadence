@@ -7254,6 +7254,62 @@
         "news",
         "education"
       ]
+    },
+    {
+      "id": "news-1793340429774-3",
+      "title": "Robotic Assessment of Thumb Proprioception after Stroke: Reliability, Validity, and Sensitivity.",
+      "summary": "A novel robotic assessment (SCJ) for thumb proprioception in chronic stroke survivors demonstrated good reliability, validity, and sensitivity, identifying deficits in 61% of participants, significantly more than the FMA-S.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42956919/",
+      "publishedAt": "2026-10-29T00:00:00.000Z",
+      "firstSeen": "2026-10-29T19:43:13.307Z",
+      "curatedScore": 85,
+      "curatedReason": "中风后腕部本体感觉评估，用了新器械，比老方法（FMA-S）更能查出问题，是给康复的定心丸。",
+      "titleZh": "机器人评估中风后拇指本体感觉：可靠性、有效性与敏感性",
+      "summaryZh": "一种新颖的机器人评估工具（SCJ）用于评估中风后慢性期患者的拇指本体感觉，显示出良好的可靠性、有效性和敏感性，能识别出61%的患者存在本体感觉缺陷，远高于FMA-S。",
+      "curatedReasonEn": "The development of a reliable, valid, and sensitive robotic assessment for thumb proprioception post-stroke is a significant advancement. This tool's ability to detect deficits in a higher percentage of patients than traditional measures like the FMA-S will likely improve the characterization of sensory impairments and inform more targeted rehabilitation strategies.",
+      "limitation": "本研究使用了临床试验的基线数据和特定的机器人评估（SCJ），需要在更广泛的卒中人群中进一步验证，并与其他高级评估工具进行比较。",
+      "limitationEn": "The study used baseline data from a clinical trial and a specific robotic assessment (SCJ), requiring further validation in broader stroke populations and comparison with other advanced assessment tools.",
+      "tags": [
+        "research",
+        "neurological",
+        "stroke",
+        "vestibular"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Archives of physical medicine and rehabilitation",
+      "tech": true,
+      "related": [
+        {
+          "source": "Archives of PM&R",
+          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00980-9/fulltext?rss=yes",
+          "title": "Robotic Assessment of Thumb Proprioception after Stroke: Reliability, Validity, and Sensitivity"
+        }
+      ]
+    },
+    {
+      "id": "news-1793340429775-22",
+      "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial",
+      "summary": "The PROSpect trial found no evidence that prone positioning or HFOV improve ventilator-free days in early, moderate-to-severe PARDS, recommending against their routine use as first-line strategies.",
+      "category": "cardiopulmonary",
+      "source": "The Lancet",
+      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01949-5/fulltext?rss=yes",
+      "publishedAt": "2026-10-31T00:00:00.000Z",
+      "firstSeen": "2026-10-30T06:07:09.775Z",
+      "curatedScore": 80,
+      "curatedReason": "重症新生儿呼吸窘迫综合征（PARDS），俯卧位和高频振荡通气（HFOV）不是首选，别常规用了。",
+      "titleZh": "俯卧位和高频振荡通气在早期儿童急性呼吸窘迫综合征（PROSpect）：一项国际性、2x2 析因、反应适应性、III 期、随机对照试验",
+      "summaryZh": "PROSpect试验未发现俯卧位或高频振荡通气能改善早期、中重度儿童急性呼吸窘迫综合征（PARDS）的无通气天数，因此不推荐将其作为一线策略常规使用。",
+      "curatedReasonEn": "The PROSpect trial provides high-level evidence that prone positioning and HFOV are not recommended as first-line strategies for early, moderate-to-severe PARDS, directly impacting clinical guidelines and practice for pediatric critical care. This finding challenges previous assumptions and directs care toward alternative approaches.",
+      "limitation": "本研究侧重于早期、中度至重度PARDS，并以脱离呼吸机天数作为主要结局，研究结果可能无法直接推广至其他PARDS严重程度或不同的结局指标。",
+      "limitationEn": "The study focused on early, moderate-to-severe PARDS and used ventilator-free days as the primary outcome, and findings may not directly translate to other PARDS severity levels or different outcome measures.",
+      "tags": [
+        "research",
+        "cardiopulmonary"
+      ],
+      "studyDesign": "RCT",
+      "journal": "The Lancet"
     }
   ]
 }
