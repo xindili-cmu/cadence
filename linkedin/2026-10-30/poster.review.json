@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-30T01:13:38.282Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effect of Incorporating Perceptual Learning Into Plantar Hardness Discrimination on the Risk of Falling and Muscle Torque in Patients With Hemiplegia: A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42952006/"
+    },
+    {
+      "slide": 2,
+      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42950436/"
+    },
+    {
+      "slide": 3,
+      "title": "Predicting Robot-Based Tracking Performance After Stroke Using Lesion Features and Clinical Assessments: A Pilot Study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.28.26366424v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Implementing low-cost Capability, Opportunity Motivation and Behaviour (COM-B) interventions to increase bed-substitution rehabilitation referrals in acute stroke care.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42954284/"
+    },
+    {
+      "slide": 5,
+      "title": "The effects of stretching interventions in people with multiple sclerosis: a systematic review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42954086/"
+    }
+  ]
+}

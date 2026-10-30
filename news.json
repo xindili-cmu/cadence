@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-10-30T00:01:11.014Z",
+    "lastUpdated": "2026-10-30T01:12:51.428Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,14 +20,13 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42952006/",
       "category": "orthopedic",
       "publishedAt": "2026-10-29T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 5,
       "sources": [
         "American journal of physical medicine & rehabilitation",
         "Disability and rehabilitation",
         "Clinical biomechanics (Bristol, Avon)",
         "medRxiv",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Archives of physical medicine and rehabilitation"
+        "Archives of Physical Medicine and Rehabilitation"
       ],
       "tag": null,
       "kind": "theme",
@@ -63,20 +62,14 @@
         },
         {
           "source": "PubMed",
-          "journal": "Archives of physical medicine and rehabilitation",
-          "title": "Point-of-Care Computer Vision for Postural Assessment in Brain Injury Rehabilitation.",
-          "titleZh": "点对点计算机视觉在脑损伤康复中姿势评估的应用"
-        },
-        {
-          "source": "PubMed",
           "journal": "Disability and rehabilitation",
           "title": "Identifying activities and participation domains with severe dependence using the ICF-based LIMOS-Br in chronic stroke.",
           "titleZh": "使用基于 ICF 的 LIMOS-Br 识别慢性卒中中重度依赖的活动与参与领域"
         }
       ],
-      "heat": 4.24,
-      "themeZh": "神经性疾病平衡与步态的康复评估",
-      "themeEn": "Neurological Balance and Gait Rehabilitation Assessment"
+      "heat": 3.47,
+      "themeZh": "卒中后步态与平衡能力评估及机器人康复",
+      "themeEn": "Stroke gait, balance assessment, and robotic rehab"
     },
     {
       "id": "news-1793061569236-22",
@@ -137,9 +130,9 @@
           "titleZh": "从获得性脑损伤和脊髓损伤专科康复病房出院后 3 个月和 12 个月，重要他人在正式支持方面的视角。"
         }
       ],
-      "heat": 2.83,
-      "themeZh": "卒中后居家神经康复的干预与依从性",
-      "themeEn": "Stroke Home Neurorehabilitation Intervention and Adherence"
+      "heat": 2.78,
+      "themeZh": "卒中居家康复、高剂量步行及多模式干预",
+      "themeEn": "Stroke home rehab, high-dose walking, multimodal intervention"
     },
     {
       "id": "news-1793236104088-21",
@@ -211,11 +204,75 @@
           "journal": "BMC musculoskeletal disorders",
           "title": "Preoperative factors associated with quadriceps strength 1 year after total knee arthroplasty: a prospective longitudinal study.",
           "titleZh": "全膝关节置换术后 1 年股四头肌力量相关术前因素的预测性纵向研究"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Interprofessional communication and early rehabilitation practices in orthopaedic surgery: a cross-sectional survey",
+          "titleZh": "骨科手术中的跨专业沟通与早期康复实践：一项横断面调查"
         }
       ],
-      "heat": 2.5,
-      "themeZh": "运动损伤（踝、ACL）康复与重返运动",
-      "themeEn": "Sports Injury (Ankle, ACL) Rehabilitation and Return to Sport"
+      "heat": 2.46,
+      "themeZh": "运动员踝关节扭伤与ACL重建的康复",
+      "themeEn": "Athlete ankle sprain and ACL reconstruction rehab"
+    },
+    {
+      "id": "news-1792532610308-0",
+      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
+      "category": "orthopedic",
+      "publishedAt": "2026-10-28T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Disability and rehabilitation",
+        "Gait & posture",
+        "Aging Clinical and Experimental Research",
+        "Physiotherapy",
+        "International Urogynecology Journal"
+      ],
+      "tag": "spine",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+          "titleZh": "体外冲击波疗法对慢性腰痛患者疼痛强度和功能障碍的影响：一项系统综述和荟萃分析。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Effects of treadmill exercise with and without vertical traction on gait, pain, disability, trunk proprioception, and depression in patients with chronic mechanical low back pain: A randomized controlled trial.",
+          "titleZh": "跑步机运动联合或不联合垂直牵引对慢性机械性腰痛患者步态、疼痛、残疾、躯干本体感觉和抑郁的影响：一项随机对照试验"
+        },
+        {
+          "source": "Aging Clin Exp Res",
+          "journal": "Aging Clinical and Experimental Research",
+          "title": "Effects of 12-week massage on pain, muscle co-contraction, and knee loading in medial knee osteoarthritis: a randomized clinical trial",
+          "titleZh": "12周按摩对内侧膝骨关节炎患者疼痛、肌肉协同收缩和膝关节负荷的影响：一项随机临床试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
+          "titleZh": "围绝经期女性与物理治疗依从性的障碍与促进因素：一项定性研究"
+        },
+        {
+          "source": "Int Urogynecol J",
+          "journal": "International Urogynecology Journal",
+          "title": "Pelvic Floor Yoga for Women with Overactive Bladder-Wet: A Subgroup Analysis of a Multisite Randomized Trial",
+          "titleZh": "盆底瑜伽在湿型膀胱过度活动症女性中的疗效：一项多中心随机试验的亚组分析"
+        },
+        {
+          "source": "Int Urogynecol J",
+          "journal": "International Urogynecology Journal",
+          "title": "Anatomical Variations and Morphometry of the Pudendal Nerve: A Systematic Review and Meta-Analysis",
+          "titleZh": "阴部神经的解剖变异与形态测量：系统综述和荟萃分析"
+        }
+      ],
+      "heat": 2.46,
+      "themeZh": "慢性疼痛的冲击波、运动及按摩治疗",
+      "themeEn": "Chronic pain: shockwave, exercise, and massage"
     },
     {
       "id": "news-1792532610309-1",
@@ -257,50 +314,145 @@
           "titleZh": "致编辑的信：一项针对运动障碍者的远程运动音乐干预对健康结果的影响：一项随机对照试验"
         }
       ],
-      "heat": 2.12,
-      "themeZh": "多发性硬化症的运动干预与认知功能",
-      "themeEn": "Multiple Sclerosis Exercise Intervention and Cognition"
-    },
-    {
-      "id": "news-1793279964353-3",
-      "title": "Stage-Dependent Sarcopenia Status in Parkinson's Disease: An ICF-Based ISarcoPRM Algorithm.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42952010/",
-      "category": "neurological",
-      "publishedAt": "2026-10-29T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "Disability and rehabilitation",
-        "Clinical rehabilitation"
-      ],
-      "tag": "parkinson",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Stage-Dependent Sarcopenia Status in Parkinson's Disease: An ICF-Based ISarcoPRM Algorithm.",
-          "titleZh": "帕金森病肌少症的阶段依赖性状态：基于 ICF 的 ISarcoPRM 算法"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Fall prevention interventions among older adults in low-and middle-income countries (LMICs): an integrative review.",
-          "titleZh": "中低收入国家（LMICs）老年人跌倒预防干预措施：一项综合性综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "Empowering safer mobility behaviour for fall prevention in people with Parkinson's disease: A qualitative study.",
-          "titleZh": "赋能帕金森病患者更安全的移动行为以预防跌倒：一项定性研究"
-        }
-      ],
-      "heat": 2.12,
-      "themeZh": "帕金森病患者的跌倒预防与步态",
-      "themeEn": "Parkinson's Disease Fall Prevention and Gait"
+      "heat": 2.08,
+      "themeZh": "多发性硬化症的物理治疗与活动干预",
+      "themeEn": "MS physical therapy and activity interventions"
     }
   ],
   "items": [
+    {
+      "id": "news-1793322769590-29",
+      "title": "The cost-effectiveness of motivational interviewing to activate pain support in veterans seeking compensation for musculoskeletal conditions: multisite randomised clinical trial",
+      "summary": "A multisite randomized clinical trial (n=1101) found that a motivational interviewing intervention costing $300 per participant increased the use of physical therapy and other musculoskeletal services, raising healthcare system costs by $US1,508 (p<0.001), but had no significant effect on total societal costs or preference-rated quality of life over 36 weeks, thus not being cost-effective in the short-term.",
+      "category": "manual-modality",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42665354/?fc=None&ff=20261029053910&v=2.20.1",
+      "publishedAt": "2026-08-28T00:00:00.000Z",
+      "firstSeen": "2026-10-30T01:12:49.590Z",
+      "curatedScore": 75,
+      "curatedReason": "一项针对退伍军人的多中心随机临床试验发现，动机性访谈虽然增加了物理治疗、脊柱手法、针灸等服务的使用，但也显著增加了医疗系统成本。鉴于其对生活质量的无显著影响且短期内不具成本效益，临床实践中应审慎评估其价值。",
+      "titleZh": "动机性访谈在激活寻求肌肉骨骼疾病补偿的退伍军人疼痛支持中的成本效益：一项多中心随机临床试验",
+      "summaryZh": "一项多中心随机临床试验（n=1101）发现，每位参与者花费 300 美元的动机性访谈干预增加了物理治疗及其他肌肉骨骼服务的使用，使医疗系统成本增加 1,508 美元（p<0.001），但对总社会成本或偏好评定的生活质量在 36 周内无显著影响，因此短期内不具成本效益。",
+      "curatedReasonEn": "A multisite RCT in veterans found that motivational interviewing increased the use of PT, spinal manipulation, and acupuncture but significantly raised healthcare system costs. Given no significant impact on quality of life and short-term non-cost-effectiveness, its value in clinical practice warrants careful consideration.",
+      "limitation": "该试验的成本效益评估仅限于 36 周的短期随访，长期效果和成本效益尚不明确。",
+      "limitationEn": "The cost-effectiveness evaluation in this trial was limited to a short 36-week follow-up, leaving long-term effects and cost-effectiveness unknown.",
+      "tags": [
+        "research",
+        "reimbursement",
+        "spine"
+      ],
+      "studyDesign": "RCT"
+    },
+    {
+      "id": "news-1791594305192-31",
+      "title": "Here are the Speech Language Therapy Coding Changes Going Into Effect on January 1, 2027",
+      "summary": "Effective January 1, 2027, CPT code 92507 for speech-language therapy will be deleted and replaced by ten new, more specific codes covering fluency, speech sound production, language, and voice/upper airway disorders, according to the AMA's CPT Editorial Panel.",
+      "category": "practice",
+      "source": "WebPT",
+      "sourceUrl": "https://www.webpt.com/blog/here-are-the-speech-language-therapy-coding-changes-going-into-effect-on-january-1-2027",
+      "publishedAt": "2026-10-06T00:00:00.000Z",
+      "firstSeen": "2026-10-10T01:05:05.192Z",
+      "curatedScore": 75,
+      "curatedReason": "WebPT 发布的这则新闻非常关键：自 2027 年 1 月 1 日起，言语语言治疗 CPT 代码 92507 将被废止，并被十个更具体的代码取代。虽然是 SLP 相关，但它标志着美国医疗编码体系的重大变化，对你理解跨专业诊疗、尤其是涉及联合报销的 PT 执业具有重要参考意义。",
+      "titleZh": "2027 年 1 月 1 日生效的言语语言治疗编码变更",
+      "summaryZh": "根据 AMA 的 CPT 编辑委员会，自 2027 年 1 月 1 日起，言语语言治疗 CPT 代码 92507 将被废止，并由十个针对流利度、言语发音、语言及声音/上气道障碍的新代码取代。",
+      "curatedReasonEn": "This WebPT news is crucial: effective January 1, 2027, CPT code 92507 for speech-language therapy will be deleted and replaced by ten more specific codes. While SLP-specific, it marks a significant change in US medical coding, offering important insights for your understanding of interprofessional practice, especially regarding joint reimbursement.",
+      "tags": [
+        "news",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1792797268167-7",
+      "title": "Efficacy of whole-body vibration training in the management of patients with COPD: a systematic review and meta-analysis.",
+      "summary": "A systematic review and meta-analysis of 15 RCTs found that whole-body vibration training significantly improved 6-minute walk distance (MD = 34.35 m; 95% CI: 13.67, 55.04) and 5-repetition sit-to-stand test performance (MD = -5.95 seconds; 95% CI: -10.76, -1.14) in COPD patients compared to usual care, but not when compared to active exercise interventions.",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42913179/",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-23T23:14:28.167Z",
+      "curatedScore": 70,
+      "curatedReason": "全身体振动训练（WBVT）对 COPD 患者的益处有限，仅在与无康复对照组相比时才观察到步距和坐站能力的改善。不应将其作为常规运动康复的替代方案。",
+      "titleZh": "全身体振动训练对 COPD 患者管理疗效的系统评价和荟萃分析",
+      "summaryZh": "一项包含 15 项随机对照试验的系统综述和荟萃分析发现，全身体振动训练能显著改善 COPD 患者的 6 分钟步行距离（平均差 = 34.35 米；95% CI：13.67，55.04）和 5 次坐站测试表现（平均差 = -5.95 秒；95% CI：-10.76，-1.14），但仅在与常规护理相比时有效，与主动运动干预相比则无显著差异。",
+      "curatedReasonEn": "Whole-body vibration training (WBVT) shows limited benefits for COPD patients, with improvements in walking distance and sit-to-stand performance observed only when compared to no rehabilitation. It should not replace conventional exercise-based pulmonary rehabilitation.",
+      "limitation": "纳入研究存在高偏倚风险，证据确定性为低到极低。",
+      "limitationEn": "Included studies had a high risk of bias, and evidence certainty ranged from low to very low.",
+      "tags": [
+        "research",
+        "COPD"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Brazilian journal of physical therapy"
+    },
+    {
+      "id": "news-1792797268167-8",
+      "title": "Dizziness, Lower Limb Weakness, and Falls in COPD: A Prospective Longitudinal Pilot Study Using Monthly Home Diaries.",
+      "summary": "A prospective longitudinal pilot study (n=27) found that monthly home diary monitoring of dizziness and lower limb weakness showed higher apparent discrimination for predicting falls in COPD patients than single-visit baseline assessments, with dizziness having the strongest discrimination (AUC = 0.813).",
+      "category": "cardiopulmonary",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42910412/",
+      "publishedAt": "2026-10-23T00:00:00.000Z",
+      "firstSeen": "2026-10-23T23:14:28.167Z",
+      "curatedScore": 70,
+      "curatedReason": "对于 COPD 患者，每月通过日记监测头晕和下肢无力等症状，可能比单次评估更能有效识别跌倒风险，这提示了一种低成本的补充性筛查方法。",
+      "titleZh": "COPD 患者的头晕、下肢无力和跌倒：一项使用每月居家日记的前瞻性纵向初步研究",
+      "summaryZh": "一项前瞻性纵向初步研究（n=27）发现，每月通过居家日记监测头晕和下肢无力，在预测 COPD 患者跌倒方面的区分度高于单次基线评估，其中头晕的区分度最强（AUC = 0.813）。",
+      "curatedReasonEn": "For COPD patients, monthly diary-recorded symptom monitoring (e.g., dizziness, lower limb weakness) may offer better fall risk discrimination than single-visit assessments, suggesting a low-cost, complementary screening approach.",
+      "limitation": "这是一项小样本的初步观察性研究（n=27），结果具有探索性且可能存在偏倚。",
+      "limitationEn": "This was a small pilot observational study (n=27), making the findings exploratory and potentially biased.",
+      "tags": [
+        "research",
+        "COPD",
+        "falls"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1793322769590-27",
+      "title": "Interprofessional communication and early rehabilitation practices in orthopaedic surgery: a cross-sectional survey",
+      "summary": "A cross-sectional survey of 84 orthopedic surgeons and 513 physiotherapists in Türkiye revealed that despite 96.4% of surgeons acknowledging the importance of early physiotherapy, only 27.4% reported initiation within 0-3 postoperative days, and nearly half of both groups reported low direct communication.",
+      "category": "orthopedic",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10685-4",
+      "publishedAt": "2026-10-28T00:00:00.000Z",
+      "firstSeen": "2026-10-30T01:12:49.590Z",
+      "curatedScore": 70,
+      "curatedReason": "尽管骨科医生和物理治疗师都认识到早期康复的重要性，但本研究揭示了土耳其在术后康复启动时间及医患沟通实践上的显著差异，提示行业在标准化流程和跨专业协作上仍有待改进。",
+      "titleZh": "骨科手术中的跨专业沟通与早期康复实践：一项横断面调查",
+      "summaryZh": "一项针对土耳其 84 名骨科医生和 513 名物理治疗师的横断面调查显示，尽管 96.4% 的外科医生认识到早期物理治疗的重要性，但只有 27.4% 的人报告在术后 0-3 天内开始康复，且近半数受访者表示直接沟通不足。",
+      "curatedReasonEn": "Despite awareness of early rehabilitation's importance, this study highlights significant variations in post-operative rehabilitation timing and interprofessional communication practices in Türkiye, suggesting a need for improved standardization and collaboration.",
+      "limitation": "这是一项横断面调查，只能揭示相关性而非因果关系，且可能存在回忆偏倚。",
+      "limitationEn": "This is a cross-sectional survey, which can only show correlations, not causation, and may be subject to recall bias.",
+      "tags": [
+        "research",
+        "workforce",
+        "regulation"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1793322769590-28",
+      "title": "How ChoosePT Turns PTs' Expertise Into Trusted Public Resources",
+      "summary": "APTA's ChoosePT.com serves as a consumer-focused resource providing free, reliable, evidence-based health information on physical therapy, with content reviewed by board-certified specialists like Anna V. Howard, PT, BS, PCS, a pediatric clinical specialist.",
+      "category": "pediatric",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/apta-and-you/news-publications/podcasts/2026/how-choosept-turns-pts-expertise-into-trusted-public-resources",
+      "publishedAt": "2026-10-27T04:00:00.000Z",
+      "firstSeen": "2026-10-30T01:12:49.590Z",
+      "curatedScore": 65,
+      "curatedReason": "在向患者家庭解释儿童物理治疗时，你可以直接引用 APTA 的 ChoosePT.com。这个网站内容经过专家评审，能为家长提供可靠的循证信息，省去了你自行寻找科普素材的时间。",
+      "titleZh": "ChoosePT 如何将物理治疗师的专业知识转化为值得信赖的公共资源",
+      "summaryZh": "APTA 的 ChoosePT.com 网站是一个面向大众的资源平台，提供免费、可靠、循证的物理治疗健康信息，其内容由 Anna V. Howard 博士等经专业认证的儿科临床专家负责评审。",
+      "curatedReasonEn": "When explaining pediatric physical therapy to patient families, direct them to APTA's ChoosePT.com. The expert-reviewed, evidence-based content will save you time in finding reliable educational materials for parents.",
+      "tags": [
+        "news",
+        "education"
+      ]
+    },
     {
       "id": "news-1792741318136-0",
       "title": "Validation and prognostic value of the five-repetition sit-to-stand test in patients with severe exacerbation of COPD.",
@@ -1929,146 +2081,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Journal of NeuroEngineering and Rehabilitation"
-    },
-    {
-      "id": "news-1792627564768-22",
-      "title": "PTJ Author Interview: Severe Spinal Stenosis and Exercise-Based Rehabilitation",
-      "summary": "An APTA podcast interview discusses a study finding that the severity of lumbar spinal stenosis (mild, moderate, or severe) does not impact responsiveness to exercise-based rehabilitation, challenging conventional clinical decision-making regarding surgical referrals.",
-      "category": "manual-modality",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/apta-and-you/news-publications/podcasts/2026/ptj-author-interview-severe-spinal-stenosis-and-exercise-based-rehabilitation",
-      "publishedAt": "2026-10-20T04:00:00.000Z",
-      "firstSeen": "2026-10-22T00:06:04.768Z",
-      "curatedScore": 70,
-      "curatedReason": "这项 PTJ 作者访谈强调，腰椎管狭窄的严重程度不影响患者对运动康复的响应。这意味着无论影像学结果如何，运动疗法都应被视为一线治疗，并挑战了将严重病例优先转诊至手术的传统观念。",
-      "titleZh": "PTJ 作者访谈：重度脊柱管狭窄与运动康复",
-      "summaryZh": "美国物理治疗协会（APTA）播客访谈讨论了一项研究，发现腰椎管狭窄（轻度、中度或重度）的严重程度不影响对运动康复的响应，这挑战了传统临床决策中关于手术转诊的观念。",
-      "curatedReasonEn": "This PTJ author interview highlights that the severity of lumbar spinal stenosis does not affect patient responsiveness to exercise-based rehabilitation. This means exercise therapy should be considered a first-line treatment regardless of imaging results, challenging the traditional view of prioritizing severe cases for surgery.",
-      "tags": [
-        "news",
-        "spine"
-      ]
-    },
-    {
-      "id": "news-1793061569236-21",
-      "title": "Patient Voices in a Digital Space: Thematic Analysis of YouTube Comments on Pelvic Floor Content",
-      "summary": "A thematic analysis of 14.7K YouTube comments on pelvic floor content found three major themes: desire for community, healthcare experiences (including mistrust), and desire for knowledge, highlighting the platform's role for PFD patients.",
-      "category": "orthopedic",
-      "source": "Int Urogynecol J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06948-2",
-      "publishedAt": "2026-10-26T00:00:00.000Z",
-      "firstSeen": "2026-10-27T00:39:29.236Z",
-      "curatedScore": 65,
-      "curatedReason": "YouTube 是盆底功能障碍患者寻求社区支持和知识的重要平台，尤其对于面临医疗障碍的人群。你可以考虑将此平台纳入患者教育和支持策略。",
-      "titleZh": "数字空间中的患者声音：盆底内容 YouTube 评论的主题分析",
-      "summaryZh": "对盆底内容相关 YouTube 评论的 1.47 万条评论进行主题分析，发现三个主要主题：对社区的渴望、医疗保健经验（包括不信任）以及对知识的渴望，突显了该平台对盆底功能障碍患者的作用。",
-      "curatedReasonEn": "YouTube is a vital platform for individuals with pelvic floor disorders seeking community support and knowledge, especially for those facing healthcare barriers. Consider integrating this platform into patient education and support strategies.",
-      "limitation": "这项定性研究基于 YouTube 评论，其代表性和深度可能有限，无法完全反映所有患者的观点。",
-      "limitationEn": "This qualitative study, based on YouTube comments, may have limited representativeness and depth, not fully reflecting all patient perspectives.",
-      "tags": [
-        "research",
-        "pelvic-floor",
-        "telehealth"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "International Urogynecology Journal"
-    },
-    {
-      "id": "news-1792797268166-1",
-      "title": "Discussing pain increases at the point of exercise prescription: a clinical commentary for persistent musculoskeletal conditions.",
-      "summary": "A clinical commentary suggests that clinicians should discuss potential pain increases at the point of exercise prescription for persistent musculoskeletal conditions, rather than after symptoms occur, to improve patient preparation and adherence, as no universal adjustment rule exists.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42912467/",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "firstSeen": "2026-10-23T23:14:28.166Z",
-      "curatedScore": 75,
-      "curatedReason": "这篇临床评论提醒你，在为慢性肌肉骨骼疼痛患者开具运动处方时，务必提前讨论症状可能加重的问题。由于目前尚无统一的疼痛管理规则，与患者建立共识性沟通比提供通用算法更重要，这能提高患者依从性并促使他们及时寻求建议。",
-      "titleZh": "在运动处方阶段讨论疼痛增加：针对持续性肌肉骨骼疾病的临床评论",
-      "summaryZh": "一篇临床评论建议，对于持续性肌肉骨骼疾病，临床医生应在开具运动处方时讨论潜在的疼痛增加，而非症状发生之后，以改善患者的准备和依从性，因为目前尚无通用的调整规则。",
-      "curatedReasonEn": "This clinical commentary highlights the crucial need to proactively discuss potential symptom aggravation when prescribing exercise for chronic musculoskeletal pain. Given the lack of a universal pain management rule, establishing a consensual dialogue with patients is more vital than providing generic algorithms, which can improve adherence and timely help-seeking.",
-      "tags": [
-        "news",
-        "pain-management"
-      ],
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1793048730788-16",
-      "title": "Criterion validity of the Watt-max Test and Test Assessors' judgement of V..O2max achievement in Individuals with Heart Disease",
-      "summary": "This study examined the criterion validity of the Watt-max Test and assessors' judgment for V̇O2max achievement in individuals with heart disease, supporting its use in cardiac rehabilitation for assessing aerobic capacity.",
-      "category": "cardiopulmonary",
-      "source": "Archives of PM&R",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00981-0/fulltext?rss=yes",
-      "publishedAt": "2026-10-26T00:00:00.000Z",
-      "firstSeen": "2026-10-26T21:05:30.788Z",
-      "curatedScore": 70,
-      "curatedReason": "如果你正在为心脏病患者评估最大摄氧量（V̇O2max），可以考虑使用Watt-max测试和评估者的判断。这项观察研究支持了它们的效度，为心脏康复中的有氧能力评估提供了一个更可靠的工具。",
-      "titleZh": "Watt-max测试和评估者对心血管疾病患者V̇O2max达成判断的效标效度",
-      "summaryZh": "本研究评估了Watt-max测试和评估者对心血管疾病患者最大摄氧量（V̇O2max）达成判断的效标效度，支持其在心脏康复中评估有氧能力的应用。",
-      "curatedReasonEn": "If you're assessing V̇O2max in individuals with heart disease, consider incorporating the Watt-max Test and assessor judgment. This observational study supports their criterion validity, offering a more reliable tool for aerobic capacity assessment in cardiac rehabilitation.",
-      "limitation": "研究对象仅限于心血管疾病患者，结果对外推至其他人群可能有限。",
-      "limitationEn": "The study population was limited to individuals with heart disease, which may limit generalizability to other populations.",
-      "tags": [
-        "research",
-        "exercise-testing",
-        "cardiac-rehabilitation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of Physical Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1792797268167-2",
-      "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
-      "summary": "A qualitative study explored how ten expert physiotherapists calibrate clinical reasoning under uncertainty using 24 short musculoskeletal clinical vignettes, revealing they use clinical scripts flexibly, assign decisional weight to various cues, and transform uncertainty into action through provisional decisions, monitoring, and adjustment.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42911383/",
-      "publishedAt": "2026-10-23T00:00:00.000Z",
-      "firstSeen": "2026-10-23T23:14:28.167Z",
-      "curatedScore": 70,
-      "curatedReason": "这项针对 10 名专家物理治疗师的质性研究提示，面对不确定性，灵活运用临床脚本、权衡各项线索并进行试探性决策和调整，是处理复杂病例的关键。这有助于我们反思自己的临床决策流程。",
-      "titleZh": "不确定性下临床推理的校准：一项针对肌肉骨骼领域专家物理治疗师的定性研究",
-      "summaryZh": "一项定性研究通过 24 个肌肉骨骼临床情景，探讨了 10 位专家物理治疗师在不确定性下如何校准临床推理，发现他们灵活运用临床脚本、根据不同线索分配决策权重，并通过临时决策、监测和调整将不确定性转化为行动。",
-      "curatedReasonEn": "This qualitative study of 10 expert physiotherapists suggests that flexibly using clinical scripts, weighing various cues, and making provisional decisions with monitoring and adjustment are key to managing complex cases under uncertainty. This helps us reflect on our own clinical decision-making processes.",
-      "limitation": "本研究为定性研究，样本量小且基于书面情景模拟，可能无法完全捕捉真实临床互动的复杂性。",
-      "limitationEn": "This qualitative study uses a small sample and relies on written clinical vignettes, which may not fully capture the complexity of real-world clinical interactions.",
-      "tags": [
-        "research",
-        "clinical-reasoning"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1793001306947-1",
-      "title": "Point-of-Care Computer Vision for Postural Assessment in Brain Injury Rehabilitation.",
-      "summary": "A clinician-led, computer vision (CV)-based system for point-of-care postural assessment in people with acquired brain injury (n=20) showed excellent usability (System Usability Scale: 85.3 ± 12.3) and captured therapy-related improvements in seated cervical lateral flexion (-0.084°/day) and standing trunk lateral flexion (-0.096°/day).",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42927784/",
-      "publishedAt": "2026-10-25T00:00:00.000Z",
-      "firstSeen": "2026-10-25T11:45:54.482Z",
-      "curatedScore": 75,
-      "curatedReason": "这款计算机视觉（CV）工具为获得性脑损伤患者的姿势评估提供了客观、可行的方案，并能捕捉到康复治疗带来的姿势变化。这提示你未来在神经康复领域，利用 AI 工具进行实时、量化评估，将可能成为常规辅助手段。",
-      "titleZh": "点对点计算机视觉在脑损伤康复中姿势评估的应用",
-      "summaryZh": "一项由临床医生主导、基于计算机视觉的系统，用于获得性脑损伤（ABI）患者（n=20）的即时姿势评估，显示出极佳的可用性（系统可用性量表：85.3 ± 12.3），并能捕捉到治疗后坐姿颈椎侧屈（每日减少 0.084°）和站姿躯干侧屈（每日减少 0.096°）的改善。",
-      "curatedReasonEn": "This computer vision (CV) tool offers an objective and feasible solution for postural assessment in individuals with acquired brain injury, capable of capturing therapy-related postural changes. This suggests that in neurorehabilitation, AI tools for real-time, quantitative assessment may become a standard auxiliary method in the future.",
-      "limitation": "这项初步评估是小样本观察性研究，尚需大规模验证其在不同临床情境下的外推性。",
-      "limitationEn": "This preliminary evaluation is a small-sample observational study, requiring large-scale validation for generalizability across diverse clinical settings.",
-      "tags": [
-        "research",
-        "brain-injury"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Archives of physical medicine and rehabilitation",
-      "related": [
-        {
-          "source": "Archives of PM&R",
-          "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00982-2/fulltext?rss=yes",
-          "title": "Point-of-Care Computer Vision for Postural Assessment in Brain Injury Rehabilitation"
-        }
-      ]
     }
   ]
 }
