@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-31T00:55:29.120Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42958196/"
+    },
+    {
+      "slide": 2,
+      "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01949-5/fulltext?rss=yes"
+    },
+    {
+      "slide": 3,
+      "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42961310/"
+    },
+    {
+      "slide": 4,
+      "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42961285/"
+    },
+    {
+      "slide": 5,
+      "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42960484/"
+    }
+  ]
+}
