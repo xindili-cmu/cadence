@@ -1,0 +1,237 @@
+{
+ "date": "2026-11-02",
+ "generatedAt": "2026-11-02T00:56:25.202Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-01T00:14:34.788Z",
+ "windowEnd": "2026-11-02T00:56:23.452Z",
+ "lead": {
+  "titleZh": "膝骨关节炎：运动类型与持续时间对疼痛和功能影响的系统综述",
+  "titleEn": "Knee OA: Exercise Type & Duration Impact on Pain and Function",
+  "paragraphZh": "今日共有 8 篇条目，骨科与肌骨方向占 4 篇。其中一篇贝叶斯网络 Meta 分析系统综述（curatedScore 85）探讨了运动类型和持续时间对膝骨关节炎患者疼痛、功能和生活质量的影响，提供了高等级证据，值得关注。另有两篇观察研究（curatedScore 75）分别涉及远程康复对慢性膝关节疼痛的价值，以及针对髋骨关节炎症状的运动疗法对腰痛的改善作用。",
+  "paragraphEn": "Today's edition features 8 entries, with 4 focusing on orthopedic and musculoskeletal conditions. A systematic review with Bayesian network meta-analysis (curatedScore 85) provides high-level evidence on the effects of exercise type and duration on pain, function, and quality of life in knee osteoarthritis patients, meriting close attention. Additionally, two observational studies (curatedScore 75) explore the value of telerehabilitation for chronic knee pain and the impact of exercise therapy for hip osteoarthritis symptoms on low back pain."
+ },
+ "stats": {
+  "events": 8,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 3,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1793540352239-1",
+     "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+     "summary": "A Bayesian network meta-analysis of 35 trials (n=3808) found short-term combined aerobic and resistance exercise had the largest effect for pain (SMD = -0.937), function (SMD = -0.590), and QoL (SMD = 0.663) in patients with knee osteoarthritis.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.239Z",
+     "curatedScore": 85,
+     "curatedReason": "本项贝叶斯网络 Meta 分析坐实了对膝骨关节炎患者，短期（≤12 周）有氧与阻抗联合运动能带来最大的疼痛、功能和生活质量改善。在给膝 OA 患者开运动处方时，应优先考虑联合训练。",
+     "titleZh": "运动类型和持续时间对膝骨关节炎患者疼痛、功能和生活质量的影响：一项贝叶斯网络 Meta 分析系统综述",
+     "summaryZh": "一项包含 35 项试验（n=3808）的贝叶斯网络 Meta 分析显示，对于膝骨关节炎患者，短期有氧与阻抗联合运动对疼痛（SMD = -0.937）、功能（SMD = -0.590）和生活质量（SMD = 0.663）的改善效果最大。",
+     "curatedReasonEn": "This Bayesian network meta-analysis confirms that for knee OA patients, short-term (≤12 weeks) combined aerobic and resistance exercise yields the greatest improvements in pain, function, and quality of life. Prioritize combined training when prescribing exercise for knee OA.",
+     "limitation": "证据确定性（GRADE）多为低或极低，长期干预的临床意义证据有限，需更多高质量研究支持。",
+     "limitationEn": "Evidence certainty (GRADE) was mostly low or very low, and the clinical significance of long-term interventions was limited, warranting more high-quality studies.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+     "id": "news-1793540352238-0",
+     "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
+     "summary": "In Australian adults with chronic knee pain, those with first-hand experience of telerehabilitation were willing to pay AU$87.49 (95% CI: 72.83, 102.14) more for telerehabilitation consultations than those who experienced in-person care, indicating a greater willingness to use and pay for it.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966905/",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.238Z",
+     "curatedScore": 75,
+     "curatedReason": "有远程康复经验的患者，对远程康复的使用意愿和支付意愿明显更高。这提示你，对膝骨关节炎患者提供远程康复服务时，初次体验可能会显著影响其长期采纳度。",
+     "titleZh": "远程康复对慢性膝关节疼痛的价值：一项嵌套在随机对照试验中的离散选择实验",
+     "summaryZh": "一项在澳大利亚进行的针对慢性膝关节疼痛患者的研究发现，有过远程康复经验的患者比接受面对面护理的患者，对远程康复咨询的支付意愿高出 AU$87.49 (95% CI: 72.83, 102.14)，表明其更愿意使用并为此付费。",
+     "curatedReasonEn": "Patients with prior telerehabilitation experience show significantly higher willingness to use and pay for it. This suggests that for knee OA patients, the initial experience with telerehabilitation may significantly influence long-term adoption.",
+     "limitation": "本研究基于离散选择实验和随机对照试验的嵌套设计，结果对外推至真实世界决策仍需谨慎。",
+     "limitationEn": "The study's nested design within a DCE and RCT warrants caution in generalizing results to real-world decision-making.",
+     "tags": [
+      "research",
+      "knee",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "The Journal of orthopaedic and sports physical therapy",
+     "tech": true
+    },
+    {
+     "id": "news-1793540352240-3",
+     "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
+     "summary": "Among 5014 patients with hip OA, 61% reported comorbid LBP. Participation in the GLA:D® program was associated with significant LBP reductions of 19% at 3 months and 21% at 12 months, particularly among hip OA responders.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966026/",
+     "publishedAt": "2026-10-31T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.240Z",
+     "curatedScore": 75,
+     "curatedReason": "这项大规模队列研究提示，GLA:D® 计划对髋骨关节炎患者的腰痛也有效，特别是髋关节疼痛有改善的患者。在你处理髋骨关节炎合并腰痛的患者时，可以考虑向其推荐该计划。",
+     "titleZh": "针对髋骨关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项 5014 名患者的纵向队列研究",
+     "summaryZh": "在 5014 名髋骨关节炎患者中，61% 报告伴有腰痛。参与 GLA:D® 计划与腰痛强度在 3 个月时降低 19%、12 个月时降低 21% 显著相关，尤其在髋骨关节炎治疗响应者中效果更明显。",
+     "curatedReasonEn": "This large cohort study suggests that the GLA:D® program is also effective for low back pain in hip OA patients, especially those with improved hip pain. Consider recommending this program to patients with hip OA and comorbid low back pain.",
+     "limitation": "观察性研究，存在混杂因素，无法建立因果关系，且可能存在选择偏倚。",
+     "limitationEn": "As an observational study, confounding factors exist, causality cannot be established, and selection bias may be present.",
+     "tags": [
+      "research",
+      "hip",
+      "spine"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy"
+    },
+    {
+     "id": "news-1793540352240-2",
+     "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
+     "summary": "A systematic review of 73 studies on low back pain moderators found highly heterogeneous literature with poor quality of moderation analyses, yielding inconclusive results regarding which patients respond best to specific treatments, with no clearly important moderators identified in higher-quality analyses.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966898/",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.240Z",
+     "curatedScore": 70,
+     "curatedReason": "关于腰痛治疗效果调节因素的证据，目前仍高度异质且质量欠佳。不要指望能精确预测哪些患者对特定腰痛治疗响应最佳，继续基于指南和经验进行个体化管理。",
+     "titleZh": "临床医生能否预测哪些患者对特定治疗反应最佳？一项关于初级保健腰痛调节因素的系统综述",
+     "summaryZh": "一项针对 73 项腰痛调节因素研究的系统综述发现，现有文献高度异质，调节分析质量普遍较差，未能得出关于哪些患者对特定治疗反应最佳的明确结论，高质量分析中也未发现明显重要的调节因素。",
+     "curatedReasonEn": "Evidence on treatment effect moderators for low back pain remains highly heterogeneous and of poor quality. Do not expect to precisely predict which patients respond best to specific LBP treatments; continue individualized management based on guidelines and experience.",
+     "limitation": "研究高度异质性且调节分析质量普遍较差，未进行 Meta 分析，结论证据力不足。",
+     "limitationEn": "High study heterogeneity and generally poor quality of moderation analyses precluded meta-analysis, limiting the strength of conclusions.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "The Journal of orthopaedic and sports physical therapy"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1793540352241-8",
+     "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
+     "summary": "The Balance Intensity Tool for Exercise (BITE) demonstrated excellent inter-rater reliability (ICC 2,1 > 0.9) and narrower 95% LoA (up to ±20%) compared to clinical judgment for assessing balance intensity in 61 people with multiple sclerosis.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42965342/",
+     "publishedAt": "2026-10-31T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.241Z",
+     "curatedScore": 75,
+     "curatedReason": "平衡强度运动工具（BITE）为多发性硬化症患者的平衡训练提供了更客观、可靠的评估方法。在临床实践中，如果你需要量化平衡训练强度，可以考虑使用 BITE 来补充或验证你的临床判断。",
+     "titleZh": "多发性硬化症患者平衡强度临床方法：临床判断与平衡强度运动工具的比较 — 一项评估者间一致性和可靠性研究",
+     "summaryZh": "平衡强度运动工具（BITE）在评估 61 名多发性硬化症患者平衡强度时，显示出卓越的评估者间可靠性（ICC 2,1 > 0.9）和更窄的 95% 一致性界限（最高 ±20%），优于临床判断。",
+     "curatedReasonEn": "The Balance Intensity Tool for Exercise (BITE) offers a more objective and reliable method for assessing balance training intensity in people with multiple sclerosis. In clinical practice, if you need to quantify balance training intensity, consider using BITE to supplement or validate your clinical judgment.",
+     "limitation": "研究对象仅为多发性硬化症患者，结果推广到其他平衡障碍人群时需谨慎。",
+     "limitationEn": "The study only included people with multiple sclerosis, so results should be generalized to other populations with balance impairments with caution.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice"
+    },
+    {
+     "id": "news-1793540352240-7",
+     "title": "Robot-assisted gait training for adult neurological rehabilitation in acute National Health Service settings: Physiotherapists' perceptions before implementation.",
+     "summary": "A qualitative study with 11 UK physiotherapists found cautious optimism towards robot-assisted gait training (RAGT) in acute neurological rehabilitation settings, identifying anticipated benefits such as increased training intensity and reduced therapist burden, alongside perceived barriers like staffing and patient suitability.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966025/",
+     "publishedAt": "2026-10-31T00:00:00.000Z",
+     "firstSeen": "2026-11-01T13:39:12.240Z",
+     "curatedScore": 70,
+     "curatedReason": "物理治疗师对在急性神经康复中使用机器人辅助步态训练（RAGT）持谨慎乐观态度。这表明尽管存在挑战，RAGT 在神经康复领域的应用前景广阔，但需要周密的实施策略和组织支持。",
+     "titleZh": "机器人辅助步态训练在国家医疗服务系统急性神经康复中的应用：物理治疗师实施前的看法",
+     "summaryZh": "一项针对 11 名英国物理治疗师的定性研究发现，他们在国家医疗服务系统急性神经康复环境中对机器人辅助步态训练（RAGT）持谨慎乐观态度，认为其能增加训练强度、减轻治疗师负担，但也面临人员配置和患者适应性等障碍。",
+     "curatedReasonEn": "Physiotherapists express cautious optimism regarding robot-assisted gait training (RAGT) in acute neurological rehabilitation. This suggests RAGT has broad potential in neurological rehabilitation, despite challenges, requiring thoughtful implementation strategies and organizational support.",
+     "limitation": "定性研究，样本量小（11名英国物理治疗师），结果可能不具有广泛代表性。",
+     "limitationEn": "As a qualitative study with a small sample size (11 UK physiotherapists), the findings may not be broadly representative.",
+     "tags": [
+      "research",
+      "stroke",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1793576498099-27",
+     "title": "Effect of Data Processing Strategy on Maximal Oxygen Uptake and Plateau Identification in Collegiate Tennis Athletes",
+     "summary": "This study investigates the effect of different data processing strategies on the identification of maximal oxygen uptake and plateau in collegiate tennis athletes, highlighting implications for accurate physiological assessment.",
+     "category": "sports",
+     "source": "Disabil Rehabil",
+     "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2756941?af=R",
+     "publishedAt": "2026-10-31T11:49:21.000Z",
+     "firstSeen": "2026-11-01T23:41:38.099Z",
+     "curatedScore": 65,
+     "curatedReason": "在评估大学网球运动员的最大摄氧量时，不要以为数据处理方法都一样。这项观察研究提示，不同的数据处理策略会影响最大摄氧量和平台期的识别，这意味着你的评估结果可能因处理方式而异。",
+     "titleZh": "数据处理策略对大学网球运动员最大摄氧量和平台期识别的影响",
+     "summaryZh": "这项研究探讨了不同数据处理策略对大学网球运动员最大摄氧量和平台期识别的影响，强调了其对准确生理评估的意义。",
+     "curatedReasonEn": "When assessing collegiate tennis players' maximal oxygen uptake, don't assume all data processing methods are equal. This observational study indicates that different data processing strategies impact the identification of maximal oxygen uptake and plateaus, meaning your assessment results could vary based on the method used.",
+     "limitation": "研究对象为大学网球运动员，结果外推到其他人群或运动类型可能受限。",
+     "limitationEn": "The study focused on collegiate tennis athletes, limiting generalizability to other populations or sport types.",
+     "tags": [
+      "research",
+      "measurement"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Measurement in Physical Education and Exercise Science"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1793580973285-26",
+     "title": "Longitudinal correlations among the berg balance scale, falls efficacy scale, and morse fall scale: a secondary analysis of a randomized controlled trial",
+     "summary": "A prospective correlational study of 66 older adults found that associations among Berg Balance Scale (BBS), Falls Efficacy Scale (FES), and Morse Fall Scale (MFS) increased over a 6-week period, with strong correlations observed by 6 weeks (r = −0.704 for BBS/MFS, r = 0.714 for FES/MFS).",
+     "category": "geriatric",
+     "source": "Bull Fac Phys Ther",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s43161-026-00371-w",
+     "publishedAt": "2026-10-29T00:00:00.000Z",
+     "firstSeen": "2026-11-02T00:56:13.285Z",
+     "curatedScore": 70,
+     "curatedReason": "对老年人进行跌倒风险评估时，若只用单一量表，可能会错过动态变化。这项观察研究提示，BBS、FES 和 MFS 这三份量表之间的关联度会随时间增强，到第6周时达到强相关（如BBS/MFS的r=-0.704），这意味着动态追踪时，你可以更自信地将它们结合起来综合评估，尤其是评估周期稍长的情况。",
+     "titleZh": "Berg 平衡量表、跌倒效能量表和 Morse 跌倒量表之间的纵向相关性：一项随机对照试验的二次分析",
+     "summaryZh": "一项对66名老年人进行的前瞻性相关性研究发现，在 6 周的观察期内，Berg 平衡量表 (BBS)、跌倒效能量表 (FES) 和 Morse 跌倒量表 (MFS) 之间的关联性增强，并在第 6 周时观察到强相关性（BBS/MFS 为 r = −0.704，FES/MFS 为 r = 0.714）。",
+     "curatedReasonEn": "When assessing fall risk in older adults, relying solely on one scale might miss dynamic changes. This observational study suggests that the association among BBS, FES, and MFS strengthens over time, reaching strong correlations by 6 weeks (e.g., r=-0.704 for BBS/MFS). This implies you can more confidently integrate these scales for comprehensive assessment during dynamic tracking, especially over slightly longer assessment periods.",
+     "limitation": "作为一项相关性研究，无法推断因果关系。样本量相对较小 (66名老年人)，且仅观察了 6 周。",
+     "limitationEn": "As a correlational study, it cannot infer causality. The sample size is relatively small (66 older adults), and the observation period was only 6 weeks.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "assessment"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Bulletin of Faculty of Physical Therapy"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
