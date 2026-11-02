@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-02T00:56:15.447Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-11-02T06:25:03.552Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -127,41 +127,29 @@
           "titleZh": "一项随机对照试验的经济学评估：中风后偏盲患者的扫描眼训练康复选择与假训练（SEARCH试验）"
         }
       ],
-      "heat": 5.43,
-      "themeZh": "卒中后功能障碍的康复机器人与计算机视觉评估",
-      "themeEn": "Robotic & Computer Vision Assessment of Post-Stroke Function"
+      "heat": 5.01,
+      "themeZh": "卒中后康复中的机器人、计算机视觉与NMES应用",
+      "themeEn": "Robotics, Computer Vision, NMES in Stroke Rehab"
     },
     {
-      "id": "news-1793236104088-21",
-      "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10677-4",
-      "category": "sports",
+      "id": "news-1793540352239-1",
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
+      "category": "orthopedic",
       "publishedAt": "2026-11-01T00:00:00.000Z",
       "sourceCount": 7,
       "sources": [
-        "BMC Musculoskeletal Disorders",
-        "BMC Sports Science, Medicine and Rehabilitation",
         "The Journal of orthopaedic and sports physical therapy",
         "Aging Clinical and Experimental Research",
-        "Physiotherapy",
         "Physiotherapy theory and practice",
-        "Disability and rehabilitation"
+        "Disability and rehabilitation",
+        "Physiotherapy",
+        "Clinical biomechanics (Bristol, Avon)",
+        "Archives of Physical Medicine and Rehabilitation"
       ],
-      "tag": "sports",
+      "tag": "knee",
       "kind": "theme",
       "members": [
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
-          "titleZh": "本体感觉训练对运动员踝关节扭伤预防的有效性：一项系统评价与Meta分析"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
-          "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究"
-        },
         {
           "source": "PubMed",
           "journal": "The Journal of orthopaedic and sports physical therapy",
@@ -173,12 +161,6 @@
           "journal": "Aging Clinical and Experimental Research",
           "title": "Effects of 12-week massage on pain, muscle co-contraction, and knee loading in medial knee osteoarthritis: a randomized clinical trial",
           "titleZh": "12周按摩对内侧膝骨关节炎患者疼痛、肌肉协同收缩和膝关节负荷的影响：一项随机临床试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
-          "titleZh": "针对髋骨关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项 5014 名患者的纵向队列研究"
         },
         {
           "source": "PubMed",
@@ -200,14 +182,32 @@
         },
         {
           "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
+          "titleZh": "针对髋骨关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项 5014 名患者的纵向队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
+          "titleZh": "病例系列：探究腰痛物理治疗后现实世界姿势行为的改变"
+        },
+        {
+          "source": "PubMed",
           "journal": "The Journal of orthopaedic and sports physical therapy",
           "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
           "titleZh": "临床医生能否预测哪些患者对特定治疗反应最佳？一项关于初级保健腰痛调节因素的系统综述"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
+          "titleZh": "烧伤后创伤后慢性疼痛和瘙痒的纵向轨迹和风险因素：一项前瞻性多中心队列研究。"
         }
       ],
-      "heat": 4.88,
-      "themeZh": "运动疼痛与骨关节炎的运动疗法和手法干预",
-      "themeEn": "Exercise and Manual Therapy for Musculoskeletal Pain"
+      "heat": 4.51,
+      "themeZh": "骨关节炎和慢性腰痛的运动与物理治疗",
+      "themeEn": "Exercise and Physical Therapy for Joint Pain"
     },
     {
       "id": "news-1793236104088-22",
@@ -270,67 +270,67 @@
           "titleZh": "全身体振动训练对 COPD 患者管理疗效的系统评价和荟萃分析"
         }
       ],
-      "heat": 3.51,
-      "themeZh": "老年心肺疾病患者功能评估与体能训练",
-      "themeEn": "Functional Assessment and Training in Cardiopulmonary Conditions"
+      "heat": 3.24,
+      "themeZh": "老年心肺疾病患者的体能评估与干预",
+      "themeEn": "Fitness Assessment and Intervention for Elderly"
     },
     {
-      "id": "news-1793489307995-24",
-      "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
-      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00986-X/fulltext?rss=yes",
-      "category": "orthopedic",
-      "publishedAt": "2026-10-31T00:00:00.000Z",
-      "sourceCount": 6,
+      "id": "news-1793236104088-21",
+      "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10677-4",
+      "category": "sports",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "sourceCount": 5,
       "sources": [
-        "Archives of Physical Medicine and Rehabilitation",
-        "Physiotherapy",
-        "International Urogynecology Journal",
-        "medRxiv",
-        "Physiotherapy theory and practice",
-        "BMC Musculoskeletal Disorders"
+        "BMC Musculoskeletal Disorders",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "BMC musculoskeletal disorders",
+        "Clinical biomechanics (Bristol, Avon)"
       ],
-      "tag": "pelvic-floor",
+      "tag": "sports",
       "kind": "theme",
       "members": [
         {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
-          "titleZh": "烧伤后创伤后慢性疼痛和瘙痒的纵向轨迹和风险因素：一项前瞻性多中心队列研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
-          "titleZh": "围绝经期女性与物理治疗依从性的障碍与促进因素：一项定性研究"
-        },
-        {
-          "source": "Int Urogynecol J",
-          "journal": "International Urogynecology Journal",
-          "title": "Patient Voices in a Digital Space: Thematic Analysis of YouTube Comments on Pelvic Floor Content",
-          "titleZh": "数字空间中的患者声音：YouTube 盆底内容评论的主题分析"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Evaluating ChatGPTs Responses to Chiropractic Patient Questions: A Comparative Study",
-          "titleZh": "评估 ChatGPT 对脊骨神经医学患者问题的回答：一项比较研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
-          "titleZh": "在不确定性下校准临床推理：一项针对肌肉骨骼实践中专家物理治疗师的定性研究"
-        },
-        {
           "source": "BMC Musculoskelet Disord",
           "journal": "BMC Musculoskeletal Disorders",
-          "title": "Interprofessional communication and early rehabilitation practices in orthopaedic surgery: a cross-sectional survey",
-          "titleZh": "骨科手术中的跨专业沟通与早期康复实践：一项横断面调查"
+          "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
+          "titleZh": "本体感觉训练对运动员踝关节扭伤预防的有效性：一项系统评价与Meta分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
+          "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
+          "titleZh": "ACL 重建术后单腿落地运动控制中短足运动与趾卷曲运动的比较：一项探索性随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+          "titleZh": "基于运动的康复干预对全膝关节置换术后运动恐惧症的影响：一项随机对照试验的系统综述和 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
+          "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Preoperative factors associated with quadriceps strength 1 year after total knee arthroplasty: a prospective longitudinal study.",
+          "titleZh": "全膝关节置换术后 1 年股四头肌力量的术前相关因素：一项前瞻性纵向研究"
         }
       ],
-      "heat": 2.96,
-      "themeZh": "骨科康复中患者参与、临床决策与多学科协作",
-      "themeEn": "Patient Engagement and Clinical Reasoning in Orthopedic Rehab"
+      "heat": 3.22,
+      "themeZh": "运动员损伤预防与术后康复训练",
+      "themeEn": "Injury Prevention and Post-Op Sports Rehab"
     },
     {
       "id": "news-1793540352241-8",
@@ -342,9 +342,9 @@
       "sources": [
         "Physiotherapy theory and practice",
         "Disability and rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
         "medRxiv",
-        "BMC Sports Science, Medicine and Rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation"
+        "BMC Sports Science, Medicine and Rehabilitation"
       ],
       "tag": "ms",
       "kind": "theme",
@@ -362,6 +362,12 @@
           "titleZh": "拉伸干预对多发性硬化症患者的影响：一项系统综述"
         },
         {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Letter to Editor: Effects of a Teleexercise Movement-to-Music Intervention on Health Outcomes in Individuals With Mobility Disabilities: A Randomized Controlled Trial",
+          "titleZh": "致编辑的信：远程音乐运动干预对行动障碍个体健康结局影响的随机对照试验"
+        },
+        {
           "source": "medRxiv",
           "title": "Remote Ischemic Conditioning Modulates Spinal Reflex Excitability in Healthy Young Adults: A Pilot Randomized Controlled Trial",
           "titleZh": "远程缺血预处理调节健康年轻成人脊髓反射兴奋性的初步随机对照试验"
@@ -371,43 +377,59 @@
           "journal": "BMC Sports Science, Medicine and Rehabilitation",
           "title": "Acute neuromuscular and postural control responses to balance exercise with blood flow restriction in sedentary adults: a randomized controlled trial",
           "titleZh": "血流限制联合平衡运动对久坐成人急性神经肌肉和姿势控制反应：一项随机对照试验"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Letter to Editor: Effects of a Teleexercise Movement-to-Music Intervention on Health Outcomes in Individuals With Mobility Disabilities: A Randomized Controlled Trial",
-          "titleZh": "致编辑的信：远程音乐运动干预对行动障碍个体健康结局影响的随机对照试验"
         }
       ],
-      "heat": 2.47,
-      "themeZh": "神经系统疾病的平衡训练与运动干预效应",
-      "themeEn": "Balance Training and Exercise for Neurological Conditions"
+      "heat": 2.28,
+      "themeZh": "神经系统疾病与健康人群的平衡及运动干预",
+      "themeEn": "Balance and Exercise for Neurological Conditions"
     }
   ],
   "items": [
     {
-      "id": "news-1792339155437-0",
-      "title": "Barriers and Facilitators Influencing Physiotherapists' Adherence to Clinical Practice Guidelines and Return to Sport Criteria after Anterior Cruciate Ligament Reconstruction: A Qualitative Study in Austria.",
-      "summary": "A qualitative study explored barriers and facilitators influencing 9 Austrian physiotherapists' adherence to clinical practice guidelines and return-to-sport criteria after ACLR. Key themes included guideline usability, patient expectations, professional attitudes, resource limitations, and interprofessional misalignment.",
+      "id": "news-1793600701528-2",
+      "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
+      "summary": "In 33 individuals 2.78 ± 2.78 years post-ACLR, greater learned helplessness was moderately associated with greater peak knee abduction in the ACLR limb (r = 0.564, p = 0.001) during jump-landing. Weaker associations with hip flexion were also observed.",
       "category": "sports",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42893304/",
-      "publishedAt": "2026-10-18T00:00:00.000Z",
-      "firstSeen": "2026-10-18T15:59:15.437Z",
-      "curatedScore": 75,
-      "curatedReason": "这项定性研究揭示了奥地利物理治疗师在 ACLR 后依从临床实践指南和重返运动标准时的障碍与促进因素，对改善康复路径和跨专业沟通有指导意义。",
-      "titleZh": "奥地利物理治疗师在前交叉韧带重建术后依从临床实践指南和重返运动标准的障碍与促进因素：一项定性研究",
-      "summaryZh": "一项定性研究探讨了奥地利9名物理治疗师在前交叉韧带重建术后依从临床实践指南和重返运动标准的障碍与促进因素。主要主题包括指南可用性、患者期望、专业态度、资源限制和跨专业协调不足。",
-      "curatedReasonEn": "This qualitative study identifies barriers and facilitators influencing physiotherapists' adherence to CPGs and RTS criteria after ACLR in Austria, offering insights for improving rehabilitation pathways and interprofessional communication.",
-      "limitation": "研究样本量较小（9名物理治疗师），结果可能不完全适用于其他地区或更广泛的执业环境。",
-      "limitationEn": "The study involved a small sample size of 9 physiotherapists, and the findings may not be fully generalizable to other regions or broader practice settings.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42967377/",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "firstSeen": "2026-11-02T06:25:01.528Z",
+      "curatedScore": 70,
+      "curatedReason": "这项研究表明，重建前交叉韧带（ACLR）后患者的习得性无助感与跳-落地时的膝关节外翻力学有中度关联。在康复和重返运动评估中，除了关注生物力学，也别忽视患者的心理社会因素。",
+      "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关",
+      "summaryZh": "在 33 名前交叉韧带重建术后 2.78 ± 2.78 年的个体中，较高的习得性无助感与重建侧肢体在跳-落地时的膝关节峰值外展角度呈中度相关（r = 0.564, p = 0.001）。同时观察到与髋关节屈曲的较弱关联。",
+      "curatedReasonEn": "This study indicates a moderate association between learned helplessness and knee abduction mechanics during jump-landing after ACLR. In rehabilitation and return-to-sport assessments, do not overlook psychosocial factors in addition to biomechanics.",
+      "limitation": "研究样本量较小（N=33），且参与者普遍习得性无助感评分较低，可能影响结果的普遍性。",
+      "limitationEn": "The study has a small sample size (N=33), and participants generally had low learned helplessness scores, which might affect the generalizability of the findings.",
       "tags": [
         "research",
-        "knee",
-        "guideline-adherence"
+        "knee"
       ],
       "studyDesign": "观察研究",
-      "journal": "International journal of sports physical therapy"
+      "journal": "Clinical biomechanics (Bristol, Avon)"
+    },
+    {
+      "id": "news-1793600701526-0",
+      "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
+      "summary": "This case series (N=5) found that real-world lumbar posture differed between days in three participants following a physiotherapy session for chronic low back pain, with four of five participants showing changes in end-range flexion consistent with postural advice. All five reported reduced disability.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42967378/",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "firstSeen": "2026-11-02T06:25:01.526Z",
+      "curatedScore": 65,
+      "curatedReason": "本系列病例研究提示可穿戴传感器能捕捉到腰痛患者在现实生活中的姿势行为，且部分行为改变与物理治疗师的建议相符。这为理解疼痛发生机制和个性化康复提供了初步线索，但效应归因仍需对照研究。",
+      "titleZh": "病例系列：探究腰痛物理治疗后现实世界姿势行为的改变",
+      "summaryZh": "这项病例系列研究（N=5）发现，在接受慢性腰痛物理治疗后，三名参与者在日常生活中腰椎姿势分布发生变化，且五分之四的参与者在终末屈曲时间方面显示出与姿势建议一致的改变。所有五名参与者均报告残疾程度减轻。",
+      "curatedReasonEn": "This case series suggests wearable sensors can capture real-world postural behaviors in low back pain patients, with some changes aligning with physiotherapy advice. This offers initial clues for understanding pain mechanisms and individualized rehabilitation, but attributing effects requires controlled studies.",
+      "limitation": "本研究为小样本病例系列，未设对照组，无法将行为变化归因于干预，且发现仅为假说生成。",
+      "limitationEn": "This is a small case series without a control group, limiting attribution of behavioral changes to intervention, and findings are hypothesis-generating.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Clinical biomechanics (Bristol, Avon)"
     },
     {
       "id": "news-1793580973285-26",
