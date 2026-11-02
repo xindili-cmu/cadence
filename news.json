@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-02T06:25:03.552Z",
+    "lastUpdated": "2026-11-02T16:20:40.855Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -127,9 +127,9 @@
           "titleZh": "一项随机对照试验的经济学评估：中风后偏盲患者的扫描眼训练康复选择与假训练（SEARCH试验）"
         }
       ],
-      "heat": 5.01,
-      "themeZh": "卒中后康复中的机器人、计算机视觉与NMES应用",
-      "themeEn": "Robotics, Computer Vision, NMES in Stroke Rehab"
+      "heat": 4.34,
+      "themeZh": "卒中后肢体功能与姿态康复的机器人及电刺激应用",
+      "themeEn": "Robot and NMES for Post-Stroke Rehabilitation"
     },
     {
       "id": "news-1793540352239-1",
@@ -142,10 +142,10 @@
         "The Journal of orthopaedic and sports physical therapy",
         "Aging Clinical and Experimental Research",
         "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
         "Physiotherapy",
         "Clinical biomechanics (Bristol, Avon)",
-        "Archives of Physical Medicine and Rehabilitation"
+        "Archives of Physical Medicine and Rehabilitation",
+        "International Urogynecology Journal"
       ],
       "tag": "knee",
       "kind": "theme",
@@ -176,12 +176,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
-          "titleZh": "体外冲击波疗法对慢性腰痛患者疼痛强度和功能障碍的影响：一项系统综述和荟萃分析。"
-        },
-        {
-          "source": "PubMed",
           "journal": "Physiotherapy",
           "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
           "titleZh": "针对髋骨关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项 5014 名患者的纵向队列研究"
@@ -203,11 +197,67 @@
           "journal": "Archives of Physical Medicine and Rehabilitation",
           "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
           "titleZh": "烧伤后创伤后慢性疼痛和瘙痒的纵向轨迹和风险因素：一项前瞻性多中心队列研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
+          "titleZh": "围绝经期女性与物理治疗依从性的障碍与促进因素：一项定性研究"
+        },
+        {
+          "source": "Int Urogynecol J",
+          "journal": "International Urogynecology Journal",
+          "title": "Patient Voices in a Digital Space: Thematic Analysis of YouTube Comments on Pelvic Floor Content",
+          "titleZh": "数字空间中的患者声音：YouTube 盆底内容评论的主题分析"
         }
       ],
-      "heat": 4.51,
-      "themeZh": "骨关节炎和慢性腰痛的运动与物理治疗",
-      "themeEn": "Exercise and Physical Therapy for Joint Pain"
+      "heat": 3.91,
+      "themeZh": "骨关节炎和腰痛的运动与物理治疗效果及体验",
+      "themeEn": "Exercise and Therapy for OA, Low Back Pain"
+    },
+    {
+      "id": "news-1793636438463-0",
+      "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42968360/",
+      "category": "orthopedic",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "American journal of physical medicine & rehabilitation",
+        "medRxiv",
+        "Physiotherapy theory and practice",
+        "BMC Musculoskeletal Disorders"
+      ],
+      "tag": null,
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+          "titleZh": "人工智能在物理与康复医学治疗计划中的作用：一项系统综述"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Evaluating ChatGPTs Responses to Chiropractic Patient Questions: A Comparative Study",
+          "titleZh": "评估 ChatGPT 对脊骨神经医学患者问题的回答：一项比较研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
+          "titleZh": "在不确定性下校准临床推理：一项针对肌肉骨骼实践中专家物理治疗师的定性研究"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Interprofessional communication and early rehabilitation practices in orthopaedic surgery: a cross-sectional survey",
+          "titleZh": "骨科手术中的跨专业沟通与早期康复实践：一项横断面调查"
+        }
+      ],
+      "heat": 3.16,
+      "themeZh": "物理治疗中人工智能、临床推理与跨专业沟通",
+      "themeEn": "AI, Clinical Reasoning, Interprofessional Communication in PT"
     },
     {
       "id": "news-1793236104088-22",
@@ -270,9 +320,9 @@
           "titleZh": "全身体振动训练对 COPD 患者管理疗效的系统评价和荟萃分析"
         }
       ],
-      "heat": 3.24,
-      "themeZh": "老年心肺疾病患者的体能评估与干预",
-      "themeEn": "Fitness Assessment and Intervention for Elderly"
+      "heat": 2.81,
+      "themeZh": "老年和慢性病群体心肺与体能评估及运动干预",
+      "themeEn": "Cardiopulmonary Fitness in Older Adults and COPD"
     },
     {
       "id": "news-1793236104088-21",
@@ -328,63 +378,37 @@
           "titleZh": "全膝关节置换术后 1 年股四头肌力量的术前相关因素：一项前瞻性纵向研究"
         }
       ],
-      "heat": 3.22,
-      "themeZh": "运动员损伤预防与术后康复训练",
-      "themeEn": "Injury Prevention and Post-Op Sports Rehab"
-    },
-    {
-      "id": "news-1793540352241-8",
-      "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42965342/",
-      "category": "neurological",
-      "publishedAt": "2026-10-31T00:00:00.000Z",
-      "sourceCount": 5,
-      "sources": [
-        "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "medRxiv",
-        "BMC Sports Science, Medicine and Rehabilitation"
-      ],
-      "tag": "ms",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
-          "titleZh": "多发性硬化症患者平衡强度临床方法：临床判断与平衡强度运动工具的比较 — 一项评估者间一致性和可靠性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "The effects of stretching interventions in people with multiple sclerosis: a systematic review.",
-          "titleZh": "拉伸干预对多发性硬化症患者的影响：一项系统综述"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Letter to Editor: Effects of a Teleexercise Movement-to-Music Intervention on Health Outcomes in Individuals With Mobility Disabilities: A Randomized Controlled Trial",
-          "titleZh": "致编辑的信：远程音乐运动干预对行动障碍个体健康结局影响的随机对照试验"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Remote Ischemic Conditioning Modulates Spinal Reflex Excitability in Healthy Young Adults: A Pilot Randomized Controlled Trial",
-          "titleZh": "远程缺血预处理调节健康年轻成人脊髓反射兴奋性的初步随机对照试验"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Acute neuromuscular and postural control responses to balance exercise with blood flow restriction in sedentary adults: a randomized controlled trial",
-          "titleZh": "血流限制联合平衡运动对久坐成人急性神经肌肉和姿势控制反应：一项随机对照试验"
-        }
-      ],
-      "heat": 2.28,
-      "themeZh": "神经系统疾病与健康人群的平衡及运动干预",
-      "themeEn": "Balance and Exercise for Neurological Conditions"
+      "heat": 2.79,
+      "themeZh": "运动损伤后本体感觉、肌力与运动控制康复",
+      "themeEn": "Proprioception, Strength, Motor Control in Sports Rehab"
     }
   ],
   "items": [
+    {
+      "id": "news-1793636438463-0",
+      "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+      "summary": "A systematic review of 9 studies found that large language models (LLMs) showed promising capabilities in supporting rehabilitation treatment planning, with concordance with expert opinion reaching 98.75% after review, particularly in musculoskeletal and cardiovascular rehabilitation. However, reported hallucinations underscore the need for supervision and further high-quality studies.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42968360/",
+      "publishedAt": "2026-11-02T00:00:00.000Z",
+      "firstSeen": "2026-11-02T16:20:38.463Z",
+      "curatedScore": 75,
+      "curatedReason": "生成式 AI（特别是 LLM）在康复治疗计划中的应用潜力显著，但在整合到临床工作流程前，必须解决“幻觉”问题并进行严格的真实世界验证。请将 AI 辅助方案作为参考，并始终保持专家监督。",
+      "titleZh": "人工智能在物理与康复医学治疗计划中的作用：一项系统综述",
+      "summaryZh": "一项包含9项研究的系统综述发现，大型语言模型（LLM）在支持康复治疗计划方面展现出良好潜力，尤其在肌肉骨骼和心血管康复中，经专家审查后与专家意见的一致性可达98.75%。然而，研究报告的“幻觉”现象强调了监督和进一步高质量研究的必要性。",
+      "curatedReasonEn": "Generative AI, especially LLMs, shows significant potential in rehabilitation treatment planning, but must address \"hallucinations\" and undergo rigorous real-world validation before clinical integration. Treat AI-assisted plans as references, and always maintain expert supervision.",
+      "limitation": "本综述纳入的研究数量有限（9项），且AI工具与专家意见的一致性评估方法可能存在局限。",
+      "limitationEn": "The review included a limited number of studies (9), and the assessment methods for AI tool concordance with expert opinion might have limitations.",
+      "tags": [
+        "research",
+        "telehealth",
+        "workforce"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "American journal of physical medicine & rehabilitation",
+      "tech": true
+    },
     {
       "id": "news-1793600701528-2",
       "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
@@ -2118,30 +2142,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC musculoskeletal disorders"
-    },
-    {
-      "id": "news-1792532610308-0",
-      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
-      "summary": "A systematic review and meta-analysis of 9 RCTs (N unspecified) found that radial extracorporeal shockwave therapy (rESWT) significantly reduced pain (SMD = -0.72) in chronic low back pain, but functional disability improvement (MD = -6.12) did not reach clinical significance. Most outcomes were evaluated immediately post-intervention.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
-      "publishedAt": "2026-10-20T00:00:00.000Z",
-      "firstSeen": "2026-10-20T21:43:30.308Z",
-      "curatedScore": 85,
-      "curatedReason": "关于体外冲击波疗法（ESWT）治疗慢性腰痛的系统综述提示，ESWT，特别是径向冲击波，对短期疼痛有效，但功能改善临床意义不大。这意味着你在考虑 ESWT 时应将其作为辅助手段，而非替代主动训练。",
-      "titleZh": "体外冲击波疗法对慢性腰痛患者疼痛强度和功能障碍的影响：一项系统综述和荟萃分析。",
-      "summaryZh": "一项包含 9 项 RCT 的系统综述和荟萃分析发现，径向体外冲击波疗法（rESWT）显著减轻了慢性腰痛患者的疼痛（SMD = -0.72），但功能障碍的改善（MD = -6.12）未达到临床意义；多数结果仅在干预后即刻评估。",
-      "curatedReasonEn": "This systematic review on extracorporeal shockwave therapy (ESWT) for chronic low back pain indicates that ESWT, particularly radial ESWT, is effective for short-term pain but offers limited clinically meaningful functional improvement. This suggests you should consider ESWT as an adjunct, not a replacement for active rehabilitation.",
-      "limitation": "研究随访时间短，且纳入研究间存在显著异质性，限制了建议的强度。",
-      "limitationEn": "The studies had short follow-up periods, and substantial heterogeneity across included trials limits the strength of recommendations.",
-      "tags": [
-        "research",
-        "dry-needling",
-        "spine"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Disability and rehabilitation"
     }
   ]
 }
