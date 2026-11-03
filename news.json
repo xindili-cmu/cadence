@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-03T06:59:09.193Z",
+    "lastUpdated": "2026-11-03T16:20:36.389Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -19,19 +19,17 @@
       "title": "Robotic Assessment of Thumb Proprioception after Stroke: Reliability, Validity, and Sensitivity.",
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42956919/",
       "category": "neurological",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "sourceCount": 11,
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "sourceCount": 9,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "medRxiv",
-        "Physiotherapy",
-        "American journal of physical medicine & rehabilitation",
-        "NeuroRehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation",
+        "Neurorehabilitation and neural repair",
         "Journal of Rehabilitation Medicine",
         "Disability and rehabilitation",
         "Clinical rehabilitation",
         "Topics in stroke rehabilitation",
+        "NeuroRehabilitation",
         "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
@@ -55,33 +53,15 @@
           "titleZh": "用于脑损伤康复中姿势评估的床旁计算机视觉技术"
         },
         {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Robot-assisted gait training for adult neurological rehabilitation in acute National Health Service settings: Physiotherapists' perceptions before implementation.",
-          "titleZh": "机器人辅助步态训练在国家医疗服务系统急性神经康复中的应用：物理治疗师实施前的看法"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
-          "titleZh": "神经肌肉电刺激（NMES）对卒中后患者下肢活动能力和日常生活活动的影响：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
-          "titleZh": "使用混合技术实现的上肢神经康复方法：一项范围综述"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "A pragmatic, decentralized trial of the home-based, autonomous InTandem® neurorehabilitation system: analyses of engagement, safety, and effectiveness from the OrcHESTRAS trial",
-          "titleZh": "基于家庭的自主InTandem®神经康复系统的一项实用型、去中心化试验：OrcHESTRAS试验中的参与度、安全性和有效性分析"
-        },
-        {
           "source": "medRxiv",
           "title": "A Retrospective Real-World Assessment of Motor Status After Stroke Using a Home-Based Brain-Computer Interface",
           "titleZh": "使用居家脑机接口对卒中后运动状态的真实世界回顾性评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Development of a Single-Camera Markerless Motion Capture System for Assessing Upper Limb Function Post-Stroke (FULMA).",
+          "titleZh": "用于评估卒中后上肢功能的单摄像头无标记运动捕捉系统（FULMA）的开发"
         },
         {
           "source": "J Rehabil Med",
@@ -132,9 +112,65 @@
           "titleZh": "功能性搭桥测试的聚合效度及其与急性卒中患者步行独立性的预后关联：一项回顾性队列研究"
         }
       ],
-      "heat": 7.03,
-      "themeZh": "卒中后上肢本体感觉与步态的机器人评估与康复",
-      "themeEn": "Stroke Upper Limb Robot Assessment and Rehab"
+      "heat": 7.11,
+      "themeZh": "卒中后功能障碍的机器人与计算机视觉评估",
+      "themeEn": "Robot and Computer Vision Stroke Assessment"
+    },
+    {
+      "id": "news-1792928754481-3",
+      "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42921866/",
+      "category": "neurological",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "American journal of physical medicine & rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "NeuroRehabilitation",
+        "medRxiv",
+        "PubMed"
+      ],
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Efficacy of Neuromuscular Electrical Stimulation (NMES) on Lower Limb Mobility and Activities of Daily Living in Post-Stroke Patients: A Systematic Review and Meta-Analysis.",
+          "titleZh": "神经肌肉电刺激（NMES）对卒中后患者下肢活动能力和日常生活活动的影响：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Comparative Effects of Neurostimulation- and Technology-Augmented Robot-Assisted Training on Upper-Limb Motor Recovery After Stroke: A Systematic Review and Network Meta-Analysis",
+          "titleZh": "卒中后上肢运动恢复中神经刺激和技术增强型机器人辅助训练的比较效应：一项系统综述和网络荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
+          "titleZh": "使用混合技术实现的上肢神经康复方法：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effects of Medium-frequency Electrical Stimulation Combined with Near-Infrared Light on Quadriceps Function and Independent Walking in Patients with Spinal Cord Injury.",
+          "titleZh": "中频电刺激联合近红外光对脊髓损伤患者股四头肌功能和独立行走能力的影响"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Remote Ischemic Conditioning Modulates Spinal Reflex Excitability in Healthy Young Adults: A Pilot Randomized Controlled Trial",
+          "titleZh": "远程缺血预处理调节健康年轻成人脊髓反射兴奋性的初步随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "title": "Validation study comparing a novel sham acupuncture technique with Park sham acupuncture: A randomized controlled trial",
+          "titleZh": "新型假针刺技术与 Park 假针刺比较的验证研究：一项随机对照试验"
+        }
+      ],
+      "heat": 3.95,
+      "themeZh": "卒中与脊髓损伤康复中的神经电刺激与机器人技术",
+      "themeEn": "Neurostimulation and Robotics in Stroke, SCI Rehab"
     },
     {
       "id": "news-1793177001337-0",
@@ -204,9 +240,9 @@
           "titleZh": "烧伤后创伤后慢性疼痛和瘙痒的纵向轨迹和风险因素：一项前瞻性多中心队列研究。"
         }
       ],
-      "heat": 4.47,
-      "themeZh": "影响患者依从性与自我管理的社会心理因素",
-      "themeEn": "Psychosocial Factors in Patient Engagement and Self-Management"
+      "heat": 3.91,
+      "themeZh": "腰痛与妇科盆底功能障碍的物理治疗干预",
+      "themeEn": "PT for Low Back and Pelvic Floor Dysfunction"
     },
     {
       "id": "news-1793674829856-29",
@@ -255,94 +291,142 @@
           "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关"
         }
       ],
-      "heat": 3.2,
-      "themeZh": "儿童与ACL重建术后患者下肢运动控制训练",
-      "themeEn": "Lower Limb Motor Control Training Post-ACL, Pediatric"
+      "heat": 2.79,
+      "themeZh": "儿童与ACL重建康复中的运动干预效果",
+      "themeEn": "Exercise Interventions for Pediatric and ACL Rehab"
     },
     {
-      "id": "news-1793636438463-0",
-      "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42968360/",
+      "id": "news-1793540352239-1",
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
       "category": "orthopedic",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "sourceCount": 4,
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "sourceCount": 5,
       "sources": [
-        "American journal of physical medicine & rehabilitation",
-        "medRxiv",
-        "Physiotherapy theory and practice",
-        "BMC Musculoskeletal Disorders"
-      ],
-      "tag": null,
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
-          "titleZh": "人工智能在物理与康复医学治疗计划中的作用：一项系统综述"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Evaluating ChatGPTs Responses to Chiropractic Patient Questions: A Comparative Study",
-          "titleZh": "评估 ChatGPT 对脊骨神经科患者提问的回答：一项比较研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Calibrating clinical reasoning under uncertainty: a qualitative study of expert physiotherapists in musculoskeletal practice.",
-          "titleZh": "在不确定性下校准临床推理：一项针对肌肉骨骼实践中专家物理治疗师的定性研究"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Interprofessional communication and early rehabilitation practices in orthopaedic surgery: a cross-sectional survey",
-          "titleZh": "骨科手术中的跨专业沟通与早期康复实践：一项横断面调查"
-        }
-      ],
-      "heat": 2.56,
-      "themeZh": "AI在康复治疗方案规划及临床推理中的应用",
-      "themeEn": "AI in Rehabilitation Treatment Planning and Reasoning"
-    },
-    {
-      "id": "news-1793279964353-1",
-      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
-      "category": "orthopedic",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Physiotherapy",
+        "The Journal of orthopaedic and sports physical therapy",
         "BMC musculoskeletal disorders",
+        "Physiotherapy theory and practice",
+        "BMC Sports Science, Medicine and Rehabilitation",
         "Archives of Physical Medicine and Rehabilitation"
       ],
-      "tag": "shoulder",
+      "tag": "knee",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-          "titleZh": "乳腺癌术后腋网综合征不同物理疗法的比较有效性：随机对照试验的网络荟萃分析"
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+          "titleZh": "运动类型和持续时间对膝骨关节炎患者疼痛、功能和生活质量的影响：一项贝叶斯网络 Meta 分析系统综述"
         },
         {
           "source": "PubMed",
           "journal": "BMC musculoskeletal disorders",
-          "title": "Implementation, feasibility and optimization of a web- and mobile-supported semi-automated shoulder rehabilitation system (WMSSR): a prospective consecutive interventional cohort study.",
-          "titleZh": "网络和移动支持的半自动化肩部康复系统（WMSSR）的实施、可行性和优化：一项前瞻性连续干预队列研究"
+          "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+          "titleZh": "基于运动的康复干预对全膝关节置换术后运动恐惧症的影响：一项随机对照试验的系统综述和 Meta 分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Discussing pain increases at the point of exercise prescription: a clinical commentary for persistent musculoskeletal conditions.",
+          "titleZh": "讨论运动处方时的疼痛增加：关于持续性肌肉骨骼疾病的临床评论"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
+          "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
+          "titleZh": "远程康复对慢性膝关节疼痛的价值：一项嵌套在随机对照试验中的离散选择实验"
         },
         {
           "source": "Archives of PM&R",
           "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Real-Time Ultrasound-Assisted Laryngeal Electromyography Using an In-Plane Trajectory View: A Prospective Feasibility Study",
-          "titleZh": "实时超声辅助平面内轨迹视图喉部肌电图术：一项前瞻性可行性研究"
+          "title": "Letter to Editor: Effects of a Teleexercise Movement-to-Music Intervention on Health Outcomes in Individuals With Mobility Disabilities: A Randomized Controlled Trial",
+          "titleZh": "致编辑的信：远程音乐运动干预对行动障碍个体健康结局影响的随机对照试验"
         }
       ],
-      "heat": 1.92,
-      "themeZh": "超声与网络支持系统在肌骨康复中的应用",
-      "themeEn": "Ultrasound and Web Systems in Musculoskeletal Rehab"
+      "heat": 1.97,
+      "themeZh": "膝关节骨关节炎与术后疼痛的运动康复",
+      "themeEn": "Exercise Rehab for Knee OA and Post-Op Pain"
     }
   ],
   "items": [
+    {
+      "id": "news-1793722834156-25",
+      "title": "Comparative Effects of Neurostimulation- and Technology-Augmented Robot-Assisted Training on Upper-Limb Motor Recovery After Stroke: A Systematic Review and Network Meta-Analysis",
+      "summary": "This systematic review and network meta-analysis aimed to compare robot-assisted training alone with neurostimulation- or technology-augmented RAT for poststroke upper-limb recovery.",
+      "category": "neurological",
+      "source": "Archives of PM&R",
+      "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00990-1/fulltext?rss=yes",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "firstSeen": "2026-11-03T16:20:34.156Z",
+      "curatedScore": 75,
+      "curatedReason": "这项系统综述和网络荟萃分析比较了卒中后上肢运动恢复中，单独机器人辅助训练与结合神经刺激或技术增强的机器人辅助训练的效果。它将为你评估先进康复技术在临床中的应用提供证据，了解不同技术组合的相对优势。",
+      "titleZh": "卒中后上肢运动恢复中神经刺激和技术增强型机器人辅助训练的比较效应：一项系统综述和网络荟萃分析",
+      "summaryZh": "这项系统综述和网络荟萃分析旨在比较单独机器人辅助训练与结合神经刺激或技术增强的机器人辅助训练在卒中后上肢运动恢复中的效果。",
+      "curatedReasonEn": "This systematic review and network meta-analysis suggests that for post-stroke upper-limb recovery, robot-assisted training (RAT) augmented with neurostimulation or other technologies may be superior to RAT alone. When planning advanced rehabilitation programs, consider the potential benefits of these combined interventions.",
+      "tags": [
+        "research",
+        "stroke",
+        "technology"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Archives of Physical Medicine and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1793722834155-1",
+      "title": "Effects of Medium-frequency Electrical Stimulation Combined with Near-Infrared Light on Quadriceps Function and Independent Walking in Patients with Spinal Cord Injury.",
+      "summary": "A two-phase study (Phase I: 36 SCI patients, 15 controls; Phase II: 18 SCI patients) explored combined medium-frequency electrical stimulation and near-infrared therapy, suggesting potential improvements in quadriceps activation, femoral artery blood-flow velocity, and walking ability in SCI patients, though findings are preliminary.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42973390/",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "firstSeen": "2026-11-03T16:20:34.155Z",
+      "curatedScore": 70,
+      "curatedReason": "初步证据提示中频电刺激结合近红外光可能改善脊髓损伤患者的股四头肌激活、股动脉血流速度和步行能力。但该研究样本量小（18 例 SCI 患者）、非随机、无对照组随机化，别急着引入常规方案，需等待更大规模的 RCT 验证。",
+      "titleZh": "中频电刺激联合近红外光对脊髓损伤患者股四头肌功能和独立行走能力的影响",
+      "summaryZh": "一项两阶段研究（I 期：36 例脊髓损伤患者与 15 例健康对照；II 期：18 例脊髓损伤患者）初步探索了中频电刺激联合近红外疗法，提示其可能改善脊髓损伤患者的股四头肌激活、股动脉血流速度和步行能力。",
+      "curatedReasonEn": "Preliminary evidence suggests that medium-frequency electrical stimulation combined with near-infrared light may improve quadriceps activation, femoral artery blood-flow velocity, and walking ability in patients with spinal cord injury. However, the study involved a small sample size (18 SCI patients), was nonrandomized, and lacked randomized control, so avoid premature integration into routine protocols and await confirmation from larger RCTs.",
+      "limitation": "研究样本量小，为非随机对照设计，结果仍需大规模随机对照研究确认。",
+      "limitationEn": "The study has a small sample size and a nonrandomized controlled design; results require confirmation from larger randomized studies.",
+      "tags": [
+        "research",
+        "spinal-cord",
+        "electro",
+        "laser"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "American journal of physical medicine & rehabilitation"
+    },
+    {
+      "id": "news-1793722834156-2",
+      "title": "Development of a Single-Camera Markerless Motion Capture System for Assessing Upper Limb Function Post-Stroke (FULMA).",
+      "summary": "The Functional Upper Limb Movement Assessment (FULMA) system, a single-camera markerless motion capture tool, achieved 83.3% mean accuracy in predicting ordinal task performance scores for upper limb function post-stroke, showing preliminary agreement with therapist ratings in 39 stroke participants and 19 healthy controls.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42973162/",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "firstSeen": "2026-11-03T16:20:34.156Z",
+      "curatedScore": 70,
+      "curatedReason": "这款单摄像头、无标记运动捕捉系统（FULMA）在卒中后上肢功能评估上，初步显示出与职能治疗师评级一致性高。虽然仍处于开发阶段，但它为客观量化卒中康复的精细运动变化提供了潜力，可作为未来技术在临床实践中的风向标。",
+      "titleZh": "用于评估卒中后上肢功能的单摄像头无标记运动捕捉系统（FULMA）的开发",
+      "summaryZh": "功能性上肢运动评估系统（FULMA）是一款单摄像头无标记运动捕捉工具，在 39 名卒中患者和 19 名健康对照者中，预测上肢功能任务表现评分的平均准确度达到 83.3%，初步显示与治疗师评分的一致性。",
+      "curatedReasonEn": "This single-camera markerless motion capture system (FULMA) shows promising preliminary agreement with occupational therapist ratings for post-stroke upper limb function assessment. While still in development, it offers potential for objectively quantifying subtle motor changes in stroke rehabilitation, serving as a bellwether for future technological integration into clinical practice.",
+      "limitation": "这是一项早期开发研究，需要在更广阔的临床环境中进行外部验证和测量属性评估。",
+      "limitationEn": "This was an early development study and requires external validation and evaluation of measurement properties in broader clinical settings.",
+      "tags": [
+        "research",
+        "stroke",
+        "technology"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair"
+    },
     {
       "id": "news-1793177001337-0",
       "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
@@ -2020,75 +2104,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "American journal of physical medicine & rehabilitation"
-    },
-    {
-      "id": "news-1793279964354-4",
-      "title": "Cardiorespiratory training after stroke or transient ischemic attack in the United Kingdom: A national survey.",
-      "summary": "A national survey (n=253) of UK physiotherapists and exercise professionals found varying provision of cardiorespiratory training after stroke or TIA, with people with greater disability potentially less likely to receive it. Key concerns included serious adverse events, fatigue, falls, and barriers such as commissioning, resources, skills, and lack of guidelines.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950437/",
-      "publishedAt": "2026-10-28T00:00:00.000Z",
-      "firstSeen": "2026-10-29T13:19:24.354Z",
-      "curatedScore": 70,
-      "curatedReason": "这项英国全国调查揭示了卒中和短暂性脑缺血发作（TIA）后心肺训练的现状、风险认知和实施障碍。它突出显示了服务提供不均（残疾程度较高者可能更难获得训练）、对风险因素认知不一以及指南缺乏等问题。这提示你，在临床实践中推广和实施心肺训练仍面临挑战，需关注服务公平性和专业知识培训。",
-      "titleZh": "英国卒中或短暂性脑缺血发作后心肺训练的全国调查",
-      "summaryZh": "一项针对英国物理治疗师和运动专业人士的全国调查（n=253）发现，卒中或短暂性脑缺血发作后心肺训练的提供情况各异，残疾程度较高者可能更难获得训练。主要担忧包括严重不良事件、疲劳、跌倒，以及服务委托、资源、技能和指南缺乏等障碍。",
-      "curatedReasonEn": "This UK national survey reveals the current provision, risk perceptions, and barriers to cardiorespiratory training after stroke and TIA. It highlights disparities in service delivery (individuals with greater disability potentially less likely to receive training), inconsistent risk factor perceptions, and a lack of guidelines. This suggests that implementing and promoting cardiorespiratory training in clinical practice still faces challenges, requiring attention to service equity and professional knowledge training.",
-      "tags": [
-        "news",
-        "stroke"
-      ],
-      "journal": "Physiotherapy"
-    },
-    {
-      "id": "news-1793236104088-21",
-      "title": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
-      "summary": "A systematic review and meta-analysis of 15 RCTs found proprioceptive training associated with a 34% lower relative occurrence of ankle injury in athletes, with moderate certainty of evidence.",
-      "category": "sports",
-      "source": "BMC Musculoskelet Disord",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10677-4",
-      "publishedAt": "2026-10-28T00:00:00.000Z",
-      "firstSeen": "2026-10-29T01:08:24.088Z",
-      "curatedScore": 88,
-      "curatedReason": "这项更新的系统综述和荟萃分析提供了强有力证据，表明本体感觉训练可将运动员踝关节损伤的相对发生率降低约34%。鉴于中等强度的证据确定性，您应将其整合到全面的损伤预防策略中，但最佳训练特征仍需进一步研究。",
-      "titleZh": "本体感觉训练对运动员踝关节扭伤预防的有效性：一项系统评价与Meta分析",
-      "titleEn": "The effectiveness of proprioceptive training for the prevention of ankle sprains in athletes: a systematic review and meta-analysis",
-      "summaryZh": "一项对15项随机对照试验的系统评价与Meta分析发现，本体感觉训练与运动员踝关节损伤发生率降低34%相关，证据确定性为中等。",
-      "curatedReasonEn": "This systematic review and meta-analysis provides strong evidence that proprioceptive training reduces the relative occurrence of ankle injury in athletes by approximately 34%. Given the moderate certainty of evidence, you should integrate this into comprehensive injury prevention strategies, though optimal training characteristics warrant further investigation.",
-      "limitation": "最佳训练特征以及预防效果在不同运动、比赛水平和运动员群体中的普适性，需要进一步研究。",
-      "limitationEn": "Optimal training characteristics and generalizability of the preventive effect across different sports, competition levels, and athlete populations require further investigation.",
-      "tags": [
-        "research",
-        "sports"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Musculoskeletal Disorders"
-    },
-    {
-      "id": "news-1793236104088-19",
-      "title": "A pragmatic, decentralized trial of the home-based, autonomous InTandem® neurorehabilitation system: analyses of engagement, safety, and effectiveness from the OrcHESTRAS trial",
-      "summary": "A decentralized trial of the InTandem® home-based neurorehabilitation system showed high engagement (81.9%) and significant improvements in 6MWT distance and TUG time in chronic stroke survivors.",
-      "category": "neurological",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02164-7",
-      "publishedAt": "2026-10-26T00:00:00.000Z",
-      "firstSeen": "2026-10-29T01:08:24.088Z",
-      "curatedScore": 82,
-      "curatedReason": "InTandem® 这种自主型居家神经康复系统在慢性卒中幸存者中展现了81.9%的高依从性，并显著改善了6MWT距离和TUG时间。这种可扩展的去中心化方法，为神经康复提供了很有前景的新途径。",
-      "titleZh": "基于家庭的自主InTandem®神经康复系统的一项实用型、去中心化试验：OrcHESTRAS试验中的参与度、安全性和有效性分析",
-      "titleEn": "A pragmatic, decentralized trial of the home-based, autonomous InTandem® neurorehabilitation system: analyses of engagement, safety, and effectiveness from the OrcHESTRAS trial",
-      "summaryZh": "一项关于InTandem®居家神经康复系统的实用型试验显示，该系统在慢性卒中幸存者中实现了高参与度（81.9%），并显著改善了6分钟步行试验距离和计时起立行走试验时间。",
-      "curatedReasonEn": "The autonomous, home-based InTandem® neurorehabilitation system achieved high engagement (81.9%) and significantly improved 6MWT distance and TUG time in chronic stroke survivors. This scalable, decentralized approach offers a promising new avenue for neurorehabilitation.",
-      "limitation": "本研究侧重于12周内的参与度、安全性和有效性，进一步的长期结局数据将更有益。",
-      "limitationEn": "The study focused on engagement, safety, and effectiveness over 12 weeks, and further long-term outcome data would be beneficial.",
-      "tags": [
-        "research",
-        "neurological",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of NeuroEngineering and Rehabilitation"
     }
   ]
 }
