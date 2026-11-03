@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-03T03:02:01.529Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Comparative study of therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching on knee joint range of motion and functional ability in children with hemiplegic cerebral palsy: a randomized trial",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10589-3"
+    },
+    {
+      "slide": 2,
+      "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42968360/"
+    },
+    {
+      "slide": 3,
+      "title": "A Retrospective Real-World Assessment of Motor Status After Stroke Using a Home-Based Brain-Computer Interface",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.30.26366945v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Effectiveness of Plyometric Exercises Versus Flatfoot Corrective Exercises on Balance and Foot Posture in Obese Children with a Flexible Flatfoot: A Comparative Study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.31.26361899v1?rss=1"
+    },
+    {
+      "slide": 5,
+      "title": "From Signal to Biological Meaning: A Systematic Review of Construct-Validity Evidence for External Training Load Metrics in Sport",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01133-7"
+    }
+  ]
+}
