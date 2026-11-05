@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-04T19:54:07.639Z",
+    "lastUpdated": "2026-11-05T00:56:42.837Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,10 +20,9 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42945760/",
       "category": "orthopedic",
       "publishedAt": "2026-11-04T00:00:00.000Z",
-      "sourceCount": 8,
+      "sourceCount": 7,
       "sources": [
         "Physiotherapy",
-        "International Urogynecology Journal",
         "BMC Geriatrics",
         "Archives of Physical Medicine and Rehabilitation",
         "Clinical biomechanics (Bristol, Avon)",
@@ -39,12 +38,6 @@
           "journal": "Physiotherapy",
           "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
           "titleZh": "围绝经期女性参与物理治疗以缓解相关副作用的障碍和促进因素是什么？"
-        },
-        {
-          "source": "Int Urogynecol J",
-          "journal": "International Urogynecology Journal",
-          "title": "Patient Voices in a Digital Space: Thematic Analysis of YouTube Comments on Pelvic Floor Content",
-          "titleZh": "数字空间中的患者声音：YouTube 盆底内容评论的主题分析"
         },
         {
           "source": "BMC Geriatrics",
@@ -88,8 +81,9 @@
           "titleZh": "加权坐姿核心练习对健康年轻成人即时姿势稳定性的影响：一项探索性研究"
         }
       ],
-      "heat": 6,
-      "themeEn": "Patient education, exercise, digital impact on PT adherence"
+      "heat": 4.88,
+      "themeZh": "疼痛与慢性病患者康复依从性及影响因素",
+      "themeEn": "Rehabilitation adherence and factors in chronic pain"
     },
     {
       "id": "news-1793794659746-3",
@@ -97,18 +91,16 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42977063/",
       "category": "neurological",
       "publishedAt": "2026-11-03T00:00:00.000Z",
-      "sourceCount": 10,
+      "sourceCount": 8,
       "sources": [
         "Archives of physical medicine and rehabilitation",
-        "NeuroRehabilitation",
         "medRxiv",
         "Archives of Physical Medicine and Rehabilitation",
         "Neurorehabilitation and neural repair",
+        "NeuroRehabilitation",
         "Physiotherapy",
-        "Journal of Rehabilitation Medicine",
-        "Disability and rehabilitation",
-        "Physiotherapy theory and practice",
-        "Topics in stroke rehabilitation"
+        "Clinical rehabilitation",
+        "Physiotherapy theory and practice"
       ],
       "tag": "stroke",
       "kind": "theme",
@@ -118,12 +110,6 @@
           "journal": "Archives of physical medicine and rehabilitation",
           "title": "Comparative Effects of Neurostimulation- and Technology-Augmented Robot-Assisted Training on Upper-Limb Motor Recovery After Stroke: A Systematic Review and Network Meta-Analysis.",
           "titleZh": "卒中后上肢运动康复中神经刺激和技术增强机器人辅助训练的比较效果：一项系统综述和网络荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
-          "titleZh": "使用混合技术实现的上肢神经康复方法：一项范围综述"
         },
         {
           "source": "medRxiv",
@@ -160,33 +146,21 @@
           "titleZh": "机器人辅助步态训练在国家医疗服务系统急性神经康复中的应用：物理治疗师实施前的看法"
         },
         {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Impact of age and frailty on the effect of a multimodal individualized long-term intervention after stroke: the last-long trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-          "titleZh": "年龄和衰弱对卒中后多模式个体化长期干预效果的影响：LAST-long 试验"
-        },
-        {
           "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
-          "titleZh": "确定神经康复中心理社会干预的关键组成部分：一项针对获得性脑损伤年轻成人的真实主义评估"
+          "journal": "Clinical rehabilitation",
+          "title": "An economic evaluation alongside a randomised controlled trial of Scanning Eye trAining as a Rehabilitation Choice compared to sham training for Hemianopia after stroke (the SEARCH trial).",
+          "titleZh": "扫描眼部训练作为卒中后偏盲康复选择的随机对照试验的经济学评估（SEARCH 试验）"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Neurological and functional recovery despite persistent skull defect after decompressive hemicraniectomy: a case report.",
           "titleZh": "减压半颅骨切除术后颅骨缺损持续存在下的神经和功能恢复：一例病例报告。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
-          "titleZh": "中风后睡眠期间运动记忆巩固：康复时机假说"
         }
       ],
-      "heat": 5.3,
-      "themeZh": "上肢卒中康复的机器人与技术辅助评估及训练",
-      "themeEn": "Robotic & tech-assisted upper limb stroke rehab"
+      "heat": 3.95,
+      "themeZh": "卒中后上肢功能恢复的机器人与技术评估干预",
+      "themeEn": "Stroke upper-limb robot-assisted assessment and training"
     },
     {
       "id": "news-1793674829856-29",
@@ -235,28 +209,96 @@
           "titleZh": "实时反馈运动疗法对全髋关节置换术患者的疗效：一项试点集群随机对照试验"
         }
       ],
-      "heat": 3.75,
-      "themeZh": "骨科康复中治疗性超声、运动与实时反馈的应用",
-      "themeEn": "Therapeutic ultrasound, exercise, real-time feedback in ortho rehab"
+      "heat": 3.49,
+      "themeZh": "儿童与成人骨关节功能障碍康复运动疗法对比",
+      "themeEn": "Comparative exercise therapy for orthopedic dysfunction"
     },
     {
-      "id": "news-1793742698701-3",
-      "title": "Altered Cognitive Control and Cortical Oscillatory Dynamics in Athletes With ACL Reconstruction During Decision-Making Under Uncertainty.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42975142/",
-      "category": "sports",
+      "id": "news-1793822045338-1",
+      "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42979678/",
+      "category": "neurological",
+      "publishedAt": "2026-11-04T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Disability and rehabilitation",
+        "American journal of physical medicine & rehabilitation",
+        "medRxiv",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Physiotherapy theory and practice"
+      ],
+      "tag": "vestibular",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
+          "titleZh": "低剂量颈椎旁利多卡因注射液对颈源性头晕相关结局的影响：一项随机、假对照、评估者盲法试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effects of Medium-frequency Electrical Stimulation Combined with Near-Infrared Light on Quadriceps Function and Independent Walking in Patients with Spinal Cord Injury.",
+          "titleZh": "中频电刺激联合近红外光对脊髓损伤患者股四头肌功能和独立行走能力的影响"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Remote Ischemic Conditioning Modulates Spinal Reflex Excitability in Healthy Young Adults: A Pilot Randomized Controlled Trial",
+          "titleZh": "远程缺血预处理调节健康年轻成人脊髓反射兴奋性的初步随机对照试验"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Acute neuromuscular and postural control responses to balance exercise with blood flow restriction in sedentary adults: a randomized controlled trial",
+          "titleZh": "久坐成年人平衡运动结合血流限制对急性神经肌肉和姿势控制反应的影响：一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
+          "titleZh": "多发性硬化症患者平衡强度临床方法：临床判断与平衡强度运动工具的比较 — 一项评估者间一致性和可靠性研究"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Therapeutic acute intermittent hypoxia alters supraspinal neural control of lower limb movement in multiple sclerosis",
+          "titleZh": "急性间歇性低氧疗法改变多发性硬化症患者下肢运动的超脊髓神经控制"
+        }
+      ],
+      "heat": 3.49,
+      "themeZh": "神经肌肉电刺激与感觉运动疗法对平衡控制影响",
+      "themeEn": "Neuromuscular stimulation and sensorimotor balance therapy"
+    },
+    {
+      "id": "news-1793365861885-0",
+      "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42958196/",
+      "category": "orthopedic",
       "publishedAt": "2026-11-03T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
+        "BMC musculoskeletal disorders",
+        "Clinical biomechanics (Bristol, Avon)",
         "The American journal of sports medicine",
         "International journal of sports physical therapy",
-        "Clinical biomechanics (Bristol, Avon)",
         "Sports Medicine - Open",
-        "Measurement in Physical Education and Exercise Science",
-        "BMC Sports Science, Medicine and Rehabilitation"
+        "Measurement in Physical Education and Exercise Science"
       ],
-      "tag": "acl",
+      "tag": "knee",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+          "titleZh": "全膝关节置换术后运动恐惧症的运动康复干预：一项随机对照试验的系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
+          "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关"
+        },
         {
           "source": "PubMed",
           "journal": "The American journal of sports medicine",
@@ -268,12 +310,6 @@
           "journal": "International journal of sports physical therapy",
           "title": "Neurocognitive Factors in ACL Injury: The Missing Piece in Rehabilitation and Prevention? A Scoping Review.",
           "titleZh": "ACL 损伤中的神经认知因素：康复与预防中缺失的一环？一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
-          "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关"
         },
         {
           "source": "PubMed",
@@ -292,71 +328,203 @@
           "journal": "Measurement in Physical Education and Exercise Science",
           "title": "Effect of Data Processing Strategy on Maximal Oxygen Uptake and Plateau Identification in Collegiate Tennis Athletes",
           "titleZh": "数据处理策略对大学网球运动员最大摄氧量和平台期识别的影响"
-        },
-        {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
-          "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究"
         }
       ],
-      "heat": 3.18,
-      "themeZh": "运动训练中 ACL 重建的神经认知与生物力学",
-      "themeEn": "Neurocognition and biomechanics in sport ACL rehab"
-    },
-    {
-      "id": "news-1793794659746-4",
-      "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42976662/",
-      "category": "cardiopulmonary",
-      "publishedAt": "2026-11-04T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Physiotherapy",
-        "Brazilian journal of physical therapy",
-        "Archives of Physical Medicine and Rehabilitation",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-      ],
-      "tag": "COPD",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
-          "titleZh": "椅旁运动训练对COPD急性加重患者肺功能、运动能力和生活质量的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Efficacy of whole-body vibration training in the management of patients with COPD: a systematic review and meta-analysis.",
-          "titleZh": "全身振动训练在慢性阻塞性肺疾病患者管理中的疗效：一项系统综述和Meta分析"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Effects of Functional Inspiratory Muscle Training in Individuals with Obesity: A Randomized Controlled Trial",
-          "titleZh": "功能性吸气肌训练对肥胖个体的影响：一项随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Brazilian journal of physical therapy",
-          "title": "Validation and prognostic value of the five-repetition sit-to-stand test in patients with severe exacerbation of COPD.",
-          "titleZh": "五次坐站试验在慢性阻塞性肺疾病急性加重期患者中的验证和预后价值"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Dizziness, Lower Limb Weakness, and Falls in COPD: A Prospective Longitudinal Pilot Study Using Monthly Home Diaries.",
-          "titleZh": "慢性阻塞性肺疾病患者的眩晕、下肢无力和跌倒：一项使用月度居家日记的前瞻性纵向试点研究"
-        }
-      ],
-      "heat": 3,
-      "themeZh": "COPD 患者运动训练、振动疗法与功能评估",
-      "themeEn": "Exercise, vibration, and functional assessment for COPD"
+      "heat": 2.96,
+      "themeZh": "运动损伤康复中认知、心理与外部负荷的评估",
+      "themeEn": "Cognitive and psychological factors in sports rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1793365861885-0",
+      "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+      "summary": "Exercise-based rehabilitation significantly reduced kinesiophobia (SMD = -1.22, 95% CI [-1.72, -0.72]) and improved knee function (SMD = 1.19, 95% CI [0.67, 1.71]) in 1,096 patients after total knee arthroplasty, although certainty of evidence was low and heterogeneity was high.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42958196/",
+      "publishedAt": "2026-10-30T00:00:00.000Z",
+      "firstSeen": "2026-10-30T13:11:01.885Z",
+      "curatedScore": 85,
+      "curatedReason": "这份系统综述和荟萃分析表明，在全膝关节置换术后，基于运动的康复能显著降低运动恐惧症（SMD = -1.22）并改善膝关节功能（SMD = 1.19）。这些结果强化了运动在术后康复中的核心作用，你应该在临床路径中优先考虑它。",
+      "titleZh": "全膝关节置换术后运动恐惧症的运动康复干预：一项随机对照试验的系统综述和荟萃分析",
+      "summaryZh": "一项纳入 1,096 名患者的系统综述和荟萃分析发现，在全膝关节置换术后，基于运动的康复能显著降低运动恐惧症（SMD = -1.22，95% CI [-1.72, -0.72]）并改善膝关节功能（SMD = 1.19，95% CI [0.67, 1.71]），但证据确定性低且异质性高。",
+      "curatedReasonEn": "This systematic review and meta-analysis indicates that exercise-based rehabilitation significantly reduces kinesiophobia (SMD = -1.22) and improves knee function (SMD = 1.19) after total knee arthroplasty. These findings reinforce the central role of exercise in postoperative rehab and should be prioritized in your clinical pathways.",
+      "limitation": "证据确定性低，且存在显著的异质性，结果稳定性受限。",
+      "limitationEn": "Low certainty of evidence and substantial heterogeneity limit the robustness of the findings.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1793840200728-33",
+      "title": "CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste",
+      "summary": "CMS finalized its CY 2027 Physician Fee Schedule, aiming to shift from sick care to healthcare and curb waste. This final rule will impact reimbursement policies for healthcare providers in the US.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-finalizes-cy-2027-physician-fee-schedule-shift-sick-care-healthcare-curb-waste",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "firstSeen": "2026-11-05T00:56:40.728Z",
+      "curatedScore": 79,
+      "curatedReason": "CMS 发布了 2027 财年医师收费标准最终规则，其目标是改变“疾病治疗”向“健康护理”的模式转变并遏制浪费。你应密切关注这份最终规则的具体条款，因为它将直接影响你在美国市场的报销策略和执业范围。",
+      "titleZh": "了解 CMS 最终确定 2027 财年医师收费标准，从疾病治疗转向健康护理并遏制浪费",
+      "summaryZh": "CMS 最终确定了 2027 财年医师收费标准，旨在将医疗服务从“疾病治疗”转向“健康护理”并遏制浪费，这将影响美国医疗服务提供者的报销政策。",
+      "curatedReasonEn": "CMS has released its Calendar Year 2027 Physician Fee Schedule final rule, aiming to shift from 'sick care' to 'healthcare' and curb waste. You should closely review the specific provisions of this final rule, as it will directly impact your reimbursement strategies and scope of practice in the US market.",
+      "tags": [
+        "news",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1793840200729-34",
+      "title": "Calendar Year (CY) 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F) — Medicare Shared Savings Program",
+      "summary": "CMS released the Calendar Year (CY) 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F), which includes details on the Medicare Shared Savings Program (MSSP).",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule-cms-1848-f-medicare-shared-savings",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "firstSeen": "2026-11-05T00:56:40.729Z",
+      "curatedScore": 79,
+      "curatedReason": "CMS 发布了 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F），其中包含 Medicare 共享储蓄计划（MSSP）相关内容。此规则对 MSSP 的具体调整将影响参与该计划的诊所和医院的报销结构，务必仔细研究其细节。",
+      "titleZh": "了解 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F）——Medicare 共享储蓄计划",
+      "summaryZh": "CMS 发布了 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F），其中包含了 Medicare 共享储蓄计划（MSSP）的详细信息。",
+      "curatedReasonEn": "CMS has released the Calendar Year 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F), which includes provisions related to the Medicare Shared Savings Program (MSSP). The specific adjustments to MSSP will affect the reimbursement structure for clinics and hospitals participating in the program, so you must review the details carefully.",
+      "tags": [
+        "news",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1793365861886-3",
+      "title": "Factors associated with Severe Balance Impairment After Right-Hemisphere Stroke: The Role of Spatial Neglect and Lateropulsion: A Secondary Analysis of Multicenter Cross-Sectional Study POSTIM.",
+      "summary": "In 82 right-hemisphere stroke patients with recovered unsupported standing but marked weight-bearing asymmetry, 74% had severe balance impairment (BBS <45/56). Spatial neglect (OR 11.15), lateropulsion (OR 3.54), and lower-limb motor deficit (OR 0.91) were independently associated with severe balance impairment.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42957620/",
+      "publishedAt": "2026-10-30T00:00:00.000Z",
+      "firstSeen": "2026-10-30T13:11:01.886Z",
+      "curatedScore": 75,
+      "curatedReason": "右半球卒中后，即使患者能独立站立，严重的平衡障碍仍与空间忽视和偏侧推挤独立相关。这意味着在康复评估和干预中，你需要优先识别和解决这些高危因素，以降低跌倒风险。",
+      "titleZh": "右半球卒中后严重平衡障碍的相关因素：空间忽视和偏侧推挤的作用：多中心横断面研究 POSTIM 的二次分析",
+      "summaryZh": "对 82 名右半球卒中患者的分析显示，在恢复无辅助站立但负重不对称显著的患者中，74% 有严重平衡障碍（BBS <45/56）。空间忽视（OR 11.15）、偏侧推挤（OR 3.54）和下肢运动缺陷（OR 0.91）与严重平衡障碍独立相关。",
+      "curatedReasonEn": "In patients after right-hemisphere stroke, even with recovered unsupported standing, severe balance impairment is independently associated with spatial neglect and lateropulsion. This implies you should prioritize identifying and addressing these high-risk factors in rehabilitation assessment and intervention to reduce fall risk.",
+      "limitation": "本横断面研究设计无法确立因果关系。",
+      "limitationEn": "The cross-sectional study design precludes causal inference.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1792590968345-1",
+      "title": "Early postoperative functional exercise adherence and its association with 3-month hip functional recovery among older adults after femoral neck fracture surgery: a prospective observational study.",
+      "summary": "A prospective observational study of 230 older adults after femoral neck fracture surgery found that higher pre-discharge functional exercise adherence was positively associated with 3-month Harris Hip Score (B = 0.842, p < 0.001) and correlated with kinesiophobia, rehabilitation self-efficacy, and social support.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42902229/",
+      "publishedAt": "2026-10-21T00:00:00.000Z",
+      "firstSeen": "2026-10-21T13:56:08.345Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究强调了老年髋部骨折术后早期功能锻炼依从性的重要性：依从性越高，3 个月时的髋部功能恢复越好。作为临床医生，你应重视心理（运动恐惧症、自我效能）和照护连续性（康复指导、出院计划）等可干预因素，以提升患者依从性。",
+      "titleZh": "老年股骨颈骨折术后早期功能锻炼依从性及其与 3 个月髋关节功能恢复的关联：一项前瞻性观察研究",
+      "summaryZh": "一项对 230 名老年股骨颈骨折术后患者的前瞻性观察研究发现，出院前早期功能锻炼依从性越高，3 个月时的 Harris 髋关节评分越好（B = 0.842，p < 0.001），且与运动恐惧症、康复自我效能和社会支持相关。",
+      "curatedReasonEn": "This study highlights the importance of early functional exercise adherence post-hip fracture surgery in older adults: higher adherence is associated with better 3-month hip function. As a clinician, you should focus on modifiable factors like psychological aspects (kinesiophobia, self-efficacy) and continuity of care (rehabilitation guidance, discharge plans) to improve patient adherence.",
+      "limitation": "观察性研究设计无法建立因果关系。",
+      "limitationEn": "The observational study design does not establish causality.",
+      "tags": [
+        "research",
+        "hip"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1793840200729-35",
+      "title": "Medicare Outpatient Final Rule Expands Surgical Options, Lowers Out-of-Pocket Costs for 340B Drugs",
+      "summary": "Medicare Outpatient Final Rule expands surgical options and lowers out-of-pocket costs for 340B drugs, affecting patient co-pays and healthcare access.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/press-releases/medicare-outpatient-final-rule-expands-surgical-options-lowers-out-pocket-costs-340b-drugs",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "firstSeen": "2026-11-05T00:56:40.729Z",
+      "curatedScore": 75,
+      "curatedReason": "Medicare 门诊最终规则拓宽了手术选择并降低了 340B 药物的自付费用。虽然这主要影响外科和药房，但你的患者可能会因此受益于更低的共付额，你需要了解这些变化对转诊和患者财务负担的影响。",
+      "titleZh": "了解 Medicare 门诊最终规则扩展手术选择，降低 340B 药物自付费用",
+      "summaryZh": "Medicare 门诊最终规则拓宽了手术选择并降低了 340B 药物的自付费用，这将影响患者的自付额和医疗可及性。",
+      "curatedReasonEn": "The Medicare Outpatient Final Rule expands surgical options and lowers out-of-pocket costs for 340B drugs. While primarily impacting surgery and pharmacy, your patients may benefit from lower co-pays, and you need to understand the implications of these changes on referrals and patient financial burden.",
+      "tags": [
+        "news",
+        "reimbursement"
+      ]
+    },
+    {
+      "id": "news-1793840200729-36",
+      "title": "Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F)",
+      "summary": "CMS published the Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F), impacting payment rates and policies for outpatient services.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2027-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center-0",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "firstSeen": "2026-11-05T00:56:40.729Z",
+      "curatedScore": 75,
+      "curatedReason": "CMS 发布了 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F）。这些支付系统的更新将直接影响医院门诊和 ASC 的 PT 服务报销，你需要熟悉新规则以确保合规和最大化收入。",
+      "titleZh": "了解 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F）",
+      "summaryZh": "CMS 发布了 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F），这将影响门诊服务的支付费率和政策。",
+      "curatedReasonEn": "CMS released the Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F). Updates to these payment systems will directly impact PT service reimbursements in hospital outpatient and ASC settings, requiring you to familiarize yourself with the new rules for compliance and revenue maximization.",
+      "tags": [
+        "news",
+        "reimbursement"
+      ]
+    },
+    {
+      "id": "news-1793840200729-37",
+      "title": "Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule - CMS-1844-F",
+      "summary": "CMS published the Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule (CMS-1844-F), which will affect reimbursement and policy for home health services.",
+      "category": "practice",
+      "source": "CMS",
+      "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-home-health-prospective-payment-system-final-rule-cms-1844-f",
+      "publishedAt": "2026-11-04T12:00:00.000Z",
+      "firstSeen": "2026-11-05T00:56:40.729Z",
+      "curatedScore": 75,
+      "curatedReason": "CMS 发布了 2027 财年家庭健康前瞻性支付系统最终规则（CMS-1844-F）。这项规则将影响家庭健康服务提供者的报销标准和政策，对家庭康复服务的可持续性至关重要，你应关注具体调整。",
+      "titleZh": "了解 2027 财年家庭健康前瞻性支付系统最终规则 - CMS-1844-F",
+      "summaryZh": "CMS 发布了 2027 财年家庭健康前瞻性支付系统最终规则（CMS-1844-F），这将影响家庭健康服务的报销和政策。",
+      "curatedReasonEn": "CMS released the Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule (CMS-1844-F). This rule will impact reimbursement standards and policies for home health service providers, which is crucial for the sustainability of home rehabilitation services. You should pay attention to the specific adjustments.",
+      "tags": [
+        "news",
+        "reimbursement"
+      ]
+    },
+    {
+      "id": "news-1793388557464-3",
+      "title": "An economic evaluation alongside a randomised controlled trial of Scanning Eye trAining as a Rehabilitation Choice compared to sham training for Hemianopia after stroke (the SEARCH trial).",
+      "summary": "A randomized controlled trial found that visual scanning training for post-stroke hemianopia had similar costs to sham training, with a marginal but non-significant QALY gain of 0.001 (95%CI: -0.018, 0.021) and an Incremental Cost-Effectiveness Ratio of £19,790/QALY.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961104/",
+      "publishedAt": "2026-10-30T00:00:00.000Z",
+      "firstSeen": "2026-10-30T19:29:17.464Z",
+      "curatedScore": 70,
+      "curatedReason": "卒中后偏盲的视觉扫描训练，相较于假训练，显示出边际但非显著的 QALY 获益，并且成本效益比略低于 NICE 阈值。虽然本研究提示了其潜力，但在成本敏感的临床环境中，你应谨慎评估其经济效益，并结合患者具体情况权衡。",
+      "titleZh": "扫描眼部训练作为卒中后偏盲康复选择的随机对照试验的经济学评估（SEARCH 试验）",
+      "summaryZh": "一项随机对照试验显示，卒中后偏盲的视觉扫描训练与假训练成本相似，且带来边际但非显著的 QALY 获益（0.001，95%CI: -0.018, 0.021），增量成本效益比为 £19,790/QALY。",
+      "curatedReasonEn": "Visual scanning training for post-stroke hemianopia showed a marginal but non-significant QALY gain compared to sham training, with cost-effectiveness slightly below the NICE threshold. While this study suggests potential, you should cautiously evaluate its economic benefits in cost-sensitive clinical settings and weigh it against individual patient needs.",
+      "limitation": "QALY 获益非显著，且经济评估的样本量相对较小。",
+      "limitationEn": "The QALY gain was non-significant, and the economic evaluation had a relatively small sample size.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Clinical rehabilitation"
+    },
     {
       "id": "news-1793822045338-1",
       "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
@@ -1900,212 +2068,6 @@
         "ethics",
         "workforce"
       ]
-    },
-    {
-      "id": "news-1793061569237-24",
-      "title": "Impact of age and frailty on the effect of a multimodal individualized long-term intervention after stroke: the last-long trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
-      "summary": "A single-blinded RCT (n=301) found that a stroke coordinator-led, community-based intervention showed no overall functional benefit, but age modified the effect. Participants ≥80 years old were less likely to have a favorable mRS outcome (23.4% vs 57.0%, p=0.004) with intervention, while younger participants showed improved Trail Making Test B scores (-32.2 s, 95% CI -58.0 to -6.4, p=0.015).",
-      "category": "neurological",
-      "source": "J Rehabil Med",
-      "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46250",
-      "publishedAt": "2026-10-26T00:00:00.000Z",
-      "firstSeen": "2026-10-27T00:39:29.237Z",
-      "curatedScore": 75,
-      "curatedReason": "这项 RCT 表明，卒中后的长期多模式干预对不同年龄组有差异效应。80 岁以上患者可能不会从干预中获得整体功能改善，甚至有更差结果的倾向，而年轻患者在认知方面可能受益。你在为卒中患者制定长期康复计划时，应根据患者年龄调整干预策略，尤其对老年患者要重新评估方案的适用性。",
-      "titleZh": "年龄和衰弱对卒中后多模式个体化长期干预效果的影响：LAST-long 试验",
-      "summaryZh": "一项单盲随机对照试验（n=301）发现，一项由卒中协调员主导的社区干预措施没有显示出总体功能益处，但年龄改变了其效果。80 岁及以上参与者在干预后获得良好改良 Rankin 量表（mRS）结果的可能性较低（23.4% vs 57.0%，p=0.004），而年轻参与者在径迹追踪测试 B 中得分有所改善（-32.2 秒，95% CI -58.0 至 -6.4，p=0.015）。",
-      "curatedReasonEn": "This RCT indicates differential effects of long-term multimodal intervention after stroke across age groups. Patients over 80 years old may not experience overall functional benefit from the intervention, and may even trend toward worse outcomes, while younger patients might benefit cognitively. When developing long-term rehabilitation plans for stroke patients, you should tailor intervention strategies based on age, especially re-evaluating the suitability of plans for older patients.",
-      "limitation": "本研究主要关注卒中轻度症状的参与者，结果对外推至更严重的卒中患者可能存在局限性。",
-      "limitationEn": "This study primarily focused on participants with mild stroke symptoms, limiting the generalizability of the findings to patients with more severe stroke.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "RCT",
-      "journal": "Journal of Rehabilitation Medicine"
-    },
-    {
-      "id": "news-1793408113694-29",
-      "title": "How Should Practices Manage Credit Card Processing Fees?",
-      "summary": "This article explains the complex rules for physical therapy practices regarding credit card processing fees, noting that Medicare prohibits passing these fees to beneficiaries. It details varying state laws (some strictly prohibit, others permit with limits) and credit card network rules (Visa and Mastercard permit with strict disclosure guidelines and notification requirements), advising practices to consult legal counsel.",
-      "category": "practice",
-      "source": "WebPT",
-      "sourceUrl": "https://www.webpt.com/blog/how-should-practices-manage-credit-card-processing-fees",
-      "publishedAt": "2026-10-27T00:00:00.000Z",
-      "firstSeen": "2026-10-31T00:55:13.694Z",
-      "curatedScore": 75,
-      "curatedReason": "这篇文章详细阐述了物理治疗诊所能否将信用卡手续费转嫁给患者的复杂规定，特别指出 Medicare 不允许此操作，且各州法律和信用卡网络规则差异巨大。在你的执业中，务必熟悉你所在州和地区关于附加费的具体法律，并在执行前咨询法律顾问，以避免违规。",
-      "titleZh": "诊所如何管理信用卡手续费？",
-      "summaryZh": "本文解释了物理治疗诊所关于信用卡手续费的复杂规定，指出 Medicare 禁止将这些费用转嫁给受益人。文章详细阐述了各州法律（有些严格禁止，有些允许但有限制）和信用卡网络规则（Visa 和 Mastercard 允许，但有严格的披露准则和通知要求）的差异，建议诊所咨询法律顾问。",
-      "curatedReasonEn": "This article details the complex regulations governing whether physical therapy clinics can pass credit card processing fees to patients, specifically noting that Medicare prohibits this and that state laws and credit card network rules vary widely. In your practice, you must be familiar with the specific laws regarding surcharges in your state and region, and consult legal counsel before implementation, to avoid non-compliance.",
-      "tags": [
-        "news",
-        "reimbursement",
-        "regulation"
-      ]
-    },
-    {
-      "id": "news-1793408113693-26",
-      "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
-      "summary": "A 23-week prospective cohort study (n=96) of Italian track-and-field athletes found that musculoskeletal pain was reported in 25.2% of athlete-weeks, but only 8.3% were athlete-labelled injuries. Two-thirds of pain-positive weeks (67.6%) were not labeled as injuries, highlighting that relying on self-reported injury significantly underestimates the symptom burden.",
-      "category": "sports",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02209-3",
-      "publishedAt": "2026-10-28T00:00:00.000Z",
-      "firstSeen": "2026-10-31T00:55:13.693Z",
-      "curatedScore": 70,
-      "curatedReason": "这项前瞻性队列研究强调，仅依赖运动员自报伤病会遗漏大部分疼痛问题。在你的运动康复实践中，应采用基于症状和后果的监测工具，如 OSTRC 问卷，以便更全面地识别和管理运动员的健康问题，而不仅仅是等待他们自报“伤病”。",
-      "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究",
-      "summaryZh": "一项针对意大利田径运动员的为期 23 周前瞻性队列研究（n=96）发现，25.2% 的运动员周报告有肌肉骨骼疼痛，但仅 8.3% 被运动员标记为伤病。三分之二的疼痛周（67.6%）未被标记为伤病，这表明仅依赖自报伤病会显著低估症状负担。",
-      "curatedReasonEn": "This prospective cohort study highlights that relying solely on athlete-reported injuries misses a significant portion of pain issues. In your sports rehabilitation practice, you should use symptom- and consequence-based monitoring tools, such as the OSTRC questionnaire, to more comprehensively identify and manage athletes' health problems, rather than just waiting for them to report an 'injury'.",
-      "limitation": "本研究为观察性队列研究，不能建立因果关系，且研究人群仅限于意大利田径运动员，结果可能不完全适用于其他运动项目或人群。",
-      "limitationEn": "This is an observational cohort study, which cannot establish causality. The study population is limited to Italian track-and-field athletes, so the results may not be fully generalizable to other sports or populations.",
-      "tags": [
-        "research",
-        "injury-prevention",
-        "athletic-performance"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1793408113694-27",
-      "title": "Validation study comparing a novel sham acupuncture technique with Park sham acupuncture: A randomized controlled trial",
-      "summary": "A randomized controlled trial (n=66) comparing a novel noninvasive sham acupuncture device with the Park sham device found no significant differences in perceived penetration sensation, pain, or deqi (p > 0.05). Both devices elicited minimal sensory responses (<1.0 on NRS), and the novel device was noninferior, supporting its use as a valid control in acupuncture trials.",
-      "category": "manual-modality",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42732822/?fc=None&ff=20261029053910&v=2.20.1",
-      "publishedAt": "2026-11-01T00:00:00.000Z",
-      "firstSeen": "2026-10-31T00:55:13.694Z",
-      "curatedScore": 70,
-      "curatedReason": "这项 RCT 验证了一种新型假针刺设备的有效性，其与市售 Park 假针刺设备表现出可比的假性刺激效应，且未报告不良事件。这为针刺临床试验提供了另一个可信的对照工具，有助于未来更严谨的针刺疗效研究。",
-      "titleZh": "新型假针刺技术与 Park 假针刺比较的验证研究：一项随机对照试验",
-      "summaryZh": "一项随机对照试验（n=66）比较了一种新型无创假针刺设备与 Park 假针刺设备，结果显示在感知穿透感、疼痛和得气方面无显著差异（p > 0.05）。两种设备均引起最小的感官反应（NRS <1.0），且新型设备具有非劣效性，支持其作为针刺试验的有效对照。",
-      "curatedReasonEn": "This RCT validated a novel sham acupuncture device, demonstrating comparable sham stimulation effects to the commercially available Park sham acupuncture device, with no reported adverse events. This provides another credible control tool for acupuncture clinical trials, facilitating more rigorous research into acupuncture efficacy in the future.",
-      "limitation": "本研究的受试者是健康成人，结果可能无法直接外推至实际的疼痛或疾病患者群体。",
-      "limitationEn": "The study participants were healthy adults, so the results may not be directly generalizable to actual pain or disease patient populations.",
-      "tags": [
-        "research",
-        "acupuncture",
-        "electro"
-      ],
-      "studyDesign": "RCT"
-    },
-    {
-      "id": "news-1793061569236-21",
-      "title": "Patient Voices in a Digital Space: Thematic Analysis of YouTube Comments on Pelvic Floor Content",
-      "summary": "A thematic analysis of 14.7K YouTube comments on pelvic floor physical therapy (PFPT) videos revealed three major themes: desire for community, healthcare experiences, and desire for knowledge. The platform serves as a vital resource for individuals with pelvic floor disorders, fostering community and empowerment.",
-      "category": "orthopedic",
-      "source": "Int Urogynecol J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06948-2",
-      "publishedAt": "2026-10-26T00:00:00.000Z",
-      "firstSeen": "2026-10-27T00:39:29.236Z",
-      "curatedScore": 65,
-      "curatedReason": "YouTube 上的盆底物理治疗（PFPT）内容是患者获取信息和建立社区的重要渠道，尤其对于受耻辱感影响且难以获得传统医疗服务的患者。你可以利用这一趋势，加强线上患者教育和支持，但要注意内容的专业性和准确性。",
-      "titleZh": "数字空间中的患者声音：YouTube 盆底内容评论的主题分析",
-      "summaryZh": "对 YouTube 盆底物理治疗（PFPT）视频的 1.47 万条评论进行主题分析，发现三大主题：社区渴望、医疗经验和知识渴望。该平台是盆底功能障碍患者的重要资源，促进了社区建设和赋权。",
-      "curatedReasonEn": "YouTube's pelvic floor physical therapy (PFPT) content serves as a vital resource for patients to access information and build community, especially for those affected by stigma and limited access to traditional healthcare. You can leverage this trend to enhance online patient education and support, but ensure the professionalism and accuracy of the content.",
-      "limitation": "本研究为回顾性定性分析，仅限于 YouTube 平台上的公开评论，可能无法全面反映所有患者的观点和体验。",
-      "limitationEn": "This study is a retrospective qualitative analysis limited to public comments on YouTube, which may not fully reflect the views and experiences of all patients.",
-      "tags": [
-        "research",
-        "pelvic-floor"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "International Urogynecology Journal"
-    },
-    {
-      "id": "news-1792156831220-0",
-      "title": "Trends in Australia's physiotherapy workforce: changes and future implications.",
-      "summary": "Between 2013 and 2023, Australia's physiotherapy workforce increased by 70.5% to 35,889, yet 81.0% practiced in metropolitan areas, with males less likely and Indigenous physiotherapists more likely to work in regional, rural, and remote areas.",
-      "category": "practice",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42885190/",
-      "publishedAt": "2026-10-16T00:00:00.000Z",
-      "firstSeen": "2026-10-16T13:20:31.220Z",
-      "curatedScore": 75,
-      "curatedReason": "澳大利亚物理治疗师劳动力分配不均问题依然突出，特别是城乡差距。报告提出的教育实践、激励和支持策略值得中国和美国PT行业思考，以解决偏远地区PT短缺问题。",
-      "titleZh": "澳大利亚物理治疗师劳动力趋势：变化与未来影响。",
-      "summaryZh": "2013年至2023年间，澳大利亚物理治疗师劳动力增长70.5%至35,889人，但81.0%仍在都市区执业，男性在城乡和偏远地区执业的可能性较低，而原住民物理治疗师则较高。",
-      "curatedReasonEn": "Workforce maldistribution among Australian physiotherapists, especially between urban and rural areas, remains prominent. The strategies proposed, focusing on education, incentives, and support, are worth considering by the PT industries in China and the US to address PT shortages in remote areas.",
-      "limitation": "研究基于回顾性数据集，无法建立因果关系。",
-      "limitationEn": "The study relies on retrospective datasets, which prevents establishing causal relationships.",
-      "tags": [
-        "news",
-        "workforce"
-      ],
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1793388557463-1",
-      "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
-      "summary": "A scoping review identified ten studies on hybrid technology-enabled upper limb neurorehabilitation for adult stroke patients in hospital settings, showing positive outcomes and feasibility for implementation.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961310/",
-      "publishedAt": "2026-10-30T00:00:00.000Z",
-      "firstSeen": "2026-10-30T19:29:17.463Z",
-      "curatedScore": 75,
-      "curatedReason": "本综述显示，针对中风患者的混合技术（如机器人、VR、传感器）上肢神经康复在医院环境中展现出积极效果和可行性。可作为你了解未来技术整合方向的参考。",
-      "titleZh": "使用混合技术实现的上肢神经康复方法：一项范围综述",
-      "summaryZh": "一项范围综述确定了针对住院成人中风患者使用混合技术（如机器人、虚拟现实和传感器疗法）进行上肢神经康复的十项研究，结果显示出积极的患者结局和临床实施的可行性。",
-      "curatedReasonEn": "This review indicates that hybrid technology (e.g., robotics, VR, sensor-based) for upper limb neurorehabilitation in stroke patients shows positive outcomes and feasibility in hospital settings. It serves as a reference for future technology integration trends.",
-      "limitation": "大多数研究为观察性或初步性质，侧重于临床可行性而非长期疗效。",
-      "limitationEn": "Most studies were observational or pilot in nature, focusing on clinical feasibility rather than long-term efficacy.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "NeuroRehabilitation",
-      "tech": true
-    },
-    {
-      "id": "news-1793388557464-2",
-      "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
-      "summary": "A realist evaluation identified three key program theories for psychosocial interventions in young adults with acquired brain injury: engaging the individual, empowering the community, and equipping professionals.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961285/",
-      "publishedAt": "2026-10-30T00:00:00.000Z",
-      "firstSeen": "2026-10-30T19:29:17.464Z",
-      "curatedScore": 75,
-      "curatedReason": "对于脑损伤年轻成人（含卒中）的心理社会干预，本研究提示有三大支柱：让个体参与、赋能社区、武装专业人员。如果你所在机构的康复方案效果不彰，不妨审视一下是否缺少这几个环节。",
-      "titleZh": "确定神经康复中心理社会干预的关键组成部分：一项针对获得性脑损伤年轻成人的真实主义评估",
-      "summaryZh": "一项真实主义评估确定了针对获得性脑损伤（包括中风）年轻成人进行心理社会干预的三个关键项目理论：个体参与、社区赋能和专业人员装备。",
-      "curatedReasonEn": "For psychosocial interventions in young adults with acquired brain injury (including stroke), this study suggests three pillars: individual engagement, community empowerment, and equipping professionals. If your rehabilitation programs are falling short, consider whether these components are adequately addressed.",
-      "limitation": "研究样本量较小，仅限于英国的年轻成人及服务提供者，可能影响结果的普遍性。",
-      "limitationEn": "The study involved a small sample size, limited to young adults and service providers in the UK, which may affect the generalizability of the findings.",
-      "tags": [
-        "research",
-        "brain-injury",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Disability and rehabilitation"
-    },
-    {
-      "id": "news-1793388557464-4",
-      "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
-      "summary": "This review synthesizes evidence for the rehabilitation timing hypothesis in stroke, suggesting that scheduling motor therapy close to sleep could enhance motor memory consolidation and recovery, though direct clinical evidence in stroke populations is lacking.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42960484/",
-      "publishedAt": "2026-10-30T00:00:00.000Z",
-      "firstSeen": "2026-10-30T19:29:17.464Z",
-      "curatedScore": 75,
-      "curatedReason": "这篇综述提出了“康复时机假说”，强调将中风后运动康复安排在接近睡眠的时间，可能通过优化睡眠中的运动记忆巩固来增强恢复。这是一个值得你在临床实践中探索的低成本策略。",
-      "titleZh": "中风后睡眠期间运动记忆巩固：康复时机假说",
-      "summaryZh": "本综述综合了中风康复时机假说的证据，提出将运动疗法安排在临近睡眠的时间可能增强运动记忆巩固和恢复，尽管目前尚缺乏在卒中人群中直接验证的临床证据。",
-      "curatedReasonEn": "This review introduces the \"rehabilitation timing hypothesis,\" suggesting that scheduling post-stroke motor rehabilitation close to sleep may enhance recovery by optimizing motor memory consolidation during sleep. This is a low-cost strategy worth exploring in your clinical practice.",
-      "limitation": "目前在卒中人群中直接验证康复时机假说的临床证据尚缺乏，需要更多正式试验。",
-      "limitationEn": "Direct clinical evidence to test the rehabilitation timing hypothesis in stroke populations is currently lacking, and more formal trials are urgently needed.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "综述",
-      "journal": "Topics in stroke rehabilitation"
     }
   ]
 }
