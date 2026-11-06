@@ -1,0 +1,251 @@
+{
+ "date": "2026-11-06",
+ "generatedAt": "2026-11-06T01:42:03.717Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-05T01:33:35.229Z",
+ "windowEnd": "2026-11-06T01:42:02.117Z",
+ "lead": {
+  "titleZh": "2027 年最终规则：影响 PT 实践的年度政策更新",
+  "titleEn": "2027 Final Rule: Annual Policy Updates Impacting PT Practice",
+  "paragraphZh": "今日日报共 9 条，跨 4 个专业领域。其中 2027 年最终规则的政策更新以 79 分位列 curatedScore 最高，直接影响 PT 执业，值得临床医师重点关注。此外，肩峰下疼痛综合征的结构化 PRP 术后康复 RCT，以及下肢外骨骼控制策略的综述，得分也较高，均达 75 分。",
+  "paragraphEn": "Today's digest includes 9 entries across 4 specialties. The 2027 Final Rule policy updates, with a curatedScore of 79, are the highest-scoring and directly impact PT practice, warranting close attention from clinicians. Additionally, an RCT on structured post-PRP rehabilitation for subacromial pain syndrome and a review on lower-extremity exoskeleton control strategies both scored 75 points."
+ },
+ "stats": {
+  "events": 9,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 4,
+  "topScore": 79
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1793902062545-0",
+     "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
+     "summary": "A randomized controlled trial of 54 SAPS patients found that adding a structured post-PRP rehabilitation approach to conventional physiotherapy significantly improved pain (VAS: 2.92 ± 1.14 vs 7.96 ± 0.75; SF-MPQ: 10.07 ± 3.33 vs 19.37 ± 2.35, p < 0.001) and shoulder function compared to conventional physiotherapy alone over 21 days.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42985783/",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T18:07:42.545Z",
+     "curatedScore": 75,
+     "curatedReason": "有结构化的 PRP 术后康复方案，可能在短期内进一步改善肩峰撞击综合征患者的疼痛、肌力、活动度和肩关节功能。将此作为联合疗法的考量，但记住尚无长期随访数据。",
+     "titleZh": "结构化富血小板血浆术后康复方案对肩峰下疼痛综合征患者疼痛和功能的影响：一项随机对照试验。",
+     "summaryZh": "一项对 54 例肩峰下疼痛综合征 (SAPS) 患者的随机对照试验发现，在传统物理治疗基础上增加结构化富血小板血浆 (PRP) 术后康复方案，在 21 天内显著改善了患者的疼痛（VAS：从 9.00 ± 0.67 降至 2.92 ± 1.14，对照组从 9.11 ± 0.64 降至 7.96 ± 0.75；SF-MPQ：从 27.07 ± 4.41 降至 10.07 ± 3.33，对照组从 21.33 ± 2.46 降至 19.37 ± 2.35；p < 0.001）和肩关节功能。",
+     "curatedReasonEn": "A structured post-PRP rehabilitation approach may provide additional short-term improvements in pain, muscle strength, range of motion, and shoulder function in SAPS patients. Consider this as part of a combined therapy, but note the lack of long-term follow-up data.",
+     "limitation": "研究随访时间短，未评估长期效果。",
+     "limitationEn": "The study had a short follow-up period and did not assess long-term effects.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+     "id": "news-1793902062547-1",
+     "title": "Patient experiences with a prescription-based digital health application (DiGA) for knee disorders: a qualitative study in german orthopaedic care.",
+     "summary": "A qualitative study of 10 German patients with knee disorders prescribed a DiGA found general acceptance, valuing its flexibility, location independence, and role in bridging physiotherapy gaps, especially for prehabilitation. Challenges included limited personalization and motivational benefits without professional guidance.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42983354/",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T18:07:42.547Z",
+     "curatedScore": 70,
+     "curatedReason": "数字健康应用程序 (DiGA) 被患者视为骨科护理中物理治疗的有效补充，尤其在术前康复和维持护理方面。了解其在德国医疗体系下的优势与局限，有助于你评估类似技术在自身执业中的应用潜力。",
+     "titleZh": "德国骨科护理中，膝关节疾病患者使用处方数字健康应用程序 (DiGA) 的经验：一项定性研究。",
+     "summaryZh": "一项对 10 名被处方数字健康应用程序 (DiGA) 的德国膝关节疾病患者进行的定性研究发现，患者普遍接受并重视其灵活性、地域独立性以及在弥补物理治疗服务差距方面的作用，尤其在术前康复中。挑战包括个性化不足和缺乏专业指导时的激励效果有限。",
+     "curatedReasonEn": "Digital health applications (DiGAs) are perceived by patients as a valuable complement to physiotherapy in orthopedic care, particularly for prehabilitation and continuity of care. Understanding its strengths and limitations in the German healthcare system can help you assess the potential for similar technologies in your own practice.",
+     "limitation": "这是一项定性研究，样本量小，且观察期短，未评估长期依从性、临床疗效和安全性。",
+     "limitationEn": "This is a qualitative study with a small sample size and short observation period, not assessing long-term adherence, clinical effectiveness, or safety.",
+     "tags": [
+      "research",
+      "knee",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC musculoskeletal disorders",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1793902062547-5",
+     "title": "Next-generation control strategies for lower-extremity exoskeletons: State-of-the-art, limitations, and future directions.",
+     "summary": "This review summarizes current and emerging control strategies for lower-extremity exoskeletons in gait rehabilitation, highlighting their limitations (e.g., unintuitive interfaces, poor adaptation to varying conditions) and exploring advances in user intent detection, such as brain-computer interfaces and novel biosignals.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42984434/",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T18:07:42.547Z",
+     "curatedScore": 75,
+     "curatedReason": "目前下肢外骨骼在步态康复中的普及，主要受限于其控制策略不够直观、难以适应复杂环境。这份综述系统地指出了现有技术瓶颈，并展望了脑机接口等新兴用户意图检测技术，这将是未来实现外骨骼广泛应用和个性化康复的关键。",
+     "titleZh": "下肢外骨骼的下一代控制策略：现状、局限性与未来方向。",
+     "summaryZh": "这篇综述总结了步态康复中下肢外骨骼的当前和新兴控制策略，强调了其局限性（例如，不直观的界面，对不同条件适应性差），并探讨了用户意图检测的进展，如脑机接口和新型生物信号。",
+     "curatedReasonEn": "The widespread adoption of lower-extremity exoskeletons in gait rehabilitation is primarily hampered by unintuitive control strategies and poor adaptation to varying conditions. This review systematically identifies current technical bottlenecks and anticipates emerging user intent detection technologies, such as brain-computer interfaces, which will be crucial for realizing widespread exoskeleton adoption and personalized rehabilitation in the future.",
+     "tags": [
+      "research",
+      "spinal-cord",
+      "stroke",
+      "parkinson"
+     ],
+     "studyDesign": "综述",
+     "journal": "PM & R : the journal of injury, function, and rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1793902062548-36",
+     "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
+     "summary": "A case study showed that low-frequency continuous deep brain stimulation (55 Hz) of the motor thalamus in a patient with severe diffuse axonal injury and chronic dysarthria/dysphagia led to progressive recovery of facial symmetry, resolution of laryngeal penetration, and marked improvements in respiratory/phonatory control and speech intelligibility over 3 years.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.04.26366993v1?rss=1",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T18:07:42.548Z",
+     "curatedScore": 75,
+     "curatedReason": "低频脑深部电刺激（DBS）可能对创伤性脑损伤 (TBI) 后的口面部运动功能恢复有长期治疗潜力。尽管是单病例研究，但这种持续性改善的观察，提示 DBS 作为辅助干预手段，可能扩展 TBI 患者的功能恢复窗口。",
+     "titleZh": "低频脑深部电刺激促进创伤性脑损伤后口面部运动功能的长期恢复：一项病例研究。",
+     "summaryZh": "一项病例研究显示，一名患有严重弥漫性轴索损伤和慢性构音障碍/吞咽困难的患者，在接受运动丘脑低频持续脑深部电刺激（55 Hz）后，其面部对称性逐渐恢复，喉部穿透得以解决，呼吸/发声控制和言语清晰度在三年内显著改善。",
+     "curatedReasonEn": "Low-frequency deep brain stimulation (DBS) may have long-term therapeutic potential for orofacial motor recovery after traumatic brain injury (TBI). Although a single-case study, this observation of sustained improvement suggests that DBS, as an adjunctive intervention, could extend the window of functional recovery for TBI patients.",
+     "limitation": "单病例研究，结果外推性极低，需要大规模研究验证。",
+     "limitationEn": "Single-case study, results have extremely low generalizability, requiring validation in larger studies.",
+     "tags": [
+      "research",
+      "brain-injury"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1793929309346-20",
+     "title": "Development and psychometric evaluation of the Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS)",
+     "summary": "The Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS) were developed and found to be valid, reliable, and sensitive assessments of disease severity and occupational status in 995 adults with ME/CFS, demonstrating moderate-good criterion-related validity (SoMES r=0.663, MEOSS r=0.472) and excellent test-retest reliability for MEOSS (k=0.76).",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.04.26367265v1?rss=1",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-06T01:41:49.346Z",
+     "curatedScore": 70,
+     "curatedReason": "新量表 SoMES 和 MEOSS 为肌痛性脑脊髓炎/慢性疲劳综合征的疾病严重程度和职业状态评估提供了有效、可靠且敏感的工具，有助于临床医生更客观地跟踪患者的疾病进展和康复需求。",
+     "titleZh": "肌痛性脑脊髓炎严重程度量表（SoMES）和肌痛性脑脊髓炎职业状态量表（MEOSS）的开发与心理测量学评估",
+     "summaryZh": "肌痛性脑脊髓炎严重程度量表（SoMES）和肌痛性脑脊髓炎职业状态量表（MEOSS）已开发完成，并在995名肌痛性脑脊髓炎/慢性疲劳综合征成人患者中被证实为疾病严重程度和职业状态的有效、可靠且敏感的评估工具，显示出中度至良好的效标关联效度（SoMES r=0.663, MEOSS r=0.472）和MEOSS优秀的重测信度（k=0.76）。",
+     "curatedReasonEn": "The new SoMES and MEOSS scales provide valid, reliable, and sensitive tools for assessing disease severity and occupational status in Myalgic Encephalomyelitis/Chronic Fatigue Syndrome, helping clinicians objectively track patient progression and rehabilitation needs.",
+     "limitation": "这是一项初步的横断面心理测量学研究，需要通过更多前瞻性研究来验证其在不同人群和长期随访中的表现。",
+     "limitationEn": "This is a preliminary cross-sectional psychometric study, requiring further prospective research to validate its performance in diverse populations and long-term follow-up.",
+     "tags": [
+      "research",
+      "chronic-fatigue"
+     ],
+     "studyDesign": "观察研究"
+    },
+    {
+     "id": "news-1793871505915-28",
+     "title": "Smaller Cortical Responses to Balance Perturbations in Parkinson's Disease with Freezing of Gait",
+     "summary": "A study found that Parkinson's disease patients with freezing of gait (FoG) had smaller cortical N1 amplitudes than those without FoG and older adults during backward support-surface translations, suggesting altered perturbation-evoked cortical activity and potentially reflecting altered supplementary motor area function.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.03.26367107v1?rss=1",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T09:38:25.915Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究提示，步态冻结（FoG）的帕金森病患者对平衡扰动的皮层反应较小，这可能是辅助运动区功能改变的体现。这些发现可为 FoG 的早期识别和干预提供潜在的神经生理标志物。",
+     "titleZh": "步态冻结型帕金森病患者对平衡扰动的皮层反应较小",
+     "summaryZh": "一项研究发现，在向后支撑面平移过程中，步态冻结（FoG）型帕金森病患者的皮层 N1 波幅小于非 FoG 型帕金森病患者和老年人，这提示扰动诱发的皮层活动发生改变，可能反映了辅助运动区功能的改变。",
+     "curatedReasonEn": "This study suggests that Parkinson's disease patients with Freezing of Gait (FoG) exhibit smaller cortical responses to balance perturbations, potentially reflecting altered supplementary motor area function. These findings could offer a neurophysiological marker for early FoG identification and intervention.",
+     "limitation": "研究样本量相对较小，且仅限于单一中心，可能限制了结果的普遍性。",
+     "limitationEn": "The study has a relatively small sample size and is limited to a single center, which may restrict the generalizability of the findings.",
+     "tags": [
+      "research",
+      "parkinson",
+      "vestibular"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1793902062548-8",
+     "title": "Benefits and limitations of robotic gait exoskeletons in functional rehabilitation of children with cerebral palsy: an umbrella review.",
+     "summary": "An umbrella review on robotic gait exoskeletons for children with cerebral palsy found that RAGT improves overall motor function, particularly GMFM dimensions D and E, but has limited and inconsistent effects on spatiotemporal gait parameters, and does not consistently outperform treadmill training or conventional physiotherapy.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42986299/",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T18:07:42.548Z",
+     "curatedScore": 70,
+     "curatedReason": "机器人辅助步态训练 (RAGT) 在改善脑瘫儿童的粗大运动功能方面有一定作用，尤其在 GMFM 量表 D 和 E 维度上，但对时空步态参数的改善不一致。将其作为常规康复的补充手段，并明确其适用范围。",
+     "titleZh": "机器人步态外骨骼在脑瘫儿童功能康复中的益处和局限性：一项伞形综述。",
+     "summaryZh": "一项关于脑瘫儿童机器人步态外骨骼的伞形综述发现，机器人辅助步态训练 (RAGT) 可改善总体运动功能，尤其是粗大运动功能测量系统 (GMFM) D 和 E 维度，但对时空步态参数的影响有限且不一致，并且在步态相关结局方面并不持续优于跑步机训练或传统物理治疗。",
+     "curatedReasonEn": "Robot-Assisted Gait Training (RAGT) can improve gross motor function in children with cerebral palsy, especially in GMFM dimensions D and E, but improvements in spatiotemporal gait parameters are inconsistent. Consider it as a complementary intervention to conventional rehabilitation, with clear application boundaries.",
+     "limitation": "这是一项伞形综述，依赖于纳入研究的异质性，且未报告除 GMFM-88 和时空步态参数外的其他结局指标。",
+     "limitationEn": "This is an umbrella review, dependent on the heterogeneity of included studies, and did not report outcomes other than GMFM-88 and spatiotemporal gait parameters.",
+     "tags": [
+      "research",
+      "cerebral-palsy",
+      "gait-training"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1793922189241-31",
+     "title": "Everything You Need to Know About the 2027 Final Rule",
+     "summary": "WebPT's blog post summarizes key information regarding the 2027 Final Rule, covering changes relevant to physical therapy practice and reimbursement.",
+     "category": "practice",
+     "source": "WebPT",
+     "sourceUrl": "https://www.webpt.com/blog/everything-you-need-to-know-about-the-2027-final-rule",
+     "publishedAt": "2026-11-05T00:00:00.000Z",
+     "firstSeen": "2026-11-05T23:43:09.241Z",
+     "curatedScore": 79,
+     "curatedReason": "WebPT 的这篇博文为你梳理了 2027 年最终规则的要点，涵盖了对 PT 执业和报销的重要变化。尽管这只是一个概述，但它能让你快速掌握 Medicare 费率、报销政策等关键信息，助你提前规划应对。",
+     "titleZh": "2026 年 11 月 5 日：关于 2027 年最终规则你需要知道的一切",
+     "summaryZh": "WebPT 的博文总结了 2027 年最终规则的关键信息，涵盖了与物理治疗执业和报销相关的变化。",
+     "curatedReasonEn": "This WebPT blog post summarizes the key points of the 2027 Final Rule. While specific details require consulting official documents, this overview is crucial for understanding changes in Medicare rates, reimbursement policies, and other key factors affecting PT practice, helping you plan your strategies in advance.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "regulation",
+      "US"
+     ]
+    },
+    {
+     "id": "news-1793922189241-29",
+     "title": "CMS Final Rule Strengthens Supports Lasting Drug Savings",
+     "summary": "CMS has released a final rule to strengthen and support lasting drug savings, focusing on the Medicare Drug Price Negotiation Program and the Medicare Prescription Drug Benefit Program.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-final-rule-strengthens-supports-lasting-drug-savings",
+     "publishedAt": "2026-11-05T12:00:00.000Z",
+     "firstSeen": "2026-11-05T23:43:09.241Z",
+     "curatedScore": 75,
+     "curatedReason": "CMS 发布了旨在巩固药物定价谈判和处方药福利计划的最终规则。这对 PT 报销和执业没有直接影响，但作为美国医疗系统关键部分的成本控制机制，值得你关注宏观背景。不过这并非 PT 执业的直接变化点。",
+     "titleZh": "CMS 最终规则加强并支持持久的药物节约",
+     "summaryZh": "CMS 发布了一项最终规则，旨在加强并支持持久的药物节约，重点关注医疗保险药物价格谈判计划和医疗保险处方药福利计划。",
+     "curatedReasonEn": "CMS has released a final rule concerning drug price negotiation and prescription drug benefits. While this doesn't directly impact your PT reimbursement or daily practice, understanding these macro policy shifts in healthcare cost control can help you contextualize the broader industry landscape.",
+     "tags": [
+      "news",
+      "regulation"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
