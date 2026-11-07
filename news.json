@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-07T08:56:19.883Z",
+    "lastUpdated": "2026-11-07T16:31:45.544Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,16 +20,17 @@
       "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42977063/",
       "category": "neurological",
       "publishedAt": "2026-11-06T00:00:00.000Z",
-      "sourceCount": 9,
+      "sourceCount": 10,
       "sources": [
         "Archives of physical medicine and rehabilitation",
         "NeuroRehabilitation",
+        "Topics in stroke rehabilitation",
         "Physiotherapy",
-        "PM & R : the journal of injury, function, and rehabilitation",
+        "medRxiv",
+        "Physiotherapy theory and practice",
         "Disability and rehabilitation",
         "Journal of NeuroEngineering and Rehabilitation",
         "Neurorehabilitation and neural repair",
-        "medRxiv",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
       ],
       "tag": "stroke",
@@ -49,27 +50,38 @@
         },
         {
           "source": "PubMed",
+          "journal": "Topics in stroke rehabilitation",
+          "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
+          "titleZh": "卒中后睡眠期间运动记忆的巩固：康复Timing假说"
+        },
+        {
+          "source": "PubMed",
           "journal": "NeuroRehabilitation",
-          "title": "Adherence System Usability Patient Experience and Psychosocial Impact in Robot Assisted Gait Neurorehabilitation A Cross Sectional Study.",
-          "titleZh": "机器人辅助步态神经康复中依从性系统可用性患者体验及心理社会影响：一项横断面研究"
+          "title": "Neurorehabilitation as an Opportunity for Structured Post-Stroke Lipid Management: A Narrative Review.",
+          "titleZh": "神经康复作为卒中后结构化脂质管理的机会：一项叙述性综述"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy",
-          "title": "Robot-assisted gait training for adult neurological rehabilitation in acute National Health Service settings: Physiotherapists' perceptions before implementation.",
-          "titleZh": "急性英国国家医疗服务体系环境中，机器人辅助步态训练在成人神经康复中的应用：实施前物理治疗师的看法。"
+          "title": "Cardiorespiratory training after stroke or transient ischemic attack in the United Kingdom: A national survey.",
+          "titleZh": "英国卒中或短暂性脑缺血发作后的心肺训练：一项全国调查"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
+          "titleZh": "低频脑深部电刺激促进创伤性脑损伤后口面部运动功能的长期恢复：一项病例研究。"
         },
         {
           "source": "PubMed",
-          "journal": "PM & R : the journal of injury, function, and rehabilitation",
-          "title": "Next-generation control strategies for lower-extremity exoskeletons: State-of-the-art, limitations, and future directions.",
-          "titleZh": "下肢外骨骼的下一代控制策略：现状、局限性与未来方向。"
+          "journal": "Physiotherapy theory and practice",
+          "title": "Neurological and functional recovery despite persistent skull defect after decompressive hemicraniectomy: a case report.",
+          "titleZh": "去骨瓣减压术后持续颅骨缺损患者的神经和功能恢复：一例病例报告"
         },
         {
           "source": "PubMed",
           "journal": "Disability and rehabilitation",
-          "title": "Benefits and limitations of robotic gait exoskeletons in functional rehabilitation of children with cerebral palsy: an umbrella review.",
-          "titleZh": "机器人步态外骨骼在脑瘫儿童功能康复中的益处和局限性：一项伞形综述。"
+          "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
+          "titleZh": "识别神经康复中心理社会干预的关键组成部分：一项对获得性脑损伤年轻成年人的真实主义评估"
         },
         {
           "source": "J NeuroEng Rehabil",
@@ -101,80 +113,9 @@
           "titleZh": "卒中患者康复 8 周后独立行走能力的机器学习预测：一项回顾性研究"
         }
       ],
-      "heat": 5.59,
-      "themeZh": "神经损伤机器人辅助康复的进展、挑战与患者体验",
-      "themeEn": "Robotic Neurorehabilitation: Advances, Challenges, Patient Experience"
-    },
-    {
-      "id": "news-1794013300131-26",
-      "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10639-w",
-      "category": "orthopedic",
-      "publishedAt": "2026-11-06T00:00:00.000Z",
-      "sourceCount": 7,
-      "sources": [
-        "BMC Musculoskeletal Disorders",
-        "Physiotherapy",
-        "Clinical biomechanics (Bristol, Avon)",
-        "European Spine Journal",
-        "The Journal of orthopaedic and sports physical therapy",
-        "medRxiv",
-        "Archives of Physical Medicine and Rehabilitation"
-      ],
-      "tag": "spine",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
-          "titleZh": "埃塞俄比亚慢性腰痛患者跨专业康复计划（IPRehab-LBP）的可行性：一项开放标签的试点随机对照试验及内嵌过程评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
-          "titleZh": "针对髋关节骨性关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项包含 5014 名患者的纵向队列研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
-          "titleZh": "一项探索腰痛物理治疗后真实世界姿势行为改变的病例系列研究"
-        },
-        {
-          "source": "Eur Spine J",
-          "journal": "European Spine Journal",
-          "title": "Lumbar mobility and strength correlate with low back pain and quality of life",
-          "titleZh": "腰椎活动度和力量与腰痛及生活质量的相关性"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of orthopaedic and sports physical therapy",
-          "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
-          "titleZh": "临床医生能否预测哪些患者对特定治疗反应最佳？初级保健中腰痛调节因素的系统综述。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Effects of Weighted Seated Core Exercises on Immediate Postural Stability in Healthy Young Adults: An Exploratory Study",
-          "titleZh": "加权坐姿核心练习对健康年轻人即时姿势稳定性的影响：一项探索性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
-          "titleZh": "更年期女性肌肉骨骼疼痛患者参与物理治疗的障碍与促进因素"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
-          "titleZh": "烧伤后创伤性慢性疼痛和瘙痒的纵向轨迹及风险因素：一项前瞻性多中心队列研究"
-        }
-      ],
-      "heat": 4.35,
-      "themeZh": "腰痛的评估、干预效果和康复策略",
-      "themeEn": "Low Back Pain Assessment and Rehabilitation"
+      "heat": 5.57,
+      "themeZh": "卒中与脑损伤后上肢运动康复的神经调控和技术增强",
+      "themeEn": "Neurostimulation and Technology in Post-Stroke Upper Limb Rehab"
     },
     {
       "id": "news-1794041778002-19",
@@ -230,78 +171,85 @@
           "titleZh": "肌肉骨骼初级物理治疗中的电子健康：证据、促进因素和障碍——一项范围综述"
         }
       ],
-      "heat": 3.73,
-      "themeZh": "老年和骨科康复中数字健康与远程医疗的应用",
-      "themeEn": "Digital Health, Telerehabilitation in Geriatric and Orthopedic Care"
+      "heat": 3.34,
+      "themeZh": "老年和骨关节慢性疼痛的数字健康与远程康复",
+      "themeEn": "Digital Health and Telerehab for Geriatric Pain"
     },
     {
-      "id": "news-1793902062548-36",
-      "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.04.26366993v1?rss=1",
-      "category": "neurological",
+      "id": "news-1794013300131-26",
+      "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10639-w",
+      "category": "orthopedic",
       "publishedAt": "2026-11-06T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "medRxiv",
-        "Physiotherapy theory and practice",
-        "Disability and rehabilitation",
-        "Topics in stroke rehabilitation",
-        "NeuroRehabilitation",
-        "Physiotherapy"
+        "BMC Musculoskeletal Disorders",
+        "Physiotherapy",
+        "Clinical biomechanics (Bristol, Avon)",
+        "European Spine Journal",
+        "The Journal of orthopaedic and sports physical therapy",
+        "Archives of Physical Medicine and Rehabilitation"
       ],
-      "tag": "brain-injury",
+      "tag": "spine",
       "kind": "theme",
       "members": [
         {
-          "source": "medRxiv",
-          "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
-          "titleZh": "低频脑深部电刺激促进创伤性脑损伤后口面部运动功能的长期恢复：一项病例研究。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Neurological and functional recovery despite persistent skull defect after decompressive hemicraniectomy: a case report.",
-          "titleZh": "去骨瓣减压术后持续颅骨缺损患者的神经和功能恢复：一例病例报告"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
-          "titleZh": "识别神经康复中心理社会干预的关键组成部分：一项对获得性脑损伤年轻成年人的真实主义评估"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Topics in stroke rehabilitation",
-          "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
-          "titleZh": "卒中后睡眠期间运动记忆的巩固：康复Timing假说"
-        },
-        {
-          "source": "PubMed",
-          "journal": "NeuroRehabilitation",
-          "title": "Neurorehabilitation as an Opportunity for Structured Post-Stroke Lipid Management: A Narrative Review.",
-          "titleZh": "神经康复作为卒中后结构化脂质管理的机会：一项叙述性综述"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
+          "titleZh": "埃塞俄比亚慢性腰痛患者跨专业康复计划（IPRehab-LBP）的可行性：一项开放标签的试点随机对照试验及内嵌过程评估"
         },
         {
           "source": "PubMed",
           "journal": "Physiotherapy",
-          "title": "Cardiorespiratory training after stroke or transient ischemic attack in the United Kingdom: A national survey.",
-          "titleZh": "英国卒中或短暂性脑缺血发作后的心肺训练：一项全国调查"
+          "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
+          "titleZh": "针对髋关节骨性关节炎症状的监督下患者教育和运动疗法能否改善腰痛？一项包含 5014 名患者的纵向队列研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
+          "titleZh": "一项探索腰痛物理治疗后真实世界姿势行为改变的病例系列研究"
+        },
+        {
+          "source": "Eur Spine J",
+          "journal": "European Spine Journal",
+          "title": "Lumbar mobility and strength correlate with low back pain and quality of life",
+          "titleZh": "腰椎活动度和力量与腰痛及生活质量的相关性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
+          "titleZh": "临床医生能否预测哪些患者对特定治疗反应最佳？初级保健中腰痛调节因素的系统综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "What are the barriers and facilitators to engagement with physiotherapy among women experiencing adverse effects associated with menopause?",
+          "titleZh": "更年期女性肌肉骨骼疼痛患者参与物理治疗的障碍与促进因素"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Longitudinal Trajectories and Risk Factors for Post-traumatic Chronic Pain and Pruritus Following Burn Injuries: a Prospective Multicenter Cohort Study",
+          "titleZh": "烧伤后创伤性慢性疼痛和瘙痒的纵向轨迹及风险因素：一项前瞻性多中心队列研究"
         }
       ],
-      "heat": 3.73,
-      "themeZh": "脑损伤及卒中后神经康复的策略与要素",
-      "themeEn": "Neurorehabilitation Strategies After Brain Injury, Stroke"
+      "heat": 3.34,
+      "themeZh": "慢性腰痛的运动疗法、姿势行为及治疗预测因素",
+      "themeEn": "Chronic LBP Exercise, Posture, and Treatment Predictors"
     },
     {
       "id": "news-1794013300132-28",
       "title": "Female Team-Sport Athletes’ Physical Fitness and Jump Performance Kinematics After Plyometric Jump Training: A Systematic Review and Meta-analysis",
       "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01136-4",
       "category": "sports",
-      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "publishedAt": "2026-11-06T11:07:39.000Z",
       "sourceCount": 5,
       "sources": [
         "Sports Medicine - Open",
-        "BMC Sports Science, Medicine and Rehabilitation",
+        "Measurement in Physical Education and Exercise Science",
         "International journal of sports physical therapy",
         "The American journal of sports medicine",
         "Clinical biomechanics (Bristol, Avon)"
@@ -316,10 +264,16 @@
           "titleZh": "跳深训练后女子团队运动员的体能和跳跃表现运动学：一项系统综述和荟萃分析"
         },
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Effects of repeated-sprint training in hypoxia on repeated-sprint and sprint performance in athletes: a systematic review and three-level meta-analysis",
-          "titleZh": "缺氧下重复冲刺训练对运动员重复冲刺和冲刺表现的影响：一项系统综述和三水平 Meta 分析"
+          "source": "Meas Phys Educ Exerc Sci",
+          "journal": "Measurement in Physical Education and Exercise Science",
+          "title": "Normalization of Peak Torque in Adolescent Athletes: Which Method and What Body Parameters to Use?",
+          "titleZh": "青少年运动员峰值扭矩的标准化：应采用哪种方法和身体参数？"
+        },
+        {
+          "source": "Meas Phys Educ Exerc Sci",
+          "journal": "Measurement in Physical Education and Exercise Science",
+          "title": "How Swing Tilt Translates into Batted-Ball Outcomes: Pitch-Type-Specific Mediation by Bat Speed in MLB",
+          "titleZh": "挥杆倾斜度如何转化为击球结果：MLB 中挥棒速度对特定投球类型的中介作用"
         },
         {
           "source": "Sports Med - Open",
@@ -364,12 +318,118 @@
           "titleZh": "习得性无助感与前交叉韧带重建术后跳跃着陆生物力学相关"
         }
       ],
-      "heat": 3.11,
-      "themeZh": "运动员表现、训练负荷与损伤评估",
-      "themeEn": "Athlete Performance, Training Load, Injury Assessment"
+      "heat": 3.27,
+      "themeZh": "竞技运动员体能表现、损伤风险及训练负荷评估",
+      "themeEn": "Athlete Performance, Injury Risk, Training Load Assessment"
+    },
+    {
+      "id": "news-1793279964353-1",
+      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
+      "category": "orthopedic",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "Physiotherapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Musculoskeletal Disorders",
+        "International journal of sports physical therapy",
+        "Archives of Physical Medicine and Rehabilitation"
+      ],
+      "tag": "shoulder",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
+          "titleZh": "不同物理疗法对乳腺癌术后腋网综合征疗效的比较：一项随机对照试验的网络荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "结构化富血小板血浆术后康复方案对肩峰下疼痛综合征患者疼痛和功能的影响：一项随机对照试验。"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Comparative study of therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching on knee joint range of motion and functional ability in children with hemiplegic cerebral palsy: a randomized trial",
+          "titleZh": "治疗性超声与全身振动作为被动牵伸辅助手段对偏瘫脑瘫儿童膝关节活动度和功能能力影响的比较研究：一项随机试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Feasibility, Safety, and Preliminary Effect Estimates of an Ultrasound-Informed Hybrid Joint-Sparing Rehabilitation Strategy in Patients With Rheumatoid Arthritis: A Prospective Non-Randomized Proof-of-Concept Study.",
+          "titleZh": "超声引导下混合式关节保护康复策略治疗类风湿关节炎患者的可行性、安全性和初步疗效评估：一项前瞻性非随机概念验证研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Ultrasound-Guided Percutaneous Tendon Dry Needling for Recalcitrant Distal Biceps Tendinopathy: A Case Series.",
+          "titleZh": "超声引导经皮肌腱干针治疗难治性远端肱二头肌肌腱病：一个病例系列"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Real-Time Ultrasound-Assisted Laryngeal Electromyography Using an In-Plane Trajectory View: A Prospective Feasibility Study",
+          "titleZh": "实时超声辅助喉部肌电图检查的平面内轨迹视图：一项前瞻性可行性研究"
+        }
+      ],
+      "heat": 2.78,
+      "themeZh": "超声引导下多种物理疗法在康复中的应用效能",
+      "themeEn": "Ultrasound-Guided Physical Therapy Effectiveness in Rehab"
     }
   ],
   "items": [
+    {
+      "id": "news-1794069103386-19",
+      "title": "Normalization of Peak Torque in Adolescent Athletes: Which Method and What Body Parameters to Use?",
+      "summary": "This study investigated the optimal normalization method and body parameters for peak torque assessment in adolescent athletes to improve strength measurement accuracy.",
+      "category": "sports",
+      "source": "Meas Phys Educ Exerc Sci",
+      "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2759700?af=R",
+      "publishedAt": "2026-11-06T11:07:39.000Z",
+      "firstSeen": "2026-11-07T16:31:43.386Z",
+      "curatedScore": 75,
+      "curatedReason": "确定在青少年运动员中标准化峰值扭矩的最佳方法，有助于你更准确地评估肌肉力量和功能，指导力量训练方案的设计和康复进展的监测。",
+      "titleZh": "青少年运动员峰值扭矩的标准化：应采用哪种方法和身体参数？",
+      "summaryZh": "本研究探讨了青少年运动员峰值扭矩评估的最佳标准化方法和身体参数，以提高力量测量的准确性。",
+      "curatedReasonEn": "Identifying the optimal method for normalizing peak torque in adolescent athletes helps you more accurately assess muscle strength and function, guiding the design of strength training programs and monitoring rehabilitation progress.",
+      "limitation": "研究可能未涵盖所有潜在的身体参数和标准化方法，且青少年运动员的样本量和特异性可能限制结果的外推性。",
+      "limitationEn": "The study may not cover all potential body parameters and normalization methods, and the sample size and specificity of adolescent athletes may limit the generalizability of the findings.",
+      "tags": [
+        "research",
+        "strength-assessment",
+        "adolescent-rehab"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Measurement in Physical Education and Exercise Science"
+    },
+    {
+      "id": "news-1794069103385-18",
+      "title": "How Swing Tilt Translates into Batted-Ball Outcomes: Pitch-Type-Specific Mediation by Bat Speed in MLB",
+      "summary": "This study examined how swing tilt influences batted-ball outcomes in MLB baseball, mediated by bat speed, in a pitch-type-specific manner.",
+      "category": "sports",
+      "source": "Meas Phys Educ Exerc Sci",
+      "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2756944?af=R",
+      "publishedAt": "2026-11-02T04:17:53.000Z",
+      "firstSeen": "2026-11-07T16:31:43.385Z",
+      "curatedScore": 70,
+      "curatedReason": "理解棒球运动员挥杆倾斜度如何转化为击球结果，可作为评估运动表现和设计训练干预措施的参考，尤其是通过提升挥棒速度来改善击球表现。",
+      "titleZh": "挥杆倾斜度如何转化为击球结果：MLB 中挥棒速度对特定投球类型的中介作用",
+      "summaryZh": "这项研究分析了 MLB 棒球运动员的挥杆倾斜度如何通过挥棒速度中介，在不同投球类型下影响击球结果。",
+      "curatedReasonEn": "Understanding how swing tilt translates into batted-ball outcomes can inform the assessment of athletic performance and design of training interventions, particularly by leveraging bat speed to improve hitting.",
+      "limitation": "研究对象仅限于 MLB 棒球运动员，外推至其他运动项目或人群需谨慎。",
+      "limitationEn": "The study is limited to MLB baseball players, and its findings may not be generalizable to other sports or populations.",
+      "tags": [
+        "research",
+        "biomechanics",
+        "performance-training"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Measurement in Physical Education and Exercise Science"
+    },
     {
       "id": "news-1793365861885-0",
       "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
@@ -2077,50 +2137,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "BMC Musculoskeletal Disorders"
-    },
-    {
-      "id": "news-1793842403277-37",
-      "title": "Effects of repeated-sprint training in hypoxia on repeated-sprint and sprint performance in athletes: a systematic review and three-level meta-analysis",
-      "summary": "A three-level meta-analysis of 10 studies (216 athletes) found that repeated-sprint training in hypoxia (Hedges' g = 0.31, 95% CI [0.12, 0.50], P = 0.001) may improve repeated-sprint performance, including sprint-time/RSA-time and sprint decrement, but evidence certainty is very low and inconsistent for power/work output.",
-      "category": "cardiopulmonary",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02219-1",
-      "publishedAt": "2026-11-03T00:00:00.000Z",
-      "firstSeen": "2026-11-05T01:33:23.277Z",
-      "curatedScore": 75,
-      "curatedReason": "这项系统综述指出，尽管在缺氧下重复冲刺训练（RSH）可能改善重复冲刺表现，但证据确定性非常低，尚未确立其对功率/做功输出的持续益处。在考虑将其作为补充训练策略时，你应保持谨慎，并期待更大型、高质量的试验。",
-      "titleZh": "缺氧下重复冲刺训练对运动员重复冲刺和冲刺表现的影响：一项系统综述和三水平 Meta 分析",
-      "summaryZh": "一项对 10 项研究（216 名运动员）的三水平 Meta 分析发现，缺氧下重复冲刺训练（Hedges' g = 0.31, 95% CI [0.12, 0.50], P = 0.001）可能改善重复冲刺表现，包括冲刺时间/RSA 时间和冲刺衰减，但证据确定性非常低，且对功率/做功输出的益处不一致。",
-      "curatedReasonEn": "This systematic review indicates that while repeated-sprint training in hypoxia (RSH) may improve repeated-sprint performance, the evidence is of very low certainty and does not establish a consistent benefit for power/work output. When considering it as a supplementary training strategy, you should remain cautious and await larger, high-quality trials.",
-      "limitation": "纳入研究数量有限（10 项），样本量较小（216 名运动员），且证据确定性被评为非常低，限制了结论的普遍性和强度。",
-      "limitationEn": "The limited number of included studies (10) and small sample size (216 athletes), coupled with a very low certainty of evidence, restrict the generalizability and strength of the conclusions.",
-      "tags": [
-        "research",
-        "performance-training",
-        "hypoxia"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1793842403278-38",
-      "title": "The Fight Against MPPR Isn't New. And It Isn't Over",
-      "summary": "The APTA warns that Multiple Procedure Payment Reduction (MPPR) policies are resurfacing among commercial payers, requiring continued advocacy to protect physical therapist payment and patient access to medically necessary services.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/11/04/the-fight-against-mppr-isnt-new-and-it-isnt-over",
-      "publishedAt": "2026-11-04T00:00:00.000Z",
-      "firstSeen": "2026-11-05T01:33:23.278Z",
-      "curatedScore": 75,
-      "curatedReason": "本文强调，随着商业保险公司再次加速实施多重程序支付削减（MPPR）政策，你必须认识到这不仅会影响物理治疗师的报销，还可能限制患者获得必要服务的机会。积极参与行业倡导，争取更有利的报销政策，对于维护你的执业收入和患者权益至关重要。",
-      "titleZh": "反对多重程序支付削减 (MPPR) 的斗争并未结束",
-      "summaryZh": "美国物理治疗协会 (APTA) 警告，多重程序支付削减 (MPPR) 政策正在商业支付方中重新出现，需要持续倡导以保护物理治疗师的支付和患者获得医疗必要服务的权利。",
-      "curatedReasonEn": "This article highlights that as commercial payers accelerate the implementation of Multiple Procedure Payment Reduction (MPPR) policies, you must recognize that this not only impacts physical therapist reimbursement but may also limit patient access to necessary services. Active participation in advocacy efforts to secure more favorable reimbursement policies is crucial for protecting your practice revenue and patient rights.",
-      "tags": [
-        "news",
-        "reimbursement",
-        "us"
-      ]
     }
   ]
 }
