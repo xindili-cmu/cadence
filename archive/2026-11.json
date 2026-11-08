@@ -1828,6 +1828,78 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Measurement in Physical Education and Exercise Science"
+    },
+    {
+      "id": "news-1794098991596-18",
+      "title": "Immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults: a randomized waitlist-controlled trial",
+      "summary": "A randomized waitlist-controlled trial (n=50) found that 12 weeks of variable dual-task training led to immediate improvements in functional lower-limb strength (SMD = 0.54) in older adults, sustained at 3-month follow-up. Delayed improvements in functional mobility, inhibitory control, and short-term memory emerged at follow-up.",
+      "category": "geriatric",
+      "source": "BMC Geriatrics",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08667-1",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "firstSeen": "2026-11-08T00:49:51.596Z",
+      "curatedScore": 85,
+      "curatedReason": "这项研究表明，变异双任务训练能即时改善社区老年人的下肢功能性力量，并延迟改善功能性活动能力、抑制控制和短期记忆。你可以考虑将这种变异双任务训练纳入老年患者的康复方案，尤其是在追求长期认知和运动益处时。",
+      "titleZh": "社区老年人变异双任务训练的即时任务特异性与延迟泛化适应：一项随机候补对照试验",
+      "summaryZh": "一项随机候补对照试验（n=50）发现，12周的变异双任务训练能即时改善老年人的下肢功能性力量（SMD = 0.54），并在3个月随访中维持。功能性活动能力、抑制控制和短期记忆的延迟改善在随访时出现。",
+      "curatedReasonEn": "This study indicates that variable dual-task training immediately improves functional lower-limb strength in community-dwelling older adults, with delayed improvements in functional mobility, inhibitory control, and short-term memory. You can consider incorporating this variable dual-task training into rehabilitation programs for older patients, especially when aiming for long-term cognitive and motor benefits.",
+      "limitation": "该研究的局限性在于其回顾性注册试验，且部分认知和运动益处表现为延迟效应，需要进一步研究其机制。",
+      "limitationEn": "The limitation of this study is its retrospectively registered trial, and some cognitive and motor benefits appeared as delayed effects, requiring further research into their mechanisms.",
+      "tags": [
+        "research",
+        "fall-prevention",
+        "cognitive-function"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Geriatrics"
+    },
+    {
+      "id": "news-1794098991596-16",
+      "title": "Sex-Equitable Machine Learning Prediction of Ankle Reinjury in Individuals with Chronic Ankle Instability: A 2-Year Prospective Cohort Study with Fairness Audit",
+      "summary": "A 2-year prospective cohort study developed and internally validated sex-equitable machine learning models to predict ankle reinjury in 96 individuals with chronic ankle instability. The Elastic Net model achieved an AUC of 0.807, and applying sex-specific decision thresholds reduced the equalized-odds gap by 57% (to 0.164).",
+      "category": "sports",
+      "source": "Sports Med - Open",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01137-3",
+      "publishedAt": "2026-11-07T00:00:00.000Z",
+      "firstSeen": "2026-11-08T00:49:51.596Z",
+      "curatedScore": 79,
+      "curatedReason": "这款机器学习模型能预测慢性踝关节不稳患者的两年内再受伤风险，并引入性别公平的阈值策略，将性别平等的赔率差距减少了57%。这提示你，未来在临床应用预测模型时，应考虑性别特异性调整，以优化不同性别的患者管理。",
+      "titleZh": "慢性踝关节不稳患者踝关节再损伤的性别公平机器学习预测：一项为期两年的前瞻性队列研究及公平性审计",
+      "summaryZh": "一项为期两年的前瞻性队列研究开发并内部验证了性别公平的机器学习模型，以预测96名慢性踝关节不稳患者的踝关节再损伤。Elastic Net模型达到了0.807的AUC，并且应用性别特异性决策阈值将性别平等的赔率差距降低了57%（至0.164）。",
+      "curatedReasonEn": "This machine learning model predicts the 2-year re-injury risk in individuals with chronic ankle instability and, with a sex-equitable threshold strategy, reduced the equalized-odds gap by 57%. This suggests that when applying predictive models in clinical practice, you should consider sex-specific adjustments to optimize patient management across genders.",
+      "limitation": "该研究的局限性在于其模型需要外部验证才能在临床中部署，且尽管通过性别特定阈值降低了性别公平差距，但\"不成比例影响比\"仍低于理想基准。",
+      "limitationEn": "The study's limitation is that its model requires external validation before clinical deployment, and despite reducing the equalized-odds gap through sex-specific thresholding, the disproportionate-impact ratio remained below the ideal benchmark.",
+      "tags": [
+        "research",
+        "foot-ankle",
+        "machine-learning"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Sports Medicine - Open",
+      "tech": true
+    },
+    {
+      "id": "news-1794098991594-14",
+      "title": "Prevalence and symptom severity of thrower’s shoulder in elite youth handball players",
+      "summary": "A prospective study of 660 elite youth handball players (52.3% boys) found that 22.4% reported shoulder problems, with an average symptom severity of 457.8 ± 352.0 points on the WOSI questionnaire. Latent class analysis showed no discernible pattern of symptom distribution.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02199-2",
+      "publishedAt": "2026-11-07T00:00:00.000Z",
+      "firstSeen": "2026-11-08T00:49:51.594Z",
+      "curatedScore": 75,
+      "curatedReason": "本研究揭示了精英青少年手球运动员肩部过度使用症状的流行率和症状严重程度。在预防和干预青少年运动员的肩部损伤方面，可以利用 WOSI 问卷来评估症状严重程度，但要避免将其作为区分症状模式的工具。",
+      "titleZh": "精英青少年手球运动员投掷肩部过度使用症状的流行率与严重程度",
+      "summaryZh": "一项针对660名精英青少年手球运动员（52.3%为男孩）的前瞻性研究发现，22.4%的运动员报告有肩部问题，WOSI问卷的平均症状严重度为457.8 ± 352.0分。潜在类别分析未能发现明显的症状分布模式。",
+      "curatedReasonEn": "This study reveals the prevalence and severity of overuse shoulder symptoms in elite youth handball players. In preventing and intervening shoulder injuries in young athletes, the WOSI questionnaire can be utilized to assess symptom severity, but should not be relied upon to differentiate symptom patterns.",
+      "limitation": "本研究的局限在于其观察性设计，未能探究症状的因果关系，且WOSI问卷未能识别出不同的症状模式。",
+      "limitationEn": "The limitation of this study lies in its observational design, which did not explore the causal relationship of symptoms, and the WOSI questionnaire failed to identify distinct symptom patterns.",
+      "tags": [
+        "research",
+        "shoulder"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
     }
   ]
 }

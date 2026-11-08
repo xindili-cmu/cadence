@@ -1,0 +1,179 @@
+{
+ "date": "2026-11-08",
+ "generatedAt": "2026-11-08T00:50:01.535Z",
+ "windowHours": 50,
+ "windowStart": "2026-11-07T01:04:52.802Z",
+ "windowEnd": "2026-11-08T00:49:59.948Z",
+ "lead": {
+  "titleZh": "社区老年人变异双任务训练：即时特异适应与延迟泛化",
+  "titleEn": "Variable Dual-Task Training in Older Adults: Immediate Specific and Delayed Generalized Adaptations",
+  "paragraphZh": "今天共发布 6 条，涵盖 2 个专业方向，运动康复占 4 条。最值得关注的是老年康复领域中，探讨社区老年人变异双任务训练效果的 RCT，其 curatedScore 高达 85 分。该研究揭示了此类训练在即时任务特异性和延迟泛化适应方面的作用。",
+  "paragraphEn": "Today's edition features 6 entries across 2 specialties, with 4 in sports rehabilitation. The highlight is an RCT in geriatric rehabilitation, scoring 85, which investigates the immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults."
+ },
+ "stats": {
+  "events": 6,
+  "specialties": 2,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1794098991596-16",
+     "title": "Sex-Equitable Machine Learning Prediction of Ankle Reinjury in Individuals with Chronic Ankle Instability: A 2-Year Prospective Cohort Study with Fairness Audit",
+     "summary": "A 2-year prospective cohort study developed and internally validated sex-equitable machine learning models to predict ankle reinjury in 96 individuals with chronic ankle instability. The Elastic Net model achieved an AUC of 0.807, and applying sex-specific decision thresholds reduced the equalized-odds gap by 57% (to 0.164).",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01137-3",
+     "publishedAt": "2026-11-07T00:00:00.000Z",
+     "firstSeen": "2026-11-08T00:49:51.596Z",
+     "curatedScore": 79,
+     "curatedReason": "这款机器学习模型能预测慢性踝关节不稳患者的两年内再受伤风险，并引入性别公平的阈值策略，将性别平等的赔率差距减少了57%。这提示你，未来在临床应用预测模型时，应考虑性别特异性调整，以优化不同性别的患者管理。",
+     "titleZh": "慢性踝关节不稳患者踝关节再损伤的性别公平机器学习预测：一项为期两年的前瞻性队列研究及公平性审计",
+     "summaryZh": "一项为期两年的前瞻性队列研究开发并内部验证了性别公平的机器学习模型，以预测96名慢性踝关节不稳患者的踝关节再损伤。Elastic Net模型达到了0.807的AUC，并且应用性别特异性决策阈值将性别平等的赔率差距降低了57%（至0.164）。",
+     "curatedReasonEn": "This machine learning model predicts the 2-year re-injury risk in individuals with chronic ankle instability and, with a sex-equitable threshold strategy, reduced the equalized-odds gap by 57%. This suggests that when applying predictive models in clinical practice, you should consider sex-specific adjustments to optimize patient management across genders.",
+     "limitation": "该研究的局限性在于其模型需要外部验证才能在临床中部署，且尽管通过性别特定阈值降低了性别公平差距，但\"不成比例影响比\"仍低于理想基准。",
+     "limitationEn": "The study's limitation is that its model requires external validation before clinical deployment, and despite reducing the equalized-odds gap through sex-specific thresholding, the disproportionate-impact ratio remained below the ideal benchmark.",
+     "tags": [
+      "research",
+      "foot-ankle",
+      "machine-learning"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Sports Medicine - Open",
+     "tech": true
+    },
+    {
+     "id": "news-1794098991594-14",
+     "title": "Prevalence and symptom severity of thrower’s shoulder in elite youth handball players",
+     "summary": "A prospective study of 660 elite youth handball players (52.3% boys) found that 22.4% reported shoulder problems, with an average symptom severity of 457.8 ± 352.0 points on the WOSI questionnaire. Latent class analysis showed no discernible pattern of symptom distribution.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02199-2",
+     "publishedAt": "2026-11-07T00:00:00.000Z",
+     "firstSeen": "2026-11-08T00:49:51.594Z",
+     "curatedScore": 75,
+     "curatedReason": "本研究揭示了精英青少年手球运动员肩部过度使用症状的流行率和症状严重程度。在预防和干预青少年运动员的肩部损伤方面，可以利用 WOSI 问卷来评估症状严重程度，但要避免将其作为区分症状模式的工具。",
+     "titleZh": "精英青少年手球运动员投掷肩部过度使用症状的流行率与严重程度",
+     "summaryZh": "一项针对660名精英青少年手球运动员（52.3%为男孩）的前瞻性研究发现，22.4%的运动员报告有肩部问题，WOSI问卷的平均症状严重度为457.8 ± 352.0分。潜在类别分析未能发现明显的症状分布模式。",
+     "curatedReasonEn": "This study reveals the prevalence and severity of overuse shoulder symptoms in elite youth handball players. In preventing and intervening shoulder injuries in young athletes, the WOSI questionnaire can be utilized to assess symptom severity, but should not be relied upon to differentiate symptom patterns.",
+     "limitation": "本研究的局限在于其观察性设计，未能探究症状的因果关系，且WOSI问卷未能识别出不同的症状模式。",
+     "limitationEn": "The limitation of this study lies in its observational design, which did not explore the causal relationship of symptoms, and the WOSI questionnaire failed to identify distinct symptom patterns.",
+     "tags": [
+      "research",
+      "shoulder"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1794069103386-19",
+     "title": "Normalization of Peak Torque in Adolescent Athletes: Which Method and What Body Parameters to Use?",
+     "summary": "This study investigated the optimal normalization method and body parameters for peak torque assessment in adolescent athletes to improve strength measurement accuracy.",
+     "category": "sports",
+     "source": "Disabil Rehabil",
+     "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2759700?af=R",
+     "publishedAt": "2026-11-06T11:07:39.000Z",
+     "firstSeen": "2026-11-07T16:31:43.386Z",
+     "curatedScore": 75,
+     "curatedReason": "确定在青少年运动员中标准化峰值扭矩的最佳方法，有助于你更准确地评估肌肉力量和功能，指导力量训练方案的设计和康复进展的监测。",
+     "titleZh": "青少年运动员峰值扭矩的标准化：应采用哪种方法和身体参数？",
+     "summaryZh": "本研究探讨了青少年运动员峰值扭矩评估的最佳标准化方法和身体参数，以提高力量测量的准确性。",
+     "curatedReasonEn": "Identifying the optimal method for normalizing peak torque in adolescent athletes helps you more accurately assess muscle strength and function, guiding the design of strength training programs and monitoring rehabilitation progress.",
+     "limitation": "研究可能未涵盖所有潜在的身体参数和标准化方法，且青少年运动员的样本量和特异性可能限制结果的外推性。",
+     "limitationEn": "The study may not cover all potential body parameters and normalization methods, and the sample size and specificity of adolescent athletes may limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "strength-assessment",
+      "adolescent-rehab"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Measurement in Physical Education and Exercise Science"
+    },
+    {
+     "id": "news-1794069103385-18",
+     "title": "How Swing Tilt Translates into Batted-Ball Outcomes: Pitch-Type-Specific Mediation by Bat Speed in MLB",
+     "summary": "This study examined how swing tilt influences batted-ball outcomes in MLB baseball, mediated by bat speed, in a pitch-type-specific manner.",
+     "category": "sports",
+     "source": "Disabil Rehabil",
+     "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2756944?af=R",
+     "publishedAt": "2026-11-02T04:17:53.000Z",
+     "firstSeen": "2026-11-07T16:31:43.385Z",
+     "curatedScore": 70,
+     "curatedReason": "理解棒球运动员挥杆倾斜度如何转化为击球结果，可作为评估运动表现和设计训练干预措施的参考，尤其是通过提升挥棒速度来改善击球表现。",
+     "titleZh": "挥杆倾斜度如何转化为击球结果：MLB 中挥棒速度对特定投球类型的中介作用",
+     "summaryZh": "这项研究分析了 MLB 棒球运动员的挥杆倾斜度如何通过挥棒速度中介，在不同投球类型下影响击球结果。",
+     "curatedReasonEn": "Understanding how swing tilt translates into batted-ball outcomes can inform the assessment of athletic performance and design of training interventions, particularly by leveraging bat speed to improve hitting.",
+     "limitation": "研究对象仅限于 MLB 棒球运动员，外推至其他运动项目或人群需谨慎。",
+     "limitationEn": "The study is limited to MLB baseball players, and its findings may not be generalizable to other sports or populations.",
+     "tags": [
+      "research",
+      "biomechanics",
+      "performance-training"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Measurement in Physical Education and Exercise Science"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1794098991596-18",
+     "title": "Immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults: a randomized waitlist-controlled trial",
+     "summary": "A randomized waitlist-controlled trial (n=50) found that 12 weeks of variable dual-task training led to immediate improvements in functional lower-limb strength (SMD = 0.54) in older adults, sustained at 3-month follow-up. Delayed improvements in functional mobility, inhibitory control, and short-term memory emerged at follow-up.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08667-1",
+     "publishedAt": "2026-11-06T00:00:00.000Z",
+     "firstSeen": "2026-11-08T00:49:51.596Z",
+     "curatedScore": 85,
+     "curatedReason": "这项研究表明，变异双任务训练能即时改善社区老年人的下肢功能性力量，并延迟改善功能性活动能力、抑制控制和短期记忆。你可以考虑将这种变异双任务训练纳入老年患者的康复方案，尤其是在追求长期认知和运动益处时。",
+     "titleZh": "社区老年人变异双任务训练的即时任务特异性与延迟泛化适应：一项随机候补对照试验",
+     "summaryZh": "一项随机候补对照试验（n=50）发现，12周的变异双任务训练能即时改善老年人的下肢功能性力量（SMD = 0.54），并在3个月随访中维持。功能性活动能力、抑制控制和短期记忆的延迟改善在随访时出现。",
+     "curatedReasonEn": "This study indicates that variable dual-task training immediately improves functional lower-limb strength in community-dwelling older adults, with delayed improvements in functional mobility, inhibitory control, and short-term memory. You can consider incorporating this variable dual-task training into rehabilitation programs for older patients, especially when aiming for long-term cognitive and motor benefits.",
+     "limitation": "该研究的局限性在于其回顾性注册试验，且部分认知和运动益处表现为延迟效应，需要进一步研究其机制。",
+     "limitationEn": "The limitation of this study is its retrospectively registered trial, and some cognitive and motor benefits appeared as delayed effects, requiring further research into their mechanisms.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "cognitive-function"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Geriatrics"
+    },
+    {
+     "id": "news-1794041778002-19",
+     "title": "Midlife mobility assessment from the pocket: agreement and consistency between smartphone placement configurations",
+     "summary": "A study on 46 adults (40-64 years) found strong correlations (rs=0.83-0.93 for balance, r=0.996 for STS repetition count) and good-to-excellent consistency between front-pocket/thigh and lower-back smartphone placements for static balance, sit-to-stand, and Timed Up and Go tests, supporting simplified, potentially unsupervised mobility monitoring.",
+     "category": "geriatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.05.26367337v1?rss=1",
+     "publishedAt": "2026-11-06T00:00:00.000Z",
+     "firstSeen": "2026-11-07T08:56:18.002Z",
+     "curatedScore": 75,
+     "curatedReason": "智能手机放入口袋/大腿位置与标准腰部位置进行平衡、坐站转换和 TUG 测试时，其移动性评估结果表现出良好的一致性。这意味着临床中可以更灵活地使用患者自带的智能手机进行初步的移动性筛查，特别是对于中老年人群，有望简化远程监测流程。",
+     "titleZh": "智能手机放置位置对中老年人移动性评估一致性的影响",
+     "summaryZh": "一项对 46 名中老年人（40-64 岁）的研究发现，智能手机放置在前口袋/大腿位置与标准腰部位置进行静态平衡、坐站转换和 TUG 测试时，其移动性评估结果（如平衡、STS 重复次数 r=0.996）具有很强相关性（rs=0.83-0.93）和良好到优秀的一致性，支持简化且可能无需监督的移动性监测。",
+     "curatedReasonEn": "Smartphone placement in the pocket/thigh shows good agreement with standard lower-back placement for mobility assessments (balance, STS, TUG). This allows for more flexible use of personal smartphones in clinical settings for initial mobility screening, particularly in midlife adults, potentially simplifying remote monitoring protocols.",
+     "limitation": "部分移动性参数在不同放置位置之间存在绝对值差异，提示在量化评估时仍需注意校准或进一步验证。",
+     "limitationEn": "Some mobility parameters showed absolute value differences between placements, suggesting the need for calibration or further validation in quantitative assessments.",
+     "tags": [
+      "research",
+      "digital-health",
+      "aging"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

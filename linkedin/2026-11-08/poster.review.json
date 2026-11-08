@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-08T00:50:04.550Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults: a randomized waitlist-controlled trial",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08667-1"
+    },
+    {
+      "slide": 2,
+      "title": "Sex-Equitable Machine Learning Prediction of Ankle Reinjury in Individuals with Chronic Ankle Instability: A 2-Year Prospective Cohort Study with Fairness Audit",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01137-3"
+    },
+    {
+      "slide": 3,
+      "title": "Prevalence and symptom severity of thrower’s shoulder in elite youth handball players",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02199-2"
+    },
+    {
+      "slide": 4,
+      "title": "Normalization of Peak Torque in Adolescent Athletes: Which Method and What Body Parameters to Use?",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2759700?af=R"
+    },
+    {
+      "slide": 5,
+      "title": "Midlife mobility assessment from the pocket: agreement and consistency between smartphone placement configurations",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.05.26367337v1?rss=1"
+    }
+  ]
+}
