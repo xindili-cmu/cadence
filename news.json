@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-08T16:43:54.336Z",
+    "lastUpdated": "2026-11-08T22:16:03.672Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -23,8 +23,8 @@
       "sourceCount": 7,
       "sources": [
         "Sports Medicine - Open",
-        "International journal of sports physical therapy",
         "Sports Medicine",
+        "International journal of sports physical therapy",
         "BMC Sports Science, Medicine and Rehabilitation",
         "Measurement in Physical Education and Exercise Science",
         "The American journal of sports medicine",
@@ -40,12 +40,6 @@
           "titleZh": "跳深训练后女子团队运动员的体能和跳跃表现运动学：一项系统综述和荟萃分析"
         },
         {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Gamified Versus Traditional Balance Training: Effects on Balance and Motivation in Collegiate Student-Athletes.",
-          "titleZh": "游戏化与传统平衡训练：对大学学生运动员平衡和动机的影响"
-        },
-        {
           "source": "Sports Medicine",
           "journal": "Sports Medicine",
           "title": "The Applied Sport Science of Professional Male Basketball: A Narrative Review of Current and Emerging Practices",
@@ -56,6 +50,12 @@
           "journal": "Sports Medicine - Open",
           "title": "From Signal to Biological Meaning: A Systematic Review of Construct-Validity Evidence for External Training Load Metrics in Sport",
           "titleZh": "从信号到生物学意义：运动中外部训练负荷指标构造效度证据的系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Gamified Versus Traditional Balance Training: Effects on Balance and Motivation in Collegiate Student-Athletes.",
+          "titleZh": "游戏化与传统平衡训练：对大学学生运动员平衡和动机的影响"
         },
         {
           "source": "BMC Sports Sci Med Rehabil",
@@ -106,9 +106,9 @@
           "titleZh": "慢性踝关节不稳患者踝关节再损伤的性别公平机器学习预测：一项为期两年的前瞻性队列研究及公平性审计"
         }
       ],
-      "heat": 3.89,
-      "themeZh": "竞技运动员体能表现、训练负荷与伤病预防",
-      "themeEn": "Athlete Performance, Training Load, Injury Prevention"
+      "heat": 3.59,
+      "themeZh": "运动员运动表现提升与损伤预防研究",
+      "themeEn": "Athlete Performance Enhancement and Injury Prevention"
     },
     {
       "id": "news-1793794659746-3",
@@ -220,9 +220,87 @@
           "titleZh": "英国卒中或短暂性脑缺血发作后的心肺训练：一项全国调查"
         }
       ],
-      "heat": 3.53,
-      "themeZh": "卒中后肢体功能障碍的神经康复机器人与技术",
-      "themeEn": "Post-Stroke Neurorehab Robotics and Technology"
+      "heat": 3.26,
+      "themeZh": "机器人与神经技术辅助卒中患者上肢及步态康复",
+      "themeEn": "Robot-assisted Stroke Rehabilitation with Neurotechnology"
+    },
+    {
+      "id": "news-1793279964353-1",
+      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
+      "category": "orthopedic",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "sourceCount": 7,
+      "sources": [
+        "Physiotherapy",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "BMC Musculoskeletal Disorders",
+        "International journal of sports physical therapy",
+        "Archives of Physical Medicine and Rehabilitation",
+        "Disability and rehabilitation",
+        "American journal of physical medicine & rehabilitation"
+      ],
+      "tag": "shoulder",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
+          "titleZh": "不同物理疗法对乳腺癌术后腋网综合征疗效的比较：一项随机对照试验的网络荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
+          "titleZh": "结构化富血小板血浆术后康复方案对肩峰下疼痛综合征患者疼痛和功能的影响：一项随机对照试验。"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Comparative study of therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching on knee joint range of motion and functional ability in children with hemiplegic cerebral palsy: a randomized trial",
+          "titleZh": "治疗性超声与全身振动作为被动牵伸辅助手段对偏瘫脑瘫儿童膝关节活动度和功能能力影响的比较研究：一项随机试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Feasibility, Safety, and Preliminary Effect Estimates of an Ultrasound-Informed Hybrid Joint-Sparing Rehabilitation Strategy in Patients With Rheumatoid Arthritis: A Prospective Non-Randomized Proof-of-Concept Study.",
+          "titleZh": "超声引导下混合式关节保护康复策略治疗类风湿关节炎患者的可行性、安全性和初步疗效评估：一项前瞻性非随机概念验证研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Ultrasound-Guided Percutaneous Tendon Dry Needling for Recalcitrant Distal Biceps Tendinopathy: A Case Series.",
+          "titleZh": "超声引导经皮肌腱干针治疗难治性远端肱二头肌肌腱病：一个病例系列"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Real-Time Ultrasound-Assisted Laryngeal Electromyography Using an In-Plane Trajectory View: A Prospective Feasibility Study",
+          "titleZh": "实时超声辅助喉部肌电图检查的平面内轨迹视图：一项前瞻性可行性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
+          "titleZh": "手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面的疗效：一项系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
+          "titleZh": "低剂量颈旁利多卡因注射对颈源性眩晕相关结局的影响：一项随机、假对照、评估者盲法试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Effects of Medium-frequency Electrical Stimulation Combined with Near-Infrared Light on Quadriceps Function and Independent Walking in Patients with Spinal Cord Injury.",
+          "titleZh": "中频电刺激联合近红外光对脊髓损伤患者股四头肌功能和独立行走能力的影响"
+        }
+      ],
+      "heat": 2.54,
+      "themeZh": "超声引导下不同物理疗法治疗骨科疾病的有效性",
+      "themeEn": "Ultrasound-guided Physical Therapies for Orthopedic Conditions"
     },
     {
       "id": "news-1794013300131-26",
@@ -304,80 +382,9 @@
           "titleZh": "肌肉骨骼初级物理治疗中的电子健康：证据、促进因素和障碍——一项范围综述"
         }
       ],
-      "heat": 2.75,
-      "themeZh": "慢性腰背痛的康复治疗效果与影响因素",
-      "themeEn": "Chronic Low Back Pain Rehabilitation"
-    },
-    {
-      "id": "news-1793279964353-1",
-      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
-      "category": "orthopedic",
-      "publishedAt": "2026-11-06T00:00:00.000Z",
-      "sourceCount": 6,
-      "sources": [
-        "Physiotherapy",
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "BMC Musculoskeletal Disorders",
-        "International journal of sports physical therapy",
-        "Archives of Physical Medicine and Rehabilitation",
-        "The Lancet"
-      ],
-      "tag": "shoulder",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-          "titleZh": "不同物理疗法对乳腺癌术后腋网综合征疗效的比较：一项随机对照试验的网络荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "结构化富血小板血浆术后康复方案对肩峰下疼痛综合征患者疼痛和功能的影响：一项随机对照试验。"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Comparative study of therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching on knee joint range of motion and functional ability in children with hemiplegic cerebral palsy: a randomized trial",
-          "titleZh": "治疗性超声与全身振动作为被动牵伸辅助手段对偏瘫脑瘫儿童膝关节活动度和功能能力影响的比较研究：一项随机试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Feasibility, Safety, and Preliminary Effect Estimates of an Ultrasound-Informed Hybrid Joint-Sparing Rehabilitation Strategy in Patients With Rheumatoid Arthritis: A Prospective Non-Randomized Proof-of-Concept Study.",
-          "titleZh": "超声引导下混合式关节保护康复策略治疗类风湿关节炎患者的可行性、安全性和初步疗效评估：一项前瞻性非随机概念验证研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Ultrasound-Guided Percutaneous Tendon Dry Needling for Recalcitrant Distal Biceps Tendinopathy: A Case Series.",
-          "titleZh": "超声引导经皮肌腱干针治疗难治性远端肱二头肌肌腱病：一个病例系列"
-        },
-        {
-          "source": "Archives of PM&R",
-          "journal": "Archives of Physical Medicine and Rehabilitation",
-          "title": "Real-Time Ultrasound-Assisted Laryngeal Electromyography Using an In-Plane Trajectory View: A Prospective Feasibility Study",
-          "titleZh": "实时超声辅助喉部肌电图检查的平面内轨迹视图：一项前瞻性可行性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
-          "titleZh": "手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面的疗效：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "The Lancet",
-          "journal": "The Lancet",
-          "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial",
-          "titleZh": "早期儿童急性呼吸窘迫综合征中俯卧位通气和高频震荡通气的疗效：一项国际、两因素、适应性、III期随机对照试验"
-        }
-      ],
-      "heat": 2.36,
-      "themeZh": "超声引导下物理治疗与康复技术应用",
-      "themeEn": "Ultrasound-Guided Physical Therapy and Rehab"
+      "heat": 2.54,
+      "themeZh": "腰痛的综合康复管理：从评估到干预",
+      "themeEn": "Comprehensive Rehabilitation for Low Back Pain"
     },
     {
       "id": "news-1793279964351-0",
@@ -424,12 +431,36 @@
           "titleZh": "治疗性急性间歇性缺氧改变多发性硬化症患者下肢运动的超脊髓神经控制"
         }
       ],
-      "heat": 1.57,
-      "themeZh": "神经系统疾病患者平衡功能障碍与干预",
-      "themeEn": "Neurological Balance Impairment and Intervention"
+      "heat": 1.45,
+      "themeZh": "神经系统疾病患者平衡功能与跌倒风险干预",
+      "themeEn": "Balance and Fall Risk Intervention for Neurological Patients"
     }
   ],
   "items": [
+    {
+      "id": "news-1792928754481-4",
+      "title": "Investigating the Feasibility of Locomotor Training for Children Under 5 Years With Complex Neurodisabilties.",
+      "summary": "A 6-week locomotor training program for 71 young children (mean age 2.8 years) with neurodisabilities and significant motor impairments was found feasible and beneficial, with Goal Attainment Scaling scores increasing from 12.8 to 56.2 and no major adverse events.",
+      "category": "pediatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42925538/",
+      "publishedAt": "2026-10-25T00:00:00.000Z",
+      "firstSeen": "2026-10-25T11:45:54.482Z",
+      "curatedScore": 75,
+      "curatedReason": "这项对神经残疾幼儿的运动训练可行性研究，即便样本量不大，但仍提示了其安全性和潜在益处。在评估此类患儿时，可将其作为早期干预的选项之一，但需注意其仍处于探索阶段。",
+      "titleZh": "探究 5 岁以下复杂神经残疾儿童运动训练的可行性",
+      "summaryZh": "一项针对 71 名（平均年龄 2.8 岁）有神经残疾和显著运动障碍的幼儿进行的为期 6 周的运动训练项目被证实可行且有益，目标达成量表分数从 12.8 增至 56.2，且无重大不良事件。",
+      "curatedReasonEn": "This feasibility study on locomotor training for young children with neurodisabilities, despite a modest sample size, suggests its safety and potential benefits. When assessing such children, consider it an early intervention option, but note that it is still in an exploratory phase.",
+      "limitation": "该研究为单组前瞻性设计，缺乏对照组，且随访期较短，限制了对干预效果的长期评估。",
+      "limitationEn": "This study was a single-group pre-post design, lacking a control group, and the follow-up period was short, limiting the long-term evaluation of intervention effectiveness.",
+      "tags": [
+        "research",
+        "motor-impairment",
+        "cerebral-palsy"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Pediatric physical therapy : the official publication of the Section on Pediatrics of the American Physical Therapy Association"
+    },
     {
       "id": "news-1794156232394-14",
       "title": "The development and psychometric evaluation of the Post Activity Symptom Scale (PASS) for Myalgic Encephalomyelitis/ Chronic Fatigue Syndrome.",
@@ -2160,29 +2191,6 @@
       "studyDesign": "系统综述",
       "journal": "Disability and rehabilitation",
       "tech": true
-    },
-    {
-      "id": "news-1793340429775-22",
-      "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial",
-      "summary": "An international, two-by-two factorial, response-adaptive, phase 3, randomized controlled trial (PROSpect) found no evidence to support prone positioning or high-frequency oscillatory ventilation as first-line strategies to improve ventilator-free days in patients with early, moderate-to-severe pediatric acute respiratory distress syndrome.",
-      "category": "pediatric",
-      "source": "The Lancet",
-      "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01949-5/fulltext?rss=yes",
-      "publishedAt": "2026-10-31T00:00:00.000Z",
-      "firstSeen": "2026-10-30T06:07:09.775Z",
-      "curatedScore": 80,
-      "curatedReason": "这项大型 RCT 未发现俯卧位通气或高频震荡通气能改善早期中重度儿童急性呼吸窘迫综合征患者的无呼吸机天数。这意味着对这类患儿不应常规使用这些策略。",
-      "titleZh": "早期儿童急性呼吸窘迫综合征中俯卧位通气和高频震荡通气的疗效：一项国际、两因素、适应性、III期随机对照试验",
-      "summaryZh": "一项国际、两因素、适应性、III期随机对照试验（PROSpect）发现，没有证据支持俯卧位通气或高频震荡通气作为改善早期中重度儿童急性呼吸窘迫综合征患者无呼吸机天数的一线策略。",
-      "curatedReasonEn": "This large RCT found no evidence that prone positioning or high-frequency oscillatory ventilation improve ventilator-free days in patients with early, moderate-to-severe pediatric ARDS. This means these strategies should not be routinely used in this population.",
-      "limitation": "研究未详细说明潜在的异质性或亚组分析，可能掩盖了某些特定情况下治疗的潜在益处。",
-      "limitationEn": "The study did not elaborate on potential heterogeneity or subgroup analyses, which might obscure potential benefits of treatment in specific circumstances.",
-      "tags": [
-        "research",
-        "pediatric"
-      ],
-      "studyDesign": "RCT",
-      "journal": "The Lancet"
     }
   ]
 }
