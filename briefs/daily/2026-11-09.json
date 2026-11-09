@@ -1,0 +1,82 @@
+{
+ "date": "2026-11-09",
+ "generatedAt": "2026-11-09T01:05:54.052Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-08T00:49:59.948Z",
+ "windowEnd": "2026-11-09T01:05:52.173Z",
+ "lead": {
+  "titleZh": "ME/CFS劳力后症状量表PASS：观察研究发布，老年人跌倒关联性数据更新",
+  "titleEn": "ME/CFS Post-Activity Symptom Scale (PASS) Development; Falls Association Data Updated",
+  "paragraphZh": "今日两项观察研究值得关注，其中一项是用于肌痛性脑脊髓炎/慢性疲劳综合征的劳力后症状量表（PASS）的开发与心理测量学评估，该研究的 curatedScore 达75分，是今天信号中得分最高、最值得关注的。另一项是关于社区老年人跌倒关联性与判别性能的研究，为临床决策提供了新的证据。",
+  "paragraphEn": "Today's signal highlights two observational studies. The development and psychometric evaluation of the Post Activity Symptom Scale (PASS) for Myalgic Encephalomyelitis/Chronic Fatigue Syndrome achieved the highest curated score of 75, making it the most significant finding. The second study updates evidence on falls association and discriminative performance in community-dwelling older adults."
+ },
+ "stats": {
+  "events": 2,
+  "specialties": 2,
+  "multiSource": 0,
+  "sources": 2,
+  "topScore": 75
+ },
+ "sections": [
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1794156232394-14",
+     "title": "The development and psychometric evaluation of the Post Activity Symptom Scale (PASS) for Myalgic Encephalomyelitis/ Chronic Fatigue Syndrome.",
+     "summary": "The Post Activity Symptom Scale (PASS) was developed and psychometrically evaluated, demonstrating moderate criterion-related validity (r=0.58, p<0.001), excellent discriminant validity (p<0.001), and test-retest reliability (ICC = 0.81) for measuring post-exertional malaise in ME/CFS patients.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.06.26367424v1?rss=1",
+     "publishedAt": "2026-11-08T00:00:00.000Z",
+     "firstSeen": "2026-11-08T16:43:52.394Z",
+     "curatedScore": 75,
+     "curatedReason": "PASS 量表为肌痛性脑脊髓炎/慢性疲劳综合征患者的劳力后不适提供了一个有效、可靠且敏感的测量工具。这能让你更客观地追踪患者的症状变化，支持临床决策。",
+     "titleZh": "用于肌痛性脑脊髓炎/慢性疲劳综合征的劳力后症状量表（PASS）的开发与心理测量学评估",
+     "summaryZh": "劳力后症状量表（PASS）的开发与心理测量学评估显示，该量表在测量肌痛性脑脊髓炎/慢性疲劳综合征（ME/CFS）患者的劳力后不适方面具有中等准则效度（r=0.58, p<0.001）、优秀判别效度（p<0.001）和重测信度（ICC = 0.81）。",
+     "curatedReasonEn": "The PASS scale offers a valid, reliable, and sensitive measure of post-exertional malaise in patients with Myalgic Encephalomyelitis/Chronic Fatigue Syndrome. This allows for more objective tracking of symptom changes and supports clinical decision-making.",
+     "limitation": "本研究为量表开发和心理测量学评估，仍需在更广泛的临床实践中验证其适用性。",
+     "limitationEn": "This study focuses on scale development and psychometric evaluation; its applicability requires further validation in broader clinical practice.",
+     "tags": [
+      "research",
+      "chronic-fatigue",
+      "outcome-measure"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1794186342111-17",
+     "title": "Timed Up and Go, gait speed, and grip strength: associations and discriminative performance for falls in community-dwelling older adults - results from the KORA-age study",
+     "summary": "A cohort study (n=1079) found that Timed Up and Go (TUG) performance was associated with reported falls in community-dwelling older adults (OR 1.095, 95% CI 1.018–1.176). However, TUG, gait speed, and grip strength showed no clear incremental discrimination beyond age and sex in identifying fallers, and established TUG thresholds had limited sensitivity.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08627-9",
+     "publishedAt": "2026-11-06T00:00:00.000Z",
+     "firstSeen": "2026-11-09T01:05:42.111Z",
+     "curatedScore": 70,
+     "curatedReason": "尽管 TUG 测试与跌倒风险相关，但它、步速和握力在区分有无跌倒史的老年人方面，增量判别能力有限。你在临床筛查时，应认识到这些测试的局限性，并综合其他风险因素考量。",
+     "titleZh": "Timed Up and Go、步速和握力：社区老年人跌倒关联性与判别性能—KORA-age 研究结果",
+     "summaryZh": "一项队列研究（n=1079）发现，Timed Up and Go（TUG）表现与社区老年人报告的跌倒相关（OR 1.095，95% CI 1.018–1.176）。然而，TUG、步速和握力在区分跌倒者时，其超越年龄和性别的增量判别能力不明显，且既定的 TUG 阈值敏感性有限。",
+     "curatedReasonEn": "While TUG is associated with falls, its incremental discriminative performance, along with gait speed and grip strength, for identifying older adults with or without falls is limited. When conducting clinical screenings, recognize the limitations of these tests and consider other risk factors.",
+     "limitation": "本研究数据基于自我报告的跌倒史，可能存在回忆偏倚，且为观察性研究。",
+     "limitationEn": "This study relied on self-reported fall history, which may introduce recall bias, and is an observational study.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "physical-performance"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

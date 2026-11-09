@@ -1,0 +1,18 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-09T01:05:56.011Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "The development and psychometric evaluation of the Post Activity Symptom Scale (PASS) for Myalgic Encephalomyelitis/ Chronic Fatigue Syndrome.",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.06.26367424v1?rss=1"
+    },
+    {
+      "slide": 2,
+      "title": "Timed Up and Go, gait speed, and grip strength: associations and discriminative performance for falls in community-dwelling older adults - results from the KORA-age study",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08627-9"
+    }
+  ]
+}
