@@ -1001,6 +1001,34 @@ async function run() {
     ok(!!vKey && vKey[1].split(':').length === 4, 'V4: worker v-key 为 5 段');
     ok(rep.includes("p[0] === 's' && p.length === 7") && rep.includes("p[0] === 'v' && p.length === 5"),
       'V4: search-log-report.js 按同样段数解析（改 key 形状必须两边同改）');
+    // V5（2026-11-09）：机器流量不得计入遥测。当天云机房的无头 Chrome 每分钟写一条 v，
+    // 用掉 KV 免费档日写入额度的一半以上，并稀释「搜索占访问比」的分母。两层各守一条，
+    // 再用真实 UA 样本跑一遍 worker 的判定函数（只测字符串存在挡不住正则写错）。
+    ok(/if \(navigator\.webdriver\) return;[\s\S]{0,200}sendBeacon\('\/api\/ping'/.test(app),
+      'V5: app.main.jsx 在发 beacon 之前跳过 navigator.webdriver');
+    const uaCheck = wk.indexOf("isAutomatedUA(request.headers.get('user-agent'))");
+    ok(uaCheck > -1 && uaCheck < wk.indexOf('env.SEARCH_LOG.put('), 'V5: worker.js 在写 KV 之前按 UA 过滤');
+    const fnSrc = wk.match(/function isAutomatedUA\(ua\) \{[\s\S]*?\n\}/);
+    ok(!!fnSrc, 'V5: worker.js 定义了 isAutomatedUA');
+    if (fnSrc) {
+      const isAuto = new Function(fnSrc[0] + '; return isAutomatedUA;')();
+      const bots = [
+        '', null,
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)',
+      ];
+      const humans = [
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.50',
+      ];
+      ok(bots.every(u => isAuto(u) === true), 'V5: 无头 Chrome / Linux 桌面 / 爬虫 / 空 UA 判为机器');
+      ok(humans.every(u => isAuto(u) === false), 'V5: Mac / Windows / iPhone / Android / 微信内置浏览器判为真人');
+    }
   }
 
   // ── W 段：poster 刊名短名（2026-09-17，daily-poster 设计交付的前置条件）──────

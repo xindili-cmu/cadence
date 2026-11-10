@@ -2224,6 +2224,12 @@ function FeedApp() {
   // sendBeacon is fire-and-forget; failures are invisible to the reader by design.
   const cdPing = (body) => {
     try {
+      // Automated browsers (headless Chrome, Playwright, Puppeteer…) run this JS
+      // too. 2026-11-09: a wave of cloud-hosted headless Chrome wrote ~1 pageview
+      // key per minute, burned the KV free-tier write cap and diluted the
+      // "% of visits that search" denominator. worker.js isAutomatedUA is the
+      // second layer for clients that hide this flag.
+      if (navigator.webdriver) return;
       const json = JSON.stringify(body);
       if (navigator.sendBeacon) navigator.sendBeacon('/api/ping', new Blob([json], { type: 'application/json' }));
       else fetch('/api/ping', { method: 'POST', body: json, keepalive: true, headers: { 'content-type': 'application/json' } }).catch(() => {});

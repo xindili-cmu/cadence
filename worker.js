@@ -126,6 +126,19 @@ function b64url(str) {
   for (const b of bytes) bin += String.fromCharCode(b);
   return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
+// Automated clients must not count as readers (2026-11-09: cloud-hosted
+// headless Chrome on Linux produced ~85% of a day's requests, wrote one `v`
+// key per page load and used up the KV free-tier daily writes). First layer is
+// navigator.webdriver in app.main.jsx; this catches clients that hide it.
+// Desktop Linux is dropped on purpose: for a clinician readership it is almost
+// entirely datacenter traffic, and under-counting a few real readers is cheaper
+// than a denominator full of bots. Android (also "Linux" in the UA) is kept.
+function isAutomatedUA(ua) {
+  if (!ua) return true;
+  if (/HeadlessChrome|bot\b|crawl|spider|Lighthouse|Playwright|Puppeteer|PhantomJS|Selenium/i.test(ua)) return true;
+  if (/X11; Linux/i.test(ua) && !/Android/i.test(ua)) return true;
+  return false;
+}
 async function handlePing(request, env, ctx, url) {
   const no = new Response(null, { status: 204 });
   try {
@@ -134,6 +147,7 @@ async function handlePing(request, env, ctx, url) {
     // included). Anything else is junk — swallow it silently.
     if (request.headers.get('origin') !== url.origin) return no;
     if (!env.SEARCH_LOG) return no;
+    if (isAutomatedUA(request.headers.get('user-agent'))) return no;
     const raw = await request.text();
     if (!raw || raw.length > 1024) return no;
     const b = JSON.parse(raw);
