@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-10T12:46:55.519Z",
+    "lastUpdated": "2026-11-10T20:54:37.486Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -20,15 +20,16 @@
       "sourceUrl": "https://blogs.bmj.com/bjsm/2026/11/09/can-traditional-chinese-exercises-help-people-with-musculoskeletal-disorders/",
       "category": "orthopedic",
       "publishedAt": "2026-11-09T00:00:00.000Z",
-      "sourceCount": 7,
+      "sourceCount": 8,
       "sources": [
         "British Journal of Sports Medicine",
         "medRxiv",
         "Physiotherapy",
         "Clinical biomechanics (Bristol, Avon)",
-        "European Spine Journal",
         "The Journal of orthopaedic and sports physical therapy",
-        "BMC Musculoskeletal Disorders"
+        "BMC Musculoskeletal Disorders",
+        "American journal of physical medicine & rehabilitation",
+        "BMC musculoskeletal disorders"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -57,12 +58,6 @@
           "titleZh": "探索物理治疗对腰痛患者真实世界姿势行为改变的病例系列研究"
         },
         {
-          "source": "Eur Spine J",
-          "journal": "European Spine Journal",
-          "title": "Lumbar mobility and strength correlate with low back pain and quality of life",
-          "titleZh": "腰椎活动度和力量与腰痛及生活质量的相关性"
-        },
-        {
           "source": "PubMed",
           "journal": "The Journal of orthopaedic and sports physical therapy",
           "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
@@ -73,11 +68,35 @@
           "journal": "BMC Musculoskeletal Disorders",
           "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
           "titleZh": "埃塞俄比亚慢性腰痛患者跨专业康复计划（IPRehab-LBP）的可行性：一项开放标签的试点随机对照试验及内嵌过程评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+          "titleZh": "人工智能在物理治疗与康复医学治疗计划中的作用：一项系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
+          "titleZh": "亲身体验与远程康复治疗慢性膝关节疼痛的价值：一项嵌套在随机对照试验中的离散选择实验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Patient experiences with a prescription-based digital health application (DiGA) for knee disorders: a qualitative study in german orthopaedic care.",
+          "titleZh": "膝关节疾病患者对处方数字健康应用（DiGA）的体验：德国骨科护理中的一项定性研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "e-health in musculoskeletal primary care physiotherapy: Evidence, facilitators, and barriers - A scoping review.",
+          "titleZh": "肌肉骨骼初级物理治疗中的电子健康：证据、促进因素和障碍——一项范围综述"
         }
       ],
-      "heat": 4.12,
-      "themeZh": "肌肉骨骼疾病的运动与姿态干预",
-      "themeEn": "Exercise and Posture Interventions for Musculoskeletal Disorders"
+      "heat": 4.18,
+      "themeZh": "骨骼肌肉疾病的运动疗法与康复效果",
+      "themeEn": "Exercise and rehabilitation for musculoskeletal disorders"
     },
     {
       "id": "news-1793794659746-3",
@@ -140,93 +159,165 @@
           "titleZh": "机器人步态外骨骼在脑瘫儿童功能康复中的益处与局限性：一项伞形综述。"
         }
       ],
-      "heat": 3.53,
-      "themeZh": "机器人与神经刺激技术在肢体康复中的应用",
-      "themeEn": "Robotics and Neurostimulation for Limb Rehabilitation"
+      "heat": 3.14,
+      "themeZh": "机器人与技术辅助神经康复训练策略",
+      "themeEn": "Robot-assisted neurorehabilitation strategies"
     },
     {
-      "id": "news-1793279964353-1",
-      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
-      "category": "orthopedic",
+      "id": "news-1793755945670-3",
+      "title": "Walking Capacity and Daily Movement Behaviours After Ischemic Stroke: A Potential Capacity-Performance Gap.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42975922/",
+      "category": "neurological",
       "publishedAt": "2026-11-09T00:00:00.000Z",
       "sourceCount": 6,
       "sources": [
-        "Physiotherapy",
         "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "International journal of sports physical therapy",
-        "Disability and rehabilitation",
+        "medRxiv",
         "Physiotherapy theory and practice",
-        "American journal of physical medicine & rehabilitation"
+        "Disability and rehabilitation",
+        "NeuroRehabilitation",
+        "Physiotherapy"
       ],
-      "tag": "shoulder",
+      "tag": "stroke",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Walking Capacity and Daily Movement Behaviours After Ischemic Stroke: A Potential Capacity-Performance Gap.",
+          "titleZh": "缺血性卒中后的步行能力和日常运动行为：潜在的能力-表现差距"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Regression-Based Balance Discordance Refines Prediction of Prospective Falls After Subacute Stroke: A Secondary Analysis of the LEAPS Trial",
+          "titleZh": "基于回归的平衡失调指标在预测亚急性卒中后前瞻性跌倒中的作用：LEAPS 试验的二次分析"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Smaller Cortical Responses to Balance Perturbations in Parkinson's Disease with Freezing of Gait",
+          "titleZh": "帕金森病冻结步态患者对平衡扰动的皮层反应较小"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
+          "titleZh": "低频脑深部电刺激促进创伤性脑损伤后口面部运动功能的长期恢复：一个病例研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Neurological and functional recovery despite persistent skull defect after decompressive hemicraniectomy: a case report.",
+          "titleZh": "去骨瓣减压术后颅骨缺损持续存在下神经功能和运动恢复：一病例报告"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
+          "titleZh": "神经康复中心理社会干预关键要素的识别：一项针对获得性脑损伤年轻患者的真实主义评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Neurorehabilitation as an Opportunity for Structured Post-Stroke Lipid Management: A Narrative Review.",
+          "titleZh": "神经康复：结构化卒中后血脂管理的机会：一篇叙述性综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Cardiorespiratory training after stroke or transient ischemic attack in the United Kingdom: A national survey.",
+          "titleZh": "英国卒中或短暂性脑缺血发作后的心肺训练：一项全国调查"
+        }
+      ],
+      "heat": 3.14,
+      "themeZh": "卒中及脑损伤后平衡与运动功能恢复",
+      "themeEn": "Balance and motor recovery post-stroke/brain injury"
+    },
+    {
+      "id": "news-1793794659746-4",
+      "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42976662/",
+      "category": "cardiopulmonary",
+      "publishedAt": "2026-11-10T00:00:00.000Z",
+      "sourceCount": 3,
+      "sources": [
+        "Physiotherapy",
+        "Archives of Physical Medicine and Rehabilitation",
+        "NeuroRehabilitation"
+      ],
+      "tag": "COPD",
       "kind": "theme",
       "members": [
         {
           "source": "PubMed",
           "journal": "Physiotherapy",
-          "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-          "titleZh": "不同物理疗法对乳腺癌术后腋网综合征疗效的比较：一项随机对照试验的网络荟萃分析"
+          "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
+          "titleZh": "椅上运动训练对急性加重期慢阻肺患者肺功能、运动能力和生活质量的影响：一项随机对照试验"
+        },
+        {
+          "source": "Archives of PM&R",
+          "journal": "Archives of Physical Medicine and Rehabilitation",
+          "title": "Effects of Functional Inspiratory Muscle Training in Individuals with Obesity: A Randomized Controlled Trial",
+          "titleZh": "功能性吸气肌训练对肥胖个体的影响：一项随机对照试验"
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "结构化 PRP 术后康复方案对肩峰下疼痛综合征疼痛与功能影响的随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Ultrasound-Guided Percutaneous Tendon Dry Needling for Recalcitrant Distal Biceps Tendinopathy: A Case Series.",
-          "titleZh": "超声引导下经皮肌腱干针治疗难治性远端肱二头肌肌腱病：病例系列"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
-          "titleZh": "手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面的疗效：一项系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
-          "titleZh": "低剂量颈旁利多卡因注射对颈源性眩晕相关结局的影响：一项随机、假对照、评估者盲法试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Effects of adjunctive craniosacral therapy to conventional physiotherapy on postural responses and autonomic function in individuals with multiple sclerosis: a randomized controlled trial.",
-          "titleZh": "辅助颅骶治疗联合常规物理治疗对多发性硬化症患者姿势反应和自主神经功能影响的随机对照试验"
-        },
-        {
-          "source": "PubMed",
-          "journal": "American journal of physical medicine & rehabilitation",
-          "title": "Effects of Medium-frequency Electrical Stimulation Combined with Near-Infrared Light on Quadriceps Function and Independent Walking in Patients with Spinal Cord Injury.",
-          "titleZh": "中频电刺激联合近红外光对脊髓损伤患者股四头肌功能及独立步行的影响"
+          "journal": "NeuroRehabilitation",
+          "title": "Feasibility and Preliminary Effects of Oropharyngeal Alignment Exercise on Swallowing Function in Neurological Disorders with Restricted Mouth Opening: A Pilot Study.",
+          "titleZh": "口咽对齐训练对伴口张受限的神经系统疾病患者吞咽功能的可行性及初步效果：一项预试验"
         }
       ],
-      "heat": 3.53,
-      "themeZh": "物理疗法对特定病症疼痛与功能的影响",
-      "themeEn": "Physical Therapy for Pain and Function"
+      "heat": 2.22,
+      "themeZh": "呼吸及吞咽功能康复训练效果",
+      "themeEn": "Rehabilitation for respiratory and swallowing function"
     },
     {
-      "id": "news-1794013300132-28",
-      "title": "Female Team-Sport Athletes’ Physical Fitness and Jump Performance Kinematics After Plyometric Jump Training: A Systematic Review and Meta-analysis",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01136-4",
+      "id": "news-1793742698701-3",
+      "title": "Altered Cognitive Control and Cortical Oscillatory Dynamics in Athletes With ACL Reconstruction During Decision-Making Under Uncertainty.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42975142/",
       "category": "sports",
       "publishedAt": "2026-11-07T00:00:00.000Z",
-      "sourceCount": 6,
+      "sourceCount": 7,
       "sources": [
+        "The American journal of sports medicine",
+        "International journal of sports physical therapy",
+        "Clinical biomechanics (Bristol, Avon)",
         "Sports Medicine - Open",
         "BMC Sports Science, Medicine and Rehabilitation",
         "Sports Medicine",
-        "International journal of sports physical therapy",
-        "Measurement in Physical Education and Exercise Science",
-        "Clinical biomechanics (Bristol, Avon)"
+        "Measurement in Physical Education and Exercise Science"
       ],
       "tag": "return-to-sport",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "The American journal of sports medicine",
+          "title": "Altered Cognitive Control and Cortical Oscillatory Dynamics in Athletes With ACL Reconstruction During Decision-Making Under Uncertainty.",
+          "titleZh": "ACL重建运动员在不确定性决策中认知控制和皮层振荡动力学的改变"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Neurocognitive Factors in ACL Injury: The Missing Piece in Rehabilitation and Prevention? A Scoping Review.",
+          "titleZh": "ACL 损伤中的神经认知因素：康复和预防中缺失的一环？一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "International journal of sports physical therapy",
+          "title": "Beyond Reconstruction: Return to Olympic Medal Performance Following Morphology-Informed and Criterion-Based Nonoperative Management of a Femoral-Sided Sherman Type II ACL Injury - A Case Report.",
+          "titleZh": "超越重建：股骨侧谢尔曼II型ACL损伤形态学引导和基于标准的非手术管理后重返奥运奖牌水平表现——一个病例报告"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical biomechanics (Bristol, Avon)",
+          "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
+          "titleZh": "习得性无助感与前交叉韧带重建术后跳跃着地生物力学相关"
+        },
+        {
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "Sex-Equitable Machine Learning Prediction of Ankle Reinjury in Individuals with Chronic Ankle Instability: A 2-Year Prospective Cohort Study with Fairness Audit",
+          "titleZh": "慢性踝关节不稳患者踝关节再损伤的性别公平机器学习预测：一项为期两年的前瞻性队列研究及公平性审计"
+        },
         {
           "source": "Sports Med - Open",
           "journal": "Sports Medicine - Open",
@@ -244,12 +335,6 @@
           "journal": "BMC Sports Science, Medicine and Rehabilitation",
           "title": "Effects of repeated-sprint training in hypoxia on repeated-sprint and sprint performance in athletes: a systematic review and three-level meta-analysis",
           "titleZh": "低氧重复冲刺训练对运动员重复冲刺和冲刺表现的影响：一项系统综述和三水平荟萃分析"
-        },
-        {
-          "source": "Sports Med - Open",
-          "journal": "Sports Medicine - Open",
-          "title": "From Signal to Biological Meaning: A Systematic Review of Construct-Validity Evidence for External Training Load Metrics in Sport",
-          "titleZh": "从信号到生物学意义：运动中外部训练负荷指标构造效度证据的系统综述"
         },
         {
           "source": "Sports Medicine",
@@ -298,74 +383,153 @@
           "journal": "BMC Sports Science, Medicine and Rehabilitation",
           "title": "Comparison of the effects of modified razor curl and nordic hamstring exercises on hamstring muscle strength and posterior-chain endurance in male football players",
           "titleZh": "修正剃刀卷和北欧腘绳肌练习对男足球运动员腘绳肌力量和后链耐力的影响比较"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Neurocognitive Factors in ACL Injury: The Missing Piece in Rehabilitation and Prevention? A Scoping Review.",
-          "titleZh": "ACL 损伤中的神经认知因素：康复和预防中缺失的一环？一项范围综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
-          "titleZh": "习得性无助感与前交叉韧带重建术后跳跃着地生物力学相关"
-        },
-        {
-          "source": "Sports Med - Open",
-          "journal": "Sports Medicine - Open",
-          "title": "Sex-Equitable Machine Learning Prediction of Ankle Reinjury in Individuals with Chronic Ankle Instability: A 2-Year Prospective Cohort Study with Fairness Audit",
-          "titleZh": "慢性踝关节不稳患者踝关节再损伤的性别公平机器学习预测：一项为期两年的前瞻性队列研究及公平性审计"
         }
       ],
-      "heat": 1.76,
-      "themeZh": "运动训练对运动员表现与恢复的影响",
-      "themeEn": "Sports Training Effects on Athlete Performance"
-    },
-    {
-      "id": "news-1793981098662-1",
-      "title": "Healthcare professionals' perceptions and experiences of promoting physical activity in persons with multiple sclerosis: a systematic review of qualitative evidence.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42989809/",
-      "category": "neurological",
-      "publishedAt": "2026-11-08T00:00:00.000Z",
-      "sourceCount": 3,
-      "sources": [
-        "Disability and rehabilitation",
-        "Physiotherapy theory and practice",
-        "medRxiv"
-      ],
-      "tag": "ms",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Healthcare professionals' perceptions and experiences of promoting physical activity in persons with multiple sclerosis: a systematic review of qualitative evidence.",
-          "titleZh": "医疗专业人员在多发性硬化症患者中促进体育活动的看法和经验：一项定性证据的系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy theory and practice",
-          "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
-          "titleZh": "多发性硬化症患者平衡训练强度的临床评估：临床判断与平衡训练强度工具（BITE）的比较——一项评价者间一致性和可靠性研究。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "The development and psychometric evaluation of the Post Activity Symptom Scale (PASS) for Myalgic Encephalomyelitis/ Chronic Fatigue Syndrome.",
-          "titleZh": "用于肌痛性脑脊髓炎/慢性疲劳综合征的劳力后症状量表（PASS）的开发与心理测量学评估"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Development and psychometric evaluation of the Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS)",
-          "titleZh": "肌痛性脑脊髓炎严重程度量表（SoMES）和肌痛性脑脊髓炎职业状态量表（MEOSS）的开发与心理测量学评估"
-        }
-      ],
-      "heat": 1.25,
-      "themeZh": "多发性硬化与慢性疲劳症状评估与干预",
-      "themeEn": "MS and Chronic Fatigue Symptom Assessment"
+      "heat": 1.83,
+      "themeZh": "ACL损伤康复与预防中的神经认知因素",
+      "themeEn": "Neurocognitive factors in ACL injury rehabilitation"
     }
   ],
   "items": [
+    {
+      "id": "news-1793742698701-3",
+      "title": "Altered Cognitive Control and Cortical Oscillatory Dynamics in Athletes With ACL Reconstruction During Decision-Making Under Uncertainty.",
+      "summary": "A study of 90 open-skill athletes (45 non-ACLR, 45 ACLR) found ACLR athletes exhibited slower response times and lower accuracy (d = 0.75-1.09) during a probabilistic go/no-go task, along with attenuated prestimulus midfrontal theta power (d = 0.60) and reduced left-lateralized central beta (d = 0.61) and posterior alpha suppression (d = 0.55) during target phase.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42975142/",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "firstSeen": "2026-11-03T21:51:38.701Z",
+      "curatedScore": 85,
+      "curatedReason": "ACL重建（ACLR）运动员在不确定决策情境下表现出持续的神经认知改变，这可能增加再受伤风险。你在评估ACLR运动员重返赛场时，应考虑纳入神经认知评估，而不只是传统的体能测试。",
+      "titleZh": "ACL重建运动员在不确定性决策中认知控制和皮层振荡动力学的改变",
+      "summaryZh": "一项对90名开放技能运动员（45名非ACLR，45名ACLR）的研究发现，ACLR运动员在概率性Go/No-Go任务中反应时间较慢、准确性较低（d = 0.75-1.09），且在目标刺激阶段，刺激前中额θ波功率衰减（d = 0.60），左侧中央β波（d = 0.61）和后部α波抑制（d = 0.55）减弱。",
+      "curatedReasonEn": "Athletes with ACL reconstruction (ACLR) show persistent neurocognitive alterations during decision-making under uncertainty, which may increase reinjury risk. When evaluating ACLR athletes for return to sport, consider integrating neurocognitive assessments beyond traditional physical tests.",
+      "limitation": "这是一项对照实验室研究，环境与真实运动场景存在差异，可能影响结果的生态效度。",
+      "limitationEn": "This is a controlled laboratory study, and the environment differs from real-world sports settings, potentially affecting ecological validity.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "The American journal of sports medicine"
+    },
+    {
+      "id": "news-1794001025428-0",
+      "title": "Feasibility, Safety, and Preliminary Effect Estimates of an Ultrasound-Informed Hybrid Joint-Sparing Rehabilitation Strategy in Patients With Rheumatoid Arthritis: A Prospective Non-Randomized Proof-of-Concept Study.",
+      "summary": "A 12-week ultrasound-informed hybrid rehabilitation protocol in 30 RA patients showed greater pain reduction (ΔVAS: -2.88 ± 0.84 cm vs. -0.60 ± 0.20 cm; p < 0.001; Cohen's d = 3.74) compared to minimal education, with 100% retention and 86% home compliance, but no significant changes in ultrasonographic synovitis.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42990106/",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "firstSeen": "2026-11-06T21:37:05.428Z",
+      "curatedScore": 75,
+      "curatedReason": "这项概念验证性研究提示，将超声信息整合到风湿性关节炎（RA）康复计划中是可行的。然而，其非随机设计和过高的效应量估计，限制了你将其应用于临床的依据。",
+      "titleZh": "超声引导的混合式关节保护康复策略在类风湿关节炎患者中的可行性、安全性及初步疗效评估：一项前瞻性非随机概念验证研究",
+      "summaryZh": "一项在30例类风湿关节炎（RA）患者中进行的为期12周的超声引导混合康复方案，与最低限度教育相比，疼痛减轻更大（ΔVAS：-2.88 ± 0.84 cm vs. -0.60 ± 0.20 cm; p < 0.001; Cohen's d = 3.74），研究招募率100%，留存率100%，居家依从性86%，但超声滑膜炎无显著变化。",
+      "curatedReasonEn": "This proof-of-concept study suggests that integrating ultrasound information into rheumatoid arthritis (RA) rehabilitation is feasible. However, its non-randomized design and likely overestimated effect sizes limit its clinical applicability.",
+      "limitation": "这是一项单中心、非随机、小样本的概念验证性研究，对照组干预非常有限，且效应量可能被高估。",
+      "limitationEn": "This is a single-center, non-randomized, small-sample proof-of-concept study with a minimal control intervention and likely overestimated effect sizes.",
+      "tags": [
+        "research",
+        "hand-wrist"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1793755945670-3",
+      "title": "Walking Capacity and Daily Movement Behaviours After Ischemic Stroke: A Potential Capacity-Performance Gap.",
+      "summary": "In a cross-sectional study of ambulatory ischemic stroke patients, subacute patients had faster gait speed (0.89 vs. 0.71 m/s; p = 0.03) and shorter TUG times (15.9 vs. 19.0 s; p = 0.03) than acute patients, but both groups accumulated high sedentary time (∼12 hours/day). Gait speed was the only walking capacity measure associated with daily movement behaviors.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42975922/",
+      "publishedAt": "2026-11-03T00:00:00.000Z",
+      "firstSeen": "2026-11-04T01:32:25.670Z",
+      "curatedScore": 75,
+      "curatedReason": "卒中患者在急性期和亚急性期存在“能力-表现”差距：尽管步行能力有所恢复，但每日久坐时间仍高达约12小时。这提示你在康复中不仅要关注步行能力的提高，更要加入改善日常运动行为的干预。",
+      "titleZh": "缺血性卒中后的步行能力和日常运动行为：潜在的能力-表现差距",
+      "summaryZh": "一项对可活动缺血性卒中患者的横断面研究发现，亚急性期患者的步速（0.89 vs. 0.71 m/s; p = 0.03）和计时起立行走（TUG）时间（15.9 vs. 19.0 s; p = 0.03）均优于急性期患者，但两组患者每日久坐时间均较高（约12小时/天）。步速是唯一与日常运动行为相关的步行能力指标。",
+      "curatedReasonEn": "Stroke patients exhibit a \"capacity-performance\" gap in acute and subacute phases: despite walking capacity recovery, daily sedentary time remains around 12 hours. This suggests that your rehabilitation should not only focus on improving walking capacity but also include interventions to enhance daily movement behaviors.",
+      "limitation": "这是一项横断面研究，无法建立因果关系，且样本量较小。",
+      "limitationEn": "This is a cross-sectional study that cannot establish causality and has a small sample size.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1794344075545-1",
+      "title": "Feasibility and Preliminary Effects of Oropharyngeal Alignment Exercise on Swallowing Function in Neurological Disorders with Restricted Mouth Opening: A Pilot Study.",
+      "summary": "A single-arm pilot study with 9 participants (7 stroke, 1 Parkinson's) found oropharyngeal alignment exercise feasible and well-tolerated, with most showing increased maximal mouth opening (6-13 mm) and statistically significant improvements in MASA, GUSS, and PAS scores, particularly for semisolid boluses.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43006710/",
+      "publishedAt": "2026-11-10T00:00:00.000Z",
+      "firstSeen": "2026-11-10T20:54:35.545Z",
+      "curatedScore": 70,
+      "curatedReason": "这项初步研究表明，口咽对齐训练在有吞咽困难和口部张开受限的神经系统疾病患者中是可行且耐受性良好的。如果你的患者也有类似症状，可以留意后续更大规模的对照试验。",
+      "titleZh": "口咽对齐训练对伴口张受限的神经系统疾病患者吞咽功能的可行性及初步效果：一项预试验",
+      "summaryZh": "一项对9名参与者（7名卒中，1名帕金森病）进行的单臂预试验发现，口咽对齐训练可行且耐受性良好，大多数参与者最大口张开度增加6-13毫米，MASA、GUSS和PAS评分统计学显著改善，尤其对半固体团块效果明显。",
+      "curatedReasonEn": "This preliminary study indicates that oropharyngeal alignment exercise is feasible and well-tolerated in neurological patients with dysphagia and restricted mouth opening. If your patients present with similar symptoms, keep an eye on future larger-scale controlled trials.",
+      "limitation": "这是一项单臂先导研究，样本量小，且缺乏对照组，无法推断干预的因果效应。",
+      "limitationEn": "This is a single-arm pilot study with a small sample size and no control group, preventing causal inference of the intervention's effects.",
+      "tags": [
+        "research",
+        "stroke",
+        "parkinson"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1794001025429-3",
+      "title": "Neurorehabilitation as an Opportunity for Structured Post-Stroke Lipid Management: A Narrative Review.",
+      "summary": "This narrative review found that intensive LDL-C reduction improves secondary stroke prevention, citing evidence from SPARCL, Treat Stroke to Target, FOURIER, and Ez PAVE. It suggests integrating supervised medication titration, adherence monitoring, and risk stratification into neurorehabilitation could strengthen secondary stroke prevention.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42992449/",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "firstSeen": "2026-11-06T21:37:05.429Z",
+      "curatedScore": 70,
+      "curatedReason": "卒中后强化血脂管理对二级预防至关重要。这篇综述提示，神经康复可能是落实血脂管理、监测依从性并降低再发卒中风险的关键环节，值得你在临床路径设计时考虑。",
+      "titleZh": "神经康复：结构化卒中后血脂管理的机会：一篇叙述性综述",
+      "summaryZh": "这篇叙述性综述发现，强化降低低密度脂蛋白胆固醇（LDL-C）可改善卒中二级预防，并引用了SPARCL、Treat Stroke to Target、FOURIER和Ez PAVE的研究证据。综述建议，将监督用药滴定、依从性监测和风险分层整合到神经康复中，可能加强卒中二级预防。",
+      "curatedReasonEn": "Intensive lipid management is crucial for secondary prevention after stroke. This review suggests that neurorehabilitation could be a key setting for implementing lipid management, monitoring adherence, and reducing recurrent stroke risk. Consider this when designing your clinical pathways.",
+      "limitation": "这是一篇叙述性综述，可能存在选择偏倚，且未提供量化证据。",
+      "limitationEn": "This is a narrative review, potentially subject to selection bias and not providing quantitative evidence.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "综述",
+      "journal": "NeuroRehabilitation"
+    },
+    {
+      "id": "news-1794001025429-6",
+      "title": "Beyond Reconstruction: Return to Olympic Medal Performance Following Morphology-Informed and Criterion-Based Nonoperative Management of a Femoral-Sided Sherman Type II ACL Injury - A Case Report.",
+      "summary": "An elite field hockey player with a femoral-sided Sherman type II ACL injury successfully returned to Olympic medal performance (silver medal 200 days post-injury) after morphology-informed nonoperative management and criterion-based rehabilitation. The athlete resumed international competition at 140 days post injury.",
+      "category": "sports",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42992267/",
+      "publishedAt": "2026-11-06T00:00:00.000Z",
+      "firstSeen": "2026-11-06T21:37:05.429Z",
+      "curatedScore": 70,
+      "curatedReason": "这个病例报告展示了在对侧股骨谢尔曼II型ACL损伤精英运动员中，形态学引导下的非手术管理结合基于标准的康复治疗，最终能帮助运动员重返高水平竞技。这提示我们，特定ACL损伤表型下非手术治疗可能是一个可行路径，挑战了传统上对精英运动员的治疗假设。",
+      "titleZh": "超越重建：股骨侧谢尔曼II型ACL损伤形态学引导和基于标准的非手术管理后重返奥运奖牌水平表现——一个病例报告",
+      "summaryZh": "一名股骨侧谢尔曼II型ACL损伤的精英曲棍球运动员在形态学引导的非手术管理和基于标准的康复后，成功恢复至奥运奖牌水平（伤后200天获得银牌）。该运动员在伤后140天恢复国际比赛。",
+      "curatedReasonEn": "This case report demonstrates that morphology-informed nonoperative management combined with criterion-based rehabilitation can help elite athletes with femoral-sided Sherman type II ACL injuries return to high-level competition. This suggests a viable nonoperative pathway for specific ACL injury phenotypes, challenging traditional treatment assumptions for elite athletes.",
+      "limitation": "这是一篇单例报告，证据等级低，结果外推性受限。",
+      "limitationEn": "This is a single case report, providing low-level evidence with limited generalizability.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "International journal of sports physical therapy"
+    },
     {
       "id": "news-1793742698701-4",
       "title": "Diagnosis, Rehabilitation, and Return to Sport after Athletic Hamstring Injury: An ICCUS Society Consensus Statement.",
@@ -1172,29 +1336,6 @@
       ],
       "studyDesign": "观察研究",
       "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1793111990349-0",
-      "title": "Preoperative factors associated with quadriceps strength 1 year after total knee arthroplasty: a prospective longitudinal study.",
-      "summary": "A prospective longitudinal study (n=39) found that higher preoperative normalized quadriceps strength (B=0.72, 95% CI: 0.40 to 1.0) and Limb Symmetry Index (LSI) were significantly associated with better normalized quadriceps strength 1 year after TKA in older adults with uncomplicated recovery.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42934625/",
-      "publishedAt": "2026-10-27T00:00:00.000Z",
-      "firstSeen": "2026-10-27T14:39:50.349Z",
-      "curatedScore": 75,
-      "curatedReason": "这项纳入 39 人的观察研究提示，如果 TKA 术前股四头肌强度和肢体对称性指数（LSI）较高，患者术后 1 年的股四头肌强度表现也会更好。这意味着术前加强股四头肌训练可能至关重要，你应该在术前康复中更关注这些指标。",
-      "titleZh": "全膝关节置换术 1 年后股四头肌强度相关的术前因素：一项前瞻性纵向研究。",
-      "summaryZh": "一项前瞻性纵向研究（n=39）发现，在接受全膝关节置换术后 1 年，术前较高的标准化股四头肌力量（B=0.72，95% CI：0.40 至 1.0）和肢体对称指数 (LSI) 与术后更好的标准化股四头肌力量显著相关，此发现适用于术后恢复顺利的老年患者。",
-      "curatedReasonEn": "This observational study of 39 individuals suggests that higher preoperative quadriceps strength and Limb Symmetry Index (LSI) are associated with better quadriceps strength one year post-TKA. This implies that strengthening quadriceps pre-surgery may be critical, and you should prioritize these metrics in your pre-rehabilitation strategies.",
-      "limitation": "这是一项探索性研究，样本量较小（39 例），且仅限于恢复顺利的患者，结果需要大型研究进一步验证。",
-      "limitationEn": "This was an exploratory study with a small sample size (39 participants) and was limited to patients with uncomplicated recovery, so larger studies are needed for confirmation.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "BMC musculoskeletal disorders"
     },
     {
       "id": "news-1793902062548-36",
@@ -2025,123 +2166,6 @@
       "studyDesign": "综述",
       "journal": "Physiotherapy",
       "tech": true
-    },
-    {
-      "id": "news-1793674829856-32",
-      "title": "From Signal to Biological Meaning: A Systematic Review of Construct-Validity Evidence for External Training Load Metrics in Sport",
-      "summary": "A systematic review of 46 studies found that most external training load (ETL) metrics were supported as descriptions of external movement or work rather than direct indicators of biological demand or response. It highlighted common limitations in hypothesis testing and analysis, with only 28% of studies using a direct construct-matched criterion.",
-      "category": "sports",
-      "source": "Sports Med - Open",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01133-7",
-      "publishedAt": "2026-10-31T00:00:00.000Z",
-      "firstSeen": "2026-11-03T03:00:29.856Z",
-      "curatedScore": 70,
-      "curatedReason": "这项系统综述强调，大多数外部训练负荷指标更多是描述外部运动和工作量，而非直接反映生物学需求或反应。它提醒您在解读这些指标时，必须明确其构造属性、机制和验证证据，避免过度解读为生理负荷。",
-      "titleZh": "从信号到生物学意义：运动中外部训练负荷指标构造效度证据的系统综述",
-      "summaryZh": "一项对 46 项研究的系统综述发现，大多数外部训练负荷（ETL）指标被支持为外部运动或工作量的描述，而非生物学需求或反应的直接指标。研究指出假设检验和分析中存在的常见局限性，仅有 28% 的研究使用了直接构造匹配的衡量标准。",
-      "curatedReasonEn": "This systematic review emphasizes that most external training load metrics primarily describe external movement and workload, rather than directly reflecting biological demand or response. It reminds you that when interpreting these metrics, it is crucial to clarify their construct properties, mechanisms, and validation evidence, avoiding over-interpretation as physiological load.",
-      "limitation": "纳入研究的方法学异质性高，且样本量偏小，多数研究仅包含男性运动员。",
-      "limitationEn": "The included studies showed high methodological heterogeneity, small sample sizes, and most studies only included male athletes.",
-      "tags": [
-        "research",
-        "athletic-performance"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Sports Medicine - Open"
-    },
-    {
-      "id": "news-1793674829856-35",
-      "title": "Lumbar mobility and strength correlate with low back pain and quality of life",
-      "summary": "A retrospective cross-sectional study (n=1309) found that lumbar functional strength (sit-to-stand test) and device-assisted mobility measurements were strongly associated with chronic low back pain (all p ≤ 0.001) and health-related quality of life (SF36-PF and SF36-BP) in both cLBP and nLBP groups.",
-      "category": "manual-modality",
-      "source": "Eur Spine J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10482-6",
-      "publishedAt": "2026-11-02T00:00:00.000Z",
-      "firstSeen": "2026-11-03T03:00:29.856Z",
-      "curatedScore": 70,
-      "curatedReason": "这项横断面研究坐实了腰椎功能性力量和活动度与慢性腰痛（cLBP）及生活质量密切相关。它支持在脊柱功能评估中采用起坐试验和设备辅助测量，以更全面地评估患者状况，但其预测价值仍需前瞻性研究。",
-      "titleZh": "腰椎活动度和力量与腰痛及生活质量的相关性",
-      "summaryZh": "一项回顾性横断面研究（n=1309）发现，腰椎功能性力量（起坐试验）和设备辅助的活动度测量与慢性腰痛（所有 p ≤ 0.001）及健康相关生活质量（SF36-PF 和 SF36-BP）在慢性腰痛组和非慢性腰痛组均有强相关性。",
-      "curatedReasonEn": "This cross-sectional study confirms that lumbar functional strength and mobility are strongly associated with chronic low back pain (cLBP) and quality of life. It supports the adoption of sit-to-stand tests and device-assisted measurements for a more comprehensive assessment of spinal function, but its predictive value still requires prospective research.",
-      "limitation": "这是一项回顾性横断面研究，不能确定因果关系，且无法评估这些指标对预后的预测能力。",
-      "limitationEn": "This was a retrospective cross-sectional study, which cannot establish causality and cannot assess the predictive power of these measures on outcomes.",
-      "tags": [
-        "research",
-        "spine",
-        "manual-therapy"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "European Spine Journal"
-    },
-    {
-      "id": "news-1793279964351-0",
-      "title": "Effect of Incorporating Perceptual Learning Into Plantar Hardness Discrimination on the Risk of Falling and Muscle Torque in Patients With Hemiplegia: A Randomized Controlled Trial.",
-      "summary": "A randomized controlled trial (n=34) found that incorporating perceptual learning into plantar hardness discrimination significantly lowered fall risk (ES=1.48), increased knee extensors torque (ES=1.19), and improved FIM scores (ES=1.56) in stroke patients with hemiplegia.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42952006/",
-      "publishedAt": "2026-10-29T00:00:00.000Z",
-      "firstSeen": "2026-10-29T13:19:24.351Z",
-      "curatedScore": 85,
-      "curatedReason": "将知觉学习融入足底硬度辨别训练，能显著降低偏瘫患者跌倒风险，提高下肢肌肉扭矩和功能。这项RCT结果明确，提示你可以考虑将此作为卒中康复中感官整合训练的新方向。",
-      "titleZh": "足底硬度辨别知觉学习对偏瘫患者跌倒风险和肌肉扭矩影响的随机对照试验",
-      "summaryZh": "一项随机对照试验（n=34）发现，在偏瘫卒中患者的康复计划中纳入足底硬度辨别知觉学习，可显著降低跌倒风险（ES=1.48），增加膝伸肌扭矩（ES=1.19），并提高功能独立性评定量表（FIM）得分（ES=1.56）。",
-      "curatedReasonEn": "Integrating perceptual learning into plantar hardness discrimination significantly reduces fall risk and improves lower limb muscle torque and function in stroke patients with hemiplegia. This RCT provides clear evidence that you should consider this as a new direction for sensory integration training in stroke rehabilitation.",
-      "limitation": "该研究缺乏长期随访数据，且未提及盲法，可能存在观察者偏倚。",
-      "limitationEn": "This study lacks long-term follow-up data and did not mention blinding, which could introduce observer bias.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "RCT",
-      "journal": "American journal of physical medicine & rehabilitation"
-    },
-    {
-      "id": "news-1793279964353-1",
-      "title": "Comparative effectiveness of different physical therapies for axillary web syndrome after breast cancer surgery: A network meta-analysis of randomized controlled trials.",
-      "summary": "A network meta-analysis of 14 RCTs (1007 patients) found that soft tissue manual therapy + therapeutic exercise + low-level laser therapy significantly reduced pain (SMD = -4.40, 95% CrI: -5.52 to -3.28) and improved shoulder ROM in axillary web syndrome, while MLD + therapeutic exercise showed the largest improvement in upper-limb disability (MD = -19.01, 95% CrI: -22.52 to -15.52).",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42950436/",
-      "publishedAt": "2026-10-28T00:00:00.000Z",
-      "firstSeen": "2026-10-29T13:19:24.353Z",
-      "curatedScore": 85,
-      "curatedReason": "这项网络荟萃分析为乳腺癌术后腋网综合征的物理治疗提供了实证基础：手法、运动和低强度激光三联疗法在减轻疼痛和改善活动度方面有显著优势，而徒手淋巴引流结合运动则在改善上肢功能方面效果最佳。你可以依据这些结果优化你的临床方案。",
-      "titleZh": "不同物理疗法对乳腺癌术后腋网综合征疗效的比较：一项随机对照试验的网络荟萃分析",
-      "summaryZh": "一项对 14 项随机对照试验（1007 名患者）的网络荟萃分析发现，软组织手法治疗 + 治疗性运动 + 低强度激光疗法显著减轻了腋网综合征的疼痛（SMD = -4.40，95% CrI: -5.52 至 -3.28）并改善了肩关节活动度，而徒手淋巴引流 + 治疗性运动对上肢残疾的改善最大（MD = -19.01，95% CrI: -22.52 至 -15.52）。",
-      "curatedReasonEn": "This network meta-analysis provides an evidence base for physical therapy in post-mastectomy axillary web syndrome: a combination of soft tissue manual therapy, therapeutic exercise, and low-level laser therapy significantly reduces pain and improves range of motion, while manual lymphatic drainage with exercise is best for upper limb function. You can optimize your clinical protocols based on these findings.",
-      "limitation": "该网络荟萃分析的证据网络稀疏，且存在临床异质性，部分结果在敏感性分析中可信区间跨越无效值，限制了证据的确定性。",
-      "limitationEn": "The evidence network in this network meta-analysis is sparse, and clinical heterogeneity exists, with some credible intervals crossing null in sensitivity analyses, limiting the certainty of evidence.",
-      "tags": [
-        "research",
-        "manual-therapy",
-        "laser"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Physiotherapy"
-    },
-    {
-      "id": "news-1794001025429-7",
-      "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
-      "summary": "A systematic review and meta-analysis of five RCTs (n=143 infants) found a statistically significant pooled effect (Cohen's d = 0.90, 95% CI: 0.54 to 1.27, p < 0.001) in favor of manual physiotherapy techniques for improving cervical ROM in infants with congenital muscular torticollis, indicating a large overall effect.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42990132/",
-      "publishedAt": "2026-11-06T00:00:00.000Z",
-      "firstSeen": "2026-11-06T21:37:05.429Z",
-      "curatedScore": 85,
-      "curatedReason": "这项系统综述和荟萃分析确证了手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面的临床意义。手法治疗应该作为你早期干预这些患儿的一线方案，但同时要注意研究的局限性，期待更多长期数据。",
-      "titleZh": "手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面的疗效：一项系统综述和荟萃分析",
-      "summaryZh": "一项对五项随机对照试验（n=143 名婴儿）的系统综述和荟萃分析发现，手法物理治疗技术在改善先天性肌性斜颈婴儿颈椎活动度方面具有统计学上显著的汇总效应（Cohen's d = 0.90, 95% CI: 0.54 至 1.27, p < 0.001），表明总体效果显著。",
-      "curatedReasonEn": "This systematic review and meta-analysis (5 RCTs, 143 infants) strongly confirms that manual physiotherapy significantly improves cervical ROM in infants with congenital muscular torticollis (Cohen's d = 0.90). Therefore, manual therapy should be your first-line intervention for these infants. However, note the relatively small sample sizes of included studies and anticipate more long-term efficacy data.",
-      "limitation": "本系统综述和荟萃分析纳入的研究数量较少（5 项 RCT），干预方案存在差异，且缺乏长期随访数据，限制了结论的普遍性和持久性。",
-      "limitationEn": "This systematic review and meta-analysis included a small number of studies (5 RCTs), showed variability in intervention protocols, and lacked long-term follow-up data, limiting the generalizability and durability of the conclusions.",
-      "tags": [
-        "research",
-        "manual-therapy"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
     }
   ]
 }
