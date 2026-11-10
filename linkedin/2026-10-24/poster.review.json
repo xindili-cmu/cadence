@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-23T23:56:53.458Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Comparison of short-foot and toe-curl exercises on movement control during single-leg landing after ACL reconstruction: An exploratory randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42913286/"
+    },
+    {
+      "slide": 2,
+      "title": "Construct validity and intrasession intra-rater reliability of the stair and step tests in individuals with multiple sclerosis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42912572/"
+    },
+    {
+      "slide": 3,
+      "title": "Single-Case Design for Network-based BCI Rehabilitation: Individual Learning Trajectories and Effects of Motor Imagery Timing in Stroke Patients",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.21.26366015v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Impact of malnutrition and protein-enriched oral nutrition on early recovery after fragility fractures in older adults: the NuTra trial",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08247-3"
+    },
+    {
+      "slide": 5,
+      "title": "Validation and prognostic value of the five-repetition sit-to-stand test in patients with severe exacerbation of COPD.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42906271/"
+    }
+  ]
+}

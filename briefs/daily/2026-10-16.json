@@ -1,0 +1,298 @@
+{
+ "date": "2026-10-16",
+ "generatedAt": "2026-10-15T23:46:50.459Z",
+ "windowHours": 26,
+ "windowStart": "2026-10-15T00:13:57.523Z",
+ "windowEnd": "2026-10-15T23:46:48.469Z",
+ "lead": {
+  "titleZh": "今日三篇 75 分研究：ACL 重建、腰骶椎术后排尿功能、患者数据应用",
+  "titleEn": "Three Top-Scoring Studies: ACL Reconstruction, Post-Lumbosacral Surgery Voiding, Patient Data Utilization",
+  "paragraphZh": "今日共 11 条信号，涵盖 4 个专业方向，有 3 项研究以 75 分并列最高分。其中，骨科与肌骨领域的术中球海绵体反射监测预测腰骶椎手术后排尿功能障碍的系统综述，以及运动康复中足球运动员 ACL 重建术后重返赛场及职业生涯可持续性的观察研究，均值得临床重点关注。此外，一篇关于利用以患者为中心的结果数据改善康复护理的述评，也提供了重要的行业执业视角。",
+  "paragraphEn": "Today's 11 signals span 4 specialties, with 3 studies tied for the highest score at 75. Among these, the systematic review on intraoperative bulbocavernosus reflex monitoring for postoperative voiding dysfunction after lumbosacral spine surgery in orthopedics and musculoskeletal, and the observational study on return to play and career sustainability after primary ACL reconstruction in football for sports rehabilitation, warrant particular clinical attention. Additionally, a commentary on using patient-centered outcomes data to improve rehabilitation care offers important practice insights."
+ },
+ "stats": {
+  "events": 11,
+  "specialties": 4,
+  "multiSource": 0,
+  "sources": 9,
+  "topScore": 75
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1792107995967-31",
+     "title": "Predictive value of intraoperative bulbocavernosus reflex monitoring for postoperative voiding dysfunction after lumbosacral spine surgery: a systematic review and meta-analysis",
+     "summary": "A systematic review and meta-analysis of intraoperative bulbocavernosus reflex (BCR) monitoring found it feasible (94% success rate) and predictive of postoperative voiding dysfunction (POVD) after lumbosacral spine surgery. BCR showed moderate sensitivity (62%) and high specificity (99%), with a high negative predictive value of 94% for POVD.",
+     "category": "orthopedic",
+     "source": "Eur Spine J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10411-7",
+     "publishedAt": "2026-10-14T00:00:00.000Z",
+     "firstSeen": "2026-10-15T23:46:35.967Z",
+     "curatedScore": 75,
+     "curatedReason": "术中球海绵体反射（BCR）监测对腰骶椎手术后排尿功能障碍（POVD）具有高特异性和阴性预测值。这提示您在参与腰骶椎术前评估和术后康复计划时，可将 BCR 监测结果作为辅助参考，识别 POVD 高风险患者，并协助制定个体化康复策略。",
+     "titleZh": "术中球海绵体反射监测对腰骶椎手术后排尿功能障碍的预测价值：一项系统综述和荟萃分析",
+     "summaryZh": "一项关于术中球海绵体反射（BCR）监测的系统综述和荟萃分析发现，该方法可行（成功率 94%），且能预测腰骶椎手术后的排尿功能障碍（POVD）。BCR 对 POVD 表现出中度敏感性（62%）和高特异性（99%），阴性预测值为 94%。",
+     "curatedReasonEn": "Intraoperative bulbocavernosus reflex (BCR) monitoring shows high specificity and negative predictive value for postoperative voiding dysfunction (POVD) after lumbosacral spine surgery. This suggests that when participating in pre- and post-operative rehabilitation planning for lumbosacral spine surgery, you can use BCR monitoring results as an auxiliary reference to identify high-risk POVD patients and help develop individualized rehabilitation strategies.",
+     "limitation": "本研究纳入的 RCT 数量有限，且研究间存在异质性，可能影响结果的普遍性。",
+     "limitationEn": "The limited number of RCTs included and the heterogeneity among studies may affect the generalizability of the results.",
+     "tags": [
+      "research",
+      "spine",
+      "pelvic-floor"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "European Spine Journal"
+    },
+    {
+     "id": "news-1792107995967-30",
+     "title": "The effect of adding virtual reality-based rehabilitation to conventional physiotherapy on pain, function and static balance control in patients with total knee arthroplasty during the acute rehabilitation phase: a randomized controlled trial",
+     "summary": "A randomized controlled trial (N=52) found that adding VR-based therapy to conventional physiotherapy after total knee arthroplasty significantly improved WOMAC scores and pain at post-treatment and one-month follow-up (p < 0.001, η² = 0.36), and static balance (p < 0.001, η² = 0.23 for mediolateral mean velocity) compared to conventional therapy alone.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10507-7",
+     "publishedAt": "2026-10-14T00:00:00.000Z",
+     "firstSeen": "2026-10-15T23:46:35.967Z",
+     "curatedScore": 70,
+     "curatedReason": "在全膝关节置换术（TKA）的急性康复期，虚拟现实（VR）疗法能额外改善患者的疼痛、功能和静态平衡。这提示您可考虑将 VR 引入 TKA 术后早期康复方案，作为传统物理治疗的补充。",
+     "titleZh": "在全膝关节置换术急性康复期，将虚拟现实康复加入常规物理治疗对疼痛、功能和静态平衡控制的影响：一项随机对照试验",
+     "summaryZh": "一项随机对照试验（N=52）发现，在全膝关节置换术后，与单独的常规物理治疗相比，在常规物理治疗中加入基于虚拟现实的疗法能显著改善治疗后和一个月随访时的 WOMAC 评分和疼痛（p < 0.001, η² = 0.36），以及静态平衡（p < 0.001, 内外侧平均速度 η² = 0.23）。",
+     "curatedReasonEn": "Virtual reality (VR) therapy can provide additional benefits in pain, function, and static balance during the acute rehabilitation phase following total knee arthroplasty (TKA). This suggests you might consider incorporating VR into early post-TKA rehabilitation programs as a supplement to conventional physiotherapy.",
+     "limitation": "本研究为单中心小样本研究（52 名患者），随访期短，且未评估长期疗效。",
+     "limitationEn": "This was a single-center study with a small sample size (52 patients), short follow-up, and did not assess long-term efficacy.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Musculoskeletal Disorders",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1792107995967-34",
+     "title": "Promoting arm movement practice with a novel wheelchair armrest early after stroke: a randomized controlled trial",
+     "summary": "A randomized controlled trial (N=35) found that a novel wheelchair-mounted rehabilitation device, Boost, was feasible and allowed stroke inpatients to complete thousands of unsupervised upper extremity movements. While no significant between-group clinical differences were found at 3-month follow-up, the Boost group showed a trend toward greater UEFM improvement immediately post-intervention (11.8 vs. 6.9 points, p = 0.06), especially for those with less severe impairment.",
+     "category": "neurological",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02111-6",
+     "publishedAt": "2026-10-15T00:00:00.000Z",
+     "firstSeen": "2026-10-15T23:46:35.967Z",
+     "curatedScore": 70,
+     "curatedReason": "新型轮椅扶手辅助设备 Boost 在卒中早期住院康复中能促进患者完成数千次上肢运动，对轻度损伤患者短期效果更佳。这提示您可考虑引入此类设备，增加患者在无直接监督下的运动量，从而优化康复效率，尤其对于损伤程度较轻的患者。",
+     "titleZh": "卒中早期使用新型轮椅扶手辅助促进手臂运动训练：一项随机对照试验",
+     "summaryZh": "一项随机对照试验（N=35）发现，新型轮椅辅助康复设备 Boost 在卒中住院患者中可行，并使其在无监督下完成数千次上肢运动。虽然 3 个月随访时未发现显著的组间临床差异，但 Boost 组在干预后上肢 Fugl-Meyer 评分有更大改善趋势（11.8 vs. 6.9 分, p = 0.06），尤其对轻度损伤患者更明显。",
+     "curatedReasonEn": "The novel wheelchair armrest device, Boost, can facilitate thousands of upper extremity movements in early post-stroke inpatient rehabilitation, with better short-term outcomes for less severely impaired patients. This suggests you could consider incorporating such devices to increase patient exercise volume without direct supervision, optimizing rehabilitation efficiency, especially for those with less severe impairment.",
+     "limitation": "本研究样本量较小（35 名患者），随访期短，且未达到显著的组间临床差异，尚需更大规模 RCT 验证。",
+     "limitationEn": "This study had a small sample size (35 patients), short follow-up, and did not achieve significant between-group clinical differences, necessitating validation in larger RCTs.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+     "id": "news-1792064576023-1",
+     "title": "How do neurorehabilitation patients perceive their fundamental care needs? Findings from a qualitative study.",
+     "summary": "A qualitative study in an Italian rehabilitation hospital explored neurorehabilitation patients' perceptions of fundamental care needs across physical, psychosocial, and relational dimensions, finding that patients valued care extending beyond technical tasks to include dignity, emotional support, and empathetic presence.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42876390/",
+     "publishedAt": "2026-10-15T00:00:00.000Z",
+     "firstSeen": "2026-10-15T11:42:56.023Z",
+     "curatedScore": 70,
+     "curatedReason": "仅仅关注运动功能恢复是不够的。患者真正看重的是超越技术任务的尊严、情感支持和同理心。在评估神经康复患者进展时，你必须把心理社会和关系维度纳入考量，否则会错过患者的核心需求。",
+     "titleZh": "神经康复患者如何看待他们的基本护理需求？一项定性研究的发现",
+     "summaryZh": "一项在意大利康复医院进行的定性研究发现，神经康复患者对基本护理的需求涵盖身体、心理社会和关系维度，强调了护理不仅是技术性任务，更是关乎尊严、情感支持和同理心在场的有意义行为。",
+     "curatedReasonEn": "Focusing solely on motor function isn't enough. Patients value dignity, emotional support, and empathetic presence beyond technical tasks. When assessing neurorehabilitation patients, you must include psychosocial and relational dimensions; otherwise, you'll miss their core needs.",
+     "limitation": "本研究为定性分析，样本量较小且在单一意大利康复医院进行，结果的外推性有限。",
+     "limitationEn": "This qualitative study has a small sample size and was conducted in a single Italian rehabilitation hospital, limiting the generalizability of its findings.",
+     "tags": [
+      "research",
+      "stroke",
+      "parkinson",
+      "ms"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "PM & R : the journal of injury, function, and rehabilitation"
+    },
+    {
+     "id": "news-1792107995967-35",
+     "title": "Effects of training with a soft wearable robot (Myosuit®) on the walking ability of patients with chronic stroke",
+     "summary": "A randomized controlled study (N=30) found that gait training using Myosuit®, a soft wearable robot, did not show overall significant differences compared to a control group in chronic stroke patients. However, subgroup analysis showed significant improvements in the 10-m walking test, Berg balance scale, and gait velocity for Myosuit® users with better baseline gait function (FAC 4).",
+     "category": "neurological",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02135-4",
+     "publishedAt": "2026-10-12T00:00:00.000Z",
+     "firstSeen": "2026-10-15T23:46:35.967Z",
+     "curatedScore": 65,
+     "curatedReason": "使用软性可穿戴机器人 Myosuit® 进行步态训练可能对慢性卒中、且步态功能较好的患者的步态功能有改善作用。这提示您在引入康复机器人时，应考虑患者的基线步态功能水平，以实现更精准的干预。",
+     "titleZh": "使用软性可穿戴机器人（Myosuit®）训练对慢性卒中患者步行能力的影响",
+     "summaryZh": "一项随机对照研究（N=30）发现，与对照组相比，使用软性可穿戴机器人 Myosuit® 进行步态训练对慢性卒中患者总体上未显示显著差异。然而，亚组分析显示，基线步态功能较好（FAC 4）的 Myosuit® 使用者在 10 米步行测试、Berg 平衡量表和步速方面有显著改善。",
+     "curatedReasonEn": "Gait training with the soft wearable robot Myosuit® may improve gait function in chronic stroke patients with better baseline gait function. This suggests that when introducing rehabilitation robots, you should consider patients' baseline gait function levels for more precise interventions.",
+     "limitation": "本研究样本量较小（30 名患者），且总体结果未见显著差异，仅在亚组分析中显示出效应。",
+     "limitationEn": "This study had a small sample size (30 patients), showed no significant overall differences, and only revealed effects in subgroup analysis.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1792039950372-26",
+     "title": "Preliminary Validation of a Multidimensional Stimulability Testing Rating Scale for Patients with Voice Disorders",
+     "summary": "A preliminary validation study of the Multidimensional Stimulability Profile for Voice (MSP-V) in 78 patients with voice disorders demonstrated emerging content, construct, concurrent, and predictive validity, supporting its use for increased clarity in stimulability testing documentation.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.13.26365451v1?rss=1",
+     "publishedAt": "2026-10-14T00:00:00.000Z",
+     "firstSeen": "2026-10-15T04:52:30.372Z",
+     "curatedScore": 65,
+     "curatedReason": "这项研究初步验证了用于声音障碍患者多维刺激性测试评定量表（MSP-V）的有效性，为言语病理学家提供了更精细的评估工具。对物理治疗师来说，这提示了在其他康复领域开发类似多维评估工具的潜力。",
+     "titleZh": "声音障碍患者多维刺激性测试评定量表的初步验证",
+     "summaryZh": "一项对 78 名声音障碍患者进行的多维刺激性声音档案（MSP-V）评定量表的初步验证研究表明，该量表具有内容、结构、并发和预测效度，支持其在刺激性测试记录中提供更高清晰度。",
+     "curatedReasonEn": "This study offers preliminary validation of a Multidimensional Stimulability Profile for Voice (MSP-V) rating scale for patients with voice disorders, providing speech-language pathologists with a more refined assessment tool. For physical therapists, this suggests the potential for developing similar multidimensional assessment tools in other rehabilitation fields.",
+     "limitation": "研究样本量相对较小，且仅是初步验证，需要进一步在不同人群中进行大规模验证。",
+     "limitationEn": "The study had a relatively small sample size and provided only preliminary validation, requiring further large-scale validation in diverse populations.",
+     "tags": [
+      "research",
+      "assessment",
+      "voice-disorders"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1792107995967-37",
+     "title": "Return to Competition and Career Sustainability After Primary ACL Reconstruction in Football: A Nationwide Cohort Study of Long-Term Participation",
+     "summary": "A nationwide cohort study of 10,836 football players after primary ACLR found a 58.5% return to competition (RTC) rate. Post-RTC career sustainability (median 31 matches over 3 seasons) was greatest among top-level players (97 matches over 5 seasons) and men (33 matches over 4 seasons vs. women's 29 matches over 3 seasons). RTC alone provides an incomplete description of participation.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02558-6",
+     "publishedAt": "2026-10-13T00:00:00.000Z",
+     "firstSeen": "2026-10-15T23:46:35.967Z",
+     "curatedScore": 75,
+     "curatedReason": "足球运动员在初次 ACLR 术后重返赛场（RTC）率达 58.5%，但职业生涯持续性因竞技水平和性别而异。这提示您在 ACLR 康复中，RTC 并非终点，应关注术后长期参与度，并根据患者的竞技水平和性别制定差异化的重返运动及职业可持续性策略。",
+     "titleZh": "足球运动员初次 ACL 重建术后重返赛场及职业生涯可持续性：一项全国性长期参与队列研究",
+     "summaryZh": "一项对 10,836 名足球运动员初次 ACL 重建术后的全国性队列研究发现，重返赛场 (RTC) 率为 58.5%。RTC 后职业生涯可持续性（中位数 3 个赛季 31 场比赛）在顶级水平运动员（5 个赛季 97 场比赛）和男性（4 个赛季 33 场比赛对比女性 3 个赛季 29 场比赛）中最高。RTC 本身不能完全描述长期参与度。",
+     "curatedReasonEn": "The return to competition (RTC) rate after primary ACLR in football players is 58.5%, but career sustainability varies by competitive level and sex. This suggests that in ACLR rehabilitation, RTC is not the endpoint; you should focus on long-term participation and tailor return-to-sport and career sustainability strategies based on the player's competitive level and sex.",
+     "limitation": "本研究为回顾性队列研究，可能存在未测量的混杂因素。",
+     "limitationEn": "This was a retrospective cohort study, and unmeasured confounding factors may exist.",
+     "tags": [
+      "research",
+      "knee",
+      "acl"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1792084235923-23",
+     "title": "Using Patient-Centered Outcomes Data to Support Reciprocal Learning and Improve Rehabilitation Care",
+     "summary": "This commentary highlights the critical need for transparency and clear communication among rehabilitation team members when utilizing patient-centered outcomes (PCO) data to inform individual care and guide health system-level learning, emphasizing challenges in systematic implementation.",
+     "category": "practice",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00970-6/fulltext?rss=yes",
+     "publishedAt": "2026-10-15T00:00:00.000Z",
+     "firstSeen": "2026-10-15T17:10:35.923Z",
+     "curatedScore": 75,
+     "curatedReason": "这篇评论强调了利用以患者为中心的结果（PCO）数据来改进康复护理的关键性，但指出系统性实施面临挑战。它提示你，透明化团队沟通和明确数据使用目的，是优化康复结果和促进系统学习的重要途径。",
+     "titleZh": "利用以患者为中心的结果数据支持互惠学习和改善康复护理",
+     "summaryZh": "这篇评论强调，在利用以患者为中心的结果（PCO）数据来指导个体护理和健康系统层面的学习时，康复团队成员之间需保持透明和清晰的沟通，并指出系统性实施面临挑战。",
+     "curatedReasonEn": "This commentary emphasizes the criticality of using Patient-Centered Outcomes (PCO) data to improve rehabilitation care but notes challenges in systematic implementation. It suggests that transparent team communication and clear objectives for data use are crucial for optimizing rehabilitation outcomes and fostering system-level learning.",
+     "tags": [
+      "述评",
+      "reimbursement",
+      "practice-improvement"
+     ],
+     "studyDesign": "述评",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1792100031617-21",
+     "title": "CMS Announces Resources, Flexibilities to Assist with Public Health Emergency in Alabama and Florida",
+     "summary": "CMS announced new resources and flexibilities to aid Alabama and Florida during a public health emergency.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/news-alert/cms-announces-resources-flexibilities-assist-public-health-emergency-alabama-florida",
+     "publishedAt": "2026-10-15T12:00:00.000Z",
+     "firstSeen": "2026-10-15T21:33:51.617Z",
+     "curatedScore": 65,
+     "curatedReason": "CMS 宣布为阿拉巴马州和佛罗里达州的公共卫生紧急事件提供资源和灵活性。如果您在这些州执业，请关注 CMS 官网，及时了解具体的政策细节，这可能影响您的报销和执业流程。",
+     "titleZh": "CMS 宣布为阿拉巴马州和佛罗里达州提供公共卫生紧急情况援助资源与灵活性",
+     "summaryZh": "CMS 宣布为阿拉巴马州和佛罗里达州在公共卫生紧急情况期间提供新的资源和灵活性。",
+     "curatedReasonEn": "CMS has announced resources and flexibilities to assist with public health emergencies in Alabama and Florida. If you practice in these states, monitor the CMS website for specific policy details, as this may affect your reimbursement and practice procedures.",
+     "tags": [
+      "policy",
+      "regulation"
+     ]
+    },
+    {
+     "id": "news-1792084235923-25",
+     "title": "CMS News: Trump Administration Announces $78 Million for Rural Healthcare Workforce, Chronic Disease Prevention, and Facility Upgrades Across Texas",
+     "summary": "This is an outdated announcement about the Trump Administration allocating funding for rural healthcare workforce, chronic disease prevention, and facility upgrades across Texas, with no new information.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/cms-roundup/cms-news-trump-administration-announces-78-million-rural-healthcare-workforce-chronic-disease",
+     "publishedAt": "2026-10-15T12:00:00.000Z",
+     "firstSeen": "2026-10-15T17:10:35.923Z",
+     "curatedScore": 65,
+     "curatedReason": "这是一条关于美国CMS新闻的索引页面，而非具体事件的报道。尽管标题提到特朗普政府宣布拨款，但这是陈旧信息（特朗普政府已卸任），且新闻链接指向的是一篇发布在“CMS Roundup”栏目下、日期为2026年的旧文转发，信息增量为零。",
+     "titleZh": "阅读更多关于CMS新闻：特朗普政府宣布为德克萨斯州农村医疗劳动力、慢性病预防和设施升级提供7800万美元",
+     "summaryZh": "这是一条关于特朗普政府为德克萨斯州农村医疗劳动力、慢性病预防和设施升级拨款的过时新闻，不提供新信息。",
+     "curatedReasonEn": "This is an index page for CMS news in the US, not a specific event report. Although the title mentions the Trump Administration's funding announcement, this is outdated information (the Trump Administration is no longer in office), and the news link directs to a reposted article from the \"CMS Roundup\" section dated 2026, offering no new information.",
+     "tags": [
+      "news",
+      "workforce",
+      "policy"
+     ]
+    },
+    {
+     "id": "news-1792039950372-27",
+     "title": "Feasibility and Measurement Properties of a Large Language Model-Based Virtual Patient Laboratory for Clinical Reasoning Training in Physical Therapy Students: Single-Arm Pilot Study",
+     "summary": "A pilot study with 27 physical therapy students found a large language model-based virtual patient lab feasible for clinical reasoning training, but LLM-generated clinical judgment ratings clustered near the maximum and did not reflect human assessor ratings with a real patient.",
+     "category": "practice",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.13.26364741v1?rss=1",
+     "publishedAt": "2026-10-14T00:00:00.000Z",
+     "firstSeen": "2026-10-15T04:52:30.372Z",
+     "curatedScore": 65,
+     "curatedReason": "本研究发现，基于大型语言模型（LLM）的虚拟患者实验室在物理治疗学生临床推理训练中的可行性良好，但 LLM 生成的评分与人类评估的真实患者表现相关性不强。这提示你在使用 AI 工具进行教学和评估时，要警惕其评分的有效性，仍需人类专家校准。",
+     "titleZh": "基于大型语言模型的虚拟患者实验室在物理治疗学生临床推理训练中的可行性与测量特性：单臂试点研究",
+     "summaryZh": "一项针对 27 名物理治疗学生的试点研究发现，基于大型语言模型的虚拟患者实验室在临床推理训练中是可行的，但 LLM 生成的临床判断评分集中在最高分附近，且未能反映人类评估者对真实患者的评分。",
+     "curatedReasonEn": "This study found that a large language model (LLM)-based virtual patient lab was feasible for clinical reasoning training in physical therapy students, but LLM-generated ratings did not strongly correlate with human assessments of real patient performance. This cautions you to be wary of the validity of AI-generated scores when using AI tools for teaching and assessment, still requiring human expert calibration.",
+     "limitation": "研究发现 LLM 生成的评分普遍偏高且与真实患者表现的相关性不足，限制了其作为评估工具的有效性。",
+     "limitationEn": "The study found that LLM-generated ratings were generally high and showed insufficient correlation with real patient performance, limiting their effectiveness as an assessment tool.",
+     "tags": [
+      "research",
+      "education",
+      "telehealth"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

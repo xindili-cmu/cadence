@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-04T01:32:59.998Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Altered Cognitive Control and Cortical Oscillatory Dynamics in Athletes With ACL Reconstruction During Decision-Making Under Uncertainty.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42975142/"
+    },
+    {
+      "slide": 2,
+      "title": "Diagnosis, Rehabilitation, and Return to Sport after Athletic Hamstring Injury: An ICCUS Society Consensus Statement.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42974573/"
+    },
+    {
+      "slide": 3,
+      "title": "Neurocognitive Factors in ACL Injury: The Missing Piece in Rehabilitation and Prevention? A Scoping Review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42974571/"
+    },
+    {
+      "slide": 4,
+      "title": "Walking Capacity and Daily Movement Behaviours After Ischemic Stroke: A Potential Capacity-Performance Gap.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42975922/"
+    },
+    {
+      "slide": 5,
+      "title": "Adherence System Usability Patient Experience and Psychosocial Impact in Robot Assisted Gait Neurorehabilitation A Cross Sectional Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42974753/"
+    }
+  ]
+}

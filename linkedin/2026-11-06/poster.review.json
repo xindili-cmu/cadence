@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-06T01:42:08.728Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42985783/"
+    },
+    {
+      "slide": 2,
+      "title": "Next-generation control strategies for lower-extremity exoskeletons: State-of-the-art, limitations, and future directions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42984434/"
+    },
+    {
+      "slide": 3,
+      "title": "Low-frequency deep brain stimulation promotes long-term orofacial motor recovery after traumatic brain injury: A case study",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.04.26366993v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Patient experiences with a prescription-based digital health application (DiGA) for knee disorders: a qualitative study in german orthopaedic care.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42983354/"
+    },
+    {
+      "slide": 5,
+      "title": "Development and psychometric evaluation of the Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS)",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.04.26367265v1?rss=1"
+    }
+  ]
+}

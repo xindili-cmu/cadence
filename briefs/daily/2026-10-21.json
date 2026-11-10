@@ -1,0 +1,230 @@
+{
+ "date": "2026-10-21",
+ "generatedAt": "2026-10-21T00:11:02.196Z",
+ "windowHours": 26,
+ "windowStart": "2026-10-20T00:31:33.654Z",
+ "windowEnd": "2026-10-21T00:10:00.495Z",
+ "lead": {
+  "titleZh": "冲击波疗法与身体活动指南均有证据支持",
+  "titleEn": "ESWT and Physical Activity Guidelines Show Supporting Evidence",
+  "paragraphZh": "今日有 8 条新发，其中两项系统综述（最高分 85 分）均来自骨科与肌骨及神经康复领域，分别关注慢性腰痛的体外冲击波疗法和多发性硬化症患者的身体活动指南对认知的影响。青少年髌股疼痛的增强式训练 RCT 值得关注。",
+  "paragraphEn": "Today's 8 new items include two systematic reviews (top score 85) from Orthopedics/MSK and Neurorehab, focusing on extracorporeal shockwave therapy for chronic low back pain and the impact of physical activity guidelines on cognition in multiple sclerosis. An RCT on plyometrics for adolescent patellofemoral pain is also noteworthy."
+ },
+ "stats": {
+  "events": 8,
+  "specialties": 3,
+  "multiSource": 0,
+  "sources": 4,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1792532610308-0",
+     "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+     "summary": "A systematic review and meta-analysis of 9 RCTs (N=430) found that radial extracorporeal shockwave therapy (rESWT) significantly reduced pain in chronic low back pain (SMD = -0.72; 95% CI -1.30 to -0.14), but functional improvements (MD = -6.12) did not meet the minimal clinically important difference.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42900489/",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T21:43:30.308Z",
+     "curatedScore": 85,
+     "curatedReason": "针对慢性腰痛，体外冲击波疗法（ESWT）特别是径向冲击波（rESWT）在短期疼痛管理上显示出中等效应量（SMD = -0.72），但功能改善的临床意义不明显。别将其作为独立疗法，而应作为运动疗法的辅助手段。",
+     "titleZh": "体外冲击波疗法对慢性腰痛疼痛强度和功能障碍的影响：系统综述和荟萃分析",
+     "summaryZh": "一项包含9项RCT（N=430）的系统综述和荟萃分析显示，径向体外冲击波疗法（rESWT）可显著减轻慢性腰痛患者的疼痛（SMD = -0.72），但功能改善（MD = -6.12）未达到临床最小重要差异。",
+     "curatedReasonEn": "For chronic low back pain, extracorporeal shockwave therapy (ESWT), especially radial ESWT (rESWT), shows a moderate effect size (SMD = -0.72) for short-term pain reduction, but functional improvements are not clinically meaningful. Do not consider it a standalone treatment; use it as an adjunct to exercise therapy.",
+     "limitation": "本系统综述的证据多为干预后即时评估，随访期短，且各研究间存在显著异质性。",
+     "limitationEn": "Evidence in this systematic review is largely based on immediate post-intervention assessments with short follow-up, and there is significant heterogeneity among studies.",
+     "tags": [
+      "research",
+      "spine",
+      "electro"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1792541269904-17",
+     "title": "Clinical and functional outcomes of aquatic plyometrics in adolescent patellofemoral pain syndrome: a dual-arm randomized controlled trial\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+     "summary": "A dual-arm RCT found aquatic plyometric exercises significantly improved pain, quadriceps and hamstring torque, functional disability, and quality of life in adolescents with patellofemoral pain syndrome compared to conventional exercises.",
+     "category": "orthopedic",
+     "source": "J Rehabil Med",
+     "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46495",
+     "publishedAt": "2026-10-19T00:00:00.000Z",
+     "firstSeen": "2026-10-21T00:07:49.904Z",
+     "curatedScore": 80,
+     "curatedReason": "这项RCT证实，与传统锻炼相比，水中增强式训练能显著改善青少年髌骨股骨疼痛综合征患者的疼痛、股四头肌和腘绳肌力量、功能障碍及生活质量。应考虑将其纳入临床实践。",
+     "titleZh": "青少年髌股疼痛综合征患者水生增强式训练的临床和功能结局：一项双臂随机对照试验",
+     "summaryZh": "一项双臂随机对照试验显示，与常规练习相比，水生增强式练习能显著改善青少年髌股疼痛综合征患者的疼痛、股四头肌和腘绳肌扭矩、功能障碍和生活质量。",
+     "curatedReasonEn": "This RCT provides strong evidence that aquatic plyometrics are superior to conventional exercises for improving pain, strength, function, and quality of life in adolescents with patellofemoral pain syndrome. Clinicians should consider incorporating this intervention.",
+     "limitation": "本研究在沙特阿拉伯进行；其结果推广至其他人群需谨慎考虑。",
+     "limitationEn": "Study conducted in Saudi Arabia; generalizability to other populations needs consideration.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Journal of Rehabilitation Medicine"
+    },
+    {
+     "id": "news-1792532610309-20",
+     "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+     "summary": "A feasibility study with 20 NCAA Division I women athletes (8 with prior knee injury) using a four-channel distributed wearable ultrasound (D-WUS) system found that D-WUS detected significant differences in right-limb neuromuscular coordination (VL-VMO correlation p=0.029; timing symmetry p=0.019) in those with previous knee injuries, differences not reflected in force-plate biomechanics.",
+     "category": "orthopedic",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.18.26365835v1?rss=1",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T21:43:30.309Z",
+     "curatedScore": 75,
+     "curatedReason": "可穿戴超声系统在检测膝关节损伤后神经肌肉协调性差异方面表现出可行性，且能发现传统力板生物力学未反映出的问题。在评估和监测膝关节康复进展时，未来可以考虑将其作为客观量化肌肉收缩模式的补充工具，但目前尚需大规模研究验证其临床实用性。",
+     "titleZh": "可穿戴分布式超声检测膝关节损伤后神经肌肉协调差异的可行性研究",
+     "summaryZh": "一项针对20名NCAA一级大学女子运动员（8名有既往膝关节损伤）的可行性研究，使用四通道分布式可穿戴超声（D-WUS）系统，发现在有既往膝关节损伤的运动员中，D-WUS能检测到右肢神经肌肉协调性的显著差异（VL-VMO相关性 p=0.029；时间对称性 p=0.019），这些差异未在力板生物力学中体现。",
+     "curatedReasonEn": "Wearable ultrasound systems show feasibility in detecting neuromuscular coordination differences after knee injury, revealing issues not reflected by traditional force plate biomechanics. In assessing and monitoring knee rehabilitation progress, consider it a supplementary tool for objective quantification of muscle contraction patterns, though large-scale studies are needed to validate its clinical utility.",
+     "limitation": "本研究是初步的可行性研究，样本量小（N=20），且仅限于大学女子运动员这一特定人群。",
+     "limitationEn": "This is a preliminary feasibility study with a small sample size (N=20) and is limited to a specific population of NCAA Division I women athletes.",
+     "tags": [
+      "research",
+      "knee",
+      "wearable-tech"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1792532610309-1",
+     "title": "Physical activity guidelines' impact on cognition in multiple sclerosis: a systematic review and meta-analysis of randomized clinical trials.",
+     "summary": "A systematic review and meta-analysis of 12 RCTs (N=462) found that meeting physical activity guidelines for people with multiple sclerosis (MS) significantly improved processing speed (SMD = 0.29), visuospatial memory (SMD = 0.47), and verbal memory (SMD = 0.75).",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899457/",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T21:43:30.309Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述明确指出，达到多发性硬化症（MS）患者的身体活动指南要求，可以显著改善处理速度和记忆力。在管理MS患者时，将达标的运动处方纳入认知康复计划，这应成为你的首选干预方案。",
+     "titleZh": "身体活动指南对多发性硬化症患者认知功能的影响：随机临床试验的系统综述和荟萃分析",
+     "summaryZh": "一项包含12项RCT（N=462）的系统综述和荟萃分析发现，达到多发性硬化症（MS）患者的身体活动指南要求，可显著改善处理速度（SMD = 0.29）、视觉空间记忆（SMD = 0.47）和言语记忆（SMD = 0.75）。",
+     "curatedReasonEn": "This systematic review clearly indicates that meeting physical activity guidelines for people with multiple sclerosis (MS) can significantly improve processing speed and memory. When managing MS patients, incorporating guideline-compliant exercise prescriptions into cognitive rehabilitation programs should be your preferred intervention.",
+     "limitation": "本系统综述纳入的随机对照试验数量有限，且存在较高偏倚风险。",
+     "limitationEn": "This systematic review included a limited number of randomized controlled trials with a high risk of bias.",
+     "tags": [
+      "research",
+      "ms",
+      "cognition"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1792532610309-2",
+     "title": "Significant others' perspectives on formal supports at 3- and 12-months post-discharge from specialist rehabilitation units following acquired brain injury and spinal cord injury.",
+     "summary": "A qualitative study exploring perspectives of 24 significant others at 3 months and 19 at 12 months post-discharge from inpatient rehabilitation found that family members play a central role in filling gaps in formal support systems for individuals with acquired brain injury and spinal cord injury, highlighting communication and support understanding as key barriers.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899455/",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T21:43:30.309Z",
+     "curatedScore": 70,
+     "curatedReason": "本研究揭示了脑损伤和脊髓损伤患者出院后，家庭成员在正式支持服务中面临的挑战。作为临床医生，你必须主动且清晰地向家属提供支持资源信息，并更早地将他们纳入康复决策过程，以减轻家属的负担并提高患者依从性。",
+     "titleZh": "脑损伤和脊髓损伤患者出院后 3 个月和 12 个月主要照护者对正式支持的看法",
+     "summaryZh": "一项定性研究调查了24名和19名主要照护者在脑损伤和脊髓损伤患者出院后3个月和12个月的看法，发现家庭成员在弥补正式支持系统不足方面发挥核心作用，并强调沟通和对支持的理解是主要障碍。",
+     "curatedReasonEn": "This study reveals the challenges faced by family members in accessing formal support services after discharge for patients with acquired brain injury and spinal cord injury. As a clinician, you must proactively and clearly provide families with information about support resources and involve them earlier in the rehabilitation decision-making process to alleviate caregiver burden and improve patient adherence.",
+     "limitation": "本研究采用定性方法，样本量相对较小，结果主要反映了特定地区（澳大利亚昆士兰州）家属的视角。",
+     "limitationEn": "This qualitative study has a relatively small sample size, and its findings primarily reflect the perspectives of family members in a specific region (Queensland, Australia).",
+     "tags": [
+      "research",
+      "brain-injury",
+      "spinal-cord"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1792532610309-3",
+     "title": "Process evaluation of daily electrical stimulation to prevent recurring pressure ulcers in individuals with spinal cord injury: the SCI PREVOLT trial.",
+     "summary": "A mixed-methods process evaluation with 70 participants and 13 healthcare professionals assessed the implementation of electrical stimulation (ES) for pressure ulcer prevention in individuals with spinal cord injury, identifying limited evidence, usability issues, and organizational barriers (e.g., lack of reimbursement) that hinder adoption and adherence in home and rehabilitation settings.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42899442/",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T21:43:30.309Z",
+     "curatedScore": 70,
+     "curatedReason": "这项过程评估揭示了在家用和康复环境中实施电刺激预防脊髓损伤压疮的障碍，包括证据有限、可用性差和组织问题。在你考虑推广或应用类似技术时，务必关注这些实际障碍，确保有明确的指导和支持。",
+     "titleZh": "脊髓损伤患者日常电刺激预防压疮复发的过程评估：SCI PREVOLT 试验",
+     "summaryZh": "一项包含70名参与者和13名医疗专业人员的混合方法过程评估，旨在评估电刺激（ES）预防脊髓损伤压疮的实施情况，发现证据有限、可用性问题和组织障碍（如缺乏报销）是阻碍在家用和康复环境中采用和依从性的主要因素。",
+     "curatedReasonEn": "This process evaluation reveals barriers to implementing electrical stimulation for pressure ulcer prevention in spinal cord injury patients at home and in rehabilitation settings, including limited evidence, poor usability, and organizational issues. When considering the adoption or promotion of similar technologies, you must address these practical barriers by ensuring clear guidance and support.",
+     "limitation": "本研究是一项过程评估，主要关注实施障碍，而非干预措施本身的疗效。研究结果基于混合方法，可能存在定性数据的主观性。",
+     "limitationEn": "This study is a process evaluation focusing on implementation barriers rather than the efficacy of the intervention itself. The findings are based on mixed methods, which may involve subjectivity in qualitative data.",
+     "tags": [
+      "research",
+      "spinal-cord",
+      "electro"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1792541269905-22",
+     "title": "Low balance confidence in relation to strength training, walking, sitting, and physical function among women aged 75–105 years: a cross-sectional study within the Women’s Health Initiative Strong and Healthy (WHISH) Intervention Cohort",
+     "summary": "In women aged 75-105, low balance confidence was associated with increased sitting time and lower physical function, while higher balance confidence was linked to more strength training and walking. The prevalence of low balance confidence was higher in those aged 85+.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08510-7",
+     "publishedAt": "2026-10-19T00:00:00.000Z",
+     "firstSeen": "2026-10-21T00:07:49.905Z",
+     "curatedScore": 75,
+     "curatedReason": "这项针对75-105岁老年女性的横断面研究发现，平衡信心不足与久坐时间增加、身体功能下降相关，而平衡信心高则与力量训练、步行活动及更好的身体功能相关。这强化了在老年人群中推广这些活动的重要性。",
+     "titleZh": "75-105岁女性的平衡信心低与力量训练、行走、久坐和身体功能的关系：一项女性健康倡议强健与健康（WHISH）干预队列的横断面研究",
+     "summaryZh": "在75-105岁的女性中，平衡信心低与久坐时间增加和身体功能下降有关，而平衡信心高则与更多的力量训练和行走有关。85岁以上女性的低平衡信心患病率更高。",
+     "curatedReasonEn": "This cross-sectional study in older women (75-105 years) identifies strong associations between lower balance confidence and factors like sitting time, while higher confidence is linked to strength training, walking, and better physical function. This reinforces the importance of promoting these activities in geriatric populations.",
+     "limitation": "横断面设计限制了时间顺序的确定；研究结果需在纵向研究中得到证实。",
+     "limitationEn": "Cross-sectional design limits the establishment of temporality; findings need confirmation in longitudinal studies.",
+     "tags": [
+      "research",
+      "geriatric"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    },
+    {
+     "id": "news-1792516760863-1",
+     "title": "Development and validation of a prediction model for subsequent fractures after hip fracture surgery in older adults: a retrospective cohort study.",
+     "summary": "A retrospective cohort study developed and validated a nomogram to predict subsequent fractures within 2 years after hip fracture surgery in older adults, showing good discriminative performance (C-index 0.891 in development cohort) with age, hip function, neurodegenerative disease, eye disease, and living alone as predictors, and exercise as a protective factor.",
+     "category": "geriatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42897522/",
+     "publishedAt": "2026-10-20T00:00:00.000Z",
+     "firstSeen": "2026-10-20T17:19:20.863Z",
+     "curatedScore": 70,
+     "curatedReason": "对于髋部骨折术后的老年患者，这个回顾性队列研究提示我们可以通过年龄、髋关节功能、神经退行性疾病、眼疾和独居等因素，加上运动史，初步判断两年内再骨折的风险。不过，这只是个回顾性观察研究，在临床上真正使用这个列线图前，需要更强的RCT证据验证其前瞻性预测效力。",
+     "titleZh": "老年髋部骨折术后再次骨折预测模型的开发与验证：一项回顾性队列研究",
+     "summaryZh": "一项回顾性队列研究开发并验证了一个用于预测老年髋部骨折术后两年内再次骨折的列线图。该模型表现出良好的区分度（开发队列 C-index 0.891），识别出年龄、髋关节功能、神经退行性疾病、眼疾、独居为预测因素，运动为保护因素。",
+     "curatedReasonEn": "For older adults post-hip fracture surgery, this retrospective cohort study suggests we can use factors like age, hip function, neurodegenerative disease, eye disease, and living alone, alongside exercise history, to estimate the risk of re-fracture within two years. However, this is a retrospective observational study; stronger RCT evidence is needed to prospectively validate its predictive power before clinical implementation.",
+     "limitation": "这是一项回顾性队列研究，尽管进行了时间验证，但仍需要前瞻性研究来进一步确认模型的预测性能和临床实用性。",
+     "limitationEn": "This is a retrospective cohort study; despite temporal validation, prospective studies are needed to further confirm the model's predictive performance and clinical utility.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC musculoskeletal disorders"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

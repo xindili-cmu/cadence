@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-02",
+  "lead": {
+    "categoryId": "orthopedic",
+    "claim": "For knee OA pain, function, and QoL, prioritize short-term combined exercise.",
+    "context": "A systematic review with network meta-analysis investigated which exercise types and durations were most effective for knee osteoarthritis.",
+    "journal": "JOSPT",
+    "signal": 85,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42966901/"
+  },
+  "supporting": [
+    {
+      "categoryId": "orthopedic",
+      "claim": "Do patients with first-hand telerehabilitation experience value it more?",
+      "context": "In a study of Australian adults with chronic knee pain, researchers explored the value of telerehabilitation based on prior experience.",
+      "journal": "JOSPT",
+      "tech": true,
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966905/"
+    },
+    {
+      "categoryId": "orthopedic",
+      "claim": "The GLA:D® program for hip OA may also reduce low back pain.",
+      "context": "This longitudinal cohort study examined the effect of a supervised education and exercise program on low back pain in patients with hip osteoarthritis.",
+      "journal": "Physiotherapy",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966026/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "The Balance Intensity Tool offers a reliable way to assess balance intensity.",
+      "context": "This study compared the inter-rater agreement and reliability of a tool versus clinical judgment for assessing balance intensity in people with multiple sclerosis.",
+      "journal": "Physiotherapy theory and practice",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42965342/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Physiotherapists are cautiously optimistic about robot-assisted gait training.",
+      "context": "A qualitative study explored physiotherapists' perceptions of robot-assisted gait training in acute neurological rehabilitation before its implementation.",
+      "journal": "Physiotherapy",
+      "tech": true,
+      "signal": 70,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966025/"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-20T00:32:42.230Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "A multimodal non-fatiguing recovery strategy improves neuromuscular restoration and attenuates inflammatory and oxidative stress responses following a standardized football match: a randomized crossover study",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02162-1"
+    },
+    {
+      "slide": 2,
+      "title": "Effectiveness of physical, psychological, and alternative interventions for post-COVID-19 condition: a systematic review | Journal of Rehabilitation Medicine",
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46279"
+    },
+    {
+      "slide": 3,
+      "title": "What’s Behind the Label? Rethinking Exercise Prescription for Tendinopathy - BJSM blog - social media's leading SEM voice",
+      "url": "https://blogs.bmj.com/bjsm/2026/10/19/whats-behind-the-label-rethinking-exercise-prescription-for-tendinopathy/"
+    },
+    {
+      "slide": 4,
+      "title": "Development of a Communication Characteristics Module for Autistic Adults and the Creation of a Communication Profile Variable",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.15.26365687v1?rss=1"
+    },
+    {
+      "slide": 5,
+      "title": "Fall prevention interventions among older adults in low-and middle-income countries (LMICs): an integrative review.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42895234/"
+    }
+  ]
+}

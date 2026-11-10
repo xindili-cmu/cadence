@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-21",
+  "lead": {
+    "categoryId": "orthopedic",
+    "claim": "ESWT offers short-term pain relief for chronic low back pain.",
+    "context": "*Why this matters:* A systematic review found radial extracorporeal shockwave therapy reduced pain but not functional disability in chronic low back pain.",
+    "journal": "Disability and rehabilitation",
+    "signal": 85,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42900489/"
+  },
+  "supporting": [
+    {
+      "categoryId": "neurological",
+      "claim": "Meeting exercise guidelines improves processing speed and memory in MS.",
+      "context": "*Why this matters*: A systematic review found that meeting physical activity guidelines for people with MS significantly improved processing speed and visuospatial and verbal memory.",
+      "journal": "Disability and rehabilitation",
+      "signal": 85,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42899457/"
+    },
+    {
+      "categoryId": "orthopedic",
+      "claim": "Aquatic plyometrics better than land exercises for adolescent knee pain.",
+      "context": "*Why this matters:* An RCT showed aquatic plyometric exercises improved pain, strength, function, and quality of life in adolescents with patellofemoral pain syndrome.",
+      "journal": "Journal of Rehabilitation Medicine",
+      "signal": 80,
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46495"
+    },
+    {
+      "categoryId": "orthopedic",
+      "claim": "Wearable ultrasound detects subtle knee neuromuscular coordination deficits.",
+      "context": "*Why this matters:* A feasibility study found wearable ultrasound identified neuromuscular coordination differences after knee injury not seen with force plates.",
+      "journal": "medRxiv",
+      "tech": true,
+      "signal": 75,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.18.26365835v1?rss=1"
+    },
+    {
+      "categoryId": "geriatric",
+      "claim": "Balance confidence in older women links to activity and function.",
+      "context": "*Why this matters:* A study found low balance confidence in older women correlated with more sitting and less function, while higher confidence linked to activity and better function.",
+      "journal": "BMC Geriatrics",
+      "signal": 75,
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08510-7"
+    }
+  ]
+}

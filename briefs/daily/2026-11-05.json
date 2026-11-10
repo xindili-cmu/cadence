@@ -1,0 +1,489 @@
+{
+ "date": "2026-11-05",
+ "generatedAt": "2026-11-05T01:33:37.363Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-04T01:32:40.191Z",
+ "windowEnd": "2026-11-05T01:33:35.229Z",
+ "lead": {
+  "titleZh": "可穿戴设备揭示卒中后上肢能力与实际使用动态分离，提示康复关注点",
+  "titleEn": "Wearables show dynamic dissociation of upper limb capacity and real-world use post-stroke, informing rehab focus",
+  "paragraphZh": "今日有 20 份条目，涵盖 6 个专业方向。最值得关注的是一项观察研究，其 curatedScore 高达 85 分，揭示了卒中后 6 个月内上肢能力与实际使用之间的动态分离，提示临床应更关注真实世界中的功能表现。此外，另有 2 篇 RCT（curatedScore 均为 80 分）分别针对极老年人肌少症伴认知功能障碍和 COPD 急性加重患者的干预提供了高等级证据。",
+  "paragraphEn": "Today's issue features 20 entries across 6 specialties. The highlight is an observational study with a curatedScore of 85, revealing a dynamic dissociation between upper limb capacity and real-world use within six months post-stroke, suggesting a focus on real-world functional performance in rehabilitation. Additionally, two RCTs (both with curatedScores of 80) provide high-level evidence for interventions in sarcopenia with cognitive impairment in the oldest-old and acute exacerbation of COPD patients."
+ },
+ "stats": {
+  "events": 20,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 11,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1793842403277-32",
+     "title": "Postoperative rehabilitation after medial meniscus posterior root repair: a scoping review of published protocol descriptions and evidence gaps",
+     "summary": "A scoping review of 69 studies (78 protocols) on medial meniscus posterior root repair rehabilitation found that weight-bearing (100%), ROM (98.7%), and bracing (88.5%) were frequently reported, but formal strengthening (28.2%), closed-chain exercise (23.1%), and gait/neuromuscular training (3.8% each) were less consistently described.",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10710-6",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 75,
+     "curatedReason": "这项范围界定综述揭示，内侧半月板后根修复术后的康复方案在主动和功能性训练方面描述不足。在制订康复计划时，除了早期保护和承重/活动度管理外，你应更多地关注如何整合正式强化、闭链运动和步态训练。",
+     "titleZh": "内侧半月板后根修复术后康复：已发表方案描述和证据差距的范围界定综述",
+     "summaryZh": "一项对 69 项内侧半月板后根修复术后康复研究（78 项方案）的范围界定综述发现，负重管理（100%）、活动度（98.7%）和支具/固定（88.5%）被频繁报道，但正式强化（28.2%）、闭链运动（23.1%）和步态/神经肌肉训练（各 3.8%）的描述则不够一致。",
+     "curatedReasonEn": "This scoping review reveals that rehabilitation protocols after medial meniscus posterior root repair lack consistent descriptions for active and functional training. When developing rehabilitation plans, beyond early protection and weight-bearing/ROM management, you should focus more on integrating formal strengthening, closed-chain exercises, and gait training.",
+     "limitation": "综述的结论是基于已发表方案的描述，而非实际临床实施或经验证的进展阈值，可能与真实世界实践存在差异。",
+     "limitationEn": "The review's conclusions are based on descriptions of published protocols rather than actual clinical implementation or validated progression thresholds, which may differ from real-world practice.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+     "id": "news-1793794659744-0",
+     "title": "Efficacy of real-time feedback exercise therapy in patients following total hip arthroplasty: a pilot cluster-randomized controlled trial.",
+     "summary": "A pilot cluster-randomized controlled trial with 22 patients found no statistically significant differences in functional outcomes between real-time feedback-assisted home-exercise and standard written instructions following total hip arthroplasty, although the feedback group reported greater motivation.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42977959/",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-04T12:17:39.744Z",
+     "curatedScore": 70,
+     "curatedReason": "本试验表明，全髋关节置换术后，实时反馈的居家锻炼与传统书面指导在改善功能和生活质量上无显著差异。提示技术辅助可能更多影响患者体验而非直接功能提升，在评估此类技术时要综合考量。",
+     "titleZh": "实时反馈运动疗法对全髋关节置换术患者的疗效：一项试点集群随机对照试验",
+     "summaryZh": "一项纳入22名患者的试点集群随机对照试验发现，全髋关节置换术后，实时反馈辅助居家锻炼与标准书面指导在改善功能结局方面无统计学差异，但反馈组患者报告了更高的锻炼动力。",
+     "curatedReasonEn": "This trial shows no significant difference between real-time feedback home exercise and standard written instructions in improving function and quality of life after total hip arthroplasty. It suggests technology assistance may impact patient experience more than direct functional improvement, necessitating comprehensive consideration when evaluating such technologies.",
+     "limitation": "这是一项小样本试点研究，参与者年龄范围窄，且未能充分评估患者报告的依从性与实际训练量之间的关系。",
+     "limitationEn": "This was a small pilot study with a narrow age range, and it did not adequately assess the relationship between patient-reported adherence and actual training volume.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC musculoskeletal disorders"
+    },
+    {
+     "id": "news-1793794659745-1",
+     "title": "e-health in musculoskeletal primary care physiotherapy: Evidence, facilitators, and barriers - A scoping review.",
+     "summary": "A scoping review of 45 studies mapped e-Health solutions in primary care musculoskeletal physiotherapy, identifying internet-based solutions, mobile apps, and video consultations as most common, alongside 21 facilitators and 23 barriers to implementation.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42976661/",
+     "publishedAt": "2026-11-03T00:00:00.000Z",
+     "firstSeen": "2026-11-04T12:17:39.745Z",
+     "curatedScore": 70,
+     "curatedReason": "这份范围综述描绘了基层物理治疗中数字健康的现状，指出了其潜力与尚存障碍。它确认了虚拟现实、可穿戴设备等新兴技术的证据空白，指导你未来的技术采纳和培训策略。",
+     "titleZh": "肌肉骨骼初级物理治疗中的电子健康：证据、促进因素和障碍——一项范围综述",
+     "summaryZh": "一项纳入45项研究的范围综述，梳理了初级肌肉骨骼物理治疗中的电子健康解决方案，发现互联网方案、移动应用和视频咨询最为常见，并识别出21个促进因素和23个障碍。",
+     "curatedReasonEn": "This scoping review maps the current landscape of e-Health in primary care physiotherapy, highlighting its potential and persistent barriers. It identifies evidence gaps in emerging technologies like virtual reality and wearables, guiding your future technology adoption and training strategies.",
+     "limitation": "研究方法和数字健康干预的异质性、高收入国家研究的主导地位以及技术快速发展限制了结果的普适性。",
+     "limitationEn": "Heterogeneity in study methods and e-Health modalities, the predominance of studies from high-income countries, and rapid technological advancements limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "telehealth"
+     ],
+     "studyDesign": "综述",
+     "journal": "Physiotherapy",
+     "tech": true
+    },
+    {
+     "id": "news-1793822045338-31",
+     "title": "Effects of Weighted Seated Core Exercises on Immediate Postural Stability in Healthy Young Adults: An Exploratory Study",
+     "summary": "An exploratory study (N=10) found that low-load, seated core exercises did not yield immediate enhancements in standing stability in healthy young adults, with increased transversus abdominis thickness during a balance task correlating with heightened postural instability.",
+     "category": "orthopedic",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.03.26366886v1?rss=1",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-04T19:54:05.338Z",
+     "curatedScore": 65,
+     "curatedReason": "低负荷坐姿核心练习在健康年轻成人中未能立即改善站立稳定性。这提示在临床实践中，此类练习不应被过早地视为能即刻改善平衡的独立干预手段。",
+     "titleZh": "加权坐姿核心练习对健康年轻成人即时姿势稳定性的影响：一项探索性研究",
+     "summaryZh": "一项探索性研究（N=10）发现，低负荷坐姿核心练习未能立即改善健康年轻成人的站立稳定性；在平衡任务中，腹横肌厚度增加与姿势不稳加剧相关。",
+     "curatedReasonEn": "Low-load seated core exercises did not immediately improve standing stability in healthy young adults. This suggests that in clinical practice, such exercises should not be prematurely considered independent interventions that instantly enhance balance.",
+     "limitation": "本研究样本量小（N=10），且仅针对健康年轻成人，结果可能不适用于临床患者或不同年龄段人群。",
+     "limitationEn": "The study had a small sample size (N=10) and focused only on healthy young adults, limiting the generalizability of findings to clinical populations or other age groups.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1793842403277-33",
+     "title": "Wearable-based digital metrics reveal dynamic dissociations between upper limb capacity and real-world use over the first six months after stroke",
+     "summary": "In 72 stroke patients over six months, wearable-based digital metrics revealed that upper limb activity capacity and real-world performance were correlated (Spearman's ρs = 0.45–0.78, p < 0.001) but their coupling weakened over time, with 52% of those improving on ARAT not improving their use ratio, indicating a dynamic dissociation.",
+     "category": "neurological",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02193-2",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 85,
+     "curatedReason": "这项研究强调，卒中后上肢功能恢复的“能力”和“实际使用”是两个独立的目标。在康复过程中，你不能只关注临床能力评估，还需要结合可穿戴设备数据，同时监测和提升患者在现实世界中的患侧手臂使用情况，以实现更个性化的康复目标。",
+     "titleZh": "可穿戴数字指标揭示卒中后六个月内上肢能力与现实世界使用之间的动态分离",
+     "summaryZh": "在 72 名卒中患者的六个月随访中，可穿戴数字指标揭示上肢活动能力与现实世界表现相关（Spearman's ρs = 0.45–0.78, p < 0.001），但其耦合性随时间减弱；52% 在 ARAT 上有改善的患者，其使用比例并未提高，表明两者存在动态分离。",
+     "curatedReasonEn": "This study emphasizes that upper limb \"capacity\" and \"real-world use\" are distinct targets in stroke recovery. During rehabilitation, you should not solely focus on clinical capacity assessments, but also integrate wearable device data to monitor and enhance affected arm use in real-world settings for more personalized rehabilitation goals.",
+     "limitation": "研究观察了患者在常规康复下 6 个月的表现，但未评估特定干预措施对能力与实际使用之间动态分离的影响。",
+     "limitationEn": "The study observed patient performance over six months during conventional rehabilitation but did not evaluate the impact of specific interventions on the dynamic dissociation between capacity and real-world use.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of NeuroEngineering and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1793822045338-1",
+     "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
+     "summary": "A randomized, sham-controlled trial (N=81) found low-dose cervical paraspinal lidocaine injections improved Dizziness Handicap Inventory total score by -6.78 points (95% CI -8.21 to -5.36; p < 0.001) compared to sham, a modest short-term improvement below the 11-point minimal important change for cervicogenic dizziness.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42979678/",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-04T19:54:05.338Z",
+     "curatedScore": 75,
+     "curatedReason": "低剂量颈旁利多卡因注射液在短期内对颈源性头晕相关的残疾有改善作用，但其临床意义有限，且尚未与康复方案进行联合测试。在将其纳入常规实践前，需要更多证据。",
+     "titleZh": "低剂量颈椎旁利多卡因注射液对颈源性头晕相关结局的影响：一项随机、假对照、评估者盲法试验",
+     "summaryZh": "一项随机、假对照试验（N=81）发现，低剂量颈椎旁利多卡因注射液在颈源性头晕患者中使头晕残疾量表总分比假注射组改善了-6.78分（95% CI -8.21至-5.36；p < 0.001），这一短期改善虽然显著但低于11分的最小重要改变值。",
+     "curatedReasonEn": "Low-dose cervical paraspinal lidocaine injections show a modest short-term improvement in dizziness-related disability for cervicogenic dizziness, but clinical significance is limited and it has not been tested with rehabilitation. More evidence is needed before integrating this into routine practice.",
+     "limitation": "本研究未验证参与者盲法，随访时间短，且未与康复治疗同时进行测试，限制了其长期有效性和与康复方案结合的适用性。",
+     "limitationEn": "This study did not verify participant blinding, had short-term follow-up, and did not test the intervention alongside rehabilitation, limiting its long-term efficacy and applicability with rehabilitation protocols.",
+     "tags": [
+      "research",
+      "vestibular",
+      "spine"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1793822045338-32",
+     "title": "Technology Demonstration of a Portable Sensorimotor Assessment System after Short-Duration Spaceflight",
+     "summary": "A technology demonstration successfully deployed a portable sensorimotor assessment system, including ankle proprioception and visual-vestibular tests, for one astronaut participant pre- and post-spaceflight, showing decreased performance post-flight in both assessments.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.02.26367086v1?rss=1",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-04T19:54:05.338Z",
+     "curatedScore": 70,
+     "curatedReason": "这项技术演示验证了便携式感觉运动评估系统在短时间太空飞行后评估宇航员感觉运动失调的潜力。虽然是初步数据，但该系统未来可能用于需要快速评估神经肌肉功能障碍的特殊人群，比如重症监护室或高风险运动康复。",
+     "titleZh": "短时间太空飞行后便携式感觉运动评估系统的技术演示",
+     "summaryZh": "一项技术演示成功部署了便携式感觉运动评估系统，包括踝关节本体感觉和视觉-前庭测试，用于一名宇航员在太空飞行前后的评估，结果显示飞行后两项评估的表现均下降。",
+     "curatedReasonEn": "This technology demonstration validates the potential of a portable sensorimotor assessment system for evaluating astronaut sensorimotor dysfunction after short-duration spaceflight. Although preliminary, this system could be used in special populations needing rapid neuromuscular function assessment, such as in ICU or high-risk sports rehabilitation.",
+     "limitation": "本研究仅为一名宇航员的技术演示，样本量极小，且未进行对照，需要未来大规模验证和对照试验。",
+     "limitationEn": "This was a technology demonstration with only one astronaut participant, representing an extremely small sample size without controls, necessitating future large-scale validation and controlled trials.",
+     "tags": [
+      "research",
+      "vestibular"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1793842403277-34",
+     "title": "The Applied Sport Science of Professional Male Basketball: A Narrative Review of Current and Emerging Practices",
+     "summary": "A narrative review outlines current and emerging applied sport science practices in professional male basketball, emphasizing the complex physical, technical, and travel demands, and the need for holistic, individualized approaches to optimize player preparation, performance, health, and recovery.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02557-7",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇综述为专业男子篮球运动的运动科学实践提供了全面的概述。在为篮球运动员制定训练、表现和康复策略时，你需要一个多层面、个性化的方法，并谨慎利用新兴技术进行监测，确保数据使用得当。",
+     "titleZh": "职业男子篮球的运动科学应用：当前与新兴实践的叙述性综述",
+     "summaryZh": "一篇叙述性综述概述了职业男子篮球中当前和新兴的运动科学实践，强调了复杂的身体、技术和出行需求，以及需要采用整体、个性化方法来优化运动员的准备、表现、健康和恢复。",
+     "curatedReasonEn": "This narrative review provides a comprehensive overview of applied sport science practices in professional male basketball. When developing training, performance, and rehabilitation strategies for basketball players, you need a multifaceted, individualized approach and careful utilization of emerging technologies for monitoring, ensuring data is used appropriately.",
+     "limitation": "这是一篇叙述性综述，可能未采用系统性的文献检索和质量评估方法，因此其结论可能存在选择偏倚和主观性。",
+     "limitationEn": "As a narrative review, it may not have employed systematic literature search and quality assessment methods, thus its conclusions might be subject to selection bias and subjectivity.",
+     "tags": [
+      "research",
+      "basketball",
+      "performance-training"
+     ],
+     "studyDesign": "综述",
+     "journal": "Sports Medicine"
+    },
+    {
+     "id": "news-1793842403277-35",
+     "title": "Factors associated with current KOOS-defined knee status among recreational runners: a cross-sectional study",
+     "summary": "A cross-sectional study of 423 recreational runners identified weekly running frequency, full-marathon participation, previous knee or ankle discomfort, and annual running volume of 600–900 km as factors associated with current KOOS-defined knee status, with previous discomfort showing the strongest link.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02192-9",
+     "publishedAt": "2026-10-29T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究识别了休闲跑步者膝关节状态（KOOS 定义）的相关因素。在评估和咨询休闲跑步者时，你应关注他们的每周跑步频率、全马参与情况、既往膝踝不适史和年跑步量，这些因素可能提示膝关节健康风险。",
+     "titleZh": "休闲跑步者当前 KOOS 定义膝关节状况的相关因素：一项横断面研究",
+     "summaryZh": "一项对 423 名休闲跑步者的横断面研究发现，每周跑步频率、全马参与、既往膝踝不适史和年跑步量 600-900 公里是与当前 KOOS 定义膝关节状况相关的因素，其中既往不适关联性最强。",
+     "curatedReasonEn": "For recreational runners, a history of knee or ankle discomfort is the most significant red flag when assessing knee health, more so than running frequency, marathon participation, or annual running volume (600-900 km). This suggests that in running injury prevention, prioritizing patient history over simple training metrics is prudent.",
+     "limitation": "这是一项横断面研究，无法确立因果关系；研究结果依赖于问卷数据，可能存在回忆偏差； nomogram 仍需前瞻性评估和外部验证。",
+     "limitationEn": "This is a cross-sectional study, so it cannot establish causality; results rely on questionnaire data, which may have recall bias; and the nomogram requires prospective evaluation and external validation.",
+     "tags": [
+      "research",
+      "knee",
+      "running"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1793842403277-36",
+     "title": "Adding blood flow restriction to low-load resistance training for sarcopenia and cognitive function in oldest-old adults: an exploratory randomized controlled trial",
+     "summary": "An exploratory RCT (N=36) in oldest-old adults with sarcopenia and MCI found supervised low-load BFR-RT to be well-attended and safe, showing favorable changes in handgrip strength, 4-m walk time, verbal learning, and delayed recall compared to no exercise, but limited additional benefits over matched low-load RT.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08489-1",
+     "publishedAt": "2026-11-03T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 80,
+     "curatedReason": "这项探索性 RCT 提示，低负荷血流限制抗阻训练 (BFR-RT) 对于伴有肌少症和轻度认知障碍的极老年人是安全且可行的。当常规高负荷训练难以耐受时，你可以考虑 BFR-RT 作为替代方案，它可能对握力、4 米步行表现、言语学习和延迟回忆有益。",
+     "titleZh": "增加血流限制的低负荷抗阻训练对极老年人肌少症和认知功能的影响：一项探索性随机对照试验",
+     "summaryZh": "一项针对伴有肌少症和轻度认知障碍的极老年人（N=36）的探索性随机对照试验发现，监督下的低负荷血流限制抗阻训练（BFR-RT）依从性良好且安全，与无运动对照组相比，在握力、4 米步行时间、言语学习和延迟回忆方面显示出有利变化，但与匹配的低负荷抗阻训练相比，额外益处有限。",
+     "curatedReasonEn": "This exploratory RCT suggests that low-load blood flow restriction resistance training (BFR-RT) is safe and feasible for the oldest-old adults with sarcopenia and mild cognitive impairment. When conventional high-load training is difficult to tolerate, you can consider BFR-RT as an alternative, as it may benefit handgrip strength, 4-m walk performance, verbal learning, and delayed recall.",
+     "limitation": "这项探索性 RCT 样本量较小（36 人），且血流限制相较于匹配的低负荷抗阻训练的额外益处证据有限，需更大规模试验验证。",
+     "limitationEn": "This exploratory RCT had a small sample size (36 participants), and evidence for additional benefits of blood flow restriction over matched low-load resistance training was limited, requiring larger trials for validation.",
+     "tags": [
+      "research",
+      "sarcopenia",
+      "cognition"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1793794659746-4",
+     "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
+     "summary": "A randomized controlled trial of 30 AECOPD patients found chair-based exercise training significantly improved functional exercise capacity (6MWT distance: mean change 79.7m vs 28.8m, p=0.042), dyspnoea, and quality of life compared to breathing exercises alone.",
+     "category": "cardiopulmonary",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42976662/",
+     "publishedAt": "2026-11-03T00:00:00.000Z",
+     "firstSeen": "2026-11-04T12:17:39.746Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究提供了在COPD急性加重住院期间开展椅旁运动训练的强有力证据。它坐实了该干预不仅可行，而且能显著改善患者的功能运动能力、呼吸困难和生活质量，应当被纳入你的临床常规。",
+     "titleZh": "椅旁运动训练对COPD急性加重患者肺功能、运动能力和生活质量的影响：一项随机对照试验",
+     "summaryZh": "一项纳入30名COPD急性加重患者的随机对照试验发现，与单纯呼吸练习相比，椅旁运动训练显著改善了功能运动能力（6分钟步行距离平均变化79.7米 vs 28.8米，p=0.042）、呼吸困难和生活质量。",
+     "curatedReasonEn": "This study provides strong evidence for implementing chair-based exercise training during hospitalization for acute COPD exacerbations. It confirms that this intervention is not only feasible but also significantly improves patients' functional exercise capacity, dyspnea, and quality of life, and should be incorporated into your clinical routine.",
+     "limitation": "研究样本量较小，且仅在单一医院环境中进行，可能影响结果的普遍性。",
+     "limitationEn": "The study had a small sample size and was conducted in a single hospital setting, which may limit the generalizability of the results.",
+     "tags": [
+      "research",
+      "COPD"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy"
+    },
+    {
+     "id": "news-1793842403277-37",
+     "title": "Effects of repeated-sprint training in hypoxia on repeated-sprint and sprint performance in athletes: a systematic review and three-level meta-analysis",
+     "summary": "A three-level meta-analysis of 10 studies (216 athletes) found that repeated-sprint training in hypoxia (Hedges' g = 0.31, 95% CI [0.12, 0.50], P = 0.001) may improve repeated-sprint performance, including sprint-time/RSA-time and sprint decrement, but evidence certainty is very low and inconsistent for power/work output.",
+     "category": "cardiopulmonary",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02219-1",
+     "publishedAt": "2026-11-03T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.277Z",
+     "curatedScore": 75,
+     "curatedReason": "这项系统综述指出，尽管在缺氧下重复冲刺训练（RSH）可能改善重复冲刺表现，但证据确定性非常低，尚未确立其对功率/做功输出的持续益处。在考虑将其作为补充训练策略时，你应保持谨慎，并期待更大型、高质量的试验。",
+     "titleZh": "缺氧下重复冲刺训练对运动员重复冲刺和冲刺表现的影响：一项系统综述和三水平 Meta 分析",
+     "summaryZh": "一项对 10 项研究（216 名运动员）的三水平 Meta 分析发现，缺氧下重复冲刺训练（Hedges' g = 0.31, 95% CI [0.12, 0.50], P = 0.001）可能改善重复冲刺表现，包括冲刺时间/RSA 时间和冲刺衰减，但证据确定性非常低，且对功率/做功输出的益处不一致。",
+     "curatedReasonEn": "This systematic review indicates that while repeated-sprint training in hypoxia (RSH) may improve repeated-sprint performance, the evidence is of very low certainty and does not establish a consistent benefit for power/work output. When considering it as a supplementary training strategy, you should remain cautious and await larger, high-quality trials.",
+     "limitation": "纳入研究数量有限（10 项），样本量较小（216 名运动员），且证据确定性被评为非常低，限制了结论的普遍性和强度。",
+     "limitationEn": "The limited number of included studies (10) and small sample size (216 athletes), coupled with a very low certainty of evidence, restrict the generalizability and strength of the conclusions.",
+     "tags": [
+      "research",
+      "performance-training",
+      "hypoxia"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1793794659746-27",
+     "title": "Effects of Functional Inspiratory Muscle Training in Individuals with Obesity: A Randomized Controlled Trial",
+     "summary": "A randomized controlled trial investigated the effects of functional inspiratory muscle training in individuals with obesity, a chronic disease impacting cardiometabolic, respiratory, and musculoskeletal systems.",
+     "category": "cardiopulmonary",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00935-4/fulltext?rss=yes",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-04T12:17:39.746Z",
+     "curatedScore": 75,
+     "curatedReason": "这项随机对照试验表明功能性吸气肌训练可能对肥胖个体有益，尤其考虑到肥胖对心肺和肌肉骨骼系统的多方面影响。这提示你可以在综合康复策略中考虑吸气肌训练，以改善呼吸功能和运动耐力。",
+     "titleZh": "功能性吸气肌训练对肥胖个体的影响：一项随机对照试验",
+     "summaryZh": "一项随机对照试验研究了功能性吸气肌训练对肥胖个体的影响。肥胖是一种影响心肺和肌肉骨骼系统的慢性疾病。",
+     "curatedReasonEn": "This randomized controlled trial suggests that functional inspiratory muscle training may benefit individuals with obesity, especially given the multifactorial impact of obesity on cardiorespiratory and musculoskeletal systems. This indicates you could consider inspiratory muscle training within comprehensive rehabilitation strategies to improve respiratory function and exercise tolerance.",
+     "limitation": "摘要未提供详细的研究结果，无法评估干预的具体效应量和临床意义。",
+     "limitationEn": "The abstract does not provide detailed study results, preventing evaluation of the specific effect sizes and clinical significance of the intervention.",
+     "tags": [
+      "research",
+      "COPD"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1793840200728-33",
+     "title": "CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste",
+     "summary": "CMS finalized its CY 2027 Physician Fee Schedule, aiming to shift from sick care to healthcare and curb waste. This final rule will impact reimbursement policies for healthcare providers in the US.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-finalizes-cy-2027-physician-fee-schedule-shift-sick-care-healthcare-curb-waste",
+     "publishedAt": "2026-11-04T12:00:00.000Z",
+     "firstSeen": "2026-11-05T00:56:40.728Z",
+     "curatedScore": 79,
+     "curatedReason": "CMS 发布了 2027 财年医师收费标准最终规则，其目标是改变“疾病治疗”向“健康护理”的模式转变并遏制浪费。你应密切关注这份最终规则的具体条款，因为它将直接影响你在美国市场的报销策略和执业范围。",
+     "titleZh": "了解 CMS 最终确定 2027 财年医师收费标准，从疾病治疗转向健康护理并遏制浪费",
+     "summaryZh": "CMS 最终确定了 2027 财年医师收费标准，旨在将医疗服务从“疾病治疗”转向“健康护理”并遏制浪费，这将影响美国医疗服务提供者的报销政策。",
+     "curatedReasonEn": "CMS has released its Calendar Year 2027 Physician Fee Schedule final rule, aiming to shift from 'sick care' to 'healthcare' and curb waste. You should closely review the specific provisions of this final rule, as it will directly impact your reimbursement strategies and scope of practice in the US market.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "regulation"
+     ]
+    },
+    {
+     "id": "news-1793840200729-34",
+     "title": "Calendar Year (CY) 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F) — Medicare Shared Savings Program",
+     "summary": "CMS released the Calendar Year (CY) 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F), which includes details on the Medicare Shared Savings Program (MSSP).",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-medicare-physician-fee-schedule-final-rule-cms-1848-f-medicare-shared-savings",
+     "publishedAt": "2026-11-04T12:00:00.000Z",
+     "firstSeen": "2026-11-05T00:56:40.729Z",
+     "curatedScore": 79,
+     "curatedReason": "CMS 发布了 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F），其中包含 Medicare 共享储蓄计划（MSSP）相关内容。此规则对 MSSP 的具体调整将影响参与该计划的诊所和医院的报销结构，务必仔细研究其细节。",
+     "titleZh": "了解 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F）——Medicare 共享储蓄计划",
+     "summaryZh": "CMS 发布了 2027 财年 Medicare 医师收费标准最终规则（CMS-1848-F），其中包含了 Medicare 共享储蓄计划（MSSP）的详细信息。",
+     "curatedReasonEn": "CMS has released the Calendar Year 2027 Medicare Physician Fee Schedule Final Rule (CMS-1848-F), which includes provisions related to the Medicare Shared Savings Program (MSSP). The specific adjustments to MSSP will affect the reimbursement structure for clinics and hospitals participating in the program, so you must review the details carefully.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "regulation"
+     ]
+    },
+    {
+     "id": "news-1793842403278-38",
+     "title": "The Fight Against MPPR Isn't New. And It Isn't Over",
+     "summary": "The APTA warns that Multiple Procedure Payment Reduction (MPPR) policies are resurfacing among commercial payers, requiring continued advocacy to protect physical therapist payment and patient access to medically necessary services.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/11/04/the-fight-against-mppr-isnt-new-and-it-isnt-over",
+     "publishedAt": "2026-11-04T00:00:00.000Z",
+     "firstSeen": "2026-11-05T01:33:23.278Z",
+     "curatedScore": 75,
+     "curatedReason": "本文强调，随着商业保险公司再次加速实施多重程序支付削减（MPPR）政策，你必须认识到这不仅会影响物理治疗师的报销，还可能限制患者获得必要服务的机会。积极参与行业倡导，争取更有利的报销政策，对于维护你的执业收入和患者权益至关重要。",
+     "titleZh": "反对多重程序支付削减 (MPPR) 的斗争并未结束",
+     "summaryZh": "美国物理治疗协会 (APTA) 警告，多重程序支付削减 (MPPR) 政策正在商业支付方中重新出现，需要持续倡导以保护物理治疗师的支付和患者获得医疗必要服务的权利。",
+     "curatedReasonEn": "This article highlights that as commercial payers accelerate the implementation of Multiple Procedure Payment Reduction (MPPR) policies, you must recognize that this not only impacts physical therapist reimbursement but may also limit patient access to necessary services. Active participation in advocacy efforts to secure more favorable reimbursement policies is crucial for protecting your practice revenue and patient rights.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "us"
+     ]
+    },
+    {
+     "id": "news-1793840200729-35",
+     "title": "Medicare Outpatient Final Rule Expands Surgical Options, Lowers Out-of-Pocket Costs for 340B Drugs",
+     "summary": "Medicare Outpatient Final Rule expands surgical options and lowers out-of-pocket costs for 340B drugs, affecting patient co-pays and healthcare access.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/medicare-outpatient-final-rule-expands-surgical-options-lowers-out-pocket-costs-340b-drugs",
+     "publishedAt": "2026-11-04T12:00:00.000Z",
+     "firstSeen": "2026-11-05T00:56:40.729Z",
+     "curatedScore": 75,
+     "curatedReason": "Medicare 门诊最终规则拓宽了手术选择并降低了 340B 药物的自付费用。虽然这主要影响外科和药房，但你的患者可能会因此受益于更低的共付额，你需要了解这些变化对转诊和患者财务负担的影响。",
+     "titleZh": "了解 Medicare 门诊最终规则扩展手术选择，降低 340B 药物自付费用",
+     "summaryZh": "Medicare 门诊最终规则拓宽了手术选择并降低了 340B 药物的自付费用，这将影响患者的自付额和医疗可及性。",
+     "curatedReasonEn": "The Medicare Outpatient Final Rule expands surgical options and lowers out-of-pocket costs for 340B drugs. While primarily impacting surgery and pharmacy, your patients may benefit from lower co-pays, and you need to understand the implications of these changes on referrals and patient financial burden.",
+     "tags": [
+      "news",
+      "reimbursement"
+     ]
+    },
+    {
+     "id": "news-1793840200729-36",
+     "title": "Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F)",
+     "summary": "CMS published the Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F), impacting payment rates and policies for outpatient services.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-2027-hospital-outpatient-prospective-payment-system-opps-ambulatory-surgical-center-0",
+     "publishedAt": "2026-11-04T12:00:00.000Z",
+     "firstSeen": "2026-11-05T00:56:40.729Z",
+     "curatedScore": 75,
+     "curatedReason": "CMS 发布了 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F）。这些支付系统的更新将直接影响医院门诊和 ASC 的 PT 服务报销，你需要熟悉新规则以确保合规和最大化收入。",
+     "titleZh": "了解 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F）",
+     "summaryZh": "CMS 发布了 2027 财年医院门诊前瞻性支付系统（OPPS）和流动手术中心（ASC）最终规则（CMS-1850-F），这将影响门诊服务的支付费率和政策。",
+     "curatedReasonEn": "CMS released the Calendar Year 2027 Hospital Outpatient Prospective Payment System (OPPS) and Ambulatory Surgical Center (ASC) Final Rule (CMS-1850-F). Updates to these payment systems will directly impact PT service reimbursements in hospital outpatient and ASC settings, requiring you to familiarize yourself with the new rules for compliance and revenue maximization.",
+     "tags": [
+      "news",
+      "reimbursement"
+     ]
+    },
+    {
+     "id": "news-1793840200729-37",
+     "title": "Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule - CMS-1844-F",
+     "summary": "CMS published the Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule (CMS-1844-F), which will affect reimbursement and policy for home health services.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/fact-sheets/calendar-year-cy-2027-home-health-prospective-payment-system-final-rule-cms-1844-f",
+     "publishedAt": "2026-11-04T12:00:00.000Z",
+     "firstSeen": "2026-11-05T00:56:40.729Z",
+     "curatedScore": 75,
+     "curatedReason": "CMS 发布了 2027 财年家庭健康前瞻性支付系统最终规则（CMS-1844-F）。这项规则将影响家庭健康服务提供者的报销标准和政策，对家庭康复服务的可持续性至关重要，你应关注具体调整。",
+     "titleZh": "了解 2027 财年家庭健康前瞻性支付系统最终规则 - CMS-1844-F",
+     "summaryZh": "CMS 发布了 2027 财年家庭健康前瞻性支付系统最终规则（CMS-1844-F），这将影响家庭健康服务的报销和政策。",
+     "curatedReasonEn": "CMS released the Calendar Year (CY) 2027 Home Health Prospective Payment System Final Rule (CMS-1844-F). This rule will impact reimbursement standards and policies for home health service providers, which is crucial for the sustainability of home rehabilitation services. You should pay attention to the specific adjustments.",
+     "tags": [
+      "news",
+      "reimbursement"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "What's In The Box? Previewing the APTA Private Practice Annual Conference 2026",
+   "titleZh": "2026年11月4日 “盒中乾坤”：APTA私人执业年会2026预告",
+   "source": "WebPT",
+   "sourceUrl": "https://www.webpt.com/blog/whats-in-the-box-previewing-the-apta-private-practice-annual-conference-2026",
+   "publishedAt": "2026-11-04T00:00:00.000Z",
+   "journal": null
+  }
+ ]
+}

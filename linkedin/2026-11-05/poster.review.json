@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-05T01:33:39.805Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Wearable-based digital metrics reveal dynamic dissociations between upper limb capacity and real-world use over the first six months after stroke",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02193-2"
+    },
+    {
+      "slide": 2,
+      "title": "Adding blood flow restriction to low-load resistance training for sarcopenia and cognitive function in oldest-old adults: an exploratory randomized controlled trial",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08489-1"
+    },
+    {
+      "slide": 3,
+      "title": "Effects of chair-based exercise training on pulmonary function, exercise capacity, and quality of life in patients with acute exacerbation of COPD: A randomised controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42976662/"
+    },
+    {
+      "slide": 4,
+      "title": "Postoperative rehabilitation after medial meniscus posterior root repair: a scoping review of published protocol descriptions and evidence gaps",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10710-6"
+    },
+    {
+      "slide": 5,
+      "title": "Effects of low-dose cervical paraspinal lidocaine injections on cervicogenic dizziness-related outcomes: a randomized, sham-controlled, assessor-blinded trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42979678/"
+    }
+  ]
+}

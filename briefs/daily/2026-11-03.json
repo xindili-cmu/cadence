@@ -1,0 +1,337 @@
+{
+ "date": "2026-11-03",
+ "generatedAt": "2026-11-03T03:01:59.098Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-02T01:00:51.232Z",
+ "windowEnd": "2026-11-03T03:00:51.232Z",
+ "lead": {
+  "titleZh": "脑瘫膝关节活动度：超声与全身振动作为被动拉伸辅助的RCT",
+  "titleEn": "CP Knee ROM: Ultrasound vs. Whole-Body Vibration as Passive Stretching Adjunct in RCT",
+  "paragraphZh": "今日共 12 条更新，涵盖 6 个专科。最高分研究是骨科与肌骨领域的 RCT，比较了治疗性超声与全身振动作为被动拉伸辅助疗法对偏瘫型脑瘫儿童膝关节活动度和功能能力的影响，得分为 85 分，值得临床优先关注。此外，人工智能在物理与康复医学治疗计划中的系统综述也值得一看。",
+  "paragraphEn": "Today's update features 12 items across 6 specialties. The highest-scoring study, at 85 points, is an RCT in Orthopedics & Musculoskeletal comparing therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching for knee joint range of motion and functional ability in children with hemiplegic cerebral palsy, meriting priority attention. Additionally, a systematic review on the role of AI in physical and rehabilitation medicine treatment planning is noteworthy."
+ },
+ "stats": {
+  "events": 12,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 8,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1793674829856-29",
+     "title": "Comparative study of therapeutic ultrasound and whole-body vibration as adjuncts to passive stretching on knee joint range of motion and functional ability in children with hemiplegic cerebral palsy: a randomized trial",
+     "summary": "A randomized trial (n=60 children aged 4-6 years with hemiplegic cerebral palsy) compared therapeutic ultrasound (US) and whole-body vibration (WBV) as adjuncts to passive stretching. The WBV group showed significantly greater improvements in active knee extension ROM (13.82% vs 7.05%) and GMFM scores (22.72% vs 11.32%) over 12 weeks (p<0.01).",
+     "category": "orthopedic",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10589-3",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-03T03:00:29.856Z",
+     "curatedScore": 85,
+     "curatedReason": "这项随机对照试验表明，在脑瘫儿童的拉伸治疗中，全身振动作为辅助手段比治疗性超声效果更优，能显著提升膝关节活动度和粗大运动功能。在临床实践中，应优先考虑全身振动作为辅助干预来增强脑瘫患儿的康复效果。",
+     "titleZh": "治疗性超声与全身振动作为被动拉伸辅助疗法对偏瘫型脑瘫儿童膝关节活动度和功能能力的比较研究：一项随机试验",
+     "summaryZh": "一项随机试验（n=60名4-6岁偏瘫型脑瘫儿童）比较了治疗性超声（US）和全身振动（WBV）作为被动拉伸的辅助疗法。WBV组在12周后在主动膝关节伸展活动度（13.82% vs 7.05%）和粗大运动功能量表得分（22.72% vs 11.32%）方面显示出显著更大的改善（p<0.01）。",
+     "curatedReasonEn": "This RCT indicates that whole-body vibration as an adjunct to stretching is superior to therapeutic ultrasound for improving knee range of motion and gross motor function in children with cerebral palsy. In clinical practice, prioritize whole-body vibration as an adjunctive intervention to enhance rehabilitation outcomes for children with cerebral palsy.",
+     "limitation": "研究对象仅限于4-6岁的偏瘫型脑瘫儿童，结果外推需谨慎。",
+     "limitationEn": "The study was limited to children with hemiplegic cerebral palsy aged 4-6 years, so generalization of results should be cautious.",
+     "tags": [
+      "research"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+     "id": "news-1793636438463-0",
+     "title": "The Role of Artificial Intelligence in Treatment Planning in Physical and Rehabilitation Medicine: A Systematic Review.",
+     "summary": "A systematic review of 9 studies found that large language models (LLMs) showed promising capabilities in supporting rehabilitation treatment planning, with concordance with expert opinion reaching 98.75% after review, particularly in musculoskeletal and cardiovascular rehabilitation. However, reported hallucinations underscore the need for supervision and further high-quality studies.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42968360/",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-02T16:20:38.463Z",
+     "curatedScore": 75,
+     "curatedReason": "生成式 AI（特别是 LLM）在康复治疗计划中的应用潜力显著，但在整合到临床工作流程前，必须解决“幻觉”问题并进行严格的真实世界验证。请将 AI 辅助方案作为参考，并始终保持专家监督。",
+     "titleZh": "人工智能在物理与康复医学治疗计划中的作用：一项系统综述",
+     "summaryZh": "一项包含9项研究的系统综述发现，大型语言模型（LLM）在支持康复治疗计划方面展现出良好潜力，尤其在肌肉骨骼和心血管康复中，经专家审查后与专家意见的一致性可达98.75%。然而，研究报告的“幻觉”现象强调了监督和进一步高质量研究的必要性。",
+     "curatedReasonEn": "Generative AI, especially LLMs, shows significant potential in rehabilitation treatment planning, but must address \"hallucinations\" and undergo rigorous real-world validation before clinical integration. Treat AI-assisted plans as references, and always maintain expert supervision.",
+     "limitation": "本综述纳入的研究数量有限（9项），且AI工具与专家意见的一致性评估方法可能存在局限。",
+     "limitationEn": "The review included a limited number of studies (9), and the assessment methods for AI tool concordance with expert opinion might have limitations.",
+     "tags": [
+      "research",
+      "telehealth",
+      "workforce"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "American journal of physical medicine & rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1793674829856-30",
+     "title": "The first Archives of Physiotherapy Best Paper Awards: recognizing research that advances the profession\n\t\t\t\t\t\t\t| Archives of Physiotherapy",
+     "summary": "Archives of Physiotherapy announced its first Best Paper Awards for an original research article and a systematic review published in 2025. The original research explored physiotherapy dose and motor recovery post-stroke, while the systematic review compared loaded vs unloaded exercise for chronic low back pain.",
+     "category": "orthopedic",
+     "source": "Arch Physiother",
+     "sourceUrl": "https://www.archivesofphysiotherapy.com/index.php/aop/article/view/4048",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-03T03:00:29.856Z",
+     "curatedScore": 70,
+     "curatedReason": "《物理治疗档案》首次评选出了最佳论文，强调了高质量研究在推进物理治疗专业方面的重要性。其中提及的两篇获奖论文，一篇关注卒中后物理治疗剂量与运动恢复的关系，另一篇系统综述比较了负重与非负重运动在慢性腰痛管理中的效果，这些发现可指导你在实践中更精准地评估治疗方案。",
+     "titleZh": "《物理治疗档案》首届最佳论文奖：表彰推动专业发展的研究",
+     "summaryZh": "《物理治疗档案》公布了首届最佳论文奖，表彰了2025年发表的一篇原创研究文章和一篇系统综述。原创研究探讨了卒中后物理治疗剂量与运动恢复的关系，系统综述则比较了负重与非负重运动在慢性腰痛管理中的效果。",
+     "curatedReasonEn": "Archives of Physiotherapy awarded its first Best Paper Awards, highlighting the importance of high-quality research in advancing the PT profession. Two winning papers discussed the association of physiotherapy dose with motor recovery post-stroke and compared loaded versus unloaded exercise for chronic low back pain, offering guidance for precise treatment evaluation.",
+     "tags": [
+      "news",
+      "education"
+     ],
+     "journal": "Archives of Physiotherapy"
+    },
+    {
+     "id": "news-1793600701526-0",
+     "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
+     "summary": "This case series (N=5) found that real-world lumbar posture differed between days in three participants following a physiotherapy session for chronic low back pain, with four of five participants showing changes in end-range flexion consistent with postural advice. All five reported reduced disability.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42967378/",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-11-02T06:25:01.526Z",
+     "curatedScore": 65,
+     "curatedReason": "本系列病例研究提示可穿戴传感器能捕捉到腰痛患者在现实生活中的姿势行为，且部分行为改变与物理治疗师的建议相符。这为理解疼痛发生机制和个性化康复提供了初步线索，但效应归因仍需对照研究。",
+     "titleZh": "病例系列：探究腰痛物理治疗后现实世界姿势行为的改变",
+     "summaryZh": "这项病例系列研究（N=5）发现，在接受慢性腰痛物理治疗后，三名参与者在日常生活中腰椎姿势分布发生变化，且五分之四的参与者在终末屈曲时间方面显示出与姿势建议一致的改变。所有五名参与者均报告残疾程度减轻。",
+     "curatedReasonEn": "This case series suggests wearable sensors can capture real-world postural behaviors in low back pain patients, with some changes aligning with physiotherapy advice. This offers initial clues for understanding pain mechanisms and individualized rehabilitation, but attributing effects requires controlled studies.",
+     "limitation": "本研究为小样本病例系列，未设对照组，无法将行为变化归因于干预，且发现仅为假说生成。",
+     "limitationEn": "This is a small case series without a control group, limiting attribution of behavioral changes to intervention, and findings are hypothesis-generating.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Clinical biomechanics (Bristol, Avon)"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1793662656607-31",
+     "title": "A Retrospective Real-World Assessment of Motor Status After Stroke Using a Home-Based Brain-Computer Interface",
+     "summary": "A retrospective observational study of 452 stroke survivors using at-home BCI therapy found mean UEFM scores improved by 4.3 points at 12 weeks, reached the MCID (5.25 points) by 16 weeks, and continued to increase to 8.1 points at 52 weeks, especially in patients with severe chronic impairment.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.30.26366945v1?rss=1",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-02T23:37:36.607Z",
+     "curatedScore": 75,
+     "curatedReason": "这项真实世界的回顾性研究表明，在家使用脑机接口 (BCI) 疗法在常规护理中可为卒中幸存者提供持久的运动功能改善，特别是对于重度慢性功能障碍的患者。这支持了在临床实践中推广 BCI 辅助康复的可能性。",
+     "titleZh": "使用居家脑机接口对卒中后运动状态的真实世界回顾性评估",
+     "summaryZh": "一项针对 452 名使用居家脑机接口 (BCI) 疗法的卒中幸存者的回顾性观察研究发现，平均 UEFM 评分在 12 周时提高了 4.3 分，在 16 周时达到了最小临床重要差异 (MCID)，并在 52 周时持续增加到 8.1 分，尤其在重度慢性功能障碍患者中效果显著。",
+     "curatedReasonEn": "This real-world retrospective study suggests that at-home brain-computer interface (BCI) therapy provides sustained motor improvements for stroke survivors in routine care, particularly those with severe chronic impairment. This supports the potential for wider adoption of BCI-assisted rehabilitation in clinical practice.",
+     "limitation": "这是一项回顾性观察研究，存在潜在的选择偏倚，且并非所有患者都完成了 1 年随访。",
+     "limitationEn": "This was a retrospective observational study with potential selection bias, and not all patients completed the 1-year follow-up.",
+     "tags": [
+      "research",
+      "stroke",
+      "telehealth",
+      "bci"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    },
+    {
+     "id": "news-1793662656607-29",
+     "title": "Therapeutic acute intermittent hypoxia alters supraspinal neural control of lower limb movement in multiple sclerosis",
+     "summary": "A sham-controlled, double-blind crossover trial in 23 adults with MS found that acute intermittent hypoxia therapy augmented activation in the basal ganglia, thalamus, and cortical motor regions during lower-limb movement, suggesting modulation of supraspinal motor circuitry.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.01.26366948v1?rss=1",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-02T23:37:36.607Z",
+     "curatedScore": 70,
+     "curatedReason": "急性间歇性低氧疗法 (AIH) 似乎通过调节基底节-丘脑-皮质运动环路来改善多发性硬化症患者的下肢运动控制，这为 AIH 辅助神经康复提供了神经生理学基础。",
+     "titleZh": "急性间歇性低氧疗法改变多发性硬化症患者下肢运动的超脊髓神经控制",
+     "summaryZh": "一项针对 23 名多发性硬化症成年患者的假对照、双盲交叉试验发现，急性间歇性低氧疗法在下肢运动期间增强了基底节、丘脑和皮质运动区域的激活，提示其对超脊髓运动回路的调节作用。",
+     "curatedReasonEn": "Acute intermittent hypoxia (AIH) appears to improve lower limb motor control in individuals with multiple sclerosis by modulating the basal ganglia-thalamo-cortical motor loop, providing a neurophysiological basis for AIH-assisted neurorehabilitation.",
+     "limitation": "这项初步研究的样本量相对较小，且需要进一步验证这些发现与临床功能改善之间的关系。",
+     "limitationEn": "This preliminary study has a relatively small sample size, and further validation is needed regarding the link between these findings and clinical functional improvements.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1793674829856-32",
+     "title": "From Signal to Biological Meaning: A Systematic Review of Construct-Validity Evidence for External Training Load Metrics in Sport",
+     "summary": "A systematic review of 46 studies found that most external training load (ETL) metrics are supported as descriptions of external movement or exposure rather than direct indicators of biological demand or response. Direct construct-matched evidence was uncommon, and methodological limitations reduced confidence in biological interpretations.",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01133-7",
+     "publishedAt": "2026-10-31T00:00:00.000Z",
+     "firstSeen": "2026-11-03T03:00:29.856Z",
+     "curatedScore": 70,
+     "curatedReason": "这项系统综述指出，大多数外部训练负荷（ETL）指标更多地描述了外部运动和做功，而非直接的生理需求或反应。在运动康复和训练监控中，不要盲目将 ETL 数据解读为直接的生理负荷，应明确其构建效度并结合生理指标综合评估，避免过度推断。",
+     "titleZh": "从信号到生物学意义：运动中外部训练负荷指标构建效度证据的系统综述",
+     "summaryZh": "一项对46项研究的系统综述发现，大多数外部训练负荷（ETL）指标被支持为外部运动或暴露的描述，而非直接的生物需求或反应指标。直接的构建效度证据不常见，方法学局限性降低了对生物学解释的信心。",
+     "curatedReasonEn": "This systematic review indicates that most external training load (ETL) metrics primarily describe external movement and work, rather than direct biological demands or responses. In sports rehabilitation and training monitoring, avoid blindly interpreting ETL data as direct physiological load. Instead, combine it with physiological indicators for comprehensive assessment, preventing over-inference.",
+     "limitation": "各指标、目标构建、比较器和研究设计的异质性高，限制了 Meta 分析，证据链有方法学局限。",
+     "limitationEn": "High heterogeneity across metrics, target constructs, comparators, and study designs limited meta-analysis, and evidence chains had methodological limitations.",
+     "tags": [
+      "research",
+      "performance-training",
+      "monitoring"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine - Open"
+    },
+    {
+     "id": "news-1793600701528-2",
+     "title": "Learned helplessness is associated with jump-landing biomechanics following anterior cruciate ligament reconstruction.",
+     "summary": "In 33 individuals 2.78 ± 2.78 years post-ACLR, greater learned helplessness was moderately associated with greater peak knee abduction in the ACLR limb (r = 0.564, p = 0.001) during jump-landing. Weaker associations with hip flexion were also observed.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42967377/",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-11-02T06:25:01.528Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究表明，重建前交叉韧带（ACLR）后患者的习得性无助感与跳-落地时的膝关节外翻力学有中度关联。在康复和重返运动评估中，除了关注生物力学，也别忽视患者的心理社会因素。",
+     "titleZh": "习得性无助与前交叉韧带重建术后的跳-落地生物力学相关",
+     "summaryZh": "在 33 名前交叉韧带重建术后 2.78 ± 2.78 年的个体中，较高的习得性无助感与重建侧肢体在跳-落地时的膝关节峰值外展角度呈中度相关（r = 0.564, p = 0.001）。同时观察到与髋关节屈曲的较弱关联。",
+     "curatedReasonEn": "This study indicates a moderate association between learned helplessness and knee abduction mechanics during jump-landing after ACLR. In rehabilitation and return-to-sport assessments, do not overlook psychosocial factors in addition to biomechanics.",
+     "limitation": "研究样本量较小（N=33），且参与者普遍习得性无助感评分较低，可能影响结果的普遍性。",
+     "limitationEn": "The study has a small sample size (N=33), and participants generally had low learned helplessness scores, which might affect the generalizability of the findings.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Clinical biomechanics (Bristol, Avon)"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1793662656607-30",
+     "title": "Effectiveness of Plyometric Exercises Versus Flatfoot Corrective Exercises on Balance and Foot Posture in Obese Children with a Flexible Flatfoot: A Comparative Study",
+     "summary": "An 8-week comparative study in 120 obese children with flexible flatfoot found that both plyometric and flatfoot corrective exercises improved foot posture and balance; however, plyometric training showed greater gains in balance (median path length: 30.39 cm vs. 37.45 cm, p < 0.001) and slightly better foot posture improvements for the left foot (p = 0.028).",
+     "category": "pediatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.10.31.26361899v1?rss=1",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-02T23:37:36.607Z",
+     "curatedScore": 75,
+     "curatedReason": "这项研究表明，针对肥胖扁平足儿童，弹跳训练在改善平衡方面优于传统矫正练习，这是为儿童足部姿态和步态训练选择干预方法时的重要考量。",
+     "titleZh": "弹跳训练与扁平足矫正训练对肥胖伴柔韧性扁平足儿童平衡和足部姿态的有效性比较：一项比较研究",
+     "summaryZh": "一项针对 120 名肥胖伴柔韧性扁平足儿童的 8 周比较研究发现，弹跳训练和扁平足矫正训练都能改善足部姿态和平衡；但弹跳训练在平衡方面取得了更大的改善（中位路径长度：30.39 厘米 vs 37.45 厘米，p < 0.001），左足足部姿态改善也略好（p = 0.028）。",
+     "curatedReasonEn": "This study indicates that plyometric exercises are superior to traditional corrective exercises for improving balance in obese children with flexible flatfoot, which is an important consideration when selecting interventions for pediatric foot posture and gait training.",
+     "limitation": "这是一项非随机的平行比较研究，可能存在选择偏倚。",
+     "limitationEn": "This was a non-randomized comparative study, which may be subject to selection bias.",
+     "tags": [
+      "research",
+      "foot-ankle",
+      "pediatric-rehab",
+      "balance-training"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1793674829856-34",
+     "title": "Impact of comfortable nursing combined with diversified health education on self-management behavior in elderly patients with cardiovascular diseases",
+     "summary": "A retrospective cohort study (n=142 elderly CVD inpatients) found that a joint group receiving comfort care combined with diversified health education significantly improved CSMS total scores (116.00 vs 98.00, p<0.001) and SF-36 scores compared to a conventional group. Treatment adherence showed a favorable trend (92.96% vs 81.69%, p=0.044).",
+     "category": "cardiopulmonary",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08597-y",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-03T03:00:29.856Z",
+     "curatedScore": 65,
+     "curatedReason": "这项回顾性研究显示，舒适护理结合多元化健康教育模式可显著改善老年心血管疾病患者的自我管理能力和生活质量，但治疗依从性改善趋势需进一步验证。此模式为护理而非物理治疗主导，你在与护理团队协作时可参考。",
+     "titleZh": "舒适护理结合多元化健康教育对老年心血管疾病患者自我管理行为的影响",
+     "summaryZh": "一项回顾性队列研究（n=142名老年心血管疾病住院患者）发现，与常规组相比，接受舒适护理结合多元化健康教育的联合组在CSMS总分（116.00 vs 98.00, p<0.001）和SF-36得分方面均显著改善。治疗依从性显示出有利趋势（92.96% vs 81.69%, p=0.044）。",
+     "curatedReasonEn": "This retrospective study suggests that combining comfort care with diversified health education can significantly improve self-management and quality of life in elderly cardiovascular disease patients, although the trend in treatment adherence requires further validation. This model is nursing-led rather than PT-led; you may refer to it when collaborating with nursing teams.",
+     "limitation": "回顾性研究设计且未随机分组，可能存在混杂因素；干预主要为护理和健康教育，非物理治疗。",
+     "limitationEn": "Retrospective study design with non-randomized groups, potential confounders; interventions were primarily nursing and health education, not physical therapy.",
+     "tags": [
+      "research",
+      "patient-education"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1793674829856-35",
+     "title": "Lumbar mobility and strength correlate with low back pain and quality of life",
+     "summary": "A retrospective cross-sectional study (n=1,309 adults) found that STS, FFD, and Idiag M360 thoracolumbar flexion/extension were significantly associated with SF36-PF and SF36-BP (all p ≤ 0.002) in both chronic low back pain (cLBP) and non-cLBP groups. Greater STS performance and higher thoracolumbar flexion/extension were associated with lower odds of cLBP (all p ≤ 0.001).",
+     "category": "manual-modality",
+     "source": "Eur Spine J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00586-026-10482-6",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-03T03:00:29.856Z",
+     "curatedScore": 70,
+     "curatedReason": "功能性力量和腰椎活动度与慢性下腰痛及生活质量的关联再次得到佐证。我们在评估患者时，确实应该重视 STS 表现和设备辅助的腰椎活动度测量，它们是判断 cLBP 风险和患者预后的重要指标。",
+     "titleZh": "腰椎活动度和力量与下腰痛及生活质量相关",
+     "summaryZh": "一项回顾性横断面研究（n=1,309名成人）发现，坐站试验（STS）、指尖触地试验（FFD）和Idiag M360胸腰椎屈伸活动度在慢性下腰痛（cLBP）和非cLBP组中均与SF36-PF和SF36-BP显著相关（均p ≤ 0.002）。STS表现更佳和胸腰椎屈伸活动度更高与cLBP的较低几率相关（均p ≤ 0.001）。",
+     "curatedReasonEn": "The link between functional strength, thoracolumbar mobility, chronic low back pain, and quality of life is reaffirmed. When assessing patients, prioritize STS performance and device-assisted lumbar mobility measurements; they are key indicators for cLBP risk and patient prognosis.",
+     "limitation": "回顾性横断面研究，无法确定因果关系，且未评估这些测量方法对预后的预测能力。",
+     "limitationEn": "Retrospective cross-sectional study, unable to determine causality, and did not assess the predictive ability of these measurements for outcomes.",
+     "tags": [
+      "research",
+      "spine",
+      "low-back-pain"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "European Spine Journal"
+    },
+    {
+     "id": "news-1793662656607-23",
+     "title": "Real-Time Ultrasound-Assisted Laryngeal Electromyography Using an In-Plane Trajectory View: A Prospective Feasibility Study",
+     "summary": "This prospective feasibility study demonstrates that real-time ultrasound-assisted laryngeal electromyography, using an in-plane trajectory view, is a safe and effective method for diagnosing laryngeal neuropathies and guiding therapeutic injections.",
+     "category": "manual-modality",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00991-3/fulltext?rss=yes",
+     "publishedAt": "2026-11-02T00:00:00.000Z",
+     "firstSeen": "2026-11-02T23:37:36.607Z",
+     "curatedScore": 65,
+     "curatedReason": "超声引导下的喉部肌电图术能提高诊断的准确性与安全性，对评估喉部神经病变和指导注射治疗很有用。",
+     "titleZh": "实时超声辅助平面内轨迹视图喉部肌电图术：一项前瞻性可行性研究",
+     "summaryZh": "这项前瞻性可行性研究表明，在平面内轨迹视图下，实时超声辅助的喉部肌电图术是诊断喉部神经病变和指导治疗性注射的一种安全有效的方法。",
+     "curatedReasonEn": "Real-time ultrasound guidance for laryngeal electromyography improves diagnostic accuracy and safety, making it valuable for assessing laryngeal neuropathies and guiding injections.",
+     "limitation": "这是一项可行性研究，样本量小且缺乏对照组。",
+     "limitationEn": "This is a feasibility study with a small sample size and no control group.",
+     "tags": [
+      "research",
+      "electro"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

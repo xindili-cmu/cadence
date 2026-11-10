@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-26",
+  "lead": {
+    "categoryId": "neurological",
+    "claim": "Consider NMES to improve lower limb function in post-stroke patients.",
+    "context": "A systematic review and meta-analysis found neuromuscular electrical stimulation improved several measures of lower limb mobility and daily activities in post-stroke patients.",
+    "journal": "AJPM&R",
+    "signal": 85,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42921866/"
+  },
+  "supporting": [
+    {
+      "categoryId": "neurological",
+      "claim": "For stroke balance, is whole-body vibration most beneficial?",
+      "context": "A network meta-analysis of stroke rehabilitation interventions found whole-body vibration most beneficial for balance, while other exercise types improved walking endurance.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "signal": 80,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02150-5"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "No single observational gait tool is fully recommended for neurological populations.",
+      "context": "A COSMIN systematic review and meta-analysis found no observational gait analysis tool was fully recommended for use in neurological populations, though some showed potential for stroke.",
+      "journal": "Disability and rehabilitation",
+      "signal": 80,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42925108/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Balance confidence and objective balance are distinct in chronic stroke.",
+      "context": "A secondary analysis of adults with chronic stroke found small correlations between balance confidence and objective balance and gait measures.",
+      "journal": "Clin Biomech",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42925857/"
+    },
+    {
+      "categoryId": "sports",
+      "claim": "Can machine learning predict peak ACL force from biomechanical parameters?",
+      "context": "An interpretable machine learning model demonstrated high accuracy in predicting peak ACL force during side-cutting maneuvers in male football and basketball athletes.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "tech": true,
+      "signal": 75,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02140-7"
+    }
+  ]
+}

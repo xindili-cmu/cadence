@@ -1,0 +1,7 @@
+linkedin-poster-claims.js failed at 2026-11-01T00:15:41.873Z
+
+draft still breaks 1 rule(s) after retry:
+  - paper 1 claim reuses the raw title (78% of its words come from it) — rewrite it as a plain-language clinical claim
+
+The carousel for 2026-11-01 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-11-01 && node scripts/linkedin-poster.js 2026-11-01

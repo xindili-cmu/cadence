@@ -1,0 +1,333 @@
+{
+ "date": "2026-10-31",
+ "generatedAt": "2026-10-31T00:55:26.844Z",
+ "windowHours": 50,
+ "windowStart": "2026-10-30T01:12:59.671Z",
+ "windowEnd": "2026-10-31T00:55:25.509Z",
+ "lead": {
+  "titleZh": "全膝关节置换术后运动恐惧症：运动康复干预的系统综述",
+  "titleEn": "Kinesiophobia Post-TKA: Systematic Review on Exercise Interventions",
+  "paragraphZh": "今天共 12 条更新，骨科与肌骨、神经康复方向内容较多。最值得关注的是一篇系统综述，它评估了基于运动的康复干预对全膝关节置换术后运动恐惧症的影响。",
+  "paragraphEn": "Today's update includes 12 entries, with a focus on orthopedic and musculoskeletal as well as neurorehabilitation. The most noteworthy item is a systematic review evaluating exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty."
+ },
+ "stats": {
+  "events": 12,
+  "specialties": 6,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1793365861885-0",
+     "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
+     "summary": "A systematic review of 11 RCTs (N=1,096) found that exercise-based rehabilitation was associated with a reduction in kinesiophobia (SMD = -1.22, 95% CI [-1.72, -0.72]) and improvements in knee function (SMD = 1.19, 95% CI [0.67, 1.71]) after total knee arthroplasty, although the certainty of evidence was low for both outcomes.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42958196/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T13:11:01.885Z",
+     "curatedScore": 85,
+     "curatedReason": "本系统综述发现，运动康复能显著降低全膝关节置换术（TKA）患者的运动恐惧症（kinesiophobia）并改善膝关节功能，效应量分别为 SMD -1.22 和 1.19。尽管证据确定性为低，但这一结果支持在 TKA 术后康复中更积极地整合运动干预。",
+     "titleZh": "基于运动的康复干预对全膝关节置换术后运动恐惧症的影响：一项随机对照试验的系统综述和 Meta 分析",
+     "summaryZh": "一项纳入 11 项随机对照试验（N=1,096）的系统综述显示，基于运动的康复干预可显著降低全膝关节置换术后患者的运动恐惧症（SMD = -1.22）并改善膝关节功能（SMD = 1.19），但证据确定性较低。",
+     "curatedReasonEn": "This systematic review found that exercise-based rehabilitation significantly reduced kinesiophobia (SMD -1.22) and improved knee function (SMD 1.19) after total knee arthroplasty (TKA). Despite low certainty of evidence, these findings support more active integration of exercise into TKA post-operative rehabilitation.",
+     "limitation": "该综述证据确定性低，且存在显著异质性及偏倚风险，短期疼痛结局不稳健。",
+     "limitationEn": "The review has low certainty of evidence, significant heterogeneity, and risk of bias, with non-robust short-term pain outcomes.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC musculoskeletal disorders"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1793388557463-1",
+     "title": "Upper Limb Neurorehabilitation Using a Hybrid Technology-Enabled Therapy Approach-A Scoping Review.",
+     "summary": "A scoping review identified ten studies on hybrid technology-enabled upper limb neurorehabilitation for adult stroke patients in hospital settings, showing positive outcomes and feasibility for implementation.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961310/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T19:29:17.463Z",
+     "curatedScore": 75,
+     "curatedReason": "本综述显示，针对中风患者的混合技术（如机器人、VR、传感器）上肢神经康复在医院环境中展现出积极效果和可行性。可作为你了解未来技术整合方向的参考。",
+     "titleZh": "使用混合技术实现的上肢神经康复方法：一项范围综述",
+     "summaryZh": "一项范围综述确定了针对住院成人中风患者使用混合技术（如机器人、虚拟现实和传感器疗法）进行上肢神经康复的十项研究，结果显示出积极的患者结局和临床实施的可行性。",
+     "curatedReasonEn": "This review indicates that hybrid technology (e.g., robotics, VR, sensor-based) for upper limb neurorehabilitation in stroke patients shows positive outcomes and feasibility in hospital settings. It serves as a reference for future technology integration trends.",
+     "limitation": "大多数研究为观察性或初步性质，侧重于临床可行性而非长期疗效。",
+     "limitationEn": "Most studies were observational or pilot in nature, focusing on clinical feasibility rather than long-term efficacy.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述",
+     "journal": "NeuroRehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1793388557464-2",
+     "title": "Identifying key components for psychosocial interventions in neurorehabilitation: a realist evaluation on young adults with an acquired brain injury.",
+     "summary": "A realist evaluation identified three key program theories for psychosocial interventions in young adults with acquired brain injury: engaging the individual, empowering the community, and equipping professionals.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961285/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T19:29:17.464Z",
+     "curatedScore": 75,
+     "curatedReason": "对于脑损伤年轻成人（含卒中）的心理社会干预，本研究提示有三大支柱：让个体参与、赋能社区、武装专业人员。如果你所在机构的康复方案效果不彰，不妨审视一下是否缺少这几个环节。",
+     "titleZh": "确定神经康复中心理社会干预的关键组成部分：一项针对获得性脑损伤年轻成人的真实主义评估",
+     "summaryZh": "一项真实主义评估确定了针对获得性脑损伤（包括中风）年轻成人进行心理社会干预的三个关键项目理论：个体参与、社区赋能和专业人员装备。",
+     "curatedReasonEn": "For psychosocial interventions in young adults with acquired brain injury (including stroke), this study suggests three pillars: individual engagement, community empowerment, and equipping professionals. If your rehabilitation programs are falling short, consider whether these components are adequately addressed.",
+     "limitation": "研究样本量较小，仅限于英国的年轻成人及服务提供者，可能影响结果的普遍性。",
+     "limitationEn": "The study involved a small sample size, limited to young adults and service providers in the UK, which may affect the generalizability of the findings.",
+     "tags": [
+      "research",
+      "brain-injury",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1793388557464-4",
+     "title": "Motor memory consolidation during sleep after stroke: the rehabilitation timing hypothesis.",
+     "summary": "This review synthesizes evidence for the rehabilitation timing hypothesis in stroke, suggesting that scheduling motor therapy close to sleep could enhance motor memory consolidation and recovery, though direct clinical evidence in stroke populations is lacking.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42960484/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T19:29:17.464Z",
+     "curatedScore": 75,
+     "curatedReason": "这篇综述提出了“康复时机假说”，强调将中风后运动康复安排在接近睡眠的时间，可能通过优化睡眠中的运动记忆巩固来增强恢复。这是一个值得你在临床实践中探索的低成本策略。",
+     "titleZh": "中风后睡眠期间运动记忆巩固：康复时机假说",
+     "summaryZh": "本综述综合了中风康复时机假说的证据，提出将运动疗法安排在临近睡眠的时间可能增强运动记忆巩固和恢复，尽管目前尚缺乏在卒中人群中直接验证的临床证据。",
+     "curatedReasonEn": "This review introduces the \"rehabilitation timing hypothesis,\" suggesting that scheduling post-stroke motor rehabilitation close to sleep may enhance recovery by optimizing motor memory consolidation during sleep. This is a low-cost strategy worth exploring in your clinical practice.",
+     "limitation": "目前在卒中人群中直接验证康复时机假说的临床证据尚缺乏，需要更多正式试验。",
+     "limitationEn": "Direct clinical evidence to test the rehabilitation timing hypothesis in stroke populations is currently lacking, and more formal trials are urgently needed.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "综述",
+     "journal": "Topics in stroke rehabilitation"
+    },
+    {
+     "id": "news-1793365861886-3",
+     "title": "Factors associated with Severe Balance Impairment After Right-Hemisphere Stroke: The Role of Spatial Neglect and Lateropulsion: A Secondary Analysis of Multicenter Cross-Sectional Study POSTIM.",
+     "summary": "In 82 right-hemisphere stroke patients with postural asymmetry, 74% had severe balance impairment (BBS <45/56). Spatial neglect (OR 11.15), lateropulsion (OR 3.54), and lower-limb motor deficit (OR 0.91) were independently associated with severe balance impairment.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42957620/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T13:11:01.886Z",
+     "curatedScore": 75,
+     "curatedReason": "右半球卒中（RHS）患者即使恢复了无支撑站立，仍有高比例存在严重的平衡障碍，且与空间忽视和躯体偏斜独立相关。在评估和干预 RHS 患者的平衡障碍时，你应着重筛查并针对这些神经心理因素。",
+     "titleZh": "右半球卒中后严重平衡障碍的相关因素：空间忽视和躯体偏斜的作用：一项多中心横断面研究 POSTIM 的次要分析",
+     "summaryZh": "在 82 例伴有姿势不对称的右半球卒中患者中，74% 存在严重平衡障碍（BBS <45/56）。空间忽视（OR 11.15）、躯体偏斜（OR 3.54）和下肢运动缺陷（OR 0.91）与严重平衡障碍独立相关。",
+     "curatedReasonEn": "A high proportion of right-hemisphere stroke (RHS) patients experience severe balance impairment even after recovering unsupported standing, and this is independently associated with spatial neglect and lateropulsion. When assessing and intervening in balance deficits for RHS patients, you should prioritize screening for and addressing these neuropsychological factors.",
+     "limitation": "这是一项回顾性横断面分析，无法建立因果关系，且患者样本量有限。",
+     "limitationEn": "This is a retrospective cross-sectional analysis, precluding causal inference, and has a limited patient sample size.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "NeuroRehabilitation"
+    },
+    {
+     "id": "news-1793388557464-3",
+     "title": "An economic evaluation alongside a randomised controlled trial of Scanning Eye trAining as a Rehabilitation Choice compared to sham training for Hemianopia after stroke (the SEARCH trial).",
+     "summary": "An economic evaluation alongside a randomized controlled trial for visual scanning training in post-stroke hemianopia found the intervention's cost-effectiveness ratio of £19,790/QALY was below the NICE threshold, but QALY gain was marginal and non-significant.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42961104/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T19:29:17.464Z",
+     "curatedScore": 70,
+     "curatedReason": "对于中风后偏盲患者，视觉扫描训练的成本效益分析显示其略低于英国NICE的成本效益阈值。虽然质量调整生命年（QALY）增益不显著，但可作为你考虑引入该干预时的经济学参考。",
+     "titleZh": "一项随机对照试验的经济学评估：中风后偏盲患者的扫描眼训练康复选择与假训练（SEARCH试验）",
+     "summaryZh": "一项针对中风后偏盲患者视觉扫描训练的随机对照试验的经济学评估发现，该干预的成本效益比为19,790英镑/QALY，低于NICE阈值，但QALY增益微弱且不显著。",
+     "curatedReasonEn": "For post-stroke hemianopia, visual scanning training showed a cost-effectiveness ratio slightly below the UK NICE threshold. Although the Quality-Adjusted Life Year (QALY) gain was not significant, this provides an economic reference when considering this intervention.",
+     "limitation": "视觉扫描训练的QALY增益不显著，经济效益结论尚需更多高水平证据支持。",
+     "limitationEn": "The QALY gain for visual scanning training was not significant, and economic benefit conclusions require more high-level evidence.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Clinical rehabilitation"
+    },
+    {
+     "id": "news-1793365861886-2",
+     "title": "Convergent validity of the Functional Bridge Test and its prognostic association with walking independence in patients with acute stroke: a retrospective cohort study.",
+     "summary": "The Functional Bridge Test (FBT) demonstrated adequate convergent validity with NIHSS (ρ = -0.668) and FSS-ICU scores (ρ = 0.730) and was independently associated with walking independence (adjusted OR = 1.786, 95% CI = 1.022-3.418) in 207 patients with acute stroke.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42958700/",
+     "publishedAt": "2026-10-30T00:00:00.000Z",
+     "firstSeen": "2026-10-30T13:11:01.886Z",
+     "curatedScore": 70,
+     "curatedReason": "功能性搭桥测试（FBT）与 NIHSS 评分和 FSS-ICU 评分有良好关联性，并且独立预测卒中患者的步行独立性。这个简单易行的床旁评估工具在急性卒中患者中具有不错的效度和预后价值，值得你考虑作为常规评估手段。",
+     "titleZh": "功能性搭桥测试的聚合效度及其与急性卒中患者步行独立性的预后关联：一项回顾性队列研究",
+     "summaryZh": "功能性搭桥测试（FBT）在 207 例急性卒中患者中，与 NIHSS 评分（ρ = -0.668）和 FSS-ICU 评分（ρ = 0.730）显示出良好的聚合效度，并且与步行独立性独立相关（调整后 OR = 1.786）。",
+     "curatedReasonEn": "The Functional Bridge Test (FBT) shows good correlation with NIHSS and FSS-ICU scores and independently predicts walking independence in stroke patients. This simple bedside assessment tool has decent validity and prognostic value for acute stroke, making it a worthy addition to your routine assessments.",
+     "limitation": "这是一项回顾性队列研究，且随访终点基于出院时间而非标准化时间点，可能存在选择偏倚。",
+     "limitationEn": "This was a retrospective cohort study with a variable discharge-based endpoint, which may introduce selection bias.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physiotherapy theory and practice"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1793408113693-26",
+     "title": "Weekly musculoskeletal pain beyond self-reported injury in Italian track-and-field athletes: a 23-week prospective cohort study",
+     "summary": "A 23-week prospective cohort study (n=96) of Italian track-and-field athletes found that musculoskeletal pain was reported in 25.2% of athlete-weeks, but only 8.3% were athlete-labelled injuries. Two-thirds of pain-positive weeks (67.6%) were not labeled as injuries, highlighting that relying on self-reported injury significantly underestimates the symptom burden.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02209-3",
+     "publishedAt": "2026-10-28T00:00:00.000Z",
+     "firstSeen": "2026-10-31T00:55:13.693Z",
+     "curatedScore": 70,
+     "curatedReason": "这项前瞻性队列研究强调，仅依赖运动员自报伤病会遗漏大部分疼痛问题。在你的运动康复实践中，应采用基于症状和后果的监测工具，如 OSTRC 问卷，以便更全面地识别和管理运动员的健康问题，而不仅仅是等待他们自报“伤病”。",
+     "titleZh": "意大利田径运动员自报伤病之外的每周肌肉骨骼疼痛：一项为期 23 周的前瞻性队列研究",
+     "summaryZh": "一项针对意大利田径运动员的为期 23 周前瞻性队列研究（n=96）发现，25.2% 的运动员周报告有肌肉骨骼疼痛，但仅 8.3% 被运动员标记为伤病。三分之二的疼痛周（67.6%）未被标记为伤病，这表明仅依赖自报伤病会显著低估症状负担。",
+     "curatedReasonEn": "This prospective cohort study highlights that relying solely on athlete-reported injuries misses a significant portion of pain issues. In your sports rehabilitation practice, you should use symptom- and consequence-based monitoring tools, such as the OSTRC questionnaire, to more comprehensively identify and manage athletes' health problems, rather than just waiting for them to report an 'injury'.",
+     "limitation": "本研究为观察性队列研究，不能建立因果关系，且研究人群仅限于意大利田径运动员，结果可能不完全适用于其他运动项目或人群。",
+     "limitationEn": "This is an observational cohort study, which cannot establish causality. The study population is limited to Italian track-and-field athletes, so the results may not be fully generalizable to other sports or populations.",
+     "tags": [
+      "research",
+      "injury-prevention",
+      "athletic-performance"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1793340429775-22",
+     "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial",
+     "summary": "The PROSpect trial found no evidence that prone positioning or HFOV improve ventilator-free days in early, moderate-to-severe PARDS, recommending against their routine use as first-line strategies.",
+     "category": "cardiopulmonary",
+     "source": "The Lancet",
+     "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01949-5/fulltext?rss=yes",
+     "publishedAt": "2026-10-31T00:00:00.000Z",
+     "firstSeen": "2026-10-30T06:07:09.775Z",
+     "curatedScore": 80,
+     "curatedReason": "重症新生儿呼吸窘迫综合征（PARDS），俯卧位和高频振荡通气（HFOV）不是首选，别常规用了。",
+     "titleZh": "俯卧位和高频振荡通气在早期儿童急性呼吸窘迫综合征（PROSpect）：一项国际性、2x2 析因、反应适应性、III 期、随机对照试验",
+     "summaryZh": "PROSpect试验未发现俯卧位或高频振荡通气能改善早期、中重度儿童急性呼吸窘迫综合征（PARDS）的无通气天数，因此不推荐将其作为一线策略常规使用。",
+     "curatedReasonEn": "The PROSpect trial provides high-level evidence that prone positioning and HFOV are not recommended as first-line strategies for early, moderate-to-severe PARDS, directly impacting clinical guidelines and practice for pediatric critical care. This finding challenges previous assumptions and directs care toward alternative approaches.",
+     "limitation": "本研究侧重于早期、中度至重度PARDS，并以脱离呼吸机天数作为主要结局，研究结果可能无法直接推广至其他PARDS严重程度或不同的结局指标。",
+     "limitationEn": "The study focused on early, moderate-to-severe PARDS and used ventilator-free days as the primary outcome, and findings may not directly translate to other PARDS severity levels or different outcome measures.",
+     "tags": [
+      "research",
+      "cardiopulmonary"
+     ],
+     "studyDesign": "RCT",
+     "journal": "The Lancet"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1793408113694-27",
+     "title": "Validation study comparing a novel sham acupuncture technique with Park sham acupuncture: A randomized controlled trial",
+     "summary": "A randomized controlled trial (n=66) comparing a novel noninvasive sham acupuncture device with the Park sham device found no significant differences in perceived penetration sensation, pain, or deqi (p > 0.05). Both devices elicited minimal sensory responses (<1.0 on NRS), and the novel device was noninferior, supporting its use as a valid control in acupuncture trials.",
+     "category": "manual-modality",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42732822/?fc=None&ff=20261029053910&v=2.20.1",
+     "publishedAt": "2026-11-01T00:00:00.000Z",
+     "firstSeen": "2026-10-31T00:55:13.694Z",
+     "curatedScore": 70,
+     "curatedReason": "这项 RCT 验证了一种新型假针刺设备的有效性，其与市售 Park 假针刺设备表现出可比的假性刺激效应，且未报告不良事件。这为针刺临床试验提供了另一个可信的对照工具，有助于未来更严谨的针刺疗效研究。",
+     "titleZh": "新型假针刺技术与 Park 假针刺比较的验证研究：一项随机对照试验",
+     "summaryZh": "一项随机对照试验（n=66）比较了一种新型无创假针刺设备与 Park 假针刺设备，结果显示在感知穿透感、疼痛和得气方面无显著差异（p > 0.05）。两种设备均引起最小的感官反应（NRS <1.0），且新型设备具有非劣效性，支持其作为针刺试验的有效对照。",
+     "curatedReasonEn": "This RCT validated a novel sham acupuncture device, demonstrating comparable sham stimulation effects to the commercially available Park sham acupuncture device, with no reported adverse events. This provides another credible control tool for acupuncture clinical trials, facilitating more rigorous research into acupuncture efficacy in the future.",
+     "limitation": "本研究的受试者是健康成人，结果可能无法直接外推至实际的疼痛或疾病患者群体。",
+     "limitationEn": "The study participants were healthy adults, so the results may not be directly generalizable to actual pain or disease patient populations.",
+     "tags": [
+      "research",
+      "acupuncture",
+      "electro"
+     ],
+     "studyDesign": "RCT"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1793408113694-30",
+     "title": "Australian Health Practitioner Regulation Agency - Record 13,171 notifications completed as health workforce nears one million",
+     "summary": "The 2025/26 AHPRA annual report highlights a record 13,171 notifications completed as Australia's health workforce nears one million. It notes improved responses to racism and discrimination, increased referrals to tribunals (295 practitioners, up 53.6%), and enhanced transparency with sexual misconduct findings now public. New expedited pathways for international practitioners also supported workforce growth.",
+     "category": "practice",
+     "source": "AHPRA",
+     "sourceUrl": "https://www.ahpra.gov.au/News/2026-10-29-Ahpra-annual-report",
+     "publishedAt": "2026-10-29T00:00:00.000Z",
+     "firstSeen": "2026-10-31T00:55:13.694Z",
+     "curatedScore": 79,
+     "curatedReason": "澳大利亚健康从业者监管机构 (AHPRA) 的年度报告显示，在医疗劳动力接近一百万的背景下，完成了创纪录数量的投诉通知，并加强了对种族主义和歧视的回应。作为澳大利亚的物理治疗师，这表明监管机构在持续改进其透明度和风险管理，关注专业行为和临床表现，因此你应密切关注其发布的指南和政策更新，确保执业合规性。",
+     "titleZh": "澳大利亚健康从业者监管机构——随着医疗劳动力接近一百万，完成了创纪录的 13,171 份通知",
+     "summaryZh": "2025/26 年度 AHPRA 报告显示，在澳大利亚医疗劳动力接近一百万之际，完成了创纪录的 13,171 份通知。报告指出，对种族主义和歧视的回应有所改善，提交给法庭的案件有所增加（295 名从业者，增长 53.6%），并且通过公开性行为不当裁决提高了透明度。新的国际从业者快速通道也支持了劳动力增长。",
+     "curatedReasonEn": "The Australian Health Practitioner Regulation Agency (AHPRA) annual report shows a record number of notifications completed amidst a health workforce nearing one million, along with an improved response to racism and discrimination. As a physical therapist in Australia, this indicates that the regulator is continuously improving its transparency and risk management, focusing on professional conduct and clinical performance. Therefore, you should closely follow its published guidelines and policy updates to ensure compliance in your practice.",
+     "tags": [
+      "policy",
+      "regulation",
+      "ethics",
+      "workforce"
+     ]
+    },
+    {
+     "id": "news-1793408113694-29",
+     "title": "How Should Practices Manage Credit Card Processing Fees?",
+     "summary": "This article explains the complex rules for physical therapy practices regarding credit card processing fees, noting that Medicare prohibits passing these fees to beneficiaries. It details varying state laws (some strictly prohibit, others permit with limits) and credit card network rules (Visa and Mastercard permit with strict disclosure guidelines and notification requirements), advising practices to consult legal counsel.",
+     "category": "practice",
+     "source": "WebPT",
+     "sourceUrl": "https://www.webpt.com/blog/how-should-practices-manage-credit-card-processing-fees",
+     "publishedAt": "2026-10-27T00:00:00.000Z",
+     "firstSeen": "2026-10-31T00:55:13.694Z",
+     "curatedScore": 75,
+     "curatedReason": "这篇文章详细阐述了物理治疗诊所能否将信用卡手续费转嫁给患者的复杂规定，特别指出 Medicare 不允许此操作，且各州法律和信用卡网络规则差异巨大。在你的执业中，务必熟悉你所在州和地区关于附加费的具体法律，并在执行前咨询法律顾问，以避免违规。",
+     "titleZh": "诊所如何管理信用卡手续费？",
+     "summaryZh": "本文解释了物理治疗诊所关于信用卡手续费的复杂规定，指出 Medicare 禁止将这些费用转嫁给受益人。文章详细阐述了各州法律（有些严格禁止，有些允许但有限制）和信用卡网络规则（Visa 和 Mastercard 允许，但有严格的披露准则和通知要求）的差异，建议诊所咨询法律顾问。",
+     "curatedReasonEn": "This article details the complex regulations governing whether physical therapy clinics can pass credit card processing fees to patients, specifically noting that Medicare prohibits this and that state laws and credit card network rules vary widely. In your practice, you must be familiar with the specific laws regarding surcharges in your state and region, and consult legal counsel before implementation, to avoid non-compliance.",
+     "tags": [
+      "news",
+      "reimbursement",
+      "regulation"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

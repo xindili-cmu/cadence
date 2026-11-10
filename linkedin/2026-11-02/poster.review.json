@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-02T00:56:27.344Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966901/"
+    },
+    {
+      "slide": 2,
+      "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966905/"
+    },
+    {
+      "slide": 3,
+      "title": "Does low back pain improve following supervised patient education and exercise therapy targeting hip osteoarthritis symptoms? A longitudinal cohort study of 5014 patients.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966026/"
+    },
+    {
+      "slide": 4,
+      "title": "Clinical approach to balance intensity in people with multiple sclerosis: clinical judgment versus the Balance Intensity Tool for Exercise - an inter-rater agreement and reliability study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42965342/"
+    },
+    {
+      "slide": 5,
+      "title": "Robot-assisted gait training for adult neurological rehabilitation in acute National Health Service settings: Physiotherapists' perceptions before implementation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42966025/"
+    }
+  ]
+}

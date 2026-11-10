@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-10-21T00:13:10.781Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effects of extracorporeal shockwave therapy on pain intensity and functional disability in chronic low back pain: a systematic review and meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42900489/"
+    },
+    {
+      "slide": 2,
+      "title": "Physical activity guidelines' impact on cognition in multiple sclerosis: a systematic review and meta-analysis of randomized clinical trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42899457/"
+    },
+    {
+      "slide": 3,
+      "title": "Clinical and functional outcomes of aquatic plyometrics in adolescent patellofemoral pain syndrome: a dual-arm randomized controlled trial | Journal of Rehabilitation Medicine",
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46495"
+    },
+    {
+      "slide": 4,
+      "title": "Feasibility of Distributed Wearable Ultrasound for Detecting Neuromuscular Coordination Differences After Knee Injury",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.10.18.26365835v1?rss=1"
+    },
+    {
+      "slide": 5,
+      "title": "Low balance confidence in relation to strength training, walking, sitting, and physical function among women aged 75–105 years: a cross-sectional study within the Women’s Health Initiative Strong and Healthy (WHISH) Intervention Cohort",
+      "url": "https://link.springer.com/article/10.1186/s12877-026-08510-7"
+    }
+  ]
+}
