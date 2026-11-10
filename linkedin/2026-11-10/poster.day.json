@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-10",
+  "lead": {
+    "categoryId": "orthopedic",
+    "claim": "Integrate Traditional Chinese Exercises for better physical function and mental health.",
+    "context": "An umbrella review examined if these exercises improve outcomes for various musculoskeletal disorders.",
+    "journal": "British Journal of Sports Medicine",
+    "signal": 90,
+    "url": "https://blogs.bmj.com/bjsm/2026/11/09/can-traditional-chinese-exercises-help-people-with-musculoskeletal-disorders/"
+  },
+  "supporting": [
+    {
+      "categoryId": "sports",
+      "claim": "Emphasize sleep extension to improve athletic performance and recovery.",
+      "context": "A systematic review explored how sleep duration affects athletic performance, cognitive function, and recovery.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "signal": 80,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02218-2"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Visual feedback balance training may improve balance and reduce fear of falling in stroke.",
+      "context": "A randomized controlled trial compared robot-assisted gait training with visual feedback balance training for stroke patients.",
+      "journal": "Physiotherapy theory and practice",
+      "tech": true,
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43001794/"
+    },
+    {
+      "categoryId": "sports",
+      "claim": "Modified razor curls are a practical alternative to Nordic hamstring exercises for football players.",
+      "context": "A randomized controlled trial compared the effects of two exercises on hamstring strength and posterior-chain endurance.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "signal": 75,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02215-5"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Does craniosacral therapy improve postural control or autonomic function in MS patients?",
+      "context": "A randomized controlled trial investigated if adding craniosacral therapy to conventional physiotherapy affected postural responses and autonomic function in multiple sclerosis.",
+      "journal": "Physiotherapy theory and practice",
+      "signal": 70,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43001615/"
+    }
+  ]
+}
