@@ -1,0 +1,23 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-11T01:21:26.233Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Five Days of Acute Intermittent Hypoxia Is Safe and Improves Somatic Motor Function in Persons with Multiple Sclerosis",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.09.26367650v1?rss=1"
+    },
+    {
+      "slide": 2,
+      "title": "Feasibility and Preliminary Effects of Oropharyngeal Alignment Exercise on Swallowing Function in Neurological Disorders with Restricted Mouth Opening: A Pilot Study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43006710/"
+    },
+    {
+      "slide": 3,
+      "title": "Unpacking the Success: An Ecological Systems Perspective on Distance Running Performance in Ethiopia",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01139-1"
+    }
+  ]
+}
