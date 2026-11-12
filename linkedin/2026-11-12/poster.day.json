@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-12",
+  "lead": {
+    "categoryId": "orthopedic",
+    "claim": "Timing of ACL surgery impacts long-term walking mechanics.",
+    "context": "Why this matters: This systematic review found that delayed ACL reconstruction is linked to persistent sagittal plane deficits during walking.",
+    "journal": "Sports medicine (Auckland, N.Z.)",
+    "signal": 85,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43009638/"
+  },
+  "supporting": [
+    {
+      "categoryId": "orthopedic",
+      "claim": "Can biofeedback reduce knee abduction angle in ACL injury prevention?",
+      "context": "Why this matters: This systematic review suggests biofeedback may reduce peak knee abduction angle in ACL injury prevention, but evidence certainty is low.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "tech": true,
+      "signal": 79,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02237-z"
+    },
+    {
+      "categoryId": "orthopedic",
+      "claim": "A standard multidisciplinary program for low back pain can be more cost-effective.",
+      "context": "Why this matters: This retrospective cohort study found a standard multidisciplinary pathway was more cost-effective than a federal-funded pathway for low back pain.",
+      "journal": "British Journal of Sports Medicine",
+      "signal": 75,
+      "url": "https://oem.bmj.com/content/early/2026/11/10/oemed-2026-111120"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "IMU-based gait analysis can objectively assess vestibular rehabilitation progress.",
+      "context": "Why this matters: This observational study found IMU sensors, even single ones, can capture significant improvements in gait after vestibular rehabilitation.",
+      "journal": "Gait & posture",
+      "tech": true,
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43008499/"
+    },
+    {
+      "categoryId": "sports",
+      "claim": "Use the same digital handgrip dynamometer to track patient progress.",
+      "context": "Why this matters: This study found that different digital handgrip dynamometers have excellent reliability but are not interchangeable due to systematic differences.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "signal": 75,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02225-3"
+    }
+  ]
+}

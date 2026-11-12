@@ -1,0 +1,365 @@
+{
+ "date": "2026-11-12",
+ "generatedAt": "2026-11-12T02:21:55.621Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-11T01:21:22.672Z",
+ "windowEnd": "2026-11-12T02:21:37.771Z",
+ "lead": {
+  "titleZh": "ACL 重建术后膝关节生物力学受术前等待时间影响",
+  "titleEn": "ACL Reconstruction: Pre-op Wait Time Impacts Knee Biomechanics",
+  "paragraphZh": "今日共 13 篇文章，骨科与肌骨康复占绝对多数。其中 2 篇系统综述关注 ACL 术后，curatedScore 85 的系统综述提示，伤后至手术间隔时间会影响 ACL 重建患者步行时的膝关节生物力学，值得临床关注。",
+  "paragraphEn": "Today's 13 articles are predominantly in orthopedic and musculoskeletal rehabilitation. Two systematic reviews focus on post-ACL reconstruction; one, with a curatedScore of 85, indicates that the interval between injury and surgery influences knee biomechanics during walking in ACL reconstructed patients, warranting clinical attention."
+ },
+ "stats": {
+  "events": 13,
+  "specialties": 7,
+  "multiSource": 0,
+  "sources": 7,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1794419798183-2",
+     "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
+     "summary": "A systematic review and meta-analysis of 16 studies (18-55 years) found ACLR patients have lower peak knee flexion angle (SMD = -0.33), peak knee adduction angle (SMD = -0.47), and peak knee flexion moment (SMD = -0.64) during walking. Delayed reconstruction (≥ 12 months) is associated with persistent sagittal plane deficits, while early surgery (< 6 months) is linked to fewer long-term sagittal-plane deficits but temporary frontal-plane asymmetries and extension deficits.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43009638/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-11T17:56:38.183Z",
+     "curatedScore": 85,
+     "curatedReason": "这项系统综述明确指出，ACL 重建术（ACLR）后步态生物力学异常与伤后至手术间隔时间有关。长期延迟手术（≥ 12 个月）与持续性矢状面缺陷相关，而早期手术（< 6 个月）虽早期有额状面不对称和伸展缺陷，但长期矢状面缺陷较少。你规划 ACLR 患者康复时，必须考虑手术时机，针对性地调整康复策略，尤其是对于延迟手术的患者，需更多关注其矢状面功能的恢复。",
+     "titleZh": "伤后至手术间隔时间影响前交叉韧带重建患者步行时的膝关节生物力学：一项系统综述与 Meta 分析",
+     "summaryZh": "一项包含 16 项研究（18-55 岁）的系统综述和 Meta 分析发现，ACL 重建患者在步行时表现出较低的膝关节屈曲峰值角度（SMD = -0.33）、内收峰值角度（SMD = -0.47）和屈曲峰值力矩（SMD = -0.64）。延迟重建（≥ 12 个月）与持续性矢状面缺陷相关，而早期手术（< 6 个月）与较少的长期矢状面缺陷相关，但可能伴有暂时的额状面不对称和伸展缺陷。",
+     "curatedReasonEn": "This systematic review clarifies that altered walking biomechanics post-ACLR are related to the interval between injury and surgery. Delayed surgery (≥ 12 months) is associated with persistent sagittal plane deficits, while early surgery (< 6 months) shows fewer long-term sagittal plane deficits despite early frontal plane asymmetries and extension deficits. When planning rehabilitation for ACLR patients, you must consider surgical timing to tailor strategies, particularly focusing on sagittal plane recovery for those with delayed surgery.",
+     "limitation": "纳入研究的方法学质量中等（平均 65%），且存在高异质性（I² ≥ 57%），这可能影响了结果的确定性和推断强度。",
+     "limitationEn": "The included studies had moderate methodological quality (average 65%) and high heterogeneity (I² ≥ 57%), which may affect the certainty and strength of the conclusions.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports medicine (Auckland, N.Z.)"
+    },
+    {
+     "id": "news-1794450095527-18",
+     "title": "Effectiveness of wearable and non-wearable biofeedback on knee biomechanics during functional tasks in anterior cruciate ligament injury prevention and rehabilitation: a systematic review and meta-analysis",
+     "summary": "A systematic review and meta-analysis found that biofeedback interventions significantly reduced peak knee abduction angle (Hedges’ g = 0.52, 95% CI 0.06 to 0.98) in ACL injury prevention, but the certainty of evidence was low to very low, with no significant effects on other knee biomechanics.",
+     "category": "orthopedic",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02237-z",
+     "publishedAt": "2026-11-10T00:00:00.000Z",
+     "firstSeen": "2026-11-12T02:21:35.527Z",
+     "curatedScore": 79,
+     "curatedReason": "生物反馈在ACL损伤预防中可能有助于减少膝关节外翻角度，但这只是初步提示，证据质量低到非常低。我们不能就此断定生物反馈能真正降低ACL损伤率。在临床中，我们仍需谨慎，应等待更高质量的RCT来评估其对实际损伤结果而非生物力学替代指标的长期效果，再考虑常规推荐。",
+     "titleZh": "可穿戴和非可穿戴生物反馈对前交叉韧带损伤预防和康复中膝关节生物力学有效性的系统综述和荟萃分析",
+     "summaryZh": "一项系统综述和荟萃分析发现，生物反馈干预显著降低了前交叉韧带损伤预防中的膝关节外展峰值角度（Hedges’ g = 0.52, 95% CI 0.06 至 0.98），但证据确定性为低到非常低，对其他膝关节生物力学无显著影响。",
+     "curatedReasonEn": "Biofeedback may help reduce peak knee abduction angle in ACL injury prevention, but this is a preliminary suggestion based on low to very low certainty evidence. We cannot conclude that biofeedback truly reduces ACL injury rates. Clinically, we must remain cautious and await higher-quality RCTs that evaluate its long-term effects on actual injury outcomes, rather than just biomechanical surrogates, before considering widespread recommendation.",
+     "limitation": "研究纳入的大部分是预防性研究，且证据总体确定性为低至非常低，限制了对临床实践的直接指导。",
+     "limitationEn": "Most included studies were prevention-focused, and the overall certainty of evidence was low to very low, limiting direct clinical practice guidance.",
+     "tags": [
+      "research",
+      "knee",
+      "ACL"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1794450095527-17",
+     "title": "Effectiveness and cost-effectiveness of a multidisciplinary programme compared to usual care for people with low back pain in Belgium",
+     "summary": "A retrospective cohort study in Belgium found that a standard multidisciplinary rehabilitation pathway was more cost-effective for workers with low back pain than a federal-funded pathway or usual care, with the federal pathway associated with higher costs (€7374) and longer disability (~111 days).",
+     "category": "orthopedic",
+     "source": "BJSM",
+     "sourceUrl": "https://oem.bmj.com/content/early/2026/11/10/oemed-2026-111120",
+     "publishedAt": "2026-11-10T00:00:00.000Z",
+     "firstSeen": "2026-11-12T02:21:35.527Z",
+     "curatedScore": 75,
+     "curatedReason": "别盲目相信“联邦资助”就一定好。比利时这项回顾性队列研究清楚地提示我们，标准的多学科康复（MBR）路径在成本效益上优于联邦资助的FEDRIS路径和常规护理。特别是联邦路径，其成本更高（7374欧元）且导致更长的残疾期（约111天）。这意味着，在设计腰痛康复项目时，必须警惕过度投入而收效甚微的情况。",
+     "titleZh": "比利时多学科康复项目与常规护理对腰痛患者的有效性和成本效益比较",
+     "summaryZh": "一项比利时回顾性队列研究发现，对腰痛工人而言，标准多学科康复路径比联邦资助路径或常规护理更具成本效益，其中联邦路径与更高的成本（7374欧元）和更长的致残期（约111天）相关。",
+     "curatedReasonEn": "Don't blindly assume 'federally funded' means better. This retrospective cohort study from Belgium clearly suggests that a standard multidisciplinary rehabilitation (MBR) pathway is more cost-effective for low back pain than the federal-funded FEDRIS pathway or usual care. Specifically, the federal pathway was associated with higher costs (€7374) and longer disability (~111 days). This is a strong reminder that when designing low back pain rehabilitation programs, we must be cautious about over-investment yielding minimal returns.",
+     "limitation": "这是一项回顾性队列研究，数据来自行政数据库，存在潜在的混杂因素和选择偏倚，可能影响结果的因果推断。",
+     "limitationEn": "This is a retrospective cohort study using administrative database data, which may be subject to confounding and selection bias, potentially affecting causal inferences.",
+     "tags": [
+      "research",
+      "spine",
+      "reimbursement"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1794419798182-0",
+     "title": "Experiences of physiotherapists in managing pelvic floor disorders at public hospitals in uThukela district, South Africa.",
+     "summary": "A qualitative study with 12 physiotherapists in South Africa's uThukela district identified limited undergraduate training, inadequate resources, understaffing, and poor referral pathways as barriers to managing pelvic floor disorders in public hospitals.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43011422/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-11T17:56:38.182Z",
+     "curatedScore": 70,
+     "curatedReason": "本研究揭示了南非公立医院物理治疗师在管理盆底障碍（PFD）方面面临的挑战，如本科培训不足、资源匮乏、人员不足及转诊路径不畅。这些发现可指导当地改善教育和资源分配，但其区域性限制了普遍适用性。",
+     "titleZh": "南非 uThukela 地区公立医院物理治疗师管理盆底障碍的经验",
+     "summaryZh": "一项针对南非 uThukela 地区 12 名物理治疗师的定性研究发现，本科培训不足、资源匮乏、人员不足和转诊路径不畅是公立医院管理盆底障碍（PFDs）的障碍。",
+     "curatedReasonEn": "This study highlights challenges faced by physiotherapists in managing pelvic floor disorders (PFDs) in South African public hospitals, including insufficient undergraduate training, limited resources, understaffing, and poor referral pathways. These findings can guide local improvements in education and resource allocation, though their regional specificity limits universal applicability.",
+     "limitation": "本研究为定性描述性研究，样本量小（12 名物理治疗师），结果主要反映南非 uThukela 地区的特定背景，外推至其他地区或国家的适用性有限。",
+     "limitationEn": "This qualitative descriptive study with a small sample (12 physiotherapists) primarily reflects the specific context of the uThukela district in South Africa, limiting its generalizability to other regions or countries.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "The South African journal of physiotherapy"
+    },
+    {
+     "id": "news-1794419798183-1",
+     "title": "Health-seeking behaviours of people with osteoarthritis in sub-Saharan Africa: A scoping review.",
+     "summary": "A scoping review of five studies from sub-Saharan Africa found that health-seeking behavior for osteoarthritis is largely delayed or fragmented, influenced by intrapersonal, interpersonal, organizational, and community factors, highlighting barriers like beliefs, poor knowledge, and limited access to rehabilitation.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43011416/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-11T17:56:38.183Z",
+     "curatedScore": 70,
+     "curatedReason": "这项范围综述揭示了撒哈拉以南非洲骨关节炎患者求医行为受文化信仰、健康素养和医疗系统多重影响。它提醒你，在低收入地区执业时，需要加强患者教育、推广自我管理和拓展社区康复，同时改进转诊路径，以应对延迟就医和康复服务可及性差的现状。",
+     "titleZh": "撒哈拉以南非洲骨关节炎患者的健康寻求行为：一项范围综述",
+     "summaryZh": "一项针对撒哈拉以南非洲五项研究的范围综述发现，骨关节炎患者的健康寻求行为普遍延迟或碎片化，受个体、人际、组织和社区因素影响，突出表现为信念、知识匮乏和康复服务可及性受限等障碍。",
+     "curatedReasonEn": "This scoping review reveals that health-seeking behaviors of people with osteoarthritis in sub-Saharan Africa are influenced by cultural beliefs, health literacy, and healthcare systems. It reminds you to enhance patient education, promote self-management, expand community-based rehabilitation, and improve referral pathways when practicing in low-resource settings, addressing delayed help-seeking and limited access to rehabilitation services.",
+     "limitation": "本范围综述仅纳入 5 项研究，且全部来自农村地区，代表性有限，可能未能全面反映撒哈拉以南非洲地区骨关节炎患者的健康寻求行为。",
+     "limitationEn": "This scoping review included only 5 studies, all from rural settings, limiting its representativeness and potentially not fully capturing health-seeking behaviors of people with osteoarthritis across sub-Saharan Africa.",
+     "tags": [
+      "research",
+      "knee",
+      "hip"
+     ],
+     "studyDesign": "综述",
+     "journal": "The South African journal of physiotherapy"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1794389724088-1",
+     "title": "Inertial measurement unit-based gait analysis for objective assessment of vestibular rehabilitation.",
+     "summary": "An observational study of 30 AVS participants found that IMU-based gait analysis, even with a single pelvis sensor, captured significant improvements in walking speed, Gait Profile Score, and cadence after 6 weeks of vestibular rehabilitation, supporting its clinical feasibility for assessment.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43008499/",
+     "publishedAt": "2026-11-10T00:00:00.000Z",
+     "firstSeen": "2026-11-11T09:35:24.088Z",
+     "curatedScore": 75,
+     "curatedReason": "IMU 传感器（包括单传感器）在急性前庭综合征（AVS）患者的步态分析中展现出良好的可行性，可作为评估前庭康复进展的客观工具。这提示你可以考虑将可穿戴设备纳入日常评估，以量化患者的进步。",
+     "titleZh": "基于惯性测量单元的步态分析对前庭康复的客观评估",
+     "summaryZh": "一项针对 30 名急性前庭综合征患者的观察性研究发现，即使是单骨盆 IMU 传感器也能捕捉到前庭康复 6 周后步行速度、步态姿态评分和步频的显著改善，支持其作为康复评估的临床可行性。",
+     "curatedReasonEn": "IMU sensors, including single-sensor setups, demonstrate good feasibility for gait analysis in patients with acute vestibular syndrome (AVS) and can serve as objective tools for assessing vestibular rehabilitation progress. This suggests you could consider incorporating wearable devices into your routine assessments to quantify patient improvement.",
+     "limitation": "本研究样本量相对较小（30 例 AVS 患者），且缺乏长期随访数据来评估 IMU 在更长时间康复效果中的表现。",
+     "limitationEn": "This study has a relatively small sample size (30 AVS participants) and lacks long-term follow-up data to evaluate IMU performance in assessing rehabilitation outcomes over extended periods.",
+     "tags": [
+      "research",
+      "vestibular"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Gait & posture",
+     "tech": true
+    },
+    {
+     "id": "news-1794444637239-0",
+     "title": "A COSMIN systematic review of performance-based assessment tools for mealtime performance in Parkinson's disease: a linking study based on the ICF framework.",
+     "summary": "A systematic review identified only two performance-based outcome measures for mealtime performance in Parkinson's disease, the Mealtime Assessment Scale (MAS) and modified OARS scale, finding the MAS covered more ICF components but neither had independent content validity testing. The evidence base remains limited and preliminary.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43013464/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-12T00:50:37.239Z",
+     "curatedScore": 70,
+     "curatedReason": "现有证据对帕金森病患者餐时表现的评估工具非常有限。在 ICF 框架下，餐时评估量表（MAS）覆盖度较广，但内容效度仍需独立验证。你在临床中应更关注餐时表现的多维度，而非仅仅吞咽。",
+     "titleZh": "帕金森病患者餐时表现评估工具的 COSMIN 系统综述：基于 ICF 框架的关联研究",
+     "summaryZh": "一项系统综述发现，帕金森病餐时表现的客观评估工具仅有餐时评估量表（MAS）和改良版 OARS 量表两项。MAS 覆盖了 ICF 的所有四个组成部分，但两项工具均缺乏独立内容效度验证，现有证据基础有限且初步。",
+     "curatedReasonEn": "Evidence for mealtime performance assessment tools in Parkinson's disease is very limited. Within the ICF framework, the Mealtime Assessment Scale (MAS) has broad coverage, but its content validity still requires independent validation. Clinically, you should focus on multi-dimensional aspects of mealtime performance, beyond just swallowing.",
+     "limitation": "本系统综述仅纳入了两项研究，证据基础非常有限且初步。",
+     "limitationEn": "This systematic review included only two studies, indicating a very limited and preliminary evidence base.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1794450095527-20",
+     "title": "Digital handgrip assessment in musculoskeletal health: reliability, measurement precision, interchangeability, and clinical implications for rehabilitation and sports medicine",
+     "summary": "Three digital handgrip dynamometers showed excellent test-retest reliability (ICC = 0.88–0.95), but limited interchangeability due to systematic differences in absolute force values (GripAble produced 26.37–30.47% lower values). K-Force showed the lowest SEM (1.36–1.63 kg).",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02225-3",
+     "publishedAt": "2026-11-07T00:00:00.000Z",
+     "firstSeen": "2026-11-12T02:21:35.527Z",
+     "curatedScore": 75,
+     "curatedReason": "测量握力时，千万别混用数字握力计！尽管这些设备都有出色的重测信度（ICC = 0.88–0.95），但它们之间存在显著的系统性差异，例如 GripAble 的读数比其他设备低了 26.37–30.47%。这意味着，你在追踪患者进展时，必须始终使用同一设备，否则数据无法准确比较。同时，务必参考各设备的最小可检测变化值（MDC 95：3.77-5.87 kg）来判断真正的变化。",
+     "titleZh": "数字握力评估在肌肉骨骼健康中的应用：可靠性、测量精度、互换性及对康复和运动医学的临床意义",
+     "summaryZh": "三款数字握力计显示出优秀的重测信度（ICC = 0.88–0.95），但由于绝对力量值的系统性差异（GripAble 的读数比其他产品低 26.37–30.47%），互换性有限。K-Force 的 SEM 最低（1.36–1.63 kg）。",
+     "curatedReasonEn": "Never mix digital handgrip dynamometers when measuring grip strength! While these devices show excellent test-retest reliability (ICC = 0.88–0.95), there are significant systematic differences between them; for example, GripAble consistently reads 26.37–30.47% lower than others. This means you must use the same device consistently when tracking patient progress, otherwise your data will not be comparable. Always refer to the device-specific minimal detectable change (MDC 95: 3.77-5.87 kg) to interpret true changes.",
+     "limitation": "研究仅纳入了25名健康成人，其结果在运动人群和临床患者中的适用性尚待验证。",
+     "limitationEn": "The study included only 25 healthy adults, and its findings' applicability to athletic and clinical populations still needs to be validated.",
+     "tags": [
+      "research",
+      "hand-wrist",
+      "assessment"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1794450095527-21",
+     "title": "Surgical techniques for swan neck finger deformity correction",
+     "summary": "This review provides a detailed definition of swan neck finger deformity and summarizes available treatment options, from conservative splinting to various surgical techniques.",
+     "category": "pediatric",
+     "source": "J Rehabil Med",
+     "sourceUrl": "https://medicaljournalssweden.se/JPHS/article/view/47042",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-12T02:21:35.527Z",
+     "curatedScore": 65,
+     "curatedReason": "这篇综述详细定义了天鹅颈指畸形，并概述了保守夹板固定到多种手术矫正方案。虽然它为理解这种复杂畸形提供了基础，但作为一篇叙述性综述，它并未提供具体的循证治疗推荐，更多是知识的梳理。",
+     "titleZh": "天鹅颈指畸形矫正手术技术",
+     "summaryZh": "本综述详细定义了天鹅颈指畸形，并总结了从保守夹板固定到各种手术矫正技术在内的可用治疗方案。",
+     "curatedReasonEn": "This review provides a detailed definition of swan neck finger deformity and outlines treatment options ranging from conservative splinting to various surgical corrections. While it offers a foundational understanding of this complex deformity, as a narrative review, it does not provide specific evidence-based treatment recommendations, primarily serving as a knowledge compilation.",
+     "limitation": "本综述未进行系统性检索和质量评估，因此无法提供明确的治疗推荐，更多是对手术技术和治疗策略的概述。",
+     "limitationEn": "This review did not conduct a systematic search or quality appraisal, thus it cannot provide definitive treatment recommendations, serving more as an overview of surgical techniques and treatment strategies.",
+     "tags": [
+      "research",
+      "hand-wrist"
+     ],
+     "studyDesign": "综述",
+     "journal": "Journal of Rehabilitation Medicine"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1794444637241-16",
+     "title": "Early Prediction of Discharge Outcomes in Geriatric Rehabilitation: Development and Temporal Validation of a Multiclass Model",
+     "summary": "A multiclass model was developed and temporally validated to predict three mutually exclusive discharge outcomes (minimal dependency, nursing-care dependency, or medical deterioration) in geriatric rehabilitation patients by day 7, achieving an AUC of 0.81 for multinomial regression.",
+     "category": "geriatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367591v1?rss=1",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-12T00:50:37.241Z",
+     "curatedScore": 75,
+     "curatedReason": "这个模型提示，对老年康复患者，在入院第 7 天预测其出院转归是可行的，AUC 为 0.81。这意味着你可以更早地识别那些可能需要更多护理或存在医疗恶化风险的患者，从而及时启动社工介入或加强监护。",
+     "titleZh": "老年康复出院结局的早期预测：多分类模型的开发与时序验证",
+     "summaryZh": "一项研究开发并时序验证了一个多分类模型，可在老年康复患者入院第 7 天预测三种互斥的出院结局（最低依赖、护理依赖或医学恶化），多项式回归模型 AUC 达到 0.81。",
+     "curatedReasonEn": "This model suggests that predicting discharge outcomes for geriatric rehabilitation patients by day 7 of admission is feasible, with an AUC of 0.81. This implies you could identify patients at higher risk of nursing-care dependency or medical deterioration earlier, allowing for timely social work intervention or intensified monitoring.",
+     "limitation": "本研究为回顾性队列研究，且仅在一个公共老年康复医院进行，结果的外推性有待前瞻性多中心验证。",
+     "limitationEn": "This was a retrospective cohort study conducted in a single public geriatric rehabilitation hospital, and the generalizability of the findings requires prospective multi-center validation.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "frailty"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1794444637240-15",
+     "title": "Physiological responses during high intensity interval training and moderate intensity continuous training in patients attending early cardiac rehabilitation",
+     "summary": "This article discusses the physiological responses during high-intensity interval training (HIIT) and moderate-intensity continuous training (MICT) in patients undergoing early cardiac rehabilitation, highlighting exercise training as a cornerstone for improving cardiorespiratory fitness and reducing mortality.",
+     "category": "cardiopulmonary",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00992-5/fulltext?rss=yes",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-12T00:50:37.240Z",
+     "curatedScore": 75,
+     "curatedReason": "心脏康复中的高强度间歇训练（HIIT）与中等强度持续训练（MICT）的生理反应是重要比较点。了解患者在不同训练模式下的心肺和代谢反应，有助于你为早期心脏康复患者制定更精细的运动处方。",
+     "titleZh": "早期心脏康复患者高强度间歇训练与中等强度持续训练期间的生理反应",
+     "summaryZh": "本文探讨了早期心脏康复患者在高强度间歇训练（HIIT）和中等强度持续训练（MICT）期间的生理反应，强调运动训练是改善心肺适能和降低死亡率的基石。",
+     "curatedReasonEn": "The physiological responses of High-Intensity Interval Training (HIIT) versus Moderate-Intensity Continuous Training (MICT) in cardiac rehabilitation are key comparison points. Understanding patient cardiopulmonary and metabolic responses to different training modes will help you refine exercise prescriptions for early cardiac rehabilitation patients.",
+     "tags": [
+      "news",
+      "cardiac-rehab",
+      "exercise-prescription"
+     ],
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1794419798183-3",
+     "title": "Physiotherapy and Exercise-Based Rehabilitation for Mental Health: A Two-Decade Bibliometric Analysis of Global Trends, Thematic Evolution, and the Socioeconomic Vulnerability Gap (2006-2025).",
+     "summary": "A bibliometric analysis of 5223 publications (2006-2025) on physical rehabilitation and mental health showed a 22.6-fold increase in publications. Research is concentrated in high-income countries (75.9%), with socioeconomic vulnerability explicitly referenced in only 4.6% of publications, highlighting it as an under-researched area.",
+     "category": "practice",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43010739/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-11T17:56:38.183Z",
+     "curatedScore": 75,
+     "curatedReason": "这项文献计量分析显示，物理治疗和运动康复在精神健康领域的文献量显著增长，但研究重心仍高度集中在高收入国家。它提醒你，在规划研究或寻求资助时，应关注低收入环境、成本效益评估和实施科学，以填补社会经济脆弱性这一关键且尚未充分探索的空白，确保研究成果能转化为更公平的干预措施。",
+     "titleZh": "物理治疗和运动康复对精神健康的影响：一项全球趋势、主题演变和社会经济脆弱性差距的二十年文献计量分析（2006-2025）",
+     "summaryZh": "一项针对 5223 份关于物理康复与精神健康的出版物（2006-2025 年）的文献计量分析显示，出版量增长了 22.6 倍。研究主要集中在高收入国家（75.9%），仅有 4.6% 的出版物明确提及社会经济脆弱性，凸显其为一个尚未充分研究的领域。",
+     "curatedReasonEn": "This bibliometric analysis shows substantial growth in physical therapy and exercise rehabilitation literature for mental health, yet research remains concentrated in high-income countries. It prompts you to focus on low-resource settings, cost-effectiveness evaluations, and implementation science when planning research or seeking funding, to address the critical and underexplored gap of socioeconomic vulnerability and ensure equitable interventions.",
+     "limitation": "文献计量学研究的局限性在于其结果依赖于关键词和数据库检索策略，可能无法捕捉所有相关研究，尤其是在未明确标记社会经济脆弱性的研究中。此外，对2026年数据的纳入，作为预测而非实际已发表数据，也可能带来偏差。",
+     "limitationEn": "The limitation of bibliometric studies is their reliance on keywords and database search strategies, which may not capture all relevant research, especially those not explicitly tagged with socioeconomic vulnerability. Additionally, the inclusion of 2026 data as projections rather than actual published data may introduce bias.",
+     "tags": [
+      "research",
+      "telehealth",
+      "education"
+     ],
+     "studyDesign": "综述",
+     "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+     "id": "news-1794450095528-24",
+     "title": "Physical Therapy in the News: October 2026",
+     "summary": "APTA's \"Physical Therapy in the News: October 2026\" is a monthly series highlighting recent media coverage of the profession and its members.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/11/10/physical-therapy-in-the-news-october-2026",
+     "publishedAt": "2026-11-10T00:00:00.000Z",
+     "firstSeen": "2026-11-12T02:21:35.528Z",
+     "curatedScore": 65,
+     "curatedReason": "APTA 每月发布一次的“新闻中的物理治疗”总结了媒体对物理治疗专业和 APTA 成员的报道。这可以让你快速了解当前媒体关注的焦点和行业形象。",
+     "titleZh": "新闻中的物理治疗：2026 年 10 月 | APTA",
+     "summaryZh": "APTA 的“2026 年 10 月物理治疗新闻”是一个每月系列，重点报道了物理治疗专业及其成员最近的媒体曝光。",
+     "curatedReasonEn": "APTA's monthly \"Physical Therapy in the News\" summarizes media coverage of the physical therapy profession and APTA members. This allows you to quickly gauge current media focus and the industry's public image.",
+     "tags": [
+      "news"
+     ],
+     "studyDesign": "述评"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

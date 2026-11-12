@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-12T02:21:58.235Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43009638/"
+    },
+    {
+      "slide": 2,
+      "title": "Effectiveness of wearable and non-wearable biofeedback on knee biomechanics during functional tasks in anterior cruciate ligament injury prevention and rehabilitation: a systematic review and meta-analysis",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02237-z"
+    },
+    {
+      "slide": 3,
+      "title": "Effectiveness and cost-effectiveness of a multidisciplinary programme compared to usual care for people with low back pain in Belgium",
+      "url": "https://oem.bmj.com/content/early/2026/11/10/oemed-2026-111120"
+    },
+    {
+      "slide": 4,
+      "title": "Inertial measurement unit-based gait analysis for objective assessment of vestibular rehabilitation.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43008499/"
+    },
+    {
+      "slide": 5,
+      "title": "Digital handgrip assessment in musculoskeletal health: reliability, measurement precision, interchangeability, and clinical implications for rehabilitation and sports medicine",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02225-3"
+    }
+  ]
+}
