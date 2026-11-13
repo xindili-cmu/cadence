@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-13T06:57:22.578Z",
+    "lastUpdated": "2026-11-13T16:32:48.471Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -82,9 +82,9 @@
           "titleZh": "用于幻肢痛、神经功能恢复和假肢采纳的扩展现实（XR）严肃游戏：一项系统综述"
         }
       ],
-      "heat": 5.12,
-      "themeZh": "机器人辅助技术在脑卒中与脑瘫康复中的应用",
-      "themeEn": "Robotic Rehabilitation for Stroke and CP"
+      "heat": 4.45,
+      "themeZh": "卒中与脑瘫患者肢体功能障碍的机器人康复策略",
+      "themeEn": "Robotic Rehabilitation for Stroke and CP Motor Dysfunction"
     },
     {
       "id": "news-1794553025454-3",
@@ -148,27 +148,39 @@
           "titleZh": "一项探索物理治疗后腰痛患者现实世界姿势行为变化的案例系列研究"
         }
       ],
-      "heat": 4.48,
-      "themeZh": "低背痛多学科康复项目的实施与影响",
-      "themeEn": "Multidisciplinary Rehab for Low Back Pain"
+      "heat": 3.9,
+      "themeZh": "跨专业协作与经济性方案对慢性疼痛康复服务的影响",
+      "themeEn": "Interprofessional, Cost-Effective Rehab for Chronic Pain"
     },
     {
-      "id": "news-1793540352238-0",
-      "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966905/",
+      "id": "news-1793540352239-1",
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
       "category": "orthopedic",
       "publishedAt": "2026-11-12T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
         "The Journal of orthopaedic and sports physical therapy",
-        "BMC musculoskeletal disorders",
         "Physical therapy",
+        "BMC musculoskeletal disorders",
         "The South African journal of physiotherapy",
         "International journal of sports physical therapy"
       ],
       "tag": "knee",
       "kind": "theme",
       "members": [
+        {
+          "source": "PubMed",
+          "journal": "The Journal of orthopaedic and sports physical therapy",
+          "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+          "titleZh": "膝骨关节炎患者运动类型与持续时间对疼痛、功能和生活质量的影响：一项贝叶斯网络 Meta 分析系统综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "VRCycle: A Feasibility Randomized Controlled Trial Evaluating a Virtual Reality Cycling Intervention in People With Knee Osteoarthritis.",
+          "titleZh": "VRCycle：一项评估虚拟现实骑行干预对膝骨关节炎患者可行性的随机对照试验"
+        },
         {
           "source": "PubMed",
           "journal": "The Journal of orthopaedic and sports physical therapy",
@@ -180,12 +192,6 @@
           "journal": "BMC musculoskeletal disorders",
           "title": "Patient experiences with a prescription-based digital health application (DiGA) for knee disorders: a qualitative study in german orthopaedic care.",
           "titleZh": "膝关节疾病患者处方数字健康应用 (DiGA) 的使用体验：一项德国骨科护理的定性研究"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physical therapy",
-          "title": "VRCycle: A Feasibility Randomized Controlled Trial Evaluating a Virtual Reality Cycling Intervention in People With Knee Osteoarthritis.",
-          "titleZh": "VRCycle：一项评估虚拟现实骑行干预对膝骨关节炎患者可行性的随机对照试验"
         },
         {
           "source": "PubMed",
@@ -206,9 +212,9 @@
           "titleZh": "青少年至成人髋关节发育不良的保守及术后康复方案：文献综述"
         }
       ],
-      "heat": 3.2,
-      "themeZh": "骨关节炎与髋关节发育不良的康复干预",
-      "themeEn": "Rehabilitation for Osteoarthritis and Hip Dysplasia"
+      "heat": 2.78,
+      "themeZh": "膝骨关节炎康复中运动、数字疗法和远程医疗的应用",
+      "themeEn": "Exercise, Digital Health, Telerehab for Knee OA"
     },
     {
       "id": "news-1794419798183-2",
@@ -290,9 +296,9 @@
           "titleZh": "剖析成功：从生态系统视角看埃塞俄比亚长跑表现 | Sports Medicine - Open。"
         }
       ],
-      "heat": 3.17,
-      "themeZh": "ACL重建后膝关节生物力学与神经认知",
-      "themeEn": "ACL Reconstruction Biomechanics and Neurocognition"
+      "heat": 2.76,
+      "themeZh": "ACL重建后生物力学与神经认知功能恢复",
+      "themeEn": "ACL Reconstruction Biomechanics and Neurocognitive Recovery"
     },
     {
       "id": "news-1794001025429-7",
@@ -346,12 +352,35 @@
           "titleZh": "超声引导的混合式关节保护康复策略在类风湿关节炎患者中的可行性、安全性及初步疗效评估：一项前瞻性非随机概念验证研究"
         }
       ],
-      "heat": 2.56,
-      "themeZh": "颈部、肩部与手部疾病的物理治疗技术",
-      "themeEn": "Manual Therapy for Neck, Shoulder, Hand"
+      "heat": 2.23,
+      "themeZh": "物理疗法对特定肌肉骨骼疾病的有效性",
+      "themeEn": "Manual Therapy for Musculoskeletal Conditions"
     }
   ],
   "items": [
+    {
+      "id": "news-1793540352239-1",
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "summary": "A systematic review with Bayesian network meta-analysis of 35 trials (n = 3808) found short-term combined aerobic and resistance exercise had the largest effect on pain (SMD = -0.937), function (SMD = -0.590), and quality of life (SMD = 0.663) in patients with knee OA.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "firstSeen": "2026-11-01T13:39:12.239Z",
+      "curatedScore": 85,
+      "curatedReason": "这项贝叶斯网络 Meta 分析（35 项试验，3808 名患者）确立了联合有氧和抗阻运动在膝骨关节炎（OA）患者中对疼痛、功能和生活质量的短期（≤12 周）临床意义。这强化了我们应将联合运动处方作为膝 OA 一线干预的证据。",
+      "titleZh": "膝骨关节炎患者运动类型与持续时间对疼痛、功能和生活质量的影响：一项贝叶斯网络 Meta 分析系统综述",
+      "summaryZh": "一项包含 35 项试验（3808 名患者）的贝叶斯网络 Meta 分析系统综述发现，在膝骨关节炎患者中，短期联合有氧和抗阻运动对疼痛（SMD = -0.937）、功能（SMD = -0.590）和生活质量（SMD = 0.663）具有最大效应。",
+      "curatedReasonEn": "This Bayesian network meta-analysis (35 trials, 3808 patients) establishes the short-term (≤12 weeks) clinical meaningfulness of combined aerobic and resistance exercise for pain, function, and quality of life (QoL) in knee osteoarthritis (OA) patients. This strengthens the evidence for prioritizing combined exercise prescription as a first-line intervention for knee OA.",
+      "limitation": "短期效应的证据确定性较低（low certainty），长期效应的证据有限且确定性更低（very low certainty），提示还需更多高质量研究。",
+      "limitationEn": "The certainty of evidence for short-term effects was low, and long-term effects were limited and of very low certainty, indicating a need for more high-quality research.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
     {
       "id": "news-1793902062545-0",
       "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
@@ -1352,29 +1381,6 @@
       ],
       "studyDesign": "综述",
       "journal": "The South African journal of physiotherapy"
-    },
-    {
-      "id": "news-1793365861885-0",
-      "title": "Exercise-based rehabilitation interventions for kinesiophobia after total knee arthroplasty: a systematic review and meta-analysis of randomized controlled trials.",
-      "summary": "A systematic review and meta-analysis of 11 RCTs (N = 1,096) found that exercise-based rehabilitation was associated with a reduction in kinesiophobia (SMD = -1.22) and improvements in knee function (SMD = 1.19) at ≤ 4 weeks post-TKA, although the certainty of evidence was low.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42958196/",
-      "publishedAt": "2026-10-30T00:00:00.000Z",
-      "firstSeen": "2026-10-30T13:11:01.885Z",
-      "curatedScore": 85,
-      "curatedReason": "术后全膝关节置换术（TKA）患者，早期（≤ 4 周）运动康复确可显著降低运动恐惧，并改善膝关节功能。尽管现有证据确定性不高，但这个发现支持我们应坚持早期运动干预。",
-      "titleZh": "全膝关节置换术后运动恐惧症的运动康复干预：一项随机对照试验的系统综述和荟萃分析",
-      "summaryZh": "一项包含 11 项随机对照试验（N=1,096）的系统综述和荟萃分析发现，运动康复与全膝关节置换术后 ≤ 4 周的运动恐惧症（SMD = -1.22）和膝关节功能改善（SMD = 1.19）相关，但证据确定性较低。",
-      "curatedReasonEn": "For patients post-TKA, early (≤ 4 weeks) exercise rehabilitation significantly reduces kinesiophobia and improves knee function. While the certainty of evidence is low, this finding reinforces our practice of prioritizing early exercise intervention.",
-      "limitation": "本研究的证据确定性较低，且存在显著的异质性，结果的稳健性和效应量可能不稳定。",
-      "limitationEn": "The certainty of evidence in this study is low, with substantial heterogeneity, suggesting that the robustness of results and effect sizes may be unstable.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "BMC musculoskeletal disorders"
     },
     {
       "id": "news-1793794659746-3",
