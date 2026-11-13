@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-13T16:32:48.471Z",
+    "lastUpdated": "2026-11-13T23:41:32.269Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -82,29 +82,109 @@
           "titleZh": "用于幻肢痛、神经功能恢复和假肢采纳的扩展现实（XR）严肃游戏：一项系统综述"
         }
       ],
-      "heat": 4.45,
-      "themeZh": "卒中与脑瘫患者肢体功能障碍的机器人康复策略",
-      "themeEn": "Robotic Rehabilitation for Stroke and CP Motor Dysfunction"
+      "heat": 4.02,
+      "themeZh": "机器人辅助技术在卒中与脑瘫康复中的应用与效用",
+      "themeEn": "Robotics in Stroke and CP Rehabilitation"
     },
     {
-      "id": "news-1794553025454-3",
-      "title": "From Referral to Reality: A Mixed Methods Analysis of Barriers to Pediatric Rehabilitation Service Initiation.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43020406/",
-      "category": "pediatric",
-      "publishedAt": "2026-11-12T00:00:00.000Z",
-      "sourceCount": 7,
+      "id": "news-1794098991596-18",
+      "title": "Immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults: a randomized waitlist-controlled trial",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08667-1",
+      "category": "neurological",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "sourceCount": 4,
       "sources": [
-        "Archives of physical medicine and rehabilitation",
-        "Archives of Physical Medicine and Rehabilitation",
-        "The South African journal of physiotherapy",
-        "BMC Musculoskeletal Disorders",
-        "British Journal of Sports Medicine",
-        "The Journal of orthopaedic and sports physical therapy",
-        "Clinical biomechanics (Bristol, Avon)"
+        "BMC Geriatrics",
+        "medRxiv",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+        "NeuroRehabilitation"
       ],
-      "tag": null,
+      "tag": "stroke",
       "kind": "theme",
       "members": [
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Immediate task-specific and delayed generalized adaptations to variable dual-task training in community-dwelling older adults: a randomized waitlist-controlled trial",
+          "titleZh": "社区居住老年人多变双任务训练后任务特异性即时适应和延迟泛化适应：一项随机候补对照试验"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Post-discharge home-based rehabilitation for frail older adults a scoping review of environmental support strategies for functional recovery and aging-in-place",
+          "titleZh": "出院后居家康复对衰弱老年人的环境支持策略范围综述：功能恢复和就地养老"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Early Prediction of Discharge Outcomes in Geriatric Rehabilitation: Development and Temporal Validation of a Multiclass Model",
+          "titleZh": "老年康复出院结局的早期预测：多分类模型的开发与时序验证"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Power of Functional Mobility Tests in Predicting Fall Risk Among Older Adults.",
+          "titleZh": "功能性活动能力测试在预测老年人跌倒风险中的效用"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Timed Up and Go, gait speed, and grip strength: associations and discriminative performance for falls in community-dwelling older adults - results from the KORA-age study",
+          "titleZh": " timed up and go、步速和握力：与跌倒的关联性及社区居住老年人的鉴别性能 - KORA-age 研究结果"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Midlife mobility assessment from the pocket: agreement and consistency between smartphone placement configurations",
+          "titleZh": "从口袋评估中年移动性：智能手机放置配置之间的一致性和连贯性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Walking Capacity and Daily Movement Behaviours After Ischemic Stroke: A Potential Capacity-Performance Gap.",
+          "titleZh": "缺血性卒中后的步行能力和日常运动行为：潜在的能力-表现差距"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Regression-Based Balance Discordance Refines Prediction of Prospective Falls After Subacute Stroke: A Secondary Analysis of the LEAPS Trial",
+          "titleZh": "基于回归的平衡不一致性可更精准预测亚急性卒中后前瞻性跌倒：LEAPS 试验的二次分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Machine Learning Prediction of Independent Walking 8 Weeks After Rehabilitation in Patients With Stroke: A Retrospective Study.",
+          "titleZh": "机器学习预测卒中患者康复8周后独立行走能力：一项回顾性研究。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Neurorehabilitation as an Opportunity for Structured Post-Stroke Lipid Management: A Narrative Review.",
+          "titleZh": "神经康复：结构化卒中后血脂管理的机会：一篇叙述性综述"
+        }
+      ],
+      "heat": 2.84,
+      "themeZh": "社区老年人跌倒风险预测与居家功能康复策略",
+      "themeEn": "Fall Risk Prediction & Home Rehab for Elderly"
+    },
+    {
+      "id": "news-1794613289801-16",
+      "title": "Physical and psychosocial outcomes in children with limb loss 2-years after the 2023 Kahramanmaras-Türkiye earthquakes",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.13.26367810v1?rss=1",
+      "category": "pediatric",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "medRxiv",
+        "Archives of physical medicine and rehabilitation",
+        "Archives of Physical Medicine and Rehabilitation",
+        "The South African journal of physiotherapy"
+      ],
+      "tag": "amputation",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "medRxiv",
+          "title": "Physical and psychosocial outcomes in children with limb loss 2-years after the 2023 Kahramanmaras-Türkiye earthquakes",
+          "titleZh": "2023 年卡赫拉曼马拉什-土耳其地震两年后肢体缺失儿童的身体和心理社会结局"
+        },
         {
           "source": "PubMed",
           "journal": "Archives of physical medicine and rehabilitation",
@@ -122,35 +202,11 @@
           "journal": "The South African journal of physiotherapy",
           "title": "Experiences of physiotherapists in managing pelvic floor disorders at public hospitals in uThukela district, South Africa.",
           "titleZh": "南非 uThukela 地区公立医院物理治疗师管理盆底障碍的经验"
-        },
-        {
-          "source": "BMC Musculoskelet Disord",
-          "journal": "BMC Musculoskeletal Disorders",
-          "title": "Feasibility of an interprofessional rehabilitation program (IPRehab-LBP) for people with chronic low back pain in Ethiopia: an open-label pilot randomized controlled trial with an embedded process evaluation",
-          "titleZh": "埃塞俄比亚慢性腰痛跨专业康复项目 (IPRehab-LBP) 的可行性：一项开放标签初步随机对照试验及内嵌过程评估"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "Effectiveness and cost-effectiveness of a multidisciplinary programme compared to usual care for people with low back pain in Belgium",
-          "titleZh": "比利时多学科康复项目与常规护理对腰痛患者的有效性和成本效益比较"
-        },
-        {
-          "source": "PubMed",
-          "journal": "The Journal of orthopaedic and sports physical therapy",
-          "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
-          "titleZh": "临床医生能否预测哪些患者对特定治疗反应最佳？初级保健中腰痛调节因素的系统综述"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Clinical biomechanics (Bristol, Avon)",
-          "title": "A case-series exploring real-world postural behaviour change following physiotherapy for low back pain.",
-          "titleZh": "一项探索物理治疗后腰痛患者现实世界姿势行为变化的案例系列研究"
         }
       ],
-      "heat": 3.9,
-      "themeZh": "跨专业协作与经济性方案对慢性疼痛康复服务的影响",
-      "themeEn": "Interprofessional, Cost-Effective Rehab for Chronic Pain"
+      "heat": 2.84,
+      "themeZh": "儿科与其他特殊群体康复服务可及性与障碍",
+      "themeEn": "Access Barriers to Pediatric & Special Rehab"
     },
     {
       "id": "news-1793540352239-1",
@@ -212,9 +268,9 @@
           "titleZh": "青少年至成人髋关节发育不良的保守及术后康复方案：文献综述"
         }
       ],
-      "heat": 2.78,
-      "themeZh": "膝骨关节炎康复中运动、数字疗法和远程医疗的应用",
-      "themeEn": "Exercise, Digital Health, Telerehab for Knee OA"
+      "heat": 2.51,
+      "themeZh": "膝骨关节炎与髋关节置换术后的数字与远程康复",
+      "themeEn": "Digital and Telerehab for Knee & Hip OA"
     },
     {
       "id": "news-1794419798183-2",
@@ -296,68 +352,59 @@
           "titleZh": "剖析成功：从生态系统视角看埃塞俄比亚长跑表现 | Sports Medicine - Open。"
         }
       ],
-      "heat": 2.76,
-      "themeZh": "ACL重建后生物力学与神经认知功能恢复",
-      "themeEn": "ACL Reconstruction Biomechanics and Neurocognitive Recovery"
-    },
-    {
-      "id": "news-1794001025429-7",
-      "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42990132/",
-      "category": "pediatric",
-      "publishedAt": "2026-11-12T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-        "Journal of Rehabilitation Medicine",
-        "medRxiv",
-        "International journal of sports physical therapy"
-      ],
-      "tag": "tendinopathy",
-      "kind": "theme",
-      "members": [
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Efficacy of Manual Physiotherapy Techniques for Improving Cervical Range of Motion in Infants With Congenital Muscular Torticollis: A Systematic Review and Meta-Analysis.",
-          "titleZh": "手动物理治疗技术对改善先天性肌性斜颈婴儿颈椎活动度的疗效：一项系统综述和荟萃分析。"
-        },
-        {
-          "source": "J Rehabil Med",
-          "journal": "Journal of Rehabilitation Medicine",
-          "title": "Surgical techniques for swan neck finger deformity correction",
-          "titleZh": "天鹅颈指畸形矫正手术技术"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
-          "titleZh": "结构化 PRP 术后康复方案对肩峰下疼痛综合征疼痛与功能的影响：一项随机对照试验。"
-        },
-        {
-          "source": "medRxiv",
-          "title": "Individualized systems-informed corrective exercise for adults meeting prespecified criteria for upper crossed syndrome: protocol for a randomized controlled trial",
-          "titleZh": "针对符合上交叉综合征预设标准的成年人的个体化系统矫正运动：一项随机对照试验方案。"
-        },
-        {
-          "source": "PubMed",
-          "journal": "International journal of sports physical therapy",
-          "title": "Ultrasound-Guided Percutaneous Tendon Dry Needling for Recalcitrant Distal Biceps Tendinopathy: A Case Series.",
-          "titleZh": "超声引导下经皮肌腱干针治疗难治性远端肱二头肌肌腱病：病例系列"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
-          "title": "Feasibility, Safety, and Preliminary Effect Estimates of an Ultrasound-Informed Hybrid Joint-Sparing Rehabilitation Strategy in Patients With Rheumatoid Arthritis: A Prospective Non-Randomized Proof-of-Concept Study.",
-          "titleZh": "超声引导的混合式关节保护康复策略在类风湿关节炎患者中的可行性、安全性及初步疗效评估：一项前瞻性非随机概念验证研究"
-        }
-      ],
-      "heat": 2.23,
-      "themeZh": "物理疗法对特定肌肉骨骼疾病的有效性",
-      "themeEn": "Manual Therapy for Musculoskeletal Conditions"
+      "heat": 2.49,
+      "themeZh": "前交叉韧带损伤后生物力学与神经认知功能",
+      "themeEn": "ACL Injury Biomechanics and Neurocognitive Factors"
     }
   ],
   "items": [
+    {
+      "id": "news-1794613289801-16",
+      "title": "Physical and psychosocial outcomes in children with limb loss 2-years after the 2023 Kahramanmaras-Türkiye earthquakes",
+      "summary": "A retrospective analysis (n=56) of children with earthquake-related limb loss 2.3 years post-amputation showed favorable physical, social, and school-related quality of life (median PedsQL 72.3/100.0), but lower emotional functioning (60.0/100.0). Unilateral lower limb loss was associated with superior adjustment and prosthetic satisfaction.",
+      "category": "pediatric",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.13.26367810v1?rss=1",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "firstSeen": "2026-11-13T23:41:29.801Z",
+      "curatedScore": 75,
+      "curatedReason": "大地震两年后，儿童截肢者的肢体功能、社会功能和学校相关生活质量表现良好，但情感健康仍受影响，提示康复服务应整合长期心理健康支持。",
+      "titleZh": "2023 年卡赫拉曼马拉什-土耳其地震两年后肢体缺失儿童的身体和心理社会结局",
+      "summaryZh": "一项对 56 名地震相关肢体缺失儿童的回顾性分析显示，截肢 2.3 年后，其身体、社会和学校相关生活质量良好（PedsQL 中位数 72.3/100.0），但情感功能较低（60.0/100.0）。单侧下肢缺失的儿童表现出更好的适应性和假肢满意度。",
+      "curatedReasonEn": "Two years post-earthquake, children with limb loss showed favorable physical, social, and school-related quality of life, but emotional well-being remained affected. This highlights the need for integrated long-term mental health support within rehabilitation services.",
+      "limitation": "本研究为回顾性分析，样本来自单一康复中心，可能存在选择偏倚和数据完整性限制。",
+      "limitationEn": "This was a retrospective analysis with samples from a single rehabilitation center, which may introduce selection bias and data completeness limitations.",
+      "tags": [
+        "research",
+        "amputation",
+        "pediatric-rehab",
+        "quality-of-life"
+      ],
+      "studyDesign": "观察研究"
+    },
+    {
+      "id": "news-1794613289800-0",
+      "title": "Power of Functional Mobility Tests in Predicting Fall Risk Among Older Adults.",
+      "summary": "A prospective observational study found that the Timed Up and Go Test (TUG, AUC=0.777) and Four Square Step Test (FSST, AUC=0.771) had the highest discrimination for predicting falls in older adults, though no single test was sufficiently strong alone. Combining tests with fall history (AUC 0.89-0.97) improved model fit.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43024148/",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "firstSeen": "2026-11-13T23:41:29.800Z",
+      "curatedScore": 70,
+      "curatedReason": "TUG 和 FSST 在预测老年人跌倒风险方面表现出最高的区分度，但单一测试的效能不足以独立预测。将功能测试与跌倒史结合使用可提高预测准确性。",
+      "titleZh": "功能性活动能力测试在预测老年人跌倒风险中的效用",
+      "summaryZh": "一项前瞻性观察性研究发现，计时起立行走测试（TUG，AUC=0.777）和四方步进测试（FSST，AUC=0.771）在预测老年人跌倒方面具有最高的区分度，但单一测试不足以可靠预测。将功能测试与跌倒史结合（AUC 0.89-0.97）可提高模型拟合度。",
+      "curatedReasonEn": "The TUG and FSST showed the highest discrimination for fall risk in older adults, but individual tests were insufficient for standalone prediction. Combining functional tests with fall history improved predictive accuracy.",
+      "limitation": "本研究为单中心观察性队列研究，样本量相对较小，且功能测试与跌倒史结合的发现需外部验证。",
+      "limitationEn": "This was a single-center observational cohort study with a relatively small sample size, and the findings regarding combining functional tests with fall history require external validation.",
+      "tags": [
+        "research",
+        "fall-prevention"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
     {
       "id": "news-1793540352239-1",
       "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
@@ -2080,53 +2127,6 @@
       ],
       "studyDesign": "综述",
       "journal": "International journal of sports physical therapy"
-    },
-    {
-      "id": "news-1793948383186-4",
-      "title": "Interactive Gardening Intervention for Preschoolers With Developmental Delays: A Family-Centered Feasibility Study.",
-      "summary": "A non-randomized controlled pretest-posttest study (N=60 dyads) found that an interactive, family-centered gardening intervention significantly improved social functioning within the intervention group (mean change, 3.34 ± 9.47; p = .007) among preschoolers with developmental delays, and was feasible and well accepted.",
-      "category": "pediatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42988743/",
-      "publishedAt": "2026-11-05T00:00:00.000Z",
-      "firstSeen": "2026-11-06T06:59:43.186Z",
-      "curatedScore": 70,
-      "curatedReason": "这项初步研究提示，以家庭为中心、互动式的园艺干预对发育迟缓学龄前儿童的社会功能有积极影响，并且具有良好的可行性和接受度。你可以将其视为早期干预中支持社会参与的补充方法。",
-      "titleZh": "针对发育迟缓学龄前儿童的互动式园艺干预：一项以家庭为中心的可行性研究",
-      "summaryZh": "一项非随机对照前后测研究（60 对亲子）发现，一项互动式、以家庭为中心的园艺干预显著改善了发育迟缓学龄前儿童干预组的社会功能（平均变化 3.34 ± 9.47；p = .007），且该干预可行并被良好接受。",
-      "curatedReasonEn": "This pilot study suggests that a family-centered, interactive gardening intervention positively impacts social functioning in preschoolers with developmental delays and is feasible and well-accepted. You can consider it a complementary approach to support social participation in early intervention.",
-      "limitation": "该研究为非随机对照设计，且样本量相对较小，对感官整合和照护者相关结局未显示显著改善。",
-      "limitationEn": "The study uses a non-randomized controlled design with a relatively small sample size, and did not show significant improvements in sensory integration or caregiver-related outcomes.",
-      "tags": [
-        "research",
-        "early-intervention",
-        "social-participation"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physical & occupational therapy in pediatrics"
-    },
-    {
-      "id": "news-1793929309346-20",
-      "title": "Development and psychometric evaluation of the Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS)",
-      "summary": "This study developed and evaluated the Severity of Myalgic Encephalomyelitis Scale (SoMES) and the Myalgic Encephalomyelitis Occupational Status Scale (MEOSS) among 995 adults with ME/CFS, finding both scales to be valid and reliable for assessing disease severity and occupational status, with moderate (SoMES k=0.53) and excellent (MEOSS k=0.76) test-retest reliability.",
-      "category": "neurological",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.04.26367265v1?rss=1",
-      "publishedAt": "2026-11-05T00:00:00.000Z",
-      "firstSeen": "2026-11-06T01:41:49.346Z",
-      "curatedScore": 70,
-      "curatedReason": "新量表虽初步有效，但请记住，它们只是工具。虽然 SoMES 和 MEOSS 显示出评估 ME/CFS 严重程度和职业状况的潜力，特别是 MEOSS 的测试重测信度达到 k=0.76，但在实际应用中仍需结合患者的整体临床表现。别让量表分数取代你的临床判断。",
-      "titleZh": "肌痛性脑脊髓炎严重程度量表（SoMES）和肌痛性脑脊髓炎职业状态量表（MEOSS）的开发与心理测量学评估",
-      "summaryZh": "这项研究开发并评估了肌痛性脑脊髓炎严重程度量表（SoMES）和肌痛性脑脊髓炎职业状态量表（MEOSS），对 995 名 ME/CFS 成人患者进行测试，结果显示这两个量表在评估疾病严重程度和职业状态方面均有效且可靠，重测信度分别为中等（SoMES k=0.53）和优秀（MEOSS k=0.76）。",
-      "curatedReasonEn": "New scales, while preliminarily effective, are just tools. While SoMES and MEOSS show potential for assessing ME/CFS severity and occupational status—especially MEOSS with k=0.76 test-retest reliability—they should always be used in conjunction with a patient's overall clinical presentation. Don't let scale scores replace your clinical judgment.",
-      "limitation": "研究人群为在线调查参与者，可能存在自我选择偏差，且未在不同临床设置中进行验证。",
-      "limitationEn": "The study population consists of online survey participants, which may introduce self-selection bias, and validation in different clinical settings is still needed.",
-      "tags": [
-        "research",
-        "outcome-measures",
-        "chronic-fatigue"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
