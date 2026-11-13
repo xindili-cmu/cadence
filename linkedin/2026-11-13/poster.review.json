@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-13T02:06:40.167Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Comparative Efficacy of Low-Level Laser Therapy in Patients With Carpal Tunnel Syndrome: An Updated Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43013892/"
+    },
+    {
+      "slide": 2,
+      "title": "VRCycle: A Feasibility Randomized Controlled Trial Evaluating a Virtual Reality Cycling Intervention in People With Knee Osteoarthritis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43016107/"
+    },
+    {
+      "slide": 3,
+      "title": "User Experience of a Rehab Community-Based, Affordable Robot Exercise System (Rehab CARES) for Gamified Motor and Cognitive Stroke Rehabilitation",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367762v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "XR serious games for phantom limb pain, neurofunctional recovery, and prosthetic adoption: a systematic review | Journal of Rehabilitation Medicine",
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46784"
+    },
+    {
+      "slide": 5,
+      "title": "From Referral to Reality: A Mixed Methods Analysis of Barriers to Pediatric Rehabilitation Service Initiation",
+      "url": "https://www.archives-pmr.org/article/S0003-9993(26)00987-1/fulltext?rss=yes"
+    }
+  ]
+}
