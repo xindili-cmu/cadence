@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-15T09:36:58.357Z",
-    "totalItems": 75,
+    "lastUpdated": "2026-11-15T17:16:07.560Z",
+    "totalItems": 74,
     "categories": [
       "orthopedic",
       "neurological",
@@ -92,9 +92,9 @@
           "titleZh": "ERAS理念下多学科干预对进行胃切除术的衰弱老年患者预后的影响：一项非随机前瞻性队列研究"
         }
       ],
-      "heat": 4.31,
-      "themeZh": "卒中后跌倒风险、步态能力与康复预后的预测",
-      "themeEn": "Predicting Post-Stroke Falls, Gait, and Rehab Outcomes"
+      "heat": 3.86,
+      "themeZh": "中风患者步态与平衡障碍的跌倒风险预测及早期识别",
+      "themeEn": "Stroke gait, balance, and fall prediction"
     },
     {
       "id": "news-1794419798183-3",
@@ -165,9 +165,9 @@
           "titleZh": "膝关节疾病患者处方数字健康应用 (DiGA) 的使用体验：一项德国骨科护理的定性研究"
         }
       ],
-      "heat": 2.46,
-      "themeZh": "康复实践中的障碍、服务利用与AI应用趋势",
-      "themeEn": "Rehab Barriers, Service Use, and AI Trends"
+      "heat": 2.2,
+      "themeZh": "全球物理康复服务实践的障碍、趋势与人工智能应用",
+      "themeEn": "Rehabilitation service barriers, trends, AI"
     },
     {
       "id": "news-1793794659746-3",
@@ -223,9 +223,9 @@
           "titleZh": "脑瘫儿童功能康复中机器人步态外骨骼的益处与局限性：一项伞形综述"
         }
       ],
-      "heat": 1.85,
-      "themeZh": "神经康复中机器人与外骨骼辅助训练的效用与体验",
-      "themeEn": "Robotic and Exoskeleton Assisted Neurorehabilitation Efficacy"
+      "heat": 1.65,
+      "themeZh": "神经康复中机器人与外骨骼辅助训练的疗效与用户体验",
+      "themeEn": "Robotic and exoskeleton neurorehabilitation efficacy, experience"
     },
     {
       "id": "news-1794389724088-1",
@@ -261,9 +261,9 @@
           "titleZh": "带标记增强的视频运动捕捉技术在下肢和躯干运动学中的验证"
         }
       ],
-      "heat": 1.56,
-      "themeZh": "利用IMU与视频捕捉技术评估步态与肢体功能",
-      "themeEn": "Gait and Limb Function Assessment by IMU"
+      "heat": 1.39,
+      "themeZh": "基于传感器和计算机视觉的运动功能客观评估技术",
+      "themeEn": "Sensor and vision-based motion assessment"
     },
     {
       "id": "news-1794477441890-4",
@@ -318,12 +318,35 @@
           "titleZh": "超声引导的混合关节保护康复策略对类风湿关节炎患者的可行性、安全性和初步效果：一项前瞻性非随机概念验证研究"
         }
       ],
-      "heat": 1.54,
-      "themeZh": "物理疗法中激光、超声与注射干预的有效性与应用",
-      "themeEn": "Efficacy of Laser, Ultrasound, and Injections"
+      "heat": 1.38,
+      "themeZh": "超声引导下手动和物理疗法对肌骨疾病的治疗效用",
+      "themeEn": "Ultrasound-guided manual and physical therapies"
     }
   ],
   "items": [
+    {
+      "id": "news-1793540352240-2",
+      "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
+      "summary": "A systematic review of 73 studies on low back pain moderators in primary care found a broad but superficial body of literature. While RCT quality was generally high, moderation analysis quality was poor, with no clearly important moderators identified across high-quality analyses. Promising moderators, such as graded exposure for those with high catastrophizing, require further testing.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966898/",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "firstSeen": "2026-11-01T13:39:12.240Z",
+      "curatedScore": 70,
+      "curatedReason": "针对基层腰痛患者的治疗效应调节因素，这项系统综述发现文献广但不深。明确的重要调节因素尚未识别，即使是中等质量分析中发现的有前景调节因素（如分级暴露对高灾难化思维患者更有效）也需要进一步验证。别把它们过早写入常规临床路径。",
+      "titleZh": "临床医师能否预测哪些患者对特定治疗反应最佳？基层腰痛调节因素的系统综述",
+      "summaryZh": "一项针对基层腰痛治疗效应调节因素的系统综述（73 项研究）发现，文献广泛但深入不足。RCT 质量普遍较高，但调节分析质量较差，高质量分析未识别出明确的重要调节因素。部分有前景的调节因素（如分级暴露对高灾难化思维患者更有效）仍需进一步验证。",
+      "curatedReasonEn": "This systematic review on treatment effect moderators for low back pain in primary care found a broad but superficial body of literature. No clearly important moderators were identified, and even promising ones from fair-quality analyses (e.g., graded exposure for high catastrophizing) require further testing. Do not prematurely integrate these into routine clinical pathways.",
+      "limitation": "研究高度异质，多数分析事后进行，高质量分析未发现明确调节因素，研究多样性阻碍了荟萃分析。",
+      "limitationEn": "Studies were highly heterogeneous, most analyses were post-hoc, high-quality analyses found no clear moderators, and study diversity precluded meta-analysis.",
+      "tags": [
+        "research",
+        "spine"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
     {
       "id": "news-1793902062548-8",
       "title": "Benefits and limitations of robotic gait exoskeletons in functional rehabilitation of children with cerebral palsy: an umbrella review.",
@@ -1471,29 +1494,6 @@
       "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
     },
     {
-      "id": "news-1793540352239-1",
-      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
-      "summary": "A systematic review with Bayesian network meta-analysis of 35 trials (n = 3808) found short-term combined aerobic and resistance exercise had the largest effect on pain (SMD = -0.937), function (SMD = -0.590), and quality of life (SMD = 0.663) in patients with knee OA.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
-      "publishedAt": "2026-11-01T00:00:00.000Z",
-      "firstSeen": "2026-11-01T13:39:12.239Z",
-      "curatedScore": 85,
-      "curatedReason": "这项贝叶斯网络 Meta 分析（35 项试验，3808 名患者）确立了联合有氧和抗阻运动在膝骨关节炎（OA）患者中对疼痛、功能和生活质量的短期（≤12 周）临床意义。这强化了我们应将联合运动处方作为膝 OA 一线干预的证据。",
-      "titleZh": "膝骨关节炎患者运动类型与持续时间对疼痛、功能和生活质量的影响：一项贝叶斯网络 Meta 分析系统综述",
-      "summaryZh": "一项包含 35 项试验（3808 名患者）的贝叶斯网络 Meta 分析系统综述发现，在膝骨关节炎患者中，短期联合有氧和抗阻运动对疼痛（SMD = -0.937）、功能（SMD = -0.590）和生活质量（SMD = 0.663）具有最大效应。",
-      "curatedReasonEn": "This Bayesian network meta-analysis (35 trials, 3808 patients) establishes the short-term (≤12 weeks) clinical meaningfulness of combined aerobic and resistance exercise for pain, function, and quality of life (QoL) in knee osteoarthritis (OA) patients. This strengthens the evidence for prioritizing combined exercise prescription as a first-line intervention for knee OA.",
-      "limitation": "短期效应的证据确定性较低（low certainty），长期效应的证据有限且确定性更低（very low certainty），提示还需更多高质量研究。",
-      "limitationEn": "The certainty of evidence for short-term effects was low, and long-term effects were limited and of very low certainty, indicating a need for more high-quality research.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "The Journal of orthopaedic and sports physical therapy"
-    },
-    {
       "id": "news-1793902062545-0",
       "title": "Effectiveness of a Structured Post-Platelet Rich Plasma Rehabilitation Approach on Pain and Function in Subacromial Pain Syndrome: A Randomized Controlled Trial.",
       "summary": "A 21-day structured post-PRP rehabilitation approach, added to standard physiotherapy, significantly improved pain (VAS: 9.00 ± 0.67 to 2.92 ± 1.14 vs. 9.11 ± 0.64 to 7.96 ± 0.75, p < 0.001) and function in 27 subacromial pain syndrome participants compared to standard physiotherapy alone.",
@@ -1615,33 +1615,6 @@
         "shoulder"
       ],
       "studyDesign": "RCT"
-    },
-    {
-      "id": "news-1793540352238-0",
-      "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
-      "summary": "A discrete choice experiment nested in an RCT found that patients with prior telerehabilitation experience were willing to pay significantly more (AU$87.49) for telehealth consultations for chronic knee pain compared to those with in-person experience.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966905/",
-      "publishedAt": "2026-11-01T00:00:00.000Z",
-      "firstSeen": "2026-11-01T13:39:12.238Z",
-      "curatedScore": 75,
-      "curatedReason": "有远程康复经验的患者明显更愿意为慢加性膝关节疼痛的远程医疗咨询付费，AU$87.49 的支付意愿差额印证了这点。打算拓展远程医疗服务的同行们请注意，实际使用经验才是提升患者接受度和支付意愿的关键。",
-      "titleZh": "慢性膝痛远程康复的亲身体验及其价值：一项随机对照试验中的离散选择实验",
-      "titleEn": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial",
-      "summaryZh": "一项嵌套在随机对照试验中的离散选择实验发现，有远程康复经验的患者更愿意为慢性膝痛的远程医疗咨询支付费用（高出 87.49 澳元）。",
-      "curatedReasonEn": "This study provides evidence that prior experience with telerehabilitation significantly increases willingness to pay for it. This finding is important for providers considering expanding or adopting telehealth services for chronic knee pain, suggesting patient acceptance is linked to actual use.",
-      "limitation": "离散选择实验依赖假设情景，可能无法完全反映真实世界中的选择。",
-      "limitationEn": "The discrete choice experiment relies on hypothetical scenarios, which may not perfectly reflect real-world choices.",
-      "tags": [
-        "research",
-        "orthopedic",
-        "knee",
-        "telehealth"
-      ],
-      "studyDesign": "RCT",
-      "journal": "The Journal of orthopaedic and sports physical therapy",
-      "tech": true
     },
     {
       "id": "news-1794257481385-3",
