@@ -926,7 +926,7 @@ async function run() {
     // 任何一条被整目录排除，站点就静默白屏（Workers 404）。
     const MUST_SERVE = ['news.json', 'journals.json', 'sources.json', 'archive/', 'briefs/daily/',
       'briefs/', 'design-system/', 'vendor/', 'index.html', '404.html', 'rss.xml', 'sitemap.xml',
-      'robots.txt', 'favicon.svg', 'og-card.png', '*.json', '*.html', '*.js', '*.css', '*.svg', '*.png', '*.woff2'];
+      'robots.txt', 'favicon.svg', 'og-card.png', 'og/', '*.json', '*.html', '*.js', '*.css', '*.svg', '*.png', '*.woff2'];
     for (const pat of MUST_SERVE) ok(!ig.includes(pat), `T2: .assetsignore 不含 ${pat}（app 需要它）`);
   }
 
@@ -1443,6 +1443,38 @@ async function run() {
     // AB5 作用域互锁：闸的作用域 = S5 断言的作用域（不等就会重现「断言比修复宽」的自锁）
     const s5 = (fs.readFileSync(__filename, 'utf8').match(/const S_SHIPPED = '([\d-]+)'/) || [])[1];
     ok(s5 && s5 === REASON_EN_REQUIRED_SINCE, `AB5: 闸作用域（${REASON_EN_REQUIRED_SINCE}）= S5 作用域（${s5}）`);
+  }
+
+  // ── AC 段：分享卡索引（2026-11-15，Cloudflare 免费版 10ms CPU 超限 100+/天）──
+  // 事故：worker.js 对 /?item=<id> 逐个 JSON.parse news.json + 全部 archive 月份
+  // （~4MB），Googlebot 爬 sitemap 里 ~1750 条 permalink 时每天超时 100+ 次（1102）。
+  // 现在 deploy.yml 部署前跑 build-og-index.js 生成 og/<shard>.json，worker 只读一片。
+  // 守三件事：①两份 ogShard 一致（不一致 = 每条都查不到，静默退回通用卡片）；
+  // ②接线：deploy.yml 在 wrangler deploy 之前生成；worker 不再扫 archive；
+  // ③索引覆盖全部条目且单片足够小。
+  {
+    console.log('\nAC. 分享卡索引：worker ↔ 构建脚本 分片一致 + 接线 + 覆盖');
+    const og = require('./build-og-index');
+    const wk = fs.readFileSync(path.join(__dirname, '..', 'worker.js'), 'utf8');
+    const fnSrc = (wk.match(/function ogShard\(id\) \{[\s\S]*?\n\}/) || [])[0];
+    ok(!!fnSrc, 'AC1: worker.js 定义了 ogShard()');
+    const wShard = new Function(`${fnSrc}; return ogShard;`)();
+    const root = path.join(__dirname, '..');
+    const ids = fs.existsSync(path.join(root, 'news.json')) ? [...og.collectItems(root).keys()] : [];
+    const sample = ids.length ? ids : ['a', 'pubmed-12345', '中文-id', 'x.y-z_9'];
+    ok(sample.every((id) => wShard(id) === og.ogShard(id)), `AC1: 两份 ogShard 对 ${sample.length} 个 id 结果一致`);
+    ok(!/archive\//.test(wk.slice(wk.indexOf('function ogShard'), wk.indexOf('// Daily-brief permalink meta'))),
+      'AC2: worker 的条目查找不再逐月扫 archive（回退即转红）');
+    const dep = fs.readFileSync(path.join(root, '.github', 'workflows', 'deploy.yml'), 'utf8');
+    const iB = dep.indexOf('node scripts/build-og-index.js'), iD = dep.indexOf('wrangler@');
+    ok(iB > 0 && iB < iD, 'AC2 接线：deploy.yml 在 wrangler deploy 之前生成 og/');
+    if (ids.length) {
+      const sh = Object.values(og.buildShards(root));
+      const n = sh.reduce((a, m) => a + Object.keys(m).length, 0);
+      ok(n === ids.length, `AC3: 索引覆盖全部 ${ids.length} 条`);
+      const maxKB = Math.max(...sh.map((m) => Buffer.byteLength(JSON.stringify(m)))) / 1024;
+      ok(maxKB < 200, `AC3: 最大分片 ${maxKB.toFixed(0)}KB < 200KB（超了就该加分片数）`);
+    }
   }
 
   console.log(`\n✅ all ${passed} assertions passed`);

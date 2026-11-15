@@ -43,6 +43,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Build share-card index (og/)
+        # Per-item og meta for worker.js, built from this checkout so it can never
+        # lag news.json/archive. og/ is gitignored; see scripts/build-og-index.js.
+        run: node scripts/build-og-index.js
+
       - name: Deploy with Wrangler
         # Pinned (not @latest) so a poisoned upstream release can't run in CI.
         # Bump deliberately when you want a newer Wrangler.

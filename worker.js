@@ -17,42 +17,31 @@
 // and the zh default was hobbling it (crawlers indexed Chinese titles for
 // every permalink). zh readers keep zh cards via &lang=zh on copied links;
 // CN channels are paused, so no new bare links circulate in WeChat.
-const CJK_RE = /[一-鿿]/;
-function storyMeta(story, lang) {
-  const en = lang === 'en';
-  const title = (en ? (story.titleEn || story.title) : (story.titleZh || story.title)) || '';
-  // en guard (2026-07-04): the pipeline occasionally wrote a Chinese summary
-  // into `summary` — an EN share card (LinkedIn daily path) must never carry a
-  // Chinese description. Fall back to the English take (curatedReasonEn),
-  // which is English by construction; last resort is an empty description.
-  const enDesc = !CJK_RE.test(story.summary || '')
-    ? (story.summary || story.curatedReasonEn || '')
-    : (story.curatedReasonEn || '');
-  const rawDesc = (en ? enDesc : (story.summaryZh || story.summary)) || '';
-  const desc = rawDesc.length > 200 ? rawDesc.slice(0, 199) + '…' : rawDesc;
-  return { title, desc };
-}
-
-// Look the id up in the live feed first, then archive months (newest first).
-// All fetches go through the assets binding — same-colo, no public egress.
-async function findStory(id, url, env) {
-  const getJson = async (path) => {
-    try {
-      const r = await env.ASSETS.fetch(new Request(new URL(path, url)));
-      return r.ok ? await r.json() : null;
-    } catch { return null; }
-  };
-  const live = await getJson('/news.json');
-  let hit = live && (live.items || []).find((s) => s.id === id);
-  if (hit) return hit;
-  const idx = await getJson('/archive/index.json');
-  const files = ((idx && idx.months) || []).map((m) => m.file).filter(Boolean).sort().reverse();
-  for (const f of files) {
-    const month = await getJson('/archive/' + f);
-    hit = month && (month.items || []).find((s) => s.id === id);
-    if (hit) return hit;
+// Per-item share meta comes from og/<shard>.json, precomputed at deploy time by
+// scripts/build-og-index.js (title + ≤200-char desc, EN and ZH — the old
+// storyMeta() logic lives there now). 2026-11-15: the previous lookup
+// JSON-parsed news.json + every archive month (~4 MB) per request and blew the
+// free-tier 10 ms CPU cap 100+ times/day (Googlebot on sitemap permalinks).
+// One shard is a few KB. Missing shard/id → untouched page (site-level card).
+// ogShard() must stay identical to the one in build-og-index.js
+// (pipeline-gates.test.js AC 段 checks).
+function ogShard(id) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < id.length; i++) {
+    h ^= id.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
   }
-  return null;
+  return (h % 64).toString(16).padStart(2, '0');
+}
+async function findStoryMeta(id, url, env, lang) {
+  try {
+    const r = await env.ASSETS.fetch(new Request(new URL(`/og/${ogShard(id)}.json`, url)));
+    if (!r.ok) return null;
+    const hit = (await r.json())[id];
+    if (!hit) return null;
+    const [title, desc] = lang === 'en' ? hit.e : hit.z;
+    return { title, desc };
+  } catch { return null; }
 }
 
 // Daily-brief permalink meta (?daily=YYYY-MM-DD). Same crawler story as
@@ -216,11 +205,9 @@ export default {
       }
       if (!id) return assetResp;
 
-      const story = await findStory(id, url, env);
-      if (!story) return assetResp;
-
-      const { title, desc } = storyMeta(story, lang);
-      if (!title) return assetResp;
+      const meta = await findStoryMeta(id, url, env, lang);
+      if (!meta || !meta.title) return assetResp;
+      const { title, desc } = meta;
       // Canonical self-URL for this story: language-independent (?item= only),
       // so Google folds ?lang= variants into one canonical URL. id is our own
       // slug ([\w.-]+ today), but encode defensively.

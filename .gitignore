@@ -15,3 +15,6 @@ Claude outputs/
 
 # 2026-10-09：策展原文存档的本地缓存（全文，含出版社摘要 / 新闻正文）——永不进公开仓库
 .cache-source-archive/
+
+# 2026-11-15：分享卡索引，deploy.yml 部署时生成（scripts/build-og-index.js），不进仓库
+og/
