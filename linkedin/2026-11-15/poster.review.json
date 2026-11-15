@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-15T01:09:59.638Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Gait variability as a predictor of fall risk in patients with stroke: A 6-month prospective cohort study with survival analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43025304/"
+    },
+    {
+      "slide": 2,
+      "title": "Ultrasound-guided versus landmark-guided injections in musculoskeletal practice: a scoping review of clinical efficacy, educational needs, and economic considerations",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10612-7"
+    },
+    {
+      "slide": 3,
+      "title": "Integrated Decision-Making Under Uncertainty in High-Performance Sport Support Systems",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01149-z"
+    },
+    {
+      "slide": 4,
+      "title": "Routine physical function assessment may identify older adults at increased risk of dementia years before diagnosis",
+      "url": "https://ebn.bmj.com/content/early/2026/11/13/ebnurs-2026-104692"
+    },
+    {
+      "slide": 5,
+      "title": "Stakeholder priorities for rehabilitation to support functioning at home and work among people on sick leave due to low back pain: a group concept mapping study | Journal of Rehabilitation Medicine",
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46346"
+    }
+  ]
+}

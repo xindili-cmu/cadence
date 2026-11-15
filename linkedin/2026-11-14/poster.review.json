@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-14T01:33:02.927Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Comparison of Radiofrequency Microtenotomy vs. Heavy-Slow Resistance for Refractory Plantar Fasciopathy: A Randomised Controlled Trial",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01129-3"
+    },
+    {
+      "slide": 2,
+      "title": "Physical and psychosocial outcomes in children with limb loss 2-years after the 2023 Kahramanmaras-Türkiye earthquakes",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.13.26367810v1?rss=1"
+    },
+    {
+      "slide": 3,
+      "title": "Radiographic quantification of active self-correction during physiotherapeutic scoliosis-specific exercises and its potential prognostic value in adolescent idiopathic scoliosis",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10732-0"
+    },
+    {
+      "slide": 4,
+      "title": "The effect of multi-joint lower-limb training on lower-limb function after total knee arthroplasty: a randomised controlled clinical trial",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10729-9"
+    },
+    {
+      "slide": 5,
+      "title": "GLIM-defined malnutrition and frailty in older outpatients with diabetes",
+      "url": "https://link.springer.com/article/10.1007/s40520-026-03553-7"
+    }
+  ]
+}

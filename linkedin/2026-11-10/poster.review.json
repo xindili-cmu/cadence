@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-10T03:41:12.856Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Can traditional Chinese exercises help people with musculoskeletal disorders? - BJSM blog - social media's leading SEM voice",
+      "url": "https://blogs.bmj.com/bjsm/2026/11/09/can-traditional-chinese-exercises-help-people-with-musculoskeletal-disorders/"
+    },
+    {
+      "slide": 2,
+      "title": "Effects of sleep manipulation on athletic performance, cognitive function, and recovery: a systematic review of experimental studies",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02218-2"
+    },
+    {
+      "slide": 3,
+      "title": "Comparison of robot-assisted gait training and visual feedback balance training on balance and gait outcomes in patients with stroke: a randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43001794/"
+    },
+    {
+      "slide": 4,
+      "title": "Comparison of the effects of modified razor curl and nordic hamstring exercises on hamstring muscle strength and posterior-chain endurance in male football players",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02215-5"
+    },
+    {
+      "slide": 5,
+      "title": "Effects of adjunctive craniosacral therapy to conventional physiotherapy on postural responses and autonomic function in individuals with multiple sclerosis: a randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43001615/"
+    }
+  ]
+}

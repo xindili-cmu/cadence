@@ -1,0 +1,330 @@
+{
+ "date": "2026-11-13",
+ "generatedAt": "2026-11-13T02:05:19.748Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-12T02:21:37.771Z",
+ "windowEnd": "2026-11-13T02:05:02.912Z",
+ "lead": {
+  "titleZh": "腕管综合征激光治疗的最新系统综述：物理治疗技术应用的新证据",
+  "titleEn": "Updated Systematic Review on Laser Therapy for Carpal Tunnel Syndrome: New Evidence for PT Techniques",
+  "paragraphZh": "今日共 11 条信号，涵盖 8 个专科方向。一篇关于低能量激光疗法治疗腕管综合征的系统综述，curatedScore 高达 80 分，更新了该物理治疗技术的比较疗效证据。同时，膝骨关节炎的虚拟现实骑行干预，以及基于社区的经济型机器人锻炼系统在卒中康复中的用户体验，都有 75 分的 RCT 或观察研究，值得关注。",
+  "paragraphEn": "Today's feed contains 11 entries across 8 specialties. An updated systematic review on low-level laser therapy for carpal tunnel syndrome, with a curatedScore of 80, provides new evidence on the comparative efficacy of this physical therapy technique. Additionally, a 75-point RCT on virtual reality cycling for knee osteoarthritis and an observational study on user experience with an affordable robot exercise system for stroke rehabilitation also warrant attention."
+ },
+ "stats": {
+  "events": 11,
+  "specialties": 8,
+  "multiSource": 0,
+  "sources": 8,
+  "topScore": 80
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1794507886042-0",
+     "title": "VRCycle: A Feasibility Randomized Controlled Trial Evaluating a Virtual Reality Cycling Intervention in People With Knee Osteoarthritis.",
+     "summary": "A two-arm feasibility RCT (n=41) found that both VR-enhanced cycling and traditional cycling for 6 weeks were highly feasible and acceptable for people with knee osteoarthritis, showing preliminary improvements in pain, function, and exercise capacity.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43016107/",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-12T18:24:46.042Z",
+     "curatedScore": 75,
+     "curatedReason": "对于膝骨关节炎患者，VR 辅助骑行和传统骑行都高度可行且可接受，能在 6 周内初步改善疼痛、功能和运动能力。VR 方案或许能增加患者运动依从性，但此为小型可行性 RCT（n=41），尚不能得出定论，期待大型试验数据。",
+     "titleZh": "VRCycle：一项评估虚拟现实骑行干预对膝骨关节炎患者可行性的随机对照试验",
+     "summaryZh": "一项双臂可行性随机对照试验（n=41）发现，为期 6 周的虚拟现实增强骑行和传统骑行对膝骨关节炎患者均高度可行且可接受，并在疼痛、功能和运动能力方面显示出初步改善。",
+     "curatedReasonEn": "Both VR-enhanced cycling and traditional cycling are highly feasible and acceptable for people with knee osteoarthritis, showing preliminary improvements in pain, function, and exercise capacity over 6 weeks. While VR may boost exercise adherence, this was a small feasibility RCT (n=41), so don't draw firm conclusions yet; larger trials are needed.",
+     "limitation": "这是一项可行性研究，样本量小（n=41），不具备评估疗效的统计功效。",
+     "limitationEn": "This was a feasibility study with a small sample size (n=41) and was not powered to evaluate efficacy.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physical therapy",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1794507886044-19",
+     "title": "User Experience of a Rehab Community-Based, Affordable Robot Exercise System (Rehab CARES) for Gamified Motor and Cognitive Stroke Rehabilitation",
+     "summary": "A longitudinal study (n=6 adults with chronic stroke) on RehabCARES, a gamified robot exercise system for motor and cognitive stroke rehabilitation, reported low pain, light-to-moderate perceived exertion, strong enjoyment, and high usability scores (peaking at 86/100), indicating a positive user experience in a community setting.",
+     "category": "neurological",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367762v1?rss=1",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-12T18:24:46.044Z",
+     "curatedScore": 75,
+     "curatedReason": "这款社区康复机器人系统（RehabCARES）的用户体验积极，证实了机器人辅助训练在卒中后运动和认知康复中的可行性与可接受性。它提示了未来社区康复模式中智能硬件的潜力，能为你的患者提供个性化且有吸引力的训练。",
+     "titleZh": "基于社区的经济型机器人锻炼系统（Rehab CARES）在游戏化运动和认知卒中康复中的用户体验",
+     "summaryZh": "一项关于 RehabCARES（一种用于运动和认知卒中康复的游戏化机器人锻炼系统）的纵向研究（n=6 名慢性卒中成人）报告称，该系统在社区环境中提供了积极的用户体验，表现为低疼痛、轻至中度感知劳累、强烈的愉悦感和高可用性评分（最高 86/100）。",
+     "curatedReasonEn": "This community-based rehabilitation robot system (RehabCARES) received positive user experience, confirming the feasibility and acceptability of robot-assisted training for post-stroke motor and cognitive rehabilitation. It indicates the potential of smart hardware in future community rehabilitation models, offering personalized and engaging training for your patients.",
+     "limitation": "这是一项初步的用户体验研究，样本量小（n=6），且缺乏对照组，无法评估其确切的临床疗效。",
+     "limitationEn": "This is a preliminary user experience study with a small sample size (n=6) and lacks a control group, preventing assessment of definitive clinical efficacy.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "tech": true
+    },
+    {
+     "id": "news-1794535499790-17",
+     "title": "XR serious games for phantom limb pain, neurofunctional recovery, and prosthetic adoption: a systematic review\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+     "summary": "A systematic review of 24 studies found that XR serious games demonstrated preliminary benefits in reducing phantom limb pain (largest effect sizes with AR-based phantom motor execution systems, d = 0.9–1.3), improving functional mobility, and supporting prosthesis adoption after amputation.",
+     "category": "neurological",
+     "source": "J Rehabil Med",
+     "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46784",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-13T02:04:59.790Z",
+     "curatedScore": 70,
+     "curatedReason": "XR 严肃游戏，特别是 AR 幻肢运动执行系统（d = 0.9–1.3），有望作为截肢术后幻肢痛管理、功能活动度提升和假肢适应的新辅助手段。虽然这只是初步证据，但其在疼痛干预和假肢使用训练方面的潜力值得我们关注。",
+     "titleZh": "用于幻肢痛、神经功能恢复和假肢采纳的扩展现实（XR）严肃游戏：一项系统综述",
+     "titleEn": "XR serious games for phantom limb pain, neurofunctional recovery, and prosthetic adoption: a systematic review",
+     "summaryZh": "一项对 24 项研究的系统综述发现，扩展现实（XR）严肃游戏在减轻幻肢痛（AR 幻肢运动执行系统效应量最大，d=0.9-1.3）、改善截肢后的功能活动能力和支持假肢采纳方面显示出初步益处。",
+     "curatedReasonEn": "XR serious games, especially AR-based phantom motor execution systems (d = 0.9–1.3), show promise as an adjunct for managing phantom limb pain, improving functional mobility, and aiding prosthesis adoption post-amputation. While preliminary, this evidence warrants attention for its potential in pain intervention and prosthetic training.",
+     "limitation": "神经功能和具身性结局的证据仍处于探索阶段，XR游戏的实际应用和可扩展性仍有待深入研究。",
+     "limitationEn": "The evidence for neurofunctional and embodiment outcomes is still exploratory, and real-world implementation and scalability of XR games remain under-researched.",
+     "tags": [
+      "research",
+      "neurological"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Journal of Rehabilitation Medicine"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1794535499791-18",
+     "title": "Match Exposure and Estimated Travel Before ACL Injury in Professional Women’s Football: An Exploratory Within-Player Case-Crossover Study",
+     "summary": "An exploratory case-crossover study in professional women's football found that injury seasons had slightly greater match exposure (minutes, appearances) and estimated travel distance in the 30 days prior to injury compared to matched control periods, though effect sizes were small and variability was high.",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01144-4",
+     "publishedAt": "2026-11-10T00:00:00.000Z",
+     "firstSeen": "2026-11-13T02:04:59.791Z",
+     "curatedScore": 65,
+     "curatedReason": "这项探索性研究提出，在职业女子足球中，受伤前 30 天的比赛暴露（上场时间、出场次数）和预估旅行距离可能略有增加。尽管效应量小且变异性大，这些发现可为未来前瞻性研究的 ACL 损伤预防策略提供思路。",
+     "titleZh": "职业女子足球运动员 ACL 损伤前的比赛暴露与预估行程：一项探索性个体交叉研究",
+     "titleEn": "Match Exposure and Estimated Travel Before ACL Injury in Professional Women’s Football: An Exploratory Within-Player Case-Crossover Study",
+     "summaryZh": "一项对职业女子足球运动员的探索性个体交叉研究发现，与匹配的对照期相比，ACL 损伤赛季前的比赛暴露（分钟数、出场次数）和 30 天内的预估行程稍多，但效应量小且变异性大。",
+     "curatedReasonEn": "This exploratory study suggests that slightly higher match exposure and travel distance may precede ACL injuries in professional women’s football. While effect sizes are small and variability is high, these findings could inform future prospective research on injury prevention strategies.",
+     "limitation": "本研究为探索性研究，效应量小，玩家间变异性大，且未建立因果关系。",
+     "limitationEn": "The study is exploratory with small effect sizes and substantial between-player variability, and it does not establish causality.",
+     "tags": [
+      "research",
+      "sports",
+      "ACL"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Sports Medicine - Open"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1794507886044-18",
+     "title": "From Referral to Reality: A Mixed Methods Analysis of Barriers to Pediatric Rehabilitation Service Initiation",
+     "summary": "This mixed-methods study investigates factors associated with pediatric rehabilitation service initiation through an integrated analysis of sociodemographic characteristics and parental experiences of non-initiation.",
+     "category": "pediatric",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00987-1/fulltext?rss=yes",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-12T18:24:46.044Z",
+     "curatedScore": 70,
+     "curatedReason": "这项混合方法研究深入剖析了影响儿科康复服务启动的社会人口学因素及家长经验，提醒我们很多家庭在康复服务初期会遇到障碍。作为儿科物理治疗师，我们可以此为鉴，审视并优化转诊和服务流程，以提高服务依从性。",
+     "titleZh": "从转诊到现实：儿科康复服务启动障碍的混合方法分析",
+     "summaryZh": "本研究通过对社会人口学特征和家长未启动服务经历的综合分析，调查了与儿科康复服务启动相关的因素。",
+     "curatedReasonEn": "This mixed-methods study delves into sociodemographic factors and parental experiences influencing the initiation of pediatric rehabilitation services, highlighting common barriers families face. As pediatric physical therapists, we should leverage these insights to review and optimize our referral and service processes to improve adherence.",
+     "limitation": "尚无摘要或全文，无法评估研究设计细节，可能存在方法学或外推性方面的局限。",
+     "limitationEn": "No abstract or full text is available to assess study design details; limitations may exist in methodology or generalizability.",
+     "tags": [
+      "research",
+      "workforce"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1794535499791-20",
+     "title": "The impact of multidisciplinary intervention under the concept of ERAS on the prognosis of frail older patients undergoing gastrectomy: a non-randomized prospective cohort study",
+     "summary": "A non-randomized prospective cohort study found that a multidisciplinary ERAS-based intervention for frail older patients undergoing gastrectomy led to lower postoperative complication rates (P=0.043), shorter hospital stays (7.1 vs. 10.5 days), and improved functional recovery (6-minute walk test) compared to conventional care.",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08660-8",
+     "publishedAt": "2026-11-06T00:00:00.000Z",
+     "firstSeen": "2026-11-13T02:04:59.791Z",
+     "curatedScore": 70,
+     "curatedReason": "这项前瞻性队列研究表明，针对虚弱老年胃切除术患者的多学科 ERAS 干预能显著降低术后并发症率（P=0.043）、缩短住院时间（7.1 对 10.5 天）并改善功能恢复。对这类脆弱人群，整合性、团队协作的围手术期护理是值得推广的策略。",
+     "titleZh": "ERAS理念下多学科干预对进行胃切除术的衰弱老年患者预后的影响：一项非随机前瞻性队列研究",
+     "titleEn": "The impact of multidisciplinary intervention under the concept of ERAS on the prognosis of frail older patients undergoing gastrectomy: a non-randomized prospective cohort study",
+     "summaryZh": "一项针对接受胃切除术的衰弱老年患者的非随机前瞻性队列研究发现，基于ERAS的多学科干预可降低术后并发症发生率（P=0.043）、缩短住院时间（7.1 vs. 10.5天），并改善功能恢复，优于常规护理。",
+     "curatedReasonEn": "This prospective cohort study suggests that a multidisciplinary ERAS-based intervention can significantly improve outcomes for frail older patients undergoing gastrectomy, including reduced complications and hospital stay. This supports the integration of comprehensive, team-based perioperative care for this vulnerable population.",
+     "limitation": "本研究采用非随机化设计与历史对照，且30天再入院率差异无统计学意义。",
+     "limitationEn": "The study used a non-randomized design with historical controls, and the 30-day readmission rate difference was not statistically significant.",
+     "tags": [
+      "research",
+      "geriatric"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1794535499791-21",
+     "title": "Squeezing more out of less: blood-flow restriction training in COPD and other conditions, from the clinic to the home",
+     "summary": "This commentary discusses blood flow restriction (BFR) training as a low-load resistance exercise strategy that achieves strength gains comparable to high-load training, suggesting its utility for patients with COPD and other conditions, enabling exercise from clinic to home.",
+     "category": "cardiopulmonary",
+     "source": "BJSM",
+     "sourceUrl": "https://thorax.bmj.com/content/early/2026/11/11/thorax-2026-225942",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-13T02:04:59.791Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇评论强调，血流限制（BFR）训练作为一种低负荷阻力运动策略，能达到与高负荷训练相当的力量增益。对于 COPD 及其他不耐受高负荷训练的患者，BFR 有望成为一种从诊所到家庭都可实行的有效方案，值得临床同行进一步关注。",
+     "titleZh": "“少即是多”：从诊所到居家，COPD及其他疾病的血流限制训练",
+     "titleEn": "Squeezing more out of less: blood-flow restriction training in COPD and other conditions, from the clinic to the home",
+     "summaryZh": "本文评述了血流限制（BFR）训练作为一种低负荷阻力训练策略，可实现与高负荷训练相当的力量增益，并提出其在COPD等疾病患者中的应用前景，支持从诊所到居家进行训练。",
+     "curatedReasonEn": "This commentary highlights blood flow restriction (BFR) training as a promising low-load resistance training method that can elicit strength gains comparable to high-load training. Its application in populations intolerant to high loads, such as those with COPD, from clinic to home, warrants further clinical attention.",
+     "tags": [
+      "research",
+      "cardiopulmonary",
+      "COPD",
+      "manual-modality"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    },
+    {
+     "id": "news-1794535499792-22",
+     "title": "Effects of Hypoxic Exposure and Training Methods on Wingate Test Performance: A Systematic Review",
+     "summary": "A systematic review of 43 studies found acute hypoxic exposure generally does not decrease Wingate test performance unless severe (FiO2 ~0.104) or repeated; prolonged chronic exposure can reduce performance, but shorter camps do not. Intermittent hypoxic training likely benefits performance when combined with longer exercise durations.",
+     "category": "cardiopulmonary",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01125-7",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-13T02:04:59.792Z",
+     "curatedScore": 70,
+     "curatedReason": "这份系统综述指出，急性缺氧暴露通常不会降低 Wingate 测试表现，除非缺氧程度严重 (FiO2 ~0.104) 或反复暴露；长期慢性缺氧可能会降低表现，但短期训练营则不会。间歇性低氧训练在结合更长运动持续时间时，很可能有利于提高表现。",
+     "titleZh": "缺氧暴露和训练方法对 Wingate 测试表现的影响：一项系统综述",
+     "titleEn": "Effects of Hypoxic Exposure and Training Methods on Wingate Test Performance: A Systematic Review",
+     "summaryZh": "一项对 43 项研究的系统综述发现，急性缺氧暴露通常不会降低 Wingate 测试表现，除非在严重（FiO2 ~0.104）或重复情况下；长期慢性暴露可能降低表现，但短期训练营则不会。间歇性缺氧训练可能在与较长运动时间结合时有益于表现。",
+     "curatedReasonEn": "This systematic review indicates that acute hypoxic exposure does not significantly impair Wingate test performance unless severe or repeated, and prolonged chronic exposure may reduce anaerobic performance. Intermittent hypoxic training, especially with longer exercise durations, may enhance anaerobic capacity.",
+     "limitation": "该综述发现，高强度间歇训练可能会提高无氧运动表现，无论是否缺氧，这表明训练方式本身是关键。",
+     "limitationEn": "The review found that high-intensity interval training may improve anaerobic performance regardless of hypoxic exposure, suggesting the modality itself is key.",
+     "tags": [
+      "research",
+      "cardiopulmonary",
+      "sports"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine - Open"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1794477441890-4",
+     "title": "Comparative Efficacy of Low-Level Laser Therapy in Patients With Carpal Tunnel Syndrome: An Updated Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+     "summary": "An updated systematic review and meta-analysis of 16 RCTs found low-level laser therapy (LLLT) significantly reduced pain (Hedges' g=-1.524, P <0.001) and improved grip strength (Hedges' g=0.391, P=0.002) in carpal tunnel syndrome. Pulsed mode was superior for analgesia, continuous for grip strength.",
+     "category": "manual-modality",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43013892/",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-12T09:57:21.890Z",
+     "curatedScore": 80,
+     "curatedReason": "对于腕管综合征患者，明确使用 LLLT。本综述证实 LLLT 能显著缓解疼痛（Hedges' g=-1.524）并提升握力（Hedges' g=0.391）。治疗时请注意：脉冲模式更利于镇痛，而连续模式对改善握力效果更佳。",
+     "titleZh": "低能量激光疗法治疗腕管综合征患者的比较疗效：随机对照试验的最新系统综述和荟萃分析",
+     "summaryZh": "一项针对 16 项随机对照试验的最新系统综述和荟萃分析发现，低能量激光疗法 (LLLT) 显著减轻了腕管综合征的疼痛 (Hedges' g=-1.524, P <0.001) 并改善了握力 (Hedges' g=0.391, P=0.002)。脉冲模式在镇痛方面表现更优，连续模式则有利于握力。",
+     "curatedReasonEn": "For your carpal tunnel syndrome patients, definitely incorporate LLLT. This review confirms significant pain reduction (Hedges' g=-1.524) and improved grip strength (Hedges' g=0.391). When applying, remember that pulsed mode is superior for analgesia, while continuous mode is better for improving grip strength.",
+     "limitation": "不同研究间激光参数、治疗方案和评估方法存在异质性，可能影响结果的综合性。",
+     "limitationEn": "Heterogeneity in laser parameters, treatment regimens, and assessment methods across studies may affect the generalizability of results.",
+     "tags": [
+      "research",
+      "laser",
+      "hand-wrist"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "American journal of physical medicine & rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1794526997557-17",
+     "title": "CMS Extends and Modifies Nationwide Freeze on New Medicare Hospice and Home Health Enrollment for Six Months to Combat Fraud",
+     "summary": "CMS has extended and modified the nationwide freeze on new Medicare hospice and home health enrollment for an additional six months to combat fraud.",
+     "category": "practice",
+     "source": "CMS",
+     "sourceUrl": "https://www.cms.gov/newsroom/press-releases/cms-extends-modifies-nationwide-freeze-new-medicare-hospice-home-health-enrollment-six-months-combat",
+     "publishedAt": "2026-11-12T12:00:00.000Z",
+     "firstSeen": "2026-11-12T23:43:17.557Z",
+     "curatedScore": 79,
+     "curatedReason": "CMS 将全国范围内针对新的 Medicare 安宁疗护和家庭健康机构注册的冻结延长并修改六个月。如果你在考虑开设新的安宁疗护或家庭健康服务，这表明美国监管环境收紧，短期内机会窗口关闭，需要密切关注后续政策走向。",
+     "titleZh": "CMS 延长并修改全国范围内对新的 Medicare 安宁疗护和家庭健康机构注册的冻结六个月，以打击欺诈行为",
+     "summaryZh": "CMS 已将全国范围内针对新的 Medicare 安宁疗护和家庭健康机构注册的冻结延长并修改六个月，以打击欺诈行为。",
+     "curatedReasonEn": "CMS has extended and modified the nationwide freeze on new Medicare hospice and home health enrollment for six months. If you are considering opening new hospice or home health services, this indicates a tightening regulatory environment in the U.S. and a closed window of opportunity in the short term. You should closely monitor future policy developments.",
+     "tags": [
+      "policy",
+      "regulation",
+      "reimbursement"
+     ]
+    },
+    {
+     "id": "news-1794507886043-17",
+     "title": "Use of Rehabilitation Therapy Services among World Trade Center Health Program Members with Cancer",
+     "summary": "This study aims to examine the utilization of rehabilitation therapy services among World Trade Center Health Program members with cancer certification between 2011 and 2024.",
+     "category": "practice",
+     "source": "Archives of PM&R",
+     "sourceUrl": "https://www.archives-pmr.org/article/S0003-9993(26)00989-5/fulltext?rss=yes",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-12T18:24:46.043Z",
+     "curatedScore": 70,
+     "curatedReason": "这项观察性研究（2011-2024 年数据）揭示了世贸中心健康计划中癌症患者康复服务的使用模式。它提示了特定高危人群在康复服务可及性和利用上的潜在缺口，值得我们作为政策制定者和康复服务提供者深入评估。",
+     "titleZh": "世贸中心健康计划癌症患者康复治疗服务利用情况",
+     "summaryZh": "本研究旨在调查 2011 年至 2024 年间，世贸中心健康计划中患有癌症的成员对康复治疗服务的利用情况。",
+     "curatedReasonEn": "This observational study (2011-2024 data) illuminates rehabilitation service utilization patterns among cancer patients in the World Trade Center Health Program. It signals potential gaps in accessibility and uptake for this specific high-risk population, warranting deeper evaluation from policymakers and rehabilitation providers like us.",
+     "limitation": "尚无摘要或全文，无法评估研究设计细节，可能存在因数据来源和人群特异性导致的局限。",
+     "limitationEn": "No abstract or full text is available to assess study design details; limitations may exist due to data source and population specificity.",
+     "tags": [
+      "research",
+      "workforce"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Archives of Physical Medicine and Rehabilitation"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

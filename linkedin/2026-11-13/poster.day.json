@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-13",
+  "lead": {
+    "categoryId": "manual-modality",
+    "claim": "Low-level laser therapy cuts carpal tunnel pain and boosts grip strength.",
+    "context": "*Why this matters*: An updated systematic review and meta-analysis of 16 RCTs found low-level laser therapy (LLLT) significantly reduced pain and improved grip strength in carpal tunnel syndrome.",
+    "journal": "AJPM&R",
+    "signal": 80,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43013892/"
+  },
+  "supporting": [
+    {
+      "categoryId": "orthopedic",
+      "claim": "VR cycling and traditional cycling are feasible for knee osteoarthritis.",
+      "context": "*Why this matters*: A feasibility RCT found that both VR-enhanced cycling and traditional cycling for 6 weeks were highly feasible and acceptable for people with knee osteoarthritis.",
+      "journal": "Physical therapy",
+      "tech": true,
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43016107/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Can a gamified robot help chronic stroke patients in the community?",
+      "context": "A longitudinal study assessed user experience with RehabCARES, a gamified robot system for motor and cognitive rehabilitation in chronic stroke patients.",
+      "journal": "medRxiv",
+      "tech": true,
+      "signal": 75,
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.10.26367762v1?rss=1"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Can XR games help with phantom limb pain, function, and prosthesis use?",
+      "context": "A systematic review explored the preliminary benefits of XR serious games for reducing phantom limb pain, improving functional mobility, and supporting prosthesis adoption after amputation.",
+      "journal": "Journal of Rehabilitation Medicine",
+      "signal": 70,
+      "url": "https://medicaljournalssweden.se/jrm/article/view/46784"
+    },
+    {
+      "categoryId": "pediatric",
+      "claim": "What barriers prevent children from starting rehabilitation services?",
+      "context": "This mixed-methods study investigated factors linked to the initiation of pediatric rehabilitation services, including sociodemographic characteristics and parental experiences.",
+      "journal": "Archives of PM&R",
+      "signal": 70,
+      "url": "https://www.archives-pmr.org/article/S0003-9993(26)00987-1/fulltext?rss=yes"
+    }
+  ]
+}

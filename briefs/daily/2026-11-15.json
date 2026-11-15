@@ -1,0 +1,185 @@
+{
+ "date": "2026-11-15",
+ "generatedAt": "2026-11-15T01:09:57.374Z",
+ "windowHours": 50,
+ "windowStart": "2026-11-14T01:32:58.597Z",
+ "windowEnd": "2026-11-15T01:09:55.897Z",
+ "lead": {
+  "titleZh": "卒中步态变异性：潜在跌倒风险预测指标，临床应关注",
+  "titleEn": "Stroke Gait Variability: A Potential Fall Risk Predictor, Clinical Attention Warranted",
+  "paragraphZh": "今日日报共包含6条内容，涉及3个专业领域，其中老年康复和手法理疗各贡献3条。最值得关注的是一项观察研究，探讨了卒中患者步态变异性与跌倒风险的关联，其curatedScore达到85分，提示临床对该指标应有更多认识。",
+  "paragraphEn": "Today's issue features 6 entries across 3 specialties, with geriatric rehabilitation and manual therapy each contributing 3. The most notable is an observational study with a curatedScore of 85, investigating the link between gait variability and fall risk in stroke patients, suggesting increased clinical awareness of this metric."
+ },
+ "stats": {
+  "events": 6,
+  "specialties": 3,
+  "multiSource": 0,
+  "sources": 6,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1794704988844-20",
+     "title": "Integrated Decision-Making Under Uncertainty in High-Performance Sport Support Systems",
+     "summary": "A narrative review proposes a framework for integrated decision-making in high-performance sport support systems, combining established decision principles with qualitative triage. It outlines five interdependent functions for integrated work and emphasizes athlete values, decision rights, and coaches' roles.",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01149-z",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-15T01:09:48.844Z",
+     "curatedScore": 70,
+     "curatedReason": "这篇综述为高水平运动支持系统中的决策制定提供了一个框架，强调了在不确定性下整合证据和专业判断的重要性。它能帮助你优化你的跨学科协作方式，更好地将科学推理应用于运动员的康复与表现管理。",
+     "titleZh": "高水平运动支持系统中不确定性下的整合决策 | 运动医学 - 开放",
+     "summaryZh": "一篇叙述性综述提出了一种高水平运动支持系统中整合决策的框架，结合了既定的决策原则和定性分类。它概述了整合工作的五个相互依赖的功能，并强调了运动员价值观、决策权和教练角色的重要性。",
+     "curatedReasonEn": "In high-performance sport support systems, you need to integrate established decision principles with qualitative triage, rather than relying on a single model. The framework provided by this review can help you optimize interdisciplinary collaboration and better integrate evidence with professional judgment under uncertainty.",
+     "limitation": "该框架仍是概念性的，其内容效度、可用性、分类一致性、实施负担和决策过程仍需进一步评估。",
+     "limitationEn": "The framework remains conceptual, and its content validity, usability, triage consistency, implementation burden, and decision processes require further evaluation.",
+     "tags": [
+      "research",
+      "athlete-performance"
+     ],
+     "studyDesign": "综述",
+     "journal": "Sports Medicine - Open"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1794669109877-7",
+     "title": "Gait variability as a predictor of fall risk in patients with stroke: A 6-month prospective cohort study with survival analysis.",
+     "summary": "In a 6-month prospective cohort study of 112 stroke patients, stride time variability (STV) at discharge, with an optimal cutoff of 3.40% (AUC 0.756, sensitivity 88.2%, specificity 53.8%), was identified as the sole independent predictor of post-discharge falls, outperforming conventional measures.",
+     "category": "geriatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43025304/",
+     "publishedAt": "2026-11-14T00:00:00.000Z",
+     "firstSeen": "2026-11-14T15:11:49.877Z",
+     "curatedScore": 85,
+     "curatedReason": "这项前瞻性队列研究表明，卒中患者出院时的步幅时间变异性（STV）是预测其出院后6个月内跌倒风险的独立指标，其3.40%的截断值可辅助早期风险识别。这提示你在临床实践中应常规评估STV，并对高风险患者实施有针对性的跌倒预防干预。",
+     "titleZh": "步态变异性作为卒中患者跌倒风险预测指标：一项6个月随访的队列研究和生存分析",
+     "summaryZh": "一项对112名卒中患者进行6个月随访的前瞻性队列研究显示，出院时的步幅时间变异性（STV），以3.40%为最佳截断值（AUC 0.756，敏感性88.2%，特异性53.8%），是出院后跌倒的唯一独立预测因子，优于其他常规测量指标。",
+     "curatedReasonEn": "This prospective cohort study indicates that stride time variability (STV) at discharge is an independent predictor of fall risk within 6 months post-discharge for stroke patients, with a 3.40% cutoff value aiding early risk identification. This suggests you should routinely assess STV in clinical practice and implement targeted fall prevention interventions for high-risk patients.",
+     "limitation": "该研究为单中心样本，可能限制了STV截断值的普适性，需要多中心验证。",
+     "limitationEn": "The study's single-center sample may limit the generalizability of the STV cutoff value, requiring multi-center validation.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Gait & posture"
+    },
+    {
+     "id": "news-1794704988844-22",
+     "title": "Routine physical function assessment may identify older adults at increased risk of dementia years before diagnosis",
+     "summary": "A commentary on a nested case-control study (Age Ageing 2026;55(4):afag062) suggests that routine assessment of gait speed, grip strength, and frailty may identify older adults at increased risk of dementia years before diagnosis, advocating for their inclusion in longitudinal monitoring.",
+     "category": "geriatric",
+     "source": "BJSM",
+     "sourceUrl": "https://ebn.bmj.com/content/early/2026/11/13/ebnurs-2026-104692",
+     "publishedAt": "2026-11-13T00:00:00.000Z",
+     "firstSeen": "2026-11-15T01:09:48.844Z",
+     "curatedScore": 70,
+     "curatedReason": "日常体能评估（如步速、握力和衰弱程度）不仅关乎身体健康，也可能预示认知功能。这项述评提示你，将这些评估纳入对老年人的常规监测，有望在痴呆诊断前数年识别高风险个体，为早期干预或延缓认知衰退争取时间。",
+     "titleZh": "常规身体功能评估或可在痴呆诊断前数年识别患病风险增加的老年人",
+     "summaryZh": "一项对巢式病例对照研究（Age Ageing 2026;55(4):afag062）的述评指出，常规评估步速、握力和衰弱程度可能在痴呆诊断前数年识别出患病风险增加的老年人，并倡导将其纳入长期监测。",
+     "curatedReasonEn": "Routine physical function assessments (e.g., gait speed, grip strength, and frailty) are not only about physical health but may also predict cognitive function. This commentary suggests incorporating these assessments into routine monitoring of older adults, potentially identifying high-risk individuals years before a dementia diagnosis, allowing time for early intervention or delaying cognitive decline.",
+     "limitation": "这是一篇述评文章，而非原始研究，因此其结论是基于对现有证据的解读。",
+     "limitationEn": "This is a commentary rather than an original research study, so its conclusions are based on an interpretation of existing evidence.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "frailty"
+     ],
+     "studyDesign": "述评",
+     "journal": "British Journal of Sports Medicine"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1794704988844-23",
+     "title": "Ultrasound-guided versus landmark-guided injections in musculoskeletal practice: a scoping review of clinical efficacy, educational needs, and economic considerations",
+     "summary": "A scoping review of 29 studies found ultrasound-guided (US) injections reliably improve placement accuracy and may provide short-term symptomatic benefit at selected sites (shoulder, knee, elbow). However, comparative clinical superiority at longer follow-up and cost-effectiveness remain undetermined.",
+     "category": "manual-modality",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10612-7",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-15T01:09:48.844Z",
+     "curatedScore": 75,
+     "curatedReason": "这份范围综述表明，超声引导注射可可靠提高注射准确性，并在特定部位提供短期症状缓解，但长期临床优越性和成本效益尚无定论。它提醒你，在将超声引导注射常规化之前，仍需权衡患者解剖特点、临床需求和经济因素。",
+     "titleZh": "超声引导与体表标志引导注射在肌肉骨骼实践中的对比：临床疗效、教育需求和经济考量范围综述",
+     "summaryZh": "一项对 29 项研究的范围综述发现，超声引导（US）注射可可靠地提高置入准确性，并在选定部位（肩、膝、肘）提供短期症状改善。然而，在较长随访期内的比较临床优越性和成本效益仍未确定。",
+     "curatedReasonEn": "This scoping review indicates that ultrasound-guided injections reliably improve placement accuracy and may offer short-term symptomatic relief at selected sites, but long-term clinical superiority and cost-effectiveness are not established. It reminds you to weigh patient anatomy, clinical requirements, and economic considerations before routinely adopting ultrasound-guided injections.",
+     "limitation": "纳入研究的方法学异质性高，且缺乏统一的经济学分析模型，限制了结果的综合性。",
+     "limitationEn": "High methodological heterogeneity among included studies and a lack of uniform economic analysis models limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "electro",
+      "shoulder",
+      "knee",
+      "elbow"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+     "id": "news-1794704988844-24",
+     "title": "Stakeholder priorities for rehabilitation to support functioning at home and work among people on sick leave due to low back pain: a group concept mapping study\n\t\t\t\t\t\t\t| Journal of Rehabilitation Medicine",
+     "summary": "A group concept mapping study (n=101) identified six stakeholder-prioritized clusters for low back pain rehabilitation for people on sick leave: self-management, physical training, workplace involvement, interdisciplinary coordination, individual support, and extended assessment. All clusters received high importance ratings.",
+     "category": "manual-modality",
+     "source": "J Rehabil Med",
+     "sourceUrl": "https://medicaljournalssweden.se/jrm/article/view/46346",
+     "publishedAt": "2026-11-11T00:00:00.000Z",
+     "firstSeen": "2026-11-15T01:09:48.844Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究清晰地界定了因腰痛病假人群对康复的优先需求，涵盖了自我管理、体能训练、工作场所参与等六大集群。它强调了以患者为中心、跨部门协调的康复模式，能够指导你优化对这类患者的综合康复策略，促进他们重返家庭和工作。",
+     "titleZh": "因腰痛请病假人群的康复利益相关者优先事项，以支持居家和工作功能：一项团体概念图研究",
+     "summaryZh": "一项团体概念图研究（n=101）确定了因腰痛请病假人群的六个利益相关者优先康复集群：自我管理、体能训练、工作场所参与、跨学科协调、个体支持和扩展评估。所有集群均获得高度重要性评价。",
+     "curatedReasonEn": "This study clearly defines the rehabilitation priorities for people on sick leave due to low back pain, covering six clusters including self-management, physical training, and workplace involvement. It emphasizes patient-centered, cross-sectoral coordinated rehabilitation models, which can guide you in optimizing comprehensive rehabilitation strategies for these patients, promoting their return to home and work.",
+     "limitation": "研究样本量较小，且参与者仅来自丹麦，结果的普适性可能受限。",
+     "limitationEn": "The study had a small sample size, and participants were only from Denmark, which may limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "spine",
+      "workforce"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of Rehabilitation Medicine"
+    },
+    {
+     "id": "news-1794669109877-23",
+     "title": "Validation of Video-based Motion Capture for Lower Body and Trunk Kinematics with Marker Augmentation",
+     "summary": "A study validated video-based motion capture with marker augmentation for lower body and trunk kinematics, suggesting its potential as a low-cost, non-invasive tool for movement analysis.",
+     "category": "manual-modality",
+     "source": "Disabil Rehabil",
+     "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2763492?af=R",
+     "publishedAt": "2026-11-13T12:13:57.000Z",
+     "firstSeen": "2026-11-14T15:11:49.877Z",
+     "curatedScore": 65,
+     "curatedReason": "视频捕捉技术结合标记物增强，在下肢和躯干运动学评估中显示出准确性，这提示我们，低成本、非侵入性的运动分析工具可能很快就能进入临床。在考虑购置昂贵设备前，不妨关注这类技术的成熟度。",
+     "titleZh": "带标记增强的视频运动捕捉技术在下肢和躯干运动学中的验证",
+     "summaryZh": "一项研究验证了带标记增强的视频运动捕捉技术在下肢和躯干运动学分析中的准确性，提示了其作为低成本、非侵入性运动分析工具的潜力。",
+     "curatedReasonEn": "Video-based motion capture with marker augmentation shows promise for accurate lower body and trunk kinematics. This suggests low-cost, non-invasive movement analysis tools might soon be viable for clinical use. Before investing in expensive equipment, keep an eye on how these technologies mature.",
+     "limitation": "该研究的局限性在于可能仅在特定实验室条件下进行验证，其在真实临床环境中的普适性和操作便捷性仍需进一步评估。",
+     "limitationEn": "The limitation of this study is that validation may have been conducted only under specific laboratory conditions, and its generalizability and operational convenience in real clinical settings still require further evaluation.",
+     "tags": [
+      "research",
+      "technology",
+      "assessment"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Measurement in Physical Education and Exercise Science"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}
