@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-15T17:16:07.560Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-11-15T22:58:23.197Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -92,9 +92,9 @@
           "titleZh": "ERAS理念下多学科干预对进行胃切除术的衰弱老年患者预后的影响：一项非随机前瞻性队列研究"
         }
       ],
-      "heat": 3.86,
-      "themeZh": "中风患者步态与平衡障碍的跌倒风险预测及早期识别",
-      "themeEn": "Stroke gait, balance, and fall prediction"
+      "heat": 3.55,
+      "themeZh": "中风患者步态变异与老年人跌倒及功能预后预测",
+      "themeEn": "Stroke gait, falls, and geriatric functional prediction"
     },
     {
       "id": "news-1794419798183-3",
@@ -165,9 +165,9 @@
           "titleZh": "膝关节疾病患者处方数字健康应用 (DiGA) 的使用体验：一项德国骨科护理的定性研究"
         }
       ],
-      "heat": 2.2,
-      "themeZh": "全球物理康复服务实践的障碍、趋势与人工智能应用",
-      "themeEn": "Rehabilitation service barriers, trends, AI"
+      "heat": 2.03,
+      "themeZh": "物理治疗实践中服务可及性、需求与AI应用研究",
+      "themeEn": "Physiotherapy practice: access, needs, AI"
     },
     {
       "id": "news-1793794659746-3",
@@ -223,9 +223,9 @@
           "titleZh": "脑瘫儿童功能康复中机器人步态外骨骼的益处与局限性：一项伞形综述"
         }
       ],
-      "heat": 1.65,
-      "themeZh": "神经康复中机器人与外骨骼辅助训练的疗效与用户体验",
-      "themeEn": "Robotic and exoskeleton neurorehabilitation efficacy, experience"
+      "heat": 1.52,
+      "themeZh": "机器人辅助技术在神经康复中的应用与用户体验",
+      "themeEn": "Robotic assistance in neurorehabilitation and user experience"
     },
     {
       "id": "news-1794389724088-1",
@@ -261,9 +261,9 @@
           "titleZh": "带标记增强的视频运动捕捉技术在下肢和躯干运动学中的验证"
         }
       ],
-      "heat": 1.39,
-      "themeZh": "基于传感器和计算机视觉的运动功能客观评估技术",
-      "themeEn": "Sensor and vision-based motion assessment"
+      "heat": 1.28,
+      "themeZh": "惯性与视觉系统在康复评估中的运动捕捉技术",
+      "themeEn": "IMU and vision-based motion capture"
     },
     {
       "id": "news-1794477441890-4",
@@ -318,34 +318,59 @@
           "titleZh": "超声引导的混合关节保护康复策略对类风湿关节炎患者的可行性、安全性和初步效果：一项前瞻性非随机概念验证研究"
         }
       ],
-      "heat": 1.38,
-      "themeZh": "超声引导下手动和物理疗法对肌骨疾病的治疗效用",
-      "themeEn": "Ultrasound-guided manual and physical therapies"
+      "heat": 1.27,
+      "themeZh": "激光、超声与干针等物理因子治疗肌骨疾病",
+      "themeEn": "Laser, ultrasound, dry needling for MSK"
     }
   ],
   "items": [
     {
-      "id": "news-1793540352240-2",
-      "title": "Can Clinicians Predict Which Patients Respond Best to a Specific Treatment? A Systematic Review of Low Back Pain Moderators in Primary Care.",
-      "summary": "A systematic review of 73 studies on low back pain moderators in primary care found a broad but superficial body of literature. While RCT quality was generally high, moderation analysis quality was poor, with no clearly important moderators identified across high-quality analyses. Promising moderators, such as graded exposure for those with high catastrophizing, require further testing.",
+      "id": "news-1793540352239-1",
+      "title": "Effects of Exercise Type and Duration on Pain, Function, and Quality of Life in Patients With Knee Osteoarthritis: A Systematic Review With Bayesian Network Meta-Analysis.",
+      "summary": "A network meta-analysis of 35 trials (N=3808) found that short-term combined aerobic and resistance exercise had the largest effects on pain (SMD = -0.937, low certainty), function (SMD = -0.590, low certainty), and quality of life (SMD = 0.663, low certainty) in knee osteoarthritis patients.",
       "category": "orthopedic",
       "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966898/",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966901/",
       "publishedAt": "2026-11-01T00:00:00.000Z",
-      "firstSeen": "2026-11-01T13:39:12.240Z",
-      "curatedScore": 70,
-      "curatedReason": "针对基层腰痛患者的治疗效应调节因素，这项系统综述发现文献广但不深。明确的重要调节因素尚未识别，即使是中等质量分析中发现的有前景调节因素（如分级暴露对高灾难化思维患者更有效）也需要进一步验证。别把它们过早写入常规临床路径。",
-      "titleZh": "临床医师能否预测哪些患者对特定治疗反应最佳？基层腰痛调节因素的系统综述",
-      "summaryZh": "一项针对基层腰痛治疗效应调节因素的系统综述（73 项研究）发现，文献广泛但深入不足。RCT 质量普遍较高，但调节分析质量较差，高质量分析未识别出明确的重要调节因素。部分有前景的调节因素（如分级暴露对高灾难化思维患者更有效）仍需进一步验证。",
-      "curatedReasonEn": "This systematic review on treatment effect moderators for low back pain in primary care found a broad but superficial body of literature. No clearly important moderators were identified, and even promising ones from fair-quality analyses (e.g., graded exposure for high catastrophizing) require further testing. Do not prematurely integrate these into routine clinical pathways.",
-      "limitation": "研究高度异质，多数分析事后进行，高质量分析未发现明确调节因素，研究多样性阻碍了荟萃分析。",
-      "limitationEn": "Studies were highly heterogeneous, most analyses were post-hoc, high-quality analyses found no clear moderators, and study diversity precluded meta-analysis.",
+      "firstSeen": "2026-11-01T13:39:12.239Z",
+      "curatedScore": 85,
+      "curatedReason": "这项高质量的NMA坐实了有氧和阻力训练，无论是单独还是结合，在短期内都能显著改善膝骨关节炎患者的疼痛、功能和生活质量，其中短期内结合训练效果最佳。在讨论KOA管理策略时，这能作为你向患者和同行推荐运动疗法的一线证据。",
+      "titleZh": "运动类型和持续时间对膝骨关节炎患者疼痛、功能和生活质量的影响：一项贝叶斯网络Meta分析系统综述",
+      "summaryZh": "一项包含35项试验（3808名患者）的贝叶斯网络Meta分析发现，短期内（≤12周）结合有氧和阻力训练对膝骨关节炎患者的疼痛（SMD = -0.937）、功能（SMD = -0.590）和生活质量（SMD = 0.663）改善效果最大，但证据确定性较低。",
+      "curatedReasonEn": "This high-quality NMA confirms that aerobic and resistance exercise, alone or combined, significantly improves pain, function, and quality of life for knee OA patients in the short term, with combined exercise showing the largest effect. Use this as frontline evidence when advocating for exercise therapy in KOA management discussions with patients and peers.",
+      "limitation": "对于长期运动干预的临床意义，证据有限且确定性较低。",
+      "limitationEn": "Evidence regarding the clinical significance of long-term exercise interventions was limited and of low certainty.",
       "tags": [
         "research",
-        "spine"
+        "knee"
       ],
       "studyDesign": "系统综述",
       "journal": "The Journal of orthopaedic and sports physical therapy"
+    },
+    {
+      "id": "news-1793540352238-0",
+      "title": "First-Hand Experience and the Value of Telerehabilitation for Chronic Knee Pain: A Discrete Choice Experiment Nested in a Randomized Controlled Trial.",
+      "summary": "Australian adults (N=319) with chronic knee pain who experienced telerehabilitation were willing to pay AU$87.49 (95% CI: 72.83, 102.14) more for telerehabilitation consultations than those who received in-person care.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42966905/",
+      "publishedAt": "2026-11-01T00:00:00.000Z",
+      "firstSeen": "2026-11-01T13:39:12.238Z",
+      "curatedScore": 75,
+      "curatedReason": "这项在澳大利亚进行的研究揭示，亲身体验过远程康复的患者，比接受面对面治疗的患者，更愿意使用和支付远程康复服务。这提示了临床实践中提升远程康复接受度的潜在路径。",
+      "titleZh": "亲身体验与远程康复对慢性膝关节疼痛的价值：一项嵌套在随机对照试验中的离散选择实验",
+      "summaryZh": "一项在澳大利亚进行的包含319名慢性膝关节疼痛成人患者的研究发现，亲身体验过远程康复的患者，比接受面对面治疗的患者，愿意为远程康复咨询支付多AU$87.49 (95% CI: 72.83, 102.14)。",
+      "curatedReasonEn": "This Australian study reveals that patients with first-hand experience of telerehabilitation were more willing to use and pay for it than those who received in-person care. This suggests potential avenues for improving telerehabilitation adoption in clinical practice.",
+      "limitation": "本研究的参与者均已完成一项RCT，可能存在基线偏倚。",
+      "limitationEn": "Participants in this study had all completed an RCT, which might introduce baseline bias.",
+      "tags": [
+        "research",
+        "knee",
+        "telehealth"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "The Journal of orthopaedic and sports physical therapy",
+      "tech": true
     },
     {
       "id": "news-1793902062548-8",
