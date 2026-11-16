@@ -1,0 +1,13 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-16T01:12:29.615Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Artificial intelligence-assisted assessment of the forward roll in the Fundamental Motor Skills in Sport (FUS) test: agreement with expert consensus, inter-rater reliability, and rater workload",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02232-4"
+    }
+  ]
+}
