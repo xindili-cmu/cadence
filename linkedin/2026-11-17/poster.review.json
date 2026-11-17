@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-17T04:03:35.328Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "From \"Tech Fear\" to Digital Self-Efficacy: A COM-B and TDF Analysis of Tele-Exercise Engagement in Older Adults at Risk of Falls",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.15.26367805v1?rss=1"
+    },
+    {
+      "slide": 2,
+      "title": "Education and training pathways for advanced musculoskeletal physiotherapists: a qualitative study investigating competency.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43037201/"
+    },
+    {
+      "slide": 3,
+      "title": "Physical calibration and signal periodic updates to synchronize IMUs for 5-day continuous knee flexion tracking",
+      "url": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368098v1?rss=1"
+    },
+    {
+      "slide": 4,
+      "title": "Cellular health beyond body composition: phase angle suitability for breast cancer patients undergoing physical training: a randomised trial",
+      "url": "https://link.springer.com/article/10.1007/s11332-026-01994-1"
+    },
+    {
+      "slide": 5,
+      "title": "Increasing Efficiency in Resistance Training? Exploring a Minimalistic Approach in Supramaximal Accentuated Eccentric Loading: A Narrative Review",
+      "url": "https://link.springer.com/article/10.1007/s40279-026-02578-2"
+    }
+  ]
+}

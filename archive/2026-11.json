@@ -3462,6 +3462,99 @@
         "reimbursement",
         "regulation"
       ]
+    },
+    {
+      "id": "news-1794888189726-17",
+      "title": "Physical calibration and signal periodic updates to synchronize IMUs for 5-day continuous knee flexion tracking",
+      "summary": "A study with 15 volunteers demonstrated that combining physical calibration with signal-based periodic updates effectively synchronized wearable IMUs for 5-day continuous knee flexion tracking, achieving high correlation (r ≥ 0.971) and low RMSD (≤ 6.2 degrees) compared to motion capture, enabling accurate real-world kinematic monitoring.",
+      "category": "orthopedic",
+      "source": "medRxiv",
+      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.14.26368098v1?rss=1",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "firstSeen": "2026-11-17T04:03:09.726Z",
+      "curatedScore": 70,
+      "curatedReason": "对膝关节屈曲的长期、连续性运动学追踪，这项方法在真实世界中有可能实现。这项小样本研究提示，你也许能通过物理校准与信号更新结合的方式，让可穿戴 IMU 系统达到长达 5 天的精确度，相关性 (r ≥ 0.971) 和 RMSD (≤ 6.2 度) 都表现不错。",
+      "titleZh": "用于 5 天连续膝关节屈曲跟踪的 IMU 物理校准和信号周期性更新同步方法",
+      "summaryZh": "一项涉及 15 名志愿者的研究表明，将物理校准与基于信号的周期性更新相结合，可有效同步可穿戴惯性测量单元（IMU），实现长达 5 天的膝关节屈曲连续跟踪。与运动捕捉相比，该方法实现了高相关性（r ≥ 0.971）和低均方根差（RMSD ≤ 6.2 度），从而实现准确的真实世界运动学监测。",
+      "curatedReasonEn": "Long-term, continuous kinematic tracking of knee flexion might be achievable in real-world settings with this method. This small-sample study suggests you could achieve accurate 5-day tracking with wearable IMU systems by combining physical calibration with signal updates, showing good correlation (r ≥ 0.971) and low RMSD (≤ 6.2 degrees).",
+      "limitation": "研究对象为健康志愿者，在临床患者人群中，长期穿戴 IMU 的依从性和同步精度可能需要进一步验证。",
+      "limitationEn": "The study was conducted on healthy volunteers; adherence to long-term IMU wear and synchronization accuracy in clinical patient populations may require further validation.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "观察研究",
+      "tech": true
+    },
+    {
+      "id": "news-1794888189726-18",
+      "title": "Cellular health beyond body composition: phase angle suitability for breast cancer patients undergoing physical training: a randomised trial",
+      "summary": "A randomized trial with 37 breast cancer patients found no significant between-group differences in phase angle (PhA) or body composition between home-based and hospital-supervised high-intensity training. Changes in PhA (p < 0.0001), BMI (p = 0.0377), fat mass (p = 0.0387), and muscle mass (p = 0.0449) were primarily treatment-dependent, supporting structured home-based exercise and PhA as an independent cellular health marker.",
+      "category": "orthopedic",
+      "source": "Sport Sci Health",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s11332-026-01994-1",
+      "publishedAt": "2026-11-13T00:00:00.000Z",
+      "firstSeen": "2026-11-17T04:03:09.726Z",
+      "curatedScore": 70,
+      "curatedReason": "这项 RCT 表明，对乳腺癌患者而言，无论是居家运动还是医院监督下的高强度训练，身体成分和血参数的变化主要取决于化疗而非运动模式。这意味着你可以更灵活地为乳腺癌患者开具运动处方，同时相位角（PhA）可作为细胞和代谢状态的独立指标。",
+      "titleZh": "身体成分之外的细胞健康：相位角在接受体育训练的乳腺癌患者中的适用性：一项随机试验",
+      "summaryZh": "一项对 37 名乳腺癌患者进行的随机试验发现，居家运动组和医院监督下高强度训练组在相位角（PhA）或身体成分方面没有显著组间差异。相位角（p < 0.0001）、BMI（p = 0.0377）、脂肪量（p = 0.0387）和肌肉量（p = 0.0449）的变化主要与治疗相关，支持结构化居家运动和将 PhA 作为独立的细胞健康标志物。",
+      "curatedReasonEn": "This RCT suggests that for breast cancer patients, changes in body composition and blood parameters are primarily chemotherapy-dependent, not exercise modality-dependent, for both home-based and supervised high-intensity training. This implies greater flexibility in prescribing exercise for breast cancer patients, with phase angle (PhA) serving as an independent indicator of cellular and metabolic status.",
+      "limitation": "研究样本量较小（37 人），且居家组和医院组在训练监督强度和环境上存在差异，可能影响结果的可比性。",
+      "limitationEn": "The study had a small sample size (37 participants), and differences in supervision intensity and environment between home-based and hospital-based groups may affect comparability of results.",
+      "tags": [
+        "research",
+        "oncology",
+        "exercise-physiology"
+      ],
+      "studyDesign": "RCT",
+      "journal": "Sport Sciences for Health"
+    },
+    {
+      "id": "news-1794888189727-21",
+      "title": "Increasing Efficiency in Resistance Training? Exploring a Minimalistic Approach in Supramaximal Accentuated Eccentric Loading: A Narrative Review",
+      "summary": "This narrative review synthesizes evidence on supramaximal accentuated eccentric loading (SAEL), indicating its potential to promote strength gains with low volumes (e.g., 2–4 sets of 3–8 repetitions per week) due to high eccentric mechanical stimulus. However, direct comparisons with traditional resistance training are sparse, and evidence on physiological adaptations primarily comes from eccentric-only training.",
+      "category": "sports",
+      "source": "Sports Medicine",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02578-2",
+      "publishedAt": "2026-11-14T00:00:00.000Z",
+      "firstSeen": "2026-11-17T04:03:09.727Z",
+      "curatedScore": 70,
+      "curatedReason": "超最大离心负荷 (SAEL) 训练在提高力量方面可能有效，即便训练容量很低（每周 2-4 组，每组 3-8 次）。如果你在寻找一种高机械刺激、低训练量的方案，这可能值得尝试。但请注意，目前与传统阻力训练的直接比较研究还很有限。",
+      "titleZh": "提高阻力训练效率？探索超最大离心负荷中的极简主义方法：一项叙述性综述",
+      "summaryZh": "本叙述性综述综合了超最大离心负荷（SAEL）的证据，表明其通过高离心机械刺激，有望以低训练量（例如，每周 2-4 组，每组 3-8 次）促进力量增长。然而，与传统阻力训练的直接比较稀少，且生理适应性证据主要来自纯离心训练。",
+      "curatedReasonEn": "Supramaximal accentuated eccentric loading (SAEL) training may be effective for strength gains, even with low volumes (e.g., 2–4 sets of 3–8 repetitions per week). If you're looking for a high mechanical stimulus with low training volume, this might be worth exploring. However, direct comparisons with traditional resistance training are still sparse.",
+      "limitation": "该综述是一篇叙述性综述，可能存在选择偏倚，且大部分证据来自高强度离心训练而非 SAEL 干预本身，缺乏与传统阻力训练的直接比较。",
+      "limitationEn": "This is a narrative review, which may be subject to selection bias, and much of the evidence is derived from high-intensity eccentric-only training rather than SAEL interventions, lacking direct comparisons with traditional resistance training.",
+      "tags": [
+        "research",
+        "resistance-training",
+        "eccentric-loading"
+      ],
+      "studyDesign": "综述",
+      "journal": "Sports Medicine"
+    },
+    {
+      "id": "news-1794888189727-20",
+      "title": "BJSM blog - social media's leading SEM voice -",
+      "summary": "The BJSM blog provides recent short articles on sports and exercise medicine, including hamstring strain injuries, traditional Chinese exercises for MSK disorders, CARTA algorithm for Achilles rupture, mSIT+ for concussion, and exercise guidelines.",
+      "category": "sports",
+      "source": "BJSM",
+      "sourceUrl": "https://blogs.bmj.com/bjsm/",
+      "publishedAt": "2026-11-10T05:00:58.000Z",
+      "firstSeen": "2026-11-17T04:03:09.727Z",
+      "curatedScore": 65,
+      "curatedReason": "BJSM 的这篇博客文章汇编了运动医学和骨骼肌肉健康的最新短文，但记住这只是一个概览。它适合你快速了解近期的热点话题，比如腘绳肌损伤、跟腱断裂算法和脑震荡评估，但要深究某个主题，你还得去查阅原始文献。",
+      "titleZh": "BJSM 博客——社交媒体领先的运动医学之声",
+      "summaryZh": "《英国运动医学杂志》博客提供关于运动与运动医学的最新短文，涵盖腘绳肌拉伤、中医运动对肌肉骨骼疾病的帮助、跟腱断裂的 CARTA 算法、脑震荡的 mSIT+ 评估以及运动指南等。",
+      "curatedReasonEn": "This BJSM blog post compiles recent short articles on sports and exercise medicine, but remember it's just an overview. It's useful for a quick catch-up on hot topics like hamstring strain injuries, Achilles rupture algorithms, and concussion assessment, but you'll need to chase down original sources for deeper dives.",
+      "tags": [
+        "news",
+        "hamstring",
+        "concussion",
+        "achilles"
+      ],
+      "journal": "British Journal of Sports Medicine"
     }
   ]
 }
