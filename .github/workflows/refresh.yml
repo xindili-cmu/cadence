@@ -161,6 +161,8 @@ jobs:
           LATEST=$(ls briefs/daily | grep -E '^[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' | sort | tail -1 | cut -d. -f1)
           node scripts/linkedin-poster-claims.js "$LATEST"
           node scripts/linkedin-poster.js "$LATEST"
+          # PDF as lossless PNG so the morning task can attach it in-page (linkedin.com CSP blocks fetch, allows <img>)
+          node scripts/pdf-to-png.js "$LATEST"
 
       # Field-completeness check on the edition we just generated (missing
       # titleZh/summaryZh, half-filled limitation pairs). Non-blocking on
