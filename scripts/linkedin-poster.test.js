@@ -17,7 +17,7 @@
 const fs = require('fs');
 const path = require('path');
 const { loadTaxonomy, validateDay, contrast, buildPdf } = require('./linkedin-poster');
-const { checkAgainstSource } = require('./linkedin-poster-claims');
+const { checkAgainstSource, alignCopies, duplicateErrors } = require('./linkedin-poster-claims');
 
 let fail = 0;
 const ok = (cond, msg) => { console.log(`${cond ? '  ✓' : '  ✗'} ${msg}`); if (!cond) fail++; };
@@ -52,6 +52,21 @@ ok(checkAgainstSource({ claim: 'Group classes for knee arthritis can run inside 
 ok(checkAgainstSource({ claim: 'Group classes help 120 patients.', context: 'x' }, src).some((e) => /"120"/.test(e)), 'invented number is rejected');
 ok(checkAgainstSource({ claim: 'Group classes help knees.', context: 'An RCT in Brazil.' }, src).some((e) => /RCT/.test(e)), 'unstated study design is rejected');
 ok(checkAgainstSource({ claim: 'Implementation of group-based health education and exercise for knee osteoarthritis', context: 'x' }, src).some((e) => /raw title/.test(e)), 'title-as-claim is rejected');
+
+console.log('\nP3b. copy belongs to its own paper (2026-11-18: lead shipped with paper 2\'s claim)');
+const stroke = { title: 'Network-Based Brain Stimulation: Targeting the Frontoparietal Network for Cognitive Rehabilitation After Stroke Systematic Review and Meta-Analysis.', summary: 'A systematic review and meta-analysis of 21 RCTs found that non-invasive brain stimulation (NIBS) targeting the frontoparietal network improved executive function, working memory, and attention in stroke survivors, with superior outcomes when combined with cognitive training.' };
+const spect = { claim: 'SPECT-CT may complement other imaging in chronic low back pain.', context: 'This study explored how SPECT-CT findings relate to MRI and CT results in patients with chronic low back pain.' };
+const nibs = { claim: 'Brain stimulation plus cognitive training may aid cognition after stroke.', context: 'This review looked at non-invasive brain stimulation of the frontoparietal network in stroke survivors.' };
+ok(checkAgainstSource(spect, stroke).some((e) => /do not match this paper/.test(e)), 'another paper\'s copy on this paper is rejected');
+ok(checkAgainstSource(nibs, stroke).length === 0, 'the paper\'s own copy passes');
+const reply = [2, 3, 4, 5].map((i) => ({ i, claim: `claim ${i}`, context: `context ${i}` }));
+const al = alignCopies(reply, 5);
+ok(al.errs.some((e) => /^paper 1 is missing/.test(e)) && !al.fresh[0].claim, 'a reply that omits paper 1 is an error, never filled from array position');
+ok(al.fresh[1].claim === 'claim 2' && al.fresh[4].claim === 'claim 5', 'the other papers map by their "i" number');
+ok(alignCopies([{ i: '1', claim: 'a' }], 1).errs.length === 0, 'a string "i" is accepted');
+ok(alignCopies([{ i: 1, claim: 'a' }, { i: 1, claim: 'b' }], 1).errs.some((e) => /2 times/.test(e)), 'a duplicated "i" is an error');
+ok(duplicateErrors([spect, spect, nibs]).some((e) => /^paper 1 claim is identical to paper 2/.test(e)), 'two papers with the same claim are rejected');
+ok(duplicateErrors([spect, nibs]).length === 0, 'distinct copy passes the duplicate check');
 
 console.log('\nP4. PDF writer');
 const px = (w, h) => ({ width: w, height: h, rgba: Buffer.alloc(w * h * 4, 255) });

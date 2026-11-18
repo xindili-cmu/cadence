@@ -96,6 +96,55 @@ function checkAgainstSource(copy, it) {
   const tw = words(decode(it.title)), cw = words(copy.claim || '');
   const share = cw.size ? [...cw].filter((w) => tw.has(w)).length / cw.size : 0;
   if (cw.size >= 4 && share >= 0.75) errs.push(`claim reuses the raw title (${Math.round(share * 100)}% of its words come from it) — rewrite it as a plain-language clinical claim`);
+  // Is this copy about THIS paper at all? (2026-11-18: paper 1 shipped with paper
+  // 2's claim — every other rule passed.) Backtest over 35 editions: genuine copy
+  // scores >= 0.53, copy paired with the wrong paper <= 0.54 only for same-topic
+  // neighbours and 0.00-0.08 for the two real mix-ups; 0.35 separates them.
+  const rel = relevance(copy, it);
+  if (rel != null && rel < MIN_RELEVANCE) errs.push(`claim/context do not match this paper's title or summary (only ${Math.round(rel * 100)}% of their key words appear there) — you may have written another paper's copy here; rewrite it from THIS paper's text`);
+  return errs;
+}
+
+const MIN_RELEVANCE = 0.35;
+const STOP = new Set('this that with from were was are have has had study studies patients patient may can could should would into than then them they their there these those what when which while who why how for the and but not out about after before between during more most less also only over under such very been being does did its use used using among across within without looked explored examined found shows show showed help helps improve improves improved consider matters adults people care'.split(' '));
+const stems = (s) => new Set(decode(s).toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/[\s-]+/).filter((w) => w.length > 3 && !STOP.has(w)).map((w) => w.slice(0, 5)));
+/** Share of the copy's key words that occur in the paper's own source text (null = too short to judge). */
+function relevance(copy, it) {
+  const c = stems(`${copy.claim || ''} ${copy.context || ''}`);
+  if (c.size < 3) return null;
+  const s = stems(sourceText(it));
+  return [...c].filter((w) => s.has(w)).length / c.size;
+}
+
+/**
+ * Map the model's reply onto the papers STRICTLY by its "i" number. Never fall
+ * back to array position: when a reply omits paper 1, position 0 holds paper 2's
+ * copy and the lead silently gets another paper's claim (2026-09-25, 2026-11-18).
+ */
+function alignCopies(got, n) {
+  const errs = [];
+  const fresh = Array.from({ length: n }, (_, k) => {
+    const hits = (Array.isArray(got) ? got : []).filter((p) => p && Number(p.i) === k + 1);
+    if (hits.length === 1) return hits[0];
+    errs.push(`paper ${k + 1} ${hits.length ? `was returned ${hits.length} times` : 'is missing from your reply'} — return every paper exactly once with its own "i" number`);
+    return {};
+  });
+  return { fresh, errs };
+}
+
+/** No two papers may carry the same claim or context. */
+function duplicateErrors(copies) {
+  const errs = [];
+  const norm = (s) => decode(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  for (const k of ['claim', 'context']) {
+    for (let a = 0; a < copies.length; a++) for (let b = a + 1; b < copies.length; b++) {
+      const x = norm((copies[a] || {})[k]), y = norm((copies[b] || {})[k]);
+      if (x && x === y) {
+        errs.push(`paper ${a + 1} ${k} is identical to paper ${b + 1}'s — each paper needs its own ${k}, written from its own text`);
+        errs.push(`paper ${b + 1} ${k} is identical to paper ${a + 1}'s — each paper needs its own ${k}, written from its own text`);
+      }
+    }
+  }
   return errs;
 }
 
@@ -164,6 +213,7 @@ function buildDay(date, items, copies) {
 function allErrors(day, items, copies, TAX) {
   const errs = validateDay(day, TAX).map((e) => e.replace(/^lead\./, 'paper 1 ').replace(/^supporting\[(\d)\]\./, (_, d) => `paper ${+d + 2} `));
   items.forEach((it, k) => { for (const e of checkAgainstSource(copies[k] || {}, it)) errs.push(`paper ${k + 1} ${e}`); });
+  errs.push(...duplicateErrors(copies));
   return errs;
 }
 
@@ -201,14 +251,16 @@ async function main() {
       const raw = await callLLM(SYSTEM, userPrompt(items, feedback), { json: true });
       if (!raw) throw new Error(`LLM (${LLM_PROVIDER}) returned nothing`);
       const got = parseJson(raw);
-      const fresh = items.map((_, k) => got.find((p) => p.i === k + 1) || got[k] || {});
+      const aligned = alignCopies(got, items.length);
+      const fresh = aligned.fresh;
       copies = items.map((_, k) => locked[k] || fresh[k]);
       day = buildDay(ed.date, items, copies);
-      errs = allErrors(day, items, copies, TAX);
+      // an alignment error only matters for a paper that still needs copy
+      errs = [...aligned.errs.filter((e) => !locked[+e.match(/^paper (\d+) /)[1] - 1]), ...allErrors(day, items, copies, TAX)];
       items.forEach((_, k) => { if (!locked[k] && !errs.some((e) => e.startsWith(`paper ${k + 1} `))) locked[k] = copies[k]; });
       if (!errs.length) break;
       console.warn(`  attempt ${attempt}: ${errs.length} rule violation(s)\n    - ${errs.join('\n    - ')}`);
-      feedback = errs.map((e) => `- ${e}`).join('\n') + '\nShorten every over-long claim well below its limit. Cut words, do not just trim a few letters.';
+      feedback = errs.map((e) => `- ${e}`).join('\n') + '\nShorten every over-long claim well below its limit. Cut words, do not just trim a few letters.\nKeep each paper\'s original "i" number and return ALL papers.';
     }
     if (errs.length) throw new Error(`draft still breaks ${errs.length} rule(s) after retry:\n  - ${errs.join('\n  - ')}`);
 
@@ -229,6 +281,6 @@ async function main() {
   }
 }
 
-module.exports = { checkAgainstSource, resolveJournal, buildDay, parseJson };
+module.exports = { checkAgainstSource, resolveJournal, buildDay, parseJson, alignCopies, duplicateErrors, relevance };
 
 if (require.main === module) main().catch((e) => { console.error('✗ linkedin-poster-claims:', e.message); process.exit(1); });
