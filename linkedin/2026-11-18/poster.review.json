@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-18T03:02:31.572Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Network-Based Brain Stimulation: Targeting the Frontoparietal Network for Cognitive Rehabilitation After Stroke Systematic Review and Meta-Analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43042673/"
+    },
+    {
+      "slide": 2,
+      "title": "Comparative diagnostic utility of SPECT-CT versus MRI and CT in chronic low back pain.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43043457/"
+    },
+    {
+      "slide": 3,
+      "title": "Injury risk and physical therapy utilization following knee surgery in U.S. Army soldiers: a comparison of military and non-military treatment facilities.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43038873/"
+    },
+    {
+      "slide": 4,
+      "title": "Aqua Steps: A Feasibility Study of a new Aquatic Exercise Therapy Intervention for Falls Prevention in Older Adults.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43043067/"
+    },
+    {
+      "slide": 5,
+      "title": "Who am I now? Experienced changes of occupational identity after spinal cord injury.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43043308/"
+    }
+  ]
+}
