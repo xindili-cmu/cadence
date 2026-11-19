@@ -1,0 +1,662 @@
+{
+ "date": "2026-11-19",
+ "generatedAt": "2026-11-19T02:43:43.202Z",
+ "windowHours": 26,
+ "windowStart": "2026-11-18T03:02:08.570Z",
+ "windowEnd": "2026-11-19T02:43:25.112Z",
+ "lead": {
+  "titleZh": "卒中远端上肢功能恢复：经颅时间干涉刺激的 RCT 结果积极，支持作为新干预手段",
+  "titleEn": "Stroke Distal Upper Limb Recovery: Positive RCT Results for Transcranial Temporal Interference Stimulation",
+  "paragraphZh": "今日我们共筛选出 26 篇条目，其中有 2 篇评分高达 85 分。其中一篇 RCT 针对卒中后远端上肢功能恢复，利用靶向齿状核经颅时间干涉刺激，呈现出积极结果，这为临床 PT 提供了一个潜在的新干预方向。另一篇系统综述兼 Meta 分析则聚焦于动作观察疗法在痴呆或认知障碍患者中的疗效，也值得关注。",
+  "paragraphEn": "Today's curation includes 26 entries, with two scoring 85. A standout RCT shows positive results for targeted dentate nucleus transcranial temporal interference stimulation in stroke patients' distal upper limb recovery, indicating a promising new intervention. Additionally, a systematic review and meta-analysis on action observation therapy in dementia or cognitively impaired patients warrants attention."
+ },
+ "stats": {
+  "events": 26,
+  "specialties": 8,
+  "multiSource": 0,
+  "sources": 13,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1795056196846-19",
+     "title": "Aerobic and aerobic–cognitive training in knee osteoarthritis following acute exercise intensity selection: a two-phase randomised controlled trial protocol",
+     "summary": "This two-phase randomized controlled trial protocol will investigate aerobic and aerobic-cognitive training in knee osteoarthritis, aiming to select optimal exercise intensity (55%, 65%, or 75% HRR) based on acute sensory and hemodynamic responses (N=60 in Phase I) and evaluate their efficacy against physical-agent therapy (N=108 in Phase II) on pain (primary outcome: NRS at 12 weeks).",
+     "category": "orthopedic",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02254-y",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.846Z",
+     "curatedScore": 75,
+     "curatedReason": "这项RCT方案意在找到膝骨关节炎患者有氧训练的最佳强度（55%、65%或75% HRR），并结合认知训练。若未来结果积极，你或许能为患者制定更精准的个性化运动处方，但目前仍是研究的早期阶段。",
+     "titleZh": "膝骨关节炎患者急性运动强度选择后的有氧和有氧-认知训练：一项两阶段随机对照试验方案",
+     "summaryZh": "这项两阶段随机对照试验方案将研究膝骨关节炎患者的有氧和有氧-认知训练。研究旨在根据急性感觉和血流动力学反应选择最佳运动强度（I期60名受试者），并在II期评估其对疼痛（12周NRS为主要结局）的疗效，共招募108名受试者，与物理因子治疗进行比较。",
+     "curatedReasonEn": "This trial protocol aims to optimize exercise intensity for knee osteoarthritis and explore the potential of cognitive training combined with aerobic exercise. It highlights the role of pain processing, sensory responses, and brain hemodynamics in KOA rehabilitation, with future results potentially informing more personalized exercise prescriptions.",
+     "limitation": "作为一项试验方案，尚未获得实际结果，其结论和临床意义仍待未来研究验证。",
+     "limitationEn": "As a trial protocol, no actual results are available yet, and its conclusions and clinical implications await future validation.",
+     "tags": [
+      "research",
+      "knee",
+      "exercise-therapy"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1795056196847-22",
+     "title": "A systematic review of robotic hip exoskeletons for gait rehabilitation: from design to clinical evidence",
+     "summary": "A systematic review of 19 human subject studies (2015-2025) on robotic hip exoskeletons for gait rehabilitation found reported improvements in walking speed, step length, and symmetry across populations, with some studies showing reductions in metabolic cost and improved functional mobility. However, evidence for sustained clinical impact remains limited.",
+     "category": "orthopedic",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02222-0",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 75,
+     "curatedReason": "这项系统综述总结了髋关节外骨骼机器人在步态康复中的应用进展，肯定了其在改善步速、步长和对称性方面的短期益处。它为神经康复物理治疗师提供了当前技术局限性（标准化欠缺、成本高、真实世界可转移性差）的清晰认识，指导未来在临床实践中更审慎地应用这些设备。",
+     "titleZh": "用于步态康复的机器人髋关节外骨骼：从设计到临床证据的系统综述",
+     "summaryZh": "一项对19项关于机器人髋关节外骨骼步态康复研究（2015-2025）的系统综述发现，在不同人群中，步速、步长和对称性均有改善，部分研究显示代谢成本降低和功能活动度提高。然而，支持长期临床效果的证据仍有限。",
+     "curatedReasonEn": "This systematic review summarizes advancements in robotic hip exoskeletons for gait rehabilitation, affirming their short-term benefits in improving walking speed, step length, and symmetry. It provides neurorehabilitation physical therapists with a clear understanding of current technical limitations (lack of standardization, high costs, poor real-world transferability), guiding more judicious application of these devices in clinical practice.",
+     "limitation": "尽管报告了改善，但证据主要来自短期和受控环境研究，尚缺乏支持长期临床影响的证据，且存在标准化指标和成本可及性等挑战。",
+     "limitationEn": "Although improvements were reported, the evidence primarily comes from short-term and controlled environment studies, lacking evidence to support sustained clinical impact, and challenges such as standardized metrics and cost accessibility remain.",
+     "tags": [
+      "research",
+      "stroke",
+      "parkinson",
+      "spinal-cord"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Journal of NeuroEngineering and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1794987775436-0",
+     "title": "Patients treated with rehabilitation alone after anterior cruciate ligament injury display greater muscle strength symmetry, yet lower absolute muscle strength normalized to bodyweight compared to reconstruction: A Cross-sectional study of 3,093 patients.",
+     "summary": "A cross-sectional study of 3,093 patients found that those treated with rehabilitation alone for ACL injury had greater muscle strength symmetry but lower absolute muscle strength normalized to bodyweight compared to the ACL reconstruction group.",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43044517/",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-18T07:42:55.436Z",
+     "curatedScore": 75,
+     "curatedReason": "这项大型横断面研究提示，单纯康复治疗的 ACL 损伤患者，肌力对称性更好，但绝对肌力（矫正体重后）低于重建组。评估非手术路径时，请注意权衡这种差异。",
+     "titleZh": "3,093 例患者的横断面研究：ACL 损伤后仅接受康复治疗者比重建者显示出更好的肌力对称性，但绝对肌力（矫正体重后）更低",
+     "summaryZh": "一项对 3,093 例 ACL 损伤患者的横断面研究显示，仅接受康复治疗的患者在所有随访中肌力对称性更好，但除了 10 周时的覥绳肌力外，未受伤肢体的绝对肌力（体重标准化后）均低于重建组。",
+     "curatedReasonEn": "This large cross-sectional study suggests that ACL injury patients treated with rehabilitation alone exhibit better muscle strength symmetry but lower absolute strength (normalized to bodyweight) compared to the reconstruction group. When evaluating non-operative pathways, consider this trade-off.",
+     "limitation": "这是一项回顾性横断面研究，无法建立因果关系，且患者分组受年龄和活动水平影响，存在选择偏倚。",
+     "limitationEn": "This is a retrospective cross-sectional study, which cannot establish causality, and patient grouping was influenced by age and activity level, introducing selection bias.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    },
+    {
+     "id": "news-1795056196847-20",
+     "title": "Reported Approaches to Vaginal Pessary Use for Treating Pelvic Organ Prolapse in Women: A Secondary Analysis of Randomised Controlled Trials",
+     "summary": "A secondary analysis of 14 RCTs on vaginal pessary use for pelvic organ prolapse (POP) found significant variation and incompleteness in reporting intervention components across TIDieR domains, hindering reproducibility in clinical practice. Only one study reported all TIDieR domains.",
+     "category": "orthopedic",
+     "source": "Int Urogynecol J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06907-x",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这项二次分析强调了目前盆腔器官脱垂（POP）阴道子宫托干预RCTs报告细节的不足，影响了其在临床实践中的可复制性。它提醒临床物理治疗师和研究者，未来试验应更全面地描述子宫托的类型、使用方法和联合治疗，以提高证据质量和转化效率。",
+     "titleZh": "女性盆腔器官脱垂阴道子宫托使用方法报告分析：随机对照试验的二次分析",
+     "summaryZh": "一项针对盆腔器官脱垂（POP）阴道子宫托使用的14项RCT的二次分析发现，干预措施的报告在TIDieR领域存在显著差异和不完整性，影响了临床实践的可复制性。仅一项研究报告了所有TIDieR领域。",
+     "curatedReasonEn": "This secondary analysis highlights inadequate reporting of vaginal pessary intervention details in current RCTs for pelvic organ prolapse (POP), hindering reproducibility in clinical practice. It reminds physical therapists and researchers to comprehensively describe pessary types, usage, and combined treatments in future trials to enhance evidence quality and translation.",
+     "limitation": "该研究关注的是RCTs中子宫托干预报告的完整性，而非干预本身的疗效，因此不能直接提供子宫托治疗POP的临床证据强度。",
+     "limitationEn": "This study focused on the completeness of reporting pessary interventions in RCTs, not the efficacy of the interventions themselves, so it does not directly provide clinical evidence strength for pessary treatment of POP.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "International Urogynecology Journal"
+    },
+    {
+     "id": "news-1795056196847-21",
+     "title": "Prevalence and Associated Factors of Pelvic Floor Dysfunction Symptoms in Peruvian Women, 2025",
+     "summary": "A national cross-sectional study of 1280 Peruvian women in 2025 found a PFD symptom prevalence of 40.1% (95% CI 35.8–44.6). Older age (aPR 3.47 for 55–64 years), multiparity (aPR 1.62), grand multiparity (aPR 1.72), and macrosomic newborn history (aPR 1.22) were independently associated with higher prevalence.",
+     "category": "orthopedic",
+     "source": "Int Urogynecol J",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06972-2",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这项秘鲁的横断面研究提供了盆底功能障碍（PFD）症状的流行病学数据及其关联因素。它提示我们，在拉美地区，老年、多产和巨大儿分娩史是PFD的高风险因素，支持了对高危人群进行主动筛查和预防性盆底护理的必要性。",
+     "titleZh": "2025年秘鲁女性盆底功能障碍症状的流行率及相关因素",
+     "summaryZh": "一项2025年针对秘鲁1280名女性进行的全国横断面研究发现，盆底功能障碍症状的流行率为40.1%（95% CI 35.8–44.6）。老年（55-64岁调整后患病率比3.47）、多产（调整后患病率比1.62）、高产次（调整后患病率比1.72）和巨大儿分娩史（调整后患病率比1.22）与较高的流行率独立相关。",
+     "curatedReasonEn": "This Peruvian cross-sectional study provides epidemiological data on pelvic floor dysfunction (PFD) symptoms and associated factors. It suggests that older age, multiparity, and a history of macrosomic newborns are high-risk factors for PFD in Latin America, supporting the need for active screening and preventive pelvic floor care in at-risk populations.",
+     "limitation": "这是一项横断面研究，无法建立因果关系；且症状评估基于患者自述问卷，可能存在回忆偏倚。",
+     "limitationEn": "This is a cross-sectional study, unable to establish causality, and symptom assessment relies on self-reported questionnaires, which may involve recall bias.",
+     "tags": [
+      "research",
+      "pelvic-floor"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "International Urogynecology Journal"
+    },
+    {
+     "id": "news-1795022457311-0",
+     "title": "Effects of neuromuscular electrical stimulation applied simultaneously with exercise therapy in patellofemoral pain: A single-blind, randomized, sham-controlled pilot trial.",
+     "summary": "A single-blind, randomized pilot trial (n=30) found no additional short-term benefit of neuromuscular electrical stimulation (NMES) combined with exercise therapy for pain, function, or quadriceps strength in patellofemoral pain, compared to exercise with sham stimulation. A small increase in quadriceps muscle thickness was observed in the NMES group (p = .03, Cohen's d = -0.27).",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43046713/",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-18T17:20:57.311Z",
+     "curatedScore": 70,
+     "curatedReason": "对髌股疼痛患者，电刺激联合运动疗法在短期内未显示出额外益处，除了股四头肌厚度的小幅增加。避免将 NMES 作为常规辅助手段。",
+     "titleZh": "髌股疼痛患者同时施加神经肌肉电刺激联合运动疗法的效果：一项单盲、随机、假对照试点试验",
+     "summaryZh": "一项单盲、随机试点试验（n=30）发现，对髌股疼痛患者，与假刺激相比，神经肌肉电刺激（NMES）联合运动疗法在短期内对疼痛、功能或股四头肌力量没有额外益处。NMES 组观察到股四头肌厚度小幅增加（p = .03，Cohen's d = -0.27）。",
+     "curatedReasonEn": "For patellofemoral pain patients, NMES combined with exercise therapy showed no additional short-term benefits beyond a small increase in quadriceps muscle thickness. Avoid routine use of NMES as an adjunct.",
+     "limitation": "这是一项小型试点研究，仅有 30 名参与者，可能无法检测出小到中等效应量的真实差异。",
+     "limitationEn": "This was a small pilot trial with only 30 participants, potentially underpowered to detect small to moderate effect sizes.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Physiotherapy theory and practice"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1795056196847-23",
+     "title": "Selective distal upper extremity recovery following targeted dentate nucleus temporal interference stimulation in stroke-double-blind, sham-controlled randomized controlled trial with resting-state EEG",
+     "summary": "A double-blind, sham-controlled RCT (N=47) showed that 10 sessions of dentate nucleus-targeted tTIS combined with rehabilitation significantly improved FMA-UE (adjusted mean difference 3.98 points, p = 0.006) and ARAT (adjusted mean difference 2.98 points, p = 0.005) in subacute stroke patients, particularly for distal motor control (d=2.46, p<0.001), compared to sham.",
+     "category": "neurological",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02213-1",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 85,
+     "curatedReason": "这项高质量RCT首次证实，靶向齿状核的经颅时间干涉刺激（tTIS）联合常规康复，能显著改善亚急性卒中患者的上肢运动功能，特别是远端控制。它为临床带来了新的神经调控干预手段，提示我们可以在现有康复方案中探索结合tTIS来提升卒中上肢功能恢复。",
+     "titleZh": "靶向齿状核经颅时间干涉刺激在卒中患者中选择性远端上肢功能恢复：一项双盲、假对照随机对照试验与静息态脑电图研究",
+     "summaryZh": "一项双盲、假对照随机对照试验（N=47）显示，10次靶向齿状核的经颅时间干涉刺激结合康复治疗，显著改善了亚急性卒中患者的FMA-UE（调整均数差3.98分，p = 0.006）和ARAT（调整均数差2.98分，p = 0.005），尤其是在远端运动控制方面（d=2.46，p<0.001），优于假刺激。",
+     "curatedReasonEn": "This high-quality RCT is the first to confirm that targeted dentate nucleus temporal interference stimulation (tTIS) combined with conventional rehabilitation significantly improves upper extremity motor function, especially distal control, in subacute stroke patients. It introduces a new neuromodulation intervention to clinical practice, suggesting exploration of tTIS integration into existing rehabilitation protocols to enhance stroke upper limb recovery.",
+     "limitation": "研究的随访期较短（仅短时改善），且未完全阐明神经生理学变化的临床意义和个体治疗反应的长期验证，外推至所有卒中患者应谨慎。",
+     "limitationEn": "The study has a short follow-up period (only short-term improvement), and the clinical significance of neurophysiological changes and long-term validation of individual treatment responses are not fully elucidated, thus extrapolation to all stroke patients should be cautious.",
+     "tags": [
+      "research",
+      "stroke",
+      "brain-injury"
+     ],
+     "studyDesign": "RCT",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+     "id": "news-1795022457313-2",
+     "title": "Efficacy of action observation therapy in patients with dementia or cognitive impairment: a systematic review and meta-analysis of randomized trials.",
+     "summary": "A systematic review and meta-analysis of nine RCTs (n=348) found action observation therapy significantly improved cognitive function (SMD = 0.86, 95% CI = 0.53 to 1.19), activities of daily living (SMD = 0.67, 95% CI = 0.22 to 1.12), and naming aphasia (SMD = 0.53, 95% CI = 0.01 to 1.05) in patients with dementia or cognitive impairment.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43046686/",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-18T17:20:57.313Z",
+     "curatedScore": 85,
+     "curatedReason": "动作观察疗法对痴呆或认知障碍患者的认知功能、ADL 和命名性失语有显著改善作用。这为认知康复提供了强有力的非药物干预选择。",
+     "titleZh": "动作观察疗法对痴呆或认知障碍患者的疗效：一项随机试验的系统综述和 Meta 分析",
+     "summaryZh": "一项包含 9 项随机对照试验（n=348）的系统综述和 Meta 分析发现，动作观察疗法显著改善了痴呆或认知障碍患者的认知功能（SMD = 0.86，95% CI = 0.53 至 1.19）、日常生活活动（ADL）（SMD = 0.67，95% CI = 0.22 至 1.12）和命名性失语（SMD = 0.53，95% CI = 0.01 至 1.05）。",
+     "curatedReasonEn": "Action observation therapy significantly improved cognitive function, ADL, and naming aphasia in patients with dementia or cognitive impairment. This offers a strong non-pharmacological intervention option for cognitive rehabilitation.",
+     "limitation": "纳入研究的方法学质量和样本量存在异质性，可能影响结果的总体稳健性。",
+     "limitationEn": "There was heterogeneity in methodological quality and sample size among the included studies, potentially impacting the overall robustness of the results.",
+     "tags": [
+      "research",
+      "cognitive-rehab",
+      "dementia"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Disability and rehabilitation"
+    },
+    {
+     "id": "news-1795022457312-1",
+     "title": "Satisfaction with hospital-based outpatient rehabilitation in people with Parkinson's disease and its association with life satisfaction and health-related quality of life: a longitudinal national register study.",
+     "summary": "A longitudinal national register study (n=173) in Sweden found that over 82% of Parkinson's disease patients were satisfied with outpatient rehabilitation. Higher satisfaction was associated with greater life satisfaction and health-related quality of life at discharge, with some associations differing by sex and age, though these links were less evident at 1-year follow-up.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43046787/",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-18T17:20:57.312Z",
+     "curatedScore": 70,
+     "curatedReason": "高满意度与出院时的生活满意度和健康相关生活质量相关，但长期随访中这种关联减弱。这提示您，衡量患者康复体验和报告结局至关重要，尤其是在帕金森病康复中。",
+     "titleZh": "帕金森病患者对医院门诊康复的满意度及其与生活满意度及健康相关生活质量的关联：一项纵向国家登记研究",
+     "summaryZh": "一项瑞典国家纵向登记研究（n=173）发现，超过 82% 的帕金森病患者对门诊康复满意。较高的满意度与出院时更高的生活满意度和健康相关生活质量相关，某些关联因性别和年龄而异，但在 1 年随访时这些关联减弱。",
+     "curatedReasonEn": "High satisfaction was associated with life satisfaction and HRQoL at discharge, but this link weakened at 1-year follow-up. This suggests that measuring patient rehabilitation experiences and reported outcomes is crucial, especially in Parkinson's disease rehabilitation.",
+     "limitation": "这是一项基于瑞典国家登记数据的观察性研究，可能存在未测量的混杂因素影响结果。",
+     "limitationEn": "This is an observational study based on Swedish national register data, and unmeasured confounders might influence the results.",
+     "tags": [
+      "research",
+      "parkinson"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of rehabilitation medicine"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1795056196847-24",
+     "title": "Comparative Effects of Different Neuromuscular Training Modalities and Doses on Lower-Limb Injury Prevention in Athletes: A Systematic Review and Meta-analysis",
+     "summary": "A systematic review and meta-analysis of 27 RCTs (27,663 participants) found NMT was associated with reduced lower-limb injury risk (RR = 0.72, 95% CI 0.64–0.82), with structured and multidimensional programs showing favorable pooled estimates. However, overall certainty of evidence was very low, and dose-related findings were exploratory.",
+     "category": "sports",
+     "source": "Sports Med - Open",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s40798-026-01142-6",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 80,
+     "curatedReason": "这项针对27,663名参与者的系统综述提示，神经肌肉训练（NMT）可能降低下肢损伤风险（RR=0.72），但证据的确定性非常低。虽然结构化和多维度NMT看起来有益，但在临床实践中，你需要谨慎评估其应用，并关注患者依从性。",
+     "titleZh": "不同神经肌肉训练模式和剂量对运动员下肢损伤预防的比较效果：一项系统综述和Meta分析",
+     "summaryZh": "一项包含27项RCT（27,663名参与者）的系统综述和Meta分析发现，神经肌肉训练（NMT）与下肢损伤风险降低相关（RR = 0.72，95% CI 0.64–0.82），其中结构化和多维方案显示出有利的汇总估计。然而，证据的整体确定性非常低，且剂量相关发现为探索性结果。",
+     "curatedReasonEn": "This systematic review of 27,663 participants suggests that neuromuscular training (NMT) may reduce lower-limb injury risk (RR=0.72), but the certainty of evidence is very low. While structured and multidimensional NMT appears beneficial, in clinical practice, you should cautiously evaluate its application and focus on patient adherence.",
+     "limitation": "证据的整体确定性非常低，特别是剂量效应分析为研究层面的关联，而非因果关系，且可能存在发表偏倚。",
+     "limitationEn": "The overall certainty of evidence is very low, especially for dose-response analyses, which represent study-level associations rather than causal relationships, and potential publication bias exists.",
+     "tags": [
+      "research",
+      "injury-prevention"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Sports Medicine - Open"
+    },
+    {
+     "id": "news-1795048282706-1",
+     "title": "3D Biomechanics of Anterior Cruciate Ligament Injuries in Football: What We Have Learned in the Last Five Years.",
+     "summary": "This review synthesizes over five years of research on 3D biomechanics of ACL injuries in elite male football players, identifying a sequence of multiplanar knee rotations and marked inter-individual variability in whole-body kinematics, proposing biomechanically informed injury mitigation strategies.",
+     "category": "sports",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43050047/",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T00:31:22.706Z",
+     "curatedScore": 75,
+     "curatedReason": "这份综述提醒我们，ACL 损伤不仅仅是单一平面的问题，而是复杂的膝关节多平面旋转序列。更重要的是，它强调了显著的个体差异，提示我们在预防和康复中必须超越“一刀切”的方案，转向针对个体全身姿态的精细化策略。",
+     "titleZh": "足球中前交叉韧带损伤的 3D 生物力学：过去五年我们学到了什么",
+     "summaryZh": "这篇综述综合了过去五年精英男子足球运动员 ACL 损伤 3D 生物力学的研究，确定了膝关节多平面旋转的序列和全身运动的显著个体差异，并提出了基于生物力学的损伤缓解策略。",
+     "curatedReasonEn": "This review clarifies that ACL injuries involve a complex sequence of multiplanar knee rotations, not just isolated movements. Crucially, it highlights significant inter-individual variability, underscoring that our prevention and rehabilitation strategies must move beyond 'one-size-fits-all' and become more nuanced, especially regarding context-dependent whole-body postures.",
+     "limitation": "该综述基于对已发生损伤的运动学重建，可能存在回顾性偏倚。",
+     "limitationEn": "The review is based on kinematic reconstructions of existing injuries, which may introduce retrospective bias.",
+     "tags": [
+      "research",
+      "knee"
+     ],
+     "studyDesign": "综述",
+     "journal": "Sports medicine (Auckland, N.Z.)"
+    },
+    {
+     "id": "news-1795056196847-26",
+     "title": "Knee joint biomechanical characteristics of table tennis players based on inertial sensing technology: impact on LESS-defined risk stratification for anterior cruciate ligament injury",
+     "summary": "In 68 table tennis players, inertial measurement units identified a peak knee valgus angle of 15.62 ± 3.48° in the high-risk ACL injury group (LESS score ≥ 5) versus 9.28 ± 2.56° in the low-risk group (p < 0.001), with an optimal cutoff of 12.5° (AUC 0.860) for distinguishing risk.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02247-x",
+     "publishedAt": "2026-11-14T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这项研究利用惯性传感技术识别了乒乓球运动员在步停任务中过度的膝外翻角度是ACL损伤高风险的关键生物力学指标。它为运动物理治疗师提供了一种非侵入性的风险评估工具和明确的生物力学干预目标，有助于更早期地识别高危运动员并制定针对性预防方案。",
+     "titleZh": "基于惯性传感技术的乒乓球运动员膝关节生物力学特征：对LESS定义的ACL损伤风险分层的影响",
+     "summaryZh": "在68名乒乓球运动员中，惯性测量单元发现，高风险ACL损伤组（LESS评分≥5）的膝关节峰值外翻角度为15.62 ± 3.48°，而低风险组为9.28 ± 2.56°（p < 0.001），最佳区分风险的临界值为12.5°（AUC 0.860）。",
+     "curatedReasonEn": "This study used inertial sensing technology to identify excessive knee valgus angle during a step-stop task as a key biomechanical indicator of high ACL injury risk in table tennis players. It provides sports physical therapists with a non-invasive risk assessment tool and clear biomechanical intervention targets, aiding earlier identification of high-risk athletes and development of targeted prevention programs.",
+     "limitation": "该研究为横断面观察性研究，无法建立因果关系，且ACL损伤风险评估基于LESS评分，而非实际损伤发生率，可能存在局限性。",
+     "limitationEn": "This is a cross-sectional observational study, unable to establish causality. ACL injury risk assessment was based on the LESS score, not actual injury incidence, which might be a limitation.",
+     "tags": [
+      "research",
+      "knee",
+      "acl",
+      "injury-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1795056196847-28",
+     "title": "Effects of medial arch-support and double-density foot orthoses on median frequency of lower limb muscles during walking among cohorts at different postoperative timepoints after ACL reconstruction",
+     "summary": "A study of 40 men (30 ACLR patients, 10 healthy controls) found that medial arch-support and double-density foot orthoses significantly modulated EMG median frequency of lower limb muscles during walking, with effects most pronounced in early postoperative (6-month) ACLR groups with pronated feet.",
+     "category": "sports",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10746-8",
+     "publishedAt": "2026-11-16T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对40名男性的观察研究表明，内侧足弓支撑和双密度鞋垫能显著调节ACL重建术后下肢肌肉的EMG中值频率，尤其在术后6个月内、伴有足部旋前的患者中效果更明显。这提示你可以考虑将特定鞋垫作为ACL重建术后早期康复的辅助手段，以优化神经肌肉活动。",
+     "titleZh": "内侧足弓支撑和双密度鞋垫对ACL重建术后不同时间点患者行走时下肢肌肉中位频率的影响",
+     "summaryZh": "一项针对40名男性（30名ACL重建患者，10名健康对照）的研究发现，内侧足弓支撑和双密度鞋垫在行走时显著调节了下肢肌肉的EMG中位频率，且这种效应在早期术后（6个月）伴有扁平足的ACL重建组中最为显著。",
+     "curatedReasonEn": "This observational study of 40 men indicates that medial arch-support and double-density foot orthoses significantly modulate lower limb muscle EMG median frequency after ACLR, with effects more pronounced in early postoperative (6-month) patients with pronated feet. This suggests you might consider specific orthoses as an adjunct in early ACLR rehabilitation to optimize neuromuscular activity.",
+     "limitation": "这是一项横断面研究，而非纵向随访，无法直接反映个体康复进程中鞋垫的长期效果或 biomechanical 对齐的直接证据。",
+     "limitationEn": "This is a cross-sectional study, not a longitudinal follow-up, and therefore cannot directly reflect the long-term effects of orthoses or direct evidence of biomechanical alignment during individual recovery.",
+     "tags": [
+      "research",
+      "knee",
+      "acl"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+     "id": "news-1795056196847-29",
+     "title": "Creating Consensus: Establishing a Definition of Sports Pharmacy and Its Emerging Role in Sports Medicine",
+     "summary": "The US Sports Pharmacy Group established the first consensus-derived definition of sports pharmacy, emphasizing medication management, anti-doping advocacy, interprofessional collaboration, and athlete-centered ethical care, aiming to guide future education, certification, and research.",
+     "category": "sports",
+     "source": "Sports Medicine",
+     "sourceUrl": "https://link.springer.com/article/10.1007/s40279-026-02574-6",
+     "publishedAt": "2026-11-12T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这份关于运动药学的共识声明，首次明确定义了运动药学的范畴和职责，强调了药物管理、反兴奋剂倡导和跨专业协作的重要性。虽然直接影响物理治疗实践有限，但它为运动医学多学科团队的协作提供了清晰的界定，提示物理治疗师在团队中与其他专业（包括运动药师）进行更有效的沟通与配合。",
+     "titleZh": "建立共识：定义运动药学及其在运动医学中的新兴作用",
+     "summaryZh": "美国运动药学小组首次确立了运动药学的共识定义，强调药物管理、反兴奋剂倡导、跨专业协作和以运动员为中心的伦理护理，旨在指导未来的教育、认证和研究。",
+     "curatedReasonEn": "This consensus statement on sports pharmacy is the first to clearly define its scope and responsibilities, emphasizing medication management, anti-doping advocacy, and interprofessional collaboration. While its direct impact on physical therapy practice is limited, it provides a clear delineation for multidisciplinary sports medicine teams, encouraging physical therapists to engage in more effective communication and collaboration with other professionals, including sports pharmacists, within the team.",
+     "tags": [
+      "guideline",
+      "interprofessional-collaboration"
+     ],
+     "journal": "Sports Medicine"
+    },
+    {
+     "id": "news-1795056196847-25",
+     "title": "One-year prevalence and factors associated with injury in Japanese collegiate American footballers - a cross-sectional observational survey study",
+     "summary": "A cross-sectional survey of 896 Japanese collegiate American footballers found a 1-year injury prevalence of 62%. Factors associated with higher injury odds included higher university year, greater sport experience, five or more practice days per week, national level of play, and athletic trainer support.",
+     "category": "sports",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02274-8",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 65,
+     "curatedReason": "这项针对日本大学美式橄榄球运动员的横断面研究提供了该人群损伤流行率和相关因素的独特数据。它提示我们需关注高年级、经验丰富、训练频率高、国家级水平运动员的损伤预防，并强调运动训练师支持的重要性，有助于制定更精准的干预策略。",
+     "titleZh": "日本大学美式橄榄球运动员损伤一年流行率及相关因素：一项横断面观察性调查研究",
+     "summaryZh": "一项对896名日本大学美式橄榄球运动员的横断面调查发现，一年内损伤流行率为62%。与较高损伤几率相关的因素包括大学高年级、运动经验更丰富、每周训练五天或以上、国家级比赛水平以及运动训练师支持。",
+     "curatedReasonEn": "This cross-sectional study on Japanese collegiate American footballers provides unique data on injury prevalence and associated factors in this population. It highlights the need to focus on injury prevention for senior, experienced, high-frequency training, and national-level athletes, emphasizing the importance of athletic trainer support, which can inform more precise intervention strategies.",
+     "limitation": "这是一项横断面研究，无法建立因果关系，且数据依赖于自我报告问卷，可能存在回忆偏倚。",
+     "limitationEn": "This is a cross-sectional study, unable to establish causality, and data relies on self-reported questionnaires, which may involve recall bias.",
+     "tags": [
+      "research",
+      "injury-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    }
+   ]
+  },
+  {
+   "category": "pediatric",
+   "label": "儿童康复",
+   "items": [
+    {
+     "id": "news-1795056196847-30",
+     "title": "Body-weight support is the dominant contributor to elevated walking cost in cerebral palsy",
+     "summary": "In children with cerebral palsy (CP, N=23) and typically developing peers (TD, N=10), body-weight support significantly reduced net energetic walking cost, with a 3.5-fold greater effect in the CP group, reducing their cost by 41% to TD levels. Mediolateral stabilization had negligible energetic effects.",
+     "category": "pediatric",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02215-z",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 80,
+     "curatedReason": "这项研究发现，体重支撑是脑瘫儿童步态能耗升高的主要因素。这一发现直接指向了能耗优化康复的新策略，提示物理治疗师在设计脑瘫儿童步态训练时，应优先考虑提供重力支撑，可能比侧向稳定干预更能有效降低其行走能耗。",
+     "titleZh": "体重支撑是脑瘫儿童行走能耗升高的主要因素",
+     "summaryZh": "对脑瘫（CP，N=23）儿童和典型发育（TD，N=10）同伴的研究发现，体重支撑显著降低了行走净能耗，在CP组中的效果是TD组的3.5倍，使CP组能耗降低41%至TD组水平。内侧-外侧稳定对能耗影响可忽略不计。",
+     "curatedReasonEn": "This study found that body-weight support is the dominant contributor to elevated walking cost in children with cerebral palsy. This finding directly points to new strategies for energy-optimized rehabilitation, suggesting that physical therapists, when designing gait training for children with CP, should prioritize providing gravitational support, which may be more effective than mediolateral stabilization in reducing walking energy cost.",
+     "limitation": "研究样本量相对较小（CP组23人），且在固定非维度速度下进行，结果的外推性可能受限。",
+     "limitationEn": "The study had a relatively small sample size (23 in the CP group) and was conducted at a fixed non-dimensional speed, which might limit the generalizability of the results.",
+     "tags": [
+      "research",
+      "gait-training"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Journal of NeuroEngineering and Rehabilitation"
+    },
+    {
+     "id": "news-1795022457313-3",
+     "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff.",
+     "summary": "A retrospective study of 65 pediatric developmental dysplasia of the hip (DDH) patients found that those under 3 years old receiving combined Salter and femoral osteotomy showed superior radiographic and functional outcomes (e.g., McKay excellent/good rates: 97.1% vs 64.5%) and lower avascular necrosis risk (0% vs 12.9%) compared to patients aged 3 years or older, with a mean follow-up of 8 ± 2.5 years.",
+     "category": "pediatric",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43046054/",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-18T17:20:57.313Z",
+     "curatedScore": 75,
+     "curatedReason": "对发育性髋关节发育不良（DDH）患儿，3 岁以下接受 Salter 截骨术和股骨截骨术联合治疗的患者，功能结局和股骨头坏死（AVN）风险可能优于 3 岁及以上的患儿。这支持早期干预的价值。",
+     "titleZh": "年龄分层对儿童发育性髋关节发育不良联合 Salter 截骨术和股骨截骨术疗效影响的探索性分析（以 3 年为分界点）",
+     "summaryZh": "一项针对 65 名儿童发育性髋关节发育不良（DDH）患者的回顾性研究发现，3 岁以下接受 Salter 截骨术和股骨截骨术联合治疗的患者，其影像学和功能结局（如 McKay 优良率：97.1% vs 64.5%）以及股骨头坏死（AVN）风险（0% vs 12.9%）均优于 3 岁及以上的患者，平均随访时间为 8 ± 2.5 年。",
+     "curatedReasonEn": "For children with developmental dysplasia of the hip (DDH), those under 3 years receiving combined Salter osteotomy and femoral osteotomy may have better functional outcomes and lower avascular necrosis (AVN) risk than those aged 3 years or older. This supports the value of early intervention.",
+     "limitation": "这是一项回顾性研究，存在固有偏倚，且多变量回归的估计值不稳定，不能确证年龄的独立效应。",
+     "limitationEn": "This is a retrospective study with inherent biases, and the unstable estimates from multivariable regression preclude confirmation of an independent age effect.",
+     "tags": [
+      "research",
+      "hip"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC musculoskeletal disorders"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1795056196847-32",
+     "title": "Exploring association patterns among muscle mass, gait speed, and upper- and lower-limb muscle strength in sarcopenic and non-sarcopenic swiss community-dwelling older adults: a cross-sectional secondary analysis using portable, field-ready assessments",
+     "summary": "A cross-sectional secondary analysis of 198 older adults (17 sarcopenic) found that lower-limb strength (LLSmax) correlated more strongly with ALM/height² in sarcopenic participants (ρ = 0.79) than upper-limb strength (ULSmax) (ρ = 0.53), while the opposite trend was observed in non-sarcopenic individuals. Gait speed was not significantly associated with any measure in the sarcopenic group.",
+     "category": "geriatric",
+     "source": "Eur Rev Aging Phys Act",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s11556-026-00449-3",
+     "publishedAt": "2026-11-17T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.847Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对瑞士社区老年人的横断面分析，探讨了便携式评估工具在肌少症筛查中肌量、步速和上下肢肌力之间的关联模式。它提示下肢肌力与肌少症患者的肌量关联更强，支持在社区筛查中重视下肢肌力评估，但需更多研究验证便携式工具的诊断价值。",
+     "titleZh": "瑞士社区老年人肌少症与非肌少症人群中肌量、步速及上下肢肌力关联模式的探索：一项使用便携式现场评估工具的横断面二次分析",
+     "summaryZh": "一项针对198名老年人（17名肌少症患者）的横断面二次分析发现，在肌少症患者中，下肢肌力（LLSmax）与附肢瘦体重/身高²的关联（ρ = 0.79）强于上肢肌力（ULSmax）（ρ = 0.53），而在非肌少症个体中则观察到相反的趋势。步速在肌少症组中与任何测量指标均无显著关联。",
+     "curatedReasonEn": "This cross-sectional analysis of Swiss community-dwelling older adults explores association patterns between muscle mass, gait speed, and upper and lower limb muscle strength using portable assessment tools for sarcopenia screening. It suggests a stronger association between lower limb muscle strength and muscle mass in sarcopenic individuals, supporting the emphasis on lower limb strength assessment in community screening, but requires further research to validate the diagnostic value of portable tools.",
+     "limitation": "这是一项二次分析的横断面研究，样本量中肌少症亚组较小（N=17），且无法建立因果关系，其探索性发现应谨慎解读。",
+     "limitationEn": "This is a secondary cross-sectional analysis with a small sarcopenic subgroup (N=17) and cannot establish causality; its exploratory findings should be interpreted cautiously.",
+     "tags": [
+      "research",
+      "sarcopenia",
+      "fall-prevention"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "European Review of Aging and Physical Activity"
+    },
+    {
+     "id": "news-1795056196848-33",
+     "title": "Wearable activity-sequence measures and subsequent handgrip strength in adults aged 65 years and older: measurement characteristics and longitudinal associations",
+     "summary": "A longitudinal study of 391 adults aged 65+ found that a run-collapsed LZ76 activity-sequence measure was associated with subsequent handgrip strength (β = 0.906 kg/SD, p = 0.016, ΔR²=0.00301), while H1–H3 conditional entropy showed an imprecise association. Both measures demonstrated good within-wear agreement (ICCs of 0.775 and 0.876).",
+     "category": "geriatric",
+     "source": "BMC Geriatrics",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08711-0",
+     "publishedAt": "2026-11-16T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.848Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对391名65岁以上老年人的纵向研究发现，可穿戴设备记录的LZ76活动序列指标与随后的手握力相关（β=0.906 kg/SD）。这意味着你除了关注总活动量，还应留意老年患者日常活动的序列模式，这可能提供更精细的体能评估依据。",
+     "titleZh": "可穿戴活动序列指标与65岁及以上成人手握力的后续关联：测量特征和纵向关联",
+     "summaryZh": "一项针对391名65岁以上成年人的纵向研究发现，一种名为run-collapsed LZ76的活动序列测量指标与随后的手握力相关（β = 0.906 kg/SD, p = 0.016, ΔR²=0.00301），而H1-H3条件熵则显示出不精确的关联。这两项指标均显示出良好的穿戴内一致性（ICC分别为0.775和0.876）。",
+     "curatedReasonEn": "This longitudinal study of 391 adults aged 65+ found that the LZ76 activity-sequence measure from wearables was associated with subsequent handgrip strength (β=0.906 kg/SD). This means you should pay attention to the temporal patterns of daily activity in older patients, beyond just total activity volume, as it may offer more refined insights for physical assessment.",
+     "limitation": "研究部分结果的统计学显著性不强，且某些探索性分析是在初始结局分析后进行的，可能存在偏倚，需要更多独立验证。",
+     "limitationEn": "Some results of the study lack strong statistical significance, and certain exploratory analyses were conducted after initial outcome analyses, which may introduce bias and require further independent validation.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "frailty"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Geriatrics",
+     "tech": true
+    },
+    {
+     "id": "news-1795048282707-17",
+     "title": "Previewing gaze behaviours predict gait speed, risky stepping strategies and cognitive dual task cost in older adults",
+     "summary": "A study of 29 older adults found that greater gaze sequence complexity during route previewing predicted lower cognitive dual-task cost during walking, while larger gaze transitions predicted slower walking speed, suggesting visual planning impacts locomotor and cognitive outcomes.",
+     "category": "geriatric",
+     "source": "medRxiv",
+     "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.16.26368206v1?rss=1",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T00:31:22.707Z",
+     "curatedScore": 70,
+     "curatedReason": "这项针对 29 名老年人的观察研究提示，他们预习路线时的视线模式与步行表现和认知负荷相关。这表明，优化视觉策略，比如引导患者在行走前更有效地规划视线，可能有助于降低双任务成本并提升步速，尤其值得你在步态训练中尝试。",
+     "titleZh": "老年人预览注视行为预测步态速度、风险步态策略和认知双任务成本",
+     "summaryZh": "一项针对 29 名老年人的研究发现，路线预览期间较高的注视序列复杂性预示着步行时较低的认知双任务成本，而较大的注视转换预示着较慢的步行速度，这表明视觉规划会影响运动和认知结果。",
+     "curatedReasonEn": "This observational study of 29 older adults suggests that their gaze patterns during route previewing correlate with subsequent walking performance and cognitive load. It implies that optimizing visual strategies—perhaps by training patients to plan their gaze more effectively before walking—could reduce dual-task costs and improve walking speed. This is certainly worth exploring in your gait training protocols.",
+     "limitation": "研究样本量较小（n=29），结果可能难以广泛推广。",
+     "limitationEn": "The study has a small sample size (n=29), which may limit the generalizability of the findings.",
+     "tags": [
+      "research",
+      "fall-prevention",
+      "gait"
+     ],
+     "studyDesign": "观察研究"
+    }
+   ]
+  },
+  {
+   "category": "cardiopulmonary",
+   "label": "心肺康复",
+   "items": [
+    {
+     "id": "news-1795056196846-18",
+     "title": "Association Between Borg CR-10 Rated Perceived Exertion and Cardiorespiratory Intensity in Individuals with Coronary Heart Disease: A Cross-Sectional Study",
+     "summary": "A cross-sectional study investigated the association between Borg CR-10 Rated Perceived Exertion and cardiorespiratory intensity in individuals with coronary heart disease.",
+     "category": "cardiopulmonary",
+     "source": "Meas Phys Educ Exerc Sci",
+     "sourceUrl": "https://www.tandfonline.com/doi/full/10.1080/1091367X.2026.2765270?af=R",
+     "publishedAt": "2026-11-18T05:54:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.846Z",
+     "curatedScore": 65,
+     "curatedReason": "这项研究提供了冠心病患者Borg CR-10感知运动量表与心肺强度关联的横断面数据。它强化了Borg量表作为一种便捷、非侵入性工具，在心肺康复中指导运动强度设定的实用性，特别是在资源有限或需要自我管理的场景下。",
+     "titleZh": "Borg CR-10感知运动量表与冠心病患者心肺强度关联的横断面研究",
+     "summaryZh": "一项横断面研究探讨了冠心病患者的Borg CR-10感知运动量表与心肺强度之间的关联。",
+     "curatedReasonEn": "This study provides cross-sectional data on the association between Borg CR-10 RPE and cardiorespiratory intensity in coronary heart disease patients. It reinforces the utility of the Borg scale as a convenient, non-invasive tool for guiding exercise intensity in cardiopulmonary rehabilitation, especially in resource-limited or self-managed settings.",
+     "limitation": "这是一项横断面研究，无法建立因果关系，且可能存在回忆偏倚，影响了Borg量表在不同时间点的应用准确性。",
+     "limitationEn": "This is a cross-sectional study, which cannot establish causality and may suffer from recall bias, affecting the accuracy of Borg scale application at different time points.",
+     "tags": [
+      "research",
+      "exercise-prescription"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Measurement in Physical Education and Exercise Science"
+    }
+   ]
+  },
+  {
+   "category": "manual-modality",
+   "label": "手法与理疗",
+   "items": [
+    {
+     "id": "news-1795056196848-35",
+     "title": "Acute effects of fibular repositioning taping on balance, jumping, and sprint performance in healthy individuals: a randomized controlled trial",
+     "summary": "A three-arm RCT (N=90 healthy adults) found fibular repositioning taping (FRT) did not significantly differ from sham taping in Y-Balance performance, but showed greater short-term improvements in single-leg countermovement jump and 10-m sprint compared to both sham and control groups. These secondary findings were exploratory.",
+     "category": "manual-modality",
+     "source": "BMC Sports Sci Med Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02265-9",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.848Z",
+     "curatedScore": 70,
+     "curatedReason": "这项RCT发现，腓骨复位贴扎（FRT）在急性期可改善健康个体的单腿反向跳跃和10米冲刺表现，但对Y平衡测试的改善与假贴扎无显著差异。这提示FRT可能对某些动态运动表现有短期促进作用，但在平衡改善方面证据不强，物理治疗师应根据具体临床目标审慎应用。",
+     "titleZh": "腓骨复位贴扎对健康个体平衡、跳跃和冲刺表现的急性影响：一项随机对照试验",
+     "summaryZh": "一项三臂随机对照试验（N=90名健康成人）发现，腓骨复位贴扎（FRT）在Y平衡表现上与假贴扎无显著差异，但在单腿反向跳跃和10米冲刺方面，FRT组比假贴扎组和对照组有更大的短期改善。这些次要发现为探索性结果。",
+     "curatedReasonEn": "This RCT found that fibular repositioning taping (FRT) acutely improved single-leg countermovement jump and 10-m sprint performance in healthy individuals, but showed no significant difference from sham taping in Y-Balance test improvement. This suggests FRT might offer short-term benefits for some dynamic athletic performances, but evidence for balance improvement is not strong. Physical therapists should apply it judiciously based on specific clinical goals.",
+     "limitation": "研究为回顾性注册，且主要结局Y平衡测试与假贴扎无显著差异，次要结局的发现是探索性的，需要进一步的确认性研究。",
+     "limitationEn": "The study was retrospectively registered, and the primary outcome (Y-Balance test) showed no significant difference from sham taping. Secondary findings are exploratory and require further confirmatory studies.",
+     "tags": [
+      "research",
+      "taping",
+      "foot-ankle"
+     ],
+     "studyDesign": "RCT",
+     "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+     "id": "news-1795056196848-37",
+     "title": "Acute muscle responses to a single session of whole-body electromyostimulation in sedentary older men: a pilot study",
+     "summary": "A pilot study with seven sedentary older men found a single WB-EMS session led to transient reductions in knee extensor MVIC and handgrip strength, with recovery by 72h. Muscle soreness increased, peaking at 24-72h. Muscle thickness and echo intensity showed transient increases in vastus medialis and biceps brachii.",
+     "category": "manual-modality",
+     "source": "Bull Fac Phys Ther",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s43161-026-00388-1",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.848Z",
+     "curatedScore": 70,
+     "curatedReason": "这项试点研究发现，单次全身电肌肉刺激（WB-EMS）对久坐老年男性是安全且耐受的，并能引起肌肉力量的短期下降及可逆性肌肉反应。它提示WB-EMS可能作为一种低负荷的训练和康复策略，但其长期益处和最佳方案仍需进一步的大规模研究来明确。",
+     "titleZh": "单次全身电肌肉刺激对久坐老年男性急性肌肉反应的试点研究",
+     "summaryZh": "一项针对七名久坐老年男性的试点研究发现，单次全身电肌肉刺激导致膝伸肌最大自主收缩力和握力短暂下降，并在72小时内恢复。肌肉酸痛增加，在24-72小时达到峰值。股内侧肌和肱二头肌的肌肉厚度和回声强度均出现短暂增加。",
+     "curatedReasonEn": "This pilot study found that a single session of whole-body electromyostimulation (WB-EMS) was safe and well-tolerated in sedentary older men, inducing transient reductions in muscle strength and reversible muscle responses. It suggests WB-EMS as a potential low-load training and rehabilitation strategy, but its long-term benefits and optimal protocols require further large-scale studies.",
+     "limitation": "这是一项小样本（N=7）的试点研究，无法得出强有力的结论，且仅评估了急性肌肉反应，未涉及长期功能或力量改善。",
+     "limitationEn": "This is a small-sample (N=7) pilot study, precluding strong conclusions, and it only assessed acute muscle responses without addressing long-term functional or strength improvements.",
+     "tags": [
+      "research",
+      "electro",
+      "geriatric-rehabilitation"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "Bulletin of Faculty of Physical Therapy"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1795056196848-38",
+     "title": "APTA State Chapters Advance Payment, Access, and Practice in 2026",
+     "summary": "APTA state chapters secured legislative victories in 2026, advancing payment protections, expanding scope of practice, and improving patient access to physical therapy care.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/11/18/apta-state-chapters-advance-payment-access-practice",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.848Z",
+     "curatedScore": 75,
+     "curatedReason": "APTA州分会在2026年通过立法努力，在支付、执业范围和患者可及性方面取得了显著进展。这凸显了持续的政策倡导对于物理治疗行业的重要性，提示美国地区的物理治疗师，积极参与或支持专业协会的立法工作，是推动执业环境改善的关键。",
+     "titleZh": "APTA 州分会在2026年推动支付、准入和执业取得进展",
+     "summaryZh": "APTA各州分会在2026年取得了立法胜利，在支付保护、执业范围扩大和改善患者获得物理治疗服务方面取得了进展。",
+     "curatedReasonEn": "APTA state chapters achieved significant legislative progress in 2026 across payment, scope of practice, and patient access. This highlights the importance of sustained policy advocacy for the physical therapy profession, suggesting that physical therapists in the US should actively participate in or support professional association legislative efforts as a key driver for improving practice environments.",
+     "tags": [
+      "news",
+      "regulation",
+      "reimbursement",
+      "practice-scope",
+      "US"
+     ]
+    },
+    {
+     "id": "news-1795056196848-39",
+     "title": "APTA Report: Demand for PTs and PTAs Is Outpacing Workforce Growth",
+     "summary": "A new APTA report reveals that in 2026, outpatient physical therapy practices saw an 11% workforce growth but a nearly 25% increase in job openings, indicating that demand for PTs and PTAs is significantly outpacing workforce growth.",
+     "category": "practice",
+     "source": "APTA",
+     "sourceUrl": "https://www.apta.org/article/2026/11/18/apta-report-demand-pts-ptas-outpacing-workforce-growth",
+     "publishedAt": "2026-11-18T00:00:00.000Z",
+     "firstSeen": "2026-11-19T02:43:16.848Z",
+     "curatedScore": 75,
+     "curatedReason": "APTA的报告指出，2026年物理治疗师和物理治疗师助理的需求增长远超劳动力增长，凸显了行业日益增长的服务缺口。这提示物理治疗机构和执业者，应重视人才招聘和保留策略，并思考如何优化现有资源以应对不断扩大的患者需求。",
+     "titleZh": "APTA 报告：物理治疗师和物理治疗师助理需求增长超越劳动力增长",
+     "summaryZh": "一份新的APTA报告显示，2026年门诊物理治疗机构的劳动力增长了11%，但职位空缺增加了近25%，表明对物理治疗师（PT）和物理治疗师助理（PTA）的需求显著超过了劳动力增长。",
+     "curatedReasonEn": "APTA's report indicates that in 2026, the demand for physical therapists and physical therapist assistants significantly outpaced workforce growth, highlighting a widening service gap in the profession. This suggests that physical therapy practices and practitioners should prioritize recruitment and retention strategies and consider how to optimize existing resources to meet increasing patient demand.",
+     "tags": [
+      "news",
+      "workforce",
+      "US"
+     ]
+    }
+   ]
+  }
+ ],
+ "flashes": [
+  {
+   "title": "APTA, NSCA Return-to-Play Summit Highlights Rehab, Performance",
+   "titleZh": "APTA、NSCA 重返赛场峰会强调康复与体能表现",
+   "source": "APTA",
+   "sourceUrl": "https://www.apta.org/article/2026/11/17/apta-nsca-return-to-play-summit-highlights-rehab-performance",
+   "publishedAt": "2026-11-17T00:00:00.000Z",
+   "journal": null
+  }
+ ]
+}

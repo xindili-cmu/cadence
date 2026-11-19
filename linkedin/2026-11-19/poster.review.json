@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-19T02:43:45.952Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Selective distal upper extremity recovery following targeted dentate nucleus temporal interference stimulation in stroke-double-blind, sham-controlled randomized controlled trial with resting-state EEG",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02213-1"
+    },
+    {
+      "slide": 2,
+      "title": "Efficacy of action observation therapy in patients with dementia or cognitive impairment: a systematic review and meta-analysis of randomized trials.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43046686/"
+    },
+    {
+      "slide": 3,
+      "title": "Comparative Effects of Different Neuromuscular Training Modalities and Doses on Lower-Limb Injury Prevention in Athletes: A Systematic Review and Meta-analysis",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01142-6"
+    },
+    {
+      "slide": 4,
+      "title": "Body-weight support is the dominant contributor to elevated walking cost in cerebral palsy",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02215-z"
+    },
+    {
+      "slide": 5,
+      "title": "Aerobic and aerobic–cognitive training in knee osteoarthritis following acute exercise intensity selection: a two-phase randomised controlled trial protocol",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02254-y"
+    }
+  ]
+}
