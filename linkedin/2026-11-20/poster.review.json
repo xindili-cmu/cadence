@@ -1,0 +1,28 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-20T02:27:57.697Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Virtual and Augmented Reality Feedback During Robotic Gait Training Acutely Modulate Paretic Muscle Activation, Limb Loading, and Propulsion-Related Mechanics in Chronic Hemiparetic Stroke: A Randomised Crossover Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43055269/"
+    },
+    {
+      "slide": 2,
+      "title": "Integrated care for chronic musculoskeletal (MSK) disorders is promising but incomplete: a scoping review of MSK service-delivery approaches across systems",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10709-z"
+    },
+    {
+      "slide": 3,
+      "title": "Venous flow dynamics in post-stroke hemiparetic lower extremity motor dysfunctions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43055080/"
+    },
+    {
+      "slide": 4,
+      "title": "Current Clinical Practice and Barriers to Instrumented Gait Assessment in Stroke Rehabilitation: A Cross-Sectional Survey.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43055270/"
+    }
+  ]
+}
