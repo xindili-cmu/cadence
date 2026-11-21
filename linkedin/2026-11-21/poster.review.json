@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-21T02:38:10.727Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Impact of Adding Fatigue-Focused Cognitive Behavior Therapy to Supervised Pilates-Based Core Stability Training on Balance and Walking in Patients with Multiple Sclerosis: A Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061942/"
+    },
+    {
+      "slide": 2,
+      "title": "Self-guided home-based rehabilitation for upper limb motor recovery in people with stroke: a systematic review and meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43059141/"
+    },
+    {
+      "slide": 3,
+      "title": "Impact of Rehabilitation Initiation Timing on Safety and Efficacy in Patients With Acute Stroke and Concurrent Heart Failure.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061727/"
+    },
+    {
+      "slide": 4,
+      "title": "Application of the ICF in the functioning assessment of children with suspected developmental coordination difficulties.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43057048/"
+    },
+    {
+      "slide": 5,
+      "title": "Manual techniques for headache: who delivers what and where? A systematic review of randomized controlled trials with a practice-mapping analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43062012/"
+    }
+  ]
+}
