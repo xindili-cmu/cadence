@@ -1,0 +1,18 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-22T01:28:56.488Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Effect of the timing and setting of pulmonary rehabilitation on functional recovery after lung cancer surgery: A systematic review and meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061927/"
+    },
+    {
+      "slide": 2,
+      "title": "Response to letter to the editor regarding 'barriers and facilitators of decision-making in home-based rehabilitation exercise among older adults following total knee arthroplasty: A qualitative study'.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43061950/"
+    }
+  ]
+}
