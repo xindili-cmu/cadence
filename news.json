@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-22T02:20:03.757Z",
-    "totalItems": 74,
+    "lastUpdated": "2026-11-22T09:55:59.864Z",
+    "totalItems": 75,
     "categories": [
       "orthopedic",
       "neurological",
@@ -13,8 +13,90 @@
       "practice"
     ]
   },
-  "hotTopics": [],
+  "hotTopics": [
+    {
+      "id": "news-1795341358907-0",
+      "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43067188/",
+      "category": "orthopedic",
+      "publishedAt": "2026-11-22T00:00:00.000Z",
+      "sourceCount": 2,
+      "sources": [
+        "PubMed",
+        "medRxiv"
+      ],
+      "tag": "spine",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
+          "titleZh": "与预后和肌肉骨骼疾病相关的临床推理——将预后推理纳入物理治疗实践的大师班课程"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Thoracic expansion and spirometry 120 days after adding diaphragmatic manual therapy to physiotherapy in non-specific low back pain: Follow-up of a randomized controlled trial",
+          "titleZh": "在非特异性腰痛的物理治疗中加入手法膈肌治疗对胸廓扩张和肺活量的120天随访结果：一项随机对照试验的随访"
+        }
+      ],
+      "heat": 1.73,
+      "themeZh": "肌肉骨骼疾病的预后推理与手动治疗干预",
+      "themeEn": "Prognostic Reasoning & Manual Therapy for MSK Disorders"
+    }
+  ],
   "items": [
+    {
+      "id": "news-1795341358907-0",
+      "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
+      "summary": "This masterclass article outlines a practical framework for physiotherapists to incorporate clinical reasoning associated with prognosis into their management of musculoskeletal disorders, aiming to optimize patient outcomes.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43067188/",
+      "publishedAt": "2026-11-22T00:00:00.000Z",
+      "firstSeen": "2026-11-22T09:55:58.907Z",
+      "curatedScore": 75,
+      "curatedReason": "本篇「大师班」文章深入探讨了预后判断在骨科物理治疗中的核心地位，提供了一个实用的框架，指导你如何将预后思维融入临床实践，优化患者结局。",
+      "titleZh": "与预后和肌肉骨骼疾病相关的临床推理——将预后推理纳入物理治疗实践的大师班课程",
+      "summaryZh": "这篇大师班文章为物理治疗师提供了一个实用框架，旨在将预后相关的临床推理融入肌肉骨骼疾病管理中，以优化患者结局。",
+      "curatedReasonEn": "This \"Masterclass\" article delves into the core role of prognostic reasoning in orthopedic physical therapy, providing a practical framework to guide you in integrating prognosis into your clinical practice to optimize patient outcomes.",
+      "limitation": "本篇为专家意见，而非基于原创研究数据。",
+      "limitationEn": "This is an expert opinion article, not based on original research data.",
+      "tags": [
+        "research",
+        "spine",
+        "knee",
+        "shoulder",
+        "hip",
+        "foot-ankle",
+        "hand-wrist"
+      ],
+      "studyDesign": "述评",
+      "journal": "Musculoskeletal science & practice"
+    },
+    {
+      "id": "news-1795341358908-1",
+      "title": "Physiatry-physiotherapy interdisciplinary project (PHY 2 ): Service evaluation of a new caregiving model for musculoskeletal pain by advanced practice physiotherapists in the physiatry department.",
+      "summary": "A single-center prospective descriptive cohort study (n=300) found that Advanced Practice Physiotherapists (APPs) independently managed 41% of musculoskeletal pain patients without physiatry consultation, reducing wait times and improving patient satisfaction.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43067131/",
+      "publishedAt": "2026-11-22T00:00:00.000Z",
+      "firstSeen": "2026-11-22T09:55:58.908Z",
+      "curatedScore": 70,
+      "curatedReason": "对于常见肌肉骨骼疼痛，高级执业物理治疗师（APP）可以独立承担近一半的患者管理工作（41%），并且可以有效缩短等待时间、提高患者满意度。在你的机构中，可以考虑更大力度地授权APP来管理这类患者，提升效率。",
+      "titleZh": "物理治疗-理疗科多学科项目 (PHY2)：高级执业物理治疗师在理疗科为肌肉骨骼疼痛患者提供新照护模式的服务评估",
+      "summaryZh": "一项单中心前瞻性描述性队列研究（n=300）发现，高级执业物理治疗师（APPs）独立管理了41%的肌肉骨骼疼痛患者，无需理疗师会诊，同时缩短了等待时间并提高了患者满意度。",
+      "curatedReasonEn": "Advanced Practice Physiotherapists (APPs) can independently manage almost half (41%) of common musculoskeletal pain patients, effectively reducing wait times and improving patient satisfaction. Consider empowering APPs more robustly in your clinic to manage these patients, which could significantly boost efficiency.",
+      "limitation": "本研究为单中心前瞻性描述性队列研究，且缺乏对照组，结果推广性受限。",
+      "limitationEn": "This was a single-center prospective descriptive cohort study without a control group, limiting the generalizability of its findings.",
+      "tags": [
+        "research",
+        "reimbursement",
+        "workforce"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy"
+    },
     {
       "id": "news-1794970926332-30",
       "title": "Australian Health Practitioner Regulation Agency - Fake nurse given good behaviour bond following Ahpra prosecution",
@@ -1691,28 +1773,6 @@
       ],
       "studyDesign": "RCT",
       "journal": "Sports Medicine - Open"
-    },
-    {
-      "id": "news-1795056196848-38",
-      "title": "APTA State Chapters Advance Payment, Access, and Practice in 2026",
-      "summary": "APTA state chapters secured legislative victories in 2026, advancing payment protections, expanding scope of practice, and improving patient access to physical therapy care.",
-      "category": "practice",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/article/2026/11/18/apta-state-chapters-advance-payment-access-practice",
-      "publishedAt": "2026-11-18T00:00:00.000Z",
-      "firstSeen": "2026-11-19T02:43:16.848Z",
-      "curatedScore": 75,
-      "curatedReason": "APTA州分会在2026年通过立法努力，在支付、执业范围和患者可及性方面取得了显著进展。这凸显了持续的政策倡导对于物理治疗行业的重要性，提示美国地区的物理治疗师，积极参与或支持专业协会的立法工作，是推动执业环境改善的关键。",
-      "titleZh": "APTA 州分会在2026年推动支付、准入和执业取得进展",
-      "summaryZh": "APTA各州分会在2026年取得了立法胜利，在支付保护、执业范围扩大和改善患者获得物理治疗服务方面取得了进展。",
-      "curatedReasonEn": "APTA state chapters achieved significant legislative progress in 2026 across payment, scope of practice, and patient access. This highlights the importance of sustained policy advocacy for the physical therapy profession, suggesting that physical therapists in the US should actively participate in or support professional association legislative efforts as a key driver for improving practice environments.",
-      "tags": [
-        "news",
-        "regulation",
-        "reimbursement",
-        "practice-scope",
-        "US"
-      ]
     }
   ]
 }
