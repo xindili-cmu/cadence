@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-23T01:53:33.222Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Client Challenge",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02165-y"
+    },
+    {
+      "slide": 2,
+      "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43067188/"
+    },
+    {
+      "slide": 3,
+      "title": "Sensor-based motion analysis identifies distinct biomechanical recovery trajectories following internal fixation and arthroplasty: a retrospective longitudinal cohort study",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10755-7"
+    },
+    {
+      "slide": 4,
+      "title": "Physiatry-physiotherapy interdisciplinary project (PHY 2 ): Service evaluation of a new caregiving model for musculoskeletal pain by advanced practice physiotherapists in the physiatry department.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43067131/"
+    },
+    {
+      "slide": 5,
+      "title": "Force and Power Testing in Anterior Cruciate Ligament Reconstruction Literature: A Scoping Review",
+      "url": "https://link.springer.com/article/10.1007/s40279-026-02571-9"
+    }
+  ]
+}
