@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-23T01:53:26.339Z",
+    "lastUpdated": "2026-11-23T07:53:14.173Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -45,32 +45,130 @@
           "titleZh": "与预后和肌肉骨骼疾病相关的临床推理——将预后推理纳入物理治疗实践的大师班课程"
         }
       ],
-      "heat": 2.06,
-      "themeZh": "骨科术后功能恢复与预后评估",
-      "themeEn": "Orthopedic Post-Op Recovery and Prognosis"
+      "heat": 1.89,
+      "themeZh": "骨科术后康复轨迹与预后：从生物力学到老年衰弱",
+      "themeEn": "Orthopedic Post-Op Recovery: Biomechanics to Frailty"
     }
   ],
   "items": [
     {
-      "id": "news-1784932486322-36",
-      "title": "Dry Needling State Laws",
-      "summary": "APTA has released an infographic detailing state-specific laws regarding dry needling practice by physical therapists across the United States. The resource, updated as of November 2026, clarifies which states permit, prohibit, or are silent on dry needling.",
-      "category": "manual-modality",
-      "source": "APTA",
-      "sourceUrl": "https://www.apta.org/patient-care/interventions/dry-needling/laws-by-state",
-      "publishedAt": "2026-11-18T07:00:00.000Z",
-      "firstSeen": "2026-07-24T22:34:46.322Z",
-      "curatedScore": 79,
-      "curatedReason": "APTA 发布的这份信息图概述了美国各州关于物理治疗师干针执业的法律现状。在评估或开展干针疗法时，您务必查阅您所在州的具体规定，以确保合规执业。",
-      "titleZh": "干针疗法州法律规定 | APTA",
-      "summaryZh": "APTA 发布了一份信息图，详细说明了美国各州关于物理治疗师干针执业的法律规定。该资源截至2026年11月更新，明确了哪些州允许、禁止或未明确规定干针疗法。",
-      "curatedReasonEn": "This APTA infographic outlines the current legal landscape for dry needling practice by physical therapists across US states. When evaluating or performing dry needling, you must consult your specific state regulations to ensure compliant practice.",
+      "id": "news-1794389724088-1",
+      "title": "Inertial measurement unit-based gait analysis for objective assessment of vestibular rehabilitation.",
+      "summary": "An IMU-based gait analysis during timed 25-ft walk tests in 30 acute vestibular syndrome patients showed significant improvements in vertigo-balance symptoms and gait parameters like walking speed, Gait Profile Score, and cadence after 6-week rehabilitation, even with a single pelvis sensor.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43008499/",
+      "publishedAt": "2026-11-10T00:00:00.000Z",
+      "firstSeen": "2026-11-11T09:35:24.088Z",
+      "curatedScore": 75,
+      "curatedReason": "这项研究表明，基于惯性测量单元（IMU）的步态分析能够有效捕捉急性前庭综合征（AVS）患者的步态改善，即使只使用单个骨盆传感器也能提供临床可行的数据。这支持了你在前庭康复评估中引入可穿戴 IMU 系统的潜力。",
+      "titleZh": "基于惯性测量单元的步态分析用于前庭康复的客观评估",
+      "summaryZh": "一项对 30 名急性前庭综合征患者进行的 IMU 步态分析显示，在 6 周康复后，眩晕平衡症状和步态参数（如步行速度、步态评分和步频）均显著改善，即使只使用单个骨盆传感器也能捕捉到这些改善。",
+      "curatedReasonEn": "This study demonstrates that IMU-based gait analysis effectively captures gait improvements in acute vestibular syndrome (AVS) patients, with clinically feasible data obtainable even from a single pelvic sensor. This supports the potential for integrating wearable IMU systems into your vestibular rehabilitation assessments.",
+      "limitation": "研究样本量较小（30 名 AVS 患者），且随访期相对较短（12 周），可能需要更大规模、更长期的研究来确证这些结果。",
+      "limitationEn": "The study involved a relatively small sample (30 AVS participants) and a short follow-up period (12 weeks), suggesting a need for larger, longer-term studies to confirm these findings.",
       "tags": [
-        "policy",
-        "dry-needling",
-        "regulation",
-        "US"
-      ]
+        "research",
+        "vestibular"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Gait & posture",
+      "tech": true
+    },
+    {
+      "id": "news-1794419798183-3",
+      "title": "Physiotherapy and Exercise-Based Rehabilitation for Mental Health: A Two-Decade Bibliometric Analysis of Global Trends, Thematic Evolution, and the Socioeconomic Vulnerability Gap (2006-2025).",
+      "summary": "A bibliometric analysis of 5223 publications (2006-2025) found a 22.6-fold increase in research on physical rehabilitation and mental health, predominantly from high-income countries (75.9%), with socioeconomic vulnerability remaining an under-researched theme (4.6% of publications explicitly referencing it).",
+      "category": "practice",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43010739/",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "firstSeen": "2026-11-11T17:56:38.183Z",
+      "curatedScore": 75,
+      "curatedReason": "这项文献计量分析显示，物理治疗和运动康复在精神健康领域的文献量显著增长，但研究主要集中在高收入国家。这提示你在推动运动干预应用于精神健康时，应更多关注低资源环境、成本效益和实施科学，以解决社会经济脆弱性差距。",
+      "titleZh": "物理治疗和运动康复在精神健康中的作用：全球趋势、主题演变和社会经济脆弱性差距的二十年文献计量分析（2006-2025）",
+      "summaryZh": "一项针对 5223 篇文献（2006-2025）的文献计量分析显示，物理康复与精神健康交叉领域的研究增长了 22.6 倍，但主要集中在高收入国家（75.9%），社会经济脆弱性仍是研究不足的主题（4.6% 的文献明确提及）。",
+      "curatedReasonEn": "This bibliometric analysis reveals substantial growth in physical rehabilitation literature for mental health, yet research is concentrated in high-income countries. This suggests that when advocating for exercise interventions in mental health, you should prioritize low-resource settings, cost-effectiveness, and implementation science to address socioeconomic vulnerability gaps.",
+      "limitation": "本研究作为文献计量分析，无法提供具体临床干预的效果证据，且对“社会经济脆弱性”的关键词识别存在误报率（37.5% 精度）。",
+      "limitationEn": "As a bibliometric analysis, this study cannot provide evidence on the effectiveness of specific clinical interventions, and the keyword identification for \"socioeconomic vulnerability\" had a false-positive rate (37.5% precision).",
+      "tags": [
+        "research",
+        "telehealth",
+        "workforce"
+      ],
+      "studyDesign": "综述",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
+    },
+    {
+      "id": "news-1794419798182-0",
+      "title": "Experiences of physiotherapists in managing pelvic floor disorders at public hospitals in uThukela district, South Africa.",
+      "summary": "A qualitative study with 12 physiotherapists in South Africa identified limited undergraduate training, inadequate resources, understaffing, and poor referral pathways as key barriers to managing pelvic floor disorders in public hospitals.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43011422/",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "firstSeen": "2026-11-11T17:56:38.182Z",
+      "curatedScore": 70,
+      "curatedReason": "这项定性研究揭示了南非公立医院物理治疗师在管理盆底障碍时面临的资源不足、转诊路径不畅和培训不足等挑战。这对你了解医疗资源受限地区盆底康复服务的困境和改进方向有价值。",
+      "titleZh": "南非 uThukela 地区公立医院物理治疗师管理盆底功能障碍的经验",
+      "summaryZh": "一项针对南非 12 名物理治疗师的定性研究发现，本科培训不足、资源匮乏、人员短缺和转诊路径不畅是公立医院管理盆底功能障碍的主要障碍。",
+      "curatedReasonEn": "This qualitative study highlights challenges faced by physiotherapists managing pelvic floor disorders in South African public hospitals, including inadequate resources, poor referral pathways, and insufficient training. This is valuable for understanding the systemic barriers to pelvic health physiotherapy in under-resourced settings and identifying areas for improvement.",
+      "limitation": "本研究为定性设计，样本量小（12 名物理治疗师），结果主要反映南非 uThukela 地区的特定经验，外推性有限。",
+      "limitationEn": "This qualitative study with a small sample (12 physiotherapists) reflects specific experiences in South Africa's uThukela district, limiting generalizability.",
+      "tags": [
+        "research",
+        "pelvic-floor",
+        "workforce"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "The South African journal of physiotherapy"
+    },
+    {
+      "id": "news-1794419798183-1",
+      "title": "Health-seeking behaviours of people with osteoarthritis in sub-Saharan Africa: A scoping review.",
+      "summary": "A scoping review of five studies in sub-Saharan Africa found delayed and fragmented health-seeking behaviors for osteoarthritis, influenced by beliefs (OA as normal aging), poor knowledge, limited person-centered care, and access barriers like high costs and long waiting times.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43011416/",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "firstSeen": "2026-11-11T17:56:38.183Z",
+      "curatedScore": 70,
+      "curatedReason": "这项范围综述发现撒哈拉以南非洲骨关节炎患者的健康寻求行为普遍延迟和碎片化。这提示你在该地区推广物理治疗时，需要加强患者教育、自我管理支持，并拓展社区康复服务。",
+      "titleZh": "撒哈拉以南非洲骨关节炎患者健康寻求行为的范围综述",
+      "summaryZh": "一项针对撒哈拉以南非洲的五项研究的范围综述发现，骨关节炎患者的健康寻求行为普遍延迟和碎片化，受限于对骨关节炎的认知、服务可及性差、费用高昂和等待时间长。",
+      "curatedReasonEn": "This scoping review indicates that health-seeking behaviors for osteoarthritis in sub-Saharan Africa are largely delayed and fragmented. This suggests that when promoting physiotherapy in this region, you should prioritize patient education, self-management support, and expanded community-based rehabilitation.",
+      "limitation": "本综述仅纳入五项研究，且集中于尼日利亚和南非的农村地区，证据基础薄弱，可能无法全面反映整个撒哈拉以南非洲的情况。",
+      "limitationEn": "This review included only five studies, predominantly from rural Nigeria and South Africa, providing a limited evidence base and potentially not reflecting the broader sub-Saharan African context.",
+      "tags": [
+        "research",
+        "knee",
+        "hip"
+      ],
+      "studyDesign": "综述",
+      "journal": "The South African journal of physiotherapy"
+    },
+    {
+      "id": "news-1794444637239-0",
+      "title": "A COSMIN systematic review of performance-based assessment tools for mealtime performance in Parkinson's disease: a linking study based on the ICF framework.",
+      "summary": "A COSMIN systematic review identified only two performance-based assessment tools for mealtime performance in Parkinson's disease, the Mealtime Assessment Scale (MAS) and the modified OARS scale, noting limited ICF coverage and lack of content validity testing for both.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43013464/",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "firstSeen": "2026-11-12T00:50:37.239Z",
+      "curatedScore": 70,
+      "curatedReason": "这份 COSMIN 系统综述揭示，帕金森病患者的用餐表现评估工具稀缺，现有工具 ICF 覆盖不全且缺乏充分的内容效度验证。在评估帕金森病患者的用餐功能时，你不能仅关注吞咽，需考虑姿势、餐具使用和认知因素。",
+      "titleZh": "帕金森病患者用餐表现基于性能评估工具的 COSMIN 系统综述：基于 ICF 框架的关联研究",
+      "summaryZh": "一项 COSMIN 系统综述发现，帕金森病患者用餐表现的基于性能评估工具仅有餐时评估量表 (MAS) 和改良老年美国人资源与服务量表 (OARS) 两种，它们 ICF 覆盖范围有限，且缺乏内容效度验证。",
+      "curatedReasonEn": "This COSMIN systematic review reveals a scarcity of performance-based mealtime assessment tools for Parkinson's disease, with existing tools having incomplete ICF coverage and lacking robust content validity. When assessing mealtime function in PD patients, you should look beyond swallowing to include posture, utensil handling, and cognitive factors.",
+      "limitation": "本综述仅纳入两项研究，且两种评估工具均缺乏独立的内容效度测试，使得该领域缺乏强有力的评估证据。",
+      "limitationEn": "This review included only two studies, and both assessment tools lacked independent content validity testing, indicating a weak evidence base for assessment in this area.",
+      "tags": [
+        "research",
+        "parkinson"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Disability and rehabilitation"
     },
     {
       "id": "news-1795398805364-17",
@@ -1686,96 +1784,6 @@
         "spine"
       ],
       "studyDesign": "观察研究"
-    },
-    {
-      "id": "news-1794811633899-18",
-      "title": "Wearable Sensors Predict Exertion Without Changes in Pulse Rate for Frail End-Stage Kidney Disease Patients",
-      "summary": "In a study comparing ESKD patients (n=13) and healthy older adults (n=13), multi-modal wearable sensors and individualized machine learning pipelines accurately predicted Rating of Perceived Exertion (RMSE 1.33) in ESKD patients, where pulse-rate-only models performed poorly, highlighting the need for distinct multi-modal algorithms for this population due to altered cardiovascular responses.",
-      "category": "cardiopulmonary",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.12.26367919v1?rss=1",
-      "publishedAt": "2026-11-15T00:00:00.000Z",
-      "firstSeen": "2026-11-16T06:47:13.899Z",
-      "curatedScore": 70,
-      "curatedReason": "这项研究发现，传统上依赖心率评估劳累程度的方法不适用于终末期肾病（ESKD）患者，尤其是服用β受体阻滞剂的患者。多模态可穿戴传感器结合机器学习算法，能更准确地预测这类患者的劳累感知。这提示你应为ESKD患者选用更全面的评估方法。",
-      "titleZh": "可穿戴传感器在终末期肾病衰弱患者中无需心率变化即可预测劳累",
-      "summaryZh": "一项比较终末期肾病（ESKD）患者（n=13）与健康老年人（n=13）的研究发现，对于ESKD患者，多模态可穿戴传感器和个性化机器学习流程能准确预测感知劳累度（RMSE 1.33），而仅基于脉率的模型表现不佳。这强调了由于心血管反应改变，该人群需要独特的、多模态预测算法。",
-      "curatedReasonEn": "This study found that traditional heart rate-based exertion assessment is unsuitable for End-Stage Kidney Disease (ESKD) patients, especially those on beta-blockers. Multi-modal wearable sensors with machine learning algorithms can more accurately predict perceived exertion in this population, suggesting you should use a more comprehensive assessment approach for ESKD patients.",
-      "limitation": "研究样本量较小（N=13 ESKD患者），且为单中心研究，结果可能需要多中心进一步验证。",
-      "limitationEn": "The study had a small sample size (N=13 ESKD patients) and was single-center, so results may require further multi-center validation.",
-      "tags": [
-        "research",
-        "wearable-tech"
-      ],
-      "studyDesign": "观察研究",
-      "tech": true
-    },
-    {
-      "id": "news-1794854464875-0",
-      "title": "The new body-as-machine: a response to Breedt, Tichenor, and Barlott's \"Diagnosing the body in physiotherapy\".",
-      "summary": "This response paper critically reflects on a recent article, \"Diagnosing the body in physiotherapy,\" acknowledging its strengths in analyzing the profession's evolving concept of the body from mechanical to modulated, while highlighting tensions in its treatment of Foucauldian biopower and narrow focus on musculoskeletal practice.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43037526/",
-      "publishedAt": "2026-11-16T00:00:00.000Z",
-      "firstSeen": "2026-11-16T18:41:04.875Z",
-      "curatedScore": 68,
-      "curatedReason": "这篇评论文章深入探讨了物理治疗中身体概念的演变及其对生物心理社会模式及新兴疼痛科学的批判性审视，对你的专业理论框架和临床实践哲学有参考价值。",
-      "titleZh": "新身体即机器：回应 Breedt, Tichenor, 和 Barlott 的“诊断物理治疗中的身体”一文",
-      "summaryZh": "这篇回应文章批判性地反思了 Breedt, Tichenor, 和 Barlott 的“诊断物理治疗中的身体”一文，肯定了其在分析物理治疗中身体概念从机械到调控的演变方面的贡献，同时也指出了其在处理福柯式生命权力及狭隘的肌肉骨骼实践关注点上的一些张力。",
-      "curatedReasonEn": "This commentary critically examines the evolving concept of the body in physiotherapy and its implications for the biopsychosocial model and emerging pain science, offering valuable insights for your professional theoretical framework and clinical practice philosophy.",
-      "tags": [
-        "research",
-        "ethics"
-      ],
-      "studyDesign": "述评",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1794419798183-2",
-      "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
-      "summary": "A systematic review and meta-analysis of 16 studies found that ACLR patients exhibited lower peak knee flexion angle, adduction angle, and flexion moment during walking compared to controls. Delayed reconstruction (≥ 12 months) was associated with persistent sagittal plane deficits, while early surgery (within 6 months) showed fewer long-term sagittal-plane deficits but temporary frontal-plane asymmetries.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43009638/",
-      "publishedAt": "2026-11-11T00:00:00.000Z",
-      "firstSeen": "2026-11-11T17:56:38.183Z",
-      "curatedScore": 85,
-      "curatedReason": "如果你手上的 ACLR 患者术后步态生物力学存在异常，考虑询问其伤后手术间隔。这项系统综述提示，延迟手术（≥ 12 个月）可能导致矢状面缺陷持续存在，而早期手术（6 个月内）虽有短暂的额状面不对称，但长期矢状面缺陷较少。",
-      "titleZh": "损伤与手术间隔影响 ACL 重建患者步行时的膝关节生物力学：一项系统综述和荟萃分析",
-      "summaryZh": "一项对 16 项研究的系统综述和荟萃分析发现，ACL 重建患者步行时膝关节屈曲角、内收角和屈曲力矩峰值低于健康对照组。延迟重建（≥ 12 个月）与持续的矢状面缺陷相关，而早期手术（6 个月内）的长期矢状面缺陷较少，但可能存在暂时性额状面不对称。",
-      "curatedReasonEn": "If your ACLR patients present with altered gait biomechanics post-surgery, inquire about their injury-to-surgery interval. This review suggests delayed surgery (≥ 12 months) may lead to persistent sagittal plane deficits, while early surgery (within 6 months) shows fewer long-term sagittal-plane deficits, despite temporary frontal-plane asymmetries.",
-      "limitation": "研究的异质性较高（I² 值为 57% 至 88%），且仅纳入了 16 项研究，可能影响结果的稳健性。",
-      "limitationEn": "The study exhibits high heterogeneity (I² values ranging from 57% to 88%) and included only 16 studies, which may impact the robustness of the results.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Sports medicine (Auckland, N.Z.)"
-    },
-    {
-      "id": "news-1794669109877-7",
-      "title": "Gait variability as a predictor of fall risk in patients with stroke: A 6-month prospective cohort study with survival analysis.",
-      "summary": "A 6-month prospective cohort study of 112 stroke patients found that stride time variability (STV) at discharge was an independent predictor of post-discharge falls. Fallers had significantly higher STV, and an optimal STV cutoff of 3.40% (AUC 0.756) showed high sensitivity (88.2%) in identifying fall risk.",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43025304/",
-      "publishedAt": "2026-11-14T00:00:00.000Z",
-      "firstSeen": "2026-11-14T15:11:49.877Z",
-      "curatedScore": 85,
-      "curatedReason": "这项前瞻性队列研究提示，步幅时间变异性（STV）是卒中患者出院后 6 个月内跌倒风险的独立预测因子，其 3.40% 的最佳截点可辅助识别高风险患者。这表明你在临床评估中应关注 STV，并将其纳入跌倒预防干预的早期风险识别工具。",
-      "titleZh": "步态变异性作为卒中患者跌倒风险的预测因子：一项为期 6 个月的前瞻性队列研究与生存分析",
-      "summaryZh": "一项针对 112 名卒中患者的 6 个月前瞻性队列研究发现，出院时的步幅时间变异性（STV）是出院后跌倒的独立预测因子。跌倒患者的 STV 显著更高，STV 的最佳截点为 3.40%（AUC 0.756），在识别跌倒风险方面显示出高敏感性（88.2%）。",
-      "curatedReasonEn": "This prospective cohort study suggests that stride time variability (STV) is an independent predictor of fall risk within 6 months post-discharge for stroke patients, with an optimal cutoff of 3.40% aiding high-risk identification. This indicates you should monitor STV in clinical assessments and integrate it into early fall prevention risk identification tools.",
-      "limitation": "本研究为单中心队列研究，样本量相对较小（112 名完成随访的患者），且未能完全控制所有潜在混杂因素，可能影响结果的普遍性。",
-      "limitationEn": "This is a single-center cohort study with a relatively small sample size (112 patients completing follow-up), and not all potential confounding factors were fully controlled, which may affect the generalizability of the results.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Gait & posture"
     }
   ]
 }
