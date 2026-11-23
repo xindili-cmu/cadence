@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-23T07:53:14.173Z",
+    "lastUpdated": "2026-11-23T20:20:28.729Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,42 +15,372 @@
   },
   "hotTopics": [
     {
-      "id": "news-1795341358907-0",
-      "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43067188/",
-      "category": "orthopedic",
+      "id": "news-1794419798183-3",
+      "title": "Physiotherapy and Exercise-Based Rehabilitation for Mental Health: A Two-Decade Bibliometric Analysis of Global Trends, Thematic Evolution, and the Socioeconomic Vulnerability Gap (2006-2025).",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43010739/",
+      "category": "practice",
       "publishedAt": "2026-11-22T00:00:00.000Z",
-      "sourceCount": 3,
+      "sourceCount": 5,
       "sources": [
-        "BMC Musculoskelet Disord",
+        "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
         "BMC Geriatrics",
-        "PubMed"
+        "Archives of physical medicine and rehabilitation",
+        "BMC Musculoskeletal Disorders",
+        "Physiotherapy"
       ],
-      "tag": "hip",
+      "tag": "telehealth",
       "kind": "theme",
       "members": [
         {
+          "source": "PubMed",
+          "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+          "title": "Physiotherapy and Exercise-Based Rehabilitation for Mental Health: A Two-Decade Bibliometric Analysis of Global Trends, Thematic Evolution, and the Socioeconomic Vulnerability Gap (2006-2025).",
+          "titleZh": "物理治疗和运动康复在精神健康中的作用：全球趋势、主题演变和社会经济脆弱性差距的二十年文献计量分析（2006-2025）"
+        },
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Unpacking what works in home rehabilitation in relation to contexts, mechanisms, and outcomes in a qualitative scoping review",
+          "titleZh": "定性范围综述：剖析居家康复中情境、机制和结果的关联"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Archives of physical medicine and rehabilitation",
+          "title": "From Referral to Reality: A Mixed Methods Analysis of Barriers to Pediatric Rehabilitation Service Initiation.",
+          "titleZh": "从转诊到现实：儿科康复服务启动障碍的混合方法分析"
+        },
+        {
           "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Integrated care for chronic musculoskeletal (MSK) disorders is promising but incomplete: a scoping review of MSK service-delivery approaches across systems",
+          "titleZh": "慢性肌肉骨骼疾病整合照护的现状与局限：一项系统范围综述。"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Physiatry-physiotherapy interdisciplinary project (PHY 2 ): Service evaluation of a new caregiving model for musculoskeletal pain by advanced practice physiotherapists in the physiatry department.",
+          "titleZh": "物理治疗-理疗科多学科项目 (PHY2)：高级执业物理治疗师在理疗科为肌肉骨骼疼痛患者提供新照护模式的服务评估"
+        }
+      ],
+      "heat": 2.64,
+      "themeZh": "康复服务递送模式、可及性与整合照护",
+      "themeEn": "Rehabilitation Service Delivery, Access, and Integrated Care"
+    },
+    {
+      "id": "news-1794419798183-2",
+      "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43009638/",
+      "category": "orthopedic",
+      "publishedAt": "2026-11-21T00:00:00.000Z",
+      "sourceCount": 7,
+      "sources": [
+        "Sports medicine (Auckland, N.Z.)",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "Sports Medicine",
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "BMC Musculoskeletal Disorders",
+        "Gait & posture",
+        "medRxiv"
+      ],
+      "tag": "knee",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
+          "titleZh": "损伤与手术间隔影响 ACL 重建患者步行时膝关节生物力学：一项系统综述与荟萃分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Psychological readiness, active knee flexion and patient-reported knee function at 12 and 18 months after anterior cruciate ligament reconstruction: a retrospective cohort study",
+          "titleZh": "前交叉韧带重建术后12和18个月的心理准备状态、膝关节主动屈曲和患者自评膝关节功能：一项回顾性队列研究"
+        },
+        {
+          "source": "Sports Medicine",
+          "journal": "Sports Medicine",
+          "title": "Force and Power Testing in Anterior Cruciate Ligament Reconstruction Literature: A Scoping Review",
+          "titleZh": "前交叉韧带重建文献中力量和爆发力测试：一项范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Patients treated with rehabilitation alone after anterior cruciate ligament injury display greater muscle strength symmetry, yet lower absolute muscle strength normalized to bodyweight compared to reconstruction: A Cross-sectional study of 3,093 patients.",
+          "titleZh": "前交叉韧带损伤后仅接受康复治疗的患者肌肉力量对称性更高，但绝对力量（按体重归一化）低于重建组：一项 3,093 例患者的横断面研究。"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Long-term outcomes following non-operative treatment of grade II and III medial collateral ligament injuries with and without concomitant ACL injury",
+          "titleZh": "非手术治疗 II 级和 III 级内侧副韧带损伤（伴或不伴前交叉韧带损伤）的长期结局"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+          "title": "Injury risk and physical therapy utilization following knee surgery in U.S. Army soldiers: a comparison of military and non-military treatment facilities.",
+          "titleZh": "美军士兵膝关节手术后损伤风险与物理治疗利用情况：军事与非军事医疗机构的比较"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "One-year prevalence and factors associated with injury in Japanese collegiate American footballers - a cross-sectional observational survey study",
+          "titleZh": "日本大学生美式橄榄球运动员一年期损伤患病率及相关因素：一项横断面观察性调查研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Gait & posture",
+          "title": "Inertial measurement unit-based gait analysis for objective assessment of vestibular rehabilitation.",
+          "titleZh": "基于惯性测量单元的步态分析用于前庭康复的客观评估"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
           "title": "Sensor-based motion analysis identifies distinct biomechanical recovery trajectories following internal fixation and arthroplasty: a retrospective longitudinal cohort study",
           "titleZh": "髋关节内固定与关节置换术后生物力学恢复轨迹的传感器分析：一项回顾性纵向队列研究"
         },
         {
+          "source": "medRxiv",
+          "title": "Physical calibration and signal periodic updates to synchronize IMUs for 5-day continuous knee flexion tracking",
+          "titleZh": "物理校准和信号周期性更新以同步IMU，实现5天连续膝关节屈曲跟踪。"
+        }
+      ],
+      "heat": 2.61,
+      "themeZh": "ACL重建术后康复方案与功能结局",
+      "themeEn": "ACL Reconstruction Rehabilitation Protocols and Outcomes"
+    },
+    {
+      "id": "news-1794477441890-4",
+      "title": "Comparative Efficacy of Low-Level Laser Therapy in Patients With Carpal Tunnel Syndrome: An Updated Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43013892/",
+      "category": "manual-modality",
+      "publishedAt": "2026-11-20T00:00:00.000Z",
+      "sourceCount": 7,
+      "sources": [
+        "American journal of physical medicine & rehabilitation",
+        "The Journal of manual & manipulative therapy",
+        "BMC Sports Science, Medicine and Rehabilitation",
+        "medRxiv",
+        "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
+        "Bulletin of Faculty of Physical Therapy",
+        "Physiotherapy theory and practice"
+      ],
+      "tag": "laser",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "American journal of physical medicine & rehabilitation",
+          "title": "Comparative Efficacy of Low-Level Laser Therapy in Patients With Carpal Tunnel Syndrome: An Updated Systematic Review and Meta-analysis of Randomized Controlled Trials.",
+          "titleZh": "低强度激光治疗腕管综合征患者的比较疗效：一项随机对照试验的更新系统综述和荟萃分析"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Manual techniques for headache: who delivers what and where? A systematic review of randomized controlled trials with a practice-mapping analysis.",
+          "titleZh": "手法治疗头痛：谁在何处提供何种服务？一项随机对照试验的系统综述与实践映射分析"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Client Challenge",
+          "titleZh": "悬吊核心训练与压力生物反馈训练对慢性机械性腰痛的疗效：一项三臂随机对照试验"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Thoracic expansion and spirometry 120 days after adding diaphragmatic manual therapy to physiotherapy in non-specific low back pain: Follow-up of a randomized controlled trial",
+          "titleZh": "在非特异性腰痛的物理治疗中加入手法膈肌治疗对胸廓扩张和肺活量的120天随访结果：一项随机对照试验的随访"
+        },
+        {
+          "source": "PubMed",
+          "journal": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
+          "title": "Comparative diagnostic utility of SPECT-CT versus MRI and CT in chronic low back pain.",
+          "titleZh": "SPECT-CT 与 MRI 和 CT 在慢性腰痛诊断中的比较诊断效用。"
+        },
+        {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Acute effects of fibular repositioning taping on balance, jumping, and sprint performance in healthy individuals: a randomized controlled trial",
+          "titleZh": "腓骨复位贴扎对健康个体平衡、跳跃和冲刺表现的急性影响：一项随机对照试验"
+        },
+        {
+          "source": "Bull Fac Phys Ther",
+          "journal": "Bulletin of Faculty of Physical Therapy",
+          "title": "Acute muscle responses to a single session of whole-body electromyostimulation in sedentary older men: a pilot study",
+          "titleZh": "单次全身电肌肉刺激对久坐老年男性急性肌肉反应的初步研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Effects of neuromuscular electrical stimulation applied simultaneously with exercise therapy in patellofemoral pain: A single-blind, randomized, sham-controlled pilot trial.",
+          "titleZh": "髌股疼痛患者运动疗法中同时应用神经肌肉电刺激的疗效：一项单盲、随机、假对照的初步试验。"
+        }
+      ],
+      "heat": 1.84,
+      "themeZh": "手法治疗与物理因子疗法在疼痛与功能障碍中的应用",
+      "themeEn": "Manual Therapy, Physical Modalities for Pain & Dysfunction"
+    },
+    {
+      "id": "news-1795022457313-3",
+      "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43046054/",
+      "category": "pediatric",
+      "publishedAt": "2026-11-21T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "BMC musculoskeletal disorders",
+        "BMC Geriatrics",
+        "The South African journal of physiotherapy",
+        "Clinical rehabilitation"
+      ],
+      "tag": "ddh",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "BMC musculoskeletal disorders",
+          "title": "Exploratory analysis of the impact of age stratification on outcomes of combined Salter osteotomy and femoral osteotomy in pediatric developmental dysplasia of the hip using a 3-year cutoff.",
+          "titleZh": "年龄分层对儿童发育性髋关节发育不良 Salter 截骨联合股骨截骨术疗效影响的探索性分析：以 3 岁为界"
+        },
+        {
           "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
           "title": "Chart-derived frailty index is associated with long-term mortality and longitudinal health-related quality of life after hip fracture surgery in older adults: a secondary analysis of a prospective cohort study",
           "titleZh": "图表衍生衰弱指数与髋部骨折老年患者长期死亡率和纵向健康相关生命质量的关联：一项前瞻性队列研究的次级分析"
         },
         {
           "source": "PubMed",
-          "title": "The clinical reasoning associated with prognosis and musculoskeletal disorders - A Masterclass in incorporating prognostic reasoning into physiotherapy practice.",
-          "titleZh": "与预后和肌肉骨骼疾病相关的临床推理——将预后推理纳入物理治疗实践的大师班课程"
+          "journal": "The South African journal of physiotherapy",
+          "title": "Health-seeking behaviours of people with osteoarthritis in sub-Saharan Africa: A scoping review.",
+          "titleZh": "撒哈拉以南非洲骨关节炎患者健康寻求行为的范围综述"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Clinical rehabilitation",
+          "title": "Response to letter to the editor regarding 'barriers and facilitators of decision-making in home-based rehabilitation exercise among older adults following total knee arthroplasty: A qualitative study'.",
+          "titleZh": "对《全膝关节置换术后老年人居家康复锻炼决策中的障碍与促进因素：一项定性研究》致编辑的信的回应。"
         }
       ],
-      "heat": 1.89,
-      "themeZh": "骨科术后康复轨迹与预后：从生物力学到老年衰弱",
-      "themeEn": "Orthopedic Post-Op Recovery: Biomechanics to Frailty"
+      "heat": 1.49,
+      "themeZh": "骨关节疾病的年龄影响与康复决策",
+      "themeEn": "Age Impact on Osteoarthritis and Rehabilitation Decisions"
+    },
+    {
+      "id": "news-1795180260675-2",
+      "title": "Application of the ICF in the functioning assessment of children with suspected developmental coordination difficulties.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43057048/",
+      "category": "pediatric",
+      "publishedAt": "2026-11-21T00:00:00.000Z",
+      "sourceCount": 4,
+      "sources": [
+        "Brazilian journal of physical therapy",
+        "The Lancet",
+        "Disability and rehabilitation",
+        "medRxiv"
+      ],
+      "tag": "icf",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "PubMed",
+          "journal": "Brazilian journal of physical therapy",
+          "title": "Application of the ICF in the functioning assessment of children with suspected developmental coordination difficulties.",
+          "titleZh": "ICF在疑似发育性协调障碍儿童功能评估中的应用"
+        },
+        {
+          "source": "The Lancet",
+          "journal": "The Lancet",
+          "title": "[Correspondence] The F-words for Child Development: Lessons Learned",
+          "titleZh": "儿童发育 F 词：经验教训"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Who am I now? Experienced changes of occupational identity after spinal cord injury.",
+          "titleZh": "“我现在是谁？”脊髓损伤后职业认同改变的经历"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Defining Constructs of Hand Function Quality at Home After Cervical Spinal Cord Injury Through Egocentric Videos: A Qualitative Inquiry",
+          "titleZh": "通过以自我为中心视角视频定义颈脊髓损伤后居家手功能质量的构建要素：一项定性探究"
+        }
+      ],
+      "heat": 1.49,
+      "themeZh": "儿童发展性障碍与脊髓损伤的功能评估",
+      "themeEn": "Functional Assessment in Pediatric & SCI"
     }
   ],
   "items": [
+    {
+      "id": "news-1794419798183-2",
+      "title": "Interval Between Injury and Surgery Influences Knee Biomechanics During Walking in Anterior Cruciate Ligament Reconstructed Patients: A Systematic Review with Meta-analysis.",
+      "summary": "A systematic review of 16 studies (n=3522) found ACLR patients had lower peak knee flexion angle (SMD = -0.33), peak knee adduction angle (SMD = -0.47), and peak knee flexion moment (SMD = -0.64) during walking compared to controls. Delayed reconstruction (≥12 months) was associated with persistent sagittal plane deficits, while early surgery (within 6 months) had fewer long-term sagittal-plane deficits but some temporary frontal-plane asymmetries and extension deficits.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43009638/",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "firstSeen": "2026-11-11T17:56:38.183Z",
+      "curatedScore": 85,
+      "curatedReason": "ACLR 患者的步态生物力学问题，比如膝关节屈曲、内收角度和屈曲力矩减小，是普遍现象。如果你考虑进行 ACLR，请注意：这项系统综述明确指出，手术时机至关重要，延迟手术（≥12 个月）会带来持续的矢状面缺陷，而早期手术（<6 个月）能有效减少这些长期问题。尽管早期手术可能伴随短暂的额状面不对称和伸展缺陷，但权衡之下，早期干预对改善长期步态生物力学更有利。",
+      "titleZh": "损伤与手术间隔影响 ACL 重建患者步行时膝关节生物力学：一项系统综述与荟萃分析",
+      "summaryZh": "一项包含 16 项研究（n=3522）的系统综述发现，ACLR 患者步行时峰值膝关节屈曲角（SMD = -0.33）、峰值膝关节内收角（SMD = -0.47）和峰值膝关节屈曲力矩（SMD = -0.64）均低于健康对照。延迟重建（≥12 个月）与持续的矢状面缺陷相关，而早期手术（6 个月内）与较少的长期矢状面缺陷相关，但可能存在早期暂时性额状面不对称和伸展缺陷。",
+      "curatedReasonEn": "ACLR patients commonly exhibit gait biomechanical issues, such as reduced peak knee flexion and adduction angles, and flexion moment. If you're considering ACLR, note that this systematic review unequivocally shows surgical timing is crucial: delayed surgery (≥12 months) leads to persistent sagittal plane deficits, while early surgery (<6 months) significantly reduces these long-term issues. While early surgery might bring temporary frontal plane asymmetries and extension deficits, early intervention is more beneficial for improving long-term gait biomechanics when weighing the options.",
+      "limitation": "研究间存在高度异质性（I²高达88%），可能影响结果的综合解释和推论。",
+      "limitationEn": "High heterogeneity among studies (I² up to 88%) may affect the interpretation and generalizability of the pooled results.",
+      "tags": [
+        "research",
+        "knee"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Sports medicine (Auckland, N.Z.)"
+    },
+    {
+      "id": "news-1794669109877-7",
+      "title": "Gait variability as a predictor of fall risk in patients with stroke: A 6-month prospective cohort study with survival analysis.",
+      "summary": "A 6-month prospective cohort study (n=112) of stroke patients found stride time variability (STV) at discharge to be the only independent predictor of post-discharge falls. An optimal STV cutoff of 3.40% yielded an AUC of 0.756 (95% CI 0.657-0.851), with 88.2% sensitivity and 53.8% specificity for fall prediction.",
+      "category": "geriatric",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43025304/",
+      "publishedAt": "2026-11-14T00:00:00.000Z",
+      "firstSeen": "2026-11-14T15:11:49.877Z",
+      "curatedScore": 85,
+      "curatedReason": "这项前瞻性队列研究表明，出院时步态时间变异性（STV）是卒中患者出院后 6 个月内跌倒的独立预测因子。当 STV 超过 3.40% 时，你应加强跌倒预防干预，这可以作为传统评估的补充指标。",
+      "titleZh": "步态变异性作为卒中患者跌倒风险的预测因子：一项 6 个月前瞻性队列研究及生存分析",
+      "summaryZh": "一项针对 112 名卒中患者的 6 个月前瞻性队列研究发现，出院时的步态时间变异性（STV）是出院后跌倒的唯一独立预测因子。STV 的最佳临界值为 3.40%，其曲线下面积（AUC）为 0.756（95% CI 0.657-0.851），预测跌倒的敏感性为 88.2%，特异性为 53.8%。",
+      "curatedReasonEn": "This prospective cohort study indicates that stride time variability (STV) at discharge is an independent predictor of falls within 6 months post-discharge in stroke patients. You should intensify fall prevention interventions when STV exceeds 3.40%, using this as a complementary indicator to conventional assessments.",
+      "limitation": "该研究为单中心队列研究，且样本量相对较小（n=112），结果推广性可能受限。",
+      "limitationEn": "This is a single-center cohort study with a relatively small sample size (n=112), which may limit the generalizability of its findings.",
+      "tags": [
+        "research",
+        "stroke",
+        "falls"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Gait & posture"
+    },
+    {
+      "id": "news-1794854464875-0",
+      "title": "The new body-as-machine: a response to Breedt, Tichenor, and Barlott's \"Diagnosing the body in physiotherapy\".",
+      "summary": "This response paper critically reflects on a recent article, \"Diagnosing the body in physiotherapy,\" acknowledging its strengths while highlighting tensions regarding Foucauldian biopower, the narrow focus on musculoskeletal practice, and the link between process philosophy and neoliberalism.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43037526/",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "firstSeen": "2026-11-16T18:41:04.875Z",
+      "curatedScore": 68,
+      "curatedReason": "这篇述评批评了物理治疗行业将身体视为机器的倾向，并挑战了行业对生物心理社会模式的声明。它促使你反思在临床实践中对身体概念的深层哲学假设。",
+      "titleZh": "新的身体即机器观：对 Breedt, Tichenor, and Barlott \"物理治疗中身体的诊断\"一文的回应",
+      "summaryZh": "这篇回应文章对 Breedt, Tichenor, and Barlott 的 \"物理治疗中身体的诊断\" 一文进行了批判性反思，肯定了其优点，但也指出了在福柯生物权力、对肌肉骨骼实践的狭隘关注以及过程哲学与新自由主义之间联系方面的张力。",
+      "curatedReasonEn": "This commentary criticizes the physiotherapy profession's tendency to view the body as a machine and challenges its claims to a biopsychosocial model. It prompts you to reflect on the deep philosophical assumptions underpinning your concept of the body in clinical practice.",
+      "limitation": "这是一篇批判性述评，并非基于实证研究，观点可能存在主观性。",
+      "limitationEn": "This is a critical commentary, not based on empirical research, and its perspectives may be subjective.",
+      "tags": [
+        "research",
+        "ethics"
+      ],
+      "studyDesign": "述评",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1794389724088-1",
       "title": "Inertial measurement unit-based gait analysis for objective assessment of vestibular rehabilitation.",
@@ -1715,75 +2045,6 @@
       ],
       "studyDesign": "观察研究",
       "tech": true
-    },
-    {
-      "id": "news-1794854464876-1",
-      "title": "Education and training pathways for advanced musculoskeletal physiotherapists: a qualitative study investigating competency.",
-      "summary": "A qualitative study explored advanced musculoskeletal physiotherapists' experiences and perspectives on education and training in Tasmania, Australia, revealing that current workplace-based training supports clinical expertise but lacks health-service collaboration, with opportunities for better integration of external training and alignment of policy and regulation.",
-      "category": "orthopedic",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43037201/",
-      "publishedAt": "2026-11-16T00:00:00.000Z",
-      "firstSeen": "2026-11-16T18:41:04.876Z",
-      "curatedScore": 72,
-      "curatedReason": "澳大利亚物理治疗师的进阶教育和培训现状，有助于你理解进阶实践发展中的挑战，尤其是在跨机构协作和政策与监管对能力支持方面。",
-      "titleZh": "进阶肌肉骨骼物理治疗师的教育和培训途径：一项调查能力的定性研究",
-      "summaryZh": "一项定性研究探讨了澳大利亚塔斯马尼亚进阶肌肉骨骼物理治疗师在教育和培训方面的经验与观点，发现当前基于工作场所的培训支持临床专业知识，但缺乏医疗服务协作，并存在整合外部进阶培训以及政策与监管对能力支持的机遇。",
-      "curatedReasonEn": "Understanding the current state of advanced physiotherapy education and training in Australia helps you grasp the challenges in advanced practice development, particularly regarding inter-organizational collaboration and policy/regulation support for competency.",
-      "limitation": "研究仅限于塔斯马尼亚的进阶肌肉骨骼物理治疗师，结果推广性有限。",
-      "limitationEn": "The study was limited to advanced musculoskeletal physiotherapists in Tasmania, limiting generalizability of findings.",
-      "tags": [
-        "research",
-        "education",
-        "workforce"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy theory and practice"
-    },
-    {
-      "id": "news-1795121306768-3",
-      "title": "Current Clinical Practice and Barriers to Instrumented Gait Assessment in Stroke Rehabilitation: A Cross-Sectional Survey.",
-      "summary": "A web-based cross-sectional survey of Japanese physiotherapists (n=329) found that 91.2% recognized the need for instrumented gait assessment in stroke rehabilitation, but only 39.8% used it routinely, citing equipment unavailability, excessive measurement time, and interpretation difficulty as key barriers.",
-      "category": "neurological",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43055270/",
-      "publishedAt": "2026-11-19T00:00:00.000Z",
-      "firstSeen": "2026-11-19T20:48:26.768Z",
-      "curatedScore": 70,
-      "curatedReason": "尽管日本神经物理治疗师普遍认为仪器化步态评估有必要，但常规应用仍有限。若要将其整合到卒中康复中，需要更便捷、便携且具备自动分析和结果解读支持的系统。",
-      "titleZh": "卒中康复中仪器化步态评估的当前临床实践与障碍：一项横断面调查",
-      "summaryZh": "一项针对日本物理治疗师（n=329）的网络横断面调查发现，91.2%的受访者认为卒中康复中仪器化步态评估有必要，但仅39.8%的人常规使用，主要障碍是设备不可用、测量时间过长和结果解读困难。",
-      "curatedReasonEn": "While Japanese neurological physical therapists widely perceive instrumented gait assessment as necessary, its routine use remains limited. Integrating it into stroke rehabilitation requires more time-efficient, portable systems with automated analysis and interpretation support.",
-      "limitation": "本研究为横断面调查，难以建立因果关系，且可能存在回忆偏倚。",
-      "limitationEn": "This was a cross-sectional survey, which limits the ability to establish causality and may involve recall bias.",
-      "tags": [
-        "research",
-        "stroke"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "NeuroRehabilitation"
-    },
-    {
-      "id": "news-1794811633899-17",
-      "title": "Changes in cervical muscle mechanical properties during orofacial motor tasks in individuals with and without chronic neck pain",
-      "summary": "A study comparing chronic neck pain patients to healthy controls found that orofacial motor tasks, including tongue-pressure tasks and maximum intercuspation, significantly altered cervical muscle mechanical properties (frequency, stiffness, relaxation time, creep) regardless of neck pain status, with few group-by-condition interactions, supporting functional interactions between cervical and orofacial systems.",
-      "category": "orthopedic",
-      "source": "medRxiv",
-      "sourceUrl": "https://www.medrxiv.org/content/10.64898/2026.11.12.26367942v1?rss=1",
-      "publishedAt": "2026-11-15T00:00:00.000Z",
-      "firstSeen": "2026-11-16T06:47:13.899Z",
-      "curatedScore": 70,
-      "curatedReason": "慢性颈痛患者与健康对照组在口面部运动任务中，颈部肌肉的力学特性会发生改变，但这种改变并非由慢性颈痛状态决定。这提示你在颈痛评估时应关注颈部与口面部系统的功能交互。",
-      "titleZh": "慢性颈痛患者和健康个体在口面部运动任务中颈部肌肉力学特性的变化",
-      "summaryZh": "一项比较慢性颈痛患者和健康对照组的研究发现，包括舌压任务和最大咬合在内的口面部运动任务，会显著改变颈部肌肉的力学特性（频率、僵硬度、松弛时间、蠕变），且这种改变与颈痛状态无关，组间条件交互作用较少，这支持了颈部和口面部系统之间的功能交互。",
-      "curatedReasonEn": "Cervical muscle mechanical properties change during orofacial motor tasks in both chronic neck pain patients and healthy controls, but these changes are not consistently modified by chronic neck pain status. This suggests you should consider functional interactions between cervical and orofacial systems in neck pain assessment.",
-      "limitation": "研究样本在某些分析中分为子样本，降低了统计效力，且横断面设计无法推断因果。",
-      "limitationEn": "The study sample was divided into subsamples for certain analyses, reducing statistical power, and the cross-sectional design prevents causal inference.",
-      "tags": [
-        "research",
-        "spine"
-      ],
-      "studyDesign": "观察研究"
     }
   ]
 }
