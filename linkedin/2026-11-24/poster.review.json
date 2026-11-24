@@ -1,0 +1,23 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-24T05:25:42.334Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Prevalence and Associated Factors of Pelvic Floor Dysfunction in Women Who Practice CrossFit®: A Systematic Review",
+      "url": "https://link.springer.com/article/10.1007/s00192-026-06971-3"
+    },
+    {
+      "slide": 2,
+      "title": "Does whole-body electromyostimulation improve functional, compositional, and biochemical outcomes in older women with sarcopenia? A randomized controlled trial",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10707-1"
+    },
+    {
+      "slide": 3,
+      "title": "Strength Training in Youth: A Scoping Review with Evidence Gap Map",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01128-4"
+    }
+  ]
+}
