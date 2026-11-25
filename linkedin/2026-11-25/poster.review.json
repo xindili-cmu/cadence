@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-25T04:24:24.997Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "The effect of music therapy on function in people with Parkinson's disease or parkinsonism: A systematic review and meta-analysis.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43076026/"
+    },
+    {
+      "slide": 2,
+      "title": "A meta-analysis of 8 RCTs (n=2548) on extended window IVT (4.",
+      "url": "https://jnnp.bmj.com/content/early/2026/11/18/jnnp-2026-339416"
+    },
+    {
+      "slide": 3,
+      "title": "Effects of Functional Visuo-Proprioceptive Stimulation on Upper- and Lower-Limb Motor Impairment After Stroke: A Randomized Controlled Crossover Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43075827/"
+    },
+    {
+      "slide": 4,
+      "title": "Compensatory Trunk Neuromuscular Control During Early Rehabilitation After Motor Incomplete Spinal Cord Injury.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43075990/"
+    },
+    {
+      "slide": 5,
+      "title": "Diagnostic Precision in Arthrogenic Muscle Inhibition",
+      "url": "https://link.springer.com/article/10.1186/s40798-026-01154-2"
+    }
+  ]
+}
