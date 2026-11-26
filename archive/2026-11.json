@@ -5662,6 +5662,74 @@
       "studyDesign": "观察研究",
       "journal": "Neurorehabilitation and neural repair",
       "tech": true
+    },
+    {
+      "id": "news-1795664481967-22",
+      "title": "Effects of an 8-week progressive neuro-athletic training program on goalkeeper movement performance: a randomized controlled trial",
+      "summary": "An 8-week progressive neuro-athletic training (NAT) program, added to regular soccer training, significantly improved dynamic postural control (Y-Balance composite score: 2.74% within-group improvement, Hedges’ g = 1.07), change-of-direction performance (T-agility time decreased by 2.77%, Hedges’ g = -1.36), and countermovement jump flight time (Hedges’ g = 1.16) in 20 trained male soccer goalkeepers, compared to regular training alone.",
+      "category": "sports",
+      "source": "BMC Sports Sci Med Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02200-y",
+      "publishedAt": "2026-11-24T00:00:00.000Z",
+      "firstSeen": "2026-11-26T03:41:21.967Z",
+      "curatedScore": 82,
+      "curatedReason": "这项随机对照试验表明，在常规训练基础上增加为期8周的神经运动训练（NAT）能显著改善足球守门员的动态姿势控制和变向表现。如果你在运动康复领域工作，考虑将NAT作为提高运动员核心运动表现的补充干预，尤其适用于需要快速反应和协调性的运动项目。",
+      "titleZh": "8周渐进式神经运动训练方案对守门员运动表现影响的随机对照试验",
+      "summaryZh": "一项随机对照试验显示，在常规足球训练基础上，为期8周的渐进式神经运动训练（NAT）方案显著改善了20名训练有素的男性足球守门员的动态姿势控制（Y-平衡复合得分组内提升2.74%，Hedges’ g = 1.07）、变向表现（T-敏捷时间减少2.77%，Hedges’ g = -1.36）和反向跳跃滞空时间（Hedges’ g = 1.16）。",
+      "curatedReasonEn": "This randomized controlled trial shows that adding an 8-week neuro-athletic training (NAT) program to regular training significantly improves dynamic postural control and change-of-direction performance in soccer goalkeepers. If you work in sports rehabilitation, consider NAT as a supplementary intervention to enhance core athletic performance, especially for sports requiring rapid reactions and coordination.",
+      "limitation": "对照组未接受时间匹配的主动干预，可能高估了神经运动训练的独立效果。",
+      "limitationEn": "The control group did not receive a time-matched active intervention, which may have overestimated the isolated effect of neuro-athletic training.",
+      "tags": [
+        "research",
+        "athletic-performance",
+        "soccer"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Sports Science, Medicine and Rehabilitation"
+    },
+    {
+      "id": "news-1795664481967-24",
+      "title": "2027 Fee Schedule Analysis: Delayed MIPS Sunset Is Welcome News for PTs",
+      "summary": "The Centers for Medicare & Medicaid Services (CMS) finalized several Medicare Physician Fee Schedule policies for calendar year 2027, offering welcome news for physical therapists participating in quality reporting, and providing insight into CMS' preparedness to move to quality reporting and value-based care.",
+      "category": "practice",
+      "source": "APTA",
+      "sourceUrl": "https://www.apta.org/article/2026/11/25/2027-fee-schedule-analysis-delayed-mips-sunset-is-welcome-news-for-pts",
+      "publishedAt": "2026-11-25T00:00:00.000Z",
+      "firstSeen": "2026-11-26T03:41:21.967Z",
+      "curatedScore": 79,
+      "curatedReason": "CMS发布了2027年医保医师费用表最终规则的分析报告，其中MIPS日落时间延迟的消息对物理治疗师来说是积极进展。你应关注这些政策变化，调整你的质量报告策略和价值护理模式，以优化报销。",
+      "titleZh": "2027 年费用表分析：MIPS 日落延迟对 PT 来说是好消息",
+      "summaryZh": "医疗保险和医疗补助服务中心（CMS）最终确定了 2027 日历年度的几项医疗保险医师费用表政策，为参与质量报告的物理治疗师带来了好消息，并提供了 CMS 准备转向质量报告和价值型护理的见解。",
+      "curatedReasonEn": "CMS has released an analysis of the 2027 Medicare Physician Fee Schedule final rule, with the delayed MIPS sunset being positive news for physical therapists. You should monitor these policy changes to adjust your quality reporting strategies and value-based care models to optimize reimbursement.",
+      "tags": [
+        "policy",
+        "reimbursement",
+        "regulation"
+      ]
+    },
+    {
+      "id": "news-1795664481967-21",
+      "title": "A machine learning-based assessment method for post-stroke dysfunction severity using the ICF-RS: a prospective study",
+      "summary": "A machine learning framework developed using ICF-RS data from 2,812 stroke patients achieved a mean classification accuracy of 0.84 in fivefold cross-validation and 0.71 in two external validation cohorts for post-stroke dysfunction severity. The derived continuous severity score was negatively correlated with the Modified Barthel Index (r = -0.61).",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02225-x",
+      "publishedAt": "2026-11-23T00:00:00.000Z",
+      "firstSeen": "2026-11-26T03:41:21.967Z",
+      "curatedScore": 78,
+      "curatedReason": "这个基于机器学习的模型能够将ICF-RS数据转化为中风后功能障碍的序数分类和连续严重度评分，有望支持个性化康复规划和更高效的资源分配。在临床实践中，可以考虑引入这类工具辅助标准化评估。",
+      "titleZh": "基于机器学习的 ICF-RS 中风后功能障碍严重程度评估方法：一项前瞻性研究",
+      "summaryZh": "一项基于2812名中风患者ICF-RS数据的机器学习框架，在五折交叉验证中实现了0.84的平均分类准确率，在两个外部验证队列中实现了0.71的准确率，用于评估中风后功能障碍的严重程度。导出的连续严重度评分与改良Barthel指数呈负相关（r = -0.61）。",
+      "curatedReasonEn": "This machine learning-based model can convert ICF-RS data into ordinal classifications and continuous severity scores for post-stroke dysfunction, potentially supporting personalized rehabilitation planning and more efficient resource allocation. In clinical practice, consider incorporating such tools to aid standardized assessment.",
+      "limitation": "模型在外部验证队列中的准确性低于内部交叉验证，提示其泛化能力仍有提升空间。",
+      "limitationEn": "The model's accuracy in external validation cohorts was lower than in internal cross-validation, suggesting room for improvement in generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "tech": true
     }
   ]
 }
