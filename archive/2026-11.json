@@ -5638,6 +5638,30 @@
       ],
       "studyDesign": "观察研究",
       "journal": "BMC musculoskeletal disorders"
+    },
+    {
+      "id": "news-1795653107090-0",
+      "title": "Therapy Performance Predicts Functional Recovery After Stroke.",
+      "summary": "Therapy performance metrics (TPMs) extracted from clinical notes using machine learning predict functional discharge outcomes in stroke patients (n=42) as early as 5-7 days post-admission, with R² values of 0.64-0.78 for 10MWT, 6MWT, and BBS. Incorporating TPMs improved 6MWT prediction from R²=0.30 to 0.63, reducing error by ~25 m.",
+      "category": "neurological",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43081951/",
+      "publishedAt": "2026-11-25T00:00:00.000Z",
+      "firstSeen": "2026-11-26T00:31:47.091Z",
+      "curatedScore": 85,
+      "curatedReason": "本研究利用机器学习从临床笔记中提取治疗表现指标（TPMs），大幅提升了卒中患者出院功能恢复的早期预测能力。这提示未来可通过常规临床数据实现更动态、实时的康复预测和个性化方案调整。",
+      "titleZh": "治疗表现指标预测卒中后功能恢复",
+      "summaryZh": "一项对42名卒中患者的观察研究显示，从临床笔记中提取的治疗表现指标（TPMs）可早在入院后5-7天预测出院时的功能结局，与10MWT、6MWT和BBS的出院分数强相关（R²=0.64-0.78）。将TPMs纳入机器学习模型显著提高了预测能力，6MWT的R²从0.30增至0.63，预测误差减少约25米。",
+      "curatedReasonEn": "This study significantly enhances early prediction of functional recovery post-stroke by extracting Therapy Performance Metrics (TPMs) from clinical notes using machine learning. This suggests future potential for dynamic, real-time rehabilitation prediction and personalized intervention adjustments from routine clinical data.",
+      "limitation": "研究样本量较小（42例），且为单中心研究，结果外推性有限。",
+      "limitationEn": "The study has a small sample size (42 participants) and is single-center, limiting generalizability.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Neurorehabilitation and neural repair",
+      "tech": true
     }
   ]
 }
