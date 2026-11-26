@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-26",
+  "lead": {
+    "categoryId": "neurological",
+    "claim": "Therapy notes may flag stroke recovery trajectories within a week.",
+    "context": "Machine learning extracted therapy performance metrics from clinical notes and predicted functional discharge outcomes.",
+    "journal": "NNR",
+    "tech": true,
+    "signal": 85,
+    "url": "https://pubmed.ncbi.nlm.nih.gov/43081951/"
+  },
+  "supporting": [
+    {
+      "categoryId": "sports",
+      "claim": "Adding neuro-athletic training improves goalkeepers' balance and agility.",
+      "context": "An 8-week progressive neuro-athletic training program was tested against regular training in a randomized controlled trial.",
+      "journal": "BMC Sports Sci Med Rehabil",
+      "signal": 82,
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02200-y"
+    },
+    {
+      "categoryId": "sports",
+      "claim": "TRX suspension training improved movement quality and balance after ACL reconstruction.",
+      "context": "In an RCT, 6 weeks of TRX outperformed traditional rehab in male athletes post-ACL reconstruction.",
+      "journal": "BMC musculoskeletal disorders",
+      "signal": 80,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43079379/"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Machine learning can grade post-stroke dysfunction severity from ICF data.",
+      "context": "A machine learning framework classified stroke dysfunction severity using ICF-RS data from thousands of patients.",
+      "journal": "J NeuroEng Rehabil",
+      "tech": true,
+      "signal": 78,
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02225-x"
+    },
+    {
+      "categoryId": "neurological",
+      "claim": "Nerve transfer surgery holds promise for upper limb recovery after cervical SCI.",
+      "context": "Literature analysis suggests positive aggregate outcomes but variable individual responses.",
+      "journal": "AJPM&R",
+      "signal": 75,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43078503/"
+    }
+  ]
+}

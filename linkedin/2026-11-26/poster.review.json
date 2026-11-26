@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-26T22:14:09.984Z",
+  "provider": "deepseek",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Therapy Performance Predicts Functional Recovery After Stroke.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43081951/"
+    },
+    {
+      "slide": 2,
+      "title": "Effects of an 8-week progressive neuro-athletic training program on goalkeeper movement performance: a randomized controlled trial",
+      "url": "https://link.springer.com/article/10.1186/s13102-026-02200-y"
+    },
+    {
+      "slide": 3,
+      "title": "Improvement in functional movement, landing mechanics, and dynamic balance following TRX training in physically active athletes after ACL reconstruction: a randomized controlled trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43079379/"
+    },
+    {
+      "slide": 4,
+      "title": "A machine learning-based assessment method for post-stroke dysfunction severity using the ICF-RS: a prospective study",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02225-x"
+    },
+    {
+      "slide": 5,
+      "title": "Should Nerve Transfer Surgery be the Standard of Care for Cervical Spinal Cord Injury?",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43078503/"
+    }
+  ]
+}
