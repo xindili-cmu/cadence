@@ -1677,7 +1677,10 @@ async function callGemini(systemPrompt, userPrompt, json = true) {
 // V4; we disable it so the batch JSON comes back fast/cheap without burning
 // output budget on chain-of-thought (parity with the Gemini thinkingBudget:0
 // above). Model is swappable via DEEPSEEK_MODEL (deepseek-v4-flash / -pro).
-async function callDeepSeek(systemPrompt, userPrompt) {
+// jsonObject: opt-in DeepSeek JSON mode (response_format json_object). Forces a
+// single top-level OBJECT, so only callers that expect {...} may set it (the
+// default batch callers parse arrays). The prompt must contain the word "json".
+async function callDeepSeek(systemPrompt, userPrompt, jsonObject = false) {
   const res = await fetch('https://api.deepseek.com/chat/completions', {
     method: 'POST',
     headers: {
@@ -1688,6 +1691,7 @@ async function callDeepSeek(systemPrompt, userPrompt) {
       model: DEEPSEEK_MODEL,
       max_tokens: 8000,
       thinking: { type: 'disabled' },
+      ...(jsonObject ? { response_format: { type: 'json_object' } } : {}),
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userPrompt }
@@ -1697,6 +1701,8 @@ async function callDeepSeek(systemPrompt, userPrompt) {
 
   if (!res.ok) {
     console.error(`  DeepSeek error: ${res.status} ${(await res.text()).slice(0, 200)}`);
+    // JSON mode rejected (e.g. unsupported by this model) -> one plain retry
+    if (jsonObject && res.status === 400) return callDeepSeek(systemPrompt, userPrompt, false);
     return '';
   }
 
@@ -1705,9 +1711,9 @@ async function callDeepSeek(systemPrompt, userPrompt) {
 }
 
 // One place to route a (system, user) prompt to the configured provider.
-function callLLM(systemPrompt, userPrompt, { json = true } = {}) {
+function callLLM(systemPrompt, userPrompt, { json = true, jsonObject = false } = {}) {
   if (LLM_PROVIDER === 'gemini') return callGemini(systemPrompt, userPrompt, json);
-  if (LLM_PROVIDER === 'deepseek') return callDeepSeek(systemPrompt, userPrompt);
+  if (LLM_PROVIDER === 'deepseek') return callDeepSeek(systemPrompt, userPrompt, jsonObject);
   return callAnthropic(systemPrompt, userPrompt);
 }
 

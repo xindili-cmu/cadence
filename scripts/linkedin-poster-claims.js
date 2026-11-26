@@ -244,13 +244,25 @@ async function main() {
     for (const it of items) resolveJournal(it);          // fail before spending LLM budget
 
     const { callLLM, LLM_PROVIDER } = require('./news-refresh.js');
-    let feedback = '', copies = null, day = null, errs = [];
+    let feedback = '', copies = null, day = null, errs = [], lastRaw = '';
     const MAX_ATTEMPTS = 4;
     const locked = items.map(() => null);
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-      const raw = await callLLM(SYSTEM, userPrompt(items, feedback), { json: true });
-      if (!raw) throw new Error(`LLM (${LLM_PROVIDER}) returned nothing`);
-      const got = parseJson(raw);
+      const raw = await callLLM(SYSTEM, userPrompt(items, feedback), { json: true, jsonObject: true });
+      // A reply with no usable JSON is a failed ATTEMPT, not a fatal error:
+      // retry with a format reminder; only the last attempt's failure is fatal.
+      let got;
+      try {
+        if (!raw) throw new Error(`LLM (${LLM_PROVIDER}) returned nothing`);
+        got = parseJson(raw);
+      } catch (pe) {
+        lastRaw = String(raw || '');
+        errs = [`${pe.message}`];
+        console.warn(`  attempt ${attempt}: unusable reply (${pe.message}); first 300 chars: ${JSON.stringify(lastRaw.slice(0, 300))}`);
+        if (attempt === MAX_ATTEMPTS) throw new Error(`${pe.message} on all ${MAX_ATTEMPTS} attempts; last reply began: ${JSON.stringify(lastRaw.slice(0, 300))}`);
+        feedback = `Your previous reply was not valid JSON (${pe.message}). Return ONLY the JSON object {"papers":[...]} with all ${items.length} papers, no prose.`;
+        continue;
+      }
       const aligned = alignCopies(got, items.length);
       const fresh = aligned.fresh;
       copies = items.map((_, k) => locked[k] || fresh[k]);
