@@ -1,0 +1,9 @@
+linkedin-poster-claims.js failed at 2026-11-27T03:43:45.517Z
+
+draft still breaks 3 rule(s) after retry:
+  - paper 1 is missing from your reply — return every paper exactly once with its own "i" number
+  - paper 1 claim is empty
+  - paper 1 context is empty
+
+The carousel for 2026-11-27 was NOT drafted. Fix the cause, then run:
+  node scripts/linkedin-poster-claims.js 2026-11-27 && node scripts/linkedin-poster.js 2026-11-27
