@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastUpdated": "2026-11-27T22:46:36.253Z",
+    "lastUpdated": "2026-11-28T03:24:09.093Z",
     "totalItems": 75,
     "categories": [
       "orthopedic",
@@ -15,46 +15,30 @@
   },
   "hotTopics": [
     {
-      "id": "news-1795653107090-0",
-      "title": "Therapy Performance Predicts Functional Recovery After Stroke.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43081951/",
+      "id": "news-1795836247090-13",
+      "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02229-7",
       "category": "neurological",
-      "publishedAt": "2026-11-26T00:00:00.000Z",
-      "sourceCount": 6,
+      "publishedAt": "2026-11-27T00:00:00.000Z",
+      "sourceCount": 8,
       "sources": [
-        "Neurorehabilitation and neural repair",
         "Journal of NeuroEngineering and Rehabilitation",
-        "British Journal of Sports Medicine",
         "Disability and rehabilitation",
         "American journal of physical medicine & rehabilitation",
-        "Topics in stroke rehabilitation"
+        "Neurorehabilitation and neural repair",
+        "Topics in stroke rehabilitation",
+        "British Journal of Sports Medicine",
+        "NeuroRehabilitation",
+        "Clinical rehabilitation"
       ],
       "tag": "stroke",
       "kind": "theme",
       "members": [
         {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Therapy Performance Predicts Functional Recovery After Stroke.",
-          "titleZh": "治疗表现指标预测卒中后功能恢复"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Neurorehabilitation and neural repair",
-          "title": "Impact of Rehabilitation Initiation Timing on Safety and Efficacy in Patients With Acute Stroke and Concurrent Heart Failure.",
-          "titleZh": "卒中合并心力衰竭患者康复启动时机对安全性和疗效的影响"
-        },
-        {
           "source": "J NeuroEng Rehabil",
           "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "A machine learning-based assessment method for post-stroke dysfunction severity using the ICF-RS: a prospective study",
-          "titleZh": "基于机器学习的 ICF-RS 中风后功能障碍严重程度评估方法：一项前瞻性研究"
-        },
-        {
-          "source": "BJSM",
-          "journal": "British Journal of Sports Medicine",
-          "title": "A meta-analysis of 8 RCTs (n=2548) on extended window IVT (4.",
-          "titleZh": "急性缺血性卒中延长时间窗溶栓（4.5-24 小时）：一项随机对照试验的系统综述和荟萃分析"
+          "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+          "titleZh": "外骨骼康复机器人在卒中患者上肢功能恢复中的疗效：一项系统综述和荟萃分析"
         },
         {
           "source": "PubMed",
@@ -85,28 +69,31 @@
           "journal": "Topics in stroke rehabilitation",
           "title": "Venous flow dynamics in post-stroke hemiparetic lower extremity motor dysfunctions.",
           "titleZh": "卒中后偏瘫下肢运动功能障碍中的静脉血流动力学"
-        }
-      ],
-      "heat": 3.05,
-      "themeZh": "卒中康复的治疗效果预测、早期干预与家庭疗法",
-      "themeEn": "Stroke Rehabilitation: Prediction, Early Intervention, Home Therapy"
-    },
-    {
-      "id": "news-1795819594112-0",
-      "title": "Augmenting Conventional Rehabilitation with Virtual Reality or Aerobic Exercise in Multiple Sclerosis: A Three-Arm Parallel-Group Superiority Randomized Controlled Trial.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43101968/",
-      "category": "neurological",
-      "publishedAt": "2026-11-27T00:00:00.000Z",
-      "sourceCount": 4,
-      "sources": [
-        "NeuroRehabilitation",
-        "Clinical rehabilitation",
-        "American journal of physical medicine & rehabilitation",
-        "Journal of NeuroEngineering and Rehabilitation"
-      ],
-      "tag": "ms",
-      "kind": "theme",
-      "members": [
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Therapy Performance Predicts Functional Recovery After Stroke.",
+          "titleZh": "治疗表现指标预测卒中后功能恢复"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Neurorehabilitation and neural repair",
+          "title": "Impact of Rehabilitation Initiation Timing on Safety and Efficacy in Patients With Acute Stroke and Concurrent Heart Failure.",
+          "titleZh": "卒中合并心力衰竭患者康复启动时机对安全性和疗效的影响"
+        },
+        {
+          "source": "J NeuroEng Rehabil",
+          "journal": "Journal of NeuroEngineering and Rehabilitation",
+          "title": "A machine learning-based assessment method for post-stroke dysfunction severity using the ICF-RS: a prospective study",
+          "titleZh": "基于机器学习的 ICF-RS 中风后功能障碍严重程度评估方法：一项前瞻性研究"
+        },
+        {
+          "source": "BJSM",
+          "journal": "British Journal of Sports Medicine",
+          "title": "A meta-analysis of 8 RCTs (n=2548) on extended window IVT (4.",
+          "titleZh": "急性缺血性卒中延长时间窗溶栓（4.5-24 小时）：一项随机对照试验的系统综述和荟萃分析"
+        },
         {
           "source": "PubMed",
           "journal": "NeuroRehabilitation",
@@ -130,34 +117,30 @@
           "journal": "American journal of physical medicine & rehabilitation",
           "title": "Virtual Reality and Body Weight-Supported Treadmill Training in Gait and Balance Rehabilitation After Stroke: A Systematic Review of Randomized Controlled Trials.",
           "titleZh": "虚拟现实与体重支持跑步机训练在卒中后步态和平衡康复中的应用：随机对照试验的系统综述"
-        },
-        {
-          "source": "J NeuroEng Rehabil",
-          "journal": "Journal of NeuroEngineering and Rehabilitation",
-          "title": "A systematic review of robotic hip exoskeletons for gait rehabilitation: from design to clinical evidence",
-          "titleZh": "髋部机器人外骨骼在步态康复中的应用：从设计到临床证据的系统综述"
         }
       ],
-      "heat": 2.88,
-      "themeZh": "虚拟现实和机器人辅助步态训练在神经康复中的应用",
-      "themeEn": "VR & Robotic Gait Training in Neurorehabilitation"
+      "heat": 5.39,
+      "themeZh": "卒中后上肢功能康复的创新疗法与机制研究",
+      "themeEn": "Post-stroke Upper Limb Rehabilitation: Novel Therapies & Mechanisms"
     },
     {
       "id": "news-1795664481967-22",
       "title": "Effects of an 8-week progressive neuro-athletic training program on goalkeeper movement performance: a randomized controlled trial",
       "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02200-y",
       "category": "sports",
-      "publishedAt": "2026-11-25T00:00:00.000Z",
-      "sourceCount": 8,
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "sourceCount": 10,
       "sources": [
         "BMC Sports Science, Medicine and Rehabilitation",
         "Sports Medicine - Open",
         "Measurement in Physical Education and Exercise Science",
-        "International Urogynecology Journal",
         "BMC musculoskeletal disorders",
-        "Sports medicine (Auckland, N.Z.)",
+        "BMC Musculoskeletal Disorders",
         "Sports Medicine",
-        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+        "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+        "Sports medicine (Auckland, N.Z.)",
+        "The Journal of manual & manipulative therapy",
+        "Physiotherapy theory and practice"
       ],
       "tag": "athletic-performance",
       "kind": "theme",
@@ -187,22 +170,16 @@
           "titleZh": "Performanz Spark 测量年轻男性篮球运动员短跑表现的有效性和可靠性"
         },
         {
-          "source": "Int Urogynecol J",
-          "journal": "International Urogynecology Journal",
-          "title": "Prevalence and Associated Factors of Pelvic Floor Dysfunction in Women Who Practice CrossFit®: A Systematic Review",
-          "titleZh": "CrossFit® 训练女性盆底功能障碍的患病率及相关因素：一项系统综述"
-        },
-        {
           "source": "PubMed",
           "journal": "BMC musculoskeletal disorders",
           "title": "Improvement in functional movement, landing mechanics, and dynamic balance following TRX training in physically active athletes after ACL reconstruction: a randomized controlled trial.",
           "titleZh": "ACL重建术后体能活跃运动员TRX训练对功能性动作、着陆力学和动态平衡的改善：一项随机对照试验"
         },
         {
-          "source": "PubMed",
-          "journal": "Sports medicine (Auckland, N.Z.)",
-          "title": "3D Biomechanics of Anterior Cruciate Ligament Injuries in Football: What We Have Learned in the Last Five Years.",
-          "titleZh": "足球运动中前交叉韧带损伤的3D生物力学：近五年我们学到了什么"
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Isometric muscle strength and inter-limb differences in relation to countermovement jump performance during the return-to-sport phase after ACL reconstruction: a cross-sectional study",
+          "titleZh": "ACL 重建术后返场运动阶段等长肌力与肢体间差异对反向跳表现的影响：一项横断面研究"
         },
         {
           "source": "Sports Medicine",
@@ -211,10 +188,22 @@
           "titleZh": "前交叉韧带重建文献中的力量和功率测试：一项范围综述"
         },
         {
+          "source": "BMC Sports Sci Med Rehabil",
+          "journal": "BMC Sports Science, Medicine and Rehabilitation",
+          "title": "Psychological readiness, active knee flexion and patient-reported knee function at 12 and 18 months after anterior cruciate ligament reconstruction: a retrospective cohort study",
+          "titleZh": "前交叉韧带重建术后 12 和 18 个月心理准备、主动膝关节屈曲和患者报告的膝关节功能：一项回顾性队列研究"
+        },
+        {
           "source": "PubMed",
           "journal": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
           "title": "Patients treated with rehabilitation alone after anterior cruciate ligament injury display greater muscle strength symmetry, yet lower absolute muscle strength normalized to bodyweight compared to reconstruction: A Cross-sectional study of 3,093 patients.",
           "titleZh": "前交叉韧带损伤后仅接受康复治疗的患者与重建手术患者相比，肌肉力量对称性更高，但绝对肌力（标准化到体重）较低：一项对3,093名患者的横断面研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Sports medicine (Auckland, N.Z.)",
+          "title": "3D Biomechanics of Anterior Cruciate Ligament Injuries in Football: What We Have Learned in the Last Five Years.",
+          "titleZh": "足球运动中前交叉韧带损伤的3D生物力学：近五年我们学到了什么"
         },
         {
           "source": "PubMed",
@@ -229,15 +218,27 @@
           "titleZh": "全膝关节置换术康复期间，患者、物理治疗师和骨科医生如何看待康复延迟？一项定性研究"
         },
         {
-          "source": "BMC Sports Sci Med Rehabil",
-          "journal": "BMC Sports Science, Medicine and Rehabilitation",
-          "title": "Psychological readiness, active knee flexion and patient-reported knee function at 12 and 18 months after anterior cruciate ligament reconstruction: a retrospective cohort study",
-          "titleZh": "前交叉韧带重建术后 12 和 18 个月心理准备、主动膝关节屈曲和患者报告的膝关节功能：一项回顾性队列研究"
+          "source": "Sports Med - Open",
+          "journal": "Sports Medicine - Open",
+          "title": "Diagnostic Precision in Arthrogenic Muscle Inhibition",
+          "titleZh": "关节源性肌肉抑制的诊断精确性"
+        },
+        {
+          "source": "PubMed",
+          "journal": "The Journal of manual & manipulative therapy",
+          "title": "Referral for knee pain and gait training leads to multiple sclerosis diagnosis: a case report.",
+          "titleZh": "膝关节疼痛和步态训练转诊最终诊断为多发性硬化症：一例病例报告"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Effects of neuromuscular electrical stimulation applied simultaneously with exercise therapy in patellofemoral pain: A single-blind, randomized, sham-controlled pilot trial.",
+          "titleZh": "神经肌肉电刺激联合运动疗法治疗髌股疼痛的疗效：一项单盲、随机、假对照初步试验"
         }
       ],
-      "heat": 2.88,
-      "themeZh": "神经肌肉训练与运动表现/损伤预防",
-      "themeEn": "Neuromuscular Training for Performance and Injury Prevention"
+      "heat": 4.76,
+      "themeZh": "运动员专项神经肌肉训练与损伤预防策略",
+      "themeEn": "Athlete Neuromuscular Training for Injury Prevention"
     },
     {
       "id": "news-1795341358907-0",
@@ -250,11 +251,11 @@
         "Musculoskeletal science & practice",
         "European Spine Journal",
         "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
-        "Physiotherapy",
         "Physiotherapy theory and practice",
         "BMC musculoskeletal disorders",
         "The Journal of manual & manipulative therapy",
-        "medRxiv"
+        "medRxiv",
+        "Physiotherapy"
       ],
       "tag": "spine",
       "kind": "theme",
@@ -285,12 +286,6 @@
         },
         {
           "source": "PubMed",
-          "journal": "Physiotherapy",
-          "title": "Physiatry-physiotherapy interdisciplinary project (PHY 2 ): Service evaluation of a new caregiving model for musculoskeletal pain by advanced practice physiotherapists in the physiatry department.",
-          "titleZh": "物理治疗师高级实践项目 (PHY2)：高级实践物理治疗师在康复医学科肌肉骨骼疼痛患者新护理模式的服务评估"
-        },
-        {
-          "source": "PubMed",
           "journal": "Physiotherapy theory and practice",
           "title": "Association of outpatient waiting time with pain intensity and coping strategies in patients with nonspecific chronic low back pain scheduled for physiotherapy.",
           "titleZh": "门诊等待时间与非特异性慢性腰痛物理治疗患者疼痛强度及应对策略的关联"
@@ -311,41 +306,47 @@
           "source": "medRxiv",
           "title": "Thoracic expansion and spirometry 120 days after adding diaphragmatic manual therapy to physiotherapy in non-specific low back pain: Follow-up of a randomized controlled trial",
           "titleZh": "非特异性腰痛患者在物理治疗中增加膈肌手法治疗后胸廓扩张和肺活量在 120 天后的随访：一项随机对照试验的后续研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "Education and training pathways for advanced musculoskeletal physiotherapists: a qualitative study investigating competency.",
+          "titleZh": "先进肌肉骨骼物理治疗师教育培训路径：一项探讨能力素养的定性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy",
+          "title": "Physiatry-physiotherapy interdisciplinary project (PHY 2 ): Service evaluation of a new caregiving model for musculoskeletal pain by advanced practice physiotherapists in the physiatry department.",
+          "titleZh": "物理治疗师高级实践项目 (PHY2)：高级实践物理治疗师在康复医学科肌肉骨骼疼痛患者新护理模式的服务评估"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physiotherapy theory and practice",
+          "title": "The new body-as-machine: a response to Breedt, Tichenor, and Barlott's \"Diagnosing the body in physiotherapy\".",
+          "titleZh": "新的“身体即机器”观：回应 Breedt, Tichenor 和 Barlott 的《物理治疗中的身体诊断》"
         }
       ],
-      "heat": 2.88,
-      "themeZh": "骨骼肌肉疼痛的预后、诊断与跨学科治疗",
-      "themeEn": "MSK Pain Prognosis, Diagnosis, Interdisciplinary Care"
+      "heat": 2.69,
+      "themeZh": "慢性腰痛的诊断、预后与生物心理社会康复",
+      "themeEn": "Chronic Low Back Pain: Diagnosis, Prognosis, Biopsychosocial Rehab"
     },
     {
-      "id": "news-1795574187728-0",
-      "title": "The effect of music therapy on function in people with Parkinson's disease or parkinsonism: A systematic review and meta-analysis.",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43076026/",
-      "category": "neurological",
+      "id": "news-1795729390328-1",
+      "title": "Multisite Implementation and Outcomes of KineTransForma: A Faculty-Supervised, Student-Delivered, Community-Based, Goal-Directed Home Rehabilitation Program in Chile.",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43096908/",
+      "category": "geriatric",
       "publishedAt": "2026-11-26T00:00:00.000Z",
       "sourceCount": 5,
       "sources": [
-        "Clinical rehabilitation",
-        "Disability and rehabilitation",
         "Physical therapy",
         "BMC Geriatrics",
-        "medRxiv"
+        "NeuroRehabilitation",
+        "medRxiv",
+        "Disability and rehabilitation"
       ],
-      "tag": "parkinson",
+      "tag": "home-rehabilitation",
       "kind": "theme",
       "members": [
-        {
-          "source": "PubMed",
-          "journal": "Clinical rehabilitation",
-          "title": "The effect of music therapy on function in people with Parkinson's disease or parkinsonism: A systematic review and meta-analysis.",
-          "titleZh": "音乐疗法对帕金森病或帕金森综合征患者功能的影响：系统综述和荟萃分析"
-        },
-        {
-          "source": "PubMed",
-          "journal": "Disability and rehabilitation",
-          "title": "Efficacy of action observation therapy in patients with dementia or cognitive impairment: a systematic review and meta-analysis of randomized trials.",
-          "titleZh": "观察动作疗法对痴呆或认知障碍患者的疗效：一项随机试验的系统综述和Meta分析"
-        },
         {
           "source": "PubMed",
           "journal": "Physical therapy",
@@ -359,17 +360,205 @@
           "titleZh": "一项定性范围综述探讨居家康复在老年人背景、机制和结果方面的有效性"
         },
         {
+          "source": "PubMed",
+          "journal": "NeuroRehabilitation",
+          "title": "Current Clinical Practice and Barriers to Instrumented Gait Assessment in Stroke Rehabilitation: A Cross-Sectional Survey.",
+          "titleZh": "卒中康复中器械步态评估的当前临床实践与障碍：一项横断面调查"
+        },
+        {
+          "source": "medRxiv",
+          "title": "A Qualitative Study Investigating Sex Differences in the Needs and Priorities of Lower Limb Prosthesis Users",
+          "titleZh": "一项调查下肢假肢使用者需求和优先事项性别差异的定性研究"
+        },
+        {
+          "source": "medRxiv",
+          "title": "Older Adults and Healthcare Professionals Perspectives on Comfort, Dignity, and Safety During Technology-Assisted Transfers: A Qualitative Descriptive Study",
+          "titleZh": "老年人与医护人员对技术辅助转移过程中舒适度、尊严和安全性的看法：一项定性描述性研究"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Disability and rehabilitation",
+          "title": "Physiotherapists' experiences of managing turning difficulties in Parkinson's disease: a qualitative study.",
+          "titleZh": "物理治疗师管理帕金森病转身困难的经验：一项定性研究"
+        }
+      ],
+      "heat": 2.38,
+      "themeZh": "老年与残疾人居家康复及辅助技术应用体验",
+      "themeEn": "Home Rehabilitation & Assistive Tech for Elderly, Disabled"
+    },
+    {
+      "id": "news-1795750982377-19",
+      "title": "Effectiveness of different exercise types for improving lumbar spine and femoral neck bone mineral density in older adults: a three-level pairwise and Bayesian network meta-analysis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12877-026-08740-9",
+      "category": "geriatric",
+      "publishedAt": "2026-11-25T00:00:00.000Z",
+      "sourceCount": 5,
+      "sources": [
+        "BMC Geriatrics",
+        "South African Journal of Physiotherapy",
+        "BMC Musculoskeletal Disorders",
+        "Physical therapy",
+        "medRxiv"
+      ],
+      "tag": "frailty",
+      "kind": "theme",
+      "members": [
+        {
+          "source": "BMC Geriatrics",
+          "journal": "BMC Geriatrics",
+          "title": "Effectiveness of different exercise types for improving lumbar spine and femoral neck bone mineral density in older adults: a three-level pairwise and Bayesian network meta-analysis",
+          "titleZh": "不同运动类型对改善老年人腰椎和股骨颈骨密度的有效性：三级配对和贝叶斯网络 Meta 分析"
+        },
+        {
+          "source": "SA J Physiother",
+          "journal": "South African Journal of Physiotherapy",
+          "title": "Relationship between physical activity and stem cell production: A systematic review",
+          "titleZh": "体力活动与干细胞生成的关系：一项系统综述"
+        },
+        {
+          "source": "BMC Musculoskelet Disord",
+          "journal": "BMC Musculoskeletal Disorders",
+          "title": "Does whole-body electromyostimulation improve functional, compositional, and biochemical outcomes in older women with sarcopenia? A randomized controlled trial",
+          "titleZh": "全身电肌肉刺激能否改善老年肌少症女性的功能、体成分和生化指标？一项随机对照试验"
+        },
+        {
+          "source": "PubMed",
+          "journal": "Physical therapy",
+          "title": "Aqua Steps: A Feasibility Study of a new Aquatic Exercise Therapy Intervention for Falls Prevention in Older Adults.",
+          "titleZh": "Aqua Steps：一项针对老年人跌倒预防新型水上运动疗法干预的可行性研究"
+        },
+        {
           "source": "medRxiv",
           "title": "Effects of an exercise prescription system (ACTIVE) on physical function in community-dwelling older adults: protocol for a single-centre, assessor-blinded, parallel-group randomised controlled trial",
           "titleZh": "运动处方系统（ACTIVE）对社区老年人身体机能影响：一项单中心、评估者盲法、平行组随机对照试验方案"
         }
       ],
-      "heat": 2.54,
-      "themeZh": "社区和居家康复干预对老年与神经疾病患者的功能改善",
-      "themeEn": "Community & Home Rehab for Older Adults and Neurological Patients"
+      "heat": 1.68,
+      "themeZh": "老年人运动干预改善骨密度与身体功能",
+      "themeEn": "Exercise Interventions for Bone Density in Older Adults"
     }
   ],
   "items": [
+    {
+      "id": "news-1795836247090-13",
+      "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+      "summary": "A systematic review of 28 trials (N=1,407) found that exoskeleton-assisted training improved FMA-UE (MD 5.30, 95% CI 3.82–6.79), WMFT (MD 4.78, 95% CI 1.99–7.58), and ARAT (MD 2.70, 95% CI 0.81–4.58) scores in stroke patients compared to conventional rehabilitation; effects on daily living activities were inconsistent.",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02229-7",
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.090Z",
+      "curatedScore": 85,
+      "curatedReason": "卒中后上肢功能障碍患者，外骨骼辅助训练确实比传统康复更有效，尤其是在 FMA-UE 等核心运动功能评估上。但 ADL 改善的证据仍不一致，且该领域异质性高、最佳训练剂量不明，临床应用时要考虑这些限制。",
+      "titleZh": "外骨骼康复机器人在卒中患者上肢功能恢复中的疗效：一项系统综述和荟萃分析",
+      "summaryZh": "一项包含 28 项试验（N=1,407）的系统综述发现，与传统康复相比，外骨骼辅助训练能改善卒中患者的 Fugl-Meyer 上肢评估（MD 5.30, 95% CI 3.82–6.79）、Wolf 运动功能测试（MD 4.78, 95% CI 1.99–7.58）和 Action Research Arm Test（MD 2.70, 95% CI 0.81–4.58）评分，但对日常生活活动能力的影响尚不一致。",
+      "curatedReasonEn": "For stroke patients with upper limb motor impairment, exoskeleton-assisted training is more effective than conventional rehabilitation, especially on core motor function assessments like FMA-UE. However, evidence for ADL improvement remains inconsistent, and high heterogeneity and unknown optimal training dose warrant cautious clinical application.",
+      "limitation": "研究存在显著异质性（FMA-UE 的 I²=90%，FIM 的 I²=97%），部分结局对单个研究敏感，且存在潜在研究层面混杂。",
+      "limitationEn": "There was substantial heterogeneity (I²=90% for FMA-UE, I²=97% for FIM), some outcomes were sensitive to individual trials, and potential study-level confounding exists.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1795836247091-17",
+      "title": "Relationship between physical activity and stem cell production: A systematic review",
+      "summary": "A systematic review of 19 articles found that increased physical activity, including both aerobic and anaerobic, endurance and resistance exercise, was associated with enhanced stem cell production and mobilization across children, adults, and the elderly, independent of stem cell type.",
+      "category": "geriatric",
+      "source": "SA J Physiother",
+      "sourceUrl": "https://sajp.co.za/index.php/sajp/article/view/2406/4350",
+      "publishedAt": "2026-11-24T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.091Z",
+      "curatedScore": 80,
+      "curatedReason": "这份系统综述坐实了运动疗法对不同年龄段人群（包括老年人）干预的生物学基础：规律的耐力或阻抗训练能有效促进干细胞生成与动员，支持组织修复。你在给老年患者制定运动处方时，可以更有信心去强调其对细胞层面健康的益处。",
+      "titleZh": "体力活动与干细胞生成的关系：一项系统综述",
+      "summaryZh": "一项包含 19 篇文章的系统综述发现，增加体力活动，包括有氧和无氧、耐力和阻抗运动，都与儿童、成人和老年人干细胞生成和动员的增强相关，且与干细胞类型无关。",
+      "curatedReasonEn": "This systematic review confirms the biological basis of exercise therapy across different age groups, including older adults: regular endurance or resistance training effectively promotes stem cell production and mobilization, supporting tissue repair. You can confidently emphasize these cellular-level health benefits when prescribing exercise for older patients.",
+      "limitation": "虽然评估了偏倚风险和证据质量，但研究异质性可能仍存在，且具体生理机制有待进一步阐明。",
+      "limitationEn": "Although bias risk and evidence quality were assessed, heterogeneity might still exist, and specific physiological mechanisms need further elucidation.",
+      "tags": [
+        "research",
+        "frailty",
+        "exercise"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "South African Journal of Physiotherapy"
+    },
+    {
+      "id": "news-1795836247090-15",
+      "title": "Isometric muscle strength and inter-limb differences in relation to countermovement jump performance during the return-to-sport phase after ACL reconstruction: a cross-sectional study",
+      "summary": "In 14 post-ACLR patients (mean 8.6 months post-op), isometric knee extension strength (1.00 vs. 1.24 kg/kg, p=0.001) and flexion strength (0.57 vs. 0.67 kg/kg, p=0.015) were significantly lower in the operated limb, which was a primary determinant of limb-specific CMJ kinetic output.",
+      "category": "sports",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10354-6",
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.090Z",
+      "curatedScore": 75,
+      "curatedReason": "前交叉韧带重建术后（ACLR）返场运动（RTS）阶段，单侧等长肌力测试与双侧反向跳（CMJ）的联合评估很有价值。操作侧肢体的等长肌力是决定 CMJ 动力学输出的关键，在 RTS 评估中应予重点关注。",
+      "titleZh": "ACL 重建术后返场运动阶段等长肌力与肢体间差异对反向跳表现的影响：一项横断面研究",
+      "summaryZh": "在 14 名 ACL 重建术后（平均 8.6 个月）患者中，手术侧膝关节伸肌（1.00 vs. 1.24 kg/kg, p=0.001）和屈肌（0.57 vs. 0.67 kg/kg, p=0.015）等长肌力显著较低，且是肢体特异性反向跳动力学输出的主要决定因素。",
+      "curatedReasonEn": "Combined assessment of unilateral isometric strength and bilateral countermovement jump (CMJ) is valuable during the return-to-sport (RTS) phase after ACL reconstruction (ACLR). Operated limb isometric strength is a primary determinant of limb-specific CMJ kinetic output and should be a focus in RTS assessment.",
+      "limitation": "研究样本量较小（14 名患者），且为横断面设计，无法建立因果关系。",
+      "limitationEn": "The study has a small sample size (14 patients) and is a cross-sectional design, preventing causal inference.",
+      "tags": [
+        "research",
+        "knee",
+        "return-to-sport"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1795497934983-24",
+      "title": "Does whole-body electromyostimulation improve functional, compositional, and biochemical outcomes in older women with sarcopenia? A randomized controlled trial",
+      "summary": "In an 8-week RCT (N=30), sarcopenic older women receiving whole-body electromyostimulation (WB-EMS) showed significant improvements in balance, handgrip strength, functional capacity, body composition (reduced weight, BMI, fat; increased skeletal muscle mass), and myokine profiles compared to controls.",
+      "category": "geriatric",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10707-1",
+      "publishedAt": "2026-11-23T00:00:00.000Z",
+      "firstSeen": "2026-11-24T05:25:34.983Z",
+      "curatedScore": 75,
+      "curatedReason": "这项 RCT 提示，对于老年肌少症女性，全身电肌肉刺激（WB-EMS）能够改善功能、体成分和肌细胞因子。你可以考虑将 WB-EMS 作为不适合传统阻抗训练患者的补充手段，但需注意该研究样本小且未盲法。",
+      "titleZh": "全身电肌肉刺激能否改善老年肌少症女性的功能、体成分和生化指标？一项随机对照试验",
+      "summaryZh": "一项为期 8 周的随机对照试验（N=30）显示，与对照组相比，接受全身电肌肉刺激（WB-EMS）的老年肌少症女性在平衡、握力、功能能力、体成分（体重、BMI、脂肪减少；骨骼肌质量增加）和肌细胞因子谱方面均有显著改善。",
+      "curatedReasonEn": "This RCT suggests that whole-body electromyostimulation (WB-EMS) can improve function, body composition, and myokine profiles in sarcopenic older women. You may consider WB-EMS as a supplementary option for patients unable to perform conventional resistance training, noting the small sample size and lack of blinding in this study.",
+      "limitation": "本研究为开放标签的随机试验，无分配隐藏和盲法结局评估，样本量较小（30 人）。",
+      "limitationEn": "This was an open-label randomized trial without allocation concealment or blinded outcome assessment, with a small sample size (30 participants).",
+      "tags": [
+        "research",
+        "sarcopenia",
+        "electro"
+      ],
+      "studyDesign": "RCT",
+      "journal": "BMC Musculoskeletal Disorders"
+    },
+    {
+      "id": "news-1794854464876-1",
+      "title": "Education and training pathways for advanced musculoskeletal physiotherapists: a qualitative study investigating competency.",
+      "summary": "A qualitative study in Tasmania, Australia, found that Advanced Musculoskeletal Practitioners' (AMPs) education and training are heavily reliant on workplace-based learning, with identified gaps in health-service collaboration and integration of external advanced practice training.",
+      "category": "orthopedic",
+      "source": "PubMed",
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43037201/",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "firstSeen": "2026-11-16T18:41:04.876Z",
+      "curatedScore": 72,
+      "curatedReason": "澳大利亚的定性研究揭示，先进肌肉骨骼物理治疗师（AMPs）的教育和培训仍以工作场所为基础，缺乏系统性的健康服务协作与外部高级实践培训整合。你需要推动政策和监管层面的协调，才能真正提升 AMPs 的能力与服务质量。",
+      "titleZh": "先进肌肉骨骼物理治疗师教育培训路径：一项探讨能力素养的定性研究",
+      "summaryZh": "一项澳大利亚塔斯马尼亚州的定性研究发现，先进肌肉骨骼物理治疗师（AMPs）的教育和培训主要依赖工作场所学习，但在健康服务协作和外部高级实践培训整合方面存在不足。",
+      "curatedReasonEn": "This Australian qualitative study reveals that Advanced Musculoskeletal Physiotherapists' (AMPs) education and training are predominantly workplace-based, lacking systemic health service collaboration and integration with external advanced practice training. You need to advocate for policy and regulatory alignment to truly enhance AMPs' competence and service quality.",
+      "limitation": "本研究为定性研究，仅限于塔斯马尼亚的AMPs，外推性有限。",
+      "limitationEn": "This is a qualitative study limited to AMPs in Tasmania, thus generalizability is limited.",
+      "tags": [
+        "research",
+        "workforce",
+        "education"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "Physiotherapy theory and practice"
+    },
     {
       "id": "news-1795819594112-0",
       "title": "Augmenting Conventional Rehabilitation with Virtual Reality or Aerobic Exercise in Multiple Sclerosis: A Three-Arm Parallel-Group Superiority Randomized Controlled Trial.",
@@ -1294,29 +1483,6 @@
       "journal": "Disability and rehabilitation"
     },
     {
-      "id": "news-1794613289800-0",
-      "title": "Power of Functional Mobility Tests in Predicting Fall Risk Among Older Adults.",
-      "summary": "A prospective observational cohort study found TUG (AUC = 0.777) and FSST (AUC = 0.771) had the highest discrimination for predicting falls. Only TUG remained significant in the multivariable model (OR = 1.26 per second; 95% CI: 1.08-1.47). Combining tests with fall history improved model fit (bootstrap-corrected AUC 0.89-0.97).",
-      "category": "geriatric",
-      "source": "PubMed",
-      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43024148/",
-      "publishedAt": "2026-11-13T00:00:00.000Z",
-      "firstSeen": "2026-11-13T23:41:29.800Z",
-      "curatedScore": 70,
-      "curatedReason": "本前瞻性研究指出，在预测社区居住老年人跌倒风险方面，Timed Up and Go Test（TUG）和Four Square Step Test（FSST）表现出最高的区分度，但单一测试的独立预测能力不足。临床实践中，功能性测试可作为跌倒史筛查的补充工具，而非替代，尤其TUG在多变量模型中仍有显著关联。",
-      "titleZh": "功能性活动度测试预测老年人跌倒风险的能力",
-      "summaryZh": "一项前瞻性观察性队列研究发现，TUG（AUC = 0.777）和FSST（AUC = 0.771）在预测跌倒方面具有最高的区分度。只有TUG在多变量模型中仍显著相关（OR = 1.26/秒；95% CI: 1.08-1.47）。将功能测试与跌倒史结合可改善模型拟合度（bootstrap校正后的AUC 0.89-0.97）。",
-      "curatedReasonEn": "This prospective study indicates that the Timed Up and Go Test (TUG) and Four Square Step Test (FSST) show the highest discrimination for predicting fall risk in community-dwelling older adults, but no single test is sufficiently strong as a standalone predictor. In clinical practice, functional tests can complement, rather than replace, fall history screening, with TUG showing significant association in multivariable models.",
-      "limitation": "本研究的样本量相对较小，且随访期为6个月，未能评估长期跌倒风险。研究结果的普适性及结合测试与跌倒史模型的外部验证有待进一步研究。",
-      "limitationEn": "The study has a relatively small sample size and a 6-month follow-up, not assessing long-term fall risk. The generalizability of findings and external validation of combined test and fall history models require further research.",
-      "tags": [
-        "research",
-        "falls-prevention"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy"
-    },
-    {
       "id": "news-1795228669626-26",
       "title": "A Qualitative Study Investigating Sex Differences in the Needs and Priorities of Lower Limb Prosthesis Users",
       "summary": "A qualitative study interviewed 18 lower limb prosthesis users (9 female, 9 male) to investigate sex differences in their needs and priorities. Themes emerged in prosthetic, physical, psychosocial, and financial experiences, with sex differences observed in all but the financial category, highlighting female-specific challenges in prosthetic fit, ambulation, and psychosocial aspects like frustrations with clinicians and concerns regarding maternity.",
@@ -1984,100 +2150,6 @@
       ],
       "studyDesign": "系统综述",
       "journal": "Sports Medicine - Open"
-    },
-    {
-      "id": "news-1795056196847-30",
-      "title": "Body-weight support is the dominant contributor to elevated walking cost in cerebral palsy",
-      "summary": "This study of 23 children with cerebral palsy (CP) and 10 typically developing peers found body-weight support significantly reduced net energetic cost, with a 3.5-fold greater effect in the CP group. Energetic cost in CP decreased by 41% to a level similar to typically developing participants, identifying gravitational support as a key biomechanical target.",
-      "category": "pediatric",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02215-z",
-      "publishedAt": "2026-11-18T00:00:00.000Z",
-      "firstSeen": "2026-11-19T02:43:16.847Z",
-      "curatedScore": 80,
-      "curatedReason": "这项研究表明，在脑瘫儿童中，体重支持是导致步行能量消耗增加的主要因素。这为康复干预提供了明确的生物力学靶点，提示物理治疗师应优先关注通过减少重力支持需求来优化步行效率。",
-      "titleZh": "体重支持是脑瘫儿童步行成本升高的主要原因",
-      "summaryZh": "这项对 23 名脑瘫 (CP) 儿童和 10 名典型发育同龄儿童的研究发现，体重支持显著降低了净能量消耗，在 CP 组中的效果高出 3.5 倍。CP 组的能量消耗降低了 41%，达到与典型发育参与者相似的水平，表明重力支持是关键的生物力学目标。",
-      "curatedReasonEn": "This study indicates that body-weight support is the dominant contributor to elevated walking cost in children with cerebral palsy. This identifies a clear biomechanical target for rehabilitation interventions, suggesting physical therapists should prioritize optimizing walking efficiency by reducing gravitational support demands.",
-      "limitation": "研究是在固定非维度速度的跑步机上进行的，其结果可能无法完全推广到实际的自由行走环境。",
-      "limitationEn": "The study was conducted on a treadmill at a fixed non-dimensional speed, and results may not fully generalize to real-world free-walking environments.",
-      "tags": [
-        "research",
-        "cerebral-palsy",
-        "gait"
-      ],
-      "studyDesign": "观察研究",
-      "journal": "Journal of NeuroEngineering and Rehabilitation"
-    },
-    {
-      "id": "news-1795056196846-19",
-      "title": "Aerobic and aerobic–cognitive training in knee osteoarthritis following acute exercise intensity selection: a two-phase randomised controlled trial protocol",
-      "summary": "This two-phase randomized controlled trial protocol aims to select an optimal aerobic exercise intensity for knee osteoarthritis (KOA) patients and evaluate the effectiveness of aerobic and aerobic-cognitive training against physical-agent therapy, with a planned recruitment of 108 participants. The primary outcome is average knee pain at 12 weeks.",
-      "category": "orthopedic",
-      "source": "BMC Sports Sci Med Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s13102-026-02254-y",
-      "publishedAt": "2026-11-18T00:00:00.000Z",
-      "firstSeen": "2026-11-19T02:43:16.846Z",
-      "curatedScore": 75,
-      "curatedReason": "这项纳入 108 人的两阶段 RCT 方案，重点在于确定膝骨关节炎患者有氧运动的最佳强度，并对比单独有氧训练与有氧认知结合训练的效果。如果结果积极，它将为我们优化 KOA 运动处方提供具体指导，告诉你该如何为患者选择合适的运动强度与模式。",
-      "titleZh": "膝骨关节炎急性运动强度选择后的有氧和有氧认知训练：一项两阶段随机对照试验方案",
-      "summaryZh": "这项两阶段随机对照试验方案旨在确定膝骨关节炎患者有氧运动的最佳强度，并评估有氧和有氧认知训练与物理疗法相比的疗效，计划招募 108 名受试者。主要结局指标是 12 周时的平均膝关节疼痛。",
-      "curatedReasonEn": "This 108-participant, two-phase RCT protocol focuses on identifying the optimal aerobic exercise intensity for KOA patients and comparing aerobic-cognitive training against aerobic-only training. If successful, it will offer specific guidance on how to optimize exercise prescriptions for KOA, informing your choices for intensity and modality.",
-      "limitation": "本研究为单中心试验，可能限制结果的外部有效性和推广性。",
-      "limitationEn": "The study is a single-center trial, which may limit the external validity and generalizability of the results.",
-      "tags": [
-        "research",
-        "knee"
-      ],
-      "studyDesign": "RCT",
-      "journal": "BMC Sports Science, Medicine and Rehabilitation"
-    },
-    {
-      "id": "news-1795497934982-17",
-      "title": "Prevalence and Associated Factors of Pelvic Floor Dysfunction in Women Who Practice CrossFit®: A Systematic Review",
-      "summary": "This systematic review of 16 cross-sectional and two case-control studies investigated pelvic floor dysfunction prevalence in female CrossFit practitioners. It found urinary incontinence rates from 14.5% to 84%, with longer CrossFit practice, higher intensity, and jump rope exercises associated with increased risk.",
-      "category": "orthopedic",
-      "source": "Int Urogynecol J",
-      "sourceUrl": "https://link.springer.com/article/10.1007/s00192-026-06971-3",
-      "publishedAt": "2026-11-23T00:00:00.000Z",
-      "firstSeen": "2026-11-24T05:25:34.982Z",
-      "curatedScore": 75,
-      "curatedReason": "这项系统综述强调了 CrossFit 训练女性盆底功能障碍的高患病率，特别是尿失禁。它指出了训练时间、强度和高冲击练习（如跳绳）与症状之间的关联，提示临床医生应在为从事这类运动的女性提供咨询时考虑这些风险因素。",
-      "titleZh": "CrossFit® 训练女性盆底功能障碍的患病率及相关因素：一项系统综述",
-      "summaryZh": "这项系统综述纳入了 16 项横断面研究和 2 项病例对照研究，调查了 CrossFit 训练女性盆底功能障碍的患病率。结果显示，尿失禁的患病率从 14.5% 到 84% 不等，且 CrossFit 训练时间越长、强度越高以及跳绳练习与风险增加相关。",
-      "curatedReasonEn": "This systematic review highlights the high prevalence of pelvic floor dysfunction, particularly urinary incontinence, among women who practice CrossFit. It points to associations between longer practice duration, higher intensity, and high-impact exercises like jump rope, suggesting clinicians should consider these risk factors when counseling women engaged in such sports.",
-      "limitation": "纳入的研究多为横断面设计，难以确立因果关系。",
-      "limitationEn": "The included studies were predominantly cross-sectional, making it difficult to establish causality.",
-      "tags": [
-        "research",
-        "pelvic-floor"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "International Urogynecology Journal"
-    },
-    {
-      "id": "news-1795056196847-22",
-      "title": "A systematic review of robotic hip exoskeletons for gait rehabilitation: from design to clinical evidence",
-      "summary": "This systematic review of 19 human subject studies on robotic hip exoskeletons for gait rehabilitation found reported improvements in walking speed, step length, and symmetry. Bilateral assistance and adaptive control strategies were frequently used in studies showing favorable outcomes, though long-term clinical impact remains limited.",
-      "category": "orthopedic",
-      "source": "J NeuroEng Rehabil",
-      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02222-0",
-      "publishedAt": "2026-11-17T00:00:00.000Z",
-      "firstSeen": "2026-11-19T02:43:16.847Z",
-      "curatedScore": 75,
-      "curatedReason": "这篇系统综述综合了髋部外骨骼机器人在步态康复中的应用证据，指出其在改善步速、步长和对称性方面的短期益处。虽然仍需大型临床试验和实际可用性研究，但它提示了机器人辅助技术在神经康复中的潜力。",
-      "titleZh": "髋部机器人外骨骼在步态康复中的应用：从设计到临床证据的系统综述",
-      "summaryZh": "这项对 19 项关于髋部机器人外骨骼在步态康复中应用的人体研究的系统综述发现，其在步速、步长和对称性方面均有改善。尽管长期临床影响有限，但双边辅助和自适应控制策略在显示积极结果的研究中被频繁使用。",
-      "curatedReasonEn": "This systematic review synthesizes evidence on robotic hip exoskeletons for gait rehabilitation, pointing to short-term benefits in walking speed, step length, and symmetry. While large clinical trials and real-world usability studies are still needed, it suggests the potential of robotic assistance in neurorehabilitation.",
-      "limitation": "现有证据多集中于短期功能益处，长期临床影响尚不明确。",
-      "limitationEn": "Existing evidence primarily focuses on short-term functional benefits, with limited data on sustained clinical impact.",
-      "tags": [
-        "research",
-        "hip"
-      ],
-      "studyDesign": "系统综述",
-      "journal": "Journal of NeuroEngineering and Rehabilitation",
-      "tech": true
     }
   ]
 }

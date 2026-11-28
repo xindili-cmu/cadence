@@ -1,0 +1,193 @@
+{
+ "date": "2026-11-28",
+ "generatedAt": "2026-11-28T03:24:11.722Z",
+ "windowHours": 50,
+ "windowStart": "2026-11-27T03:43:04.855Z",
+ "windowEnd": "2026-11-28T03:24:10.135Z",
+ "lead": {
+  "titleZh": "卒中上肢外骨骼与 MS 虚拟现实/有氧运动：今日神经康复亮点",
+  "titleEn": "Stroke Upper Limb Exoskeletons & MS VR/Aerobic Exercise: Today's Neuro Rehab Highlights",
+  "paragraphZh": "今日共 6 篇条目，覆盖 5 个专科。最高分 85 分有 2 篇，均来自神经康复领域，包括一项关于外骨骼康复机器人治疗卒中患者上肢功能的系统综述，以及一项探讨多发性硬化症患者结合虚拟现实或有氧运动的 RCT。",
+  "paragraphEn": "Today features 6 entries across 5 specialties. Two articles scored highest at 85, both in neurorehabilitation: a systematic review on exoskeleton rehabilitation robots for upper limb function in stroke patients, and an RCT exploring virtual reality or aerobic exercise combined with conventional rehabilitation for multiple sclerosis."
+ },
+ "stats": {
+  "events": 6,
+  "specialties": 5,
+  "multiSource": 0,
+  "sources": 5,
+  "topScore": 85
+ },
+ "sections": [
+  {
+   "category": "orthopedic",
+   "label": "骨科与肌骨",
+   "items": [
+    {
+     "id": "news-1795787994726-0",
+     "title": "Video-based assessment of functional movement quality in female adults with surgical and non-surgical scoliosis and controls: a rater-blinded observational study.",
+     "summary": "An observational study with 30 female adults found that long spinal fusion for scoliosis may have minimal measurable effect on some movement tasks, but could be associated with greater deviation scores in others, with task-specific deficits potentially appearing at later follow-up (exploratory n=4 at 2 years).",
+     "category": "orthopedic",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43099509/",
+     "publishedAt": "2026-11-27T00:00:00.000Z",
+     "firstSeen": "2026-11-27T13:59:54.726Z",
+     "curatedScore": 75,
+     "curatedReason": "这项观察性研究提示，长节段脊柱融合术对某些运动任务的影响可能要到术后更长时间才会显现。在与患者讨论手术利弊时，这能帮你从功能角度更好地权衡。",
+     "titleZh": "女性成人脊柱侧凸患者（手术及非手术）与对照组功能性运动质量的视频评估：一项评估者盲法观察性研究",
+     "summaryZh": "一项对30名女性成人进行的观察性研究发现，脊柱侧凸长节段融合术对部分运动任务的影响可能不明显，但在其他任务中可能导致更大的偏离分数，且特定任务的功能缺陷可能在后期随访（2年时探索性n=4）才显现。",
+     "curatedReasonEn": "This observational study suggests that the impact of long spinal fusion on some movement tasks may only become apparent at later follow-ups. This helps you to better weigh functional trade-offs when discussing surgical pros and cons with patients.",
+     "limitation": "研究样本量较小（n=30），且术后2年随访仅包含探索性n=4的数据，结果外推性有限。",
+     "limitationEn": "The study has a small sample size (n=30), and the 2-year post-surgical follow-up included an exploratory n=4, limiting the generalizability of the findings.",
+     "tags": [
+      "research",
+      "spine"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC musculoskeletal disorders"
+    }
+   ]
+  },
+  {
+   "category": "neurological",
+   "label": "神经康复",
+   "items": [
+    {
+     "id": "news-1795836247090-13",
+     "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+     "summary": "A systematic review of 28 trials (N=1,407) found that exoskeleton-assisted training improved FMA-UE (MD 5.30, 95% CI 3.82–6.79), WMFT (MD 4.78, 95% CI 1.99–7.58), and ARAT (MD 2.70, 95% CI 0.81–4.58) scores in stroke patients compared to conventional rehabilitation; effects on daily living activities were inconsistent.",
+     "category": "neurological",
+     "source": "J NeuroEng Rehabil",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02229-7",
+     "publishedAt": "2026-11-26T00:00:00.000Z",
+     "firstSeen": "2026-11-28T03:24:07.090Z",
+     "curatedScore": 85,
+     "curatedReason": "卒中后上肢功能障碍患者，外骨骼辅助训练确实比传统康复更有效，尤其是在 FMA-UE 等核心运动功能评估上。但 ADL 改善的证据仍不一致，且该领域异质性高、最佳训练剂量不明，临床应用时要考虑这些限制。",
+     "titleZh": "外骨骼康复机器人在卒中患者上肢功能恢复中的疗效：一项系统综述和荟萃分析",
+     "summaryZh": "一项包含 28 项试验（N=1,407）的系统综述发现，与传统康复相比，外骨骼辅助训练能改善卒中患者的 Fugl-Meyer 上肢评估（MD 5.30, 95% CI 3.82–6.79）、Wolf 运动功能测试（MD 4.78, 95% CI 1.99–7.58）和 Action Research Arm Test（MD 2.70, 95% CI 0.81–4.58）评分，但对日常生活活动能力的影响尚不一致。",
+     "curatedReasonEn": "For stroke patients with upper limb motor impairment, exoskeleton-assisted training is more effective than conventional rehabilitation, especially on core motor function assessments like FMA-UE. However, evidence for ADL improvement remains inconsistent, and high heterogeneity and unknown optimal training dose warrant cautious clinical application.",
+     "limitation": "研究存在显著异质性（FMA-UE 的 I²=90%，FIM 的 I²=97%），部分结局对单个研究敏感，且存在潜在研究层面混杂。",
+     "limitationEn": "There was substantial heterogeneity (I²=90% for FMA-UE, I²=97% for FIM), some outcomes were sensitive to individual trials, and potential study-level confounding exists.",
+     "tags": [
+      "research",
+      "stroke"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "Journal of NeuroEngineering and Rehabilitation",
+     "tech": true
+    },
+    {
+     "id": "news-1795819594112-0",
+     "title": "Augmenting Conventional Rehabilitation with Virtual Reality or Aerobic Exercise in Multiple Sclerosis: A Three-Arm Parallel-Group Superiority Randomized Controlled Trial.",
+     "summary": "A three-arm superiority RCT (n=30) found that adding Virtual Reality (VR) or Aerobic Exercise (AE) to conventional rehabilitation for Multiple Sclerosis (MS) patients did not show statistical superiority over conventional therapy alone, but all groups demonstrated significant within-group improvements in perceived manual ability, fatigue, and cognitive functions (p < 0.05). VR showed moderate-to-large effect sizes (η²p from 0.15 to 0.63) in exploratory observations.",
+     "category": "neurological",
+     "source": "PubMed",
+     "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43101968/",
+     "publishedAt": "2026-11-27T00:00:00.000Z",
+     "firstSeen": "2026-11-27T22:46:34.112Z",
+     "curatedScore": 85,
+     "curatedReason": "本项 RCT 证实，对于多发性硬化症（MS）患者，在常规康复中增加虚拟现实（VR）或有氧运动（AE）在改善功能、减轻疲劳和认知方面与常规康复本身效果等同。这为 MS 康复提供了更多可行的辅助疗法选择。",
+     "titleZh": "多发性硬化症患者常规康复中加入虚拟现实或有氧运动：一项三臂平行优效性随机对照试验",
+     "summaryZh": "一项三臂优效性随机对照试验（n=30）发现，在多发性硬化症（MS）患者的常规康复中加入虚拟现实（VR）或有氧运动（AE），在统计学上并未显示出优于单独常规疗法，但所有组在感知手动能力、疲劳和认知功能上均显示出显著组内改善（p < 0.05）。探索性观察中，VR 在非优势手敏捷性和手动速度参数上显示出中到大效应量（η²p 范围 0.15 至 0.63）。",
+     "curatedReasonEn": "This RCT confirms that adding Virtual Reality (VR) or Aerobic Exercise (AE) to conventional rehabilitation for Multiple Sclerosis (MS) patients is equally effective in improving functional performance, reducing fatigue, and enhancing cognition as conventional rehabilitation alone. This provides more viable adjunctive therapy options for MS rehabilitation.",
+     "limitation": "研究样本量较小，可能限制了检测出 VR 或 AE 统计学优越性的能力。",
+     "limitationEn": "The study had a small sample size, which may have limited the ability to detect statistical superiority for VR or AE.",
+     "tags": [
+      "research",
+      "ms"
+     ],
+     "studyDesign": "RCT",
+     "journal": "NeuroRehabilitation",
+     "tech": true
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "label": "运动康复",
+   "items": [
+    {
+     "id": "news-1795836247090-15",
+     "title": "Isometric muscle strength and inter-limb differences in relation to countermovement jump performance during the return-to-sport phase after ACL reconstruction: a cross-sectional study",
+     "summary": "In 14 post-ACLR patients (mean 8.6 months post-op), isometric knee extension strength (1.00 vs. 1.24 kg/kg, p=0.001) and flexion strength (0.57 vs. 0.67 kg/kg, p=0.015) were significantly lower in the operated limb, which was a primary determinant of limb-specific CMJ kinetic output.",
+     "category": "sports",
+     "source": "BMC Musculoskelet Disord",
+     "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10354-6",
+     "publishedAt": "2026-11-26T00:00:00.000Z",
+     "firstSeen": "2026-11-28T03:24:07.090Z",
+     "curatedScore": 75,
+     "curatedReason": "前交叉韧带重建术后（ACLR）返场运动（RTS）阶段，单侧等长肌力测试与双侧反向跳（CMJ）的联合评估很有价值。操作侧肢体的等长肌力是决定 CMJ 动力学输出的关键，在 RTS 评估中应予重点关注。",
+     "titleZh": "ACL 重建术后返场运动阶段等长肌力与肢体间差异对反向跳表现的影响：一项横断面研究",
+     "summaryZh": "在 14 名 ACL 重建术后（平均 8.6 个月）患者中，手术侧膝关节伸肌（1.00 vs. 1.24 kg/kg, p=0.001）和屈肌（0.57 vs. 0.67 kg/kg, p=0.015）等长肌力显著较低，且是肢体特异性反向跳动力学输出的主要决定因素。",
+     "curatedReasonEn": "Combined assessment of unilateral isometric strength and bilateral countermovement jump (CMJ) is valuable during the return-to-sport (RTS) phase after ACL reconstruction (ACLR). Operated limb isometric strength is a primary determinant of limb-specific CMJ kinetic output and should be a focus in RTS assessment.",
+     "limitation": "研究样本量较小（14 名患者），且为横断面设计，无法建立因果关系。",
+     "limitationEn": "The study has a small sample size (14 patients) and is a cross-sectional design, preventing causal inference.",
+     "tags": [
+      "research",
+      "knee",
+      "return-to-sport"
+     ],
+     "studyDesign": "观察研究",
+     "journal": "BMC Musculoskeletal Disorders"
+    }
+   ]
+  },
+  {
+   "category": "geriatric",
+   "label": "老年康复",
+   "items": [
+    {
+     "id": "news-1795836247091-17",
+     "title": "Relationship between physical activity and stem cell production: A systematic review",
+     "summary": "A systematic review of 19 articles found that increased physical activity, including both aerobic and anaerobic, endurance and resistance exercise, was associated with enhanced stem cell production and mobilization across children, adults, and the elderly, independent of stem cell type.",
+     "category": "geriatric",
+     "source": "SA J Physiother",
+     "sourceUrl": "https://sajp.co.za/index.php/sajp/article/view/2406/4350",
+     "publishedAt": "2026-11-24T00:00:00.000Z",
+     "firstSeen": "2026-11-28T03:24:07.091Z",
+     "curatedScore": 80,
+     "curatedReason": "这份系统综述坐实了运动疗法对不同年龄段人群（包括老年人）干预的生物学基础：规律的耐力或阻抗训练能有效促进干细胞生成与动员，支持组织修复。你在给老年患者制定运动处方时，可以更有信心去强调其对细胞层面健康的益处。",
+     "titleZh": "体力活动与干细胞生成的关系：一项系统综述",
+     "summaryZh": "一项包含 19 篇文章的系统综述发现，增加体力活动，包括有氧和无氧、耐力和阻抗运动，都与儿童、成人和老年人干细胞生成和动员的增强相关，且与干细胞类型无关。",
+     "curatedReasonEn": "This systematic review confirms the biological basis of exercise therapy across different age groups, including older adults: regular endurance or resistance training effectively promotes stem cell production and mobilization, supporting tissue repair. You can confidently emphasize these cellular-level health benefits when prescribing exercise for older patients.",
+     "limitation": "虽然评估了偏倚风险和证据质量，但研究异质性可能仍存在，且具体生理机制有待进一步阐明。",
+     "limitationEn": "Although bias risk and evidence quality were assessed, heterogeneity might still exist, and specific physiological mechanisms need further elucidation.",
+     "tags": [
+      "research",
+      "frailty",
+      "exercise"
+     ],
+     "studyDesign": "系统综述",
+     "journal": "South African Journal of Physiotherapy"
+    }
+   ]
+  },
+  {
+   "category": "practice",
+   "label": "行业与执业",
+   "items": [
+    {
+     "id": "news-1795819594114-12",
+     "title": "[Correspondence] Urgent Medicaid exceptions for refugees in the USA",
+     "summary": "US Public Law 119-21, effective October 1, 2026, removes refugee status as an independent basis for Medicaid coverage, threatening to interrupt essential medical treatment and rehabilitation for refugees with disabilities and chronic illnesses.",
+     "category": "practice",
+     "source": "The Lancet",
+     "sourceUrl": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)02161-6/fulltext?rss=yes",
+     "publishedAt": "2026-11-28T00:00:00.000Z",
+     "firstSeen": "2026-11-27T22:46:34.114Z",
+     "curatedScore": 75,
+     "curatedReason": "自 2026 年 1 日起，美国实施的公共法案 119-21 取消了难民身份作为 Medicaid 覆盖的独立依据，这直接影响了美国境内难民患者的康复服务可及性。你应留意患者的医保状态，及时调整转诊和治疗方案，避免服务中断。",
+     "titleZh": "美国紧急 Medicaid 豁免对难民的影响",
+     "summaryZh": "美国公共法案 119-21 已于 2026 年 1 日生效，取消了难民身份作为 Medicaid 覆盖的独立依据，这可能导致残疾和慢性病难民的必要医疗和康复治疗中断。",
+     "curatedReasonEn": "Effective October 1, 2026, US Public Law 119-21 removes refugee status as an independent basis for Medicaid coverage, directly impacting access to rehabilitation services for refugee patients in the US. You should be aware of patients' insurance status and adjust referral and treatment plans promptly to avoid service disruptions.",
+     "tags": [
+      "policy",
+      "reimbursement",
+      "regulation"
+     ],
+     "journal": "The Lancet"
+    }
+   ]
+  }
+ ],
+ "flashes": []
+}

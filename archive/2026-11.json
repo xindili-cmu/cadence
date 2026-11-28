@@ -5959,6 +5959,78 @@
         "regulation"
       ],
       "journal": "The Lancet"
+    },
+    {
+      "id": "news-1795836247090-13",
+      "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+      "summary": "A systematic review of 28 trials (N=1,407) found that exoskeleton-assisted training improved FMA-UE (MD 5.30, 95% CI 3.82–6.79), WMFT (MD 4.78, 95% CI 1.99–7.58), and ARAT (MD 2.70, 95% CI 0.81–4.58) scores in stroke patients compared to conventional rehabilitation; effects on daily living activities were inconsistent.",
+      "category": "neurological",
+      "source": "J NeuroEng Rehabil",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12984-026-02229-7",
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.090Z",
+      "curatedScore": 85,
+      "curatedReason": "卒中后上肢功能障碍患者，外骨骼辅助训练确实比传统康复更有效，尤其是在 FMA-UE 等核心运动功能评估上。但 ADL 改善的证据仍不一致，且该领域异质性高、最佳训练剂量不明，临床应用时要考虑这些限制。",
+      "titleZh": "外骨骼康复机器人在卒中患者上肢功能恢复中的疗效：一项系统综述和荟萃分析",
+      "summaryZh": "一项包含 28 项试验（N=1,407）的系统综述发现，与传统康复相比，外骨骼辅助训练能改善卒中患者的 Fugl-Meyer 上肢评估（MD 5.30, 95% CI 3.82–6.79）、Wolf 运动功能测试（MD 4.78, 95% CI 1.99–7.58）和 Action Research Arm Test（MD 2.70, 95% CI 0.81–4.58）评分，但对日常生活活动能力的影响尚不一致。",
+      "curatedReasonEn": "For stroke patients with upper limb motor impairment, exoskeleton-assisted training is more effective than conventional rehabilitation, especially on core motor function assessments like FMA-UE. However, evidence for ADL improvement remains inconsistent, and high heterogeneity and unknown optimal training dose warrant cautious clinical application.",
+      "limitation": "研究存在显著异质性（FMA-UE 的 I²=90%，FIM 的 I²=97%），部分结局对单个研究敏感，且存在潜在研究层面混杂。",
+      "limitationEn": "There was substantial heterogeneity (I²=90% for FMA-UE, I²=97% for FIM), some outcomes were sensitive to individual trials, and potential study-level confounding exists.",
+      "tags": [
+        "research",
+        "stroke"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "Journal of NeuroEngineering and Rehabilitation",
+      "tech": true
+    },
+    {
+      "id": "news-1795836247091-17",
+      "title": "Relationship between physical activity and stem cell production: A systematic review",
+      "summary": "A systematic review of 19 articles found that increased physical activity, including both aerobic and anaerobic, endurance and resistance exercise, was associated with enhanced stem cell production and mobilization across children, adults, and the elderly, independent of stem cell type.",
+      "category": "geriatric",
+      "source": "SA J Physiother",
+      "sourceUrl": "https://sajp.co.za/index.php/sajp/article/view/2406/4350",
+      "publishedAt": "2026-11-24T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.091Z",
+      "curatedScore": 80,
+      "curatedReason": "这份系统综述坐实了运动疗法对不同年龄段人群（包括老年人）干预的生物学基础：规律的耐力或阻抗训练能有效促进干细胞生成与动员，支持组织修复。你在给老年患者制定运动处方时，可以更有信心去强调其对细胞层面健康的益处。",
+      "titleZh": "体力活动与干细胞生成的关系：一项系统综述",
+      "summaryZh": "一项包含 19 篇文章的系统综述发现，增加体力活动，包括有氧和无氧、耐力和阻抗运动，都与儿童、成人和老年人干细胞生成和动员的增强相关，且与干细胞类型无关。",
+      "curatedReasonEn": "This systematic review confirms the biological basis of exercise therapy across different age groups, including older adults: regular endurance or resistance training effectively promotes stem cell production and mobilization, supporting tissue repair. You can confidently emphasize these cellular-level health benefits when prescribing exercise for older patients.",
+      "limitation": "虽然评估了偏倚风险和证据质量，但研究异质性可能仍存在，且具体生理机制有待进一步阐明。",
+      "limitationEn": "Although bias risk and evidence quality were assessed, heterogeneity might still exist, and specific physiological mechanisms need further elucidation.",
+      "tags": [
+        "research",
+        "frailty",
+        "exercise"
+      ],
+      "studyDesign": "系统综述",
+      "journal": "South African Journal of Physiotherapy"
+    },
+    {
+      "id": "news-1795836247090-15",
+      "title": "Isometric muscle strength and inter-limb differences in relation to countermovement jump performance during the return-to-sport phase after ACL reconstruction: a cross-sectional study",
+      "summary": "In 14 post-ACLR patients (mean 8.6 months post-op), isometric knee extension strength (1.00 vs. 1.24 kg/kg, p=0.001) and flexion strength (0.57 vs. 0.67 kg/kg, p=0.015) were significantly lower in the operated limb, which was a primary determinant of limb-specific CMJ kinetic output.",
+      "category": "sports",
+      "source": "BMC Musculoskelet Disord",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s12891-026-10354-6",
+      "publishedAt": "2026-11-26T00:00:00.000Z",
+      "firstSeen": "2026-11-28T03:24:07.090Z",
+      "curatedScore": 75,
+      "curatedReason": "前交叉韧带重建术后（ACLR）返场运动（RTS）阶段，单侧等长肌力测试与双侧反向跳（CMJ）的联合评估很有价值。操作侧肢体的等长肌力是决定 CMJ 动力学输出的关键，在 RTS 评估中应予重点关注。",
+      "titleZh": "ACL 重建术后返场运动阶段等长肌力与肢体间差异对反向跳表现的影响：一项横断面研究",
+      "summaryZh": "在 14 名 ACL 重建术后（平均 8.6 个月）患者中，手术侧膝关节伸肌（1.00 vs. 1.24 kg/kg, p=0.001）和屈肌（0.57 vs. 0.67 kg/kg, p=0.015）等长肌力显著较低，且是肢体特异性反向跳动力学输出的主要决定因素。",
+      "curatedReasonEn": "Combined assessment of unilateral isometric strength and bilateral countermovement jump (CMJ) is valuable during the return-to-sport (RTS) phase after ACL reconstruction (ACLR). Operated limb isometric strength is a primary determinant of limb-specific CMJ kinetic output and should be a focus in RTS assessment.",
+      "limitation": "研究样本量较小（14 名患者），且为横断面设计，无法建立因果关系。",
+      "limitationEn": "The study has a small sample size (14 patients) and is a cross-sectional design, preventing causal inference.",
+      "tags": [
+        "research",
+        "knee",
+        "return-to-sport"
+      ],
+      "studyDesign": "观察研究",
+      "journal": "BMC Musculoskeletal Disorders"
     }
   ]
 }

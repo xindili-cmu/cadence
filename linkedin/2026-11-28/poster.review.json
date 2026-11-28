@@ -1,0 +1,33 @@
+{
+  "status": "draft",
+  "draftedAt": "2026-11-28T03:24:14.525Z",
+  "provider": "gemini",
+  "note": "Claims/context are LLM drafts. Review against the source titles below; edit poster.day.json if needed, re-render with `node scripts/linkedin-poster.js <date>`, then set status to \"approved\".",
+  "sources": [
+    {
+      "slide": 1,
+      "title": "Efficacy of exoskeleton rehabilitation robots for upper limb function recovery in stroke patients: a systematic review and meta-analysis",
+      "url": "https://link.springer.com/article/10.1186/s12984-026-02229-7"
+    },
+    {
+      "slide": 2,
+      "title": "Augmenting Conventional Rehabilitation with Virtual Reality or Aerobic Exercise in Multiple Sclerosis: A Three-Arm Parallel-Group Superiority Randomized Controlled Trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43101968/"
+    },
+    {
+      "slide": 3,
+      "title": "Relationship between physical activity and stem cell production: A systematic review",
+      "url": "https://sajp.co.za/index.php/sajp/article/view/2406/4350"
+    },
+    {
+      "slide": 4,
+      "title": "Video-based assessment of functional movement quality in female adults with surgical and non-surgical scoliosis and controls: a rater-blinded observational study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/43099509/"
+    },
+    {
+      "slide": 5,
+      "title": "Isometric muscle strength and inter-limb differences in relation to countermovement jump performance during the return-to-sport phase after ACL reconstruction: a cross-sectional study",
+      "url": "https://link.springer.com/article/10.1186/s12891-026-10354-6"
+    }
+  ]
+}
